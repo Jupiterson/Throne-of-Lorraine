@@ -1,0 +1,166 @@
+political_decisions = {
+    #Gekkerd is gekkerds
+
+    gekkers_end_isolation = {
+        picture = CAL_greater_california
+        potential = {
+            tag = GEK
+            OR = {
+                        CAN_13 = { empty = yes }    
+                        USA_78 = { empty = yes }   
+                       USA_81 = { empty = yes }  
+                       MEX_85_1 = { empty = yes }   
+                       MEX_85_2 = { empty = yes }   
+                       MEX_94 = { empty = yes }  
+                       1 = { empty = yes }  
+		       2 = { empty = yes }   
+		       3013 = { empty = yes }  
+		       91 = { empty = yes }   
+                       92 = { empty = yes }   
+		       3476 = { empty = yes }     
+		       3475 = { empty = yes } 
+           }  
+            NOT = { has_country_flag = end_isolation }
+        }
+
+        allow = {           
+            war = no
+            prestige = 25
+#            romanticism = 1
+        }
+       
+        effect = {            
+            prestige = 50
+            set_country_flag = end_isolation
+           random_owned = {
+                limit = {
+                       CAN_13 = { empty = yes }    
+                        USA_78 = { empty = yes }   
+                       USA_81 = { empty = yes }  
+                       MEX_85_1 = { empty = yes }   
+                       MEX_85_2 = { empty = yes }   
+                       MEX_94 = { empty = yes }
+                       CAN_13 = { empty = yes }  
+                       1 = { empty = yes }  
+		       2 = { empty = yes }   
+		       3013 = { empty = yes }  
+		       91 = { empty = yes }   
+                       92 = { empty = yes }   
+		       3476 = { empty = yes }     
+		       3475 = { empty = yes } 
+                       4 = { empty = yes }
+                       3467 = { empty = yes }
+                       114 = { empty = yes }
+                      
+                
+        } 
+                      USA_78 =  { secede_province = THIS }   
+                      USA_81 =  { secede_province = THIS }   
+                      MEX_85_1 =  { secede_province = THIS }   
+                      MEX_85_2 =  { secede_province = THIS }   
+                      MEX_94 =  { secede_province = THIS } 
+                      CAN_13 =  { secede_province = THIS }  
+                      1 =  { secede_province = THIS }  
+		        2 =  { secede_province = THIS }   
+		        3013 =  { secede_province = THIS }   
+		        91 =  { secede_province = THIS }   
+                        92 =  { secede_province = THIS }   
+		        3476 =  { secede_province = THIS }     
+		        3475 =  { secede_province = THIS }   
+                        4 = { secede_province = THIS }
+                       3467 = { secede_province = THIS }
+                       114 = { secede_province = THIS }
+
+            NOT = {
+				  18
+				  2629
+				  21
+					}
+
+                        
+
+
+        ai_will_do = { factor = 1 }
+    }
+  }
+ 
+
+
+    scramble_for_america = {
+        picture = conquest_of_the_desert
+        potential = {
+            tag = VEL
+            GEK = { exists = yes owns = 91 }
+            
+            NOT = { has_country_flag = scrambled_egg }
+        }
+
+        allow = {           
+            war = no
+        }
+       
+        effect = {            
+            prestige = 25
+            set_country_flag = scrambled_egg
+           random_owned = {
+                limit = {  
+                       113 = { empty = yes }  
+		       93 = { empty = yes }   
+		       26 = { empty = yes }  
+		       27 = { empty = yes }   
+                       28 = { empty = yes }
+                      
+                
+        } 
+                       USA_111 = { secede_province = THIS }  
+                       113 = { secede_province = THIS }  
+		       93 = { secede_province = THIS }   
+		       26 = { secede_province = THIS }  
+		       27 = { secede_province = THIS }    
+                       28 = { secede_province = THIS }                               
+
+                        
+
+
+        ai_will_do = { factor = 1 }
+    }
+}
+ 
+
+
+rush_east = {
+        picture = conquest_of_the_desert
+        potential = {
+
+            tag = TEX
+#            GEK = { exists = yes owns = 3467 }
+            
+            NOT = { has_country_flag = scrambled_egg }
+        }
+
+        allow = {           
+            war = no
+        }
+       
+        effect = {            
+            prestige = 25
+            set_country_flag = scrambled_egg
+           random_owned = {
+                limit = {
+                       
+                       MEX_100 = { empty = yes }
+                       MEX_103 = { empty = yes }      
+                      
+                
+        } 
+                       
+                       MEX_100 = { secede_province = THIS }
+                       MEX_103 = { secede_province = THIS }                                        
+
+                        
+
+
+        ai_will_do = { factor = 1 }
+    }
+ }
+}

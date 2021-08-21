@@ -1,0 +1,24 @@
+name = "The Catalan War of Independence"
+
+1835.4.19 = {
+    add_attacker = SPA
+    add_defender = ARN
+
+    war_goal = {
+        casus_belli = become_independent
+        actor = SPA
+        receiver = ARA
+    }
+
+    war_goal = {
+        casus_belli = make_puppet
+        actor = SPA
+        receiver = ARA
+    }
+
+}
+
+1840.9.3 = {
+    rem_attacker = ARA
+    rem_defender = SPA
+}
