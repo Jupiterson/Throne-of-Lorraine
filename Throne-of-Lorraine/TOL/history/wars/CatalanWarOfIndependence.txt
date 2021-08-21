@@ -6,19 +6,19 @@ name = "The Catalan War of Independence"
 
     war_goal = {
         casus_belli = become_independent
-        actor = SPA
-        receiver = ARA
+        actor = ARN
+        receiver = SPA
     }
 
     war_goal = {
         casus_belli = make_puppet
         actor = SPA
-        receiver = ARA
+        receiver = ARN
     }
 
 }
 
 1840.9.3 = {
-    rem_attacker = ARA
+    rem_attacker = ARN
     rem_defender = SPA
 }
