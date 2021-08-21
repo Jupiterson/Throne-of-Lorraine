@@ -62,7 +62,7 @@ edict_of_lubeck = {
 
         allow = {
             war = no
-           # year = 1840
+            year = 1840
         }
 
         effect = {
@@ -86,64 +86,35 @@ edict_of_lubeck = {
     }
 
     centralize_hanse = {
-        picture = baltic_sea
-        potential = {
-            tag = HNS
-            has_country_flag = the_confederation_is_legitime
-            NOT = { has_country_flag = hanse_united }
-            OR = {
-                any_neighbor_country = {
-                    primary_culture = north_german
-                    OR = {
-                        vassal_of = HNS
-                    }
-                }
-                HNS = {
-                    any_core = {
-                        owned_by = THIS
-                        NOT = { is_core = THIS }
-                    }
-                }
-            }
-        }
-
-        allow = {
-            prestige = 20
-            war = no
-            OR = {
-                nationalism_n_imperialism = 1
-                is_greater_power = yes
-            }
-        }
-
-        effect = {
-            set_country_flag = hanse_united
-            prestige = 20
-            
-            any_country = {
-                limit = {
-                    OR = {
-                     tag = POM
-                     tag = HAN
-                     tag = MEC
-                     tag = SWH
-                     tag = DZG
-                     tag = BRN
-                    }
-                    primary_culture = north_german
-                    OR = {
-                        in_sphere = PBC
-                        vassal_of = PBC
-                    }
-                }
-                all_core = { add_core = HNS }
-                annex_to = PBC
-            }
-            
-        }
-
-        ai_will_do = { factor = 1 }
-    }
+		picture = crown
+		potential = {
+			tag = HNS
+			BRN = { vassal_of = THIS }
+			POM = { vassal_of = THIS }
+			HAN = { vassal_of = THIS }
+		}
+		allow = {
+			BRN = { vassal_of = THIS }
+			POM = { vassal_of = THIS }
+			HAN = { vassal_of = THIS }
+			OR = {			
+			nationalism_n_imperialism = 1
+				AND = {
+					is_greater_power = yes
+				}
+			}
+		}
+		effect = {
+			any_country = {
+				limit = {
+					primary_culture = north_german
+					vassal_of = THIS
+				}
+				annex_to = THIS
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 
 
 
