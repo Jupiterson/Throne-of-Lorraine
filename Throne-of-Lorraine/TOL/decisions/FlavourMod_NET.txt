@@ -26,6 +26,39 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
+     unite_England_with_netherlands = {  #man am I uncreative in naming
+		picture = reform_the_uk
+		potential = {
+			tag = NET
+			UOW = { vassal_of = THIS }
+		}
+		allow = {
+                       war = no
+                       year = 1850
+
+			UOW = { vassal_of = THIS }
+
+		        is_greater_power = yes
+
+			nationalism_n_imperialism = 1
+
+			}
+	
+		effect = {
+			any_country = {
+				limit = {
+					primary_culture = north_german
+					vassal_of = THIS
+				}
+				annex_to = THIS
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+
+
     appoint_thorbecke = {
         alert = no
         picture = thorbecke_reforms

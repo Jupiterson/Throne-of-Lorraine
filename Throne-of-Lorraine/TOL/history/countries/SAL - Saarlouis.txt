@@ -1,14 +1,13 @@
-capital = 411
-primary_culture = south_german
-culture = french
+capital = 3411
+primary_culture = french
 culture = rhinelander
 religion = catholic
-government = absolute_monarchy
+government = democracy
 plurality = 0.0
-nationalvalue = nv_equality
+nationalvalue = nv_liberty
 literacy = 0.8
 civilized = yes
-prestige = 6
+prestige = 1
 
 # Technologies
 post_napoleonic_thought = 1
@@ -36,12 +35,12 @@ basic_chemistry = 1
 # Political reforms
 slavery = no_slavery
 upper_house_composition = appointed
-vote_franschise = wealth_voting
+vote_franschise = none_voting
 public_meetings = yes_meeting
-press_rights = censored_press
+press_rights = state_press
 trade_unions = no_trade_unions
 voting_system = first_past_the_post
-political_parties = non_secret_ballots
+political_parties = underground_parties
 
 # Social Reforms
 wage_reform = no_minimum_wage
@@ -52,19 +51,19 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-# New Reforms
-conscription = no_draft
-debt_law = peonage
+
+#New Reforms
+conscription = two_year_draft
+debt_law = debtors_prisons
 penal_system = capital_punishment
 child_labor = child_labor_legal
-citizens_rights = primary_culture_only
+citizens_rights = culture_voting_only
 border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
-set_country_flag = catholic_country
+ruling_party = SAA_conservative_2
 
-ruling_party = FRA_liberal
 upper_house = {
     fascist = 0
     liberal = 30
