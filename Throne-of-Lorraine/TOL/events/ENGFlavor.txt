@@ -3729,156 +3729,156 @@ country_event = {
 #Splendid Isolation#
 #####################################################
 #Splendid Isolation
-country_event = {
-    id = 99930
-    title = "EVTNAME99930" #Splendid Isolation
-    desc = "EVTDESC99930"
-    picture = "bad_badboy"
-
-    trigger = {
-        tag = ENG
-        any_greater_power = { alliance_with = ENG }
-        NOT = { exists = IRE }
-        has_country_modifier = pax_britannica
-        NOT = { exists = GER }
-        NOT = { exists = GCF }
-        rank = 1
-        NOT = { year = 1870 }
-        NOT = {
-            AND = {
-                EGY = { war_with = TUR }
-                war_with = EGY
-                OR = {
-                    war_with = FRA
-                    war_with = BOR
-                }
-            }
-        }
-        OR = {
-            TUR = {
-                is_greater_power = yes
-                NOT = { alliance_with = THIS }
-            }
-            TUR = { is_greater_power = no }
-        }
-        OR = {
-            BEL = {
-                is_greater_power = yes
-                NOT = { alliance_with = THIS }
-            }
-            BEL = { is_greater_power = no }
-        }
-        OR = {
-            JAP = {
-                is_greater_power = yes
-                NOT = { alliance_with = THIS }
-            }
-            JAP = { is_greater_power = no }
-        }
-        OR = {
-            POR = {
-                is_greater_power = yes
-                NOT = { alliance_with = THIS }
-            }
-            POR = { is_greater_power = no }
-        }
-        OR = {
-            UPB = {
-                is_greater_power = yes
-                NOT = { alliance_with = THIS }
-            }
-            UPB = { is_greater_power = no }
-        }
-    }
-
-    option = {
-        name = "EVT99930OPT"
-        any_greater_power = {
-            limit = {
-                NOT = {
-                    tag = BEL
-                    tag = TUR
-                }
-                alliance_with = ENG
-            }
-            leave_alliance = THIS
-            relation = { who = THIS value = -150 }
-        }
-    }
-}
-
-#The End of Splendid Isolation
-country_event = {
-    id = 99957
-    title = "EVTNAME99957"
-    desc = "EVTDESC99957"
-    major = yes
-
-    trigger = {
-        tag = ENG
-        has_country_modifier = pax_britannica
-
-        OR = {
-            has_global_flag = french_nzl
-            AND = {
-                NOT = { exists = GCF }
-                NOT = { exists = GER }
-                year = 1885
-            }
-            exists = RHI
-            PRU_575 = {
-                OR = {
-                    owned_by = FRA
-                    owned_by = BOR
-                }
-            }
-            AND = {
-                FRA_412 = {
-                    NOT = {
-                        owned_by = FRA
-                        owned_by = BOR
+#country_event = {
+#    id = 99930
+#    title = "EVTNAME99930" #Splendid Isolation
+#    desc = "EVTDESC99930"
+#    picture = "bad_badboy"#
+#
+#    trigger = {
+#        tag = ENG
+#        any_greater_power = { alliance_with = ENG }
+#        NOT = { exists = IRE }
+#        has_country_modifier = pax_britannica
+#        NOT = { exists = GER }
+#        NOT = { exists = GCF }
+#        rank = 1
+#        NOT = { year = 1870 }
+#        NOT = {
+#            AND = {
+#                EGY = { war_with = TUR }
+#                war_with = EGY
+#                OR = {
+#                    war_with = FRA
+#                    war_with = BOR
+#                }
+#            }
+#        }
+#        OR = {
+#            TUR = {
+#                is_greater_power = yes
+#                NOT = { alliance_with = THIS }
+#            }
+#            TUR = { is_greater_power = no }
+ #       }
+ #       OR = {
+ #           BEL = {
+ ##               is_greater_power = yes
+ #               NOT = { alliance_with = THIS }
+ #           }
+ #           BEL = { is_greater_power = no }
+  #      }
+  #      OR = {
+#            JAP = {
+#                is_greater_power = yes
+#                NOT = { alliance_with = THIS }
+#            }
+#            JAP = { is_greater_power = no }
+#        }
+#        OR = {
+#            POR = {
+#                is_greater_power = yes
+#                NOT = { alliance_with = THIS }
+#            }
+#            POR = { is_greater_power = no }
+#        }
+#        OR = {
+#            UPB = {
+#                is_greater_power = yes
+#                NOT = { alliance_with = THIS }
+#            }
+#            UPB = { is_greater_power = no }
+#        }
+#    }#
+#
+#    option = {
+#        name = "EVT99930OPT"
+#        any_greater_power = {
+#            limit = {
+#                NOT = {
+#                    tag = BEL
+#                    tag = TUR
+#                }
+#                alliance_with = ENG
+#            }
+#            leave_alliance = THIS
+#            relation = { who = THIS value = -150 }
+#        }
+#    }
+#}
+#
+##The End of Splendid Isolation
+#country_event = {
+#    id = 99957
+#    title = "EVTNAME99957"
+#    desc = "EVTDESC99957"
+#    major = yes##
+#
+#    trigger = {
+#        tag = ENG
+#        has_country_modifier = pax_britannica####
+#
+#        OR = {
+#            has_global_flag = french_nzl
+#            AND = {
+#                NOT = { exists = GCF }
+#                NOT = { exists = GER }
+#                year = 1885
+#            }
+#            exists = RHI
+#            PRU_575 = {
+#                OR = {
+#                    owned_by = FRA
+#                    owned_by = BOR
+#                }
+#            }
+#            AND = {
+#                FRA_412 = {
+#                    NOT = {
+#                        owned_by = FRA
+#                        owned_by = BOR
+#                    }
+#                }
+#                FRA_411 = {
+#                    NOT = {
+#                        owned_by = FRA
+ #                       owned_by = BOR
                     }
-                }
-                FRA_411 = {
-                    NOT = {
-                        owned_by = FRA
-                        owned_by = BOR
-                    }
-                }
-            }
-            498 = { OR = { owned_by = FRA owned_by = BOR } }
-            SPA_492 = { OR = { owned_by = FRA owned_by = BOR } }
-            ENG_300 = { NOT = { owned_by = ENG } }
-            ENG_296 = { NOT = { owned_by = ENG } }
-            ENG_291 = { NOT = { owned_by = ENG } }
-            ENG_284 = { NOT = { owned_by = ENG } }
-            ENG_280 = { NOT = { owned_by = ENG } }
-            ENG_277 = { NOT = { owned_by = ENG } }
-            exists = SCO
-            exists = WHA
-            AND = {
-                exists = IRE
-                NOT = { year = 1905 }
-                has_recently_lost_war = yes
-            }
-            NOT = { exists = BEL }
-            NOT = { rank = 1 }
-            has_global_flag = EIC_independence
-        }
-    }
-
-    mean_time_to_happen = { days = 1 }
-
-    option = {
-        name = "EVT99957OPTA"
-        prestige = -25
-        remove_country_modifier = pax_britannica
-        any_greater_power = {
-            limit = { NOT = { truce_with = ENG } }
-            relation = { who = ENG value = 100 }
-        }
-    }
-}
+ #               }
+ #           }
+ #           498 = { OR = { owned_by = FRA owned_by = BOR } }
+ #           SPA_492 = { OR = { owned_by = FRA owned_by = BOR } }
+ #           ENG_300 = { NOT = { owned_by = ENG } }
+  #          ENG_296 = { NOT = { owned_by = ENG } }
+  #          ENG_291 = { NOT = { owned_by = ENG } }
+  #          ENG_284 = { NOT = { owned_by = ENG } }
+  #          ENG_280 = { NOT = { owned_by = ENG } }
+   ##         ENG_277 = { NOT = { owned_by = ENG } }
+   #         exists = SCO
+   #         exists = WHA
+#    #        AND = {
+#                exists = IRE
+#                NOT = { year = 1905 }
+#                has_recently_lost_war = yes
+#            }
+#            NOT = { exists = BEL }
+#            NOT = { rank = 1 }
+#            has_global_flag = EIC_independence
+ #       }
+ #   }
+#
+##    mean_time_to_happen = { days = 1 }##
+#
+#    option = {
+#        name = "EVT99957OPTA"
+#        prestige = -25
+#        remove_country_modifier = pax_britannica
+#        any_greater_power = {
+#            limit = { NOT = { truce_with = ENG } }
+#            relation = { who = ENG value = 100 }
+#        }
+ #   }
+#}#
 
 #####################################################
 #British Colonial Events#
