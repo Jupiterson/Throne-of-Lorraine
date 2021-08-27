@@ -1,0 +1,29 @@
+political_decisions = {
+    down_the_danube = {
+		picture = form_the_rcmp
+		potential = {
+			tag = HUN
+			NOT = { has_country_flag = down_the_danube }
+		}
+		allow = {
+			exists = yes
+			NOT = { is_vassal = yes }
+			war_policy = jingoism
+			owns = 653
+			owns = 792
+		}
+		effect = {
+			set_country_flag = down_the_danube
+			794 = { add_core = THIS }
+			796 = { add_core = THIS }
+			795 = { add_core = THIS }
+			666 = { add_core = THIS }
+			665 = { add_core = THIS }
+			badboy = 10
+		}
+		ai_will_do = {
+			factor = 1 
+		}
+	}
+	
+}

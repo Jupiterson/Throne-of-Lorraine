@@ -84,6 +84,53 @@ political_decisions = {
     }
   }
  
+#stolen from AoE
+colonial_militia = {
+		picture = form_the_ikhwan
+		potential = {
+			tag = VEL
+                        tag = GEK
+			NOT = { has_country_flag = colonial_militia }
+		}
+		
+		allow = {
+			OR = {
+				money = 10000
+				ai = yes
+			}
+			military_plans = 1
+			strategic_mobility = 1
+		}
+		effect = {
+			any_owned = {
+				limit = {
+					owner = {
+						ai = no
+					}
+				}
+				treasury = -10000
+			}
+			small_arms = 300
+			regular_clothes = 300
+			canned_food = 300
+			random_pop = {
+				limit = {
+					pop_type = farmers
+					OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+					}
+				}
+				pop_type = soldiers
+			}
+			war_exhaustion = -1
+			set_country_flag = colonial_militia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 
 
     scramble_for_america = {

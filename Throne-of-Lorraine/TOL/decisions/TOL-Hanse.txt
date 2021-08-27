@@ -85,6 +85,54 @@ edict_of_lubeck = {
         ai_will_do = { factor = 1 }
     }
 
+#stolen from AoE
+ hanseatic_frisia = {
+		picture = german_confederation
+		potential = {
+			tag = HNS
+			NOT = {
+				has_country_flag = hansa_frisia
+			}
+			has_global_flag = united_hanse
+		}
+		allow = {
+			543 = {
+				owned_by = THIS
+			}
+		}
+		effect = {
+			HAN_540 = {
+				add_core = HNS
+			}
+			HAN_540 = {
+				remove_core = MUN
+			}
+			SCH_370 = {
+				add_core = HNS
+			}
+			HOL_369 = {
+				remove_core = DNN
+			}
+			HOL_369 = {
+				remove_core = DEN
+			}
+			PRU_581 = {
+				add_core = HNS
+			}
+			NET_385 = {
+				add_core = HNS
+			}
+			badboy = 5
+			prestige = 15
+			set_country_flag = hansa_frisia
+			add_accepted_culture = frisian 
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+
     centralize_hanse = {
 		picture = crown
 		potential = {
@@ -106,6 +154,7 @@ edict_of_lubeck = {
 			}
 		}
 		effect = {
+                        set_country_flag = united_hanse
 			any_country = {
 				limit = {
 					primary_culture = north_german

@@ -3,6 +3,7 @@ political_decisions = {
 greater_genoa = {
 		picture = italian_islands
 		potential = {
+                        tag = GEN
 			NOT = {
 				has_country_flag = greater_genoa
 			}
@@ -33,11 +34,12 @@ greater_genoa = {
 expand_east = {
 		picture = reclaim_italian_lands
 		potential = {
+                        tag = GEN
 			NOT = {
 				has_country_flag = expanded_east
 			}
 			exists = yes
-#                        has_country_flag = greater_genoa
+                        has_country_flag = greater_genoa
 		
 			is_greater_power = yes
 			military_score = 45
