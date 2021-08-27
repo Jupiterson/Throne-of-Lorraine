@@ -93,7 +93,7 @@ political_decisions = {
     the_asia_minor_agreement = { #Carve up the Ottoman Empire without a Great War - Without France as Ally
         picture = sykes_picot
         potential = {
-            tag = ENG
+            tag = SCO
             is_disarmed = no
             OR = {
                 TUR = { has_country_flag = ottomans_to_turks }
@@ -111,8 +111,8 @@ political_decisions = {
                 owns = 897
             }
             OR = {
-                FRA = { exists = yes NOT = { alliance_with = ENG } }
-                BOR = { exists = yes NOT = { alliance_with = ENG } }
+                FRA = { exists = yes NOT = { alliance_with = SCO } }
+                BOR = { exists = yes NOT = { alliance_with = SCO } }
             }
             NOT = { RUS = { is_greater_power = yes alliance_with = THIS } }
             NOT = { has_global_flag = sykes_picot }
@@ -123,7 +123,7 @@ political_decisions = {
             any_greater_power = {
                 NOT = { tag = JAP }
                 NOT = { tag = USA }
-                alliance_with = ENG
+                alliance_with = SCO
             }
             TUR = { part_of_sphere = no }
             war = no
@@ -147,7 +147,7 @@ political_decisions = {
                 militancy = 8
             }
             any_greater_power = {
-                limit = { alliance_with = ENG }
+                limit = { alliance_with = SCO }
                 country_event = 99972
             }
         }

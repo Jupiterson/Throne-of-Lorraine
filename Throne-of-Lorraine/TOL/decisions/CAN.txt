@@ -523,9 +523,8 @@ political_decisions = {
         potential = {
             owns = 17
             OR = {
-                tag = ENG
-                tag = CAN
-                primary_culture = anglo_canadian
+                tag = AKI
+                primary_culture = akino_german
             }
             6 = { empty = yes }
             OR = {
@@ -573,7 +572,7 @@ political_decisions = {
 
         effect = {
             57 = {
-                change_province_name = "Ottawa"
+                change_province_name = "Neu Hannover"
                 life_rating = 5
                 add_province_modifier = {
                     name = recently_built_city
@@ -587,13 +586,13 @@ political_decisions = {
     alaskan_frontier = {
         picture = fort_selkirk
         potential = {
-            tag = ENG
+            tag = AKI
             OR = {
                 owns = 17
                 AND = {
-                    tag = ENG
+                    tag = AKI
                     RPL = {
-                        vassal_of = ENG
+                        vassal_of = AKI
                         owns = 17
                     }
                 }
@@ -609,14 +608,14 @@ political_decisions = {
         effect = {
             6 = {
                 secede_province = THIS
-                add_core = RPL
+                add_core = AKI
                 change_province_name = "Fort Selkirk"
             }
             any_owned = {
                 limit = {
-                    is_core = RPL
+                    is_core = AKI
                 }
-                secede_province = RPL
+                secede_province = AKI
             }
         }
         ai_will_do = { factor = 1 }

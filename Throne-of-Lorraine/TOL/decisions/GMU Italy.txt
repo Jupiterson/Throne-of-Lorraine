@@ -246,47 +246,48 @@ political_decisions = {
 #####################
 # Venetian ambition #
 #####################
-
-    venetian_ambition = {
-        picture = venetian_ambition
-        potential = {
-            NOT = { has_country_flag = venetian_ambition }
-            tag = VEN
-        }
-
-        allow = {
-            is_greater_power = yes
-            romanticism = 1
-            nationalism_n_imperialism = 1
-            prestige = 50
-            military_score = 50
-            OR =     {
-                ruling_party_ideology = reactionary
-                ruling_party_ideology = conservative
-                ruling_party_ideology = fascist
-            }
-        }
-
-        effect = {
-              set_country_flag = venetian_ambition
-              prestige = 30
-              727 = { add_core = VEN }
-              728 = { add_core = VEN }
-              729 = { add_core = VEN }
-              730 = { add_core = VEN }
-              731 = { add_core = VEN }
-              732 = { add_core = VEN }
-              733 = { add_core = VEN }
-              770 = { add_core = VEN }
-              780 = { add_core = VEN }
-              781 = { add_core = VEN }
-              2582 = { add_core = VEN }
-              826 = { add_core = VEN }
-              827 = { add_core = VEN }
-              badboy = 5
-        }
-    }
-
+#
+#
+#    venetian_ambition = {
+#        picture = venetian_ambition
+#        potential = {
+#            NOT = { has_country_flag = venetian_ambition }
+#            tag = VEN
+#        }
+#
+#        allow = {
+#            is_greater_power = yes
+#            romanticism = 1
+#            nationalism_n_imperialism = 1
+#            prestige = 50
+#            military_score = 50
+#            OR =     {
+#                ruling_party_ideology = reactionary
+#                ruling_party_ideology = conservative
+#                ruling_party_ideology = fascist
+#            }
+#        }
+#
+#        effect = {
+#              set_country_flag = venetian_ambition
+#              prestige = 30
+#              727 = { add_core = VEN }
+#              728 = { add_core = VEN }
+#              729 = { add_core = VEN }
+#              730 = { add_core = VEN }
+#              731 = { add_core = VEN }
+#              732 = { add_core = VEN }
+#              733 = { add_core = VEN }
+#              770 = { add_core = VEN }
+#              780 = { add_core = VEN }
+#              781 = { add_core = VEN }
+#              2582 = { add_core = VEN }
+#              826 = { add_core = VEN }
+#              827 = { add_core = VEN }
+#              badboy = 5
+#        }
+#    }
+#
 #########################
 # Codificazione Estense #
 #########################

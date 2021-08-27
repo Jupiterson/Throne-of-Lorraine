@@ -52,6 +52,7 @@ political_decisions = {
         picture = reform_the_UK
         potential = {
             tag = ENL
+            tag = UOW
             NOT = { has_country_flag = reclaimed_the_uk }
         }
 
@@ -190,10 +191,10 @@ political_decisions = {
         potential = {
             NOT = { has_country_flag = full_independence_achieved }
             OR = {
-                AND = {
-                    tag = SCO
-                    any_owned_province = { is_core = SCO is_core = ENG }
-                }
+#                AND = {
+#                    tag = SCO
+#                    any_owned_province = { is_core = SCO is_core = ENG }
+#                }
                 AND = {
                     tag = RGS
                     any_owned_province = { is_core = RGS is_core = BRZ }

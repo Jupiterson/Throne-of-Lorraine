@@ -1,0 +1,22 @@
+country_event = {
+	id = 712340
+	title = "The Restoration of the Imperium"
+	desc = "EVTDESC712340"
+	major = yes
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Italiam e restituet"
+		prestige = 10
+		set_country_flag = restore_Italy
+
+	}
+	
+	option = {
+		name = "ad orientalem!"
+		prestige = 10
+		set_country_flag = up_east
+	}
+}

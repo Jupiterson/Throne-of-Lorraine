@@ -1,0 +1,94 @@
+political_decisions = {
+
+#stolen from AOE
+demand_milan = {
+		picture = italian_trentino
+		potential = {
+                        tag = VEN
+			NOT = { has_country_flag = demand_milan_done }
+		}
+		
+		allow = {
+			OR = {
+				LOM = { exists = no }
+			}
+			OR = {
+				owns = 738 #Parma
+				owns = 739 #Modena
+			}
+			owns = 742 #Ferrara
+			is_secondary_power = yes
+			military_score = 25
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = demand_milan_done
+			 
+			 722 = { 
+				add_core = THIS 
+			}
+			 723 = {
+				add_core = THIS 
+			}
+			 726 = {
+				add_core = THIS 
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+
+expand_west = {
+		picture = italian_islands
+		potential = {
+                        tag = VEN
+			NOT = {
+				has_country_flag = expanded_west
+			}
+			exists = yes
+		
+			is_greater_power = yes
+			military_score = 25
+			war = no
+                        
+			
+
+		}
+		
+		effect = {
+			759 = {
+				add_core = THIS #Reggio de Calabria
+			}
+			763 = {
+				add_core = THIS #Messina
+			}
+			854 = {
+				add_core = THIS #Malta
+			}
+			1709 = {
+				add_core = THIS #Bône
+			}
+			1701 = {
+				add_core = THIS #Bougie
+			}
+			1700 = {
+				add_core = THIS #Algiers
+			}
+			765 = {
+				add_core = THIS #Cagliari
+			}
+			766 = {
+				add_core = THIS #Sassari
+			}
+			502 = {
+				add_core = THIS #Balearics
+			}
+			badboy = 10
+			any_pop = { consciousness = 3 }
+			set_country_flag = expanded_west
+		}
+	}
+
+}
+	

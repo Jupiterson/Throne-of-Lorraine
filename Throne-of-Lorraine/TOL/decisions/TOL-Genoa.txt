@@ -1,0 +1,82 @@
+political_decisions = {
+
+greater_genoa = {
+		picture = italian_islands
+		potential = {
+			NOT = {
+				has_country_flag = greater_genoa
+			}
+			exists = yes
+		
+			is_greater_power = yes
+			military_score = 15
+			war = no
+                        
+			
+
+		}
+		
+		effect = {
+			740 = {
+				add_core = THIS 
+			}
+			746 = {
+				add_core = THIS 
+			}		
+			
+			badboy = 5
+			any_pop = { consciousness = 3 }
+			set_country_flag = greater_genoa
+		}
+	}
+
+expand_east = {
+		picture = reclaim_italian_lands
+		potential = {
+			NOT = {
+				has_country_flag = expanded_east
+			}
+			exists = yes
+#                        has_country_flag = greater_genoa
+		
+			is_greater_power = yes
+			military_score = 45
+			war = no
+                        
+			
+
+		}
+		
+		effect = {
+			745 = {
+				add_core = THIS 
+			}
+			748 = {
+				add_core = THIS 
+			}
+			750 = {
+				add_core = THIS 
+			}
+			2567 = {
+				add_core = THIS 
+			}
+			754 = {
+				add_core = THIS 
+			}
+			755 = {
+				add_core = THIS 
+			}
+			759 = {
+				add_core = THIS 
+			}
+			760 = {
+				add_core = THIS 
+			}
+			
+			badboy = 10
+			any_pop = { consciousness = 3 }
+			set_country_flag = expanded_east
+		}
+	}
+
+}
