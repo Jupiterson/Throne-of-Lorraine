@@ -1,0 +1,163 @@
+political_decisions = {
+    sax_waldenburg = {
+        picture = german_confederation
+        potential = {
+            tag = SAX
+            NOT = { has_country_flag = minigerm_stronk }
+        }
+
+        allow = {
+            OR = {
+                nationalism_n_imperialism = 1
+                year = 1865
+            }
+        }
+
+        effect = {
+            set_country_flag = minigerm_stronk
+            683 = { add_core = SAX }
+            683 = { add_core = GER }
+        }   
+    }
+
+ #   bra_calenberg = {
+ #       picture = german_confederation
+ #       potential = {
+ #           tag = WUR
+ #           NOT = { has_country_flag = bra_stronk }
+ #       }
+##
+ #       allow = {
+ #           OR = {
+ #               nationalism_n_imperialism = 1
+ #               year = 1875
+ #           }
+ #       }###
+#
+ #       effect = {
+ #           set_country_flag = bra_stronk
+  #          537 = { add_core = BRA }
+   ##     }
+   #     ai_will_do = { factor = 1 }
+   # }
+
+    hesse_unite = {
+        picture = german_confederation
+        potential = {
+            OR = {
+                tag = WLD
+                tag = HES
+                tag = HEK
+                tag = FRM
+                tag = NAS
+            }
+            NOT = { has_country_flag = hesse_stronk }
+			ai = no
+        }
+
+        allow = {
+            OR = {
+                nationalism_n_imperialism = 1
+                year = 1875
+            }
+        }
+
+        effect = {
+            set_country_flag = hesse_stronk
+            HES_2560 = { add_core = THIS }
+            HNS = {
+                diplomatic_influence = { who = WLD value = -200 }
+                diplomatic_influence = { who = HES value = -200 }
+                diplomatic_influence = { who = HEK value = -200 }
+                diplomatic_influence = { who = FRM value = -200 }
+                diplomatic_influence = { who = NAS value = -200 }
+            }
+            BAV = {
+                diplomatic_influence = { who = WLD value = -200 }
+                diplomatic_influence = { who = HES value = -200 }
+                diplomatic_influence = { who = HEK value = -200 }
+                diplomatic_influence = { who = FRM value = -200 }
+                diplomatic_influence = { who = NAS value = -200 }
+            }
+            LOR = {
+                diplomatic_influence = { who = WLD value = -200 }
+                diplomatic_influence = { who = HES value = -200 }
+                diplomatic_influence = { who = HEK value = -200 }
+                diplomatic_influence = { who = FRM value = -200 }
+                diplomatic_influence = { who = NAS value = -200 }
+            }
+        }
+    }
+
+   along_the_rhine = {
+        picture = german_confederation
+        potential = {
+            tag = KOL
+            NOT = { has_country_flag = koelsch_stronk }
+        }
+
+        allow = {
+           nationalism_n_imperialism = 1
+           year = 1855
+        }
+
+        effect = {
+         set_country_flag = koelsch_stronk
+         BAD_586 = { add_core = THIS } 
+         FRA_412 = { add_core = THIS } 
+         578 = { add_core = KOL }
+         577 = { add_core = KOL }
+         565 = { add_core = KOL } 
+         570 = { add_core = KOL }
+         2560 = { add_core = KOL }
+               
+            }
+        }
+    
+
+   alles_ausser_deutsch = {
+        picture = german_confederation
+
+        potential = {
+            tag = WUR
+            NOT = { has_country_flag = swabians_stronk }
+        }
+
+         allow = {
+           nationalism_n_imperialism = 1         
+        }
+
+
+        effect = {
+       set_country_flag = swabians_stronk
+         594 = { add_core = WUR }
+         592 = { add_core = WUR }
+
+            }
+    }
+     
+annex_swabia = {
+        picture = german_confederation
+        potential = {
+            tag = BAV
+            NOT = { has_country_flag = swabians_weak }
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+        }
+
+        effect = {
+       set_country_flag = swabians_weak
+         594 = { add_core = BAV }
+            WUR = {
+                all_core = {
+                    add_core = BAV
+                }
+            }
+        }
+        
+    
+
