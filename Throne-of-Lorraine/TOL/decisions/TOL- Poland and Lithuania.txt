@@ -54,7 +54,131 @@ political_decisions = {
         }
     }
 
-    become_poland_lithuania = {
+ unite_poland_hungary = {
+        picture = become_poland_lithuania
+
+        potential = {
+            OR = {
+                primary_culture = polish
+                primary_culture = hungarian
+            }
+            NOT = { exists = PLC }
+            NOT = { has_country_flag = post_colonial_country }
+            NOT = { tag = WSF }
+            NOT = { tag = PLR }
+            NOT = { tag = PHC }
+        }
+
+        allow = {
+            war = no
+            HUN = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            ai = yes
+                            in_sphere = THIS
+                            OR = {
+                                is_vassal = no
+                                vassal_of = THIS
+                            }
+                            war = no
+                            is_greater_power = no
+                        }
+                    }
+                }
+            }
+            POL = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            ai = yes
+                            in_sphere = THIS
+                            OR = {
+                                is_vassal = no
+                                vassal_of = THIS
+                            }
+                            war = no
+                            is_greater_power = no
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            prestige = 30
+            random_owned = {
+                limit = { owner = { accepted_culture = south_german } } owner = { remove_accepted_culture = south_german }
+            }
+            random_owned = {
+                limit = { owner = { accepted_culture = north_german } } owner = { remove_accepted_culture = north_german }
+            }
+            random_owned = {
+                limit = { owner = { accepted_culture = czech } } owner = { remove_accepted_culture = czech }
+            }
+            random_owned = {
+                limit = { owner = { primary_culture = polish } }
+                owner = {
+                    add_accepted_culture = hungarian
+                    all_core = {
+                        add_core = PHC 
+                        remove_core = POL
+                    }
+                }
+                HUN = {
+                    all_core = { add_core = PHC }
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = { primary_culture = hungarian }
+                }
+                owner = {
+                    add_accepted_culture = polish
+                    all_core = {
+                        add_core = PHC 
+                        remove_core = HUN
+                    }
+                }
+                POL = {
+                    all_core = { add_core = PHC }
+                }
+            }
+            any_country = {
+                limit = {
+                    OR = {
+                        in_sphere = THIS
+                        vassal_of = THIS
+                    }
+                }
+                any_owned = {
+                    limit = { is_core = PHC }
+                    secede_province = THIS
+                }
+            }
+            change_tag = PHC 
+            capital = 703
+            any_greater_power = {
+                limit = {
+                    OR = {
+                        primary_culture = russian
+                        is_culture_group = germanic
+                    }
+                    neighbour = THIS
+                }
+                relation = { who = THIS value = -200 }
+                leave_alliance = THIS
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
+
+    unite_poland_lithuania = {
         picture = become_poland_lithuania
 
         potential = {
@@ -520,178 +644,7 @@ political_decisions = {
             factor = 1
         }
     }
-
-    krakow_form_galicia = {
-        picture = become_poland
-        potential = {
-            tag = KRA
-            is_subject = no
-            not = { exists = GLM }
-        }
-
-        allow = {
-            war = no
-            owns = 702 # Lvow
-            owns = 704 # Novy Sacz
-            owns = 705 # Przemsyl
-            owns = 714 # Tarnow
-            owns = 951 # Styri
-            owns = 952 # Ternopil
-            owns = 953 # Stanislavov
-        }
-
-        effect = {
-            prestige = 10
-            all_core = { remove_core = THIS }
-            change_tag = GLM
-            capital = 702
-        }
-    }
-
-    claim_eastern_poland = {
-        picture = become_poland
-        potential = {
-            tag = POL
-            NOT = { has_country_flag = claimed_eastern_poland }
-        }
-        allow = {
-            nationalism_n_imperialism = 1
-            war_policy = jingoism
-            war = no
-            is_vassal = no
-            OR = {
-                is_greater_power = yes
-                is_secondary_power = yes
-            }
-        }
-        effect = {
-            set_country_flag = claimed_eastern_poland
-            badboy = 15
-            955 = { add_core = POL }
-            956 = { add_core = POL }
-            957 = { add_core = POL }
-            RUS_707 = { add_core = POL }
-            RUS_940 = { add_core = POL }
-        }
-        ai_will_do = {
-            factor = 1
-            modifier = { factor = 0 badboy = 0.5 }
-        }
-    }
-
-    january_uprising_victory = {
-        picture = become_poland
-        potential = {
-            tag = CPL
-            owns = 706
-            has_global_flag = january_uprising_happened
-            any_neighbor_country = { has_country_flag = through_january_uprising }
-            has_country_modifier = polish_uprising_mobilization
-        }
-        allow = {
-            war = no
-            any_neighbor_country = {
-                truce_with = THIS
-                has_recently_lost_war = yes
-            }
-        }
-        effect = {
-            any_neighbor_country = { clr_country_flag = through_january_uprising }
-            set_country_flag = poland_is_free
-            remove_country_modifier = polish_uprising_mobilization
-            remove_country_modifier = unrecognized_country
-            any_owned = {
-                limit = { OR = { is_core = CPL is_core = POL } }
-                remove_core = RUS
-            }
-        }
-        ai_will_do = { factor = 1  }
-    }
-
-    revoke_germanization = {
-        picture = become_poland
-        potential = {
-            primary_culture = polish
-            owns = 685
-            owns = 699
-            owns = 700
-            has_global_flag = germanization
-            NOT = { has_country_flag = revoke_germanization }
-        }
-        allow = {
-            nationalism_n_imperialism = 1
-            war = no
-            is_vassal = no
-        }
-
-        effect = {
-            set_country_flag = revoke_germanization
-            any_owned = {
-                limit = {
-                    OR = {
-                        region = PRU_690
-                        region = PRU_701
-                        region = PRU_682
-                    }
-                }
-                remove_province_modifier = drang_nach_osten
-            }
-            GCF = { clr_country_flag = prussian_settlement_commission }
-            GER = { clr_country_flag = prussian_settlement_commission }
-            AUS = { clr_country_flag = prussian_settlement_commission }
-            KUK = { clr_country_flag = prussian_settlement_commission }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    claim_lost_plc_lands = {
-        picture = become_poland_lithuania
-        potential = {
-            OR = {
-                tag = PLC
-                tag = PLR
-            }
-            NOT = { has_country_flag = claim_lost_plc_lands }
-        }
-        allow = {
-            THIS = {
-                all_core = {
-                    owned_by = THIS
-                }
-            }
-            nationalism_n_imperialism = 1
-            war_policy = jingoism
-        }
-        effect = {
-            943 = {
-                add_core = THIS
-            }
-            1007 = {
-                add_core = THIS
-            }
-            1016 = {
-                add_core = THIS
-            }
-            962 = {
-                add_core = THIS
-            }
-            963 = {
-                add_core = THIS
-            }
-            954 = {
-                add_core = THIS
-            }
-            961 = {
-                add_core =     THIS
-            }
-            badboy = 6
-            prestige = 20
-            set_country_flag = claim_lost_plc_lands
-        }
-    }
-
+  
     become_poland_lithuania_ruthenia = {
         picture = poland_lithuania_ruthenia
         potential = {
@@ -840,17 +793,17 @@ political_decisions = {
             NOT = {
                 has_country_flag = trinidad_tobago_purchase
             }
-            ENG = {
+            GEN = {
                 owns = 2237
                 owns = 2238
             }
         }
         allow = {
-            relation = { who = ENG value = 100 }
+            relation = { who = GEN value = 100 }
             money = 75000
         }
         effect = {
-            ENG = { country_event = 21370001 }
+            GEN = { country_event = 21370001 }
             set_country_flag = trinidad_tobago_purchase
         }
 
@@ -869,16 +822,16 @@ political_decisions = {
             NOT = {
                 has_country_flag = buy_gambia_polania
             }
-            ENG = {
+            SCO = {
                 owns = 1785
             }
         }
         allow = {
-            relation = { who = ENG value = 100 }
+            relation = { who = SCO value = 100 }
             money = 50000
         }
         effect = {
-            ENG = { country_event = 21371001 }
+            SCO = { country_event = 21371001 }
             set_country_flag = buy_gambia_polania
         }
 
