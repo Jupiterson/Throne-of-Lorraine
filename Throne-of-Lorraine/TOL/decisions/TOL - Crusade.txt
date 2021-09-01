@@ -1,0 +1,83 @@
+political_decisions = {
+
+
+call_of_crusade = {
+        potential = {
+            has_country_flag = catholic_country          
+            has_global_flag = last_crusade_called                     
+            NOT = { has_country_flag = crusade_time }
+            NOT = { tag = PAP }
+        }
+
+        allow = {          
+            war = no
+            NOT = { truce_with = PAP }
+            NOT = { war_with = PAP }
+            NOT = { truce_with = TUR }
+            NOT = { war_with = TUR }
+        }
+
+        effect = {
+            set_country_flag = crusade_time
+            THIS = { country_event = 33513 }}
+        }
+    }
+
+
+    last_crusade = {
+        potential = {
+            tag = PAP
+            OR = {
+                government = hms_government
+                government = prussian_constitutionalism
+                government = absolute_monarchy
+                government = absolute_empire
+                government = semi_constitutional_empire
+                government = constitutional_empire
+                government = theocracy
+            }
+            FRA = {
+                exists = yes
+                NOT = { any_core = { owned_by = PAP } }
+                OR = {
+                    government = hms_government
+                    government = prussian_constitutionalism
+                    government = absolute_monarchy
+                    government = absolute_empire
+                    government = semi_constitutional_empire
+                    government = constitutional_empire
+                }
+            }
+            VEN = {
+                exists = yes
+                NOT = { any_core = { owned_by = PAP } }
+                OR = {
+                    government = hms_government
+                    government = prussian_constitutionalism
+                    government = absolute_monarchy
+                    government = absolute_empire
+                    government = semi_constitutional_empire
+                    government = constitutional_empire
+                    government = democracy
+                }
+            }
+            NOT = { has_country_flag = league_of_three_emperors }
+        }
+
+        allow = {
+            revolution_n_counterrevolution = 1
+            war = no
+            NOT = { truce_with = FRA }
+            NOT = { war_with = FRA }
+            NOT = { truce_with = VEN }
+            NOT = { war_with = VEN }
+        }
+
+        effect = {
+            set_global_flag = last_crusade_called
+            set_country_flag = league_of_three_emperors
+            FRA = { country_event = 33413 }
+            VEN = { country_event = 33413 }
+        }
+    }
+  }

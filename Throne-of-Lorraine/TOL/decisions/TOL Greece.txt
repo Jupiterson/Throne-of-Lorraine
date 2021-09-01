@@ -1,0 +1,34 @@
+political_decisions = {
+
+    become_greece = {
+   picture = athens_pic
+        potential = {
+            primary_culture = greek
+            NOT = { has_country_flag = post_colonial_country }
+            NOT = { tag = BYZ }
+            NOT = { tag = GRE }
+            NOT = { has_global_flag = sw_set }
+        }
+
+        allow = {
+            
+                prestige = 25
+                is_secondary_power = yes            
+            
+            war = no
+            is_vassal = no
+            owns = 834
+        }
+
+        effect = {
+            prestige = 20
+            change_tag = GRE
+            capital = 834
+
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

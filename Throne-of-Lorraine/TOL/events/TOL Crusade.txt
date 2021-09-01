@@ -1,0 +1,232 @@
+country_event = {
+    id = 33413
+    title = "EVTNAME33413" #Last Crusade
+    desc = "EVTDESC33413"
+    picture = "DIM_aprilbeweging"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT33413OPTA"
+        prestige = 20
+        THIS = { prestige = 15 }
+        relation = { who = PAP value = 200 }
+        create_alliance = PAP 
+        random_country = {
+            limit = {
+                tag = PAP 
+                THIS = { tag = FRA }
+            }
+            diplomatic_influence = { who = THIS value = 200 }
+        }
+        any_greater_power = {
+            limit = {
+                NOT = {
+                    tag = FRA
+                    tag = ITA
+                    tag = GER
+                    tag = BAV
+                    tag = SPA
+                    tag = VEN
+                }
+                alliance_with = THIS
+            }
+            leave_alliance = THIS
+            relation = {
+                who = THIS
+                value = -10
+            }
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    tag = FRA
+                    tag = ITA
+                    tag = GER
+                    tag = BAV
+                    tag = SPA
+                    tag = VEN
+                }
+                exists = yes
+                NOT = { tag = THIS }
+            }
+            relation = { who = THIS value = 100 }
+        }
+        ai_chance = {
+            factor = 80          
+            modifier = {
+                factor = 0
+                FROM = { any_owned_province = { is_core = THIS } }
+            }
+        }
+    }
+
+    option = {
+        name = "EVT33413OPTB"
+        PAP = {
+            prestige = -40
+            relation = { who = THIS value = -50 }
+        }
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0.5
+                tag = FRA
+            }
+            modifier = {
+                factor = 0.75
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 0.5
+                relation = { who = PAP value = 50 }
+            }
+            modifier = {
+                factor = 0
+                alliance_with = PAP 
+            }
+            modifier = {
+                factor = 2
+                FROM = { any_owned_province = { is_core = THIS } }
+            }
+        }
+    }
+}
+
+#call of crusade
+country_event = {
+    id = 33513
+    title = "EVTNAME33513" #Last Crusade
+    desc = "EVTDESC33513"
+    picture = "DIM_aprilbeweging"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT33513OPTA"
+        prestige = 20
+        PAP = { prestige = 85 }
+        relation = { who = PAP value = 200 }
+        create_alliance = PAP 
+        random_country = {
+            limit = {
+                tag = PAP 
+                THIS = { tag = FRA }
+            }
+            diplomatic_influence = { who = THIS value = 200 }
+        }
+        any_greater_power = {
+            limit = {
+                NOT = {
+                    tag = FRA
+                    tag = ITA
+                    tag = GER
+                    tag = BAV
+                    tag = SPA
+                    tag = VEN
+                }
+                alliance_with = THIS
+            }
+            leave_alliance = THIS
+            relation = {
+                who = THIS
+                value = -10
+            }
+        }
+      
+        ai_chance = {
+            factor = 80
+            modifier = {
+                factor = 2
+                tag = BAV
+            }
+            modifier = {
+                factor = 0
+                FROM = { any_owned_province = { is_core = THIS } }
+            }
+        }
+    }
+
+    option = {
+        name = "EVT33513OPTB"
+        PAP = {
+            prestige = -40
+            relation = { who = THIS value = -50 }
+        }
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0.5
+                relation = { who = PAP value = 50 }
+            }
+            modifier = {
+                factor = 0
+                alliance_with = PAP 
+            }
+            modifier = {
+                factor = 2
+                FROM = { any_owned_province = { is_core = THIS } }
+            }
+        }
+    }
+}
+
+
+
+
+#Declare War on the Ottomans 
+country_event = {
+    id = 99932
+    title = "EVTNAME99932"
+    desc = "EVTDESC99932"
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT99932OPTA"
+        prestige = 10
+        any_pop = {
+            limit = {
+                is_primary_culture = yes
+            }
+            militancy = -8
+            consciousness = -8
+        }
+        war = {
+            target = TUR
+            attacker_goal = { casus_belli = cut_down_to_size_ottoman }
+            defender_goal = { casus_belli = status_quo }
+            call_ally = yes
+        }
+
+        any_country = {
+            limit = {
+                has_country_modifier = great_eastern_crisis
+            }
+            remove_country_modifier = great_eastern_crisis
+        }
+
+        ai_chance = { factor = 1 }
+    }
+
+    option = {
+        name = "EVT99932OPTB"
+        prestige = -45
+        any_pop = {
+            limit = {
+                is_primary_culture = yes
+            }
+            militancy = 8
+            consciousness = 8
+        }
+
+        any_country = {
+            limit = {
+                has_country_modifier = great_eastern_crisis
+            }
+            remove_country_modifier = great_eastern_crisis
+        }
+
+        ai_chance = { factor = 0 }
+    }
+}
