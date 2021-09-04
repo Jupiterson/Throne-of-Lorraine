@@ -1,0 +1,67 @@
+political_decisions = {
+#Originally scripted by Paradox for Victoria
+#stolen by me
+    german_zoll_verein = {
+        picture = lmu
+        potential = {
+            primary_culture = north_german
+            primary_culture = rhinelander
+            primary_culture = south_german
+
+            NOT = {
+                has_country_flag = joined_lmu
+            }
+        }
+        allow = {
+            year = 1845
+            invention = silver_standard
+            NOT = { war_with = BAV }
+            NOT = { war_with = LOR }
+            NOT = { war_with = HNS }
+        }
+
+        effect = {
+            prestige = 25
+            add_country_modifier = {
+                name = latin_monetary_union
+                duration = -1
+            }
+            set_country_flag = joined_lmu
+            425 = { trade_goods = precious_goods }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+   
+
+    german_zoll_verein_UBD = {
+        picture = lmu
+        potential = {
+            tag = UBD
+            NOT = {
+                has_country_flag = joined_lmu
+            }
+        }
+        allow = {
+            year = 1865
+            invention = silver_standard
+            NOT = { war_with = FRA }
+            NOT = { war_with = BEL }
+            NOT = { war_with = ITA }
+        }
+
+        effect = {
+            prestige = 20
+            add_country_modifier = {
+                name = latin_monetary_union
+                duration = -1
+            }
+            set_country_flag = joined_lmu
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }   
+}
