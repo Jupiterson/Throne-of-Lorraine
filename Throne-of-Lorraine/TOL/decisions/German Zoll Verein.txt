@@ -4,10 +4,7 @@ political_decisions = {
     german_zoll_verein = {
         picture = lmu
         potential = {
-            primary_culture = north_german
-            primary_culture = rhinelander
-            primary_culture = south_german
-
+            has_country_flag = german_nation
             NOT = {
                 has_country_flag = joined_lmu
             }
@@ -27,7 +24,11 @@ political_decisions = {
                 duration = -1
             }
             set_country_flag = joined_lmu
-            425 = { trade_goods = precious_goods }
+            add_country_modifier = {
+                name = customs_union
+                duration = -1
+            }
+#            425 = { trade_goods = precious_goods }
         }
         ai_will_do = {
             factor = 1

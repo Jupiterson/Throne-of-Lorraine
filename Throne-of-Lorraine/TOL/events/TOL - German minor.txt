@@ -1,0 +1,30 @@
+#Nord-Afrika-Kompanie
+country_event = {
+	title = "the Nord Afrika Kompanie"
+	desc = "EVTDESC100019"
+	#major = yes
+
+	id = 100020
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+	          name = "It will be the pearl in our crown!"
+                          3290 = { secede = BAV } 
+			  MGH = { all_core = { add_core = NAK } }
+			  FROM = { release = NAK }
+			  FROM = { create_vassal = NAK }
+			  NAK = { government = colonial_company }
+			  THIS = { money = 100000 } 
+			  THIS = { 
+				          diplomatic_influence = {
+						                           who = FROM 
+						                           value = 800
+						  } 
+			  } 
+			  
+	}
+}
