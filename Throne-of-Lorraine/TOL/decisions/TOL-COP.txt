@@ -4,6 +4,7 @@ political_decisions = {
 		picture = map_levant
 		potential = {
 			tag = COP
+                        tag = UCO
 			NOT = { has_country_flag = conquest_of_levant }
 		}
 		allow = {
@@ -79,27 +80,27 @@ political_decisions = {
                 owner = {
                     add_accepted_culture = amhara
                     all_core = {
-                        add_core = PHC 
-                        remove_core = POL
+                        add_core = UCO
+                        remove_core = COP
                     }
                 }
-                HUN = {
-                    all_core = { add_core = PHC }
+                ETH = {
+                    all_core = { add_core = UCO }
                 }
             }
             random_owned = {
                 limit = {
-                    owner = { primary_culture = hungarian }
+                    owner = { primary_culture = amhara }
                 }
                 owner = {
-                    add_accepted_culture = polish
+                    add_accepted_culture = copt
                     all_core = {
-                        add_core = PHC 
+                        add_core = UCO
                         remove_core = HUN
                     }
                 }
                 POL = {
-                    all_core = { add_core = PHC }
+                    all_core = { add_core = UCO }
                 }
             }
             any_country = {
@@ -110,11 +111,11 @@ political_decisions = {
                     }
                 }
                 any_owned = {
-                    limit = { is_core = PHC }
+                    limit = { is_core = UCO }
                     secede_province = THIS
                 }
             }
-            change_tag = PHC 
+            change_tag = UCO
             capital = 703
             any_greater_power = {
                 limit = {
@@ -139,6 +140,7 @@ political_decisions = {
 		picture = form_the_ikhwan
 		potential = {
 			tag = COP
+                        tag = UCO
 			NOT = { has_country_flag = conquest_of_syria }
 		}
 		allow = {
