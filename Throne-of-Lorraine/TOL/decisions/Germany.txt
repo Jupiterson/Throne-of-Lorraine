@@ -207,9 +207,10 @@ political_decisions = {
     support_ruhr_industrialism = {
         potential = {
             OR = {
-                tag = PRU
-                tag = GER
+                tag = KOL
+                tag = DOR
                 tag = NGF
+                tag = GER
                 tag = GCF
             }
             NOT = { tech_school = prussian_tech_school }
@@ -243,10 +244,11 @@ political_decisions = {
         picture = die_wacht_am_rhein
         potential = {
             OR = {
+                tag = KOL
+                tag = DOR
+                tag = NGF
                 tag = GER
                 tag = GCF
-                tag = NGF
-                tag = PRU
             }
             NOT = { has_global_flag = watching_the_rhine }
             OR = {
@@ -527,7 +529,6 @@ political_decisions = {
         picture = von_moltkes_staff_reforms
         potential = {
             OR = {
-                tag = PRU
                 tag = GER
                 tag = NGF
             }
@@ -1089,55 +1090,6 @@ political_decisions = {
             inherit = LBG
         }
     }
-
-    annex_sigmaringen = {
-        picture = declare_republic_of_neuchatel
-        potential = {
-            OR = {
-                tag = PRU
-                tag = NGF
-                tag = GER
-            }
-            NOT = { owns = 594 }
-            owns = 549
-            SGM = { exists = yes ai = yes owns = 594 }
-        }
-
-        allow = {
-            war = no
-            is_sphere_leader_of = SGM
-            OR = {
-                AND = {
-                    SGM = { vassal_of = THIS average_militancy = 1 }
-                    nationalism_n_imperialism = 1
-                }
-                NOT = {
-                    SGM = {
-                        OR = {
-                            government = hms_government
-                            government = prussian_constitutionalism
-                            government = absolute_monarchy
-                            government = absolute_empire
-                            government = semi_constitutional_empire
-                            government = constitutional_empire
-                        }
-                    }
-                }
-            }
-        }
-
-        effect = {
-            diplomatic_influence = { who = SGM value = -400 }
-            release = SGM
-            leave_alliance = SGM
-            SGM = { any_owned = { any_pop = { militancy = 1 } } }
-            594 = { remove_core = SGM add_core = THIS }
-            594 = { add_core = THIS }
-            inherit = SGM
-        }
-        ai_will_do = { factor = 1 }
-    }
-
 
     access_to_the_rhine = {
         picture = marching_soldiers

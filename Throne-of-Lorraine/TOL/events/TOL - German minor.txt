@@ -28,3 +28,66 @@ country_event = {
 			  
 	}
 }
+
+country_event = {
+
+    id = 40004
+    title = "Trade for a port" #Trade For Jade Territory?
+    desc = "Bavaria asked for a port"
+    picture = "PRUOLDtreaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "WEll give them their port"
+        set_country_flag = sold_jade
+        treasury = 200000
+        717 = {
+            change_province_name = "Murano Hafen"
+        717 = { secede_province = BAV remove_core = VEN add_core = BAV }
+        BAV = { country_event = 40002 }
+
+        ai_chance = { factor = 100 }
+    }
+
+    option = {
+        name = "How 'bout no"
+        BAV = { country_event = 40006 }
+        set_country_flag = did_not_sell_jade
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+
+    id = 40006
+    title = "No port" #Wilhelmshaven completed
+    desc = "They didnt comply"
+    picture = "imperialshipyard"
+
+    trigger = {
+        has_country_flag = building_wilhelmshaven
+        NOT = { has_country_flag = built_wilhelmshaven }
+    }
+
+    mean_time_to_happen = {
+        months = 140
+        modifier = {
+            factor = 0.5
+            year = 1870
+        }
+        modifier = {
+            factor = 0.5
+            year = 1880
+        }
+    }
+
+    option = {
+        name = "Well, then no"
+        prestige = -20
+        set_country_flag = built_wilhelmshaven
+    }
+}
+
