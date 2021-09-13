@@ -5,7 +5,7 @@ religion = hindu
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_tradition
-literacy = 0.1
+literacy = 0.4
 
 # Political reforms
 slavery = no_slavery
@@ -38,12 +38,16 @@ colonial_policy = no_colonies
 
 set_country_flag = hindu_country
 
-# Inventions
-#bottling_process = yes
-modern_winemaking = yes
-big_sail_ships = yes
-sail_ships_transport = yes
-big_sail_support = yes
+foreign_weapons = yes_foreign_weapons
+army_schools = yes_army_schools
+foreign_navies = yes_foreign_navies
+naval_schools = yes_naval_schools
+land_reform = yes_land_reform
+finance_reform = finance_reform_two
+
+# Technologies
+flintlock_rifles = 1
+post_nelsonian_thought = 1
 
 ruling_party = BNG_conservative
 upper_house = {

@@ -1,0 +1,70 @@
+political_decisions = {
+
+ swedish_pommerania = {
+		picture = map_baltic
+		potential = {
+			tag = SWE
+			NOT = {
+				has_country_flag = pommerania
+			}
+		}
+		allow = {
+			state_n_government = 1
+		}
+		effect = {
+			PRU_544 = {
+				add_core = SWE
+			}
+			
+			PRU_546 = {
+				add_core = SWE
+			}
+			
+			badboy = 5
+			prestige = 15
+			set_country_flag = pommerania
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+
+     danish_pommerania = {
+		picture = map_baltic
+		potential = {
+			tag = DEN
+                        tag = DNN
+			NOT = {
+				has_country_flag = pommerania
+			}
+		}
+		allow = {
+			543 = {
+				owned_by = THIS
+			}
+		}
+		effect = {
+			PRU_544 = {
+				add_core = SWE
+			}
+			
+			PRU_546 = {
+				add_core = SWE
+			}
+			
+			badboy = 5
+			prestige = 15
+			set_country_flag = pommerania
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+
+
+
+	}
+	
+
+
+   
+
+}
