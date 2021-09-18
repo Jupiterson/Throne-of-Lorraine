@@ -1,0 +1,101 @@
+political_decisions = {
+
+claim_griko_lands = {
+        picture = italian_islands
+        potential = {
+            tag = SYC
+            NOT = { has_country_flag = grikko_lands }
+        }
+
+        allow = {
+            OR = {                
+                year = 1845
+            }
+        }
+
+        effect = {
+            set_country_flag = grikko_lands 
+            758 = { add_core = SYC }
+            759 = { add_core = SYC }
+            760 = { add_core = SYC }
+        }   
+    }
+
+claim_former_genoese_land = {
+        picture = italian_islands
+        potential = {
+            tag = SYC
+            NOT = { has_country_flag = former_genoese }
+        }
+
+        allow = {
+            OR = {
+                nationalism_n_imperialism = 1
+            }
+        }
+
+        effect = {
+            badboy = 10
+            set_country_flag = former_genoese 
+            854 = { add_core = SYC }
+            765 = { add_core = SYC }
+            766 = { add_core = SYC }
+            473 = { add_core = SYC }
+            502 = { add_core = SYC }
+        }   
+    }
+
+claim_tunis = {
+        picture = italian_islands
+        potential = {
+            tag = SYC
+            NOT = { has_country_flag = claimed_tunis }
+        }
+
+        allow = {
+            OR = {
+                nationalism_n_imperialism = 1
+                year = 1860
+                is_greater_power = yes
+      
+            }
+        }
+
+        effect = {
+            badboy = 5
+            set_country_flag = claimed_tunis 
+            1725 = { add_core = THIS }
+            1726 = { add_core = THIS }
+            1728 = { add_core = THIS }
+        }   
+    }
+	
+	claim_maghreb_coast = {
+        picture = italian_islands
+        potential = {
+            tag = SYC
+            NOT = { has_country_flag = maghreb_coast }
+        }
+
+        allow = {
+            OR = {
+                nationalism_n_imperialism = 1
+            }
+        }
+
+        effect = {
+            badboy = 15
+            set_country_flag = maghreb_coast
+            1737 = { add_core = THIS }
+            1736 = { add_core = THIS }
+            1735 = { add_core = THIS }
+            1734 = { add_core = THIS }
+            1731 = { add_core = THIS }
+            1730 = { add_core = THIS }
+        }   
+    }
+
+
+
+
+}

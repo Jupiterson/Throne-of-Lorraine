@@ -229,7 +229,7 @@ unite_the_coast = {
         picture = annex_united_baltic_duchy
         potential = {
             OR = { 
-                tag = UBD
+                
                 tag = HNS              
             }
             NOT = { has_country_flag = big_hanse}
@@ -242,12 +242,6 @@ unite_the_coast = {
             nationalism_n_imperialism = 1
             is_greater_power = yes
             OR = {
-                HNS = {
-                    OR = {
-                        substate_of  = THIS
-                        vassal_of = THIS
-                    }
-                }
                 UBD = {
                     OR = {
                         substate_of = THIS
@@ -269,7 +263,6 @@ unite_the_coast = {
             }
 
             UBD = { all_core = { add_core = HNS } }
-            HNS = { all_core = { add_core = HNS } }
            
             add_accepted_culture = volga_german
             add_accepted_culture = latvian
@@ -285,4 +278,55 @@ unite_the_coast = {
             }
         }
     }
+	
+	
+	unite_the_coast_ubd = {
+        picture = annex_united_baltic_duchy
+        potential = {
+            OR = { 
+                
+                tag = UBD              
+            }
+            NOT = { has_country_flag = big_baltic}
+        }
+
+        allow = {
+            war = no
+            prestige = 100
+            nationalism_n_imperialism = 1
+            is_greater_power = yes
+            OR = {
+                HNS = {
+                    OR = {
+                        substate_of  = THIS
+                        vassal_of = THIS
+                    }
+                }
+                
+            }
+        }
+
+        effect = {
+            prestige = 30
+            badboy = 20
+
+            any_country = {
+                limit = {
+                    tag = UBD
+                }
+                annex_to = THIS
+            }
+            
+            HNS = { all_core = { add_core = UBD } }
+          
+
+            set_country_flag = big_hanse
+
+            country_event = {
+                id = 718171
+                days = 10
+            }
+        }
+    }
+	
 }

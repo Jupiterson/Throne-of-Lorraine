@@ -1,7 +1,7 @@
 political_decisions = {
 
 #stolen from AOE
-demand_milan = {
+             demand_milan = {
 		picture = italian_trentino
 		potential = {
                         tag = VEN
@@ -9,13 +9,10 @@ demand_milan = {
 		}
 		
 		allow = {
-			OR = {
-				LOM = { exists = no }
-			}
-			OR = {
+
 				owns = 738 #Parma
 				owns = 739 #Modena
-			}
+			
 			owns = 742 #Ferrara
 			is_secondary_power = yes
 			military_score = 25
@@ -89,6 +86,29 @@ expand_west = {
 			set_country_flag = expanded_west
 		}
 	}
+
+remove_milan_cores_setup = {
+        picture = swabia
+        potential = {
+            tag = VEN
+            NOT = { has_country_flag = swabians_weak }
+        }
+
+        allow = {      
+            war = no
+            }
+     
+        
+
+        effect = {
+            VEN = {
+                all_core = {
+                    remove_core = LOM
+                }
+            }
+        }
+   }
+
 
 }
 	

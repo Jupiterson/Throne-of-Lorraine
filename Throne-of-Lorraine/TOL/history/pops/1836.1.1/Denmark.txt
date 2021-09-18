@@ -110,40 +110,45 @@
         size = 14500
     }
 }
-#Ribe (148000/37000 POPS)
+#Ribe (148000/37000 POPS) now Rügen
 #1k moved to 2557
 #10k moved to 2557
 368 = {
     aristocrats = {
-        culture = danish
+        culture = north_german
         religion = protestant
-        size = 250
+        size = 350
     }
 
     clergymen = {
-        culture = danish
+        culture = north_german
         religion = protestant
-        size = 250
+        size = 375
     }
 
     artisans = {
-        culture = danish
+        culture = north_german
         religion = protestant
-        size = 1100
+        size = 1825
     }
 
     soldiers = {
-        culture = danish
+        culture = north_german
         religion = protestant
-        size = 1100
+        size = 1000
     }
 
     farmers = {
-        culture = danish
+        culture = low_german
         religion = protestant
-        size = 23400
+        size = 18650
     }
 
+    farmers = {
+        culture = north_german
+        religion = protestant
+        size = 23500
+    }
 }
 
 # Esbjerg (Pops moved from Aalborg)
