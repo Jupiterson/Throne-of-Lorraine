@@ -1,11 +1,12 @@
-capital = 575
-primary_culture = north_german
-culture = rhinelander
-religion = catholic
-government = theocracy
+capital = 605
+primary_culture = south_german
+religion = reformed
+government = democracy
 plurality = 0
-nationalvalue = nv_order
-literacy = 0.0788665
+nationalvalue = nv_liberty
+literacy = 0.7
+
+is_releasable_vassal = no
 
 civilized = yes
 
@@ -20,20 +21,20 @@ school_reforms = no_schools
 
 # political reforms
 slavery=yes_slavery
-vote_franschise=landed_voting
-upper_house_composition=appointed
+vote_franschise=wealth_weighted_voting
+upper_house_composition=state_equal_weight
 voting_system=jefferson_method
-public_meetings=no_meeting
+public_meetings=yes_meeting
 press_rights=censored_press
-trade_unions=state_controlled
-political_parties=harassment
+trade_unions=non_socialist
+political_parties=gerrymandering
 
-ruling_party = PRU_reactionary
+ruling_party = PRU_liberal
 upper_house =
 {
     fascist = 0
-    liberal = 7
-    conservative = 89
+    liberal = 16
+    conservative = 80
     reactionary = 4
     radical = 0
     socialist = 0
@@ -41,20 +42,23 @@ upper_house =
 }
 
 # Starting Consciousness
-consciousness = 3
-nonstate_consciousness= 0.10998
+consciousness = 2
+nonstate_consciousness= 0
 
 # Technologies
 basic_chemistry = 1
 bronze_muzzle_loaded_artillery = 1
 classicism_n_early_romanticism = 1
+clean_coal = 1
 early_classical_theory_and_critique = 1
 enlightenment_thought = 1
+experimental_railroad = 1
 flintlock_rifles = 1
 freedom_of_trade = 1
 guild_based_production = 1
 late_enlightenment_philosophy = 1
 malthusian_thought = 1
+mechanical_production = 1
 mechanized_mining = 1
 no_standard = 1
 post_napoleonic_thought = 1
@@ -62,8 +66,11 @@ post_nelsonian_thought = 1
 practical_steam_engine = 1
 private_banks = 1
 publishing_industry = 1
+stock_exchange = 1
 water_wheel_power = 1
 prestige=0
-oob = "KOL_OOB.txt"
+oob = "AAC_OOB.txt"
+
 set_country_flag = member_hre
 set_country_flag = religi
+set_country_flag = german_nation
