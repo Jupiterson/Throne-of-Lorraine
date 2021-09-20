@@ -22,6 +22,33 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
+        embrace_the_misri = {
+        picture = embrace_minority
+        potential = {
+            tag = COP
+            NOT = {
+                OR = {
+                    accepted_culture = misri
+                    has_country_flag = embraced_misri
+                }
+            }
+        }
+
+        allow = {
+            year = 1850
+            prestige = 50
+        }
+
+        effect = {
+            set_country_flag = embraced_misri
+            add_accepted_culture = misri
+            prestige = 25            
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
         unite_the_copts = {
         picture = become_poland_lithuania
 

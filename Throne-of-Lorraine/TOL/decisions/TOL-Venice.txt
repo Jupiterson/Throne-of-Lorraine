@@ -91,7 +91,7 @@ remove_milan_cores_setup = {
         picture = swabia
         potential = {
             tag = VEN
-            NOT = { has_country_flag = swabians_weak }
+            NOT = { has_country_flag = milan_setup }
         }
 
         allow = {      
@@ -101,6 +101,7 @@ remove_milan_cores_setup = {
         
 
         effect = {
+          set_country_flag = milan_setup
             VEN = {
                 all_core = {
                     remove_core = LOM
