@@ -1,4 +1,4 @@
-BAD = {
+LOR = {
     value = 150
     military_access = yes
 }
@@ -42,6 +42,47 @@ leader = {
     personality = mediocre
     background = aristocrat
     prestige = 0.1
+}
+
+army = {
+    name = "III. Armee"
+    location = 619
+    regiment = {
+        name= "1.8. Infanteriedivision"
+        type = infantry
+        home = 628
+    }
+
+    regiment = {
+        name= "2.8. Infanteriedivision"
+        type = infantry
+        home = 642
+    }
+
+    regiment = {
+        name= "3.8. Infanteriedivision"
+        type = infantry
+        home = 768
+    }
+
+    regiment = {
+        name= "1.9. Infanteriedivision"
+        type = infantry
+        home = 624
+    }
+
+    regiment = {
+        name= "2.9. Infanteriedivision"
+        type = infantry
+        home = 649
+    }
+
+    regiment = {
+        name= "3.9. Infanteriedivision"
+        type = infantry
+        home = 633
+    }
+
 }
 
 army = {

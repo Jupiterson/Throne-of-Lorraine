@@ -53,6 +53,61 @@ incorparate_vassals = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	form_allemannia = {
+        picture = swabia
+        potential = {
+            capital_scope = { continent = europe }
+            NOT = { has_country_flag = post_colonial_country }
+			has_country_flag = allemia
+            
+            NOT = { exists = ALE }
+        }
+
+        allow = {
+            prestige = 45
+            nationalism_n_imperialism = 1
+            is_greater_power = yes
+            NOT = {
+                war_with = FRA
+                war_with = NET
+            }
+            OR = {               
+                ALE = {
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            owner = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                }
+                                war = no
+                                is_greater_power = no
+                            }
+                        }
+                    }
+                }
+            }
+	  }
+            
+
+        effect = {
+            prestige = 20
+            all_core = {
+                add_core = ALE
+            }
+           
+            }
+            change_tag = ALE
+            add_accepted_culture = north_german
+            set_global_flag = allemannia_united         
+                     
+        
+        ai_will_do = { factor = 1 }
+    }
+	
 
  claim_switzerland_bav = {
         picture = declare_neutrality

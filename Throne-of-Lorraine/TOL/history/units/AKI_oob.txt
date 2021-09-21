@@ -646,108 +646,119 @@ leader = {
 }
 
 army = {
-    name = "US Dragoons"
-    location = 199
+    name = "The Kannata Garrison"
+    location = 46
+
     regiment = {
-        name= "1st Cavalry Regiment"
-        type = dragoon
-        home = 223
+        name= "Prince of Wales's Lancers"
+        type = cuirassier
+        home = 276
     }
 
     regiment = {
-        name= "2nd Cavalry Regiment"
-        type = dragoon
-        home = 241
-    }
-
-    regiment = {
-        name= "3rd Cavalry Regiment"
-        type = dragoon
-        home = 205
-    }
-
-}
-
-army = {
-    name = "Army of the South"
-    location = 200
-    regiment = {
-        name= "1st Regiment of Infantry"
+        name= "12th (The East Suffolk) Regiment"
         type = infantry
-        home = 211
+        home = 277
     }
 
     regiment = {
-        name= "2nd Regiment of Infantry"
+        name= "9th (The East Norfolk) Regiment"
         type = infantry
-        home = 206
+        home = 277
     }
 
     regiment = {
-        name= "3rd Regiment of Infantry"
+        name= "Canadian Frontier Light Infantry"
         type = infantry
-        home = 188
+        home = 46
     }
 
     regiment = {
-        name= "1st Regiment of Artillery"
+        name= "Prince of Wales's Own Regiment"
+        type = infantry
+        home = 286
+    }
+
+    regiment = {
+        name= "1st Canadian Royal Artillery"
         type = artillery
-        home = 195
-    }
-
-}
-
-army = {
-    name = "US Army"
-    location = 220
-    regiment = {
-        name= "4th Regiment of Infantry"
-        type = infantry
-        home = 243
+        home = 266
     }
 
     regiment = {
-        name= "5th Regiment of Infantry"
-        type = infantry
-        home = 232
-    }
-
-    regiment = {
-        name= "6th Regiment of Infantry"
-        type = infantry
-        home = 235
-    }
-
-    regiment = {
-        name= "2nd Regiment of Artillery"
+        name= "2nd Canadian Royal Artillery"
         type = artillery
-        home = 234
+        home = 292
+    }
+
+    regiment = {
+        name= "1st Regiment Royal Artillery"
+        type = artillery
+        home = 255
+    }
+
+    regiment = {
+        name= "3rd Regiment Royal Artillery"
+        type = artillery
+        home = 303
     }
 
 }
+
 
 army = {
-    name = "Army of Observation"
-    location = 144
+    name = "The Akino Garrison"
+    location = 58
+
     regiment = {
-        name= "7th Regiment of Infantry"
-        type = infantry
-        home = 238
+        name= "2nd Dragoons (Royal Scots Greys)"
+        type = cuirassier
+        home = 269
     }
 
     regiment = {
-        name= "8th Regiment of Infantry"
+        name= "1st Canadian Royal Regiment"
         type = infantry
-        home = 226
+        home = 58
     }
 
     regiment = {
-        name= "9th Regiment of Infantry"
+        name= "The Welch Regiment"
         type = infantry
-        home = 247
+        home = 274
     }
 
+    regiment = {
+        name= "Duke of Cornwall's Light Infantry"
+        type = infantry
+        home = 277
+    }
+
+    regiment = {
+        name= "34th (Cumberland) Regiment"
+        type = infantry
+        home = 264
+    }
+
+    regiment = {
+        name= "6th Regiment Royal Artillery"
+        type = artillery
+        home = 259
+    }
+
+    regiment = {
+        name= "7th Regiment Royal Artillery"
+        type = artillery
+        home = 275
+    }
+
+    regiment = {
+        name= "8th Regiment Royal Artillery"
+        type = artillery
+        home = 267
+    }
 }
+
 
 navy = {
     name = "1st Squadron"
@@ -863,6 +874,67 @@ navy = {
     }
 
 }
+
+navy = {
+    name = "North America Station"
+    location = 71 #Halifax
+    ship = {
+        name= "HMS Saint Vincent"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Wellesley"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Aeolus"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Barham"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Daedalus"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Druid"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Dublin"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Hebe"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Mercury"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Mermaid"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Rhadamanthus"
+        type = commerce_raider
+    }
+
+}
+
 
 navy = {
     name = "2nd Reserve Squadron"

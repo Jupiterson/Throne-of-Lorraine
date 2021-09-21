@@ -1,0 +1,84 @@
+political_decisions = {
+  form_hispania = {
+        picture = create_iberia
+        potential = {
+            capital_scope = { continent = europe }
+            NOT = { has_country_flag = post_colonial_country }
+            OR = {
+                tag = SPA
+                tag = ARN
+                tag = LEO
+				tag = SEV
+				tag = POR
+            }
+            NOT = { exists = IBR }
+        }
+
+        allow = {
+            prestige = 45
+            nationalism_n_imperialism = 1
+            is_greater_power = yes
+            NOT = {
+                war_with = FRA
+            }
+            OR = {               
+                GNA = {
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            owner = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                }
+                                war = no
+                                is_greater_power = no
+                            }
+                        }
+                    }
+                }
+            }
+            OR = {
+                IBR = {
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            owner = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                }
+                                war = no
+                                is_greater_power = no
+                            }
+                        }
+                    }
+                }               
+            }
+        }
+
+        effect = {
+            prestige = 20
+            all_core = {
+                remove_core = THIS
+                add_core = IBR
+            }
+           IRE = {
+                all_core = {
+                    add_core = IBR
+                }
+            }
+            change_tag = IBR
+            add_accepted_culture = aragonese
+            add_accepted_culture = asturleonese
+            add_accepted_culture = catalan
+			add_accepted_culture = spanish
+			add_accepted_culture = portugese
+            set_global_flag = iberia_united         
+                     
+        }
+        ai_will_do = { factor = 1 }
+    }
+}

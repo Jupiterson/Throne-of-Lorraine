@@ -1,0 +1,364 @@
+#Relations
+
+BAV = {
+    value = 185
+}
+
+leader = {
+    name = "Joseppe Alberto"
+    picture = aus_gen_radetzky
+    date = 1835.1.1
+    type = land
+    personality = implacable
+    background = school_of_the_bayonet
+    prestige = 0.8
+}
+
+
+leader = {
+    name = "Carlo Alberto"
+    date = 1831.1.1
+    type = land
+    personality = openminded
+    background = aristocrat
+    prestige = 0.5
+}
+
+leader = {
+    name = "Emanuele Pes"
+    date = 1820.1.1
+    type = land
+    personality = diplomatic
+    background = politician
+    prestige = 0.2
+}
+
+leader = {
+    name = "Eusebio Bava"
+    date = 1832.1.1
+    type = land
+    personality = cautious
+    background = war_college
+    prestige = 0.1
+}
+
+leader = {
+    name = "Ettore Gerbaix"
+    date = 1834.1.1
+    type = land
+    personality = scared
+    background = aristocrat
+    prestige = 0.0
+}
+
+leader = {
+    name = "Giuseppe Albini"
+    date = 1836.1.1
+    type = sea
+    personality = indifferent
+    background = war_college
+    prestige = 0.0
+}
+
+leader = {
+    name = "La Marmora-Masserano"
+    date = 1836.1.1
+    type = land
+    personality = mediocre
+    background = cavalry_school
+    prestige = 0.0
+}
+
+leader = {
+    name = "Agostino Chiodo"
+    date = 1836.1.1
+    type = land
+    personality = careful
+    background = engineer
+    prestige = 0.0
+}
+
+army = {
+    name = "IV. Armee"
+    location = 729
+    regiment = {
+        name= "1.4. Infanteriedivision"
+        type = infantry
+        home = 612
+    }
+
+    regiment = {
+        name= "2.4. Infanteriedivision"
+        type = infantry
+        home = 629
+    }
+
+    regiment = {
+        name= "3.4. Infanteriedivision"
+        type = infantry
+        home = 726
+    }
+
+    regiment = {
+        name= "1.5. Infanteriedivision"
+        type = infantry
+        home = 614
+    }
+
+    regiment = {
+        name= "2.5. Infanteriedivision"
+        type = infantry
+        home = 648
+    }
+
+    regiment = {
+        name= "3.5. Infanteriedivision"
+        type = infantry
+        home = 714
+    }
+}
+
+
+army = {
+    name = "Lombardy Army"
+    location = 726
+    regiment = {
+        name= "1.1. Kavalleriedivision"
+        type = cuirassier
+        home = 619
+    }
+
+    regiment = {
+        name= "2.1. Kavalleriedivision"
+        type = cuirassier
+        home = 639
+    }
+
+    regiment = {
+        name= "3.1. Kavalleriedivision"
+        type = cuirassier
+        home = 631
+    }
+
+    regiment = {
+        name= "2.2. Infanteriedivision"
+        type = infantry
+        home = 729
+    }
+
+    regiment = {
+        name= "3.2. Infanteriedivision"
+        type = infantry
+        home = 771
+    }
+
+    regiment = {
+        name= "1.3. Infanteriedivision"
+        type = infantry
+        home = 618
+    }
+
+    regiment = {
+        name= "2.3. Infanteriedivision"
+        type = infantry
+        home = 773
+    }
+
+    regiment = {
+        name= "3.3. Infanteriedivision"
+        type = artillery
+        home = 728
+    }
+}
+
+army = {
+    name = "The Australia Garrison"
+    location = 2468
+    regiment = {
+        name= "56th (West Essex) Regiment"
+        type = infantry
+        home = 299
+    }
+
+    regiment = {
+        name= "2nd (The Queen's Royal) Regiment"
+        type = infantry
+        home = 283
+    }
+
+    regiment = {
+        name= "The Royal Lancaster Regiment"
+        type = infantry
+        home = 285
+    }
+
+}
+
+navy = {
+    name = "3rd Transport Squadron"
+    location = 1321 #Colombo
+    ship = {
+        name= "11th Transport Flotilla"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "12th Transport Flotilla"
+        type = clipper_transport
+    }
+    ship = {
+        name= "13th Transport Flotilla"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "14th Transport Flotilla"
+        type = clipper_transport
+    }
+    ship = {
+        name= "15th Transport Flotilla"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "16th Transport Flotilla"
+        type = clipper_transport
+    }
+    ship = {
+        name= "17th Transport Flotilla"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "18th Transport Flotilla"
+        type = clipper_transport
+    }
+
+}
+
+
+navy = {
+    name = "Ceylon Station"
+    location = 2128 #Diego Garcia
+    ship = {
+        name= "HMS Ajax"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Armada"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Caledonia"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Edinburgh"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Egmont"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Impregnable"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Invincible"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Minden"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Poictiers"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Warspite"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Bacchante"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Belvidera"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Briton"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Crescent"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Galatea"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Havannah"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Maidstone"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Menelaus"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Nymphe"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Tenedos"
+        type = frigate
+    }
+
+}
+
+
+navy = {
+    name = "Venetian Navy"
+    location = 729
+    ship = {
+        name= "1. Klipperflottille"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "2. Klipperflottille"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "3. Klipperflottille"
+        type = clipper_transport
+    }
+
+}

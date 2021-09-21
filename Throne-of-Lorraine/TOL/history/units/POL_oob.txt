@@ -1,0 +1,66 @@
+TUR = {
+    value = -100
+}
+
+
+army = {
+    name = "II. Armee"
+    location = 702
+    regiment = {
+        name= "1.6. Infanteriedivision"
+        type = infantry
+        home = 627
+    }
+
+    regiment = {
+        name= "2.6. Infanteriedivision"
+        type = infantry
+        home = 640
+    }
+
+    regiment = {
+        name= "3.6. Infanteriedivision"
+        type = infantry
+        home = 705
+    }
+
+    regiment = {
+        name= "1.7. Infanteriedivision"
+        type = infantry
+        home = 630
+    }
+
+    regiment = {
+        name= "2.7. Infanteriedivision"
+        type = infantry
+        home = 643
+    }
+
+    regiment = {
+        name= "3.7. Infanteriedivision"
+        type = infantry
+        home = 702
+    }
+
+}
+
+
+
+leader = {
+    name = "Gulia Radetzky"
+    picture = aus_gen_radetzky
+    date = 1835.1.1
+    type = land
+    personality = implacable
+    background = school_of_the_bayonet
+    prestige = 0.8
+}
+
+leader = {
+    name = "Julius von Krakau"
+    date = 1835.1.1
+    type = land
+    personality = wrathful
+    background = natural_born_leader
+    prestige = 0.5
+}

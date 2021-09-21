@@ -137,6 +137,100 @@ RUS = { value = 75 }
 ENG = { value = 125 }
 FRA = { value = -75 }
 
+
+army = {
+    name = "Army of the Sultan of Muscat"
+    location = 1166
+    regiment = {
+        name= "1. Brigade"
+        type = infantry
+        home = 1166
+    }
+    regiment = {
+        name= "2. Brigade"
+        type = irregular
+        home = 1166
+    }
+}
+
+army = {
+    name = "Army of the Wali of Zanzibar"
+    location = 2029
+
+    regiment = {
+        name= "1. Askaris"
+        type = infantry
+        home = 2048
+    }
+
+    regiment = {
+        name= "2. Askaris"
+        type = infantry
+        home = 2029
+    }
+    regiment = {
+        name= "3. Brigade"
+        type = irregular
+        home = 2048
+    }
+}
+
+navy = {
+    name = "Omani Fleet"
+    location = 1166
+    ship = {
+        name= "Transport Flotilla"
+        type = clipper_transport
+    }
+    ship = {
+        name= "Transport Flotilla"
+        type = clipper_transport
+    }
+
+}
+
+leader = {
+    name = "Said bin Sultan"
+    type = land
+    date = 1807.12.12
+    background = aristocrat
+    personality = aggressive
+}
+
+leader = {
+    name = "Hamididdin"
+    type = land
+    date = 1836.1.1
+    personality = stout
+    background = natural_born_leader
+}
+
+army = {
+
+    name = "Army of the Imam of Zaydi"
+
+    location = 1178
+
+    regiment = {
+
+        name= "1. Abdali"
+
+        type = cavalry
+
+        home = 1178
+    }
+    regiment = {
+
+        name= "2. Abdali"
+
+        type = irregular
+
+        home = 1178
+    }
+
+}
+
+
 army = {
     name = "Mansure Army"
     location = 860
