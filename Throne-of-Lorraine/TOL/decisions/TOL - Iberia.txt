@@ -65,7 +65,27 @@ political_decisions = {
                 remove_core = THIS
                 add_core = IBR
             }
-           IRE = {
+           SPA = {
+                all_core = {
+                    add_core = IBR
+                }
+            }
+			LEO = {
+                all_core = {
+                    add_core = IBR
+                }
+            }
+			ARN = {
+                all_core = {
+                    add_core = IBR
+                }
+            }
+			POR = {
+                all_core = {
+                    add_core = IBR
+                }
+            }
+			GNA = {
                 all_core = {
                     add_core = IBR
                 }
@@ -81,4 +101,143 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	
+	portugal_sevilla = {
+        picture = reino_undino
+        potential = {
+            tag = POR
+            NOT = { has_country_flag = sevilla }
+        }
+
+        allow = {
+        nationalism_n_imperialism = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 15
+		 badboy = 7
+       set_country_flag = sevilla
+            SEV = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+			
+        }
+	}
+	
+	
+	lord_navarra = {
+        picture = create_iberia
+        potential = {
+            tag = LEO
+            NOT = { has_country_flag = lord_of_navarra }
+        }
+
+        allow = {
+        nationalism_n_imperialism = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 15
+		 badboy = 5
+       set_country_flag = lord_of_navarra
+            BSQ = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+			
+        }
+	}
+	
+		king_basques = {
+        picture = create_iberia
+        potential = {
+            tag = LEO
+			has_country_flag = lord_of_navarra
+            NOT = { has_country_flag = king_basques }
+        }
+
+        allow = {
+        nationalism_n_imperialism = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 15
+		 badboy = 3
+       set_country_flag = king_basques
+       add_accepted_culture = basque
+			
+        }
+	}
+	
+	grenada_sevilla = {
+        picture = reino_undino
+        potential = {
+            tag = GNA 
+			has_country_flag = cadiz
+            NOT = { has_country_flag = sevilla }
+        }
+
+        allow = {
+        nationalism_n_imperialism = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 15
+		 badboy = 7
+       set_country_flag = sevilla
+            SEV = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+			
+        }
+	}
+	
+		claim_cadiz = {
+        picture = create_iberia
+        potential = {
+            tag = GNA 
+            NOT = { has_country_flag = cadiz }
+        }
+
+        allow = {
+        nationalism_n_imperialism = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 5
+		 badboy = 1
+       set_country_flag = cadiz
+            512 = { add_core = GNA }
+			
+        }
+	}
+	
+	
+	
 }
