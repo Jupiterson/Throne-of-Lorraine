@@ -1,9 +1,9 @@
 #Sphere of Influence
 #GPs
-FRA = { value = 25 }
+FRA = { value = -100 }
 RUS = { value = -100 }
-AUS = { value = -75 }
-USA = { value = 50 }
+USA = { value = -75 }
+AKI = { value = 50 }
 PRU = { value = 25 }
 TUR = { value = 125 }
 SPA = { value = -75 }
@@ -15,180 +15,6 @@ SUA = {
     level = 4
     influence_value = 0
 }
-
-#Asia
-
-MLD = {
-    value = 150
-    level = 5
-    influence_value = 100
-}
-SLG = {
-    value = 150
-    level = 5
-    influence_value = 50
-}
-
-PRK = {
-    value = 150
-    level = 5
-    influence_value = 50
-}
-
-PHG = {
-    value = 150
-    level = 5
-    influence_value = 50
-}
-
-#KEL = {
-#    value = 150
-#    level = 4
-#    influence_value = 50
-#}
-
-#TER = {
-#    value = 150
-#    level = 4
-#    influence_value = 50
-#}
-
-#KED = {
-#    value = 150
-#    level = 4
-#    influence_value = 50
-#}
-
-BUR = {
-    value = 125
-    level = 5
-    influence_value = 0
-}
-BHP = {
-    value = 100
-    level = 5
-    influence_value = 0
-}
-SIA = {
-    value = 150
-    level = 3
-    influence_value = 0
-}
-NEP = {
-    value = -25
-    level = 5
-}
-
-JOH = {
-    value = -200
-}
-
-QNG ={
-    value = -10
-    level = 0
-    influence_value = 0
-}
-
-SIN ={
-    value = -100
-    level = 0
-    influence_value = 0
-}
-
-MAK ={
-    value = -100
-    level = 0
-    influence_value = 0
-}
-
-KAL ={
-    value = -100
-    level = 0
-    influence_value = 0
-}
-
-ATJ = {
-    value = 50
-    level = 3
-}
-
-NYE ={
-    value = -10
-    level = 0
-    influence_value = 0
-}
-
-ARC = {
-    value = -50
-    level = 1
-    influence_value = 0
-}
-
-SBA = {
-    value = -50
-    level = 1
-    influence_value = 0
-}
-CRT = {
-    value = -10
-    level = 1
-    influence_value = 0
-}
-ENT = {
-    value = -10
-    level = 1
-    influence_value = 0
-}
-
-#Middle East
-PER = {
-    value = 100        #relation
-    level = 4        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-AFG = {
-    value = -50        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-BHR = {
-    value = 50
-    level = 3
-    influence_value = 0
-}
-ABU = {
-    value = 50
-    level = 5
-    influence_value = 50
-}
-OMA = {
-    value = 100
-    level = 5
-    influence_value = 50
-}
-NEJ = {
-    value = 100
-    level = 2
-    influence_value = 0
-}
-FDL = {
-    value = 50
-    level = 2
-    influence_value = 0
-}
-
-KTH = {
-    value = 50
-    level = 2
-    influence_value = 0
-}
-
-MHR = {
-    value = 50
-    level = 4
-    influence_value = 0
-}
-
 
 #Europe
 POR = {
@@ -213,23 +39,13 @@ SWE = {
     level = 3        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 0
 }
-GRE = {
+ENL = {
     value = 75
-    level = 4
-    influence_value = 0
-}
-BEL = {
-    value = 200
     level = 5
     influence_value = 0
 }
-HAN = {
-    value = 125
-    level = 5
-    influence_value = 0
-}
-ION = {
-    value = 150
+IRE = {
+    value = 20
     level = 5
     influence_value = 0
 }

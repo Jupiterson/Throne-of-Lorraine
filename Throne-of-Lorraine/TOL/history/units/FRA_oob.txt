@@ -1,17 +1,17 @@
 #Sphere of Influence
-LUC = {
-    value = 75
+LOR = {
+    value = -100
     level = 3
     influence_value = 0
 }
-BEL = {
+BSQ = {
     value = 125        #relation
     level = 4        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 25
 }
 LUX = {
-    value = 125        #relation
-    level = 3        #3=cordial, 4 = friendly, 5 sphere
+    value = -25        #relation
+    level = 5        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 25
 }
 NET = {
@@ -22,24 +22,14 @@ NET = {
         #3=cordial, 4 = friendly, 5 sphere
 
 }
-PAP = {
-    value = 125        #relation
-    level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 25
-}
-SIC = {
-    value = 125        #relation
+PRO = {
+    value = 25        #relation
     level = 3        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 25
 }
 SWI = {
-    value = 125        #relation
+    value = -125        #relation
     level = 3        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 25
-}
-SAR = {
-    value = 125        #relation
-    level = 4        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 25
 }
 GRE = {
