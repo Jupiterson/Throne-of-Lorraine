@@ -1,0 +1,94 @@
+political_decisions = {	
+    colonize_kannata_aki = {
+        picture = form_the_rcmp
+        potential = {
+            tag = AKI
+            NOT = { has_country_flag = kanatta }
+			is_vassal = no
+        }
+
+        allow = {
+            war = no			
+			civilized = yes
+			empiricism = 1
+			state_n_government = 1
+			prestige 30
+        }
+
+        effect = {
+            set_country_flag = kanatta
+			9 = { add_core = AKI }
+			2626 = { add_core = AKI }
+			2593 = { add_core = AKI }
+			48 = { add_core = AKI }
+			47 = { add_core = AKI }
+			2594 = { add_core = AKI }
+			37 = { add_core = AKI }
+			2595 = { add_core = AKI }
+            59 = { add_core = AKI }			
+			AKI = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+    }
+	
+	claim_new_england = {
+        picture = german_tirol
+        potential = {
+            tag = USA
+            NOT = { has_country_flag = border_lands }
+        }
+
+        allow = {
+        nationalism_n_imperialism = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 5
+       badboy = 10
+       set_country_flag = border_lands 
+       USA_247 = { add_core = THIS }
+			
+        }
+   }
+   
+	colonize_kannata_vel = {
+        picture = form_the_rcmp
+        potential = {
+            tag = VEL
+            NOT = { has_country_flag = kanatta }
+			is_vassal = no
+        }
+
+        allow = {
+            war = no			
+			civilized = yes
+			empiricism = 1
+			state_n_government = 1
+			prestige 30
+        }
+
+        effect = {
+            set_country_flag = kanatta
+			39 = { add_core = VEL }
+			38 = { add_core = VEL }
+			2596 = { add_core = VEL }
+			11 = { add_core = VEL }
+			31 = { add_core = VEL }
+			32 = { add_core = VEL }
+			23 = { add_core = VEL }
+			2598 = { add_core = VEL }		
+			7 = { add_core = VEL }
+			2629 = { add_core = VEL }
+			18 = { add_core = VEL }
+			2597 = { add_core = VEL }
+			28 = { add_core = VEL }	
+			26 = { add_core = VEL }
+			27 = { add_core = VEL }			
+			VEL = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+    }
+	
+}

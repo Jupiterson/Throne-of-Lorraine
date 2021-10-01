@@ -131,6 +131,58 @@ political_decisions = {
         }
 	}
 	
+	form_andalus = {
+        picture = create_iberia
+        potential = {
+		    has_country_flag = south_portugal
+            capital_scope = { continent = europe }
+            NOT = { has_country_flag = post_colonial_country }
+            OR = {
+                tag = GNA
+                tag = SEV
+            }
+            NOT = { exists = AND }
+        }
+
+        allow = {
+            prestige = 45
+            nationalism_n_imperialism = 1
+            is_greater_power = yes
+            NOT = {
+                war_with = SPA
+            }
+                          
+                GNA = {
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            owner = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                }
+                                war = no
+                                is_greater_power = no
+                            }
+                        }
+                    }
+                }                     
+        }
+
+        effect = {
+            prestige = 20
+            all_core = {
+                remove_core = THIS
+                add_core = AND
+            }
+            change_tag = AND           
+            set_global_flag = andalus_united         
+                     
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
 	
 	lord_navarra = {
         picture = create_iberia
@@ -214,11 +266,12 @@ political_decisions = {
         }
 	}
 	
-		claim_cadiz = {
+	
+	claim_algerian_coast = {
         picture = create_iberia
         potential = {
             tag = GNA 
-            NOT = { has_country_flag = cadiz }
+            NOT = { has_country_flag = algerian_coast }
         }
 
         allow = {
@@ -231,9 +284,92 @@ political_decisions = {
 
         effect = {
          prestige = 5
+		 badboy = 10
+       set_country_flag = algerian_coast
+            1705 = { add_core = GNA }
+			1706 = { add_core = GNA }
+			1700 = { add_core = GNA }
+			1717 = { add_core = GNA }
+			1813 = { add_core = GNA }
+			
+        }
+	}
+	
+	claim_south_portugal = {
+        picture = create_iberia
+        potential = {
+            tag = GNA 
+			has_country_flag = sevilla
+            NOT = { has_country_flag = south_portugal }
+        }
+
+        allow = {
+        nationalism_n_imperialism = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 15
+		 badboy = 5
+       set_country_flag = south_portugal
+            526 = { add_core = GNA }
+			527 = { add_core = GNA }
+			
+        }
+	}
+	
+		claim_cadiz = {
+        picture = create_iberia
+        potential = {
+            tag = GNA 
+            NOT = { has_country_flag = cadiz }
+        }
+
+        allow = {
+        state_n_government = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 5
 		 badboy = 1
        set_country_flag = cadiz
             512 = { add_core = GNA }
+			
+        }
+	}
+	
+	master_of_the_maghreb = {
+        picture = map_africa
+        potential = {
+            tag = IBR
+            NOT = { has_country_flag = maghreb }
+        }
+
+        allow = {
+		is_greater_power = yes
+		invention = colonial_negotiations
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 45
+		 badboy = 17
+       set_country_flag = maghreb
+            MGH = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
 			
         }
 	}

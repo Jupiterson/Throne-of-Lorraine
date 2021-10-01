@@ -1,11 +1,96 @@
-COP = { value = -80 }
-ETH = { value = -70 }
+DAR = { value = 80 }
+WAD = { value = 70 }
 GON = { value = 75 }
 TIG = { value = 75 }
 SHW = { value = 65 }
 GEL = { value = 60 }
 MAJ = { value = 60 }
 TUR = { truce_until = 1838.1.1 }
+
+navy = {
+    name = "Taba"
+    location = 1751
+    ship = {
+        name= "Toushka"
+        type = manowar
+    }
+
+    ship = {
+        name= "Sharm El-Sheikh"
+        type = manowar
+    }
+
+    ship = {
+        name= "Damyat"
+        type = manowar
+    }
+
+    ship = {
+        name= "Rasheed"
+        type = manowar
+    }
+
+    ship = {
+        name= "El Suez"
+        type = manowar
+    }
+
+    ship = {
+        name= "El Aboukir"
+        type = frigate
+    }
+
+    ship = {
+        name= "Najim al Zafir"
+        type = frigate
+    }
+
+    ship = {
+        name= "Cairo"
+        type = frigate
+    }
+
+    ship = {
+        name= "Al Iskandariyah"
+        type = frigate
+    }
+
+    ship = {
+        name= "Aswan"
+        type = frigate
+    }
+
+    ship = {
+        name= "Port Said"
+        type = frigate
+    }
+
+    ship = {
+        name= "Marsa Matruh"
+        type = frigate
+    }
+
+    ship = {
+        name= "Bur Tawfiq"
+        type = frigate
+    }
+
+    ship = {
+        name= "Al Ghardaqah"
+        type = frigate
+    }
+
+    ship = {
+        name= "Bur Safajah"
+        type = frigate
+    }
+
+    ship = {
+        name= "1st Transport Flotilla"
+        type = clipper_transport
+    }
+
+}
 
 army = {
     name = "Army of Egypt"
@@ -63,48 +148,6 @@ army = {
         type = infantry
         home = 1747
     }
-}
-
-army = {
-    name = "Army of Syria"
-    location = 902
-
-    regiment = {
-        name= "1.3 Infantry"
-        type = infantry
-        home = 1746
-    }
-
-    regiment = {
-        name= "2.3 Infantry"
-        type = infantry
-        home = 1752
-    }
-
-    regiment = {
-        name= "3.3 Infantry"
-        type = infantry
-        home = 1748
-    }
-
-    regiment = {
-        name= "1.4th Division"
-        type = infantry
-        home = 1749
-    }
-
-    regiment = {
-        name= "2.4th Division"
-        type = infantry
-        home = 1765
-    }
-
-    regiment = {
-        name= "3.4th Division"
-        type = infantry
-        home = 1764
-    }
-
 }
 
 army = {
