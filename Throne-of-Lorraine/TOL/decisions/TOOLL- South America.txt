@@ -1,0 +1,25 @@
+political_decisions = {	
+    great_river_push = {
+        picture = form_the_rcmp
+        potential = {
+            tag = BRZ
+            NOT = { has_country_flag = river_push }
+			is_vassal = no
+        }
+
+        allow = {
+            war = no			
+			empiricism = 1
+			state_n_government = 1
+			prestige 30
+        }
+
+        effect = {
+            set_country_flag = river_push
+			2421 = { add_core = BRZ }
+			2422 = { add_core = BRZ }
+			2423 = { add_core = BRZ }				
+			BRZ = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+    }
+}

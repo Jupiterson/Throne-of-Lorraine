@@ -295,6 +295,38 @@ political_decisions = {
         }
 	}
 	
+	
+	claim_italian_islands = {
+        picture = italian_islands
+        potential = {
+            tag = ARN
+            NOT = { has_country_flag = italian_islands }
+        }
+
+        allow = {
+        nationalism_n_imperialism = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 25
+		 badboy = 15
+       set_country_flag = italian_islands
+            502 = { add_core = ARN }
+			766 = { add_core = ARN }
+			765 = { add_core = ARN }
+			473 = { add_core = ARN }
+			762 = { add_core = ARN }
+			764 = { add_core = ARN }
+			763 = { add_core = ARN }
+			
+        }
+	}
+	
+	
 	claim_south_portugal = {
         picture = create_iberia
         potential = {

@@ -49,6 +49,31 @@ political_decisions = {
         }
     }
 
+
+administrate_sand_copt = {
+        picture = form_the_rcmp
+        potential = {
+            tag = COP
+            NOT = { has_country_flag = sad_abe }
+			is_vassal = no
+        }
+
+        allow = {
+            war = no			
+			prestige 40
+        }
+
+        effect = {
+            set_country_flag = sad_abe
+			1754 = { add_core = COP }
+			1759 = { add_core = COP }
+			1760 = { add_core = COP }
+			1761 = { add_core = COP }
+			1772 = { add_core = COP }					
+			COP = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+    }
+	
         unite_the_copts = {
         picture = become_poland_lithuania
 

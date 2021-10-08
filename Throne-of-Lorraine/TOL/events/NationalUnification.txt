@@ -723,6 +723,91 @@ country_event = {
     }
 }
 
+
+
+# Event to Inherit (For NIF )
+country_event = {
+    id = 11437
+    title = "Rostoration of Lega Lombardia"
+    desc = "For long the northerners of Italy have been a disunited mess, now its time to succed"
+    picture = "italian_war_of_independence_won"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Lega Lombardia!"
+        set_country_flag = wants_to_unify
+        random_country = {
+            limit = {
+                primary_culture = north_italian
+				primary_culture = venetian
+                OR = {
+                    tag = FROM
+                    tag = NIF
+                }
+            }
+            THIS = { all_core = { add_core = NIF } }
+   #         NIF = { country_event = 34627 }
+        }
+        
+        any_country = {
+            limit = {
+                OR = {
+                    is_sphere_leader_of = THIS
+                    is_our_vassal = THIS
+                }
+                NOT = { tag = FROM }
+            }
+            relation = {
+                who = FROM
+                value = -25
+            }
+            casus_belli = {
+                target = FROM
+                type = free_peoples
+                months = 12
+            }
+            casus_belli = {
+                target = FROM
+                type = humiliate
+                months = 12
+            }
+        }
+        any_country = {
+            limit = {
+                is_culture_group = THIS
+                is_greater_power = yes
+                NOT = { tag = FROM }
+            }
+            casus_belli = {
+                target = FROM
+                type = free_peoples
+                months = 36
+            }
+        }
+        any_owned = {
+                secede_province = FROM
+        }
+        FROM = { inherit = THIS }
+        ai_chance = {
+            factor = 75
+            modifier = {
+                factor = 0.8
+                NOT = {
+                    relation = { who = FROM value = 50 }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                NOT = {
+                    relation = { who = FROM value = 0 }
+                }
+            }
+        }
+    }
+}
+
+
 # Pan-Nationalist - Germany
 country_event = {
     title = "EVTNAME11100_NEW"
