@@ -109,34 +109,29 @@ country_event = {
     }
 
     option = {
-        name = "EVT45254OPTA"
+        name = "Down with the Occitans"
         set_country_flag = fra_revolt
         set_country_flag = french_revolution
         remove_accepted_culture = occitan
         remove_accepted_culture = catalan
         any_owned = {
-            limit = { is_core = OCC }
-            limit = { is_core = CAT }
-            limit = { is_core = SAR }
-            limit = { is_core = ARP }
+            limit = { OR = {
+			
+			is_core = OCC 
+            is_core = CAT 
+            is_core = ARP }	}
             any_pop = { militancy = -9 consciousness = -9 }
             remove_province_modifier = nationalist_agitation
-            secede_province = ARP 
+            secede_province = FRZ 
         }
-#       3309 = { secede_province = ARP }
-        ARP = {
+#       3309 = { secede_province = FRZ }
+        FRZ = {
             define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
             add_country_modifier = { name = unrecognized_country duration = 3650 }
         }
-        relation = { who = ARP value = -400 }
-        SPA = {
-            diplomatic_influence = {
-                who = ARP 
-                value = 400
-            }
-            relation = { who = 3309 = { secede_province = ARP }value = 200 }
-        }
-        ARP = {
+        relation = { who = FRZ value = -400 }
+        
+        FRZ = {
             capital_scope = {
                 sub_unit = { type = infantry value = current }
                 sub_unit = { type = infantry value = current }
@@ -151,41 +146,42 @@ country_event = {
             }
         }
         war = {
-            target = ARP 
+            target = FRZ 
             attacker_goal = { casus_belli = civil_war }
             defender_goal = { casus_belli = civil_war }
         }
         ai_chance = { factor = 100 }
     
-
+    }
     option = {
-        name = "EVT45254OPTB"
-        remove_accepted_culture = catalan
-        remove_accepted_culture = occitan
+        name = "Viva la França"
         any_owned = {
-            limit = { is_core = OCC }
-            limit = { is_core = CAT }
-            limit = { is_core = SAR }
-            limit = { is_core = ARP }
+            limit = { OR = {
+			
+			is_core = OCC 
+            is_core = CAT 
+            is_core = ARP } }
             any_pop = { militancy = -9 consciousness = -9 }
             remove_province_modifier = nationalist_agitation
-            secede_province = ARP 
+           secede_province = FRZ 
         }
-        ARP = {
+        FRZ = {
             define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
             add_accepted_culture = catalan
         }
-        relation = { who = OCC value = -400 }
+        relation = { who = FRZ value = -400 }
         war = {
-            target = OCC 
+            target = FRZ 
             attacker_goal = { casus_belli = civil_war }
             defender_goal = { casus_belli = civil_war }
         }
-        change_tag_no_core_switch = ARP 
+        change_tag_no_core_switch = FRZ 
+		
         ai_chance = { factor = 0 }
-            }
-    }
-}
+      }
+ }
+    
+
 
 country_event = {
     id = 10401

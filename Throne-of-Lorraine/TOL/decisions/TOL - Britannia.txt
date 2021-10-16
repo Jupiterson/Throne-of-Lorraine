@@ -101,7 +101,7 @@ political_decisions = {
 	
 	
 	claim_normandy = {
-        picture = britain_flag
+        picture = normandy
         potential = {
             has_country_flag = anglo_heritage
             NOT = { has_country_flag = williams_back }
@@ -126,7 +126,7 @@ political_decisions = {
 	}
 	
 	claim_brittany = {
-        picture = britain_flag
+        picture = brittany
         potential = {
             has_country_flag = celtic_heritage
             NOT = { has_country_flag = celtic_unions_one }
@@ -151,7 +151,7 @@ political_decisions = {
 	}
 	
 	claim_galica = {
-        picture = declare_neutrality
+        picture = galicia
         potential = {
             has_country_flag = celtic_heritage
             NOT = { has_country_flag = celtic_unions_one }
