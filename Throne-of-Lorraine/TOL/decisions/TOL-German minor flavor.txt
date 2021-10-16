@@ -140,9 +140,13 @@ incorparate_vassals = {
 	proclaim_allemania = {
         picture = swabia
         potential = {
+		limit = { 
+		OR = {
             tag = SWI
 			tag = BAD
 			tag = ALS
+			}
+		}
             NOT = { has_country_flag = allemia }
         }
 
@@ -156,7 +160,7 @@ incorparate_vassals = {
 
         effect = {
          prestige = 45
-       badboy = 5orde
+       badboy = 5
        set_country_flag = allemia
 	   411 = { add_core = ALE }
        BAD_586 = { add_core = ALE }

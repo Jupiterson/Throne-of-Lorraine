@@ -137,7 +137,6 @@ political_decisions = {
     call_geneva_convention = {
         picture = call_geneva_convention
         potential = {
-            tag = SWI
             owns = 607
             NOT = {
                 has_global_flag = geneva_convention_held
@@ -304,7 +303,6 @@ political_decisions = {
     enact_freedom_of_religion = {
         picture = preacher
         potential = {
-            tag = SWI
             tag = FER
             NOT = { has_country_flag = freedom_of_religion }
         }
