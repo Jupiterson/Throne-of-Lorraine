@@ -4,6 +4,22 @@ add_core = WHA
 add_core = ENG
 trade_goods = iron
 life_rating = 35
+    state_building = {
+        level = 3
+        building = canned_food_factory
+        upgrade = yes
+    }
+    state_building = {
+        level = 1
+        building = liquor_distillery
+        upgrade = yes
+    }
+    state_building = {
+        level = 1
+        building = machine_parts_factory
+        upgrade = yes
+    }
+
 party_loyalty = {
     ideology = liberal
     loyalty_value = 15

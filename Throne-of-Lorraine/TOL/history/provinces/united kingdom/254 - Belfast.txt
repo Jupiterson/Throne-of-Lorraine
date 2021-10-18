@@ -3,7 +3,8 @@ controller = SCO
 add_core = SCO
 add_core = IRE
 trade_goods = cattle
-naval_base = 2
+naval_base = 3
+fort = 2
 life_rating = 40
 terrain = belfast
 party_loyalty = {
@@ -14,9 +15,9 @@ party_loyalty = {
     ideology = liberal
     loyalty_value = 5
 }
-1861.1.1 = {
+
     state_building = {
-        level = 1
+        level = 3
         building = canned_food_factory
         upgrade = yes
     }
@@ -25,5 +26,20 @@ party_loyalty = {
         building = liquor_distillery
         upgrade = yes
     }
-}
+    state_building = {
+        level = 2
+        building = machine_parts_factory
+        upgrade = yes
+    }
+    state_building = {
+    level = 2
+    building = small_arms_factory
+    upgrade = yes
+    }
+    state_building = {
+        level = 3
+        building = steel_factory
+        upgrade = yes
+    }
+
 1861.1.1 = { railroad = 3 }
