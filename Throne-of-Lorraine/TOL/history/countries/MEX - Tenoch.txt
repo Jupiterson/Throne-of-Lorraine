@@ -1,9 +1,9 @@
 capital = 2172
 primary_culture = mexican
 religion = catholic
-government = democracy
+government = constitutional_empire
 plurality = 25.0
-nationalvalue = nv_equality
+nationalvalue = nv_autocracy
 literacy = 0.03
 non_state_culture_literacy = 0.01
 civilized = yes
@@ -12,14 +12,13 @@ prestige = 3
 
 # Political reforms
 slavery = no_slavery
-upper_house_composition = state_equal_weight
+upper_house_composition = appointed
 vote_franschise = none_voting
-public_meetings = yes_meeting
+public_meetings = no_meeting
 press_rights = state_press
 trade_unions = no_trade_unions
 voting_system = first_past_the_post
-political_parties = harassment
-
+political_parties = underground_parties
 # Social Reforms
 wage_reform = no_minimum_wage
 work_hours = no_work_hour_limit
@@ -30,24 +29,24 @@ pensions = no_pensions
 school_reforms = no_schools
 
 # New Reforms
-conscription = one_year_draft
-debt_law = peonage
+conscription = four_year_draft
+debt_law = serfdom
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = culture_voting_only
-border_policy = open_borders
-centralization = unitary
+border_policy = closed_borders
+centralization = confederalism
 colonial_policy = no_colonies
 
 set_country_flag = catholic_country
 
-ruling_party = MEX_conservative
+ruling_party = MEX_reactionary
 last_election = 1835.1.28
 upper_house = {
     fascist = 0
     liberal = 25
-    conservative = 63
-    reactionary = 12
+    conservative = 40
+    reactionary = 35
     radical = 0
     socialist = 0
     communist = 0
