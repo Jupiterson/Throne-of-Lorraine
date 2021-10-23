@@ -1,29 +1,29 @@
 political_decisions = {
-    sax_waldenburg = {
-        picture = german_confederation
-        potential = {
-            tag = SAX
-            NOT = { has_country_flag = minigerm_stronk }
-        }
-
-        allow = {
-            OR = {
-                nationalism_n_imperialism = 1
-                year = 1865
-            }
-        }
-
-        effect = {
-            set_country_flag = minigerm_stronk
-            683 = { add_core = SAX }
-            683 = { add_core = GER }
-        }   
-    }
+  #  sax_waldenburg = {
+  #      picture = german_confederation
+  #      potential = {
+  #          tag = SAX
+  #          NOT = { has_country_flag = minigerm_stronk }
+  #      }
+  #
+  #      allow = {
+  #          OR = {
+  #              nationalism_n_imperialism = 1
+  #              year = 1865
+  #          }
+  #      }
+  #
+  #      effect = {
+  #          set_country_flag = minigerm_stronk
+  #          683 = { add_core = SAX }
+  #          683 = { add_core = GER }
+  #      }   
+  #  }
 
 incorparate_vassals = {
 		picture = thuringia
 		potential = {
-			tag = HNS
+			tag = SAX
 			REU = { vassal_of = THIS }
 			COB = { vassal_of = THIS }
 			SWG = { vassal_of = THIS }
@@ -443,7 +443,7 @@ claim_anhalt = {
          PRU_553 = { add_core = THIS } 
                
             }
-        }
+      }
     
 
 claim_lower_saxony = {
