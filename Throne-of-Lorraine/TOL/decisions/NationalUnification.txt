@@ -404,26 +404,6 @@ political_decisions = {
                 war_with = BOR
             }
             OR = {
-                has_country_flag = ems_dispatch_sent
-                has_global_flag = germany_has_renamed_elsass
-                ALS = {
-                    all_core = {
-                        OR = {
-                            owned_by = THIS
-                            owner = {
-                                in_sphere = THIS
-                                OR = {
-                                    is_vassal = no
-                                    vassal_of = THIS
-                                }
-                                war = no
-                                is_greater_power = no
-                            }
-                        }
-                    }
-                }
-            }
-            OR = {
                 GER = {
                     all_core = {
                         OR = {
@@ -441,7 +421,7 @@ political_decisions = {
                     }
                 }
                 AND = {
-                    NGF = {
+                    HNS = {
                         all_core = {
                             OR = {
                                 owned_by = THIS
@@ -464,7 +444,7 @@ political_decisions = {
                             NOT = { rank = 8 }
                         }
                         AND = {
-                            NGF = {
+                            HNS = {
                                 ai = yes
                             }
                             BAV = {
@@ -536,12 +516,12 @@ political_decisions = {
                 remove_core = THIS
                 add_core = GER
             }
-            FRA_412 = { add_core = GER }
             remove_country_modifier = zollervein
             change_tag = GER
             add_accepted_culture = north_german
             add_accepted_culture = south_german
             add_accepted_culture = volga_german
+			add_accepted_culture = rhinelander
             random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
             random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
             random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
