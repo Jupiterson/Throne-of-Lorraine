@@ -1,68 +1,93 @@
-#Sphere of Influence
-LOR = {
-    value = -100
-    level = 3
-    influence_value = 0
-}
-BSQ = {
-    value = 125        #relation
-    level = 4        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 25
-}
-LUX = {
-    value = -25        #relation
-    level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 25
-}
-NET = {
-    value = -100
-        #relation
 
-    level = 3
-        #3=cordial, 4 = friendly, 5 sphere
+PAP = {value = 30}
 
-}
-PRO = {
-    value = 25        #relation
-    level = 3        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 25
-}
-SWI = {
-    value = -125        #relation
-    level = 3        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 25
-}
-GRE = {
-    value = 75    #relation
-    level = 4        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 10
-}
-DAI = {
-    value = 0        #relation
-    level = 3        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 25
-}
-ABA = {
-    value = 100        #relation
-    level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 25
-}
-NAP = {
-    value = 150        #relation
-    level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 25
-}
+NET = {value = -200}
+VEN = {value = -180}
+LOR = {value = -180}
+UOW = {value = -200}
+SCO = {value = -70}
+ENL = {value = -70}
+LUX = {value = -100}
+BOH = {value = -100}
+ARN = {value = -150}
+BSQ = {value = -20}
+LEO = {value = -50}
+SPA = {value = -50}
+POR = {value = -50}
+GNA = {value = -50}
+HNS = {value = -100}
+BRN = {value = -100}
+POM = {value = -100}
+BAV = {value = -100}
+GEN = {value = -100}
+HUN = {value = -80}
+SAX = {value = -80}
+TUR = {value = -80}
+SER = {value = -80}
+POL = {value = -70}
+WAL = {value = -50}
+SWI = {value = -100}
+WHA = {value = -70}
+NAP = {value = -100}
+SYC = {value = -100}
+LIT = {value = -80}
+IRE = {value = -80}
+UBD = {value = -50}
+RUS = {value = -100}
+DNN = {value = -100}
+SWE = {value = -100}
+AKI = {value = -100}
+USA = {value = -100}
+PIR = {value = -100}
+JES = {value = -50}
+TEX = {value = -100}
+PEU = {value = -20}
+VEL = {value = -80}
+GEK = {value = -30}
+MEX = {value = -20}
+COS = {value = -10}
+MSK = {value = -10}
+BRZ = {value = -50}
+ARC = {value = -100}
+SLO = {value = -50}
+WUR = {value = -50}
+HAN = {value = -90}
+KOL = {value = -50}
+HEK = {value = -50}
+HES = {value = -50}
+FRM = {value = -50}
+NAS = {value = -50}
+SWG = {value = -50}
+LIP = {value = -50}
+DOR = {value = -80}
+REU = {value = -50}
+COB = {value = -50}
+LOM = {value = -80}
+TUS = {value = -80}
+LUC = {value = -50}
+PRO = {value = -100}
+SGM = {value = -50}
+WBG = {value = -50}
+ANH = {value = -50}
+WLD = {value = -50}
+LUS = {value = -50}
+PZN = {value = -80}
+MST = {value = -50}
+DAN = {value = -50}
+GEO = {value = -50}
+BRA = {value = -50}
+TRI = {value = -80}
+COP = {value = -70}
+RGA = {value = -150}
+TLE = {value = -50}
+FEZ = {value = -50}
+MRR = {value = -50}
+WOL = {value = -100}
+TRZ = {value = -100}
+TOO = {value = -100}
+GBU = {value = -50}
+ETH = {value = -90}
 
-#GPs
-ENG = { value = 25 }
-RUS = { value = -100 }
-AUS = { value = -50 }
-USA = { value = 75 }
-PRU = { value = -50 }
-TUR = { value = -75 }
-SPA = { value = -100 }
-
-TRZ = { value = -100 }
 
 army = {
     name = "Garde Royale"
@@ -128,74 +153,10 @@ army = {
     }
 }
 
-army = {
-    name = "1er Corps d'Armée"
-    location = 409
-
-    regiment = {
-        name= "1ère Division d'Hussard"
-        type = hussar
-        home = 458
-    }
-
-    regiment = {
-        name= "1.1ème Division d'Infanterie"
-        type = infantry
-        home = 400
-    }
-
-    regiment = {
-        name= "2.1ème Division d'Infanterie"
-        type = infantry
-        home = 2570
-    }
-
-    regiment = {
-        name= "3.1ème Division d'Infanterie"
-        type = infantry
-        home = 404
-    }
-
-    regiment = {
-        name= "2.1ème Division d'Infanterie"
-        type = infantry
-        home = 402
-    }
-
-    regiment = {
-        name= "2.2ère Division d'Infanterie"
-        type = infantry
-        home = 403
-    }
-
-    regiment = {
-        name= "1.1ème Division d'Artillerie"
-        type = artillery
-        home = 399
-    }
-
-    regiment = {
-        name= "2.1ème Division d'Artillerie"
-        type = artillery
-        home = 400
-    }
-
-    regiment = {
-        name= "3.1ème Division d'Artillerie"
-        type = artillery
-        home = 399
-    }
-
-    regiment = {
-        name= "4.1ème Division d'Artillerie"
-        type = artillery
-        home = 399
-    }
-}
 
 army = {
     name = "2e Corps d'Armée"
-    location = 469
+    location = 392
 
     regiment = {
         name= "1ème Division d'Cuirasser"
@@ -311,7 +272,7 @@ army = {
         prestige = 0.1
     }
 
-    location = 1705
+    location = 463
 
     regiment = {
         name= "3.1ère Division de cavalerie"
@@ -357,38 +318,8 @@ army = {
 }
 
 army = {
-    name = "Légion étrangère"
-    location = 1700
-
-    regiment = {
-        name= "1er Régiment étranger"
-        type = guard
-        home = 1700
-    }
-
-    regiment = {
-        name= "1er Régiment Étranger de Cavalerie"
-        type = dragoon
-        home = 1704
-    }
-
-    regiment = {
-        name= "2e Régiment Étranger"
-        type = guard
-        home = 1709
-    }
-
-    regiment = {
-        name= "5.1ème Division d'Artillerie"
-        type = artillery
-        home = 400
-    }
-
-}
-
-army = {
     name = "Corps d'Observation"
-    location = 470
+    location = 461
     regiment = {
         name= "3.3ème Division de cavalerie"
         type = cuirassier
@@ -438,54 +369,19 @@ army = {
     }
 }
 
-
-army = {
-    name = "1ère Division de cavalerie"
-    location = 1704
-    regiment = {
-        name= "1.1ère Division de cavalerie"
-        type = dragoon
-        home = 422
-    }
-
-    regiment = {
-        name= "2.1ère Division de cavalerie"
-        type = dragoon
-        home = 436
-    }
-
-    regiment = {
-        name= "5.7ème Division d'Infanterie"
-        type = infantry
-        home = 448
-    }
-
-    regiment = {
-        name= "3.8ème Division d'Infanterie"
-        type = infantry
-        home = 473
-    }
-
-    regiment = {
-        name= "3ème Division d'Artillerie"
-        type = artillery
-        home = 449
-    }
-}
-
 army = {
     name = "Garnison du Sénégal"
     location = 1784
     regiment = {
         name= "1.10ème Division d'Infanterie"
         type = infantry
-        home = 411
+        home = 428
     }
 
     regiment = {
         name= "2.10ème Division d'Infanterie"
         type = infantry
-        home = 407
+        home = 428
     }
 }
 
@@ -505,22 +401,6 @@ army = {
     }
 }
 
-army = {
-    name = "Garnison de Guyane"
-    location = 2241
-
-    regiment = {
-        name= "1.8ème Division d'Infanterie"
-        type = infantry
-        home = 455
-    }
-
-    regiment = {
-        name= "2.8ème Division d'Infanterie"
-        type = infantry
-        home = 457
-    }
-}
 
 navy = {
     name = "Escadre du Nord"
@@ -694,7 +574,7 @@ navy = {
 
 navy = {
     name = "Escadre de Méditerranée"
-    location = 470
+    location = 461
     ship = {
         name= "Triton"
         type = manowar

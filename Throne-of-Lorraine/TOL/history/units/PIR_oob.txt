@@ -1,0 +1,158 @@
+GEN = {
+    value = -150
+}
+USA = {
+	value = -10
+}
+FRA = {value = -100}
+
+
+leader = {
+    name = "Andrea de Flor"
+    type = land
+    date="1836.1.1"
+    personality = harsh
+    background = expert_raider
+}
+
+leader = {
+    name = "Luca Colombo"
+    type = land
+    date="1836.1.1"
+    personality = daring
+    background = expert_raider
+}
+
+leader = {
+    name = "Roberto Morisco"
+    type = sea
+    date="1836.1.1"
+    personality = stouthearted
+    background = old_school
+}
+leader = {
+    name = "Marco Ferrari"
+    type = sea
+    date="1836.1.1"
+    personality = charismatic
+    background = adventurer
+}
+leader = {
+    name = "Ciro Accardi"
+    type = sea
+    date="1836.1.1"
+    personality = calm
+    background = adventurer
+}
+
+army = {
+    name = "La flotta principale"
+    location = 2215
+    regiment = {
+        name= "Divisione 1"
+        type = infantry
+        home = 2215
+    }
+
+    regiment = {
+        name= "Divisione 2"
+        type = infantry
+        home =2215
+    }
+	    regiment = {
+        name= "Divisione 3"
+        type = infantry
+        home =3309
+    }
+	regiment = {
+        name= "Divisione 4"
+        type = infantry
+        home =3403
+    }
+	regiment = {
+        name= "Divisione 5"
+        type = infantry
+        home =2214
+    }
+}
+	
+	army = {
+    name = "Esercito continentale"
+    location = 200
+    regiment = {
+        name= "Divisione 6"
+        type = infantry
+        home = 200
+    }
+	    regiment = {
+        name= "Divisione 7"
+        type = infantry
+        home = 2217
+    }
+
+    regiment = {
+        name= "Divisione 8"
+        type = infantry
+        home = 2219
+    }
+
+
+}
+navy = {
+    name = "La flotta principale"
+    location = 2215
+    ship = {
+        name= "Perla Nera"
+        type = frigate
+    }
+    ship = {
+        name= "Fantasia"
+        type = frigate
+    }
+    ship = {
+        name= "Buona Avventura"
+        type = frigate
+    }
+    ship = {
+        name= "Fortuna reale"
+        type = frigate
+    }
+    ship = {
+        name= "Pesce rosso"
+        type = clipper_transport
+    }
+	    ship = {
+        name= "Cambusa d'avventura"
+        type = clipper_transport
+    }
+}
+
+navy = {
+    name = "La flotta d'oro"
+    location = 2219
+    ship = {
+        name= "Il drago volante"
+        type = manowar
+    }
+	    ship = {
+        name= "Grande Squalo Forte"
+        type = manowar
+    }
+	    ship = {
+        name= "Il drago di fuoco"
+        type = manowar
+    }
+	ship = {
+        name= "Vettore"
+        type = clipper_transport
+    }
+}
+
+navy = {
+    name = "Flotta giamaicana"
+    location = 2219
+    ship = {
+        name= "Flotta giamaicana"
+        type = frigate
+    }
+}

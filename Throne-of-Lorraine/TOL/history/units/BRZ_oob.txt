@@ -6,6 +6,8 @@ CLM = {
     value = 150
 }
 
+FRA = {value = -50}
+
 army = {
     name = "Exército Imperial"
     location = 2447
@@ -51,23 +53,6 @@ army = {
         home = 2441
     }
 
-    regiment = {
-        name= "1. Brigada de Cavalaria"
-        type = cuirassier
-        home = 2429
-    }
-
-    regiment = {
-        name= "2. Brigada de Cavalaria"
-        type = cuirassier
-        home = 2434
-    }
-
-    regiment = {
-        name= "3. Brigada de Cavalaria"
-        type = cuirassier
-        home = 2426
-    }
 
 }
 
@@ -102,25 +87,6 @@ leader = {
 navy = {
     name = "Brazilian Navy"
     location = 2447
-    ship = {
-        name = "Perdo I"
-        type = manowar
-    }
-
-    ship = {
-        name = "Afonso de Albuquerque"
-        type = manowar
-    }
-
-    ship = {
-        name = "Imperatriz"
-        type = frigate
-    }
-
-    ship = {
-        name = "Dona Januária"
-        type = frigate
-    }
 
     ship = {
         name = "Nictheroy"
@@ -138,39 +104,8 @@ navy = {
     }
 
     ship = {
-        name = "Bertioga"
-        type = frigate
-    }
-
-    ship = {
-        name = "Duquesa de Goiás"
-        type = frigate
-    }
-
-    ship = {
-        name = "Alcântara"
-        type = frigate
-    }
-
-    ship = {
-        name = "Amazonas"
-        type = frigate
-    }
-
-    ship = {
         name = "Andorinha"
         type = frigate
-    }
-
-    ship = {
-        name = "Barca a Vapor Águia"
-        type = commerce_raider
-    }
-
-
-    ship = {
-        name = "Barca a Vapor Amélia"
-        type = commerce_raider
     }
 
     ship = {

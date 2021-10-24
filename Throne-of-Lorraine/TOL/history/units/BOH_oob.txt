@@ -6,4 +6,60 @@ SAX = {
     value = 130
 }
 
+FRA = {value = -100}
 
+
+army = {
+    name = "česká armáda"
+    location = 625
+    regiment = {
+        name= "1. pěší divize"
+        type = infantry
+        home = 625
+    }
+
+    regiment = {
+        name= "2. pěší divize"
+        type = infantry
+        home = 625
+    }
+
+    regiment = {
+        name= "3. pěší divize"
+        type = infantry
+        home = 3483
+    }
+
+    regiment = {
+        name= "4. pěší divize"
+        type = infantry
+        home = 632
+    }
+
+    regiment = {
+        name= "5. pěší divize"
+        type = infantry
+        home = 3333
+    }
+
+    regiment = {
+        name= "6. pěší divize"
+        type = infantry
+        home = 627
+    }
+	regiment = {
+        name= "1. dělostřelecký oddíl"
+        type = artillery
+        home = 627
+    }
+	regiment = {
+        name= "2. dělostřelecký oddíl"
+        type = artillery
+        home = 683
+    }
+	regiment = {
+        name= "3. dělostřelecký oddíl"
+        type = artillery
+        home = 632
+    }
+}

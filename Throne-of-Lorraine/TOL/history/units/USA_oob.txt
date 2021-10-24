@@ -1,568 +1,12 @@
-#Polynesia
-HAW = {
-    value = 125        #relation
-    level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-#North America
-TEX = {
-    value = 125        #relation
-    level = 2        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-MEX = {
-    value = 100        #relation
-    level = 2        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-UCA = {
-    value = 100        #relation
-    level = 3        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-COL = {                #Columbia if released
-    value = 50        #relation
-    level = 2        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 5
-}
-
-#South America
-ECU = {
-    value = 0        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-PEU = {
-    value = 100        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-BOL = {
-    value = 100        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-PBC = {
-    value = 100        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-CHL = {
-    value = 100        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-CLM = {
-    value = 100        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-BRZ = {
-    value = 100        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-URU = {
-    value = 75        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-PRG = {
-    value = -400    #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-CRT = {
-    value = -200        #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-LOS = {
-    value = -200        #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-SBA = {
-    value = -200        #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-ENT = {
-    value = -200        #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-RGS = {
-    value = -200        #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-ARC = {
-    value = -50        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-VNZ = {
-    value = 0    #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-SPU = {
-    value = 0    #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
 
 
-#Other GP's
-ENG = { value = 50 }
-FRA = { value = 75 }
-AUS = { value = 25 }
+
+FRA = { value = -100 }
 RUS = { value = 25 }
-PRU = { value = 25 }
 TUR = { value = 0 }
 SPA = { value = -25 }
 
-CHK = {
-    value = -50     #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
 
-DAI = {
-    value = -50     #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-SIA = {
-    value = -100     #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-LUA = {
-    value = -50     #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-CAM = {
-    value = -50     #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-YNN = {
-    value = -100     #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
-
-MSK = {
-    value = 0
-    level = 1
-    influence_value = 0
-}
-
-#Other
-TKG = {
-    value = 0
-    level = 3
-    influence_value = 25
-}
-
-MOR = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-DEN = {
-    value = 200
-}
-
-QNG ={
-    value = -10
-    level = 0
-    influence_value = 0
-}
-
-BAH ={
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-PNB ={
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-#African Uncivs
-SOK = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-ZAN = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-MAK = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-KAL = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-AFG = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-SIN = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-CRL = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-OYO = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-TRZ = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-WOL = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-GBU = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-TOO = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-TOU = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-JAL = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-SEG = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-MAS = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-MOS = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-KNG = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-ASH = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-ARO = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-DND = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-DAH = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-DAM = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-CLA = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-BEN = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-WRI = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-KBO = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-KON = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-LOA = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-ZUL = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-XHO = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-MAT = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-BSH = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-SUA = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-GAZ = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-AGC = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-MAD = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-WRL = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-MAJ = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-GEL = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-SID = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-HAR = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-TIG = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-GON = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-KAF = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-SHW = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-AWS = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-SHK = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-TUN = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-TRI = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-ALD = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-NAL = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-ORA = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-TRN = {
-    value = 0
-    level = 0
-    influence_value = 0
-}
-
-KOK = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-BUK = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-KAZ = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-KHI = {
-    value = -25
-    level = 0
-    influence_value = 0
-}
-
-EGY = {
-    value = 0        #relation
-    level = 0        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
-}
 
 leader = {
     name = "Winfield Scott"
@@ -646,7 +90,7 @@ leader = {
 }
 
 army = {
-    name = "US Dragoons"
+    name = "Amauldi Dragoons"
     location = 199
     regiment = {
         name= "1st Cavalry Regiment"
@@ -670,7 +114,7 @@ army = {
 
 army = {
     name = "Army of the South"
-    location = 200
+    location = 140
     regiment = {
         name= "1st Regiment of Infantry"
         type = infantry
@@ -698,7 +142,7 @@ army = {
 }
 
 army = {
-    name = "US Army"
+    name = "Amauldi Army"
     location = 220
     regiment = {
         name= "4th Regiment of Infantry"
@@ -717,18 +161,6 @@ army = {
         type = infantry
         home = 235
     }
-
-    regiment = {
-        name= "2nd Regiment of Artillery"
-        type = artillery
-        home = 234
-    }
-
-}
-
-army = {
-    name = "Army of Observation"
-    location = 144
     regiment = {
         name= "7th Regiment of Infantry"
         type = infantry
@@ -747,7 +179,14 @@ army = {
         home = 247
     }
 
+    regiment = {
+        name= "2nd Regiment of Artillery"
+        type = artillery
+        home = 234
+    }
+
 }
+
 
 navy = {
     name = "1st Squadron"
@@ -779,35 +218,7 @@ navy = {
 
 }
 
-navy = {
-    name = "2nd Squadron"
-    location = 248
-    ship = {
-        name= "Ohio"
-        type = manowar
-    }
 
-    ship = {
-        name= "Hudson"
-        type = frigate
-    }
-
-}
-
-navy = {
-    name = "3rd Squadron"
-    location = 214
-    ship = {
-        name= "John Adams"
-        type = frigate
-    }
-
-    ship = {
-        name= "United States"
-        type = frigate
-    }
-
-}
 
 navy = {
     name = "4th Squadron"
@@ -841,7 +252,7 @@ navy = {
 
 navy = {
     name = "1st Reserve Squadron"
-    location = 247
+    location = 243
     ship = {
         name= "Alabama"
         type = manowar
@@ -859,36 +270,6 @@ navy = {
 
     ship = {
         name= "1st Reserve Transport"
-        type = clipper_transport
-    }
-
-}
-
-navy = {
-    name = "2nd Reserve Squadron"
-    location = 214
-    ship = {
-        name= "Columbus"
-        type = manowar
-    }
-
-    ship = {
-        name= "Delaware"
-        type = manowar
-    }
-
-    ship = {
-        name= "New York"
-        type = manowar
-    }
-
-    ship = {
-        name= "North Carolina"
-        type = manowar
-    }
-
-    ship = {
-        name= "2nd Reserve Transport"
         type = clipper_transport
     }
 

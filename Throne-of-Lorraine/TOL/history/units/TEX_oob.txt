@@ -1,9 +1,8 @@
-USA = {
-    value = 125
-}
+
+FRA = {value = -100}
 
 leader = {
-    name = "Sam Houston"
+    name = "Alexander von Kluck"
     type = land
     date="1836.1.1"
     personality = cautious
@@ -11,7 +10,7 @@ leader = {
 }
 
 leader = {
-    name = "Charles Edward Hawkins"
+    name = "Karl von Hausen"
     type = sea
     date="1836.1.1"
     personality = audacious
@@ -20,22 +19,32 @@ leader = {
 
 
 army = {
-    name = "Army of Texas"
+    name = "Army of Freiland"
     location = 133
     regiment = {
-        name= "Travis' Command"
-        type = cuirassier
+        name= "Erste Infanterie division"
+        type = infantry
         home = 133
     }
 
     regiment = {
-        name= "Fannin's Command"
+        name= "Zweite infanterie division"
         type = infantry
         home = 132
     }
-
+	
     regiment = {
-        name = "Burleson's Command"
+        name= "Dritte infanterie division"
+        type = infantry
+        home = 132
+    }
+	regiment = {
+        name= "Vierte infanterie division"
+        type = infantry
+        home = 132
+    }
+    regiment = {
+        name = "Burlesons Befehl"
         type = artillery
         home = 137
     }
@@ -43,11 +52,11 @@ army = {
 }
 
 navy = {
-    name = "Texan Navy"
+    name = "Freilandian Navy"
     location = 133
 
     ship = {
-        name= "Invincible"
+        name= "Unbesiegbar"
         type = frigate
     }
 
@@ -57,12 +66,12 @@ navy = {
     }
 
     ship = {
-        name= "Independence"
+        name= "Die Unabhängigkeit"
         type = frigate
     }
 
     ship = {
-        name= "Liberty"
+        name= "Freiheit"
         type = clipper_transport
     }
 

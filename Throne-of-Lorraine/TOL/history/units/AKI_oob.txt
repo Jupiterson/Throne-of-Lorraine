@@ -124,9 +124,7 @@ SPU = {
 
 
 #Other GP's
-ENG = { value = 50 }
-FRA = { value = 75 }
-AUS = { value = 25 }
+FRA = { value = -100 }
 RUS = { value = 25 }
 PRU = { value = 25 }
 TUR = { value = 0 }
@@ -646,205 +644,157 @@ leader = {
 }
 
 army = {
-    name = "The Kannata Garrison"
-    location = 46
-
+    name = "Akino First Army"
+    location = 73
     regiment = {
-        name= "Prince of Wales's Lancers"
-        type = cuirassier
-        home = 276
+        name= "1st Cavalry Regiment"
+        type = dragoon
+        home = 73
     }
-
     regiment = {
-        name= "12th (The East Suffolk) Regiment"
+        name= "1st Regiment of Infantry"
         type = infantry
-        home = 277
+        home = 73
     }
 
     regiment = {
-        name= "9th (The East Norfolk) Regiment"
+        name= "2nd Regiment of Infantry"
         type = infantry
-        home = 277
+        home = 68
     }
-
     regiment = {
-        name= "Canadian Frontier Light Infantry"
+        name= "9th Regiment of Infantry"
         type = infantry
-        home = 46
+        home = 247
     }
 
-    regiment = {
-        name= "Prince of Wales's Own Regiment"
-        type = infantry
-        home = 286
-    }
-
-    regiment = {
-        name= "1st Canadian Royal Artillery"
-        type = artillery
-        home = 266
-    }
-
-    regiment = {
-        name= "2nd Canadian Royal Artillery"
-        type = artillery
-        home = 292
-    }
-
-    regiment = {
-        name= "1st Regiment Royal Artillery"
-        type = artillery
-        home = 255
-    }
-
-    regiment = {
-        name= "3rd Regiment Royal Artillery"
-        type = artillery
-        home = 303
-    }
 
 }
-
 
 army = {
-    name = "The Akino Garrison"
-    location = 58
-
+    name = "Akino Second Army"
+    location = 240
     regiment = {
-        name= "2nd Dragoons (Royal Scots Greys)"
-        type = cuirassier
-        home = 269
+        name= "2nd Cavalry Regiment"
+        type = dragoon
+        home = 240
     }
 
     regiment = {
-        name= "1st Canadian Royal Regiment"
+        name= "3rd Cavalry Regiment"
+        type = dragoon
+        home = 236
+    }
+
+    regiment = {
+        name= "3rd Regiment of Infantry"
         type = infantry
-        home = 58
+        home = 54
     }
-
     regiment = {
-        name= "The Welch Regiment"
+        name= "4th Regiment of Infantry"
         type = infantry
-        home = 274
+        home = 180
     }
 
     regiment = {
-        name= "Duke of Cornwall's Light Infantry"
+        name= "5th Regiment of Infantry"
         type = infantry
-        home = 277
+        home = 174
     }
 
     regiment = {
-        name= "34th (Cumberland) Regiment"
+        name= "6th Regiment of Infantry"
         type = infantry
-        home = 264
+        home = 249
     }
-
     regiment = {
-        name= "6th Regiment Royal Artillery"
+        name= "1st Regiment of Artillery"
         type = artillery
-        home = 259
+        home = 249
     }
-
     regiment = {
-        name= "7th Regiment Royal Artillery"
+        name= "2nd Regiment of Artillery"
         type = artillery
-        home = 275
-    }
-
-    regiment = {
-        name= "8th Regiment Royal Artillery"
-        type = artillery
-        home = 267
+        home = 56
     }
 }
 
+army = {
+    name = "Army of The West"
+    location = 160
+    regiment = {
+        name= "7th Regiment of Infantry"
+        type = infantry
+        home = 160
+    }
+
+    regiment = {
+        name= "8th Regiment of Infantry"
+        type = infantry
+        home = 159
+    }
+
+
+}
 
 navy = {
     name = "1st Squadron"
-    location = 222
+    location = 73
     ship = {
-        name= "Franklin"
+        name= "Die Hermann"
         type = manowar
     }
 
     ship = {
-        name= "Pennsylvania"
+        name= "Der Neu Hamburger Viermaster"
         type = manowar
     }
 
     ship = {
-        name= "Washington"
+        name= "Lübeckisches Flankenschiff"
         type = manowar
     }
 
     ship = {
-        name= "Columbia"
+        name= "Der Neu Lübecker Viermaster"
         type = frigate
     }
 
     ship = {
-        name= "Constellation"
+        name= "Die Neu-Pommern"
         type = frigate
     }
 
 }
+
+
 
 navy = {
     name = "2nd Squadron"
     location = 248
     ship = {
-        name= "Ohio"
-        type = manowar
-    }
-
-    ship = {
-        name= "Hudson"
-        type = frigate
-    }
-
-}
-
-navy = {
-    name = "3rd Squadron"
-    location = 214
-    ship = {
-        name= "John Adams"
+        name= "Die Karl"
         type = frigate
     }
 
     ship = {
-        name= "United States"
-        type = frigate
-    }
-
-}
-
-navy = {
-    name = "4th Squadron"
-    location = 219
-    ship = {
-        name= "Independance"
+        name= "Die Alte Jutte"
         type = frigate
     }
 
     ship = {
-        name= "Brandywine"
+        name= "Das Seeland marinen Schiff"
         type = frigate
     }
 
     ship = {
-        name= "Constitution"
+        name= "Der kleine Robert"
         type = frigate
     }
 
     ship = {
-        name= "Potomac"
-        type = frigate
-    }
-
-    ship = {
-        name= "'James McKay' Flotilla"
+        name= "Der Neue Brummer"
         type = clipper_transport
     }
 
@@ -852,115 +802,24 @@ navy = {
 
 navy = {
     name = "1st Reserve Squadron"
-    location = 247
+    location = 74
     ship = {
-        name= "Alabama"
+        name= "Die Schutzflotte nr1"
         type = manowar
     }
 
     ship = {
-        name= "Vermont"
+        name= "Die Schutzflotte nr 2"
         type = manowar
     }
 
     ship = {
-        name= "Virginia"
+        name= "Die Schutzflotte nr 3"
         type = manowar
     }
 
     ship = {
-        name= "1st Reserve Transport"
-        type = clipper_transport
-    }
-
-}
-
-navy = {
-    name = "North America Station"
-    location = 71 #Halifax
-    ship = {
-        name= "HMS Saint Vincent"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Wellesley"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Aeolus"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Barham"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Daedalus"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Druid"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Dublin"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Hebe"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Mercury"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Mermaid"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Rhadamanthus"
-        type = commerce_raider
-    }
-
-}
-
-
-navy = {
-    name = "2nd Reserve Squadron"
-    location = 214
-    ship = {
-        name= "Columbus"
-        type = manowar
-    }
-
-    ship = {
-        name= "Delaware"
-        type = manowar
-    }
-
-    ship = {
-        name= "New York"
-        type = manowar
-    }
-
-    ship = {
-        name= "North Carolina"
-        type = manowar
-    }
-
-    ship = {
-        name= "2nd Reserve Transport"
+        name= "Die Schutzflotte nr 4"
         type = clipper_transport
     }
 
