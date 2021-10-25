@@ -1,9 +1,5 @@
-USA = {
-    value = 100
-}
-SPA = {
-    value = 75
-}
+
+FRA = {value = -20}
 
 leader = {
     name = "D. Francisco López "
@@ -51,19 +47,19 @@ army = {
 
     regiment = {
         name= "1.Oajaca y Tlaxcala"
-        type = irregular
+        type = infantry
         home = 2177
     }
 
     regiment = {
         name= "2.Oajaca y Tlaxcala"
-        type = irregular
+        type = infantry
         home = 2173
     }
 
     regiment = {
         name= "3.Oajaca y Tlaxcala"
-        type = irregular
+        type = infantry
         home = 2167
     }
 
@@ -80,13 +76,19 @@ army = {
 
     regiment = {
         name= "2.Division Comonfort"
-        type = irregular
+        type = infantry
         home = 2159
     }
 
     regiment = {
         name= "3.Division Comonfort"
-        type = irregular
+        type = infantry
+        home = 2174
+    }
+	
+	    regiment = {
+        name= "4.Division Comonfort"
+        type = infantry
         home = 2174
     }
 

@@ -1,0 +1,70 @@
+
+FRA = {value = -100}
+
+leader = {
+    name = "Carlo Filangieri"
+    date = 1831.1.1
+    type = land
+    personality = harsh
+    background = generals_aide
+    prestige = 0.2
+}
+
+leader = {
+    name = "Rafaella de Cosa"
+    date = 1836.1.1
+    type = sea
+    personality = gallant
+    background = war_college
+}
+
+leader = {
+    name = "Francesco Mendoza"
+    date = 1830.1.1
+    type = land
+    personality = arrogant
+    background = aristocrat
+    prestige = 0.2
+}
+
+
+army = {
+    name = "Esercito delle Sicilie"
+    location = 762
+    regiment = {
+        name= "1. Fanteria di Linea - Re e Regina"
+        type = infantry
+        home = 762
+    }
+
+    regiment = {
+        name= "2. Fanteria di Linea - Duca di Calabria"
+        type = infantry
+        home = 763
+    }
+
+    regiment = {
+        name= "3. Fanteria di Linea - Duca di Noto"
+        type = infantry
+        home = 764
+    }
+}
+
+navy = {
+    name = "Real Marina delle Sicilie"
+    location = 762
+    ship = {
+        name= "Ferdinando II"
+        type = frigate
+    }
+
+    ship = {
+        name= "Christina"
+        type = frigate
+    }
+
+    ship = {
+        name= "Regina Isabella"
+        type = frigate
+    }
+}

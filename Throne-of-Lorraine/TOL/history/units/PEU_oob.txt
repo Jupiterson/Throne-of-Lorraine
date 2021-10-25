@@ -2,6 +2,8 @@ ECU = {
     value = -100
 }
 
+FRA = {value = -20}
+
 leader = {
     name = "Andres de Santa Cruz"
     type = land
@@ -26,24 +28,49 @@ navy = {
 }
 
 army = {
-    name = "Ejército del Perú"
+    name = "Army of the Incan Empire"
     location = 2295
     regiment = {
-        name= "1. Brigada de Infantería"
+        name= "1. Infantry Division"
         type = infantry
         home = 2295
     }
 
     regiment = {
-        name= "2. Brigada de Infantería"
+        name= "2. Infantry Division"
         type = infantry
         home = 2295
     }
 
     regiment = {
-        name= "3. Brigada de Infantería"
+        name= "3. Infantry Division"
         type = infantry
         home = 2302
+    }
+	    regiment = {
+        name= "4. Infantry Division"
+        type = infantry
+        home = 2302
+    }
+	    regiment = {
+        name= "5. Brigada de Infantería"
+        type = infantry
+        home = 2305
+    }
+	    regiment = {
+        name= "6. Infantry Division"
+        type = infantry
+        home = 2308
+    }
+		regiment = {
+        name= "6. Infantry Division"
+        type = infantry
+        home = 2297
+    }
+		regiment = {
+        name= "7. Infantry Division"
+        type = infantry
+        home = 2303
     }
 
 }

@@ -1,0 +1,71 @@
+
+FRA = {value = -180}
+
+BAV = {
+    value = 150
+    military_access = yes
+}
+
+army = {
+    name = "Garde Royale"
+    location = 411
+    regiment = {
+        name= "1.Garde"
+        type = infantry
+        home = 411
+    }
+
+    regiment = {
+        name= "2.Garde"
+        type = infantry
+        home = 411
+    }
+
+    regiment = {
+        name= "3.Garde"
+        type = infantry
+        home = 412
+    }
+
+    regiment = {
+        name= "4.Garde"
+        type = infantry
+        home = 414
+    }
+
+    regiment = {
+        name= "1ère Division d'Hussard"
+        type = hussar
+        home = 413
+    }
+
+    regiment = {
+        name= "2ère Division d'Hussard"
+        type = hussar
+        home = 409
+    }
+
+    regiment = {
+        name= "3ère Division d'Hussard"
+        type = hussar
+        home = 409
+    }
+
+    regiment = {
+        name= "1.1ère Division d'Artillerie"
+        type = artillery
+        home = 413
+    }
+
+    regiment = {
+        name= "2.1ère Division d'Artillerie"
+        type = artillery
+        home = 432
+    }
+
+    regiment = {
+        name= "3.1ère Division d'Artillerie"
+        type = artillery
+        home = 3312
+    }
+}
