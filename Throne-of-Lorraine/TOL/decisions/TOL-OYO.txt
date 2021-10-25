@@ -1,0 +1,38 @@
+political_decisions = {
+
+expell_christians = {
+        picture = falklands_map
+        potential = {
+            tag = OYO
+			NOT = { has_country_flag = expelled_chr }
+            2392 = { empty = yes }
+			2396 = { empty = yes }
+			
+        }
+        allow = {
+		     civilization_progress = 0.5
+ #           year = 1845
+            money = 70000
+        }
+        effect = {
+            treasury = -70000
+			set_country_flag = expelled_chr
+            2392 = { secede_province = THIS any_pop = { literacy = 0.25 } }
+#			2396 = { secede_province = THIS any_pop = { literacy = 0.25 } }
+			2392 = { add_core = KRI }
+#			2396 = { add_core = KRI }
+            any_pop = {
+                limit = {
+				    has_pop_religion = reformed					
+                }
+                move_pop = 2392
+            }
+			OYO = {
+                release = KRI
+				}
+			THIS = { country_event = 23299 }
+        }
+    }
+
+
+}

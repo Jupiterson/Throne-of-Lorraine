@@ -424,11 +424,11 @@ claim_border = {
     }
 
 
-claim_anhalt = {
+claim_anhalt = { 
         picture = german_confederation
         potential = {
             tag = SAX
-            NOT = { has_country_flag = anhalt_claimed }
+     #       NOT = { has_country_flag = anhalt_claimed }
         }
 
         allow = {
