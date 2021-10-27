@@ -692,8 +692,8 @@ political_decisions = {
             662 = {
                 add_core = PLR
             }
-            add_accepted_culture = byelorussian
-            add_accepted_culture = ukrainian
+            add_accepted_culture = ruthenyan
+            add_accepted_culture = ruthenyan
             change_tag = PLR
             prestige = 40
             any_country = {
@@ -723,8 +723,8 @@ political_decisions = {
             any_pop = {
                 limit = {
 					OR = {
-						has_pop_culture = ukrainian
-						has_pop_culture = byelorussian
+						has_pop_culture = ruthenyan
+						has_pop_culture = ruthenyan
 					}
                 }
                 militancy = -4

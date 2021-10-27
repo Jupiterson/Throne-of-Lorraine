@@ -216,7 +216,7 @@ country_event = {
                 owner = {
                     OR = {
                         is_culture_group = french
-                        primary_culture = french_australian
+                        primary_culture = australian
                     }
                 }
             }
@@ -243,7 +243,7 @@ country_event = {
                                                duration = 547 }
                 }
             }
-            any_pop = { limit = { location = { is_core = FAS } culture = french_australian type = bureaucrats} reduce_pop = 0.1 }
+            any_pop = { limit = { location = { is_core = FAS } culture = australian type = bureaucrats} reduce_pop = 0.1 }
             2476 = {
                 state_scope = {
                     any_owned = {

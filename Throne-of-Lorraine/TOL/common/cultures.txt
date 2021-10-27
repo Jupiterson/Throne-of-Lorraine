@@ -255,7 +255,7 @@ beneluxian = {
             List Lucas
             Michiels "van Marnix" Martena "de Moor" "Melvill van Carnbee"
             Nepveu Nachtegaal "van Nieuwenaar" "van Noort"
-            Ongerboer
+            Ongerscottish
             "van Pallandt"
             Rijk Röell "van Raephorst" "van Rechteren" Reijersen "van Renesse" "van Riebeeck" "de Rijk" "van Rossum"
             Sabron "Schimmelpenninck van der Oye" "van Saksen-Weimar" "van Spilbergen" Staal Stokhuyzen Schouten Schenk Spiegel
@@ -313,7 +313,7 @@ veldlewer = {
             List Lucas
             Michiels "van Marnix" Martena "de Moor" "Melvill van Carnbee"
             Nepveu Nachtegaal "van Nieuwenaar" "van Noort"
-            Ongerboer
+            Ongerscottish
             "van Pallandt"
             Rijk Röell "van Raephorst" "van Rechteren" Reijersen "van Renesse" "van Riebeeck" "de Rijk" "van Rossum"
             Sabron "Schimmelpenninck van der Oye" "van Saksen-Weimar" "van Spilbergen" Staal Stokhuyzen Schouten Schenk Spiegel
@@ -371,7 +371,7 @@ gek = {
             List Lucas
             Michiels "van Marnix" Martena "de Moor" "Melvill van Carnbee"
             Nepveu Nachtegaal "van Nieuwenaar" "van Noort"
-            Ongerboer
+            Ongerscottish
             "van Pallandt"
             Rijk Röell "van Raephorst" "van Rechteren" Reijersen "van Renesse" "van Riebeeck" "de Rijk" "van Rossum"
             Sabron "Schimmelpenninck van der Oye" "van Saksen-Weimar" "van Spilbergen" Staal Stokhuyzen Schouten Schenk Spiegel
@@ -453,7 +453,7 @@ gek = {
             List Lucas
             Michiels "van Marnix" Martena "de Moor" "Melvill van Carnbee"
             Nepveu Nachtegaal "van Nieuwenaar" "van Noort"
-            Ongerboer
+            Ongerscottish
             "van Pallandt"
             Rijk Röell "van Raephorst" "van Rechteren" Reijersen "van Renesse" "van Riebeeck" "de Rijk" "van Rossum"
             Sabron "Schimmelpenninck van der Oye" "van Saksen-Weimar" "van Spilbergen" Staal Stokhuyzen Schouten Schenk Spiegel
@@ -1301,12 +1301,6 @@ pan_romanian = {
         }
         radicalism = 10
     }
-    aromanian = {
-        color = { 255 220 155 }
-        first_names = { Adrian Alexandru Andrei Anton Artur Bogdan Carol Cezar Constantin Constin Cosmin Daniel Dumitru Emanuel Eremia Eugen Ferdinand Flaviu Florea Gheorghe Grigore Henric Horatiu Iacob Ilie Ioan Ion "Ion Emanuel" Iosif Iulian Iuliu Laurentiu Leontin Luca Lucian Mihai Mircea Nicolae Ovidiu Petru Radu Sergiu Silviu Simion Stefan Valeriu Vasile Victor Vintila Vlad }
-        last_names = { Angelescu Antonescu Argetoianu Averescu Baldescu Barozzi Berindei Cernat Christecu Cihoski Ciuperca Coanda Crainiceanu Critescu Culcer Cuza "de Hohenzollern" Dona Dragalina Dumitrescu Falcoianu Florescu Gardescu Grigorescu Froza Harjeu Holban Iancovescu Iliasevici Iliescu Ionascu Ionescu Ionitiu Koslinski Lahovary Lupescu Mardarescu Murgescu Poenaru Prezan Salajan Samsonovici Schitiu Scodrea Slaniceanu Steflea Tatarascu Tenescu Vaitoianu Zottu }
-        radicalism = 10
-    }
     union = ROM
 }
 
@@ -1444,8 +1438,6 @@ ruthenian = {
                            Petliura Radchenko Rozhestvensky Shevchenko Skoropadskyi Stefaniv Tymoshenko Vitovsky Zhauryd }
             radicalism = 10
 
-          union = RUT
-
         }
     cossack = {
         color = {60 160 160}
@@ -1467,6 +1459,7 @@ ruthenian = {
         }
         radicalism = 10
     }
+	union = RUT
 }
      
 baltic = {
@@ -2623,20 +2616,6 @@ south_asian = {
 
         }
     }
-    anglo_indian = {
-        color = { 190 120 130}
-        first_names = { Albert Alexander Alfred Archibald Arthur Augustus Benjamin Bernard Charles Colbert
-        Colin Cyril David Donald Douglas Edmund Edwar Fairfax Ferdinand Francis
-        Frederick Geoffrey George Graham Henrey Herbert Horatio Hubert Hugh Ian
-        James Jeremy John Joseph Leopold Lester Louis Martin Nigel Oswald
-        Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary }
-
-        last_names = { Allenby Battemberg Beatty Beresford Brown Buller Butler Campbell Cardigan Churchill
-        Cochrane Cockburn Dundas Fisher French Gough Grant Grenfell Haig
-        Hamilton Hardinge Havelock Hope Jellicoe Kitchener Lyons Madden Milne Montgomery
-        Moresby Mundy Napier Odoni Plummer Ragland Roberts Seaton Seymour
-        Smith Smith-Dorrien Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood }
-    }
     union = HND
 }
 
@@ -3280,6 +3259,13 @@ east_asian = {
         last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu
         }
     }
+	buyeo = {
+        color = {87 89 25}
+        first_names = { Hwan Chung Hyong Shinjong Haung Ch'ok Taek Seon Si Jip Guk Mok Bo Yong Sun Gyu Hu Kim Rhee Bahk Choi Jung Yie Ee Gahn Kahn Gahl Kahl Gahm Kahng Kangjun Kae Kyun Kyong Kye Ko Kok Khong Kwak Kyo Ku Kuk Kun Kung Kwog Kwon Keun Kuem Ki Kil Pak Chae Nahn Namgung Nahng Lang Nae Noh Roi Than Tam Tang Tae Toh Tokko Ton Tong Tubongbanua Ryu Mangjul Maing Myong Myo Muk Pang Min Pyun Peom Paek Pin Pi Pok Sa Sagong Sam Sang Somoon Seonwoo Seul Song Sobong Sin Sim Yang Lyang Yu Chang Changgok Jei Chong Chegal Chin P'aeng P'an Ch'ang Pyong Hyung Hyun Huhng Hyeong Hwangbo Lee Ch'oe Cho Kang Yun Han
+        }
+        last_names = { Yi Jo Bak Hong Seo Jeong Jang Shin Lim Song Jin Jun Hwang Jeon Min Yoon Ahn Ko Joon Bae Nam An "Dong Hyun" Sung Ha Baek MinSu Cha Im Won Jihun Seong "Sang Min" Minwoo Minho "Ji Hoon" Joo Woo Woojin Donghyun Jongmin Jaehyun Ji "Seung Hyun" "Sung Min" Seungmin Jihoon "Jong-un" "Jong-il" "Pong-ju" "Yong-rim" "Yong-nam" "Ryong-hae" "Yong-ho"
+        }
+    }
     union = CHI
 }
 
@@ -3297,13 +3283,6 @@ far_east_asian = {
     }
     korean = {
         color = {230 230 230}
-        first_names = { Hwan Chung Hyong Shinjong Haung Ch'ok Taek Seon Si Jip Guk Mok Bo Yong Sun Gyu Hu Kim Rhee Bahk Choi Jung Yie Ee Gahn Kahn Gahl Kahl Gahm Kahng Kangjun Kae Kyun Kyong Kye Ko Kok Khong Kwak Kyo Ku Kuk Kun Kung Kwog Kwon Keun Kuem Ki Kil Pak Chae Nahn Namgung Nahng Lang Nae Noh Roi Than Tam Tang Tae Toh Tokko Ton Tong Tubongbanua Ryu Mangjul Maing Myong Myo Muk Pang Min Pyun Peom Paek Pin Pi Pok Sa Sagong Sam Sang Somoon Seonwoo Seul Song Sobong Sin Sim Yang Lyang Yu Chang Changgok Jei Chong Chegal Chin P'aeng P'an Ch'ang Pyong Hyung Hyun Huhng Hyeong Hwangbo Lee Ch'oe Cho Kang Yun Han
-        }
-        last_names = { Yi Jo Bak Hong Seo Jeong Jang Shin Lim Song Jin Jun Hwang Jeon Min Yoon Ahn Ko Joon Bae Nam An "Dong Hyun" Sung Ha Baek MinSu Cha Im Won Jihun Seong "Sang Min" Minwoo Minho "Ji Hoon" Joo Woo Woojin Donghyun Jongmin Jaehyun Ji "Seung Hyun" "Sung Min" Seungmin Jihoon "Jong-un" "Jong-il" "Pong-ju" "Yong-rim" "Yong-nam" "Ryong-hae" "Yong-ho"
-        }
-    }
-	buyeo = {
-        color = {87 89 25}
         first_names = { Hwan Chung Hyong Shinjong Haung Ch'ok Taek Seon Si Jip Guk Mok Bo Yong Sun Gyu Hu Kim Rhee Bahk Choi Jung Yie Ee Gahn Kahn Gahl Kahl Gahm Kahng Kangjun Kae Kyun Kyong Kye Ko Kok Khong Kwak Kyo Ku Kuk Kun Kung Kwog Kwon Keun Kuem Ki Kil Pak Chae Nahn Namgung Nahng Lang Nae Noh Roi Than Tam Tang Tae Toh Tokko Ton Tong Tubongbanua Ryu Mangjul Maing Myong Myo Muk Pang Min Pyun Peom Paek Pin Pi Pok Sa Sagong Sam Sang Somoon Seonwoo Seul Song Sobong Sin Sim Yang Lyang Yu Chang Changgok Jei Chong Chegal Chin P'aeng P'an Ch'ang Pyong Hyung Hyun Huhng Hyeong Hwangbo Lee Ch'oe Cho Kang Yun Han
         }
         last_names = { Yi Jo Bak Hong Seo Jeong Jang Shin Lim Song Jin Jun Hwang Jeon Min Yoon Ahn Ko Joon Bae Nam An "Dong Hyun" Sung Ha Baek MinSu Cha Im Won Jihun Seong "Sang Min" Minwoo Minho "Ji Hoon" Joo Woo Woojin Donghyun Jongmin Jaehyun Ji "Seung Hyun" "Sung Min" Seungmin Jihoon "Jong-un" "Jong-il" "Pong-ju" "Yong-rim" "Yong-nam" "Ryong-hae" "Yong-ho"
@@ -3606,17 +3585,6 @@ american_cultures = {
         Davis Lane Posey Scales Warner Imboden Jenkins
         }
     }
-    texan = {
-        color = {153 0 0}
-        primary = TEX
-        first_names = {Hamilton Matthew Richard Hiram Thomas Elkanah John William James Albert Wilburn Walter Hinchie Samuel Benjamin
-        Henry Allison Horace Felix Jerome Lawrence Alexander Louis
-        }
-        last_names = {Bee Ector Gano Granbury Green Greer Gregg Hardeman Harrison Hood Johnston King Lane Mabry Maxey McCulloch Moore
-        Nelson Randal Robertson Ross Rosser Scurry Steele Terrell Waterhouse Waul Wharton Whitfield Wigfall Young Bowie Travis Houston
-        }
-        radicalism = 10
-    }
     #pacifican = {
     #    color = {189 138 94}
     #    first_names = { Adam Alexander William Henry Michael Samuel Joshua George John Matthew Mark Luke Lucas Jeffrey Ulysses
@@ -3639,15 +3607,7 @@ american_cultures = {
 
 neo_european_cultures = {
     leader = european
-
-    boer = {
-        color = {220 145 0}
-        first_names = { Sarel Rudolf Andries Hendrik Piet Racheltjie Dirkie Siener Koos Danie Christiaan Louis Petrus Paul Eugene Joubert
-        }
-        last_names = { Cilliers Botha Joubert Kruger Duquesne Potgieter "van Rensburg" "de la Rey" Theron "de Wet" Pretorius Retief "de Beer" Uys
-        }
-    }
-
+	
     australian = {
         color = {64 132 105}
         first_names = { John Alf Adrian Louis Hallam Henry Shane Stafford William Frederick Thomas Ronald Lawrence Bruce Ray Stuart Brian Bob Scott Guy
@@ -3655,92 +3615,8 @@ neo_european_cultures = {
         last_names = { Hope Tennyson Northcote War Thesinger Denman Forster Baird Issac Stewart Fisher Cook Davis Armstrong Anderson Mitchell MacKenzie
         }
     }
-    anglo_canadian = {
-        color = {248 165 255}
-        first_names = { Charles John Frederick Douglas Patrick Leonard Henry Arthur Alexander Campbell Gilbert Albert Victor Julian Francis James William Andrew Edwin Sam Guy Malcolm Louis David Colin
-        }
-        last_names = { Grey Elliot Hamilton Gordon Stanley Campbell Ross Windham Young Doyle Hastings Blackwood MacDougall Currie Otter Steele McNaughton Macdonell Alderson Hughes Byng Simonds Mercer Lipsett Watson Mackenzie Crerar
-        }
-    }
-    french_canadian = {
-        color = {168 195 255}
-        first_names = { Narcisse René Èdouard Luc Letellier Théodore Louis Francois Auguste Joseph Pierre Luis-Phillippe Jean Gaspard Eugéne Èssioff Huguel Jean-Pierre Gilles
-        }
-        last_names = { Belleau Caron "de St.-Just" Robitaille Masson Angers Chapleau Jotte Pantaléon Langelier Damasne LeBlanc Brodeur Perodeau
-        }
-        radicalism = 10
-    }
-    acadian = {
-        color = {168 255 249}
-        first_names = { Narcisse René Èdouard Luc Letellier Théodore Louis Francois Auguste Joseph Pierre Luis-Phillippe Jean Gaspard Eugéne Èssioff Huguel Jean-Pierre Gilles
-        }
-        last_names = { Belleau Caron "de St.-Just" Robitaille Masson Angers Chapleau Jotte Pantaléon Langelier Damasne LeBlanc Brodeur Perodeau
-        }
-    }
-    alaskan = {
-        color = { 14 139 80 }
-            first_names = {Adam Alexander William Henry Michael Samuel Joshua George John Matthew Mark Luke Lucas Jeffrey Ulysses
-            Joseph Charles Russell eksandr Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ivan Kirill Konstantin Lavr Leonid Lev Maxim
-            Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
-            }
-        last_names = {Smith Washington Grant Sherman Chamberlain Powell Clemens Abbott Abercrombie Allen Ames Anderson Barkhauer Andrews Appleton
-                Armstrong Arthur Atkins Asboth Babcock Baker Pope Banks Barnard Barnes Barnum Barry Barstow Bartlett Bates
-                Baxter Beatty Belknap Benton Blair Blunt Bradley Brown Buell Buford Burnside Butler Caldwell Campbell Carr Kuropatkin Lazarev
-                Makarov Menshikov Nakhimov Nebogatov Nikolaevich Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
-        }
-    }
-
-    neo_zelandais = {
-        color = {209 232 255}
-        first_names = { Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin
-        Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand
-        François Frédéric Georges Guillaume Gustave Henri Hubert Hugo Jacques Jean
-        Joseph Jules Julien Lazare Léopold Leroy Louis Lucien Matthieu Michel
-        Napoléon Nicolas Patrice Paul Philippe Pierre Robert Thibaut Thierry Thomas }
-
-        last_names = { Anthoine "Baraguey d'Hilliers" Bazaine Billot Bonaparte Bosquet "Boué de Lapeyrère" Bouët-Willaumez Boulanger Bourbaki
-        Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Bourbon" "de Castellane" "de Castelnau" "de Gaulle"
-        "de Langle de Cary" "de MacMahon" "de Montaignac" "de Saint Arnaud" d'Orleans Dubail Dubois Duchêne Dupetit-Thouars Exelmans
-        Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert
-        Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Petain Vaillant }
-    }
-
-    louisianan = {
-        color = { 35  27  120 }
-        first_names = { Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin
-        Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand
-        François Frédéric Georges Guillaume Gustave Henri Hubert Hugo Jacques Jean
-        Joseph Jules Julien Lazare Léopold Leroy Louis Lucien Matthieu Michel
-        Napoléon Nicolas Patrice Paul Philippe Pierre Robert Thibaut Thierry Thomas }
-
-        last_names = { Anthoine "Baraguey d'Hilliers" Bazaine Billot Bonaparte Bosquet "Boué de Lapeyrère" Bouët-Willaumez Boulanger Bourbaki
-        Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Bourbon" "de Castellane" "de Castelnau" "de Gaulle"
-        "de Langle de Cary" "de MacMahon" "de Montaignac" "de Saint Arnaud" d'Orleans Dubail Dubois Duchêne Dupetit-Thouars Exelmans
-        Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert
-        Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Petain Vaillant }
-    }
-    cajun = {
-        color = {3 128 184}
-        first_names = { Onufre Amédée Arna Barthalame Bienvenu Boudreaux Comeaux Dar Gaudet Lézin Louis Onézime Rivet Theotis Thibodeaux Azaire Beausoleil Daqué Iry Léontel Pognon Soulougue Albin Bruno Thibaut Aristide Odeo Papite Theophile Placide
-        }
-        last_names = { Guidry Thibodeaux Boudreaux Deterville "de St.-Lézin" Mandrin Laviolette Doralise Lafayette Comeaux Lazare Thibaut Guilliot Dugas Breaux Borque Bergeron Babineaux Arceneaux Cyr Daigle Delcombre Dupre Girouard Herbert Olivier Prudhomme Richard Landry Delahoussaye Courville
-        }
-    }
-
-    french_australian = {
-        color = {94 177 229}
-        first_names = { Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin
-        Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand
-        François Frédéric Georges Guillaume Gustave Henri Hubert Hugo Jacques Jean
-        Joseph Jules Julien Lazare Léopold Leroy Louis Lucien Matthieu Michel
-        Napoléon Nicolas Patrice Paul Philippe Pierre Robert Thibaut Thierry Thomas }
-
-        last_names = { Anthoine "Baraguey d'Hilliers" Bazaine Billot Bonaparte Bosquet "Boué de Lapeyrère" Bouët-Willaumez Boulanger Bourbaki
-        Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Bourbon" "de Castellane" "de Castelnau" "de Gaulle"
-        "de Langle de Cary" "de MacMahon" "de Montaignac" "de Saint Arnaud" d'Orleans Dubail Dubois Duchêne Dupetit-Thouars Exelmans
-        Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert
-        Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Petain Vaillant }
-    }
+  
+ 
 
 }
 
@@ -3781,23 +3657,6 @@ latin_american_cultures = {
         }
         radicalism = 15
     }
-    caribeno = {
-        color = {122 11 74}
-        first_names = { Alberto Alejandro Alfredo Ambrosio Anselmo Antonio Arturo Benigno Buenaventura Calixto
-        Carlos Ceferino Cesáreo Demetrio Desiderio Dionisio Domingo Eugenio Federico Felipe
-        Fernando Fidel Fulgencio Gerardo Gregorio Guillermo Horacio Ignacio Jacinto Jacobo
-        Jesús Joaquín José "José Miguel" Juan "Juan Bautista" Manuel Mariano Mario Máximo
-        Osvaldo Pablo Pedro Rafael Ramón Raúl Salvador Romás Ulises Wenceslao
-        }
-
-        last_names = { Acosta Alfau Báez Batista Bayo Cabral Carmona Castillo Castro Cisneros
-        "de Céspedes" "de la Rosa" "de Meriño" "de Rojas" Espaillat Estrada Estrella Fernández Figuereo García
-        Gil Gómez Gonzáles González Grau Guillermo Henríquez Herrera Hevia Laredo
-        Luperón Maceo Machado Márquez Mella Méndez Mendieta Moncada Morales Mota
-        Pelletier Pimentel Puello Santana Sosa Trujillo Valverde Vásquez Vázquez Zayas
-        }
-        radicalism = 10
-    }
     north_andean = {
         color = {211 230 216}
         first_names = { Antonio Camilo Carlos Cipriano Demetrio Diego Domingo Eloy Eusebio Eustorgio
@@ -3812,22 +3671,6 @@ latin_american_cultures = {
         Falcón Flores García Gómez González Gual Gutiérrez Herrán Hurtado López
         Mallarino Manjarrés Mariño Melo Monagas Moreno Núñez Obando Páez Porras
         Reyes Robles Rocafuerte Rojas Salgar Santander Soublette Urbina Villegas Zaldúa
-        }
-    }
-    south_andean = {
-        color = {116 156 146}
-        first_names = { Adolfo Agustín Alejandro Andrés Aníbal Antonio Bartolomé Bernardo David Diego
-        Domingo Eduardo Emiliano Emilio Enrique Esteban Eusebio Federico Felipe Francisco
-        Germán Hernando Hilarión Ignacio Isidoro Ismael Jorge José "José Miguel" Juan
-        "Juan Antonio" "Juan Francisco" Justo Ladislao Luis Manuel Mariano Miguel Narciso
-        Nicolás Pablo Patricio Pedro Ramón Rufino Ruperto Santiago Sebastián Severino Tomás
-        }
-
-        last_names = { Abaroa Ágreda Altamirano Arteaga Ballivián Baquedano Belzú Blanche Blanco Bulnes
-        Cabrera Calvo Campero Castilla Corrico Daza "de la Cruz" "de Santa Cruz" "de Velasco" "de Vidal"
-        Echenique Errázuriz Fernández Figueroa Franco Freire Gamarra Gorostiaga Grau
-        Guilarte "La Mar" Latorre Lynch Melgarejo Monje Montero Montes Montt Orbegoso
-        Pezet Rebolledo Ruíz-Tagle Salaverry "Santa María" Siles Sotomayor Toro Valencia Zañartu Zapata
         }
     }
     platinean = {
@@ -3868,27 +3711,7 @@ african_diaspora_cultures = {
     leader = african
 
     unit = AfricanGC
-    afro_american = {
-        color = {42 42 42}
-        first_names = { Aaron Alexander Andre Benton Caesar Cathay Charles Colin Ebenezer Edgar
-        Edward Frederick George Henry James Joseph Lewis Lloyd Matin Michael
-        Milton Osborne Pinckney Powhatan Robert Samuel Stewart Thomas William Wilson }
-
-        last_names = { Anderson Antoine Augusta Basset Beaty Blake Brooks Brown Cailloux Carney
-        Delany Douglass "Du Bois" Fields Flipper Gardner Griffin Hawkins Holland Jackson
-        King Mink Nell Pinn Ratcliff Remond Smith Stukes Tubman Veale }
-    }
     afro_caribbean = {
-        color = {32 57 32}
-        first_names = { Anderson Anselm Arthur Ben Colville Cyril Earl Edwin Ellis Eric
-        Geoffrey George Graham Henry Herbert Hubert Jeffrey John Josiah Lennox
-        Lloyd Malcolm Mervyn Nicholas Rainford Reginald Robert Stokely William Winston }
-
-        last_names = { Abbott Best Blaize Brathwaite Carmichael Chambers Clark Douglas Dymally Findley
-        Goddard Hall Henson Holder James Jones Julian Kilgour Lassalle Lovelace
-        McIntosh Nurse Perry Roberts Robinson Shadd Stollmeyer Sylvester Williams Young }
-    }
-    afro_latino = {
         color = {12 83 12}
         first_names = { Antonio Armando Arsenio Arturo Bartolomé Carlos Dámaso Enrique Francisco Generoso
         Guillermo Gumersindo Ignacio Israel Jacinto Jaime "José Celso" Juan Luciano Mario
@@ -4689,15 +4512,4 @@ southern_african = {
         last_names = { kaMpande kaMahole KaMdlela waMswati Buthelezei Khoza kaSihayo kaMvundlana kaZikhala kaMaphitha
         }
     }
-}
-bears = {
-    leader = polar_bear
-    unit = EuropeanGC
-    polar_bears = {
-        color = { 200 200 200}
-        first_names = { Nanuk Ursus Isbjorn Grrrowr Bjorn Grrgrrr Rawr Bamse }
-
-        last_names = { Beliy Medved Bjorn Rawrrorr Rrrrr Grrr Gyp Qoi Styrbjorn Blomstfjellet }
-    }
-    union = SCA
 }

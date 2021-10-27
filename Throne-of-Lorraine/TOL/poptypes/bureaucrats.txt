@@ -169,15 +169,15 @@ country_migration_target = {
             }
             AND = {
                 THIS = { has_pop_culture = dutch }
-                primary_culture = boer
+                primary_culture = scottish
             }
             AND = {
                 THIS = { is_culture_group = french }
                 OR = {
                     primary_culture = french_canadian
                     primary_culture = neo_zelandais
-                    primary_culture = french_australian
-                    primary_culture = cajun
+                    primary_culture = australian
+                    primary_culture = dixie
                     primary_culture = louisianan
                     primary_culture = french
                     primary_culture = wallonian
@@ -225,7 +225,7 @@ country_migration_target = {
 			capital_scope = { is_colonial = no continent = australia_new_zealand }
             primary_culture = australian
             primary_culture = neo_zelandais
-            primary_culture = french_australian
+            primary_culture = australian
         }
         OR = {
             government = democracy
@@ -248,7 +248,7 @@ country_migration_target = {
 			capital_scope = { is_colonial = no continent = australia_new_zealand }
             primary_culture = australian
             primary_culture = neo_zelandais
-            primary_culture = french_australian
+            primary_culture = australian
         }
         OR = {
             government = democracy
@@ -1533,7 +1533,7 @@ ideologies = {
             OR = {
                 is_accepted_culture = yes
                 is_primary_culture = yes
-                has_pop_culture = boer
+                has_pop_culture = scottish
             }
         }
 
@@ -1543,12 +1543,12 @@ ideologies = {
             OR = {
                 is_accepted_culture = yes
                 is_primary_culture = yes
-                has_pop_culture = boer
+                has_pop_culture = scottish
             }
             country = {
                 OR = {
                     primary_culture = british
-                    primary_culture = boer
+                    primary_culture = scottish
                 }
             }
         }
@@ -1725,7 +1725,7 @@ ideologies = {
             OR = {
                 is_accepted_culture = yes
                 is_primary_culture = yes
-                has_pop_culture = boer
+                has_pop_culture = scottish
             }
         }
 
@@ -1735,12 +1735,12 @@ ideologies = {
             OR = {
                 is_accepted_culture = yes
                 is_primary_culture = yes
-                has_pop_culture = boer
+                has_pop_culture = scottish
             }
             country = {
                 OR = {
                     primary_culture = british
-                    primary_culture = boer
+                    primary_culture = scottish
                 }
             }
         }

@@ -35,19 +35,19 @@ country_event = { #Mzilikazi of Matabele flees to Matabeland
             add_core = MAT
             secede_province = MAT
             life_rating = 25
-            any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
+            any_pop = { limit = { NOT = { has_pop_culture = scottish } } literacy = -0.99 }
         }
         2574 = {
             add_core = MAT
             secede_province = MAT
             life_rating = 20
-            any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
+            any_pop = { limit = { NOT = { has_pop_culture = scottish } } literacy = -0.99 }
         }
         2075 = {
             add_core = MAT
             secede_province = MAT
             life_rating = 20
-            any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
+            any_pop = { limit = { NOT = { has_pop_culture = scottish } } literacy = -0.99 }
         }
 
         2108 = {
@@ -111,15 +111,15 @@ country_event = { #The Mfecane
         2110 = { life_rating = 20 }
         random_list = {
             33 = {
-                any_pop = { limit = { NOT = { OR = { has_pop_culture = boer has_pop_culture = nguni } } } reduce_pop = 0.3 }
+                any_pop = { limit = { NOT = { OR = { has_pop_culture = scottish has_pop_culture = nguni } } } reduce_pop = 0.3 }
                 any_pop = { limit = { has_pop_culture = nguni } reduce_pop = 0.9 }
             }
             33 = {
-                any_pop = { limit = { NOT = { OR = { has_pop_culture = boer has_pop_culture = nguni } } } reduce_pop = 0.35 }
+                any_pop = { limit = { NOT = { OR = { has_pop_culture = scottish has_pop_culture = nguni } } } reduce_pop = 0.35 }
                 any_pop = { limit = { has_pop_culture = nguni } reduce_pop = 0.85 }
             }
             33 = {
-                any_pop = { limit = { NOT = { OR = { has_pop_culture = boer has_pop_culture = nguni } } } reduce_pop = 0.4 }
+                any_pop = { limit = { NOT = { OR = { has_pop_culture = scottish has_pop_culture = nguni } } } reduce_pop = 0.4 }
                 any_pop = { limit = { has_pop_culture = nguni } reduce_pop = 0.8 }
                 }
             }

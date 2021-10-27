@@ -22,11 +22,11 @@ political_decisions = {
                 limit = { owner = { tag = UKR } }
                 owner = {
                     any_country = {
-                        limit = { exists = no NOT = { primary_culture = ukrainian } accepted_culture = ukrainian }
-                        remove_accepted_culture = ukrainian
+                        limit = { exists = no NOT = { primary_culture = ruthenyan } accepted_culture = ruthenyan }
+                        remove_accepted_culture = ruthenyan
                     }
                     any_country = {
-                        limit = { exists = yes NOT = { primary_culture = ukrainian } accepted_culture = ukrainian }
+                        limit = { exists = yes NOT = { primary_culture = ruthenyan } accepted_culture = ruthenyan }
                         country_event = { id = 443039 days = 5 }
                     }
                 }
@@ -36,11 +36,11 @@ political_decisions = {
                 limit = { owner = { tag = BYE } }
                 owner = {
                     any_country = {
-                        limit = { exists = no NOT = { primary_culture = byelorussian } accepted_culture = byelorussian }
-                        remove_accepted_culture = byelorussian
+                        limit = { exists = no NOT = { primary_culture = ruthenyan } accepted_culture = ruthenyan }
+                        remove_accepted_culture = ruthenyan
                     }
                     any_country = {
-                        limit = { exists = yes NOT = { primary_culture = byelorussian } accepted_culture = byelorussian }
+                        limit = { exists = yes NOT = { primary_culture = ruthenyan } accepted_culture = ruthenyan }
                         country_event = { id = 443039 days = 10 }
                     }
                 }

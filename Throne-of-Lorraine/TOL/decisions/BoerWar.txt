@@ -1,5 +1,5 @@
 political_decisions = {
-    boer_republic = {
+    scottish_republic = {
         potential = {
             OR = {
                 tag = NAL
@@ -10,7 +10,7 @@ political_decisions = {
         }
 
         allow = {
-            NOT = { has_country_modifier = trek_boers }
+            NOT = { has_country_modifier = trek_scottishs }
         }
 
         effect = {
@@ -25,15 +25,15 @@ political_decisions = {
             regular_clothes = 150
             canned_food = 150
             add_country_modifier = {
-                name = trek_boers
+                name = trek_scottishs
                 duration = 730
             }
             add_country_modifier = {
-                name = boer_republic
+                name = scottish_republic
                 duration = 7300
             }
             any_pop = {
-                limit = { has_pop_culture = boer }
+                limit = { has_pop_culture = scottish }
                 militancy = -8
                 ideology = {
                     value = conservative
@@ -67,12 +67,12 @@ political_decisions = {
             is_our_vassal = TRN
             TRN = { NOT = { any_owned_province = { is_core = THIS } } }
             NOT = { has_country_flag = had_sand_river_convention }
-            NOT = { has_country_flag = boer_accepted }
+            NOT = { has_country_flag = scottish_accepted }
         }
         allow = {
             TRN = {
                 war = no
-                NOT = { has_country_modifier = trek_boers }
+                NOT = { has_country_modifier = trek_scottishs }
             }
         }
         effect = {
@@ -85,7 +85,7 @@ political_decisions = {
     orange_river_convention = {
         potential = {
             is_our_vassal = ORA
-            NOT = { has_country_flag = boer_accepted }
+            NOT = { has_country_flag = scottish_accepted }
             ORA = {
                 NOT = { any_owned_province = { is_core = THIS } }
             }
@@ -95,7 +95,7 @@ political_decisions = {
         allow = {
             ORA = {
                 war = no
-                NOT = { has_country_modifier = trek_boers }
+                NOT = { has_country_modifier = trek_scottishs }
             }
         }
 
@@ -108,7 +108,7 @@ political_decisions = {
 
     claim_transvaal = {
         potential = {
-            primary_culture = boer
+            primary_culture = scottish
             NOT = {
                 tag = TRN
                 has_global_flag = south_africa_formed
@@ -167,7 +167,7 @@ political_decisions = {
     claim_oranje = {
         picture = claim_transvaal
         potential = {
-            primary_culture = boer
+            primary_culture = scottish
             NOT = {
                 tag = ORA
                 has_global_flag = south_africa_formed
@@ -223,7 +223,7 @@ political_decisions = {
     claim_natalia = {
         picture = claim_transvaal
         potential = {
-            primary_culture = boer
+            primary_culture = scottish
             NOT = {
                 tag = NAL
                 has_country_flag = claimed_natalia
@@ -278,7 +278,7 @@ political_decisions = {
 	claim_northern_cape = {
 		picture = claim_transvaal
         potential = {
-            primary_culture = boer
+            primary_culture = scottish
 			NOT = { ENG_2092 = { is_core = THIS } }
         }
 
@@ -336,7 +336,7 @@ political_decisions = {
                     remove_core = SAF
                 }
                 primary_culture = THIS
-                add_accepted_culture = boer
+                add_accepted_culture = scottish
                 set_country_flag = post_colonial_country
             }
             any_owned = {
@@ -405,10 +405,10 @@ political_decisions = {
     treaty_of_vereeniging = {
         picture = treaty_signing
         potential = {
-            primary_culture = boer
+            primary_culture = scottish
             2087 = {
                 owner = {
-                    NOT = { primary_culture = boer }
+                    NOT = { primary_culture = scottish }
                     war_with = THIS
                 }
             }
@@ -440,7 +440,7 @@ political_decisions = {
         }
 
         effect = {
-            set_global_flag = won_boer_war
+            set_global_flag = won_scottish_war
             random_country = {
                 limit = {
                     owns = 2087

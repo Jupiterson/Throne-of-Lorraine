@@ -766,7 +766,7 @@ country_event = {
             is_culture_group = south_asian
             is_culture_group = indo_iranian
             AND = {
-                primary_culture = boer
+                primary_culture = scottish
                 overlord = { NOT = { owns = 2087 } }
             }
         }
@@ -818,7 +818,7 @@ country_event = {
             factor = 50
             modifier = {
                 factor = 0.25
-                primary_culture = boer
+                primary_culture = scottish
             }
             modifier = {
                 factor = 1.25
@@ -827,11 +827,11 @@ country_event = {
             modifier = {
                 factor = 1.25
                 NOT = { military_score = 10 }
-                NOT = { primary_culture = boer }
+                NOT = { primary_culture = scottish }
             }
             modifier = {
                 factor = 1.5
-                NOT = { primary_culture = boer }
+                NOT = { primary_culture = scottish }
                 any_neighbor_country = {
                     is_greater_power = yes
                     NOT = { is_our_vassal = THIS }
@@ -840,7 +840,7 @@ country_event = {
             }
             modifier = {
                 factor = 10
-                NOT = { primary_culture = boer }
+                NOT = { primary_culture = scottish }
                 any_neighbor_country = {
                     is_greater_power = yes
                     NOT = { is_our_vassal = THIS }
@@ -891,7 +891,7 @@ country_event = {
             factor = 30
             modifier = {
                 factor = 1.5
-                primary_culture = boer
+                primary_culture = scottish
             }
             modifier = {
                 factor = 1.25
@@ -951,7 +951,7 @@ country_event = {
             factor = 15
             modifier = {
                 factor = 0.75
-                primary_culture = boer
+                primary_culture = scottish
             }
 
             modifier = {
@@ -1005,7 +1005,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.25
-                primary_culture = boer
+                primary_culture = scottish
             }
             modifier = {
                 factor = 1.5
