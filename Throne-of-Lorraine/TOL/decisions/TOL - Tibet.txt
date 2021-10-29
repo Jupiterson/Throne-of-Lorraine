@@ -1,0 +1,99 @@
+political_decisions = {	
+	mountain_lord = {
+        picture = nepali_treaty  #tsushima_japan
+        potential = {
+            tag = TIB
+            NOT = { has_country_flag = mountain_lord }
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 15
+       badboy = 10
+       set_country_flag = mountain_lord 
+	   1341 = { add_core = THIS }
+	   1260 = { add_core = THIS }
+	   1329 = { add_core = THIS }
+	   1328 = { add_core = THIS }
+	   1224 = { add_core = THIS }
+	   1223 = { add_core = THIS }
+	   1223 = { add_core = THIS }
+	   1210 = { add_core = THIS }
+	   1208 = { add_core = THIS }
+	   NEP = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	   
+			
+        }
+   }
+   
+   	plain_lord = {
+        picture = tsushima_japan  #tsushima_japan
+        potential = {
+            tag = TIB
+            NOT = { has_country_flag = plain_lord }
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 15
+       badboy = 10
+       set_country_flag = plain_lord 
+	   1490 = { add_core = THIS }
+	   1488 = { add_core = THIS }
+       CHI_1594 = { add_core = THIS }
+	  
+	   
+			
+        }
+   }
+	
+	
+	steppe_lord = {
+        picture = nepali_treaty  #tsushima_japan
+        potential = {
+            tag = TIB
+		    AND = { has_country_flag = plain_lord
+		        	has_country_flag = mountain_lord }
+			       
+            NOT = {			has_country_flag = steppe_lord }
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 15
+       badboy = 15
+       set_country_flag = steppe_lord 
+	   
+	   CHI_1600 = { add_core = THIS }
+	   RUS_1185 = { add_core = THIS }
+       KOK_1190 = { add_core = THIS }
+	   CHI_1468 = { add_core = THIS }
+	  
+	   
+			
+        }
+   }
+	
+}
