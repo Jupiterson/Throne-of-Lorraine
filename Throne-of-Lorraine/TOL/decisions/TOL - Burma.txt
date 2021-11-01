@@ -1,0 +1,31 @@
+political_decisions = {
+	BUR_claim_tibet = {
+		picture = tibet_capital
+		potential = {
+			tag = BUR
+			NOT = { has_global_flag = TIB_claimed_burma }
+			NOT = { has_global_flag = BUR_claimed_tibet }
+		}
+		allow = {
+			prestige = 15
+			owns = 1602		#tag of Dali
+			war = no
+		}
+		effect = {
+			prestige = 10
+			add_accepted_culture = tibetan
+			any_country = {
+				limit = {
+					primary_culture = tibetan
+				}
+				all_core = {
+					add_core = BUR
+				}
+			}
+		set_global_flag = BUR_claimed_tibet
+		}
+		ai_will_do = {
+			factor =1
+		}
+		}
+	}

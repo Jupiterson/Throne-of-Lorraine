@@ -1,4 +1,33 @@
-political_decisions = {	
+political_decisions = {
+	TIB_claim_Burma = {
+		picture = tibet_capital
+		potential = {
+			tag = TIB
+			NOT = { has_global_flag = TIB_claimed_burma }
+			NOT = { has_global_flag = BUR_claimed_tibet }
+		}
+		allow = {
+			prestige = 10
+			owns = 1586		#tag of Xikang
+			war = no
+		}
+		effect = {
+			prestige = 15
+			add_accepted_culture = burmese
+			any_country = {
+				limit = {
+					primary_culture = burmese
+				}
+				all_core = {
+					add_core = TIB
+				}
+			}
+			set_global_flag = TIB_claimed_burma
+		}
+		ai_will_do = {
+			factor =1
+		}
+		}
 	mountain_lord = {
         picture = nepali_treaty  #tsushima_japan
         potential = {
