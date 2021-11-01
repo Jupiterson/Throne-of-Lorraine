@@ -123,9 +123,9 @@
     }
 
     farmers = {
-        culture = hungarian
-        religion = sunni
-        size = 400
+        culture = neo_greek
+        religion = orthodox
+        size = 12400
     }
 
     bureaucrats = {
@@ -165,9 +165,9 @@
     }
 
     artisans = {
-        culture = greek
+        culture = neo_greek
         religion = orthodox
-        size = 2950
+        size = 12950
     }
 
     clergymen = {
@@ -287,11 +287,64 @@
     }
 
     farmers = {
-        culture = copt
+        culture = neo_greek
         religion = coptic
-        size = 2825
+        size = 12825
     }
 }
+
+#Venetian port
+800 = {
+
+    soldiers = {
+        culture = misri
+        religion = sunni
+        size = 300
+    }
+
+    clergymen = {
+        culture = neo_greek
+        religion = orthodox
+        size = 100
+    }
+
+    artisans = {
+        culture = neo_greek
+        religion = orthodox
+        size = 400
+    }
+
+    farmers = {
+        culture = neo_greek
+        religion = orthodox
+        size = 2850
+    }
+
+    clergymen = {
+        culture = misri
+        religion = sunni
+        size = 100
+    }
+
+    artisans = {
+        culture = misri
+        religion = sunni
+        size = 100
+    }
+
+    soldiers = {
+        culture = misri
+        religion = sunni
+        size = 100
+    }
+
+    farmers = {
+        culture = misri
+        religion = sunni
+        size = 1325
+    }
+}
+
 #Tanta (341600/85400 POPS)
 1747 = {
     aristocrats = {
@@ -497,7 +550,7 @@
     }
 
     artisans = {
-        culture = copt
+        culture = neo_greek
         religion = coptic
         size = 100
     }
@@ -667,7 +720,7 @@
     farmers = {
         culture = copt
         religion = coptic
-        size = 122125
+        size = 102125
     }
 
     clergymen = {
@@ -689,9 +742,9 @@
     }
 
     artisans = {
-        culture = greek
+        culture = neo_greek
         religion = orthodox
-        size = 1950
+        size = 31950
     }
 
     slaves = {
@@ -757,9 +810,9 @@
     }
 
     farmers = {
-        culture = bedouin
-        religion = sunni
-        size = 2700
+        culture = neo_greek
+        religion = orthodox
+        size = 4700
     }
 }
 #Sidi Barrani (20000/5000 POPS)
@@ -777,13 +830,13 @@
     }
 
     artisans = {
-        culture = bedouin
-        religion = sunni
-        size = 250
+        culture = neo_greek
+        religion = orthodox
+        size = 1250
     }
 
     soldiers = {
-        culture = bedouin
+        culture = neo_greek
         religion = sunni
         size = 50
     }
