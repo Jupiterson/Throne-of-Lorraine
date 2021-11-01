@@ -304,13 +304,17 @@ political_decisions = {
         potential = {
             tag = PIR
 			NOT = {
+			    has_country_flag = marque_letter_request_positive
+			NOT = {
 			    has_country_modifier = country_of_buccaneers
         }
 		allow = {
 		    tag = PIR
 	    } 
         effect = { 
-		    add_country_modifier_ = { name = country_of_buccaneers duration = -1 }
+		    add_country_modifier = { 
+			name = country_of_buccaneers 
+			duration = -1 }
         }
 		ai_will_do = { factor = 1 }
     }
