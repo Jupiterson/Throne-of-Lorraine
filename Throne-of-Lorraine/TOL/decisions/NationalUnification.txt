@@ -404,26 +404,6 @@ political_decisions = {
                 war_with = BOR
             }
             OR = {
-                has_country_flag = ems_dispatch_sent
-                has_global_flag = germany_has_renamed_elsass
-                ALS = {
-                    all_core = {
-                        OR = {
-                            owned_by = THIS
-                            owner = {
-                                in_sphere = THIS
-                                OR = {
-                                    is_vassal = no
-                                    vassal_of = THIS
-                                }
-                                war = no
-                                is_greater_power = no
-                            }
-                        }
-                    }
-                }
-            }
-            OR = {
                 GER = {
                     all_core = {
                         OR = {
@@ -441,14 +421,13 @@ political_decisions = {
                     }
                 }
                 AND = {
-                    NGF = {
+                    HNS = {
                         all_core = {
                             OR = {
                                 owned_by = THIS
                                 owner = {
                                     in_sphere = THIS
                                     OR = {
-                                        is_vassal = no
                                         vassal_of = THIS
                                     }
                                     war = no
@@ -464,7 +443,7 @@ political_decisions = {
                             NOT = { rank = 8 }
                         }
                         AND = {
-                            NGF = {
+                            HNS = {
                                 ai = yes
                             }
                             BAV = {
@@ -536,12 +515,12 @@ political_decisions = {
                 remove_core = THIS
                 add_core = GER
             }
-            FRA_412 = { add_core = GER }
             remove_country_modifier = zollervein
             change_tag = GER
             add_accepted_culture = north_german
             add_accepted_culture = south_german
             add_accepted_culture = volga_german
+			add_accepted_culture = rhinelander
             random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
             random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
             random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
@@ -710,27 +689,10 @@ political_decisions = {
             }
             BAV_595 = { add_core = BAV }
             BAV_599 = { add_core = BAV }
-            PRU_690 = { add_core = PRU }
-            PRU_695 = { add_core = PRU }
+            
             SAX_558 = { add_core = SAX }
             539 = { add_core = BRE }
             528 = { add_core = HAM }
-            any_owned = {
-                limit = {
-                    is_core = MAI
-                }
-                remove_core = MAI
-            }
-            any_owned = {
-                limit = {
-                    is_core = PAL
-                }
-                remove_core = PAL
-            }
-            592 = { remove_core = AUG }
-            595 = { remove_core = NUM }
-            597 = { remove_core = WBG }
-            593 = { remove_core = ULM }
 
         }
         ai_will_do = { factor = 1 }
@@ -1693,7 +1655,7 @@ political_decisions = {
     form_antillean_confederation = {
         picture = form_antillean_confederation
         potential = {
-            primary_culture = caribeno
+            primary_culture = kreol
             ATC = { exists = no }
             2222 = { NOT = { is_core = ATC } }
         }
@@ -1744,7 +1706,7 @@ political_decisions = {
 form_ruthenia = {
         picture = form_antillean_confederation
         potential = {
-            primary_culture = ukrainian
+            primary_culture = ruthenyan
             RUT = { exists = no }
         }
 

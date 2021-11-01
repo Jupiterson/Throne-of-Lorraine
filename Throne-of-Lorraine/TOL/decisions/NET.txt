@@ -48,11 +48,11 @@ political_decisions = {
         }
     }
 
-    embrace_the_boer = {
-        picture = embrace_the_boer
+    embrace_the_scottish = {
+        picture = embrace_the_scottish
         potential = {
             tag = NET
-            NOT = { has_country_flag = boer_accepted }
+            NOT = { has_country_flag = scottish_accepted }
             any_owned_province = {
             OR = {
                 is_core = SAF
@@ -66,15 +66,15 @@ political_decisions = {
         allow = {
             war = no
             money = 100000
-            any_owned_province = { has_pop_culture = boer }
+            any_owned_province = { has_pop_culture = scottish }
         }
 
         effect = {
-            set_country_flag = boer_accepted
+            set_country_flag = scottish_accepted
             treasury = -100000
-            add_accepted_culture = boer
+            add_accepted_culture = scottish
             any_pop = {
-                limit = { has_pop_culture = boer }
+                limit = { has_pop_culture = scottish }
                 militancy = -7
                 consciousness = -4
                 money = 10

@@ -1,0 +1,288 @@
+#########################################################
+#														#
+#        	Revolt of the Three Feudatories				#
+#														#
+#########################################################
+
+#Guangxi Seizes Guangdong
+country_event = {
+	id = 310001
+	title = "FEU1.T"
+	desc = "FEU1.D"
+	picture = "Guangxi_revolt_pic"
+	
+	trigger = {
+		tag = QNG
+		year = 1837
+		NOT = { has_country_flag = victory_of_feudatories }
+		NOT = { has_global_flag = Guangdong_bye_bye }
+		NOT = { war_with = GXI }
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1838
+		}
+		modifier = {
+			factor = 0.5
+			year = 1839
+		}
+		modifier = {
+			factor = 0.5
+			year = 1840
+		}
+		modifier = {
+			factor = 0.25
+			year = 1841
+		}
+	}	
+		option = {
+		name = "We are powerless..."
+		prestige = -10
+		relation = { who = GXI value = -100 }
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1493
+					region = CHI_1499 
+
+				}
+			}
+			secede_province = GXI
+		}
+		CHI_1493 = { add_core = GXI }
+		CHI_1499 = { add_core = GXI }
+		GXI = { country_event = 310002 }
+		any_pop = {
+			limit = { is_primary_culture = no }
+			militancy = 1
+		}
+		set_global_flag = Guangdong_bye_bye
+	}
+}
+#Guangxi Seizes Guangdong_Guangxi
+country_event = {
+	id = 310002
+	title = "FEU2.T"
+	desc = "FEU2.D"
+	picture = "Guangxi_revolt_pic"
+	
+	is_triggered_only = yes
+		option = {
+		name = "We welcome our bretheren!"
+		prestige = 10
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -1
+			}
+		}
+	}
+#Fujian Seizes Jiangxi
+country_event = {
+	id = 310003
+	title = "FEU3.T"
+	desc = "FEU3.D"
+	picture = "Bokgun_revolt_pic"
+	
+	trigger = {
+		tag = QNG
+		year = 1838
+		NOT = { has_country_flag = victory_of_feudatories }
+		NOT = { has_global_flag = Jiangxi_bye_bye }
+		NOT = { war_with = FJN }
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1839
+		}
+		modifier = {
+			factor = 0.5
+			year = 1840
+		}
+		modifier = {
+			factor = 0.5
+			year = 1841
+		}
+		modifier = {
+			factor = 0.25
+			year = 1842
+		}
+	}	
+		option = {
+		name = "Something needs to be done!"
+		prestige = -10
+		relation = { who = FJN value = -100 }
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1545
+					region = CHI_1547 
+
+				}
+			}
+			secede_province = FJN
+		}
+		CHI_1545 = { add_core = FJN }
+		CHI_1547 = { add_core = FJN }
+		FJN = { country_event = 310004 }
+		any_pop = {
+			limit = { is_primary_culture = no }
+			militancy = 1
+		}
+		set_global_flag = Jiangxi_bye_bye
+	}
+}
+#Fujian Seizes Jiangxi_Fujian
+country_event = {
+	id = 310004
+	title = "FEU4.T"
+	desc = "FEU4.D"
+	picture = "Bokgun_revolt_pic"
+	
+	is_triggered_only = yes
+		option = {
+		name = "Our infiltrators made quick work of the oppressors!"
+		prestige = 10
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -1
+			}
+		}
+	}
+#Yunnan Seizes Sichuan
+country_event = {
+	id = 310005
+	title = "FEU5.T"
+	desc = "FEU5.D"
+	picture = "Yunnan_revolt_pic"
+	
+	trigger = {
+		tag = QNG
+		year = 1839	
+		NOT = { has_country_flag = victory_of_feudatories }
+		NOT = { has_global_flag = Sichuan_bye_bye }
+		NOT = { war_with = YNN }
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1840
+		}
+		modifier = {
+			factor = 0.5
+			year = 1841
+		}
+		modifier = {
+			factor = 0.5
+			year = 1842
+		}
+		modifier = {
+			factor = 0.25
+			year = 1843
+		}
+	}	
+		option = {
+		name = "Not Sichuan!"
+		prestige = -10
+		relation = { who = YNN value = -100 }
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1578
+					region = CHI_1579 
+
+				}
+			}
+			secede_province = YNN
+		}
+		CHI_1578 = { add_core = YNN }
+		CHI_1579 = { add_core = YNN }
+		YNN = { country_event = 310006 }
+		any_pop = {
+			limit = { is_primary_culture = no }
+			militancy = 1
+		}
+		set_global_flag = Sichuan_bye_bye
+	}
+}
+#Yunnan Seizes Sichuan_Yunnan
+country_event = {
+	id = 310006
+	title = "FEU6.T"
+	desc = "FEU6.D"
+	picture = "Yunnan_revolt_pic"
+	
+	is_triggered_only = yes
+		option = {
+		name = "It was risky, but it was worth it"
+		prestige = 10
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -1
+			}
+		}
+	}
+	
+country_event = {
+    id = 310007 #Three Feudatories Revolt
+    title = "FEU7.T"
+    desc = "FEU7.D"
+    picture = "Start_of_the_three_feudatories"
+	
+	trigger = {
+		tag = QNG
+		NOT = { has_country_flag = victory_of_feudatories }
+		NOT = { owns = 1499 }
+		NOT = { owns = 1551 }
+		NOT = { owns = 1578 }		
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1840
+		}
+		modifier = {
+			factor = 0.5
+			year = 1841
+		}
+		modifier = {
+			factor = 0.5
+			year = 1842
+		}
+		modifier = {
+			factor = 0.25
+			year = 1843
+		}
+	}	
+	
+    option = {
+        name = "Mobilize the Troops."
+		QNG = { release_vassal = GXI }
+		QNG = { release_vassal = YNN }
+		QNG = { release_vassal = FJN }
+        war = {
+            target = GXI
+            attacker_goal = {
+                casus_belli = conquest
+            }
+        }
+        war = {
+            target = YNN
+            attacker_goal = {
+                casus_belli = conquest
+            }
+        }
+        war = {
+            target = FJN
+            attacker_goal = {
+                casus_belli = conquest
+            }
+        }
+		prestige = 10
+    }
+}

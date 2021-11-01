@@ -1,0 +1,60 @@
+
+FRA = {value = -50}
+
+army = {
+    name = "Esercito Pontificio"
+    location = 2276
+    regiment = {
+        name= "1. Guardia"
+        type = guard
+        home = 2276
+    }
+
+    regiment = {
+        name= "2. Guardia"
+        type = guard
+        home = 2267
+    }
+
+    regiment = {
+        name= "3. Guardia"
+        type = guard
+        home = 2240
+    }
+	
+    regiment = {
+        name= "4. Guardia"
+        type = guard
+        home = 2240
+    }
+    regiment = {
+        name= "5. Guardia"
+        type = guard
+        home = 2266
+    }
+	    regiment = {
+        name= "6. Guardia"
+        type = guard
+        home = 2255
+    }
+	    regiment = {
+        name= "7. Guardia"
+        type = guard
+        home = 2243
+    }
+}
+
+navy = {
+    name = "Marina dei Gesuiti"
+    location = 2276
+
+    ship = {
+        name= "Nave da guerra"
+        type = frigate
+    }
+
+    ship = {
+        name= "Nave da viaggio"
+        type = steam_transport
+    }
+}

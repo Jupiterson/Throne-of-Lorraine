@@ -98,8 +98,8 @@ political_decisions = {
                     remove_core = NEW
                 }
             }
-            USA = { remove_accepted_culture = cajun }
-            remove_accepted_culture = cajun
+            USA = { remove_accepted_culture = dixie }
+            remove_accepted_culture = dixie
         }
 
         ai_will_do = { factor = 1 }
@@ -512,7 +512,7 @@ political_decisions = {
             51 = { remove_core = USA }
             50 = { remove_core = USA }
             USA = {
-                remove_accepted_culture = cajun
+                remove_accepted_culture = dixie
                 ###Add Lousiana Cores###
                 any_owned = {
                     limit = {
@@ -759,7 +759,7 @@ political_decisions = {
             ULA = {
                 set_country_flag = post_colonial_country
                 primary_culture = louisianan
-                add_accepted_culture = cajun
+                add_accepted_culture = dixie
             }
             ULA = { all_core = { remove_core = COL remove_core = FCA } }
             D01 = { primary_culture = louisianan }
@@ -894,7 +894,7 @@ political_decisions = {
             any_pop = {
                 limit = {
                     OR = {
-                        has_pop_culture = cajun
+                        has_pop_culture = dixie
                         has_pop_culture = louisianan
                     }
                 }
@@ -1224,7 +1224,7 @@ political_decisions = {
         }
         effect = {
             money = -100000
-            add_accepted_culture = french_australian
+            add_accepted_culture = australian
             AST = { all_core = { add_core = FAS } }
             FAS = { all_core = { remove_core = AST } }
             FAS = { all_core = { remove_core = THIS } }
@@ -1341,7 +1341,7 @@ political_decisions = {
                 }
                 move_pop = 2474
             }
-            UTI = { primary_culture = french_australian }
+            UTI = { primary_culture = australian }
             any_owned = {
                 limit = { is_core = FAS }
                 secede_province = UTI
@@ -1414,28 +1414,28 @@ political_decisions = {
             any_pop = {
                 limit = {
                     location = { province_id = 2475 }
-                    has_pop_culture = french_australian
+                    has_pop_culture = australian
                 }
                 move_pop = 2483
             }
             any_pop = {
                 limit = {
                     location = { province_id = 2473 }
-                    has_pop_culture = french_australian
+                    has_pop_culture = australian
                 }
                 move_pop = 2482
             }
             any_pop = {
                 limit = {
                     location = { province_id = 2471 }
-                    has_pop_culture = french_australian
+                    has_pop_culture = australian
                 }
                 move_pop = 2482
             }
             any_pop = {
                 limit = {
                     location = { province_id = 2474 }
-                    has_pop_culture = french_australian
+                    has_pop_culture = australian
                 }
                 move_pop = 2476
             }
@@ -1506,8 +1506,8 @@ political_decisions = {
                     OR = {
                         primary_culture = french_canadian
                         primary_culture = neo_zelandais
-                        primary_culture = french_australian
-                        primary_culture = cajun
+                        primary_culture = australian
+                        primary_culture = dixie
                         primary_culture = louisianan
                         is_culture_group = french
                     }
@@ -1584,8 +1584,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1628,8 +1628,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1670,8 +1670,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1708,8 +1708,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1747,8 +1747,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1789,8 +1789,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1831,8 +1831,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1874,8 +1874,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1917,8 +1917,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1958,8 +1958,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2002,8 +2002,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2045,8 +2045,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2087,8 +2087,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2127,8 +2127,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2166,8 +2166,8 @@ political_decisions = {
                         OR = {
                             primary_culture = french_canadian
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2190,8 +2190,8 @@ political_decisions = {
             OR = {
                 primary_culture = french_canadian
                 primary_culture = neo_zelandais
-                primary_culture = french_australian
-                primary_culture = cajun
+                primary_culture = australian
+                primary_culture = dixie
                 primary_culture = louisianan
                 is_culture_group = french
             }
@@ -2216,8 +2216,8 @@ political_decisions = {
                             primary_culture = french_canadian
                             primary_culture = louisianan
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
+                            primary_culture = australian
+                            primary_culture = dixie
                         }
                     }
                 }
@@ -2237,9 +2237,9 @@ political_decisions = {
                             is_culture_group = french
                             primary_culture = french_canadian
                             primary_culture = louisianan
-                            primary_culture = cajun
+                            primary_culture = dixie
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
+                            primary_culture = australian
                         }
                     }
                 }
@@ -2261,9 +2261,9 @@ political_decisions = {
                             is_culture_group = french
                             primary_culture = french_canadian
                             primary_culture = louisianan
-                            primary_culture = cajun
+                            primary_culture = dixie
                             primary_culture = neo_zelandais
-                            primary_culture = french_australian
+                            primary_culture = australian
                         }
                     }
                 }

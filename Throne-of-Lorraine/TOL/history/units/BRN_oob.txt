@@ -1,0 +1,35 @@
+
+FRA = {value = -100}
+
+army = {
+    name = "V. Armee-Korps"
+    location = 549
+
+    regiment = {
+        name= "I. Kavalleriebrigade"
+        type = dragoon
+        home = 549
+    }
+    regiment = {
+        name= "I. Linieninfanteriebrigade"
+        type = infantry
+        home = 549
+    }
+
+    regiment = {
+        name= "II. Linieninfanteriebrigade"
+        type = infantry
+        home = 681
+    }
+	    regiment = {
+        name= "III. Linieninfanteriebrigade"
+        type = infantry
+        home = 681
+    }
+	
+    regiment = {
+        name = "I. Artilleriebrigade"
+        type = artillery
+        home = 553
+    }
+}

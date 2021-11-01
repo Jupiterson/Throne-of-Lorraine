@@ -1,0 +1,34 @@
+
+FRA = {value = -30}
+
+leader = {
+    name = "Niels Visser"
+    type = land
+    date="1836.1.1"
+    personality = audacious
+    background = nationalist
+}
+
+leader = {
+    name = "Simon Baas"
+    type = land
+    date="1836.1.1"
+    personality = stouthearted
+    background = unfit
+}
+
+army = {
+    name = "Army of Gekke"
+    location = 104
+    regiment = {
+        name= "Erste Gekke divisie"
+        type = infantry
+        home = 104
+    }
+
+    regiment = {
+        name= "Tweede Gekke divisie"
+        type = infantry
+        home = 104
+    }
+}

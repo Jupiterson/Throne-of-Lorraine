@@ -1,74 +1,5 @@
-PER = { value = 200 }
-GAZ = {
-    truce_until = 1841.1.1
-    value = 125
-}
-AGC = {
-    value = -400
-}
-OMA = {
-    value = 400
-}
-ENG = {
-    value = 200
-}
-QNG = {
-    value = 125
-}
-BRZ = {
-    value = 100
-}
-SPA = {
-    value = -50
-}
-ASH = {
-    value = 50
-}
-BEN = {
-    value = 50
-}
-ZUL = {
-    value = 50
-}
-SUA = {
-    value = 100
-}
-DAH = {
-    value = 40
-}
-OYO = {
-    value = 35
-}
-ARO = {
-    value = 50
-}
-CLA = {
-    value = 50
-}
-WRI = {
-    value = 40
-}
-KON = {
-    value = 25
-}
-LOA = {
-    value = 75
-}
-GBU = {
-    value = 100
-}
-TOO = {
-    value = 35
-}
-WOL = {
-    value = 35
-}
-MOR = {
-    value = 75
-}
-NET = {
-    value = 120
-}
+
+FRA = {value = -50}
 
 army = {
     name = "Exército Português"
@@ -100,6 +31,11 @@ army = {
     regiment = {
         name= "1. Brigada de Artilharia"
         type = artillery
+        home = 3400
+    }
+	regiment = {
+        name= "2. Brigada de Artilharia"
+        type = artillery
         home = 522
     }
 
@@ -113,36 +49,25 @@ army = {
 
 army = {
     name = "Exército de Africa Ocidental"
-    location = 1999
+    location = 1691
 
     regiment = {
         name = "1. Divisão Colonial"
         type = infantry
         home = 525
     }
-}
-
-army = {
-    name = "Exército de Africa Oriental"
-    location = 2059
-
-    regiment = {
+	    regiment = {
         name = "2. Divisão Colonial"
         type = infantry
-        home = 2134
+        home = 527
     }
-}
-
-army = {
-    name = "Exército da Índia"
-    location = 1303
-
-    regiment = {
+	    regiment = {
         name = "3. Divisão Colonial"
         type = infantry
-        home = 1303
+        home = 526
     }
 }
+
 
 navy = {
     name = "Portuguese Royal Navy"

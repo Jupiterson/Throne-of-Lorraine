@@ -43,13 +43,13 @@ country_event = {
 
     trigger = {
         AND = {
-            primary_culture = boer
+            primary_culture = scottish
             owns = 2049
             owns = 2050
             owns = 2051
             owns = 2052
         }
-        NOT = { has_country_flag = rename_mozambican_provinces_boer }
+        NOT = { has_country_flag = rename_mozambican_provinces_scottish }
     }
 
 
@@ -58,7 +58,7 @@ country_event = {
 
     option = {
         name = "EVT6001OPTA"
-        set_country_flag = rename_mozambican_provinces_boer
+        set_country_flag = rename_mozambican_provinces_scottish
         2049 = { change_province_name = "Ahoutburg" add_core = THIS }
         2050 = { change_province_name = "Andriesburg" add_core = THIS }
         2051 = { change_province_name = "Goiamense" add_core = THIS }
@@ -84,10 +84,10 @@ country_event = {
 
     trigger = {
         AND = {
-            primary_culture = boer
+            primary_culture = scottish
             owns = 2087
         }
-        NOT = { has_country_flag = rename_cape_colony_boer }
+        NOT = { has_country_flag = rename_cape_colony_scottish }
     }
 
     mean_time_to_happen = { months = 1 }
@@ -95,7 +95,7 @@ country_event = {
 
     option = {
         name = "EVT6002OPTA"
-        set_country_flag = rename_cape_colony_boer
+        set_country_flag = rename_cape_colony_scottish
         2087 = { change_province_name = "Kaapstad" add_core = THIS }
         2091 = { change_province_name = "Stellenbosch" add_core = THIS }
         2092 = { change_province_name = "Laingsburg" add_core = THIS }
@@ -111,7 +111,7 @@ country_event = {
     picture = "walvis"
 
     trigger = {
-        primary_culture = boer
+        primary_culture = scottish
         OR = {
             is_greater_power = yes
             is_secondary_power = yes
@@ -159,7 +159,7 @@ country_event = {
 
     trigger = {
         AND = {
-            primary_culture = boer
+            primary_culture = scottish
             OR = {
                 government = fascist_dictatorship
                 government = presidential_dictatorship
@@ -446,7 +446,7 @@ country_event = {
 
     trigger = {
         AND = {
-            primary_culture = boer
+            primary_culture = scottish
             owns = 2087
             owns = 2100
             owns = 2098
@@ -458,7 +458,7 @@ country_event = {
 
         }
         invention = manifest_destiny
-        NOT = { has_country_flag = united_boer_saf_fired }
+        NOT = { has_country_flag = united_scottish_saf_fired }
     }
 
     mean_time_to_happen = { months = 6 }
@@ -517,7 +517,7 @@ country_event = {
         2113 = { add_core = THIS }
         2112 = { add_core = THIS }
         prestige = 5
-        set_country_flag = united_boer_saf_fired
+        set_country_flag = united_scottish_saf_fired
     }
 }
 
@@ -550,7 +550,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                culture = boer
+                culture = scottish
             }
             scaled_consciousness = {
                 factor = 1
@@ -571,7 +571,7 @@ country_event = {
     id = 6009
     title = "EVTNAME6009" #Brit concentration camps
     desc = "EVTDESC6009"
-    picture = "boer_concentration_camp"
+    picture = "scottish_concentration_camp"
 
     trigger = {
         has_country_flag = exterminate_british
@@ -627,13 +627,13 @@ country_event = {
 
     trigger = {
         AND = {
-            primary_culture = boer
+            primary_culture = scottish
             owns = 2113
             owns = 2112
             owns = 2111
             owns = 2104
         }
-        NOT = { has_country_flag = rename_natal_boer }
+        NOT = { has_country_flag = rename_natal_scottish }
     }
 
     mean_time_to_happen = { months = 1 }
@@ -641,7 +641,7 @@ country_event = {
 
     option = {
         name = "EVT6010OPTA"
-        set_country_flag = rename_natal_boer
+        set_country_flag = rename_natal_scottish
         2113 = { change_province_name = "Richardsbaai" add_core = THIS }
         2112 = { change_province_name = "Vrousmith" add_core = THIS }
         2111 = { change_province_name = "Pietermaritzburg" add_core = THIS }
@@ -678,20 +678,20 @@ country_event = {
         }
         has_global_flag = berlin_conference
         owns = 2087
-        NOT = { has_country_flag = pioneer_column_boer }
+        NOT = { has_country_flag = pioneer_column_scottish }
     }
 
     mean_time_to_happen = { days = 1 }
 
     option = {
         name = "EVT6011OPTA"
-        set_country_flag = pioneer_column_boer
+        set_country_flag = pioneer_column_scottish
         2070 = { secede_province = THIS life_rating = 25 add_core = SAF }
         2635 = { secede_province = THIS life_rating = 25 add_core = SAF }
         2068 = { secede_province = THIS life_rating = 25 add_core = SAF }
         2068 = { change_province_name = "Herculaastad" }
-        2108 = { any_pop = { limit = { type = soldiers culture = boer } move_pop = 2068 } }
-        2108 = { any_pop = { limit = { type = artisans culture = boer } pop_type = soldiers } }
+        2108 = { any_pop = { limit = { type = soldiers culture = scottish } move_pop = 2068 } }
+        2108 = { any_pop = { limit = { type = artisans culture = scottish } pop_type = soldiers } }
         ZAM = { government = colonial_company }
         MLW = { government = colonial_company }
     }
@@ -716,28 +716,28 @@ country_event = {
             2070 = { owned_by = SAF }
             2635 = { owned_by = SAF }
         }
-        NOT = { has_country_flag = rename_mashonaland_boer }
+        NOT = { has_country_flag = rename_mashonaland_scottish }
     }
 
     mean_time_to_happen = { days = 14 }
 
     option = {
         name = "EVT6012OPTA"
-        set_country_flag = rename_mashonaland_boer
+        set_country_flag = rename_mashonaland_scottish
         2068 = { change_province_name = "Herculaastad" }
         2068 = { state_scope = { change_region_name = Mashonaland } }
     }
 
     option = {
         name = "EVT6012OPTB"
-        set_country_flag = rename_mashonaland_boer
+        set_country_flag = rename_mashonaland_scottish
         2068 = { change_province_name = "Herculaastad" }
         2068 = { state_scope = { change_region_name = Rhodesia } }
     }
 
     option = {
         name = "EVT6012OPTC"
-        set_country_flag = rename_mashonaland_boer
+        set_country_flag = rename_mashonaland_scottish
         2068 = { change_province_name = "Herculaastad" }
         2068 = { state_scope = { change_region_name = Reystaat } }
     }
@@ -823,7 +823,7 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        primary_culture = boer
+        primary_culture = scottish
         AND = {
             OR = {
                 ruling_party_ideology = liberal
@@ -840,14 +840,14 @@ country_event = {
                 }
             }
         }
-        NOT = { has_country_flag = native_reintegration_boer }
+        NOT = { has_country_flag = native_reintegration_scottish }
     }
 
     mean_time_to_happen = { months = 10 }
 
     option = {
         name = "EVT6014OPTA"
-        set_country_flag = native_reintegration_boer
+        set_country_flag = native_reintegration_scottish
         add_country_modifier = {
             name = native_reintegration
             duration = -1
@@ -856,7 +856,7 @@ country_event = {
             limit = {
                 AND = {
                     OR = {
-                        has_pop_culture = boer
+                        has_pop_culture = scottish
                         has_pop_culture = british
                     }
                     OR = {
@@ -873,7 +873,7 @@ country_event = {
 
     option = {
         name = "EVT6014OPTB"
-        set_country_flag = native_reintegration_boer
+        set_country_flag = native_reintegration_scottish
         country_event = {
             id = 152009873
             days = 7
@@ -905,7 +905,7 @@ country_event = {
         owns = 2068
         owns = 2070
         owns = 2635
-        primary_culture = boer
+        primary_culture = scottish
         NOT = { has_country_flag = native_slaughter }
     }
 
@@ -933,7 +933,7 @@ country_event = {
             limit = {
                 AND = {
                     OR = {
-                        has_pop_culture = boer
+                        has_pop_culture = scottish
                         has_pop_culture = british
                     }
                     OR = {
@@ -982,7 +982,7 @@ country_event = {
             limit = {
                 AND = {
                     OR = {
-                        has_pop_culture = boer
+                        has_pop_culture = scottish
                         has_pop_culture = british
                     }
                     OR = {
@@ -1018,7 +1018,7 @@ country_event = {
         set_country_flag = no_slaughter
         any_pop = {
             limit = {
-                has_pop_culture = boer
+                has_pop_culture = scottish
                 OR = {
                     pop_majority_ideology = conservative
                     pop_majority_ideology = reactionary
@@ -1175,14 +1175,14 @@ country_event = {
     id = 6019
     title = "EVTNAME6019" #Boer Commando Flavor
     desc = "EVTDESC6019"
-    picture = boer_troops
+    picture = scottish_troops
 
     trigger = {
-        primary_culture = boer
+        primary_culture = scottish
         NOT = { year = 1890 }
         NOT = {
-            has_country_flag = boer_commandos
-            has_country_modifier = boer_commandos_modifier
+            has_country_flag = scottish_commandos
+            has_country_modifier = scottish_commandos_modifier
         }
     }
 
@@ -1190,9 +1190,9 @@ country_event = {
 
     option = {
         name = "EVT6019OPTA"
-        set_country_flag = boer_commandos
+        set_country_flag = scottish_commandos
         add_country_modifier = {
-            name = boer_commandos_modifier
+            name = scottish_commandos_modifier
             duration = -1
         }
     }
@@ -1240,7 +1240,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                culture = boer
+                culture = scottish
             }
             militancy = 3
             consciousness = 3
@@ -1284,7 +1284,7 @@ country_event = {
         ruling_party_ideology = reactionary
         any_pop = {
             limit = {
-                culture = boer
+                culture = scottish
                 OR = {
                     strata = rich
                     strata = middle
@@ -1296,7 +1296,7 @@ country_event = {
             }
         }
         any_pop = {
-            limit = { culture = boer }
+            limit = { culture = scottish }
             dominant_issue = {
                 value = jingoism
                 factor = 0.2
@@ -1310,7 +1310,7 @@ country_event = {
     id = 6021
     title = "EVTNAME6021" #Afrikaner Church and Nationalism
     desc = "EVTDESC6021"
-    picture = trekboers_crossing_the_karoo
+    picture = trekscottishs_crossing_the_karoo
 
     fire_only_once = yes
 
@@ -1321,7 +1321,7 @@ country_event = {
         }
         invention = manifest_destiny
         ideological_thought = 1
-        primary_culture = boer
+        primary_culture = scottish
         NOT = { has_country_flag = afrikaner_church_n_nationalism }
     }
 
@@ -1332,7 +1332,7 @@ country_event = {
         set_country_flag = afrikaner_church_n_nationalism
         any_pop = {
             limit = {
-                culture = boer
+                culture = scottish
             }
             consciousness = 1
             ideology = {
@@ -1364,7 +1364,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                culture = boer
+                culture = scottish
             }
             ideology = {
                 factor = 0.05
@@ -1372,7 +1372,7 @@ country_event = {
             }
         }
         any_pop = {
-            limit = { culture = boer }
+            limit = { culture = scottish }
             dominant_issue = {
                 value = jingoism
                 factor = 0.05
@@ -1408,13 +1408,13 @@ country_event = {
         2110 = {
             any_pop = {
                 limit = {
-                    culture = boer
+                    culture = scottish
                 }
                 literacy = 0.3
             }
             any_pop = {
                 limit = {
-                    NOT = { culture = boer }
+                    NOT = { culture = scottish }
                 }
                 literacy = -0.075
             }
@@ -1445,7 +1445,7 @@ country_event = {
         name = "EVT6049OPTA"
         set_country_flag = zoutpansbergdorp
         2110 = {
-            any_pop = { limit = { culture = boer } reduce_pop = 1.1 }
+            any_pop = { limit = { culture = scottish } reduce_pop = 1.1 }
             add_province_modifier = { name = recently_built_city duration = 730 }
         }
         treasury = 500
@@ -1465,15 +1465,15 @@ country_event = {
         name = "EVT6023OPTA"
         random_list = {
             33 = {
-                any_pop = { limit = { NOT = { OR = { culture = boer culture = nguni } } } reduce_pop = 0.3 }
+                any_pop = { limit = { NOT = { OR = { culture = scottish culture = nguni } } } reduce_pop = 0.3 }
                 any_pop = { limit = { culture = nguni } reduce_pop = 0.9 }
             }
             33 = {
-                any_pop = { limit = { NOT = { OR = { culture = boer culture = nguni } } } reduce_pop = 0.35 }
+                any_pop = { limit = { NOT = { OR = { culture = scottish culture = nguni } } } reduce_pop = 0.35 }
                 any_pop = { limit = { culture = nguni } reduce_pop = 0.85 }
             }
             33 = {
-                any_pop = { limit = { NOT = { OR = { culture = boer culture = nguni } } } reduce_pop = 0.4 }
+                any_pop = { limit = { NOT = { OR = { culture = scottish culture = nguni } } } reduce_pop = 0.4 }
                 any_pop = { limit = { culture = nguni } reduce_pop = 0.8 }
             }
         }
@@ -1542,13 +1542,13 @@ country_event = {
         set_country_flag = cattle_killing
         random_list = {
             33 = {
-                any_pop = { limit = { NOT = { OR = { culture = boer culture = griqua } } } reduce_pop = 0.6 }
+                any_pop = { limit = { NOT = { OR = { culture = scottish culture = griqua } } } reduce_pop = 0.6 }
             }
             33 = {
-                any_pop = { limit = { NOT = { OR = { culture = boer culture = griqua } } } reduce_pop = 0.7 }
+                any_pop = { limit = { NOT = { OR = { culture = scottish culture = griqua } } } reduce_pop = 0.7 }
             }
             33 = {
-                any_pop = { limit = { NOT = { OR = { culture = boer culture = griqua } } } reduce_pop = 0.8 }
+                any_pop = { limit = { NOT = { OR = { culture = scottish culture = griqua } } } reduce_pop = 0.8 }
             }
         }
         2096 = { owner = { country_event = 6026 } }
@@ -1957,7 +1957,7 @@ country_event = { #Portugal Rejects
     option = { #What can we do?
         name = "EVT6034OPTA"
         any_pop = {
-            limit = { has_pop_culture = boer }
+            limit = { has_pop_culture = scottish }
             militancy = 2
             dominant_issue = {
                 factor = 0.25
@@ -2142,7 +2142,7 @@ country_event = { #UK Rejects
     option = { #Draadtrekker!
         name = "EVT6038OPTA" #Railroad built to the UK border
         any_pop = {
-            limit = { has_pop_culture = boer }
+            limit = { has_pop_culture = scottish }
             militancy = 1
             dominant_issue = {
                 factor = 0.33
@@ -2215,7 +2215,7 @@ country_event = {
         2107 = {
             trade_goods = precious_goods
             add_province_modifier = {
-                name = diamonds_are_boer
+                name = diamonds_are_scottish
                 duration = 3650
             }
         }
@@ -2235,7 +2235,7 @@ country_event = {
         2108 = {
             NOT = { trade_goods = precious_goods }
         }
-        NOT = { has_country_flag = diamonds_are_boer }
+        NOT = { has_country_flag = diamonds_are_scottish }
     }
 
     mean_time_to_happen =  {
@@ -2245,11 +2245,11 @@ country_event = {
 
     option = {
         name = "EVT6043OPTA"
-        set_country_flag = diamonds_are_boer
+        set_country_flag = diamonds_are_scottish
         2108 = {
             trade_goods = precious_goods
             add_province_modifier = {
-                name = diamonds_are_boer
+                name = diamonds_are_scottish
                 duration = 3650
             }
         }
@@ -2392,12 +2392,12 @@ country_event = {
     id = 6047
     title = "EVTNAME6047"
     desc = "EVTDESC6047"
-    picture = "boer_war"
+    picture = "scottish_war"
 
     trigger = { #what triggers the event
         tag = TRN
         year = 1880
-        NOT =  { has_global_flag = first_boer_war }
+        NOT =  { has_global_flag = first_scottish_war }
         NOT = { relation = { who = ENG value = 150 } }
         vassal_of = ENG
         war = no
@@ -2435,7 +2435,7 @@ country_event = {
             }
             country_event = 6048
         }
-        set_global_flag = first_boer_war
+        set_global_flag = first_scottish_war
         TRN = {
             add_country_modifier = { name = small_country_draft duration = 1825 }
         }
@@ -2446,7 +2446,7 @@ country_event = {
 
     option = { #Chicken Out
         name = "EVT6047OPTB"
-        set_global_flag = first_boer_war
+        set_global_flag = first_scottish_war
         prestige = -5
         ai_chance = { factor = 0 }
     }
@@ -2456,7 +2456,7 @@ country_event = {
     id = 6048
     title = "EVTNAME6048" #Support Transvaal
     desc = "EVTDESC6048"
-    picture = "boer_war"
+    picture = "scottish_war"
 
     is_triggered_only = yes
 
@@ -2533,7 +2533,7 @@ country_event = {
             set_country_flag = jameson_raid
         }
         any_pop = {
-            limit = { has_pop_culture = boer }
+            limit = { has_pop_culture = scottish }
             militancy = -1
             dominant_issue = {
                 factor = 0.25
@@ -2602,7 +2602,7 @@ country_event = {
             set_country_flag = jameson_raid
         }
         any_pop = {
-            limit = { has_pop_culture = boer }
+            limit = { has_pop_culture = scottish }
             militancy = -1
             dominant_issue = {
                 factor = 0.33
@@ -2669,7 +2669,7 @@ country_event = {
     id = 6052
     title = "EVTNAME6052" #Kruger Telegram
     desc = "EVTDESC6052"
-    picture = "boer_war"
+    picture = "scottish_war"
 
     is_triggered_only = yes
 
@@ -2700,7 +2700,7 @@ country_event = {
     id = 6053
     title = "EVTNAME6053" #ZAR-Oranje Alliance
     desc = "EVTDESC6053"
-    picture = "boer_war"
+    picture = "scottish_war"
 
     fire_only_once = yes
 

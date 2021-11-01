@@ -7,6 +7,9 @@ SIA = {
 ENG = {
     value = -5        #relation
 }
+SHA = {
+    value = 100       #relation
+}
 
 leader = {
     name = "Tharrawaddy Min"
@@ -15,7 +18,35 @@ leader = {
     personality = balanced_p
     background = armchair_general
 }
-
+leader = {
+    name = "Maha Bandula"
+    type = land
+    date = 1836.1.1
+    personality = heroic
+    background = gifted_administrator
+	prestige = 0.5
+}
+leader = {
+    name = "Kyauk Lon"
+    type = land
+    date = 1836.1.1
+    personality = efficient
+    background = school_of_offense
+}
+leader = {
+    name = "Maung Gyi"
+    type = land
+    date = 1836.1.1
+    personality = indifferent
+    background = old_school
+}
+leader = {
+    name = "Maha Ne Myo"
+    type = land
+    date = 1836.1.1
+    personality = calm
+    background = old_school
+}
 army = {
     name = "Army of Burma"
     location = 1334

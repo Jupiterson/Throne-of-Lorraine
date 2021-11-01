@@ -407,7 +407,7 @@ political_decisions = {
 
         effect = {
             any_pop = { limit = { has_pop_culture = filipino } literacy = -0.04 }
-            any_pop = { limit = { has_pop_culture = caribeno } literacy = -0.02 }
+            any_pop = { limit = { has_pop_culture = kreol } literacy = -0.02 }
             any_pop = { limit = { OR = { has_pop_culture = basque has_pop_culture = catalan } } literacy = 0.03 }
 
             any_owned = {
@@ -544,7 +544,7 @@ political_decisions = {
                         is_culture_group = central_african
                         is_culture_group = east_african
                         is_culture_group = southern_african
-                        has_pop_culture = afro_american
+                        has_pop_culture = afro_french
                         has_pop_culture = dakota
                         has_pop_culture = cherokee
                         has_pop_culture = native_american_minor
@@ -610,7 +610,7 @@ political_decisions = {
                         has_pop_culture = central_american
                         has_pop_culture = mayan
                         has_pop_culture = afro_caribbean
-                        has_pop_culture = afro_american
+                        has_pop_culture = afro_french
                         has_pop_culture = kreol
                         has_pop_culture = khoisan
                         has_pop_culture = karen
@@ -654,7 +654,7 @@ political_decisions = {
                 literacy = 0.35
             }
             any_pop = {
-                limit = { has_pop_culture = boer }
+                limit = { has_pop_culture = scottish }
                 literacy = 0.15
             }
 
@@ -1186,7 +1186,7 @@ political_decisions = {
                 literacy = 0.03
             }
 
-            any_pop = { limit = { has_pop_culture = ukrainian } literacy = 0.02 }
+            any_pop = { limit = { has_pop_culture = ruthenyan } literacy = 0.02 }
 
             any_pop = { limit = { has_pop_culture = greek } literacy = 0.07 }
             any_pop = {
@@ -1457,8 +1457,8 @@ political_decisions = {
             any_pop = {
                 limit = {
                     OR = {
-                        has_pop_culture = byelorussian
-                        has_pop_culture = ukrainian
+                        has_pop_culture = ruthenyan
+                        has_pop_culture = ruthenyan
                     }
                 }
                 literacy = -0.02
@@ -1630,7 +1630,7 @@ political_decisions = {
             any_pop = { limit = { has_pop_culture = czech } literacy = 0.37 }
             any_pop = { limit = { location = { OR = { province_id = 628 province_id = 619 } } literacy = 0.08 } }
             any_pop = { limit = { OR = { has_pop_culture = ashkenazi has_pop_culture = sephardic } } literacy = 0.40 }
-            any_pop = { limit = { OR = { has_pop_culture = romanian has_pop_culture = serb has_pop_culture = ukrainian } } literacy = -0.07 }
+            any_pop = { limit = { OR = { has_pop_culture = romanian has_pop_culture = serb has_pop_culture = ruthenyan } } literacy = -0.07 }
             any_pop = { limit = { has_pop_culture = croat } literacy = -0.02 }
             any_pop = { limit = { has_pop_culture = slovene } literacy = 0.18 }
             any_pop = { limit = { has_pop_culture = polish } literacy = 0.02 }
@@ -1755,7 +1755,7 @@ political_decisions = {
                         is_culture_group = central_african
                         is_culture_group = east_african
                         is_culture_group = southern_african
-                        has_pop_culture = afro_american
+                        has_pop_culture = afro_french
                         has_pop_culture = dakota
                         has_pop_culture = cherokee
                         has_pop_culture = native_american_minor
@@ -1889,7 +1889,7 @@ political_decisions = {
             liquor = 20
             treasury = 10000
             any_pop = { limit = { has_pop_culture = russian } literacy = -0.06 }
-            any_pop = { limit = { has_pop_culture = ukrainian } literacy = -0.08 }
+            any_pop = { limit = { has_pop_culture = ruthenyan } literacy = -0.08 }
             any_pop = { limit = { has_pop_culture = sephardic } literacy = 0.25 }
         }
     }
@@ -2091,7 +2091,7 @@ political_decisions = {
                 limit = {
                     OR = {
                         type = slaves
-                        has_pop_culture = afro_american
+                        has_pop_culture = afro_french
                         is_culture_group = west_african
                         is_culture_group = central_african
                         is_culture_group = east_african

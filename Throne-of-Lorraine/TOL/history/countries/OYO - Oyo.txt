@@ -39,6 +39,10 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
+foreign_artillery = yes_foreign_artillery
+foreign_weapons = yes_foreign_weapons
+monetary_reform = yes_monetary_reform
+
 set_country_flag = animist_country
 
 ruling_party = OYO_conservative
@@ -52,14 +56,21 @@ upper_house = {
     communist = 0
 }
 
-set_country_flag = lacking_writing_system
 
 # Technologies
+post_napoleonic_thought = 1
+flintlock_rifles = 1
+freedom_of_trade = 1
 
 # Inventions
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
-consciousness = 0
+consciousness = 2
 nonstate_consciousness = 0
 
 oob = "OYO_oob.txt"

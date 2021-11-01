@@ -19,14 +19,14 @@ political_decisions = {
             random_pop = {
                 limit = {
                     pop_type = slaves
-                    has_pop_culture = afro_american
+                    has_pop_culture = afro_french
                 }
                 pop_type = soldiers
             }
             random_pop = {
                 limit = {
                     pop_type = slaves
-                    has_pop_culture = afro_american
+                    has_pop_culture = afro_french
                 }
                 pop_type = soldiers
             }
@@ -116,7 +116,7 @@ political_decisions = {
             set_country_flag = golden_cuba
             badboy = 3
             SPA_2209 = { add_core = CSA }
-            add_accepted_culture = caribeno
+            add_accepted_culture = kreol
         }
 
         ai_will_do = {
@@ -158,7 +158,7 @@ political_decisions = {
             any_pop = {
                 limit = {
                     OR = {
-                        has_pop_culture = afro_american
+                        has_pop_culture = afro_french
                         has_pop_culture = afro_brazilian
                         has_pop_culture = afro_latino
                         has_pop_culture = afro_caribbean
@@ -223,7 +223,7 @@ political_decisions = {
             any_pop = {
                 limit = {
                     OR = {
-                        has_pop_culture = afro_american
+                        has_pop_culture = afro_french
                         has_pop_culture = afro_brazilian
                         has_pop_culture = afro_caribbean
                     }
@@ -292,7 +292,7 @@ political_decisions = {
             any_pop = {
                 limit = {
                     OR = {
-                        has_pop_culture = afro_american
+                        has_pop_culture = afro_french
                         has_pop_culture = afro_brazilian
                         has_pop_culture = afro_caribbean
                     }
@@ -366,7 +366,7 @@ political_decisions = {
             any_pop = {
                 limit = {
                     OR = {
-                        has_pop_culture = afro_american
+                        has_pop_culture = afro_french
                         has_pop_culture = afro_brazilian
                         has_pop_culture = afro_caribbean
                     }
@@ -1089,7 +1089,7 @@ political_decisions = {
             has_global_flag = american_civil_war_has_happened
             any_pop = {
                 OR = {
-                    has_pop_culture = afro_american
+                    has_pop_culture = afro_french
                     has_pop_culture = afro_brazilian
                     has_pop_culture = afro_caribbean
                     has_pop_culture = asian_minor

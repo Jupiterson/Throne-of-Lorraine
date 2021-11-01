@@ -132,10 +132,8 @@ RGA = {
 USA = { value = 0 }
 PRU = { value = 25 }
 SPA = { value = 25 }
-AUS = { value = 25 }
 RUS = { value = 75 }
-ENG = { value = 125 }
-FRA = { value = -75 }
+FRA = { value = -80 }
 
 
 army = {
@@ -556,26 +554,6 @@ army = {
         name= "5. Sipahis"
         type = cavalry
         home = 926
-    }
-}
-
-army = {
-    name = "Pashalik of Tripoli Army"
-    location = 1731
-    regiment = {
-        name= "1. Askäris"
-        type = irregular
-        home = 818
-    }
-    regiment = {
-        name= "6. Sipahis"
-        type = cavalry
-        home = 805
-    }
-    regiment = {
-        name= "15. Tümeni Firkasi"
-        type = infantry
-        home = 813
     }
 }
 

@@ -268,6 +268,40 @@ political_decisions = {
                     }
             }
         }
+		
+		
+		    form_byzantium = {
+        picture = byzantine_triumph
+        potential = {
+		    is_culture_group = pan_roman
+            BYZ = { exists = no }
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+            nationalism_n_imperialism = 1
+            BYZ = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = { in_sphere = THIS }
+                        owner = { vassal_of = THIS }
+                    }
+                }
+            }
+            
+        }
+
+        effect = {
+            prestige = 50
+            TUR = { all_core = { add_core = BYZ } }
+            change_tag = BYZ
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
     balkan_themes_retaken = {
         picture = byzantine_triumph
         potential = {

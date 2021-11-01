@@ -1,0 +1,31 @@
+#Kristiene
+country_event = {
+       id = 23299
+
+    title = "Ile Kristieni"
+    desc = "With us expelling the Christians ,they have formed their own nation in the new world"
+    picture = "french_revolution_1848"
+
+    fire_only_once = yes
+    major = yes
+
+   
+    immediate = {
+        OYO = {
+            set_country_flag = kristieni_nation		
+        }    
+    }
+
+    option = {
+        name = "We'll stay here"
+        prestige = 5
+		
+	}
+	
+    option = {
+        name = "Onto the new world"     
+        change_tag_no_core_switch = KRI 
+		
+      }
+    }
+ 

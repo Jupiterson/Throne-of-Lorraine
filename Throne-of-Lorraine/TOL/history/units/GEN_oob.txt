@@ -1,46 +1,143 @@
 TUR = {
     value = -100
 }
+FRA = {value = -100}
 
+army = {
+    name = "Esercito genovese"
+    location = 724
+    regiment = {
+        name= "1. Fanteria di Linea"
+        type = infantry
+        home = 724
+    }
+
+    regiment = {
+        name= "2. Fanteria di Linea"
+        type = infantry
+        home = 724
+    }
+
+    regiment = {
+        name= "3. Fanteria di Linea"
+        type = infantry
+        home = 725
+    }
+
+    regiment = {
+        name= "4. Fanteria di Linea"
+        type = infantry
+        home = 725
+    }
+	    regiment = {
+        name= "5. Fanteria di Linea"
+        type = infantry
+        home = 765
+    }
+	    regiment = {
+        name= "1. Artiglieria"
+        type = artillery
+        home = 473
+    }
+
+}
+
+army = {
+    name = "Divisione Africana"
+    location = 724
+    regiment = {
+        name= "6. Fanteria di Linea"
+        type = infantry
+        home = 1726
+    }
+
+    regiment = {
+        name= "7. Fanteria di Linea"
+        type = infantry
+        home = 765
+    }
+	    regiment = {
+        name= "7. Fanteria di Linea"
+        type = infantry
+        home = 1726
+    }
+		regiment = {
+        name= "8. Fanteria di Linea"
+        type = infantry
+        home = 1725
+}
+
+army = {
+    name = "Divisione Colombiana"
+    location = 2190
+    regiment = {
+        name= "9. Fanteria di Linea"
+        type = infantry
+        home = 2190
+    }
+
+    regiment = {
+        name= "10. Fanteria di Linea"
+        type = infantry
+        home = 3410
+    }
+}
 
 navy = {
-    name = "2nd Transport Squadron"
-    location = 854
+    name = "Transport Squadron"
+    location = 724
     ship = {
-        name= "7th Transport Flotilla"
+        name= "1st Transport Flotilla"
         type = clipper_transport
     }
 
     ship = {
-        name= "8th Transport Flotilla"
+        name= "2nd Transport Flotilla"
         type = clipper_transport
     }
     ship = {
-        name= "9th Transport Flotilla"
+        name= "3rd Transport Flotilla"
         type = clipper_transport
     }
 
     ship = {
-        name= "10th Transport Flotilla"
+        name= "4th Transport Flotilla"
         type = clipper_transport
     }
     ship = {
-        name= "19th Transport Flotilla"
+        name= "5th Transport Flotilla"
         type = clipper_transport
     }
 
     ship = {
-        name= "20th Transport Flotilla"
-        type = clipper_transport
+        name= "4. Grande nave"
+        type = manowar
     }
     ship = {
-        name= "21th Transport Flotilla"
-        type = clipper_transport
+        name= "5. Grande nave"
+        type = manowar
     }
 
     ship = {
-        name= "22th Transport Flotilla"
-        type = clipper_transport
+        name= "6. Grande nave"
+        type = manowar
     }
 
+}
+
+navy = {
+    name = "Flotta colombiana"
+    location = 2190
+    ship = {
+        name= "1. Grande nave"
+        type = manowar
+    }
+	    ship = {
+        name= "2. Grande nave"
+        type = manowar
+    }
+	    ship = {
+        name= "3. Grande nave"
+        type = manowar
+    }
 }
