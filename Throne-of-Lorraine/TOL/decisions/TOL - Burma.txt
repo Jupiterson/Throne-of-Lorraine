@@ -7,8 +7,8 @@ political_decisions = {
 			NOT = { has_global_flag = BUR_claimed_tibet }
 		}
 		allow = {
-			prestige = 20
-			owns = 1602		#tag of Yunnan
+			prestige = 15
+			owns = 1602		#tag of Dali
 			war = no
 		}
 		effect = {
@@ -19,7 +19,7 @@ political_decisions = {
 					primary_culture = tibetan
 				}
 				all_core = {
-					add_core = TIB
+					add_core = BUR
 				}
 			}
 		set_global_flag = BUR_claimed_tibet
