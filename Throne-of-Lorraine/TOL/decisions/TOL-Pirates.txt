@@ -280,7 +280,7 @@ political_decisions = {
         potential = {
             tag = PIR
             NOT = { has_country_flag = accept_afros }
-            year = 1860
+            year = 1865
         }
         allow = {
             revolution_n_counterrevolution = 1
@@ -290,11 +290,53 @@ political_decisions = {
             set_country_flag = accept_afros
             add_accepted_culture = afro_caribbean
             add_accepted_culture = afro_american
-	    add_accepted_culture = afro_latino
-	    add_accepted_culture = afro_french
-	    add_accepted_culture = afro_dutch
+	        add_accepted_culture = afro_latino
+	        add_accepted_culture = afro_french
+	        add_accepted_culture = afro_dutch
             add_accepted_culture = afro_brazilian
             add_accepted_culture = afro_german
+			add_accepted_culture = afro_italian
         }
+    }
+	
+	### Lepri's events <potentially not working :( > ###
+	buccaneers_PIR = {
+        potential = {
+            tag = PIR
+			NOT = {
+			    has_country_modifier = country_of_buccaneers
+        }
+		allow = {
+		    tag = PIR
+	    } 
+        effect = { 
+		    add_country_modifier_ = { name = country_of_buccaneers duration = -1 }
+        }
+		ai_will_do = { factor = 1 }
+    }
+}
+	     
+	request_letter_marque = {
+        picture = letter_marque
+        potential = {
+            tag = PIR
+			exists = USA
+			NOT = {
+			    has_country_flag = marque_letter_requested 
+			}
+        }
+        allow = {
+		    war = no
+			part_of_sphere = no
+            OR = {
+			    ruling_party_ideology = conservative
+			    ruling_party_ideology = reactionary
+            }
+		}
+        effect = { 
+		    set_country_flag = marque_letter_requested
+            USA = { country_event = 28000 }
+        }
+		ai_will_do = { factor = 0.8 }
     }
 }
