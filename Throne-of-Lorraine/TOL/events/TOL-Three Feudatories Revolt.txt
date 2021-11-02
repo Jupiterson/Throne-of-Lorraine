@@ -287,6 +287,8 @@ country_event = {
 		badboy = -60
 		TIB = { country_event = 310008 }
 		BUR = { country_event = 310009 }
+		GXI = { country_event = 310010 }
+		FJN = { country_event = 310010 }
     }
 }
 #Tibet invades Xikang
@@ -328,4 +330,59 @@ country_event = {
             }
         }
     }
+}
+#Dai nam Rebellion
+country_event = {
+	id = 310010
+	title = "FEU10.T"
+	desc = "FEU10.D"
+	picture = "Yunnan_revolt_pic"
+	
+	is_triggered_only = yes	
+		option = {
+		name = "We should have expected this..."
+		any_owned = {
+			limit = {
+				OR = {
+					region = DAI_1369
+					is_core = TAI
+				}
+			}
+			secede_province = DAI
+		}
+		 war = {
+            target = DAI
+            attacker_goal = {
+                casus_belli = acquire_all_cores
+            }
+        }
+	}
+}
+#Taiwan Rebellion
+country_event = {
+	id = 310011
+	title = "FEU11.T"
+	desc = "FEU11.D"
+	picture = "Yunnan_revolt_pic"
+	
+	is_triggered_only = yes	
+		option = {
+		name = "Those ungrateful Tribes!"
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1485
+					is_core = TAI
+				}
+			}
+			secede_province = TAI 
+		CHI_1485 = { add_core = TAI }
+		}
+		 war = {
+            target = TAI
+            attacker_goal = {
+                casus_belli = acquire_all_cores
+            }
+        }
+	}
 }
