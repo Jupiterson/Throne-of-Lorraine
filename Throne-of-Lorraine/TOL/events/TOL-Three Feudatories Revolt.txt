@@ -285,5 +285,47 @@ country_event = {
         }
 		prestige = 10
 		badboy = -60
+		TIB = { country_event = 310008 }
+		BUR = { country_event = 310009 }
+    }
+}
+#Tibet invades Xikang
+country_event = {
+    id = 310008 
+    title = "FEU8.T"
+    desc = "FEU8.D"
+    picture = "Start_of_the_three_feudatories"
+	
+	is_triggered_only = yes	
+	
+    option = {
+        name = "To Kham!"
+        war = {
+            target = YNN
+            attacker_goal = {
+                casus_belli = acquire_core_state
+				state_province_id = 1586
+            }
+        }
+    }
+}
+#Burma invades Dehong
+country_event = {
+    id = 310009
+    title = "FEU9.T"
+    desc = "FEU9.D"
+    picture = "Start_of_the_three_feudatories"
+	
+	is_triggered_only = yes	
+	
+    option = {
+        name = "To Dehong!"
+        war = {
+            target = YNN
+            attacker_goal = {
+                casus_belli = acquire_core_state
+				state_province_id = 1602
+            }
+        }
     }
 }
