@@ -1,0 +1,116 @@
+# The Pirate Federation requests marque letters
+country_event = {
+    id = 28000
+	title = "The Pirate Federation requests marque letters"
+	desc = "The Pirates in the south have requested our country to release them marque letters. This would allow us to control and influence them but it would not be well seen by our neighbours "
+	picture = diplomats_examining
+
+	trigger = {
+        tag = USA
+		exists = PIR
+		PIR = { has_country_flag = marque_letter_requested }
+        NOT = { 
+		    has_country_flag = marque_letter_reply 
+		}
+    }
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+	          name = "Tell the pirates we accept their requests"
+			  set_country_flag = marque_letter_reply
+			  diplomatic_influence = {
+			    who = PIR
+			    value = 300
+			  }
+			  badboy = 5
+			   relation = {
+			    who = PIR
+			    value = 150
+			  }
+			   relation = {
+			    who = GEN
+			    value = -150
+			  }
+			  PIR = { country_event = 28001 }
+			  ai_chance = {
+                factor = 70
+                modifier = { factor = 0 badboy = 0.8  }
+              }
+			  }
+
+	option = {		  
+			  name = "We will never help the pirate scum"
+			  set_country_flag = marque_letter_reply
+			  diplomatic_influence = {
+			    who = PIR
+			    value = -300
+			  }
+			  relation = {
+			    who = GEN
+			    value = 50
+			  }
+			  relation = {
+			    who = PIR
+			    value = -100
+			  }
+			  PIR = { country_event = 28002 }
+			  ai_chance = {
+                factor = 30
+              }
+			  }        
+			  } 
+			  
+# The Amauldi Kingdom has accepted to give us marque letters
+country_event = {
+    id = 28001
+	title = "The Amauldi Kingdom has accepted to release us marque letters"
+	desc = "Our request has been accepted and now we are corsairs in behalf of the Amauldi "
+
+	trigger = {
+        tag = PIR
+		exists = PIR
+		USA = { has_country_flag = marque_letter_reply }
+        NOT = { 
+		    has_country_flag = marque_letter_request_positive 
+		}
+    }
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+	          name = "For the king!"
+			  remove_country_modifier = country_of_buccaneers
+			  set_country_flag = marque_letter_request_positive
+			  }          
+			  } 
+			  
+# The Amauldi Kingdom refuses to give us marque letters
+country_event = {
+    id = 28002
+	title = "The Amauldi Kingdom has refused to release us marque letters"
+	desc = "Our request to has been refused, therefore we will keep pirating as the way we always did"
+
+	trigger = {
+        tag = PIR
+		exists = PIR
+		USA = { has_country_flag = marque_letter_reply }
+        NOT = { 
+		    has_country_flag = marque_letter_request_negative 
+		}
+    }
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+	          name = "Yarr that's the right way"
+			  set_country_flag = marque_letter_request_negative
+			  }          
+			  }
+			  
