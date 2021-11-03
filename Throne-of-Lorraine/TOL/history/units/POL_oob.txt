@@ -4,42 +4,54 @@ TUR = {
 FRA = {value = -70}
 
 army = {
-    name = "II. Armee"
+    name = "Wojsko Polskie"
     location = 702
     regiment = {
-        name= "1.6. Infanteriedivision"
+        name= "1st Cernauti Infantry"
         type = infantry
         home = 627
     }
 
     regiment = {
-        name= "2.6. Infanteriedivision"
-        type = infantry
-        home = 640
-    }
-
-    regiment = {
-        name= "3.6. Infanteriedivision"
-        type = infantry
-        home = 705
-    }
-
-    regiment = {
-        name= "1.7. Infanteriedivision"
-        type = infantry
-        home = 630
-    }
-
-    regiment = {
-        name= "2.7. Infanteriedivision"
-        type = infantry
-        home = 643
-    }
-
-    regiment = {
-        name= "3.7. Infanteriedivision"
+        name= "1st Lwow Infantry"
         type = infantry
         home = 702
+    }
+	
+    regiment = {
+        name= "1st Iasi Hussar"
+        type = hussar
+        home = 670
+    }
+
+    regiment = {
+        name= "1st Bydgoszcz Artillery"
+        type = artillery
+        home = 700
+    }
+
+    regiment = {
+        name= "1st Gniezno Artillery"
+        type = artillery
+        home = 701
+    }
+
+    regiment = {
+        name= "1st Warszawa Artillery"
+        type = artillery
+        home = 706
+    }
+	
+    regiment = {
+        name= "1st Plock Artillery"
+        type = artillery
+        home = 708
+    }
+	
+    regiment = {
+        name= "1st Krakow Artillery"
+        type = artillery
+        home = 703
     }
 
 }
@@ -57,7 +69,7 @@ leader = {
 }
 
 leader = {
-    name = "Julius von Krakau"
+    name = "Julius von Krakow"
     date = 1835.1.1
     type = land
     personality = wrathful
