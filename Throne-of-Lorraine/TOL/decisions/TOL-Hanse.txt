@@ -128,7 +128,8 @@ reestablish_kontors ={
   reinstate_newworld_kontors ={
         picture = belgrade_view
         potential = {
-           has_country_flag = kontors_established
+			tag = HNS
+            has_country_flag = kontors_established
             NOT = {
                 
                     has_country_flag = new_kontors_established
@@ -157,7 +158,8 @@ reestablish_kontors ={
 	integrate_kontors ={
         picture = belgrade_view
         potential = {
-           new_kontors_established
+			tag = HNS
+            has_country_flag = new_kontors_established
             NOT = {
                 
                     has_country_flag = take_kontors
