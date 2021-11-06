@@ -125,7 +125,7 @@ reestablish_kontors ={
         ai_will_do = { factor = 1 }
     }
 	
-  reinstate_newworld_kontors ={
+  reinstate_newworld_kontors = {
         picture = belgrade_view
         potential = {
            has_country_flag = kontors_established
@@ -154,10 +154,10 @@ reestablish_kontors ={
         ai_will_do = { factor = 1 }
     }
 	
-	integrate_kontors ={
+	integrate_kontors = {
         picture = belgrade_view
         potential = {
-           new_kontors_established
+           has_country_flag = new_kontors_established
             NOT = {
                 
                     has_country_flag = take_kontors
@@ -323,6 +323,7 @@ embraced_south_in_hanse = {
             year = 1850
             OR = {
                 government = hms_government
+				 government = democracy
                 government = prussian_constitutionalism
                 government = absolute_monarchy
                 government = absolute_empire
