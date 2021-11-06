@@ -988,7 +988,7 @@ political_decisions = {
                             is_culture_group = american_cultures
                             location = { is_overseas = no }
                             NOT = {
-                                culture = texan
+                                culture = free_german
                                 type = craftsmen
                                 type = bureaucrats
                                 strata = rich
@@ -1051,7 +1051,7 @@ political_decisions = {
                         is_culture_group = american_cultures
                         location = { is_overseas = no }
                         NOT = {
-                            has_pop_culture = texan
+                            has_pop_culture = free_german
                             type = craftsmen
                             type = bureaucrats
                             strata = rich
@@ -1087,7 +1087,7 @@ political_decisions = {
                         has_pop_religion = catholic
                         OR = {
                             has_pop_culture = dixie
-                            has_pop_culture = texan
+                            has_pop_culture = free_german
                         }
                         NOT = { type = craftsmen }
                         location = { is_overseas = no }

@@ -3,8 +3,11 @@ political_decisions = {
         conquest_of_levant = {
 		picture = map_levant
 		potential = {
+		OR = {
+		
 			tag = COP
                         tag = UCO
+						}
 			NOT = { has_country_flag = conquest_of_levant }
 		}
 		allow = {
@@ -82,7 +85,7 @@ administrate_sand_copt = {
                 primary_culture = amhara
                 primary_culture = copt
             }
-            NOT = { exists = UOC }
+            NOT = { exists = UCO }
         }
 
         allow = {
@@ -191,8 +194,10 @@ administrate_sand_copt = {
 	conquest_of_syria = {
 		picture = form_the_ikhwan
 		potential = {
+		OR = {
 			tag = COP
                         tag = UCO
+						}
 			NOT = { has_country_flag = conquest_of_syria }
 		}
 		allow = {

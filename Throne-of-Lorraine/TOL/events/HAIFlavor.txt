@@ -173,7 +173,7 @@ country_event = {
 
     option = {
         name = "EVT45103OPTA"
-        remove_accepted_culture = afro_latino
+        remove_accepted_culture = afro_italian
         add_casus_belli = {
             target = HAI
             type = conquest
@@ -225,7 +225,7 @@ country_event = {
         set_country_flag = DOM_revolt
         set_country_flag = dominican_revolution
         remove_accepted_culture = caribeno
-        remove_accepted_culture = afro_latino
+        remove_accepted_culture = afro_italian
         any_owned = {
             limit = { is_core = DOM }
             any_pop = { militancy = -9 consciousness = -9 }
@@ -270,7 +270,7 @@ country_event = {
     option = {
         name = "EVT45104OPTB"
         remove_accepted_culture = caribeno
-        remove_accepted_culture = afro_latino
+        remove_accepted_culture = afro_italian
         any_owned = {
             limit = { is_core = DOM }
             any_pop = { militancy = -9 consciousness = -9 }
@@ -279,7 +279,7 @@ country_event = {
         }
         DOM = {
             define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
-            add_accepted_culture = afro_latino
+            add_accepted_culture = afro_italian
         }
         relation = { who = DOM value = -400 }
         war = {

@@ -3974,14 +3974,14 @@ country_event = {
         random_country = {
             limit = {
                 tag = FROM
-                primary_culture = texan
+                primary_culture = free_german
             }
             any_owned = { add_core = USA }
         }
         random_country = {
             limit = {
                 tag = FROM
-                NOT = { primary_culture = texan }
+                NOT = { primary_culture = free_german }
             }
             all_core = { add_core = USA }
         }
@@ -4395,7 +4395,7 @@ country_event = {
         name = "EVTOPTA1307" #Afro-American loses accepted status, Dixie becomes accepted, Texan becomes accepted, CSA cores go away, assimilation of Dixies stop.
         prestige = 10
         add_accepted_culture = dixie
-        random_owned = { limit = { any_pop = { has_pop_culture = texan } } owner = { add_accepted_culture = texan } }
+        random_owned = { limit = { any_pop = { has_pop_culture = free_german } } owner = { add_accepted_culture = free_german } }
         remove_accepted_culture = afro_american
         CSA = { all_core = { add_core = USA remove_core = CSA fort = -3} }
         any_pop = {

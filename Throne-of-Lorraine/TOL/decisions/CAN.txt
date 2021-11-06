@@ -168,10 +168,10 @@ political_decisions = {
                 tag = COL
                 tag = MTC
                 tag = RPL
-                primary_culture = anglo_canadian
+                primary_culture = akino_german
                 AND = {
                     primary_culture = british
-                    accepted_culture = anglo_canadian
+                    accepted_culture = akino_german
                     NOT = { tag = ENG }
                     NOT = { tag = ENL }
                 }
@@ -583,7 +583,7 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    alaskan_frontier = {
+    inuit_frontier = {
         picture = fort_selkirk
         potential = {
             tag = AKI
@@ -705,8 +705,8 @@ political_decisions = {
         picture = vive_le_quebec
         potential = {
             OR = {
-                primary_culture = french_canadian
-                primary_culture = acadian
+                primary_culture = akino_german
+                primary_culture = akino_german
             }
             NOT = {
                 tag = FCA
@@ -766,8 +766,7 @@ political_decisions = {
             74 = { change_province_name = "Québec" state_scope = { change_region_name = "Terre-Neuve" } }
             QUE = { all_core = { add_core = FCA remove_core = ENG remove_core = RPL remove_core = CAN remove_core = NEW } }
             ACA = { all_core = { add_core = ACA remove_core = ENG } }
-            add_accepted_culture = french_canadian
-            add_accepted_culture = acadian
+            add_accepted_culture = akino_german
             add_accepted_culture = afro_french
             add_accepted_culture = mulatto
             add_accepted_culture = dixie

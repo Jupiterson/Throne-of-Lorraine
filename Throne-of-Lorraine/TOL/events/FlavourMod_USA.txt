@@ -146,7 +146,7 @@ country_event = {
         }
         NOT = { year = 1870 }
         NOT = {
-            has_country_flag = texan_state_flag
+            has_country_flag = free_german_state_flag
         }
     }
 
@@ -170,7 +170,7 @@ country_event = {
                     location = {
                         is_core = TEX
                     }
-                    culture = texan
+                    culture = free_german
                     NOT = {
                         type = soldiers
                         type = bureaucrats
@@ -202,7 +202,7 @@ country_event = {
             who = MEX
             value = -50
         }
-        set_country_flag = texan_state_flag
+        set_country_flag = free_german_state_flag
     }
 }
 
@@ -285,11 +285,11 @@ country_event = {
         prestige = -25
         any_pop = {
             limit = {
-                culture = french_canadian
+                culture = akino_german
             }
             move_pop = 249
         }
-        add_accepted_culture = anglo_canadian
+        add_accepted_culture = akino_german
         CAN_46 = { is_slave = no }
         MEX_100 = { add_core = CAL }
         2148 = { add_core = CAL }

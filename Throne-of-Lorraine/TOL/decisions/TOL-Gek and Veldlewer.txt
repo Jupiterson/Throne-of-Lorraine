@@ -1,5 +1,5 @@
 political_decisions = {
-    #Gekkerd is gekkerds
+
 
     
  
@@ -52,81 +52,45 @@ colonial_militia = {
 
 
 
-    scramble_for_america = {
-        picture = conquest_of_the_desert
-        potential = {
-            tag = VEL
-            GEK = { exists = yes owns = 91 }
-            
-            NOT = { has_country_flag = scrambled_egg }
-        }
 
-        allow = {           
-            war = no
-        }
-       
-        effect = {            
-            prestige = 25
-            set_country_flag = scrambled_egg
-           random_owned = {
-                limit = {  
-                       113 = { empty = yes }  
-		       93 = { empty = yes }   
-		       26 = { empty = yes }  
-		       27 = { empty = yes }   
-                       28 = { empty = yes }
-                      
-                
-        } 
-                       USA_111 = { secede_province = THIS }  
-                       113 = { secede_province = THIS }  
-		       93 = { secede_province = THIS }   
-		       26 = { secede_province = THIS }  
-		       27 = { secede_province = THIS }    
-                       28 = { secede_province = THIS }                               
-
-                        
-
-
-        ai_will_do = { factor = 1 }
-    }
-}
  
 
 
-rush_east = {
-        picture = conquest_of_the_desert
-        potential = {
-
-            tag = TEX
+#rush_east = {
+#        picture = conquest_of_the_desert
+#        potential = {
+#
+#            tag = TEX
 #            GEK = { exists = yes owns = 3467 }
-            
-            NOT = { has_country_flag = scrambled_egg }
-        }
-
-        allow = {           
-            war = no
-        }
-       
-        effect = {            
-            prestige = 25
-            set_country_flag = scrambled_egg
-           random_owned = {
-                limit = {
-                       
-                       MEX_100 = { empty = yes }
-                       MEX_103 = { empty = yes }      
-                      
-                
-        } 
-                       
-                       MEX_100 = { secede_province = THIS }
-                       MEX_103 = { secede_province = THIS }                                        
-
-                        
-
-
-        ai_will_do = { factor = 1 }
-    }
- }
+#            
+#            NOT = { has_country_flag = scrambled_egg }
+#        }
+#
+#        allow = {           
+# #           war = no
+#        }
+#       
+#        effect = {            
+#            prestige = 25
+#            set_country_flag = scrambled_egg
+#           random_owned = {
+#                limit = {
+#                       
+#                       MEX_100 = { empty = yes }
+#                       MEX_103 = { empty = yes }      
+#                      
+#                
+#        } 
+#                       
+#                       MEX_100 = { secede_province = THIS }
+#                       MEX_103 = { secede_province = THIS }                                        #
+#
+#                        #
+#
+#
+#        ai_will_do = { factor = 1 }
+#    }
+# }
+#}
+}
 }

@@ -50,11 +50,11 @@ political_decisions = {
                 limit = { owner = { tag = LSK } }
                 owner = {
                     any_country = {
-                        limit = { exists = no NOT = { primary_culture = alaskan } accepted_culture = alaskan }
-                        remove_accepted_culture = alaskan
+                        limit = { exists = no NOT = { primary_culture = inuit } accepted_culture = inuit }
+                        remove_accepted_culture = inuit
                     }
                     any_country = {
-                        limit = { exists = yes NOT = { primary_culture = alaskan } accepted_culture = alaskan }
+                        limit = { exists = yes NOT = { primary_culture = inuit } accepted_culture = inuit }
                         country_event = { id = 443039 days = 15 }
                     }
                 }

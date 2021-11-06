@@ -499,11 +499,11 @@ country_event = {
 
         random_owned = {
             limit = { owner = { is_culture_group = british } }
-            LSK = { primary_culture = anglo_canadian }
+            LSK = { primary_culture = akino_german }
             LSK = { government = democracy }
         }
         FROM = {
-            remove_accepted_culture = alaskan
+            remove_accepted_culture = inuit
             any_owned = {
                 limit = { continent = north_america }
                 secede_province = THIS

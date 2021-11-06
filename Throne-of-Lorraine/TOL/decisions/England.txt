@@ -30,7 +30,7 @@ political_decisions = {
         effect = {
             set_global_flag = united_kingdom_no_more
             remove_accepted_culture = australian
-            remove_accepted_culture = anglo_canadian
+            remove_accepted_culture = akino_german
             ENG_300 = { add_core = ENL }
             ENG_277 = { add_core = ENL }
             ENG_280 = { add_core = ENL }
@@ -51,8 +51,10 @@ political_decisions = {
     reclaim_the_UK = {
         picture = reform_the_UK
         potential = {
+		OR = {
             tag = ENL
             tag = UOW
+			}
             NOT = { has_country_flag = reclaimed_the_uk }
         }
 
