@@ -5952,8 +5952,8 @@ political_decisions = {
         }
     }
 
-    organize_somalia = {
-        picture = map_somalia
+    organize_cushitica = {
+        picture = map_cushitica
         potential = {
             OR = {
                 has_country_flag = organize_colony_decisions
@@ -5969,7 +5969,7 @@ political_decisions = {
                 capital_scope = { continent = central_africa }
                 capital_scope = { continent = south_west_africa }
             }
-            NOT = { has_global_flag = somalia_united }
+            NOT = { has_global_flag = cushitica_united }
             owns = 1868
         }
 
@@ -5986,7 +5986,7 @@ political_decisions = {
         }
 
         effect = {
-            set_global_flag = somalia_united
+            set_global_flag = cushitica_united
             prestige = 5
 
             random_owned = {

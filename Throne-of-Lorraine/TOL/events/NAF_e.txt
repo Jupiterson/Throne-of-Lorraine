@@ -7,12 +7,12 @@ country_event = {
 
     option = {
         name = "Self-determination is segregation!"
-        add_accepted_culture = afro_american
+        add_accepted_culture = afro_french
         any_pop = {
             limit = {
                 OR = {
                     has_pop_culture = dixie
-                    has_pop_culture = afro_american
+                    has_pop_culture = afro_french
                 }
             }
             consciousness = 3
@@ -25,7 +25,7 @@ country_event = {
 
     option = {
         name = "African Americans deserve their own destiny."
-        remove_accepted_culture = afro_american
+        remove_accepted_culture = afro_french
         any_pop = {
             limit = {
                 has_pop_culture = dixie
@@ -35,7 +35,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
             consciousness = -5
             militancy = -5
@@ -118,7 +118,7 @@ country_event = {
         NAF = {
             any_pop = {
                 limit = {
-                    has_pop_culture = afro_american
+                    has_pop_culture = afro_french
                 }
                 ideology = {
                     value = communist
@@ -143,7 +143,7 @@ country_event = {
         NAF = {
             any_pop = {
                 limit = {
-                    has_pop_culture = afro_american
+                    has_pop_culture = afro_french
                 }
                 ideology = {
                     value = communist
@@ -231,7 +231,7 @@ country_event = {
         add_accepted_culture = yankee
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
                 ideology = fascist
             }
             consciousness = 5
@@ -258,7 +258,7 @@ country_event = {
         add_accepted_culture = dixie
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
                 ideology = fascist
             }
             consciousness = 5
@@ -266,7 +266,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
             consciousness = 3
             militancy = 3
@@ -727,7 +727,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
             dominant_issue = {
                 factor = 0.10
@@ -755,7 +755,7 @@ country_event = {
         name = "We will never surrender!"
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
             dominant_issue = {
                 factor = 0.10
@@ -908,7 +908,7 @@ country_event = { ##### slavery revolt failed
         }
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
             militancy = 7
             consciousness = 7
@@ -959,7 +959,7 @@ country_event = { ##### minor slave revolt
         exists = yes
         any_owned_province = {
             any_pop = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
         }
         OR = {
@@ -1008,7 +1008,7 @@ country_event = { ##### minor slave revolt
         random_owned = {
             limit = {
                 any_pop = {
-                    has_pop_culture = afro_american
+                    has_pop_culture = afro_french
                 }
                 OR = {
                     region = USA_139
@@ -1080,7 +1080,7 @@ country_event = { ##### large slave
         exists = yes
         any_owned_province = {
             any_pop = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
         }
         OR = {
@@ -1129,7 +1129,7 @@ country_event = { ##### large slave
         random_owned = {
             limit = {
                 any_pop = {
-                    has_pop_culture = afro_american
+                    has_pop_culture = afro_french
                 }
                 OR = {
                     region = USA_139
@@ -1200,7 +1200,7 @@ country_event = { #####NAF notify revolt large
             any_neighbor_province = {
                 limit = {
                     any_pop = {
-                        has_pop_culture = afro_american
+                        has_pop_culture = afro_french
                     }
                     owned_by = FROM
                     OR = {
@@ -1370,7 +1370,7 @@ country_event = { ##### Nat Turner
         name = "Heroes must be celebrated!"
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
             militancy = -1
         }
@@ -1388,7 +1388,7 @@ country_event = { ##### Nat Turner
         name = "Heroes should be remembered."
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
             consciousness = -1
         }
@@ -1406,7 +1406,7 @@ country_event = { ##### Nat Turner
         name = "There is more to our history than violence."
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
             militancy = 1
         }

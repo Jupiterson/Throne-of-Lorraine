@@ -4314,14 +4314,14 @@ country_event = {
         name = "EVTOPTA1305" #Keep Afro-American as accepted, CSA cores stay, assimilation of Dixie stops
         prestige = 10
         add_accepted_culture = dixie
-        add_accepted_culture = afro_american
+        add_accepted_culture = afro_french
         any_pop = {
             limit = { has_pop_culture = dixie }
             consciousness = 2
             militancy = 4
         }
         any_pop = {
-            limit = { has_pop_culture = afro_american }
+            limit = { has_pop_culture = afro_french }
             consciousness = -2
             militancy = -4
         }
@@ -4337,7 +4337,7 @@ country_event = {
             }
         }
         any_pop = {
-            limit = { has_pop_culture = afro_american }
+            limit = { has_pop_culture = afro_french }
             ideology = {
                 value = liberal
                 factor = 0.6
@@ -4351,7 +4351,7 @@ country_event = {
         name = "EVTOPTA1306" #Afro-American loses accepted status, CSA cores go away
         prestige = 10
         add_accepted_culture = dixie
-        remove_accepted_culture = afro_american
+        remove_accepted_culture = afro_french
         random_owned = { limit = { owner = { ai = no } } treasury = -25000 }
         any_owned = {
             limit = { is_core = CSA }
@@ -4365,7 +4365,7 @@ country_event = {
             militancy = 1
         }
         any_pop = {
-            limit = { has_pop_culture = afro_american }
+            limit = { has_pop_culture = afro_french }
             consciousness = 2
             militancy = 1
         }
@@ -4381,7 +4381,7 @@ country_event = {
             }
         }
         any_pop = {
-            limit = { has_pop_culture = afro_american }
+            limit = { has_pop_culture = afro_french }
             ideology = {
                 value = liberal
                 factor = 0.8
@@ -4396,7 +4396,7 @@ country_event = {
         prestige = 10
         add_accepted_culture = dixie
         random_owned = { limit = { any_pop = { has_pop_culture = free_german } } owner = { add_accepted_culture = free_german } }
-        remove_accepted_culture = afro_american
+        remove_accepted_culture = afro_french
         CSA = { all_core = { add_core = USA remove_core = CSA fort = -3} }
         any_pop = {
             limit = {
@@ -4407,7 +4407,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                has_pop_culture = afro_american
+                has_pop_culture = afro_french
             }
             consciousness = 4
             militancy = 2
@@ -4420,7 +4420,7 @@ country_event = {
             }
         }
         any_pop = {
-            limit = { has_pop_culture = afro_american }
+            limit = { has_pop_culture = afro_french }
             ideology = {
                 value = liberal
                 factor = 0.8

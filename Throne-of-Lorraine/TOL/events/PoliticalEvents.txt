@@ -4742,8 +4742,8 @@ country_event = {
 
     option = {
         name = "EVT443039OPTA"
-        random_country = { limit = { tag = FROM primary_culture = ukrainian }
-            THIS = { remove_accepted_culture = ukrainian }
+        random_country = { limit = { tag = FROM primary_culture = ruthenyan }
+            THIS = { remove_accepted_culture = ruthenyan }
         }
         random_country = { limit = { tag = FROM primary_culture = byelorussian }
             THIS = { remove_accepted_culture = byelorussian }
