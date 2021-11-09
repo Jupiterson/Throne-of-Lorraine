@@ -153,19 +153,20 @@ country_event = {
 		OR = {
 		    AND = {
 		        war_exhaustion = 5
-		        blockade = 10
+		        blockade = 0.5
 		    }
 		    war_exhaustion = 10
-			}
+	    }
 		PIR = {
 		    war_score = 5
+	    }
 		NOT = { has_country_flag = losing_war }
-		NOT = { has_global_flag = achieved independence }
+		NOT = { has_global_flag = achieved_independence }
 	}
+	
 	mean_time_to_happen = {
 		months = 1
 	}	
-	} 
 	
 	option = {
 	          name = "We must surrender for the stability of our great country"
@@ -328,20 +329,23 @@ country_event = {
 	trigger = {
 		tag = PIR
 		war = no
-		NOT = { has_global_flag = achieved independence }
+		NOT = { has_global_flag = achieved_independence }
 	}
+	
 	mean_time_to_happen = {
 		days = 10
 	}	
 	
 	option = {
 	          name = "Why chainging? Capo Dominica is already the right place"
-			  set_global_flag = achieved independence
+			  set_global_flag = achieved_independence
 			  capital = 2215
-			  fort = 2
-			  naval_base = 2
-			  trade_goods = precious_metal
-			  RGO_size = 4
+			  2215 = {
+			    fort = 2
+			    naval_base = 2
+			    trade_goods = precious_metal
+			    RGO_size = 4
+			  }
 			  ai_chance = {
                 factor = 50
               }
@@ -349,36 +353,44 @@ country_event = {
 
 	option = {
 	          name = "Forte Azzurro shall be our new base"
-			  set_global_flag = achieved independence
+			  set_global_flag = achieved_independence
 			  capital = 200
-			  fort = 2
-			  naval_base = 2
-			  trade_goods = precious_metal
-			  RGO_size = 4
+			  200 = {
+			    fort = 2
+			    naval_base = 2
+			    trade_goods = precious_metal
+			    RGO_size = 4
+			  }
 			  ai_chance = {
                 factor = 20
               }
 			  }
+			  
 	option = {
 	          name = "Giamaica is ideal because of it's position"
-			  set_global_flag = achieved independence
+			  set_global_flag = achieved_independence
 			  capital = 2217
-			  fort = 2
-			  naval_base = 2
-			  trade_goods = precious_metal
-			  RGO_size = 4
+			  2217 = {
+			    fort = 2
+			    naval_base = 2
+			    trade_goods = precious_metal
+			    RGO_size = 4
+			  }
 			  ai_chance = {
                 factor = 20
               }
 			  }
+			  
     option = {
 	          name = "Why nobody thought about Porto Rico?"
-			  set_global_flag = achieved independence
+			  set_global_flag = achieved_independence
 			  capital = 2222
-			  fort = 2
-			  naval_base = 2
-			  trade_goods = precious_metal
-			  RGO_size = 4
+			  2222 = {
+			    fort = 2
+			    naval_base = 2
+			    trade_goods = precious_metal
+			    RGO_size = 4
+			  }
 			  ai_chance = {
                 factor = 10
 			  }

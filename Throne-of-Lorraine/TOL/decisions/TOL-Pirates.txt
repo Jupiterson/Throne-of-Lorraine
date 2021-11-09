@@ -351,8 +351,12 @@ political_decisions = {
         picture = floride_purchase
         potential = {
 		    tag = PIR
-            3284 = owned_by = USA
-            200 = owned_by = THIS
+            3284 = {
+			    owned_by = USA
+			}
+            200 = { 
+			    owned_by = THIS
+			}
             NOT = { has_country_flag = floride_purchase }
         }
 
@@ -380,7 +384,7 @@ political_decisions = {
         picture = claim_cuba
         potential = {
 		    tag = PIR
-			has_global_flag = achieved independence
+			has_global_flag = achieved_independence
             NOT = { has_country_flag = claimed_cuba }
         }
 
