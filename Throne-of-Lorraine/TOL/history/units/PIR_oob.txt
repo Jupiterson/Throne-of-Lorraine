@@ -1,11 +1,39 @@
 GEN = {
-    value = -150
+    value = -200
 }
 USA = {
-	value = -10
+	value = -100
 }
-FRA = {value = -100}
-
+TEX = {
+	value = -100
+}
+MEX = {
+	value = -100
+}
+COS = {
+	value = -100
+}
+JES = {
+	value = -100
+}
+MSK = {
+	value = -100
+}
+AKI = {
+	value = -50
+}
+GEK = {
+	value = -50
+}
+ARC = {
+	value = -50
+}
+BRZ = {
+	value = -50
+}
+PEU = {
+	value = -50
+}
 
 leader = {
     name = "Andrea de Flor"
@@ -46,33 +74,33 @@ leader = {
 }
 
 army = {
-    name = "La flotta principale"
+    name = "L'armata dei bucanieri"
     location = 2215
     regiment = {
-        name= "Divisione 1"
+        name= "1a Divisione"
         type = infantry
         home = 2215
     }
 
     regiment = {
-        name= "Divisione 2"
+        name= "2a Divisione"
         type = infantry
-        home =2215
+        home = 2215
     }
 	    regiment = {
-        name= "Divisione 3"
+        name= "3a Divisione"
         type = infantry
-        home =3309
+        home = 3309
     }
 	regiment = {
-        name= "Divisione 4"
+        name= "4a Divisione"
         type = infantry
-        home =3403
+        home = 3403
     }
 	regiment = {
-        name= "Divisione 5"
+        name= "5a Divisione"
         type = infantry
-        home =2214
+        home = 2214
     }
 }
 	
@@ -80,18 +108,18 @@ army = {
     name = "Esercito continentale"
     location = 200
     regiment = {
-        name= "Divisione 6"
+        name= "6a Divisione"
         type = infantry
         home = 200
     }
 	    regiment = {
-        name= "Divisione 7"
+        name= "7a Divisione"
         type = infantry
         home = 2217
     }
 
     regiment = {
-        name= "Divisione 8"
+        name= "8a Divisione"
         type = infantry
         home = 2219
     }
@@ -102,7 +130,7 @@ navy = {
     name = "La flotta principale"
     location = 2215
     ship = {
-        name= "Perla Nera"
+        name= "La Perla Nera"
         type = frigate
     }
     ship = {
@@ -110,11 +138,11 @@ navy = {
         type = frigate
     }
     ship = {
-        name= "Buona Avventura"
+        name= "Coraggiosa"
         type = frigate
     }
     ship = {
-        name= "Fortuna reale"
+        name= "Fortuna"
         type = frigate
     }
     ship = {
@@ -122,7 +150,7 @@ navy = {
         type = clipper_transport
     }
 	    ship = {
-        name= "Cambusa d'avventura"
+        name= "Libertà"
         type = clipper_transport
     }
 }
@@ -135,7 +163,7 @@ navy = {
         type = manowar
     }
 	    ship = {
-        name= "Grande Squalo Forte"
+        name= "Lo squalo"
         type = manowar
     }
 	    ship = {
@@ -143,7 +171,7 @@ navy = {
         type = manowar
     }
 	ship = {
-        name= "Vettore"
+        name= "Inferno"
         type = clipper_transport
     }
 }
@@ -152,7 +180,7 @@ navy = {
     name = "Flotta giamaicana"
     location = 2219
     ship = {
-        name= "Flotta giamaicana"
+        name= "Gioiosa"
         type = frigate
     }
 }
