@@ -14,7 +14,7 @@ country_event = {
     trigger = {
         tag = USA
         war = no
-        NOT = {    has_global_flag = texanborders }
+        NOT = {    has_global_flag = free_germanborders }
         TEX = {
             all_core = { owned_by = THIS }
         }
@@ -53,7 +53,7 @@ country_event = {
         129 = {
             remove_core = TEX
         }
-        set_global_flag = texanborders
+        set_global_flag = free_germanborders
         ai_chance = {
             factor = 85
         }
@@ -542,7 +542,7 @@ country_event = {
         }
         NOT = {
             OR = {
-                accepted_culture = afro_american
+                accepted_culture = afro_french
                 accepted_culture = afro_caribbean
                 accepted_culture = afro_brazilian
             }

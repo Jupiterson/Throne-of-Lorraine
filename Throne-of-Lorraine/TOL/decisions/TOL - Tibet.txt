@@ -97,8 +97,8 @@ political_decisions = {
         picture = nepali_treaty  #tsushima_japan
         potential = {
             tag = TIB
-		    AND = { has_country_flag = plain_lord
-		        	has_country_flag = mountain_lord }
+		     has_country_flag = plain_lord
+		        	has_country_flag = mountain_lord 
 			       
             NOT = {			has_country_flag = steppe_lord }
         }

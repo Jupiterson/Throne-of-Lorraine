@@ -557,7 +557,7 @@ political_decisions = {
                         has_pop_religion = mahayana
                         has_pop_religion = animist
                         has_pop_culture = malay
-                        has_pop_culture = afro_latino
+                        has_pop_culture = afro_italian
                         has_pop_culture = han_chinese
                         has_pop_culture = asian_minor
                     }
@@ -604,7 +604,7 @@ political_decisions = {
                         has_pop_religion = sikh
                         has_pop_religion = animist
                         has_pop_culture = malayalam
-                        has_pop_culture = afro_latino
+                        has_pop_culture = afro_italian
                         is_culture_group = south_asian
                         is_culture_group = indo_iranian
                         has_pop_culture = central_american
@@ -650,7 +650,7 @@ political_decisions = {
             }
 
             any_pop = {
-                limit = { OR = { has_pop_culture = french_canadian has_pop_culture = metis has_pop_culture = french } }
+                limit = { OR = { has_pop_culture = akino_german has_pop_culture = metis has_pop_culture = french } }
                 literacy = 0.35
             }
             any_pop = {
@@ -819,7 +819,7 @@ political_decisions = {
             }
 
             any_pop = { limit = { has_pop_religion = animist } literacy = -0.09 }
-            any_pop = { limit = { has_pop_culture = afro_latino } literacy = -0.07 }
+            any_pop = { limit = { has_pop_culture = afro_italian } literacy = -0.07 }
 
             any_pop = {
                 limit = { has_pop_culture = ashkenazi }
@@ -1768,7 +1768,7 @@ political_decisions = {
                         has_pop_religion = mahayana
                         has_pop_religion = animist
                         has_pop_culture = malay
-                        has_pop_culture = afro_latino
+                        has_pop_culture = afro_italian
                         has_pop_culture = han_chinese
                         has_pop_culture = asian_minor
                     }
@@ -1953,7 +1953,7 @@ political_decisions = {
             any_pop = { limit = { has_pop_culture = breton } literacy = -0.1 }
             any_pop = { limit = { has_pop_culture = south_german } literacy = 0.54 }
             any_pop = { limit = { has_pop_culture = north_italian } literacy = 0.24 }
-            any_pop = { limit = { has_pop_culture = anglo_canadian } literacy = 0.44 }
+            any_pop = { limit = { has_pop_culture = akino_german } literacy = 0.44 }
             any_pop = { limit = { has_pop_culture = afro_french } literacy = 0.01 }
             any_pop = { limit = { has_pop_culture = basque } literacy = 0.19 }
             any_pop = { limit = { has_pop_culture = catalan } literacy = 0.14 }
@@ -2061,7 +2061,7 @@ political_decisions = {
             1888 = { any_pop = { literacy = -0.99 } }
             any_pop = { limit = { has_pop_culture = north_german } literacy = 0.5 }
             any_pop = { limit = { has_pop_culture = irish } literacy = 0.2 }
-            any_pop = { limit = { has_pop_culture = french_canadian } literacy = 0.35 }
+            any_pop = { limit = { has_pop_culture = akino_german } literacy = 0.35 }
             USA_243 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.14 } }
             USA_247 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.13 } }
             USA_231 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.10 } }
@@ -2202,7 +2202,7 @@ political_decisions = {
                 name = america_new_world
                 duration = 3650
             }
-            any_pop = { limit = { OR = { has_pop_culture = afro_latino type = slaves } } literacy = -0.99 }
+            any_pop = { limit = { OR = { has_pop_culture = afro_italian type = slaves } } literacy = -0.99 }
             2295 = {
                 any_pop = {
                     limit = { is_primary_culture = yes }
@@ -2210,18 +2210,18 @@ political_decisions = {
                 }
 
                 any_pop = {
-                    limit = { is_primary_culture = no NOT = { has_pop_culture = afro_latino } }
+                    limit = { is_primary_culture = no NOT = { has_pop_culture = afro_italian } }
                     literacy = 0.08
                 }
 
                 any_pop = {
-                    limit = { has_pop_culture = afro_latino }
+                    limit = { has_pop_culture = afro_italian }
                     literacy = 0.02
                 }
             }
             any_pop = {
                 limit = {
-                    NOT = { has_pop_culture = afro_latino }
+                    NOT = { has_pop_culture = afro_italian }
                     location = {
                         OR = {
                             province_id = 2307
@@ -2241,17 +2241,17 @@ political_decisions = {
                 any_pop = { limit = { is_primary_culture = yes } literacy = 0.04 }
             }
             2297 = {
-                any_pop = { limit = { is_primary_culture = no NOT = { has_pop_culture = afro_latino } } literacy = 0.03 }
+                any_pop = { limit = { is_primary_culture = no NOT = { has_pop_culture = afro_italian } } literacy = 0.03 }
                 any_pop = { limit = { is_primary_culture = yes } literacy = 0.06 }
             }
             2293 = { any_pop = { literacy = -0.02 } }
             2300 = { any_pop = { literacy = -0.03 } }
             2290 = {
-                any_pop = { limit = { is_primary_culture = no NOT = { has_pop_culture = afro_latino } } literacy = 0.01 }
+                any_pop = { limit = { is_primary_culture = no NOT = { has_pop_culture = afro_italian } } literacy = 0.01 }
                 any_pop = { limit = { is_primary_culture = yes } literacy = 0.02 }
             }
             2292 = {
-                any_pop = { limit = { is_primary_culture = no NOT = { has_pop_culture = afro_latino } } literacy = 0.01 }
+                any_pop = { limit = { is_primary_culture = no NOT = { has_pop_culture = afro_italian } } literacy = 0.01 }
                 any_pop = { limit = { is_primary_culture = yes } literacy = 0.02 }
             }
             2287 = { any_pop = { literacy = -0.02 } }
@@ -2903,7 +2903,7 @@ political_decisions = {
                 ammunition = 100
                 money = 3000
                 any_pop = {
-                    limit = { has_pop_culture = texan }
+                    limit = { has_pop_culture = free_german }
                     dominant_issue = { value = yes_slavery factor = 0.25 }
                     ideology = { value = conservative factor = 0.4 }
                     ideology = { value = reactionary factor = 0.2 }

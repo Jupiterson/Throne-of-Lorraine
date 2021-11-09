@@ -10,12 +10,13 @@ political_decisions = {
             NOT = { tag = WSF }
             NOT = { tag = PLR }
             NOT = { has_global_flag = sw_set }
+			
         }
 
         allow = {
             OR = {
                 prestige = 45
-                is_secondary_power = yes
+                is_greater_power = yes
                 AND = {
                     tag = CPL
                     exists = KRA KRA = { is_vassal = no }
@@ -692,8 +693,7 @@ political_decisions = {
             662 = {
                 add_core = PLR
             }
-            add_accepted_culture = ruthenyan
-            add_accepted_culture = ruthenyan
+         add_accepted_culture = ruthenyan
             change_tag = PLR
             prestige = 40
             any_country = {

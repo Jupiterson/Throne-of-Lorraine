@@ -1,9 +1,9 @@
  political_decisions = {
-    a_telegraph_line_to_uruguay = { #original VIP event idea by General Perón, scripted by Scythe
+    a_telegraph_line_to_sigur = { #original VIP event idea by General Perón, scripted by Scythe
         picture = ems_dispatch
         potential = {
             tag = ARG
-            exists = URU
+            exists = BRZ
             revolution_n_counterrevolution = 1
             NOT = { has_country_flag = a_telegraph_line_to_uruguay }
         }
@@ -79,7 +79,7 @@
     recognize_argentinas_independence = { #original VIP event by Generalisimo
         picture = court_yard_speech
         potential = {
-            tag = SAR
+            tag = FRA
             OR = {
 				exists = ARC
 				exists = ARG
@@ -339,7 +339,6 @@
         potential = {
             OR = {
                 tag = AUS
-                tag = KUK
             }
             debt_law = serfdom
             has_country_flag = serfdom_not_abolished

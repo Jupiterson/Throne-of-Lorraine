@@ -1,7 +1,7 @@
 political_decisions = {
     ###British Africa###
     british_matabale = {
-        picture = "british_somaliland"
+        picture = "british_cushiticland"
         potential = {
             tag = ENG
             ai = yes
@@ -401,14 +401,14 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    british_somaliland = {
-        picture = "british_somaliland"
+    british_cushiticland = {
+        picture = "british_cushiticland"
         potential = {
             tag = ENG
             has_global_flag = berlin_conference
             is_greater_power = yes
             NOT = { government = proletarian_dictatorship }
-            NOT = { has_country_flag = british_somaliland }
+            NOT = { has_country_flag = british_cushiticland }
             WRL = {
                 ai = yes
                 civilized = no
@@ -443,7 +443,7 @@ political_decisions = {
                 limit = { war_with = WRL }
                 end_war = WRL
             }
-            set_country_flag = british_somaliland
+            set_country_flag = british_cushiticland
         }
     }
 
@@ -1438,14 +1438,14 @@ political_decisions = {
     }
 
     ###Italian Africa###
-    italian_somaliland = {
-        picture = "italian_somaliland"
+    italian_cushiticland = {
+        picture = "italian_cushiticland"
         potential = {
             tag = ITA
             is_greater_power = yes
             has_global_flag = berlin_conference
             NOT = { government = proletarian_dictatorship }
-            NOT = { has_country_flag = italian_somaliland }
+            NOT = { has_country_flag = italian_cushiticland }
             MAJ = {
                 civilized = no
                 exists = yes
@@ -1492,7 +1492,7 @@ political_decisions = {
             treasury = -30000
             inherit = GEL
             inherit = MAJ
-            set_country_flag = italian_somaliland
+            set_country_flag = italian_cushiticland
         }
     }
 

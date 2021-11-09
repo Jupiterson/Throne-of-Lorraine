@@ -160,7 +160,7 @@ political_decisions = {
                     OR = {
                         has_pop_culture = afro_french
                         has_pop_culture = afro_brazilian
-                        has_pop_culture = afro_latino
+                        has_pop_culture = afro_italian
                         has_pop_culture = afro_caribbean
                         has_pop_culture = afro_french
                     }
@@ -1242,7 +1242,7 @@ political_decisions = {
             exists = MEX
             has_country_flag = texas_final_independence
             NOT = { has_country_flag = rgr_claimed }
-            NOT = { has_global_flag = texanborders }
+            NOT = { has_global_flag = free_germanborders }
             OR = {
                 NOT = { exists = RGR }
                 AND = {

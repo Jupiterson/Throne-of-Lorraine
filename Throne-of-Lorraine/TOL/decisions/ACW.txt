@@ -981,7 +981,7 @@ political_decisions = {
             any_pop = { militancy = -3 }
             remove_country_modifier = the_slavery_debate
             remove_accepted_culture = dixie
-            remove_accepted_culture = texan
+            remove_accepted_culture = free_german
             any_owned = {
                 limit = { is_core = CSA }
                 add_province_modifier = { name = reconstruction duration = 2555 }
@@ -1149,7 +1149,7 @@ political_decisions = {
 
         effect = {
             set_country_flag = alaska_purchase_started
-            remove_accepted_culture = alaskan
+            remove_accepted_culture = inuit
             prestige = 5
             any_country = {
                 limit = {
@@ -1366,7 +1366,7 @@ political_decisions = {
     }
 
 
-    texan_claims = {
+    free_german_claims = {
     picture = all_texas
         potential = {
             tag = TEX
@@ -1409,7 +1409,7 @@ political_decisions = {
             NOT = { has_global_flag = mexican_victory }
             NOT = { owns = 102 }
             102 = { NOT = { is_core = THIS } }
-            102 = { owner = { NOT = { OR = { primary_culture = yankee primary_culture = dixie primary_culture = texan } } } }
+            102 = { owner = { NOT = { OR = { primary_culture = yankee primary_culture = dixie primary_culture = free_german } } } }
             is_culture_group = american_cultures
             NOT = { has_country_flag = gadsden_negotiations }
             90 = { owned_by = THIS NOT = { is_core = MEX } }
@@ -1775,7 +1775,7 @@ political_decisions = {
     picture = cowboy
         potential = {
             OR = {
-                primary_culture = texan
+                primary_culture = free_german
                 primary_culture = yankee
                 primary_culture = dixie
             }

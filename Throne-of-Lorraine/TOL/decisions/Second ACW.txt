@@ -251,8 +251,8 @@ political_decisions = {
         }
     }
 
-    second_alaskan_purchase = {
-        picture = alaskan_purchase
+    second_inuit_purchase = {
+        picture = inuit_purchase
         potential = {
             1 = {
                 owned_by = THIS
@@ -263,7 +263,7 @@ political_decisions = {
                 is_core = THIS
                 NOT = { owned_by = THIS }
             }
-            NOT = { has_country_flag = second_alaskan_purchase }
+            NOT = { has_country_flag = second_inuit_purchase }
         }
 
         allow = {
@@ -278,7 +278,7 @@ political_decisions = {
         }
 
         effect = {
-            set_country_flag = second_alaskan_purchase
+            set_country_flag = second_inuit_purchase
             2599 = {
                 owner = { country_event = 44140 }
             }
@@ -546,7 +546,7 @@ political_decisions = {
             }
             add_accepted_culture = yankee
             add_accepted_culture = dixie
-            add_accepted_culture = texan
+            add_accepted_culture = free_german
         }
     }
 

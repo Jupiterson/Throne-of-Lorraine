@@ -3,8 +3,11 @@ political_decisions = {
         conquest_of_levant = {
 		picture = map_levant
 		potential = {
+		OR = {
+		
 			tag = COP
                         tag = UCO
+						}
 			NOT = { has_country_flag = conquest_of_levant }
 		}
 		allow = {
@@ -79,10 +82,10 @@ administrate_sand_copt = {
 
         potential = {
             OR = {
-                primary_culture = amhara
+                primary_culture = ethiopian
                 primary_culture = copt
             }
-            NOT = { exists = UOC }
+            NOT = { exists = UCO }
         }
 
         allow = {
@@ -130,7 +133,7 @@ administrate_sand_copt = {
             random_owned = {
                 limit = { owner = { primary_culture = copt } }
                 owner = {
-                    add_accepted_culture = amhara
+                    add_accepted_culture = ethiopian
                     all_core = {
                         add_core = UCO
                         remove_core = COP
@@ -142,7 +145,7 @@ administrate_sand_copt = {
             }
             random_owned = {
                 limit = {
-                    owner = { primary_culture = amhara }
+                    owner = { primary_culture = ethiopian }
                 }
                 owner = {
                     add_accepted_culture = copt
@@ -191,8 +194,10 @@ administrate_sand_copt = {
 	conquest_of_syria = {
 		picture = form_the_ikhwan
 		potential = {
+		OR = {
 			tag = COP
                         tag = UCO
+						}
 			NOT = { has_country_flag = conquest_of_syria }
 		}
 		allow = {

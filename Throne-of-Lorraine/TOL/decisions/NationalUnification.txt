@@ -29,7 +29,6 @@ political_decisions = {
                             owner = {
                                 in_sphere = THIS
                                 OR = {
-                                    is_vassal = no
                                     vassal_of = THIS
                                 }
                                 war = no
@@ -440,7 +439,7 @@ political_decisions = {
                         BAV = {
                             is_greater_power = yes
                             ai = yes
-                            NOT = { rank = 8 }
+                     
                         }
                         AND = {
                             HNS = {

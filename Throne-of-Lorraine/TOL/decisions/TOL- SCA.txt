@@ -33,8 +33,10 @@ political_decisions = {
      danish_pommerania = {
 		picture = map_baltic
 		potential = {
+		OR = {
 			tag = DEN
-                        tag = DNN
+             tag = DNN
+			 }
 			NOT = {
 				has_country_flag = pommerania
 			}

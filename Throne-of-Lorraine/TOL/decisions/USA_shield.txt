@@ -42,7 +42,7 @@ political_decisions = {
         effect = {
             set_country_flag = USA_CAN_Expansion
             badboy = 20
-            add_accepted_culture = anglo_canadian
+            add_accepted_culture = akino_german
             CAN = { all_core = { add_core = USA } }
             MRU = { all_core = { add_core = USA } }
             ENG_9 = { add_core = USA }
@@ -115,7 +115,7 @@ political_decisions = {
             USA_91 = { add_core = ENG }
             USA_91 = { add_core = COL }
             COL = {
-                primary_culture = anglo_canadian
+                primary_culture = akino_german
                 add_accepted_culture = yankee
             }
             USA = {
@@ -321,14 +321,14 @@ political_decisions = {
         potential = {
             owns = 57
             tag = USA
-            NOT = { accepted_culture = anglo_canadian }
+            NOT = { accepted_culture = akino_german }
         }
         allow = {
             war = no
             revolution_n_counterrevolution = 1
         }
         effect = {
-            add_accepted_culture = anglo_canadian
+            add_accepted_culture = akino_german
             CAN_46 = { add_core = USA }
         }
     }

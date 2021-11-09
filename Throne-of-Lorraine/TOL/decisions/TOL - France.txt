@@ -1,0 +1,90 @@
+political_decisions = {
+
+ proclaim_king_gauls = {
+		picture = diplomats
+		potential = {
+			OR = { tag = FRA
+			       tag = BOR
+				   tag = FRZ
+				   }
+			NOT = {
+				has_country_flag = proclaim_gauls
+			}
+		}
+		allow = {
+		    prestige = 250
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			add_accepted_culture = wallonian
+			add_accepted_culture = occitan
+			add_accepted_culture = provencial
+			add_accepted_culture = arpitan
+			add_accepted_culture = romansh
+			add_accepted_culture = catalan
+			badboy = 10
+			prestige = 25
+			set_country_flag = proclaim_gauls
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+		
+	}
+	
+	unite_the_gauls = {
+		picture = diplomats
+		potential = {
+			OR = { tag = FRA
+			       tag = BOR
+				   tag = FRZ
+				   }
+				   has_country_flag = proclaim_gauls
+			NOT = {
+				has_country_flag = united_gauls
+			}
+		}
+		allow = {
+		    prestige = 350
+		}
+		effect = {
+			WLL = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+			ARP = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+			
+			BRG	= {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+			PRO	= {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+			414 = { add_core = THIS }
+			413 = { add_core = THIS }
+			badboy = 25
+			prestige = 25
+			set_country_flag = united_gauls
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+		
+	}
+
+     
+	
+
+
+   
+
+}

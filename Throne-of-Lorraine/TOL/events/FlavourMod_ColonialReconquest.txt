@@ -65,17 +65,17 @@ country_event = {
                 months = 60
             }
         }
-        NEN = { remove_accepted_culture = french_canadian }
+        NEN = { remove_accepted_culture = akino_german }
         ai_chance = { factor = 0 }
     }
 
     option = {
         name = "EVTNAME7790001OPTB"
         set_country_flag = no_french_america
-        FRA = { remove_accepted_culture = french_canadian remove_accepted_culture = dixie }
-        BOR = { remove_accepted_culture = french_canadian remove_accepted_culture = dixie }
+        FRA = { remove_accepted_culture = akino_german remove_accepted_culture = dixie }
+        BOR = { remove_accepted_culture = akino_german remove_accepted_culture = dixie }
         badboy = -2
-        NEN = { remove_accepted_culture = french_canadian }
+        NEN = { remove_accepted_culture = akino_german }
 
         ai_chance = { factor = 1 }
     }
@@ -103,7 +103,7 @@ country_event = {
             militancy = -1
         }
         any_pop = {
-            limit = { culture = french_canadian }
+            limit = { culture = akino_german }
             consciousness = 5
             militancy = 5
         }
@@ -117,7 +117,7 @@ country_event = {
         any_pop = {
             limit = {
                 OR = {
-                    culture = anglo_canadian
+                    culture = akino_german
                     type = aristocrats
                     type = officers
                     type = soldiers
@@ -173,8 +173,8 @@ country_event = {
         prestige = -25
         badboy = -5
         set_country_flag = no_french_america
-        FRA = { remove_accepted_culture = french_canadian remove_accepted_culture = dixie }
-        BOR = { remove_accepted_culture = french_canadian remove_accepted_culture = dixie }
+        FRA = { remove_accepted_culture = akino_german remove_accepted_culture = dixie }
+        BOR = { remove_accepted_culture = akino_german remove_accepted_culture = dixie }
         ACA = { all_core = { remove_core = ACA } }
         ULA = { all_core = { remove_core = ULA } }
     }

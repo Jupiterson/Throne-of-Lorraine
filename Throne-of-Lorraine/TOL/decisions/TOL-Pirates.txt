@@ -246,6 +246,7 @@ political_decisions = {
             }
         }
     }
+    
     ### Pan Africanism ###
     found_libreville = {
         picture = map_gabon
@@ -276,6 +277,7 @@ political_decisions = {
             }
         }
     }
+    
     accept_afros = {
         picture = embrace_minority
         potential = {
@@ -292,25 +294,27 @@ political_decisions = {
             set_country_flag = accept_afros
             add_accepted_culture = afro_caribbean
             add_accepted_culture = afro_american
-	        add_accepted_culture = afro_latino
-	        add_accepted_culture = afro_french
-	        add_accepted_culture = afro_dutch
+	          add_accepted_culture = afro_italian
+	          add_accepted_culture = afro_french
+	          add_accepted_culture = afro_dutch
             add_accepted_culture = afro_brazilian
             add_accepted_culture = afro_german
-			add_accepted_culture = afro_italian
+			      add_accepted_culture = afro_italian
         }
     }
 	
-	### Lepri's events <potentially not working :( > ###
+	### Lepri's events <potentially not working : > ###
 	buccaneers_PIR = {
         potential = {
             tag = PIR
 			NOT = {
 			    has_country_flag = marque_letter_request_positive
-	    }
+				}
 			NOT = {
 			    has_country_modifier = country_of_buccaneers
-        }
+                }
+		}
+		
 		allow = {
 		    tag = PIR
 	    } 
@@ -321,7 +325,7 @@ political_decisions = {
         }
 		ai_will_do = { factor = 1 }
     }
-}
+
 	     
 	request_letter_marque = {
         picture = letter_marque
