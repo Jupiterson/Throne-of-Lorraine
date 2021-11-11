@@ -1,0 +1,39 @@
+political_decisions = {
+
+force_boehmen = {
+		picture = german_confederation
+		potential = {
+			tag = GER
+			BOH = { vassal_of = THIS }
+		}
+		allow = {
+			BOH = { vassal_of = THIS }
+					is_greater_power = yes
+				}
+			
+		
+		effect = {
+		BOH = {
+                all_core = {
+                    add_core = GER
+                }
+            }
+	    BOH = {
+                all_core = {
+                    add_core = BOE
+					remove_core = BOH
+                }
+            }
+                    prestige = 5
+                    set_country_flag = boh_incorparated
+			any_country = {
+				limit = {
+					primary_culture = czech
+					vassal_of = THIS
+				}
+				annex_to = THIS
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}
