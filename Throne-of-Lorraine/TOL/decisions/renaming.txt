@@ -866,7 +866,7 @@ political_decisions = {
             set_global_flag = slovakia_rename_hun
             clr_global_flag = slovakia_rename_czhslo
             633 = {
-                change_province_name = "Pozsony"
+                change_province_name = "Preßburg"
                 state_scope = { change_region_name = "Pozsony" }
             }
             634 = { change_province_name = "Trencsén" }
@@ -2547,6 +2547,57 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	german_renamed_savoy_aosta = {
+        picture = claim_aosta
+        potential = {
+		  OR = {
+            primary_culture = south_german
+			primary_culture = north_german
+			}
+            OR = {
+                AND = { owns = 466 NOT = { has_global_flag = german_renamed_savoy } }
+                AND = { owns = 721 NOT = { has_global_flag = german_renamed_aosta } }
+            }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            random_owned = {
+                limit = {
+                    province_id = 466
+                }
+                466 = {
+                    change_province_name = "Schambri"
+                    state_scope = { change_region_name = "Saweu" }
+                }
+                472 = { change_province_name = "Nizza" }
+                owner = {
+                    set_global_flag = german_renamed_savoy
+                    clr_global_flag = italian_renamed_savoy
+					clr_global_flag = french_renamed_savoy
+                }
+            }
+            random_owned = {
+                limit = {
+                    province_id = 721
+                }
+                721 = {
+                    change_province_name = "Aost"
+                }
+                owner = {
+                    set_global_flag = german_renamed_aosta
+                    clr_global_flag = italian_renamed_aosta
+					clr_global_flag = french_renamed_aosta
+                }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
 
     irish_land_reform = {
         picture = gtfo
@@ -3417,6 +3468,45 @@ political_decisions = {
             }
 
         }
+    }
+	
+	rename_istanbul_german = {
+        picture = constantinople
+        #alert = yes
+        potential = {
+            is_culture_group = germanic
+            owns = 860
+            NOT = { has_global_flag = istanbul_named_german }
+            NOT = { has_country_flag = istanbul_renamed }
+        }
+
+        allow = {
+            war = no
+            state_n_government = 1
+        }
+
+        effect = {
+            clr_global_flag = istanbul_named_constantinople
+            clr_global_flag = istanbul_renamed_sca
+            set_global_flag = istanbul_named_german
+            clr_global_flag = istanbul_named_tsargrad
+            any_country = { clr_country_flag = istanbul_renamed }
+            set_country_flag = istanbul_renamed
+            prestige = 2
+            860 = {
+                change_province_name = "Kaiserstadt"
+                any_pop = {
+                limit = {
+                    OR = {
+                    is_culture_group = germanic
+                        }
+                    }
+                militancy = -1
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
     }
 
     renamed_istanbul_tsargrad = {
@@ -6271,6 +6361,171 @@ political_decisions = {
             prestige = 5
             3338 = { change_province_name = "Giron" }
             3339 = { change_province_name = "Roavvenjárga" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	#TOL Stuff
+	rename_new_rome = {
+        picture = constantinople
+        #alert = yes
+        potential = {
+		   OR = {
+            tag = NIR
+			tag = BYZ
+			}
+            NOT = { has_country_flag = new_roman_rome }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            set_country_flag = new_roman_rome
+            prestige = 5
+            random_owned = {
+                limit = { owner = { primary_culture = greek } }
+                1825 = {
+                    change_province_name = "Néa Konstantinoupolis"                 
+                    state_scope = { change_region_name = "Néa Rómi" }
+                }
+				1816 = {
+                    change_province_name = "Mikrí Athína"                 
+                }
+				1952 = {
+                    change_province_name = "Plevrá Thálassas"                 
+                }
+				1951 = {
+                    change_province_name = "Zoúnklapolis"                 
+                }
+				1953 = {
+                    change_province_name = "Christianikí Póli"                 
+                }
+            }
+            random_owned = {
+                limit = { owner = { primary_culture = neo_roman  } }
+                1825 = {
+                    change_province_name = "Nova Roma"                 
+                    state_scope = { change_region_name = "Nova Italia" }
+                }
+				1816 = {
+                    change_province_name = "Parva Athenae"                 
+                }
+				1952 = {
+                    change_province_name = "Mare Latus"                 
+                }
+				1951 = {
+                    change_province_name = "Salturbs"                 
+                }
+				1953 = {
+                    change_province_name = "Christiana Urbs"                 
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+        }
+    }
+	    #SAARFLAVOUR
+	    rename_palz_saarland = {
+        picture = gtfo
+        potential = {
+            tag = SAA
+            NOT = { has_global_flag = palz_saarland }
+            owns = 571
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            set_global_flag = palz_saarland
+            prestige = 1o
+            571 = { change_province_name = "Dreckslautern" }
+
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	lemanique_rename_french = {
+        picture = declare_republic_of_neuchatel
+        potential = {
+           primary_culture = french     
+           primary_culture = occitan  
+              primary_culture = burgundian		   
+            owns = 608
+            owns = 3250
+            owns = 3317
+			  NOT = { has_global_flag = french_swiss }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		set_global_flag = french_swiss
+            608 = {
+                change_province_name = "Nouveau Châtel"
+                state_scope = { change_region_name = "Les Montange d'este " }
+            }
+            3250 = { change_province_name = "Libreville" }
+            3317 = { change_province_name = "Lausanne" }
+            609 = { change_province_name = "Sion" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	lemanique_rename_german = {
+        picture = declare_republic_of_neuchatel
+        potential = {
+            is_culture_group = germanic           
+            owns = 608
+            owns = 3250
+            owns = 3317
+			NOT = { has_global_flag = german_swiss }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		set_global_flag = german_swiss
+            608 = {
+                change_province_name = "Neuburg"
+                state_scope = { change_region_name = "West Alpen" }
+            }
+            3250 = { change_province_name = "Freiburg" }
+            3317 = { change_province_name = "Lausan" }
+            609 = { change_province_name = "Zion" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	minor_burgundy_rename_german = {
+        picture = declare_republic_of_neuchatel
+        potential = {
+            NOT = { has_global_flag = minor_brg_renamed }
+			is_culture_group = germanic     
+            owns = 432
+            owns = 3312
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            prestige = 5
+            set_global_flag = minor_brg_renamed
+			432 = { change_province_name = "Besankt"
+                    state_scope = { change_region_name = "Grafschaft Burgund" }	
+					}
+			3312 = { change_province_name = "Lonnland" }
         }
         ai_will_do = { factor = 1 }
     }

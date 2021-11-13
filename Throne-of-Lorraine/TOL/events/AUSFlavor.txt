@@ -794,7 +794,7 @@ country_event = {
     picture = "krakow_uprising"
 
     trigger = {
-        tag = AUS
+        tag = BAV
         has_global_flag = krakow_uprising
     }
     mean_time_to_happen = { days = 1 }
@@ -807,16 +807,15 @@ country_event = {
             limit = {
             exists = yes
                 OR = {
-                    tag = PRU
-                    tag = NGF
-                    tag = GER
-                    tag = GCF
+                    tag = HUN
+                    tag = BOH
+                    tag = BOE
                 }
                 owns = 549
             }
         country_event = 600052
         }
-        RUS = { country_event = 600052 }
+        HUN = { country_event = 600052 }
 
         ai_chance = {
             factor = 0.95
@@ -829,12 +828,12 @@ country_event = {
         703 = { add_core = GLM }
         badboy = 10
         prestige = -5
-        any_pop = { limit = { has_pop_culture = polish } militancy = 3 consciousness = 5 }
+        any_pop = { limit = { has_pop_culture = slovak } militancy = 3 consciousness = 5 }
         random_country = {
             limit = {
                 exists = yes
                 NOT = { tag = THIS }
-                OR = { tag = AUS tag = RUS tag = NGF tag = PRU }
+                OR = { tag = BAV tag = HUN tag = BOE tag = BOH }
             }
         relation = { who = THIS value = -150 }
         }
@@ -842,7 +841,7 @@ country_event = {
             limit = {
                 exists = yes
                 NOT = { tag = THIS }
-                OR = { tag = AUS tag = RUS tag = NGF tag = PRU }
+                OR = { tag = BAV tag = HUN tag = BOE tag = BOH }
             }
         relation = { who = THIS value = -150 }
         }
@@ -914,7 +913,7 @@ country_event = {
     picture = "polish_uprising_aus"
 
     trigger = {
-        tag = AUS
+        tag = BAV
         has_global_flag = krakow_uprising
         has_global_flag = prussia_agrees
         has_global_flag = russia_agrees
@@ -931,7 +930,6 @@ country_event = {
         clr_global_flag = russia_agrees
         prestige = 10
         badboy = 3
-        703 = { add_core = GLM }
         any_pop = { limit = { has_pop_culture = polish } militancy = 1 consciousness = 5 }
         ai_chance = { factor = 100 }
     }

@@ -1049,16 +1049,16 @@ political_decisions = {
         }
 
         allow = {
-            prestige = 10
+            war = no
         }
 
         effect = {
             410 = { change_province_name = "Kolmar" }
-            3409 = { change_province_name = "Diedenhofen" }
+            3409 = { change_province_name = "Forbach" }
             409 = {
                 change_province_name = "Straﬂburg"
                 state_scope = {
-                    change_region_name = "Elsaﬂ-Lothringen"
+                    change_region_name = "Elsaﬂ"
                 }
             }
             ALS = { government = colonial_company }
