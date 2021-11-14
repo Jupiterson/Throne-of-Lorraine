@@ -1716,7 +1716,7 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    the_mormon_exodus = {
+    the_hugenott_exodus = {
     picture = nauvoo_temple
         potential = {
             OR = {
@@ -1724,7 +1724,7 @@ political_decisions = {
                 tag = DES
             }
             year = 1846
-            NOT = { has_country_flag = mormon_exodus }
+            NOT = { has_country_flag = hugenott_exodus }
         }
 
         allow = {
@@ -1734,23 +1734,23 @@ political_decisions = {
         }
 
         effect = {
-            set_country_flag = mormon_exodus
+            set_country_flag = hugenott_exodus
             any_country = {
                 any_pop = {
-                limit = { has_pop_religion = mormon }
+                limit = { has_pop_religion = hugenott }
                     dominant_issue = { value = moralism factor = 0.5 }
                     consciousness = 5
                     move_pop = 97
                 }
             }
             any_pop = {
-            limit = { has_pop_religion = mormon }
+            limit = { has_pop_religion = hugenott }
                 dominant_issue = { value = moralism factor = 0.5 }
                 consciousness = 5
                 move_pop = 97
             }
             97 = {
-                add_province_modifier = { name = home_of_the_mormons duration = 10950 }
+                add_province_modifier = { name = home_of_the_hugenotts duration = 10950 }
                 any_pop = {
                     limit = { has_pop_culture = native_american_minor }
                     reduce_pop = 0.25

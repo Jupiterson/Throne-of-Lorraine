@@ -84,6 +84,7 @@ great_war_install_fascism
 great_war_install_communism
 uninstall_communist_gov_cb
 install_democracy
+install_peasant
 install_fascism
 install_communism
 unification_humiliate_cb
@@ -104,6 +105,7 @@ make_puppet
 install_fascism_make_puppet
 install_communism_make_puppet
 install_democracy_make_puppet
+install_peasant_make_puppet
 gunboat
 cut_down_to_size
 cut_down_to_size_boxer
@@ -8389,6 +8391,85 @@ install_democracy = {
     }
 }
 
+install_peasant = {
+    sprite_index = 26
+    is_triggered_only = yes
+    months = 12
+    construction_speed = 1.5
+    crisis = no
+
+    badboy_factor = 5.5
+    prestige_factor = 1
+    peace_cost_factor = 50
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 1
+    break_truce_militancy_factor = 1
+    truce_months = 48
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    can_use = {
+        THIS = {      
+            government = peasant_republic          
+        }
+        is_vassal = no
+        civilized = yes
+        NOT = { is_our_vassal = THIS }
+        OR = {
+            government = absolute_monarchy
+            government = absolute_empire
+        }
+        OR = {
+            war_with = THIS
+            THIS = {
+                NOT = { has_country_modifier = neutrality_modifier }
+                military_score = 1
+            }
+        }
+        OR = {
+            war_with = THIS
+            THIS = {
+                NOT = {
+                    has_country_flag = in_great_war
+                    has_country_modifier = no_more_war
+                }
+            }
+        }
+    }
+
+    po_remove_prestige = yes
+
+    war_name = DEMOCRACY_WAR_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.05
+        }
+    }
+
+    on_po_accepted = {
+        THIS = {
+            set_country_flag = friendly_democracy
+            any_country = {
+                limit = {
+                    OR = {
+                        government = proletarian_dictatorship
+                        government = fascist_dictatorship
+                    }
+                }
+                relation = { who = THIS value = -50 }
+            }
+        }
+        country_event = 96085
+    }
+}
+
 install_fascism = {
     sprite_index = 17
     is_triggered_only = yes
@@ -9416,6 +9497,47 @@ install_democracy_make_puppet = {
     crisis = no
 
     badboy_factor = 2
+    prestige_factor = 1
+    peace_cost_factor = 1.17
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 1
+    break_truce_militancy_factor = 1
+    truce_months = 48
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    can_use = {
+        NOT = { is_our_vassal = THIS }
+        is_vassal = no
+    }
+
+    po_make_puppet = yes
+
+    war_name = WAR_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.05
+        }
+    }
+
+    on_po_accepted = { THIS = { set_country_flag = friendly_democracy_puppet } country_event = 96085 }
+}
+
+install_peasant_make_puppet = {
+    sprite_index = 26
+    is_triggered_only = yes
+    constructing_cb = no
+    months = 12
+    crisis = no
+
+    badboy_factor = 7
     prestige_factor = 1
     peace_cost_factor = 1.17
     penalty_factor = 1

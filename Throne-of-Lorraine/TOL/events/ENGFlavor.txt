@@ -3628,7 +3628,7 @@ country_event = {
             clr_country_flag = ibadi_country
             clr_country_flag = catholic_country
             clr_country_flag = protestant_country
-            clr_country_flag = mormon_country
+            clr_country_flag = hugenott_country
             clr_country_flag = orthodox_country
             clr_country_flag = coptic_country
             clr_country_flag = jewish_country
@@ -3657,7 +3657,7 @@ country_event = {
             clr_country_flag = ibadi_country
             clr_country_flag = catholic_country
             clr_country_flag = protestant_country
-            clr_country_flag = mormon_country
+            clr_country_flag = hugenott_country
             clr_country_flag = orthodox_country
             clr_country_flag = coptic_country
             clr_country_flag = jewish_country
@@ -3691,7 +3691,7 @@ country_event = {
             FROM = { religion = protestant set_country_flag = protestant_country }
         }
         random_owned = { limit = { owner = { has_country_flag = orthodox_country } } FROM = { religion = orthodox set_country_flag = orthodox_country } }
-        random_owned = { limit = { owner = { has_country_flag = mormon_country } } FROM = { religion = mormon set_country_flag = mormon_country } }
+        random_owned = { limit = { owner = { has_country_flag = hugenott_country } } FROM = { religion = hugenott set_country_flag = hugenott_country } }
         random_owned = { limit = { owner = { has_country_flag = coptic_country } } FROM = { religion = coptic set_country_flag = coptic_country } }
         random_owned = { limit = { owner = { has_country_flag = sunni_country } } FROM = { religion = sunni set_country_flag = sunni_country } }
         random_owned = { limit = { owner = { has_country_flag = shiite_country } } FROM = { religion = shiite set_country_flag = shiite_country } }

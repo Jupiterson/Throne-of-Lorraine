@@ -24,7 +24,7 @@ CAN_58 = { 58 65 62 61 63 64 66 67 } #Southern Quebec
 
 CAN_60 = { 9 59 2593 2626 2592 } #Northern Quebec
 
-ENG_68 = { 68 69 70 71 72 73 3280 } #Maritimes
+ENG_68 = { 68 69 70 71 72 73 } #Maritimes
 
 ENG_74 = { 74 75 76 77 2625 } #Newfoundland
 
@@ -116,7 +116,7 @@ USA_232 = { 232 233 234 245 241 229 231 230 } #New York
 
 USA_243 = { } #Massachusets
 
-USA_247 = { 247 246 248 249 250 243 244 242 } #New England
+USA_247 = { 247 246 248 249 250 243 244 242 3280 } #New England
 
 AKI_235 = { 235 236 237 238 239 240 } #New Brandenburg
 
@@ -329,7 +329,7 @@ PRU_701 = { 701 699 700 3281 } #Posen
 
 AUS_612 = { 612 613 615 735 734 } #Tirol
 
-AUS_613 = { 616 617 618 3370 } #K�rnten-Steiermark
+AUS_613 = { 616 617 618 3288 } #K�rnten-Steiermark
 
 AUS_624 = { 623 624 3286 } #Burgenland
 
@@ -365,9 +365,9 @@ AUS_729 = { 729 730 731 732 733 3262 717 } #Venetia
 
 #AUS_734 = { 734 735 } #South Tirol
 
-AUS_736 = { 769 770 778 736 737 3288 } #Istria
+AUS_736 = { 770 778 736 737 } #Istria
 
-AUS_768 = { 767 768 3282 } #Slovenia
+AUS_768 = { 767 768 3282 3370 769 } #Slovenia
 
 AUS_771 = { 771 772 773 775 776 3289 } #Croatia
 
@@ -413,17 +413,17 @@ TUR_788 = { 783 787 789 788 786 785 784 } #Bosnia
 
 SER_794 = { 794 797 795 796 3347 3374 791 } #Northern Serbia
 
-MON_2582 = { 2583 2569 2577 2582 3375 } #Montenegro
+MON_2582 = { 2583 2569 2582 3375 } #Montenegro
 
-TUR_803 = { 803 804 798 802 799 3346 3420 3421 } #Southern Serbia
+TUR_803 = { 804 798 802 3346 2577 } #Southern Serbia
 
 TUR_805 = { 805 819 820 821 822 3342 } #Southern Macedonia
 
-TUR_806 = { 806 807 1780 3291 } #Northern Macedonia
+TUR_806 = { 806 807 1780 3291 3421 } #Northern Macedonia
 
 TUR_809 = { 815 817 808 816 3303 3305 3373 } #Eastern Rumelia
 
-TUR_810 = { 809 810 811 812 813 814 } #Bulgaria
+TUR_810 = { 809 810 811 812 813 814 799 } #Bulgaria
 
 TUR_823 = { 823 829 830 3304 825 } #Eastern Macedonia
 
@@ -435,7 +435,7 @@ GRE_837 = { 834 837 836 835 838 } #Attica - Central Greece
 
 EGY_843 = { 848 843 844 846 847 845 } #Aegean Islands
 
-TUR_853 = { 849 853 852 851 850 3307 3308 } #Albania
+TUR_853 = { 849 853 852 851 850 3307 3308 3420 803 } #Albania
 
 TUR_855 = { 855 856 857 2690 } #Cyprus
 

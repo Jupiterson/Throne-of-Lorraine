@@ -52,6 +52,21 @@ parliamentary_republic = {
     flagType = republic
 }
 
+peasant_republic = {
+    #which ideology of parties.
+    liberal = yes
+    socialist = yes
+    conservative = yes
+    reactionary = yes
+    communist = yes
+    radical = yes
+    fascist = yes
+
+    election = yes
+    duration = 100
+    appoint_ruling_party = yes
+}
+
 dominion = {
     liberal = yes
     socialist = yes
