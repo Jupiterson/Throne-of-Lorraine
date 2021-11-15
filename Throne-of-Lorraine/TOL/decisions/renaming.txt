@@ -809,7 +809,6 @@ political_decisions = {
                     accepted_culture = slovak
                 }
             }
-            owns = 633
             owns = 634
             owns = 637
             owns = 950
@@ -825,9 +824,8 @@ political_decisions = {
         effect = {
             set_global_flag = slovakia_rename_czhslo
             clr_global_flag = slovakia_rename_hun
-            633 = {
-                change_province_name = "Bratislava"
-                state_scope = { change_region_name = "Slovensko" }
+            635 = { change_province_name = "Nitra" 
+                state_scope = { change_region_name = "Nitra" }
             }
             634 = { change_province_name = "TrencÌn" }
             635 = { change_province_name = "Nitra" }
@@ -849,7 +847,6 @@ political_decisions = {
                 primary_culture = hungarian
                 tag = KUK
             }
-            owns = 633
             owns = 634
             owns = 637
             owns = 950
@@ -865,12 +862,10 @@ political_decisions = {
         effect = {
             set_global_flag = slovakia_rename_hun
             clr_global_flag = slovakia_rename_czhslo
-            633 = {
-                change_province_name = "Preﬂburg"
-                state_scope = { change_region_name = "Pozsony" }
+            635 = { change_province_name = "Nyitra"
+                state_scope = { change_region_name = "Nyitra" }
             }
             634 = { change_province_name = "TrencsÈn" }
-            635 = { change_province_name = "Nyitra" }
             636 = { change_province_name = "Beszterceb·nya" }
             637 = { change_province_name = "Kassa" }
             638 = { change_province_name = "Eperjes" }
@@ -893,7 +888,6 @@ political_decisions = {
                 has_global_flag = slovakia_rename_hun
                 has_global_flag = slovakia_rename_czhslo
             }
-            owns = 633
             owns = 634
             owns = 637
             owns = 950
@@ -908,12 +902,10 @@ political_decisions = {
         effect = {
             clr_global_flag = slovakia_rename_hun
             clr_global_flag = slovakia_rename_czhslo
-            633 = {
-                change_province_name = "Preﬂburg"
-                state_scope = { change_region_name = "Preﬂburg" }
+            635 = { change_province_name = "Neutra" 
+                state_scope = { change_region_name = "Neutra" }
             }
             634 = { change_province_name = "Trentschin" }
-            635 = { change_province_name = "Neutra" }
             636 = { change_province_name = "Neusohl" }
             637 = { change_province_name = "Kaschau" }
             638 = { change_province_name = "Eperies" }
@@ -3215,14 +3207,20 @@ political_decisions = {
             OR = {
                 AND = {
                     is_culture_group = germanic
-                    owns = 623
+                    owns = 635
                     NOT = { has_global_flag = burgenland_rename_aus }
 
                 }
                 AND = {
                     primary_culture = hungarian
-                    owns = 623
+                    owns = 635
                     NOT = { has_global_flag = burgenland_rename_hun }
+
+                }
+				AND = {
+                    primary_culture = slovak
+                    owns = 635
+                    NOT = { has_global_flag = burgenland_rename_slo }
 
                 }
             }
@@ -3241,13 +3239,15 @@ political_decisions = {
                 }
                 623 = {
                     change_province_name = "÷denburg"
-                    state_scope = { change_region_name = "Burgenland" }
+                    state_scope = { change_region_name = "Deutsch Mark" }
                 }
                 624 = { change_province_name = "Eisenstadt" }
+				633 = { change_province_name = "Preﬂburg" }
                 3286 = { change_province_name = "Steinamanger" }
                 owner = {
                     set_global_flag = burgenland_rename_aus
                     clr_global_flag = burgenland_rename_hun
+					clr_global_flag = burgenland_rename_slo
                 }
             }
 
@@ -3259,12 +3259,33 @@ political_decisions = {
                 }
                 623 = {
                     change_province_name = "Sopron"
-                    state_scope = { change_region_name = "÷rvidÈk" }
+                    state_scope = { change_region_name = "NÈmet M·rka" }
                 }
                 624 = { change_province_name = "Kismarton" }
+				633 = { change_province_name = "Pozsony" }
                 3286 = { change_province_name = "Szombathely" }
                 owner = {
                     set_global_flag = burgenland_rename_hun
+                    clr_global_flag = burgenland_rename_aus
+					clr_global_flag = burgenland_rename_slo
+                }
+            }
+			###Slovak###
+            random_owned = {
+                limit = {
+                    province_id = 623
+                    owner = { primary_culture = slovak }
+                }
+                623 = {
+                    change_province_name = "Sopron"
+                    state_scope = { change_region_name = "Nemeck· Marka" }
+                }
+                624 = { change_province_name = "Kismarton" }
+				624 = { change_province_name = "Kismarton" }
+                3286 = { change_province_name = "Szombathely" }
+                owner = {
+				    set_global_flag = burgenland_rename_slo
+                    clr_global_flag = burgenland_rename_hun
                     clr_global_flag = burgenland_rename_aus
                 }
             }
