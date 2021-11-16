@@ -11,12 +11,12 @@ country_event = {
         OR = {
             BUR = {
                 any_core = {
-                    owned_by = ENG
+                    owned_by = NET
                 }
             }
             HND = {
                 any_core = {
-                    owned_by = ENG
+                    owned_by = NET
                 }
             }
         }
@@ -28,7 +28,7 @@ country_event = {
 
     option = {
         name = "EVT9990001OPTA"
-        ENG = {
+        NET = {
             any_owned = {
                 limit = {
                     is_core = BUR
@@ -114,10 +114,10 @@ country_event = {
         }
         any_country = {
             limit = {
-                vassal_of = ENG
+                vassal_of = NET
                 is_culture_group = south_asian
             }
-            create_alliance = ENG
+            create_alliance = NET
         }
         leave_alliance = EIC
         FROM = {
@@ -185,7 +185,7 @@ country_event = {
             militancy = -10
             consciousness = -10
         }
-        ENG = {
+        NET = {
             prestige = -100
             release_vassal = EIC
             diplomatic_influence = {
@@ -278,7 +278,7 @@ country_event = {
         }
         any_country = {
             limit = {
-                vassal_of = ENG
+                vassal_of = NET
                 OR = {
                     is_culture_group = indo_iranian
                     is_culture_group = southeast_asian
@@ -289,7 +289,7 @@ country_event = {
             country_event = 9990006
         }
 
-        ENG_1251 = {
+        NET_1251 = {
             add_core = EIC
         }
         1304 = {
@@ -313,9 +313,9 @@ country_event = {
 
     option = {
         name = "EVT9990006OPTA"
-        leave_alliance = ENG
+        leave_alliance = NET
         prestige = -50
-        ENG = {
+        NET = {
             release_vassal = THIS
             diplomatic_influence = {
                 who = THIS
@@ -339,9 +339,9 @@ country_event = {
 
     option = {
         name = "EVT9990006OPTB"
-        leave_alliance = ENG
+        leave_alliance = NET
         prestige = -50
-        ENG = {
+        NET = {
             release_vassal = THIS
             diplomatic_influence = {
                 who = THIS
@@ -399,10 +399,10 @@ country_event = {
 
     trigger = {
         tag = EIC
-        substate_of = ENG
+        substate_of = NET
         OR = {
             AND = {
-                ENG = {
+                NET = {
                     strategic_mobility = 1
                 }
                 NOT = {
@@ -412,7 +412,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     point_defense_system = 1
                 }
                 NOT = {
@@ -422,7 +422,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     muzzle_loaded_rifles = 1
                 }
                 NOT = {
@@ -432,7 +432,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     breech_loaded_rifles = 1
                 }
                 NOT = {
@@ -442,7 +442,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     iron_muzzle_loaded_artillery = 1
                 }
                 NOT = {
@@ -452,7 +452,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     iron_breech_loaded_artillery = 1
                 }
                 NOT = {
@@ -462,7 +462,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     military_plans = 1
                 }
                 NOT = {
@@ -472,7 +472,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     military_statistics = 1
                 }
                 NOT = {
@@ -482,7 +482,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     army_professionalism = 1
                 }
                 NOT = {
@@ -492,7 +492,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     army_decision_making = 1
                 }
                 NOT = {
@@ -517,7 +517,7 @@ country_event = {
                         strategic_mobility = 1
                     }
                 }
-                ENG = {
+                NET = {
                     strategic_mobility = 1
                 }
             }
@@ -532,7 +532,7 @@ country_event = {
                         point_defense_system = 1
                     }
                 }
-                ENG = {
+                NET = {
                     point_defense_system = 1
                 }
             }
@@ -547,7 +547,7 @@ country_event = {
                         muzzle_loaded_rifles = 1
                     }
                 }
-                ENG = {
+                NET = {
                     muzzle_loaded_rifles = 1
                 }
             }
@@ -562,7 +562,7 @@ country_event = {
                         breech_loaded_rifles = 1
                     }
                 }
-                ENG = {
+                NET = {
                     breech_loaded_rifles = 1
                 }
             }
@@ -577,7 +577,7 @@ country_event = {
                         iron_muzzle_loaded_artillery = 1
                     }
                 }
-                ENG = {
+                NET = {
                     iron_muzzle_loaded_artillery = 1
                 }
             }
@@ -592,7 +592,7 @@ country_event = {
                         iron_breech_loaded_artillery = 1
                     }
                 }
-                ENG = {
+                NET = {
                     iron_breech_loaded_artillery = 1
                 }
             }
@@ -607,7 +607,7 @@ country_event = {
                         military_plans = 1
                     }
                 }
-                ENG = {
+                NET = {
                     military_plans = 1
                 }
             }
@@ -622,7 +622,7 @@ country_event = {
                         military_statistics = 1
                     }
                 }
-                ENG = {
+                NET = {
                     military_statistics = 1
                 }
             }
@@ -637,7 +637,7 @@ country_event = {
                         army_professionalism = 1
                     }
                 }
-                ENG = {
+                NET = {
                     army_professionalism = 1
                 }
             }
@@ -652,7 +652,7 @@ country_event = {
                         army_decision_making = 1
                     }
                 }
-                ENG = {
+                NET = {
                     army_decision_making = 1
                 }
             }
@@ -671,10 +671,10 @@ country_event = {
 
     trigger = {
         tag = EIC
-        substate_of = ENG
+        substate_of = NET
         OR = {
             AND = {
-                ENG = {
+                NET = {
                     high_pressure_steam_engine = 1
                 }
                 NOT = {
@@ -684,7 +684,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     compound_steam_engines = 1
                 }
                 NOT = {
@@ -694,7 +694,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     steam_turbine = 1
                 }
                 NOT = {
@@ -704,7 +704,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     interchangeable_parts = 1
                 }
                 NOT = {
@@ -714,7 +714,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     semi_automatization = 1
                 }
                 NOT = {
@@ -724,7 +724,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     hot_blast = 1
                 }
                 NOT = {
@@ -734,7 +734,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     mechanized_mining = 1
                 }
                 NOT = {
@@ -744,7 +744,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     early_railroad = 1
                 }
                 NOT = {
@@ -754,7 +754,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     iron_railroad = 1
                 }
                 NOT = {
@@ -764,7 +764,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     medicine = 1
                 }
                 NOT = {
@@ -774,7 +774,7 @@ country_event = {
                 }
             }
             AND = {
-                ENG = {
+                NET = {
                     inorganic_chemistry = 1
                 }
                 NOT = {
@@ -799,7 +799,7 @@ country_event = {
                         high_pressure_steam_engine = 1
                     }
                 }
-                ENG = {
+                NET = {
                     high_pressure_steam_engine = 1
                 }
             }
@@ -814,7 +814,7 @@ country_event = {
                         compound_steam_engines = 1
                     }
                 }
-                ENG = {
+                NET = {
                     compound_steam_engines = 1
                 }
             }
@@ -829,7 +829,7 @@ country_event = {
                         steam_turbine = 1
                     }
                 }
-                ENG = {
+                NET = {
                     steam_turbine = 1
                 }
             }
@@ -844,7 +844,7 @@ country_event = {
                         interchangeable_parts = 1
                     }
                 }
-                ENG = {
+                NET = {
                     interchangeable_parts = 1
                 }
             }
@@ -859,7 +859,7 @@ country_event = {
                         semi_automatization = 1
                     }
                 }
-                ENG = {
+                NET = {
                     semi_automatization = 1
                 }
             }
@@ -874,7 +874,7 @@ country_event = {
                         hot_blast = 1
                     }
                 }
-                ENG = {
+                NET = {
                     hot_blast = 1
                 }
             }
@@ -889,7 +889,7 @@ country_event = {
                         mechanized_mining = 1
                     }
                 }
-                ENG = {
+                NET = {
                     mechanized_mining = 1
                 }
             }
@@ -904,7 +904,7 @@ country_event = {
                         early_railroad = 1
                     }
                 }
-                ENG = {
+                NET = {
                     early_railroad = 1
                 }
             }
@@ -919,7 +919,7 @@ country_event = {
                         iron_railroad = 1
                     }
                 }
-                ENG = {
+                NET = {
                     iron_railroad = 1
                 }
             }
@@ -934,7 +934,7 @@ country_event = {
                         medicine = 1
                     }
                 }
-                ENG = {
+                NET = {
                     medicine = 1
                 }
             }
@@ -949,7 +949,7 @@ country_event = {
                         inorganic_chemistry = 1
                     }
                 }
-                ENG = {
+                NET = {
                     inorganic_chemistry = 1
                 }
             }
@@ -990,7 +990,7 @@ country_event = {
         name = "EVTDESC9990012OPTA"
         release = MAH
         release = BER
-        ENG = {
+        NET = {
             inherit = MAH
             inherit = BER
         }
@@ -1008,7 +1008,7 @@ country_event = {
     option = {
         name = "EVTDESC9990013OPTA"
         release = SRI
-        ENG = {
+        NET = {
             inherit = SRI
         }
         1321 = {
@@ -1083,7 +1083,7 @@ country_event = {
             AND = {
                 COL = {
                     any_core = {
-                        owned_by = ENG
+                        owned_by = NET
 						NOT = { is_core = USA }
                     }
                 }
@@ -1093,12 +1093,12 @@ country_event = {
             }
             RPL = {
                 any_core = {
-                    owned_by = ENG
+                    owned_by = NET
 					NOT = { is_core = USA }
                 }
             }
         }
-        ENG = {
+        NET = {
             war = no
         }
         war = no
@@ -1110,7 +1110,7 @@ country_event = {
 
     option = {
         name = "EVTOPT99910"
-        ENG = {
+        NET = {
             any_owned = {
                 limit = {
                     is_core = COL
