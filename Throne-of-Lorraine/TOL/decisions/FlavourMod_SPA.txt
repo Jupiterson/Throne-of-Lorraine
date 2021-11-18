@@ -252,37 +252,43 @@ political_decisions = {
         effect = {
             prestige = 5
             MEX = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VNS
                 }
             }
             COS = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VNS
                 }
             }
             ELS = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VNS
                 }
             }
             HON = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VNS
                 }
             }
             NIC = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VNS
                 }
             }
             GUA = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VNS
                 }
@@ -387,19 +393,22 @@ political_decisions = {
             prestige = 5
             inherit = CLM
             CLM = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VNG
                 }
             }
             VNZ = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VNG
                 }
             }
             ECU = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VNG
                 }
@@ -502,19 +511,22 @@ political_decisions = {
         effect = {
             prestige = 5
             PEU = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VOP
                 }
             }
             BOL = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VOP
                 }
             }
             PBC = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VOP
                 }
@@ -583,7 +595,8 @@ political_decisions = {
         effect = {
             prestige = 5
             CHL = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = CGC
                 }
@@ -703,25 +716,29 @@ political_decisions = {
         effect = {
             prestige = 5
             ARG = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VLP
                 }
             }
             ARC = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VLP
                 }
             }
             URU = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VLP
                 }
             }
             PRG = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 all_core = {
                     add_core = VLP
                 }
@@ -789,14 +806,16 @@ political_decisions = {
         }
 
         effect = {
-            government = democracy
+            				government = democracy
+                government = hanseatic
             any_country = {
                 limit = {
                     tag = VNG
                     exists = yes
                     is_vassal = no
                 }
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 change_tag = GCO
             }
             any_country = {
@@ -805,7 +824,8 @@ political_decisions = {
                     exists = yes
                     is_vassal = no
                 }
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 change_tag = PBC
             }
             any_country = {
@@ -814,7 +834,8 @@ political_decisions = {
                     exists = yes
                     is_vassal = no
                 }
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 change_tag = LPL
             }
             any_country = {
@@ -823,7 +844,8 @@ political_decisions = {
                     exists = yes
                     is_vassal = no
                 }
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 change_tag = CHL
             }
             any_country = {
@@ -832,7 +854,8 @@ political_decisions = {
                     exists = yes
                     is_vassal = no
                 }
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 change_tag = MEX
             }
             set_country_flag = colony_rebel_again

@@ -10,14 +10,16 @@ political_decisions = {
             capital = 425
             USA = {
 				exists = yes
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 owns = 232
             }
             THIS = {
                 OR = {
                     government = constitutional_empire
                     government = hms_government
-                    government = democracy
+                    				government = democracy
+                government = hanseatic
                 }
             }
             year = 1850

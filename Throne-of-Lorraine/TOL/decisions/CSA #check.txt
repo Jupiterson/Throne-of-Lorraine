@@ -44,7 +44,8 @@ political_decisions = {
                 tag = CSA
                 tag = TEX
             }
-            government = democracy
+            				government = democracy
+                government = hanseatic
             NOT = {
                 has_country_modifier = the_homestead_act
             }
@@ -756,7 +757,8 @@ political_decisions = {
                     ruling_party_ideology = reactionary
                     NOT = {
                         OR = {
-                            government = democracy
+                            				government = democracy
+                government = hanseatic
                             government = hms_government
                         }
                     }

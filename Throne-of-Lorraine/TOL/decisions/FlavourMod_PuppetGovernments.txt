@@ -23,7 +23,8 @@ political_decisions = {
                 tag = ARA
             }
             OR = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 government = prussian_constitutionalism
                 government = hms_government
                 government = semi_constitutional_empire
@@ -77,7 +78,8 @@ political_decisions = {
             is_vassal = yes
             exists = yes
             OR = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 government = prussian_constitutionalism
                 government = hms_government
                 government = absolute_monarchy
@@ -499,7 +501,8 @@ political_decisions = {
             clr_country_flag = clean_up_colonial_government
             random_owned = {
                 limit = { owner = { civilized = yes } }
-                owner = { government = democracy }
+                owner = { 				government = democracy
+                government = hanseatic }
             }
             random_owned = {
                 limit = { owner = { civilized = no } }

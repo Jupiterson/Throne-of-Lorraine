@@ -1235,7 +1235,8 @@ political_decisions = {
                 BNG = { all_core = { remove_core = BNG } }
                 ENG_1252 = { add_core = BNG }
                 BNG = {
-                    government = democracy
+                    				government = democracy
+                government = hanseatic
                     capital = 1254
                     religion = sunni
                     clr_country_flag = hindu_country
@@ -1254,7 +1255,8 @@ political_decisions = {
             }
             random_owned = {
                 limit = { owner = { government = hms_government } }
-                owner = { PAK = { government = democracy } }
+                owner = { PAK = { 				government = democracy
+                government = hanseatic } }
             }
         }
 
@@ -1310,7 +1312,8 @@ political_decisions = {
                 BNG = { all_core = { remove_core = BNG } }
                 ENG_1252 = { add_core = BNG }
                 BNG = {
-                    government = democracy
+                    				government = democracy
+                government = hanseatic
                     capital = 1254
                     religion = sunni
                     clr_country_flag = hindu_country

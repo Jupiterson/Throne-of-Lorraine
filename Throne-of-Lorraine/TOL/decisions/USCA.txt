@@ -292,8 +292,10 @@ political_decisions = {
             NOT = { tag = UCA }
             exists = UCA
             is_vassal = no
-            government = democracy
-            UCA = { government = democracy }
+            				government = democracy
+                government = hanseatic
+            UCA = { 				government = democracy
+                government = hanseatic }
             OR = {
                 tag = PNM
                 AND = {

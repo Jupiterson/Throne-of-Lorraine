@@ -937,12 +937,14 @@ political_decisions = {
             OR = {
                 AND = {
                     is_culture_group = american_cultures
-                    government = democracy
+                    				government = democracy
+                government = hanseatic
                     NOT = { has_country_modifier = catholic_growth }
                 }
                 any_neighbor_country = {
                     ai = no
-                    government = democracy
+                    				government = democracy
+                government = hanseatic
                     is_culture_group = american_cultures
                     NOT = { has_country_modifier = catholic_growth }
                 }

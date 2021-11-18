@@ -338,7 +338,8 @@ political_decisions = {
         picture = switch_to_liberty
         potential = {
             tag = USA
-            government = democracy
+            				government = democracy
+                government = hanseatic
             NOT = { exists = CSA }
             NOT = {
                 OR = {
@@ -396,7 +397,8 @@ political_decisions = {
         picture = form_union_nation
         potential = {
             tag = USA
-            government = democracy
+            				government = democracy
+                government = hanseatic
             NOT = { exists = CSA }
             has_country_flag = shield_NW
             NOT = {
@@ -1134,7 +1136,8 @@ political_decisions = {
                     value = 400
             }
             YUC = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 money = 50000
                 small_arms = 1000
                 ammunition = 1000
@@ -1371,7 +1374,8 @@ political_decisions = {
         allow = {
             war = no
             is_greater_power = yes
-            government = democracy
+            				government = democracy
+                government = hanseatic
             BOL = {
                 all_core = {
                     OR = {
@@ -1520,7 +1524,8 @@ political_decisions = {
         picture = chile_bolivia_peru_borders
         potential = {
             tag = USA
-            government = democracy
+            				government = democracy
+                government = hanseatic
             has_country_flag = andean_congress
             PBC = { vassal_of = THIS }
             NOT = { has_country_flag = CHL_andean }
@@ -1611,12 +1616,14 @@ political_decisions = {
     BRZ_USA = {
         potential = {
             tag = USA
-            government = democracy
+            				government = democracy
+                government = hanseatic
             has_country_flag = NW_hegemony
             NOT = { has_country_flag = BRZ_USA }
             NOT = { has_country_flag = USA_demcoup }
             MEX = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
             }
             BRZ = {
                 OR = {

@@ -18,7 +18,8 @@ political_decisions = {
             war = no
             is_greater_power = no
             is_secondary_power = no
-            government = democracy
+            				government = democracy
+                government = hanseatic
             OR = {
                 part_of_sphere = no
                 sphere_owner = { is_sphere_leader_of = CSA }
@@ -26,7 +27,8 @@ political_decisions = {
             }
             CSA = {
                 war = no
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 NOT = { truce_with = THIS }
             }
             OR = {
@@ -66,7 +68,8 @@ political_decisions = {
             war = no
             is_greater_power = no
             is_secondary_power = no
-            government = democracy
+            				government = democracy
+                government = hanseatic
             OR = {
                 part_of_sphere = no
                 sphere_owner = { is_sphere_leader_of = FSA }
@@ -74,7 +77,8 @@ political_decisions = {
             }
             FSA = {
                 war = no
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 NOT = { truce_with = THIS }
             }
             OR = {
@@ -114,7 +118,8 @@ political_decisions = {
             war = no
             is_greater_power = no
             is_secondary_power = no
-            government = democracy
+            				government = democracy
+                government = hanseatic
             OR = {
                 part_of_sphere = no
                 sphere_owner = { is_sphere_leader_of = CAL }
@@ -122,7 +127,8 @@ political_decisions = {
             }
             CAL = {
                 war = no
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 NOT = { truce_with = THIS }
             }
             OR = {
@@ -159,7 +165,8 @@ political_decisions = {
             war = no
             is_greater_power = no
             is_secondary_power = no
-            government = democracy
+            				government = democracy
+                government = hanseatic
             OR = {
                 part_of_sphere = no
                 sphere_owner = { is_sphere_leader_of = UIL }
@@ -167,7 +174,8 @@ political_decisions = {
             }
             UIL = {
                 war = no
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 NOT = { truce_with = THIS }
             }
             OR = {
@@ -229,14 +237,16 @@ political_decisions = {
         allow = {
             139 = { owned_by = USA }
             war = no
-            government = democracy
+            				government = democracy
+                government = hanseatic
             OR = {
                 sphere_owner = { is_sphere_leader_of = USA }
                 in_sphere = USA
             }
             USA = {
                 war = no
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 relation = { who = THIS value = 150 }
             }
         }
