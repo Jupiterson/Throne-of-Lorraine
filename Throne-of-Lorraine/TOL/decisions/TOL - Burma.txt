@@ -68,4 +68,25 @@ taungoo_restoration = {
             set_country_flag = burma_takes_chiang_mai
         }
     }
+	burma_form_eob = {
+        picture = burma_coat_of_arms
+        potential = {
+            NOT = { has_country_flag = burma_form_eob }
+			NOT = { has_country_flag = tibet_form_eob }
+            tag = BUR
+            }
+
+        allow = {
+			has_global_flag = BUR_claimed_tibet
+			prestige = 20
+            war = no
+            TIB = {exists = no}
+        }
+		effect = {
+            change_tag = EOB
+            prestige = 15
+            set_country_flag = burma_form_eob
+        }
+		ai_will_do = { factor = 1 }
 	}
+}
