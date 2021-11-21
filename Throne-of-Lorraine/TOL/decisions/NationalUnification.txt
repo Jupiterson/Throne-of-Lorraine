@@ -24,22 +24,26 @@ political_decisions = {
             GER = {
                 all_core = {
                     OR = {
-                        OR = {
                             owned_by = THIS
                             owner = {
-                                in_sphere = THIS
-                                OR = {
-                                    vassal_of = THIS
-                                }
+                                in_sphere = THIS   
+								OR = {
+								vassal_of = THIS 
+								is_vassal = no 
+								overlord = {
+								is_culture_group = germanic
+                                 
+                                }	
+                            } 								
                                 war = no
-  #                              is_greater_power = no
-                            }
-                        }
+                                is_greater_power = no
+                            }                       
                         NOT = { culture = south_german }
                     }
                 }
             }
         }
+	
 
         effect = {
             clr_country_flag = crown_from_the_gutter
@@ -300,9 +304,13 @@ political_decisions = {
                                 owner = {
                                     in_sphere = THIS
                                     OR = {
-                                        is_vassal = no
-                                        vassal_of = THIS
-                                    }
+								vassal_of = THIS 
+								is_vassal = no 
+								overlord = {
+								is_culture_group = germanic
+                                 
+                                }	
+                            }
                                     war = no
                                     is_greater_power = no
                                 }

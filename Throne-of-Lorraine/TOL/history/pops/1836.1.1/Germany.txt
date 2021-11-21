@@ -368,16 +368,22 @@
 #under the Rule of Lubeck 1836
 #Lubeck (46503/11626 POPS)
 530 = {
-    aristocrats = {
-        culture = north_german
+    artisans = {
+        culture = low_german
         religion = protestant
-        size = 200
+        size = 32200
     }
 
     bureaucrats = {
         culture = north_german
         religion = protestant
-        size = 116
+        size = 656
+    }
+	
+	capitalists = {
+        culture = low_german
+        religion = protestant
+        size = 500
     }
 
     officers = {
@@ -389,25 +395,67 @@
     clergymen = {
         culture = north_german
         religion = protestant
-        size = 230
+        size = 1230
     }
 
     artisans = {
         culture = north_german
         religion = protestant
+        size = 26976
+    }
+	
+	artisans = {
+        culture = french
+        religion = hugenott
         size = 6976
+    }
+	
+    artisans = {
+        culture = polish
+        religion = protestant
+        size = 6976
+    }
+	
+	artisans = {
+        culture = swedish
+        religion = protestant
+        size = 3976
+    }
+	
+    artisans = {
+        culture = western_slavic
+        religion = protestant
+        size = 1976
+    }
+	
+	artisans = {
+        culture = danish
+        religion = protestant
+        size = 1976
+    }
+	
+    artisans = {
+        culture = dutch
+        religion = protestant
+        size = 2976
+    }
+	
+	artisans = {
+        culture = scottish
+        religion = reformed
+        size = 1976
     }
 
     soldiers = {
         culture = north_german
         religion = protestant
-        size = 406
+        size = 2406
     }
 
     farmers = {
         culture = north_german
         religion = protestant
-        size = 3476
+        size = 13476
     }
 
     farmers = {
@@ -438,7 +486,7 @@
     artisans = {
         culture = ashkenazi
         religion = jewish
-        size = 100
+        size = 5100
     }
 
     farmers = {
@@ -490,7 +538,7 @@
     farmers = {
         culture = low_german
         religion = protestant
-        size = 38934
+        size = 48934
     }
 
     farmers = {
@@ -527,6 +575,12 @@
 
     artisans = {
         culture = north_german
+        religion = protestant
+        size = 2500
+    }
+	
+	artisans = {
+        culture = swedish
         religion = protestant
         size = 2500
     }
@@ -1870,7 +1924,7 @@
     }
 
     artisans = {
-        culture = north_german
+        culture = polish
         religion = catholic
         size = 750
     }
@@ -1952,7 +2006,7 @@
     }
 
     artisans = {
-        culture = north_german
+        culture = low_german
         religion = catholic
         size = 575
     }
@@ -2024,7 +2078,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 31575
+        size = 28575
     }
 }
 #under the rule of Anhalt 1836
@@ -2069,7 +2123,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 31355
+        size = 27355
     }
 
     clergymen = {
@@ -2139,23 +2193,23 @@
     craftsmen = {
         culture = north_german
         religion = protestant
-        size = 925
+        size = 5925
     }
 
     artisans = {
         culture = north_german
         religion = protestant
-        size = 10000
+        size = 15000
     }
 
     artisans = {
-        culture = north_german
+        culture = low_german
         religion = protestant
-        size = 250
+        size = 7250
     }
 
     soldiers = {
-        culture = north_german
+        culture = polish
         religion = protestant
         size = 1650
     }
@@ -2173,9 +2227,9 @@
     }
 
     craftsmen = {
-        culture = north_german
+        culture = polish
         religion = catholic
-        size = 100
+        size = 7100
     }
 
     artisans = {
@@ -2236,7 +2290,7 @@
     artisans = {
         culture = ashkenazi
         religion = jewish
-        size = 200
+        size = 4200
     }
 
     farmers = {
@@ -2536,7 +2590,7 @@
     aristocrats = {
         culture = north_german
         religion = protestant
-        size = 200
+        size = 1200
     }
 
     bureaucrats = {
@@ -2560,7 +2614,7 @@
     artisans = {
         culture = north_german
         religion = protestant
-        size = 8175
+        size = 28175
     }
 
     soldiers = {
@@ -2572,7 +2626,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 1550
+        size = 31550
     }
 
     clergymen = {
@@ -2582,9 +2636,9 @@
     }
 
     artisans = {
-        culture = north_german
-        religion = catholic
-        size = 900
+        culture = low_german
+        religion = protestant
+        size = 5900
     }
 
     farmers = {
@@ -3844,13 +3898,19 @@ farmers = {
     artisans = {
         culture = rhinelander
         religion = catholic
-        size = 6000
+        size = 16000
     }
 
     artisans = {
-        culture = rhinelander
+        culture = french
         religion = catholic
         size = 3625
+    }
+	
+	artisans = {
+        culture = low_german
+        religion = protestant
+        size = 13625
     }
 
     soldiers = {
@@ -5519,7 +5579,7 @@ farmers = {
     clergymen = {
         culture = south_german
         religion = catholic
-        size = 2050
+        size = 7050
     }
 
     artisans = {
@@ -5533,11 +5593,17 @@ farmers = {
         religion = catholic
         size = 10000
     }
+	
+	artisans = {
+        culture = north_italian
+        religion = catholic
+        size = 20000
+    }
 
     artisans = {
-        culture = south_german
-        religion = catholic
-        size = 1100
+        culture = low_german
+        religion = protestant
+        size = 11100
     }
 
     soldiers = {
@@ -5598,7 +5664,7 @@ farmers = {
     artisans = {
         culture = ashkenazi
         religion = jewish
-        size = 400
+        size = 12400
     }
 
     farmers = {

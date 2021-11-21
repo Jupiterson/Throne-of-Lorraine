@@ -88,6 +88,55 @@ incorparate_vassals = {
         ai_will_do = { factor = 1 }
     }
 	
+	partition_bohemia = {
+        picture = ems_dispatch
+        potential = {
+            NOT = { has_country_flag = partition_bohemia }
+            tag = SAX
+            3483 = { owned_by = BAV }
+        }
+
+        allow = {
+            war = no
+            OR = {
+            627 = { NOT = { owned_by = THIS } }
+			683 = { NOT = { owned_by = THIS } }
+            }
+            crisis_exist = no
+        }
+
+        effect = {
+            prestige = 15
+            SAX = { country_event = 19250 }
+            627 = { add_core = GER }
+			628 = { add_core = GER }
+			683 = { add_core = GER }
+			688 = { add_core = GER }
+			632 = { add_core = GER }
+            627 = { add_core = THIS }
+			628 = { add_core = THIS }
+			683 = { add_core = THIS }
+			688 = { add_core = THIS }
+			632 = { add_core = THIS }
+            set_country_flag = partition_bohemia
+            set_global_flag = partition_bohemia_started
+            any_pop = {
+                limit = { is_primary_culture = yes }
+                militancy = -6
+            }
+           
+        }
+
+        ai_will_do = {
+            factor = 1
+            }
+            modifier = {
+                factor = 0
+                war = yes
+            }
+        }
+    
+	
 
  claim_switzerland_bav = {
         picture = declare_neutrality
