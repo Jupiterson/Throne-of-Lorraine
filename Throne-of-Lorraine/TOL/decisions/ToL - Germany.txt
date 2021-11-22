@@ -36,4 +36,63 @@ force_boehmen = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	reclaim_east_frisia = {
+        picture = form_germany
+        potential = {
+            tag = GER		
+            NOT = {
+                has_country_flag = reclaimed_east_frisia
+            }
+        }
+        allow = {
+                        owns = 543
+						is_greater_power = yes
+            }
+        effect = {
+            set_country_flag = reclaimed_east_frisia
+                        add_accepted_culture = low_german
+            NET_385 = {
+                add_core = THIS
+            }
+        }
+        ai_will_do = {
+            factor = 1
+    }
+}
+
+consolidate_krain = {
+        picture = german_confederation
+        potential = {
+		OR = {
+            tag = GER
+			tag = BAV
+			}
+            NOT = {
+                has_country_flag = consolidate_krain
+            }
+        }
+        allow = {
+                        owns = 695
+						state_n_government = 1
+            }
+        effect = {
+            set_country_flag = consolidate_krain
+            SLO = {
+                all_core = {
+                                        add_core = GER
+                                        }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+    }
+}
+	
+	
+	
+	
+	
+	
+	
 }
