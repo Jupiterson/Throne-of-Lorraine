@@ -397,6 +397,12 @@
         religion = protestant
         size = 1230
     }
+	
+	craftsmen = {
+        culture = north_german
+        religion = protestant
+        size = 11230
+    }
 
     artisans = {
         culture = north_german
@@ -1456,19 +1462,19 @@
     aristocrats = {
         culture = north_german
         religion = protestant
-        size = 1750
+        size = 750
     }
 
     bureaucrats = {
         culture = north_german
         religion = protestant
-        size = 2700
+        size = 700
     }
 
     officers = {
         culture = north_german
         religion = protestant
-        size = 1200
+        size = 200
     }
 
     capitalists = {
@@ -1490,22 +1496,17 @@
     }
 
     craftsmen = {
-        culture = north_german
+        culture = low_german
         religion = protestant
-        size = 16525
+        size = 6525
     }
 
     artisans = {
-        culture = north_german
+        culture = low_german
         religion = protestant
-        size = 40000
+        size = 10000
     }
-
-    artisans = {
-        culture = french
-        religion = protestant
-        size = 30000
-    }
+	
     soldiers = {
         culture = north_german
         religion = protestant
@@ -1515,7 +1516,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 106300
+        size = 76300
     }
 
     clergymen = {
@@ -1586,7 +1587,7 @@
     farmers = {
         culture = ashkenazi
         religion = jewish
-        size = 6000
+        size = 3000
     }
     ########
 
@@ -1648,7 +1649,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 62500
+        size = 82500
     }
 }
 #Prenzlau (280000/70000 POPS)
@@ -1666,7 +1667,7 @@
     }
 
     artisans = {
-        culture = north_german
+        culture = low_german
         religion = protestant
         size = 3500
     }
@@ -1680,7 +1681,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 62500
+        size = 82500
     }
 }
 #Pritzwalk (232000/58000 POPS)
@@ -1712,7 +1713,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 51875
+        size = 81875
     }
 }
 #Cottbus (344000/86000 POPS)

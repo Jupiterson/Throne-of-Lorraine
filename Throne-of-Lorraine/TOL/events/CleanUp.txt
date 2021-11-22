@@ -2866,44 +2866,7 @@ country_event = {
         }
     }
 }
-
-#Enable/Disable Splendid Isolation
-country_event = {
-    id = 6016815
-    title = "EVTNAME6016815"
-    desc = "EVTDESC6016815"
-    picture = "abraham_speech"
-    major = yes
-
-    trigger = {
-		OR = {
-			AND = {
-				tag = ENG
-				ai = no
-			}
-			AND = {
-				ENG = { ai = yes }
-				ai = no
-			}
-		}
-        NOT = { has_global_flag = isolation_setup }
-    }
-
-    fire_only_once = yes
-    mean_time_to_happen = { days = 1 }
-
-    option = {
-        name = "EVT6016814OPTA"
-        set_global_flag = yes_isolation
-        set_global_flag = isolation_setup
-    }
-
-    option = {
-        name = "EVT6016815OPTB"
-        set_global_flag = isolation_setup
-    }
-}
-#Credits
+Credits
 country_event = {
     id = 60168151
     title = "EVTNAME60168151"
