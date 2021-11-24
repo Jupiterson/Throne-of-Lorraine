@@ -1,4 +1,6 @@
 FRA = {value = -70}
+SCO = {value = -50}
+NET = { value = -25 }
 
 army = {
     name = "The English Army"
@@ -44,6 +46,11 @@ army = {
     }
 	    regiment = {
         name= "7th Infantary division"
+        type = infantry
+        home = 287
+    }
+		regiment = {
+        name= "8th Infantary division"
         type = infantry
         home = 287
     }
