@@ -1,0 +1,60 @@
+political_decisions = {
+	wha_invade_enl = {
+		picture = wales_civil_war
+		potential = {
+			tag = WHA
+			NOT = { has_global_flag = wha_invade_enl }
+			NOT = { has_global_flag = wha_invade_uow }
+			exist = UOW
+			exist = ENL
+		}
+	allow = {
+            war = no			
+        }
+
+        effect = {
+		badboy = 5
+			relation = {
+				who = ENL
+				value = -100
+				}
+		war = {
+			target = ENL
+			defender_goal = { casus_belli = status_quo }
+			}
+		set_global_flag = wha_invade_enl
+        }
+    }
+		wha_invade_uow = {
+		picture = wales_civil_war
+		potential = {
+			tag = WHA
+			NOT = { has_global_flag = wha_invade_enl }
+			NOT = { has_global_flag = wha_invade_uow }
+			exist = UOW
+			exist = ENL
+		}
+	allow = {
+            war = no			
+        }
+
+        effect = {
+			badboy = 5
+			relation = {
+				who = UOW
+				value = -100
+				}
+			relation = {
+				who = NET
+				value = -50
+				}
+		war = {
+			target = UOW
+			defender_goal = { casus_belli = status_quo }
+			}
+		set_global_flag = wha_invade_uow
+        }
+    }
+	
+	
+}

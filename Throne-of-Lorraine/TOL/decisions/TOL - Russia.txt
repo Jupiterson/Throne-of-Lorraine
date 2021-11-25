@@ -1,0 +1,32 @@
+political_decisions = {
+	claim_nogai_lands = {
+        picture = treaty_of_turkmanchay
+        potential = {
+			tag = RUS
+			BKY = { owns = 1046 }
+			BKY = { owns = 1182 }
+			BKY = { owns = 1183 }
+        }
+
+        allow = {
+            war = no
+            BKY = { in_sphere = RUS }
+            BKY = { war = no }
+			medicine = 1
+        }
+
+        effect = {
+            prestige = 5
+			badboy = 4
+			BKY= {
+				1046 = { secede_province = RUS }
+				1182 = { secede_province = RUS }
+				1183 = { secede_province = RUS }
+			}
+       
+
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+}	
