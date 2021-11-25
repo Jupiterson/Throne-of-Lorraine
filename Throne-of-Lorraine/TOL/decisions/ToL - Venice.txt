@@ -93,52 +93,7 @@ expand_west = {
 		}
 	}
 
-remove_milan_cores_setup = {
-        picture = swabia
-        potential = {
-            tag = VEN
-            NOT = { has_country_flag = milan_setup }
-        }
 
-        allow = {      
-            war = no
-            }
-     
-        
-
-        effect = {
-          set_country_flag = milan_setup
-            VEN = {
-                all_core = {
-                    remove_core = LOM
-                }
-            }
-        }
-   }
-
-
-remove_milan_cores_setup_mil = {
-        picture = swabia
-        potential = {
-            tag = LOM
-            NOT = { has_country_flag = milan_setup }
-        }
-
-        allow = {      
-            war = no
-            }
-     
-        
-
-        effect = {
-          set_country_flag = milan_setup
-            VEN = {
-                all_core = {
-                    remove_core = LOM
-                }
-            }
-        }
-   }
 
 
 

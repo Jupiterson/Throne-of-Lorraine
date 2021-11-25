@@ -3120,7 +3120,7 @@ political_decisions = {
             }
 
             any_country = { limit = { 				government = democracy
-                government = hanseatic NOT = { has_country_flag = democracy_gov } exists = yes }
+                  NOT = { has_country_flag = democracy_gov } exists = yes }
                 clr_country_flag = communist_gov
                 clr_country_flag = absolute_monarchy_gov
                 clr_country_flag = semi_constitutional_monarchy_gov

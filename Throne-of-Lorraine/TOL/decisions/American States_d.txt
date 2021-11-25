@@ -22,7 +22,7 @@ political_decisions = {
         }
         allow = {
             				government = democracy
-                government = hanseatic
+                 
             war = no
             mass_politics = 1
             USA = {
@@ -566,7 +566,7 @@ political_decisions = {
             is_vassal = no
             OR = {
                 				government = democracy
-                government = hanseatic
+                 
                 government = hms_government
                 government = constitutional_empire
                 government = proletarian_dictatorship
@@ -622,9 +622,9 @@ political_decisions = {
 			NOT = { exists = BJC }
 			is_vassal = no
 							government = democracy
-                government = hanseatic
+                 
 			USA = { 				government = democracy
-                government = hanseatic }
+                  }
 			primary_culture = yankee
 			has_global_flag = Filibusters_victorous
 			NOT = { has_country_flag = son_statehood_we_have_applied }

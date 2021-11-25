@@ -382,7 +382,7 @@ political_decisions = {
                 COL = { all_core = { remove_core = COL remove_core = ENG remove_core = THIS add_core = FCA } }
                 CAN = { all_core = { add_core = FCA remove_core = ENG remove_core = THIS remove_core = CAN remove_core = COL remove_core = MRU } }
                 RPL = { annex_to = THIS 				government = democracy
-                government = hanseatic all_core = { add_core = FCA remove_core = ENG remove_core = THIS remove_core = COL } }
+                  all_core = { add_core = FCA remove_core = ENG remove_core = THIS remove_core = COL } }
                 74 = { change_province_name = "Québec" state_scope = { change_region_name = "Terre-Neuve" } }
                 QUE = { all_core = { add_core = FCA remove_core = ENG remove_core = THIS remove_core = RPL remove_core = CAN remove_core = NEW remove_core = QUE } }
                 ACA = { all_core = { add_core = ACA remove_core = ENG remove_core = THIS } }
@@ -1488,7 +1488,7 @@ political_decisions = {
                 capital = 1700
                 primary_culture = french
                 add_accepted_culture = maghrebi
-                add_accepted_culture = tuareg
+                add_accepted_culture = berber
             }
             1700 = {
                 change_province_name = "Alger"

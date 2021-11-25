@@ -467,7 +467,7 @@ political_decisions = {
             OR = {
                 government = hms_government
                 				government = democracy
-                government = hanseatic
+                 
                 government = constitutional_empire
                 government = proletarian_dictatorship
             }
@@ -520,7 +520,7 @@ political_decisions = {
             IRE = {
                 OR = {
                     				government = democracy
-                government = hanseatic
+                 
                     government = hms_government
                     government = constitutional_empire
                 }
@@ -572,7 +572,7 @@ political_decisions = {
                 AND = {
                     has_country_flag = the_irish_republic
                     NOT = { 				government = democracy
-                government = hanseatic }
+                  }
                     ENG = { has_country_flag = the_irish_dominion }
                 }
             }
@@ -587,7 +587,7 @@ political_decisions = {
             set_country_flag = the_irish_republic
             prestige = 5
             				government = democracy
-                government = hanseatic
+                 
             remove_accepted_culture = british
         }
 
