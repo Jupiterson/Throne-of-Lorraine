@@ -1,0 +1,62 @@
+political_decisions = {
+
+incorparate_arabistan = {
+		picture = become_saudi_arabia
+		potential = {
+			tag = PER
+			KHZ = { vassal_of = THIS }
+		}
+		allow = {
+         	KHZ = { vassal_of = THIS }
+			OR = {			
+			year = 1840
+			civilized = yes
+			}
+		}
+		effect = {
+            prestige = 5
+            set_country_flag = incorparated
+			random_country = {
+                limit = {
+                    tag = KHZ
+                    exists = yes
+                    ai = yes
+                }
+                THIS = { inherit = KHZ }
+            }
+		
+		ai_will_do = { factor = 1 }
+	}
+  }
+  
+  centralize_kalani = {
+		picture = become_saudi_arabia
+		potential = {
+			tag = AFG
+			NOT = { has_country_flag = incorparated }
+		}
+		allow = {
+			OR = {			
+			year = 1840
+			civilized = yes
+			}
+		}
+		effect = {
+            prestige = 5
+            set_country_flag = incorparated
+			random_country = {
+                any_country = {
+				limit = {
+					vassal_of = THIS
+				}
+				annex_to = THIS
+			}
+	   }
+		
+		ai_will_do = { factor = 1 }
+	}
+  }
+	
+	
+	
+}

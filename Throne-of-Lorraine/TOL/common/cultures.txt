@@ -1036,6 +1036,8 @@ iberian = {
             "ibn Umar" "ibn Uthman" "ibn Yusuf"
             }
     }
+	
+	union = IBR
 }
 
 french = {
@@ -3309,16 +3311,6 @@ native_american = {
         Guaman Guayasamín Gutiérrez Heredia Humala Iturri Lazarte Ludueña Melgarejo Palacios
         Patiño Quispe Rodríguez Roncaglia "Santa Cruz" Sosa Sumac Toledo Vargas Zapata }
     }
-    guarani = {
-        color = {89 80 175}
-        first_names = { Aniceto Antonio Bartolomé Camilo Carlos Claudio David Emiliano Eugenio Felipe
-        Félix Fernando Gregorio Jacinto Jesús José Juan Julio Luis Manuel
-        Marcos Máximo Narciso Pablo Pedro Rodrigo Roque Simón Teodoro Víctor }
-
-        last_names = { Abjaisu Álvarez Ayegua Camba Chuaie Correa Cunhagatú Díaz Fernández Galeano
-        Gómez González Guaracay Guaraní Guerrero Jopara López Mongelós Morla Ortíz
-        Paravé Picagua Riquelme Rivarola "Santa Cruz" Tarayú Torga Velázquez Yaguarete Yrahi }
-    }
     aimara = {
         color = {190 45 23}
         first_names = { Agustín Alejandro Antonio Bartolomé Carlos David Eduardo Enrique Evo Facundo
@@ -3329,15 +3321,7 @@ native_american = {
         Hoffmann Huachua Huallpa Katari Larico Machaca Mamani Morales Paredes Peñaranda
         Puma Quilca Quispe Rivera Sisa Tamayo Taquiri Torres Yllanes Yucra }
     }
-    amazonian = {
-        color = {4 255 84}
-        first_names = { Aníbal Augusto Bento Bernardo César Daniel David Donato Duarte Ernesto
-        Estevão Fernando Francisco Gabriel Graciano Hugo João Julio Leopoldo Lucas
-        Miguel Nuno Óscar Rafael Roberto Sebastião Sergio Simão Vasco Zeferino }
-
-        last_names = { Arawá Arawak Bororo Garifuna Gê Guayaná Jeikó Kaingang Kalinago Kamakán
-        Karajá Kayapó Matsés Maxakalí Purí Timbira Xavante Xerente Xokieng Yanomamö }
-    }
+    
     patagonian = {
         color = {88 99 133}
         first_names = { Agustín Antonio Aquiles Arturo Aurelio Bernardo Carlos Claudio Diego Facundo
@@ -3365,16 +3349,6 @@ native_american = {
         Jordão Lúcio Mateus Nicolau Paulo Pedro Roque Sergio Tomás Vítor }
 
         last_names = { Caetés Potiguara Tabajara Tamoios Temiminó Tupinambá Tupiniquim     }
-    }
-hets = {
-        color = {55 128 165}
-        first_names = { Aniceto Antonio Bartolomé Camilo Carlos Claudio David Emiliano Eugenio Felipe
-        Félix Fernando Gregorio Jacinto Jesús José Juan Julio Luis Manuel
-        Marcos Máximo Narciso Pablo Pedro Rodrigo Roque Simón Teodoro Víctor }
-
-        last_names = { Abjaisu Álvarez Ayegua Camba Chuaie Correa Cunhagatú Díaz Fernández Galeano
-        Gómez González Guaracay Guaraní Guerrero Jopara López Mongelós Morla Ortíz
-        Paravé Picagua Riquelme Rivarola "Santa Cruz" Tarayú Torga Velázquez Yaguarete Yrahi }
     }
     metis = {
         color = {15 68 192}
@@ -3487,6 +3461,44 @@ american_cultures = {
     #    }
     #}
     union = USA
+}
+
+amazonic = {
+    leader = european
+
+   amazonian = {
+        color = {4 255 84}
+        first_names = { Aníbal Augusto Bento Bernardo César Daniel David Donato Duarte Ernesto
+        Estevão Fernando Francisco Gabriel Graciano Hugo João Julio Leopoldo Lucas
+        Miguel Nuno Óscar Rafael Roberto Sebastião Sergio Simão Vasco Zeferino }
+
+        last_names = { Arawá Arawak Bororo Garifuna Gê Guayaná Jeikó Kaingang Kalinago Kamakán
+        Karajá Kayapó Matsés Maxakalí Purí Timbira Xavante Xerente Xokieng Yanomamö }
+    }
+	
+	hets = {
+        color = {55 128 165}
+        first_names = { Aniceto Antonio Bartolomé Camilo Carlos Claudio David Emiliano Eugenio Felipe
+        Félix Fernando Gregorio Jacinto Jesús José Juan Julio Luis Manuel
+        Marcos Máximo Narciso Pablo Pedro Rodrigo Roque Simón Teodoro Víctor }
+
+        last_names = { Abjaisu Álvarez Ayegua Camba Chuaie Correa Cunhagatú Díaz Fernández Galeano
+        Gómez González Guaracay Guaraní Guerrero Jopara López Mongelós Morla Ortíz
+        Paravé Picagua Riquelme Rivarola "Santa Cruz" Tarayú Torga Velázquez Yaguarete Yrahi }
+    }
+	
+	guarani = {
+        color = {89 80 175}
+        first_names = { Aniceto Antonio Bartolomé Camilo Carlos Claudio David Emiliano Eugenio Felipe
+        Félix Fernando Gregorio Jacinto Jesús José Juan Julio Luis Manuel
+        Marcos Máximo Narciso Pablo Pedro Rodrigo Roque Simón Teodoro Víctor }
+
+        last_names = { Abjaisu Álvarez Ayegua Camba Chuaie Correa Cunhagatú Díaz Fernández Galeano
+        Gómez González Guaracay Guaraní Guerrero Jopara López Mongelós Morla Ortíz
+        Paravé Picagua Riquelme Rivarola "Santa Cruz" Tarayú Torga Velázquez Yaguarete Yrahi }
+    }
+	
+    union = AMZ
 }
 
 neo_european_cultures = {
