@@ -78,6 +78,32 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 	
+	incorparate_aragon = {
+		picture = reino_undino
+		potential = {
+			tag = ETH
+			ARN = { vassal_of = THIS }
+		}
+		allow = {
+		    war = no
+            state_n_government = 1
+			prestige = 23
+		}
+		effect = {
+    prestige = 25
+    set_country_flag = incorparated
+	random_country = {
+                limit = {
+                    tag = ARN
+                    exists = yes
+                    ai = yes
+                }
+                THIS = { inherit = ARN }
+            }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
 	
 	portugal_sevilla = {
         picture = reino_undino

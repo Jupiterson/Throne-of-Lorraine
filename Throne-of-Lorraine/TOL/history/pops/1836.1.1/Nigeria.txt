@@ -879,7 +879,7 @@
 
     slaves = {
         culture = songhai
-        religion = sunni
+        religion = refomed
         size = 34000
     }
 }
@@ -912,9 +912,15 @@
     }
 
     farmers = {
+        culture = hausa
+        religion = fetishist
+        size = 32550
+    }
+	
+    farmers = {
         culture = songhai
         religion = fetishist
-        size = 62550
+        size = 12550
     }
 
     slaves = {
@@ -948,11 +954,17 @@
         religion = fetishist
         size = 450
     }
+	
+	farmers = {
+        culture = hausa
+        religion = fetishist
+        size = 32550
+    }
 
     farmers = {
         culture = songhai
         religion = fetishist
-        size = 56250
+        size = 26250
     }
 
     slaves = {
@@ -1026,9 +1038,9 @@
     }
 
     farmers = {
-        culture = songhai
-        religion = sunni
-        size = 9025
+        culture = hausa
+        religion = fetishist
+        size = 12550
     }
 }
 #Nupe-Jos Region (600000)
@@ -1074,7 +1086,7 @@
     farmers = {
         culture = songhai
         religion = sunni
-        size = 41150
+        size = 11150
     }
 
     aristocrats = {
@@ -1083,6 +1095,12 @@
         size = 50
     }
 
+    farmers = {
+        culture = hausa
+        religion = fetishist
+        size = 32550
+    }
+	
     clergymen = {
         culture = hausa
         religion = fetishist
@@ -1220,13 +1238,13 @@
     farmers = {
         culture = songhai
         religion = fetishist
-        size = 10625
+        size = 3625
     }
 
     slaves = {
         culture = east_kwa
         religion = fetishist
-        size = 5000
+        size = 15000
     }
 }
 #Abuja (64000/16000 POPS) #african_Minor includes Gwari and Chamba
@@ -1257,6 +1275,12 @@
 
     farmers = {
         culture = songhai
+        religion = fetishist
+        size = 3725
+    }
+	
+	farmers = {
+        culture = east_kwa
         religion = fetishist
         size = 10725
     }
@@ -1664,7 +1688,7 @@
     }
 
     farmers = {
-        culture = songhai
+        culture = hausa
         religion = sunni
         size = 37325
     }
@@ -1696,7 +1720,7 @@
     farmers = {
         culture = songhai
         religion = fetishist
-        size = 1800
+        size = 13000
     }
 
     slaves = {
@@ -1764,7 +1788,7 @@
     farmers = {
         culture = songhai
         religion = sunni
-        size = 150100
+        size = 50100
     }
 
     aristocrats = {
@@ -1794,7 +1818,7 @@
     farmers = {
         culture = hausa
         religion = fetishist
-        size = 45500
+        size = 145500
     }
 
     slaves = {
@@ -1874,7 +1898,7 @@
     farmers = {
         culture = songhai
         religion = sunni
-        size = 106025
+        size = 56025
     }
 
     aristocrats = {
@@ -1892,7 +1916,7 @@
     artisans = {
         culture = hausa
         religion = fetishist
-        size = 1500
+        size = 5500
     }
 
     soldiers = {
@@ -1902,9 +1926,9 @@
     }
 
     farmers = {
-        culture = songhai
+        culture = hausa
         religion = fetishist
-        size = 27325
+        size = 52325
     }
 
     slaves = {
@@ -2224,8 +2248,8 @@
 #Kuka (960000/240000 POPS)
 1951 = {
     aristocrats = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = sunni
         size = 4600
     }
 
@@ -2242,15 +2266,15 @@
     }
 
     clergymen = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = jewish
         size = 2500
     }
 
     artisans = {
-        culture = neo_roman
-        religion = coptic
-        size = 9600
+        culture = immundus
+        religion = sunni
+        size = 1600
     }
 
     soldiers = {
@@ -2262,20 +2286,32 @@
     farmers = {
         culture = neo_roman
         religion = coptic
-        size = 160000
+        size = 35000
+    }
+	
+	farmers = {
+        culture = immundus
+        religion = coptic
+        size = 30000
+    }
+	
+    farmers = {
+        culture = immundus
+        religion = jewish
+        size = 5000
     }
 
     slaves = {
         culture = neo_roman
         religion = coptic
-        size = 60000
+        size = 2000
     }
 }
 #Nguru (768000/192000 POPS)
 1952 = {
     aristocrats = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = sunni
         size = 2200
     }
 
@@ -2300,13 +2336,13 @@
     farmers = {
         culture = neo_roman
         religion = coptic
-        size = 74500
+        size = 24500
     }
 
     slaves = {
-        culture = neo_roman
-        religion = coptic
-        size = 36000
+        culture = immundus
+        religion = fetishist
+        size = 6000
     }
 
     aristocrats = {
@@ -2322,8 +2358,8 @@
     }
 
     artisans = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = jewish
         size = 3600
     }
 
@@ -2334,9 +2370,9 @@
     }
 
     farmers = {
-        culture = neo_roman
-        religion = coptic
-        size = 65600
+        culture = immundus
+        religion = sunni
+        size = 25600
     }
 }
 #Dikoa (816000/204000 POPS)
@@ -2354,8 +2390,8 @@
     }
 
     artisans = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = sunni
         size = 7900
     }
 
@@ -2368,13 +2404,19 @@
     farmers = {
         culture = neo_roman
         religion = coptic
-        size = 144200
+        size = 54200
     }
 
-    slaves = {
-        culture = neo_roman
-        religion = coptic
-        size = 36000
+    farmers = {
+        culture = immundus
+        religion = jewish
+        size = 10000
+    }
+	
+	farmers = {
+        culture = immundus
+        religion = sunni
+        size = 16000
     }
 
     aristocrats = {
@@ -2402,8 +2444,8 @@
     }
 
     farmers = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = sunni
         size = 7200
     }
 
