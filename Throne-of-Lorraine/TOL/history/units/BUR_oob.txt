@@ -4,9 +4,6 @@ SIA = {
     value = -200        #relation
 }
 
-ENG = {
-    value = -5        #relation
-}
 SHA = {
     value = 100       #relation
 }
@@ -24,7 +21,7 @@ leader = {
     date = 1836.1.1
     personality = heroic
     background = gifted_administrator
-	prestige = 0.5
+	prestige = 0.6
 }
 leader = {
     name = "Kyauk Lon"
@@ -48,58 +45,58 @@ leader = {
     background = old_school
 }
 army = {
-    name = "Army of Burma"
+    name = "Royal Burmese Army"
     location = 1334
+    regiment = {
+        name= "Elite Brigade 1"
+        type = infantry
+        home = 1330
+    }
+
+    regiment = {
+        name= "Elite Brigade 2"
+        type = infantry
+        home = 1330
+    }
+
+    regiment = {
+        name= "Elite Brigade 3"
+        type = infantry
+        home = 1332
+    }
+
     regiment = {
         name= "1. Brigade"
         type = irregular
-        home = 1330
+        home = 1332
     }
 
     regiment = {
         name= "2. Brigade"
         type = irregular
-        home = 1330
+        home = 1333
     }
 
     regiment = {
         name= "3. Brigade"
         type = irregular
-        home = 1332
+        home = 1333
     }
 
     regiment = {
         name= "4. Brigade"
         type = irregular
-        home = 1332
+        home = 1335
     }
 
     regiment = {
         name= "5. Brigade"
         type = irregular
-        home = 1333
+        home = 1335
     }
 
     regiment = {
         name= "6. Brigade"
-        type = irregular
-        home = 1333
-    }
-
-    regiment = {
-        name= "7. Brigade"
-        type = irregular
-        home = 1335
-    }
-
-    regiment = {
-        name= "8. Brigade"
-        type = irregular
-        home = 1335
-    }
-
-    regiment = {
-        name= "9. Brigade"
         type = irregular
         home = 1337
     }
@@ -107,40 +104,40 @@ army = {
 }
 
 army = {
-    name = "Army of South Burma"
+    name = "Army of Southern Burma"
     location = 1333
     regiment = {
-        name= "10. Brigade"
+        name= "7. Brigade"
         type = irregular
         home = 1334
     }
 
     regiment = {
-        name= "11. Brigade"
+        name= "8. Brigade"
         type = irregular
         home = 1334
     }
 
     regiment = {
-        name= "12. Brigade"
+        name= "9. Brigade"
         type = irregular
         home = 1339
     }
 
     regiment = {
-        name= "13. Brigade"
+        name= "10. Brigade"
         type = irregular
         home = 1336
     }
 
     regiment = {
-        name= "15. Brigade"
+        name= "11. Brigade"
         type = irregular
         home = 1342
     }
 
     regiment = {
-        name= "16. Brigade"
+        name= "12. Brigade"
         type = irregular
         home = 1342
     }
