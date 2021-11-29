@@ -1,0 +1,258 @@
+political_decisions = {	
+
+educate_north_amazon_tribes = {
+        picture = jesuites_n_tribes
+		potential = {
+		    tag = JES
+		    NOT = { has_country_flag = claimed_north_amazon }
+		}	
+		
+		allow = {
+	        war = no
+			medicine = 1
+			positivism = 1
+		}
+		
+		effect = {
+		    badboy = 5
+		    2261 = {
+				add_core = THIS
+		    } 
+			2401 = {
+				add_core = THIS
+		    } 
+			2278 = {
+				add_core = THIS
+		    } 
+			2403 = {
+				add_core = THIS
+		    } 
+			2402 = {
+				add_core = THIS
+		    } 
+			CLM_2262 = {
+				add_core = THIS
+		    } 
+			2262 = { secede_province = THIS }
+			2260 = { secede_province = THIS }
+			2263 = { secede_province = THIS }
+			set_country_flag = claimed_north_amazon
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+control_the_amazon = {
+        picture = amazon_exploration
+		potential = {
+		    tag = JES
+			has_country_flag = claimed_north_amazon
+		    NOT = { has_country_flag = claimed_more_amazon }
+			
+		}	
+		
+		allow = {
+	        war = no
+			OR = {
+			    owns = 2401
+				owns = 2403
+            }
+			state_n_government = 1
+			inorganic_chemistry = 1
+		}
+		
+		effect = {
+		    badboy = 7
+		    2407 = {
+				add_core = THIS
+		    } 
+			2404 = {
+				add_core = THIS
+		    } 
+			3381 = {
+				add_core = THIS
+		    } 
+			2549 = {
+				add_core = THIS
+		    } 
+			2405 = {
+				add_core = THIS
+		    } 
+			2411 = {
+				add_core = THIS
+		    } 
+			2413 = {
+				add_core = THIS
+		    } 
+			2600 = {
+				add_core = THIS
+		    } 
+			set_country_flag = claimed_more_amazon
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+take_belem = {
+        picture = belem_map
+		potential = {
+		    tag = JES
+		    has_country_flag = claimed_more_amazon
+			NOT = { has_country_flag = claimed_belem }
+		}	
+		
+		allow = {
+	        war = no
+			owns = 2411
+			owns = 2415
+			nationalism_n_imperialism = 1
+		}
+		
+		effect = {
+		    badboy = 5
+		    2410 = {
+				add_core = THIS
+		    } 
+			set_country_flag = claimed_belem
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+combat_the_infidels = {
+        picture = native_tribes_killed
+		potential = {
+		    tag = JES
+			NOT = { has_country_flag = combat_the_infidels }
+			owns = 2259
+		}	
+		
+		allow = {
+	        war = no
+			breech_loaded_rifles = 1
+		}
+		
+		effect = {
+		    badboy = 10
+		    ECU_2279 = {
+				add_core = THIS
+		    } 
+			PUE_2289 = {
+				add_core = THIS
+		    } 
+			PUE_2291 = {
+				add_core = THIS
+		    } 
+			2288 = { secede_province = THIS }
+			2286 = { secede_province = THIS }
+			2289 = { secede_province = THIS }
+			set_country_flag = combat_the_infidels
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+combat_the_heretics = {
+        picture = anti_protestantesim
+		potential = {
+		    tag = JES
+			has_country_flag = claimed_belem
+			NOT = { has_country_flag = combat_the_heretics }
+		}	
+		
+		allow = {
+		    owns = 2410
+	        war = no
+			revolution_n_counterrevolution = 1
+		}
+		
+		effect = {
+		    badboy = 10
+		    BRZ_2410 = {
+				add_core = THIS
+		    } 
+			set_country_flag = combat_the_heretics
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+the_holy_needle = {
+        picture = vaccination
+		potential = {
+		    tag = JES
+			NOT = { has_country_flag = the_holy_needle }
+		}	
+		
+		allow = {
+	        war = no
+			organic_chemistry = 1
+		}
+		
+		effect = {
+		    social_reform = acceptable_healthcare
+			set_country_flag = the_holy_needle
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+the_water_of_life = {
+        picture = catholic_hospital
+		potential = {
+		    tag = JES
+			has_country_flag = the_holy_needle
+		}	
+		
+		allow = {
+	        war = no
+			biologism = 1
+			organic_chemistry = 1
+			year = 1880
+		}
+		
+		effect = {
+		    add_country_modifier = { 
+			name = global_baby_boom
+			duration = 10950 }
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+jesuit_schools = {
+        picture = jesuites_school
+		potential = {
+		    tag = JES
+			NOT = { has_country_flag = jesuit_schools }
+		}	
+		
+		allow = {
+	        war = no
+			functionalism = 1
+		}
+		
+		effect = {
+		    social_reform = acceptable_education
+			set_country_flag = jesuit_schools
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
