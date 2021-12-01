@@ -7,7 +7,7 @@ country_event = {
 	
 	trigger = {
 		tag = RUS
-		year = 1844
+		year = 1842
 		NOT = { has_country_flag = Kazakh_war }
 		NOT = { is_our_vassal = KAZ }
 		KAZ = { owns = 1185 }
@@ -16,19 +16,19 @@ country_event = {
 		months = 10
 		modifier = {
 			factor = 0.5
+			year = 1843
+		}
+		modifier = {
+			factor = 0.5
+			year = 1844
+		}
+		modifier = {
+			factor = 0.5
 			year = 1845
 		}
 		modifier = {
-			factor = 0.5
-			year = 1846
-		}
-		modifier = {
-			factor = 0.5
-			year = 1847
-		}
-		modifier = {
 			factor = 0.25
-			year = 1848
+			year = 1846
 		}
 	}
 	option = {
@@ -45,3 +45,4 @@ country_event = {
 			attacker_goal = { casus_belli = make_puppet }
 		}
 	}
+}
