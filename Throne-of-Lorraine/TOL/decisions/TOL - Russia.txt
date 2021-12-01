@@ -29,4 +29,23 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
+	annex_the_Kazakhs = {
+		picture = military_aid
+		potential = {
+			tag = RUS
+			is_our_vassal = KAZ
+        } 
+		allow = {
+            war = no
+            KAZ = { in_sphere = RUS }
+			state_n_government  = 1
+        }
+		effect = {
+            prestige = 10
+			badboy = 4
+			inherit = KAZ
+        }
+
+        ai_will_do = { factor = 1 }
+	}
 }	

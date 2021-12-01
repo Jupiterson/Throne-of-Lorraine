@@ -1,0 +1,47 @@
+#A raid on Akmolinsk
+country_event = {
+	id = 320001
+	title = "RUSKAZ1.T"
+	desc = "RUSKAZ1.D"
+	picture = "demolished_church"
+	
+	trigger = {
+		tag = RUS
+		year = 1844
+		NOT = { has_country_flag = Kazakh_war }
+		NOT = { is_our_vassal = KAZ }
+		KAZ = { owns = 1185 }
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1845
+		}
+		modifier = {
+			factor = 0.5
+			year = 1846
+		}
+		modifier = {
+			factor = 0.5
+			year = 1847
+		}
+		modifier = {
+			factor = 0.25
+			year = 1848
+		}
+	}
+	option = {
+		name = "We will teach them an lesson!"
+		RUS_1184 = { add_core = RUS }
+		set_country_flag = Kazakh_war
+		casus_belli = {
+			target = KAZ
+			type = make_puppet
+			months = 12
+		}
+		war = {
+			target = KAZ
+			attacker_goal = { casus_belli = make_puppet }
+		}
+	}
