@@ -1,0 +1,99 @@
+#A raid on Akmolinsk-the Juz get puppeted
+country_event = {
+	id = 320001
+	title = "RUSKAZ1.T"
+	desc = "RUSKAZ1.D"
+	picture = "demolished_church"
+	
+	trigger = {
+		tag = RUS
+		year = 1842
+		NOT = { has_country_flag = Kazakh_war }
+		NOT = { is_our_vassal = KAZ }
+		KAZ = { owns = 1185 }
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1843
+		}
+		modifier = {
+			factor = 0.5
+			year = 1844
+		}
+		modifier = {
+			factor = 0.5
+			year = 1845
+		}
+		modifier = {
+			factor = 0.25
+			year = 1846
+		}
+	}
+	option = {
+		name = "We will teach them an lesson!"
+		RUS_1184 = { add_core = RUS }
+		set_country_flag = Kazakh_war
+		casus_belli = {
+			target = KAZ
+			type = make_puppet
+			months = 12
+		}
+		war = {
+			target = KAZ
+			attacker_goal = { casus_belli = make_puppet }
+		}
+	}
+}
+#The porous border with Kokand - Kokand get puppeted
+country_event = {
+	id = 320002
+	title = "RUSKAZ2.T"
+	desc = "RUSKAZ2.D"
+	picture = "storm_of_samarkand"
+	
+	trigger = {
+		tag = RUS
+		year = 1853
+		NOT = { has_country_flag = Kokand_war }
+		NOT = { is_our_vassal = KOK }
+		OR = {
+			KOK = { owns = 1202 }
+			KOK = { owns = 1193 }
+			KOK = { owns = 1189 }
+		}
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1854
+		}
+		modifier = {
+			factor = 0.5
+			year = 1855
+		}
+		modifier = {
+			factor = 0.5
+			year = 1856
+		}
+		modifier = {
+			factor = 0.25
+			year = 1857
+		}
+	}
+	option = {
+		name = "Kokand will bend the knee, just like the Juz."
+		set_country_flag = Kokand_war
+		casus_belli = {
+			target = KOK
+			type = make_puppet
+			months = 12
+		}
+		war = {
+			target = KOK
+			attacker_goal = { casus_belli = make_puppet }
+		}
+	}
+}
