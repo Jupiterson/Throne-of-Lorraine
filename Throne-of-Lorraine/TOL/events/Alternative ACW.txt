@@ -558,7 +558,7 @@ country_event = {
         name = "EVT16510OPTA"
         set_global_flag = american_civil_war_has_happened
         set_global_flag = alt_american_civil_war_has_happened
-        primary_culture = dixie
+        primary_culture = yankee
         add_accepted_culture = yankee
         remove_country_modifier = the_slavery_debate
         any_pop = {
@@ -617,7 +617,7 @@ country_event = {
         name = "EVT16510OPTB"
         set_global_flag = american_civil_war_has_happened
         set_global_flag = alt_american_civil_war_has_happened
-        primary_culture = dixie
+        primary_culture = yankee
         add_accepted_culture = yankee
         remove_country_modifier = the_slavery_debate
         any_pop = {
@@ -711,7 +711,7 @@ country_event = {
             owner = { capital = 60 }
         }
         any_pop = {
-            limit = { has_pop_culture = dixie }
+            limit = { has_pop_culture = yankee }
             dominant_issue = {
                 factor = 0.10
                 value = jingoism
@@ -730,7 +730,7 @@ country_event = {
                 NOT = {
                     any_owned_province = {
                         OR = {
-                            culture = dixie
+                            culture = yankee
                             culture = free_german
                             is_core = TEX
                         }
@@ -745,7 +745,7 @@ country_event = {
                     NOT = {
                         any_owned_province = {
                             OR = {
-                                culture = dixie
+                                culture = yankee
                                 culture = free_german
                                 is_core = TEX
                             }
@@ -771,7 +771,7 @@ country_event = {
 			exists = CSA
 			exists = FSA
 		}
-		primary_culture = dixie
+		primary_culture = yankee
         has_global_flag = american_civil_war_has_happened
     }
 
@@ -803,7 +803,7 @@ country_event = {
 
     trigger = {
         tag = USA
-		primary_culture = dixie
+		primary_culture = yankee
         NOT = { FSA = { all_core = { has_province_modifier = reconstruction_FSA } } }
         has_country_flag = has_used_radical_reconstruction_FSA
     }
@@ -815,18 +815,18 @@ country_event = {
     fire_only_once = yes
 
     option = {
-        name = "EVTOPTA16517" #Keep Yankee as accepted, begin assimilating southern cultures into dixie, FSA cores stay, assimilation of Yankee stops, remove CSA cores
+        name = "EVTOPTA16517" #Keep Yankee as accepted, begin assimilating southern cultures into yankee, FSA cores stay, assimilation of Yankee stops, remove CSA cores
         prestige = 10
         add_accepted_culture = yankee
 		remove_accepted_culture = free_german
-		remove_accepted_culture = dixie
+		remove_accepted_culture = yankee
         any_pop = {
             limit = { has_pop_culture = yankee }
             consciousness = 2
             militancy = 4
         }
 		any_pop = {
-            limit = { OR = { has_pop_culture = dixie has_pop_culture = free_german } }
+            limit = { OR = { has_pop_culture = yankee has_pop_culture = free_german } }
             consciousness = -2
             militancy = -4
         }
@@ -858,7 +858,7 @@ country_event = {
             }
         }
 		any_pop = {
-            limit = { OR = { has_pop_culture = dixie has_pop_culture = free_german } }
+            limit = { OR = { has_pop_culture = yankee has_pop_culture = free_german } }
             ideology = {
                 value = reactionary
                 factor = 0.2
@@ -880,7 +880,7 @@ country_event = {
         prestige = 10
 		add_accepted_culture = yankee
 		add_accepted_culture = free_german
-		add_accepted_culture = dixie
+		add_accepted_culture = yankee
         any_owned = {
             limit = { is_core = FSA }
             add_province_modifier = { name = reconstruction duration = 2555 }
@@ -897,7 +897,7 @@ country_event = {
             militancy = 1
         }
         any_pop = {
-            limit = { has_pop_culture = dixie }
+            limit = { has_pop_culture = yankee }
             ideology = {
                 value = reactionary
                 factor = 0.3

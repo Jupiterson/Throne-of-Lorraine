@@ -1004,7 +1004,7 @@ political_decisions = {
                     any_pop = {
                         limit = {
                             has_pop_religion = catholic
-                            has_pop_culture = dixie
+                            has_pop_culture = yankee
                             NOT = { type = craftsmen }
                             location = { is_overseas = no }
                         }
@@ -1068,7 +1068,7 @@ political_decisions = {
                     limit = {
                         has_pop_religion = catholic
                         OR = {
-                            has_pop_culture = dixie
+                            has_pop_culture = yankee
                             has_pop_culture = free_german
                         }
                         NOT = { type = craftsmen }

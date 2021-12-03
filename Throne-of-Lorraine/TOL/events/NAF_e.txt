@@ -11,7 +11,7 @@ country_event = {
         any_pop = {
             limit = {
                 OR = {
-                    has_pop_culture = dixie
+                    has_pop_culture = yankee
                     has_pop_culture = afro_french
                 }
             }
@@ -28,7 +28,7 @@ country_event = {
         remove_accepted_culture = afro_french
         any_pop = {
             limit = {
-                has_pop_culture = dixie
+                has_pop_culture = yankee
             }
             consciousness = 6
             militancy = 6
@@ -255,7 +255,7 @@ country_event = {
     option = {
         name = "Full Integration"
         add_accepted_culture = yankee
-        add_accepted_culture = dixie
+        add_accepted_culture = yankee
         any_pop = {
             limit = {
                 has_pop_culture = afro_french
@@ -284,7 +284,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                has_pop_culture = dixie
+                has_pop_culture = yankee
             }
             consciousness = -7
             militancy = -7
@@ -571,7 +571,7 @@ country_event = {
         name = "Allow the book to circulate."
         any_pop = {
             limit = {
-                has_pop_culture = dixie
+                has_pop_culture = yankee
             }
             consciousness = -1
         }
@@ -587,7 +587,7 @@ country_event = {
         name = "Curtail distribution."
         any_pop = {
             limit = {
-                has_pop_culture = dixie
+                has_pop_culture = yankee
             }
             consciousness = 1
         }
@@ -1376,7 +1376,7 @@ country_event = { ##### Nat Turner
         }
         any_pop = {
             limit = {
-                has_pop_culture = dixie
+                has_pop_culture = yankee
             }
             militancy = 1
         }
@@ -1394,7 +1394,7 @@ country_event = { ##### Nat Turner
         }
         any_pop = {
             limit = {
-                has_pop_culture = dixie
+                has_pop_culture = yankee
             }
             consciousness = 1
         }
@@ -1412,7 +1412,7 @@ country_event = { ##### Nat Turner
         }
         any_pop = {
             limit = {
-                has_pop_culture = dixie
+                has_pop_culture = yankee
             }
             militancy = -1
         }

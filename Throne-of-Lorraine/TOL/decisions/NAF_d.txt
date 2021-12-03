@@ -213,7 +213,7 @@ political_decisions = {
                     government = fascist_dictatorship
                 }
                 OR = {
-                    accepted_culture = dixie
+                    accepted_culture = yankee
                     accepted_culture = yankee
                 }
             }
@@ -262,7 +262,7 @@ political_decisions = {
                 government = proletarian_dictatorship
             }
             OR = {
-                accepted_culture = dixie
+                accepted_culture = yankee
                 accepted_culture = yankee
             }
         }
@@ -273,7 +273,7 @@ political_decisions = {
             }
         }
         effect = {
-            remove_accepted_culture = dixie
+            remove_accepted_culture = yankee
             remove_accepted_culture = yankee
         }
     }

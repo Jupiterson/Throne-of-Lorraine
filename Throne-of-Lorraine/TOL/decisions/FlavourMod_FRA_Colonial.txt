@@ -98,8 +98,8 @@ political_decisions = {
                     remove_core = NEW
                 }
             }
-            USA = { remove_accepted_culture = dixie }
-            remove_accepted_culture = dixie
+            USA = { remove_accepted_culture = yankee }
+            remove_accepted_culture = yankee
         }
 
         ai_will_do = { factor = 1 }
@@ -513,7 +513,7 @@ political_decisions = {
             51 = { remove_core = USA }
             50 = { remove_core = USA }
             USA = {
-                remove_accepted_culture = dixie
+                remove_accepted_culture = yankee
                 ###Add Lousiana Cores###
                 any_owned = {
                     limit = {
@@ -738,7 +738,7 @@ political_decisions = {
             any_pop = {
                 limit = {
                     type = craftsmen
-                    has_pop_culture = dixie
+                    has_pop_culture = yankee
                 }
                 move_pop = 194
             }
@@ -760,7 +760,7 @@ political_decisions = {
             ULA = {
                 set_country_flag = post_colonial_country
                 primary_culture = louisianan
-                add_accepted_culture = dixie
+                add_accepted_culture = yankee
             }
             ULA = { all_core = { remove_core = COL remove_core = FCA } }
             D01 = { primary_culture = louisianan }
@@ -895,7 +895,7 @@ political_decisions = {
             any_pop = {
                 limit = {
                     OR = {
-                        has_pop_culture = dixie
+                        has_pop_culture = yankee
                         has_pop_culture = louisianan
                     }
                 }
@@ -1507,7 +1507,7 @@ political_decisions = {
                     OR = {
                         primary_culture = akino_german
                         primary_culture = australian
-                        primary_culture = dixie
+                        primary_culture = yankee
                         primary_culture = louisianan
                         is_culture_group = french
                     }
@@ -1584,7 +1584,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1627,7 +1627,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1668,7 +1668,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1705,7 +1705,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1743,7 +1743,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1784,7 +1784,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1825,7 +1825,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1867,7 +1867,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1909,7 +1909,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1949,7 +1949,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -1992,7 +1992,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2034,7 +2034,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2075,7 +2075,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2114,7 +2114,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2152,7 +2152,7 @@ political_decisions = {
                         OR = {
                             primary_culture = akino_german
                              primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = louisianan
                             is_culture_group = french
                         }
@@ -2176,7 +2176,7 @@ political_decisions = {
                 primary_culture = akino_german
                 primary_culture = australian
                 primary_culture = australian
-                primary_culture = dixie
+                primary_culture = yankee
                 primary_culture = louisianan
                 is_culture_group = french
             }
@@ -2201,7 +2201,7 @@ political_decisions = {
                             primary_culture = akino_german
                             primary_culture = louisianan
                             primary_culture = australian
-                            primary_culture = dixie
+                            primary_culture = yankee
                         }
                     }
                 }
@@ -2221,7 +2221,7 @@ political_decisions = {
                             is_culture_group = french
                             primary_culture = akino_german
                             primary_culture = louisianan
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = australian
                         }
                     }
@@ -2244,7 +2244,7 @@ political_decisions = {
                             is_culture_group = french
                             primary_culture = akino_german
                             primary_culture = louisianan
-                            primary_culture = dixie
+                            primary_culture = yankee
                             primary_culture = australian
                         }
                     }
