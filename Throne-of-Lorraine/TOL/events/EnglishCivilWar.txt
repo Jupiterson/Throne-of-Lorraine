@@ -1,0 +1,32 @@
+country_event = {
+
+    id = 51390
+
+    title = "EVTNAME51390"
+    desc = "EVTDESC51390"
+    picture = "english_civil_war"
+
+    trigger = {
+        tag = UOW
+        year = 1836
+        exists = ENL
+		exists = UOW
+        NOT = { year = 1838 }
+    }
+    fire_only_once = yes
+	
+    option = {
+        name = "EVT51390OPTA"
+		war = {
+			target = ENL
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+			call_ally = no
+		}
+
+        ai_chance = {
+            factor = 100
+        }
+    }
+ai_will_do = { factor = 1 }
+}
