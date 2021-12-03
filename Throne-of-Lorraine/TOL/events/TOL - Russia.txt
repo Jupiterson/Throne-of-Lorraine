@@ -56,12 +56,12 @@ country_event = {
 	trigger = {
 		tag = RUS
 		year = 1853
-		NOT = { has_country_flag = Kokand_war }
-		NOT = { is_our_vassal = KOK }
+		NOT = { has_country_flag = Bukkhara_war }
+		NOT = { is_our_vassal = BUK }
 		OR = {
-			KOK = { owns = 1202 }
-			KOK = { owns = 1193 }
-			KOK = { owns = 1189 }
+			BUK = { owns = 1202 }
+			BUK = { owns = 1193 }
+			BUK = { owns = 1189 }
 		}
 	}
 	mean_time_to_happen = {
@@ -84,15 +84,15 @@ country_event = {
 		}
 	}
 	option = {
-		name = "Kokand will bend the knee, just like the Juz."
-		set_country_flag = Kokand_war
+		name = "Bukkhara will bend the knee, just like the Juz."
+		set_country_flag = Bukkhara_war
 		casus_belli = {
-			target = KOK
+			target = BUK
 			type = make_puppet
 			months = 12
 		}
 		war = {
-			target = KOK
+			target = BUK
 			attacker_goal = { casus_belli = make_puppet }
 		}
 	}
