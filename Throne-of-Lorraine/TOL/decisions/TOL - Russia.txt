@@ -48,21 +48,21 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
 	}
-	annex_Kokand = {
+	annex_Bukkhara = {
 		picture = ever_victorious
 		potential = {
 			tag = RUS
-			is_our_vassal = KOK
+			is_our_vassal = BUK
         } 
 		allow = {
             war = no
-            KOK = { in_sphere = RUS }
+            BUK = { in_sphere = RUS }
 			nationalism_n_imperialism  = 1
         }
 		effect = {
             prestige = 10
 			badboy = 4
-			inherit = KOK
+			inherit = BUK
         }
 
         ai_will_do = { factor = 1 }

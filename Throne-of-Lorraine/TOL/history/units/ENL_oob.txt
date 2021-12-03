@@ -1,14 +1,16 @@
 FRA = {value = -70}
 SCO = {value = -50}
-NET = { value = -25 }
+NET = { value = -100}
+UOW = { value = -200 }
+WHA = { value = -50}
 
 army = {
     name = "The English Army"
-    location = 295
+    location = 290
     regiment = {
         name= "1st Infantary division"
         type = infantry
-        home = 295
+        home = 290
     }
 
     regiment = {
@@ -38,11 +40,11 @@ army = {
 
 army = {
     name = "The 2nd English Army"
-    location = 296
+    location = 287
 	    regiment = {
         name= "6th Infantary division"
         type = infantry
-        home = 296
+        home = 287
     }
 	    regiment = {
         name= "7th Infantary division"
@@ -52,6 +54,6 @@ army = {
 		regiment = {
         name= "8th Infantary division"
         type = infantry
-        home = 287
+        home = 278
     }
 }
