@@ -1,71 +1,167 @@
 
 FRA = {value = -90}
 
+leader = {
+    name = "Amha"
+    type = land
+    date = 1836.1.1
+    personality = efficient
+    background = old_school
+}
+
+leader = {
+    name = "Kofi "
+    type = land
+    date = 1836.1.1
+    personality = calm
+    background = school_of_offense
+}
+leader = {
+    name = "Ahmed"
+    type = sea
+    date = 1836.1.1
+    personality = reserved
+    background = gifted_administrator
+}
+
+leader = {
+    name = "Negasi"
+    type = sea
+    date = 1836.1.1
+    personality = harsh
+    background = engineer
+}
+
+leader = {
+    name = "Aaron"
+    type = sea
+    date = 1836.1.1
+    personality = cautious
+    background = elderly
+}
+
 army = {
-    name = "Army of Ethiopia"
+    name = "Capital Army"
     location = 1859
     regiment = {
-	    regiment = {
         name= "1.Elite Brigade"
         type = infantry
-        home = 1859
+        home = 1857
     }
 
     regiment = {
         name= "2.Elite Brigade"
         type = infantry
-        home = 1863
-    }
-        name= "1. Brigade"
-        type = irregular
         home = 1859
+    }
+	regiment = {
+        name= "4.Elite Brigade"
+        type = infantry
+        home = 1860
+    }
+
+    regiment = {
+        name= "5.Elite Brigade"
+        type = infantry
+        home = 1867
+    }
+
+    regiment = {
+        name= "6.Elite Brigade"
+        type = infantry
+        home = 1857
+    }
+	regiment = {
+        name= "7.Elite Brigade"
+        type = infantry
+        home = 1814
+    }
+	 regiment = {
+        name= "8.Elite Brigade"
+        type = infantry
+        home = 1814
+    }
+
+    regiment = {
+        name= "1. Artillery division"
+        type = artillery
+        home = 1865
+    }
+	    regiment = {
+        name= "2. Artillery division"
+        type = artillery
+        home = 1857
+    }
+
+}
+army = {
+    name = "India Division"
+    location = 1317
+    regiment = {
+	    name= "1. Brigade"
+        type = irregular
+        home = 1317
     }
 
     regiment = {
         name= "2. Brigade"
         type = irregular
-        home = 1850
+        home = 1318
     }
 
     regiment = {
         name= "3. Brigade"
         type = irregular
-        home = 1867
+        home = 1316
     }
 
     regiment = {
         name= "4. Brigade"
         type = irregular
-        home = 1860
+        home = 1319
     }
 
     regiment = {
         name= "5. Brigade"
         type = irregular
-        home = 1871
+        home = 1316
     }
 
     regiment = {
         name= "6. Brigade"
         type = irregular
-        home = 1869
+        home = 1316
     }
 
-    regiment = {
+}
+army = {
+    name = "West Ethopian Army"
+    location = 1862
+	    regiment = {
         name= "7. Brigade"
         type = irregular
-        home = 2025
+        home = 1865
     }
 	    regiment = {
         name= "8. Brigade"
         type = irregular
-        home = 1858
+        home = 1863
     }
-
+	    regiment = {
+        name= "9. Brigade"
+        type = irregular
+        home = 1862
+    }
+		regiment = {
+        name= "10. Brigade"
+        type = irregular
+        home = 1862
+    }
 }
 
+
 navy = {
-    name = "The Ethiopian Navy"
+    name = "Main Land Navy"
     location = 1875
     ship = {
         name= "Abel"
@@ -107,4 +203,60 @@ navy = {
         type = clipper_transport
     }
 
+}
+navy = {
+    name = "Navy in India"
+    location = 1317
+    ship = {
+        name= "Liya"
+        type = frigate
+    }
+
+    ship = {
+        name= "Aida"
+        type = frigate
+    }
+
+    ship = {
+        name= "Nyala"
+        type = frigate
+    }
+
+    ship = {
+        name= "Abena"
+        type = frigate
+    }
+
+    ship = {
+        name= "Taci"
+        type = frigate
+    }
+}
+navy = {
+    name = "South East Asia Navy"
+    location = 1384
+    ship = {
+        name= "Zuri"
+        type = frigate
+    }
+
+    ship = {
+        name= "Amara"
+        type = frigate
+    }
+
+    ship = {
+        name= "Maya"
+        type = frigate
+    }
+
+    ship = {
+        name= "Jamila"
+        type = frigate
+    }
+
+    ship = {
+        name= "Edna"
+        type = frigate
+    }
 }
