@@ -579,7 +579,7 @@ scandinavian = {
         last_names = { Arnórsson Ásgeirsson Benediktsson Bjarnasen Björnsson Eggers Eldjárn Hafstein Hansen
         Hermannsson Johánesson Jónsson Magnússon Stefánsson Steinthosson Thórdarson Thórhallson Thorláksson Thurs }
     }
-    #union = SCA
+    union = SCA
 }
 
 finnougric = {
@@ -718,7 +718,7 @@ finnougric = {
     }
 }
 
-british = {
+britannian = {
     leader = european
     unit = BritishGC
     british = {
@@ -742,11 +742,7 @@ british = {
 
         last_names = { Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison Sanders    }
     }
-}
-celtic = {
-    leader = european
-    unit = BritishGC
-    irish = {
+	irish = {
         color = { 35 140 50}
         first_names = { Alexander Arthur Brian Cathal Christopher Con Daniel Denis Desmond Éamon
         Edward Ernes Fionán Frank George Harry Jack James John Joseph
@@ -764,6 +760,11 @@ celtic = {
         last_names = { Griffiths Gruffydd Griffin Roberts Jones Davids Davies "ap Morgan" Welsh
         Peters George Morgannwg Evans Williams}
     }
+	union = ENG
+}
+celtic = {
+    leader = european
+    unit = BritishGC
     #manx = {
     #    color = { 180 20 70}
     #    first_names = { Ean Ned Brian Adrian Peddyr Colby Carmac Cubbon Aleyn John
@@ -2857,16 +2858,16 @@ southeast_asian = {
 
         }
     }
-    #cham = {
-    #    color = {176 49 97}
-    #    first_names = { Shahabuddin Riayat Abdullah Jacushitic Safiuddin Muhammad Ali Al-Mukammal Ismail Muabidin Tuanku Yusuf Idris Jalil Isandar Aziz
-	#
-    #    }
-	#
-    #    last_names = { "Raja Inu" al-Marhum "Raja Ahmad" "Riayat Shah" al-Khairat Muadzam Bendahara Aadzam Murshidul
-	#
-    #    }
-    #}
+    cham = {
+        color = {176 49 97}
+        first_names = { Shahabuddin Riayat Abdullah Jacushitic Safiuddin Muhammad Ali Al-Mukammal Ismail Muabidin Tuanku Yusuf Idris Jalil Isandar Aziz
+	
+        }
+	
+        last_names = { "Raja Inu" al-Marhum "Raja Ahmad" "Riayat Shah" al-Khairat Muadzam Bendahara Aadzam Murshidul
+	
+        }
+    }
     #    acehnese = {
     #    color = {116 153 112}
     #    first_names = { Shahabuddin Riayat Abdullah Jacushitic Safiuddin Muhammad Ali Al-Mukammal Ismail Muabidin Tuanku Yusuf Idris Jalil Isandar Aziz

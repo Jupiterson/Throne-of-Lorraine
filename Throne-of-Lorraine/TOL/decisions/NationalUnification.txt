@@ -717,10 +717,10 @@ political_decisions = {
         news_desc_medium = "form_germany_NEWS_MEDIUM"
         news_desc_short = "form_germany_NEWS_SHORT"
         potential = {
-            tag = BOE
+            has_country_flag = joined_hre
             NOT = { exists = GER }
             NOT = { exists = GCF }
-            NOT = { has_global_flag = german_confederation_bohemian }
+            NOT = { has_global_flag = german_confederation }
         }
 
         allow = {

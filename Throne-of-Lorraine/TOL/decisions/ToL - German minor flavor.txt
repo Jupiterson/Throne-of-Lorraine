@@ -1,5 +1,60 @@
 political_decisions = {
 
+claim_ingriya = {
+        picture = map_ingria
+        potential = {
+            tag = UBD
+            NOT = { has_country_flag = ingija }
+        }
+
+        allow = {
+        state_n_government = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 5
+       badboy = 5
+       set_country_flag = ingija 
+       RUS_994 = { add_core = THIS }
+			
+        }
+   }
+   
+coastal_crusade = {
+        picture = annex_united_baltic_duchy
+        potential = {
+            tag = UBD
+			has_country_flag = ingija
+            NOT = { has_country_flag = coastal }
+        }
+
+        allow = {
+        nationalism_n_imperialism = 1 
+            all_core = {
+                owned_by = THIS
+            }
+     
+        }
+
+        effect = {
+         prestige = 5
+       badboy = 5
+       set_country_flag = coastal 
+       339 = { add_core = THIS }
+	   343 = { add_core = THIS }
+	   345 = { add_core = THIS }
+	   346 = { add_core = THIS }
+	   348 = { add_core = THIS }
+	   331 = { add_core = THIS }
+	   995 = { add_core = THIS }
+			
+        }
+   }
+
 incorparate_vassals = {
 		picture = thuringia
 		potential = {
