@@ -4330,28 +4330,24 @@ political_decisions = {
             OR = {
                 AND = {
                     is_culture_group = germanic
-                    OR = {
-                        AND = { owns = 356 NOT = { has_global_flag = german_renamed_daugavpils } }
-                        AND = { owns = 354 NOT = { has_global_flag = german_renamed_lativa } }
-
-                    }
+					owns = 354
+					owns = 356
+					NOT = { has_global_flag = german_renamed_lativa }
                 }
                 AND = {
                     OR = {
                         primary_culture = latvian
                         is_culture_group = baltic
                     }
-                    OR = {
-                        AND = { owns = 356 NOT = { has_global_flag = latvian_renamed_daugavpils } }
-                        AND = { owns = 354 NOT = { has_global_flag = latvian_renamed_lativa } }
-                    }
+					owns = 354
+					owns = 356
+					NOT = { has_global_flag = latvian_renamed_lativa }					
                 }
                 AND = {
                     is_culture_group = east_slavic
-                    OR = {
-                        AND = { owns = 356 NOT = { has_global_flag = russian_renamed_daugavpils } }
-                        AND = { owns = 354 NOT = { has_global_flag = russian_renamed_lativa } }
-                    }
+					owns = 354
+					owns = 356
+					NOT = { has_global_flag = russian_renamed_lativa }
                 }
             }
         }
@@ -4364,26 +4360,13 @@ political_decisions = {
             ###German###
             random_owned = {
                 limit = {
-                    province_id = 356
-                    owner = {
-                        is_culture_group = germanic
-                    }
-                }
-                356 = { change_province_name = "Dünaburg"  }
-                owner = {
-                    set_global_flag = german_renamed_daugavpils
-                    clr_global_flag = latvian_renamed_daugavpils
-                    clr_global_flag = russian_renamed_daugavpils
-                }
-            }
-            random_owned = {
-                limit = {
                     province_id = 354
                     owner = {
                         is_culture_group = germanic
                     }
                 }
-                355 = { change_province_name = "Wolmar" }
+				355 = { change_province_name = "Wolmar" }
+                356 = { change_province_name = "Dünaburg"  }
                 357 = {
                     change_province_name = "Mitau"
                     state_scope = {
@@ -4398,25 +4381,7 @@ political_decisions = {
                     clr_global_flag = russian_renamed_lativa
                 }
             }
-
             ###Latvian###
-            random_owned = {
-                limit = {
-                    province_id = 356
-                    owner = {
-                        OR = {
-                            primary_culture = latvian
-                            is_culture_group = baltic
-                        }
-                    }
-                }
-                356 = { change_province_name = "Daugavpils"  }
-                owner = {
-                    set_global_flag = latvian_renamed_daugavpils
-                    clr_global_flag = german_renamed_daugavpils
-                    clr_global_flag = russian_renamed_daugavpils
-                }
-            }
             random_owned = {
                 limit = {
                     province_id = 354
@@ -4425,6 +4390,7 @@ political_decisions = {
                     }
                 }
                 355 = { change_province_name = "Valmiera" }
+                356 = { change_province_name = "Daugavpils"  }
                 357 = {
                     change_province_name = "Jelgava"
                     state_scope = {
@@ -4443,26 +4409,13 @@ political_decisions = {
             ###Russian###
             random_owned = {
                 limit = {
-                    province_id = 356
-                    owner = {
-                        is_culture_group = east_slavic
-                    }
-                }
-                356 = { change_province_name = "Daugavpils"  }
-                owner = {
-                    set_global_flag = russian_renamed_daugavpils
-                    clr_global_flag = german_renamed_daugavpils
-                    clr_global_flag = latvian_renamed_daugavpils
-                }
-            }
-            random_owned = {
-                limit = {
                     province_id = 354
                     owner = {
                         is_culture_group = east_slavic
                     }
                 }
                 355 = { change_province_name = "Vol'mar" }
+                356 = { change_province_name = "Daugavpils"  }
                 357 = {
                     change_province_name = "Elgava"
                     state_scope = {
