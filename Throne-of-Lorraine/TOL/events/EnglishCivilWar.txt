@@ -30,3 +30,30 @@ country_event = {
     }
 ai_will_do = { factor = 1 }
 }
+
+country_event = {
+
+    id = 33409
+
+    title = "EVTNAME33409"
+    desc = "EVTDESC33409"
+    picture = "australia1st"
+	is_triggered_only = yes
+
+	
+    option = {
+        name = "EVT33409OPTA"
+		money = 6000
+		relation = {
+				who = SCO
+				value = 50
+		}
+		small_arms = 40
+		canned_food = 40
+		ammunition = 20
+        ai_chance = {
+            factor = 100
+        }
+    }
+	ai_will_do = { factor = 1 }
+}
