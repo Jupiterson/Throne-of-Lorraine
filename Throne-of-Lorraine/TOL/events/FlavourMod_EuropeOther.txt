@@ -8,42 +8,6 @@
 #99907-11 Don Pacifico Affair
 
 
-country_event = {
-    id = 99800 #Sonderbund War
-    title = "EVTNAME99800"
-    desc = "EVTDESC99800"
-    fire_only_once = yes
-    major = yes
-
-    trigger = {
-        tag = SWI
-        year = 1847
-        NOT = { year = 1855 }
-        owns = 609
-        ruling_party_ideology = liberal
-        NOT = { has_country_flag = sonderbund }
-    }
-
-    mean_time_to_happen = {
-        months = 5
-    }
-
-    option = {
-        name = "EVT99800OPTA"
-        prestige = -10
-        remove_country_modifier = neutrality_modifier
-        3250 = { add_core = SDB secede_province = SDB }
-        609 = { add_core = SDB secede_province = SDB }
-        3272 = { add_core = SDB secede_province = SDB }
-        606 = { add_core = SDB secede_province = SDB }
-        war = {
-            target = SDB
-            attacker_goal = { casus_belli = civil_war }
-            defender_goal = { casus_belli = status_quo }
-        }
-        set_country_flag = sonderbund
-    }
-}
 
 #National Unification - Notification if Country Refuses Unification
 country_event = {

@@ -1,62 +1,3 @@
-# Coronation of Queen Victoria
-country_event = {
-    id = 36898
-    title = "EVTNAME36898"
-    desc = "EVTDESC36898"
-    news = yes
-    news_desc_long = "EVTDESC36898_NEWS_LONG"
-    news_desc_medium = "EVTDESC36898_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC36898_NEWS_SHORT"
-    picture = "queenvictoria"
-
-
-    trigger = {
-        OR = {
-            tag = ENG
-        }
-        year = 1838
-        OR = {
-            government = hms_government
-            government = prussian_constitutionalism
-            government = absolute_monarchy
-            government = absolute_empire
-            government = semi_constitutional_empire
-            government = constitutional_empire
-        }
-        NOT = { year = 1860 }
-    }
-
-    major = yes
-    fire_only_once = yes
-
-    mean_time_to_happen = {
-        months = 5
-        modifier = {
-            factor = 0.1
-            month = 5
-            NOT = { month = 7 }
-        }
-    }
-
-    option = {
-        name = "EVTOPTA36898"
-        random_owned = { limit = { owner = { is_our_vassal = HAN } } owner = { leave_alliance = HAN release_vassal = HAN diplomatic_influence = { who = HAN value = -200 } } }
-        HAN = {
-            government = absolute_monarchy
-            nationalvalue = nv_autocracy
-        }
-        random_country = {
-            limit = {
-                tag = AUS
-                is_greater_power = yes
-            }
-            diplomatic_influence = { who = HAN value = 400 }
-        }
-        prestige = 5
-        election = yes
-    }
-}
-
 country_event = {
 
     id = 36900
@@ -64,7 +5,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1836
         public_meetings = yes_meeting
@@ -114,7 +55,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1837
         realism = 1 #has this tech
@@ -171,7 +112,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1840
         NOT = {
@@ -226,7 +167,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1839
         OR = {
@@ -276,7 +217,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1840
         press_rights = free_press
@@ -330,7 +271,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1843
         public_meetings = yes_meeting
@@ -378,7 +319,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1846
         press_rights = free_press
@@ -435,7 +376,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1849
         early_railroad = 1
@@ -475,7 +416,7 @@ country_event = {
     id = 36909
 
     trigger = {
-        tag = ENG
+        tag = SCO
         has_global_flag = PlanWorldFair
         year = 1849
         NOT = {
@@ -520,7 +461,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1884
         press_rights = free_press
@@ -566,7 +507,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1892
         press_rights = free_press
@@ -614,7 +555,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1917
         press_rights = free_press
@@ -657,10 +598,8 @@ country_event = {
     id = 36913
 
     trigger = {
-        OR = {
-            tag = ENG
-            tag = ENL
-        }
+            tag = AKI
+        
         year = 1850
         exists = USA
         NOT = {
@@ -704,7 +643,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1842
         invention = steamer_transports
@@ -744,7 +683,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1896
         OR = {
@@ -797,7 +736,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1856
         public_meetings = yes_meeting #allows public meetings
@@ -838,7 +777,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1856
         public_meetings = yes_meeting #allows public meetings
@@ -897,7 +836,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         war = yes
         medicine = 1
@@ -941,7 +880,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1901
         ruling_party_ideology = conservative
@@ -1006,7 +945,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1881
         owns = 2468 #Sydney
@@ -1061,7 +1000,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         functionalism = 1
         year = 1858
@@ -1114,7 +1053,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1876
         public_meetings = yes_meeting #allows public meetings
@@ -1160,7 +1099,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1887
         experimental_psychology = 1
@@ -1216,7 +1155,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1853
         public_meetings = yes_meeting
@@ -1259,7 +1198,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1864
         NOT = {
@@ -1301,7 +1240,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1867
         NOT = {
@@ -1347,7 +1286,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1879
         owns = 270
@@ -1392,7 +1331,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1865
         NOT = {
@@ -1437,7 +1376,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1897
         expressionism = 1
@@ -1480,7 +1419,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1867
         NOT = {
@@ -1524,7 +1463,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1844
         owns = 2468 #Sydney
@@ -1623,7 +1562,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         year = 1836
         exists = COB
@@ -1738,7 +1677,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
             tag = EIC
         }
         owns = 1251 #Calcutta
@@ -3492,7 +3431,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         owns = 300 #London
         year = 1888
@@ -3527,7 +3466,7 @@ country_event = {
     trigger = {
         OR = {
             tag = ENG
-            tag = ENL
+            tag = SCO
         }
         300 = {
             has_province_modifier = serial_killer

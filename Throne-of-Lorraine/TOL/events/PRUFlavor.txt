@@ -56,7 +56,7 @@ country_event = {
         name = "EVTOPTA34611"
         clr_global_flag = hamburg_great_fire
         treasury = -5000
-        HAM = { treasury = 5000 }
+        HNS = { treasury = 5000 }
         528 = { infrastructure = 1 }
         random_list = {
             33 = { 528 = {
@@ -82,11 +82,11 @@ country_event = {
                 }
             }
         diplomatic_influence = {
-            who = HAM
+            who = HNS
             value = 50
                 }
         relation = {
-            who = HAM
+            who = HNS
             value = 100
             }
         ai_chance = {
@@ -102,7 +102,7 @@ country_event = {
         name = "EVTOPTB34611"
         clr_global_flag = hamburg_great_fire
         treasury = -1000
-        HAM = { treasury = 1000 }
+        HNS = { treasury = 1000 }
         random_list = {
             33 = { 528 = {
                 add_province_modifier = {
@@ -127,11 +127,11 @@ country_event = {
                 }
             }
         diplomatic_influence = {
-            who = HAM
+            who = HNS
             value = 25
                 }
         relation = {
-            who = HAM
+            who = HNS
             value = 50
             }
         ai_chance = {
@@ -147,11 +147,11 @@ country_event = {
         name = "EVTOPTC34611"
         clr_global_flag = hamburg_great_fire
         diplomatic_influence = {
-            who = HAM
+            who = HNS
             value = -50
             }
         relation = {
-            who = HAM
+            who = HNS
             value = -75
             }
         ai_chance = {

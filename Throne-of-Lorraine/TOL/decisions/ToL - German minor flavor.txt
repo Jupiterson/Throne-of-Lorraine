@@ -1,5 +1,57 @@
 political_decisions = {
 
+
+unite_bishops = {
+        picture = annex_united_baltic_duchy
+        potential = {
+		OR = {
+		tag = DOR
+		tag = KOL
+		tag = WBG
+		tag = TER
+		tag = MAI
+		}
+            NOT = { has_country_flag = theocracy_stronk }
+        }
+
+        allow = {
+        is_greater_power = yes
+            all_core = {
+                owned_by = THIS
+            }
+		prestige = 50
+     
+        }
+
+        effect = {
+		prestige = 45
+		set_country_flag = theocracy_stronk
+       badboy = 5	   
+	   572 = { add_core = THIS }
+	   3379 = { add_core = THIS }
+	   KOL = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	   DOR = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	   MAI = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+       WBG = {
+                all_core = {
+                    add_core = THIS
+                }
+            }			
+        }
+   }
+
 claim_ingriya = {
         picture = map_ingria
         potential = {
@@ -486,15 +538,18 @@ claim_border = {
 
 
 claim_anhalt = { 
-        picture = german_confederation
+        picture = map_saxony
         potential = {
             tag = SAX
+			has_country_flag = incorparated
             NOT = { has_country_flag = anhalt_claimed }
         }
 
         allow = {
-           nationalism_n_imperialism = 1
-           year = 1855
+          prestige = 10
+		  all_core = {
+                owned_by = THIS
+            }
         }
 
         effect = {
@@ -507,8 +562,32 @@ claim_anhalt = {
       }
     
 
+claim_brandenburg = {
+        picture = map_brandenburg
+        potential = {
+            tag = SAX
+            has_country_flag = lower_saxony 
+            NOT = { has_country_flag = brandensachs }
+        }
+
+        allow = {
+           empiricism = 1
+		   all_core = {
+                owned_by = THIS
+            }
+        }
+
+        effect = {
+          prestige = 15
+          badboy = 15
+         set_country_flag = brandensachs
+         PRU_549 = { add_core = THIS } 
+               
+            }
+        }
+		
 claim_lower_saxony = {
-        picture = german_confederation
+        picture = map_brandenburg
         potential = {
             tag = SAX
             has_country_flag = anhalt_claimed 
@@ -517,7 +596,9 @@ claim_lower_saxony = {
 
         allow = {
            nationalism_n_imperialism = 1
-           year = 1855
+            all_core = {
+                owned_by = THIS
+            }
         }
 
         effect = {
