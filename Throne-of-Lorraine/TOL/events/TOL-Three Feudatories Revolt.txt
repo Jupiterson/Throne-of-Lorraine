@@ -371,7 +371,7 @@ country_event = {
 		 war = {
             target = DAI
             attacker_goal = {
-                casus_belli = acquire_all_cores
+                casus_belli = unification_annex_casus_belli
             }
         }
 	}
@@ -399,7 +399,7 @@ country_event = {
 		 war = {
             target = TAI
             attacker_goal = {
-                casus_belli = acquire_all_cores
+                casus_belli = unification_annex_casus_belli
             }
         }
 	}
@@ -445,6 +445,10 @@ country_event = {
 			tag = FJN
 			tag = YNN
 			tag = GXI
+			QNG = { 
+				NOT = { has_country_flag = victory_of_Buyeo}
+				NOT = { has_country_flag = victory_of_feudatories}
+			}
 		}
 		JCH = {
 			owns = 1524
@@ -463,10 +467,14 @@ country_event = {
 				end_war = QNG
 			}
 		}
+		
 		YNN = { country_event = 310014 }
 		FJN = { country_event = 310014 }
 		GXI = { country_event = 310014 }
-		QNG = { country_event = 310015 }		
+		QNG = { 
+			country_event = 310015
+			set_country_flag = victory_of_Buyeo
+		}		
 	}
 }
 #Victory of the feudatories event-feud
