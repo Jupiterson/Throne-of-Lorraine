@@ -119,15 +119,10 @@ country_event = {
 		relation = { who = FJN value = -100 }
 		any_owned = {
 			limit = {
-				OR = {
-					region = CHI_1545
-					region = CHI_1547 
-
-				}
+				region = CHI_1547
 			}
 			secede_province = FJN
 		}
-		CHI_1545 = { add_core = FJN }
 		CHI_1547 = { add_core = FJN }
 		FJN = { country_event = 310004 }
 		any_pop = {
@@ -154,7 +149,7 @@ country_event = {
 			}
 		}
 	}
-#Yunnan Seizes Sichuan
+#Yunnan Seizes Guizhou
 country_event = {
 	id = 310005
 	title = "FEU5.T"
@@ -166,7 +161,7 @@ country_event = {
 		year = 1839	
 		NOT = { has_country_flag = victory_of_feudatories }
 		NOT = { has_country_flag = victory_of_Buyeo }
-		NOT = { has_country_flag = Sichuan_bye_bye }
+		NOT = { has_country_flag = Guizhou_bye_bye }
 		NOT = { war_with = YNN }
 	}
 	mean_time_to_happen = {
@@ -189,30 +184,29 @@ country_event = {
 		}
 	}	
 		option = {
-		name = "Not Sichuan!"
+		name = "Not Guizhou!"
 		prestige = -10
 		relation = { who = YNN value = -100 }
 		any_owned = {
 			limit = {
-				OR = {
-					region = CHI_1578
-					region = CHI_1579 
-
-				}
+				region = CHI_1505
 			}
 			secede_province = YNN
 		}
-		CHI_1578 = { add_core = YNN }
-		CHI_1579 = { add_core = YNN }
+		1582 = { secede_province = KIE }
+		1586 = { secede_province = KIE }
+		1585 = { secede_province = KIE }
+		CHI_1578 = { add_core = YNN}
+		CHI_1505 = { add_core = YNN }
 		YNN = { country_event = 310006 }
 		any_pop = {
 			limit = { is_primary_culture = no }
 			militancy = 1
 		}
-		set_country_flag = Sichuan_bye_bye
+		set_country_flag = Guizhou_bye_bye
 	}
 }
-#Yunnan Seizes Sichuan_Yunnan
+#Yunnan Seizes Guizhou_Yunnan
 country_event = {
 	id = 310006
 	title = "FEU6.T"
@@ -279,6 +273,7 @@ country_event = {
 				casus_belli = liberate_country
 				country = JCH
 			}
+			call_ally = yes
         }
         war = {
             target = YNN
@@ -288,7 +283,8 @@ country_event = {
 			defender_goal = {
 				casus_belli = liberate_country
 				country = JCH
-			}			
+			}
+			call_ally = yes
         }
         war = {
             target = FJN
@@ -299,6 +295,7 @@ country_event = {
 				casus_belli = liberate_country
 				country = JCH
 			}
+			call_ally = yes
         }
 		prestige = 10
 		badboy = -60
