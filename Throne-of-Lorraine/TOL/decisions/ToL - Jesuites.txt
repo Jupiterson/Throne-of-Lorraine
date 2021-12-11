@@ -1,5 +1,23 @@
 political_decisions = {	
 
+education_JES = {
+        potential = {
+            tag = JES
+			NOT = {
+			    has_country_modifier = jesuits_education
+				}
+		}
+		allow = {
+		    tag = JES
+	    } 
+        effect = { 
+		    add_country_modifier = { 
+			name = jesuits_education
+			duration = -1 }
+        }
+		ai_will_do = { factor = 1 }
+    }
+
 educate_north_amazon_tribes = {
         picture = jesuites_n_tribes
 		potential = {
@@ -15,6 +33,7 @@ educate_north_amazon_tribes = {
 		
 		effect = {
 		    badboy = 5
+			prestige = 15
 		    2261 = {
 				add_core = THIS
 		    } 
@@ -65,6 +84,7 @@ control_the_amazon = {
 		
 		effect = {
 		    badboy = 7
+			prestige = 15
 		    2407 = {
 				add_core = THIS
 		    } 
@@ -113,6 +133,7 @@ take_belem = {
 		}
 		
 		effect = {
+		    prestige = 10
 		    badboy = 5
 		    2410 = {
 				add_core = THIS
@@ -139,6 +160,7 @@ combat_the_infidels = {
 		}
 		
 		effect = {
+		    prestige = 15
 		    badboy = 10
 		    ECU_2279 = {
 				add_core = THIS
@@ -175,11 +197,36 @@ combat_the_heretics = {
 		}
 		
 		effect = {
+		    prestige = 15
 		    badboy = 10
 		    BRZ_2410 = {
 				add_core = THIS
 		    } 
 			set_country_flag = combat_the_heretics
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+annex_ngabe = {
+        picture = jesuites_school2
+		potential = {
+		    tag = JES
+			exists = COS
+			NOT = { has_country_flag = annex_ngabe }
+		}	
+		
+		allow = {
+	        war = no
+			nationalism_n_imperialism = 1
+			in_sphere = COS
+		}
+		
+		effect = {
+		    inherit = COS
+			set_country_flag = annex_ngabe
         }
 		
 		ai_will_do = {
@@ -200,7 +247,7 @@ the_holy_needle = {
 		}
 		
 		effect = {
-		    social_reform = acceptable_healthcare
+		    social_reform = acceptable_health_care
 			set_country_flag = the_holy_needle
         }
 		
@@ -214,6 +261,7 @@ the_water_of_life = {
 		potential = {
 		    tag = JES
 			has_country_flag = the_holy_needle
+			NOT = { has_country_flag = the_water_of_life }
 		}	
 		
 		allow = {
@@ -227,6 +275,7 @@ the_water_of_life = {
 		    add_country_modifier = { 
 			name = global_baby_boom
 			duration = 10950 }
+			set_country_flag = the_water_of_life
         }
 		
 		ai_will_do = {
@@ -235,7 +284,7 @@ the_water_of_life = {
 	}
 
 jesuit_schools = {
-        picture = jesuites_school
+        picture = jesuites_school2
 		potential = {
 		    tag = JES
 			NOT = { has_country_flag = jesuit_schools }
@@ -247,7 +296,7 @@ jesuit_schools = {
 		}
 		
 		effect = {
-		    social_reform = acceptable_education
+		    social_reform = acceptable_schools
 			set_country_flag = jesuit_schools
         }
 		
