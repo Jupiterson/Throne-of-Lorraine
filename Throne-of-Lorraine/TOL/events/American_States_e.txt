@@ -289,7 +289,7 @@ country_event = {
     option = {
         name = "Perfect!"
         prestige = 10
-        add_accepted_culture = anglo_canadian
+        add_accepted_culture = akino_german
         ai_chance = {
             factor = 100
         }
@@ -459,74 +459,6 @@ country_event = {
 				militancy = 3
 			}
         }
-        ai_chance = {
-            factor = 100
-        }
-    }
-}
-
-country_event = {
-    id = 4489019
-    title = "The Collapse of the West."
-    desc = "EVTDESC4489019"
-    picture = "treaty"
-    major = yes
-
-    trigger = {
-        tag = USA
-        ULA = {
-            has_country_flag = ULA_greater
-            all_core = {
-                NOT = { owned_by = USA }
-            }
-        }
-        war = no
-        NOT = { has_country_flag = western_collapse }
-        has_country_flag = mormon_exodus
-        has_country_flag = treaty_of_guadalupe_hidalgo
-    }
-
-    option = {
-        name = "Terrible!"
-        prestige = -25
-        MEX_100 = { add_core = UNM }
-        MEX_103 = { add_core = UNM }
-        107 = { add_core = TEX }
-        128 = { add_core = TEX }
-        129 = { add_core = TEX }
-        109 = { add_core = TEX }
-        103 = { add_core = TEX }
-        105 = { add_core = TEX }
-        110 = { add_core = DES }
-        108 = { add_core = DES }
-        UNM = { all_core = { remove_core = USA } }
-        CAL = { all_core = { remove_core = USA } }
-        DES = { all_core = { remove_core = USA } }
-        TEX = { all_core = { remove_core = USA } }
-        release = TEX
-        release = UNM
-        release = CAL
-        release = DES
-        set_country_flag = western_collapse
-        ai_chance = {
-            factor = 100
-        }
-    }
-}
-
-country_event = {
-    id = 1388079
-    title = "The Second Louisiana Purchase."
-    desc = EVTDESC1388079
-    is_triggered_only = yes
-    picture = countryside
-
-    option = {
-        name = "Talk about buyer's remorse."
-        prestige = -20
-        ULA = { money = -400000 }
-        money = 400000
-        ULA = { all_core = { remove_core = USA } }
         ai_chance = {
             factor = 100
         }

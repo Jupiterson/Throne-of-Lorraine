@@ -5,7 +5,6 @@ political_decisions = {
         potential = {
             OR = {
                 tag = TEX
-                tag = UNM
             }
             ai = yes
             is_vassal = no
@@ -18,7 +17,8 @@ political_decisions = {
             war = no
             is_greater_power = no
             is_secondary_power = no
-            government = democracy
+            				government = democracy
+                government = hanseatic
             OR = {
                 part_of_sphere = no
                 sphere_owner = { is_sphere_leader_of = CSA }
@@ -26,7 +26,8 @@ political_decisions = {
             }
             CSA = {
                 war = no
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 NOT = { truce_with = THIS }
             }
             OR = {
@@ -66,7 +67,8 @@ political_decisions = {
             war = no
             is_greater_power = no
             is_secondary_power = no
-            government = democracy
+            				government = democracy
+                government = hanseatic
             OR = {
                 part_of_sphere = no
                 sphere_owner = { is_sphere_leader_of = FSA }
@@ -74,7 +76,8 @@ political_decisions = {
             }
             FSA = {
                 war = no
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 NOT = { truce_with = THIS }
             }
             OR = {
@@ -98,8 +101,6 @@ political_decisions = {
         potential = {
             OR = {
                 tag = DES
-                tag = UNM
-                tag = UOR
                 tag = DAK
             }
             ai = yes
@@ -114,7 +115,8 @@ political_decisions = {
             war = no
             is_greater_power = no
             is_secondary_power = no
-            government = democracy
+            				government = democracy
+                government = hanseatic
             OR = {
                 part_of_sphere = no
                 sphere_owner = { is_sphere_leader_of = CAL }
@@ -122,7 +124,8 @@ political_decisions = {
             }
             CAL = {
                 war = no
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 NOT = { truce_with = THIS }
             }
             OR = {
@@ -159,7 +162,8 @@ political_decisions = {
             war = no
             is_greater_power = no
             is_secondary_power = no
-            government = democracy
+            				government = democracy
+                government = hanseatic
             OR = {
                 part_of_sphere = no
                 sphere_owner = { is_sphere_leader_of = UIL }
@@ -167,7 +171,8 @@ political_decisions = {
             }
             UIL = {
                 war = no
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 NOT = { truce_with = THIS }
             }
             OR = {
@@ -229,14 +234,16 @@ political_decisions = {
         allow = {
             139 = { owned_by = USA }
             war = no
-            government = democracy
+            				government = democracy
+                government = hanseatic
             OR = {
                 sphere_owner = { is_sphere_leader_of = USA }
                 in_sphere = USA
             }
             USA = {
                 war = no
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 relation = { who = THIS value = 150 }
             }
         }
@@ -251,8 +258,8 @@ political_decisions = {
         }
     }
 
-    second_alaskan_purchase = {
-        picture = alaskan_purchase
+    second_inuit_purchase = {
+        picture = inuit_purchase
         potential = {
             1 = {
                 owned_by = THIS
@@ -263,7 +270,7 @@ political_decisions = {
                 is_core = THIS
                 NOT = { owned_by = THIS }
             }
-            NOT = { has_country_flag = second_alaskan_purchase }
+            NOT = { has_country_flag = second_inuit_purchase }
         }
 
         allow = {
@@ -278,7 +285,7 @@ political_decisions = {
         }
 
         effect = {
-            set_country_flag = second_alaskan_purchase
+            set_country_flag = second_inuit_purchase
             2599 = {
                 owner = { country_event = 44140 }
             }
@@ -545,8 +552,8 @@ political_decisions = {
                 country_event = 11101
             }
             add_accepted_culture = yankee
-            add_accepted_culture = dixie
-            add_accepted_culture = texan
+            add_accepted_culture = yankee
+            add_accepted_culture = free_german
         }
     }
 
@@ -944,7 +951,7 @@ political_decisions = {
             set_global_flag = declaration2
             any_pop = {
                 limit = {
-                    has_pop_culture = dixie
+                    has_pop_culture = yankee
                 }
                 militancy = -10
             }
@@ -959,7 +966,7 @@ political_decisions = {
                     value = 50
                 }
             }
-            USA = { prestige = -30 remove_accepted_culture = dixie }
+            USA = { prestige = -30 remove_accepted_culture = yankee }
         }
         ai_will_do = {
             factor = 1

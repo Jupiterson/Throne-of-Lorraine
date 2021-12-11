@@ -1,232 +1,588 @@
 country_event = {
+	id = 33410
+	title = "Cru1.t" #Papal state gets the starting event
+	desc = "Cru1.d"
+	picture = "DIM_aprilbeweging"
+	
+	trigger = {
+		tag = PAP
+		year = 1871
+		TUR = { owns = 917 }
+		NOT = { has_country_flag = papal_sent_demand }		
+	}	
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Send the demand!"
+		set_country_flag = papal_sent_demand
+		TUR = {
+			country_event = 33411
+		}
+	}
+}	
+
+country_event = {
+	id = 33411
+	title = "Cru2.t" #Ottomans respond
+	desc = "Cru2.d"
+	picture = "DIM_aprilbeweging"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "The Pope? Tho he may have no divisions, he does have the ears of Europe. Agree to all demands."
+		prestige = -25
+		
+		any_owned = {
+			limit = {
+				OR = {
+					region = EGY_921
+					region = EGY_910 
+
+				}
+			}
+			secede_province = KNI
+		}
+		EGY_921 = { add_core = KNI }
+		EGY_910  = { add_core = KNI }
+		any_pop = {
+			militancy = 4
+		}		
+		PAP = {
+			country_event = 33412
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	
+	option = {
+		name = "This is ridiculous, he must be mad!"
+		prestige = 1
+		PAP = {
+			country_event = 33413
+		}
+		ai_chance = {
+			factor = 99
+		}
+	}
+}	
+
+country_event = {
+	id = 33412
+	title = "Cru3.t" #Unbelievable!
+	desc = "Cru3.d"
+	picture = "DIM_aprilbeweging"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "I cannot believe that worked!"
+		prestige = 25
+		
+		any_pop = {
+			militancy = -4
+		}		
+	}
+	
+}	
+
+country_event = {
     id = 33413
-    title = "EVTNAME33413" #Last Crusade
-    desc = "EVTDESC33413"
+    title = "Cru4.t" #Last Crusade
+    desc = "Cru4.d"
     picture = "DIM_aprilbeweging"
 
     is_triggered_only = yes
 
     option = {
-        name = "EVT33413OPTA"
-        prestige = 20
-        THIS = { prestige = 15 }
-        relation = { who = PAP value = 200 }
-        create_alliance = PAP 
-        random_country = {
-            limit = {
-                tag = PAP 
-                THIS = { tag = FRA }
-            }
-            diplomatic_influence = { who = THIS value = 200 }
-        }
-        any_greater_power = {
-            limit = {
-                NOT = {
-                    tag = FRA
-                    tag = ITA
-                    tag = GER
-                    tag = BAV
-                    tag = SPA
-                    tag = VEN
-                }
-                alliance_with = THIS
-            }
-            leave_alliance = THIS
-            relation = {
-                who = THIS
-                value = -10
-            }
-        }
-        any_country = {
-            limit = {
-                OR = {
-                    tag = FRA
-                    tag = ITA
-                    tag = GER
-                    tag = BAV
-                    tag = SPA
-                    tag = VEN
-                }
-                exists = yes
-                NOT = { tag = THIS }
-            }
-            relation = { who = THIS value = 100 }
-        }
-        ai_chance = {
-            factor = 80          
-            modifier = {
-                factor = 0
-                FROM = { any_owned_province = { is_core = THIS } }
-            }
-        }
-    }
-
+        name = "Call for the crusade!"
+		prestige = 20
+		EGY_921 = { add_core = KNI }
+		EGY_910  = { add_core = KNI }
+		casus_belli = {
+			target = TUR
+			type = liberate_country
+			months = 12
+		}
+		war = {
+			target = TUR
+			attacker_goal = { 
+			casus_belli = liberate_country
+			country = KNI 
+			}
+		}
+		set_global_flag = last_crusade
+		ai_chance = {
+			factor = 90
+		}
+		COP = { country_event = 33416 }
+		KNI = { country_event = 33417 }
+	}	
     option = {
-        name = "EVT33413OPTB"
-        PAP = {
-            prestige = -40
-            relation = { who = THIS value = -50 }
-        }
-        ai_chance = {
-            factor = 20
-            modifier = {
-                factor = 0.5
-                tag = FRA
-            }
-            modifier = {
-                factor = 0.75
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 0.5
-                relation = { who = PAP value = 50 }
-            }
-            modifier = {
-                factor = 0
-                alliance_with = PAP 
-            }
-            modifier = {
-                factor = 2
-                FROM = { any_owned_province = { is_core = THIS } }
-            }
-        }
-    }
+        name = "This idea was ridiculous from the start..."
+		prestige = -20
+		any_pop = {
+			militancy = 4
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}	
 }
 
-#call of crusade
+#great powers declare war
 country_event = {
-    id = 33513
-    title = "EVTNAME33513" #Last Crusade
-    desc = "EVTDESC33513"
+    id = 33414
+    title = "Cru5.t" 
+    desc = "Cru5.d"
     picture = "DIM_aprilbeweging"
 
-    is_triggered_only = yes
+    trigger = {
+		is_greater_power = yes
+		capital_scope = { continent = europe }
+		has_global_flag = last_crusade
+		PAP = { war_with = TUR }
+		NOT = {
+			alliance_with = TUR
+			relation = { who = TUR value = 150 }
+			has_country_flag = war_with_TUR
+			has_country_flag = peace_with_TUR
+		}
+		TUR = { owns = 917 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+		modifier = {
+			factor = 0.5
+			TUR = {	national_provinces_occupied = .01 }
+		}
+	}
 
     option = {
-        name = "EVT33513OPTA"
+        name = "To the holy land!"
         prestige = 20
-        PAP = { prestige = 85 }
+        PAP = { prestige = 5 }
         relation = { who = PAP value = 200 }
         create_alliance = PAP 
-        random_country = {
-            limit = {
-                tag = PAP 
-                THIS = { tag = FRA }
-            }
-            diplomatic_influence = { who = THIS value = 200 }
-        }
-        any_greater_power = {
-            limit = {
-                NOT = {
-                    tag = FRA
-                    tag = ITA
-                    tag = GER
-                    tag = BAV
-                    tag = SPA
-                    tag = VEN
-                }
-                alliance_with = THIS
-            }
-            leave_alliance = THIS
-            relation = {
-                who = THIS
-                value = -10
-            }
-        }
-      
+        diplomatic_influence = {
+			who = TUR
+			value = -400
+		}
+		casus_belli = {
+			target = TUR
+			type = liberate_country
+			months = 12
+		}
+		war = {
+			target = TUR
+			attacker_goal = { 
+			casus_belli = liberate_country
+			country = KNI 
+			}
+		}
+		set_country_flag = war_with_TUR
         ai_chance = {
             factor = 80
             modifier = {
+                factor = 6
+                tag = RUS
+            }
+			modifier = {
+				factor = 4
+				OR = {
+				tag = FRA
+				tag = SPA
+				}
+			}
+			modifier = {
+                factor = 4
+                alliance_with = PAP 
+            }
+			modifier = {
                 factor = 2
-                tag = BAV
+                relation = { who = PAP value = 50 }
             }
             modifier = {
-                factor = 0
-                FROM = { any_owned_province = { is_core = THIS } }
+                factor = 0.5
+                relation = { who = TUR value = 50 }
             }
         }
     }
 
     option = {
-        name = "EVT33513OPTB"
+        name = "Why die for Jerusalem?"
         PAP = {
-            prestige = -40
+            prestige = -10
             relation = { who = THIS value = -50 }
         }
+		set_country_flag = peace_with_TUR
         ai_chance = {
             factor = 20
             modifier = {
-                factor = 0.5
-                relation = { who = PAP value = 50 }
-            }
-            modifier = {
-                factor = 0
-                alliance_with = PAP 
-            }
-            modifier = {
                 factor = 2
-                FROM = { any_owned_province = { is_core = THIS } }
-            }
+				relation = { who = TUR value = 100}
+			}
+			modifier = {
+				factor = 2
+				tag = VEN
+			}
         }
     }
 }
 
-
-
-
-#Declare War on the Ottomans 
+#secondary powers declare war
 country_event = {
-    id = 99932
-    title = "EVTNAME99932"
-    desc = "EVTDESC99932"
-    major = yes
-    is_triggered_only = yes
+    id = 33415
+    title = "Cru5.t" 
+    desc = "Cru5.d"
+    picture = "DIM_aprilbeweging"
 
+    trigger = {
+		is_secondary_power = yes
+		capital_scope = { continent = europe }
+		has_global_flag = last_crusade
+		PAP = { war_with = TUR }
+		NOT = {
+			alliance_with = TUR
+			relation = { who = TUR value = 150 }
+			has_country_flag = war_with_TUR
+			has_country_flag = peace_with_TUR
+		}
+		TUR = { owns = 917 }
+	}
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			TUR = {	national_provinces_occupied = .01 }
+		}
+	}
     option = {
-        name = "EVT99932OPTA"
+        name = "To the holy land!"
         prestige = 10
-        any_pop = {
-            limit = {
-                is_primary_culture = yes
+        PAP = { prestige = 2 }
+        relation = { who = PAP value = 200 }
+        create_alliance = PAP 
+		casus_belli = {
+			target = TUR
+			type = liberate_country
+			months = 12
+		}
+		war = {
+			target = TUR
+			attacker_goal = { 
+			casus_belli = liberate_country
+			country = KNI 
+			}
+		}
+		set_country_flag = war_with_TUR
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 4
+                OR = { 
+				tag = SPA
+				tag = POL
+				tag = BAV
+				}
             }
-            militancy = -8
-            consciousness = -8
-        }
-        war = {
-            target = TUR
-            attacker_goal = { casus_belli = cut_down_to_size_ottoman }
-            defender_goal = { casus_belli = status_quo }
-            call_ally = yes
-        }
-
-        any_country = {
-            limit = {
-                has_country_modifier = great_eastern_crisis
+			modifier = {
+                factor = 4
+                alliance_with = PAP 
             }
-            remove_country_modifier = great_eastern_crisis
+			modifier = {
+                factor = 2
+                relation = { who = PAP value = 50 }
+            }
+            modifier = {
+                factor = 0.5
+                relation = { who = TUR value = 50 }
+            }
         }
-
-        ai_chance = { factor = 1 }
     }
 
     option = {
-        name = "EVT99932OPTB"
-        prestige = -45
-        any_pop = {
-            limit = {
-                is_primary_culture = yes
-            }
-            militancy = 8
-            consciousness = 8
+        name = "Why die for Jerusalem?"
+        PAP = {
+            prestige = -1
+            relation = { who = THIS value = -50 }
         }
-
-        any_country = {
-            limit = {
-                has_country_modifier = great_eastern_crisis
-            }
-            remove_country_modifier = great_eastern_crisis
+		set_country_flag = peace_with_TUR
+        ai_chance = {
+            factor = 60
+            modifier = {
+                factor = 2
+				relation = { who = TUR value = 100}
+			}
         }
+    }
+}
 
-        ai_chance = { factor = 0 }
+#kemet declare war
+country_event = {
+    id = 33416
+    title = "Cru6.t" 
+    desc = "Cru6.d"
+    picture = "DIM_aprilbeweging"
+
+    is_triggered_only = yes
+		
+    option = {
+        name = "This is our time to seize the Holy cities!"
+        prestige = 20
+		HDJ_1151 = { add_core = COP }
+		war = {
+			target = TUR
+			attacker_goal = {
+				casus_belli = acquire_all_cores
+				country = COP
+			}
+			defender_goal = { casus_belli = status_quo	}
+			state_province_id = HDJ_1151
+		}
+        ai_chance = {
+            factor = 80
+        }
+    }
+
+    option = {
+        name = "The Ottomans are still too strong..."
+        prestige = -10
+        ai_chance = {
+            factor = 20
+        }
+    }
+}
+
+#knights declare war
+country_event = {
+	id = 33417
+	title = "Cru7.t" 
+    desc = "Cru7.d"
+    picture = "DIM_aprilbeweging"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "Finally! Our moment has come!"
+		prestige = 20
+		war = {
+			target = TUR
+			attacker_goal = {
+				casus_belli = acquire_all_cores
+				country = KNI
+			}
+			defender_goal = { casus_belli = status_quo	}
+			state_province_id = EGY_921
+		}
+		relation = { who = PAP value = 200 }
+        create_alliance = PAP 
+	}
+}
+
+#European failure
+country_event = {
+	id = 33418
+    title = "Cru8.t" 
+    desc = "Cru8.d"
+    picture = "DIM_aprilbeweging"
+	
+	trigger = {
+		tag = PAP
+		TUR = { owns = 917 }
+		has_global_flag = last_crusade	
+		NOT = { war_with = TUR }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "...What now?"
+		prestige = -50
+		any_pop = {
+			militancy = 4
+		}
+		clr_global_flag = last_crusade
+		set_global_flag = last_crusade_lost
+		TUR = { country_event = 33322 }
+	}
+	
+}
+
+#peace with Turkey-win
+country_event = {
+	id = 33419
+    title = "Cru9.t" 
+    desc = "Cru9.d"
+    picture = "DIM_aprilbeweging"
+	
+	trigger = {
+		war_with = TUR
+		has_country_flag = war_with_TUR
+		NOT = { has_global_flag = last_crusade }
+		has_global_flag = last_crusade_lost
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Declare peace, the war is lost."
+		prestige = -10
+		any_pop = {
+			militancy = 1
+		}
+		clr_country_flag = war_with_TUR
+	}
+	
+}
+
+#European victory
+country_event = {
+	id = 33420
+	title = "Cru10.t"
+	desc = "Cru10.d"
+	picture = "DIM_aprilbeweging"
+	
+	trigger = {
+		tag = TUR
+		NOT = { owns = 917 }
+		has_global_flag = last_crusade	
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "...Do as the treaty demands..."
+		prestige = -50
+		any_pop = {
+			militancy = 4
+		}
+		clr_global_flag = last_crusade
+		any_owned = {
+			limit = {
+				OR = {
+					region = TUR_853
+					region = GRE_837
+
+				}
+			}
+			secede_province = VEN
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = TUR_832
+					region = TUR_805
+					region = TUR_823
+				}
+			}
+			secede_province = GRE
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = TUR_803
+					region = TUR_806
+				}
+			}
+			secede_province = SER
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = TUR_674 
+					region = TUR_809 
+					region = TUR_810
+				}
+			}
+			secede_province = BUL
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = EGY_921 
+					region = EGY_910 
+				}
+			}
+			secede_province = KNI
+		}
+		clr_global_flag = last_crusade
+		set_global_flag = last_crusade_win
+		PAP = { country_event = 33323 }		
+	}
+}
+
+#peace with Turkey-lost
+country_event = {
+	id = 33421
+    title = "Cru11.t" 
+    desc = "Cru11.d"
+    picture = "DIM_aprilbeweging"
+	
+	trigger = {
+		war_with = TUR
+		has_country_flag = war_with_TUR
+		NOT = { has_global_flag = last_crusade }
+		has_global_flag = last_crusade_win
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Declare peace, the war is won!"
+		prestige = 10
+		any_pop = {
+			militancy = -1
+		}
+		clr_country_flag = war_with_TUR
+	}
+}
+
+#Ottoman_victory_dance
+country_event = {
+    id = 33422
+    title = "Cru12.t" 
+    desc = "Cru12.d"
+    picture = "DIM_aprilbeweging"
+
+    is_triggered_only = yes
+		
+    option = {
+        name = "We never though that this day would come!"
+        prestige = 45
+		any_pop = {
+			militancy = -4
+		}		
+    }
+}
+
+#Papal_victory_dance
+country_event = {
+    id = 33423
+    title = "Cru13.t" 
+    desc = "Cru13.d"
+    picture = "DIM_aprilbeweging"
+
+    is_triggered_only = yes
+		
+    option = {
+        name = "We never though that this day would come!"
+        prestige = 25
+		any_pop = {
+			militancy = -2
+		}		
     }
 }

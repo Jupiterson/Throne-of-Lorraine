@@ -36,6 +36,48 @@ colonial_company = {
     appoint_ruling_party = yes
 }
 
+hanseatic = {
+    #which ideology of parties.
+    liberal = yes
+    socialist = yes
+    conservative = yes
+    reactionary = yes
+    communist = yes
+    radical = yes
+    election = yes
+    duration = 60
+    appoint_ruling_party = yes
+}
+
+
+merchant_republic = {
+    #which ideology of parties.
+    liberal = yes
+    socialist = yes
+    conservative = yes
+    reactionary = yes
+    communist = yes
+    radical = yes
+    election = yes
+    duration = 60
+    appoint_ruling_party = yes
+	flagType = republic
+}
+
+daimyo = {
+    #which ideology of parties.
+    liberal = yes
+    socialist = yes
+    conservative = yes
+    reactionary = yes
+    communist = yes
+    radical = yes
+    election = yes
+    duration = 60
+    appoint_ruling_party = yes
+	flagType = monarchy
+}
+
 parliamentary_republic = {
     #which ideology of parties.
     liberal = yes
@@ -50,6 +92,21 @@ parliamentary_republic = {
     duration = 60
     appoint_ruling_party = yes
     flagType = republic
+}
+
+peasant_republic = {
+    #which ideology of parties.
+    liberal = yes
+    socialist = yes
+    conservative = yes
+    reactionary = yes
+    communist = yes
+    radical = yes
+    fascist = yes
+
+    election = yes
+    duration = 100
+    appoint_ruling_party = yes
 }
 
 dominion = {

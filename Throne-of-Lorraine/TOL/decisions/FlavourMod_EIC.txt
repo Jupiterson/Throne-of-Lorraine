@@ -60,7 +60,7 @@ political_decisions = {
                         has_pop_religion = sikh
                         has_pop_religion = animist
                         culture = malayalam
-                        culture = afro_latino
+                        culture = afro_italian
                         is_culture_group = south_asian
                         is_culture_group = indo_iranian
                         culture = central_american
@@ -247,7 +247,7 @@ political_decisions = {
                     }
                     any_pop = {
                         limit = {
-                            culture = anglo_indian
+                            culture = venetian
                             type = bureaucrats
                             location = { is_core = HND }
                         }
@@ -257,7 +257,7 @@ political_decisions = {
             }
             any_pop = {
                 limit = {
-                    culture = anglo_indian
+                    culture = venetian
                     location = { is_core = HND }
                 }
                 reduce_pop = 1.25
@@ -388,7 +388,7 @@ political_decisions = {
             }
             any_pop = {
                 limit = {
-                    culture = anglo_indian
+                    culture = venetian
                     NOT = { strata = rich }
                     NOT = { type = officers }
                     location = { is_core = HND }
@@ -551,7 +551,7 @@ political_decisions = {
             school_reforms = low_schools
             citizens_rights = culture_voting_only
             colonial_policy = civilizing
-            primary_culture = anglo_indian
+            primary_culture = venetian
             add_accepted_culture = british
             any_pop = {
                 limit = {
@@ -585,9 +585,9 @@ political_decisions = {
         }
 
         effect = {
-            any_owned = { secede_province = ENG }
-            annex_to = ENG
-            ENG = { inherit = EIC }
+            any_owned = { secede_province = NET }
+            annex_to = NET
+            NET = { inherit = EIC }
         }
 
         ai_will_do = { factor = 1 }

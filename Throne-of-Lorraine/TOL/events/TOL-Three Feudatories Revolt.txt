@@ -15,7 +15,8 @@ country_event = {
 		tag = QNG
 		year = 1837
 		NOT = { has_country_flag = victory_of_feudatories }
-		NOT = { has_global_flag = Guangdong_bye_bye }
+		NOT = { has_country_flag = victory_of_Buyeo }		
+		NOT = { has_country_flag = Guangdong_bye_bye }
 		NOT = { war_with = GXI }
 	}
 	mean_time_to_happen = {
@@ -58,7 +59,7 @@ country_event = {
 			limit = { is_primary_culture = no }
 			militancy = 1
 		}
-		set_global_flag = Guangdong_bye_bye
+		set_country_flag = Guangdong_bye_bye
 	}
 }
 #Guangxi Seizes Guangdong_Guangxi
@@ -89,7 +90,8 @@ country_event = {
 		tag = QNG
 		year = 1838
 		NOT = { has_country_flag = victory_of_feudatories }
-		NOT = { has_global_flag = Jiangxi_bye_bye }
+		NOT = { has_country_flag = victory_of_Buyeo }
+		NOT = { has_country_flag = Jiangxi_bye_bye }
 		NOT = { war_with = FJN }
 	}
 	mean_time_to_happen = {
@@ -117,22 +119,17 @@ country_event = {
 		relation = { who = FJN value = -100 }
 		any_owned = {
 			limit = {
-				OR = {
-					region = CHI_1545
-					region = CHI_1547 
-
-				}
+				region = CHI_1547
 			}
 			secede_province = FJN
 		}
-		CHI_1545 = { add_core = FJN }
 		CHI_1547 = { add_core = FJN }
 		FJN = { country_event = 310004 }
 		any_pop = {
 			limit = { is_primary_culture = no }
 			militancy = 1
 		}
-		set_global_flag = Jiangxi_bye_bye
+		set_country_flag = Jiangxi_bye_bye
 	}
 }
 #Fujian Seizes Jiangxi_Fujian
@@ -152,7 +149,7 @@ country_event = {
 			}
 		}
 	}
-#Yunnan Seizes Sichuan
+#Yunnan Seizes Guizhou
 country_event = {
 	id = 310005
 	title = "FEU5.T"
@@ -163,7 +160,8 @@ country_event = {
 		tag = QNG
 		year = 1839	
 		NOT = { has_country_flag = victory_of_feudatories }
-		NOT = { has_global_flag = Sichuan_bye_bye }
+		NOT = { has_country_flag = victory_of_Buyeo }
+		NOT = { has_country_flag = Guizhou_bye_bye }
 		NOT = { war_with = YNN }
 	}
 	mean_time_to_happen = {
@@ -186,30 +184,29 @@ country_event = {
 		}
 	}	
 		option = {
-		name = "Not Sichuan!"
+		name = "Not Guizhou!"
 		prestige = -10
 		relation = { who = YNN value = -100 }
 		any_owned = {
 			limit = {
-				OR = {
-					region = CHI_1578
-					region = CHI_1579 
-
-				}
+				region = CHI_1505
 			}
 			secede_province = YNN
 		}
-		CHI_1578 = { add_core = YNN }
-		CHI_1579 = { add_core = YNN }
+		1582 = { secede_province = KIE }
+		1586 = { secede_province = KIE }
+		1585 = { secede_province = KIE }
+		CHI_1578 = { add_core = YNN}
+		CHI_1505 = { add_core = YNN }
 		YNN = { country_event = 310006 }
 		any_pop = {
 			limit = { is_primary_culture = no }
 			militancy = 1
 		}
-		set_global_flag = Sichuan_bye_bye
+		set_country_flag = Guizhou_bye_bye
 	}
 }
-#Yunnan Seizes Sichuan_Yunnan
+#Yunnan Seizes Guizhou_Yunnan
 country_event = {
 	id = 310006
 	title = "FEU6.T"
@@ -235,8 +232,10 @@ country_event = {
 	
 	trigger = {
 		tag = QNG
+		NOT = { has_country_flag = victory_of_Buyeo }
 		NOT = { has_country_flag = victory_of_feudatories }
-		NOT = { owns = 1499 }
+		NOT = { has_country_flag = feudatories_war_happened }
+		NOT = { owns = 1501 }
 		NOT = { owns = 1551 }
 		NOT = { owns = 1578 }		
 	}
@@ -270,19 +269,272 @@ country_event = {
             attacker_goal = {
                 casus_belli = conquest
             }
+			defender_goal = {
+				casus_belli = liberate_country
+				country = JCH
+			}
+			call_ally = yes
         }
         war = {
             target = YNN
             attacker_goal = {
                 casus_belli = conquest
             }
+			defender_goal = {
+				casus_belli = liberate_country
+				country = JCH
+			}
+			call_ally = yes
         }
         war = {
             target = FJN
             attacker_goal = {
                 casus_belli = conquest
             }
+			defender_goal = {
+				casus_belli = liberate_country
+				country = JCH
+			}
+			call_ally = yes
         }
 		prestige = 10
+		badboy = -60
+		TIB = { country_event = 310008 }
+		BUR = { country_event = 310009 }
+		GXI = { country_event = 310010 }
+		FJN = { country_event = 310011 }
+		set_country_flag = feudatories_war_happened
     }
+}
+#Tibet invades Xikang
+country_event = {
+    id = 310008 
+    title = "FEU8.T"
+    desc = "FEU8.D"
+    picture = "Start_of_the_three_feudatories"
+	
+	is_triggered_only = yes	
+	
+    option = {
+        name = "To Kham!"
+        war = {
+            target = YNN
+            attacker_goal = {
+                casus_belli = acquire_core_state
+				state_province_id = 1586
+            }
+        }
+    }
+}
+#Burma invades Dehong
+country_event = {
+    id = 310009
+    title = "FEU9.T"
+    desc = "FEU9.D"
+    picture = "Burmese_Intervention"
+	
+	is_triggered_only = yes	
+	
+    option = {
+        name = "To Dehong!"
+        war = {
+            target = YNN
+            attacker_goal = {
+                casus_belli = acquire_core_state
+				state_province_id = 1602
+            }
+        }
+    }
+}
+#Dai nam Rebellion
+country_event = {
+	id = 310010
+	title = "FEU10.T"
+	desc = "FEU10.D"
+	picture = "Vietnamese_Rebellion"
+	
+	is_triggered_only = yes	
+		option = {
+		name = "We should have expected this..."
+		any_owned = {
+			limit = {
+				OR = {
+					region = DAI_1369
+					is_core = TAI
+				}
+			}
+			secede_province = DAI
+		}
+		 war = {
+            target = DAI
+            attacker_goal = {
+                casus_belli = unification_annex_casus_belli
+            }
+        }
+	}
+}
+#Taiwan Rebellion
+country_event = {
+	id = 310011
+	title = "FEU11.T"
+	desc = "FEU11.D"
+	picture = "Tawanese_Rebellion"
+	
+	is_triggered_only = yes	
+		option = {
+		name = "Those ungrateful Tribes!"
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1485
+					is_core = TAI
+				}
+			}
+			secede_province = TAI 
+		CHI_1485 = { add_core = TAI }
+		}
+		 war = {
+            target = TAI
+            attacker_goal = {
+                casus_belli = unification_annex_casus_belli
+            }
+        }
+	}
+}
+#Victory of the Empire
+country_event = {
+    id = 310012
+    title = "FEU12.T"
+    desc = "FEU12.D"
+    picture = "Start_of_the_three_feudatories"
+	
+	trigger = {
+		tag = QNG
+		NOT = { has_country_flag = victory_of_Buyeo }
+		NOT = { has_country_flag = victory_of_feudatories }
+		has_country_flag = feudatories_war_happened
+		owns = 1501
+		owns = 1551
+		owns = 1578		
+	}
+	mean_time_to_happen = {
+		months = 1
+	}	
+	
+    option = {
+	name = "Hang those traitors!"
+	prestige = 35
+        any_pop = {
+			militancy = -4
+		}
+		set_country_flag = victory_of_Buyeo
+    }
+}
+#Victory of the feudatories
+country_event = {
+	id = 310013
+	title = "FEU13.T"
+	desc = "FEU13.D"
+    picture = "Start_of_the_three_feudatories"
+	
+	trigger = {
+		OR = {
+			tag = FJN
+			tag = YNN
+			tag = GXI
+			QNG = { 
+				NOT = { has_country_flag = victory_of_Buyeo}
+				NOT = { has_country_flag = victory_of_feudatories}
+			}
+		}
+		JCH = {
+			owns = 1524
+		}	
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		random_owned = {
+			any_country = {
+				limit = {
+					war_with = QNG
+				}
+				end_war = QNG
+			}
+		}
+		
+		YNN = { country_event = 310014 }
+		FJN = { country_event = 310014 }
+		GXI = { country_event = 310014 }
+		QNG = { 
+			country_event = 310015
+			set_country_flag = victory_of_Buyeo
+		}		
+	}
+}
+#Victory of the feudatories event-feud
+country_event = {
+	id = 310014
+	title = "FEU14.T"
+	desc = "FEU14.D"
+	picture = "Tawanese_Rebellion"
+	
+	is_triggered_only = yes	
+		option = {
+		name = "Southern China is now free!"
+		prestige = 35
+        any_pop = {
+			militancy = -4
+		}
+	}
+}
+#Victory of the feudatories event-emp
+country_event = {
+	id = 310015
+	title = "FEU15.T"
+	desc = "FEU15.D"
+	picture = "Tawanese_Rebellion"
+	
+	is_triggered_only = yes	
+		option = {
+		name = "This is very, very bad..."
+		prestige = -50
+        any_pop = {
+			militancy = 2
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1493
+					region = CHI_1499 
+					region = CHI_1504
+				}
+			}
+			secede_province = GXI
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1545
+					region = CHI_1547 
+					region = CHI_1482
+				}
+			}
+			secede_province = FJN
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1578
+					region = CHI_1579 
+					region = CHI_1601
+					region = CHI_1505
+				}
+			}
+			secede_province = YNN
+		}
+		set_country_flag = victory_of_feudatories
+	}
 }

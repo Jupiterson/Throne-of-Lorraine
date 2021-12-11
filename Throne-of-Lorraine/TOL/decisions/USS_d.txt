@@ -587,13 +587,13 @@ political_decisions = {
         }
         effect = {
             set_country_flag = USS_afro
-            add_accepted_culture = afro_latino
+            add_accepted_culture = afro_italian
             add_accepted_culture = afro_brazilian
             any_pop = {
                 limit = {
                     NOT = {
                         OR = {
-                            culture = afro_latino
+                            culture = afro_italian
                             culture = afro_brazilian
                         }
                     }

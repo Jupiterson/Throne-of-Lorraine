@@ -1,5 +1,7 @@
 
 FRA = {value = -70}
+ENL = { value = -50}
+UOW = { value = -100}
 
 army = {
     name = "The Welsh Army"
@@ -32,7 +34,16 @@ army = {
         type = infantry
         home = 274
     }
-
+	regiment = {
+        name= "6ed Adran y Troedfilwyr"
+        type = infantry
+        home = 274
+    }
+	regiment = {
+        name= "7ed Adran y Troedfilwyr"
+        type = infantry
+        home = 286
+    }
     regiment = {
         name= "Yr Adran Magnelau 1af"
         type = artillery
@@ -44,4 +55,29 @@ army = {
         type = artillery
         home = 286
     }
+}
+navy = {
+    name = "Welsh Navy"
+    location = 273
+
+    ship = {
+        name= "Llong frwydr 1"
+        type = manowar
+    }
+
+    ship = {
+        name= "Llong frwydr 2"
+        type = manowar
+    }
+
+    ship = {
+        name= "Llong frwydr 3"
+        type = manowar
+    }
+
+    ship = {
+        name= "Llong Drafnidiaeth"
+        type = clipper_transport
+    }
+
 }

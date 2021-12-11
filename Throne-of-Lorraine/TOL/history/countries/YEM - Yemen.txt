@@ -1,7 +1,7 @@
 capital = 1178
 primary_culture = bedouin
-religion = sunni
-government = absolute_monarchy
+religion = coptic
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.03
@@ -49,13 +49,17 @@ upper_house = {
     communist = 0
 }
 
-set_country_flag = sunni_country
+set_country_flag = coptic_country
+foreign_artillery = yes_foreign_artillery
 foreign_weapons = yes_foreign_weapons
+monetary_reform = yes_monetary_reform
 
 # Technologies
 flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
 
 # Inventions
+
 small_arms_production = yes
 ammunition_production = yes
 big_sail_ships = yes

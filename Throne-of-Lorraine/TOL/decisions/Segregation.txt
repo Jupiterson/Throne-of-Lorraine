@@ -18,9 +18,9 @@ political_decisions = {
                 is_culture_group = latin_american_cultures
                 is_culture_group = american_cultures
                 primary_culture = australian
-                primary_culture = anglo_canadian
-                primary_culture = french_canadian
-                primary_culture = alaskan
+                primary_culture = akino_german
+                primary_culture = akino_german
+                primary_culture = inuit
             }
             any_owned_province = {
                 is_core = THIS
@@ -326,20 +326,20 @@ political_decisions = {
 							primary_culture = yankee
 						}
 						AND    = {
-							pop_majority_culture = dixie
-							primary_culture = dixie
+							pop_majority_culture = yankee
+							primary_culture = yankee
 						}
 						AND    = {
 							pop_majority_culture = australian
 							primary_culture = australian
 						}
 						AND    = {
-							pop_majority_culture = anglo_canadian
-							primary_culture = anglo_canadian
+							pop_majority_culture = akino_german
+							primary_culture = akino_german
 						}
 						AND    = {
-							pop_majority_culture = french_canadian
-							primary_culture = french_canadian
+							pop_majority_culture = akino_german
+							primary_culture = akino_german
 						}
 						AND    = {
 							pop_majority_culture = mexican
@@ -366,12 +366,12 @@ political_decisions = {
 							primary_culture = brazilian
 						}
 						AND    = {
-							pop_majority_culture = texan
-							primary_culture = texan
+							pop_majority_culture = free_german
+							primary_culture = free_german
 						}
 						AND    = {
-							pop_majority_culture = alaskan
-							primary_culture = alaskan
+							pop_majority_culture = inuit
+							primary_culture = inuit
 						}
 						AND    = {
 							pop_majority_culture = kreol
@@ -412,20 +412,20 @@ political_decisions = {
                     primary_culture = yankee
                 }
                 AND    = {
-                    pop_majority_culture = dixie
-                    primary_culture = dixie
+                    pop_majority_culture = yankee
+                    primary_culture = yankee
                 }
                 AND    = {
                     pop_majority_culture = australian
                     primary_culture = australian
                 }
                 AND    = {
-                    pop_majority_culture = anglo_canadian
-                    primary_culture = anglo_canadian
+                    pop_majority_culture = akino_german
+                    primary_culture = akino_german
                 }
                 AND    = {
-                    pop_majority_culture = french_canadian
-                    primary_culture = french_canadian
+                    pop_majority_culture = akino_german
+                    primary_culture = akino_german
                 }
                 AND    = {
                     pop_majority_culture = mexican
@@ -452,12 +452,12 @@ political_decisions = {
                     primary_culture = brazilian
                 }
                 AND    = {
-                    pop_majority_culture = texan
-                    primary_culture = texan
+                    pop_majority_culture = free_german
+                    primary_culture = free_german
                 }
                 AND    = {
-                    pop_majority_culture = alaskan
-                    primary_culture = alaskan
+                    pop_majority_culture = inuit
+                    primary_culture = inuit
                 }
                 AND    = {
                     pop_majority_culture = kreol
@@ -499,7 +499,8 @@ political_decisions = {
 				AND = {
 					war = no
 					citizens_rights = primary_culture_only
-					NOT = { government = democracy }
+					NOT = { 				government = democracy
+                government = hanseatic }
 					NOT = { government = hms_government }
 					NOT = { government = constitutional_empire }
 					war_policy = jingoism
@@ -526,20 +527,20 @@ political_decisions = {
 							primary_culture = yankee
 						}
 						AND    = {
-							pop_majority_culture = dixie
-							primary_culture = dixie
+							pop_majority_culture = yankee
+							primary_culture = yankee
 						}
 						AND    = {
 							pop_majority_culture = australian
 							primary_culture = australian
 						}
 						AND    = {
-							pop_majority_culture = anglo_canadian
-							primary_culture = anglo_canadian
+							pop_majority_culture = akino_german
+							primary_culture = akino_german
 						}
 						AND    = {
-							pop_majority_culture = french_canadian
-							primary_culture = french_canadian
+							pop_majority_culture = akino_german
+							primary_culture = akino_german
 						}
 						AND    = {
 							pop_majority_culture = mexican
@@ -566,12 +567,12 @@ political_decisions = {
 							primary_culture = brazilian
 						}
 						AND    = {
-							pop_majority_culture = texan
-							primary_culture = texan
+							pop_majority_culture = free_german
+							primary_culture = free_german
 						}
 						AND    = {
-							pop_majority_culture = alaskan
-							primary_culture = alaskan
+							pop_majority_culture = inuit
+							primary_culture = inuit
 						}
 						AND    = {
 							pop_majority_culture = kreol
@@ -586,7 +587,8 @@ political_decisions = {
         allow = {
             war = no
             citizens_rights = primary_culture_only
-            NOT = { government = democracy }
+            NOT = { 				government = democracy
+                government = hanseatic }
             NOT = { government = hms_government }
             NOT = { government = constitutional_empire }
             war_policy = jingoism
@@ -613,20 +615,20 @@ political_decisions = {
                     primary_culture = yankee
                 }
                 AND    = {
-                    pop_majority_culture = dixie
-                    primary_culture = dixie
+                    pop_majority_culture = yankee
+                    primary_culture = yankee
                 }
                 AND    = {
                     pop_majority_culture = australian
                     primary_culture = australian
                 }
                 AND    = {
-                    pop_majority_culture = anglo_canadian
-                    primary_culture = anglo_canadian
+                    pop_majority_culture = akino_german
+                    primary_culture = akino_german
                 }
                 AND    = {
-                    pop_majority_culture = french_canadian
-                    primary_culture = french_canadian
+                    pop_majority_culture = akino_german
+                    primary_culture = akino_german
                 }
                 AND    = {
                     pop_majority_culture = mexican
@@ -653,12 +655,12 @@ political_decisions = {
                     primary_culture = brazilian
                 }
                 AND    = {
-                    pop_majority_culture = texan
-                    primary_culture = texan
+                    pop_majority_culture = free_german
+                    primary_culture = free_german
                 }
                 AND    = {
-                    pop_majority_culture = alaskan
-                    primary_culture = alaskan
+                    pop_majority_culture = inuit
+                    primary_culture = inuit
                 }
                 AND    = {
                     pop_majority_culture = kreol

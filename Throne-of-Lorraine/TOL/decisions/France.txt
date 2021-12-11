@@ -10,6 +10,7 @@ political_decisions = {
             capital = 425
             USA = {
 				exists = yes
+                				government = democracy
                 government = democracy
                 owns = 232
             }
@@ -17,7 +18,8 @@ political_decisions = {
                 OR = {
                     government = constitutional_empire
                     government = hms_government
-                    government = democracy
+                    				government = democracy
+                government = democracy
                 }
             }
             year = 1850

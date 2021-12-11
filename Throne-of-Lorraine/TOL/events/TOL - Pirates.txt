@@ -395,4 +395,38 @@ country_event = {
                 factor = 10
 			  }
 	          }
-    }			  
+#Pirate-Aztecs-Relations	
+	country_event = {
+    id = 23908
+	title = "EVTNAME23908"
+	desc = "EVTDESC23908"
+	picture = confederation
+	is_triggered_only = yes
+	
+	option = {
+	          name = "EVT23908OPTA"
+			  set_country_flag = pirate_accept_aztec
+			   relation = {
+			    who = MEX
+			    value = 200
+			  }
+			  create_alliance = MEX
+			  
+        ai_chance = {
+            factor = 80
+        }
+	}
+
+	option = {		  
+			  name = "EVT23908OPTB"
+			  set_country_flag = pirate_reject_aztec
+			   relation = {
+			    who = MEX
+			    value = -100
+			  }
+			  
+        ai_chance = {
+            factor = 20
+        }        
+}	
+}

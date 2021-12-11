@@ -232,7 +232,8 @@ political_decisions = {
 
         effect = {
             prestige = 5
-            government = democracy
+            				government = democracy
+                government = hanseatic
             political_reform = wealth_weighted_voting
             political_reform = yes_meeting
             political_reform = censored_press
@@ -330,12 +331,14 @@ political_decisions = {
         }
 
         allow = {
-            government = democracy
+            				government = democracy
+                government = hanseatic
             exists = ITA
             ITA = {
                 is_greater_power = yes
                 OR = {
-                    government = democracy
+                    				government = democracy
+                government = hanseatic
                     government = hms_government
                     government = prussian_constitutionalism
                     government = semi_constitutional_empire
@@ -365,12 +368,14 @@ political_decisions = {
         }
 
         allow = {
-            government = democracy
+            				government = democracy
+                government = hanseatic
             exists = ITS
             ITS = {
                 is_greater_power = yes
                 OR = {
-                    government = democracy
+                    				government = democracy
+                government = hanseatic
                     government = hms_government
                     government = prussian_constitutionalism
                     government = semi_constitutional_empire

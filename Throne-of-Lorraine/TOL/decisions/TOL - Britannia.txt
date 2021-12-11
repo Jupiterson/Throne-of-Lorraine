@@ -4,12 +4,7 @@ political_decisions = {
         potential = {
             capital_scope = { continent = europe }
             NOT = { has_country_flag = post_colonial_country }
-            OR = {
-                tag = SCO
-                tag = UOW
-                tag = ENL
-				tag = IRE
-            }
+            is_culture_group = britannian
             NOT = { exists = ENG }
         }
 
@@ -81,7 +76,6 @@ political_decisions = {
         effect = {
             prestige = 20
             all_core = {
-                remove_core = THIS
                 add_core = ENG
             }
            IRE = {
@@ -90,6 +84,15 @@ political_decisions = {
                 }
             }
             change_tag = ENG
+			ENG = {
+                inherit = SCO
+            }
+			ENG = {
+                inherit = ENL
+            }
+		    ENG = {
+                inherit = UOW
+            }
             add_accepted_culture = scottish
             add_accepted_culture = irish
             add_accepted_culture = british

@@ -1,0 +1,42 @@
+political_decisions = {
+  form_AMZzonas = {
+        picture = create_iberia
+        potential = {
+            is_culture_group = amazonic
+            NOT = { exists = AMZ }
+        }
+
+        allow = {
+            prestige = 35
+            OR = {
+                AMZ = {
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            owner = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                }
+                                war = no
+                                is_greater_power = no
+                            }
+                        }
+                    }
+                }               
+            }
+        }
+
+        effect = {
+            prestige = 20
+			 change_tag = AMZ
+            add_accepted_culture = amazonian
+			add_accepted_culture = hets
+			add_accepted_culture = guarani
+            set_global_flag = amazon_united         
+                     
+        }
+        ai_will_do = { factor = 1 }
+    }
+	}

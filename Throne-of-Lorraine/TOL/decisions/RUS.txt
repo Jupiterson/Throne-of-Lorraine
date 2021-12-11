@@ -540,7 +540,8 @@ political_decisions = {
             owns = 1084
             owns = 1085
             owns = 2617
-            NOT = { government = democracy }
+            NOT = { 				government = democracy
+                government = hanseatic }
             NOT = { has_global_flag = manchus_expelled_primorye }
             NOT = { has_global_flag = trying_to_expel_the_manchus }
             OR = {
@@ -584,6 +585,7 @@ political_decisions = {
 
         allow = {
             owns = 1008 # Moscow
+			ideological_thought = 1
             OR = {
                 AND = {
                     NOT = { owns = 339 } # Viipuri
@@ -1695,7 +1697,8 @@ political_decisions = {
             is_our_vassal = FIN
             revolution_n_counterrevolution = 1
             NOT = { has_country_flag = finland_russification }
-            NOT = { government = democracy }
+            NOT = { 				government = democracy
+                government = hanseatic }
             NOT = { has_country_flag = Conceded_Finland }
             NOT = { has_country_flag = finland_is_recognized }
         }

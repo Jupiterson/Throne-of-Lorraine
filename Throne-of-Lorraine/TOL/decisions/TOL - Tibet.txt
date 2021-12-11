@@ -97,8 +97,8 @@ political_decisions = {
         picture = nepali_treaty  #tsushima_japan
         potential = {
             tag = TIB
-		    AND = { has_country_flag = plain_lord
-		        	has_country_flag = mountain_lord }
+		     has_country_flag = plain_lord
+		        	has_country_flag = mountain_lord 
 			       
             NOT = {			has_country_flag = steppe_lord }
         }
@@ -124,5 +124,25 @@ political_decisions = {
 			
         }
    }
-	
+	tibet_form_eob = {
+        picture = tibet_capital
+        potential = {
+            NOT = { has_country_flag = burma_form_eob }
+			NOT = { has_country_flag = tibet_form_eob }
+            tag = TIB
+            }
+
+        allow = {
+			has_global_flag = TIB_claimed_burma
+			prestige = 20
+            war = no
+            BUR = {exists = no}
+        }
+		effect = {
+            change_tag = EOB
+            prestige = 15
+            set_country_flag = tibet_form_eob
+        }
+		ai_will_do = { factor = 1 }
+	}
 }

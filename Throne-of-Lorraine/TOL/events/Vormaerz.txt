@@ -3,7 +3,7 @@
 ##Vormaerz in general##
 # Event  200014    Introduction
 # Event  200015    Kneeling controversy (BAV)
-# Events 200016-18 Free press events (BAD)
+# Events 200016-18 Free press events (LOR)
 # Events 200019-20 Grimms Woerterbuch
 # Events 200021-23 Heines Wintermaerchen
 # Event  200024    Beethovenfest response
@@ -171,7 +171,7 @@ country_event = {
             factor = 75
             modifier = {
                 factor = 0
-                tag = AUS
+                tag = BAV
            }
         }
     }
@@ -248,7 +248,7 @@ country_event = {
         months = 80
         modifier = {
             factor = 0.7
-            tag = PRU
+            tag = HNS
         }
         modifier = {
             factor = 0.7
@@ -260,7 +260,7 @@ country_event = {
         }
         modifier = {
             factor = 0.8
-            tag = BAD
+            tag = LOR
         }
         modifier = {
             factor = 0.8
@@ -280,7 +280,7 @@ country_event = {
         }
         modifier = {
             factor = 5
-            tag = AUS
+            tag = BAV
         }
         modifier = {
             factor = 0.5
@@ -357,27 +357,6 @@ country_event = {
 # These Events deal with the Vormaerz in general #
 ##################################################
 
-#Introduction
-country_event = {
-    id = 200014
-    title = "EVTNAME200014"
-    desc = "EVTDESC200014"
-    picture = "Vormaerz"
-
-    trigger = {
-        NOT = { year = 1848 }
-        is_culture_group = germanic
-        NOT = { has_country_flag = liberal_revolution_fired }
-        NOT = { has_country_flag = vormaerz }
-    }
-
-    mean_time_to_happen =  { days = 1 }
-
-    option = {
-        name = "EVTOPTA200014"
-        set_country_flag = vormaerz
-    }
-}
 
 #Kneeling controversy (BAV)
 country_event = {
@@ -421,10 +400,10 @@ country_event = {
 }
 
 #################
-# BADEN'S PRESS #
+# LOREN'S PRESS #
 #################
 
-#Era Blittersdorf (BAD)
+#Era Blittersdorf (LOR)
 country_event = {
     id = 200016
     title = "EVTNAME200016"
@@ -433,7 +412,7 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        tag = BAD
+        tag = LOR
         year = 1838
         NOT = { year = 1843 }
         OR = {
@@ -456,7 +435,7 @@ country_event = {
     }
 }
 
-#Free Press in Baden (AUS/PRU)
+#Free Press in Baden (BAV/HNS)
 country_event = {
     id = 200017
     is_triggered_only = yes
@@ -476,7 +455,7 @@ country_event = {
             factor = 50
             modifier = {
                 factor = 1.2
-                tag = AUS
+                tag = BAV
             }
             modifier = {
                 factor = 1.3
@@ -533,10 +512,10 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        tag = BAD
+        tag = LOR
         has_country_flag = free_press_in_baden
-        PRU = { has_country_flag = against_baden_press }
-        AUS = { has_country_flag = against_baden_press }
+        HNS = { has_country_flag = against_baden_press }
+        BAV = { has_country_flag = against_baden_press }
     }
 
     mean_time_to_happen =  { days = 7 }
@@ -544,10 +523,10 @@ country_event = {
     option = {
         name = "EVTOPTA200018"
         prestige = 2
-        relation = { who = AUS  value = -50 }
-        relation = {  who = PRU  value = -50 }
-        AUS = { diplomatic_influence = { who = THIS value = -50 } }
-        PRU = { diplomatic_influence = { who = THIS value = -50 } }
+        relation = { who = BAV  value = -50 }
+        relation = {  who = HNS  value = -50 }
+        BAV = { diplomatic_influence = { who = THIS value = -50 } }
+        HNS = { diplomatic_influence = { who = THIS value = -50 } }
 
         ai_chance = { factor = 60 }
     }
@@ -555,8 +534,8 @@ country_event = {
     option = {
         name = "EVTOPTB200018"
         prestige = -2
-        relation = { who = AUS  value = 150 }
-        relation = {  who = PRU value = 150 }
+        relation = { who = BAV  value = 150 }
+        relation = {  who = HNS value = 150 }
         political_reform = censored_press
         any_pop = { scaled_militancy = { ideology = liberal factor = 1 } }
 
@@ -717,7 +696,7 @@ country_event = {
             }
             modifier = {
                 factor = 2
-                tag = PRU
+                tag = HNS
             }
         }
     }
@@ -740,11 +719,11 @@ country_event = {
             factor = 70
             modifier = {
                 factor = 1.2
-                tag = AUS
+                tag = BAV
             }
             modifier = {
                 factor = 1.2
-                tag = PRU
+                tag = HNS
             }
             modifier = {
                 factor = 1.3
@@ -1413,7 +1392,7 @@ country_event = {
         is_culture_group = germanic
         OR = {
             invention = romanticist_literature
-            tag = PRU
+            tag = HNS
         }
     }
 
@@ -1521,7 +1500,7 @@ province_event = {
         months = 36
         modifier = {
             factor = 0.9
-            owner = { tag = PRU }
+            owner = { tag = HNS }
         }
         modifier = {
             factor = 0.9

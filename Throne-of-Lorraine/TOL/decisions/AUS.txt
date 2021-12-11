@@ -323,7 +323,8 @@ political_decisions = {
                     government = absolute_empire
                     government = semi_constitutional_empire
                     government = constitutional_empire
-                    government = democracy
+                    				government = democracy
+                government = hanseatic
                 }
             }
         }
@@ -773,7 +774,8 @@ political_decisions = {
             social_science = 1
             OR = {
                 government = hms_government
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 government = constitutional_empire
             }
             NOT = {
@@ -867,7 +869,8 @@ political_decisions = {
             war = no
             OR = {
                 government = hms_government
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 government = constitutional_empire
             }
             NOT = {

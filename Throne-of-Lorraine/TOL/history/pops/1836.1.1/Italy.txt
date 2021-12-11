@@ -576,19 +576,43 @@
     artisans = {
         culture = venetian
         religion = catholic
-        size = 10000
+        size = 20000
+    }
+
+    artisans = {
+        culture = south_german
+        religion = catholic
+        size = 8000
+    }
+	
+	artisans = {
+        culture = occitan
+        religion = hugenott
+        size = 4000
+    }
+	
+    artisans = {
+        culture = greek
+        religion = orthodox
+        size = 14000
     }
 
     artisans = {
         culture = venetian
         religion = catholic
-        size = 10000
-    }
+        size = 14000
+    }  
 
-    artisans = {
-        culture =venetian
-        religion = catholic
-        size = 4000
+	artisans = {
+        culture = low_german
+        religion = protestant
+        size = 13925
+    }	
+	
+	artisans = {
+        culture = japanese
+        religion = kirishitan
+        size = 3925
     }
 
     soldiers = {
@@ -600,7 +624,7 @@
     farmers = {
         culture = venetian
         religion = catholic
-        size = 60925
+        size = 80925
     }
 
     ######Jews
@@ -625,7 +649,7 @@
     artisans = {
         culture = ashkenazi
         religion = jewish
-        size = 100
+        size = 2300
     }
 
     farmers = {
@@ -783,7 +807,7 @@
     farmers = {
         culture = venetian
         religion = catholic
-        size = 111050
+        size = 151050
     }
 }
 #Padua (564000/141000 POPS)
@@ -815,7 +839,7 @@
     farmers = {
         culture = venetian
         religion = catholic
-        size = 127775
+        size = 177775
     }
 }
 #Treviso (232000/58000 POPS)
@@ -847,7 +871,7 @@
     farmers = {
         culture = venetian
         religion = catholic
-        size = 50300
+        size = 80300
     }
 }
 #Udine (300000/75000 POPS)
@@ -875,11 +899,16 @@
         religion = catholic
         size = 750
     }
-
+	
+	farmers = {
+        culture = romansh
+        religion = catholic
+        size = 39250
+    }
     farmers = {
         culture = venetian
         religion = catholic
-        size = 49250
+        size = 29250
     }
     farmers = {
         culture = slovene
@@ -930,7 +959,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 4410
+        size = 34410
     }
 
     farmers = {
@@ -1080,7 +1109,7 @@
     farmers = {
         culture = venetian
         religion = catholic
-        size = 7875
+        size = 17875
     }
 
     clergymen = {
@@ -1104,7 +1133,7 @@
     farmers = {
         culture = slovene
         religion = catholic
-        size = 6300
+        size = 16300
     }
 }
 #Gorizia (180000/45000 POPS)
@@ -1166,7 +1195,7 @@
     farmers = {
         culture = gypsy
         religion = catholic
-        size = 375
+        size = 1375
     }
 
 }
@@ -1685,66 +1714,40 @@
 }
 3398 = {
     aristocrats = {
-        culture = japanese
-        religion = catholic
+        culture = ethiopian
+        religion = coptic
         size = 210
     }
 
     clergymen = {
-        culture = japanese
-        religion = catholic
+        culture = ethiopian
+        religion = coptic
         size = 135
     }
 
     artisans = {
-        culture = japanese
-        religion = catholic
+        culture = ethiopian
+        religion = coptic
         size = 100
     }
 
     artisans = {
         culture = malay
-        religion = catholic
+        religion = coptic
         size = 1000
     }
 
     soldiers = {
         culture = malay
-        religion = catholic
+        religion = coptic
         size = 510
     }
 
     farmers = {
         culture = malay
-        religion = catholic
+        religion = coptic
         size = 19460
     }
-
-    ######Jews
-    soldiers = {
-        culture = ashkenazi
-        religion = jewish
-        size = 100
-    }
-
-    clergymen = {
-        culture = ashkenazi
-        religion = jewish
-        size = 50
-    }
-
-    artisans = {
-        culture = ashkenazi
-        religion = jewish
-        size = 350
-    }
-
-    farmers = {
-        culture = ashkenazi
-        religion = jewish
-        size = 300
-    }
-    ########
 }
 #Siena (380000/95000 POPS)
 747 = {

@@ -62,6 +62,85 @@ country_event = {
 
 }
 
+
+#Partition of Bohemia
+country_event = {
+    id = 19250
+    title = "Partition of Bohemia"
+    desc = "Prague being in Bavarian hands Silesia and the Borderlands should be in ours"
+    picture = "administration"
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = "Not so aggressive"
+        prestige = -50
+        leave_alliance = FROM
+        relation = {
+            who = FROM
+            value = -100
+        }
+        casus_belli = {
+            target = FROM
+            type = cut_down_to_size
+            months = 24
+        }
+        ai_chance = {
+            factor = 5
+        }
+    }
+
+    option = {
+        name = "Right away,we can't let the Bavarians have it"
+        set_global_flag = bohemian_partition
+        prestige = 10
+        leave_alliance = BOH
+        casus_belli = {
+            target = BOH
+            type = cut_down_to_size
+            months = 24
+        }
+        any_country = {
+            limit = {
+                exists = yes
+                alliance_with = THIS
+                is_vassal = no
+            }
+            leave_alliance = THIS
+        }
+        war = {
+            target = BOH
+            attacker_goal = {
+               casus_belli = unification_casus_belli
+                state_province_id = 683
+			   casus_belli = unification_casus_belli
+				state_province_id = 627
+            }
+            defender_goal = {
+                casus_belli = cut_down_to_size
+            }
+            call_ally = yes
+        }
+        ai_chance = {
+            factor = 95
+            modifier = {
+                factor = 0.5
+                num_of_revolts = 1
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 0.2
+                war_policy = pacifism
+            }
+        }
+    }
+}
+
+
 country_event = {
 
     id = 40006

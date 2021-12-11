@@ -1,0 +1,32 @@
+political_decisions = {
+    sco_give_supplies = {
+	    picture = congress_of_berlin
+        potential = {
+            tag = SCO
+            exists = ENL
+			exists = UOW
+            NOT = { has_global_flag = sco_give_supplies }
+        }
+
+        allow = {
+            war = no
+			money = 7000
+			year = 1836
+			month = 1
+        }
+
+        effect = {
+        set_global_flag = sco_give_supplies
+		money = -7000
+		ENL = { country_event = 33409 }
+		relation = {
+			who = NET
+			value = -20
+		}
+		relation = {
+			who = UOW
+			value = -60
+		}
+      }
+	  	ai_will_do = { factor = 1 }
+}

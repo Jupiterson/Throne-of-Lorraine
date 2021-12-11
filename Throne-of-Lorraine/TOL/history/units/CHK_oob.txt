@@ -1,24 +1,10 @@
-#Relations
-
-USA = {
-    value = 10        #relation
-}
 
 SIA = {
-    value = -50        #relation
+    value = -50 
 }
-
-FRA = {
-    value = -75        #relation
-}
-
-ENG = {
-    value = 75        #relation
-}
-
 
 army = {
-    name = "Royal Siamese Army"
+    name = "Royal Champassak Army"
     location = 1362
     regiment = {
         name= "1. Brigade"
@@ -30,5 +16,10 @@ army = {
         name= "2. Brigade"
         type = irregular
         home = 1363
+    }
+	    regiment = {
+        name= "3. Brigade"
+        type = irregular
+        home = 1359
     }
 }

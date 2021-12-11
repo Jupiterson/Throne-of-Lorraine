@@ -1,0 +1,70 @@
+political_decisions = {
+	claim_nogai_lands = {
+        picture = treaty_of_turkmanchay
+        potential = {
+			tag = RUS
+			BKY = { owns = 1046 }
+			BKY = { owns = 1182 }
+			BKY = { owns = 1183 }
+        }
+
+        allow = {
+            war = no
+            BKY = { in_sphere = RUS }
+            BKY = { war = no }
+			medicine = 1
+        }
+
+        effect = {
+            prestige = 5
+			badboy = 4
+			BKY= {
+				1046 = { secede_province = RUS }
+				1182 = { secede_province = RUS }
+				1183 = { secede_province = RUS }
+			}
+       
+
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	annex_the_Kazakhs = {
+		picture = military_aid
+		potential = {
+			tag = RUS
+			is_our_vassal = KAZ
+        } 
+		allow = {
+            war = no
+            KAZ = { in_sphere = RUS }
+			state_n_government  = 1
+        }
+		effect = {
+            prestige = 10
+			badboy = 4
+			inherit = KAZ
+        }
+
+        ai_will_do = { factor = 1 }
+	}
+	annex_Bukkhara = {
+		picture = ever_victorious
+		potential = {
+			tag = RUS
+			is_our_vassal = BUK
+        } 
+		allow = {
+            war = no
+            BUK = { in_sphere = RUS }
+			nationalism_n_imperialism  = 1
+        }
+		effect = {
+            prestige = 10
+			badboy = 4
+			inherit = BUK
+        }
+
+        ai_will_do = { factor = 1 }
+	}
+}	

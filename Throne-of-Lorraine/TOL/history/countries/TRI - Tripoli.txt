@@ -2,7 +2,7 @@ capital = 1731
 primary_culture = maghrebi
 culture = berber
 culture = bedouin
-culture = tuareg
+culture = berber
 religion = sunni
 government = absolute_monarchy
 plurality = 0.0
@@ -53,17 +53,20 @@ upper_house = {
 
 set_country_flag = sunni_country
 foreign_weapons = yes_foreign_weapons
+foreign_artillery = yes_foreign_artillery
+monetary_reform = yes_monetary_reform
 
 # Technologies
-military_staff_system = 1
 flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+
+# Inventions
 
 small_arms_production = yes
 ammunition_production = yes
 big_sail_ships = yes
 sail_ships_transport = yes
 big_sail_support = yes
-
 # Inventions
 
 # Starting Consciousness

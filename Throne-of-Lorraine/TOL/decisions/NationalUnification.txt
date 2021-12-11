@@ -24,23 +24,26 @@ political_decisions = {
             GER = {
                 all_core = {
                     OR = {
-                        OR = {
                             owned_by = THIS
                             owner = {
-                                in_sphere = THIS
-                                OR = {
-                                    is_vassal = no
-                                    vassal_of = THIS
-                                }
+                                in_sphere = THIS   
+								OR = {
+								vassal_of = THIS 
+								is_vassal = no 
+								overlord = {
+								is_culture_group = germanic
+                                 
+                                }	
+                            } 								
                                 war = no
                                 is_greater_power = no
-                            }
-                        }
+                            }                       
                         NOT = { culture = south_german }
                     }
                 }
             }
         }
+	
 
         effect = {
             clr_country_flag = crown_from_the_gutter
@@ -76,6 +79,11 @@ political_decisions = {
                 }
                 add_core = SGF
             }
+			SWI = {
+                    all_core = {
+                        add_core = SGF
+                    }
+                }
             random_owned = {
                 limit = { owner = { tag = KUK } }
                 owner = {
@@ -301,9 +309,13 @@ political_decisions = {
                                 owner = {
                                     in_sphere = THIS
                                     OR = {
-                                        is_vassal = no
-                                        vassal_of = THIS
-                                    }
+								vassal_of = THIS 
+								is_vassal = no 
+								overlord = {
+								is_culture_group = germanic
+                                 
+                                }	
+                            }
                                     war = no
                                     is_greater_power = no
                                 }
@@ -440,7 +452,7 @@ political_decisions = {
                         BAV = {
                             is_greater_power = yes
                             ai = yes
-                            NOT = { rank = 8 }
+                     
                         }
                         AND = {
                             HNS = {
@@ -698,22 +710,17 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    form_germany_AUS = {
+    form_hre = {
         picture = german_confederation
         news = yes
         news_desc_long = "form_germany_NEWS_LONG"
         news_desc_medium = "form_germany_NEWS_MEDIUM"
         news_desc_short = "form_germany_NEWS_SHORT"
         potential = {
-            OR = {
-                tag = AUS
-                tag = AUB
-                tag = KUK
-            }
+            has_country_flag = joined_hre
             NOT = { exists = GER }
             NOT = { exists = GCF }
-            has_country_flag = austrian_greater_germany
-            NOT = { has_global_flag = german_confederation_austrian }
+            NOT = { has_global_flag = german_confederation }
         }
 
         allow = {
@@ -721,53 +728,18 @@ political_decisions = {
             nationalism_n_imperialism = 1
             is_greater_power = yes
             war = no
-            ALS = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+            ALS = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { vassal_of = THIS } war = no is_greater_power = no } } } }
             OR = {
-                GER = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                AND = {
-                    HAN = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    SAX = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    WEI = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    MEI = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    COB = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    REU = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    NAS = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    HOL = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    SCL = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    SWG = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    ANH = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    HES = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    HEK = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    BRA = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    LIP = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    OLD = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    MEC = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    HAM = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    LUB = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    FRM = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    BRE = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    ai = yes
-                    NOT = { exists = NGF }
-                    OR = {
-                        SGF = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                        NOT = { exists = SGF }
-                    }
-                    PRU = { exists = yes ai = yes }
-                }
+                GER = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { vassal_of = THIS } war = no is_greater_power = no } } } }
+                
             }
         }
 
         effect = {
-            set_global_flag = german_confederation_austrian
+            set_global_flag = german_confederation_bohemian
             prestige = 20
-            random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
-            random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
-            random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
-            random_owned = { limit = { owner = { accepted_culture = hungarian } } owner = { remove_accepted_culture = hungarian } }
-            random_owned = { limit = { owner = { accepted_culture = czech } } owner = { remove_accepted_culture = czech } }
             FRA_412 = { add_core = GER }
             all_core = {
-                remove_core = THIS
                 add_core = GCF
             }
             370 = { add_core = GER }
@@ -782,30 +754,19 @@ political_decisions = {
             capital = 619
             add_accepted_culture = north_german
             add_accepted_culture = volga_german
-            remove_accepted_culture = hungarian
-            remove_accepted_culture = czech
+            add_accepted_culture = rheinlander
+			add_accepted_culture = low_german
             set_global_flag = 3hurrahs
             any_country = {
                 limit = {
                     is_culture_group = germanic
                     exists = no
                     NOT = {
-                        tag = KUK
-                        tag = AUS
-                        tag = AUB
-                        tag = DNB
-                        tag = BAN
-                        tag = SWI
-                        tag = UBD
                         tag = VLG
                         tag = LIE
                         tag = SIE
                         tag = GCF
                     }
-                    NOT = { tag = PRU }
-                    NOT = { tag = BAN }
-                    NOT = { tag = SWI }
-                    NOT = { tag = UBD }
                     NOT = { has_country_flag = post_colonial_country }
                     OR = {
                         all_core = { owned_by = THIS }
@@ -824,11 +785,7 @@ political_decisions = {
                             ai = yes
                             exists = yes
                         }
-                        AND = {
-                            tag = PRU
-                            ai = yes
-                            exists = yes
-                        }
+
                     }
                     OR = {
                         is_culture_group = germanic
@@ -853,10 +810,10 @@ political_decisions = {
                         capital_scope = { continent = south_west_africa }
                         capital_scope = { continent = asia }
                     }
-                    OR = {
-                        is_vassal = no
+                   
+                 
                         vassal_of = THIS
-                    }
+                    
                     NOT = { has_country_flag = post_colonial_country }
                 }
                 country_event = 11101
@@ -1105,16 +1062,16 @@ political_decisions = {
         }
 
         allow = {
-            prestige = 10
+            war = no
         }
 
         effect = {
             410 = { change_province_name = "Kolmar" }
-            3409 = { change_province_name = "Diedenhofen" }
+            3409 = { change_province_name = "Forbach" }
             409 = {
                 change_province_name = "Straﬂburg"
                 state_scope = {
-                    change_region_name = "Elsaﬂ-Lothringen"
+                    change_region_name = "Elsaﬂ"
                 }
             }
             ALS = { government = colonial_company }
@@ -1151,7 +1108,8 @@ political_decisions = {
                 change_province_name = "Strasbourg"
                 state_scope = { change_region_name = "Alsace-Lorraine" }
             }
-            ALS = { government = democracy }
+            ALS = { 				government = democracy
+                government = hanseatic }
             remove_country_modifier = la_tache_noire
             prestige = 10
             clr_global_flag = germany_has_renamed_elsass

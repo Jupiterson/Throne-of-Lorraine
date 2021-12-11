@@ -32,7 +32,7 @@ political_decisions = {
     brunei_protectorate = {
         picture = brunei_protectorate
         potential = {
-            tag = ENG
+            tag = NET
             OR = {
                 SWK = {
                     all_core = {
@@ -904,7 +904,7 @@ political_decisions = {
         picture = sarawak
         potential = {
             OR = {
-                tag = ENG
+                tag = NET
                 tag = EIC
             }
             is_greater_power = yes
@@ -951,7 +951,7 @@ political_decisions = {
         picture = map_east_indies
         potential = {
             OR = {
-                tag = ENG
+                tag = NET
                 tag = EIC
             }
             is_greater_power = yes
@@ -1458,7 +1458,8 @@ political_decisions = {
             }
             LXA = {
                 set_country_flag = Luangprabang
-                government = democracy
+                				government = democracy
+                 
                 political_reform = landed_voting
                 all_core = { remove_core = SIA }
                 tech_school = developing_tech_school
@@ -1656,14 +1657,14 @@ political_decisions = {
                     OR = {
                         is_culture_group = british
                         primary_culture = australian
-                        primary_culture = anglo_canadian
+                        primary_culture = akino_german
                     }
                     NOT = { has_global_flag = bismarck_islands_anglo }
                 }
                 AND = {
                     OR = {
                         is_culture_group = french
-                        primary_culture = french_canadian
+                        primary_culture = akino_german
                     }
                     NOT = { has_global_flag = bismarck_islands_french }
                 }
@@ -1735,7 +1736,7 @@ political_decisions = {
                         OR = {
                             is_culture_group = british
                             primary_culture = australian
-                            primary_culture = anglo_canadian
+                            primary_culture = akino_german
                         }
                     }
                 }
@@ -1749,7 +1750,7 @@ political_decisions = {
                     owner = {
                         OR = {
                             is_culture_group = french
-                            primary_culture = french_canadian
+                            primary_culture = akino_german
                         }
                     }
                 }

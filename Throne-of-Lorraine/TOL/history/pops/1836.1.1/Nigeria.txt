@@ -19,7 +19,31 @@
         religion = sunni
         size = 3200
     }
-
+	
+	artisans = {
+        culture = turkish
+        religion = sunni
+        size = 3200
+    }
+	
+	artisans = {
+        culture = persian
+        religion = shia
+        size = 3200
+    }
+		
+	artisans = {
+        culture = low_german
+        religion = reformed
+        size = 1200
+    }
+	
+    artisans = {
+        culture = venetian
+        religion = catholic
+        size = 1200
+    }
+	
     soldiers = {
         culture = yoruba
         religion = sunni
@@ -107,7 +131,7 @@
     }
 
     aristocrats = {
-        culture = fon
+        culture = yoruba
         religion = fetishist
         size = 200
     }
@@ -119,13 +143,13 @@
     }
 
     artisans = {
-        culture = fon
+        culture = yoruba
         religion = sunni
         size = 500
     }
 
     soldiers = {
-        culture = fon
+        culture = yoruba
         religion = fetishist
         size = 100
     }
@@ -327,13 +351,13 @@
     }
 
     bureaucrats = {
-        culture = edo
+        culture = yoruba
         religion = fetishist
         size = 200
     }
 
     officers = {
-        culture = edo
+        culture = yoruba
         religion = fetishist
         size = 700
     }
@@ -357,7 +381,7 @@
     }
 
     soldiers = {
-        culture = edo
+        culture = yoruba
         religion = fetishist
         size = 2000
     }
@@ -419,7 +443,7 @@
     }
 
     clergymen = {
-        culture = edo
+        culture = yoruba
         religion = fetishist
         size = 300
     }
@@ -431,13 +455,13 @@
     }
 
     soldiers = {
-        culture = edo
+        culture = yoruba
         religion = fetishist
         size = 300
     }
 
     farmers = {
-        culture = edo
+        culture = yoruba
         religion = fetishist
         size = 18650
     }
@@ -485,25 +509,25 @@
     }
 
     aristocrats = {
-        culture = ibo
+        culture = yoruba
         religion = sunni
         size = 1550
     }
 
     clergymen = {
-        culture = ibo
+        culture = yoruba
         religion = fetishist
         size = 775
     }
 
     artisans = {
-        culture = ibo
+        culture = yoruba
         religion = fetishist
         size = 3125
     }
 
     soldiers = {
-        culture = ibo
+        culture = yoruba
         religion = fetishist
         size = 800
     }
@@ -529,7 +553,7 @@
     }
 
     bureaucrats = {
-        culture = itsekari
+        culture = yoruba
         religion = fetishist
         size = 600
     }
@@ -547,7 +571,7 @@
     }
 
     artisans = {
-        culture = itsekari
+        culture = yoruba
         religion = fetishist
         size = 2350
     }
@@ -559,7 +583,7 @@
     }
 
     soldiers = {
-        culture = itsekari
+        culture = yoruba
         religion = sunni
         size = 100
     }
@@ -616,25 +640,25 @@
     }
 
     aristocrats = {
-        culture = edo
+        culture = yoruba
         religion = fetishist
         size = 200
     }
 
     clergymen = {
-        culture = edo
+        culture = yoruba
         religion = fetishist
         size = 100
     }
 
     artisans = {
-        culture = edo
+        culture = yoruba
         religion = fetishist
         size = 600
     }
 
     soldiers = {
-        culture = edo
+        culture = yoruba
         religion = fetishist
         size = 1150
     }
@@ -716,7 +740,7 @@
     }
 
     slaves = {
-        culture = ibibio
+        culture = yoruba
         religion = sunni
         size = 140000
     }
@@ -730,7 +754,7 @@
     }
 
     clergymen = {
-        culture = ibo
+        culture = yoruba
         religion = fetishist
         size = 3150
     }
@@ -742,7 +766,7 @@
     }
 
     artisans = {
-        culture = ibo
+        culture = yoruba
         religion = sunni
         size = 2650
     }
@@ -754,7 +778,7 @@
     }
 
     soldiers = {
-        culture = ibo
+        culture = yoruba
         religion = fetishist
         size = 900
     }
@@ -766,7 +790,7 @@
     }
 
     slaves = {
-        culture = itsekari
+        culture = yoruba
         religion = reformed
         size = 100000
     }
@@ -798,7 +822,7 @@
     }
 
     soldiers = {
-        culture = ibibio
+        culture = yoruba
         religion = fetishist
         size = 2100
     }
@@ -810,7 +834,7 @@
     }
 
     slaves = {
-        culture = tiv
+        culture = yoruba
         religion = reformed
         size = 44000
     }
@@ -824,13 +848,13 @@
     }
 
     bureaucrats = {
-        culture = ibo
+        culture = yoruba
         religion = fetishist
         size = 450
     }
 
     clergymen = {
-        culture = ibo
+        culture = yoruba
         religion = sunni
         size = 2100
     }
@@ -842,7 +866,7 @@
     }
 
     soldiers = {
-        culture = ibo
+        culture = yoruba
         religion = fetishist
         size = 2400
     }
@@ -855,7 +879,7 @@
 
     slaves = {
         culture = songhai
-        religion = sunni
+        religion = refomed
         size = 34000
     }
 }
@@ -882,19 +906,25 @@
     }
 
     soldiers = {
-        culture = tiv
+        culture = yoruba
         religion = fetishist
         size = 950
     }
 
     farmers = {
+        culture = hausa
+        religion = fetishist
+        size = 38550
+    }
+	
+    farmers = {
         culture = songhai
         religion = fetishist
-        size = 62550
+        size = 6550
     }
 
     slaves = {
-        culture = ibo
+        culture = yoruba
         religion = fetishist
         size = 23000
     }
@@ -920,19 +950,25 @@
     }
 
     soldiers = {
-        culture = tiv
+        culture = yoruba
         religion = fetishist
         size = 450
+    }
+	
+	farmers = {
+        culture = hausa
+        religion = fetishist
+        size = 42550
     }
 
     farmers = {
         culture = songhai
         religion = fetishist
-        size = 56250
+        size = 16250
     }
 
     slaves = {
-        culture = tiv
+        culture = yoruba
         religion = fetishist
         size = 8000
     }
@@ -1002,9 +1038,9 @@
     }
 
     farmers = {
-        culture = songhai
-        religion = sunni
-        size = 9025
+        culture = hausa
+        religion = fetishist
+        size = 22550
     }
 }
 #Nupe-Jos Region (600000)
@@ -1050,7 +1086,7 @@
     farmers = {
         culture = songhai
         religion = sunni
-        size = 41150
+        size = 5150
     }
 
     aristocrats = {
@@ -1059,6 +1095,12 @@
         size = 50
     }
 
+    farmers = {
+        culture = hausa
+        religion = fetishist
+        size = 38550
+    }
+	
     clergymen = {
         culture = hausa
         religion = fetishist
@@ -1196,13 +1238,13 @@
     farmers = {
         culture = songhai
         religion = fetishist
-        size = 10625
+        size = 3625
     }
 
     slaves = {
-        culture = east_kwa
+        culture = hausa
         religion = fetishist
-        size = 5000
+        size = 15000
     }
 }
 #Abuja (64000/16000 POPS) #african_Minor includes Gwari and Chamba
@@ -1234,7 +1276,13 @@
     farmers = {
         culture = songhai
         religion = fetishist
-        size = 10725
+        size = 3725
+    }
+	
+	farmers = {
+        culture = hausa
+        religion = fetishist
+        size = 60725
     }
 
     slaves = {
@@ -1640,9 +1688,9 @@
     }
 
     farmers = {
-        culture = songhai
+        culture = hausa
         religion = sunni
-        size = 37325
+        size = 47325
     }
 
     aristocrats = {
@@ -1672,7 +1720,7 @@
     farmers = {
         culture = songhai
         religion = fetishist
-        size = 1800
+        size = 3000
     }
 
     slaves = {
@@ -1740,7 +1788,7 @@
     farmers = {
         culture = songhai
         religion = sunni
-        size = 150100
+        size = 50100
     }
 
     aristocrats = {
@@ -1770,7 +1818,7 @@
     farmers = {
         culture = hausa
         religion = fetishist
-        size = 45500
+        size = 145500
     }
 
     slaves = {
@@ -1850,7 +1898,7 @@
     farmers = {
         culture = songhai
         religion = sunni
-        size = 106025
+        size = 56025
     }
 
     aristocrats = {
@@ -1868,7 +1916,7 @@
     artisans = {
         culture = hausa
         religion = fetishist
-        size = 1500
+        size = 5500
     }
 
     soldiers = {
@@ -1878,9 +1926,9 @@
     }
 
     farmers = {
-        culture = songhai
+        culture = hausa
         religion = fetishist
-        size = 27325
+        size = 52325
     }
 
     slaves = {
@@ -2200,8 +2248,8 @@
 #Kuka (960000/240000 POPS)
 1951 = {
     aristocrats = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = sunni
         size = 4600
     }
 
@@ -2218,15 +2266,15 @@
     }
 
     clergymen = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = jewish
         size = 2500
     }
 
     artisans = {
-        culture = neo_roman
-        religion = coptic
-        size = 9600
+        culture = immundus
+        religion = sunni
+        size = 1600
     }
 
     soldiers = {
@@ -2238,20 +2286,32 @@
     farmers = {
         culture = neo_roman
         religion = coptic
-        size = 160000
+        size = 35000
+    }
+	
+	farmers = {
+        culture = immundus
+        religion = coptic
+        size = 30000
+    }
+	
+    farmers = {
+        culture = immundus
+        religion = jewish
+        size = 5000
     }
 
     slaves = {
         culture = neo_roman
         religion = coptic
-        size = 60000
+        size = 2000
     }
 }
 #Nguru (768000/192000 POPS)
 1952 = {
     aristocrats = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = sunni
         size = 2200
     }
 
@@ -2276,13 +2336,13 @@
     farmers = {
         culture = neo_roman
         religion = coptic
-        size = 74500
+        size = 24500
     }
 
     slaves = {
-        culture = neo_roman
-        religion = coptic
-        size = 36000
+        culture = immundus
+        religion = fetishist
+        size = 6000
     }
 
     aristocrats = {
@@ -2298,8 +2358,8 @@
     }
 
     artisans = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = jewish
         size = 3600
     }
 
@@ -2310,9 +2370,9 @@
     }
 
     farmers = {
-        culture = neo_roman
-        religion = coptic
-        size = 65600
+        culture = immundus
+        religion = sunni
+        size = 25600
     }
 }
 #Dikoa (816000/204000 POPS)
@@ -2330,8 +2390,8 @@
     }
 
     artisans = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = sunni
         size = 7900
     }
 
@@ -2344,13 +2404,19 @@
     farmers = {
         culture = neo_roman
         religion = coptic
-        size = 144200
+        size = 54200
     }
 
-    slaves = {
-        culture = neo_roman
-        religion = coptic
-        size = 36000
+    farmers = {
+        culture = immundus
+        religion = jewish
+        size = 10000
+    }
+	
+	farmers = {
+        culture = immundus
+        religion = sunni
+        size = 16000
     }
 
     aristocrats = {
@@ -2378,8 +2444,8 @@
     }
 
     farmers = {
-        culture = neo_roman
-        religion = coptic
+        culture = immundus
+        religion = sunni
         size = 7200
     }
 

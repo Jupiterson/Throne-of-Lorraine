@@ -1,0 +1,433 @@
+#A raid on Akmolinsk-the Juz get puppeted
+country_event = {
+	id = 320001
+	title = "RUSKAZ1.T"
+	desc = "RUSKAZ1.D"
+	picture = "demolished_church"
+	
+	trigger = {
+		tag = RUS
+		year = 1842
+		NOT = { has_country_flag = Kazakh_war }
+		NOT = { is_our_vassal = KAZ }
+		KAZ = { owns = 1185 }
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1843
+		}
+		modifier = {
+			factor = 0.5
+			year = 1844
+		}
+		modifier = {
+			factor = 0.5
+			year = 1845
+		}
+		modifier = {
+			factor = 0.25
+			year = 1846
+		}
+	}
+	option = {
+		name = "We will teach them an lesson!"
+		RUS_1184 = { add_core = RUS }
+		set_country_flag = Kazakh_war
+		casus_belli = {
+			target = KAZ
+			type = make_puppet
+			months = 12
+		}
+		war = {
+			target = KAZ
+			attacker_goal = { casus_belli = make_puppet }
+		}
+	}
+}
+#The porous border with Kokand - Kokand get puppeted
+country_event = {
+	id = 320002
+	title = "RUSKAZ2.T"
+	desc = "RUSKAZ2.D"
+	picture = "storm_of_samarkand"
+	
+	trigger = {
+		tag = RUS
+		year = 1853
+		NOT = { has_country_flag = Bukkhara_war }
+		NOT = { is_our_vassal = BUK }
+		OR = {
+			BUK = { owns = 1202 }
+			BUK = { owns = 1193 }
+			BUK = { owns = 1189 }
+		}
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1854
+		}
+		modifier = {
+			factor = 0.5
+			year = 1855
+		}
+		modifier = {
+			factor = 0.5
+			year = 1856
+		}
+		modifier = {
+			factor = 0.25
+			year = 1857
+		}
+	}
+	option = {
+		name = "Bukkhara will bend the knee, just like the Juz."
+		set_country_flag = Bukkhara_war
+		casus_belli = {
+			target = BUK
+			type = make_puppet
+			months = 12
+		}
+		war = {
+			target = BUK
+			attacker_goal = { casus_belli = make_puppet }
+		}
+	}
+}
+#the metropolitans revolt
+country_event = {
+	id = 330000
+	title = "Flood0.t" 
+	desc = "Flood0.d"
+	picture = "averageorthodox"
+	
+	trigger = {
+		tag = LIT
+		year = 1851
+		RUS = { nationalism_n_imperialism  = 1 }
+		NOT = { is_our_vassal = KIE }
+		NOT = { has_country_flag = the_metropolitans_revolt }
+		NOT = { has_country_flag = the_metropolitans_revolt_resolved }		
+		owns = 958
+		OR = {
+			owns = 949
+			owns = 718
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "A Kievan puppet is better to have then a Russian Ukraine..."
+		prestige = -25
+		set_country_flag = the_metropolitans_revolt_resolved
+		959 = { secede_province = KIE }
+		958 = { secede_province = KIE }
+		960 = { secede_province = KIE }
+		any_owned = {
+			limit = {
+				OR = {
+					region = RUS_958
+					region = RUS_977
+					region = RUS_978
+				}
+				is_core = KIE
+			}
+			secede_province = KIE
+		}
+		any_pop = {
+			militancy = 4
+		}
+		create_vassal = KIE
+		create_alliance = KIE
+		add_accepted_culture = ruthenyan 
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	
+	option = {
+		name = "This is ridiculous, he must be mad!"
+		set_country_flag = the_metropolitans_revolt
+		prestige = 1
+		any_owned = {
+			limit = {
+				region = RUS_958
+				is_core = KIE
+			}
+			secede_province = KIE
+		}
+		war = {
+			target = KIE
+			attacker_goal = {
+				casus_belli = conquest_any 
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		ai_chance = {
+			factor = 99
+		}
+	}
+}
+#First Victory
+country_event = {
+	id = 330007
+	title = "The Russians intervene!" 
+	desc = "Our victory was celebrated too soon. Russia is now at our borders, and will launch an invasion soon!"
+	picture = "patriarch"
+	trigger = {
+		tag = LIT
+		NOT = { war = yes }
+		LIT = {
+			has_country_flag = the_metropolitans_revolt 
+			NOT = { has_country_flag = the_metropolitans_revolt_st2 }
+			NOT = { has_country_flag = the_metropolitans_revolt_resolved }
+		}
+		owns = 958
+		owns = 959
+		owns = 960
+	}
+	
+	mean_time_to_happen = {
+		day = 1
+	}
+	option = {
+		name = "This war is getting out of hand..."
+		set_country_flag = the_metropolitans_revolt_st2
+		RUS = {
+			country_event = 330001
+		}
+		any_pop = {
+			militancy = -1
+		}
+	}
+}
+#Russia intervenes
+country_event = {
+	id = 330001
+	title = "Flood1.t" 
+	desc = "Flood1.d"
+	picture = "patriarch"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "But of course!"	
+		casus_belli = {
+			target = LIT
+			type = make_puppet
+			months = 12
+		}
+		prestige = 5
+		any_pop = {
+			militancy = -1
+		}
+		diplomatic_influence = {
+			who = LIT
+			value = -400
+		}
+		war = {
+			target = LIT
+			attacker_goal = {
+				casus_belli = make_puppet
+				country = UKR
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally = yes
+		}	
+		ai_chance = {
+			factor = 99
+		}		
+	}
+	
+	option = {
+		name = "But we are too weak..."
+		prestige = -25
+		any_pop = {
+			militancy = 4
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+#Russian victory
+country_event = {
+	id = 330002
+	title = "Flood2.t" 
+	desc = "Flood2.d"
+	picture = "dudeonhorse"
+	
+	trigger = {
+		tag = RUS
+		NOT = { war_with = LIT }
+		LIT = {
+			has_country_flag = the_metropolitans_revolt 
+			has_country_flag = the_metropolitans_revolt_st2
+			NOT = { has_country_flag = the_metropolitans_revolt_resolved }
+			vassal_of = RUS
+		}
+	}
+	
+	mean_time_to_happen = {
+		day = 1
+	}
+	
+	option = {
+		name = "Kiev is now ours!"
+		badboy = 15
+		prestige = 25
+		1016 = { add_core = RUS }
+		LIT = { any_owned = { limit = { is_core = BYE } add_core = RUS } }
+		LIT = { any_owned = { limit = { is_core = UKR } add_core = RUS } }
+		LIT = { any_owned = { limit = { is_core = KIE } secede_province = RUS } }
+		add_accepted_culture = ruthenyan
+		release_vassal = LIT
+		diplomatic_influence = {
+			who = LIT
+			value = -400
+		}
+		LIT = { country_event = 330003 }
+		LIT = {	
+			clr_country_flag = the_metropolitans_revolt 
+			set_country_flag = the_metropolitans_revolt_resolved
+		}
+	}
+}
+#Lithuanian loss
+country_event = {
+	id = 330003
+	title = "Flood3.t" 
+	desc = "Flood3.d"
+	picture = "popularrevolt"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Now, what?"
+		prestige = -25
+		any_pop = {
+			militancy = 4
+		}
+		any_owned = { limit = { is_core = KIE } secede_province = RUS }
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+	option = {
+		name = "Contact the Poles. We have a deal to make."
+		prestige = -25
+		any_owned = { limit = { is_core = KIE } secede_province = RUS }
+		POL = { country_event = 330004 }
+		any_pop = {
+			militancy = 1
+		}
+        ai_chance = {
+            factor = 1
+			modifier = {
+                factor = 2
+                relation = { who = POL value = 50 }
+            }
+            modifier = {
+                factor = 4
+                POL = { is_greater_power = yes }
+            }
+			modifier = {
+                factor = 2
+                POL = { is_secondary_power = yes }
+            }
+        }
+	}
+}
+#Polish annexation
+country_event = {
+	id = 330004
+	title = "Flood4.t" 
+	desc = "Flood4.d"
+	picture = "dudeonhorse"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We accept!"
+		prestige = 25
+		LIT = {
+			any_owned = { add_core = PLC }
+		}
+        inherit = LIT
+		change_tag = PLC
+		any_owned = {
+			limit = {
+				is_core = POL
+				is_core = LIT
+			}
+			add_core = PLC
+		}
+		RUS = {
+			any_owned = {
+				limit = {
+					is_core = KIE
+				}
+				add_core = PLC
+			}
+		}
+	}
+}
+#Lithuanian victory
+country_event = {
+	id = 330005
+	title = "Flood5.t" 
+	desc = "Flood5.d"
+	picture = "patriarch"
+	
+	trigger = {
+		tag = LIT
+		NOT = { war_with = RUS }
+		has_country_flag = the_metropolitans_revolt 
+		has_country_flag = the_metropolitans_revolt_st2
+		NOT = { has_country_flag = the_metropolitans_revolt_resolved }
+		NOT = { vassal_of = RUS }
+		NOT = { KIE = { owns = 958 owns = 718 } }
+	}
+	
+	mean_time_to_happen = {
+		day = 1
+	}
+	
+	option = {
+		name = "Kiev is again ours!"
+		badboy = 5
+		prestige = 25
+		LIT = { any_owned = { limit = { is_core = KIE } add_core = KIE } }
+		clr_country_flag = the_metropolitans_revolt 
+		clr_country_flag = the_metropolitans_revolt_st2
+		set_country_flag = the_metropolitans_revolt_resolved
+		RUS = { country_event = 330006 }
+	}
+}
+#Russian loss
+country_event = {
+	id = 330006
+	title = "Flood6.t" 
+	desc = "Flood6.d"
+	picture = "popularrevolt"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Now, what?"
+		prestige = -25
+		any_pop = {
+			militancy = 4
+		}
+	}
+}

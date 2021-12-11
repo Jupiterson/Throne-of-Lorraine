@@ -3,9 +3,11 @@ political_decisions = {
 form_north_italian_union = {
         picture = italy_flag
 		potential = {
-	#		primary_culture = north_italian
-	#		primary_culture = venetian
+		OR = {
+			primary_culture = north_italian
+			primary_culture = venetian
 			has_country_flag = lego_lombardia
+			}
 			NOT = {
 				exists = ITA
 				exists = NIF
@@ -81,6 +83,132 @@ form_north_italian_union = {
 			factor = 1
 		}
 	}
+	
+	
+	we_lost_venice = {
+        potential = {
+		    tag = VEN
+	       	NOT = {
+		      owns = 729
+		    }
+            is_vassal = no
+            government = merchant_republic           
+            NOT = {
+                tag = ITA
+                tag = ITS
+            }
+			war = no
+        }
+
+        allow = {
+		 NOT = {
+		owns = 729
+		}
+       }
+
+        effect = {
+            set_country_flag = san_marco_republic
+            clr_country_flag = venetian_republic
+ 
+               random_owned = {  owner = { government = democracy }  }
+            }
+        
+        ai_will_do = { factor = 1 }
+    }
+	
+	we_retook_venice = {
+        potential = {
+		    tag = VEN
+            is_vassal = no
+			owns = 729
+            government = democracy
+            has_country_flag = san_marco_republic			
+            NOT = {
+                tag = ITA
+                tag = ITS
+            }
+			war = no
+        }
+
+        allow = {
+		 
+		owns = 729
+		
+       }
+
+        effect = {
+            set_country_flag = venetian_republic
+            clr_country_flag = san_marco_republic
+ 
+             random_owned = { owner = { government = merchant_republic } }    
+            }
+        
+
+        ai_will_do = { factor = 1 }
+    }
+	
+	we_lost_genoa = {
+        potential = {
+		    tag = GEN
+	       	NOT = {
+		      owns = 724
+		    }
+            is_vassal = no
+            government = merchant_republic           
+            NOT = {
+                tag = ITA
+                tag = ITS
+            }
+			war = no
+        }
+
+        allow = {
+		 NOT = {
+		owns = 724
+		}
+       }
+
+        effect = {
+            set_country_flag = tirrenian_republic
+            clr_country_flag = genoa_republic
+ 
+               random_owned = { owner = { government = democracy } } 
+            }
+        
+
+        ai_will_do = { factor = 1 }
+    }
+	
+	we_retook_genoa = {
+        potential = {
+		    tag = GEN
+            is_vassal = no
+			owns = 724
+            government = democracy
+            has_country_flag = tirrenian_republic			
+            NOT = {
+                tag = ITA
+                tag = ITS
+            }
+			war = no
+        }
+
+        allow = {
+		 
+		owns = 724
+		
+       }
+
+        effect = {
+            set_country_flag = genoa_republic
+            clr_country_flag = tirrenian_republic
+ 
+                random_owned = { owner = { government = merchant_republic } }   
+            }
+        
+
+        ai_will_do = { factor = 1 }
+    }
 	
 
 claim_griko_lands = {

@@ -83,7 +83,7 @@ country_event = {
         badboy = -5
         NEN = {
             primary_culture = yankee
-            add_accepted_culture = anglo_canadian
+            add_accepted_culture = akino_german
             government = democracy
         }
         create_alliance = NEN
@@ -194,7 +194,7 @@ country_event = {
     }
     option = {
         name = "We will not trade one European tyrant for another!"
-        add_accepted_culture = french_canadian
+        add_accepted_culture = akino_german
         relation = {
             who = FRA
             value = -100
@@ -375,12 +375,12 @@ country_event = {
 
     option = {
         name = "This is one nation indivisible. There will be no home rule."
-        add_accepted_culture = french_canadian
+        add_accepted_culture = akino_german
         set_country_flag = USA_french
         QUE = { all_core = { add_core = USA } }
         any_pop = {
             limit = {
-                culture = french_canadian
+                culture = akino_german
             }
             militancy = 6
             consciousness = 6
@@ -418,7 +418,7 @@ country_event = {
     option = {
         name = "Will the New World ever know peace from the terror of Europe?"
         set_country_flag = USA_french
-        add_accepted_culture = french_canadian
+        add_accepted_culture = akino_german
         ai_chance = {
             factor = 100
         }
@@ -434,11 +434,11 @@ country_event = {
 
     option = {
         name = "This is one nation indivisible. There will be no home rule."
-        add_accepted_culture = french_canadian
+        add_accepted_culture = akino_german
         set_country_flag = USA_french
         any_pop = {
             limit = {
-                culture = french_canadian
+                culture = akino_german
             }
             militancy = 3
             consciousness = 3
@@ -935,7 +935,7 @@ country_event = {
         CRB = {
             capital = 2217
             primary_culture = afro_caribbean
-            add_accepted_culture = afro_latino
+            add_accepted_culture = afro_italian
             add_accepted_culture = afro_french
             add_accepted_culture = caribeno
         }
@@ -948,7 +948,7 @@ country_event = {
         CRB = {
             capital = 2209
             primary_culture = caribeno
-            add_accepted_culture = afro_latino
+            add_accepted_culture = afro_italian
             add_accepted_culture = afro_french
             add_accepted_culture = afro_caribbean
         }
@@ -962,7 +962,7 @@ country_event = {
             capital = 2213
             primary_culture = afro_french
             add_accepted_culture = caribeno
-            add_accepted_culture = afro_latino
+            add_accepted_culture = afro_italian
             add_accepted_culture = afro_caribbean
         }
         ai_chance = {
@@ -980,7 +980,7 @@ country_event = {
 
     option = {
         name = "The land should be cultivated by Americans."
-        add_accepted_culture = alaskan
+        add_accepted_culture = inuit
         LSK = { all_core = { add_core = USA } }
         ai_chance = {
             factor = 70
@@ -2236,7 +2236,7 @@ country_event = {
         name = "End the Union"
         capital = 2229
         primary_culture = afro_caribbean
-        add_accepted_culture = afro_latino
+        add_accepted_culture = afro_italian
         add_accepted_culture = afro_french
         add_accepted_culture = caribeno
         release = CUB

@@ -1169,7 +1169,7 @@ province_event = {
     desc = "EVTDESC14650"
 
     trigger = {
-        NOT = { has_country_modifier = recent_safari2 }
+        NOT = { has_country_modifier = recent_scushitici2 }
         is_colonial = yes
         OR = {
             continent = africa
@@ -1213,12 +1213,12 @@ province_event = {
 
     option = {
         name = "EVTOPTB14650"
-        owner = { prestige = 3 add_country_modifier = { name = recent_safari2 duration = 365 } }
+        owner = { prestige = 3 add_country_modifier = { name = recent_scushitici2 duration = 365 } }
         state_scope = { any_pop = { limit = { is_accepted_culture = no is_primary_culture = no } militancy = 1 } }
     }
 }
 
-#Heia Safari!
+#Heia Scushitici!
 province_event = {
     id = 14660
     title = "EVTNAME14660"
@@ -1226,7 +1226,7 @@ province_event = {
 
     trigger = {
         year = 1860
-        NOT = { has_country_modifier = recent_safari }
+        NOT = { has_country_modifier = recent_scushitici }
         is_colonial = yes
         OR = {
             continent = africa
@@ -1262,7 +1262,7 @@ province_event = {
 
     option = {
         name = "EVTOPTA14660"
-        owner = { prestige = 3 add_country_modifier = { name = recent_safari duration = 365 } }
+        owner = { prestige = 3 add_country_modifier = { name = recent_scushitici duration = 365 } }
     }
 
     option = {
@@ -1271,7 +1271,7 @@ province_event = {
             limit = { civilized = yes NOT = { tag = THIS } }
             relation = { who = THIS value = 30 }
         }
-        owner = { add_country_modifier = { name = recent_safari duration = 365 } }
+        owner = { add_country_modifier = { name = recent_scushitici duration = 365 } }
     }
 }
 

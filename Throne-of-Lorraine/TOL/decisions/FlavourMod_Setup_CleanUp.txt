@@ -77,27 +77,7 @@ political_decisions = {
         }
     }
 
-    disable_microstates = {
-        picture = starting_options
-        potential = {
-            ai = no
-            has_global_flag = looking_through_options
-            NOT = { has_global_flag = disable_microstates }
-            NOT = { year = 1837 }
-        }
-        allow = { }
-        effect = {
-            set_global_flag = disable_microstates
-            3251 = { remove_core = MNC add_core = SAR add_core = ITA }
-            SAR = { inherit = MNC }
-            3252 = { remove_core = ADO remove_core = CAT add_core = SPA }
-            SPA = { inherit = ADO }
-            3253 = { remove_core = LIE add_core = AUS }
-            AUS = { inherit = LIE }
-            3266 = { remove_core = SMR add_core = PAP add_core = ITA }
-            PAP = { inherit = SMR }
-        }
-    }
+    
 
     cleanup_ant = {
         potential = {
@@ -957,12 +937,14 @@ political_decisions = {
             OR = {
                 AND = {
                     is_culture_group = american_cultures
-                    government = democracy
+                    				government = democracy
+                 
                     NOT = { has_country_modifier = catholic_growth }
                 }
                 any_neighbor_country = {
                     ai = no
-                    government = democracy
+                    				government = democracy
+                 
                     is_culture_group = american_cultures
                     NOT = { has_country_modifier = catholic_growth }
                 }
@@ -988,7 +970,7 @@ political_decisions = {
                             is_culture_group = american_cultures
                             location = { is_overseas = no }
                             NOT = {
-                                culture = texan
+                                culture = free_german
                                 type = craftsmen
                                 type = bureaucrats
                                 strata = rich
@@ -1022,7 +1004,7 @@ political_decisions = {
                     any_pop = {
                         limit = {
                             has_pop_religion = catholic
-                            has_pop_culture = dixie
+                            has_pop_culture = yankee
                             NOT = { type = craftsmen }
                             location = { is_overseas = no }
                         }
@@ -1051,7 +1033,7 @@ political_decisions = {
                         is_culture_group = american_cultures
                         location = { is_overseas = no }
                         NOT = {
-                            has_pop_culture = texan
+                            has_pop_culture = free_german
                             type = craftsmen
                             type = bureaucrats
                             strata = rich
@@ -1086,8 +1068,8 @@ political_decisions = {
                     limit = {
                         has_pop_religion = catholic
                         OR = {
-                            has_pop_culture = dixie
-                            has_pop_culture = texan
+                            has_pop_culture = yankee
+                            has_pop_culture = free_german
                         }
                         NOT = { type = craftsmen }
                         location = { is_overseas = no }

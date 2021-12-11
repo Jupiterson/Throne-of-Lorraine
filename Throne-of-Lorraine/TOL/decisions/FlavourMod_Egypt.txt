@@ -64,6 +64,12 @@ political_decisions = {
         }
 
         allow = {
+		 THIS = {
+                civilized = yes
+                OR = {
+                    part_of_sphere = no
+                }
+            }
           military_score = 10
             EGY = {
                 civilized = no

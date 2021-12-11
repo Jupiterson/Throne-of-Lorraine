@@ -1,0 +1,27 @@
+political_decisions = {
+
+incorparate_yemen = {
+		picture = become_yemen
+		potential = {
+			tag = ETH
+			YEM = { vassal_of = THIS }
+		}
+		allow = {
+            year = 1846
+		}
+		effect = {
+    prestige = 5
+    set_country_flag = incorparated
+	random_country = {
+                limit = {
+                    tag = YEM
+                    exists = yes
+                    ai = yes
+                }
+                THIS = { inherit = YEM }
+            }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	}

@@ -589,8 +589,8 @@ political_decisions = {
             TRI = { all_core = { add_core = MGH } }
             TUN = { all_core = { add_core = MGH } }
             add_accepted_culture = berber
-            add_accepted_culture = tuareg
-            add_accepted_culture = maures
+            add_accepted_culture = berber
+            add_accepted_culture = berber
             change_tag = MGH
             any_country = {
                 limit = {
@@ -608,7 +608,7 @@ political_decisions = {
                     war = no
                     OR = {
                         primary_culture = maghrebi
-                        primary_culture = maures
+                        primary_culture = berber
                     }
                     OR = {
                         in_sphere = THIS
@@ -676,8 +676,10 @@ political_decisions = {
         allow = {
             civilized = yes
             is_greater_power = yes
-            NOT = { government = democracy }
-            NOT = { government = democracy }
+            NOT = { 				government = democracy
+                government = hanseatic }
+            NOT = { 				government = democracy
+                government = hanseatic }
             nationalism_n_imperialism = 1
         }
 

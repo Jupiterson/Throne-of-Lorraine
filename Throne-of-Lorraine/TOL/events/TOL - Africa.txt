@@ -1,4 +1,4 @@
-#Kristiene
+#Kristiene-Oyo thing
 country_event = {
        id = 23299
 
@@ -28,4 +28,76 @@ country_event = {
 		
       }
     }
- 
+	
+#
+country_event = {
+    id = 99890 #Segu War
+    title = "EVTNAME99890"
+    desc = "EVTDESC99890"
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = MAS
+        year = 1844
+        NOT = { year = 1855 }
+        owns = 609
+        NOT = { has_country_flag = segu_war }
+    }
+
+    mean_time_to_happen = {
+        months = 5
+    }
+
+    option = {
+        name = "EVT99800OPTA"
+        prestige = -10
+        1800 = { secede_province = SEG }
+        war = {
+            target = SEG
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = status_quo }
+        }
+        set_country_flag = segu_war
+    }
+}	
+	
+#Hausa rebellion	
+ country_event = {
+    id = 99800 #Hausa REbellion
+    title = "EVTNAME99800"
+    desc = "EVTDESC99800"
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = MAS
+        year = 1843
+        NOT = { year = 1855 }
+        owns = 1941
+        NOT = { has_country_flag = hasua }
+    }
+
+    mean_time_to_happen = {
+        months = 5
+    }
+
+    option = {
+        name = "EVT99800OPTA"
+        prestige = -20
+        any_owned = {
+            limit = { is_core = ARO }
+            secede_province = ARO
+        }
+		
+        ARO = {
+            any_pop = { militancy = -6 }
+        }
+        war = {
+            target = ARO
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = status_quo }
+        }
+        set_country_flag = hasua
+    }
+}

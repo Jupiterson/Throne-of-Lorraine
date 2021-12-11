@@ -168,23 +168,25 @@ political_decisions = {
                 tag = COL
                 tag = MTC
                 tag = RPL
-                primary_culture = anglo_canadian
+                primary_culture = akino_german
                 AND = {
                     primary_culture = british
-                    accepted_culture = anglo_canadian
+                    accepted_culture = akino_german
                     NOT = { tag = ENG }
                     NOT = { tag = ENL }
                 }
             }
             CAN = {
                 OR = {
-                    government = democracy
+                    				government = democracy
+                government = hanseatic
                     government = hms_government
                     government = constitutional_empire
                 }
             }
             OR = {
-                government = democracy
+                				government = democracy
+                government = hanseatic
                 government = hms_government
                 government = constitutional_empire
             }
@@ -583,7 +585,7 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    alaskan_frontier = {
+    inuit_frontier = {
         picture = fort_selkirk
         potential = {
             tag = AKI
@@ -705,8 +707,8 @@ political_decisions = {
         picture = vive_le_quebec
         potential = {
             OR = {
-                primary_culture = french_canadian
-                primary_culture = acadian
+                primary_culture = akino_german
+                primary_culture = akino_german
             }
             NOT = {
                 tag = FCA
@@ -762,15 +764,15 @@ political_decisions = {
             MRU = { all_core = { remove_core = MRU } }
             COL = { all_core = { remove_core = COL remove_core = ENG add_core = FCA } }
             CAN = { all_core = { add_core = FCA remove_core = ENG remove_core = CAN remove_core = COL remove_core = MRU } }
-            RPL = { annex_to = THIS government = democracy all_core = { add_core = FCA remove_core = ENG remove_core = COL } }
+            RPL = { annex_to = THIS 				government = democracy
+                government = hanseatic all_core = { add_core = FCA remove_core = ENG remove_core = COL } }
             74 = { change_province_name = "Québec" state_scope = { change_region_name = "Terre-Neuve" } }
             QUE = { all_core = { add_core = FCA remove_core = ENG remove_core = RPL remove_core = CAN remove_core = NEW } }
             ACA = { all_core = { add_core = ACA remove_core = ENG } }
-            add_accepted_culture = french_canadian
-            add_accepted_culture = acadian
+            add_accepted_culture = akino_german
             add_accepted_culture = afro_french
             add_accepted_culture = mulatto
-            add_accepted_culture = dixie
+            add_accepted_culture = yankee
             USA_139 = { add_core = ULA } #Louisiana
             USA_144 = { add_core = ULA } #Arkansas
             USA_148 = { add_core = ULA } #Missouri

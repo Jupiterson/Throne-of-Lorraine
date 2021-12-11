@@ -163,7 +163,7 @@ country_migration_target = {
                     primary_culture = french_canadian
                     primary_culture = neo_zelandais
                     primary_culture = australian
-                    primary_culture = dixie
+                    primary_culture = yankee
                     primary_culture = louisianan
                     primary_culture = french
                     primary_culture = wallonian
@@ -6533,14 +6533,14 @@ rehabilitation = {
             factor = 2.0
             country = { government = democracy }
             NOT = { country = { primary_culture = yankee } }
-            NOT = { country = { primary_culture = dixie } }
+            NOT = { country = { primary_culture = yankee } }
         }
 
         modifier = {
             factor = 0.5
             OR = {
                 country = { primary_culture = yankee }
-                country = { primary_culture = dixie }
+                country = { primary_culture = yankee }
             }
         }
 
