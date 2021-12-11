@@ -1,24 +1,23 @@
-capital = 2295
-primary_culture = quechua
-culture = aimara
+capital = 2402
+primary_culture = amazonian
 religion = catholic
 government = absolute_monarchy
-plurality = 25.0
+plurality = 15.0
 nationalvalue = nv_equality
-literacy = 0.09
+literacy = 0.07
 non_state_culture_literacy = 0.01
 civilized = no
-prestige = 12
+prestige = 3
 
 # Political reforms
-slavery = yes_slavery
+slavery = no_slavery
 upper_house_composition = appointed
-vote_franschise = none_voting
-public_meetings = no_meeting
+vote_franschise = wealth_weighted_voting
+public_meetings = yes_meeting
 press_rights = state_press
 trade_unions = no_trade_unions
-voting_system = first_past_the_post
-political_parties = underground_parties
+voting_system = jefferson_method
+political_parties = harassment
 
 # Social Reforms
 wage_reform = no_minimum_wage
@@ -29,8 +28,8 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-# New Reforms
-conscription = one_year_draft
+#New Reforms
+conscription = two_year_draft
 debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
@@ -39,48 +38,54 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
-set_country_flag = catholic_country
-
-ruling_party = PEU_conservative
+ruling_party = GAM_conservative
+last_election = 1835.1.1
 upper_house = {
     fascist = 0
-    liberal = 29
-    conservative = 57
-    reactionary = 14
+    liberal = 10
+    conservative = 50
+    reactionary = 40
     radical = 0
     socialist = 0
     communist = 0
 }
 
-decision = PEU_1836_setup
-
 set_country_flag = new_world_nation
 
+decision = BRZ_1836_setup
+
 # Technologies
+post_napoleonic_thought = 1
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
-military_staff_system = 1
 army_command_principle = 1
-freedom_of_trade = 1
-hot_blast = 1
-basic_chemistry = 1
+post_nelsonian_thought = 1
+private_banks = 1
+no_standard = 1
+guild_based_production = 1
+classicism_n_early_romanticism = 1
+late_enlightenment_philosophy = 1
+enlightenment_thought = 1
+mechanical_production = 1
+piston_steam_engine = 1
+clipper_design = 1
 
+# Inventions
+dragoon_activation = yes
 
-foreign_training = yes_foreign_training
-foreign_weapons = yes_foreign_weapons
-foreign_officers = yes_foreign_officers
-finance_reform = finance_reform_two #International Debt
-education_reform = yes_education_reform
+#Starting Consciousness
+consciousness = 3
+nonstate_consciousness = 1
 
-
-oob = "PEU_oob.txt"
+oob = "TAB_oob.txt"
 1861.1.1 = {
-    oob = "/1861/PEU_oob.txt"
-    set_country_flag = peru_reunited
+    oob = "/1861/BRZ_oob.txt"
+    literacy = 0.14
+    non_state_culture_literacy = 0.05
 }
 1861.1.1 = {
+plurality = 60
 
-plurality = 50
 # Technologies
     post_napoleonic_thought = 1
     flintlock_rifles = 1
@@ -89,6 +94,7 @@ plurality = 50
     iron_muzzle_loaded_artillery = 1
     military_staff_system = 1
     army_command_principle = 1
+    army_professionalism = 1
 
     post_nelsonian_thought = 1
     clipper_design = 1
@@ -101,23 +107,29 @@ plurality = 50
     private_banks = 1
     stock_exchange = 1
     no_standard = 1
+    ad_hoc_money_bill_printing = 1
+    private_bank_money_bill_printing = 1
     early_classical_theory_and_critique = 1
     late_classical_theory = 1
     freedom_of_trade = 1
+    market_structure = 1
     guild_based_production = 1
 
     classicism_n_early_romanticism = 1
     romanticism = 1
     late_enlightenment_philosophy = 1
+    idealism = 1
     malthusian_thought = 1
     positivism = 1
     enlightenment_thought = 1
     ideological_thought = 1
+    state_n_government = 1
     introspectionism = 1
 
     piston_steam_engine = 1
     high_pressure_steam_engine = 1
     mechanical_production = 1
+    interchangeable_parts = 1
     hot_blast = 1
     experimental_railroad = 1
     basic_chemistry = 1

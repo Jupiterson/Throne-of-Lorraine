@@ -1,60 +1,76 @@
-
-FRA = {value = -50}
+FRA = {
+    value = -25
+}
+PEU = {
+    value = -100
+}
+BRZ = {
+    value = -100
+}
+USA = {
+    value = 25
+}
+TEX = {
+    value = -25
+}
+GEN = {
+    value = -75
+}
 
 army = {
-    name = "Esercito Pontificio"
+    name = "Armée Jésuite"
     location = 2276
     regiment = {
-        name= "1. Guardia"
+        name= "1. Guarde"
         type = guard
-        home = 2276
+        home = 2247
     }
 
     regiment = {
-        name= "2. Guardia"
+        name= "2. Guarde"
         type = guard
-        home = 2267
+        home = 2252
     }
 
     regiment = {
-        name= "3. Guardia"
+        name= "3. Guarde"
         type = guard
-        home = 2240
+        home = 2254
     }
 	
     regiment = {
-        name= "4. Guardia"
-        type = guard
-        home = 2240
-    }
-    regiment = {
-        name= "5. Guardia"
-        type = guard
-        home = 2266
-    }
-	    regiment = {
-        name= "6. Guardia"
+        name= "4. Guarde"
         type = guard
         home = 2255
     }
-	    regiment = {
-        name= "7. Guardia"
+    regiment = {
+        name= "5. Guarde"
         type = guard
-        home = 2243
+        home = 2256
+    }
+	    regiment = {
+        name= "6. Guarde"
+        type = guard
+        home = 2264
+    }
+	    regiment = {
+        name= "7. Guarde"
+        type = guard
+        home = 2267
     }
 }
 
 navy = {
-    name = "Marina dei Gesuiti"
+    name = "Marine des Jèsuites"
     location = 2276
 
     ship = {
-        name= "Nave da guerra"
+        name= "Saint Antoine"
         type = frigate
     }
 
     ship = {
-        name= "Nave da viaggio"
+        name= "Navire de transport"
         type = steam_transport
     }
 }

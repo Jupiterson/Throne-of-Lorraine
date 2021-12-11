@@ -1,16 +1,16 @@
-capital = 2447
-primary_culture = brazilian
-religion = catholic
-government = constitutional_empire
+capital = 2369
+primary_culture = amazonian
+religion = animist
+government = absolute_monarchy
 plurality = 15.0
 nationalvalue = nv_equality
-literacy = 0.77
+literacy = 0.07
 non_state_culture_literacy = 0.01
-civilized = yes
+civilized = no
 prestige = 3
 
 # Political reforms
-slavery = yes_slavery
+slavery = no_slavery
 upper_house_composition = appointed
 vote_franschise = wealth_weighted_voting
 public_meetings = yes_meeting
@@ -38,15 +38,13 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
-set_country_flag = catholic_country
-
-ruling_party = BRZ_conservative
+ruling_party = GAM_conservative
 last_election = 1835.1.1
 upper_house = {
     fascist = 0
-    liberal = 35
-    conservative = 60
-    reactionary = 5
+    liberal = 10
+    conservative = 50
+    reactionary = 40
     radical = 0
     socialist = 0
     communist = 0
@@ -79,14 +77,13 @@ dragoon_activation = yes
 consciousness = 3
 nonstate_consciousness = 1
 
-oob = "BRZ_oob.txt"
+oob = "COC_oob.txt"
 1861.1.1 = {
     oob = "/1861/BRZ_oob.txt"
     literacy = 0.14
     non_state_culture_literacy = 0.05
 }
 1861.1.1 = {
-set_country_flag = interfere_with_uruguay
 plurality = 60
 
 # Technologies
