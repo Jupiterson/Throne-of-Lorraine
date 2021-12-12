@@ -726,10 +726,8 @@ political_decisions = {
             set_country_flag = polish_lithuania_ruthenia_formed
             any_pop = {
                 limit = {
-					OR = {
 						has_pop_culture = ruthenyan
-						has_pop_culture = ruthenyan
-					}
+
                 }
                 militancy = -4
                 consciousness = -2

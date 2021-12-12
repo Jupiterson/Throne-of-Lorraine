@@ -183,73 +183,7 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
-
-
-    christimas_and_cocos_adminstration = {
-        picture = dreams_of_empire
-        potential = {
-            owns = 2244
-                tag = AST
-                AND = {
-                    owns = 2476
-                    owns = 2468
-                    owns = 2487
-                    owns = 2493
-                    owns = 2497
-                    owns = 2505
-                }
-                AST = { vassal_of = THIS }
-            }
-            OR = {
-                AND = {
-                    OR = { FRA = { has_country_flag = australia_organized } BOR = { has_country_flag = australia_organized } }
-                    2244 = { NOT = { is_core = FAS } }
-                }
-                AND = {
-                    OR = {
-                        primary_culture = british
-                        primary_culture = australian
-                    }
-                    2244 = { NOT = { is_core = AST } }
-                }
-            }
-        }
-
-        allow = {
-            war = no
-            state_n_government = 1
-        }
-
-        effect = {
-            random_owned = {
-                limit = {
-                    owner = {
-                        OR = {
-                            is_culture_group = british
-                            primary_culture = australian
-                            primary_culture = akino_german
-                        }
-                    }
-                }
-                2244 = { add_core = AST }
-                random_country = { limit = { tag = AST exists = yes } 2244 = { secede_province = AST } }
-            }
-
-            random_owned = {
-                limit = {
-                    owner = {
-                        OR = {
-                             primary_culture = australian
-                            is_culture_group = french
-                        }
-                    }
-                }
-                2244 = { add_core = FAS }
-                random_country = { limit = { tag = FAS exists = yes } 2244 = { secede_province = FAS } }
-            }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
+	
 }
+
+

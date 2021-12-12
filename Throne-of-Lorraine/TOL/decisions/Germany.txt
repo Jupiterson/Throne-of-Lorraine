@@ -42,12 +42,6 @@ political_decisions = {
                     NOT = { truce_with = THIS }
                     NOT = { relation = { who = THIS value = 100 } }
                 }
-                BOR = {
-                    exists = yes
-                    OR = { is_mobilised = no war = no }
-                    NOT = { truce_with = THIS }
-                    NOT = { relation = { who = THIS value = 100 } }
-                }
             }
             OR = {
                 AND = {

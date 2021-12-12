@@ -24,57 +24,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    claim_monaco = {
-    picture = establish_panfrenchism
-        potential = {
-            primary_culture = french
-            is_greater_power = yes
-            capital = 425
-            has_recently_lost_war = no
-            owns = 412
-            owns = 466
-            owns = 721
-            has_country_flag = claimed_aosta
-            NOT = { has_country_flag = claim_monaco }
-            721 = { owned_by = THIS }
-            NOT = { has_global_flag = disable_microstates }
-            MNC = {
-                exists = yes
-                ai = yes
-            }
-        }
-
-        allow = {
-            war_policy = jingoism
-            NOT = {
-                OR = {
-                    relation = { who = ITA value = 100 }
-                    relation = { who = ITS value = 100 }
-                }
-            }
-            MNC = {
-                OR = {
-                    NOT = {
-                        OR = {
-                            vassal_of = ITA
-                            vassal_of = ITS
-                        }
-                    }
-                    vassal_of = THIS
-                }
-            }
-        }
-
-        effect = {
-            FRA = { set_country_flag = claim_monaco }
-            BOR = { set_country_flag = claim_monaco }
-            inherit = MNC
-            badboy = 0.1
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
     tonkin_campaign = {
     picture = tonkin_campaign
         potential = {
@@ -665,71 +614,6 @@ political_decisions = {
         }
     }
 
-    reclaim_alsace = {
-    picture = black_stain
-        alert = no
-        potential = {
-            primary_culture = french
-            is_greater_power = yes
-            capital = 425
-            is_disarmed = no
-            OR = {
-                has_global_flag = franco_prussian_memorial
-                has_global_flag = franco_prussian_memorial2
-            }
-            NOT = { owns = 412 }
-            NOT = { has_country_flag = black_stain }
-        }
-
-        allow = {
-            OR = {
-                AND = {
-                    year = 1905
-                    OR = {
-                        alliance_with = ENG
-                        alliance_with = RUS
-                        alliance_with = ITA
-                        alliance_with = ITS
-                    }
-                }
-                GER = {
-                    exists = yes
-                    OR = {
-                        is_disarmed = yes
-                        AND = {
-                            has_recently_lost_war = yes
-                            war_exhaustion = 10
-                        }
-                    }
-                }
-                GCF = {
-                    exists = yes
-                    OR = {
-                        is_disarmed = yes
-                        AND = {
-                            has_recently_lost_war = yes
-                            war_exhaustion = 10
-                        }
-                    }
-                }
-                ai = no
-            }
-        }
-
-        effect = {
-            FRA = { set_country_flag = black_stain }
-            BOR = { set_country_flag = black_stain }
-            prestige = 10
-            FRA_412 = { add_core = THIS }
-            any_pop = {
-                limit = { is_culture_group = french }
-                militancy = -2
-            }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
     the_treaty_of_milan = {
     picture = establish_panfrenchism
         potential = {
@@ -933,6 +817,7 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
+	
 
     remove_any_french_cores = {
         potential = {

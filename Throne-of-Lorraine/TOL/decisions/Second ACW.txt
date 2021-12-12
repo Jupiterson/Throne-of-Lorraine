@@ -47,62 +47,9 @@ political_decisions = {
         }
     }
 
-    join_fsa = {
-        picture = form_fsa
-        potential = {
-            OR = {
-                tag = NEN
-                tag = UIL
-                tag = UNB
-                tag = DAK
-            }
-            ai = yes
-            is_vassal = no
-            NOT = { has_country_flag = asked_to_join_fsa }
-            neighbour = FSA
-
-        }
-
-        allow = {
-            war = no
-            is_greater_power = no
-            is_secondary_power = no
-            				government = democracy
-                government = hanseatic
-            OR = {
-                part_of_sphere = no
-                sphere_owner = { is_sphere_leader_of = FSA }
-                in_sphere = FSA
-            }
-            FSA = {
-                war = no
-                				government = democracy
-                government = hanseatic
-                NOT = { truce_with = THIS }
-            }
-            OR = {
-                in_sphere = FSA
-                relation = { who = FSA value = 100 }
-            }
-        }
-
-        effect = {
-            set_country_flag = asked_to_join_fsa
-            all_core = { add_core = FSA }
-            FSA = { country_event = 60130 }
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
     join_california = {
         potential = {
-            OR = {
                 tag = DES
-                tag = DAK
-            }
             ai = yes
             is_vassal = no
             NOT = { has_country_flag = asked_to_join_california }
@@ -138,119 +85,6 @@ political_decisions = {
             set_country_flag = asked_to_join_california
             all_core = { add_core = CAL }
             CAL = { country_event = 60130 }
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    join_new_america = {
-        potential = {
-            OR = {
-                tag = UNB
-                tag = DAK
-            }
-            ai = yes
-            is_vassal = no
-            NOT = { has_country_flag = asked_to_join_new_america }
-            neighbour = UIL
-
-        }
-
-        allow = {
-            war = no
-            is_greater_power = no
-            is_secondary_power = no
-            				government = democracy
-                government = hanseatic
-            OR = {
-                part_of_sphere = no
-                sphere_owner = { is_sphere_leader_of = UIL }
-                in_sphere = UIL
-            }
-            UIL = {
-                war = no
-                				government = democracy
-                government = hanseatic
-                NOT = { truce_with = THIS }
-            }
-            OR = {
-                in_sphere = UIL
-                relation = { who = UIL value = 100 }
-            }
-        }
-
-        effect = {
-            set_country_flag = asked_to_join_new_america
-            all_core = { add_core = UIL }
-            UIL = { country_event = 60130 }
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    rejoin_usa = {
-        potential = {
-            OR = {
-                AND = {
-                    tag = CAL
-                    has_country_flag = usstatehood_we_have_applied
-                }
-                AND = {
-                    tag = TEX
-                    has_country_flag = usstatehood_we_have_applied
-                }
-                AND = {
-                    tag = DES
-                    has_country_flag = usstatehood_we_have_applied
-                }
-                AND = {
-                    tag = NEN
-                    OR = {
-                        has_country_flag = usstatehood_we_have_applied
-                        USA = { ai = yes }
-                    }
-                }
-                tag = UIL
-                tag = UNB
-                tag = UNM
-                tag = UOR
-                tag = DAK
-            }
-            NOT = { has_global_flag = disunited_states }
-            NOT = { has_country_flag = asked_to_rejoin_usa }
-            NOT = {
-                tag = USA
-                tag = CSA
-                tag = FSA
-            }
-            is_greater_power = no
-            ai = yes
-        }
-
-        allow = {
-            139 = { owned_by = USA }
-            war = no
-            				government = democracy
-                government = hanseatic
-            OR = {
-                sphere_owner = { is_sphere_leader_of = USA }
-                in_sphere = USA
-            }
-            USA = {
-                war = no
-                				government = democracy
-                government = hanseatic
-                relation = { who = THIS value = 150 }
-            }
-        }
-
-        effect = {
-            set_country_flag = asked_to_rejoin_usa
-            USA = { country_event = 60130 }
         }
 
         ai_will_do = {
@@ -402,13 +236,8 @@ political_decisions = {
             OR = {
                 tag = FSA
                 tag = NEN
-                tag = UIL
-                tag = UOR
-                tag = DAK
                 tag = DES
                 tag = CAL
-                tag = UNM
-                tag = UNB
             }
             NOT = { has_country_flag = flag_of_freedom }
         }

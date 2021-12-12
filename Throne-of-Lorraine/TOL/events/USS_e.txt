@@ -1120,27 +1120,6 @@ country_event = {
         any_owned = {
             limit = {
                 OR = {
-                    province_id = 78
-                    province_id = 79
-                    province_id = 80
-                    province_id = 81
-                    province_id = 82
-                    province_id = 83
-                    province_id = 91
-                    province_id = 92
-                    province_id = 93
-                    province_id = 3475
-                    province_id = 3476
-                }
-            }
-            remove_core = THIS
-            add_core = UOR
-            secede_province = UOR
-        }
-
-        any_owned = {
-            limit = {
-                OR = {
                     province_id = 112
                     province_id = 107
                     province_id = 110
@@ -1261,37 +1240,6 @@ country_event = {
             factor = 100
         }
     }
-}
-
-country_event = {
-    id = 1033676
-    title = "End of the Union?"
-    desc = EVTDESC1033676
-    picture = treaty_of_versailles
-
-    trigger = {
-        tag = USA
-        has_global_flag = USS_USA_win
-        war = no
-        NOT = { exists = UIL }
-        owns = 163
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    option = {
-        name = "It is for the best."
-        USA = { all_core = { add_core = UIL } }
-        USA = { all_core = { remove_core = USA } }
-        change_tag = UIL
-        capital = 163
-        ai_chance = {
-            factor = 100
-        }
-    }
-
 }
 
 

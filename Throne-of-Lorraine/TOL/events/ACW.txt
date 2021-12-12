@@ -3934,14 +3934,6 @@ country_event = {
         # }
 
         inherit = FROM
-        random_owned = {
-            limit = {
-                is_core = RGR
-                state_scope = { is_slave = no }
-                owner = { slavery = yes_slavery }
-            }
-            state_scope = { is_slave = yes }
-        }
         ai_chance = {
             factor = 10
         }

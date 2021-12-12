@@ -224,16 +224,7 @@ political_decisions = {
                     }
                     #money = 75000
                 }
-                BOR = {
-                    exists = yes
-                    OR = {
-                        owns = 1683 #Taza
-                        owns = 1680 #Fez
-                        owns = 1690 #Marrakesh
-                        owns = 1694 #Agadir
-                    }
-                    #money = 75000
-                }
+               
             }
         }
 
@@ -319,7 +310,6 @@ political_decisions = {
                 DAH = { exists = no war_with = THIS }
                 OYO = { exists = no war_with = THIS }
                 ARO = { exists = no war_with = THIS }
-                KBO = { exists = no war_with = THIS }
                 DND = { exists = no war_with = THIS }
                 DAM = { exists = no war_with = THIS }
                 MOS = { exists = no war_with = THIS }
@@ -364,7 +354,6 @@ political_decisions = {
                             tag = DAH
                             tag = OYO
                             tag = ARO
-                            tag = KBO
                             tag = DND
                             tag = DAM
                             tag = MOS
