@@ -3763,10 +3763,8 @@ political_decisions = {
     bulgaria_rename_rumelia = {
         picture = gtfo
         potential = {
-            OR = {
                 tag = BUL
-                tag = BGR
-            }
+            
             owns = 815
             NOT = { has_global_flag = bulgaria_rename_rumelia }
         }
@@ -4093,10 +4091,8 @@ political_decisions = {
     bulgarian_rename_e_macedonia = {
         picture = gtfo
         potential = {
-            OR = {
                 tag = BUL
-                tag = BGR
-            }
+
             owns = 829
             NOT = { has_global_flag = bulgarian_rename_e_macedonia }
         }
@@ -4183,10 +4179,8 @@ political_decisions = {
     bulgarian_rename_n_macedonia = {
         picture = gtfo
         potential = {
-            OR = {
                 primary_culture = bulgarian
-                tag = BGR
-            }
+            
             owns = 806
             NOT = { has_global_flag = bulgarian_rename_n_macedonia }
         }

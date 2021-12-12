@@ -1100,10 +1100,9 @@ political_decisions = {
     claim_transnitria = {
         picture = transnistria_stamp
         potential = {
-            OR = {
+
                 tag = ROM
-                tag = BGR
-            }
+            
             NOT = { has_country_flag = claimed_transnitria }
         }
 
@@ -1124,7 +1123,6 @@ political_decisions = {
             }
             RUS_968 = {
                 add_core = ROM
-                add_core = BGR
             }
         }
         ai_will_do = { factor = 1 }
@@ -1164,10 +1162,9 @@ political_decisions = {
     claim_tisza = {
         picture = romanians_marching
         potential = {
-            OR = {
+
                 tag = ROM
-                tag = BGR
-            }
+            
             NOT = { has_country_flag = claimed_tisza }
         }
 
@@ -1198,31 +1195,25 @@ political_decisions = {
             }
             648 = {
                 add_core = ROM
-                add_core = BGR
             }
             650 = {
                 add_core = ROM
-                add_core = BGR
+
             }
             649 = {
                 add_core = ROM
-                add_core = BGR
             }
             3331 = {
                 add_core = ROM
-                add_core = BGR
             }
             792 = {
                 add_core = ROM
-                add_core = BGR
             }
             795 = {
                 add_core = ROM
-                add_core = BGR
             }
             3347 = {
                 add_core = ROM
-                add_core = BGR
             }
         }
         ai_will_do = { factor = 1 }
@@ -1272,10 +1263,8 @@ political_decisions = {
     greater_bulgaria = {
         picture = greater_bulgaria
         potential = {
-            OR = {
                 tag = BUL
-                tag = BGR
-            }
+            
             NOT = { has_country_flag = greater_bulgaria_claimed }
         }
 
@@ -1305,20 +1294,8 @@ political_decisions = {
             860 = {
                 remove_core = BUL
             }
-            TUR_805 = {
-                limit = { THIS = { tag = BGR } }
-                add_core = BGR
-            } #Southern Macedonia
-            TUR_803 = {
-                limit = { THIS = { tag = BGR } }
-                add_core = BGR
-            } #Southern Serbia
-            random_owned = {
-                limit = { owner = { NOT = { has_country_flag = bulgaria_exchange has_country_flag = eastern_rumelia_exchange } } THIS = { tag = BGR } }
-                TUR_860 = {
-                    add_core = BGR
-                } #Thrace
-            }
+          
+     
         }
         ai_will_do = { factor = 1 }
     }

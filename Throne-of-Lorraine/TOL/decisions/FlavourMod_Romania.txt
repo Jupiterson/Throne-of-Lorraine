@@ -42,10 +42,8 @@ political_decisions = {
     abolish_slavery_romania = {
         picture = abolish_slavery_romania
         potential = {
-            OR = {
                 primary_culture = romanian
-                tag = BGR
-            }
+            
             OR = {
                 slavery = yes_slavery
                 slavery = freedom_of_womb
