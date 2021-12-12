@@ -173,12 +173,6 @@ political_decisions = {
                     }
                 }
             }
-            FCA = {
-                OR = {
-                    exists = no
-                    NOT = { vassal_of = THIS }
-                }
-            }
             OR = {
                 COS = { in_sphere = THIS }
                 ELS    = { in_sphere = THIS }

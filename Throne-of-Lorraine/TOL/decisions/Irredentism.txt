@@ -131,38 +131,6 @@ political_decisions = {
         }
     }
 
-    claim_santa_catarina = {
-        picture = claim_santa_catarina
-        potential = {
-            tag = RGS
-            NOT = { has_country_flag = claim_santa_catarina }
-        }
-
-        allow = {
-            war = no
-            is_vassal = no
-            prestige = 45
-        }
-
-        effect = {
-            set_country_flag = claim_santa_catarina
-            badboy = 5
-            2461 = { #Desterro
-                add_core = RGS
-            }
-            2462 = { #Sao Miguel
-                add_core = RGS
-            }
-            2459 = { #Lajes
-                add_core = RGS
-            }
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
     claim_greater_albania = {
         picture = claim_greater_albania
         potential = {
@@ -839,64 +807,6 @@ political_decisions = {
             clr_global_flag = brazil_has_renamed_cisplatina
         }
 
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    total_war_in_rio_grande_sul = {
-        alert = yes
-        picture = begin_line_of_advantage
-        potential = {
-            NOT = { has_country_modifier = small_country_draft }
-            NOT = { has_country_flag = rgs_draft_happened }
-            tag = RGS
-        }
-
-        allow = {
-            war_with = BRZ
-        }
-
-        effect = {
-            iron = 10
-            wool = 10
-            timber = 25
-            small_arms = 10
-            leadership = 20
-            add_country_modifier = {
-                name = small_country_draft
-                duration = 365
-            }
-            set_country_flag = rgs_draft_happened
-        }
-        ai_will_do = { factor = 1 }
-    }
-
-    total_war_in_rio_grande = {
-        alert = yes
-        picture = begin_line_of_advantage
-        potential = {
-            NOT = { has_country_modifier = small_country_draft }
-            NOT = { has_country_flag = rgr_draft_happened }
-            tag = RGR
-        }
-
-        allow = {
-            war_with = MEX
-        }
-
-        effect = {
-            iron = 10
-            wool = 10
-            timber = 25
-            small_arms = 10
-            leadership = 20
-            add_country_modifier = {
-                name = small_country_draft
-                duration = 365
-            }
-            set_country_flag = rgr_draft_happened
-        }
         ai_will_do = {
             factor = 1
         }

@@ -8,8 +8,6 @@ political_decisions = {
                 tag = ARC
                 tag = LPL
                 tag = CHL
-                tag = VLP
-                tag = CGC
                 AND = {
                     tag = SBA
                     is_vassal = no
@@ -143,8 +141,6 @@ political_decisions = {
                 tag = LPL
                 tag = PRG
                 tag = CHL
-                tag = CGC
-                tag = VLP
             }
             OR = {
                 2362 = { empty = yes }
@@ -343,7 +339,6 @@ political_decisions = {
             OR = {
                 tag = ARC
                 tag = ARG
-                tag = VLP
             }
             owns = 2348
             2348 = { is_capital = no }

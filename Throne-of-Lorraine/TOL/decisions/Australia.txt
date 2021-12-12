@@ -189,9 +189,7 @@ political_decisions = {
         picture = dreams_of_empire
         potential = {
             owns = 2244
-            OR = {
                 tag = AST
-                tag = FAS
                 AND = {
                     owns = 2476
                     owns = 2468
@@ -201,7 +199,6 @@ political_decisions = {
                     owns = 2505
                 }
                 AST = { vassal_of = THIS }
-                FAS = { vassal_of = THIS }
             }
             OR = {
                 AND = {
