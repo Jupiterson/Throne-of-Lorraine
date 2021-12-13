@@ -41,19 +41,16 @@ country_event = {
 		option = {
 		name = "We are powerless..."
 		prestige = -10
+		money = 50000
 		relation = { who = GXI value = -100 }
 		any_owned = {
 			limit = {
-				OR = {
-					region = CHI_1493
-					region = CHI_1499 
-
-				}
+				region = CHI_1499
 			}
 			secede_province = GXI
 		}
-		CHI_1493 = { add_core = GXI }
 		CHI_1499 = { add_core = GXI }
+		CHI_1493 = { add_core = GXI }
 		GXI = { country_event = 310002 }
 		any_pop = {
 			limit = { is_primary_culture = no }
@@ -116,6 +113,7 @@ country_event = {
 		option = {
 		name = "Something needs to be done!"
 		prestige = -10
+		money = 50000
 		relation = { who = FJN value = -100 }
 		any_owned = {
 			limit = {
@@ -186,6 +184,7 @@ country_event = {
 		option = {
 		name = "Not Guizhou!"
 		prestige = -10
+		money = 50000
 		relation = { who = YNN value = -100 }
 		any_owned = {
 			limit = {
@@ -193,9 +192,9 @@ country_event = {
 			}
 			secede_province = YNN
 		}
-		1582 = { secede_province = KIE }
-		1586 = { secede_province = KIE }
-		1585 = { secede_province = KIE }
+		1582 = { secede_province = YNN }
+		1586 = { secede_province = YNN }
+		1585 = { secede_province = YNN }
 		CHI_1578 = { add_core = YNN}
 		CHI_1505 = { add_core = YNN }
 		YNN = { country_event = 310006 }
@@ -236,8 +235,8 @@ country_event = {
 		NOT = { has_country_flag = victory_of_feudatories }
 		NOT = { has_country_flag = feudatories_war_happened }
 		NOT = { owns = 1501 }
-		NOT = { owns = 1551 }
-		NOT = { owns = 1578 }		
+		NOT = { owns = 1550 }
+		NOT = { owns = 1585 }		
 	}
 	mean_time_to_happen = {
 		months = 10
@@ -261,6 +260,7 @@ country_event = {
 	
     option = {
         name = "Mobilize the Troops."
+		money = 100000
 		QNG = { release_vassal = GXI }
 		QNG = { release_vassal = YNN }
 		QNG = { release_vassal = FJN }
@@ -414,8 +414,8 @@ country_event = {
 		NOT = { has_country_flag = victory_of_feudatories }
 		has_country_flag = feudatories_war_happened
 		owns = 1501
-		owns = 1551
-		owns = 1578		
+		owns = 1550
+		owns = 1585		
 	}
 	mean_time_to_happen = {
 		months = 1
