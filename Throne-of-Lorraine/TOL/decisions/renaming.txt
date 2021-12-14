@@ -1355,7 +1355,8 @@ political_decisions = {
     silesia_rename_german = {
         picture = gtfo
         potential = {
-            is_culture_group = germanic
+		NOT = { has_country_flag = silesia_german }
+		is_culture_group = germanic
             NOT = {
                 AND = {
                     tag = DNB
@@ -1374,6 +1375,7 @@ political_decisions = {
         }
 
         effect = {
+		set_country_flag = silesia_german  
             random_owned = {
                 limit = {
                     province_id = 682
