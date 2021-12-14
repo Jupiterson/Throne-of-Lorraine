@@ -1775,16 +1775,17 @@
         religion = reformed
         size = 1100
     }
-    craftsmen = {
-        culture = british
+	
+    labourers = {
+        culture = welsh
         religion = reformed
-        size = 1000
+        size = 30625
     }
-
+	
     labourers = {
         culture = british
         religion = reformed
-        size = 60625
+        size = 35625
     }
 }
 #Plymouth (812000/203000 POPS)
@@ -1814,9 +1815,15 @@
     }
 
     labourers = {
+        culture = welsh
+        religion = reformed
+        size = 36250
+    }
+	
+	labourers = {
         culture = british
         religion = reformed
-        size = 56250
+        size = 26250
     }
 
     farmers = {
@@ -1850,7 +1857,13 @@
     farmers = {
         culture = british
         religion = reformed
-        size = 20000
+        size = 10000
+    }
+	
+	farmers = {
+        culture = welsh
+        religion = reformed
+        size = 8000
     }
 
     farmers = {
@@ -2299,37 +2312,37 @@
 #Isles of Scilly (XXX/XXX POPS)
 3480 = {
     aristocrats = {
-        culture = british
+        culture = welsh
         religion = reformed
         size = 10
     }
 
     bureaucrats = {
-        culture = british
+        culture = welsh
         religion = reformed
         size = 10
     }
 
     clergymen = {
-        culture = british
+        culture = welsh
         religion = reformed
         size = 10
     }
 
     soldiers = {
-        culture = british
+        culture = welsh
         religion = reformed
         size = 20
     }
 
     farmers = {
-        culture = british
+        culture = welsh
         religion = reformed
         size = 220
     }
 
     artisans = {
-        culture = british
+        culture = welsh
         religion = reformed
         size = 30
     }

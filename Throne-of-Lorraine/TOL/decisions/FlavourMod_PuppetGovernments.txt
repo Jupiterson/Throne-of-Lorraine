@@ -497,8 +497,12 @@ political_decisions = {
             clr_country_flag = clean_up_colonial_government
             random_owned = {
                 limit = { owner = { civilized = yes } }
-                owner = { 				government = democracy
-                government = hanseatic }
+                owner = { 	
+				OR = {
+            government = democracy
+            government = hanseatic
+			}
+			}
             }
             random_owned = {
                 limit = { owner = { civilized = no } }

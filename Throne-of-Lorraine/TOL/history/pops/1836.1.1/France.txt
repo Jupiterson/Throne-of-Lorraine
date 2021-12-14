@@ -1525,6 +1525,7 @@
     aristocrats = {
         culture = breton
         religion = catholic
+		militancy = 9
         size = 1350
     }
 
@@ -1580,6 +1581,7 @@
         culture = breton
         religion = catholic
         size = 9500
+		militancy = 9
     }
 
     artisans = {
@@ -1598,6 +1600,7 @@
         culture = breton
         religion = catholic
         size = 110800
+		militancy = 9
     }
 }
 #St Brieuc (604000/151000 POPS)
@@ -1655,6 +1658,7 @@
         culture = breton
         religion = catholic
         size = 134500
+		militancy = 9
     }
 }
 #Vannes (436000/109000 POPS)
@@ -1711,6 +1715,7 @@
         culture = breton
         religion = catholic
         size = 90700
+		militancy = 9
     }
 }
 #Nantes (476000/119000 POPS)
@@ -1755,6 +1760,7 @@
         culture = breton
         religion = catholic
         size = 20450
+		militancy = 9
     }
 }
 #Rennes (548000/137000 POPS)
@@ -1799,6 +1805,7 @@
         culture = breton
         religion = catholic
         size = 100000
+		militancy = 9
     }
 
 }
@@ -2104,6 +2111,7 @@
         culture = burgundian
         religion = catholic
         size = 83850
+		militancy = 5
     }
 }
 #Auxerre (356000/89000 POPS)
@@ -2142,6 +2150,7 @@
         culture = burgundian
         religion = catholic
         size = 82900
+		militancy = 5
     }
 }
 #Moulins (596000/149000 POPS)
@@ -2174,11 +2183,13 @@
         culture = burgundian
         religion = catholic
         size = 80799
+		militancy = 5
     }
     farmers = {
         culture = occitan
         religion = hugenott
         size = 56775
+		militancy = 9
     }
 
 }
@@ -2212,6 +2223,7 @@
         culture = burgundian
         religion = catholic
         size = 46000
+		militancy = 5
     }
 
     farmers = {
@@ -2264,6 +2276,7 @@
         culture = burgundian
         religion = catholic
         size = 87050
+		militancy = 5
     }
 
     soldiers = {
@@ -2307,13 +2320,14 @@
     farmers = {
         culture = burgundian
         religion = catholic
-        size = 42400
+        size = 62400
+		militancy = 5
     }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 30000
+        size = 10000
     }
 
 }
@@ -2344,14 +2358,16 @@
 
     farmers = {
         culture = arpitan
-        religion = catholic
+        religion = hugenott
         size = 42400
+		militancy = 7
     }
 
     farmers = {
         culture = burgundian
         religion = catholic
         size = 30000
+		militancy = 5
     }
 
 }
@@ -2693,7 +2709,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 103925
+        size = 63925
+    }
+	
+	farmers = {
+        culture = occitan
+        religion = hugenott
+        size = 53925
+		militancy = 9
     }
 }
 #Poitiers (288000/72000 POPS)
@@ -2753,11 +2776,18 @@
         religion = catholic
         size = 1000
     }
+	
+	farmers = {
+        culture = occitan
+        religion = hugenott
+        size = 33500
+		militancy = 6
+    }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 83500
+        size = 43500
     }
 
 }
@@ -2816,6 +2846,7 @@
         culture = occitan
         religion = hugenott
         size = 42050
+		militancy = 9
     }
 }
 #Chateauroux (520000/130000 POPS)
@@ -2854,6 +2885,7 @@
         culture = occitan
         religion = hugenott
         size = 81000
+		militancy = 9
     }
 }
 #Tulle (788000/197000 POPS)
@@ -2892,12 +2924,14 @@
         culture = occitan
         religion = hugenott
         size = 3500
+		militancy = 9
     }
 
     farmers = {
         culture = occitan
         religion = hugenott
         size = 72050
+		militancy = 9
     }
 
 }
@@ -2949,6 +2983,7 @@
         culture = occitan
         religion = hugenott
         size = 86200
+		militancy = 9
     }
 
     farmers = {
@@ -2992,13 +3027,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 40050
+        size = 20050
     }
 
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 52350
+        size = 72350
+		militancy = 9
     }
 }
 #Cahors (286000/71500 POPS)
@@ -3030,13 +3066,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 40825
+        size = 10825
     }
 
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 33125
+        size = 73125
+		militancy = 9
     }
 
 }
@@ -3137,10 +3174,11 @@
         culture = arpitan
         religion = catholic
         size = 88100
+		militancy = 9
     }
 
     farmers = {
-        culture = french
+        culture = burgundian
         religion = catholic
         size = 48100
     }
@@ -3236,12 +3274,14 @@
         culture = arpitan
         religion = hugenott
         size = 50725
+		militancy = 9
     }
 
     farmers = {
-        culture = french
-        religion = catholic
+        culture = occitan
+        religion = hugenott
         size = 35025
+		militancy = 9
     }
 }
 #Valence (656000/164000 POPS)
@@ -3256,6 +3296,7 @@
         culture = occitan
         religion = hugenott
         size = 1150
+		militancy = 9
     }
 
     clergymen = {
@@ -3280,6 +3321,7 @@
         culture = occitan
         religion = hugenott
         size = 41100
+		militancy = 9
     }
 
        farmers = {
@@ -3292,6 +3334,7 @@
         culture = occitan
         religion = hugenott
         size = 60100
+		militancy = 9
     }
 }
 #Grenoble (696000/174000 POPS)
@@ -3335,13 +3378,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 50300
+        size = 20300
     }
 
     farmers = {
         culture = arpitan
         religion = hugenott
-        size = 90800
+        size = 130800
+		militancy = 9
     }
 
 }
@@ -3405,7 +3449,8 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 72300
+        size = 92300
+		militancy = 9
     }
 }
 #Montauban (584000/146000 POPS)
@@ -3437,13 +3482,14 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 74150
+        size = 94150
+		militancy = 9
     }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 60400
+        size = 40400
     }
 }
 3313 = {
@@ -3474,13 +3520,14 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 74150
+        size = 94150
+		militancy = 9
     }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 60400
+        size = 40400
     }
 }
 #Foix (348000/87000 POPS)
@@ -3513,8 +3560,9 @@
         culture = occitan
         religion = hugenott
         size = 60350
+		militancy = 9
     }
-
+	
     farmers = {
         culture = french
         religion = catholic
@@ -3593,12 +3641,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 50510
+        size = 20510
     }
-        farmers = {
+        
+	farmers = {
         culture = occitan
         religion = hugenott
-        size = 60510
+		militancy = 9
+        size = 90510
     }
 }
 #Mont de Marsan (556000/139000 POPS)
@@ -3630,13 +3680,14 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 80675
+        size = 100675
+		militancy = 9
     }
 
-        farmers = {
+    farmers = {
         culture = french
         religion = catholic
-        size = 40975
+        size = 20975
     }
 }
 #Pau (676000/169000 POPS)
@@ -3674,6 +3725,7 @@
     farmers = {
         culture = occitan
         religion = hugenott
+		militancy = 9
         size = 64700
     }
 
@@ -3881,13 +3933,14 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 80500
+        size = 120500
+		militancy = 9
     }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 43150
+        size = 13150
     }
 }
 #Rodez (504000/126000 POPS)
@@ -3919,13 +3972,14 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 90750
+        size = 100750
+		militancy = 9
     }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 25750
+        size = 15750
     }
 }
 #Carcassone (276000/69000 POPS)
@@ -3957,7 +4011,8 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 50000
+        size = 70000
+		militancy = 9
     }
 
     farmers = {
@@ -3995,6 +4050,7 @@
     farmers = {
         culture = occitan
         religion = hugenott
+		militancy = 9
         size = 11425
     }
 
@@ -4072,13 +4128,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 28100
+        size = 8100
     }
 
     farmers = {
         culture = arpitan
         religion = hugenott
-        size = 31800
+        size = 51800
+		militancy = 9
     }
 
     clergymen = {
@@ -4123,7 +4180,7 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 26375
+        size = 6375
     }
 
     clergymen = {
@@ -4135,7 +4192,8 @@
     farmers = {
         culture = arpitan
         religion = hugenott
-        size = 26175
+        size = 46175
+		militancy = 8
     }
 
     farmers = {
@@ -4178,7 +4236,7 @@
     }
 
     artisans = {
-        culture = provencial
+        culture = occitan
         religion = hugenott
         size = 10000
     }
@@ -4214,7 +4272,7 @@
     }
 
     farmers = {
-        culture = provencial
+        culture = occitan
         religion = hugenott
         size = 12400
     }
@@ -4252,6 +4310,12 @@
     }
 
     farmers = {
+        culture = occitan
+        religion = hugenott
+        size = 10300
+    }
+	
+	farmers = {
         culture = french
         religion = hugenott
         size = 10300
@@ -4357,7 +4421,8 @@
         religion = hugenott
         size = 6000
     }
-        artisans = {
+	
+    artisans = {
         culture = provencial
         religion = hugenott
         size = 7000
@@ -4522,15 +4587,10 @@
     }
 
     farmers = {
-        culture = french
-        religion = hugenott
-        size = 4800
-    }
-
-    farmers = {
         culture = north_italian
         religion = catholic
         size = 43300
+		militancy = 9
     }
 
 }

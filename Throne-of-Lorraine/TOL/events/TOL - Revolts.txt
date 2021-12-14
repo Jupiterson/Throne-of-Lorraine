@@ -7,7 +7,11 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        year = 1854
+        any_pop = {
+		has_pop_culture = finnish 
+		average_militancy = 6 
+		location = 343 
+		}
         OR = {
             tag = SWE
         }
@@ -77,7 +81,11 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        year = 1859
+		any_pop = {
+		has_pop_culture = burgundian 
+		average_militancy = 6 
+		location = 432 
+		}
         OR = {
             tag = LOR
             tag = FRA
@@ -141,7 +149,7 @@ country_event = {
 #Albanian Revolt
 country_event = {
     id = 123467
-    title = "Albanian revolts of 1843"
+    title = "The Albanian revolt"
     desc = "The Albanians are revolting against our rule."
     fire_only_once = yes
     picture = "ALB_revolt_1"
@@ -151,7 +159,10 @@ country_event = {
         tag = TUR
         owns = 852
         owns = 849
-        year = 1843
+        any_pop = {
+		has_pop_culture = albanian 
+		average_militancy = 6 
+		}
         NOT = { exists = ALB }
     }
     option = {
@@ -210,7 +221,14 @@ country_event = {
         owns = 684
         owns = 3277
 		year = 1854
-        NOT = { year = 1840 }
+		
+		any_pop = { 
+		average_militancy = 6
+        OR = {	 	
+		location = 682
+		location = 684
+	  	   }
+		}
         NOT = { exists = SLS }
     }
     option = {
@@ -267,7 +285,7 @@ country_event = {
 #Corsican Revolt
 country_event = {
     id = 123469
-    title = "Corsican revolts of 1842"
+    title = "The Corsican revolt"
     desc = "The Corsicans are revolting against our rule."
     fire_only_once = yes
     picture = "ALB_revolt_3"
@@ -308,7 +326,7 @@ country_event = {
 #Holstein
 country_event = {
     id = 123471
-    title = "German rebellion of 1845"
+    title = "The German rebellion"
     desc = "The Holstein are revolting against our rule."
     fire_only_once = yes
     picture = "ALB_revolt_5"
@@ -322,7 +340,14 @@ country_event = {
         owns = 2236
         owns = 370
         owns = 371
-        year = 1845
+        any_pop = { 
+		average_militancy = 6
+	    has_pop_culture = north_german
+        OR = {			
+		location = 370
+		location = 371
+	  	   }
+		}
         NOT = { year = 1848 }
         NOT = { exists = SWH }
     }
@@ -386,11 +411,18 @@ country_event = {
     picture = "ALB_revolt_6"
     mean_time_to_happen = { months = 5 }
     trigger = {
+	any_pop = { 
+		average_militancy = 6
+		has_pop_culture = romansh
+        OR = {	 	
+		location = 611
+		location = 2669
+	  	   }
+		}
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = SWI
         owns = 611
         owns = 2669
-        year = 1847
         NOT = { year = 1850 }
         NOT = { exists = TTL }
     }
@@ -448,12 +480,20 @@ country_event = {
     mean_time_to_happen = { months = 5 }
     trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
+		any_pop = { 
+		average_militancy = 6
+        OR = {	 	
+		location = 618
+		location = 616
+		location = 615
+		location = 617
+	  	   }
+		}
         tag = BAV
         owns = 618
         owns = 616
         owns = 615
         owns = 617
-        year = 1856
         NOT = { exists = STY }
     }
     option = {
