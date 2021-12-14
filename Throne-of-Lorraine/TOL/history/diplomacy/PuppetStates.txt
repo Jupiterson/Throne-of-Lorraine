@@ -56,23 +56,6 @@ substate = {
     end_date = 1936.1.1
 }
 
-
-#Rajputana Agency
-substate = {
-    first = NET
-    second = RAJ
-    start_date = 1815.1.1
-    end_date = 1936.1.1
-}
-
-#Balochistan Agency
-substate = {
-    first = ENG
-    second = BLC
-    start_date = 1815.1.1
-    end_date = 1936.1.1
-}
-
 #CAN / NZL / AST / MRU / NEW / RHO
 substate = {
     first = ENG
@@ -177,6 +160,24 @@ vassal = {
 vassal = {
     first = AFG
     second = HAZ
+    start_date = 1830.1.1
+    end_date = 1936.1.1
+}
+vassal = {
+    first = AFG
+    second = PNJ
+    start_date = 1830.1.1
+    end_date = 1936.1.1
+}
+vassal = {
+    first = AFG
+    second = SIN
+    start_date = 1830.1.1
+    end_date = 1936.1.1
+}
+vassal = {
+    first = AFG
+    second = CRL
     start_date = 1830.1.1
     end_date = 1936.1.1
 }
@@ -573,17 +574,10 @@ substate = {
 #######################
 #        INDIA        #
 #######################
-# United Kingdom-Mughal
-vassal = {
-    first = NET
-    second = MUG
-    start_date = 1805.1.1
-    end_date = 1936.1.1
-}
 
-# United Kingdom-Bahawalpur
+# Karlani Empire-Bahawalpur
 vassal = {
-    first = NET
+    first = AFG
     second = BHP
     start_date = 1805.1.1
     end_date = 1936.1.1
@@ -598,100 +592,92 @@ vassal = {
 }
 
 # United Kingdom-Bastar
-vassal = {
-    first = NET
-    second = BAS
-    start_date = 1836.1.1
-    end_date = 1949.1.1
-}
+#vassal = {
+#    first = NET
+#    second = BAS
+#    start_date = 1836.1.1
+#    end_date = 1949.1.1
+#}
 
-# United Kingdom-Beroda
+# Karlani Empire-Bikaner
 vassal = {
-    first = NET
-    second = BER
-    start_date = 1802.1.1
-    end_date = 1949.1.1
-}
-
-# United Kingdom-Bikaner
-vassal = {
-    first = NET
+    first = AFG
     second = BIK
     start_date = 1818.5.9
     end_date = 1949.1.1
 }
 
 # United Kingdom-Bhopal
-vassal = {
-    first = NET
-    second = BHO
-    start_date = 1818.2.1
-    end_date = 1949.1.1
-}
+#vassal = {
+#    first = NET
+#    second = BHO
+#    start_date = 1818.2.1
+#    end_date = 1949.1.1
+#}
 
 # United Kingdom-Bundelkhand
-vassal = {
-    first = NET
-    second = BUN
-    start_date = 1836.1.1
-    end_date = 1936.1.1
-}
+#vassal = {
+#    first = NET
+#    second = BUN
+#    start_date = 1836.1.1
+#    end_date = 1936.1.1
+#}
 
 # United Kingdom-Gwalior
-vassal = {
-    first = NET
-    second = GWA
-    start_date = 1817.1.1
-    end_date = 1949.1.1
-}
+#vassal = {
+#    first = NET
+#    second = GWA
+#    start_date = 1817.1.1
+#    end_date = 1949.1.1
+#}
 
-# United Kingdom-Hyderabad
+# Marathi Empire-Hyderabad
 vassal = {
-    first = NET
+    first = MAH
     second = HYD
     start_date = 1798.1.1
     end_date = 1949.1.1
 }
 
 # United Kingdom-Indore
-vassal = {
-    first = NET
-    second = IND
-    start_date = 1818.1.1
-    end_date = 1949.1.1
-}
+#vassal = {
+#    first = NET
+#    second = IND
+#    start_date = 1818.1.1
+#    end_date = 1949.1.1
+#}
 
 # United Kingdom-Jaipur
-vassal = {
-    first = NET
-    second = JAI
-    start_date = 1818.1.1
-    end_date = 1949.1.1
-}
+#vassal = {
+#    first = NET
+#    second = JAI
+#    start_date = 1818.1.1
+#    end_date = 1949.1.1
+#}
 
-# United Kingdom-Jaisalmer
+# Karlani Empire-Jaisalmer
 vassal = {
-    first = NET
+    first = AFG
     second = JAS
     start_date = 1818.1.1
     end_date = 1949.1.1
 }
 
-# United Kingdom-Jodhpur
+# Karlani Empire-Jodhpur
 vassal = {
-    first = NET
+    first = AFG
     second = JOD
     start_date = 1818.1.1
     end_date = 1949.1.1
 }
 
 # United Kingdom-Kutch
-vassal = {
-    first = NET
-    second = KUT
-    start_date = 1812.1.1
-    end_date = 1949.1.1
-}
+#vassal = {
+#    first = NET
+#    second = KUT
+#    start_date = 1812.1.1
+#    end_date = 1949.1.1
+#}
 
 #vassal = {
 #    first = PAN
@@ -701,14 +687,14 @@ vassal = {
 #}
 
 # United Kingdom-Mewar
-vassal = {
-    first = NET
-    second = MEW
-    start_date = 1818.1.1
-    end_date = 1949.1.1
-}
+#vassal = {
+#    first = NET
+#    second = MEW
+#    start_date = 1818.1.1
+#    end_date = 1949.1.1
+#}
 
-# United Kingdom-Mysore
+# Netherlands-Mysore
 vassal = {
     first = NET
     second = MYS
@@ -717,28 +703,28 @@ vassal = {
 }
 
 # United Kingdom-Nagpur
-vassal = {
-    first = NET
-    second = NAG
-    start_date = 1816.1.1
-    end_date = 1949.1.1
-}
+#vassal = {
+#    first = NET
+#    second = NAG
+#    start_date = 1816.1.1
+#    end_date = 1949.1.1
+#}
 
 # United Kingdom-Orissa
-vassal = {
-    first = NET
-    second = ORI
-    start_date = 1803.1.1
-    end_date = 1949.1.1
-}
+#vassal = {
+#    first = NET
+#    second = ORI
+#    start_date = 1803.1.1
+#    end_date = 1949.1.1
+#}
 
 # United Kingdom-Travancore
-vassal = {
-    first = NET
-    second = TRA
-    start_date = 1795.1.1
-    end_date = 1949.1.1
-}
+#vassal = {
+#    first = NET
+#    second = TRA
+#    start_date = 1795.1.1
+#    end_date = 1949.1.1
+#}
 
 
 
