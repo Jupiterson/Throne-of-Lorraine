@@ -431,3 +431,86 @@ country_event = {
 		}
 	}
 }
+#A port in Azov
+country_event = {
+	id = 340001
+	title = "BuyAZV1.t" 
+	desc = "BuyAZV1.d"
+	picture = "crimean_war_ships"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Contact the Fareynikte. We have a deal to make."
+		FER = { country_event = 340002 }
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = "We only talk with worthy nations. Contact the Venetians. We have a backroom deal to make."
+		VEN = { country_event = 340003 }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+#Fareynikte
+country_event = {
+	id = 340002
+	title = "BuyAZV2.t" 
+	desc = "BuyAZV2.d"
+	picture = "crimean_war_ships"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "With heavy hearts, we accept."
+		money = 100000
+		RUS = { money = -100000 }
+		RUS = { country_event = 340004 }
+	}
+}
+#Venetians
+country_event = {
+	id = 340003
+	title = "BuyAZV3.t" 
+	desc = "BuyAZV3.d"
+	picture = "crimean_war_ships"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Delightfully devilish, Russians. Gold is Gold."
+		money = 50000
+		RUS = { 
+		money = -50000
+		badboy = 2
+		}
+		RUS = { country_event = 340004 }
+	}
+}
+#Russian response
+country_event = {
+	id = 340004
+	title = "BuyAZV4.t" 
+	desc = "BuyAZV4.d"
+	picture = "loans"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This is a glorious day! "
+		RUS = { country_event = 340004 }
+		FER = {
+			any_owned = {
+				limit = {
+					region = RUS_979 
+				}
+			secede_province = RUS
+			}
+		}
+		RUS_979  = { add_core = RUS }
+		prestige = 10
+	}
+}
