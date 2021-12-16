@@ -29,6 +29,49 @@ political_decisions = {
 		}
 		
 	}
+	
+	become_denmark = {
+        picture = enact_dual_monarchy
+        potential = {
+            tag = DNN
+            exists = NOR
+        }
+
+        allow = {
+            war = no
+            OR = {
+                AND = {
+                    exists = NOR
+                    NOR = {
+                        NOT = { vassal_of = DNN }
+                    }
+                }
+                NOT = {
+                    any_owned_province = {
+                        is_core = NOR
+                    }
+                }
+ 
+            }
+        }
+
+        effect = {
+            prestige = -20
+            NOR = {
+                all_core = { remove_core = DNN }
+            }
+            all_core = {
+                remove_core = DNN
+                add_core = DEN
+            }
+            any_pop = {
+                limit = { has_pop_culture = norwegian }
+                militancy = 4
+            }
+            remove_accepted_culture = norwegian
+            change_tag = DEN
+        }
+    }
 
      danish_pommerania = {
 		picture = map_baltic

@@ -236,7 +236,12 @@ claim_griko_lands = {
 embrace_the_greeks_ven = {
         picture = unite_with_greece
         potential = {
+		Or = {
             tag = VEN
+			tag = ITA
+			tag = NIF
+			}
+			has_country_flag = greek_italian
             any_owned_province = { is_core = GRE }
             NOT = {
                 OR = {
@@ -295,7 +300,12 @@ claim_greece_italy = {
 embrace_the_greeks_syc = {
         picture = unite_with_greece
         potential = {
+		Or = {
             tag = SYC
+			tag = ITA
+			tag = ITS
+			}
+			has_country_flag = greek_italian
             NOT = {
                 OR = {
                     accepted_culture = greek

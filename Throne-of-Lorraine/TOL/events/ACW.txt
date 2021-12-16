@@ -24,7 +24,7 @@ country_event = {
 
     immediate = {
         clr_country_flag = the_slavery_debate
-        CSA = { set_country_flag = the_slavery_debate }
+        NAF = { set_country_flag = the_slavery_debate }
         set_global_flag = american_civil_war_has_happened
         set_global_flag = acw_war_started
     }
@@ -59,7 +59,7 @@ country_event = {
         }
         any_owned = {
             limit = {
-                is_core = CSA
+                is_core = NAF
                 NOT = {
                     province_id = 146
                     province_id = 147
@@ -75,11 +75,11 @@ country_event = {
                     province_id = 2146
                 }
             }
-            secede_province = CSA
+            secede_province = NAF
         }
-        diplomatic_influence = { who = CSA value = -400 }
+        diplomatic_influence = { who = NAF value = -400 }
         war = {
-            target = CSA
+            target = NAF
             attacker_goal = { casus_belli = civil_war }
             defender_goal = { casus_belli = status_quo }
         }
@@ -93,7 +93,7 @@ country_event = {
         }
         any_owned = {
             limit = {
-                is_core = CSA
+                is_core = NAF
                 NOT = {
                     province_id = 146
                     province_id = 147
@@ -109,15 +109,15 @@ country_event = {
                     province_id = 2146
                 }
             }
-            secede_province = CSA
+            secede_province = NAF
         }
-        diplomatic_influence = { who = CSA value = -400 }
-        release_vassal = CSA
-        change_tag_no_core_switch = CSA
+        diplomatic_influence = { who = NAF value = -400 }
+        release_vassal = NAF
+        change_tag_no_core_switch = NAF
 
         USA = {
             war = {
-                target = CSA
+                target = NAF
                 attacker_goal = { casus_belli = civil_war }
                 defender_goal = { casus_belli = status_quo }
             }
@@ -259,7 +259,7 @@ country_event = {
     }
 }
 
-#Seceding CSA cores while in peace
+#Seceding NAF cores while in peace
 country_event = {
     id = 16011
     title = "EVTNAME16011"
@@ -280,13 +280,13 @@ country_event = {
             value = 0.4
         }
 		any_owned_province = {
-			is_core = CSA
+			is_core = NAF
 		}
     }
 
     immediate = {
         clr_country_flag = the_slavery_debate
-        CSA = { set_country_flag = the_slavery_debate }
+        NAF = { set_country_flag = the_slavery_debate }
         set_global_flag = american_civil_war_has_happened
         set_global_flag = csa_released
 		set_country_flag = click_the_button_already
@@ -331,7 +331,7 @@ country_event = {
         add_country_modifier = { name = no_more_war duration = 150 }
         any_owned = {
             limit = {
-                is_core = CSA
+                is_core = NAF
                 NOT = {
                     province_id = 146
                     province_id = 147
@@ -347,15 +347,15 @@ country_event = {
                     province_id = 2146
                 }
             }
-            secede_province = CSA
+            secede_province = NAF
         }
-        relation = { who = CSA value = 200 }
-        diplomatic_influence = { who = CSA value = 400 }
-        military_access = CSA
-        create_alliance = CSA
+        relation = { who = NAF value = 200 }
+        diplomatic_influence = { who = NAF value = 400 }
+        military_access = NAF
+        create_alliance = NAF
         badboy = -1
 
-        CSA = {
+        NAF = {
             set_country_flag = state_of_emergency_country
             ruling_party_ideology = conservative
             political_reform = mandatory_service
@@ -400,7 +400,7 @@ country_event = {
     trigger = {
         tag = USA
         NOT = {
-			exists = CSA
+			exists = NAF
 			exists = FSA
 			primary_culture = yankee
 		}
@@ -411,7 +411,7 @@ country_event = {
     mean_time_to_happen = { days = 14 }
 
     immediate = {
-        CSA = { clr_country_flag = state_of_emergency_country }
+        NAF = { clr_country_flag = state_of_emergency_country }
         USA = { clr_country_flag = state_of_emergency_country }
     }
 
@@ -3731,7 +3731,7 @@ province_event = {
     trigger = {
         continent = north_america
         NOT = {
-            is_core = CSA
+            is_core = NAF
             state_id = 184
         }
         OR = {
@@ -3790,7 +3790,7 @@ province_event = {
     option = {
         name = "EVTOPTA16250"
         state_scope = {
-			any_owned = { add_core = CSA }
+			any_owned = { add_core = NAF }
             any_pop = {
                 dominant_issue = {
                     value = yes_slavery
@@ -3989,7 +3989,7 @@ country_event = {
         tag = USA
         has_global_flag = american_civil_war_has_happened
         has_country_flag = has_used_radical_reconstruction
-        NOT = { exists = CSA }
+        NOT = { exists = NAF }
         slavery = no_slavery
         owns = 60
         owns = 195
@@ -4234,7 +4234,7 @@ country_event = {
 
      trigger = {
         tag = USA
-        NOT = { CSA = { all_core = { has_province_modifier = reconstruction } } }
+        NOT = { NAF = { all_core = { has_province_modifier = reconstruction } } }
         has_country_flag = has_used_radical_reconstruction
     }
 
@@ -4245,7 +4245,7 @@ country_event = {
     fire_only_once = yes
 
     option = {
-        name = "EVTOPTA1305" #Keep Afro-American as accepted, CSA cores stay, assimilation of Dixie stops
+        name = "EVTOPTA1305" #Keep Afro-American as accepted, NAF cores stay, assimilation of Dixie stops
         prestige = 10
         add_accepted_culture = yankee
         add_accepted_culture = afro_french
@@ -4282,16 +4282,16 @@ country_event = {
     }
 
     option = {
-        name = "EVTOPTA1306" #Afro-American loses accepted status, CSA cores go away
+        name = "EVTOPTA1306" #Afro-American loses accepted status, NAF cores go away
         prestige = 10
         add_accepted_culture = yankee
         remove_accepted_culture = afro_french
         random_owned = { limit = { owner = { ai = no } } treasury = -25000 }
         any_owned = {
-            limit = { is_core = CSA }
+            limit = { is_core = NAF }
             add_province_modifier = { name = reconstruction duration = 2555 }
         }
-        CSA = { all_core = { add_core = USA remove_core = CSA } }
+        NAF = { all_core = { add_core = USA remove_core = NAF } }
         TEX = { remove_accepted_culture = yankee }
         any_pop = {
             limit = { has_pop_culture = yankee }
@@ -4326,12 +4326,12 @@ country_event = {
     }
 
     option = {
-        name = "EVTOPTA1307" #Afro-American loses accepted status, Dixie becomes accepted, Texan becomes accepted, CSA cores go away, assimilation of Dixies stop.
+        name = "EVTOPTA1307" #Afro-American loses accepted status, Dixie becomes accepted, Texan becomes accepted, NAF cores go away, assimilation of Dixies stop.
         prestige = 10
         add_accepted_culture = yankee
         random_owned = { limit = { any_pop = { has_pop_culture = free_german } } owner = { add_accepted_culture = free_german } }
         remove_accepted_culture = afro_french
-        CSA = { all_core = { add_core = USA remove_core = CSA fort = -3} }
+        NAF = { all_core = { add_core = USA remove_core = NAF fort = -3} }
         any_pop = {
             limit = {
                 has_pop_culture = yankee
