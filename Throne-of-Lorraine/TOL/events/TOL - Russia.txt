@@ -514,3 +514,154 @@ country_event = {
 		prestige = 10
 	}
 }
+#The Crimean partition
+country_event = {
+	id = 350000
+	title = "Crimeaw0.t" 
+	desc = "Crimeaw0.d"
+	picture = "averageorthodox"
+	
+	trigger = {
+		tag = RUS
+		year = 1842
+		war = no
+		LIT = { war = no }
+		state_n_government = 1
+		NOT = { owns = 3436 }
+		NOT = { has_country_flag = the_crimean_war }
+		NOT = { has_country_flag = the_crimean_war_alone }
+		NOT = { has_country_flag = the_crimean_war_resolved }		
+		owns = 979
+		979 = { has_building = railroad }
+		979 = { has_building = fort }
+		CRI = { vassal_of = TUR }
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "Crimea must go. Contact the Lithuanians. Promise them Odessa if they join."
+		set_country_flag = the_crimean_war 
+		LIT = { country_event = { id = 350001 days = 7 } }
+		ai_chance = {
+			factor = 5
+		}		
+	}
+	
+	option = {
+		name = "Crimea must go. We do not need the Lithuanians."
+		set_country_flag = the_crimean_war_alone
+		prestige = 5
+		casus_belli = {
+                target = TUR
+                type = steal_puppet
+                months = 12
+        }
+		war = {
+			target = TUR
+			attacker_goal = {
+				casus_belli = steal_puppet
+				country = CRI
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally = yes
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+#The Lithuanian response
+country_event = {
+	id = 350001
+	title = "Crimeaw1.t" 
+	desc = "Crimeaw1.d"
+	picture = "diplomats_examining"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Odessa is worth cooperating with the Russians."
+		create_alliance = RUS
+		leave_alliance = TUR
+		RUS = { country_event = { id = 350002 days = 7 } }
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	
+	option = {
+		name = "We cannot trust them. They can die for Crimea alone. "
+		RUS = {
+			country_event = { id = 350003 days = 7 }
+			set_country_flag = the_crimean_war_alone
+			clr_country_flag = the_crimean_war
+		}
+		ai_chance = {
+			factor = 99
+		}
+	}
+}
+#The Lithuanians agree!
+country_event = {
+	id = 350002
+	title = "Crimeaw2.t" 
+	desc = "Crimeaw2.d"
+	picture = "diplomats_examining"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Now we go to war!"
+		prestige = 5
+		casus_belli = {
+                target = TUR
+                type = steal_puppet
+                months = 12
+        }
+		war = {
+			target = TUR
+			attacker_goal = {
+				casus_belli = steal_puppet
+				country = CRI
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally = yes
+		}
+	}
+}
+#The Lithuanians refuse!
+country_event = {
+	id = 350003
+	title = "Crimeaw3.t" 
+	desc = "Crimeaw3.d"
+	picture = "diplomats_examining"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Alone the war, Alone the glory."
+		prestige = 5
+		casus_belli = {
+                target = TUR
+                type = steal_puppet
+                months = 12
+        }
+		war = {
+			target = TUR
+			attacker_goal = {
+				casus_belli = steal_puppet
+				country = CRI
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally = yes
+		}
+	}
+}
