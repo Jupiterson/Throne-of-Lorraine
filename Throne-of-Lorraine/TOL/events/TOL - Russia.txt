@@ -542,7 +542,6 @@ country_event = {
 	
 	option = {
 		name = "Crimea must go. Contact the Lithuanians. Promise them Odessa if they join."
-		set_country_flag = the_crimean_war 
 		LIT = { country_event = { id = 350001 days = 7 } }
 		ai_chance = {
 			factor = 5
@@ -595,11 +594,7 @@ country_event = {
 	
 	option = {
 		name = "We cannot trust them. They can die for Crimea alone. "
-		RUS = {
-			country_event = { id = 350003 days = 7 }
-			set_country_flag = the_crimean_war_alone
-			clr_country_flag = the_crimean_war
-		}
+		RUS = { country_event = { id = 350003 days = 7 } }
 		ai_chance = {
 			factor = 99
 		}
@@ -616,6 +611,7 @@ country_event = {
 	
 	option = {
 		name = "Now we go to war!"
+		set_country_flag = the_crimean_war 
 		prestige = 5
 		casus_belli = {
                 target = TUR
@@ -646,6 +642,7 @@ country_event = {
 	
 	option = {
 		name = "Alone the war, Alone the glory."
+		set_country_flag = the_crimean_war_alone
 		prestige = 5
 		casus_belli = {
                 target = TUR
@@ -663,5 +660,121 @@ country_event = {
 			}
 			call_ally = yes
 		}
+	}
+}
+#Crimean war victory-Russia alone
+country_event = {
+	id = 350004
+	title = "Crimeaw4.t" 
+	desc = "Crimeaw4.d"
+	picture = "french_on_crimean_war"
+	
+	trigger = {
+		tag = RUS
+		war = no
+		CRI = { war = no }
+		NOT = { owns = 3436 }
+		NOT = { has_country_flag = the_crimean_war }
+		has_country_flag = the_crimean_war_alone
+		NOT = { has_country_flag = the_crimean_war_resolved }		
+		CRI = { vassal_of = RUS }
+	}
+	
+	mean_time_to_happen = {
+		month = 1
+	}
+	
+	option = {
+		name = "Annex The land. The Black Sea shall be ours!"
+		set_country_flag = the_crimean_war_resolved
+		clr_country_flag = the_crimean_war
+		prestige = 25
+		inherit = CRI
+		any_pop = {
+            consciousness = -1
+			militancy = -1
+        }
+	}
+}
+#Crimean war victory-Lithuanians get a slice
+country_event = {
+	id = 350005
+	title = "Crimeaw5.t" 
+	desc = "Crimeaw5.d"
+	picture = "french_on_crimean_war"
+	
+	trigger = {
+		tag = RUS
+		war = no
+		CRI = { war = no }
+		NOT = { owns = 3436 }
+		has_country_flag = the_crimean_war
+		NOT = { has_country_flag = the_crimean_war_alone }
+		NOT = { has_country_flag = the_crimean_war_resolved }		
+		CRI = { vassal_of = RUS }
+	}
+	
+	mean_time_to_happen = {
+		month = 1
+	}
+	
+	option = {
+		name = "Annex The land. The Black Sea shall be ours!"
+		set_country_flag = the_crimean_war_resolved
+		clr_country_flag = the_crimean_war_alone
+		CRI= {
+			any_owned = {
+				limit = {
+					region = CRI_970
+				}
+			secede_province = LIT
+			}
+		}
+		prestige = 25
+		inherit = CRI
+		any_owned = {
+				limit = {
+					region = CRI_970
+				}
+			secede_province = LIT
+		}
+		any_pop = {
+            consciousness = -1
+			militancy = -1
+        }
+	}
+}
+#Crimean war lost
+country_event = {
+	id = 350006
+	title = "Crimeaw6.t" 
+	desc = "Crimeaw6.d"
+	picture = "french_on_crimean_war"
+	
+	trigger = {
+		tag = RUS
+		war = no
+		CRI = { war = no }
+		NOT = { owns = 3436 }
+		OR = {
+			has_country_flag = the_crimean_war_alone
+			has_country_flag = the_crimean_war
+		}
+		NOT = { has_country_flag = the_crimean_war_resolved }		
+		NOT = { CRI = { vassal_of = RUS } }
+	}
+	
+	mean_time_to_happen = {
+		month = 1
+	}
+	
+	option = {
+		name = "How did we?"
+		set_country_flag = the_crimean_war_resolved
+		prestige = -25
+		any_pop = {
+            consciousness = 3
+			militancy = 3
+        }
 	}
 }
