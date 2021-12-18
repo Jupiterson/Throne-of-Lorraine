@@ -95,4 +95,27 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
+	Take_Nogai = {
+        picture = embrace_the_jews
+        potential = {
+			tag = RUS
+			BKY = { in_sphere = RUS }
+        }
+
+        allow = {
+			is_greater_power = yes
+            war = no
+            money = 100000
+			iron_railroad = 1
+			nationalism_n_imperialism  = 1
+        }
+
+        effect = {
+            prestige = 10
+			badboy = 4
+			inherit = BKY
+        }
+
+        ai_will_do = { factor = 1 }
+    }
 }	
