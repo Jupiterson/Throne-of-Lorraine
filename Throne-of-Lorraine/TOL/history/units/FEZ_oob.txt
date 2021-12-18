@@ -1,3 +1,45 @@
 
 FRA = {value = -50}
 
+leader = {
+    name = "Ahmed Dlimi"
+    type = land
+    date = 1836.1.1
+    personality = calm
+    background = school_of_offense
+}
+
+army = {
+    name = "Capital Army"
+    location = 1680
+    regiment = {
+        name= "Fez Brigade"
+        type = infantry
+        home = 1680
+    }
+
+    regiment = {
+        name= "Wazzan Brigade"
+        type = infantry
+        home = 1681
+    }
+	
+	regiment = {
+        name= "Meknes Cavalry"
+        type = cavalry
+        home = 1682
+    }
+
+    regiment = {
+        name= "Taza Cavalry"
+        type = cavalry
+        home = 1683
+    }
+
+    regiment = {
+        name= "Rabat Artillery"
+        type = infantry
+        home = 1857
+    }
+
+}
