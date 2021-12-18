@@ -38,15 +38,17 @@ country_event = {
 			year = 1841
 		}
 	}	
-		option = {
+	option = {
 		name = "We are powerless..."
 		prestige = -10
 		money = 50000
 		relation = { who = GXI value = -100 }
 		any_owned = {
 			limit = {
-				region = CHI_1499
-				region = CHI_1493
+				or = {
+					region = CHI_1499
+					region = CHI_1493
+				}
 			}
 			secede_province = GXI
 		}
@@ -118,11 +120,15 @@ country_event = {
 		relation = { who = FJN value = -100 }
 		any_owned = {
 			limit = {
-				region = CHI_1547
+				or = {
+					region = CHI_1547
+					region = CHI_1545
+				}
 			}
 			secede_province = FJN
 		}
 		CHI_1547 = { add_core = FJN }
+		CHI_1545 = { add_core = FJN }
 		FJN = { country_event = 310004 }
 		any_pop = {
 			limit = { is_primary_culture = no }

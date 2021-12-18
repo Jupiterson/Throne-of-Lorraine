@@ -38,6 +38,19 @@ HAL = {
     level = 5
     influence_value = 0
 }
+
+BHR = {
+    value = 125        #relation
+    level = 5        #3=cordial, 4 = friendly, 5 = sphere
+    influence_value = 0
+}
+
+QAT = {
+    value = 125        #relation
+    level = 5        #3=cordial, 4 = friendly, 5 = sphere
+    influence_value = 0
+}
+
 SAM = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 = sphere
@@ -51,17 +64,40 @@ EGY = {
     influence_value = 0
     truce_until = 1838.1.1
 }
+TRI = {
+    value = 125
+	level = 5        #3=cordial, 4 = friendly, 5 sphere
+    influence_value = 0
+}
+
 #Europe
 ATH = {
     value = -25        #relation
     level = 0        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 12
+
 }
 WAL = {
     value = 125
     level = 4
     influence_value = 0
 }
+ATJ = {
+    value = 50        #relation
+    level = 3        #3=cordial, 4 = friendly, 5 sphere
+    influence_value = 0
+}
+RGA = {
+    value = 25
+    level = 3
+    influence_value = 0
+}
+CRI = {
+    value = 100
+    level = 5        #3=cordial, 4 = friendly, 5 = sphere
+    influence_value = 100
+}
+
 
 #Other GP's
 USA = { value = 0 }

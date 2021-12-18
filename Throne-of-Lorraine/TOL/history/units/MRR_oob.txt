@@ -1,3 +1,33 @@
 
 FRA = {value = -50}
 
+leader = {
+    name = "Mohamed Oufkir"
+    type = land
+    date = 1836.1.1
+    personality = calm
+    background = school_of_offense
+}
+
+army = {
+    name = "Marrakesh Army"
+    location = 1690
+    regiment = {
+        name= "Marrakesh militia"
+        type = irregular
+        home = 1690
+    }
+
+    regiment = {
+        name= "Safi militia"
+        type = irregular
+        home = 2563
+    }
+	
+	regiment = {
+        name= "Agadir Cavalry"
+        type = cavalry
+        home = 1694
+    }
+
+}
