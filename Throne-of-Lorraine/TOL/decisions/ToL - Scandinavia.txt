@@ -1,9 +1,12 @@
 political_decisions = {
 
  swedish_pommerania = {
-		picture = map_baltic
+		picture = map_brandeburg
 		potential = {
+		OR = {
 			tag = SWE
+			tag = SCA
+			}
 			NOT = {
 				has_country_flag = pommerania
 			}
@@ -12,11 +15,38 @@ political_decisions = {
 			state_n_government = 1
 		}
 		effect = {
-			PRU_544 = {
+			
+			PRU_546 = {
 				add_core = SWE
 			}
 			
-			PRU_546 = {
+			badboy = 5
+			prestige = 15
+			set_country_flag = pommerania
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+		
+	}
+	
+	swedish_karelia = {
+		picture = map_pomorye
+		potential = {
+			tag = SWE
+			NOT = {
+				has_country_flag = pommerania
+			}
+		}
+		allow = {
+		is_greater_power = yes
+			all_core = {
+                owned_by = THIS
+            }
+		}
+		effect = {
+			
+			RUS_339 = {
 				add_core = SWE
 			}
 			
@@ -72,14 +102,82 @@ political_decisions = {
             change_tag = DEN
         }
     }
-
-     danish_pommerania = {
-		picture = map_baltic
+	
+	danish_holstein = {
+		picture = map_brandeburg
 		potential = {
 		OR = {
 			tag = DEN
              tag = DNN
+			 tag = SCA
 			 }
+			NOT = {
+				has_country_flag = holsten
+			}
+		}
+		allow = {
+			all_core = {
+                owned_by = THIS
+            }
+		}
+		effect = {
+			HOL_369 = {
+				add_core = THIS
+			}
+			
+			badboy = 5
+			prestige = 15
+			set_country_flag = holsten
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	
+danish_north_germany = {
+		picture = map_brandeburg
+		potential = {
+		OR = {
+			tag = DEN
+             tag = DNN
+			 tag = SCA
+			 }
+			has_country_flag = holsten
+			NOT = {
+				has_country_flag = north_germany
+			}
+		}
+		allow = {
+			all_core = {
+                owned_by = THIS
+            }
+		}
+		effect = {
+			PRU_544 = {
+				add_core = THIS
+			}
+			HAN_528 = {
+				add_core = THIS
+			}
+			badboy = 10
+			prestige = 15
+			set_country_flag = north_germany
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+
+     danish_pommerania = {
+		picture = map_brandeburg
+		potential = {
+		OR = {
+			tag = DEN
+             tag = DNN
+			 tag = SCA
+			 }
+			 has_country_flag = north_germany
 			NOT = {
 				has_country_flag = pommerania
 			}
@@ -90,12 +188,8 @@ political_decisions = {
 			}
 		}
 		effect = {
-			PRU_544 = {
-				add_core = SWE
-			}
-			
 			PRU_546 = {
-				add_core = SWE
+				add_core = THIS
 			}
 			
 			badboy = 5
