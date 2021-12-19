@@ -449,10 +449,10 @@ country_event = {
 			tag = FJN
 			tag = YNN
 			tag = GXI
-			QNG = { 
+		}
+		QNG = { 
 				NOT = { has_country_flag = victory_of_Buyeo}
 				NOT = { has_country_flag = victory_of_feudatories}
-			}
 		}
 		JCH = {
 			owns = 1524
@@ -477,7 +477,6 @@ country_event = {
 		GXI = { country_event = 310014 }
 		QNG = { 
 			country_event = 310015
-			set_country_flag = victory_of_Buyeo
 		}		
 	}
 }

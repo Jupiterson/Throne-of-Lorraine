@@ -533,7 +533,6 @@ country_event = {
 		NOT = { has_country_flag = the_crimean_war_resolved }		
 		owns = 979
 		979 = { has_building = railroad }
-		979 = { has_building = fort }
 		CRI = { vassal_of = TUR }
 	}
 	mean_time_to_happen = {
@@ -775,6 +774,172 @@ country_event = {
 		any_pop = {
             consciousness = 3
 			militancy = 3
+        }
+	}
+}
+#The Georgian Crisis
+country_event = {
+	id = 360000
+	title = "Georgiaw0.t" 
+	desc = "Georgiaw0.d"
+	picture = "Prince_of_Georgia"
+	
+	trigger = {
+		tag = RUS
+		year = 1882
+		war = no
+		GEO = { 
+			war = no
+			owns = 1090
+		}
+		revolution_n_counterrevolution = 1
+		NOT = { GEO = { vassal_of = RUS } }
+		owns = 1051
+		owns = 1056
+		NOT = { has_country_flag = the_georgian_war }
+		NOT = { has_country_flag = the_georgian_war_resolved }		
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "Georgia is Ottoman Turf. We better not risk it. "
+		set_country_flag = the_georgian_war_resolved
+		prestige = -5
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				GEO = { in_sphere = TUR }
+			}
+			modifier = {
+			factor = 1.5
+			war_policy = anti_military
+			}
+		}		
+	}
+	
+	option = {
+		name = "Contact the Bagrationi prince. We accept his deal."
+		set_country_flag = the_georgian_war
+		prestige = 5
+		casus_belli = {
+                target = GEO
+                type = make_puppet
+                months = 12
+        }
+		TUR = { country_event = { id = 360001 days = 7 } }
+		war = {
+			target = GEO
+			attacker_goal = {
+				casus_belli = make_puppet
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally = yes
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+			factor = 4
+			war_policy = jingoism
+			}
+		}
+	}
+}
+#The Turkish intervention
+country_event = {
+	id = 360001
+	title = "Georgiaw1.t" 
+	desc = "Georgiaw1.d"
+	picture = "Turkish_intervention"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Mobilize the forces. We go to war, now."
+		prestige = 5
+		diplomatic_influence = {
+			who = GEO
+			value = 400
+		}
+		relation = {
+			who = GEO
+			value = 200
+		}
+		alliance_with = GEO
+		leave_alliance = RUS
+	}
+	
+	option = {
+		name = "Going against Russia is risky..."
+		prestige = -5
+		any_pop = { 
+			militancy = 1
+		}
+	}
+}
+#Georgian war victory
+country_event = {
+	id = 360002
+	title = "Georgiaw2.t" 
+	desc = "Georgiaw2.d"
+	picture = "Georgia_map"
+	
+	trigger = {
+		tag = RUS
+		war = no
+		GEO= { war = no }
+		has_country_flag = the_georgian_war
+		NOT = { has_country_flag = the_georgian_war_resolved }		
+		GEO = { vassal_of = RUS }
+	}
+	
+	mean_time_to_happen = {
+		month = 1
+	}
+	
+	option = {
+		name = "Our Caucasian border is secure!"
+		set_country_flag = the_georgian_war_resolved
+		clr_country_flag = the_georgian_war
+		prestige = 25
+		any_pop = {
+            consciousness = -1
+			militancy = -1
+        }
+	}
+}
+#Georgian war lost
+country_event = {
+	id = 360003
+	title = "Georgiaw3.t" 
+	desc = "Georgiaw3.d"
+	picture = "Georgia_map"
+	
+	trigger = {
+		tag = RUS
+		war = no
+		GEO= { war = no }
+		has_country_flag = the_georgian_war
+		NOT = { has_country_flag = the_georgian_war_resolved }		
+		NOT = { GEO = { vassal_of = RUS } }
+	}
+	
+	mean_time_to_happen = {
+		month = 1
+	}
+	
+	option = {
+		name = "A shameful defeat..."
+		set_country_flag = the_georgian_war_resolved
+		clr_country_flag = the_georgian_war
+		prestige = -15
+		any_pop = {
+            consciousness = 2
+			militancy = 2
         }
 	}
 }
