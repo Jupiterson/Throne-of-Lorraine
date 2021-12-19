@@ -259,6 +259,25 @@ political_decisions = {
         }
         ai_will_do = { factor = 0 }
     }
+	
+	option_enable_revolts = {
+        picture = starting_options
+        alert = no
+        potential = {
+            ai = no
+            has_country_flag = country_looking_through_options
+            NOT = { year = 1837 }
+            NOT = { has_global_flag = revolts_enabled }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            set_global_flag = revolts_enabled
+        }
+        ai_will_do = { factor = 0 }
+    }
 
     option_enable_easter_eggs = {
         picture = starting_options

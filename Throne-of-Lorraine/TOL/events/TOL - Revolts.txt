@@ -4,7 +4,7 @@ country_event = {
     title = "A Finnish Revolt"
     desc = "EVTDESC998500"
     picture = "crete_revolt"
-    fire_only_once = yes
+#   fire_only_once = yes
 
     trigger = {
         any_pop = {
@@ -78,7 +78,7 @@ country_event = {
     title = "Burgundy in Revolt"
     desc = "EVTDESC998501"
     picture = "crete_revolt"
-    fire_only_once = yes
+#    fire_only_once = yes
 
     trigger = {
 		any_pop = {
@@ -151,7 +151,7 @@ country_event = {
     id = 123467
     title = "The Albanian revolt"
     desc = "The Albanians are revolting against our rule."
-    fire_only_once = yes
+ #   fire_only_once = yes
     picture = "ALB_revolt_1"
     mean_time_to_happen = { months = 5 }
     trigger = {
@@ -211,7 +211,7 @@ country_event = {
     id = 123468
     title = "The Silesian Uprising"
     desc = "The Silesians are revolting against our rule."
-    fire_only_once = yes
+#    fire_only_once = yes
     picture = "ALB_revolt_2"
     mean_time_to_happen = { months = 5 }
     trigger = {
@@ -220,7 +220,6 @@ country_event = {
         owns = 682
         owns = 684
         owns = 3277
-		year = 1854
 		
 		any_pop = { 
 		average_militancy = 6
@@ -328,7 +327,7 @@ country_event = {
     id = 123471
     title = "The German rebellion"
     desc = "The Holstein are revolting against our rule."
-    fire_only_once = yes
+#    fire_only_once = yes
     picture = "ALB_revolt_5"
     mean_time_to_happen = { months = 5 }
     trigger = {
@@ -348,7 +347,6 @@ country_event = {
 		location = 371
 	  	   }
 		}
-        NOT = { year = 1848 }
         NOT = { exists = SWH }
     }
     option = {
@@ -407,7 +405,7 @@ country_event = {
     id = 123472
     title = "The Romansh Revolution"
     desc = "The Romansh are revolting against our rule as they feel under represented"
-    fire_only_once = yes
+ #   fire_only_once = yes
     picture = "ALB_revolt_6"
     mean_time_to_happen = { months = 5 }
     trigger = {
@@ -419,6 +417,492 @@ country_event = {
 		location = 2669
 	  	   }
 		}
+		NOT = { has_global_flag = cleaning_up_ghosts }
+        tag = SWI
+        owns = 611
+        owns = 2669
+        NOT = { exists = TTL }
+    }
+    option = {
+        name = "Crush them!"
+        any_pop = {
+            limit = {
+                has_pop_culture = romansh
+            }
+            consciousness = 2
+            militancy = 2
+        }
+        611 = {
+            secede_province = TTL
+        }
+        2669 = {
+            secede_province = TTL
+        }
+        war = {
+            target = TTL
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+    option = {
+        name = "Rights for the Romansh people!"
+        any_pop = {
+            limit = {
+                has_pop_culture = romansh
+            }
+            consciousness = 2
+            militancy = 2
+        }
+        611 = {
+            secede_province = TTL
+        }
+        2669 = {
+            secede_province = TTL
+        }
+        war = {
+            target = TTL
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+        change_tag_no_core_switch = TTL
+    }
+}
+
+country_event = {
+    id = 123470
+    title = "Styrian Uprising"
+    desc = "The Styrians decided that they will nolonger follow Bavarian rule."
+#    fire_only_once = yes
+    picture = "dervish_attack"
+    mean_time_to_happen = { months = 5 }
+    trigger = {
+		NOT = { has_global_flag = cleaning_up_ghosts }
+		any_pop = { 
+		average_militancy = 6
+        OR = {	 	
+		location = 618
+		location = 616
+		location = 615
+		location = 617
+	  	   }
+		}
+        tag = BAV
+        owns = 618
+        owns = 616
+        owns = 615
+        owns = 617
+        NOT = { exists = STY }
+    }
+    option = {
+        name = "Crush them!"
+        618 = {
+            secede_province = STY
+        }
+        616 = {
+            secede_province = STY
+        }
+        3288 = {
+            secede_province = STY
+        }
+        617 = {
+            secede_province = STY
+        }
+		615 = {
+            secede_province = STY
+        }
+        war = {
+            target = STY
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+    option = {
+        name = "Styria shall be free!"
+        618 = {
+            secede_province = STY
+        }
+        616 = {
+            secede_province = STY
+        }
+        3288 = {
+            secede_province = STY
+        }
+        617 = {
+            secede_province = STY
+        }
+		615 = {
+            secede_province = STY
+        }
+        war = {
+            target = STY
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+        change_tag_no_core_switch = STY
+    }
+}
+
+
+####################################
+#----------------------------------#
+####### Non-Dynamic Revolts ########
+#----------------------------------#
+####################################
+
+#Finish Revolt 
+country_event = {
+    id = 999500
+    title = "A Finnish Revolt"
+    desc = "EVTDESC998500"
+    picture = "crete_revolt"
+   fire_only_once = yes
+
+    trigger = {
+        OR = {
+		    tag = SCA
+            tag = SWE
+        }
+        343 = { owned_by = THIS }
+        war = no
+        NOT = { exists = FIN }
+		year = 1843
+		has_global_flag = revolts_enabled
+    }
+
+    mean_time_to_happen = {
+        months = 48
+
+        modifier = {
+            factor = 0.5
+            year = 1854
+        }
+
+        modifier = {
+            factor = 0.5
+            average_militancy = 6
+        }
+
+        modifier = {
+            factor = 0.5
+            has_recently_lost_war = yes
+        }
+    }
+
+    immediate = {
+        prestige = -15
+        badboy = 3
+        FIN = { government = democracy }
+    }
+
+    option = {
+        name = "They shall pay"
+        any_owned = {
+            limit = { is_core = FIN }
+            secede_province = FIN 
+        }
+        diplomatic_influence = {
+            who = FIN 
+            value = -400
+        }
+        casus_belli = {
+            target = FIN 
+            type = conquest
+            months = 12
+        }
+        war = {
+            target = FIN 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+	
+}
+
+#Burgundian Revolt
+country_event = {
+    id = 999501
+    title = "Burgundy in Revolt"
+    desc = "EVTDESC998501"
+    picture = "crete_revolt"
+    fire_only_once = yes
+
+    trigger = {
+	    year = 1848
+		has_global_flag = revolts_enabled
+        OR = {
+            tag = LOR
+            tag = FRA
+        }
+        432 = { owned_by = THIS }
+        war = no
+        NOT = { exists = BRG }
+    }
+
+    mean_time_to_happen = {
+        months = 48
+
+        modifier = {
+            factor = 0.5
+            year = 1859
+        }
+
+        modifier = {
+            factor = 0.5
+            average_militancy = 6
+        }
+
+        modifier = {
+            factor = 0.5
+            has_recently_lost_war = yes
+        }
+    }
+
+    immediate = {
+        prestige = -15
+        badboy = 3
+        FIN = { government = democracy }
+    }
+
+    option = {
+        name = "Well then..."
+        any_owned = {
+            limit = { is_core = BRG }
+            secede_province = BRG 
+        }
+        diplomatic_influence = {
+            who = BRG 
+            value = -400
+        }
+        casus_belli = {
+            target = BRG 
+            type = conquest
+            months = 12
+        }
+        war = {
+            target = BRG 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+#Albanian Revolt
+country_event = {
+    id = 124467
+    title = "The Albanian revolt"
+    desc = "The Albanians are revolting against our rule."
+    fire_only_once = yes
+    picture = "ALB_revolt_1"
+    mean_time_to_happen = { months = 5 }
+    trigger = {
+		NOT = { has_global_flag = cleaning_up_ghosts }
+        tag = TUR
+        owns = 852
+        owns = 849
+        year = 1840
+		has_global_flag = revolts_enabled
+        NOT = { exists = ALB }
+    }
+    option = {
+        name = "Crush them!"
+        any_pop = {
+            limit = {
+                has_pop_culture = albanian
+            }
+            consciousness = 2
+            militancy = 2
+        }
+        any_owned = {
+            limit = { is_core = ALB }
+            secede_province = ALB
+        }
+        war = {
+            target = ALB
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+    option = {
+        name = "Albania shall be free!"
+        any_pop = {
+            limit = {
+                has_pop_culture = albanian
+            }
+            consciousness = 2
+            militancy = 2
+        }
+        any_owned = {
+            limit = { is_core = ALB }
+            secede_province = ALB
+        }
+        war = {
+            target = ALB
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+        change_tag_no_core_switch = ALB
+    }
+}
+
+#Silesian uprising
+country_event = {
+    id = 124468
+    title = "The Silesian Uprising"
+    desc = "The Silesians are revolting against our rule."
+    fire_only_once = yes
+    picture = "ALB_revolt_2"
+    mean_time_to_happen = { months = 5 }
+    trigger = {
+		NOT = { has_global_flag = cleaning_up_ghosts }
+        tag = SAX
+        owns = 682
+        owns = 684
+        owns = 3277
+		year = 1854
+		has_global_flag = revolts_enabled
+        NOT = { exists = SLS }
+    }
+    option = {
+        name = "Crush them!"
+        any_pop = {
+            limit = {
+                has_pop_culture = polish
+            }
+            consciousness = 2
+            militancy = 2
+        }
+        682 = {
+            secede_province = SLS
+        }
+        684 = {
+            secede_province = SLS
+        }
+        3277 = {
+            secede_province = SLS
+        }
+        war = {
+            target = SLS
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = acquire_core_state state_province_id = 682 }
+        }
+    }
+    option = {
+        name = "Silesia shall be free!"
+        any_pop = {
+            limit = {
+                has_pop_culture = polish
+            }
+            consciousness = 2
+            militancy = 2
+        }
+        682 = {
+            secede_province = SLS
+        }
+        684 = {
+            secede_province = SLS
+        }
+        3277 = {
+            secede_province = SLS
+        }
+        war = {
+            target = SLS
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = acquire_core_state state_province_id = 682 }
+        }
+        change_tag_no_core_switch = SLS
+    }
+}
+
+#Holstein
+country_event = {
+    id = 124471
+    title = "The German rebellion"
+    desc = "The Holstein are revolting against our rule."
+    fire_only_once = yes
+    picture = "ALB_revolt_5"
+    mean_time_to_happen = { months = 5 }
+    trigger = {
+		NOT = { has_global_flag = cleaning_up_ghosts }
+		OR = {
+        tag = DNN
+		tag = DEN
+		}
+        owns = 2236
+        owns = 370
+        owns = 371
+        year = 1846
+		has_global_flag = revolts_enabled
+        NOT = { year = 1848 }
+        NOT = { exists = SWH }
+    }
+    option = {
+        name = "Crush them!"
+        any_pop = {
+            limit = {
+                has_pop_culture = albanian
+            }
+            consciousness = 2
+            militancy = 2
+        }
+        2236 = {
+            secede_province = SWH
+        }
+        370 = {
+            secede_province = SWH
+        }
+        371 = {
+            secede_province = SWH
+        }
+        war = {
+            target = SWH
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+    option = {
+        name = "The Germans shall be free!"
+        any_pop = {
+            limit = {
+                has_pop_culture = albanian
+            }
+            consciousness = 2
+            militancy = 2
+        }
+        2236 = {
+            secede_province = SWH
+        }
+        370 = {
+            secede_province = SWH
+        }
+        371 = {
+            secede_province = SWH
+        }
+        war = {
+            target = SWH
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+        change_tag_no_core_switch = SWH
+    }
+}
+
+#Three Leagues Revolt
+country_event = {
+    id = 124472
+    title = "The Romansh Revolution"
+    desc = "The Romansh are revolting against our rule as they feel under represented"
+    fire_only_once = yes
+    picture = "ALB_revolt_6"
+    mean_time_to_happen = { months = 5 }
+    trigger = {
+	    year = 1853
+		has_global_flag = revolts_enabled
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = SWI
         owns = 611
@@ -472,7 +956,7 @@ country_event = {
 }
 
 country_event = {
-    id = 123470
+    id = 124470
     title = "Styrian Uprising"
     desc = "The Styrians decided that they will nolonger follow Bavarian rule."
     fire_only_once = yes
@@ -480,16 +964,12 @@ country_event = {
     mean_time_to_happen = { months = 5 }
     trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
-		any_pop = { 
-		average_militancy = 6
-        OR = {	 	
-		location = 618
-		location = 616
-		location = 615
-		location = 617
-	  	   }
-		}
+		year = 1857
+		has_global_flag = revolts_enabled
+		OR = {
         tag = BAV
+		tag = SGF
+		}
         owns = 618
         owns = 616
         owns = 615
