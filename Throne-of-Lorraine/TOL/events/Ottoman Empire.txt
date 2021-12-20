@@ -1633,7 +1633,7 @@ country_event = {
         892 = { change_province_name = "Hakkari" }
         924 = { change_province_name = "Zaxho" }
         925 = { change_province_name = "Kirkuk" }
-        release_vassal = BHT
+        PER = { release_vassal = BHT }
         diplomatic_influence = { who = BHT value = -400 }
         relation = { who = BHT value = -400 }
         leave_alliance = BHT
@@ -1647,6 +1647,9 @@ country_event = {
                     tag = BNB
                     tag = BDN
                     tag = BTL
+					tag = RDL
+					tag = MKN
+					tag = URM
                 }
             }
             annex_to = BHT
@@ -1696,7 +1699,7 @@ country_event = {
         892 = { change_province_name = "Hakkari" }
         924 = { change_province_name = "Zakho" }
         925 = { change_province_name = "Kirkuk" }
-        release_vassal = BHT
+        PER = { release_vassal = BHT }
         diplomatic_influence = { who = BHT value = -400 }
         relation = { who = BHT value = -400 }
         PER = { relation = { who = BHT value = -400 } }
@@ -1711,6 +1714,9 @@ country_event = {
                     tag = BNB
                     tag = BDN
                     tag = BTL
+					tag = RDL
+					tag = MKN
+					tag = URM
                 }
             }
             annex_to = BHT
@@ -1744,7 +1750,7 @@ country_event = {
         924 = { change_province_name = "Zaxho" }
         925 = { change_province_name = "Kirkuk" }
         prestige = 5
-        release_vassal = BHT
+        PER = { release_vassal = BHT }
         diplomatic_influence = { who = BHT value = -400 }
         leave_alliance = BHT
         any_country = {
@@ -1757,6 +1763,9 @@ country_event = {
                     tag = BNB
                     tag = BDN
                     tag = BTL
+					tag = RDL
+					tag = MKN
+					tag = URM
                 }
             }
             annex_to = BHT
@@ -1883,6 +1892,9 @@ country_event = {
                 is_core = BNB
                 is_core = BDN
                 is_core = BTL
+				is_core = RDL
+				is_core = MKN
+				is_core = URM
                 }
             }
             any_pop = { limit = { OR = { has_pop_religion = yazidi has_pop_religion = catholic has_pop_religion = orthodox } }
@@ -1891,13 +1903,16 @@ country_event = {
             }
         }
 
-        any_owned = { limit = { OR = { is_core = RDL is_core = MKN } } secede_province = PER }
+        any_owned = { limit = { OR = { is_core = RDL is_core = MKN is_core = URM } NOT = { is_core = TUR } } secede_province = PER }
 
         BTL = { all_core = { remove_core = BTL } }
         BDN = { all_core = { remove_core = BDN } }
         BHT = { all_core = { remove_core = BHT } }
         BNB = { all_core = { remove_core = BNB remove_core = PER } }
         SRN = { all_core = { remove_core = SRN } }
+		RDL = { all_core = { remove_core = BNB add_core = PER } }
+		MKN = { all_core = { remove_core = BNB add_core = PER } }
+		URM = { all_core = { remove_core = BNB add_core = PER } }
     }
 }
 
