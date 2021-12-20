@@ -77,43 +77,43 @@ political_decisions = {
 
 
 #  Malta/Knights switch
-	kni_become_mlt = {
-		picture = "knights_hospitaller_maltese_cross"
-		potential = {
-			tag = KNI
-			owns = 854
-			NOT = { has_country_flag = kni_become_mlt }
-		}
-		allow = {
-			war = no
-			# Either tech's advanced to make people want a Maltese country or the country's screwed up recently
-			OR = {
-				revolution_n_counterrevolution = 1
-				AND = {
-					has_recently_lost_war = yes
-					is_disarmed = yes
-					is_greater_power = no
-				}
-			}
-		}
-		effect = {
-            prestige = 20
-            all_core = {
-                remove_core = KNI
-                add_core = MLT
-            }
-            change_tag = MLT
-			remove_accepted_culture = french
-			remove_accepted_culture = maltese
-			remove_accepted_culture = greek
-			primary_culture = maltese
-			set_country_flag = kni_become_mlt
-			political_reform = universal_voting
-            				government = democracy
-                government = hanseatic
-            any_pop = { militancy = -2 }
-		}
-	}
+#	kni_become_mlt = {
+#		picture = "knights_hospitaller_maltese_cross"#
+#		potential = {
+#			tag = KNI
+#			owns = 854
+#			NOT = { has_country_flag = kni_become_mlt }
+#		}
+#		allow = {
+#			war = no
+#			# Either tech's advanced to make people want a Maltese country or the country's screwed up recently
+#			OR = {
+#				revolution_n_counterrevolution = 1
+#				AND = {
+#					has_recently_lost_war = yes
+#					is_disarmed = yes
+#					is_greater_power = no
+#				}
+#			}
+#		}
+#		effect = {
+ #           prestige = 20
+  #          all_core = {
+   #             remove_core = KNI
+    #            add_core = MLT
+     #       }
+      #      change_tag = MLT
+		#	remove_accepted_culture = french
+#			remove_accepted_culture = maltese
+#			remove_accepted_culture = greek
+#			primary_culture = maltese
+#			set_country_flag = kni_become_mlt
+#			political_reform = universal_voting
+ #           				government = democracy
+  #              government = hanseatic
+   #         any_pop = { militancy = -2 }
+	#	}
+#	}
 	
 	mlt_become_kni = {	
 		picture = "knights_hospitaller_maltese_cross"

@@ -132,265 +132,6 @@ political_decisions = {
         }
     }
 
-    austrian_form_south_german_confederation = {
-        potential = {
-            OR = {
-                tag = AUS
-                tag = AUB
-                tag = KUK
-            }
-            #any_owned_province = {
-            #    NOT = {
-            #        OR = {
-            #            is_core = AUS
-            #            is_core = GER
-            #            is_colonial = yes
-            #        }
-            #    }
-            #}
-            is_greater_power = yes
-            primary_culture = south_german
-            NOT = {
-                exists = GER
-                exists = SGF
-                has_country_flag = inherit_sgf
-            }
-        }
-        allow = {
-            war = no
-            nationalism_n_imperialism = 1
-            BAV = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            ai = yes
-                            in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
-                            war = no
-                            is_greater_power = no
-                        }
-                    }
-                }
-            }
-            BAD = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            ai = yes
-                            in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
-                            war = no
-                            is_greater_power = no
-                        }
-                    }
-                }
-            }
-            WUR = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            ai = yes
-                            in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
-                            war = no
-                            is_greater_power = no
-                        }
-                    }
-                }
-            }
-            OR = {
-                594 = { owned_by = THIS }
-                SGM = {
-                    all_core = {
-                        OR = {
-                            owned_by = THIS
-                            owner = {
-                                ai = yes
-                                in_sphere = THIS
-                                OR = {
-                                    is_vassal = no
-                                    vassal_of = THIS
-                                }
-                                war = no
-                                is_greater_power = no
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        effect = {
-            prestige = 10
-            FRA_412 = { add_core = GER }
-            random_owned = { limit = { owner = { ai = yes } } owner = { badboy = -5 } }
-            random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
-            random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
-            random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
-            random_owned = { limit = { owner = { accepted_culture = hungarian } } owner = { remove_accepted_culture = hungarian } }
-            random_owned = { limit = { owner = { accepted_culture = czech } } owner = { remove_accepted_culture = czech } }
-            any_country = {
-                limit = {
-                    OR = {
-                        tag = WUR
-                        tag = BAD
-                        tag = BAV
-                        tag = SGM
-                    }
-                    in_sphere = THIS
-                }
-                annex_to = THIS
-            }
-            any_owned = {
-                limit = {
-                    OR = {
-                        culture = south_german
-                        province_id = 412
-                    }
-                    is_core = GER
-                    NOT = {
-                        is_core = AUS
-                        is_core = KUK
-                    }
-                    NOT = { has_country_flag = post_colonial_country }
-                }
-                add_core = SGF
-            }
-            release_vassal = SGF
-            diplomatic_influence = {
-                who = SGF
-                value = 300
-            }
-            SGF = {
-                prestige = -50
-                political_reform = federalism
-                create_alliance = THIS
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    form_north_german_confederation = {
-        potential = {
-            is_greater_power = yes
-            primary_culture = north_german
-            primary_culture = rhinelander
-            capital_scope = { continent = europe }
-            NOT = {
-                has_country_flag = post_colonial_country
-                exists = GER
-                exists = GCF
-                exists = NGF
-            }
-        }
-        allow = {
-            war = no
-            nationalism_n_imperialism = 1
-            OR = {
-                GER = {
-                    all_core = {
-                        OR = {
-                            OR = {
-                                owned_by = THIS
-                                owner = {
-                                    in_sphere = THIS
-                                    OR = {
-								vassal_of = THIS 
-								is_vassal = no 
-								overlord = {
-								is_culture_group = germanic
-                                 
-                                }	
-                            }
-                                    war = no
-                                    is_greater_power = no
-                                }
-                            }
-                            NOT = { culture = north_german }
-                        }
-                    }
-                }
-                AND = {
-                    year = 1865
-                    has_country_flag = brothers_war_winner
-                    ai = yes
-                    has_recently_lost_war = no
-                    is_greater_power = yes
-                    NOT = { war_exhaustion = 1 }
-                }
-            }
-        }
-
-        effect = {
-            prestige = 15
-            clr_country_flag = crown_from_the_gutter
-            clr_country_flag = secondary_union_formation
-            random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
-            random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
-            random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
-            random_owned = { limit = { owner = { accepted_culture = hungarian } } owner = { remove_accepted_culture = hungarian } }
-            all_core = { add_core = NGF remove_core = THIS }
-            any_owned = {
-                limit = {
-                    NOT = { is_core = THIS }
-                    any_core = {
-                        exists = no
-                        primary_culture = north_german
-                        has_country_flag = wants_to_unify
-                        NOT = { has_country_flag = post_colonial_country }
-                    }
-                }
-                add_core = NGF
-            }
-            change_tag = NGF
-            NGF = {
-                political_reform = federalism
-            }
-            any_country = {
-                limit = {                    
-                    NOT = {
-                        primary_culture = north_german
-                        tag = SCH
-                    }
-                    in_sphere = THIS
-                    NOT = { tag = THIS }
-                    NOT = { has_country_flag = post_colonial_country }
-                    OR = {
-                        is_vassal = no
-                        vassal_of = THIS
-                    }
-                }
-                country_event = 11106
-            }
-            random_country = {
-                limit = {
-                    tag = SCH
-                    in_sphere = THIS
-                }
-                country_event = 11106
-            }
-            370 = { add_core = GER }
-            371 = { add_core = GER }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
     form_germany = {
         news = yes
         news_desc_long = "form_germany_NEWS_LONG"
@@ -2015,6 +1756,109 @@ form_ruthenia = {
         }
 
         ai_will_do = { factor = 1 }
+    }
+	
+	
+	
+	
+	
+	
+	join_the_hansa = {
+   picture = german_confederation
+        potential = {
+			OR = {
+            primary_culture = north_german
+			primary_culture = low_german
+            primary_culture = rhinelander
+			}
+            capital_scope = { continent = europe }
+            NOT = {
+                has_country_flag = post_colonial_country
+                exists = GER
+                exists = GCF
+                exists = NGF
+				is_greater_power = yes
+            }
+			nationalism_n_imperialism = 1
+			exists = HNS
+        }
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+			
+            OR = {
+                GER = {
+                    all_core = {
+                        OR = {
+                            OR = {
+                                owned_by = THIS
+                                owner = {
+                                    in_sphere = THIS
+                                    OR = {
+								vassal_of = THIS 
+								is_vassal = no 
+								overlord = {
+								is_culture_group = germanic
+                                 
+                                }	
+                            }
+                                    war = no
+                                    is_greater_power = no
+                                }
+                            }
+                            NOT = {
+        							culture = north_german
+                                    culture = low_german 
+                                    culture = rhinelander 	
+									}
+                        }
+                    }
+                }
+#                AND = {
+#                    year = 1865
+#                    has_country_flag = brothers_war_winner
+#                    ai = yes
+#                    has_recently_lost_war = no
+#                    is_greater_power = yes
+#                    NOT = { war_exhaustion = 1 }
+#                }
+            }
+        }
+
+        effect = {
+            prestige = 15
+            clr_country_flag = crown_from_the_gutter
+            clr_country_flag = secondary_union_formation
+            random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
+            random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
+            random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
+            random_owned = { limit = { owner = { accepted_culture = hungarian } } owner = { remove_accepted_culture = hungarian } }
+            all_core = { add_core = HNS }
+            any_owned = {
+                limit = {
+                    NOT = { is_core = THIS }
+                    any_core = {
+                        exists = no
+						OR = {
+                        primary_culture = north_german
+						primary_culture = low_german
+						primary_culture = rhinelander
+						}
+                        has_country_flag = wants_to_unify
+                        NOT = { has_country_flag = post_colonial_country }
+                    }
+                }
+                add_core = HNS
+            }
+            change_tag = HNS
+            HNS = {
+                political_reform = federalism
+            }           
+           
+        }
+        ai_will_do = {
+            factor = 1
+        }
     }
 
 }

@@ -365,7 +365,7 @@ country_event = {
             limit = {
                 owner = { primary_culture = north_german }
                 NOT = { exists = GER }
-                exists = NGF
+                exists = HNS
             }
             any_country = {
                 limit = {
@@ -382,7 +382,7 @@ country_event = {
                     value = -100
                 }
             }
-            NGF = {
+            HNS = {
                 diplomatic_influence = {
                     who = THIS
                     value = 200
@@ -399,7 +399,7 @@ country_event = {
             limit = {
                 owner = { primary_culture = north_german }
                 NOT = { exists = GER }
-                NOT = { exists = NGF }
+                NOT = { exists = HNS }  #former NGF
                 exists = SGF
             }
             SGF = {
@@ -470,9 +470,9 @@ country_event = {
                 }
                 NOT = { exists = GER }
                 NOT = { exists = SGF }
-                exists = NGF
+                exists = HNS
             }
-            NGF = {
+            HNS = {
                 diplomatic_influence = {
                     who = THIS
                     value = 200
@@ -489,7 +489,7 @@ country_event = {
             limit = {
                 owner = { primary_culture = north_german }
                 NOT = { exists = GER }
-                NOT = { exists = NGF }
+                NOT = { exists = HNS }  #former NGF
                 NOT = { exists = SGF }
             }
             any_country = {
@@ -553,7 +553,7 @@ country_event = {
                 }
                 NOT = { exists = GER }
                 NOT = { exists = SGF }
-                NOT = { exists = NGF }
+                NOT = { exists = HNS }  #former NGF
             }
             any_country = {
                 limit = {
@@ -676,7 +676,7 @@ country_event = {
             }
             random_country = {
                 limit = {
-                    tag = NGF
+                    tag = HNS
                     is_greater_power = yes
                     exists = yes
                     GER = {
@@ -719,7 +719,7 @@ country_event = {
                             is_greater_power = no
                         }
                     }
-                    NGF = {
+                    HNS = {
                         OR = {
                             exists = no
                             is_greater_power = no
@@ -749,7 +749,7 @@ country_event = {
                             is_greater_power = no
                         }
                     }
-                    NGF = {
+                    HNS = {
                         OR = {
                             exists = no
                             is_greater_power = no

@@ -518,7 +518,7 @@ country_event = {
     picture = "threehurrahs"
 
     trigger = {
-        tag = NGF
+        tag = HNS
         war = no
         is_greater_power = yes
         is_disarmed = no
@@ -647,7 +647,7 @@ country_event = {
 
     fire_only_once = yes
     trigger = {
-        tag = NGF
+        tag = HNS
         war = no
         has_country_flag = glory_of_germany_al
         NOT = { has_country_flag = lost_alsace_lorraine }
@@ -695,14 +695,14 @@ country_event = {
             tag = AUB
             tag = KUK
             tag = PRU
-            tag = NGF
+            tag = HNS
             tag = SGF
         }
         OR = {
             war_with = FRA
             war_with = BOR
             war_with = PRU
-            war_with = NGF
+            war_with = HNS
             war_with = SGF
             war_with = AUS
             war_with = AUB
@@ -1222,7 +1222,7 @@ country_event = {
         random_owned = { limit = { owner = { primary_culture = FROM } }
             owner = { any_owned = { limit = { is_core = THIS } remove_core = THIS } }
         }
-        annex_to = NGF
+        annex_to = HNS
 
         ai_chance = {
             factor = 0.5
@@ -1285,11 +1285,11 @@ country_event = {
     option = {
         name = "EVT33038OPTC"
         all_core = {
-            add_core = NGF
+            add_core = HNS
             remove_core = THIS
         }
-        NGF = { inherit = THIS }
-        change_tag_no_core_switch = NGF
+        HNS = { inherit = THIS }
+        change_tag_no_core_switch = HNS
 
         ai_chance = { factor = 0 }
     }
@@ -1307,7 +1307,7 @@ country_event = {
         tag = PRU
         is_vassal = no
         ai = yes
-        NOT = { exists = NGF }
+        NOT = { exists = HNS }  #former NGF
         NOT = { exists = GER }
         NOT = { exists = GCF }
         NOT = { year = 1890 }
@@ -1343,19 +1343,19 @@ country_event = {
 
     option = {
         name = "EVT33039OPTA"
-        NGF = { set_country_flag = formed_on_rhine_crisis }
+        HNS = { set_country_flag = formed_on_rhine_crisis }
         any_owned = {
             limit = {
                 is_core = GER
                 }
-            add_core = NGF
+            add_core = HNS
             remove_core = THIS
             }
-        change_tag = NGF
+        change_tag = HNS
         all_core = {
             limit = { is_core = PRU }
                 remove_core = PRU
-                add_core = NGF
+                add_core = HNS
             }
         any_country = {
             limit = {
@@ -1374,7 +1374,7 @@ country_event = {
                     tag = DNB
                     tag = UBD
                     tag = PRU
-                    tag = NGF
+                    tag = HNS
                     tag = LUX
                     capital_scope = { NOT = { is_core = GER } }
                     is_vassal = yes
@@ -1408,17 +1408,17 @@ country_event = {
 
         option = {
         name = "EVT33039OPTB"
-        NGF = { set_country_flag = formed_on_rhine_crisis }
+        HNS = { set_country_flag = formed_on_rhine_crisis }
         any_owned = {
             limit = {  is_core = GER }
-            add_core = NGF
+            add_core = HNS
             remove_core = THIS
             }
-        change_tag = NGF
+        change_tag = HNS
         all_core = {
             limit = { is_core = PRU }
                 remove_core = PRU
-                add_core = NGF
+                add_core = HNS
             }
         any_country = {
             limit = {
@@ -1493,7 +1493,7 @@ country_event = {
         OR = {
             tag = GER
             tag = GCF
-            tag = NGF
+            tag = HNS
             tag = SGF
         }
         owns = 549 #Berlin
@@ -2178,7 +2178,7 @@ country_event = {
                 limit = {
                     OR = {
                         tag = PRU
-                        tag = NGF
+                        tag = HNS
                         tag = GER
                         tag = GCF
                     }
@@ -2235,7 +2235,7 @@ country_event = {
                 limit = {
                     OR = {
                         tag = PRU
-                        tag = NGF
+                        tag = HNS
                         tag = GER
                         tag = GCF
                     }
@@ -2547,7 +2547,7 @@ country_event = {
 
 country_event = {
     id = 99981
-    title = "EVTNAME99981" #NGF Does not prevent the sale
+    title = "EVTNAME99981" #HNS Does not prevent the sale
     desc = "EVTDESC99981"
     picture = "luxembourg_crisis"
     major = yes
@@ -2628,8 +2628,8 @@ country_event = {
     option = {
         name = "EVT99999OPTA"
         relation = { who = FROM value = 200 }
-        create_alliance = NGF
-        NGF = { diplomatic_influence = { who = THIS value = 400 } }
+        create_alliance = HNS
+        HNS = { diplomatic_influence = { who = THIS value = 400 } }
         leave_alliance = KUK
         leave_alliance = AUS
         leave_alliance = AUB
@@ -2748,7 +2748,7 @@ country_event = {
         random_owned = {
             limit = {
                 province_id = 549 #Berlin
-                owned_by = NGF
+                owned_by = HNS
             }
             owner = { capital = 549 }
         }
@@ -2835,9 +2835,9 @@ country_event = {
     option = {
         name = "EVTOPTA34627" #annex all
         badboy = 3
-        BAD = { relation = { who = NGF value = -50 } }
-        WUR = { relation = { who = NGF value = -50 } }
-        BAV = { relation = { who = NGF value = -50 } }
+        BAD = { relation = { who = HNS value = -50 } }
+        WUR = { relation = { who = HNS value = -50 } }
+        BAV = { relation = { who = HNS value = -50 } }
 
         ai_chance = { factor = 0.01 }
     }
@@ -2846,14 +2846,14 @@ country_event = {
         name = "EVTOPTB34627" #release south of main
 
 
-        2560 = { remove_core = NGF }
-        570 = { remove_core = NGF }
+        2560 = { remove_core = HNS }  #former NGF
+        570 = { remove_core = HNS }  #former NGF
         2560 = { secede_province = HES }
         570 = { secede_province = HES }
 
         HES = {
-            relation = { who = NGF value = 25 }
-            create_alliance = NGF
+            relation = { who = HNS value = 25 }
+            create_alliance = HNS
         }
 
         diplomatic_influence = { who = HES value = 400 }
@@ -2864,9 +2864,9 @@ country_event = {
     option = {
         name = "EVTOPTC34627" #release all
 
-        2560 = { remove_core = NGF }
-        567 = { remove_core = NGF }
-        570 = { remove_core = NGF }
+        2560 = { remove_core = HNS }  #former NGF
+        567 = { remove_core = HNS }  #former NGF
+        570 = { remove_core = HNS }  #former NGF
         2560 = { secede_province = HES }
         567 = { secede_province = HES }
         570 = { secede_province = HES }

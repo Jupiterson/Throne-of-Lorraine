@@ -161,7 +161,7 @@ country_event = {
         owns = 849
         any_pop = {
 		has_pop_culture = albanian 
-		average_militancy = 6 
+		average_militancy = 5 
 		}
         NOT = { exists = ALB }
     }
@@ -222,7 +222,7 @@ country_event = {
         owns = 3277
 		
 		any_pop = { 
-		average_militancy = 6
+		average_militancy = 5
         OR = {	 	
 		location = 682
 		location = 684
@@ -340,7 +340,7 @@ country_event = {
         owns = 370
         owns = 371
         any_pop = { 
-		average_militancy = 6
+		average_militancy = 5
 	    has_pop_culture = north_german
         OR = {			
 		location = 370
@@ -410,7 +410,7 @@ country_event = {
     mean_time_to_happen = { months = 5 }
     trigger = {
 	any_pop = { 
-		average_militancy = 6
+		average_militancy = 5
 		has_pop_culture = romansh
         OR = {	 	
 		location = 611
@@ -478,7 +478,7 @@ country_event = {
     trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
 		any_pop = { 
-		average_militancy = 6
+		average_militancy = 5
         OR = {	 	
 		location = 618
 		location = 616
@@ -541,6 +541,146 @@ country_event = {
         change_tag_no_core_switch = STY
     }
 }
+
+country_event = {
+    id = 99539
+    title = "Illyrian Revot"
+    desc = "The Illyrians and southern Slavs are Revolting"
+    picture = "hungarian_revolution_1848"
+
+    trigger = {
+        any_pop = { 
+		average_militancy = 6
+		has_pop_culture = croat
+        OR = {	 	
+		location = 771
+	  	   }
+		}
+		any_pop = { 
+		average_militancy = 6
+		has_pop_culture = bosniak
+        OR = {	 	
+		location = 783
+	  	   }
+		}
+        tag = HUN
+        owns = 783
+		owns = 771		
+    }
+
+    mean_time_to_happen = {
+        months = 12
+    }
+
+    option = {
+        name = "Crush them!"
+        any_owned = {
+            limit = { is_core = ILL }
+            secede_province = ILL 
+        }	
+        relation = { who = ILL value = -100 }
+        ILL = {
+            capital = 783
+            small_arms = 400
+            regular_clothes = 400
+            canned_food = 500
+            treasury = 35000         
+        }
+		
+		 war = {
+            target = ILL
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+	
+	    option = {
+        name = "Free the Slavs!"
+        any_owned = {
+            limit = { is_core = ILL }
+            secede_province = ILL 
+        }	
+        relation = { who = ILL value = -100 }
+        ILL = {
+            capital = 783
+            small_arms = 400
+            regular_clothes = 400
+            canned_food = 500
+            treasury = 35000         
+        }
+		
+		 war = {
+            target = ILL
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+		change_tag_no_core_switch = ILL
+    }
+}
+
+
+country_event = {
+    id = 123473
+    title = "Moldavian revolt"
+    desc = "The Moldavians are revolting against our rule."
+    #fire_only_once = yes
+    picture = "BOS_revolt"
+    mean_time_to_happen = { months = 5 }
+    trigger = {
+		NOT = { has_global_flag = cleaning_up_ghosts }
+        tag = POL
+		tag = PLC
+        owns = 670
+        any_pop = { 
+		average_militancy = 4
+		has_pop_culture = romanian
+        OR = {	 	
+		location = 771
+	  	   }
+		}
+        NOT = { exists = MOL }
+    }
+    option = {
+        name = "Crush them!"
+        any_pop = {
+            limit = {
+                has_pop_culture = romanian
+            }
+            consciousness = 2
+            militancy = 2
+        }
+        any_owned = {
+            limit = { is_core = MOL }
+            secede_province = MOL 
+        }	
+        war = {
+            target = MOL
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+    option = {
+        name = "Moldova shall be free!"
+        any_pop = {
+            limit = {
+                has_pop_culture = romanian
+            }
+            consciousness = 2
+            militancy = 2
+        }
+         any_owned = {
+            limit = { is_core = MOL }
+            secede_province = MOL 
+        }	
+        war = {
+            target = MOL
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+        change_tag_no_core_switch = MOL
+    }
+}
+
 
 
 ####################################
@@ -1022,5 +1162,126 @@ country_event = {
             defender_goal = { casus_belli = status_quo }
         }
         change_tag_no_core_switch = STY
+    }
+}
+
+country_event = {
+    id = 99812
+    title = "Illyrian Revot"
+    desc = "The Illyrians and southern Slavs are Revolting"
+    picture = "hungarian_revolution_1848"
+
+    trigger = {
+    	year = 1847
+		has_global_flag = revolts_enabled
+        tag = HUN
+        owns = 783
+		owns = 771		
+    }
+
+    mean_time_to_happen = {
+        months = 12
+    }
+
+    option = {
+        name = "Crush them!"
+        any_owned = {
+            limit = { is_core = ILL }
+            secede_province = ILL 
+        }	
+        relation = { who = ILL value = -100 }
+        ILL = {
+            capital = 783
+            small_arms = 400
+            regular_clothes = 400
+            canned_food = 500
+            treasury = 35000         
+        }
+		
+		 war = {
+            target = ILL
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+	
+	    option = {
+        name = "Free the Slavs!"
+        any_owned = {
+            limit = { is_core = ILL }
+            secede_province = ILL 
+        }	
+        relation = { who = ILL value = -100 }
+        ILL = {
+            capital = 783
+            small_arms = 400
+            regular_clothes = 400
+            canned_food = 500
+            treasury = 35000         
+        }
+		
+		 war = {
+            target = ILL
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+		change_tag_no_core_switch = ILL
+    }
+}
+
+country_event = {
+    id = 123466
+    title = "Moldavian revolt"
+    desc = "The Moldavians are revolting against our rule."
+    fire_only_once = yes
+    picture = "BOS_revolt"
+    mean_time_to_happen = { months = 5 }
+    trigger = {
+		NOT = { has_global_flag = cleaning_up_ghosts }
+        tag = POL
+		tag = PLC
+        owns = 670
+        year = 1851
+		has_global_flag = revolts_enabled
+        NOT = { exists = MOL }
+    }
+    option = {
+        name = "Crush them!"
+        any_pop = {
+            limit = {
+                has_pop_culture = romanian
+            }
+            consciousness = 2
+            militancy = 2
+        }
+        any_owned = {
+            limit = { is_core = MOL }
+            secede_province = MOL 
+        }	
+        war = {
+            target = MOL
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+    option = {
+        name = "Moldova shall be free!"
+        any_pop = {
+            limit = {
+                has_pop_culture = romanian
+            }
+            consciousness = 2
+            militancy = 2
+        }
+         any_owned = {
+            limit = { is_core = MOL }
+            secede_province = MOL 
+        }	
+        war = {
+            target = MOL
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+        change_tag_no_core_switch = MOL
     }
 }

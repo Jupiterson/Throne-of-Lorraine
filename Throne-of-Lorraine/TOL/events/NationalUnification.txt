@@ -255,7 +255,7 @@ country_event = {
             modifier = {
                 factor = 2
                 AND = {
-                    tag = NGF
+                    tag = HNS
                     is_greater_power = no
                 }
             }
@@ -579,7 +579,7 @@ country_event = {
     }
 }
 
-# Event to Inherit (For NGF & SGF )
+# Event to Inherit (For HNS & SGF )
 country_event = {
     id = 11106
     title = "EVTNAME11106"
@@ -596,11 +596,11 @@ country_event = {
                 primary_culture = north_german
                 OR = {
                     tag = FROM
-                    tag = NGF
+                    tag = HNS
                 }
             }
-            THIS = { all_core = { add_core = NGF } }
-            NGF = { country_event = 34627 }
+            THIS = { all_core = { add_core = HNS }  #former NGF }
+            HNS = { country_event = 34627 }
         }
         random_country = {
             limit = {
@@ -711,7 +711,7 @@ country_event = {
             }
             modifier = {
                 factor = 0
-                FROM = { tag = NGF }
+                FROM = { tag = HNS }  #former NGF
                 NOT = {
                     OR = {
                         any_owned_province = { port = yes }
@@ -838,7 +838,7 @@ country_event = {
         is_greater_power = yes
         OR = {
             AND = {
-                tag = NGF
+                tag = HNS
                 any_owned_province = {
                     is_core = GER
                     culture = south_german
@@ -881,7 +881,7 @@ country_event = {
         }
         random_owned = {
             limit = {
-                owner = { tag = NGF }
+                owner = { tag = HNS }  #former NGF
             }
             owner = { add_accepted_culture = south_german }
         }
@@ -962,7 +962,7 @@ country_event = {
                 NOT = { has_country_flag = post_colonial_country }
                 OR = {
                     all_core = { owned_by = THIS }
-                    tag = NGF
+                    tag = HNS
                     tag = SGF
                 }
             }
@@ -1072,7 +1072,7 @@ country_event = {
     }
 }
 
-# Last-Ditch Formation of NGF
+# Last-Ditch Formation of HNS
 country_event = {
     id = 11110
     title = "EVTNAME11110"
@@ -1085,7 +1085,7 @@ country_event = {
         is_vassal = no
         NOT = {
             exists = GER
-            exists = NGF
+            exists = HNS
             has_country_flag = refused_NGF_idea
         }
         OR = {
@@ -1167,8 +1167,8 @@ country_event = {
         prestige = -15
         badboy = 10
         clr_country_flag = crown_from_the_gutter
-        all_core = { add_core = NGF }
-        change_tag = NGF
+        all_core = { add_core = HNS }  #former NGF
+        change_tag = HNS
         random_owned = {
             limit = { owner = { is_culture_group = germanic accepted_culture = polish } }
             owner = { remove_accepted_culture = polish }
@@ -1195,7 +1195,7 @@ country_event = {
                     is_cultural_union = no
                 }
             }
-            all_core = { add_core = NGF }
+            all_core = { add_core = HNS }  #former NGF
         }
         any_country = {
             limit = {

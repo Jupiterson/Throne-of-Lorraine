@@ -101,37 +101,5 @@ political_decisions = {
         }
     }
 
-    repudiate_the_treaty_of_paucarpata = {
-        picture = peru_bolivia
-        potential = {
-            tag = CHL
-            truce_with = PBC
-            PBC = { exists = yes war_with = PEU has_recently_lost_war = yes }
-            SPU = { vassal_of = PBC }
-            NOT = { has_country_flag = treaty_of_paucarpata_repudiated }
-        }
-
-        allow = {
-            NOT = { has_recently_lost_war = yes }
-            NOT = { PBC = { military_score = THIS } }
-        }
-
-        effect = {
-            casus_belli = {
-                target = PBC
-                type = release_puppet
-                months = 24
-            }
-            war = {
-                target = PBC
-                attacker_goal = {
-                    casus_belli = release_puppet
-                    country = SPU
-                 }
-            }
-            set_country_flag = treaty_of_paucarpata_repudiated
-        }
-    }
-
 
 }

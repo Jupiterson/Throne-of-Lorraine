@@ -1325,7 +1325,6 @@ country_event = {
             limit = {
                 OR = {
                     tag = PBC
-                    tag = SPU
                     tag = PEU
                 }
             }
@@ -3255,7 +3254,7 @@ country_event = {
         is_our_vassal = LBG
         war = no
         OR = {
-            exists = NGF
+            exists = HNS
             exists = GER
             exists = GCF
         }
@@ -3272,7 +3271,7 @@ country_event = {
                 neighbour = THIS
                 is_greater_power = yes
                 OR = {
-                    tag = NGF
+                    tag = HNS
                     tag = GER
                     tag = GCF
                 }
@@ -3395,7 +3394,7 @@ country_event = {
                 OR = {
                     alliance_with = GCF
                     alliance_with = GER
-                    alliance_with = NGF
+                    alliance_with = HNS
                 }
             }
             modifier = {
@@ -3418,7 +3417,7 @@ country_event = {
                 OR = {
                     alliance_with = GCF
                     alliance_with = GER
-                    alliance_with = NGF
+                    alliance_with = HNS
                 }
             }
             modifier = {
