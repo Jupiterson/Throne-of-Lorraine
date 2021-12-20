@@ -871,6 +871,9 @@ country_event = {
 		}
 		alliance_with = GEO
 		leave_alliance = RUS
+		ai_chance = {
+			factor = 1
+		}	
 	}
 	
 	option = {
@@ -879,6 +882,9 @@ country_event = {
 		any_pop = { 
 			militancy = 1
 		}
+		ai_chance = {
+			factor = 100
+		}	
 	}
 }
 #Georgian war victory
