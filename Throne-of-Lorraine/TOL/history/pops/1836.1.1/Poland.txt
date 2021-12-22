@@ -466,14 +466,26 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 27280
+        size = 47280
+    }
+	
+	farmers = {
+        culture = polish
+        religion = protestant
+        size = 8280
     }
 }
 3337 = {
     farmers = {
+        culture = western_slavic
+        religion = protestant
+        size = 37280
+    }
+	
+	farmers = {
         culture = north_german
         religion = protestant
-        size = 27280
+        size = 17280
     }
 }
 #Liegnitz (484000/121000 POPS)
@@ -933,8 +945,15 @@ clergymen = {
     artisans = {
         culture = north_german
         religion = protestant
+        size = 4500
+    }
+	
+	artisans = {
+        culture = volga_german
+        religion = protestant
         size = 9500
     }
+
 
     soldiers = {
         culture = north_german
@@ -943,7 +962,7 @@ clergymen = {
     }
 
     farmers = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 1100
     }
@@ -981,7 +1000,7 @@ clergymen = {
     farmers = {
         culture = polish
         religion = catholic
-        size = 1875
+        size = 6875
     }
 
     ######Jews
@@ -1019,7 +1038,7 @@ clergymen = {
 #Tuchel (180000/45000 POPS)
 691 = {
     aristocrats = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 800
     }
@@ -1037,7 +1056,7 @@ clergymen = {
     }
 
     farmers = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 20825
     }
@@ -1129,7 +1148,7 @@ clergymen = {
     }
 
     farmers = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 25950
     }
@@ -1294,31 +1313,31 @@ clergymen = {
 #Elbing (148000/37000 POPS)
 693 = {
     aristocrats = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 700
     }
 
     clergymen = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 125
     }
 
     artisans = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 1400
     }
 
     soldiers = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 1000
     }
 
     farmers = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 27425
     }
@@ -1397,7 +1416,7 @@ clergymen = {
     }
 
     farmers = {
-        culture = north_german
+        culture = volga_german
         religion = catholic
         size = 7475
     }
@@ -1405,55 +1424,55 @@ clergymen = {
 #Torun (156000/44000 POPS)
 694 = {
     aristocrats = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 850
     }
 
     clergymen = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 125
     }
 
     artisans = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 800
     }
 
     soldiers = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 175
     }
 
     farmers = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 13900
     }
 
     clergymen = {
-        culture = north_german
+        culture = volga_german
         religion = catholic
         size = 100
     }
 
     artisans = {
-        culture = north_german
+        culture = volga_german
         religion = catholic
         size = 100
     }
 
     soldiers = {
-        culture = north_german
+        culture = volga_german 
         religion = catholic
         size = 100
     }
 
     farmers = {
-        culture = north_german
+        culture = volga_german
         religion = catholic
         size = 1850
     }
@@ -1519,19 +1538,19 @@ clergymen = {
     }
 
     clergymen = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 550
     }
 
     artisans = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 2900
     }
 
     soldiers = {
-        culture = north_german
+        culture = volga_german
         religion = protestant
         size = 2000
     }
@@ -1601,7 +1620,12 @@ clergymen = {
     farmers = {
         culture = volga_german
         religion = protestant
-        size = 5550
+        size = 25550
+    }
+	farmers = {
+        culture = polish
+        religion = protestant
+        size = 15550
     }
 }
 3327 = {
@@ -3125,7 +3149,7 @@ clergymen = {
     farmers = {
         culture = polish
         religion = catholic
-        size = 41625
+        size = 24625
     }
 
     serfs = {
@@ -3155,7 +3179,13 @@ clergymen = {
     farmers = {
         culture = lithuanian
         religion = catholic
-        size = 11625
+        size = 12625
+    }
+	
+	farmers = {
+        culture = volga_german
+        religion = catholic
+        size = 21625
     }
 
     clergymen = {
