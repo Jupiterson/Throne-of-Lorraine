@@ -106,7 +106,164 @@ coastal_crusade = {
 			
         }
    }
+   
+   become_prussia = {
+        picture = annex_united_baltic_duchy
+        potential = {
+            tag = UBD
+			owns = 695
+            NOT = {
+                exists = PRU
+                any_owned_province = { is_core = EST }
+				any_owned_province = { is_core = LAT }
+            }
+        }
 
+        allow = {
+            war = no
+            owns = 695
+        }
+
+        effect = {
+            change_tag_no_core_switch = PRU
+            remove_accepted_culture = latvian
+            remove_accepted_culture = estonian
+            primary_culture = volga_german
+            any_pop = {
+                limit = { has_pop_culture = volga_german }
+                militancy = -3
+            }
+            any_pop = {
+                limit = { has_pop_culture = latvian }
+                militancy = 6
+            }
+			any_pop = {
+                limit = { has_pop_culture = estonian }
+                militancy = 6
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	 become_latvia = {
+        picture = annex_united_baltic_duchy
+        potential = {
+            tag = UBD
+		    owns = 354
+            NOT = {
+                exists = LAT
+                any_owned_province = { is_core = EST }
+				any_owned_province = { is_core = PRU }
+            }
+        }
+
+        allow = {
+            war = no
+            owns = 354
+        }
+
+        effect = {
+            change_tag_no_core_switch = = LAT
+            remove_accepted_culture = volga_german
+            remove_accepted_culture = estonian
+            primary_culture = latvian
+            any_pop = {
+                limit = { has_pop_culture = latvian }
+                militancy = -3
+            }
+            any_pop = {
+                limit = { has_pop_culture = volga_german }
+                militancy = 6
+            }
+			any_pop = {
+                limit = { has_pop_culture = estonian }
+                militancy = 6
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    become_estonia = {
+        picture = annex_united_baltic_duchy
+        potential = {
+            tag = UBD
+			owns = 349
+            NOT = {
+                exists = EST
+                any_owned_province = { is_core = LAT }
+				any_owned_province = { is_core = PRU }
+            }
+        }
+
+        allow = {
+            war = no
+            owns = 354
+        }
+
+        effect = {
+            change_tag_no_core_switch = = EST
+            remove_accepted_culture = volga_german
+            remove_accepted_culture = latvian
+            primary_culture = estonian
+            any_pop = {
+                limit = { has_pop_culture = estonian }
+                militancy = -3
+            }
+            any_pop = {
+                limit = { has_pop_culture = volga_german }
+                militancy = 6
+            }
+			any_pop = {
+                limit = { has_pop_culture = latvian }
+                militancy = 6
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	 become_memel = {
+        picture = annex_united_baltic_duchy
+        potential = {
+            tag = LIT
+			owns = 698
+            NOT = {
+                exists = MML
+				owns = 360
+                any_owned_province = { is_core = UKR }
+				any_owned_province = { is_core = BYE }
+            }
+        }
+
+        allow = {
+            war = no
+            owns = 698
+        }
+
+        effect = {
+            change_tag_no_core_switch = = MML
+            remove_accepted_culture = polish
+            remove_accepted_culture = ruthenyian
+            primary_culture = volga_german
+            any_pop = {
+                limit = { has_pop_culture = volga_german }
+                militancy = -3
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
 incorparate_vassals = {
 		picture = thuringia
 		potential = {

@@ -3,6 +3,7 @@ political_decisions = {
     form_baltic_states = {
         potential = {
             is_culture_group = baltic
+			tag = PRU
             NOT = { exists = UBD }
             NOT = { has_global_flag = baltic_states_formed }
             NOT = { has_country_flag = post_colonial_country }
