@@ -286,46 +286,46 @@ army = {
 
 }
 army = {
-    name = "Cavilary division"
+    name = "Cavalry division"
     location = 269
     regiment = {
-        name= "Cavilary Division 1"
+        name= "Cavalry Division 1"
         type = hussar
         home = 269
     }
 
     regiment = {
-        name= "Cavilary Division 2"
+        name= "Cavalry Division 2"
         type = hussar
         home = 281
     }
 
     regiment = {
-        name= "Cavilary Division 3"
+        name= "Cavalry Division 3"
         type = hussar
         home = 279
     }
 
     regiment = {
-        name= "Cavilary Division 4"
+        name= "Cavalry Division 4"
         type = hussar
         home = 280
     }
 
     regiment = {
-        name= "Cavilary Division 5"
+        name= "Cavalry Division 5"
         type = hussar
         home = 271
     }
 
     regiment = {
-        name= "Cavilary Division 6"
+        name= "Cavalry Division 6"
         type = hussar
         home = 271
     }
 
     regiment = {
-        name= "Cavilary Division 7"
+        name= "Cavalry Division 7"
         type = hussar
         home = 254
 	}
@@ -380,7 +380,7 @@ army = {
 }
 
 army = {
-    name = "Englsih Border Division"
+    name = "English Border Division"
     location = 282
     regiment = {
         name= "Division 9"
@@ -406,13 +406,12 @@ army = {
 }
 army = {
     name = "Java Garrison"
-    location = 1419
+    location = 1418
     regiment = {
         name= "Java division 13"
         type = infantry
         home = 1408
     }
-
     regiment = {
         name= "Java division 14"
         type = infantry
@@ -431,13 +430,12 @@ army = {
 }
 army = {
     name = "Sumatra Garrison"
-    location = 1419
+    location = 1399
     regiment = {
         name= "Sumatra division 17"
         type = infantry
         home = 1418
     }
-
     regiment = {
         name= "Sumatra division 18"
         type = infantry
@@ -704,161 +702,6 @@ navy = {
 
 }
 
-
-navy = {
-    name = "Mediterranean Fleet"
-    location = 854 #Malta
-    ship = {
-        name= "HMS Hogue"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Medway"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Mulgrave"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Pembroke"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Queen Charlotte"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Scarborough"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Agincourt"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Black Prince"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Melville"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Minotaur"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Pitt"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Wellington"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Alfred"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Andromeda"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Circe"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Clyde"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Cornwall"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Eurotas"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Fox"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Hotspur"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Leda"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Penelope"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS President"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Proserpine"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Salamander"
-        type = commerce_raider
-    }
-
-}
-
-navy = {
-    name = "South Atlantic Station"
-    location = 2131 # Falklands
-    ship = {
-        name= "HMS Hamadryad"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Lancaster"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Thames"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Thisbe"
-        type = frigate
-    }
-
-}
 
 navy = {
     name = "1st Transport Squadron"
