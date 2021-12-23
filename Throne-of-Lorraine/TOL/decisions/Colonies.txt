@@ -993,6 +993,7 @@ political_decisions = {
                 }
             }
             year = 1870
+			NOT = { has_country_flag = dyes_removed }
         }
 
         allow = {
@@ -1000,6 +1001,7 @@ political_decisions = {
         }
 
         effect = {
+		set_country_flag = dyes_removed
             random_owned = {
                 limit = {
                     province_id = 1310
