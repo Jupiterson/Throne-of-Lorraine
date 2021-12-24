@@ -484,6 +484,8 @@ political_decisions = {
             remove_accepted_culture = breton
             remove_accepted_culture = wallonian
             remove_accepted_culture = occitan
+			remove_accepted_culture = catalan
+			remove_accepted_culture = provencial
             any_owned = {
                 limit = {
                     is_core = THIS
@@ -589,6 +591,7 @@ political_decisions = {
                 }
                 primary_culture = french
             }
+			THIS = { country_event = 19300 }
         }
     }
 

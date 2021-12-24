@@ -1282,6 +1282,9 @@ country_event = {
         }
         add_accepted_culture = south_italian
         add_accepted_culture = north_italian
+		add_accepted_culture = central_italian
+		add_accepted_culture = sicilian
+		add_accepted_culture = venetian
         random_owned = {
             limit = { owner = { is_culture_group = italian accepted_culture = french } }
             owner = { remove_accepted_culture = french }
