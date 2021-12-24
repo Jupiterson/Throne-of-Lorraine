@@ -164,84 +164,6 @@ army = {
 }
 
 army = {
-    name = "Army of the Wali of Zanzibar"
-    location = 2029
-
-    regiment = {
-        name= "1. Askaris"
-        type = infantry
-        home = 2048
-    }
-
-    regiment = {
-        name= "2. Askaris"
-        type = infantry
-        home = 2029
-    }
-    regiment = {
-        name= "3. Brigade"
-        type = irregular
-        home = 2048
-    }
-}
-
-navy = {
-    name = "Omani Fleet"
-    location = 1166
-    ship = {
-        name= "Transport Flotilla"
-        type = clipper_transport
-    }
-    ship = {
-        name= "Transport Flotilla"
-        type = clipper_transport
-    }
-
-}
-
-leader = {
-    name = "Said bin Sultan"
-    type = land
-    date = 1807.12.12
-    background = aristocrat
-    personality = aggressive
-}
-
-leader = {
-    name = "Hamididdin"
-    type = land
-    date = 1836.1.1
-    personality = stout
-    background = natural_born_leader
-}
-
-army = {
-
-    name = "Army of the Imam of Zaydi"
-
-    location = 1178
-
-    regiment = {
-
-        name= "1. Abdali"
-
-        type = cavalry
-
-        home = 1178
-    }
-    regiment = {
-
-        name= "2. Abdali"
-
-        type = irregular
-
-        home = 1178
-    }
-
-}
-
-
-army = {
     name = "Mansure Army"
     location = 860
     regiment = {
@@ -259,13 +181,13 @@ army = {
     regiment = {
         name= "3. Tümeni Firkasi"
         type = infantry
-        home = 859
+        home = 3342
     }
 
     regiment = {
         name= "4. Tümeni Firkasi"
         type = infantry
-        home = 802
+        home = 805
     }
 
     regiment = {
@@ -283,7 +205,7 @@ army = {
     regiment = {
         name= "1. Süvari Firkasi"
         type = cuirassier
-        home = 798
+        home = 3302
     }
 
     regiment = {
@@ -295,7 +217,7 @@ army = {
     regiment = {
         name= "3. Süvari Firkasi"
         type = cuirassier
-        home = 853
+        home = 832
     }
 
     regiment = {
@@ -349,7 +271,7 @@ army = {
     regiment = {
         name= "4. Süvari Firkasi"
         type = cuirassier
-        home = 783
+        home = 897
     }
 
     regiment = {
@@ -367,7 +289,7 @@ army = {
     regiment = {
         name = "2. Topçu Firkas"
         type = artillery
-        home = 804
+        home = 813
     }
 }
 
@@ -402,7 +324,7 @@ army = {
     regiment = {
         name= "3. Timariot"
         type = irregular
-        home = 675
+        home = 894
     }
 
     regiment = {
@@ -464,7 +386,7 @@ army = {
 
 army = {
     name = "4th Army"
-    location = 923
+    location = 909
 
     regiment = {
         name= "17. Tümeni Firkasi"
@@ -481,7 +403,7 @@ army = {
     regiment = {
         name= "7. Timariot"
         type = irregular
-        home = 923
+        home = 916
     }
 
     regiment = {
@@ -500,12 +422,12 @@ army = {
 
 army = {
     name = "5th Army"
-    location = 1096
+    location = 882
 
     regiment = {
         name= "18. Tümeni Firkasi"
         type = infantry
-        home = 923
+        home = 898
     }
 
     regiment = {
@@ -523,7 +445,7 @@ army = {
     regiment = {
         name= "5. Sipahis"
         type = cavalry
-        home = 926
+        home = 3293
     }
 }
 
