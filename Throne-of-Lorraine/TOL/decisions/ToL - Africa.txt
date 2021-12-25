@@ -24,4 +24,52 @@ incorparate_yemen = {
 		ai_will_do = { factor = 1 }
 	}
 	
+collapse_modifier_isa = {
+        picture = embrace_minority
+        potential = {
+            tag = MAS
+            NOT = { has_country_flag = collapsing }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+           badboy = 6
+		   set_country_flag = collapsing
+		  add_country_modifier = {
+                name = collapsing_nation
+                duration = -1
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	reform_caliphate = {
+        picture = tanzania_shop
+        potential = {
+  
+            NOT = { has_country_flag = reformed_nation }
+        }
+
+        allow = {
+            war = no
+            money = 10000
+            admin_reform = yes_admin_reform
+            land_reform = yes_land_reform
+			finance_reform = yes_finance_reform
+        }
+
+        effect = {
+		remove_country_modifier = collapsing_nation
+        set_country_flag = reformed_nation
+            money = -10000
+            
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	
+	
 	}

@@ -51,8 +51,14 @@ political_decisions = {
 
         effect = { 
 		 badboy = 10
+		 add_accepted_culture = burgundian
          set_country_flag = brugundian_weak
             BRG = {
+                all_core = {
+                    add_core = LOR
+                }
+            }
+			ARP = {
                 all_core = {
                     add_core = LOR
                 }
@@ -170,6 +176,7 @@ rhineland_lorrainian = {
         }
 
         effect = { 
+		add_accepted_culture = arpitan
 		 badboy = 10
        set_country_flag = swabians_weak
             SWI = {

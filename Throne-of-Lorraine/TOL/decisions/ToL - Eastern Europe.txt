@@ -66,6 +66,7 @@ political_decisions = {
             NOT = { exists = PLC }
             NOT = { has_country_flag = post_colonial_country }
             NOT = { tag = WSF }
+			NOT = { tag = PLC }
             NOT = { tag = PLR }
             NOT = { tag = PHC }
         }
@@ -191,6 +192,7 @@ political_decisions = {
             NOT = { has_country_flag = post_colonial_country }
             NOT = { tag = WSF }
             NOT = { tag = PLR }
+			NOT = { tag = PHC }
         }
 
         allow = {
