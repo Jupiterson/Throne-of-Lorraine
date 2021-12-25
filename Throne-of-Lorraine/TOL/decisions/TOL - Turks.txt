@@ -58,6 +58,73 @@ political_decisions = {
             set_country_flag = ended_armenia
         }
     }
+	steal_yemen = {
+        picture = become_saudi_arabia
+        potential = {
+		tag = TUR
+		YEM = { vassal_of = ETH }
+        NOT = { has_country_flag = steal_yemen }
+        }
+
+        allow = {
+            war = no
+			prestige = 60
+			year = 1946
+        }
+
+        effect = {
+		war = {
+            target = ETH
+            attacker_goal = {
+                casus_belli = steal_puppet
+                country = YEM
+            }
+            defender_goal = {
+                casus_belli = status_quo
+            }
+            call_ally = yes
+        }
+			
+		relation = {
+			who = ETH
+			value = -100
+		}
+		set_country_flag = steal_yemen
+		badboy = 7
+        }
+		ai_will_do ={ factor = 1 }
+    }
 	
+	ottoman_conquer_egypt = {
+        picture = egypt
+        potential = {
+		tag = TUR
+        NOT = { has_country_flag = ottoman_conquer_egypt }
+		is_vassal = no
+        }
+
+        allow = {
+            war = no			
+			is_greater_power = yes
+			prestige = 70
+			nationalism_n_imperialism = 1
+        }
+
+        effect = {
+		add_core = 1755
+		add_core = 1746
+		add_core = 1751
+		add_core = 1752
+		add_core = 1753
+		add_core = 1737
+		relation = {
+			who = COP
+			value = -100
+		}
+		set_country_flag = ottoman_conquer_egypt
+		badboy = 7
+        }
+		ai_will_do ={ factor = 1 }
+    }
 	
 }
