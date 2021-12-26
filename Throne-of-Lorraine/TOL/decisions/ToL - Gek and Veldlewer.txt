@@ -1,10 +1,61 @@
 political_decisions = {
 
+	# Rancho
+    rancho = {
+        picture = MEX_rancho
+        potential = {
+            OR = {
+                tag = MEX
+                tag = GEK
+                tag = PAC
+            }
+            NOT = {    has_global_flag = rancho }
+            year = 1836
+        }
 
+        allow = {
+            romanticism = 1
+            money = 5000
+        }
+
+        effect = {
+            set_global_flag = rancho
+            treasury = -5000
+
+            any_owned = {
+                limit = {
+                    OR = {
+                    province_id = 84
+                    province_id = 85
+                    province_id = 86
+                    province_id = 87
+                    province_id = 88
+                    province_id = 89
+                    province_id = 90
+                    province_id = 3448
+                    province_id = 3449
+                    province_id = 3450
+                    province_id = 3451
+                    province_id = 3452
+                    province_id = 3453
+                    province_id = 3454
+                    province_id = 3455
+                    }
+                }
+            add_province_modifier = {
+                name = rancho
+                duration = 1825
+                #Five years
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
     
  
-#stolen from AoE
-colonial_militia = {
+	#stolen from AoE
+	colonial_militia = {
 		picture = form_the_ikhwan
 		potential = {
 			tag = VEL
