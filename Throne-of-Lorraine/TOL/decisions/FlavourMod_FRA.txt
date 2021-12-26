@@ -330,14 +330,14 @@ political_decisions = {
             FRA = { set_country_flag = walloon_autonomy }
             BOR = { set_country_flag = walloon_autonomy }
             prestige = -25
-            add_accepted_culture = wallonian
+            add_accepted_culture = belgican
             random_country = {
                 limit = { tag = BEL exists = no }
                 BEL = { all_core = { remove_core = BEL } }
             }
             any_pop = {
                 limit = {
-                    has_pop_culture = wallonian
+                    has_pop_culture = belgican
                 }
                 consciousness = -5
                 militancy = -5

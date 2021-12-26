@@ -1,7 +1,7 @@
 political_decisions = {
 
 #stolen from AOE
-             demand_milan = {
+   demand_milan = {
 		picture = italian_trentino
 		potential = {
                         tag = VEN
@@ -14,8 +14,7 @@ political_decisions = {
 				owns = 739 #Modena
 			
 			owns = 742 #Ferrara
-			is_secondary_power = yes
-			military_score = 25
+			is_greater_power = yes
 			war = no
 		}
 		

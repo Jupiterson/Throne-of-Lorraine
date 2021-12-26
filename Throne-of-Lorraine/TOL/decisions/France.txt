@@ -465,7 +465,7 @@ political_decisions = {
             primary_culture = french
             is_greater_power = yes
             capital = 425
-            any_owned_province = { is_core = BRT }
+            any_owned_province = { is_core = OCC }
             BRT = { exists = no }
             NOT = { has_country_flag = enacted_french_schooling     }
         }
@@ -482,7 +482,7 @@ political_decisions = {
             BOR = { set_country_flag = enacted_french_schooling set_country_flag = french_assimilation }
             remove_accepted_culture = arpitan
             remove_accepted_culture = breton
-            remove_accepted_culture = wallonian
+            remove_accepted_culture = belgican
             remove_accepted_culture = occitan
 			remove_accepted_culture = catalan
 			remove_accepted_culture = provencial

@@ -143,7 +143,7 @@ political_decisions = {
                         }
                     }
                     NOT = {
-                        has_pop_culture = wallonian
+                        has_pop_culture = belgican
                         has_pop_culture = flemish
                     }
                 }
@@ -239,7 +239,7 @@ political_decisions = {
             }
             change_tag = FLA
             remove_accepted_culture = flemish
-            remove_accepted_culture = wallonian
+            remove_accepted_culture = belgican
             primary_culture = flemish
             add_accepted_culture = dutch
             any_pop = {
@@ -247,7 +247,7 @@ political_decisions = {
                 militancy = -3
             }
             any_pop = {
-                limit = { has_pop_culture = wallonian }
+                limit = { has_pop_culture = belgican }
                 militancy = 6
             }
         }
@@ -285,7 +285,7 @@ political_decisions = {
             remove_accepted_culture = dutch
             capital = 392
             any_pop = {
-                limit = { has_pop_culture = wallonian }
+                limit = { has_pop_culture = belgican }
                 militancy = -3
             }
             any_pop = {
@@ -340,7 +340,7 @@ political_decisions = {
                 remove_core = BEL
             }
             change_tag = BEL
-            add_accepted_culture = wallonian
+            add_accepted_culture = belgican
             remove_accepted_culture = dutch
             capital = 387
             random_country = {

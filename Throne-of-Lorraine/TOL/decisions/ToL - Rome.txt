@@ -1,66 +1,156 @@
 political_decisions = {
-    romanization_edict = {
+    roman_romanization_edict = {
         picture = romanization
         potential = {
             tag = NIR
-            has_country_flag = retaken_italy
+            has_country_flag = expanded_empire
             NOT = { has_country_flag = romanization_edict }
         }
 
         allow = {
-            NOT = { has_country_flag = romanization_edict }
-            is_greater_power = yes
             all_core = { owned_by = THIS }
             war = no
-            NOT = { school_reforms = no_schools }
-            invention = biased_multiculturalism
-            invention = social_darwinism
         }
 
         effect = {
             set_country_flag = romanization_edict
             any_owned = {
                 limit = {
-                    is_core = BYZ
+                    is_core = NIR
                 }
                 add_province_modifier = {
-                    name = french_cultural_unity
+                    name = roman_cultural_unity_1
                     duration = -1
                 }
             }
         }
     }
-
-    reclaim_north_africa = {
-        picture = reclaim_anatolia
+	
+	 roman_romanization_edict_2 = {
+        picture = romanization
         potential = {
             tag = NIR
-              
+			OR = {
+            has_country_flag = africa_will_be_retaken 
+			has_country_flag = da_wae
+            }			 
+            NOT = { has_country_flag = romanization_edict }
+        }
+
+        allow = {
+            all_core = { owned_by = THIS }
+            war = no
+        }
+
+        effect = {
+            set_country_flag = romanization_edict
+            any_owned = {
+                limit = {
+                    is_core = NIR
+					NOT = {
+					has_province_modifier = roman_cultural_unity_1
+					}
+                }
+                add_province_modifier = {
+                    name = roman_cultural_unity_2
+                    duration = -1
+                }
+            }
+        }
+    }
+	
+	expand_the_empire = {
+        picture = roman_temple
+        potential = {
+            tag = NIR
+            ai = no 
+            NOT = { has_country_flag = expanded_empire }
+        }
+
+        allow = {
+            is_secondary_power = yes
+            empiricism = 1
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 15
+            FRA_1813 = {
+                add_core = THIS
+            }
+			FRA_1813 = {
+                add_core = THIS
+            }
+		    ENG_1825 = {
+                add_core = THIS
+            }
+			ENG_1818 = {
+                add_core = THIS
+            }
+			SOK_1963 = {
+                add_core = THIS
+            }
+			SOK_1937 = {
+                add_core = THIS
+            }
+			SOK_1945 = {
+                add_core = THIS
+            }
+		                      
+            set_country_flag = expanded_empire
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+    }
+	
+	###Romes's Expansion###
+	#Stolen from AoE
+     #restore_Italy  (normal rome)
+	 #up_east (africa)
+	the_future_of_rome = {
+		picture = roman_temple
+		potential = {
+			tag = NIR
+			has_country_flag = expanded_empire
+			NOT = { has_country_flag = rome_expansion }
+			exists = yes
+		}
+			
+		allow = {
+			war = no
+            all_core = { owned_by = THIS }
+			is_secondary_power = yes
+		}
+		
+		effect = {
+			set_country_flag = rome_expansion
+			country_event = 712340
+			badboy = 6
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+
+    reclaim_north_africa = {
+        picture = carthage_map
+        potential = {
+            tag = NIR
+            has_country_flag = restore_Italy			
             NOT = { has_country_flag = africa_will_be_retaken }
         }
 
         allow = {
-            NOT = { has_country_flag = africa_will_be_retaken }
             is_secondary_power = yes
-            owns = 1731
+			all_core = { owned_by = THIS }
 
         }
 
         effect = {
             badboy = 15
-            MOR_1696 = {
-                add_core = NIR
-            }
-            MOR_1693 = {
-                add_core = NIR
-            }
-            MOR_1686 = {
-                add_core = NIR
-            }
+			
             MOR_1683 = {
-                add_core = NIR
-            }
-            MOR_1694 = {
                 add_core = NIR
             }
             FRA_1700 = {
@@ -70,6 +160,9 @@ political_decisions = {
                 add_core = NIR
             }
             ALD_1708 = {
+                add_core = NIR
+            }
+            ALD_1718 = {
                 add_core = NIR
             }
             ALD_1713 = {
@@ -83,19 +176,14 @@ political_decisions = {
             }
             TRI_1735 = {
                 add_core = NIR
-            }
-            ENG_1818 = {
-                add_core = NIR
-            }
-            ENG_1825 = {
-                add_core = NIR
-            }   
-            EGY_1751 = {
+            } 
+            EGY_1758 = {
                 add_core = NIR
             }          
                 any_country = {
                 limit = {
-                    primary_culture = turkish
+                    primary_culture = maghrebi
+					primary_culture = berber
                 }
                 relation = {
                     who = THIS
@@ -103,86 +191,59 @@ political_decisions = {
                 }
             }
             set_country_flag = africa_will_be_retaken
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
         }
     }
 
 
-    reclaim_anatolia = {
-        picture = reclaim_anatolia
+    claim_africa = {
+        picture = carthage_map
         potential = {
             tag = NIR
-           has_country_flag = reclaimed_egypt  
-            NOT = { has_country_flag = anatolia_will_be_retaken }
+            has_country_flag = up_east 
+            NOT = { has_country_flag = da_wae }
         }
 
         allow = {
-            NOT = { has_country_flag = anatolia_will_be_retaken }
-            is_greater_power = yes
-            owns = 1731
+            is_secondary_power = yes
+			all_core = { owned_by = THIS }
 
         }
 
         effect = {
             badboy = 15
-            TUR_863 = {
+			
+            OYO = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+            EGY_1842 = {
                 add_core = NIR
             }
-            TUR_869 = {
+            FRA_1927 = {
                 add_core = NIR
             }
-            TUR_873 = {
+            FRA_1965 = {
                 add_core = NIR
             }
-            TUR_876 = {
+            ENG_1956 = {
                 add_core = NIR
-            }
-            TUR_880 = {
-                add_core = NIR
-            }
-            TUR_882 = {
-                add_core = NIR
-            }
-            TUR_887 = {
-                add_core = NIR
-            }
-            TUR_890 = {
-                add_core = NIR
-            }
-            TUR_894 = {
-                add_core = NIR
-            }
-            TUR_893 = {
-                add_core = NIR
-            }
-            EGY_897 = {
-                add_core = NIR
-            }
-            EGY_903 = {
-                add_core = NIR
-            }
-            EGY_910 = {
-                add_core = NIR
-            }
-            EGY_915 = {
-                add_core = NIR
-            }  
-            EGY_921 = {
-                add_core = NIR
-            }      
+            }         
                 any_country = {
                 limit = {
-                    primary_culture = turkish
+                    primary_culture = forest_bantu
+					primary_culture = yoruba
                 }
                 relation = {
                     who = THIS
                     value = -200
                 }
             }
-            set_country_flag = anatolia_will_be_retaken
+            set_country_flag = da_wae
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
         }
     }
-
-
 
     anatolia_retaken = {
         picture= byzantine_triumph
@@ -270,11 +331,12 @@ political_decisions = {
         }
 		
 		
-		    form_byzantium = {
+form_byzantium = {
         picture = byzantine_triumph
         potential = {
 		    is_culture_group = pan_roman
             BYZ = { exists = no }
+			NOT = { tag = NIR }
         }
 
         allow = {
