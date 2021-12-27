@@ -1,5 +1,27 @@
 political_decisions = {
-    roman_romanization_edict = {
+    corpus_iuris_civilis = {
+        picture = law_of_equality
+        potential = {
+            tag = NIR
+            NOT = { has_country_flag = corpus_iuris_civilis }
+			civilization_progress = 50
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            set_country_flag = corpus_iuris_civilis
+			add_country_modifier = {
+                    name = corpus_iuris_civilis
+                    duration = 3650
+                }
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+    roman_romanization_edict = { 
         picture = romanization
         potential = {
             tag = NIR
@@ -24,6 +46,7 @@ political_decisions = {
                 }
             }
         }
+		ai_will_do = { factor = 1 }
     }
 	
 	 roman_romanization_edict_2 = {
@@ -57,6 +80,7 @@ political_decisions = {
                 }
             }
         }
+		ai_will_do = { factor = 1 }
     }
 	
 	expand_the_empire = {
@@ -100,6 +124,7 @@ political_decisions = {
             set_country_flag = expanded_empire
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
         }
+		ai_will_do = { factor = 1 }
     }
 	
 	###Romes's Expansion###
@@ -193,6 +218,7 @@ political_decisions = {
             set_country_flag = africa_will_be_retaken
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
         }
+		ai_will_do = { factor = 1 }
     }
 
 
@@ -243,6 +269,7 @@ political_decisions = {
             set_country_flag = da_wae
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
         }
+		ai_will_do = { factor = 1 }
     }
 
     anatolia_retaken = {
@@ -328,6 +355,7 @@ political_decisions = {
                     militancy = -5
                     }
             }
+			ai_will_do = { factor = 1 }
         }
 		
 		
@@ -440,5 +468,6 @@ form_byzantium = {
             }
             set_country_flag = byzantine_next_step
         }
+		ai_will_do = { factor = 1 }
     }
 }

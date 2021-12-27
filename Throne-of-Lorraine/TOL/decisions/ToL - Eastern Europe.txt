@@ -55,7 +55,7 @@ political_decisions = {
         }
     }
 
- unite_poland_hungary = {
+	unite_poland_hungary = {
         picture = become_poland_lithuania
 
         potential = {
@@ -178,8 +178,6 @@ political_decisions = {
         }
     }
 
-
-
     unite_poland_lithuania = {
         picture = become_poland_lithuania
 
@@ -189,7 +187,11 @@ political_decisions = {
                 primary_culture = lithuanian
             }
             NOT = { exists = PLC }
-            NOT = { has_country_flag = post_colonial_country }
+            NOT = {
+				has_country_flag = post_colonial_country
+				has_country_flag = polish_lithuania_ruthenia_formed
+				has_country_flag = ruthenyans_accepted_culture
+			}
             NOT = { tag = WSF }
             NOT = { tag = PLR }
 			NOT = { tag = PHC }
@@ -740,6 +742,216 @@ political_decisions = {
             factor = 1
         }
     }
+	
+	emancipate_ruthenyans = {
+        picture = embrace_the_jews
+        potential = {
+            tag = LIT
+            NOT = {
+                has_country_flag = ruthenyans_accepted_culture
+            }
+        }
+        allow = {
+            958 = {
+                owned_by = LIT
+            }
+            nationalism_n_imperialism  = 1
+			citizens_rights = all_voting_pops
+            citizenship_policy = full_citizenship
+        }
+        effect = {
+            RUS_977 = {
+                add_core = LIT
+            }
+            RUS_978 = {
+                add_core = LIT
+            }
+            1007 = {
+                add_core = LIT
+            }
+            943 = {
+                add_core = LIT
+            }
+			add_accepted_culture = ruthenyan
+            prestige = 10
+            RUS = {
+                any_owned = {
+                    limit = { region = RUS_973 }
+                    add_core = LIT
+                }
+            }
+			RUS = {
+                any_owned = {
+                    limit = { region = CRI_970 }
+                    add_core = LIT
+                }
+            }
+			RUS = {
+                any_owned = {
+                    limit = { region = RUS_964 }
+                    add_core = LIT
+                }
+            }
+            any_greater_power = {
+                limit = {
+                    OR = {
+                        primary_culture = russian
+                        is_culture_group = germanic
+                    }
+                    neighbour = THIS
+                }
+                relation = { who = THIS value = -200 }
+                leave_alliance = THIS
+            }
+            set_country_flag = ruthenyans_accepted_culture
+            any_pop = {
+                limit = {
+						has_pop_culture = ruthenyan
+
+                }
+                militancy = -4
+                consciousness = -2
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	lithuanian_poland_lithuania_ruthenia = {
+        picture = poland_lithuania_ruthenia
+        potential = {
+			OR = {
+                primary_culture = polish
+                primary_culture = lithuanian
+            }
+            NOT = { exists = PLC }
+            NOT = {
+				has_country_flag = post_colonial_country
+				has_country_flag = polish_lithuania_ruthenia_formedx
+			}
+            NOT = { tag = WSF }
+            NOT = { tag = PLR }
+			NOT = { tag = PHC }
+			LIT = {
+				has_country_flag = ruthenyans_accepted_culture
+			}
+        }
+        allow = {
+            war = no
+            LIT = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            ai = yes
+                            in_sphere = THIS
+                            OR = {
+                                is_vassal = no
+                                vassal_of = THIS
+                            }
+                            war = no
+                            is_greater_power = no
+                        }
+                    }
+                }
+            }
+            POL = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            ai = yes
+                            in_sphere = THIS
+                            OR = {
+                                is_vassal = no
+                                vassal_of = THIS
+                            }
+                            war = no
+                            is_greater_power = no
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+			any_country = {
+                any_owned = {
+                    limit = { is_core = POL }
+                    add_core = PLR
+                    remove_core = POL
+                }
+				any_owned = {
+                    limit = { is_core = LIT }
+                    add_core = PLR
+                    remove_core = LIT
+                }
+            }
+			random_owned = {
+                limit = { owner = { primary_culture = polish } }
+                owner = {
+                    add_accepted_culture = lithuanian
+					add_accepted_culture = ruthenyan
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = { primary_culture = lithuanian }
+                }
+                owner = {
+                    add_accepted_culture = polish
+                }
+            }
+            PRU_695 = {
+                add_core = PLR
+            }
+            PRU_682 = {
+                add_core = PLR
+            }
+            RUS_354 = {
+                add_core = PLR
+            }
+			PRU_690 = {
+				add_core = PLR
+			}
+            change_tag = PLR
+            prestige = 40
+            any_country = {
+                limit = {
+                    OR = {
+                        in_sphere = THIS
+                        vassal_of = THIS
+                    }
+                }
+                any_owned = {
+                    limit = { is_core = PLR }
+                    secede_province = THIS
+                }
+            }
+            any_greater_power = {
+                limit = {
+                    OR = {
+                        primary_culture = russian
+                        is_culture_group = germanic
+                    }
+                    neighbour = THIS
+                }
+                relation = { who = THIS value = -200 }
+                leave_alliance = THIS
+            }
+            set_country_flag = polish_lithuania_ruthenia_formed
+            any_pop = {
+                militancy = -4
+                consciousness = -2
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
     poland_baltic_thingy = {
         picture = russify_baltic_states
         potential = {
