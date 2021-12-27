@@ -48,31 +48,7 @@ political_decisions = {
                 }
                 THIS = { inherit = FLA }
             }
-            random_country = {
-                limit = {
-                    tag = BEL
-                    exists = yes
-                    ai = yes
-                    OR = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                    }
-                }
-                THIS = {
-                    inherit = BEL
-                    release_vassal = WLL
-                    create_alliance = WLL
-                    diplomatic_influence = {
-                        who = WLL
-                        value = 300
-                    }
-                }
-                BEL = {
-                    all_core = {
-                        remove_core = BEL
-                    }
-                }
-            }
+            
             random_owned = {
                 limit = { province_id = 397 }
                 owner = {
@@ -96,6 +72,7 @@ political_decisions = {
             NOT = {
                 exists = WLL
                 exists = BEL
+				exists = PIC
                 has_country_flag = signed_treaty_of_london
                 has_country_flag = francophonie_embraced
             }

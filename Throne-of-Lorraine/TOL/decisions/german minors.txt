@@ -133,12 +133,21 @@ political_decisions = {
         }
 
         effect = {
-            BEL = {
+            WLL = {
                 all_core = {
                     add_core = BRG
                 }
                 all_core = {
-                    remove_core = BEL
+                    remove_core = WLL
+                }
+            }
+			
+			 PIC = {
+                all_core = {
+                    add_core = BRG
+                }
+                all_core = {
+                    remove_core = PIC
                 }
             }
         }

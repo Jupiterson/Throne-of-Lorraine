@@ -1804,13 +1804,7 @@ political_decisions = {
                         duration = 1095
                     }
                 }
-            }
-            BEL = {
-                add_country_modifier = {
-                    name = global_baby_boom
-                    duration = 1825
-                }
-            }
+            }          
             NEJ = {
                 add_country_modifier = {
                     name = global_baby_boom
@@ -2937,8 +2931,7 @@ political_decisions = {
             #################Setup SWI######################
 
             #################Belgian War of Independence######################
-            NET = { war_exhaustion = 40 badboy = 5 }
-            BEL = { war_exhaustion = 10 }
+            NET = { war_exhaustion = 2 badboy = 5 }
             #################Belgian War of Independence######################
 
             #################1832 War with Colombia######################
