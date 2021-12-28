@@ -154,7 +154,7 @@ country_event = {
 			}
 		}
 	}
-#Yunnan Seizes Guizhou
+#Yunnan Seizes Chengdu
 country_event = {
 	id = 310005
 	title = "FEU5.T"
@@ -189,21 +189,17 @@ country_event = {
 		}
 	}	
 		option = {
-		name = "Not Guizhou!"
+		name = "Not Chengdu!"
 		prestige = -10
 		money = 50000
 		relation = { who = YNN value = -100 }
 		any_owned = {
 			limit = {
-				region = CHI_1505
+				region = CHI_1578
 			}
 			secede_province = YNN
 		}
-		1582 = { secede_province = YNN }
-		1586 = { secede_province = YNN }
-		1585 = { secede_province = YNN }
 		CHI_1578 = { add_core = YNN}
-		CHI_1505 = { add_core = YNN }
 		YNN = { country_event = 310006 }
 		any_pop = {
 			limit = { is_primary_culture = no }
