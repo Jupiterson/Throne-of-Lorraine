@@ -814,7 +814,6 @@ country_event = {
 
     trigger = {
         war = no
-        NOT = { tag = LIE }
         NOT = { tag = VLG }
         NOT = { tag = GCF }
         NOT = { tag = SIE }
@@ -951,7 +950,6 @@ country_event = {
                 NOT = { tag = SIE }
                 NOT = { tag = UBD }
                 NOT = { tag = BAN }
-                NOT = { tag = SWI }
                 NOT = { has_country_flag = post_colonial_country }
                 OR = {
                     all_core = { owned_by = THIS }
@@ -1078,7 +1076,6 @@ country_event = {
         is_vassal = no
         NOT = {
             exists = GER
-            exists = HNS
             has_country_flag = refused_NGF_idea
         }
         OR = {

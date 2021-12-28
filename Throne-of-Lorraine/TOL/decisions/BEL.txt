@@ -41,6 +41,7 @@ political_decisions = {
 				tag = WLL
             }
             NOT = { exists = BEL }
+			}
 
         allow = {
             PIC = {
@@ -105,7 +106,6 @@ political_decisions = {
         ai_will_do = {
             factor = 1
         }
-    }
 	}
 
 
@@ -136,9 +136,7 @@ political_decisions = {
             change_tag = WLL
         }
 
-        ai_will_do = {
-            factor = 1
-        }
+         ai_will_do = { factor = 1 }
     }
 
     congo_mining_company = {

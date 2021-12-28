@@ -432,58 +432,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    taiping_intervention = {
-        picture = steamer_warship
-        potential = {
-            tag = QNG
-            war_with = TPG
-            OR = {
-                has_global_flag = ever_victorious_army
-                QNG = { ai = yes }
-            }
-            has_country_flag = arrow_incident
-            NOT = { has_global_flag = taiping_intervention }
-        }
-
-        allow = {
-            OR = {
-                truce_with = ENG
-                has_country_flag = gave_up_2nd_opium
-            }
-            NOT = { war_with = ENG }
-            NOT = { any_greater_power = { war_with = ENG } }
-            OR = {
-                national_provinces_occupied = 0.30
-                TPG = {
-                   ai = yes
-                   exists = yes
-                   OR = {
-                        military_score = 80
-                        brigades_compare = 1
-                   }
-                }
-            }
-        }
-
-        effect = {
-            war_exhaustion = -20
-            ENG = { country_event = { id = 99946 days = 1 } }
-            random_country = {
-                limit = {
-                    primary_culture = french
-                    is_greater_power = yes
-                    exists = yes
-                    has_country_flag = arrow_incident
-                }
-                country_event = { id = 99946 days = 1 }
-            }
-            set_variable = { which = china_destablization value = 1 }
-            set_global_flag = taiping_intervention
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
     likin_taxation = {
         picture = lijin
         potential = {
