@@ -1055,4 +1055,33 @@ political_decisions = {
             factor = 1
         }
     }
+	
+	claim_prussia = {
+        picture = map_ingria
+        potential = {
+		OR = {
+            tag = POL
+			tag = PLR
+			tag = PLC
+			tag = PHC
+			}
+            NOT = { has_country_flag = prussia }
+			owns = 3327
+        }
+
+        allow = {
+        state_n_government = 1 
+        owns = 3327
+     
+        }
+
+        effect = {
+        prestige = 5
+        badboy = 5
+        set_country_flag = prussia 
+        RUS_994 = { add_core = THIS }
+			
+        }
+   }
+   
 }

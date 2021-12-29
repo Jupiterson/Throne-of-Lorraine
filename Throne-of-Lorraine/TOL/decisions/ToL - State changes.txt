@@ -299,6 +299,7 @@ unite_saarland = {
         potential = {
             tag = PRO
             exists = OCC
+			NOT = { has_global_flag = Occ_annex_pro }
         }
 
         allow = {
@@ -316,6 +317,7 @@ unite_saarland = {
         }
 
         effect = {
+		set_global_flag = Occ_annex_pro
 #            PRO = {
 #                all_core = { remove_core = FRA }
 #            }
@@ -368,8 +370,7 @@ unite_saarland = {
 			ILL = {
                 inherit = THIS
             }
-			add_accepted_culture = bosniak
-			add_accepted_culture = croat
+			add_accepted_culture = illyrian
         }
     }
 	

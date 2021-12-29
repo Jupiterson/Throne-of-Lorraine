@@ -12,12 +12,11 @@ country_event = {
 		average_militancy = 6 
 #		location = { is_core = FIE }
 		}
-        OR = {
-            tag = SWE
-        }
+		tag = SWE
         343 = { owned_by = THIS }
         #war = no
         NOT = { exists = FIN }
+		NOT = { has_country_modifier = revolt_cooldown }
     }
 
     mean_time_to_happen = {
@@ -32,12 +31,6 @@ country_event = {
             factor = 0.5
             has_recently_lost_war = yes
         }
-    }
-
-    immediate = {
-        prestige = -15
-        badboy = 3
-        FIN = { government = democracy }
     }
 
     option = {
@@ -55,6 +48,7 @@ country_event = {
             type = conquest
             months = 12
         }
+	    add_country_modifier = { name = revolt_cooldown duration = 1825 }
         war = {
             target = FIN 
             attacker_goal = { casus_belli = conquest }
@@ -76,6 +70,7 @@ country_event = {
 #    fire_only_once = yes
 
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = burgundian 
 		average_militancy = 6 
@@ -105,14 +100,10 @@ country_event = {
         }
     }
 
-##    immediate = {
-#        prestige = -15
-#        badboy = 3
-#        FIN = { government = democracy }
-#    }
 
     option = {
         name = "Well then..."
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = BRG }
             secede_province = BRG 
@@ -146,6 +137,7 @@ country_event = {
     picture = "ALB_revolt_1"
     mean_time_to_happen = { months = 5 }
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = TUR
         owns = 852
@@ -158,6 +150,7 @@ country_event = {
     }
     option = {
         name = "Crush them!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_pop = {
             limit = {
                 has_pop_culture = albanian
@@ -177,6 +170,7 @@ country_event = {
     }
     option = {
         name = "Albania shall be free!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_pop = {
             limit = {
                 has_pop_culture = albanian
@@ -206,6 +200,7 @@ country_event = {
     picture = "ALB_revolt_2"
     mean_time_to_happen = { months = 5 }
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = SAX
         owns = 682
@@ -223,6 +218,7 @@ country_event = {
     }
     option = {
         name = "Crush them!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_pop = {
             limit = {
                 has_pop_culture = polish
@@ -247,6 +243,7 @@ country_event = {
     }
     option = {
         name = "Silesia shall be free!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_pop = {
             limit = {
                 has_pop_culture = polish
@@ -281,6 +278,7 @@ country_event = {
     picture = "ALB_revolt_3"
     mean_time_to_happen = { months = 5 }
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = GEN
         owns = 473
@@ -290,6 +288,7 @@ country_event = {
     }
     option = {
         name = "Crush them!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         473 = {
             secede_province = CRS
         }
@@ -301,6 +300,7 @@ country_event = {
     }
     option = {
         name = "Corsica shall be free!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         473 = {
             secede_province = CRS
         }
@@ -322,6 +322,7 @@ country_event = {
     picture = "ALB_revolt_5"
     mean_time_to_happen = { months = 5 }
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
 		OR = {
         tag = DNN
@@ -342,6 +343,7 @@ country_event = {
     }
     option = {
         name = "Crush them!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_pop = {
             limit = {
                 has_pop_culture = albanian
@@ -366,6 +368,7 @@ country_event = {
     }
     option = {
         name = "The Germans shall be free!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_pop = {
             limit = {
                 has_pop_culture = albanian
@@ -400,6 +403,7 @@ country_event = {
     picture = "ALB_revolt_6"
     mean_time_to_happen = { months = 5 }
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 	any_pop = { 
 		average_militancy = 5
 		has_pop_culture = romansh
@@ -416,6 +420,7 @@ country_event = {
     }
     option = {
         name = "Crush them!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_pop = {
             limit = {
                 has_pop_culture = romansh
@@ -437,6 +442,7 @@ country_event = {
     }
     option = {
         name = "Rights for the Romansh people!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_pop = {
             limit = {
                 has_pop_culture = romansh
@@ -467,6 +473,7 @@ country_event = {
     picture = "dervish_attack"
     mean_time_to_happen = { months = 5 }
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
 		any_pop = { 
 		average_militancy = 5
@@ -486,6 +493,7 @@ country_event = {
     }
     option = {
         name = "Crush them!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         618 = {
             secede_province = STY
         }
@@ -509,6 +517,7 @@ country_event = {
     }
     option = {
         name = "Styria shall be free!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         618 = {
             secede_province = STY
         }
@@ -540,16 +549,17 @@ country_event = {
     picture = "hungarian_revolution_1848"
 
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
         any_pop = { 
 		average_militancy = 6
-		has_pop_culture = croat
+		has_pop_culture = illyrian
         OR = {	 	
 		location = 771
 	  	   }
 		}
 		any_pop = { 
 		average_militancy = 6
-		has_pop_culture = bosniak
+		has_pop_culture = illyrian
         OR = {	 	
 		location = 783
 	  	   }
@@ -565,6 +575,8 @@ country_event = {
 
     option = {
         name = "Crush them!"
+		set_country_flag = illyrian_rev
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = ILL }
             secede_province = ILL 
@@ -587,6 +599,8 @@ country_event = {
 	
 	    option = {
         name = "Free the Slavs!"
+		set_country_flag = illyrian_rev
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = ILL }
             secede_province = ILL 
@@ -618,6 +632,7 @@ country_event = {
     picture = "BOS_revolt"
     mean_time_to_happen = { months = 5 }
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = POL
 		tag = PLC
@@ -630,6 +645,7 @@ country_event = {
     }
     option = {
         name = "Crush them!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_pop = {
             limit = {
                 has_pop_culture = romanian
@@ -649,6 +665,7 @@ country_event = {
     }
     option = {
         name = "Moldova shall be free!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_pop = {
             limit = {
                 has_pop_culture = romanian
@@ -678,6 +695,7 @@ country_event = {
 #    fire_only_once = yes
 
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = romanian 
 		average_militancy = 5 
@@ -717,6 +735,7 @@ country_event = {
 
     option = {
         name = "Well then..."
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = SIE }
             secede_province = SIE 
@@ -742,6 +761,7 @@ country_event = {
 	
 	option = {
         name = "Down with the oppressors"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = SIE }
             secede_province = SIE 
@@ -776,6 +796,7 @@ country_event = {
 #    fire_only_once = yes
 
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = bulgarian 
 		average_militancy = 5 
@@ -807,6 +828,7 @@ country_event = {
 
     option = {
         name = "Well then..."
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = BUL }
             secede_province = BUL 
@@ -832,6 +854,7 @@ country_event = {
 	
 	option = {
         name = "Down with the oppressors"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = BUL }
             secede_province = BUL 
@@ -866,6 +889,7 @@ country_event = {
 #    fire_only_once = yes
 
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = arpitan 
 		average_militancy = 5 
@@ -900,6 +924,7 @@ country_event = {
 
     option = {
         name = "Well then..."
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = ARP }
             secede_province = ARP 
@@ -925,6 +950,7 @@ country_event = {
 	
 	option = {
         name = "Down with the oppressors"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = ARP }
             secede_province = ARP 
@@ -959,6 +985,7 @@ country_event = {
 #    fire_only_once = yes
 
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = breton 
 		average_militancy = 5 
@@ -991,6 +1018,7 @@ country_event = {
 
     option = {
         name = "Well then..."
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = BRT }
             secede_province = BRT 
@@ -1016,6 +1044,7 @@ country_event = {
 	
 	option = {
         name = "Down with the oppressors"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { is_core = BRT }
             secede_province = BRT 
@@ -1050,6 +1079,7 @@ country_event = {
 #   fire_only_once = yes
 
     trigger = {
+	NOT = { has_country_modifier = revolt_cooldown }
         any_pop = {
 		has_pop_culture = belgican 
 		average_militancy = 5 
@@ -1080,6 +1110,7 @@ country_event = {
 	
     option = {
         name = "They shall pay"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = {
 			OR = {
@@ -1111,6 +1142,7 @@ country_event = {
 	
 	option = {
         name = "Vivre Belgica!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         any_owned = {
             limit = { OR = {
 			is_core = PIC
@@ -1264,7 +1296,7 @@ country_event = {
     immediate = {
         prestige = -15
         badboy = 3
-        FIN = { government = democracy }
+        BRG = { government = democracy }
     }
 
     option = {
@@ -1708,6 +1740,7 @@ country_event = {
     }
     option = {
         name = "Crush them!"
+		set_country_flag = illyrian_rev
         any_pop = {
             limit = {
                 has_pop_culture = romanian
@@ -1727,6 +1760,7 @@ country_event = {
     }
     option = {
         name = "Moldova shall be free!"
+		set_country_flag = illyrian_rev
         any_pop = {
             limit = {
                 has_pop_culture = romanian

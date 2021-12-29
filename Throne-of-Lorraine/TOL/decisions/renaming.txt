@@ -383,7 +383,7 @@ political_decisions = {
     istria_rename_cro = {
         picture = gtfo
         potential = {
-            primary_culture = croat
+            primary_culture = illyrian
             owns = 770
             owns = 778
             NOT = { has_global_flag = istria_rename_cro }
@@ -1989,16 +1989,16 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    croatia_rename_cro = {
+    illyriania_rename_cro = {
         picture = gtfo
         potential = {
             OR = {
-                primary_culture = croat
+                primary_culture = illyrian
                 tag = YUG
             }
             owns = 771
             owns = 772
-            NOT = { has_global_flag = croatia_rename_cro }
+            NOT = { has_global_flag = illyriania_rename_cro }
         }
 
         allow = {
@@ -2006,8 +2006,8 @@ political_decisions = {
         }
 
         effect = {
-            set_global_flag = croatia_rename_cro
-            clr_global_flag = croatia_rename_hun
+            set_global_flag = illyriania_rename_cro
+            clr_global_flag = illyriania_rename_hun
             clr_global_flag = serbia_rename_cro_cores
             clr_global_flag = serbia_rename_cro
             771 = {
@@ -2040,8 +2040,8 @@ political_decisions = {
 
         effect = {
             set_global_flag = serbia_rename_cro_cores
-            clr_global_flag = croatia_rename_hun
-            clr_global_flag = croatia_rename_cro
+            clr_global_flag = illyriania_rename_hun
+            clr_global_flag = illyriania_rename_cro
             772 = {
                 change_province_name = "Sisak"
             }
@@ -2065,8 +2065,8 @@ political_decisions = {
 
         effect = {
             set_global_flag = serbia_rename_cro
-            clr_global_flag = croatia_rename_hun
-            clr_global_flag = croatia_rename_cro
+            clr_global_flag = illyriania_rename_hun
+            clr_global_flag = illyriania_rename_cro
             clr_global_flag = serbia_rename_cro_cores
             771 = {
                 change_province_name = "Zagreb"
@@ -2081,7 +2081,7 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    croatia_rename_hun = {
+    illyriania_rename_hun = {
         picture = gtfo
         potential = {
             OR = {
@@ -2091,7 +2091,7 @@ political_decisions = {
             }
             owns = 771
             owns = 772
-            NOT = { has_global_flag = croatia_rename_hun }
+            NOT = { has_global_flag = illyriania_rename_hun }
         }
 
         allow = {
@@ -2099,8 +2099,8 @@ political_decisions = {
         }
 
         effect = {
-            set_global_flag = croatia_rename_hun
-            clr_global_flag = croatia_rename_cro
+            set_global_flag = illyriania_rename_hun
+            clr_global_flag = illyriania_rename_cro
             clr_global_flag = serbia_rename_cro_cores
             clr_global_flag = serbia_rename_cro
             771 = {
@@ -2116,7 +2116,7 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    croatia_rename_aus = {
+    illyriania_rename_aus = {
         picture = gtfo
         potential = {
             is_culture_group = germanic
@@ -2127,8 +2127,8 @@ political_decisions = {
                 }
             }
             OR = {
-                has_global_flag = croatia_rename_hun
-                has_global_flag = croatia_rename_cro
+                has_global_flag = illyriania_rename_hun
+                has_global_flag = illyriania_rename_cro
                 has_global_flag = serbia_rename_cro_cores
                 has_global_flag = serbia_rename_cro
             }
@@ -2141,8 +2141,8 @@ political_decisions = {
         }
 
         effect = {
-            clr_global_flag = croatia_rename_hun
-            clr_global_flag = croatia_rename_cro
+            clr_global_flag = illyriania_rename_hun
+            clr_global_flag = illyriania_rename_cro
             clr_global_flag = serbia_rename_cro_cores
             clr_global_flag = serbia_rename_cro
             771 = {
@@ -2162,7 +2162,7 @@ political_decisions = {
         picture = gtfo
         potential = {
             OR = {
-                primary_culture = croat
+                primary_culture = illyrian
                 tag = YUG
             }
             owns = 777
@@ -2292,7 +2292,7 @@ political_decisions = {
         picture = italian_dalmatia
         potential = {
             OR = {
-                primary_culture = croat
+                primary_culture = illyrian
                 tag = YUG
             }
             owns = 780

@@ -1110,7 +1110,7 @@ burgundian = {
 south_slavic = {
     leader = european
     unit = AustriaHungaryGC
-    croat = {
+    illyrian = {
         color = {140 140 190}
         first_names = { Andrija Antun Bazilije Breno Dragutin Dzivo Filip Franjo Gaspar Ivan
         Janko Jero Jerolim Josip Juraj Karlo Kresimir Krsto Ljudevit Lucijan
@@ -1192,23 +1192,6 @@ south_slavic = {
         Mravlajk Pengov Pesek Peterle Pirec Plecnik Rozman Rupnik Sarh Srebrnic
         Tomazic Tomsic Urbancic Vega "Von Windisch-Grätz" Zagar Zerjal Zizke Zornada Zupancic
         }
-    }
-    bosniak = {
-        color = {30 200 200}
-        first_names = { Abdulvehhab Adnan Ahmed Ali Alija Asim Atif Beriz Dzemal Dzemaludin
-        Elvir Enver Fikret Fuad Gazi Hakija Hamdija Hamid Haris Hasan
-        Husein Irfan Isa Ivan Izet Jusuf Mehmed Meho Mirsad Muhamed
-        Musa Mustafa Naser Osman Raif Rasim Refik Safet Safvet Sefer
-        Sejad Semezdin Semir Skender Sokollu Sulejman Vedad Zija Zlatko Zuko
-        }
-
-        last_names = { Abdic Arapovic Basgic Belkic Bijedic Catic Causevic Ceric Colakovic Dizdar
-        Dizdarevic Dzikic Dzumhur Ekrem Gradascevic Halilovic Husrev Ibisevic Ilhamija Imamovic
-        Isakovic Izetbegovic Kodro Konjic Kulenovic Lagumdzija Ljajic Ljubicic Ljubijankic Mehmedinovic
-        Muradbegovic Muzurovic Osmanagic Peco Plakalo Pozderac Prazina Rizvanbegovic Sabanadzovic Salihovic
-        Sarajlic Selimovic Silajdzic Sokolovic Spaho Terzic Tihic Turaljic Tükcan Ugljanin
-        }
-        radicalism = 15
     }
 }
 pan_roman = {
@@ -2318,7 +2301,7 @@ south_asian = {
     leader = indian
     unit = IndianGC
     assamese = {
-        color = {112 134 156}
+        color = {0 134 156}
         first_names = { Chandraka Purandar Ruchinath Kaganath Dhekial Jogeshwar Sudingphaa Kamaleswar Daman Hao Jama Patalang
 
         }
@@ -2328,7 +2311,7 @@ south_asian = {
     }
 
     bihari = {
-        color = {180 75 130}
+        color = {77 161 174}
         first_names = { Maharshi Mahavira Ashtravakra Chanakya Ashoka Samudragupta Vachaspati Vatsyayana Asvaghosa Udayanacharaya
 
         }
@@ -2338,7 +2321,7 @@ south_asian = {
         }
     }
     manipuri = {
-        color = {190 150 240}
+        color = {84 203 220}
         first_names = { Churachandra Kulachanrda Surachandra Chandrakirti Devendra Nara Genavira Pitambara Marjit Moduchanrda Charajit Harshachandra Chingthang
 
         }
@@ -2348,7 +2331,7 @@ south_asian = {
         }
     }
     oriya = {
-        color = {190 63 88}
+        color = {64 131 141}
         first_names = { Dibvyasimhadeva Harekrushnadeva Gopinathdeva Padmanavadeva Birakishoredeva Mukundadeva Ramachandradeva
 
         }
@@ -2358,7 +2341,7 @@ south_asian = {
         }
     }
     sinhala = {
-        color = {74 39 40}
+        color = {40 105 115}
         first_names = { Kirtisri Vikrama Sri Vijaya Viraparakkama Vimala Rajasingha Senarat  Anagarika Wimalaratne
 
         }
@@ -2368,7 +2351,7 @@ south_asian = {
         }
     }
     avadhi = {
-        color = {90 64 23}
+        color = {45 133 171}
         first_names = { Lokendra Raghuraj Vijay Vishvanath Pheran Jugal Parbhu Narayan Ishvari Udit Prasan Mahip
 
         }
@@ -2378,7 +2361,7 @@ south_asian = {
         }
     }
     kanauji = {
-        color = {90 190 41}
+        color = {67 125 149}
         first_names = { Lokendra Raghuraj Vijay Vishvanath Pheran Jugal Parbhu Narayan Ishvari Udit Prasan Mahip
 
         }
@@ -2388,7 +2371,7 @@ south_asian = {
         }
     }
     hindi = {
-        color = {255 140 0}
+        color = {59 174 174}
         first_names = { Maharshi Mahavira Ashtravakra Chanakya Ashoka Samudragupta Vachaspati Vatsyayana Asvaghosa Udayanacharaya
 
         }
@@ -2399,12 +2382,12 @@ south_asian = {
     }
     urdu = {
          #!religion = { sunni }
-         color = { 0 100 0 }
+         color = { 84 144 144 }
          first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
          last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
     }
     kashmiri = {
-        color = {255 0 128}
+        color = {10 164 164}
         first_names = { Atta Sher Muhammad Abdullah Vakil Kifayat Rahmatullah Mir Mirza Juma Mulla Mirdad Madad Azad Haji Karimdad
 
         }
@@ -2414,7 +2397,7 @@ south_asian = {
         }
     }
     gujarati = {
-        color = {99 12 89}
+        color = {71 116 175}
         first_names = { Chetan Fakirbhai Jivraj Madhavsingh Khemchand Manubhai Bharatsingh Balwantry Chabildas Maniraj
 
         }
@@ -2424,7 +2407,7 @@ south_asian = {
         }
     }
     marathi = {
-        color = {190 220 10}
+        color = {107 116 198}
         first_names = { Venkatji Shahuji Pratapsinha Rajaram Shivaji Shambhaji Balaji Bajirao Madhava Narayan Raghunath Sawai
 
         }
@@ -2435,7 +2418,7 @@ south_asian = {
     }
 
     rajput = {
-        color = {192 232 147}
+        color = {64 141 192}
         first_names = { Sardar Fateh Muhammad Malik Umar Hayat Rai Hussain Veer Durga Bhai Rao Harsha Bhagwant "Mirza Raja" Jawapala Sawai
 
         }
@@ -2446,7 +2429,7 @@ south_asian = {
         radicalism = 10
     }
     kannada = {
-        color = {82 32 170}
+        color = {64 102 192}
         first_names = { Aliya Abbakka Amoghdagestaniasha Basaveshwara Bijjala Guvida Harihara Kempe Krishnadeva Krisnaraja Mayurdagestanima Pulakesi Rani Chennamma Sagolli Tailapa Veera Vikramaditya Vishnuvardhana
 
         }
@@ -2456,7 +2439,7 @@ south_asian = {
         }
     }
     malayalam = {
-        color = {170 100 23}
+        color = {84 109 166}
         first_names = { Cheraman Swathi Thirunal Sri Sakthan Raja Moolam Marthanda Dharma Chithira Balarama Ayilyam Saamoothiri
 
         }
@@ -2466,7 +2449,7 @@ south_asian = {
         }
     }
     tamil = {
-        color = {180 23 75}
+        color = {27 68 165}
         first_names = { Ramayyan Seshayya Ramiengar Seshadri Shungrasoobyer Rajagopalachari Shanmukham Ramaswami Dheeran Subramania Chidambaram Sathyamurthy Vanchinathan Champakaraman
 
         }
@@ -2476,7 +2459,7 @@ south_asian = {
         }
     }
     telegu = {
-        color = {22 89 152}
+        color = {67 110 210}
         first_names = { Vasireddy Venkatadri Uyyalawada Narasimha Veerapandiya Keneganti Alluri Potti Tanguturi Pingali Durgabai Sarojini Kandukuri
 
         }
@@ -2492,7 +2475,7 @@ indo_iranian = {
     leader = indian
     unit = IndianGC
     bengali = {
-        color = {156 134 112}
+        color = {71 175 123}
         first_names = { Murshid Quli Shujauddin Alauddin Alivardi Sirajuddaula "Mir Muhammad" Najimuddin Reza Saifuddaula Zainul Ahmad Mansur Mubarak Hasan Wasif Waris
 
         }
@@ -2502,7 +2485,7 @@ indo_iranian = {
         }
     }
     panjabi = {
-        color = {190 180 170}
+        color = {50 154 119}
         first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur
 
         }
@@ -2512,7 +2495,7 @@ indo_iranian = {
         }
     }
     sindi = {
-        color = {190 65 230}
+        color = {15 175 105}
         first_names = { "Morad Ali" "Nur Mohammad" Sobhdar Hosayn Shahdad Mohammad Nasir Morad Karim Gholam "Mir Fath"
 
         }

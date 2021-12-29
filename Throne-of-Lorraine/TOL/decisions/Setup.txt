@@ -1186,10 +1186,7 @@ political_decisions = {
                 limit = { has_pop_religion = sunni is_primary_culture = no location = { continent = europe } NOT = { literacy = 0.03 } }
                 literacy = 0.02
             }
-            any_pop = {
-                limit = { has_pop_religion = sunni OR = { has_pop_culture = circassian has_pop_culture = bosniak has_pop_culture = albanian } }
-                literacy = 0.02
-            }
+     
 
             any_pop = {
                 limit = {
@@ -1212,7 +1209,7 @@ political_decisions = {
                 limit = {
                     NOT = { has_pop_religion = sunni }
                     OR = {
-                        has_pop_culture = croat
+                        has_pop_culture = illyrian
                         has_pop_culture = bulgarian
                     }
                 }
@@ -1650,7 +1647,7 @@ political_decisions = {
             any_pop = { limit = { location = { OR = { province_id = 628 province_id = 619 } } literacy = 0.08 } }
             any_pop = { limit = { OR = { has_pop_culture = ashkenazi has_pop_culture = sephardic } } literacy = 0.40 }
             any_pop = { limit = { OR = { has_pop_culture = romanian has_pop_culture = serb has_pop_culture = ruthenyan } } literacy = -0.07 }
-            any_pop = { limit = { has_pop_culture = croat } literacy = -0.02 }
+            any_pop = { limit = { has_pop_culture = illyrian } literacy = -0.02 }
             any_pop = { limit = { has_pop_culture = slovene } literacy = 0.18 }
             any_pop = { limit = { has_pop_culture = polish } literacy = 0.02 }
             AUS_623 = { any_pop = { limit = { has_pop_culture = hungarian } literacy = 0.02 } }

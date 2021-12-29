@@ -51,7 +51,7 @@ political_decisions = {
                 militancy = 4
                 consciousness = 6
             }
-            any_pop = { limit = { has_pop_culture = croat }
+            any_pop = { limit = { has_pop_culture = illyrian }
                 militancy = 2
                 consciousness = 4
             }
@@ -118,44 +118,6 @@ political_decisions = {
         }
     }
 
-    hun_cro_settlement = {
-        potential = {
-            tag = HUN
-            CRO = {
-                exists = no
-                any_core = { owned_by = HUN }
-            }
-            NOT = { has_country_flag = hun_cro_settlement }
-        }
-
-        allow = {
-            prestige = 25
-            nationalism_n_imperialism = 1
-            war = no
-        }
-
-        effect = {
-            prestige = 5
-            set_country_flag = hun_cro_settlement
-            add_accepted_culture = croat
-            any_pop = { limit = { has_pop_culture = croat }
-                militancy = -2
-                consciousness = -1
-            }
-            any_pop = { limit = { has_pop_culture = slovak }
-                militancy = 2
-                consciousness = 3
-            }
-            any_pop = { limit = { has_pop_culture = romanian }
-                militancy = 2
-                consciousness = 3
-            }
-            any_pop = { limit = { has_pop_culture = serb }
-                militancy = 2
-                consciousness = 3
-            }
-        }
-    }
 
 #border dispute resolution events start here
 

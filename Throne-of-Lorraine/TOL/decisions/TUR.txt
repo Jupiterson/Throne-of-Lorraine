@@ -157,10 +157,7 @@ political_decisions = {
                 limit = { owner = { any_owned_province = { is_core = ALB } } }
                 owner = { add_accepted_culture = albanian }
             }
-            random_owned = {
-                limit = { owner = { any_owned_province = { is_core = BOS } } }
-                owner = { add_accepted_culture = bosniak }
-            }
+            
             random_owned = {
                 limit = { owner = { any_owned_province = { is_core = EGY } NOT = { has_global_flag = arab_nationalism_encouraged } } }
                 owner = { add_accepted_culture = misri }

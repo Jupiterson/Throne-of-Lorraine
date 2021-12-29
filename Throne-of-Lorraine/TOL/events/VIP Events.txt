@@ -357,10 +357,9 @@ country_event = { #original VIP event by Hrast, edited by Palisadoes
         any_pop = {
             limit = {
                 OR = {
-                    has_pop_culture = croat
+                    has_pop_culture = illyrian
                     has_pop_culture = serb
                     has_pop_culture = slovene
-                    has_pop_culture = bosniak
                 }
             }
             scaled_consciousness = { factor = 4 ideology = liberal }

@@ -669,7 +669,7 @@ country_event = {
     id = 900646
     title = "EVTNAME900646" #The Croatian Issue
     desc = "EVTDESC900646"
-    picture = "croatia_issue"
+    picture = "illyriania_issue"
 
     trigger = {
         OR = {
@@ -687,8 +687,8 @@ country_event = {
         NOT = {
             tag = TUR
             tag = RUS
-            has_country_flag = claimed_croatia
-            has_country_flag = refused_croatia
+            has_country_flag = claimed_illyriania
+            has_country_flag = refused_illyriania
             has_global_flag = berlin_congress_held
         }
     }
@@ -699,7 +699,7 @@ country_event = {
 
     option = {
         name = "EVT900646OPTA"
-        set_country_flag = claimed_croatia
+        set_country_flag = claimed_illyriania
         badboy = 3
         ai_chance = {
             factor = 95
@@ -716,7 +716,7 @@ country_event = {
 
     option = {
         name = "EVT900646OPTB"
-        set_country_flag = refused_croatia
+        set_country_flag = refused_illyriania
         badboy = -1
         ai_chance = {
             factor = 5
@@ -2460,7 +2460,7 @@ country_event = {
     option = {
         name = "EVT90071OPTA"
         set_country_flag = oe_refused_congress
-        clr_country_flag = claimed_croatia
+        clr_country_flag = claimed_illyriania
         clr_country_flag = claimed_bosnia
         clr_country_flag = receiving_cyprus
         relation = {
@@ -2488,7 +2488,7 @@ country_event = {
 
     option = {
         name = "EVT90071OPTB"
-        clr_country_flag = claimed_croatia
+        clr_country_flag = claimed_illyriania
         clr_country_flag = claimed_bosnia
         clr_country_flag = receiving_cyprus
         clr_country_flag = hosting_berlin_congress
@@ -2697,10 +2697,10 @@ country_event = {
     id = 900706
     title = "EVTNAME900706"
     desc = "EVTDESC900706"
-    picture = "croatia_issue"
+    picture = "illyriania_issue"
 
     trigger = {
-        has_country_flag = claimed_croatia
+        has_country_flag = claimed_illyriania
         has_global_flag = berlin_congress_held
         is_greater_power = yes
         CRO = {
@@ -2715,7 +2715,7 @@ country_event = {
 
     option = {
         name = "EVT900705OPTA"
-        clr_country_flag = claimed_croatia
+        clr_country_flag = claimed_illyriania
         prestige = 10
         CRO = { country_event = 19370 }
         leave_alliance = RUS

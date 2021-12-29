@@ -63,7 +63,7 @@ political_decisions = {
                 limit = {
                     OR = {
                         has_pop_culture = slovak
-                        has_pop_culture = croat
+                        has_pop_culture = illyrian
                         has_pop_culture = slovene
                         has_pop_culture = north_italian
                         has_pop_culture = polish
@@ -184,7 +184,7 @@ political_decisions = {
                 militancy = -4
             }
             any_pop = {
-                limit = { has_pop_culture = croat }
+                limit = { has_pop_culture = illyrian }
                 militancy = -4
             }
             any_pop = {
@@ -212,7 +212,7 @@ political_decisions = {
                 militancy = 5
             }
             add_accepted_culture = czech
-            add_accepted_culture = croat
+            add_accepted_culture = illyrian
             add_accepted_culture = slovene
             add_accepted_culture = slovak
             add_accepted_culture = polish
@@ -735,7 +735,7 @@ political_decisions = {
                 has_country_flag = danube_proposal_in_progress
             }
             OR = {
-                accepted_culture = croat
+                accepted_culture = illyrian
                 NOT = { any_owned_province = { is_core = CRO } }
             }
         }
@@ -755,7 +755,7 @@ political_decisions = {
                     OR = {
                         has_pop_culture = hungarian
                         has_pop_culture = czech
-                        has_pop_culture = croat
+                        has_pop_culture = illyrian
                     }
                 }
                 militancy = 4
@@ -772,7 +772,7 @@ political_decisions = {
         }
     }
 
-    embrace_croat_minority = {
+    embrace_illyrian_minority = {
         picture = embrace_minority
         potential = {
             OR = {
@@ -781,8 +781,8 @@ political_decisions = {
             }
             any_owned_province = { is_core = CRO }
             NOT = {
-                accepted_culture = croat
-                has_country_flag = embraced_croats
+                accepted_culture = illyrian
+                has_country_flag = embraced_illyrians
                 has_country_flag = danube_proposal_in_progress
             }
             OR = {
@@ -797,8 +797,8 @@ political_decisions = {
             psychoanalysis = 1
         }
         effect = {
-            set_country_flag = embraced_croats
-            add_accepted_culture = croat
+            set_country_flag = embraced_illyrians
+            add_accepted_culture = illyrian
             prestige = -25
             any_pop = {
                 limit = {
@@ -811,7 +811,7 @@ political_decisions = {
                 consciousness = 4
             }
             any_pop = {
-                limit = { has_pop_culture = croat }
+                limit = { has_pop_culture = illyrian }
                 militancy = -4
                 consciousness = -4
             }
@@ -855,7 +855,7 @@ political_decisions = {
                     OR = {
                         has_pop_culture = hungarian
                         has_pop_culture = czech
-                        has_pop_culture = croat
+                        has_pop_culture = illyrian
                         has_pop_culture = slovene
                     }
                 }
