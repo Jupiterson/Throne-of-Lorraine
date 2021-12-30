@@ -56,9 +56,15 @@ land_reform = yes_land_reform
 education_reform = yes_education_reform
 monetary_reform = yes_monetary_reform
 foreign_weapons = yes_foreign_weapons
+foreign_artillery = yes_foreign_artillery
+foreign_navies = yes_foreign_navies
+western_shipyards = yes_western_shipyards
 
 # Technologies
 flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+post_nelsonian_thought = 1
+clipper_design = 1
 
 # Inventions
 small_arms_production = yes
@@ -73,7 +79,7 @@ big_sail_support = yes
 consciousness = 0
 nonstate_consciousness = 0
 
-oob = "TKG_oob.txt"
+oob = "SAI_oob.txt"
 1861.1.1 = {
     oob = "/1861/TKG_oob.txt"
     set_country_flag = caved_to_commodore_perry
