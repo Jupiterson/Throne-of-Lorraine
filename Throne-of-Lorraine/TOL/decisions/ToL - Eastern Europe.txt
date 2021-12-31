@@ -406,7 +406,10 @@ political_decisions = {
         potential = {
             primary_culture = polish
             NOT = { owns = 706 }
-            NOT = { tag = PLC }
+            NOT = { tag = PLC
+                    tag = PHC
+                    tag = PZN
+					}
             any_neighbor_country = {
                 owns = 706
                 OR = {

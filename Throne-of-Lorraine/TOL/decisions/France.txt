@@ -476,6 +476,9 @@ political_decisions = {
         }
 
         effect = {
+		 THIS = {
+                political_reform = unitary
+            }
             FRA = { set_country_flag = enacted_french_schooling set_country_flag = french_assimilation }
             BOR = { set_country_flag = enacted_french_schooling set_country_flag = french_assimilation }
             remove_accepted_culture = arpitan

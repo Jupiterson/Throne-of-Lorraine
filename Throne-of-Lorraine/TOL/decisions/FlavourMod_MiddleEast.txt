@@ -468,7 +468,9 @@ political_decisions = {
     aden_protectorate = {
         picture = aden_protectorate
         potential = {
-            NOT = { is_culture_group = arab }
+            NOT = { is_culture_group = arab 
+			tag = VEN
+			}
             OR = {
                 any_owned_province = { is_core = LHJ }
                 any_owned_province = { is_core = FDL }
@@ -663,12 +665,7 @@ political_decisions = {
                 AND = { #Trucial States
                     owns = 1167 #Abu Dhabi
                     12 = { empty = yes } #Liwa
-                }
-                AND = { #North Yemen
-                    owns = 1178 #Sana'a
-                    1180 = { empty = yes } #Taizz
-                    1161 = { empty = yes } #Sharurah
-                }
+                
                 AND = { #Yemen
                     OR = {
                         owns = 1175
@@ -704,20 +701,7 @@ political_decisions = {
                         year = 1920
                         state_n_government = 1
                     }
-                }
-                AND = { #North Yemen
-                    owns = 1178 #Sana'a
-                    1180 = { empty = yes } #Taizz
-                    1161 = { empty = yes } #Sharurah
-                    OR = {
-                        year = 1920
-                        AND = {
-                            state_n_government = 1
-                            NOT = { capital_scope = { continent = europe } }
-                        }
-                        has_country_flag = ottoman_zaydi_war
-                    }
-                }
+              }
                 AND = { #Yemen
                     OR = {
                         owns = 1178
@@ -782,19 +766,6 @@ political_decisions = {
                     }
                 }
                 12 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
-                owner = { prestige = 1 }
-            }
-            #North Yemen#
-            random_owned = {
-                limit = {
-                    owner = {
-                        owns = 1178 #Sana'a
-                        1180 = { empty = yes } #Taizz
-                        1161 = { empty = yes } #Sharurah
-                    }
-                }
-                1180 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 30 }
-                1161 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
                 owner = { prestige = 1 }
             }
             #Yemen#

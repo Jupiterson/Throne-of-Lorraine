@@ -17,6 +17,96 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
+	doleh_treaty_port = {
+        picture = qeshm_iran
+        potential = {
+            has_country_modifier = negotiating_treaty
+            1180 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            remove_country_modifier = negotiating_treaty
+            1180 = { secede_province = THIS change_controller = THIS }
+            1180 = { trade_goods = precious_goods }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	muroto_treaty_port = {
+        picture = qeshm_iran
+        potential = {
+            has_country_modifier = negotiating_treaty
+            1161 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            remove_country_modifier = negotiating_treaty
+            1161 = { secede_province = THIS change_controller = THIS }
+            1161 = { trade_goods = precious_goods }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	minamiosumi_treaty_port = {
+        picture = macao_china
+        potential = {
+            has_country_modifier = negotiating_treaty
+            3281 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            remove_country_modifier = negotiating_treaty
+            3281 = { secede_province = THIS change_controller = THIS }
+            3281 = { trade_goods = precious_goods }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	adale_treaty_port = {
+        picture = macao_china
+        potential = {
+            has_country_modifier = negotiating_treaty
+        }
+
+        allow = {
+        }
+
+        effect = {
+            remove_country_modifier = negotiating_treaty
+            3311 = { secede_province = THIS change_controller = THIS }
+            3311 = { trade_goods = precious_goods }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	 masirah_treaty_port = {
+        picture = qeshm_iran
+        potential = {
+            has_country_modifier = negotiating_treaty
+            221 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
+#            NOT = { has_global_flag = qeshm_treaty_port_alternate }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            remove_country_modifier = negotiating_treaty
+            221 = { secede_province = THIS change_controller = THIS }
+            221 = { trade_goods = precious_goods }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
 
     qeshm_treaty_port = {
         picture = qeshm_iran

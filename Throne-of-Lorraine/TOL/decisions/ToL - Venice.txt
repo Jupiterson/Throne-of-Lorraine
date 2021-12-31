@@ -1,5 +1,29 @@
 political_decisions = {
 
+	assimilate_dalmatia = {
+        picture = embrace_minority
+        potential = {
+            tag = VEN
+            NOT = { has_country_flag = schooling }
+        }
+
+        allow = {
+		medicine = 1
+		NOT = { school_reforms = no_schools }
+        invention = biased_multiculturalism
+        invention = social_darwinism
+        war = no
+        }
+
+        effect = {
+           badboy = 6
+		   set_country_flag = schooling
+		   any_owned = { limit = { is_core = ILL } add_province_modifier = { name = croat_teacher duration = -1 } }
+		  
+        }
+        ai_will_do = { factor = 1 }
+    }
+
 #stolen from AOE
    demand_milan = {
 		picture = italian_trentino
@@ -9,11 +33,9 @@ political_decisions = {
 		}
 		
 		allow = {
-
-				owns = 738 #Parma
-				owns = 739 #Modena
-			
-			owns = 742 #Ferrara
+			all_core = {
+                owned_by = THIS
+            }
 			is_greater_power = yes
 			war = no
 		}
@@ -21,15 +43,11 @@ political_decisions = {
 		effect = {
 			set_country_flag = demand_milan_done
 			 
-			 722 = { 
-				add_core = THIS 
-			}
-			 723 = {
-				add_core = THIS 
-			}
-			 726 = {
-				add_core = THIS 
-			}
+			 LOM = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
 		}
 		ai_will_do = { factor = 1 }
 	}

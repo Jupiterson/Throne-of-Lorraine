@@ -126,11 +126,6 @@
         size = 1000
     }
 
-    serfs = {
-        culture = illyrian
-        religion = catholic
-        size = 12000
-    }
 
     aristocrats = {
         culture = hungarian
@@ -421,7 +416,7 @@
     farmers = {
         culture = venetian
         religion = catholic
-        size = 31325
+        size = 11325
     }
 
     clergymen = {
@@ -445,7 +440,7 @@
     serfs = {
         culture = illyrian
         religion = orthodox
-        size = 10225
+        size = 20225
     }
 }
 #Varadzin (68000/17000 POPS)
@@ -895,13 +890,13 @@
         size = 100
     }
 
-    serfs = {
+    farmers = {
         culture = gypsy
         religion = catholic
         size = 1000
     }
 
-    serfs = {
+    farmers = {
         culture = illyrian
         religion = catholic
         size = 20000
@@ -1023,7 +1018,7 @@
         size = 100
     }
 
-    serfs = {
+    farmers = {
         culture = illyrian
         religion = orthodox
         size = 6550
@@ -1058,7 +1053,7 @@
     farmers = {
         culture = venetian
         religion = catholic
-        size = 9125
+        size = 4125
     }
 
     farmers = {
@@ -1115,11 +1110,18 @@
         size = 100
     }
 
-    serfs = {
+    farmers = {
         culture = illyrian
         religion = orthodox
-        size = 1825
+        size = 3825
     }
+	
+    farmers = {
+        culture = greek
+        religion = orthodox
+        size = 2825
+    }
+
 
 }
 #Banat-Bacska Region (104000) #See Serbia.txt and Romania.txt for balance of region

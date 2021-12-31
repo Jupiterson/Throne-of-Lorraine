@@ -34,21 +34,13 @@ form_north_italian_union = {
 			}
 		}
 		
-		        effect = {
+		 effect = {
             prestige = 15                  
             all_core = { add_core = NIF }
-            any_owned = {
-                limit = {
-                    NOT = { is_core = THIS }
-                    any_core = {
-                        exists = no
-                        primary_culture = north_italian
-						primary_culture = venetian
-                        has_country_flag = wants_to_unify
-                        NOT = { has_country_flag = post_colonial_country }
-                    }
+              ITA = {
+                all_core = {
+                    add_core = NIF
                 }
-                add_core = NIF
             }
             change_tag = NIF
             NIF = {
@@ -56,11 +48,8 @@ form_north_italian_union = {
             }
             any_country = {
                 limit = {                    
-                    NOT = {
-                        primary_culture = north_italian
-						primary_culture = venetian
-                        tag = SCH
-                    }
+                    primary_culture = north_italian
+					primary_culture = venetian                   
                     in_sphere = THIS
                     NOT = { tag = THIS }
                     NOT = { has_country_flag = post_colonial_country }
@@ -71,13 +60,7 @@ form_north_italian_union = {
                 }
                 country_event = 11106
             }
-            random_country = {
-                limit = {
-                    tag = SCH
-                    in_sphere = THIS
-                }
-                country_event = 11437
-            }          
+            
         }
 		ai_will_do = {
 			factor = 1
