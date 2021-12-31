@@ -4,7 +4,42 @@
 #                                                                                    #
 #####################################################################################
 
-#Commodore Perry's Expedition events
+#Asano Nomura's Expedition events
+country_event = {
+    picture = "commodore_perry"
+        potential = {
+            tag = SAI
+            civilized = yes
+            TKG = {
+                exists = yes
+                civilized = no
+                has_country_modifier = uncivilized_isolationism
+                NOT = { has_country_flag = caved_to_commodore_perry }
+                NOT = { has_country_flag = rejected_commodore_perry }
+            }
+            total_amount_of_ships = 4
+            has_country_flag = sent_iwakura_mission
+            NOT = {
+                has_country_flag = commodore_perry_expedition
+                has_global_flag = boshin_war
+                has_global_flag = boshin_war_has_happened
+            }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            set_country_flag = commodore_perry_expedition
+            badboy = 2
+            TKG = { country_event = 97605 }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+}
 country_event = {
     id = 97605
     title = "EVTNAME97605" #Kurofune

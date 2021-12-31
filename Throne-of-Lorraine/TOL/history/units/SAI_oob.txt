@@ -1,0 +1,134 @@
+
+leader = {
+    name = "Teichii Suzuki"
+    type = land
+    date = 1836.1.1
+    personality = efficient
+    background = old_school
+}
+
+leader = {
+    name = "Kenryo Sasaki"
+    type = land
+    date = 1836.1.1
+    personality = calm
+    background = school_of_offense
+}
+leader = {
+    name = "Sanji Okido"
+    type = sea
+    date = 1836.1.1
+    personality = reserved
+    background = gifted_administrator
+}
+
+leader = {
+    name = "Toshio Kimura"
+    type = sea
+    date = 1836.1.1
+    personality = harsh
+    background = engineer
+}
+
+leader = {
+    name = "Taiki Nomura"
+    type = sea
+    date = 1836.1.1
+    personality = cautious
+    background = elderly
+}
+
+army = {
+    name = "Capital Army"
+    location = 1455
+    regiment = {
+        name= "Central Manila regiment"
+        type = infantry
+        home = 1455
+    }
+
+    regiment = {
+        name= "Manila artillery brigade"
+        type = artillery
+        home = 1455
+    }
+	
+	regiment = {
+        name= "2nd Manila artillery brigade"
+        type = artillery
+        home = 1455
+    }
+	
+	regiment = {
+        name= "3rd Manila artillery brigade"
+        type = artillery
+        home = 1455
+    }
+	regiment = {
+        name= "Northern Vigan regiment"
+        type = infantry
+        home = 1456
+    }
+
+    regiment = {
+        name= "Legazpi calvary"
+        type = cavalry
+        home = 1457
+    }
+
+}
+
+navy = {
+    name = "Main Oceangoing fleet"
+    location = 1455
+    ship = {
+        name= "Mamiya"
+        type = frigate
+    }
+
+    ship = {
+        name= "Nosaki"
+        type = frigate
+    }
+
+    ship = {
+        name= "Irako"
+        type = frigate
+    }
+
+    ship = {
+        name= "Muroto"
+        type = frigate
+    }
+
+    ship = {
+        name= "Kurasaki"
+        type = frigate
+    }
+
+    ship = {
+        name= "Asahi"
+        type = clipper_transport
+    }
+	
+	ship = {
+        name= "Tsugaru"
+        type = clipper_transport
+    }
+	
+	ship = {
+        name= "Yaeyama"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "Akashi"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "Tsukushi"
+        type = clipper_transport
+    }
+
+}
