@@ -178,39 +178,6 @@ country_event = { #original VIP event by Pimparel
     }
 }
 
-#The Czech National Theater
-country_event = { #original VIP event by Palisadoes
-    id = 131509
-    title = "EVTNAME131509"
-    desc = "EVTDESC131509"
-    picture = "theatre"
-    fire_only_once = yes
-
-    trigger = {
-        nationalism_n_imperialism = 1
-        owns = 625 #Prague
-        NOT = {
-            year = 1881
-            primary_culture = czech
-            accepted_culture = czech
-        }
-    }
-
-    mean_time_to_happen =  { months = 24 }
-
-    option = {
-        name = "EVTOPTA131509"
-        any_pop = {
-            limit = {
-                has_pop_culture = czech
-                location = { is_core = BOH }
-            }
-            consciousness = 3
-            ideology = { value = liberal factor = 0.10 }
-        }
-    }
-}
-
 #The Splitting of Charles University in Prague
 country_event = { #original VIP event by Palisadoes
     id = 131510

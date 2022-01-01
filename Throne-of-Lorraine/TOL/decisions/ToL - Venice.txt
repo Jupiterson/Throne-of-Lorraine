@@ -1,5 +1,36 @@
 political_decisions = {
 
+
+maghera_expansion = {
+        picture = budapest_city
+        potential = {
+            OR = {
+                tag = VEN
+                tag = ITA
+                tag = NIF
+            }
+            owns = 729
+            NOT = { has_global_flag = venice_expanded }
+        }
+
+        allow = {
+            revolution_n_counterrevolution = 1
+            money = 50000
+        }
+
+        effect = {
+            treasury = -50000
+            set_country_flag = venice_expanded
+   
+            729 = {
+                life_rating = 5
+                add_province_modifier = { name = recently_built_city duration = 1825 }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
 	assimilate_dalmatia = {
         picture = embrace_minority
         potential = {

@@ -3,7 +3,7 @@ country_event = {
     id = 31300
 
     trigger = {
-        tag = SWI
+        tag = LOR
         year = 1837
         NOT = {
             year = 1840
@@ -39,58 +39,6 @@ country_event = {
         }
     }
 
-}
-
-country_event = {
-
-    id = 31301
-
-    trigger = {
-        tag = SWI
-        has_global_flag = LouisNapoleonExtradite
-        year = 1837
-        NOT = {
-            year = 1840
-            war_with = BOR
-            war_with = FRA
-            has_country_flag = LouisNapoleonExtradited
-        }
-
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen =  {
-        months = 5
-
-        modifier = {
-            factor = 0.75 #increase likelihood to happen
-            year = 1838
-        }
-
-
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1840
-        }
-    }
-
-    title = "EVTNAME31301"
-    desc = "EVTDESC31301"
-    picture = "napoleon3"
-
-    option = {
-        name = "EVTOPTA31301"
-        random_owned = {
-            limit = { exists = FRA }
-            owner = { relation = { who = FRA value = -50 } }
-        }
-        random_owned = {
-            limit = { exists = BOR }
-            owner = { relation = { who = BOR value = -50 } }
-        }
-        set_country_flag = LouisNapoleonExtradited
-    }
 }
 
 country_event = {
@@ -256,160 +204,7 @@ country_event = {
     }
 }
 
-country_event = {
 
-    id = 31306
-
-    trigger = {
-        tag = SWI
-        owns = 2568 #Lugano Ticino
-        year = 1890
-        NOT = {
-            year = 1893
-        }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen =  {
-        months = 5
-
-        modifier = {
-            factor = 0.75 #increase likelihood to happen
-            year = 1888
-        }
-
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1889
-        }
-    }
-
-    title = "EVTNAME31306"
-    desc = "EVTDESC31306"
-    picture = "Upperhouse"
-
-    option = {
-        name = "EVTOPTA31306"
-        2568 = {
-            any_pop = {
-                scaled_militancy = {
-                    factor = 8
-                       ideology = liberal
-                }
-            }
-            any_pop = {
-                scaled_consciousness = {
-                    factor = 2
-                    ideology = conservative
-                }
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 31307
-    news = yes
-    news_desc_long = "EVTDESC31307_NEWS_LONG"
-    news_desc_medium = "EVTDESC31307_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC31307_NEWS_SHORT"
-
-    trigger = {
-        tag = SWI
-        year = 1898
-        exists = AUS
-        AUS = {
-            OR = {
-                government = hms_government
-                government = prussian_constitutionalism
-                government = absolute_monarchy
-                government = absolute_empire
-                government = semi_constitutional_empire
-                government = constitutional_empire
-            }
-        }
-        NOT = { year = 1902 }
-    }
-
-    fire_only_once = yes
-    mean_time_to_happen =  {
-        months = 5
-
-        modifier = {
-            factor = 0.75 #increase likelihood to happen
-            year = 1899
-        }
-
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1900
-        }
-    }
-
-    title = "EVTNAME31307"
-    desc = "EVTDESC31307"
-    picture = "sisiassassination"
-
-    option = {
-        name = "EVTOPTA31307"
-        prestige = -25
-    }
-
-}
-
-
-country_event = {
-
-    id = 31308
-    news = yes
-    news_desc_long = "EVTDESC31308_NEWS_LONG"
-    news_desc_medium = "EVTDESC31308_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC31308_NEWS_SHORT"
-
-    trigger = {
-        tag = SWI
-        government = democracy
-        war = no
-        year = 1915
-        NOT = {
-            year = 1918
-            has_country_flag = 1stSocCon
-        }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen =  {
-        months = 5
-
-        modifier = {
-            factor = 0.75 #increase likelihood to happen
-            year = 1916
-        }
-
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1917
-        }
-    }
-
-    title = "EVTNAME31308"
-    desc = "EVTDESC31308"
-    picture = "anticorn"
-
-    option = {
-        name = "EVTOPTA31308"
-        plurality = 1
-        set_country_flag = 1stSocCon
-        labourers = {
-            consciousness = 1
-        }
-        craftsmen = {
-            consciousness = 1
-        }
-    }
-}
 
 country_event = {
 
@@ -504,48 +299,6 @@ country_event = {
     option = {
         name = "EVTOPTA31310"
         prestige = 20
-    }
-
-}
-
-country_event = {
-
-    id = 31311
-    news = yes
-    news_desc_long = "EVTDESC31311_NEWS_LONG"
-    news_desc_medium = "EVTDESC31311_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC31311_NEWS_SHORT"
-
-    is_triggered_only = yes
-    fire_only_once = yes
-
-
-    title = "Swiss Primary Language"
-    desc = "Go ahead, choose one."
-    picture = "genevaconvention"
-
-    option = {
-        name = "South German"
-        primary_culture = south_german
-    }
-    option = {
-        name = "North Italian"
-        primary_culture = north_italian
-    }
-    option = {
-        name = "French"
-        primary_culture = french
-        any_owned = { limit = { is_core = THIS } add_province_modifier = { name = cultural_resurgence duration = 365 } }
-    }
-    option = {
-        name = "Arpitan"
-        primary_culture = arpitan
-        any_owned = { limit = { is_core = THIS } add_province_modifier = { name = cultural_resurgence duration = 1825 } }
-    }
-    option = {
-        name = "Romansh"
-        primary_culture = romansh
-        any_owned = { limit = { is_core = THIS } add_province_modifier = { name = cultural_resurgence duration = 3650 } }
     }
 
 }
