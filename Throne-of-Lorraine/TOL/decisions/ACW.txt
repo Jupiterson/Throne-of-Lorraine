@@ -639,47 +639,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    offer_to_buy_cuba = {
-        picture = map_caribbean
-        potential = {
-            tag = USA
-            2209 = { owned_by = SPA }
-            NOT = {
-                has_country_flag = ostend_manifesto_published
-                has_country_flag = maine_incident
-                has_country_flag = trying_to_buy_cuba
-            }
-            has_global_flag = american_civil_war_has_happened
-        }
-
-        allow = {
-            war = no
-            is_greater_power = yes
-            money = 1000000
-            2209 = { owner = { NOT = { truce_with = THIS } } }
-            SPA = {
-                exists = yes
-                war = no
-            any_owned_province = {
-                is_core = CUB
-                OR = {
-                    controlled_by = REB
-                    has_province_modifier = nationalist_agitation
-                    average_militancy = 6
-                    }
-                }
-            }
-            NOT = { has_country_flag = maine_incident }
-        }
-
-        effect = {
-            set_country_flag = trying_to_buy_cuba
-            2209 = { owner = { country_event = 90131 } }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
     annexation_santo_domingo = {
     picture = annexation_santo_domingo
         potential = {

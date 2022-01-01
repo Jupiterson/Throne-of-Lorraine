@@ -4927,14 +4927,14 @@ country_event = {
         name = "EVT110073OPTA" #This will make a nice trinket!
         prestige = 15
         any_pop = {
-            limit = { has_pop_culture = akan }
+            limit = { has_pop_culture = east_kwa }
             consciousness = 9
             militancy = 9
         }
         any_owned = { limit = { region = FRA_1907 } secede_province = ASH }
         ASH = {
             government = absolute_empire
-            primary_culture = akan
+            primary_culture = east_kwa
             civilized = no
             treasury = 5000
             small_arms = 25
@@ -4954,13 +4954,13 @@ country_event = {
         badboy = -1
         prestige_factor = -0.1
         any_pop = {
-            limit = { has_pop_culture = akan }
+            limit = { has_pop_culture = east_kwa }
             consciousness = -9
             militancy = -9
         }
         ASH = {
             any_pop = {
-                limit = { has_pop_culture = akan }
+                limit = { has_pop_culture = east_kwa }
                 consciousness = -9
                 militancy = -9
             }

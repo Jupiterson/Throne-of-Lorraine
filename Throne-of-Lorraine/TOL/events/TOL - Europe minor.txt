@@ -1,0 +1,119 @@
+country_event = {
+
+    id = 90131
+    title = "EVTNAME37704" #Is Cuba For Sale?
+    desc = "EVTDESC37704"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA37704" #No
+        FROM = { country_event = 90132 }
+        ai_chance = {
+            factor = 90
+            modifier = {
+                factor = 0.25
+                 502 = { owner = { = {
+                    OR = {
+                        has_country_modifier = in_bankrupcy
+                        has_country_modifier = generalised_debt_default
+                    }
+                }
+            }
+			}
+			}
+            modifier = {
+                factor = 0.8
+                502 = { owner = { war = yes } }
+            }
+            modifier = {
+                factor = 0.8
+                502 = { owner = {
+                    is_secondary_power = no
+                    is_greater_power = no
+                }
+				}
+            }
+            modifier = {
+                factor = 0.8
+                relation = { who = FROM value = 100 }
+            }
+            modifier = {
+                factor = 0.8
+                alliance_with = FROM
+            }
+        }
+    }
+
+    option = {
+        name = "EVTOPTB37704" #Yes
+        random_owned = {
+			limit = { owner = { SPA = { exists = yes } } }
+			owner = { SPA = { country_event = 90133 } }
+		}
+        money = 1000000
+        limit = {
+                    province_id = 502
+                }
+                secede_province = SPA
+        ai_chance = {
+            factor = 25
+            modifier = {
+                factor = 0
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.5
+                NOT = {
+                    relation = { who = FROM value = 50 }
+                }
+            }
+            modifier = {
+                factor = 0.25
+                NOT = {
+                    relation = { who = FROM value = -50 }
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+
+    id = 90132
+    title = "EVTNAME90132" #The Spanish Have Refused
+    desc = "EVTDESC90132"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT90132OPTA"
+        relation = {
+            who = GEN
+            value = -50
+        }
+    }
+}
+
+country_event = {
+
+    id = 90133
+    title = "EVTNAME90133" #Cuba is Ours
+    desc = "EVTDESC90133"
+    picture = "Celebration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT90133OPTA"
+        prestige = 20
+        money = -1000000
+        relation = {
+            who = SPA
+            value = 100
+        }
+
+    }
+}

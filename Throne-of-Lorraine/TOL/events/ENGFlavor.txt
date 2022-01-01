@@ -2271,14 +2271,18 @@ country_event = {
     picture = "slaves"
 
     trigger = {
+	OR = {
         tag = ENG
+		tag = SCO
+		tag = CLT
+		}
         war = no
         slavery = no_slavery
         is_greater_power = yes
         nationalism_n_imperialism = 1
         year = 1860
         NOT = { has_country_flag = lagos_slave_trade }
-        1923 = {
+        1161 = {
             owner = {
                 war = no
                 civilized = no
@@ -2286,7 +2290,7 @@ country_event = {
                 ai = yes
                 OR = {
                     part_of_sphere = no
-                    in_sphere = ENG
+                    in_sphere = THIS
                 }
             }
         }
@@ -2299,8 +2303,8 @@ country_event = {
     option = {
         name = "EVT36965OPTA"
         set_country_flag = lagos_slave_trade
-        1923 = { owner = { country_event = 36966 } }
-        1923 = { secede_province = THIS }
+        1161 = { owner = { country_event = 36966 } }
+        1161 = { secede_province = THIS }
         relation = { who = SOK value = -400 }
         relation = { who = OYO value = -400 }
         relation = { who = ARO value = -400 }

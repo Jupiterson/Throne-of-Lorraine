@@ -3753,11 +3753,11 @@ political_decisions = {
             add_accepted_culture = teda
             add_accepted_culture = kanuri
             add_accepted_culture = fur
-            add_accepted_culture = dyula
+            add_accepted_culture = mande
             add_accepted_culture = fulbe
             add_accepted_culture = songhai
             remove_accepted_culture = senufo
-            remove_accepted_culture = bambara
+            remove_accepted_culture = mande
             add_country_modifier = {
                 name = isolationist_jihadism
                 duration = 10000
@@ -5717,51 +5717,6 @@ political_decisions = {
             set_global_flag = casati_law_passed
             prestige = 3
             social_reform = good_schools
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-	ayachucho_treaty = {
-        picture = ayacucho
-        potential = {
-            tag = BRZ
-            war = no
-            NOT = { has_country_flag = ayacucho_treaty_negotiated }
-			year = 1860
-			OR = {
-				AND = {
-					war = no
-					year = 1867
-					nationalism_n_imperialism = 1
-					3381 = { owner = { war = no } }
-					3382 = { owner = { war = no } }
-				}
-				ai = no
-			}
-        }
-        allow = {
-            war = no
-            year = 1867
-			nationalism_n_imperialism = 1
-			3381 = { owner = { war = no } }
-			3382 = { owner = { war = no } }
-        }
-        effect = {
-            set_country_flag = ayacucho_treaty_negotiated
-            3381 = { add_core = THIS }
-            3382 = { add_core = THIS }
-            any_country = {
-				limit = {
-					NOT = { tag = THIS }
-					OR = {
-						owns = 3381
-						owns = 3382
-					}
-				}
-				country_event = 123627
-			}
-			
         }
         ai_will_do = {
             factor = 1
