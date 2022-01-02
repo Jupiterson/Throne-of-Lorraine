@@ -1,33 +1,33 @@
-country_event = {
-    id = 28012
-    title = "The first Isle of Man TT"
-    desc = "The Isle of Man Tourist Trophy is a motorcycle racing event run in a time-trial format on public roads closed to the public in the Isle of Man. It's on his first edition but it's already gaining the infamous title of 'most dangerous racing event in the world'".
-    fire_only_once = yes
-    picture = motocycles
-
-    trigger = {
-	    year = 1905
-		owns = 304
-    }
-	
-	mean_time_to_happen = {
-        months = 6
-        modifier = {
-            factor = 3
-            year = 1905
-        }
-        modifier = {
-            factor = 2
-            year = 1906
-        }
-		modifier = {
-            factor = 1
-            year = 1907
-        }
-    }
-	
-    option = {
-        name = "A bit too dangerous but it provides good spectacle"
-		prestige = 10
-    }
-}
+#country_event = {
+#    id = 28012
+#    title = "The first Isle of Man TT"
+#    desc = "The Isle of Man Tourist Trophy is a motorcycle racing event run in a time-trial format on public roads closed to the public in the Isle of Man. It's on his first edition but it's already gaining the infamous title of 'most dangerous racing event in the world'".
+#    fire_only_once = yes
+#    picture = motocycles
+#
+#    trigger = {
+#	    year = 1905
+#		owns = 304
+#    }
+#	
+#	mean_time_to_happen = {
+#       months = 6
+#        modifier = {
+#            factor = 3
+#            year = 1905
+#        }
+#        modifier = {
+#            factor = 2
+#            year = 1906
+#        }
+#		modifier = {
+#            factor = 1
+#            year = 1907
+#        }
+#    }
+	#
+#    option = {
+#        name = "A bit too dangerous but it provides good spectacle"#
+#		prestige = 10
+#    }
+#}
