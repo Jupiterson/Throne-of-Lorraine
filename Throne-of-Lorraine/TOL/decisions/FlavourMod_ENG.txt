@@ -206,7 +206,10 @@ political_decisions = {
     mosquito_protectorate = {
         picture = moskito_coast_reserve
         potential = {
-            tag = ENG
+		Or = {
+            tag = GEN
+			tag = ITA
+			}
             is_greater_power = yes
             MSK = { exists = yes in_sphere = THIS }
             NOT = { has_country_flag = mosquito_protectorate }
@@ -227,7 +230,7 @@ political_decisions = {
                 limit = {
                     OR = {
                         primary_culture = central_american
-                        primary_culture = spanish
+                        primary_culture = miskito
                     }
                     exists = yes
                     owns = 2197

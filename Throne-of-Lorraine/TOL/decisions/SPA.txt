@@ -4,7 +4,6 @@ political_decisions = {
         potential = {
             OR = {
                 tag = SPA
-                tag = SPC
                 tag = IBR
             }
             OR = {
@@ -216,113 +215,7 @@ political_decisions = {
             }
         }
     }
-
-    the_moroccan_question = {
-    picture = moroccan_partition
-        potential = {
-            OR = {
-                tag = SPA
-                tag = SPC
-                tag = IBR
-            }
-            OR = {
-                government = hms_government
-                government = prussian_constitutionalism
-                government = absolute_monarchy
-                government = absolute_empire
-                government = semi_constitutional_empire
-                government = constitutional_empire
-            }
-            owns = 1689
-            NOT = { has_country_flag = moroccan_question }
-            MOR = {
-                ai = yes
-                exists = yes
-                part_of_sphere = yes
-                NOT = { in_sphere = THIS }
-                sphere_owner = { capital_scope = { continent = europe } }
-                sphere_owner = { NOT = { tag = TUR } }
-                sphere_owner = { NOT = { tag = RUS } }
-            }
-            has_global_flag = berlin_conference
-            1774 = { empty = yes }
-            1773 = { empty = yes }
-            1696 = { empty = yes }
-        }
-
-        allow = {
-            war = no
-        }
-
-        effect = {
-            set_country_flag = moroccan_question
-            MOR = { sphere_owner = { country_event = 971700 } }
-        }
-        ai_will_do = { factor = 1 }
-    }
-
-
-    abolish_los_fueros = {
-    picture = fueros
-        potential = {
-            OR = {
-                tag = SPA
-                tag = SPC
-                tag = IBR
-            }
-            OR = {
-                government = hms_government
-                government = prussian_constitutionalism
-                government = absolute_monarchy
-                government = absolute_empire
-                government = semi_constitutional_empire
-                government = constitutional_empire
-                government = presidential_dictatorship
-                government = fascist_dictatorship
-                government = proletarian_dictatorship
-            }
-            NOT = { has_country_flag = fueros_abolished }
-            NOT = { has_global_flag = carlists_pacified }
-        }
-
-        allow = {
-            war = no
-            revolution_n_counterrevolution = 1
-        }
-
-        effect = {
-            set_country_flag = fueros_abolished
-            any_pop = {
-                limit = {
-                OR = {
-                    has_pop_culture = basque
-                    has_pop_culture = catalan
-                    }
-                }
-                consciousness = 4
-                militancy = 1
-            }
-            any_pop = {
-                scaled_militancy = {
-                    ideology = conservative
-                    factor = 0.5
-                }
-                scaled_militancy = {
-                    ideology = reactionary
-                    factor = 1
-                }
-                scaled_militancy = {
-                    ideology = liberal
-                    factor = -1
-                }
-            }
-            political_reform = unitary
-            GLC = { all_core = { remove_core = GLC } }
-        }
-        ai_will_do = { factor = 1 }
-    }
-
-
+	
     effective_occupation_western_sahara = {
     picture = map_morocco
         potential = {

@@ -313,15 +313,6 @@ political_decisions = {
                     has_global_flag = japanese_rename_korea
                     vassal_of = JAP
                 }
-                ###Spain Puppets###
-                AND = {
-                    tag = PHL
-                    OR = {
-                        vassal_of = SPA
-                        vassal_of = SPC
-                        vassal_of = IBR
-                    }
-                }
                 ###Italian Puppets###
                 AND = {
                     OR = {

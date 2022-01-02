@@ -101,6 +101,9 @@ political_decisions = {
             NET_385 = {
                 add_core = THIS
             }
+			HAN_540 = {
+                add_core = THIS
+            }
         }
         ai_will_do = {
             factor = 1
@@ -125,6 +128,12 @@ political_decisions = {
         effect = {
             set_country_flag = consolidate_krain
             SLO = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                }
+				
+			 SLO = {
                 all_core = {
                                         add_core = GER
                                         }
