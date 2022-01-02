@@ -230,38 +230,7 @@ political_decisions = {
         }
     }
 
-    raise_the_flag_of_freedom = {
-        picture = switch_to_liberty
-        potential = {
-            OR = {
-                tag = FSA
-                tag = NEN
-                tag = DES
-                tag = CAL
-            }
-            NOT = { has_country_flag = flag_of_freedom }
-        }
-
-        allow = {
-            war_with = USA
-        }
-
-        effect = {
-            set_country_flag = flag_of_freedom
-            any_pop = {
-                limit = { is_primary_culture = yes }
-                militancy = -4
-                dominant_issue = {
-                    factor = 0.05
-                    value = jingoism
-                }
-            }
-            leadership = 40
-            small_arms = 100
-            regular_clothes = 100
-        }
-    }
-
+   
     fsa_enact_radical_reconstruction = {
         picture = enact_radical_reconstruction
         potential = {

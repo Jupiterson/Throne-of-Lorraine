@@ -971,23 +971,6 @@ country_event = {
     }
 }
 
-#Verdi at the Worldfair (France)
-country_event = {
-
-    id = 202032
-    title = "EVTNAME202030"
-    desc = "EVTDESC202030"
-    picture = "Verdi_WF"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "Ah, la Marseillaise!"
-        prestige = 5
-        relation = { who = FROM value = 15 }
-    }
-}
-
 #Manzoni, I promessi sposi
 country_event = {
 

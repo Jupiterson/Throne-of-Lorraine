@@ -1,4 +1,5 @@
 ###########################################################################
+###########################################################################
 #
 # Assimilation Troubles
 #
@@ -880,66 +881,6 @@ province_event = {
         name = "EVTOPTB2120"
         owner = {
             plurality = -1
-        }
-    }
-}
-
-#Anarchist Exclusion Act: Immigrant Deported
-province_event = {
-    id = 2130
-    title = "EVTNAME2130"
-    desc = "EVTDESC2130"
-
-    is_triggered_only = yes
-
-    trigger = {
-        has_recent_imigration = 30
-        has_national_minority = yes
-        owner = {
-            civilized = yes
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 1000
-        modifier = {
-            factor = 0.9
-            NOT = {
-                average_militancy = 4
-            }
-        }
-        modifier = {
-            factor = 0.9
-            NOT = {
-                average_militancy = 3
-            }
-        }
-        modifier = {
-            factor = 0.9
-            NOT = {
-                average_militancy = 2
-            }
-        }
-        modifier = {
-            factor = 0.9
-            average_consciousness = 4
-        }
-        modifier = {
-            factor = 0.9
-            average_consciousness = 5
-        }
-    }
-
-    option = {
-        name = "EVTOPTA2130"
-        any_pop = {
-            militancy = -0.5
-        }
-    }
-    option = {
-        name = "EVTOPTB2130"
-        any_pop = {
-            consciousness = -0.5
         }
     }
 }

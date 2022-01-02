@@ -911,27 +911,6 @@ country_event = {
         }
     }
 }
-
-#Reaction event for the declaration of NY independence
-country_event = {
-    id = 187907
-    title = "EVTNAME187907"
-    desc = "EVTDESC187907"
-    picture = "new_york"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "Damned secessionists!"
-        plurality = -20
-        prestige = -25
-        relation = {
-            who = UNY
-            value = -200
-        }
-    }
-}
-
 #Praieira Tensions, coinciding with the Liberal Revolution
 country_event = {
     id = 187910
@@ -2213,102 +2192,6 @@ country_event = {
         ai_chance = {
             factor = 25
         }
-    }
-}
-
-country_event = {
-    id = 44373
-    title = "EVTNAME44373"
-    desc = "EVTDESC44373"
-    picture = "texas"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "Sell Colorado to the United States."
-        badboy = -1
-        USA = { country_event = 44374 }
-        ai_chance = {
-            factor = 95
-        }
-    }
-
-    option = {
-        name = "Never! Colorado is ours!"
-        set_country_flag = texas_border_treaty
-        badboy = 2
-        relation = { who = USA value = -100 }
-        ai_chance = {
-            factor = 5
-        }
-    }
-}
-
-country_event = {
-    id = 44374
-    title = "EVTNAME44374"
-    desc = "EVTDESC44374"
-    picture = "texas"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "We accept their offer!"
-        set_country_flag = texas_border_treaty
-        prestige = 5
-        badboy = -1
-        treasury = -25000
-        USA_106 = {
-            secede_province = USA
-            add_core = USA
-            remove_core = TEX
-        }
-        relation = { who = TEX value = 100 }
-        TEX = { country_event = 44375 }
-        ai_chance = {
-            factor = 100
-        }
-    }
-
-    option = {
-        name = "We don't need Colorado."
-        set_country_flag = texas_border_treaty
-        badboy = 2
-        relation = { who = TEX value = -100 }
-        TEX = { country_event = 44376 }
-        ai_chance = {
-            factor = 0
-        }
-    }
-}
-
-country_event = {
-    id = 44375
-    title = "EVTNAME44375"
-    desc = "EVTDESC44375"
-    picture = "texas"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "Wonderful!"
-        prestige = 5
-        treasury = 25000
-        relation = { who = USA value = 100 }
-    }
-}
-
-country_event = {
-    id = 44376
-    title = "EVTNAME44376"
-    desc = "EVTDESC44376"
-    picture = "texas"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "Damn."
-        relation = { who = USA value = -100 }
     }
 }
 

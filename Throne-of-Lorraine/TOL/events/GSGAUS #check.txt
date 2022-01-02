@@ -2434,19 +2434,6 @@ country_event = {
         }
         random_owned = {
             limit = {
-                province_id = 800
-                owned_by = TUR
-            }
-            state_scope = {
-                any_owned = {
-                    add_core = MON
-                    secede_province = MON
-                    remove_core = TUR
-                }
-            }
-        }
-        random_owned = {
-            limit = {
                 province_id = 3420
                 owned_by = TUR
             }

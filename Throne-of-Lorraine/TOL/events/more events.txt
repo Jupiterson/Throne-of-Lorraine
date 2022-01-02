@@ -290,38 +290,6 @@ country_event = {
 
 
 country_event = {
-    id = 8751245
-    title = "Collapse of Overseas Colonies"
-    desc = "Our colonies have collapsed due to the creation of Iberia."
-    is_triggered_only = yes
-
-    option = {
-        name = "There it goes"
-        any_country = {
-            limit = {
-                any_core = {
-                    OR = {
-                        owned_by = SPA
-                        owned_by = SPC
-                        owned_by = POR
-                        owned_by = UPB
-                    }
-                    NOT = {
-                        OR = {
-                            is_core = SPA
-                            is_core = SPC
-                            is_core = POR
-                            is_core = UPB
-                        }
-                    }
-                }
-            }
-            country_event = 5269025
-        }
-    }
-}
-
-country_event = {
     id = 5269025
     title = "Collapse of Overseas Colonies"
     desc = "Due to turmoil that resulted from the formation of the Iberian Union, Spanish and Portugese colonies have collapsed."
