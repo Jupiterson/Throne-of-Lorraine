@@ -1,4 +1,37 @@
 political_decisions = {
+    nobles_autonomy_SCO = {
+        potential = {
+            tag = SCO
+			NOT = {
+			    has_province_modifier = nobles_autonomy_SCO
+                }
+		}
+		
+		allow = {
+		    tag = SCO
+	    } 
+        effect = { 
+		    any_owned = {
+                limit = {
+                    province_id = 279
+					province_id = 280
+					province_id = 281
+					province_id = 282
+					province_id = 254
+					province_id = 255
+					province_id = 256
+					province_id = 257
+					province_id = 3378
+                }
+                add_province_modifier = {
+                    name = nobles_autonomy_SCO
+                    duration = -1
+                }
+            }
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
     sco_give_supplies = {
 	    picture = congress_of_berlin
         potential = {
@@ -30,4 +63,41 @@ political_decisions = {
       }
 	  	ai_will_do = { factor = 1 }
 }
+
+    centralize_northumbria = {
+        picture = ulster_scot
+        potential = {
+            tag = SCO
+            is_vassal = no
+			has_country_flag = ulster_scot
+            NOT = { has_country_flag = centralize_northumbria }
+        }
+
+        allow = {
+            is_greater_power = yes
+            nationalism_n_imperialism = 1
+            war = no
+        }
+
+        effect = {
+		    any_owned = {
+                limit = {
+					province_id = 279
+					province_id = 280
+					province_id = 281
+					province_id = 282
+                }
+                remove_province_modifier = {
+                    name = nobles_autonomy_SCO
+                }
+				rich_strata = { consciousness = 5 militancy = 10 }
+				poor_strata = { consciousness = 2 militancy = 4 }
+			}
+            set_country_flag = centralize_northumbria
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }

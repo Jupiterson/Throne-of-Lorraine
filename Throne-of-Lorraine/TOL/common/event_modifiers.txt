@@ -4737,7 +4737,7 @@ corpus_iuris_civilis = {
     administrative_efficiency_modifier = 0.1
 	research_points_modifier = 0.1
 	supply_consumption = -0.1
-	max_tax = 0.1
+	tax_efficiency = 0.1
     icon = 17
 }
 
@@ -4770,4 +4770,12 @@ revolt_cooldown = {
 croat_teacher = {
     assimilation_rate = 2.5
     icon = 11
+}
+
+nobles_autonomy_SCO = {
+	local_factory_input = -0.25
+	local_RGO_output = -0.25
+	pop_consciousness_modifier = -0.25
+	pop_militancy_modifier = -0.25
+	icon = 20
 }
