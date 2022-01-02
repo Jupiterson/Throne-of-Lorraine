@@ -1210,7 +1210,7 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    claim_ulster = {
+    centralize_ulster = {
         picture = ulster_scot
         potential = {
             tag = SCO
@@ -1220,12 +1220,25 @@ political_decisions = {
 
         allow = {
             is_greater_power = yes
-            revolution_n_counterrevolution = 1
-            war_policy = jingoism
+            state_n_government = 1
             war = no
         }
 
         effect = {
+		    any_owned = {
+                limit = {
+					province_id = 254
+					province_id = 255
+					province_id = 256
+					province_id = 257
+					province_id = 3378
+                }
+                remove_province_modifier = {
+                    name = nobles_autonomy_SCO
+                }
+				rich_strata = { consciousness = 5 militancy = 10 }
+				poor_strata = { consciousness = 2 militancy = 4 }
+			}
             set_country_flag = ulster_scot
             ENG_254 = { add_core = SCO }
         }
