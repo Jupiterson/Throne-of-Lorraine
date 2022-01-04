@@ -6,68 +6,78 @@
 
 #Asano Nomura's Expedition events
 country_event = {
+	id = 97604
+	title = "JAPsupplies0.t" #Sainantan expedition
+    desc = "JAPsupplies0.d"
     picture = "commodore_perry"
-        potential = {
-            tag = SAI
-            civilized = yes
-            TKG = {
-                exists = yes
-                civilized = no
-                has_country_modifier = uncivilized_isolationism
-                NOT = { has_country_flag = caved_to_commodore_perry }
-                NOT = { has_country_flag = rejected_commodore_perry }
-            }
-            total_amount_of_ships = 4
-            has_country_flag = sent_iwakura_mission
-            NOT = {
-                has_country_flag = commodore_perry_expedition
-                has_global_flag = boshin_war
-                has_global_flag = boshin_war_has_happened
-            }
+    trigger = {
+        tag = SAI
+        civilized = yes
+        SAT = {
+			exists = yes
+			civilized = no
+			has_country_modifier = uncivilized_isolationism
+			NOT = { has_country_flag = satsuma_shock }
         }
+        total_amount_of_ships = 4
+        has_country_flag = sent_iwakura_mission
+        NOT = {
+            has_country_flag = asano_nomura_expedition
+            has_global_flag = boshin_war
+            has_global_flag = boshin_war_has_happened
+        }
+		war = no
+    }
+	mean_time_to_happen = {
+		months = 10
+	}
 
-        allow = {
-            war = no
-        }
+    option = {
+		name = "Send the fleet!"
+        set_country_flag = asano_nomura_expedition
+        SAT = { country_event = 97605 }
+    }
 
-        effect = {
-            set_country_flag = commodore_perry_expedition
-            badboy = 2
-            TKG = { country_event = 97605 }
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
 }
 country_event = {
     id = 97605
-    title = "EVTNAME97605" #Kurofune
-    desc = "EVTDESC97605"
+    title = "JAPsupplies1.t" #Satsuma response
+    desc = "JAPsupplies1.d"
     picture = "commodore_perry"
 
     is_triggered_only = yes
 
     option = {
-        name = "EVT97605OPTA"
-        set_country_flag = caved_to_commodore_perry
+        name = "The southern cities may be stronger than we perceived..."
+        set_country_flag = satsuma_shock
         prestige = -10
-        remove_country_modifier = sakoku
-        remove_country_modifier = rangaku
-        remove_country_modifier = uncivilized_isolationism
+		remove_country_modifier = uncivilized_isolationism
         remove_country_modifier = isolationist_foreign_naval_officers
         remove_country_modifier = isolationist_foreign_naval_schools
         remove_country_modifier = isolationist_foreign_officers
         remove_country_modifier = isolationist_foreign_training
-        add_country_modifier = {
-            name = "western_influences"
-            duration = -1
-        }
+		TKG = {
+			remove_country_modifier = sakoku
+			remove_country_modifier = rangaku
+			remove_country_modifier = uncivilized_isolationism
+			remove_country_modifier = isolationist_foreign_naval_officers
+			remove_country_modifier = isolationist_foreign_naval_schools
+			remove_country_modifier = isolationist_foreign_officers
+			remove_country_modifier = isolationist_foreign_training
+			country_event = 97607
+			add_country_modifier = {
+				name = "western_influences"
+				duration = -1
+			}
+		}
         any_country = {
             limit = {
                 primary_culture = japanese
-                substate_of = THIS
+                substate_of = TKG
+				NOT = { tag = SAT }
+				NOT = { tag = SAI }
             }
+			country_event = 97607
             remove_country_modifier = uncivilized_isolationism
             remove_country_modifier = isolationist_foreign_naval_officers
             remove_country_modifier = isolationist_foreign_naval_schools
@@ -77,7 +87,7 @@ country_event = {
         any_country = {
             limit = {
                 primary_culture = japanese
-                substate_of = THIS
+                substate_of = TKG
                 civilized = no
             }
             add_country_modifier = {
@@ -86,192 +96,38 @@ country_event = {
             }
         }
         FROM = { country_event = 97606 }
-
-        ai_chance = { factor = 85 }
-    }
-
-    option = {
-        name = "EVT97605OPTB"
-        set_country_flag = rejected_commodore_perry
-        leave_alliance = USA
-        relation = { who = USA value = -200 }
-        add_casus_belli = {
-            target = USA
-            type = add_to_sphere
-            months = 12
-        }
-        add_casus_belli = {
-            target = USA
-            type = humiliate
-            months = 12
-        }
-        FROM = { country_event = 97607 }
-
-        ai_chance = { factor = 15 }
     }
 }
 
 country_event = {
     id = 97606
-    title = "EVTNAME97606" #Commodore Perry Successful
-    desc = "EVTDESC97606"
-    news = yes
-    news_title = "EVTNAME97606_NEWS_TITLE"
-    news_desc_long = "EVTDESC97606_NEWS_LONG"
-    news_desc_medium = "EVTDESC97606_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC97606_NEWS_SHORT"
-    picture = "commodore_perry"
+    title = "JAPsupplies2.t" #satsuma_shock_SAI
+    desc = "JAPsupplies2.d"
+    picture = "satsuma_rebellion"
 
     is_triggered_only = yes
 
     option = {
-        name = "EVT97606OPTA"
+        name = "The Shogun... He might be weaker than we knew him."
         prestige = 20
-        random_country = {
-            limit = {
-                is_sphere_leader_of = TKG
-                NOT = { tag = THIS }
-            }
-            diplomatic_influence = { who = TKG value = -100 }
-        }
-        diplomatic_influence = { who = TKG value = 100 }
-        relation = { who = TKG value = 100 }
+        relation = { who = TKG value = -100 }
     }
 }
-
 country_event = {
     id = 97607
-    title = "EVTNAME97607" #The Japanese Are Defiant
-    desc = "EVTDESC97607"
-    picture = "commodore_perry"
+    title = "JAPsupplies3.t" #satsuma_shock_JAP
+    desc = "JAPsupplies3.d"
+    picture = "satsuma_rebellion"
 
     is_triggered_only = yes
 
     option = {
-        name = "EVT97607OPTA"
-        any_pop = {
-            dominant_issue = {
-                factor = 0.05
-                value = jingoism
-            }
-        }
-        diplomatic_influence = { who = TKG value = -200 }
-        war = {
-            target = TKG
-            attacker_goal = {
-                casus_belli = add_to_sphere
-            }
-        }
-    }
-
-    option = {
-        name = "EVT97607OPTB"
-        prestige = -20
-        any_pop = {
-            dominant_issue = {
-                factor = 0.05
-                value = pacifism
-            }
-        }
+        name = "A daimyo lost to some merchants?"
+        prestige = -1
+        relation = { who = SAI value = -100 }
     }
 }
 
-country_event = {
-    id = 97608
-    title = "EVTNAME97608" #Japanese Surrender
-    desc = "EVTDESC97608"
-    picture = "treaty"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT97608OPTA"
-        clr_country_flag = rejected_commodore_perry
-        set_country_flag = surrendered_to_perry
-        prestige = -10
-        treasury = -100000
-        FROM = { country_event = 97609 }
-        remove_country_modifier = uncivilized_isolationism
-        remove_country_modifier = isolationist_foreign_naval_officers
-        remove_country_modifier = isolationist_foreign_naval_schools
-        remove_country_modifier = isolationist_foreign_officers
-        remove_country_modifier = isolationist_foreign_training
-        add_country_modifier = {
-            name = "western_influences"
-            duration = -1
-        }
-        any_country = {
-            limit = {
-                primary_culture = japanese
-                substate_of = THIS
-            }
-            remove_country_modifier = uncivilized_isolationism
-            remove_country_modifier = isolationist_foreign_naval_officers
-            remove_country_modifier = isolationist_foreign_naval_schools
-            remove_country_modifier = isolationist_foreign_officers
-            remove_country_modifier = isolationist_foreign_training
-        }
-        any_country = {
-            limit = {
-                primary_culture = japanese
-                substate_of = THIS
-                civilized = no
-            }
-            add_country_modifier = {
-                name = "western_influences"
-                duration = -1
-            }
-        }
-        ai_chance = { factor = 100 }
-    }
-
-    option = {
-        name = "EVT97608OPTB"
-        war_exhaustion = 20
-        FROM = { country_event = 97610 }
-        ai_chance = { factor = 0 }
-    }
-}
-
-country_event = {
-    id = 97609
-    title = "EVTNAME97609" #The Japanese Have Surrendered
-    desc = "EVTDESC97609"
-    news = yes
-    news_title = "EVTNAME97609_NEWS_TITLE"
-    news_desc_long = "EVTDESC97609_NEWS_LONG"
-    news_desc_medium = "EVTDESC97609_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC97609_NEWS_SHORT"
-    picture = "commodore_perry"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT97609OPTA"
-        clr_country_flag = negotiate_unequal_treaty_TKG
-        FROM = { clr_country_flag = negotiate_unequal_treaty_TKG }
-        prestige = 10
-        end_war = FROM
-        treasury = 100000
-        relation = { who = FROM value = 300 }
-        diplomatic_influence = { who = FROM value = 200 }
-    }
-}
-
-country_event = {
-    id = 97610
-    title = "EVTNAME97610" #The Japanese Have Refused!
-    desc = "EVTDESC97610"
-    picture = "treaty"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT97610OPTA"
-        prestige = -5
-        FROM = { clr_country_flag = negotiate_unequal_treaty_TKG }
-    }
-}
 
 #####################################################################################
 #                                                                                    #
