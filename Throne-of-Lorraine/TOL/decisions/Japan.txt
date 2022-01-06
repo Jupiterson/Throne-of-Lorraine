@@ -179,9 +179,8 @@ political_decisions = {
                 JAP = { is_substate = no }
                 TOS = { is_substate = no }
                 SAT = { is_substate = no }
-                CHO = { is_substate = no }
+                UTS = { is_substate = no }
                 KAG = { is_substate = no }
-                YZW = { is_substate = no }
                 SEN = { is_substate = no }
             }
         }
@@ -341,10 +340,9 @@ political_decisions = {
                 OR = {
                     SAT = { ai = no }
                     TOS = { ai = no }
-                    CHO = { ai = no }
+                    UTS = { ai = no }
                     KAG = { ai = no }
                     SEN = { ai = no }
-                    YZW = { ai = no }
                 }
             }
         }
@@ -954,8 +952,7 @@ political_decisions = {
             }
             OR = {
                 SEN = { exists = yes }
-                YZW = { exists = yes }
-                CHO = { exists = yes }
+                UTS = { exists = yes }
                 SAT = { exists = yes }
                 TOS = { exists = yes }
                 KAG = { exists = yes }
@@ -976,14 +973,9 @@ political_decisions = {
                 SEN = { exists = no }
             }
             OR = {
-                is_sphere_leader_of = YZW
-                relation = { who = YZW value = 100 }
-                YZW = { exists = no }
-            }
-            OR = {
-                is_sphere_leader_of = CHO
-                relation = { who = CHO value = 100 }
-                CHO = { exists = no }
+                is_sphere_leader_of = UTS
+                relation = { who = UTS value = 100 }
+                UTS = { exists = no }
             }
             OR = {
                 is_sphere_leader_of = SAT
@@ -1010,16 +1002,10 @@ political_decisions = {
                         remove_core = SEN
                     }
             }
-            CHO = {
+            UTS = {
                     all_core = {
                            add_core = TKG
-                        remove_core = CHO
-                    }
-            }
-            YZW = {
-                    all_core = {
-                           add_core = TKG
-                        remove_core = YZW
+                        remove_core = UTS
                     }
             }
             KAG = {
@@ -1069,8 +1055,7 @@ political_decisions = {
                 limit = {
                     OR = {
                         tag = SEN
-                        tag = YZW
-                        tag = CHO
+                        tag = UTS
                         tag = SAT
                         tag = TOS
                         tag = KAG
@@ -1123,8 +1108,7 @@ political_decisions = {
                 limit = {
                     OR = {
                         tag = SEN
-                        tag = YZW
-                        tag = CHO
+                        tag = UTS
                         tag = SAT
                         tag = TOS
                         tag = KAG

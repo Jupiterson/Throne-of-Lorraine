@@ -576,12 +576,11 @@ country_event = {
         OR = {
             year = 1862
             average_militancy = 2
-            CHO = { average_militancy = 4 }
+            UTS = { average_militancy = 4 }
             SAT = { average_militancy = 4 }
             TOS = { average_militancy = 4 }
             KAG = { average_militancy = 4 }
             SEN = { average_militancy = 4 }
-            YZW = { average_militancy = 4 }
             JAP = { average_militancy = 4 }
         }
         NOT = { has_country_flag = sakuradamon_incident }
@@ -714,9 +713,8 @@ country_event = {
             has_global_flag = order_to_expel_barbarians
             JAP = { is_vassal = no }
             KAG = { is_vassal = no }
-            YZW = { is_vassal = no }
             SEN = { is_vassal = no }
-            CHO = { is_vassal = no }
+            UTS = { is_vassal = no }
             TOS = { is_vassal = no }
             SAT = { is_vassal = no }
         }
@@ -743,9 +741,8 @@ country_event = {
         remove_country_modifier = kobu_gattai
         JAP = { all_core = { add_core = TKG } }
         SAT = { all_core = { add_core = TKG } }
-        CHO = { all_core = { add_core = TKG } }
+        UTS = { all_core = { add_core = TKG } }
         SEN = { all_core = { add_core = TKG } }
-        YZW = { all_core = { add_core = TKG } }
         TOS = { all_core = { add_core = TKG } }
         KAG = { all_core = { add_core = TKG } }
         any_country = {
@@ -938,7 +935,7 @@ country_event = {
             }
             modifier = {
                 factor = 2
-                tag = CHO
+                tag = UTS
             }
             modifier = {
                 factor = 1.5
@@ -1048,7 +1045,7 @@ country_event = {
             }
             modifier = {
                 factor = 0
-                tag = CHO
+                tag = UTS
             }
         }
     }
@@ -1237,7 +1234,7 @@ country_event = {
         has_global_flag = boshin_war
         OR = {
             AND = {
-                owns = 1649
+                owns = 1640
                 1657 = {
                     OR = {
                         owned_by = THIS
@@ -1314,8 +1311,7 @@ country_event = {
             limit = {
                 OR = {
                     tag = SEN
-                    tag = YZW
-                    tag = CHO
+                    tag = UTS
                     tag = SAT
                     tag = TOS
                     tag = KAG
@@ -1664,8 +1660,7 @@ country_event = {
             limit = {
                 OR = {
                     tag = SEN
-                    tag = YZW
-                    tag = CHO
+                    tag = UTS
                     tag = SAT
                     tag = TOS
                     tag = KAG
@@ -1822,8 +1817,7 @@ country_event = {
         OR = {
             tag = KAG
             tag = SEN
-            tag = YZW
-            tag = CHO
+            tag = UTS
             tag = TOS
             tag = SAT
         }
@@ -3211,9 +3205,8 @@ country_event = {
             has_global_flag = order_to_expel_barbarians
             JAP = { is_vassal = no }
             KAG = { is_vassal = no }
-            YZW = { is_vassal = no }
             SEN = { is_vassal = no }
-            CHO = { is_vassal = no }
+            UTS = { is_vassal = no }
             TOS = { is_vassal = no }
             SAT = { is_vassal = no }
         }
@@ -3240,9 +3233,8 @@ country_event = {
         remove_country_modifier = kobu_gattai
         TKG = { all_core = { add_core = JAP } }
         SAT = { all_core = { add_core = JAP } }
-        CHO = { all_core = { add_core = JAP } }
+        UTS = { all_core = { add_core = JAP } }
         SEN = { all_core = { add_core = JAP } }
-        YZW = { all_core = { add_core = JAP } }
         TOS = { all_core = { add_core = JAP } }
         KAG = { all_core = { add_core = JAP } }
     }

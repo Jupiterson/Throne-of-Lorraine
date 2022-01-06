@@ -2783,7 +2783,6 @@ political_decisions = {
                     OR = {
                         tag = KAG
                         tag = SEN
-                        tag = YZW
                         tag = TKG
                     }
                 }
@@ -2822,10 +2821,11 @@ political_decisions = {
             any_country = {
                 limit = {
                     OR = {
-                        tag = CHO
+                        tag = UTS
                         tag = SAT
                         tag = TOS
                         tag = JAP
+						tag = SAI
                     }
                 }
                 set_country_flag = rangaku_applied

@@ -1,10 +1,10 @@
-capital = 1673
+capital = 1640
 primary_culture = japanese
 religion = mahayana
 government = daimyo
 plurality = 0.0
 nationalvalue = nv_tradition
-literacy = 0.30
+literacy = 0.40
 prestige = 2
 
 
@@ -27,32 +27,30 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
-# New Reforms
-conscription = no_draft
+#New Reforms
+conscription = two_year_draft
 debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
-border_policy = closed_borders
+border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
 set_country_flag = mahayana_country
 
-ruling_party = NIP_reactionary
+ruling_party = NIP_conservative
 upper_house = {
     fascist = 0
     liberal = 17
-    conservative = 35
-    reactionary = 48
+    conservative = 48
+    reactionary = 35
     radical = 0
     socialist = 0
     communist = 0
 }
 
-set_country_flag = fudai_daimyo
-
+set_country_flag = tozama_daimyo
 
 land_reform = yes_land_reform
 monetary_reform = yes_monetary_reform
@@ -67,17 +65,19 @@ monetary_reform = yes_monetary_reform
 consciousness = 0
 nonstate_consciousness = 0
 
-oob = "YZW_oob.txt"
+oob = "UTS_oob.txt"
 1861.1.1 = {
-    oob = "/1861/YZW_oob.txt"
+    oob = "/1861/UTS_oob.txt"
+    set_country_flag = angered_by_bakufu
 }
 1861.1.1 = {
 
 foreign_weapons = yes_foreign_weapons
 army_schools = yes_army_schools
+foreign_training = yes_foreign_training
 foreign_navies = yes_foreign_navies
-naval_schools = yes_naval_schools
 land_reform = yes_land_reform
+education_reform = yes_education_reform
 finance_reform = finance_reform_two
 
 # Technologies
@@ -86,5 +86,7 @@ post_nelsonian_thought = 1
 
 # Inventions
 #bottling_process = yes
+modern_winemaking = yes
+
 
 }
