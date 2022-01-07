@@ -3,8 +3,8 @@ political_decisions = {
         potential = {
             tag = SCO
 			NOT = {
-			    has_province_modifier = nobles_autonomy_SCO
-                }
+			    has_country_flag = nobles_autonomy_SCO
+            }
 		}
 		
 		allow = {
@@ -13,21 +13,24 @@ political_decisions = {
         effect = { 
 		    any_owned = {
                 limit = {
-                    province_id = 279
-					province_id = 280
-					province_id = 281
-					province_id = 282
-					province_id = 254
-					province_id = 255
-					province_id = 256
-					province_id = 257
-					province_id = 3378
+				    OR = {
+					    province_id = 279
+					    province_id = 280
+					    province_id = 281
+					    province_id = 282
+					    province_id = 254
+					    province_id = 255
+			            province_id = 256
+						province_id = 257
+					    province_id = 3378
+					}
                 }
                 add_province_modifier = {
                     name = nobles_autonomy_SCO
                     duration = -1
                 }
             }
+			set_country_flag = nobles_autonomy_SCO
         }
 		ai_will_do = { factor = 1 }
     }
@@ -65,7 +68,7 @@ political_decisions = {
 }
 
     centralize_northumbria = {
-        picture = ulster_scot
+        picture = madnobles
         potential = {
             tag = SCO
             is_vassal = no
@@ -82,14 +85,14 @@ political_decisions = {
         effect = {
 		    any_owned = {
                 limit = {
-					province_id = 279
-					province_id = 280
-					province_id = 281
-					province_id = 282
+				    OR = {
+					    province_id = 279
+					    province_id = 280
+					    province_id = 281
+					    province_id = 282
+					}	
                 }
-                remove_province_modifier = {
-                    name = nobles_autonomy_SCO
-                }
+                remove_province_modifier = nobles_autonomy_SCO
 				rich_strata = { consciousness = 5 militancy = 10 }
 				poor_strata = { consciousness = 2 militancy = 4 }
 			}
