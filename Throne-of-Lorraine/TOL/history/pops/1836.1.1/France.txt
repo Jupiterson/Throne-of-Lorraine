@@ -70,7 +70,14 @@
     labourers = {
         culture = belgican
         religion = catholic
-        size = 120500
+        size = 80500
+    }
+	
+	serfs = {
+        culture = belgican
+        religion = catholic
+        size = 40500
+		militancy = 5
     }
 }
 #Dunkirk (396000/99000 POPS)
@@ -126,7 +133,7 @@
     farmers = {
         culture = flemish
         religion = catholic
-        size = 63550
+        size = 43550
     }
 
     artisans = {
@@ -140,11 +147,12 @@
         religion = catholic
         size = 300
     }
-
-    farmers = {
+	
+	serfs = {
         culture = flemish
         religion = catholic
-        size = 15000
+        size = 40500
+		militancy = 5
     }
 }
 #Arras (428000/107000 POPS)
@@ -176,13 +184,27 @@
     farmers = {
         culture = belgican
         religion = catholic
-        size = 60200
+        size = 40200
+    }
+	
+	serfs = {
+        culture = belgican
+        religion = catholic
+        size = 20500
+		militancy = 5
+    }
+	
+	serfs = {
+        culture = french
+        religion = catholic
+        size = 10500
+		militancy = 5
     }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 30125
+        size = 20125
     }
 }
 
@@ -214,13 +236,27 @@
     farmers = {
         culture = belgican
         religion = catholic
-        size = 70200
+        size = 50200
+    }
+	
+	serfs = {
+        culture = french
+        religion = catholic
+        size = 5500
+		militancy = 5
+    }
+	
+	serfs = {
+        culture = belgican
+        religion = catholic
+        size = 25500
+		militancy = 5
     }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 20125
+        size = 15125
     }
 }
 #Amiens (552000/138000 POPS)
@@ -258,7 +294,14 @@
     farmers = {
         culture = belgican
         religion = catholic
-        size = 102875
+        size = 72875
+    }
+	
+	serfs = {
+        culture = belgican
+        religion = catholic
+        size = 25500
+		militancy = 5
     }
 
     farmers = {
@@ -302,7 +345,14 @@
     farmers = {
         culture = belgican
         religion = catholic
-        size = 80450
+        size = 60450
+    }
+	
+	serfs = {
+        culture = belgican
+        religion = catholic
+        size = 25500
+		militancy = 5
     }
 
     farmers = {
@@ -354,7 +404,14 @@
     farmers = {
         culture = belgican
         religion = catholic
-        size = 100725
+        size = 80725
+    }
+	
+	serfs = {
+        culture = belgican
+        religion = catholic
+        size = 40500
+		militancy = 5
     }
 	
 	farmers = {
@@ -392,7 +449,14 @@
     farmers = {
         culture = belgican
         religion = catholic
-        size = 47400
+        size = 17400
+    }
+	
+	serfs = {
+        culture = belgican
+        religion = catholic
+        size = 30500
+		militancy = 5
     }
 
     clergymen = {
@@ -442,7 +506,14 @@
     farmers = {
         culture = belgican
         religion = catholic
-        size = 79556
+        size = 49556
+    }
+	
+	serfs = {
+        culture = belgican
+        religion = catholic
+        size = 30500
+		militancy = 5
     }
 	
 	farmers = {
@@ -490,11 +561,18 @@
         religion = catholic
         size = 1000
     }
+	
+    serfs = {
+        culture = french
+        religion = catholic
+        size = 20500
+		militancy = 5
+    }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 55900
+        size = 35900
     }
 }
 #Chaumont (256000/64000 POPS)
@@ -526,7 +604,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 98750
+        size = 68750
+    }
+	
+    serfs = {
+        culture = french
+        religion = catholic
+        size = 30500
+		militancy = 5
     }
 }
 #Chalons (348000/87000 POPS)
@@ -558,8 +643,8 @@
     farmers = {
         culture = belgican
         religion = catholic
-        size = 58700
-    }
+        size = 28700
+    }	
 	
 	farmers = {
         culture = belgican
@@ -1389,11 +1474,18 @@
         religion = catholic
         size = 2000
     }
+	
+	serfs = {
+        culture = french
+        religion = catholic
+        size = 50500
+		militancy = 5
+    }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 146550
+        size = 96550
     }
 }
 #Evreux (424000/106000 POPS)
@@ -1425,7 +1517,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 97750
+        size = 67750
+    }
+	
+	serfs = {
+        culture = french
+        religion = catholic
+        size = 30500
+		militancy = 5
     }
 }
 #Alencon (442000/110500 POPS)
@@ -1457,7 +1556,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 101800
+        size = 71800
+    }
+	
+	serfs = {
+        culture = french
+        religion = catholic
+        size = 30500
+		militancy = 5
     }
 }
 #Caen (1088000/272000 POPS)
@@ -1495,7 +1601,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 150550
+        size = 90550
+    }
+	
+	 serfs = {
+        culture = french
+        religion = catholic
+        size = 60500
+		militancy = 5
     }
 
 }
@@ -1614,11 +1727,18 @@
         religion = catholic
         size = 1000
     }
+	
+    serfs = {
+        culture = breton
+        religion = catholic
+        size = 30500
+		militancy = 5
+    }
 
     farmers = {
         culture = breton
         religion = catholic
-        size = 110800
+        size = 80800
 		militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -1673,11 +1793,19 @@
         religion = catholic
         size = 1100
     }
+	
+	    
+   serfs = {
+        culture = breton
+        religion = catholic
+        size = 30500
+		militancy = 5
+    }
 
     farmers = {
         culture = breton
         religion = catholic
-        size = 134500
+        size = 104500
 		militancy = 9
     }
 }
@@ -1730,11 +1858,18 @@
         religion = catholic
         size = 100
     }
+	
+	serfs = {
+        culture = breton
+        religion = catholic
+        size = 30500
+		militancy = 5
+    }
 
     farmers = {
         culture = breton
         religion = catholic
-        size = 90700
+        size = 60700
 		militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -1776,6 +1911,7 @@
         religion = catholic
         size = 20650
     }
+	
 
     labourers = {
         culture = breton
@@ -1822,11 +1958,18 @@
         religion = catholic
         size = 400
     }
+	
+	 serfs = {
+        culture = breton
+        religion = catholic
+        size = 30500
+		militancy = 5
+    }
 
     farmers = {
         culture = breton
         religion = catholic
-        size = 100000
+        size = 70000
 		militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -1894,11 +2037,25 @@
         religion = catholic
         size = 4000
     }
+	
+   serfs = {
+        culture = breton
+        religion = catholic
+        size = 30500
+		militancy = 5
+    }
+	
+   serfs = {
+        culture = french
+        religion = catholic
+        size = 80500
+		militancy = 5
+    }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 222200
+        size = 112200
     }
 
     ####Jews
@@ -2014,11 +2171,18 @@
         religion = catholic
         size = 1000
     }
+	
+	serfs = {
+        culture = french
+        religion = catholic
+        size = 20500
+		militancy = 5
+    }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 79675
+        size = 59675
     }
 }
 3399 = {
@@ -2045,11 +2209,18 @@
         religion = catholic
         size = 1000
     }
+	
+    serfs = {
+        culture = french
+        religion = catholic
+        size = 20500
+		militancy = 5
+    }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 79675
+        size = 59675
     }
 }
 #Melun (328000/82000 POPS)
@@ -2077,11 +2248,18 @@
         religion = catholic
         size = 1000
     }
+	
+   serfs = {
+        culture = french
+        religion = catholic
+        size = 30500
+		militancy = 5
+    }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 90500
+        size = 60500
     }
 
 }
@@ -2127,13 +2305,28 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 43850
+        size = 23850
+    }
+	
+   serfs = {
+        culture = burgundian
+        religion = catholic
+        size = 20500
+		militancy = 5
+    }
+	
+		
+    serfs = {
+        culture = french
+        religion = catholic
+        size = 20500
+		militancy = 5
     }
 
     farmers = {
         culture = burgundian
         religion = catholic
-        size = 83850
+        size = 63850
 		militancy = 5
     }
 }
@@ -2168,11 +2361,19 @@
         religion = catholic
         size = 43850
     }
+	
+	   
+	serfs = {
+        culture = burgundian
+        religion = catholic
+        size = 20500
+		militancy = 5
+    }
 
     farmers = {
         culture = burgundian
         religion = catholic
-        size = 82900
+        size = 62900
 		militancy = 5
     }
 }
@@ -2205,7 +2406,14 @@
     farmers = {
         culture = burgundian
         religion = catholic
-        size = 80799
+        size = 50799
+		militancy = 5
+    }
+	
+	serfs = {
+        culture = burgundian
+        religion = catholic
+        size = 30500
 		militancy = 5
     }
     farmers = {
@@ -2245,7 +2453,14 @@
     farmers = {
         culture = burgundian
         religion = catholic
-        size = 46000
+        size = 26000
+		militancy = 5
+    }
+	
+    serfs = {
+        culture = burgundian
+        religion = catholic
+        size = 20500
 		militancy = 5
     }
 
@@ -2294,11 +2509,18 @@
         religion = catholic
         size = 1500
     }
+	
+	serfs = {
+        culture = burgundian
+        religion = catholic
+        size = 20500
+		militancy = 5
+    }
 
     farmers = {
         culture = burgundian
         religion = catholic
-        size = 87050
+        size = 67050
 		militancy = 5
     }
 
@@ -2343,7 +2565,14 @@
     farmers = {
         culture = burgundian
         religion = catholic
-        size = 62400
+        size = 42400
+		militancy = 5
+    }
+	
+	serfs = {
+        culture = burgundian
+        religion = catholic
+        size = 20500
 		militancy = 5
     }
 
@@ -2439,11 +2668,18 @@
         religion = catholic
         size = 2000
     }
+	
+    serfs = {
+        culture = french
+        religion = catholic
+        size = 20500
+		militancy = 5
+    }
 
     labourers = {
         culture = french
         religion = catholic
-        size = 77900
+        size = 57900
     }
 }
 #Laval (358000/89500 POPS)
@@ -2475,7 +2711,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 82750
+        size = 62750
+    }
+	
+    serfs = {
+        culture = french
+        religion = catholic
+        size = 20500
+		militancy = 5
     }
 }
 #Le Mans (464000/116000 POPS)
@@ -2507,7 +2750,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 107100
+        size = 67100
+    }
+	
+  serfs = {
+        culture = french
+        religion = catholic
+        size = 40500
+		militancy = 5
     }
 }
 #La Roche (344000/86000 POPS)
@@ -2539,7 +2789,14 @@
     labourers = {
         culture = french
         religion = catholic
-        size = 79850
+        size = 49850
+    }
+	
+	  serfs = {
+        culture = french
+        religion = catholic
+        size = 30500
+		militancy = 5
     }
 
 }
@@ -2591,7 +2848,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 63350
+        size = 43350
+    }
+	
+	  serfs = {
+        culture = french
+        religion = catholic
+        size = 20500
+		militancy = 5
     }
 }
 #Bourges (264400/66100 POPS)
@@ -2623,7 +2887,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 58250
+        size = 48250
+    }
+	
+  serfs = {
+        culture = french
+        religion = catholic
+        size = 10500
+		militancy = 5
     }
 }
 #Blois (243600/60900 POPS)
@@ -2655,7 +2926,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 54500
+        size = 34500
+    }
+	
+   serfs = {
+        culture = french
+        religion = catholic
+        size = 20500
+		militancy = 5
     }
 }
 #Tours (300000/75000 POPS)
@@ -2687,7 +2965,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 64800
+        size = 44800
+    }
+
+	serfs = {
+        culture = french
+        religion = catholic
+        size = 20500
+		militancy = 5
     }
 
 }
@@ -2736,10 +3021,16 @@
         size = 63925
     }
 	
+	serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 24800
+    }
+	
 	farmers = {
         culture = occitan
         religion = hugenott
-        size = 53925
+        size = 33925
 		militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -2769,11 +3060,18 @@
         religion = catholic
         size = 750
     }
+	
+   serfs = {
+        culture = french
+        religion = hugenott
+        size = 24800
+    }
+	
 
     farmers = {
         culture = french
         religion = catholic
-        size = 63625
+        size = 43625
     }
 }
 #Angouleme (364000/91000 POPS)
@@ -2808,6 +3106,12 @@
         size = 33500
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+	serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 24800
     }
 
     farmers = {
@@ -2867,6 +3171,12 @@
         religion = catholic
         size = 18750
     }
+	
+	serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 24800
+    }
 
     farmers = {
         culture = occitan
@@ -2907,11 +3217,17 @@
         religion = catholic
         size = 41000
     }
+	
+	serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 24800
+    }
 
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 81000
+        size = 51000
 		militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -2959,9 +3275,15 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 72050
+        size = 32050
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+	serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 24800
     }
 
 }
@@ -3016,9 +3338,16 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 86200
+        size = 56200
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+		
+	serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 34800
     }
 
     farmers = {
@@ -3068,9 +3397,15 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 72350
+        size = 52350
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+	serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 24800
     }
 }
 #Cahors (286000/71500 POPS)
@@ -3111,6 +3446,12 @@
         size = 73125
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+	serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 24800
     }
 
 }
@@ -3214,7 +3555,7 @@
     farmers = {
         culture = arpitan
         religion = catholic
-        size = 88100
+        size = 58100
 		militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -3223,6 +3564,13 @@
         culture = burgundian
         religion = catholic
         size = 48100
+    }
+	
+	serfs = {
+        culture = arpitan
+        religion = catholic
+        size = 30500
+		militancy = 5
     }
 
     #####Jews
@@ -3315,9 +3663,16 @@
     farmers = {
         culture = arpitan
         religion = hugenott
-        size = 50725
+        size = 20725
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+	 serfs = {
+        culture = arpitan
+        religion = catholic
+        size = 30500
+		militancy = 5
     }
 
     farmers = {
@@ -3373,6 +3728,13 @@
         religion = catholic
         size = 11100
     }
+	
+   serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 30500
+		militancy = 5
+    }
 
     farmers = {
         culture = occitan
@@ -3425,11 +3787,18 @@
         religion = catholic
         size = 20300
     }
+	
+	   serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 30500
+		militancy = 5
+    }
 
     farmers = {
         culture = arpitan
         religion = hugenott
-        size = 130800
+        size = 100800
 		militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -3491,11 +3860,18 @@
         religion = catholic
         size = 20000
     }
+	
+	 serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 30500
+		militancy = 5
+    }
 
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 92300
+        size = 62300
 		militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -3529,9 +3905,16 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 94150
+        size = 64150
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+	 serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 30500
+		militancy = 5
     }
 
     farmers = {
@@ -3568,9 +3951,16 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 94150
+        size = 64150
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+	   serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 30500
+		militancy = 5
     }
 
     farmers = {
@@ -3608,9 +3998,16 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 60350
+        size = 40350
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+	   serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 20500
+		militancy = 5
     }
 	
     farmers = {
@@ -3693,11 +4090,18 @@
         religion = catholic
         size = 20510
     }
+	
+	serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 30500
+		militancy = 5
+    }
         
 	farmers = {
         culture = occitan
         religion = hugenott
-        size = 90510
+        size = 60510
 		militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -3731,8 +4135,15 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 100675
+        size = 70675
 		militancy = 9
+    }
+	
+	   serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 30500
+		militancy = 5
     }
 
     farmers = {
@@ -3776,9 +4187,16 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 64700
+        size = 34700
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+	serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 30500
+		militancy = 5
     }
 
     farmers = {
@@ -3919,7 +4337,7 @@
         size = 250
     }
 
-    farmers = {
+    serfs = {
         culture = occitan
         religion = catholic
         size = 34700
@@ -3927,7 +4345,7 @@
         rebel_type = nationalist_rebels
     }
 
-    farmers = {
+    serfs = {
         culture = basque
         religion = catholic
         size = 30000
@@ -3991,8 +4409,15 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 120500
+        size = 70500
 		militancy = 9
+    }
+	
+ serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 50500
+		militancy = 5
     }
 
     farmers = {
@@ -4030,8 +4455,15 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 100750
+        size = 70750
 		militancy = 9
+    }
+	
+	   serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 30500
+		militancy = 5
     }
 
     farmers = {
@@ -4069,9 +4501,16 @@
     farmers = {
         culture = occitan
         religion = hugenott
-        size = 70000
+        size = 40000
 		militancy = 9
         rebel_type = nationalist_rebels
+    }
+	
+	   serfs = {
+        culture = occitan
+        religion = hugenott
+        size = 30500
+		militancy = 5
     }
 
     farmers = {
