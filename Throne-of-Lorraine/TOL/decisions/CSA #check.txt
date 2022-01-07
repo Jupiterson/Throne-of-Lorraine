@@ -642,9 +642,8 @@ political_decisions = {
                     ruling_party_ideology = reactionary
                     NOT = {
                         OR = {
-                            				government = democracy
-                 
-                            government = hms_government
+                          government = democracy               
+                          government = hms_government
                         }
                     }
                 }
