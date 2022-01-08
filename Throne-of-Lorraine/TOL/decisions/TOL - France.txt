@@ -3,7 +3,9 @@ political_decisions = {
  proclaim_king_gauls = {
 		picture = diplomats
 		potential = {
-			OR = { tag = FRA
+		has_country_flag = liberalism_embraced
+			OR = { 
+			tag = FRA
 			       tag = BOR
 				   tag = FRZ
 				   }
@@ -198,8 +200,8 @@ political_decisions = {
         picture = meeting
         potential = {
            tag = FRA
-#		   NOT = { has_country_flag = liberalism_embraced }
-#		   has_country_flag = dois_de_lhomme
+		   NOT = { has_country_flag = liberalism_embraced }
+		   has_country_flag = dois_de_lhomme
         }
 
         allow = {
@@ -264,9 +266,8 @@ political_decisions = {
 								   is_core = GER
 								   is_core = ARP
 								   } 
-								
-								add_core = IDF 
 								}
+								add_core = IDF 
 							}
         }
 
