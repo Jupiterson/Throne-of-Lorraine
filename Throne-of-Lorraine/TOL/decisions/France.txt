@@ -146,27 +146,25 @@ political_decisions = {
     the_rhine_crisis = {
         picture = adolphe_thiers
         potential = {
-            primary_culture = french
+            tag = VIC
             is_greater_power = yes
             capital = 425
-            exists = PRU
-            PRU = {
-                owns = 572
-                owns = 575
-            }
             NOT = {
                 has_country_flag = crisis_on_the_rhine
+				owns = 572
+                owns = 575
             }
-        }
+			}
+        
 
         allow = {
             war = no
             NOT = { truce_with = PRU }
-            state_n_government = 1
+            year = 1880
         }
 
         effect = {
-            badboy = 2
+            badboy = 5
             add_country_modifier = {
                 name = rhine_crisis
                 duration = -1
@@ -308,232 +306,6 @@ political_decisions = {
         }
 
         ai_will_do = { factor = 1 }
-    }
-
-    claim_savoy = {
-        picture = form_italy
-        potential = {
-            primary_culture = french
-            is_greater_power = yes
-            capital = 425
-            OR = {
-                has_global_flag = plombieres
-                revolution_n_counterrevolution = 1
-            }
-            NOT = {
-                465 = { is_core = THIS }
-                has_global_flag = plombieres_refused
-                has_country_flag = claimed_savoy
-            }
-        }
-
-        allow = {
-            OR = {
-                war_policy = jingoism
-                war_policy = pro_military
-            }
-            OR = {
-                ITA = {
-                    exists = yes
-                    NOT = { in_sphere = THIS }
-                }
-                ITS = {
-                    exists = yes
-                    NOT = { in_sphere = THIS }
-                }
-            }
-            NOT = {
-                has_country_modifier = punitive_effects
-                has_country_modifier = no_more_war
-            }
-        }
-
-        effect = {
-            FRA = { set_country_flag = claimed_savoy }
-            BOR = { set_country_flag = claimed_savoy }
-            badboy = 3
-            465 = { add_core = THIS }
-            466 = { add_core = THIS }
-            472 = { add_core = THIS }
-            random_country = {
-                limit = { owns = 465 }
-                leave_alliance = THIS
-                relation = { who = THIS value = -100 }
-            }
-        }
-    }
-
-    claim_aosta = {
-        picture = claim_aosta
-        potential = {
-            primary_culture = french
-            is_greater_power = yes
-            capital = 425
-            OR = {
-                owns = 412 #Metz
-                owns = 720 #Turin
-            }
-            owns = 472 #Nice
-            NOT = { 721 = { is_core = THIS } }
-        }
-
-        allow = {
-            OR = {
-                war_policy = jingoism
-                war_policy = pro_military
-            }
-            OR = {
-                ITA = {
-                    exists = yes
-                    NOT = { in_sphere = THIS }
-                }
-                ITS = {
-                    exists = yes
-                    NOT = { in_sphere = THIS }
-                }
-            }
-            NOT = {
-                has_country_modifier = punitive_effects
-                has_country_modifier = no_more_war
-            }
-        }
-
-        effect = {
-            FRA = { set_country_flag = claimed_aosta }
-            BOR = { set_country_flag = claimed_aosta }
-            badboy = 1
-            721 = { add_core = THIS }
-            3435 = { add_core = THIS }
-            3434 = { add_core = THIS }
-            random_country = {
-                limit = { owns = 721 }
-                leave_alliance = THIS
-                relation = { who = THIS value = -100 }
-            }
-        }
-
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                OR = {
-                    466 = { NOT = { is_core = ITA } }
-                    466 = { NOT = { is_core = ITS } }
-                }
-            }
-
-            modifier = {
-                factor = 0
-                badboy = 0.8
-            }
-        }
-    }
-
-    annex_new_caledonia = {
-        picture = dreams_of_empire
-        potential = {
-            primary_culture = french
-            is_greater_power = yes
-            capital = 425
-            state_n_government = 1
-            1097 = { empty = yes }
-            OR = {
-                government = hms_government
-                government = prussian_constitutionalism
-                government = absolute_monarchy
-            }
-        }
-
-        allow = {
-            war = no
-            nationalism_n_imperialism = 1
-        }
-
-        effect = {
-            prestige = 3
-            1097 = { add_core = THIS }
-            1097 = { secede_province = THIS }
-            add_country_modifier = { name = penal_colonies duration = -1 }
-        }
-    }
-
-    french_language_schooling = {
-        picture = embrace_minority
-        potential = {
-            primary_culture = french
-            is_greater_power = yes
-            capital = 425
-            any_owned_province = { is_core = OCC }
-            BRT = { exists = no }
-            NOT = { has_country_flag = enacted_french_schooling     }
-        }
-
-        allow = {
-            war = no
-            NOT = { school_reforms = no_schools }
-            invention = biased_multiculturalism
-            invention = social_darwinism
-        }
-
-        effect = {
-		 THIS = {
-                political_reform = unitary
-            }
-            FRA = { set_country_flag = enacted_french_schooling set_country_flag = french_assimilation }
-            BOR = { set_country_flag = enacted_french_schooling set_country_flag = french_assimilation }
-            remove_accepted_culture = arpitan
-            remove_accepted_culture = breton
-            remove_accepted_culture = belgican
-            remove_accepted_culture = occitan
-			remove_accepted_culture = catalan
-			remove_accepted_culture = provencial
-            any_owned = {
-                limit = {
-                    is_core = THIS
-					is_overseas = no
-                    OR = {
-                        is_core = BRT
-                        is_core = WLL
-                        is_core = CAT
-                        is_core = CRS
-                        is_core = ITA
-                        is_core = ITS
-                        is_core = THIS
-                        is_core = SWI
-                        AND = {
-                            is_core = LUX
-                            THIS = { has_country_flag = chose_door_one }
-                        }
-                        AND = {
-                            is_core = RHI
-                            THIS = { has_country_flag = chose_door_one }
-                        }
-                        culture = occitan
-                    }
-                }
-                add_province_modifier = {
-                    name = french_cultural_unity
-                    duration = -1
-                }
-            }
-            any_country = {
-                limit = {
-                    tag = LUX
-                    exists = yes
-                    vassal_of = THIS
-                }
-                primary_culture = french
-            }
-            any_country = {
-                limit = {
-                    tag = RHI
-                    exists = yes
-                    vassal_of = THIS
-                }
-                primary_culture = french
-            }
-			THIS = { country_event = 993466 }
-        }
     }
 
     st_barths_question = {

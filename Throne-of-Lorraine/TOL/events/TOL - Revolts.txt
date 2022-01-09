@@ -1887,10 +1887,22 @@ country_event = {
 
 country_event = {
     id = 993466
-    title = "The second french Civil-War"
+    title = "The great French Collapse"
     desc = "With our attempt of unity, the minorities in our nation started revolting"
     picture = "crete_revolt"
     fire_only_once = yes
+	
+	trigger = {
+        tag = FRA
+		tag = VIC
+		any_pop = {
+		average_militancy = 4 
+		location = { is_core = THIS }
+		}
+		has_country_flag = enacted_french_schooling
+    }
+	
+	 mean_time_to_happen = { months = 1 }
 	
     option = {
         name = "The French will thrive united!"
@@ -2084,7 +2096,7 @@ country_event = {
         }
     }
 	
-	    option = {
+	option = {
         name = "The Occitans are the way to go!"
         any_owned = {
             limit = { is_core = PRO }
@@ -2275,5 +2287,245 @@ country_event = {
         ai_chance = {
             factor = 100
         }
+    }
+	
+	option = {
+        name = "The Belgicans are are nice too..."
+        any_owned = {
+            limit = { is_core = PRO }
+            secede_province = PRO 
+        }
+		any_owned = {
+            limit = { is_core = CAT }
+            secede_province = CAT 
+        }
+		any_owned = {
+            limit = { is_core = BSQ }
+            secede_province = BSQ 
+        }
+	    any_owned = {
+            limit = { is_core = BRG }
+            secede_province = BRG 
+        }
+	    any_owned = {
+            limit = { is_core = BRT }
+            secede_province = BRT 
+        }
+	    any_owned = {
+            limit = { is_core = ARP }
+            secede_province = ARP 
+        }
+		any_owned = {
+            limit = { is_core = OCC }
+            secede_province = OCC 
+        }
+	    any_owned = {
+            limit = { is_core = LOR }
+            secede_province = LOR 
+        }
+	    any_owned = {
+            limit = { is_core = WLL }
+            secede_province = WLL 
+        }
+	    any_owned = {
+            limit = { is_core = NRM }
+            secede_province = NRM 
+        }
+	    any_owned = {
+            limit = { is_core = PIC }
+            secede_province = PIC 
+        }
+        diplomatic_influence = {
+            who = PRO 
+            value = -400
+        }
+		diplomatic_influence = {
+            who = CAT 
+            value = -400
+        }
+		diplomatic_influence = {
+            who = BSQ 
+            value = -400
+        }
+		diplomatic_influence = {
+            who = BRG 
+            value = -400
+        }        
+		diplomatic_influence = {
+            who = BRT 
+            value = -400
+        }
+		diplomatic_influence = {
+            who = ARP 
+            value = -400
+        }
+		diplomatic_influence = {
+            who = OCC 
+            value = -400
+        }
+		diplomatic_influence = {
+            who = LOR 
+            value = -400
+        }
+		diplomatic_influence = {
+            who = WLL 
+            value = -400
+        }
+		diplomatic_influence = {
+            who = NRM 
+            value = -400
+        }		
+		diplomatic_influence = {
+            who = PIC 
+            value = -400
+        }
+        casus_belli = {
+            target = PRO 
+            type = conquest
+            months = 12
+        }
+		casus_belli = {
+            target = CAT 
+            type = conquest
+            months = 12
+        }
+		casus_belli = {
+            target = BSQ 
+            type = conquest
+            months = 12
+        }
+		
+		casus_belli = {
+            target = BRG 
+            type = conquest
+            months = 12
+        }
+		casus_belli = {
+            target = BRT 
+            type = conquest
+            months = 12
+        }
+		casus_belli = {
+            target = ARP 
+            type = conquest
+            months = 12
+        }
+		casus_belli = {
+            target = OCC 
+            type = conquest
+            months = 12
+        }
+		casus_belli = {
+            target = NRM 
+            type = conquest
+            months = 12
+        }
+		casus_belli = {
+            target = WLL 
+            type = conquest
+            months = 12
+        }
+		casus_belli = {
+            target = PIC 
+            type = conquest
+            months = 12
+        }
+        war = {
+            target = PIC 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+		war = {
+            target = WLL 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+		war = {
+            target = NRM 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+        war = {
+            target = OCC 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+		war = {
+            target = ARP 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }     
+		war = {
+            target = BRT 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }      
+		war = {
+            target = BRG 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }     
+		war = {
+            target = BSQ 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }      
+		war = {
+            target = CAT 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }     
+        change_tag_no_core_switch = WLL		
+		
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+
+country_event = {
+    id = 123443
+    title = "The French Revolution"
+    desc = "The French are staging a Revolution in our Capital"
+    fire_only_once = yes
+    picture = "BOS_revolt"
+    mean_time_to_happen = { months = 5 }
+    trigger = {
+		NOT = { has_global_flag = cleaning_up_ghosts }
+        tag = FRA
+		tag = BOS
+		any_pop = {
+		average_militancy = 4 
+		location = { is_core = THIS }
+		}
+        NOT = { exists = IDF }
+		has_country_flag = order_embraced
+    }
+    mean_time_to_happen = { months = 1 }
+    option = {
+        name = "Crush them!"
+        any_owned = {
+            limit = { is_core = IDF }
+            secede_province = IDF 
+        }	
+        war = {
+            target = IDF
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+    option = {
+        name = "The French are superior!"
+         any_owned = {
+            limit = { is_core = IDF }
+            secede_province = IDF 
+        }	
+        war = {
+            target = IDF
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+        change_tag_no_core_switch = IDF
     }
 }

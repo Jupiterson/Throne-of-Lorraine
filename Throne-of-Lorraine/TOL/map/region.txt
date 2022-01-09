@@ -16,9 +16,9 @@ ENG_30 = { 31 32 33 34 35 } #Saskatchewan
 
 ENG_36 = { 42 36 37 38 39 40 41 } #Manitoba
 
-CAN_46 = { 46 57 55 56 52 53 54 } #Southern Ontario
+CAN_46 = { 46 57 55 51 56 52 53 54 } #Southern Ontario
 
-CAN_50 = { 49 50 51 47 48 2594 } #Northern Ontario
+CAN_50 = { 49 50 47 48 2594 } #Northern Ontario
 
 CAN_58 = { 58 65 62 61 63 64 66 67 } #Southern Quebec
 
@@ -66,7 +66,7 @@ USA_129 = { 131 129 130 } #Oklahoma
 
 TEX_132 = { 133 43 132 134 135 136 137 138 } #Texas
 
-USA_139 = { 139 140 141 142 } #Louisiana
+USA_139 = { 139 141 142 } #Louisiana
 
 USA_144 = { 143 144 145 } #Arkansas
 
@@ -76,31 +76,31 @@ USA_151 = { 151 152 153 154 } #Iowa
 
 USA_158 = { 155 156 157 158 } #Minnesota
 
-USA_162 = { 159 160 161 162 } #Wisconsin
+USA_162 = { 159 160 161 162 163 164 166 177 } #Wisconsin
 
-USA_168 = { 163 168 167 166 165 164 } #Illinois
+USA_168 = { 168 167 165 } #Illinois
 
 USA_170 = { 169 170 172 171 } #Indiana
 
-USA_176 = { 173 174 175 176 177 } #Michigan
+USA_176 = { 173 174 175 176 } #Michigan
 
 USA_178 = { 178 179 180 183 182 181 228 } #Ohio
 
 USA_185 = { 184 185 186 187 } #Kentucky
 
-USA_188 = { 188 189 191 190 } #Tennessee
+USA_188 = { 188 190 2556 } #Tennessee
 
-USA_194 = { 194 192 193 } #Mississippi
+USA_194 = { 192 193 189 194 140 } #Mississippi
 
-USA_196 = { 195 196 197 } #Alabama
+USA_196 = { 195 196 191 } #Alabama
 
-USA_200 = { 200 199 198 3284 } #Florida
+USA_200 = { 200 199 198 3284 197 } #Florida
 
 USA_201 = { 201 202 204 2555 } #Georgia
 
 USA_205 = { 205 206 } #South Carolina
 
-USA_2556 = { 209 207 208 210 2556 } #North Carolina
+USA_2556 = { 209 207 208 210 } #North Carolina
 
 USA_211 = { 60 211 212 213 214 215 216 } #Virginia
 
@@ -472,11 +472,11 @@ EGY_897 = { 897 901 904 905 3300 3362 3294 } #Aleppo
 
 EGY_903 = { 902 903 906 907 3358 3405 } #Syria
 
-EGY_910 = { 908 910 911 922 909 2639 } #Transjordan
+EGY_910 = { 910 911 2639 } #Transjordan
 
 EGY_915 = { 913 915 912 914 3359 3360 3361 } #Lebanon
 
-EGY_921 = { 917 921 920 919 918 916 3357 3474 } #Palestine
+EGY_921 = { 917 921 920 908 919 918 916 909 3357 3474 } #Palestine
 
 TUR_923 = { 923 924 925 928 3352 } #Mosul
 
@@ -512,7 +512,7 @@ PER_1140 = { 1140 1139 1143  1146 1144 } #Kerman
 
 PER_1148 = { 1148 1147 1150 1149 1116 2638 3354 } #Khorasan
 
-HDJ_1151 = { 1151 1152 1153 1154 1155 } #Hedjaz
+HDJ_1151 = { 1151 1152 1153 1154 1155 922 } #Hedjaz
 
 NEJ_1156 = { 1160 1156 1158 1159 } #Hail
 
