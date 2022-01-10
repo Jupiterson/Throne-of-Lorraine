@@ -135,27 +135,30 @@ country_event = {
 #                                                                                    #
 #####################################################################################
 
-#Sonno Joi event chain
+#Daimin Gokuo event chain
 country_event = {
     id = 97615
-    title = "EVTNAME97615" #Sonno Joi
-    desc = "EVTDESC97615"
+    title = "Daimingokuo0.t" #Daimin Gokuo
+    desc = "Daimingokuo0.d"
     picture = "sonno_joi"
 
     trigger = {
         primary_culture = japanese
-        OR = {
-            tag = TKG
-            substate_of = TKG
-            vassal_of = TKG
-        }
+		AND = {
+			OR = {
+				tag = TKG
+				substate_of = TKG
+				vassal_of = TKG
+			}
+			NOT = { tag = SAI }
+		}
         TKG = {
             OR = {
                 has_country_modifier = western_influences
                 civilized = yes
             }
         }
-        NOT = { has_country_flag = sonno_joi }
+        NOT = { has_country_flag = Daimin_gokuo }
         NOT = { has_global_flag = boshin_war }
         NOT = { has_global_flag = boshin_war_has_happened }
     }
@@ -165,15 +168,15 @@ country_event = {
     }
 
     option = {
-        name = "EVT97615OPTA"
-        set_country_flag = sonno_joi
+        name = "Ridiculous..."
+        set_country_flag = Daimin_gokuo
         remove_country_modifier = sakoku
         remove_country_modifier = rangaku
-        aristocrats = {
+        clergymen = {
             consciousness = 2
             ideology = {
-                value = reactionary
-                factor = 0.2
+                value = liberal
+                factor = 0.1
             }
         }
         any_pop = {
@@ -184,12 +187,12 @@ country_event = {
 
 province_event = {
     id = 97616
-    title = "EVTNAME97616" #Rebellion against foreigners
-    desc = "EVTDESC97616"
+    title = "Daimingokuo1.t" #Discussions in public
+    desc = "Daimingokuo1.d"
 
     trigger = {
         owner = {
-            has_country_flag = sonno_joi
+            has_country_flag = Daimin_gokuo
             war = no
         }
         owner = { any_neighbor_country = { primary_culture = japanese } }
@@ -206,7 +209,7 @@ province_event = {
             has_province_modifier = legation_quarter
             any_neighbor_province = { has_province_modifier = peasant_revolt }
             AND = {
-                owner = { has_global_flag = order_to_expel_barbarians }
+                owner = { has_global_flag = imperial_talks_representation }
                 port = yes
             }
             owner = { civilized = yes }
@@ -214,6 +217,7 @@ province_event = {
         NOT = {
             owner = { has_global_flag = boshin_war }
             owner = { has_global_flag = boshin_war_has_happened }
+			owner = { tag = SAI }
             has_province_modifier = peasant_revolt
             average_militancy = 6
         }
@@ -223,7 +227,7 @@ province_event = {
         months = 250
         modifier = {
             factor = 0.75
-            owner = { has_global_flag = order_to_expel_barbarians }
+            owner = { has_global_flag = imperial_talks_representation }
         }
         modifier = {
             factor = 0.75
@@ -264,15 +268,15 @@ province_event = {
     }
 
     option = {
-        name = "EVT97616OPTA"
+        name = "This is getting out of hand..."
         owner = { prestige = -2 }
         any_pop = {
             ideology = {
-                value = reactionary
+                value = liberal
                 factor = 0.1
             }
             scaled_militancy = {
-                ideology = reactionary
+                ideology = liberal
                 factor = 4
             }
         }
@@ -289,8 +293,8 @@ province_event = {
 
 country_event = {
     id = 97617
-    title = "EVTNAME97617" #Order to Expel the Barbarians
-    desc = "EVTDESC97617"
+    title = "Daimingokuo2.t" #Discussions in public
+    desc = "Daimingokuo2.d"
     news = yes
     news_desc_long = "EVTDESC97617_NEWS_LONG"
     news_desc_medium = "EVTDESC97617_NEWS_MEDIUM"
@@ -300,7 +304,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "EVT97617OPTA"
+        name = "We need a stronger grip on him..."
         relation = { who = FROM value = -100 }
         prestige = -5
     }
@@ -308,14 +312,14 @@ country_event = {
 
 country_event = {
     id = 97618
-    title = "EVTNAME97617" #Order to Expel the Barbarians - Response from Substates
-    desc = "EVTDESC97618"
+    title = "Daimingokuo3.t" #Discussions in public - Response from Substates
+    desc = "Daimingokuo3.d"
     picture = "sonno_joi"
 
     is_triggered_only = yes
 
     option = {
-        name = "EVT97618OPTA"
+        name = "$COUNTRY$ supports the Emperor"
         set_country_flag = supports_imperial_edict
         relation = { who = FROM value = 50 }
         ruling_party_ideology = conservative
@@ -343,7 +347,7 @@ country_event = {
     }
 
     option = {
-        name = "EVT97618OPTB"
+        name = "This is a dangerous and reckless act"
         set_country_flag = opposes_imperial_edict
         relation = { who = FROM value = -50 }
         ruling_party_ideology = reactionary
@@ -351,7 +355,7 @@ country_event = {
             factor = 50
             modifier = {
                 factor = 1.5
-                TKG = { has_country_flag = rejected_commodore_perry }
+                SAI = { has_country_flag = asano_nomura_expedition }
             }
             modifier = {
                 factor = 0.5
@@ -710,7 +714,7 @@ country_event = {
         OR = {
             has_country_modifier = kobu_gattai
             has_country_flag = sakuradamon_incident
-            has_global_flag = order_to_expel_barbarians
+            has_global_flag = imperial_talks_representation
             JAP = { is_vassal = no }
             KAG = { is_vassal = no }
             SEN = { is_vassal = no }
@@ -785,8 +789,7 @@ country_event = {
             government = constitutional_empire
         }
         OR = {
-            has_country_flag = caved_to_commodore_perry
-            has_country_flag = surrendered_to_perry
+			SAI = { has_country_flag = asano_nomura_expedition }
             has_recently_lost_war = yes
             any_core = {
                 empty = no
@@ -971,7 +974,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.2
-                TKG = { has_country_flag = caved_to_commodore_perry }
+                SAI = { has_country_flag = asano_nomura_expedition }
             }
             modifier = {
                 factor = 0.8
@@ -1029,7 +1032,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.2
-                TKG = { has_country_flag = rejected_commodore_perry }
+                SAI = { has_country_flag = asano_nomura_expedition }
             }
             modifier = {
                 factor = 1.2
@@ -3202,7 +3205,7 @@ country_event = {
         OR = {
             has_country_modifier = kobu_gattai
             has_country_flag = sakuradamon_incident
-            has_global_flag = order_to_expel_barbarians
+            has_global_flag = imperial_talks_representation
             JAP = { is_vassal = no }
             KAG = { is_vassal = no }
             SEN = { is_vassal = no }
