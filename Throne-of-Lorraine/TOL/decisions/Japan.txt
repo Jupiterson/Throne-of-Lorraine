@@ -224,6 +224,7 @@ political_decisions = {
                 government = absolute_empire
                 government = semi_constitutional_empire
                 government = constitutional_empire
+				government = daimyo
             }
             NOT = {
                 has_global_flag = boshin_war
@@ -329,6 +330,11 @@ political_decisions = {
                 factor = 0
                 NOT = { year = 1868 }
                 civilized = no
+            }
+			modifier = {
+                factor = 0
+				tag = SAI
+                NOT = { year = 1868 }
             }
             modifier = {
                 factor = 0
@@ -951,6 +957,7 @@ political_decisions = {
                 government = absolute_empire
                 government = semi_constitutional_empire
                 government = constitutional_empire
+				government = daimyo
             }
             OR = {
                 SEN = { exists = yes }
