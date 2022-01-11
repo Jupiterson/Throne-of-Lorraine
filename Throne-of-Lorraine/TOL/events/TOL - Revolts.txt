@@ -313,6 +313,99 @@ country_event = {
     }
 }
 
+#Sardinian Revolt
+country_event = {
+    id = 123480
+    title = "The Sardinian revolt"
+    desc = "The Sardinian are revolting against our rule."
+    fire_only_once = yes
+    picture = "ALB_revolt_5"
+    mean_time_to_happen = { months = 5 }
+    trigger = {
+		NOT = { has_global_flag = cleaning_up_ghosts }
+#        tag = GEN
+        owns = 765
+        exists = CRS 
+		NOT = { exists = SRD }
+		any_pop = { 
+		average_militancy = 4
+        location = { is_core = SRD }
+		}
+    }
+    option = {
+        name = "Crush them!"
+        any_owned = {
+            limit = { is_core = SRD }
+            secede_province = SRD 
+        }
+        war = {
+            target = SRD
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+    option = {
+        name = "Sardinia shall be free!"
+        any_owned = {
+            limit = { is_core = SRD }
+            secede_province = SRD 
+        }
+        war = {
+            target = SRD
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+        change_tag_no_core_switch = SRD
+    }
+}
+
+
+#Dalmatian Revolt
+country_event = {
+    id = 123354
+    title = "The Dalmatian revolt"
+    desc = "The Dalmatian are revolting against our rule."
+    fire_only_once = yes
+    picture = "ALB_revolt_5"
+    mean_time_to_happen = { months = 5 }
+    trigger = {
+		NOT = { has_global_flag = cleaning_up_ghosts }
+        tag = VEN
+        owns = 781
+        exists = CRS 
+		NOT = { exists = DLM }
+		any_pop = { 
+		average_militancy = 4
+        location = { is_core = DLM }
+		}
+    }
+    option = {
+        name = "Crush them!"
+        any_owned = {
+            limit = { is_core = DLM }
+            secede_province = DLM 
+        }
+        war = {
+            target = DLM
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+    option = {
+        name = "Dalmatia shall be free!"
+        any_owned = {
+            limit = { is_core = DLM }
+            secede_province = DLM 
+        }
+        war = {
+            target = DLM
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+        change_tag_no_core_switch = DLM
+    }
+}
+
 #Holstein
 country_event = {
     id = 123471
@@ -709,7 +802,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 48
+        months = 6
 
         modifier = {
             factor = 0.5
@@ -808,7 +901,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 48    
+        months = 9    
         modifier = {
             factor = 0.5
             average_militancy = 6
@@ -904,7 +997,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 48    
+        months = 6    
         modifier = {
             factor = 0.5
             average_militancy = 6
@@ -998,7 +1091,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 48    
+        months = 6    
         modifier = {
             factor = 0.5
             average_militancy = 6
@@ -1095,7 +1188,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 48
+        months = 6
 
         modifier = {
             factor = 0.5
@@ -1199,7 +1292,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 48    
+        months = 6    
         modifier = {
             factor = 0.5
             average_militancy = 6
@@ -1210,12 +1303,6 @@ country_event = {
             has_recently_lost_war = yes
         }
     }
-
-#    immediate = {
-#        prestige = -15
-#        badboy = 3
-#        FIN = { government = democracy }
-#    }
 
     option = {
         name = "Well then..."

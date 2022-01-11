@@ -86,7 +86,10 @@ political_decisions = {
 	reclaim_east_frisia = {
         picture = form_germany
         potential = {
-            tag = GER		
+		OR = {
+            tag = GER	
+            tag = HNS
+            }			
             NOT = {
                 has_country_flag = reclaimed_east_frisia
             }
