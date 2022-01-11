@@ -86,7 +86,7 @@ political_decisions = {
                     TKG = { civilized = no }
                 }
             }
-            NOT = { has_country_flag = military_mission_in_japan }
+            NOT = { has_global_flag = military_mission_in_japan }
         }
 
         allow = {
@@ -115,7 +115,7 @@ political_decisions = {
                 military_reform = yes_foreign_officers
                 military_reform = yes_foreign_naval_officers
             }
-            FRA = { set_country_flag = military_mission_in_japan }
+            set_global_flag = military_mission_in_japan
             
         }
 
