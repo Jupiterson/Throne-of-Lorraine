@@ -21,7 +21,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
     }
 	
-    roman_romanization_edict = { 
+    roman_romanization_edict_1 = { 
         picture = romanization
         potential = {
             tag = NIR
@@ -49,7 +49,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
     }
 	
-	 roman_romanization_edict_2 = {
+	 roman_romanization_edict_3 = {
         picture = romanization
         potential = {
             tag = NIR
@@ -385,8 +385,61 @@ form_byzantium = {
 
         effect = {
             prestige = 50
-            TUR = { all_core = { add_core = BYZ } }
+			badboy = -10
+            869 = {
+                change_province_name = "Smyrna"
+            }
+            862 = {
+                change_province_name = "Nicomedia"
+            }
+            861 = {
+                change_province_name = "Skoutarion"
+            }
+            863 = {
+                change_province_name = "Prusa"
+            }
+            864 = {
+                change_province_name = "Palaeokastron"
+            }
+            865 = {
+                change_province_name = "Dardanellia"
+            }
+            867 = {
+                change_province_name = "Cotyaeum"
+            }
+            870 = {
+                change_province_name = "Magnesia"
+            }
+            871 = {
+                change_province_name = "Laodicea"
+            }
+            872 = {
+                change_province_name = "Mylasa"
+            }
+            853 = {
+                change_province_name = "Argyrocastron"
+            }
+            824 = {
+                change_province_name = "Ioannina"
+            }
+            823 = {
+                change_province_name = "Christoupolis"
+            }
+            830 = {
+                change_province_name = "Alexandroupoli"
+            }
+            828 = {
+                change_province_name = "Adrianople"
+            }
+            858 = {
+                change_province_name = "Saranta Ekklisies"
+            }
+            859 = {
+                change_province_name = "Callipolis"
+            }
+            set_country_flag = byzantine_revival
             change_tag = BYZ
+			
         }
 
         ai_will_do = { factor = 1 }
@@ -470,4 +523,185 @@ form_byzantium = {
         }
 		ai_will_do = { factor = 1 }
     }
+	
+	#################
+	#------BYZ------#
+	#################
+	
+	reclaim_levant_byz = {
+        picture = map_levant
+        potential = {
+            tag = BYZ
+            ai = no 
+            NOT = { has_country_flag = levant }
+        }
+
+        allow = {
+            empiricism = 1
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 8
+            EGY_903 = {
+                add_core = THIS
+            }
+			EGY_897 = {
+                add_core = THIS
+            }
+		    EGY_915 = {
+                add_core = THIS
+            }
+			EGY_921 = {
+                add_core = THIS
+            }
+			EGY_1755 = {
+                add_core = THIS
+            }	                      
+            set_country_flag = levant
+			add_accepted_culture = syriac   
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+	reclaim_egypt = {
+        picture = egypt
+        potential = {
+            tag = BYZ
+            ai = no 
+#			has_country_flag = levant
+            NOT = { has_country_flag = egypt }
+        }
+
+        allow = {
+            empiricism = 1
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 8
+            COP = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                }                   
+            set_country_flag = egypt
+			add_accepted_culture = copt   
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+	reclaim_maghreb = {
+        picture = form_maghreb
+        potential = {
+            tag = BYZ
+            ai = no 
+#			has_country_flag = egypt
+            NOT = { has_country_flag = maghreb }
+        }
+
+        allow = {
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 8
+            TUN = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                } 
+            FRA_1700 = {
+                add_core = THIS
+            }	
+            ALD_1704 = {
+                add_core = THIS
+            }
+            ALD_1708 = {
+                add_core = THIS
+            }		
+            3290 = { add_core = THIS }	
+            1736 = { add_core = THIS }		
+            1735 = { add_core = THIS }	
+            1737 = { add_core = THIS }	
+            1740 = { add_core = THIS }	
+            1732 = { add_core = THIS }	
+            1733 = { add_core = THIS }	
+            1731 = { add_core = THIS }					
+            set_country_flag = maghreb
+#			add_accepted_culture = copt   
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+	
+	on_to_italia = {
+        picture = italian_islands
+        potential = {
+            tag = BYZ
+            ai = no 
+#			has_country_flag = maghreb
+            NOT = { has_country_flag = o_t_italia }
+        }
+
+        allow = {
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 8
+            NAP = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                } 
+			SYC = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                } 
+            SAR_765 = {
+                add_core = THIS
+            }				
+            set_country_flag = o_t_italia
+			add_accepted_culture = central_italian 
+            add_accepted_culture = south_italian
+            add_accepted_culture = sicilian		
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+	form_rome = {
+        picture = roman_map
+        potential = {
+		    tag = BYZ
+#			has_country_flag = o_t_italia
+        }
+
+        allow = {
+			owns = 749
+            war = no
+            RME = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = { in_sphere = THIS }
+                        owner = { vassal_of = THIS }
+                    }
+                }
+            }
+            
+        }
+
+        effect = {
+            prestige = 50
+			badboy = -10
+            set_country_flag = AETERNA_VITTRIX
+            change_tag = RME
+			
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
 }
