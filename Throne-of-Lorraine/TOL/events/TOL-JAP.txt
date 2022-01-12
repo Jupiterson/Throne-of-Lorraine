@@ -135,11 +135,11 @@ country_event = {
 #                                                                                    #
 #####################################################################################
 
-#Daimin Gokuo event chain
+#Bunmin Kounou event chain
 country_event = {
     id = 97615
-    title = "Daimingokuo0.t" #Daimin Gokuo
-    desc = "Daimingokuo0.d"
+    title = "Bunminkounou0.t" #Bunmin Kounou
+    desc = "Bunminkounou0.d"
     picture = "sonno_joi"
 
     trigger = {
@@ -158,7 +158,7 @@ country_event = {
                 civilized = yes
             }
         }
-        NOT = { has_country_flag = Daimin_gokuo }
+        NOT = { has_country_flag = Bunmin_kounou }
         NOT = { has_global_flag = boshin_war }
         NOT = { has_global_flag = boshin_war_has_happened }
     }
@@ -169,7 +169,7 @@ country_event = {
 
     option = {
         name = "Ridiculous..."
-        set_country_flag = Daimin_gokuo
+        set_country_flag = Bunmin_kounou
         remove_country_modifier = sakoku
         remove_country_modifier = rangaku
         clergymen = {
@@ -187,12 +187,12 @@ country_event = {
 
 province_event = {
     id = 97616
-    title = "Daimingokuo1.t" #Discussions in public
-    desc = "Daimingokuo1.d"
+    title = "Bunminkounou1.t" #Discussions in public
+    desc = "Bunminkounou1.d"
 
     trigger = {
         owner = {
-            has_country_flag = Daimin_gokuo
+            has_country_flag = Bunmin_kounou
             war = no
         }
         owner = { any_neighbor_country = { primary_culture = japanese } }
@@ -293,8 +293,8 @@ province_event = {
 
 country_event = {
     id = 97617
-    title = "Daimingokuo2.t" #Discussions in public
-    desc = "Daimingokuo2.d"
+    title = "Bunminkounou2.t" #Discussions in public
+    desc = "Bunminkounou2.d"
     news = yes
     news_desc_long = "EVTDESC97617_NEWS_LONG"
     news_desc_medium = "EVTDESC97617_NEWS_MEDIUM"
@@ -312,8 +312,8 @@ country_event = {
 
 country_event = {
     id = 97618
-    title = "Daimingokuo3.t" #Discussions in public - Response from Substates
-    desc = "Daimingokuo3.d"
+    title = "Bunminkounou3.t" #Discussions in public - Response from Substates
+    desc = "Bunminkounou3.d"
     picture = "sonno_joi"
 
     is_triggered_only = yes
@@ -1309,6 +1309,7 @@ country_event = {
         JAP = {
             political_reform = regionalism
             government = absolute_empire
+			country_event = 97649
         }
         any_country = {
             limit = {
@@ -1513,6 +1514,134 @@ country_event = {
     }
 }
 
+country_event = {
+    id = 97649
+    title = "JAPconstitution0.t" #The Half-cooked constitution
+    desc = "JAPconstitution0.d"
+    picture = "meiji_parliament"
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = "Enact it!"
+        set_country_flag = enacted_new_constitution
+        remove_country_modifier = uncivilized_isolationism
+        prestige = 10
+        political_reform = universal_weighted_voting
+		political_reform = state_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = all_trade_unions
+		political_reform = gerrymandering
+		political_reform = bankruptcy
+		
+		government = hms_government
+		any_pop = {
+            limit = { is_primary_culture = yes }
+            ideology = {
+                value = reactionary
+                factor = 0.2
+            }
+            scaled_militancy = {
+                ideology = liberal
+                factor = -8
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 2
+            }
+        }
+        create_vassal = RYU
+		prestige = 15
+    }
+}
+province_event = {
+    id = 970000
+    title = "JAPconstitution1.t" #Reactionary mobilization
+    desc = "JAPconstitution1.d"
+
+    trigger = {
+        owner = {
+            has_country_flag = enacted_new_constitution
+			vote_franschise = universal_weighted_voting
+			has_country_modifier = global_baby_boom
+            war = no
+        }
+        controlled_by = THIS
+        NOT = {
+            has_province_modifier = peasant_revolt
+            average_militancy = 6
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 50
+        modifier = {
+            factor = 0.5
+            owner = { ruling_party_ideology = reactionary }
+        }
+        modifier = {
+            factor = 0.75
+            owner = { ruling_party_ideology = conservative }
+        }
+        modifier = {
+            factor = 1.5
+            owner = { ruling_party_ideology = liberal }
+        }
+        modifier = {
+            factor = 2
+            owner = { ruling_party_ideology = radical }
+        }
+		modifier = {
+            factor = 2
+            owner = { ruling_party_ideology = socialist }
+        }
+        modifier = {
+            factor = 0.9
+            reactionary = 5
+        }
+        modifier = {
+            factor = 0.9
+            reactionary = 10
+        }
+        modifier = {
+            factor = 0.9
+            reactionary = 15
+        }
+        modifier = {
+            factor = 4
+            owner = { average_militancy = 4 }
+        }
+        modifier = {
+            factor = 2
+            owner = { average_militancy = 6 }
+        }
+        modifier = {
+            factor = 0.75
+            owner = { NOT = { average_militancy = 2 } }
+        }
+    }
+
+    option = {
+        name = "This is getting out of hand..."
+        owner = { prestige = -2 }
+        any_pop = {
+            ideology = {
+                value = reactionary
+                factor = 0.1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 4
+            }
+        }
+        add_province_modifier = {
+            name = peasant_revolt
+            duration = 365
+        }
+    }
+}
 #Imperial Surrender Event
 country_event = {
     id = 97650
@@ -1668,6 +1797,7 @@ country_event = {
                     tag = SAT
                     tag = TOS
                     tag = KAG
+					tag = SAI
                 }
                 exists = yes
             }
