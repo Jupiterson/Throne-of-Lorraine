@@ -135,11 +135,11 @@ country_event = {
 #                                                                                    #
 #####################################################################################
 
-#Daimin Gokuo event chain
+#Bunmin Kounou event chain
 country_event = {
     id = 97615
-    title = "Daimingokuo0.t" #Daimin Gokuo
-    desc = "Daimingokuo0.d"
+    title = "Bunminkounou0.t" #Bunmin Kounou
+    desc = "Bunminkounou0.d"
     picture = "sonno_joi"
 
     trigger = {
@@ -158,7 +158,7 @@ country_event = {
                 civilized = yes
             }
         }
-        NOT = { has_country_flag = Daimin_gokuo }
+        NOT = { has_country_flag = Bunmin_kounou }
         NOT = { has_global_flag = boshin_war }
         NOT = { has_global_flag = boshin_war_has_happened }
     }
@@ -169,7 +169,7 @@ country_event = {
 
     option = {
         name = "Ridiculous..."
-        set_country_flag = Daimin_gokuo
+        set_country_flag = Bunmin_kounou
         remove_country_modifier = sakoku
         remove_country_modifier = rangaku
         clergymen = {
@@ -187,12 +187,12 @@ country_event = {
 
 province_event = {
     id = 97616
-    title = "Daimingokuo1.t" #Discussions in public
-    desc = "Daimingokuo1.d"
+    title = "Bunminkounou1.t" #Discussions in public
+    desc = "Bunminkounou1.d"
 
     trigger = {
         owner = {
-            has_country_flag = Daimin_gokuo
+            has_country_flag = Bunmin_kounou
             war = no
         }
         owner = { any_neighbor_country = { primary_culture = japanese } }
@@ -293,8 +293,8 @@ province_event = {
 
 country_event = {
     id = 97617
-    title = "Daimingokuo2.t" #Discussions in public
-    desc = "Daimingokuo2.d"
+    title = "Bunminkounou2.t" #Discussions in public
+    desc = "Bunminkounou2.d"
     news = yes
     news_desc_long = "EVTDESC97617_NEWS_LONG"
     news_desc_medium = "EVTDESC97617_NEWS_MEDIUM"
@@ -312,8 +312,8 @@ country_event = {
 
 country_event = {
     id = 97618
-    title = "Daimingokuo3.t" #Discussions in public - Response from Substates
-    desc = "Daimingokuo3.d"
+    title = "Bunminkounou3.t" #Discussions in public - Response from Substates
+    desc = "Bunminkounou3.d"
     picture = "sonno_joi"
 
     is_triggered_only = yes
@@ -1309,6 +1309,7 @@ country_event = {
         JAP = {
             political_reform = regionalism
             government = absolute_empire
+			country_event = 97649
         }
         any_country = {
             limit = {
@@ -1513,6 +1514,134 @@ country_event = {
     }
 }
 
+country_event = {
+    id = 97649
+    title = "JAPconstitution0.t" #The Half-cooked constitution
+    desc = "JAPconstitution0.d"
+    picture = "meiji_parliament"
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = "Enact it!"
+        set_country_flag = enacted_new_constitution
+        remove_country_modifier = uncivilized_isolationism
+        prestige = 10
+        political_reform = universal_weighted_voting
+		political_reform = state_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = all_trade_unions
+		political_reform = gerrymandering
+		political_reform = bankruptcy
+		
+		government = hms_government
+		any_pop = {
+            limit = { is_primary_culture = yes }
+            ideology = {
+                value = reactionary
+                factor = 0.2
+            }
+            scaled_militancy = {
+                ideology = liberal
+                factor = -8
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 2
+            }
+        }
+        create_vassal = RYU
+		prestige = 15
+    }
+}
+province_event = {
+    id = 970000
+    title = "JAPconstitution1.t" #Reactionary mobilization
+    desc = "JAPconstitution1.d"
+
+    trigger = {
+        owner = {
+            has_country_flag = enacted_new_constitution
+			vote_franschise = universal_weighted_voting
+			has_country_modifier = global_baby_boom
+            war = no
+        }
+        controlled_by = THIS
+        NOT = {
+            has_province_modifier = peasant_revolt
+            average_militancy = 6
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 50
+        modifier = {
+            factor = 0.5
+            owner = { ruling_party_ideology = reactionary }
+        }
+        modifier = {
+            factor = 0.75
+            owner = { ruling_party_ideology = conservative }
+        }
+        modifier = {
+            factor = 1.5
+            owner = { ruling_party_ideology = liberal }
+        }
+        modifier = {
+            factor = 2
+            owner = { ruling_party_ideology = radical }
+        }
+		modifier = {
+            factor = 2
+            owner = { ruling_party_ideology = socialist }
+        }
+        modifier = {
+            factor = 0.9
+            reactionary = 5
+        }
+        modifier = {
+            factor = 0.9
+            reactionary = 10
+        }
+        modifier = {
+            factor = 0.9
+            reactionary = 15
+        }
+        modifier = {
+            factor = 4
+            owner = { average_militancy = 4 }
+        }
+        modifier = {
+            factor = 2
+            owner = { average_militancy = 6 }
+        }
+        modifier = {
+            factor = 0.75
+            owner = { NOT = { average_militancy = 2 } }
+        }
+    }
+
+    option = {
+        name = "This is getting out of hand..."
+        owner = { prestige = -2 }
+        any_pop = {
+            ideology = {
+                value = reactionary
+                factor = 0.1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 4
+            }
+        }
+        add_province_modifier = {
+            name = peasant_revolt
+            duration = 365
+        }
+    }
+}
 #Imperial Surrender Event
 country_event = {
     id = 97650
@@ -1668,6 +1797,7 @@ country_event = {
                     tag = SAT
                     tag = TOS
                     tag = KAG
+					tag = SAI
                 }
                 exists = yes
             }
@@ -2474,140 +2604,9 @@ country_event = {
 }
 
 country_event = {
-    id = 97677
-    title = "EVTNAME97677" #The Korean Question
-    desc = "EVTDESC97677"
-    picture = "asian_administration"
-
-    trigger = {
-        has_country_modifier = line_of_advantage
-        is_disarmed = no
-        war = no
-        KOR = {
-            exists = yes
-            is_vassal = no
-            war = no
-            OR = {
-                civilized = yes
-                has_country_flag = tonghak_rebellion_happened
-            }
-        }
-        NOT = {
-            has_country_flag = korea_line_of_advantage
-            badboy = 0.8
-            war_exhaustion = 20
-            num_of_revolts = 1
-            any_greater_power = { alliance_with = KOR }
-            truce_with = KOR
-            war_policy = pacifism
-            war_policy = anti_military
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 24
-        modifier = {
-            factor = 2
-            war_policy = pro_military
-        }
-        modifier = {
-            factor = 0.25
-            OR = {
-                AND = {
-                    total_amount_of_ships = 10
-                    KOR = { NOT = { total_amount_of_ships = 10 } }
-                }
-                AND = {
-                    total_amount_of_ships = 20
-                    KOR = { NOT = { total_amount_of_ships = 20 } }
-                }
-                AND = {
-                    total_amount_of_ships = 30
-                    KOR = { NOT = { total_amount_of_ships = 30 } }
-                }
-                AND = {
-                    total_amount_of_ships = 40
-                    KOR = { NOT = { total_amount_of_ships = 40 } }
-                }
-            }
-        }
-        modifier = {
-            factor = 5
-            OR = {
-                AND = {
-                    NOT = { total_amount_of_ships = 10 }
-                    KOR = { total_amount_of_ships = 10 }
-                }
-                AND = {
-                    NOT = { total_amount_of_ships = 20 }
-                    KOR = { total_amount_of_ships = 20 }
-                }
-                AND = {
-                    NOT = { total_amount_of_ships = 30 }
-                    KOR = { total_amount_of_ships = 30 }
-                }
-                AND = {
-                    NOT = { total_amount_of_ships = 40 }
-                    KOR = { total_amount_of_ships = 40 }
-                }
-            }
-        }
-    }
-
-    option = {
-        name = "EVT97677OPTA"
-        set_country_flag = korea_line_of_advantage
-        badboy = 5
-        leave_alliance = KOR
-        relation = { who = KOR value = -200 }
-        diplomatic_influence = { who = KOR value = -100 }
-        casus_belli = {
-            target = KOR
-            type = make_puppet
-            months = 240
-        }
-        random_country = {
-            limit = {
-                tag = KOR
-                THIS = { ai = yes }
-            }
-            country_event = 97676
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
-
-    option = {
-        name = "EVT97677OPTB"
-        set_country_flag = korea_line_of_advantage
-        prestige = -10
-        any_pop = { consciousness = 1 }
-        move_issue_percentage = {
-            from = anti_military
-            to = pacifism
-            value = 0.05
-        }
-        move_issue_percentage = {
-            from = pro_military
-            to = anti_military
-            value = 0.05
-        }
-        move_issue_percentage = {
-            from = jingoism
-            to = pro_military
-            value = 0.05
-        }
-        ai_chance = {
-            factor = 0
-        }
-    }
-}
-
-country_event = {
     id = 97678
-    title = "EVTNAME97678" #The Formosa Question
-    desc = "EVTDESC97678"
+    title = "Taiwanwar0.t" #The Formosa Question
+    desc = "Taiwanwar0.d"
     picture = "ship_attacked"
 
     trigger = {
@@ -2616,32 +2615,12 @@ country_event = {
         has_country_modifier = line_of_advantage
         is_disarmed = no
         war = no
-        2681 = {
-            is_colonial = no
-            owner = {
-                is_culture_group = east_asian
-                is_greater_power = no
-                part_of_sphere = no
-                is_vassal = no
-                NOT = { truce_with = THIS }
-                NOT = { alliance_with = THIS }
-                OR = {
-                    NOT = { brigades_compare = 3 }
-                    has_global_flag = warlord_era_has_begun
-                }
-                OR = {
-                    number_of_states = 3
-                    war = no
-                }
-            }
-        }
         OR = {
             year = 1874
             total_amount_of_ships = 35
         }
         NOT = {
             has_country_flag = taiwan_line_of_advantage
-            badboy = 0.8
             war_exhaustion = 20
             num_of_revolts = 1
             war_policy = pacifism
@@ -2662,7 +2641,7 @@ country_event = {
     }
 
     option = {
-        name = "EVT97678OPTA"
+        name = "Formosa is an invaluable strategic position, and this opportunity cannot be missed. To Formosa!"
         set_country_flag = taiwan_line_of_advantage
         random_country = {
             limit = { owns = 2681 }
@@ -2675,7 +2654,7 @@ country_event = {
     }
 
     option = {
-        name = "EVT97678OPTB"
+        name = "This entails more risk than benefit..."
         set_country_flag = taiwan_line_of_advantage
         prestige = -10
         any_pop = { consciousness = 1 }
@@ -2709,7 +2688,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "EVT97679OPTA"
+        name = "Taiwan is not worth a war with Japan."
         random_owned = {
             limit = { owner = { NOT = { number_of_states = 2 } } }
             THIS = { civilized = no }
@@ -2728,13 +2707,13 @@ country_event = {
             }
         }
         ai_chance = {
-            factor = 75
-            modifier = {
-                factor = 1.5
-                is_secondary_power = yes
-            }
+            factor = 10
             modifier = {
                 factor = 0.1
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 2
                 any_greater_power = { war_with = THIS }
             }
             modifier = {
@@ -2746,7 +2725,7 @@ country_event = {
     }
 
     option = {
-        name = "EVT97679OPTB"
+        name = "Let.Them.Come."
         random_owned = {
             limit = {
                 owner = { NOT = { number_of_states = 2 } }
@@ -2762,6 +2741,7 @@ country_event = {
         random_owned = {
             limit = {
                 owner = { number_of_states = 2 }
+				is_colonial = no
             }
             JAP = {
                 diplomatic_influence = { who = THIS value = -100 }
@@ -2775,14 +2755,31 @@ country_event = {
                 }
             }
         }
+		random_owned = {
+            limit = {
+                owner = { number_of_states = 2 }
+				is_colonial = yes
+            }
+            JAP = {
+                diplomatic_influence = { who = THIS value = -100 }
+                war = {
+                    target = THIS
+                    attacker_goal = {
+                        casus_belli = place_in_the_sun
+                        state_province_id = 1485
+                    }
+                    call_ally = yes
+                }
+            }
+        }
         ai_chance = {
-            factor = 25
+            factor = 20
             modifier = {
                 factor = 0
                 FROM = { brigades_compare = 3 }
             }
             modifier = {
-                factor = 0.5
+                factor = 0
                 NOT = { FROM = { brigades_compare = 3 } }
                 FROM = { brigades_compare = 1 }
             }
@@ -2802,8 +2799,150 @@ country_event = {
             }
         }
     }
+	option = {
+        name = "Contact the Buyeo. We have a deal to make. "
+		QNG = { country_event = 97780 }
+        ai_chance = {
+            factor = 100
+            modifier = {
+                factor = 0
+                THIS = { NOT = { tag = TAI } }
+            }
+			modifier = {
+                factor = 0
+                1482 = { owner = { NOT = { tag = QNG } } } 
+            }
+        }
+    }
 }
 
+country_event = { 
+	id = 97780
+	title = "Taiwanwar2.t" #Buyeo response
+	desc = "Taiwanwar2.d"
+	picture = "ship_attacked"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "But of course! We can repell those sandal wearers with ease!"
+		create_vassal = TAI
+		create_alliance = TAI
+		JAP = { country_event = 97781 }
+		ai_chance = {
+            factor = 10
+			modifier = {
+				factor = 0.5
+				JAP = { brigades_compare = 3 }
+			}
+        }
+	}
+	
+	option = {
+		name = "We might be too weak for this..."
+		ai_chance = {
+            factor = 5
+        }
+		JAP = {
+            diplomatic_influence = { who = TAI value = -100 }
+            war = {
+                target = TAI
+                attacker_goal = { casus_belli = conquest_any }
+            }
+        }
+	}
+}
+country_event = { 
+	id = 97781
+	title = "Taiwanwar3.t" #Japanese declaration of war
+	desc = "Taiwanwar3.d"
+	picture = "ship_attacked"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Then to war, we go."
+		casus_belli = {
+			target = QNG
+			type = release_puppet
+			months = 24
+		}
+		war = {
+			target = QNG
+			attacker_goal = {
+				casus_belli = release_puppet
+				country = TAI 
+			}
+		}
+	}
+}
+country_event = { 
+	id = 1316085
+	title = "Taiwanwar4.t" #Treaty of Shimonoseki
+	desc = "Taiwanwar4.d"
+	picture = "meiji_parliament"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Transfer the lands..."
+		prestige = -5
+		treasury = -100000
+		JAP = { country_event = 1316086 }
+	}
+}
+country_event = { 
+	id = 1316086
+	title = "Taiwanwar5.t" #Treaty of Shimonoseki
+	desc = "Taiwanwar5.d"
+	picture = "meiji_parliament"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This is a victory that shall go down in history!"
+		FROM = {
+			clr_country_flag = negotiate_unequal_treaty
+			end_war = THIS
+		}
+		prestige = 25
+		treasury = 100000
+		diplomatic_influence = { who = FROM value = 50 }
+		1485 = {
+			remove_core = FJN
+			add_core = TAI
+		}
+		2562 = {
+			remove_core = FJN
+			add_core = TAI
+		}
+		2406 = {
+			remove_core = FJN
+			add_core = TAI
+		}
+		2681 = {
+			remove_core = FJN
+			add_core = TAI
+		}
+		any_owned = {
+			limit = {
+				region = CHI_1485
+			}
+			any_pop = { militancy = 6 }
+		}
+		any_country = {
+			limit = {
+				OR = {
+					vassal_of = FROM
+					substate_of = FROM
+				}
+				war_with = THIS
+			}
+			end_war = THIS
+		}
+		inherit = TAI
+	}
+}
 country_event = {
     id = 97680
     title = "EVTNAME97680" #The Sakhalin Question

@@ -328,7 +328,7 @@ political_decisions = {
             factor = 1
             modifier = {
                 factor = 0
-                NOT = { year = 1868 }
+                NOT = { year = 1869 }
                 civilized = no
             }
 			modifier = {
@@ -447,84 +447,6 @@ political_decisions = {
                     }
                 owner = { social_reform = low_schools }
             }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-    meiji_constitution = {
-        picture = meiji_court
-        potential = {
-            tag = JAP
-            civilized = yes
-            OR = {
-                government = absolute_monarchy
-                government = absolute_empire
-            }
-            has_country_modifier = fukoku_kyohei
-            NOT = { has_country_flag = enacted_meiji_constitution }
-        }
-
-        allow = {
-            war = no
-            state_n_government = 1
-            plurality = 20
-        }
-
-        effect = {
-            set_country_flag = enacted_meiji_constitution
-            remove_country_modifier = uncivilized_isolationism
-            prestige = 10
-            political_reform = wealth_weighted_voting
-            random_owned = {
-                limit = {
-                    owner = { political_parties = underground_parties }
-                }
-                owner = {
-                    political_reform = harassment
-                }
-            }
-
-            random_owned = {
-                limit = {
-                    owner = { debt_law = peonage }
-                }
-                owner = {
-                    political_reform = debtors_prisons
-                }
-            }
-
-            random_owned = {
-                limit = {
-                    owner = { debt_law = serfdom }
-                }
-                owner = {
-                    political_reform = debtors_prisons
-                }
-            }
-
-            random_owned = {
-                limit = {
-                    owner = { ai = yes }
-                }
-                owner = {
-                    treasury = 150000
-                    machine_parts = 400
-                    steel = 600 #was iron
-                    cement = 600
-                    build_factory_in_capital_state = fabric_factory
-                    build_factory_in_capital_state = canned_food_factory
-                    build_factory_in_capital_state = liquor_distillery
-                    activate_technology = high_pressure_steam_engine
-                    activate_technology = freedom_of_trade
-                    activate_technology = mechanized_mining
-                }
-            }
-
-            government = prussian_constitutionalism
-            any_pop = { militancy = -2 }
-
-            create_vassal = RYU
         }
 
         ai_will_do = { factor = 1 }
@@ -797,7 +719,7 @@ political_decisions = {
                 civilized = yes
             }
             OR = {
-                has_country_flag = Daimin_gokuo
+                has_country_flag = Bunmin_kounou
                 civilized = yes
             }
         }
@@ -831,7 +753,7 @@ political_decisions = {
             modifier = {
                 factor = 0
                 TKG = { ai = no }
-                NOT = { has_country_flag = Daimin_gokuo }
+                NOT = { has_country_flag = Bunmin_kounou }
             }
         }
     }
@@ -1480,10 +1402,6 @@ political_decisions = {
                     owner = {
                         is_culture_group = east_asian
                         war_with = THIS
-                        NOT = {
-                            capital = 1485
-                            has_country_flag = negotiate_unequal_treaty
-                        }
                     }
                 }
                 truce_with = QNG
