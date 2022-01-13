@@ -163,6 +163,30 @@ political_decisions = {
         }
     }
 	
+	core_FRZ = {
+        picture = enact_dual_monarchy
+        potential = {
+            tag = FRZ
+            war = no
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            prestige = -20
+            FRA = {
+                all_core = { add_core = FRZ }
+            }
+            any_pop = {
+                limit = { has_pop_culture = french }
+                militancy = 4
+            }
+        }
+    }
+	
+	
 	become_denmark = {
         picture = enact_dual_monarchy
         potential = {
