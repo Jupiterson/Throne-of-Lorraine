@@ -127,4 +127,32 @@ political_decisions = {
 		ai_will_do ={ factor = 1 }
     }
 	
-}
+	ottoman_change_culture = {
+        picture = ottoman_symbol
+        potential = {
+		tag = TUR
+        NOT = { has_country_flag = ottoman_change_culture }
+        }
+
+        allow = {
+            war = no			
+			prestige = 80
+			nationalism_n_imperialism = 1
+			state_n_government = 1
+        }
+        effect = {
+			any_pop = { 
+			limit = {
+            NOT = { has_pop_culture = turkish }
+        }
+        consciousness = 3 
+		} 
+		primary_culture = ottoman
+		add_accepted_culture = turkish
+		set_country_flag = ottoman_change_culture
+		province_controlled_by = TUR = { assimilate = yes }
+
+		
+       }
+		ai_will_do ={ factor = 1 }
+    }
