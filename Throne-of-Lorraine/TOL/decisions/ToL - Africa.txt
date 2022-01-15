@@ -71,5 +71,213 @@ collapse_modifier_isa = {
     }
 	
 	
+	###############
+	#----Kongo----#
+    ###############	
+	
+	claim_loango = {
+        picture = map_congo
+        potential = {
+            tag = KON
+            NOT = { has_country_flag = loango }
+        }
+
+        allow = {
+		    admin_reform = yes_admin_reform
+            land_reform = yes_land_reform
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 3
+            LOA = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                }                   
+            set_country_flag = loango
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+	claim_lunda = {
+        picture = map_congo_free_state
+        potential = {
+            tag = KON
+			has_country_flag = loango
+            NOT = { has_country_flag = lunda }
+        }
+
+        allow = {
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 4
+            LUN = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                }                   
+            set_country_flag = lunda
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+	claim_south_central = {
+        picture = banda_oriental
+        potential = {
+            tag = KON
+			has_country_flag = lunda
+            NOT = { has_country_flag = south_central }
+        }
+
+        allow = {
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 4
+            ENG_2014 = {
+                add_core = THIS
+            } 
+            POR_2003 = {
+                add_core = THIS
+            } 
+            POR_2006 = {
+                add_core = THIS
+            } 
+            BEL_1984 = {
+                add_core = THIS
+            } 	
+			2080 = { add_core = THIS }	
+			2082 = { add_core = THIS }	
+			2076 = { add_core = THIS }	
+			2081 = { add_core = THIS }	
+            set_country_flag = south_central
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+	jungle_conquest = {
+        picture = banatia_map
+        potential = {
+            tag = KON
+			has_country_flag = south_central
+            NOT = { has_country_flag = jungle }
+        }
+
+        allow = {
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 4
+            FRA_1978 = {
+                add_core = THIS
+            } 
+            FRA_1972 = {
+                add_core = THIS
+            } 
+            BEL_1992 = {
+                add_core = THIS
+            } 
+            BEL_1996 = {
+                add_core = THIS
+            } 				   
+			BEL_1990 = {
+                add_core = THIS
+            } 
+            set_country_flag = jungle
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+		
+	claim_tangyika = {
+        picture = banatia_map
+        potential = {
+            tag = KON
+			has_country_flag = jungle
+            NOT = { has_country_flag = tangyska }
+        }
+
+        allow = {
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 4
+            RWA = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                }  
+            UBH = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                }	
+            KZB = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                }				
+			ENG_2016 = {
+                add_core = THIS
+            } 
+			2020 = { add_core = THIS }	
+			2035 = { add_core = THIS }	
+            set_country_flag = tangyska
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+	
+    form_bantu	= {
+        picture = form_rajputana
+        potential = {
+		    tag = KON
+			has_country_flag = tangyska
+        }
+
+        allow = {
+		civilized = yes
+            KON = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = { in_sphere = THIS }
+                        owner = { vassal_of = THIS }
+                    }
+                }
+            }
+            
+        }
+
+        effect = {
+            prestige = 50
+			badboy = -10
+            set_country_flag = bantu_unite
+            change_tag = BTU
+			add_accepted_culture = bakongo
+			add_accepted_culture = mongo
+			add_accepted_culture = forest_bantu
+			add_accepted_culture = south_forest_bantu
+			add_accepted_culture = swahili
+			add_accepted_culture = lacustrine_bantu
+			add_accepted_culture = nyasa
+			add_accepted_culture = southern_bantu
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
+
 	
 	}

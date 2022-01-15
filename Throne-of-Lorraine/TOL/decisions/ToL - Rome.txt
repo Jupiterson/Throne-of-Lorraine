@@ -569,7 +569,7 @@ form_byzantium = {
         potential = {
             tag = BYZ
             ai = no 
-#			has_country_flag = levant
+			has_country_flag = levant
             NOT = { has_country_flag = egypt }
         }
 
@@ -596,7 +596,7 @@ form_byzantium = {
         potential = {
             tag = BYZ
             ai = no 
-#			has_country_flag = egypt
+			has_country_flag = egypt
             NOT = { has_country_flag = maghreb }
         }
 
@@ -629,7 +629,7 @@ form_byzantium = {
             1733 = { add_core = THIS }	
             1731 = { add_core = THIS }					
             set_country_flag = maghreb
-#			add_accepted_culture = copt   
+			add_accepted_culture = copt   
         }
 		ai_will_do = { factor = 1 }
     }
@@ -640,7 +640,7 @@ form_byzantium = {
         potential = {
             tag = BYZ
             ai = no 
-#			has_country_flag = maghreb
+			has_country_flag = maghreb
             NOT = { has_country_flag = o_t_italia }
         }
 
@@ -675,13 +675,13 @@ form_byzantium = {
         picture = roman_map
         potential = {
 		    tag = BYZ
-#			has_country_flag = o_t_italia
+			has_country_flag = o_t_italia
         }
 
         allow = {
 			owns = 749
             war = no
-            RME = {
+            BYZ = {
                 all_core = {
                     OR = {
                         owned_by = THIS

@@ -3828,7 +3828,7 @@ west_african = {
     }
 }
 
-central_african = {
+bantu = {
     leader = african
 
     unit = AfricanGC
@@ -3872,6 +3872,40 @@ central_african = {
     #    last_names = { Mussa Mutato Bowelle Makeda Nzinga Sundiata
     #    }
     #}
+	swahili = {
+        color = {84 96 204}
+        first_names = { Ahmed Jabari Kamari Amiri  Asani Babu Balozi Darweshi Erevu Faraji Fupi Heri Hishima Ibada Huru Husani Imara Issa Jahidi Jalali Juma Jumaane Kafeel Khamisi Kifimbo Kivuli Kondo Lumbwi Machupa Mbwana Mosi Salehe Safi Zuberi
+        }
+
+        last_names = { Ahmed Jabari Kamari Amiri  Asani Babu Balozi Darweshi Erevu Faraji Fupi Heri Hishima Ibada Huru Husani Imara Issa Jahidi Jalali Juma Jumaane Kafeel Khamisi Kifimbo Kivuli Kondo Lumbwi Machupa Mbwana Mosi Salehe Safi Zuberi
+        }
+    }
+    lacustrine_bantu = {
+        color = {128 175 93}
+        first_names = { Mutesa Mwanga Kalema Kiweewa Ssemakookiro Jjunju Kyabaggo Namugala Kikulwe Kabulu
+        }
+
+        last_names = { Njovu Ndiga Ngo Nseenene Mmamba Ngonge Ngabi
+        }
+    }
+	    nyasa = {
+        color = {18 88 48}
+        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
+        }
+
+        last_names = { Mwale Phiri Mkunkhuntha Mbewe Kalimakudzulu
+        }
+    }
+	
+ southern_bantu = {
+        color = {192 167 66}
+        first_names = { Kinjikitile Fambaltate Songea Ebabruma Mputa Mbemchapa Atepa Matola Magobi Rjoroza Wasesse Rinyizea Chapwanya Chakoma Kapola Kapungu Kindunda Kinjalla Kiwanga Mahengu Mburu Mhavanginonya Namkina Ngosingosi Schabruma Sentambandu Uawula Ulanga
+        }
+
+        last_names = { Ngwale Farhenga Chimai Amari Kwira Mtemi Hanga Mwanawalifa Mbano
+        }
+    }
+	union = BTU
 }
 
 east_african = {
@@ -3898,22 +3932,6 @@ east_african = {
         last_names = { Nabushi Ntayitunda Muhigirwa
         }
     }
-    swahili = {
-        color = {84 96 204}
-        first_names = { Ahmed Jabari Kamari Amiri  Asani Babu Balozi Darweshi Erevu Faraji Fupi Heri Hishima Ibada Huru Husani Imara Issa Jahidi Jalali Juma Jumaane Kafeel Khamisi Kifimbo Kivuli Kondo Lumbwi Machupa Mbwana Mosi Salehe Safi Zuberi
-        }
-
-        last_names = { Ahmed Jabari Kamari Amiri  Asani Babu Balozi Darweshi Erevu Faraji Fupi Heri Hishima Ibada Huru Husani Imara Issa Jahidi Jalali Juma Jumaane Kafeel Khamisi Kifimbo Kivuli Kondo Lumbwi Machupa Mbwana Mosi Salehe Safi Zuberi
-        }
-    }
-    lacustrine_bantu = {
-        color = {128 175 93}
-        first_names = { Mutesa Mwanga Kalema Kiweewa Ssemakookiro Jjunju Kyabaggo Namugala Kikulwe Kabulu
-        }
-
-        last_names = { Njovu Ndiga Ngo Nseenene Mmamba Ngonge Ngabi
-        }
-    }
     cushitic = {
         color = {201 101 39}
         first_names = { "Ibn Muhammad" Abdullah "Abbas said" Ismail Mansur Rahman Abdallahi Hassan Malusi Tahir Wiraj Amsalu Nijam Bakri
@@ -3934,14 +3952,6 @@ southern_african = {
     leader = african
 
     unit = ZuluGC
-    nyasa = {
-        color = {18 88 48}
-        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
-        }
-
-        last_names = { Mwale Phiri Mkunkhuntha Mbewe Kalimakudzulu
-        }
-    }
     khoisan = {
         color = {122 46 133}
         first_names = { Naresib Gabeb Gorakhab Oasib Na-khom Tsawub Gaob Hanab O-Naib Khaub Khomab Hab
@@ -3956,14 +3966,6 @@ southern_african = {
         }
 
         last_names = { Tsiranana Ramanantsoa Ratsimandrava Andriamahazo Ratsiraka
-        }
-    }
-    southern_bantu = {
-        color = {192 167 66}
-        first_names = { Kinjikitile Fambaltate Songea Ebabruma Mputa Mbemchapa Atepa Matola Magobi Rjoroza Wasesse Rinyizea Chapwanya Chakoma Kapola Kapungu Kindunda Kinjalla Kiwanga Mahengu Mburu Mhavanginonya Namkina Ngosingosi Schabruma Sentambandu Uawula Ulanga
-        }
-
-        last_names = { Ngwale Farhenga Chimai Amari Kwira Mtemi Hanga Mwanawalifa Mbano
         }
     }
     sotho = {

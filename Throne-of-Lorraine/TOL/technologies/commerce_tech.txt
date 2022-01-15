@@ -1,11 +1,10 @@
 #financial_institutions
 private_banks = {
-    area = financial_institutions
-    year = 1836
-    cost = 3600
-
-    tax_eff = 5
-
+	area = financial_institutions
+	year = 1836
+	cost = 3600
+	administrative_efficiency = 0.025
+	tax_eff = 2.5
     ai_chance = {
         factor = 4
         modifier = {
@@ -30,13 +29,13 @@ private_banks = {
         }
     }
 }
+
 stock_exchange = {
-    area = financial_institutions
-    year = 1836
-    cost = 7200
-
-    tax_eff = 5
-
+	area = financial_institutions
+	year = 1836
+	cost = 7200
+	administrative_efficiency = 0.025
+	tax_eff = 2.5
     ai_chance = {
         factor = 2
         modifier = {
@@ -61,13 +60,13 @@ stock_exchange = {
         }
     }
 }
+
 business_banks = {
-    area = financial_institutions
-    year = 1850
-    cost = 10800
-
-    tax_eff = 5
-
+	area = financial_institutions
+	year = 1850
+	cost = 10800
+	administrative_efficiency = 0.025
+	tax_eff = 2.5
     ai_chance = {
         factor = 2
         modifier = {
@@ -96,12 +95,13 @@ business_banks = {
         }
     }
 }
-investment_banks = {
-    area = financial_institutions
-    year = 1870
-    cost = 14400
 
-    tax_eff = 5
+investment_banks = {
+	area = financial_institutions
+	year = 1870
+	cost = 14400
+	administrative_efficiency = 0.025
+	tax_eff = 2.5
     ai_chance = {
         factor = 1.5
         modifier = {
@@ -130,12 +130,13 @@ investment_banks = {
         }
     }
 }
-bank_inspection_board = {
-    area = financial_institutions
-    year = 1900
-    cost = 18000
 
-    tax_eff = 5
+bank_inspection_board = {
+	area = financial_institutions
+	year = 1890
+	cost = 18000
+	administrative_efficiency = 0.05
+	tax_eff = 2.5
     ai_chance = {
         factor = 1.5
         modifier = {
@@ -160,14 +161,15 @@ bank_inspection_board = {
         }
     }
 }
-mutual_funds = {
-    area = financial_institutions
-    year = 1919
-    cost = 21600
 
-    tax_eff = 5
+mutual_funds = {
+	area = financial_institutions
+	year = 1915
+	cost = 21600
+	administrative_efficiency = 0.05
+	tax_eff = 5
     ai_chance = {
-        factor = 1.5
+        factor = 2.5
         modifier = {
             factor = 1.5
             rank = 16
@@ -179,6 +181,49 @@ mutual_funds = {
         modifier = {
             factor = 1.02
             tech_school = commerce_tech_school
+        }
+        modifier = {
+            factor = 1.05
+            literacy = 0.3
+        }
+        modifier = {
+            factor = 1.05
+            literacy = 0.6
+        }
+    }
+}
+
+modern_financial_institutions = {
+	area = financial_institutions
+	year = 1920
+	cost = 30000
+	administrative_efficiency = 0.05
+	tax_eff = 10
+    ai_chance = {
+        factor = 5
+		modifier = {
+			factor = 0.5
+			NOT = { year = 1925 }
+		}
+        modifier = {
+            factor = 1.5
+            rank = 16
+        }
+        modifier = {
+            factor = 8
+            economic_policy = laissez_faire
+        }
+        modifier = {
+            factor = 1.02
+            tech_school = commerce_tech_school
+        }
+        modifier = {
+            factor = 1.05
+            literacy = 0.3
+        }
+        modifier = {
+            factor = 1.05
+            literacy = 0.6
         }
     }
 }
@@ -186,11 +231,12 @@ mutual_funds = {
 
 #monetary_system
 no_standard = {
-    area = monetary_system
-    year = 1836
-    cost = 3600
-
-    administrative_efficiency = 0.05
+	area = monetary_system
+	year = 1836
+	cost = 3600
+	permanent_prestige = 2
+	factory_output = 0.01
+	administrative_efficiency = 0.05
     ai_chance = {
         factor = 2
         modifier = {
@@ -201,14 +247,20 @@ no_standard = {
             factor = 1.02
             tech_school = commerce_tech_school
         }
+        modifier = {
+            factor = 1.01
+            tech_school = industrial_tech_school
+        }
     }
 }
-ad_hoc_money_bill_printing = {
-    area = monetary_system
-    year = 1836
-    cost = 7200
 
-    administrative_efficiency = 0.05
+ad_hoc_money_bill_printing = {
+	area = monetary_system
+	year = 1836
+	cost = 7200
+	permanent_prestige = 2
+	factory_output = 0.01
+	administrative_efficiency = 0.05
     ai_chance = {
         factor = 2
         modifier = {
@@ -231,14 +283,20 @@ ad_hoc_money_bill_printing = {
             factor = 1.02
             tech_school = commerce_tech_school
         }
+        modifier = {
+            factor = 1.01
+            tech_school = industrial_tech_school
+        }
     }
 }
-private_bank_money_bill_printing = {
-    area = monetary_system
-    year = 1836
-    cost = 10800
 
-    administrative_efficiency = 0.05
+private_bank_money_bill_printing = {
+	area = monetary_system
+	year = 1836
+	cost = 10800
+	permanent_prestige = 5
+	factory_output = 0.01
+	administrative_efficiency = 0.05
     ai_chance = {
         factor = 1.5
         modifier = {
@@ -253,14 +311,20 @@ private_bank_money_bill_printing = {
             factor = 1.02
             tech_school = commerce_tech_school
         }
+        modifier = {
+            factor = 1.01
+            tech_school = industrial_tech_school
+        }
     }
 }
-central_bank_money_bill_printing = {
-    area = monetary_system
-    year = 1850
-    cost = 14400
 
-    administrative_efficiency = 0.05
+central_bank_money_bill_printing = {
+	area = monetary_system
+	year = 1850
+	cost = 14400
+	permanent_prestige = 5
+	factory_output = 0.01
+	administrative_efficiency = 0.05
     ai_chance = {
         factor = 1.5
         modifier = {
@@ -276,17 +340,19 @@ central_bank_money_bill_printing = {
             tech_school = commerce_tech_school
         }
         modifier = {
-            factor = 30
-            has_country_modifier = leader_of_kalmar
+            factor = 1.01
+            tech_school = industrial_tech_school
         }
     }
 }
-modern_central_bank_system = {
-    area = monetary_system
-    year = 1870
-    cost = 18000
 
-    administrative_efficiency = 0.05
+modern_central_bank_system = {
+	area = monetary_system
+	year = 1870
+	cost = 18000
+	permanent_prestige = 10
+	factory_output = 0.01
+	administrative_efficiency = 0.05
     ai_chance = {
         factor = 1.5
         modifier = {
@@ -309,15 +375,20 @@ modern_central_bank_system = {
             factor = 3
             tech_school = commerce_tech_school
         }
+        modifier = {
+            factor = 3
+            tech_school = industrial_tech_school
+        }
     }
 }
+
 market_determined_exchange_rates = {
-    area = monetary_system
-    year = 1900
-    cost = 21600
-
-
-    administrative_efficiency = 0.05
+	area = monetary_system
+	year = 1900
+	cost = 21600
+	permanent_prestige = 10
+	factory_output = 0.02
+	administrative_efficiency = 0.1
     ai_chance = {
         factor = 1.2
         modifier = {
@@ -333,6 +404,46 @@ market_determined_exchange_rates = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.5
+            tech_school = industrial_tech_school
+        }
+        modifier = {
+            factor = 0.25
+            NOT = { literacy = 0.4 }
+        }
+    }
+}
+
+modern_monetary_system = {
+	area = monetary_system
+	year = 1920
+	cost = 30000
+	permanent_prestige = 20
+	factory_output = 0.05
+	administrative_efficiency = 0.1
+	ai_chance = {
+		factor = 1.2
+		modifier = {
+			factor = 0.5
+			NOT = { year = 1925 }
+		}
+        modifier = {
+            factor = 5
+            economic_policy = laissez_faire
+        }
+        modifier = {
+            factor = 1.1
+            rank = 16
+        }
+        modifier = {
+            factor = 3
+            tech_school = commerce_tech_school
+        }
+        modifier = {
+            factor = 3
+            tech_school = industrial_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
@@ -342,16 +453,23 @@ market_determined_exchange_rates = {
 
 #economic_thought_and_critique
 early_classical_theory_and_critique = {
-    area = economic_thought_and_critique
-    year = 1836
-    cost = 3600
-
-    factory_input = -0.01
+	area = economic_thought_and_critique
+	year = 1836
+	cost = 3600
+	factory_input = -0.01
+	increase_research = 0.15
     ai_chance = {
         factor = 1
         modifier = {
             factor = 1.02
             tech_school = commerce_tech_school
+        }
+        modifier = {
+            factor = 1.01
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
         }
         modifier = {
             factor = 1.05
@@ -367,14 +485,15 @@ early_classical_theory_and_critique = {
         }
     }
 }
-late_classical_theory = {
-    area = economic_thought_and_critique
-    year = 1836
-    cost = 7200
 
-    factory_input = -0.01
-    rgo_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+late_classical_theory = {
+	area = economic_thought_and_critique
+	year = 1840
+	cost = 7200
+	factory_input = -0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
+	increase_research = 0.150
     ai_chance = {
         factor = 8
         modifier = {
@@ -385,7 +504,6 @@ late_classical_theory = {
             factor = 1.2
             industrial_score = 100 #50
         }
-
         modifier = {
             factor = 1.04
             any_owned_province = { trade_goods = precious_goods }
@@ -403,19 +521,27 @@ late_classical_theory = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.01
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
     }
 }
-collectivist_theory = {
-    area = economic_thought_and_critique
-    year = 1836
-    cost = 10800
 
-    factory_input = -0.01
-    rgo_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+collectivist_theory = {
+	area = economic_thought_and_critique
+	year = 1850
+	cost = 10800
+	factory_input = -0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
+	increase_research = 0.150
     ai_chance = {
         factor = 1.01
         modifier = {
@@ -435,6 +561,13 @@ collectivist_theory = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.01
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
             factor = 1.05
             literacy = 0.3
         }
@@ -448,14 +581,15 @@ collectivist_theory = {
         }
     }
 }
-the_historical_theory = {
-    area = economic_thought_and_critique
-    year = 1850
-    cost = 14400
 
-    factory_input = -0.01
-    rgo_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+the_historical_theory = {
+	area = economic_thought_and_critique
+	year = 1860
+	cost = 14400
+	factory_input = -0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
+	increase_research = 0.150
     ai_chance = {
         factor = 1.01
         modifier = {
@@ -475,6 +609,13 @@ the_historical_theory = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.01
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
             factor = 1.05
             literacy = 0.3
         }
@@ -488,16 +629,17 @@ the_historical_theory = {
         }
     }
 }
-neoclassical_theory = {
-    area = economic_thought_and_critique
-    year = 1870
-    cost = 18000
 
-    factory_input = -0.01
-    rgo_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+neoclassical_theory = {
+	area = economic_thought_and_critique
+	year = 1890
+	cost = 18000
+	factory_input = -0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
+	increase_research = 0.3
     ai_chance = {
-        factor = 1
+        factor = 1.01
         modifier = {
             factor = 1.1
             industrial_score = 500 #400
@@ -515,6 +657,13 @@ neoclassical_theory = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.5
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
             factor = 1.05
             literacy = 0.3
         }
@@ -528,14 +677,15 @@ neoclassical_theory = {
         }
     }
 }
-keynesian_economics = {
-    area = economic_thought_and_critique
-    year = 1900
-    cost = 21600
 
-    factory_input = -0.01
-    rgo_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+keynesian_economics = {
+	area = economic_thought_and_critique
+	year = 1900
+	cost = 21600
+	factory_input = -0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
+	increase_research = 0.3
     ai_chance = {
         factor = 1.01
         modifier = {
@@ -555,6 +705,65 @@ keynesian_economics = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 2.5
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
+            factor = 1.05
+            literacy = 0.3
+        }
+        modifier = {
+            factor = 1.05
+            literacy = 0.6
+        }
+        modifier = {
+            factor = 0.25
+            NOT = { literacy = 0.4 }
+        }
+    }
+}
+
+neoliberal_theory = {
+	area = economic_thought_and_critique
+	year = 1920
+	cost = 30000
+	factory_input = -0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
+	increase_research = 0.3
+    ai_chance = {
+        factor = 1.01
+		modifier = {
+			factor = 0.5
+			NOT = { year = 1925 }
+		}
+        modifier = {
+            factor = 1.2
+            industrial_score = 1500 #1000
+        }
+        modifier = {
+            factor = 1.2
+            industrial_score = 2000 #1500
+        }
+        modifier = {
+            factor = 1.04
+            any_owned_province = { trade_goods = precious_goods }
+        }
+        modifier = {
+            factor = 3
+            tech_school = commerce_tech_school
+        }
+        modifier = {
+            factor = 2.5
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
             factor = 1.05
             literacy = 0.3
         }
@@ -572,18 +781,18 @@ keynesian_economics = {
 
 #market_functionality
 freedom_of_trade = {
-    area = market_functionality
-    year = 1836
-    cost = 3600
-
-    influence = 0.1
-    farm_rgo_eff = 0.1
-    rgo_goods_output = { coal = 0.1 }
-    rgo_goods_output = { iron = 0.1 }
-    rgo_goods_output = { oil = 0.1 }
-    rgo_goods_output = { precious_metal = 0.1 }
-    rgo_goods_output = { sulphur = 0.1 }
-
+	area = market_functionality
+	year = 1836
+	cost = 3600
+	influence = 0.1
+	farm_rgo_eff = 0.1
+	rgo_goods_output = { coal = 0.1 }
+	rgo_goods_output = { iron = 0.1 }
+	rgo_goods_output = { oil = 0.1 }
+	rgo_goods_output = { copper = 0.1 }
+	rgo_goods_output = { lead = 0.1 }
+	rgo_goods_output = { precious_metal = 0.1 }
+	rgo_goods_output = { sulphur = 0.1 }
     ai_chance = {
         factor = 11
         modifier = {
@@ -607,39 +816,47 @@ freedom_of_trade = {
             tech_school = commerce_tech_school
         }
         modifier = {
-            factor = 0.25
-            NOT = {
-                literacy = 0.4
-                any_owned_province = {
-                    continent = africa
-                    is_colonial = yes
-                }
-            }
+            factor = 1.01
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
         }
+        modifier = {
+			factor = 0.25
+			NOT = {
+				literacy = 0.4
+				any_owned_province = {
+					continent = africa	
+					is_colonial = yes
+				}
+			}
+		}
     }
 }
+
 market_structure = {
-    area = market_functionality
-    year = 1836
-    cost = 7200
-
-    influence = 0.1
-    farm_rgo_eff = 0.1
-    rgo_goods_output = { coal = 0.1 }
-    rgo_goods_output = { iron = 0.1 }
-    rgo_goods_output = { oil = 0.1 }
-    rgo_goods_output = { precious_metal = 0.1 }
-    rgo_goods_output = { sulphur = 0.1 }
-
+	area = market_functionality
+	year = 1836
+	cost = 7200
+	farm_rgo_eff = 0.1
+	influence = 0.1
+	rgo_goods_output = { coal = 0.1 }
+	rgo_goods_output = { iron = 0.1 }
+	rgo_goods_output = { oil = 0.1 }
+	rgo_goods_output = { copper = 0.1 }
+	rgo_goods_output = { lead = 0.1 }
+	rgo_goods_output = { precious_metal = 0.1 }
+	rgo_goods_output = { sulphur = 0.1 }
     ai_chance = {
         factor = 2
-
         modifier = {
             factor = 50
             OR = {
-                tag = NGF
                 tag = GER
-                tag = PRU
+                tag = HLR
+                tag = CAE
+				tag = NGF
             }
         }
         modifier = {
@@ -663,36 +880,43 @@ market_structure = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.5
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
             factor = 20
             colonial_nation = yes
             year = 1870
         }
         modifier = {
-            factor = 0.25
-            NOT = {
-                literacy = 0.4
-                any_owned_province = {
-                    continent = africa
-                    is_colonial = yes
-                }
-            }
-        }
+			factor = 0.25
+			NOT = {
+				literacy = 0.4
+				any_owned_province = {
+					continent = africa	
+					is_colonial = yes
+				}
+			}
+		}
     }
-
 }
+
 business_regulations = {
-    area = market_functionality
-    year = 1836
-    cost = 10800
-
-    influence = 0.2
-    farm_rgo_eff = 0.1
-    rgo_goods_output = { coal = 0.1 }
-    rgo_goods_output = { iron = 0.1 }
-    rgo_goods_output = { oil = 0.1 }
-    rgo_goods_output = { precious_metal = 0.1 }
-    rgo_goods_output = { sulphur = 0.1 }
-
+	area = market_functionality
+	year = 1836
+	cost = 10800
+	farm_rgo_eff = 0.2
+	rgo_goods_output = { coal = 0.1 }
+	rgo_goods_output = { iron = 0.1 }
+	rgo_goods_output = { oil = 0.1 }
+	rgo_goods_output = { copper = 0.1 }
+	rgo_goods_output = { lead = 0.1 }
+	rgo_goods_output = { precious_metal = 0.1 }
+	rgo_goods_output = { sulphur = 0.1 }
+	influence = 0.1
     ai_chance = {
         factor = 2
         modifier = {
@@ -712,30 +936,36 @@ business_regulations = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.5
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
             factor = 20
             colonial_nation = yes
             year = 1870
         }
         modifier = {
-            factor = 0.25
-            NOT = {
-                literacy = 0.4
-                any_owned_province = {
-                    continent = africa
-                    is_colonial = yes
-                }
-            }
-        }
+			factor = 0.25
+			NOT = {
+				literacy = 0.4
+				any_owned_province = {
+					continent = africa	
+					is_colonial = yes
+				}
+			}
+		}
     }
-
 }
-market_regulations = {
-    area = market_functionality
-    year = 1850
-    cost = 14400
 
-    influence = 0.2
-    rgo_goods_output = { precious_goods = 0.1 }
+market_regulations = {
+	area = market_functionality
+	year = 1850
+	cost = 14400
+	rgo_goods_output = { precious_goods = 0.1 }
+	influence = 0.1
     ai_chance = {
         factor = 2
         modifier = {
@@ -759,33 +989,39 @@ market_regulations = {
             tech_school = commerce_tech_school
         }
         modifier = {
-            factor = 50
-            year = 1875
-            any_owned_province = {
-                continent = africa
-                is_colonial = yes
-            }
+            factor = 1.5
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
         }
         modifier = {
-            factor = 0.25
-            NOT = {
-                literacy = 0.4
-                any_owned_province = {
-                    continent = africa
-                    is_colonial = yes
-                }
-            }
-        }
+			factor = 50
+			year = 1875
+			any_owned_province = {
+				continent = africa	
+				is_colonial = yes
+			}
+		}
+        modifier = {
+			factor = 0.25
+			NOT = {
+				literacy = 0.4
+				any_owned_province = {
+					continent = africa	
+					is_colonial = yes
+				}
+			}
+		}
     }
-
 }
-economic_responsibility = {
-    area = market_functionality
-    year = 1870
-    cost = 18000
 
-    influence = 0.2
-    rgo_goods_output = { precious_goods = 0.20 }
+economic_responsibility = {
+	area = market_functionality
+	year = 1870
+	cost = 18000
+	influence = 0.2
+	rgo_goods_output = { precious_goods = 0.20 }
     ai_chance = {
         factor = 1.05
         modifier = {
@@ -809,18 +1045,24 @@ economic_responsibility = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.5
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
     }
-
 }
-government_interventionism = {
-    area = market_functionality
-    year = 1900
-    cost = 21600
 
-    influence = 0.2
+government_interventionism = {
+	area = market_functionality
+	year = 1900
+	cost = 21600
+	influence = 0.2
     rgo_goods_output = { precious_goods = 0.20 }
     ai_chance = {
         factor = 1.01
@@ -845,21 +1087,73 @@ government_interventionism = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 2.5
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
     }
+}
 
+globalized_markets = {
+	area = market_functionality
+	year = 1920
+	cost = 30000
+	influence = 0.2
+    rgo_goods_output = { precious_goods = 0.30 }
+    ai_chance = {
+        factor = 1.01
+		modifier = {
+			factor = 0.5
+			NOT = { year = 1925 }
+		}
+        modifier = {
+            factor = 1.2
+            is_greater_power = yes
+        }
+        modifier = {
+            factor = 1.2
+            industrial_score = 1000
+        }
+        modifier = {
+            factor = 1.2
+            industrial_score = 1500
+        }
+        modifier = {
+            factor = 1.04
+            any_owned_province = { trade_goods = precious_goods }
+        }
+        modifier = {
+            factor = 3
+            tech_school = commerce_tech_school
+        }
+        modifier = {
+            factor = 2.5
+			OR = {
+               tech_school = industrial_tech_school
+			   tech_school = naval_tech_school
+			}
+        }
+        modifier = {
+            factor = 0.25
+            NOT = { literacy = 0.4 }
+        }
+    }
 }
 
 
 #tech_organization
 guild_based_production = {
-    area = tech_organization
-    year = 1836
-    cost = 3600
-
-    factory_output = 0.01
+	area = tech_organization
+	year = 1836
+	cost = 3600
+    activate_building = canned_food_factory 
+	factory_output = 0.01
     ai_chance = {
         factor = 1.03
         modifier = {
@@ -887,27 +1181,32 @@ guild_based_production = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.01
+            tech_school = industrial_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
     }
 }
-organized_factories = {
-    area = tech_organization
-    year = 1836
-    cost = 7200
 
-    factory_output = 0.01
-    rgo_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
-        ai_chance = {
+organized_factories = {
+	area = tech_organization
+	year = 1836
+	cost = 7200
+	factory_output = 0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
+    ai_chance = {
         factor = 1.03
         modifier = {
             factor = 50
             OR = {
-                tag = NGF
                 tag = GER
-                tag = PRU
+                tag = HLR
+                tag = CAE
+				tag = NGF
             }
         }
         modifier = {
@@ -943,19 +1242,23 @@ organized_factories = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.01
+            tech_school = industrial_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
     }
 }
-scientific_management = {
-    area = tech_organization
-    year = 1836
-    cost = 10800
 
-    factory_output = 0.01
-    rgo_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+scientific_management = {
+	area = tech_organization
+	year = 1836
+	cost = 10800
+	factory_output = 0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
     ai_chance = {
         factor = 1.03
         modifier = {
@@ -991,19 +1294,23 @@ scientific_management = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.01
+            tech_school = industrial_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
-    }
+    }	
 }
-time_saving_measures = {
-    area = tech_organization
-    year = 1850
-    cost = 14400
 
-    factory_output = 0.01
-    rgo_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+time_saving_measures = {
+	area = tech_organization
+	year = 1850
+	cost = 14400
+	factory_output = 0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
     ai_chance = {
         factor = 1.03
         modifier = {
@@ -1027,19 +1334,23 @@ time_saving_measures = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.01
+            tech_school = industrial_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
     }
 }
-management_strategy = {
-    area = tech_organization
-    year = 1870
-    cost = 18000
 
-    factory_output = 0.01
-    rgo_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+management_strategy = {
+	area = tech_organization
+	year = 1870
+	cost = 18000
+	factory_output = 0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
     ai_chance = {
         factor = 1.03
         modifier = {
@@ -1063,19 +1374,23 @@ management_strategy = {
             tech_school = commerce_tech_school
         }
         modifier = {
+            factor = 1.5
+            tech_school = industrial_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
     }
 }
-organizational_development = {
-    area = tech_organization
-    year = 1900
-    cost = 21600
 
-    factory_output = 0.01
-    rgo_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+organizational_development = {
+	area = tech_organization
+	year = 1900
+	cost = 21600
+	factory_output = 0.01
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
     ai_chance = {
         factor = 1.03
         modifier = {
@@ -1097,6 +1412,54 @@ organizational_development = {
         modifier = {
             factor = 3
             tech_school = commerce_tech_school
+        }
+        modifier = {
+            factor = 2.5
+            tech_school = industrial_tech_school
+        }
+        modifier = {
+            factor = 0.25
+            NOT = { literacy = 0.4 }
+        }
+    }
+}
+
+modern_business_management = {
+	area = tech_organization
+	year = 1920
+	cost = 30000
+	factory_output = 0.03
+	rgo_goods_output = { precious_goods = 0.1 }
+	rgo_size = { precious_goods = 0.05 }
+    ai_chance = {
+        factor = 1.03
+		modifier = {
+			factor = 0.5
+			NOT = { year = 1925 }
+		}
+        modifier = {
+            factor = 1.2
+            is_greater_power = yes
+        }
+        modifier = {
+            factor = 1.2
+            industrial_score = 1000
+        }
+        modifier = {
+            factor = 1.2
+            industrial_score = 1500
+        }
+        modifier = {
+            factor = 1.04
+            any_owned_province = { trade_goods = precious_goods }
+        }
+        modifier = {
+            factor = 3
+            tech_school = commerce_tech_school
+        }
+        modifier = {
+            factor = 2.5
+            tech_school = industrial_tech_school
         }
         modifier = {
             factor = 0.25
