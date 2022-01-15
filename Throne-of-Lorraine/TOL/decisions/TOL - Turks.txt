@@ -150,9 +150,11 @@ political_decisions = {
 		primary_culture = ottoman
 		add_accepted_culture = turkish
 		set_country_flag = ottoman_change_culture
-		province_controlled_by = TUR = { assimilate = yes }
+		random_owned = { limit = { is_core = TUR } assimilate = yes }
 
 		
        }
 		ai_will_do ={ factor = 1 }
     }
+	
+	}
