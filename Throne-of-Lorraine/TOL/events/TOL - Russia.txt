@@ -434,6 +434,65 @@ country_event = {
 		}
 	}
 }
+#Loss of Connection to Ukraine
+country_event = {
+	id = 330008
+	title = "Flood8.t" 
+	desc = "Flood8.d"
+	picture = "averageorthodox"
+	
+	trigger = {
+		tag = LIT
+		NOT = { owns = 955 }
+		NOT = { owns = 958 }
+		NOT = { owns = 676 }
+		NOT = { owns = 963 }
+		OR = {
+			owns = 969
+			owns = 971
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Our decline accelerates..."
+		prestige = -25
+		any_owned = {
+			limit = {
+				or = {
+					region = RUS_955 
+					region = CRI_970
+					region = RUS_968
+				}
+			}
+		secede_province = UKR
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = {
+		name = "Contact the Poles. We have a deal to make."
+		prestige = -25
+		any_owned = {
+			limit = {
+				or = {
+					region = RUS_955 
+					region = CRI_970
+					region = RUS_968
+				}
+			}
+		secede_province = UKR
+		}
+		POL = { country_event = 330004 }
+		ai_chance = {
+			factor = 1
+		}		
+	}
+}
+
 #A port in Azov
 country_event = {
 	id = 340001
