@@ -1,1 +1,56 @@
 FRA = {value = -20}
+
+army = {
+    name = "Ejército colonial"
+    location = 1894
+    regiment = {
+        name= "1. Brigada Real de Infantería"
+        type = infantry
+        home = 1892
+    }
+
+    regiment = {
+        name= "2. Brigada Real de Infantería"
+        type = infantry
+        home = 1894
+    }
+	
+}
+
+army = {
+    name = "Ejército de reserva"
+    location = 493
+    regiment = {
+        name= "Brigada de Artillería"
+        type = artillery
+        home = 493
+    }
+
+    regiment = {
+        name= "Brigada de húsar"
+        type = hussar
+        home = 3472
+    }
+	
+}
+
+navy = {
+    name = "Escuadra Unida del Ecuador"
+    location = 3472
+    ship = {
+        name= "Pamplona"
+        type = frigate
+    }
+    ship = {
+        name= "Bayonne"
+        type = frigate
+    }
+    ship = {
+        name= "Angel"
+        type = clipper_transport
+    }
+	ship = {
+        name= "Josu"
+        type = clipper_transport
+    }
+}
