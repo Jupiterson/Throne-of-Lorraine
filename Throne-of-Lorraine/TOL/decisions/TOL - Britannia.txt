@@ -83,6 +83,23 @@ political_decisions = {
                     add_core = ENG
                 }
             }
+           WHA = {
+                all_core = {
+                    add_core = ENG
+                }
+            }
+           ENL = {
+                all_core = {
+                    add_core = ENG
+                }
+            }
+			ENG = {
+				add_core = limit = {ENG_277}
+				add_core = limit = {ENG_280}
+				add_core = limit = {ENG_271}
+				add_core = limit = {ENG_266}
+				add_core = 253
+			}
             change_tag = ENG
 			ENG = {
                 inherit = SCO
@@ -96,6 +113,7 @@ political_decisions = {
             add_accepted_culture = scottish
             add_accepted_culture = irish
             add_accepted_culture = british
+			add_accepted_culture + walesh
             set_global_flag = britannia_united         
                      
         }
