@@ -7,7 +7,8 @@ political_decisions = {
 			NOT = { has_global_flag = BUR_claimed_tibet }
 		}
 		allow = {
-			prestige = 15
+			has_country_flag = burma_claim_dali
+			prestige = 20
 			owns = 1602		#tag of Dali
 			war = no
 		}
@@ -29,23 +30,23 @@ political_decisions = {
 		}
 }
 taungoo_restoration = {
-        picture = burma_coat_of_arms
+        picture = taungoo_flag
         potential = {
 		    tag = BUR
-            NOT = { has_global_flag = taungoo_restoration }
+            NOT = { has_country_flag = taungoo_restoration }
 		}
 		allow = {
             war = no
-			prestige = 5
+			prestige = 20
         }
         effect = {
 			SIA = { all_core = { add_core = BUR } }
 			LXA = { all_core = { add_core = BUR } }
-			CHK = { all_core = { add_core = BUR } }
+			PAT = { all_core = { add_core = BUR } }
 			add_accepted_culture = lao
 			add_accepted_culture = thai
-            badboy = 15
-			set_global_flag = taungoo_restoration
+            badboy = 13
+			set_country_flag = taungoo_restoration
         }
 		ai_will_do = { factor = 1 }
 }
@@ -60,7 +61,8 @@ taungoo_restoration = {
         allow = {
             war = no
             is_our_vassal = SHA
-	year = 1845
+			year = 1850
+			civilized = yes
         }
 
         effect = {
@@ -72,21 +74,40 @@ taungoo_restoration = {
 	burma_form_eob = {
         picture = burma_coat_of_arms
         potential = {
-            NOT = { has_country_flag = burma_form_eob }
-			NOT = { has_country_flag = tibet_form_eob }
+            NOT = { has_global_flag = burma_form_eob }
+			NOT = { has_global_flag = tibet_form_eob }
             tag = BUR
             }
 
         allow = {
 			has_global_flag = BUR_claimed_tibet
-			prestige = 20
             war = no
             TIB = {exists = no}
         }
 		effect = {
             change_tag = EOB
-            prestige = 15
-            set_country_flag = burma_form_eob
+            prestige = 25
+            set_global_flag = burma_form_eob
+			BUR = { all_core = { add_core = BUR } }
+			TIB = { all_core = { add_core = BUR } }			
+        }
+		ai_will_do = { factor = 1 }
+	}
+	burma_claim_dali = {
+        picture = nanzhao_kingdom
+        potential = {
+            NOT = { has_country_flag = burma_claim_dali }
+            tag = BUR
+            }
+
+        allow = {
+			prestige = 20
+            war = no
+        }
+		effect = {
+            prestige = 5
+            set_country_flag = burma_claim_dali
+			add_core = 1602
         }
 		ai_will_do = { factor = 1 }
 	}

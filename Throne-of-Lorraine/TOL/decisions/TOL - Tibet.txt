@@ -127,21 +127,22 @@ political_decisions = {
 	tibet_form_eob = {
         picture = tibet_capital
         potential = {
-            NOT = { has_country_flag = burma_form_eob }
-			NOT = { has_country_flag = tibet_form_eob }
+            NOT = { has_global_flag = burma_form_eob }
+			NOT = { has_global_flag = tibet_form_eob }
             tag = TIB
             }
 
         allow = {
 			has_global_flag = TIB_claimed_burma
-			prestige = 20
             war = no
             BUR = {exists = no}
         }
 		effect = {
             change_tag = EOB
-            prestige = 15
-            set_country_flag = tibet_form_eob
+            prestige = 25
+            set_global_flag = tibet_form_eob
+			BUR = { all_core = { add_core = EOB } }
+			TIB = { all_core = { add_core = EOB } }
         }
 		ai_will_do = { factor = 1 }
 	}
