@@ -1,131 +1,13 @@
 political_decisions = {
-    ems_dispatch = {
-        picture = ems_dispatch
-        potential = {
-            NOT = { has_country_flag = ems_dispatch_sent }
-            is_greater_power = yes
-            tag = NGF
-            OR = {
-                government = hms_government
-                government = prussian_constitutionalism
-                government = absolute_monarchy
-                government = absolute_empire
-                government = semi_constitutional_empire
-                government = constitutional_empire
-            }
-            412 = { NOT = { owned_by = THIS } }
-            OR = {
-                has_country_flag = von_moltke
-                AND = {
-                    ai = yes
-                    year = 1865
-                }
-            }
-        }
-
-        allow = {
-            war = no
-            OR = {
-                year = 1870
-                steel_breech_loaded_artillery = 1
-                machine_guns = 1
-                AND = {
-                    nationalism_n_imperialism = 1
-                    has_country_modifier = prussian_general_staff
-                    ai = no
-                }
-            }
-            OR = {
-                FRA = {
-                    exists = yes
-                    OR = { is_mobilised = no war = no }
-                    NOT = { truce_with = THIS }
-                    NOT = { relation = { who = THIS value = 100 } }
-                }
-            }
-            OR = {
-                AND = {
-                    BAV = { in_sphere = THIS }
-                    WUR = { in_sphere = THIS }
-                    BAD = { in_sphere = THIS }
-                }
-                SGF = { in_sphere = THIS }
-                year = 1860
-            }
-            crisis_exist = no
-        }
-
-        effect = {
-            prestige = 5
-            random_country = {
-                limit = {
-                    primary_culture = french
-                    capital = 425
-                    owns = 412
-                }
-                country_event = 19200
-            }
-            random_country = {
-                limit = {
-                    NOT = { capital = 425 }
-                    owns = 412
-                }
-                country_event = 19200
-            }
-            FRA_412 = { add_core = GER }
-            set_country_flag = ems_dispatch_sent
-            set_global_flag = franco_prussian_war_started
-            any_pop = {
-                limit = { is_primary_culture = yes }
-                militancy = -6
-            }
-            any_country = {
-                limit = {
-                    primary_culture = south_german
-                    NOT = { tag = AUS }
-                    NOT = { tag = KUK }
-                    NOT = { tag = BAN }
-                    NOT = { tag = SWI }
-                    NOT = { tag = LIE }
-                    NOT = { tag = SIE }
-                    exists = yes
-                }
-                country_event = 99999
-            }
-        }
-
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                has_country_modifier = law_changed_by_force
-            }
-            modifier = {
-                factor = 0
-                OR = {
-                    war_exhaustion = 5
-                    num_of_revolts = 1
-                    is_disarmed = yes
-                    FRA = { exists = yes brigades_compare = 2 }
-                    BOR = { exists = yes brigades_compare = 2 }
-                }
-            }
-            modifier = {
-                factor = 0
-                war = yes
-            }
-        }
-    }
-
+   
     construct_germania_werft = {
         picture = construct_germania_werft
         potential = {
             NOT = { has_global_flag = germania_werft_has_been_built }
             OR = {
-                tag = PRU
+                tag = HNS
+				tag = UBD
                 tag = GER
-                #tag = GCF
-                tag = NGF
             }
             owns = 369
         }
@@ -203,7 +85,6 @@ political_decisions = {
             OR = {
                 tag = KOL
                 tag = DOR
-                tag = NGF
                 tag = GER
                 tag = GCF
             }
@@ -240,7 +121,6 @@ political_decisions = {
             OR = {
                 tag = KOL
                 tag = DOR
-                tag = NGF
                 tag = GER
                 tag = GCF
             }
@@ -867,117 +747,6 @@ political_decisions = {
             }
         }
     }
-
-    appoint_von_bismarck = {
-    picture = appoint_von_bismarck
-        potential = {
-            OR = {
-                tag = NGF
-                tag = GER
-            }
-            OR = {
-                government = absolute_monarchy
-                government = absolute_empire
-                government = prussian_constitutionalism
-                government = semi_constitutional_empire
-            }
-            NOT = {
-                year = 1888
-                has_country_flag = von_bismarck_appointed
-            }
-        }
-
-        allow = {
-            war = no
-            OR = {
-                nationalism_n_imperialism = 1
-                tag = GER
-            }
-            OR = {
-                ruling_party_ideology = liberal
-                ruling_party_ideology = conservative
-                ruling_party_ideology = reactionary
-            }
-        }
-
-        effect = {
-            set_country_flag = von_bismarck_appointed
-            add_country_modifier = {
-                name = otto_von_bismarck
-                duration = 12775
-            }
-            any_pop = {
-                limit = { is_culture_group = germanic }
-                militancy = -3
-                dominant_issue = {
-                    factor = 0.2
-                    value = jingoism
-                }
-                ideology = {
-                    factor = 0.05
-                    value = conservative
-                }
-            }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-    reclaim_alsace_lorraine = {
-        picture = reichsland_elsass
-        potential = {
-            has_country_flag = lost_alsace_lorraine
-            412 = {
-                NOT = {
-                    is_core = GER
-                    owned_by = GER
-                }
-            }
-        }
-
-        allow = {
-            tag = GER
-            is_greater_power = yes
-            412 = { owner = { NOT = { truce_with = THIS } } }
-            OR = {
-                war_policy = jingoism
-                412 = { owner = { war_with = THIS } }
-            }
-        }
-
-        effect = {
-            clr_country_flag = lost_alsace_lorraine
-            badboy = 5
-            FRA_412 = { add_core = GER }
-            random_country = {
-                limit = {
-                    owns = 412
-                    NOT = { tag = THIS }
-                }
-                relation = { who = GER value = -100 }
-                leave_alliance = GER
-                casus_belli = {
-                    target = THIS
-                    type = cut_down_to_size
-                    months = 24
-                }
-                casus_belli = {
-                    target = THIS
-                    type = humiliate
-                    months = 24
-                }
-            }
-        }
-
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                badboy = 0.8
-            }
-        }
-    }
-
     purchase_spanish_pacific = {
         picture = treaty_signing
         potential = {
@@ -1089,7 +858,6 @@ political_decisions = {
         picture = marching_soldiers
         potential = {
             OR = {
-                tag = PRU
                 tag = NGF
             }
             any_owned_province = {
