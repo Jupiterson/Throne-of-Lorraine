@@ -1,41 +1,37 @@
 #Relations
 
-SIA = {
-    value = -200        #relation
-}
-
-SHA = {
-    value = 100       #relation
-}
+SIA = {value = -200 }
+LXA = {value = -150}
+SHA = {value = 100}
 
 leader = {
     name = "Tharrawaddy Min"
     type = land
     date = 1836.1.1
-    personality = balanced_p
-    background = armchair_general
+    personality = skilled 
+    background = nationalist
 }
 leader = {
     name = "Maha Bandula"
     type = land
     date = 1836.1.1
-    personality = heroic
-    background = gifted_administrator
-	prestige = 0.6
+    personality = efficient
+    background = adventurer
+	prestige = 0.1
 }
 leader = {
     name = "Kyauk Lon"
     type = land
     date = 1836.1.1
-    personality = efficient
-    background = school_of_offense
+    personality = gutsy
+    background = school_of_defense
 }
 leader = {
-    name = "Maung Gyi"
+    name = "Maha Hein"
     type = land
     date = 1836.1.1
     personality = indifferent
-    background = old_school
+    background = unqualified
 }
 leader = {
     name = "Maha Ne Myo"
@@ -105,7 +101,7 @@ army = {
 
 army = {
     name = "Army of Southern Burma"
-    location = 1333
+    location = 1330
     regiment = {
         name= "7. Brigade"
         type = irregular
@@ -127,19 +123,19 @@ army = {
     regiment = {
         name= "10. Brigade"
         type = irregular
-        home = 1336
+        home = 1330
     }
 
     regiment = {
         name= "11. Brigade"
         type = irregular
-        home = 1342
+        home = 1330
     }
 
     regiment = {
         name= "12. Brigade"
         type = irregular
-        home = 1342
+        home = 1330
     }
 
 }
