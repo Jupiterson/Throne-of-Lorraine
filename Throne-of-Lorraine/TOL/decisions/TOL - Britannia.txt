@@ -2,6 +2,16 @@ political_decisions = {
   form_britannia = {
         picture = reform_the_uk
         potential = {
+		    OR = {
+			    ai = no
+				OR = {
+			        AND = {
+			            NOT = { tag = SCO }
+				        NOT = { tag = WHA }
+					}
+				    has_country_flag = britannia_ai
+				}
+			}
             capital_scope = { continent = europe }
             NOT = { has_country_flag = post_colonial_country }
             is_culture_group = britannian
@@ -9,32 +19,12 @@ political_decisions = {
         }
 
         allow = {
-            prestige = 45
+            prestige = 50
             nationalism_n_imperialism = 1
             is_greater_power = yes
-            NOT = {
-                war_with = FRA
-                war_with = NET
-            }
-            OR = {               
-                IRE = {
-                    all_core = {
-                        OR = {
-                            owned_by = THIS
-                            owner = {
-                                in_sphere = THIS
-                                OR = {
-                                    is_vassal = no
-                                    vassal_of = THIS
-                                }
-                                war = no
-                                is_greater_power = no
-                            }
-                        }
-                    }
-                }
-            }
-            OR = {
+			is_disarmed = no
+            war = no
+            AND = {
                 ENG = {
                     all_core = {
                         OR = {
@@ -51,55 +41,63 @@ political_decisions = {
                         }
                     }
                 }
-                AND = {
-                    SCO = {
-                        all_core = {
-                            OR = {
-                                owned_by = THIS
-                                owner = {
-                                    in_sphere = THIS
-                                    OR = {
-                                        is_vassal = no
-                                        vassal_of = THIS
-                                    }
-                                    war = no
-                                    is_greater_power = no
+                SCO = {
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            owner = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
                                 }
+                                war = no
+                                is_greater_power = no
+                            }   
+                        }
+                    }
+                }                   
+                WHA = {
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            owner = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                }
+                                war = no
+                                is_greater_power = no
                             }
                         }
-                    }                   
-                                       
-                }
+                    }
+                }                       
             }
         }
 
         effect = {
             prestige = 20
-            all_core = {
-                add_core = ENG
-            }
-           IRE = {
-                all_core = {
+            SCO = {
+			    all_core = {
                     add_core = ENG
                 }
-            }
-           WHA = {
-                all_core = {
-                    add_core = ENG
-                }
-            }
-           ENL = {
-                all_core = {
-                    add_core = ENG
-                }
-            }
-			ENG = {
-				add_core = limit = {ENG_277}
-				add_core = limit = {ENG_280}
-				add_core = limit = {ENG_271}
-				add_core = limit = {ENG_266}
-				add_core = 253
 			}
+            IRE = {
+                all_core = {
+                    add_core = ENG
+                }
+            }
+            WHA = {
+                all_core = {
+                    add_core = ENG
+                }
+            }
+            ENL = {
+                all_core = {
+                    add_core = ENG
+                }
+            }
             change_tag = ENG
 			ENG = {
                 inherit = SCO
@@ -110,12 +108,14 @@ political_decisions = {
 		    ENG = {
                 inherit = UOW
             }
+			ENG = {
+                inherit = WHA
+            }
             add_accepted_culture = scottish
             add_accepted_culture = irish
             add_accepted_culture = british
-			add_accepted_culture + walesh
-            set_global_flag = britannia_united         
-                     
+			add_accepted_culture = welsh
+            set_global_flag = britannia_united                     
         }
         ai_will_do = { factor = 1 }
     }
@@ -124,76 +124,112 @@ political_decisions = {
 	claim_normandy = {
         picture = normandy
         potential = {
-            has_country_flag = anglo_heritage
+		    tag = ENG
+			has_country_flag = brittany_claimed
             NOT = { has_country_flag = williams_back }
         }
 
         allow = {
 		is_greater_power = yes
-        nationalism_n_imperialism = 1 
+		is_disarmed = no
+		war = no
+        revolution_n_counterrevolution = 1 
             all_core = {
                 owned_by = THIS
             }
-     
         }
 
         effect = {
-		badboy = 5
-         prestige = 15
-       set_country_flag = williams_back
+		    badboy = 10
+            prestige = 15
+            set_country_flag = williams_back
             FRA_418 = { add_core = THIS }
-			
-        }
+		}
 	}
 	
 	claim_brittany = {
         picture = brittany
         potential = {
-            has_country_flag = celtic_heritage
-            NOT = { has_country_flag = celtic_unions_one }
-        }
+            tag = ENG
+            NOT = { has_country_flag = brittany_claimed }
+		}
 
         allow = {
-		is_greater_power = yes
-        nationalism_n_imperialism = 1 
+		    is_greater_power = yes
+		    is_disarmed = no
+		    war = no
+            revolution_n_counterrevolution = 1 
+			naval_plans = 1
             all_core = {
                 owned_by = THIS
             }
-     
         }
 
         effect = {
-         prestige = 15
-		 badboy = 5
-       set_country_flag = celtic_unions_one
-            FRA_420 = { add_core = THIS }
-			
+            prestige = 15
+		    badboy = 7
+            set_country_flag = brittany_claimed
+			add_accepted_culture = breton
+            FRA_420 = { add_core = THIS }	
         }
 	}
 	
-	claim_galica = {
-        picture = galicia
+	reclaim_angevin_lands = {
+        picture = brittany
         potential = {
-            has_country_flag = celtic_heritage
-            NOT = { has_country_flag = celtic_unions_one }
-        }
+            tag = ENG
+			has_country_flag = williams_back
+            NOT = { has_country_flag = angevin_claimed }
+		}
 
         allow = {
-		is_greater_power = yes
-        nationalism_n_imperialism = 1 
+		    is_greater_power = yes
+		    is_disarmed = no
+		    war = no
+            mass_politics = 1 
             all_core = {
                 owned_by = THIS
             }
-     
         }
 
         effect = {
-         prestige = 15
-		 badboy = 5
-       set_country_flag = celtic_unions_one
-            SPA_474 = { add_core = THIS }
-			
+            prestige = 50
+		    badboy = 15
+            set_country_flag = angevin_claimed
+            FRA_435 = { add_core = THIS }
+            FRA_442 = { add_core = THIS }
+            FRA_458 = { add_core = THIS }			
         }
 	}
 	
+	french_kingdom_status = {
+        picture = brittany
+        potential = {
+            tag = ENG
+		    has_country_flag = angevin_claimed
+            NOT = { has_country_flag = dual_monarchy }
+		}
+
+        allow = {
+		    year = 1900
+		    is_greater_power = yes
+		    is_disarmed = no
+		    war = no
+            mass_politics = 1 
+            all_core = {
+                owned_by = THIS
+            }
+        }
+
+        effect = {
+            prestige = 25
+		    badboy = 5
+			add_accepted_culture = french
+			relation = {
+			    who = FRA
+	            value = -150
+            }
+            set_country_flag = dual_monarchy			
+        }
+	}
 }
