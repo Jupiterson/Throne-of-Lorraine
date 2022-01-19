@@ -3369,21 +3369,6 @@ country_event = {
         }
     }
 }
-#Institute the cultuurstelsel
-country_event = {
-    id = 211400
-    is_triggered_only = yes
-    title = "DIM_cultuurstelsel_event_title"
-    desc = "DIM_cultuurstelsel_event_desc"
-    picture = "DIM_cultuurstelsel_banner"
-    fire_only_once = yes
-
-    option = {
-        name = "EVTOPTA211400"
-        set_country_flag = cultuurstelsel
-        set_variable = { which = javanese_famine_counter value = 1 } #hack for Javanese Famine events, which are of course dependend on the cultuurstelsel.
-    }
-}
 
 #Abuse of the Herendienst
 province_event = {
