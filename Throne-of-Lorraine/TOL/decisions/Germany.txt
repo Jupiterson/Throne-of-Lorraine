@@ -656,6 +656,7 @@ political_decisions = {
     reclaim_poland_GER = {
         picture = become_poland
         potential = {
+			NOT = { has_country_flag = claim_on_poland }
             OR = {
                 tag = PRU
                 tag = NGF
@@ -696,6 +697,7 @@ political_decisions = {
 
         effect = {
             badboy = 5
+			set_country_flag = claim_on_poland
             random_owned = {
                 limit = {
                     OR = {

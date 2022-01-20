@@ -4,7 +4,7 @@ political_decisions = {
         picture = reino_unido
         potential = {
             OR = { 
-			    OR = {
+			    AND = {
 			        ai = no
 				    has_country_flag = scotlandbrazil_ai
 			    }
