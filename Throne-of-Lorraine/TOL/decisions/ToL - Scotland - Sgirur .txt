@@ -3,13 +3,14 @@ political_decisions = {
     unite_the_kingdom = {
         picture = reino_unido
         potential = {
-            OR = { 
-			    AND = {
-			        ai = no
-				    has_country_flag = scotlandbrazil_ai
-			    }
-                primary_culture = brazilian
-            }
+            OR = {
+			    tag = SCO
+                tag = BRZ
+			}
+			OR = {
+			    ai = no
+				has_country_flag = scotlandbrazil_ai
+			}
             NOT = { has_country_flag = Union_of_PTBR}
         }
 
@@ -49,7 +50,7 @@ political_decisions = {
             BRZ = { all_core = { add_core = UPB } }
 
             add_accepted_culture = brazilian
-
+			add_accepted_culture = scottish
             change_tag = UPB
 
             set_country_flag = Union_of_PTBR
