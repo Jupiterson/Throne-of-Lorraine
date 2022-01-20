@@ -2092,10 +2092,20 @@ political_decisions = {
     claim_fiume = {
         picture = fiume_port
         potential = {
-            tag = HUN
             owns = 773
-            778 = { NOT = { is_core = HUN } }
-            773 = { is_core = HUN }
+			AND = {
+				778 = { NOT = { is_core = HUN } }
+				778 = { NOT = { is_core = PHC } }
+				or = {
+					tag = HUN
+					tag = PHC
+				}
+				or = {
+					773 = { is_core = HUN }
+					773 = { is_core = PHC }
+				}
+			}
+            
         }
 
         allow = {
@@ -2104,7 +2114,18 @@ political_decisions = {
         }
 
         effect = {
-            778 = { add_core = HUN }
+			any_owned = {
+				limit = {
+					owner = { tag = HUN }
+				}
+				778 = { add_core = HUN }
+			}
+			any_owned = { 
+				limit = {
+					owner = { tag = PHC }
+				}
+				778 = { add_core = PHC }
+			}
             badboy = 1
         }
         ai_will_do = { factor = 1 }

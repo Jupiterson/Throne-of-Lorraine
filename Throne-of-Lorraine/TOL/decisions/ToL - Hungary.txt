@@ -2,7 +2,10 @@ political_decisions = {
     down_the_danube = {
 		picture = form_the_rcmp
 		potential = {
-			tag = HUN
+			or = {
+				tag = HUN
+				tag = PHC
+			}
 			NOT = { has_country_flag = down_the_danube }
 		}
 		allow = {
@@ -35,7 +38,10 @@ political_decisions = {
 	illyrian_union = {
         picture = greater_croatia_map
         potential = {
-            tag = HUN
+			or = {
+				tag = HUN
+				tag = PHC
+			}
             NOT = { has_country_flag = ill_union }
 			has_country_flag = illyrian_rev
         }
