@@ -20,7 +20,7 @@ CAN_46 = { 46 57 55 51 56 52 53 54 } #Southern Ontario
 
 CAN_50 = { 49 50 47 48 2594 } #Northern Ontario
 
-CAN_58 = { 58 65 62 61 63 64 66 67 } #Southern Quebec
+CAN_58 = { 58 65 62 61 63 64 66 67 250 3280 } #Southern Quebec
 
 CAN_60 = { 9 59 2593 2626 2592 } #Northern Quebec
 
@@ -86,37 +86,37 @@ USA_176 = { 173 174 175 176 } #Michigan
 
 USA_178 = { 178 179 180 183 182 181 228 } #Ohio
 
-USA_185 = { 184 185 186 187 } #Kentucky
+USA_185 = { } #Kentucky
 
-USA_188 = { 188 190 2556 } #Tennessee
+USA_188 = { 184 185 186 187 188 } #Tennessee
 
 USA_194 = { 192 193 189 194 140 } #Mississippi
 
-USA_196 = { 195 196 191 } #Alabama
+USA_196 = { 195 196 191 198 197 } #Alabama
 
-USA_200 = { 200 199 198 3284 197 } #Florida
+USA_200 = { 200 199 3284 } #Florida
 
-USA_201 = { 201 202 204 2555 } #Georgia
+USA_201 = { } #Georgia
 
-USA_205 = { 205 206 } #South Carolina
+USA_205 = { 201 202 204 2555 205 206 } #South Carolina
 
-USA_2556 = { 209 207 208 210 } #North Carolina
+USA_2556 = { 209 207 208 210 214 2556 190 } #North Carolina
 
-USA_211 = { 60 211 212 213 214 215 216 } #Virginia
+USA_211 = { 211 213 216 60 } #Virginia
 
-USA_218 = { 218 217 } #West Virginia
+USA_218 = { 218 217 215 } #West Virginia
 
-USA_219 = { 2146 220 219 222 } #Maryland
+USA_219 = { 2146 220 219 222 212 } #Maryland
 
 USA_223 = { 223 224 225 226 227 2627 } #Pennsylvania
 
 USA_231 = { } #New Jersey
 
-USA_232 = { 232 233 234 245 241 229 231 230 } #New York
+USA_232 = { 232 233 234 245 241 229 231 230 243 244 242 } #New York
 
 USA_243 = { } #Massachusets
 
-USA_247 = { 247 246 248 249 250 243 244 242 3280 } #New England
+USA_247 = { 247 246 248 249 } #New England
 
 AKI_235 = { 235 236 237 238 239 240 } #New Brandenburg
 
