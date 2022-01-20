@@ -492,7 +492,93 @@ country_event = {
 		}		
 	}
 }
-
+#Collapse of Lithuania
+country_event = {
+	id = 330009
+	title = "Flood9.t" 
+	desc = "Flood9.d"
+	picture = "averageorthodox"
+	
+	trigger = {
+		tag = LIT
+		NOT = { accepted_culture = ruthenyan }
+		NOT = { any_owned_province = { or = { region = RUS_360 region = RUS_707 } } }
+		NOT = { has_country_flag = lithuanian_collapse_discussion }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Our decline is complete..."
+		change_tag = BYE
+		any_owned = {
+			limit = {
+				is_core = EST
+			}
+		secede_province = EST
+		}
+		any_owned = {
+			limit = {
+				is_core = LAT
+			}
+		secede_province = LAT
+		}
+		any_owned = {
+			limit = {
+				is_core = UKR
+			}
+		secede_province = UKR
+		}
+		any_owned = {
+			limit = {
+				is_core = CRI
+			}
+		secede_province = CRI
+		}
+		any_owned = {
+			limit = {
+				is_core = POL
+			}
+		secede_province = POL
+		}
+		any_owned = {
+			limit = {
+				is_core = RUS
+			}
+		secede_province = RUS
+		}
+		POL = { country_event = 330010 }
+		RUS = { country_event = 330010 }
+		HUN = { country_event = 330010 }
+		CRI = { country_event = 330010 }
+		ai_chance = {
+			factor = 99
+		}
+	}
+	option = {
+		name = "No! We can recover from this!"
+		prestige = 1
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = lithuanian_collapse_discussion
+	}
+}
+#Major nations response
+country_event = {
+	id = 330010
+	title = "Flood10.t" 
+	desc = "Flood10.d"
+	picture = "averageorthodox"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Another rival falls."
+		prestige = 10
+	}
+}
 #A port in Azov
 country_event = {
 	id = 340001
