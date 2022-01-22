@@ -1,10 +1,10 @@
 political_decisions = {
 
-    amuldi_change_capital = {
+    amauldi_change_capital = {
     picture = diplo_annex
         potential = {
 			tag = USA
-            NOT = { has_country_flag = amuldi_change_capital }
+            NOT = { has_country_flag = amauldi_change_capital}
         }
 
         allow = {         
@@ -15,7 +15,7 @@ political_decisions = {
 
         effect = {
 			capital = 219
-			set_country_flag = amuldi_change_capital
+			set_country_flag = amauldi_change_capital
         }
 
         ai_will_do = {
