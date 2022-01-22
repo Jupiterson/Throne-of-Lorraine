@@ -1,0 +1,25 @@
+political_decisions = {
+
+    amuldi_change_capital = {
+    picture = diplo_annex
+        potential = {
+			tag = USA
+            NOT = { has_country_flag = amuldi_change_capital }
+        }
+
+        allow = {         
+            war = no
+            is_vassal = no
+			state_n_government = 1
+        }
+
+        effect = {
+			capital = 219
+			set_country_flag = amuldi_change_capital
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
