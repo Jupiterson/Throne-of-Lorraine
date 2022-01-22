@@ -6499,4 +6499,164 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	new_england_rename_usa = {
+        picture = gtfo
+        potential = {
+            NOT = { has_global_flag = new_eng_ren }
+			primary_culture = yankee
+            owns = 247
+            owns = 246
+            owns = 248
+			owns = 249
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            prestige = 5
+            set_global_flag = new_eng_ren
+			247 = { change_province_name = "Saureau"
+                    state_scope = { change_region_name = "Nouvelle France" }	
+					}
+			246 = { change_province_name = "Nouvelle Saarlouis" }
+			248 = { change_province_name = "Teutonique" }
+			249 = { change_province_name = "Banatique" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+    new_england_rename_aki = {
+        picture = gtfo
+        potential = {
+            has_global_flag = new_eng_ren
+			OR = {
+                primary_culture = akino_german
+				primary_culture = north_german
+				primary_culture = south_german
+				primary_culture = low_german
+				primary_culture = free_german
+				}
+            owns = 247
+            owns = 246
+            owns = 248
+			owns = 249
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            prestige = 5
+            clr_global_flag = new_eng_ren
+			247 = { change_province_name = "Neu Hamburg"
+                    state_scope = { change_region_name = "Neu Lübeck" }	
+					}
+			246 = { change_province_name = "Bierburg" }
+			248 = { change_province_name = "Klein Riga" }
+			249 = { change_province_name = "Bankenhausen" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	new_york_aki = {
+        picture = gtfo
+        potential = {
+            NOT = { has_global_flag = new_yor_ren }
+			OR = {
+                primary_culture = akino_german
+				primary_culture = north_german
+				primary_culture = south_german
+				primary_culture = low_german
+				primary_culture = free_german
+				}
+            owns = 232
+            owns = 233
+            owns = 234
+			owns = 245
+			owns = 241
+            owns = 229
+            owns = 231
+			owns = 230
+			owns = 243
+            owns = 244
+            owns = 242
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            prestige = 5
+            set_global_flag = new_yor_ren
+			232 = { change_province_name = "Neu Nanzig"
+                    state_scope = { change_region_name = "Südmark" }	
+					}
+			233 = { change_province_name = "Lange Insel" }
+			234 = { change_province_name = "Albanier" }
+			245 = { change_province_name = "Pittsfeld" }
+			241 = { change_province_name = "Artburg" }
+			229 = { change_province_name = "Nönäse" }
+			231 = { change_province_name = "Neu Berlin" }
+			230 = { change_province_name = "Trensin" }
+			243 = { change_province_name = "Boston" }
+			244 = { change_province_name = "Neu Tholey" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+    new_york_usa = {
+        picture = gtfo
+        potential = {
+            has_global_flag = new_yor_ren
+			primary_culture = yankee
+            owns = 232
+            owns = 233
+            owns = 234
+			owns = 245
+			owns = 241
+            owns = 229
+            owns = 231
+			owns = 230
+			owns = 243
+            owns = 244
+            owns = 242
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            prestige = 5
+            clr_global_flag = new_yor_ren
+			232 = { change_province_name = "Nouvelle Paris"
+                    state_scope = { change_region_name = "Nouvelle Paris" }	
+					}
+			233 = { change_province_name = "Long Isle" }
+			234 = { change_province_name = "Albanie" }
+			245 = { change_province_name = "Pits" }
+			241 = { change_province_name = "Artforte" }
+			229 = { change_province_name = "Nesais" }
+			231 = { change_province_name = "Camden" }
+			230 = { change_province_name = "Trenton" }
+			243 = { change_province_name = "Boston" }
+			244 = { change_province_name = "Nouvelle Montpellier" }
+			242 = { change_province_name = "Providence" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
