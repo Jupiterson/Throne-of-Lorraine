@@ -19,7 +19,11 @@ leader = {
 army = {
     name = "Bulgarian Army"
     location = 809
-
+    regiment = {
+        name= "1. khusarska diviziya"
+        type = hussar
+        home = 809
+    }
     regiment = {
         name= "1. pekhotna diviziya"
         type = infantry
