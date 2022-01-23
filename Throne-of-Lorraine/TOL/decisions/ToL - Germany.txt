@@ -46,7 +46,9 @@ political_decisions = {
               tag = PZN
               tag = UBD	
                 } 				 
-            NOT = { exists = GER }
+            NOT = { exists = GER 
+			        has_country_flag = joined_hre  
+					 }
         }
 
         allow = {

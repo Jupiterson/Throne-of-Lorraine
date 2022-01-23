@@ -442,12 +442,13 @@ centralize_power = {
 	 french_language_schooling = {
         picture = jesuites_school2
         potential = {
-            primary_culture = french
+            tag = FRA
             is_greater_power = yes
             capital = 425
             any_owned_province = { is_core = OCC }
             BRT = { exists = no }
-            NOT = { has_country_flag = enacted_french_schooling     }
+			BOR = { exists = no }
+            NOT = { has_country_flag = enacted_french_schooling  }
         }
 
         allow = {

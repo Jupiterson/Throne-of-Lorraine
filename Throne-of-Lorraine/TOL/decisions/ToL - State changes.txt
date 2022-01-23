@@ -168,6 +168,7 @@ political_decisions = {
         potential = {
             tag = FRZ
             war = no
+			NOT = { exists = FRA }
         }
 
         allow = {
@@ -182,6 +183,44 @@ political_decisions = {
             any_pop = {
                 limit = { has_pop_culture = french }
                 militancy = 4
+            }
+        }
+    }
+	
+	core_UOW = {
+        picture = enact_dual_monarchy
+        potential = {
+            tag = UOW
+            war = no
+			NOT = { exists = ENL }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            ENL = {
+                all_core = { remove_core = UOW }
+            }
+        }
+    }
+	
+	core_ENL = {
+        picture = enact_dual_monarchy
+        potential = {
+            tag = ENL
+            war = no
+			NOT = { exists = UOW }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            UOW = {
+                all_core = { remove_core = ENL }
             }
         }
     }
