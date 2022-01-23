@@ -59,3 +59,26 @@ country_event = {
 		add_accepted_culture = albanian
 	}
 }
+country_event = {
+       id = 24560
+    title = "We got free supplies for our war with the Ottomans!"
+    desc = "Idk who gave it to us but free stuff is free stuff."
+    picture = "bulgarian_parade"
+    trigger = {
+        tag = BUL
+        exists = BUL
+		NOT = { year = 1840 }
+    }
+   fire_only_once = yes
+
+    option = {
+        name = "Free Stuff?"
+		BUL = {
+            treasury = 20000
+            small_arms = 100
+            ammunition = 100
+            canned_food = 100
+            artillery = 100
+			}
+		}
+}
