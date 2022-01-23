@@ -1,0 +1,72 @@
+
+TUR = { value = -75 }
+leader = {
+    name = "Omer Vrioni"
+    type = land
+    date = 1820.1.1
+	personality = defiant
+    background = artillerist
+    prestige = 0.1
+}
+leader = {
+    name = "Omer Vrioni"
+    type = land
+    date = 1820.1.1
+	personality = inspiring
+    background = school_of_the_bayonet
+    prestige = 0.1
+}
+army = {
+    name = "Bulgarian Army"
+    location = 809
+
+    regiment = {
+        name= "1. pekhotna diviziya"
+        type = infantry
+        home = 809
+    }
+
+    regiment = {
+        name= "2. pekhotna diviziya"
+        type = infantry
+        home = 809
+    }
+
+    regiment = {
+        name= "3. pekhotna diviziya"
+        type = infantry
+        home = 810
+    }
+
+    regiment = {
+        name= "4. pekhotna diviziya"
+        type = infantry
+        home = 812
+    }
+
+    regiment = {
+        name= "5. pekhotna diviziya"
+        type = infantry
+        home = 818
+    }
+    regiment = {
+        name= "6. pekhotna diviziya"
+        type = infantry
+        home = 811
+    }
+    regiment = {
+        name= "1. artileriĭski divizion"
+        type = artillery
+        home = 814
+    }
+    regiment = {
+        name= "2. artileriĭski divizion"
+        type = artillery
+        home = 813
+    }
+    regiment = {
+        name= "3. artileriĭski divizion"
+        type = artillery
+        home = 813
+    }
+}
