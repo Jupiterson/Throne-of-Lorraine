@@ -1169,47 +1169,6 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-
-    greater_bulgaria = {
-        picture = greater_bulgaria
-        potential = {
-                tag = BUL
-            
-            NOT = { has_country_flag = greater_bulgaria_claimed }
-        }
-
-        allow = {
-            war = no
-            is_greater_power = yes
-            invention = manifest_destiny
-            invention = nostalgic_romanticism
-        #    government = fascist_dictatorship
-        }
-
-        effect = {
-            set_country_flag = greater_bulgaria_claimed
-            badboy = 15
-            TUR_805 = {
-                add_core = BUL
-            } #Southern Macedonia
-            TUR_803 = {
-                add_core = BUL
-            } #Southern Serbia
-            random_owned = {
-                limit = { owner = { NOT = { has_country_flag = bulgaria_exchange has_country_flag = eastern_rumelia_exchange } } }
-                TUR_860 = {
-                    add_core = BUL
-                } #Thrace
-            }
-            860 = {
-                remove_core = BUL
-            }
-          
-     
-        }
-        ai_will_do = { factor = 1 }
-    }
-
     centralize_ulster = {
         picture = ulster_scot
         potential = {
