@@ -516,7 +516,8 @@ country_event = {
 			limit = {
 				is_core = BYE
 			}
-		secede_province = BYE
+			secede_province = BYE
+		}
 		any_owned = {
 			limit = {
 				is_core = EST
@@ -547,11 +548,10 @@ country_event = {
 			}
 		secede_province = POL
 		}
-		RUS = { inherit = LIT }
-		POL = { country_event = 330010 }
+		POL = { country_event = 330011 }
 		RUS = { country_event = 330010 }
-		HUN = { country_event = 330010 }
-		CRI = { country_event = 330010 }
+		HUN = { country_event = 330011 }
+		CRI = { country_event = 330011 }
 		ai_chance = {
 			factor = 99
 		}
@@ -568,6 +568,21 @@ country_event = {
 #Major nations response
 country_event = {
 	id = 330010
+	title = "Flood10.t" 
+	desc = "Flood10.d"
+	picture = "averageorthodox"
+	
+	is_triggered_only = yes
+	
+	option = {
+		1016 = { add_core = RUS }
+		inherit = LIT
+		name = "Another rival falls."
+		prestige = 10
+	}
+}
+country_event = {
+	id = 330011
 	title = "Flood10.t" 
 	desc = "Flood10.d"
 	picture = "averageorthodox"
