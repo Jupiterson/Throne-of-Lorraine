@@ -200,8 +200,8 @@ political_decisions = {
         }
 
         effect = {
-            ENL = {
-                all_core = { remove_core = UOW }
+            UOW = {
+                all_core = { remove_core = ENL }
             }
         }
     }
@@ -219,8 +219,8 @@ political_decisions = {
         }
 
         effect = {
-            UOW = {
-                all_core = { remove_core = ENL }
+            ENL = {
+                all_core = { remove_core = UOW }
             }
         }
     }
@@ -234,6 +234,7 @@ political_decisions = {
         }
 
         allow = {
+		NOT = { has_country_flag = became_denmark }
             war = no
             OR = {
                 AND = {
@@ -252,6 +253,7 @@ political_decisions = {
         }
 
         effect = {
+	    	set_country_flag = became_denmark
             prestige = -20
             NOR = {
                 all_core = { remove_core = DNN }

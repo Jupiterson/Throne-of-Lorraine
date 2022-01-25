@@ -644,14 +644,14 @@ country_event = {
     trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
         any_pop = { 
-		average_militancy = 6
+		average_militancy = 7
 		has_pop_culture = illyrian
         OR = {	 	
 		location = 771
 	  	   }
 		}
 		any_pop = { 
-		average_militancy = 6
+		average_militancy = 7
 		has_pop_culture = illyrian
         OR = {	 	
 		location = 783

@@ -62,7 +62,10 @@ political_decisions = {
     equal_rule = {
         picture = first_vote_usa
         potential = {
+           		OR = {
             tag = PIR
+			tag = TEX
+			}
             year = 1860
             NOT = { has_country_modifier = equal_rule }
         }
@@ -81,7 +84,10 @@ political_decisions = {
         picture = embrace_minority
         potential = {
 			ai = no
+            		OR = {
             tag = PIR
+			tag = TEX
+			}
             NOT = { has_country_modifier = law_changed_by_force }
 			NOT = { has_country_flag = wealth_distribution_used }
         }
@@ -281,7 +287,10 @@ political_decisions = {
     accept_afros = {
         picture = embrace_minority
         potential = {
+		OR = {
             tag = PIR
+			tag = TEX
+			}
             NOT = { has_country_flag = accept_afros }
             year = 1865
         }
