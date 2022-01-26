@@ -1,4 +1,4 @@
-political_decisions = {	
+political_decisions = {
     colonize_kannata_aki = {
         picture = form_the_rcmp
         potential = {
@@ -166,6 +166,88 @@ political_decisions = {
         }
     }
 	
-
-	
+	#Arizonan Colonization
+	Arizonan_colonization = {
+		picture = tonkin_campaign
+		potential = {
+			tag = TEX
+			100 = { owned_by = HOP }
+		}
+		
+		allow = {
+			war = no
+			money = 5000
+			medicine = 1
+			strategic_mobility = 1
+			military_plans = 1
+		}
+		
+		effect = {
+			release_vassal = HOP
+			release_vassal = OOD
+			release_vassal = ZUN
+			release_vassal = NAV
+			casus_belli = {
+				target = HOP
+				type = establish_protectorate_casus_belli
+				months = 12
+			}
+			casus_belli = {
+				target = OOD
+				type = establish_protectorate_casus_belli
+				months = 12
+			}
+			casus_belli = {
+				target = ZUN
+				type = establish_protectorate_casus_belli
+				months = 12
+			}
+			casus_belli = {
+				target = NAV
+				type = establish_protectorate_casus_belli
+				months = 12
+			}
+			war = {
+				target = HOP
+				attacker_goal = {
+					casus_belli = establish_protectorate_casus_belli
+				}
+				defender_goal = {
+					casus_belli = status_quo
+				}
+				call_ally = yes
+			}
+			war = {
+				target = OOD
+				attacker_goal = {
+					casus_belli = establish_protectorate_casus_belli
+				}
+				defender_goal = {
+					casus_belli = status_quo
+				}
+				call_ally = yes
+			}
+			war = {
+				target = ZUN
+				attacker_goal = {
+					casus_belli = establish_protectorate_casus_belli
+				}
+				defender_goal = {
+					casus_belli = status_quo
+				}
+				call_ally = yes
+			}
+			war = {
+				target = NAV
+				attacker_goal = {
+					casus_belli = establish_protectorate_casus_belli
+				}
+				defender_goal = {
+					casus_belli = status_quo
+				}
+				call_ally = yes
+			}
+			prestige = 10
+		}
+	}
 }

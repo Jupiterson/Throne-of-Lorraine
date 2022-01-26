@@ -626,6 +626,14 @@ indian_lands = {
     icon = 1
 }
 
+new_states = {
+    immigrant_attract = 0.8
+    pop_consciousness_modifier = -0.5
+    pop_militancy_modifier = 0.-10
+    assimilation_rate = 0.8
+    icon = 1
+}
+
 #you_are_going_to_the_usa = {
 #    global_immigrant_attract = 0.5
 #    icon = 1
@@ -2607,6 +2615,12 @@ vancouver_boom = {
 
 america_new_world = {
     global_immigrant_attract = 0.75
+    global_population_growth = 0.005
+    icon = 17
+}
+
+open_territories = {
+    global_immigrant_attract = 2
     global_population_growth = 0.005
     icon = 17
 }
