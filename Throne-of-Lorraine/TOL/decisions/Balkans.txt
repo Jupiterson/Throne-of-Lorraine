@@ -2096,11 +2096,11 @@ political_decisions = {
 			AND = {
 				778 = { NOT = { is_core = HUN } }
 				778 = { NOT = { is_core = PHC } }
-				or = {
+				OR = {
 					tag = HUN
 					tag = PHC
 				}
-				or = {
+				OR = {
 					773 = { is_core = HUN }
 					773 = { is_core = PHC }
 				}

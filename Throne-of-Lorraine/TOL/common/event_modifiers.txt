@@ -629,9 +629,44 @@ indian_lands = {
 new_states = {
     immigrant_attract = 0.8
     pop_consciousness_modifier = -0.5
-    pop_militancy_modifier = 0.-10
+    pop_militancy_modifier = -0.10
     assimilation_rate = 0.8
     icon = 1
+}
+
+biobio_mining_reforms = {
+	factory_output = 0.05
+	factory_throughput = 0.10
+	factory_owner_cost = -0.15
+    pop_consciousness_modifier = 0.05
+    pop_militancy_modifier = 0.05
+    icon = 1
+}
+
+incan_industrial_reforms = {
+    factory_output = 0.1
+	factory_throughput = 0.15
+	factory_owner_cost = -0.25
+    pop_consciousness_modifier = 0.15
+    pop_militancy_modifier = 0.10
+	population_growth = 0.05
+    icon = 1
+}
+
+incan_reform_benefits_mining = {
+	population_growth = 0.01
+    immigrant_attract = 1.5
+	mine_rgo_eff = 0.2
+    mine_rgo_size = 1
+	icon = 11
+}
+
+incan_reform_benefits_farming = {
+	population_growth = 0.01
+    immigrant_attract = 1.5
+	mine_rgo_eff = 0.2
+    mine_rgo_size = 1
+	icon = 11
 }
 
 #you_are_going_to_the_usa = {
