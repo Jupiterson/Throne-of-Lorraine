@@ -156,5 +156,27 @@ political_decisions = {
        }
 		ai_will_do ={ factor = 1 }
     }
+	ottoman_factories = {
+        picture = byzantine_triumph
+        potential = {
+		tag = TUR
+        NOT = { has_country_flag = ottoman_factories }
+        }
+
+        allow = {
+            war = no			
+			prestige = 60
+			money = 30000
+			state_n_government = 1
+        }
+        effect = {
+		money = -25000
+		build_factory_in_capital_state = artillery_factory
+		build_factory_in_capital_state = small_arms_factory
+		build_factory_in_capital_state = ammunition_factory
+		build_factory_in_capital_state = machine_parts_factory
+       }
+		ai_will_do ={ factor = 1 }
+    }
 	
 	}
