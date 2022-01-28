@@ -106,3 +106,151 @@ country_event = {
 			  }
 			  }
 }
+
+#Irish Revolt
+country_event = {
+    id = 28015
+    title = "EVTNAME28015"
+    desc = "EVTDESC28015"
+    picture = "crete_revolt"
+	fire_only_once = yes
+
+    trigger = {
+	    tag = ENG
+	    NOT = { has_country_flag = irish_revolt }
+		any_pop = {
+		    has_pop_culture = irish
+	        average_militancy = 4
+        }
+		OR = {
+		    263 = { owned_by = THIS }
+			254 = { owned_by = THIS }
+		}
+        NOT = { exists = IRR }
+    }
+
+    mean_time_to_happen = {
+        months = 3
+        modifier = {
+            factor = 0.5
+            average_militancy = 7
+        }
+
+        modifier = {
+            factor = 0.5
+            has_recently_lost_war = yes
+        }
+    }
+	
+	option = {
+        name = "Well then..."
+		set_country_flag = irish_revolt
+        any_owned = {
+            limit = { is_core = IRR }
+            secede_province = IRR
+        }
+        diplomatic_influence = {
+            who = IRR
+            value = -400
+        }
+        casus_belli = {
+            target = IRR 
+            type = conquest
+            months = 12
+        }
+        war = {
+            target = IRR 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+		random = {
+		    chance = 0.2
+	        set_country_flag = irish_integration
+	    }
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+#Irish win
+country_event = {
+    id = 28016
+	fire_only_once = yes
+
+    trigger = {
+	    tag = IRR
+		war = no
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+	
+	option = {
+        name = "sium"
+		any_owned_province = {
+		    secede_province = IRE
+		}
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+#Britannia integrates Irish
+country_event = {
+    id = 28017
+	title = "EVTNAME28017"
+    desc = "EVTDESC28017"
+    picture = "crete_revolt"
+	fire_only_once = yes
+
+    trigger = {
+	    has_country_flag = irish_integration
+	    tag = ENG
+		war = no
+    }
+
+    mean_time_to_happen = {
+        days = 20
+    }
+	
+	option = {
+        name = "Integrate the Irish culture then."
+		add_accepted_culture = irish
+		any_pop = {
+		    limit = { 
+			    NOT = has_pop_culture = irish
+			}
+	        average_militancy = 4
+        }
+		any_pop = {
+		    limit = { 
+			    has_pop_culture = irish
+			}
+	        average_militancy = -2
+        }
+        ai_chance = {
+            factor = 70
+        }
+    }
+	option = {
+        name = "We will stick with our previous decision."
+		any_pop = {
+		    limit = { 
+			    NOT = has_pop_culture = irish
+			}
+	        average_militancy = -2
+        }
+		any_pop = {
+		    limit = { 
+			    has_pop_culture = irish
+			}
+	        average_militancy = 4
+        }
+        ai_chance = {
+            factor = 70
+        }
+    }
+}
