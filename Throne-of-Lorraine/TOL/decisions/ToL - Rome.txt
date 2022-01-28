@@ -278,7 +278,7 @@ form_byzantium = {
         potential = {
 		    is_culture_group = pan_roman
             BYZ = { exists = no }
-			NOT = { or = { tag = NIR tag = RME } }
+			NOT = { OR = { tag = NIR tag = RME } }
         }
 
         allow = {
