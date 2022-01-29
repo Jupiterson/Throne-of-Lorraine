@@ -177,6 +177,12 @@ political_decisions = {
 
         effect = {
             prestige = -20
+			any_owned = {
+                limit = {
+                    has_province_modifier = french_terror
+                }
+                remove_province_modifier = french_terror
+            }
             FRA = {
                 all_core = { add_core = FRZ }
             }

@@ -156,7 +156,6 @@ political_decisions = {
                 war_with = FRA
                 war_with = BOR
             }
-            OR = {
                 GER = {
                     all_core = {
                         OR = {
@@ -173,93 +172,7 @@ political_decisions = {
                         }
                     }
                 }
-                AND = {
-                    HNS = {
-                        all_core = {
-                            OR = {
-                                owned_by = THIS
-                                owner = {
-                                    in_sphere = THIS
-                                    OR = {
-                                        vassal_of = THIS
-                                    }
-                                    war = no
-                                    is_greater_power = no
-                                }
-                            }
-                        }
-                    }
-                    OR = {
-                        BAV = {
-                            is_greater_power = yes
-                            ai = yes
-                     
-                        }
-                        AND = {
-                            HNS = {
-                                ai = yes
-                            }
-                            BAV = {
-                                ai = yes
-                                is_greater_power = yes
-                            }
-                        }
-                        BAV = {
-                            ai = yes
-                            is_greater_power = no
-                            part_of_sphere = no
-                        }
-                        BAV = {
-                            all_core = {
-                                OR = {
-                                    owned_by = THIS
-                                    owner = {
-                                        in_sphere = THIS
-                                        OR = {
-                                            is_vassal = no
-                                            vassal_of = THIS
-                                        }
-                                        war = no
-                                        is_greater_power = no
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    WUR = {
-                        all_core = {
-                            OR = {
-                                owned_by = THIS
-                                owner = {
-                                    in_sphere = THIS
-                                    OR = {
-                                        is_vassal = no
-                                        vassal_of = THIS
-                                    }
-                                    war = no
-                                    is_greater_power = no
-                                }
-                            }
-                        }
-                    }
-                    BAD = {
-                        all_core = {
-                            OR = {
-                                owned_by = THIS
-                                owner = {
-                                    in_sphere = THIS
-                                    OR = {
-                                        is_vassal = no
-                                        vassal_of = THIS
-                                    }
-                                    war = no
-                                    is_greater_power = no
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            
         }
 
         effect = {
