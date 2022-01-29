@@ -53,13 +53,11 @@ political_decisions = {
                     add_core = CLT
                 }
             }
-
             IRE = {
                 all_core = {
                     add_core = CLT
                 }
             }
-
             SCO = {
                 all_core = {
                     add_core = CLT
@@ -76,6 +74,18 @@ political_decisions = {
                 }
             }
             change_tag = CLT
+			CLT = {
+                inherit = SCO
+            }
+			CLT = {
+                inherit = IRE
+            }
+		    CLT = {
+                inherit = WHA
+            }
+			CLT = {
+                inherit = IOM
+            }
             add_accepted_culture = irish
             add_accepted_culture = welsh
             add_accepted_culture = scottish
