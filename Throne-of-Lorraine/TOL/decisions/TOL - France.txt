@@ -190,6 +190,13 @@ political_decisions = {
                 consciousness = 9
                 militancy = 9
             }
+			
+			any_owned = {
+                limit = {
+                    has_province_modifier = french_terror
+                }
+                remove_province_modifier = french_terror
+            }
         }
 
         ai_will_do = { factor = 0.5 }
@@ -581,6 +588,13 @@ centralize_power = {
 								}
 								add_core = FRZ 
 							}
+							
+			any_owned = {
+                limit = {
+                    has_province_modifier = french_terror
+                }
+                remove_province_modifier = french_terror
+            }
         }
 
         ai_will_do = { factor = 1 }
