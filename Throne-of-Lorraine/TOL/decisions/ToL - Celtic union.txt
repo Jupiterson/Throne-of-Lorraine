@@ -53,13 +53,11 @@ political_decisions = {
                     add_core = CLT
                 }
             }
-
             IRE = {
                 all_core = {
                     add_core = CLT
                 }
             }
-
             SCO = {
                 all_core = {
                     add_core = CLT
@@ -76,40 +74,22 @@ political_decisions = {
                 }
             }
             change_tag = CLT
+			CLT = {
+                inherit = SCO
+            }
+			CLT = {
+                inherit = IRE
+            }
+		    CLT = {
+                inherit = WHA
+            }
+			CLT = {
+                inherit = IOM
+            }
             add_accepted_culture = irish
             add_accepted_culture = welsh
             add_accepted_culture = scottish
         }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-	
-	Claim_cornwall = {
-        potential = {
-            tag = CLT
-            NOT = { has_country_flag = cornwall_claimed }
-        }
-        allow = {
-		    war = no
-		    is_greater_power = yes
-            revolution_n_counterrevolution = 1 
-			is_disarmed = no
-            all_core = {
-                owned_by = THIS
-            }
-        }
-        effect = {
-            badboy = 5
-            prestige = 10
-            set_country_flag = cornwall_claimed
-            299 = {
-			    add_core = CLT
-			}	
-            3268 = {
-			    add_core = CLT
-			}
-			}
         ai_will_do = {
             factor = 1
         }
