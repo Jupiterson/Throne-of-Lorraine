@@ -16,6 +16,8 @@ political_decisions = {
             NOT = { has_country_flag = post_colonial_country }
             is_culture_group = britannian
             NOT = { exists = ENG }
+			NOT = { tag = CLT }
+			NOT = { tag = UPB }
         }
 
         allow = {
@@ -112,9 +114,15 @@ political_decisions = {
                 inherit = WHA
             }
             add_accepted_culture = scottish
-            add_accepted_culture = irish
             add_accepted_culture = british
 			add_accepted_culture = welsh
+			any_pop = {
+			    limit = {
+				    has_pop_culture = irish
+				}
+				consciousness = 10
+	            militancy = 10
+            }
             set_global_flag = britannia_united                     
         }
         ai_will_do = { factor = 1 }
