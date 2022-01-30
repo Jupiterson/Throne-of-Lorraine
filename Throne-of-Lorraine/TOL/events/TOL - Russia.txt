@@ -322,7 +322,7 @@ country_event = {
 		}
 		any_owned = { limit = { is_core = KIE } secede_province = RUS }
 		ai_chance = {
-			factor = 5
+			factor = 5	
 		}
 	}
 	
@@ -336,7 +336,7 @@ country_event = {
 			militancy = 1
 		}
         ai_chance = {
-            factor = 1
+            factor = 2
 			modifier = {
                 factor = 2
                 relation = { who = POL value = 50 }
