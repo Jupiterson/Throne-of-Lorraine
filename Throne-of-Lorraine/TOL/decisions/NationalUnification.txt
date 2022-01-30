@@ -379,11 +379,9 @@ political_decisions = {
             nationalism_n_imperialism = 1
             is_greater_power = yes
             war = no
-            ALS = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { vassal_of = THIS } war = no is_greater_power = no } } } }
-            OR = {
-                GER = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { vassal_of = THIS } war = no is_greater_power = no } } } }
+            GER = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { vassal_of = THIS } war = no is_greater_power = no } } } }
                 
-            }
+            
         }
 
         effect = {
@@ -405,7 +403,8 @@ political_decisions = {
             capital = 619
             add_accepted_culture = north_german
             add_accepted_culture = volga_german
-            add_accepted_culture = rheinlander
+			add_accepted_culture = south_german
+            add_accepted_culture = rhinlander
 			add_accepted_culture = low_german
             set_global_flag = 3hurrahs
             any_country = {

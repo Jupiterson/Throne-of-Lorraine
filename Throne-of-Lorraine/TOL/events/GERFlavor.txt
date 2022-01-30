@@ -1114,7 +1114,7 @@ country_event = {
         name = "EVT33037OPTA"
         badboy = 5
         set_country_flag = french_claimed_the_rhine
-        PRU = { set_country_flag = french_claimed_the_rhine }
+        LOR = { set_country_flag = french_claimed_the_rhine }
         any_country = {
             limit = {
                 is_greater_power = yes
@@ -1122,14 +1122,14 @@ country_event = {
             }
             leave_alliance = THIS
         }
-        PRU = { country_event = 99925 }
+        LOR = { country_event = 99925 }
         casus_belli = {
-            target = PRU
+            target = LOR
             type = acquire_any_state
             months = 6
         }
         casus_belli = {
-            target = PRU
+            target = LOR
             type = liberate_country
             months = 6
         }
@@ -1138,6 +1138,7 @@ country_event = {
                 is_greater_power = no
                 OR = {
                     primary_culture = north_german
+					primary_culture = rhinelander
                     primary_culture = south_german
                 }
             }
@@ -1304,10 +1305,9 @@ country_event = {
     major = yes
 
     trigger = {
-        tag = PRU
+        tag = HNS
         is_vassal = no
         ai = yes
-        NOT = { exists = HNS }  #former NGF
         NOT = { exists = GER }
         NOT = { exists = GCF }
         NOT = { year = 1890 }
@@ -1343,19 +1343,19 @@ country_event = {
 
     option = {
         name = "EVT33039OPTA"
-        HNS = { set_country_flag = formed_on_rhine_crisis }
+        GCF = { set_country_flag = formed_on_rhine_crisis }
         any_owned = {
             limit = {
                 is_core = GER
                 }
-            add_core = HNS
+            add_core = GCF
             remove_core = THIS
             }
-        change_tag = HNS
+        change_tag = GCF
         all_core = {
-            limit = { is_core = PRU }
-                remove_core = PRU
-                add_core = HNS
+            limit = { is_core = HNS }
+                remove_core = HNS
+                add_core = GCF
             }
         any_country = {
             limit = {
@@ -1375,7 +1375,6 @@ country_event = {
                     tag = UBD
                     tag = PRU
                     tag = HNS
-                    tag = LUX
                     capital_scope = { NOT = { is_core = GER } }
                     is_vassal = yes
                     }

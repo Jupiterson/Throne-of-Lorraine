@@ -28,47 +28,6 @@ political_decisions = {
         }
     }
 
-    confiscations_of_mendizabal = {
-        picture = confiscations_of_mendizabal
-        potential = {
-            OR = {
-                tag = SPA
-                tag = IBR
-            }
-            NOT = {
-                has_country_flag = mendizabal_confiscated
-            }
-        }
-
-        allow = {
-            ideological_thought = 1
-        }
-
-        effect = {
-            treasury = 250000
-            prestige = 10
-            relation = {
-                who = PAP
-                value = -50
-            }
-            any_pop = {
-                scaled_militancy = {
-                    ideology = conservative
-                    factor = 2
-                }
-                scaled_militancy = {
-                    issue = moralism
-                    factor = 4
-                }
-                dominant_issue = {
-                    value = pro_atheism
-                    factor = 0.1
-                }
-            }
-            set_country_flag = mendizabal_confiscated
-        }
-    }
-
     spanish_restoration = {
     picture = spanish_restoration
         potential = {

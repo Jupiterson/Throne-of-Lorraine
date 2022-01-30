@@ -47,6 +47,7 @@ maghera_expansion = {
         }
 
         effect = {
+		set_country_flag = can_ignore_cultural_core
            badboy = 6
 		   set_country_flag = schooling
 		   any_owned = { limit = { is_core = ILL } add_province_modifier = { name = croat_teacher duration = -1 } }

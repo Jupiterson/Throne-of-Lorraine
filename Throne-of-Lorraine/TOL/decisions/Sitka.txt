@@ -3639,7 +3639,41 @@ political_decisions = {
         }
     }
 	
-	   setup_terror_terror = {
+		 setup_freiland = {
+        potential = {
+            tag = TEX
+            NOT = { has_country_flag = land_free }
+        }
+        allow = {
+        }
+        effect = {
+        set_country_flag = land_free          						
+		TEX = {
+                add_country_modifier = {
+                    name = land_of_the_free
+                    duration = -1
+                }
+            }
+			
+			AKI = {
+                add_country_modifier = {
+                    name = segregation_and_rascism
+                    duration = -1
+                }
+            }
+			PIR = {
+                add_country_modifier = {
+                    name = land_of_the_free
+                    duration = -1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	 setup_terror_terror = {
         potential = {
             tag = FRA
             NOT = { has_country_flag = terror }
@@ -3647,10 +3681,15 @@ political_decisions = {
         allow = {
         }
         effect = {
-            set_country_flag = terror
-            			
+        set_country_flag = terror          						
+		FRA = {
+                add_country_modifier = {
+                    name = stubborn_nobility
+                    duration = -1
+                }
+            }
 	any_owned = { 
-	add_province_modifier = { name = french_terror duration = -1 } 
+	add_province_modifier = { name = french_terrorfrench_terror duration = -1 } 
 	}
         }
         ai_will_do = {

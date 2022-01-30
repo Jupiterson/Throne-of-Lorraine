@@ -399,7 +399,6 @@ country_event = {
             limit = {
                 owner = { primary_culture = north_german }
                 NOT = { exists = GER }
-                NOT = { exists = HNS }  #former NGF
                 exists = SGF
             }
             SGF = {
@@ -489,7 +488,6 @@ country_event = {
             limit = {
                 owner = { primary_culture = north_german }
                 NOT = { exists = GER }
-                NOT = { exists = HNS }  #former NGF
                 NOT = { exists = SGF }
             }
             any_country = {
@@ -553,7 +551,6 @@ country_event = {
                 }
                 NOT = { exists = GER }
                 NOT = { exists = SGF }
-                NOT = { exists = HNS }  #former NGF
             }
             any_country = {
                 limit = {
