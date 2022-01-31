@@ -147,7 +147,7 @@ political_decisions = {
                 is_culture_group = native_american
                 primary_culture = australian
                 primary_culture = akino_german
-                primary_culture = akino_german
+                primary_culture = pirate
             }
             OR = {
                 continent = north_america
@@ -172,7 +172,8 @@ political_decisions = {
             NOT = { citizenship_policy = residency }
             NOT = { religious_policy = moralism }
             OR = {
-                				government = democracy
+                government = democracy
+				government = pirate_republic
                 government = hanseatic
                 government = hms_government
                 government = constitutional_empire

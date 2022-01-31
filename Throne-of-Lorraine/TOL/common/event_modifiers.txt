@@ -4852,8 +4852,10 @@ french_terror = {
 #	war_exhaustion = 0.05
 	immigrant_push = 0.5
     local_RGO_output = -0.5
-    pop_consciousness_modifier = 0.10
-    pop_militancy_modifier = 0.10
+    pop_consciousness_modifier = 0.5
+    pop_militancy_modifier = 0.5
+	non_accepted_pop_consciousness_modifier = 0.1
+    non_accepted_pop_militancy_modifier = 0.1
     local_ruling_party_support = -0.80
     goods_demand = -0.05
     icon = 1
@@ -4881,4 +4883,23 @@ segregation_and_rascism = {
     global_immigrant_attract = -0.15
 	assimilation_rate = -0.025
     icon = 20
+}
+
+merchant_heaven = {
+    global_immigrant_attract = 0.50
+    global_population_growth = 0.0025
+	diplomatic_points_modifier = 0.2
+	research_points_modifier = 0.1
+	war_exhaustion = -0.25
+	goods_demand = 0.05
+    icon = 11
+}
+
+hre_member = {
+    global_population_growth = 0.0025
+	diplomatic_points_modifier = -0.1
+	research_points_modifier = 0.1
+	war_exhaustion = -0.1
+	cb_generation_speed_modifier = 0.75
+    icon = 17
 }

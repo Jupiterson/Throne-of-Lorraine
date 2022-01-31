@@ -3639,7 +3639,7 @@ political_decisions = {
         }
     }
 	
-		 setup_freiland = {
+   setup_freiland = {
         potential = {
             tag = TEX
             NOT = { has_country_flag = land_free }
@@ -3648,13 +3648,12 @@ political_decisions = {
         }
         effect = {
         set_country_flag = land_free          						
-		TEX = {
+	    	TEX = {
                 add_country_modifier = {
                     name = land_of_the_free
                     duration = -1
                 }
             }
-			
 			AKI = {
                 add_country_modifier = {
                     name = segregation_and_rascism
@@ -3672,6 +3671,196 @@ political_decisions = {
             factor = 1
         }
     }
+	
+	setup_merchants = {
+        potential = {
+            tag = HNS
+            NOT = { has_country_flag = merchant_heaven }
+        }
+        allow = {
+        }
+        effect = {
+        set_country_flag = merchant_heaven          						
+	    	HNS = {
+                add_country_modifier = {
+                    name = merchant_heaven
+                    duration = -1
+                }
+            }
+			VEN = {
+                add_country_modifier = {
+                    name = merchant_heaven
+                    duration = -1
+                }
+            }
+		
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	setup_hre = {
+        potential = {
+            tag = HNS
+            NOT = { has_country_flag = part_of_hre }
+        }
+        allow = {
+        }
+        effect = {
+        set_country_flag = part_of_hre          						
+	        BAD = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            NAS = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            FRM = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            HEK    = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            WUR = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            HES = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+			HNS = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            POM = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            BRN = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            MAG    = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            SAX = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            LOR = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+			 LIE = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            REU = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+			SWG = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            WLD = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            DOR = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            SWI    = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            LUX = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            SAL = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+	       ATB = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            HAN = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            ANH    = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+            BAV = {
+                add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }
+            }
+		
+		
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
 	
 	 setup_terror_terror = {
         potential = {

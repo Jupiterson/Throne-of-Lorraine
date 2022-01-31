@@ -1176,7 +1176,11 @@ country_event = {
         any_pop = {
 		has_pop_culture = belgican 
 		average_militancy = 5 
-#		location = { is_core = FIE }
+		location = { 
+		OR = { is_core = WLL
+               is_core = PIC	
+			   }
+		}
 		}
 		tag = BEL
         #war = no
