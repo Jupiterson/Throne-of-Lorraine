@@ -6,11 +6,6 @@ UOW = {
     value = 125
 }
 
-JAV = {
-    value = 400
-    military_access = yes
-}
-
 #India
 MAH = {
     value = 125
@@ -178,20 +173,68 @@ army = {
 }
 
 army = {
-    name = "K.N.I.L."
-    location = 1408
+    name = "1e Infanterie Divisie"
+    location = 387 #Brussels
     regiment = {
-        name = "1e Indische Brigade"
+        name= "1e Infanterie Brigade"
         type = infantry
-        home = 1413
+        home = 387 #Brussels
+    }
+	
+	regiment = {
+        name= "3e Cavalerie Brigade"
+        type = cuirassier
+        home = 391 #Hasselt
+    }
+	   
+    regiment = {
+        name= "1er Brigade de Cavalerie"
+        type = dragoon
+        home = 387 #Brussels
+    }
+	
+	regiment = {
+        name= "8eme Brigade d'Infanterie"
+        type = infantry
+        home = 387
+    }
+	
+	regiment = {
+        name= "4e Infanterie Brigade"
+        type = infantry
+        home = 390 #Antwerp
     }
 
     regiment = {
-        name = "Banisaren Korps"
+        name= "2e Infanterie Brigade"
         type = infantry
-        home = 1421
+        home = 388 #Bruges
+    }
+
+    regiment = {
+        name= "3e Infanterie Brigade"
+        type = infantry
+        home = 389 #Ghent
     }
 }
+
+
+navy = {
+    name = "Marine Royale"
+    location = 390
+
+    ship = {
+        name= "Congrès"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "Les Quatre Journées"
+        type = clipper_transport
+    }
+
+}
+
 
 navy = {
     name = "Koninklijke Marine"
