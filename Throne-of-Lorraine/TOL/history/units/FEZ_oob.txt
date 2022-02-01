@@ -5,7 +5,7 @@ leader = {
     name = "Ahmed Dlimi"
     type = land
     date = 1836.1.1
-    personality = calm
+    personality = defiant
     background = school_of_offense
 }
 
@@ -43,7 +43,13 @@ army = {
     }
 
     regiment = {
-        name= "Rabat Artillery"
+        name= "Rabat First Artillery"
+        type = artillery
+        home = 1685
+    }
+	
+	regiment = {
+        name= "Rabat Second Artillery"
         type = artillery
         home = 1685
     }

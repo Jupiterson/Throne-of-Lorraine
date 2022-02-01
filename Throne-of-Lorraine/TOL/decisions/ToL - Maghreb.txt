@@ -157,18 +157,89 @@ political_decisions = {
                     secede_province = THIS
                 }
             }
-			any_province = {
-				limit = {
-					region = MOR_1696
-					region = FRA_1775
-					region = FRA_1803
-				}
-				add_core = MOR
-            }
+			1696 = { add_core = MOR }
+			1773 = { add_core = MOR }
+			1774 = { add_core = MOR }
+			1716 = { add_core = MOR }
+			1722 = { add_core = MOR }
+			2609 = { add_core = MOR }
+			1801 = { add_core = MOR }
+			1802 = { add_core = MOR }
+			1803 = { add_core = MOR }
+			1804 = { add_core = MOR }
+			1805 = { add_core = MOR }
+			3430 = { add_core = MOR }
+			3431 = { add_core = MOR }
+			1782 = { add_core = MOR }
+			1781 = { add_core = MOR }
+			1775 = { add_core = MOR }
+			1776 = { add_core = MOR }
+			1777 = { add_core = MOR }
+			1778 = { add_core = MOR }
+			1779 = { add_core = MOR }
         }
 
         ai_will_do = { factor = 1 }
     }
+	
+	renovate_palace_of_marrakesh = {
+		picture = addis_ababa_building
+        potential = {
+            tag = MOR
+			NOT = { has_country_flag = marrakesh_renovated }
+            owns = 1690 #Marrakesh
+			ai = no
+        }
+
+        allow = {
+            money = 5000
+			war = no
+        }
+
+        effect = {
+			set_country_flag = marrakesh_renovated
+			money = -5000
+            capital = 1690
+            prestige = 5
+			1690 = {
+				fort = 2
+				add_province_modifier = {
+					name = european_military_mission
+					duration = 1825
+				}
+			}
+        }
+	}
+	
+	occupy_dakhla = {
+		picture = map_morocco
+        potential = {
+            tag = MOR
+			NOT = { has_country_flag = annexed_sahrawi }
+			has_country_flag = marrakesh_renovated
+            owns = 1696
+			1774 = { empty = yes }
+        }
+
+        allow = {
+            money = 5000
+			war = no
+        }
+
+        effect = {
+			set_country_flag = annexed_sahrawi
+			money = -5000
+            prestige = 10
+			1773 = {
+				secede_province = THIS
+				fort = 1
+			}
+			1774 = {
+				secede_province = THIS
+				fort = 1
+			}
+        }
+	}
 	
 	form_maghreb = {
         picture = form_maghreb

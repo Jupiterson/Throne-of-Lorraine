@@ -101,3 +101,92 @@ country_event = {
         set_country_flag = hasua
     }
 }
+
+#Morrocan civil war
+country_event = {
+    id = 201000 #Goods for armies
+    title = "Moroc0.t"
+    desc = "Moroc0.d"
+    fire_only_once = yes
+	picture = "supportwar"
+
+    trigger = {
+        tag = FEZ
+        NOT = { year = 1840 }
+    }
+
+    mean_time_to_happen = {
+		day = 7
+    }
+
+    option = {
+        name = "Now, to the south!"
+        small_arms = 400
+        regular_clothes = 400
+        canned_food = 500
+		artillery = 100
+		ammunition = 200
+    }
+}
+
+#Building Nouadhibou
+country_event = {
+    id = 202000 #colonize coastal Mauritania
+    title = "Moroc1.t"
+    desc = "Moroc1.d"
+    fire_only_once = yes
+	picture = "al_wajbah"
+
+    trigger = {
+        tag = MOR
+		civilized = yes
+		owns = 1774
+		1775 = { empty = yes }
+    }
+
+    mean_time_to_happen = {
+		months = 60
+    }
+
+    option = {
+        name = "The Berbers must be subjugated..."
+		prestige = 10
+        1775 = {
+            change_province_name = "Nouadhibou"
+			secede_province = THIS
+			fort = 1
+			naval_base = 1
+        }
+    }
+}
+#Conquest of inner Mauritania
+country_event = {
+    id = 203000 #colonize inner Mauritania
+    title = "Moroc2.t"
+    desc = "Moroc2.d"
+    fire_only_once = yes
+	picture = "arab_revolt"
+
+    trigger = {
+        tag = MOR
+		civilized = yes
+		owns = 1775
+		owns = 1776
+		1779 = { empty = yes }
+    }
+
+    mean_time_to_happen = {
+		months = 10
+    }
+
+    option = {
+        name = "The Sahel is our oyster!"
+		prestige = 10
+        1779 = { secede_province = THIS }
+		1781 = { secede_province = THIS }
+		1782 = { secede_province = THIS }
+		1801 = { secede_province = THIS }
+		3430 = { secede_province = THIS }
+		3431 = { secede_province = THIS }
+    }
+}
