@@ -1138,6 +1138,7 @@ country_event = {
 		name = "This is an opportunity we can't miss!"
 		set_country_flag = tuvan_provocation
 		prestige = 1
+		1067 = { add_core = TNT }
 		1068 = { add_core = TNT }
 		
 		QNG = { country_event = { id = 370001 days = 7 } }
@@ -1184,10 +1185,15 @@ country_event = {
 	option = {
 		name = "Punishing the Mongol Host will make the Buyeo learn their lesson!"
 		inherit = ALT
+		casus_belli = {
+			target = QNG
+			type = acquire_substate_region
+			months = 12
+		}
 		QNG = {
 			casus_belli = {
 				target = RUS
-				type = free_allied_cores
+				type = liberate_country
 				months = 12
 			}
 		}
@@ -1198,9 +1204,8 @@ country_event = {
 				state_province_id = 1079
 			}
 			defender_goal = {
-				casus_belli = free_allied_cores
+				casus_belli = liberate_country
 				country = TNT
-				state_province_id = 1068
 			}
 			call_ally = yes
 		}
