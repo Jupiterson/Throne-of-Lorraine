@@ -2,10 +2,16 @@
 FRA = {value = -50}
 
 army = {
-    name = "Armee von Luxemburg"
+    name = "Bischofs Armee"
     location = 575
     regiment = {
         name= "1. Infanterieregiment"
+        type = infantry
+        home = 575
+    }
+	
+	regiment = {
+        name= "XXVII. Linieninfanteriebrigade"
         type = infantry
         home = 575
     }

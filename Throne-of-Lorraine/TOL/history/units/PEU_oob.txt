@@ -82,3 +82,124 @@ army = {
     }
 
 }
+
+army = {
+    name = "Ejército de Chile"
+    location = 2324
+    regiment = {
+        name= "1. Brigada de artillería"
+        type = artillery
+        home = 2324
+    }
+
+    regiment = {
+        name= "1. Brigada de Infantería"
+        type = infantry
+        home = 2324
+    }
+
+    regiment = {
+        name= "2. Brigada de Infantería"
+        type = infantry
+        home = 2325
+    }
+
+    regiment = {
+        name= "3. Brigada de Infantería"
+        type = infantry
+        home = 2328
+    }
+
+    regiment = {
+        name= "1. Brigada de Caballería"
+        type = cuirassier
+        home = 2324
+    }
+}
+
+navy = {
+    name = "Chilean Navy"
+    location = 2325
+    ship = {
+        name = "Aquiles"
+        type = frigate
+    }
+
+    ship = {
+        name = "Voltaire"
+        type = frigate
+    }
+
+    ship = {
+        name = "Orbegoso"
+        type = frigate
+    }
+
+    ship = {
+        name = "Valparaiso"
+        type = frigate
+    }
+
+    ship = {
+        name = "Libertad"
+        type = frigate
+    }
+
+    ship = {
+        name = "1. Buque de transporte"
+        type = clipper_transport
+    }
+
+
+    ship = {
+        name = "2. Buque de transporte"
+        type = clipper_transport
+    }
+
+}
+
+army = {
+    name = "Ejército de Bolivia"
+    location = 2313 #Chuquisaca (Sucre)
+    regiment = {
+        name= "1. Brigada de Infanteria"
+        type = infantry
+        home = 2313
+    }
+
+    regiment = {
+        name= "2. Brigada de Infanteria"
+        type = infantry
+        home = 2310
+    }
+
+    regiment = {
+        name= "3. Brigada de Infanteria"
+        type = infantry
+        home = 2311
+    }
+}
+
+
+army = {
+    name = "Ejército de Ecuador"
+    location = 2279
+    regiment = {
+        name= "1. Brigada de Infantería"
+        type = infantry
+        home = 2279
+    }
+
+    regiment = {
+        name= "2. Brigada de Infantería"
+        type = infantry
+        home = 2279
+    }
+
+    regiment = {
+        name= "3. Brigada de Infantería"
+        type = infantry
+        home = 2283
+    }
+
+}
