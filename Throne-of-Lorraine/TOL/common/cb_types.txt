@@ -5161,11 +5161,8 @@ demand_concession_casus_belli = {
                 civilization_progress = 0.6
                 has_country_flag = post_colonial_country
             }
-            AND = {
-                tag = KOR
-                THIS = { primary_culture = japanese }
-            }
         }
+		NOT = { tag = QNG }
         civilized = no
         number_of_states = 2
         is_vassal = no
@@ -5382,11 +5379,8 @@ demand_concession_NI_casus_belli = {
                 civilization_progress = 0.6
                 has_country_flag = post_colonial_country
             }
-            AND = {
-                tag = KOR
-                THIS = { primary_culture = japanese }
-            }
         }
+		NOT = { tag = QNG }
         civilized = no
         number_of_states = 2
         is_vassal = no
