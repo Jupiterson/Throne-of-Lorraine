@@ -3,7 +3,6 @@ political_decisions = {
    picture = bulgarian_miracle
         potential = {
 			tag = BUL
-			has_country_flag = bulgaria_won
             NOT = { has_country_flag = bul_claim_macedonia }
         }
 
@@ -63,7 +62,6 @@ political_decisions = {
     picture = bul_emblem
         potential = {
 			tag = BUL
-			has_country_flag = bulgaria_won
             NOT = { has_country_flag = bulgaria_take_constantinople }
 			860 = { owned_by = TUR }
         }
@@ -89,9 +87,7 @@ political_decisions = {
     picture = first_bulgarian_empire
         potential = {
 			tag = BUL
-			has_country_flag = bulgaria_won
             NOT = { has_country_flag = bul_claim_romania_albania }
-			860 = { owned_by = TUR }
         }
 
         allow = {
