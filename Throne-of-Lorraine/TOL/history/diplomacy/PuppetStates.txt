@@ -551,14 +551,6 @@ substate = {
 #}
 
 
-#Russia - Bukei Horde
-vassal = {
-    first = RUS
-    second = AKH
-    start_date = 1801.1.1
-    end_date = 1865.1.1
-}
-
 
 #Ottoman Empire-Samos
 substate = {
@@ -753,15 +745,15 @@ vassal = {
 
 ##########################China
 #China - Qinghai
-substate = {
-    first = QNG
-    second = XBI
-    start_date = 1836.1.1
-    end_date = 1937.1.1
-}
+#substate = {
+#    first = QNG
+#    second = XBI
+#    start_date = 1836.1.1
+#    end_date = 1937.1.1
+#}
 
 #China - Xinjiang
-substate = {
+vassal = {
     first = QNG
     second = XIN
     start_date = 1836.1.1
@@ -769,12 +761,12 @@ substate = {
 }
 
 #China - Kashgaria
-vassal = {
-    first = QNG
-    second = KML
-    start_date = 1836.1.1
-    end_date = 1937.1.1
-}
+#vassal = {
+#    first = QNG
+#    second = KML
+#    start_date = 1836.1.1
+#    end_date = 1937.1.1
+#}
 
 #China - Tannu Tuva
 vassal = {
@@ -857,7 +849,7 @@ vassal = {
 #}
 
 # China/Guangxi
-vassal = {
+substate = {
     first = QNG
     second = GXI
     start_date = 1815.11.9
@@ -865,7 +857,7 @@ vassal = {
 }
 
 # China/Fujian
-vassal = {
+substate = {
     first = QNG
     second = FJN
     start_date = 1815.11.9
