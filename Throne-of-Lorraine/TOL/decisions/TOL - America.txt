@@ -19,9 +19,6 @@ political_decisions = {
 			9 = { add_core = AKI }
 			2626 = { add_core = AKI }
 			2593 = { add_core = AKI }
-			48 = { add_core = AKI }
-			47 = { add_core = AKI }
-			2594 = { add_core = AKI }
 			37 = { add_core = AKI }
 			2595 = { add_core = AKI }
             59 = { add_core = AKI }			
@@ -52,6 +49,7 @@ political_decisions = {
 			
         }
    }
+
    
 	colonize_kannata_vel = {
         picture = form_the_rcmp
@@ -80,6 +78,9 @@ political_decisions = {
 			2598 = { add_core = VEL }
 			6 = { add_core = VEL }			
 			7 = { add_core = VEL }
+			48 = { add_core = VEL }
+			47 = { add_core = VEL }
+			2594 = { add_core = VEL }
 			2629 = { add_core = VEL }
 			18 = { add_core = VEL }
 			2597 = { add_core = VEL }
@@ -89,6 +90,98 @@ political_decisions = {
 			VEL = { all_core = { limit = { empty = yes } secede_province = THIS } }
         }
     }
+	
+	
+	    form_gewesten = {
+        potential = {
+            OR = {
+                tag = VEL
+                tag = GEK
+            }
+            NOT = {
+                exists = VEP
+                has_global_flag = gewesten_formed
+            }
+        }
+
+        allow = {
+		 any_neighbor_country = {
+		  OR = {
+                tag = VEL
+				tag = GEK
+            }
+            war = no
+            nationalism_n_imperialism = 1
+            GEK = {
+                OR = {
+                    AND = {
+                        exists = yes
+                        war = no
+                        OR = {
+                            is_vassal = no
+                            vassal_of = THIS
+                        }
+                        OR = {
+                            part_of_sphere = no
+                            in_sphere = THIS
+                            sphere_owner = { is_sphere_leader_of = THIS }
+                            has_country_flag = newly_released_nation
+                        }
+                    }
+                    all_core = {
+                        owner = {
+                            war = no
+                        }
+                        OR = {
+                            owned_by = THIS
+                            owner = { in_sphere = THIS }
+                            owner = { has_country_flag = newly_released_nation }
+                        }
+                    }
+                }
+            }
+            VEL = {
+                OR = {
+                    AND = {
+                        exists = yes
+                        OR = {
+                            is_vassal = no
+                            vassal_of = THIS
+                        }
+                        OR = {
+                            part_of_sphere = no
+                            in_sphere = THIS
+                            sphere_owner = { is_sphere_leader_of = THIS }
+                            has_country_flag = newly_released_nation
+                        }
+                    }
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            owner = { in_sphere = THIS }
+                            owner = { has_country_flag = newly_released_nation }
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            set_global_flag = gewesten_formed
+            prestige = 10
+            VEL = { all_core = { add_core = VEP } }
+            GEK = { all_core = { add_core = VEP } }
+            add_accepted_culture = gek
+            add_accepted_culture = veldleuwer
+            change_tag = VEP
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
 	
 	claim_freiland = {
         picture = german_tirol
