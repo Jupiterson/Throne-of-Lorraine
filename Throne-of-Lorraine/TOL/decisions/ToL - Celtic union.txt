@@ -35,6 +35,51 @@ political_decisions = {
 			}
         }
         allow = {
+			SCO = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                            war = no
+                        }
+                        owner = {
+                            vassal_of = THIS
+                            war = no
+                        }
+                    }
+                }
+            }
+            IRE = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                            war = no
+                        }
+                        owner = {
+                            vassal_of = THIS
+                            war = no
+                        }
+                    }
+                }
+            }
+            WHA = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                            war = no
+                        }
+                        owner = {
+                            vassal_of = THIS
+                            war = no
+                        }
+                    }
+                }
+            }
             war = no
             prestige = 50
             is_disarmed = no
