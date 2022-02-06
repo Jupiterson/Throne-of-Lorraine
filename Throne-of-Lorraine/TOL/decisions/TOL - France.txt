@@ -197,7 +197,7 @@ political_decisions = {
                 }
                 remove_province_modifier = french_terror
             }
-			remove_country_modifier = stubborn_nobility
+			remove_country_modifier = nobility_fra
         }
 
         ai_will_do = { factor = 0.5 }
@@ -596,7 +596,7 @@ centralize_power = {
                 }
                 remove_province_modifier = french_terror
             }
-			remove_country_modifier = stubborn_nobility
+			remove_country_modifier = nobility_fra
         }
 
         ai_will_do = { factor = 1 }
@@ -664,6 +664,36 @@ centralize_power = {
         }
 
         ai_will_do = { factor = 1 }
+    }
+	
+	
+	french_renaissance = {
+        picture = british_propaganda
+        potential = {
+		OR = {
+            tag = FRZ
+			tag = BOR
+			tag = OCC
+			tag = BEL
+			tag = ARP
+			tag = VIC
+			}
+            war = no
+			NOT = { exists = FRA }
+			NOT = { has_global_flag = french_ren }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		    set_global_flag = french_ren
+            add_country_modifier = {
+                    name = french_renaissance
+                    duration = 10657
+                }
+        }
     }
    
 

@@ -2000,6 +2000,12 @@ political_decisions = {
 			any_owned = { 
 	        add_province_modifier = { name = french_terror duration = -1 } 
          	}
+			FRA = {
+			add_country_modifier = {
+                    name = nobility_fra
+                    duration = -1
+               }   
+            }			   
             relation = { who = WOL value = -400 }
             relation = { who = TOO value = -400 }
             badboy = 6.03

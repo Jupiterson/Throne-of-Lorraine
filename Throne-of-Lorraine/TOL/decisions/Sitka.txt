@@ -3640,7 +3640,9 @@ political_decisions = {
    setup_freiland = {
         potential = {
             tag = TEX
-            NOT = { has_country_flag = land_free }
+            NOT = { has_country_flag = land_free 
+			        year = 1837
+					}
         }
         allow = {
         }
@@ -3673,7 +3675,9 @@ political_decisions = {
 	setup_merchants = {
         potential = {
             tag = HNS
-            NOT = { has_country_flag = merchant_heaven }
+            NOT = { has_country_flag = merchant_heaven 
+			year = 1837
+			}
         }
         allow = {
         }
@@ -3701,7 +3705,9 @@ political_decisions = {
 	setup_hre = {
         potential = {
             tag = HNS
-            NOT = { has_country_flag = part_of_hre }
+            NOT = { has_country_flag = part_of_hre 
+			year = 1837
+			}
         }
         allow = {
         }
@@ -3860,29 +3866,29 @@ political_decisions = {
     }
 	
 	
-	 setup_terror_terror = {
-        potential = {
-            tag = FRA
-            NOT = { has_country_flag = terror }
-        }
-        allow = {
-        }
-        effect = {
-        set_country_flag = terror          						
-		FRA = {
-                add_country_modifier = {
-                    name = stubborn_nobility
-                    duration = -1
-                }
-            }
-	any_owned = { 
-	add_province_modifier = { name = french_terrorfrench_terror duration = -1 } 
-	}
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+#	 setup_terror_terror = {
+#        potential = {
+#            tag = FRA
+#            NOT = { has_country_flag = terror }
+#        }
+#        allow = {
+#        }
+#        effect = {
+#        set_country_flag = terror          						
+#        add_country_modifier = {
+#                    name = nobility_fra
+#                    duration = -1
+#               }
+#            
+#			
+#	any_owned = { 
+#	add_province_modifier = { name = french_terror duration = -1 } #
+#	}
+# #       }
+#        ai_will_do = {
+#            factor = 1
+#        }
+#    }
     treaty_of_washington = {
         picture = washington_treaty
         potential = {

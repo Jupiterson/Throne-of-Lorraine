@@ -1562,16 +1562,15 @@ country_event = {
     picture = "bedr_khan_massacres"
 
     trigger = {
-        tag = TUR
+        tag = PER
         OR = {
-            truce_with = EGY
-            EGY = { exists = no }
-            has_country_flag = egypt_limited_rule_agreed
+            truce_with = KHZ
+            KHZ = { exists = no }
+            has_country_flag = arab_incorparated
             owns = 917
         }
         war = no
         BHT = { exists = yes NOT = { has_country_flag = yazidi_kurdistan } }
-        EGY = { war = no }
         NOT = { year = 1860 }
         year = 1840
     }
@@ -1612,6 +1611,7 @@ country_event = {
 					tag = RDL
 					tag = MKN
 					tag = URM
+					tag = ASY
                 }
             }
             annex_to = BHT
@@ -1679,6 +1679,7 @@ country_event = {
 					tag = RDL
 					tag = MKN
 					tag = URM
+					tag = ASY
                 }
             }
             annex_to = BHT
@@ -1727,6 +1728,7 @@ country_event = {
                     tag = BTL
 					tag = RDL
 					tag = MKN
+					tag = ASY
 					tag = URM
                 }
             }

@@ -4850,10 +4850,10 @@ the_soldier_king = {
 french_terror = {
     immigrant_attract = -1.5
 #	war_exhaustion = 0.05
-	immigrant_push = 0.5
+#	immigrant_push = 0.5
     local_RGO_output = -0.5
-    pop_consciousness_modifier = 0.25
-    pop_militancy_modifier = 0.25
+    pop_consciousness_modifier = 0.15
+    pop_militancy_modifier = 0.15
 	non_accepted_pop_consciousness_modifier = 0.1
     non_accepted_pop_militancy_modifier = 0.1
     local_ruling_party_support = -0.80
@@ -4861,15 +4861,23 @@ french_terror = {
     icon = 1
 }
 
-stubborn_nobility = {
+#stubborn_nobility = {
+#    global_immigrant_attract = -0.75
+#    global_population_growth = -0.0025
+#	diplomatic_points_modifier = -0.1
+#	assimilation_rate = -0.1
+#	badboy = 0.1
+#	war_exhaustion = 0.5
+# #   icon = 20
+#}
+
+nobility_fra = {
     global_immigrant_attract = -0.75
-    global_population_growth = -0.005
+    global_population_growth = -0.0025
 	diplomatic_points_modifier = -0.1
-	assimilation_rate = -0.05
-	badboy = 0.1
-	war_exhaustion = 0.5
     icon = 20
 }
+
 
 land_of_the_free = {
     global_immigrant_attract = 0.75
@@ -4901,5 +4909,15 @@ hre_member = {
 	research_points_modifier = 0.05
 	war_exhaustion = -0.05
 	cb_generation_speed_modifier = 0.35
+    icon = 17
+}
+
+french_renaissance = {
+    global_population_growth = 0.0075
+	research_points_modifier = 0.1
+	pop_consciousness_modifier = -0.25
+    pop_militancy_modifier = -0.25
+	war_exhaustion = -0.05
+	goods_demand = 0.05
     icon = 17
 }

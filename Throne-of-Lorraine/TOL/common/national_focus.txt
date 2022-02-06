@@ -117,6 +117,29 @@ immigration_focus = {
             NOT = { state_scope = { any_owned_province = { NOT = { is_core = THIS } } } }
         }
     }
+	
+    resettle_focus = {
+        immigrant_attract = 0.1 #increases attractiveness to immigrants by 10 %
+		assimilation_rate = 0.20
+		immigrant_push = 0.25
+		pop_militancy_modifier = 0.5
+	    pop_consciousness_modifier = 0.5
+        icon = 2
+        limit = {
+		    owner = { NOT = { OR = { government = democracy government = hms_government } } }
+            owner = {
+                OR = {
+                    citizenship_policy = residency
+                    government = proletarian_dictatorship
+                    government = fascist_dictatorship
+					war_policy = jingoism
+                }
+            }
+            NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
+            owner = { number_of_states = 5 }
+			NOT = { is_colonial = yes }
+        }
+    }
 }
 
 diplomatic_focus = {
