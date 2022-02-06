@@ -174,12 +174,10 @@ political_decisions = {
 	core_FRZ = {
         picture = enact_dual_monarchy
         potential = {
-		    Or = {
             tag = FRZ
-			government = democracy
-			}
             war = no
 			NOT = { exists = FRA }
+			NOT = { has_global_flag = FRZ_cores_set }
         }
 
         allow = {
@@ -187,6 +185,7 @@ political_decisions = {
         }
 
         effect = {
+		    set_global_flag = FRZ_cores_set
             prestige = -20
 			any_owned = {
                 limit = {
@@ -212,6 +211,7 @@ political_decisions = {
             tag = UOW
             war = no
 			NOT = { exists = ENL }
+			NOT = { has_global_flag = UOW_won }
         }
 
         allow = {
@@ -219,6 +219,7 @@ political_decisions = {
         }
 
         effect = {
+		set_global_flag = UOW_won
             UOW = {
                 all_core = { remove_core = ENL }
             }
@@ -231,6 +232,7 @@ political_decisions = {
             tag = ENL
             war = no
 			NOT = { exists = UOW }
+			NOT = { has_global_flag = ENL_won }
         }
 
         allow = {
@@ -238,6 +240,7 @@ political_decisions = {
         }
 
         effect = {
+		set_global_flag = ENL_won
             ENL = {
                 all_core = { remove_core = UOW }
             }
