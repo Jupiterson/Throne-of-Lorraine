@@ -2,22 +2,27 @@
 #Under loose authority of Colombia 1836
 #Marabitanas (12000/3000 POPS) #now part of Brazil
 2401 = {
-    aristocrats = {
+    clergymen = {
         culture = amazonian
         religion = animist
-        size = 50
+        size = 200
+    }
+    artisans = {
+        culture = amazonian
+        religion = animist
+        size = 2000
     }
 
     soldiers = {
         culture = amazonian
         religion = animist
-        size = 25
+        size = 3000
     }
 
     farmers = {
         culture = amazonian
         religion = animist
-        size = 2925
+        size = 6100
     }
 
     clergymen = {
@@ -45,22 +50,27 @@
     }
 }
 3381 = {
-    aristocrats = {
+    clergymen = {
         culture = amazonian
         religion = animist
-        size = 50
+        size = 20
+    }
+    artisans = {
+        culture = amazonian
+        religion = animist
+        size = 900
     }
 
     soldiers = {
         culture = amazonian
         religion = animist
-        size = 25
+        size = 40
     }
 
     farmers = {
         culture = amazonian
         religion = animist
-        size = 2925
+        size = 4000
     }
 
     clergymen = {
@@ -204,24 +214,28 @@
 }
 #Tefe (4000/1000 POPS)
 2404 = {
+    clergymen = {
+        culture = amazonian
+        religion = animist
+        size = 200
+    }
     aristocrats = {
         culture = amazonian
         religion = animist
-        size = 10
+        size = 4200
     }
 
     soldiers = {
         culture = amazonian
         religion = animist
-        size = 15
+        size = 6000
     }
 
     farmers = {
         culture = amazonian
         religion = animist
-        size = 975
+        size = 15000
     }
-
     clergymen = {
         culture = amazonian
         religion = reformed
@@ -769,42 +783,16 @@
 }
 #Altamira (12000/3000 POPS)
 2600 = {
-    aristocrats = {
-        culture = brazilian
-        religion = reformed
-        size = 5
-    }
-
     clergymen = {
-        culture = brazilian
-        religion = reformed
-        size = 5
-    }
-
-    artisans = {
-        culture = brazilian
-        religion = reformed
-        size = 5
-    }
-
-    soldiers = {
-        culture = brazilian
-        religion = reformed
-        size = 5
-    }
-
-    farmers = {
-        culture = brazilian
-        religion = reformed
-        size = 20
-    }
-
-    farmers = {
         culture = amazonian
-        religion = reformed
-        size = 975
+        religion = animist
+        size = 300
     }
-
+    artisans = {
+        culture = amazonian
+        religion = animist
+        size = 5000
+    }
     aristocrats = {
         culture = amazonian
         religion = animist
@@ -814,61 +802,19 @@
     soldiers = {
         culture = amazonian
         religion = animist
-        size = 25
+        size = 3000
     }
 
     farmers = {
         culture = amazonian
         religion = animist
-        size = 1950
+        size = 16000
     }
 }
 #Mato Grosso Region (108000)
 #Under the rule of Brazil 1836
 #Dourados (44000/11000 POPS)
 2416 = {
-    aristocrats = {
-        culture = brazilian
-        religion = reformed
-        size = 225
-    }
-
-    bureaucrats = {
-        culture = brazilian
-        religion = reformed
-        size = 10
-    }
-
-    officers = {
-        culture = brazilian
-        religion = reformed
-        size = 15
-    }
-
-    clergymen = {
-        culture = brazilian
-        religion = reformed
-        size = 125
-    }
-
-    artisans = {
-        culture = brazilian
-        religion = reformed
-        size = 250
-    }
-
-    soldiers = {
-        culture = brazilian
-        religion = reformed
-        size = 75
-    }
-
-    farmers = {
-        culture = brazilian
-        religion = reformed
-        size = 1400
-    }
-
     clergymen = {
         culture = guarani
         religion = animist
@@ -896,12 +842,6 @@
 #Under loose authority of Brazil 1836
 #Vila Bela (28000/7000 POPS)
 2417 = {
-    clergymen = {
-        culture = brazilian
-        religion = reformed
-        size = 50
-    }
-
     artisans = {
         culture = amazonian
         religion = reformed
@@ -913,13 +853,6 @@
         religion = reformed
         size = 25
     }
-
-    farmers = {
-        culture = brazilian
-        religion = reformed
-        size = 1825
-    }
-
     aristocrats = {
         culture = amazonian
         religion = animist
@@ -935,46 +868,22 @@
     artisans = {
         culture = amazonian
         religion = animist
-        size = 250
+        size = 3000
     }
 
     soldiers = {
         culture = amazonian
         religion = animist
-        size = 50
+        size = 2000
     }
 
     farmers = {
         culture = amazonian
         religion = animist
-        size = 4575
+        size = 13000
     }
 }
 3380 = {
-    clergymen = {
-        culture = brazilian
-        religion = reformed
-        size = 50
-    }
-
-    artisans = {
-        culture = amazonian
-        religion = reformed
-        size = 100
-    }
-
-    soldiers = {
-        culture = amazonian
-        religion = reformed
-        size = 25
-    }
-
-    farmers = {
-        culture = brazilian
-        religion = reformed
-        size = 1825
-    }
-
     aristocrats = {
         culture = amazonian
         religion = animist
@@ -1007,30 +916,6 @@
 }
 #Cuiaba (28000/7000 POPS)
 2418 = {
-    clergymen = {
-        culture = brazilian
-        religion = reformed
-        size = 25
-    }
-
-    artisans = {
-        culture = brazilian
-        religion = reformed
-        size = 50
-    }
-
-    soldiers = {
-        culture = brazilian
-        religion = reformed
-        size = 25
-    }
-
-    farmers = {
-        culture = brazilian
-        religion = reformed
-        size = 900
-    }
-
     aristocrats = {
         culture = amazonian
         religion = animist
@@ -1093,30 +978,6 @@
 }
 #Corumba (8000/2000 POPS)
 2419 = {
-    clergymen = {
-        culture = brazilian
-        religion = reformed
-        size = 25
-    }
-
-    artisans = {
-        culture = brazilian
-        religion = reformed
-        size = 50
-    }
-
-    soldiers = {
-        culture = brazilian
-        religion = reformed
-        size = 25
-    }
-
-    farmers = {
-        culture = brazilian
-        religion = reformed
-        size = 400
-    }
-
     aristocrats = {
         culture = amazonian
         religion = animist
@@ -1157,30 +1018,6 @@
 #Under loose authority of Paraguay 1836
 #Igautemi (20000/5000 POPS) #now part of Brazil
 2420 = {
-    clergymen = {
-        culture = brazilian
-        religion = reformed
-        size = 50
-    }
-
-    artisans = {
-        culture = brazilian
-        religion = reformed
-        size = 100
-    }
-
-    soldiers = {
-        culture = brazilian
-        religion = reformed
-        size = 25
-    }
-
-    farmers = {
-        culture = brazilian
-        religion = reformed
-        size = 1825
-    }
-
     aristocrats = {
         culture = guarani
         religion = animist
@@ -1190,25 +1027,25 @@
     clergymen = {
         culture = guarani
         religion = animist
-        size = 75
+        size = 600
     }
 
     artisans = {
         culture = guarani
         religion = animist
-        size = 150
+        size = 2000
     }
 
     soldiers = {
         culture = guarani
         religion = animist
-        size = 25
+        size = 8000
     }
 
     farmers = {
         culture = guarani
         religion = animist
-        size = 2700
+        size = 10300
     }
 }
 #Goias Region (64000)
@@ -1290,30 +1127,6 @@
 #Under loose authority of Brazil 1836
 #Aganja (8000/2000 POPS)
 2422 = {
-    clergymen = {
-        culture = brazilian
-        religion = reformed
-        size = 25
-    }
-
-    artisans = {
-        culture = brazilian
-        religion = reformed
-        size = 50
-    }
-
-    soldiers = {
-        culture = brazilian
-        religion = reformed
-        size = 25
-    }
-
-    farmers = {
-        culture = brazilian
-        religion = reformed
-        size = 900
-    }
-
     aristocrats = {
         culture = amazonian
         religion = animist
@@ -1346,30 +1159,6 @@
 }
 #Palmas (12000/3000 POPS)
 2423 = {
-    clergymen = {
-        culture = brazilian
-        religion = reformed
-        size = 25
-    }
-
-    artisans = {
-        culture = brazilian
-        religion = reformed
-        size = 50
-    }
-
-    soldiers = {
-        culture = brazilian
-        religion = reformed
-        size = 25
-    }
-
-    farmers = {
-        culture = brazilian
-        religion = reformed
-        size = 900
-    }
-
     aristocrats = {
         culture = amazonian
         religion = animist
