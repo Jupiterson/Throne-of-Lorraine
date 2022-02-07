@@ -144,13 +144,14 @@ political_decisions = {
 			any_pop = { 
 			limit = {
             NOT = { has_pop_culture = turkish }
+			NOT = { has_pop_culture = ottoman }
         }
-        consciousness = 3 
+        consciousness = 2
 		} 
 		primary_culture = ottoman
 		add_accepted_culture = turkish
 		set_country_flag = ottoman_change_culture
-		random_owned = { limit = { is_core = TUR } assimilate = yes }
+		random_owned = { limit = { any_owned = TUR } assimilate = yes }
 
 		
        }
