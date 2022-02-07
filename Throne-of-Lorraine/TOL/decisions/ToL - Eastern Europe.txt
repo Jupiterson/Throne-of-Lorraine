@@ -69,6 +69,7 @@ political_decisions = {
 			NOT = { tag = PLC }
             NOT = { tag = PLR }
             NOT = { tag = PHC }
+			NOT = { tag = HUN }
         }
 
         allow = {
@@ -90,7 +91,9 @@ political_decisions = {
                     }
                 }
             }
-            POL = {
+	OR = {
+	    state_n_government = 1
+        POL = {
                 all_core = {
                     OR = {
                         owned_by = THIS
@@ -107,6 +110,8 @@ political_decisions = {
                     }
                 }
             }
+			
+		}
         }
         effect = {
             prestige = 30
@@ -298,7 +303,7 @@ political_decisions = {
                 }
             }
             change_tag = PLC
-            capital = 703
+            capital = 706
             any_greater_power = {
                 limit = {
                     OR = {

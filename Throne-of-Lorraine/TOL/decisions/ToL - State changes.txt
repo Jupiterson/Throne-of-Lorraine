@@ -174,7 +174,13 @@ political_decisions = {
 	core_FRZ = {
         picture = enact_dual_monarchy
         potential = {
+		    OR = {
             tag = FRZ
+			AND = { 
+			tag = FRA
+			government = democracy
+			}
+			}
             war = no
 			NOT = { exists = FRA }
 			NOT = { has_global_flag = FRZ_cores_set }
@@ -386,6 +392,10 @@ unite_saarland = {
         potential = {
             tag = PRO
             exists = OCC
+			NOT = { 
+			is_greater_power = yes
+			is_secondary_power = yes
+			}
 			NOT = { has_global_flag = Occ_annex_pro }
         }
 

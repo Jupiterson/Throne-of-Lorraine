@@ -126,7 +126,7 @@ immigration_focus = {
 	    pop_consciousness_modifier = 0.5
         icon = 2
         limit = {
-		    owner = { NOT = { OR = { government = democracy government = hms_government } } }
+		    owner = { NOT = { OR = { government = democracy } } }
             owner = {
                 OR = {
                     citizenship_policy = residency

@@ -1,4 +1,40 @@
 political_decisions = {
+
+    buy_neu_mark = {
+		picture = "catholic_hospital"
+		potential = {
+		AND = {
+			owns = 549
+			is_vassal = no
+			tag = HNS
+			}
+			NOT = { owns = 692 }
+			NOT = { has_country_flag = buy_neumark }
+		}
+		allow = {
+			war = no
+			money = 100000
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+		effect = {
+			random_country = {
+                limit = {
+                    owns = 692
+                }
+				country_event = {
+					id = 950020
+					days = 0
+				}
+            }
+			set_country_flag = buy_neumark
+		}
+	
+	}
+	
+	
     embraced_jews_in_hanse = {
     picture = embrace_the_jews
         potential = {

@@ -29,6 +29,74 @@
 #	}
 #}#
 
+	
+	#Buy Barth - offer received
+country_event = {
+	id = 950020
+	title = "Buy Neumark?"
+	desc = "Neu Mark has long been part of the Teutons for long, Its now up for sale!"
+	picture = "meeting3"
+	is_triggered_only = yes
+	option = {
+		name = "Yes"
+		relation = {
+			who = HNS
+			value = 50
+		}
+		treasury = 100000
+		any_country = {
+			limit = { tag = HNS }
+			country_event = {
+				id = 950021
+				days = 0
+			}
+		}
+	}
+	option = {
+		name = "No"
+		relation = {
+			who = HNS
+			value = -5
+		}
+		any_country = {
+			limit = { tag = HNS }
+			country_event = {
+				id = 950022
+				days = 0
+			}
+		}
+	}
+}
+#Buy Barth - offer accepted
+country_event = {
+	id = 950021
+	title = "Neumark is Ours!"
+	desc = "Neu Mark has now been integrated into our Nation"
+	picture = "meeting3"
+	is_triggered_only = yes
+	option = {
+		name = "Huzzah"
+		treasury = -100000
+		692 = { 
+			secede_province = HNS 
+			remove_core = FROM 
+		}
+		prestige = 20
+	}
+}
+#Buy Barth - offer rejected
+country_event = {
+	id = 950022
+	title = "Neumark won't be ours..."
+	desc = "The Teutons declined our great offer, their mistake!"
+	picture = "meeting3"
+	is_triggered_only = yes
+	option = {
+		name = "Pity"
+		prestige = -5
+	}
+}
+
 country_event = {
 
     id = 40004
