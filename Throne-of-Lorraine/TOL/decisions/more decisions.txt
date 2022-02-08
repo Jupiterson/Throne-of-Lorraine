@@ -44,7 +44,7 @@ political_decisions = {
             factor = 1
         }
     }
-    outside_form_italy = {
+   outside_form_italy = {
         picture = form_italy
         potential = {
             NOT = {
@@ -112,6 +112,9 @@ political_decisions = {
                     OR = {
                         primary_culture = north_italian
                         primary_culture = south_italian
+                        primary_culture = central_italian
+                        primary_culture = venetian
+			primary_culture = sicilian
                     }
                     in_sphere = THIS
                 }
@@ -161,6 +164,40 @@ political_decisions = {
             AUS_734 = { secede_province = ITA }    #Trent
             AUS_736 = { secede_province = ITA }    #Littoral
             AUS_780 = { secede_province = ITA }    #Dalmatia
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    outside_italia_irredenta_ITS = {
+        potential = {
+            NOT = {
+                tag = AUS
+                tag = KUK
+                tag = YUG
+            }
+            is_greater_power = yes
+            exists = ITS
+            ITS = {    vassal_of = THIS }
+            OR = {
+                AUS_729 = { owned_by = THIS }    #Venetia
+                AUS_734 = { owned_by = THIS }    #Trent
+                AUS_736 = { owned_by = THIS }    #Littoral
+                AUS_780 = { owned_by = THIS }    #Dalmatia
+            }
+        }
+        allow = {
+            relation = {
+                who = ITS
+                value = 150
+            }
+        }
+
+        effect = {
+            AUS_729 = { secede_province = ITS }    #Venetia
+            AUS_734 = { secede_province = ITS }    #Trent
+            AUS_736 = { secede_province = ITS }    #Littoral
+            AUS_780 = { secede_province = ITS }    #Dalmatia
         }
         ai_will_do = {
             factor = 1
