@@ -144,4 +144,54 @@ centralize_ulster = {
             factor = 1
         }
     }
+	
+	## gaelic larp
+	gaelic_societies = {
+        picture = madnobles
+        potential = {
+            tag = SCO
+            NOT = { has_country_flag = gaelic_societies}
+        }
+
+        allow = {
+            romanticism = 1
+        }
+
+        effect = {
+		    add_country_modifier = {
+                    name = gaelic_societies
+                    duration = -1
+            }
+            set_country_flag = gaelic_societies
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	gaelic_english_bilinguism = {
+        picture = madnobles
+        potential = {
+            tag = SCO
+			has_country_flag = gaelic_societies
+            NOT = { has_country_flag = gaelic_english_bilinguism}
+        }
+
+        allow = {
+            positivism = 1
+        }
+
+        effect = {
+		    add_country_modifier = {
+                    name = gaelic_english_bilinguism
+                    duration = -1
+            }
+            set_country_flag = gaelic_english_bilinguism
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }

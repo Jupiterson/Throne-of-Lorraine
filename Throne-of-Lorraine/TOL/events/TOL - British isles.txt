@@ -146,7 +146,7 @@ country_event = {
         name = "Well then..."
 		set_country_flag = irish_revolt
         any_owned = {
-            limit = { is_core = IRR }
+            limit = { is_core = IRE }
             secede_province = IRR
         }
         diplomatic_influence = {
@@ -163,6 +163,7 @@ country_event = {
             attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = status_quo }
         }
+		IRE = country_event = 28018
 		random = {
 		    chance = 0.2
 	        set_country_flag = irish_integration
@@ -251,6 +252,56 @@ country_event = {
         }
         ai_chance = {
             factor = 70
+        }
+    }
+}
+
+#Ireland intervenes
+country_event = {
+    id = 28018
+	title = "EVTNAME28018"
+    desc = "EVTDESC28018"
+    picture = "crete_revolt"
+	is_triggered_only = yes
+	
+	option = {
+        name = "We have to defend our brothers at all costs."
+		war = {
+	        target = SCO
+			attacker_goal = { casus_belli = [casus belli] }
+			defender_goal = { casus_belli = [casus belli] }
+			call_ally = no
+		}
+		random = {
+		    chance = 0.25
+			relation = {
+		        who = SCO
+			    value = -75
+		    }
+		}
+        ai_chance = {
+            factor = 25
+        }
+    }
+	option = {
+        name = "Secretly give them supplies."
+		money = -10000
+		IRR = {
+            small_arms = 300
+            ammunition = 300
+		}
+        ai_chance = {
+            factor = 50
+        }
+    }
+	option = {
+        name = "We can't do nothing."
+		relation = {
+		    who = SCO
+			value = 25
+		}
+        ai_chance = {
+            factor = 25
         }
     }
 }
