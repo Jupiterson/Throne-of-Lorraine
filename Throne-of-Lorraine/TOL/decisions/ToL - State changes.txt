@@ -175,18 +175,20 @@ political_decisions = {
         picture = enact_dual_monarchy
         potential = {
 		    OR = {
-            tag = FRZ
-			AND = { 
+		    	AND = {
+               tag = FRZ
+		    	NOT { exists = FRA }
+		     	}
+	   		AND = { 
 			tag = OCC
 			has_global_flag = occ_chose_violence
 			}
-			AND = { 
-			tag = FRA
-			government = democracy
-			}
+		    	AND = { 
+		    	tag = FRA
+	    		government = democracy
+		    	}
 			}
             war = no
-			NOT = { exists = FRA }
 			NOT = { has_global_flag = FRZ_cores_set }
         }
 
