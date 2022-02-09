@@ -122,14 +122,14 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    build_the_st_petersburg_moscow_railway = { #Saint Petersburg–Moscow Railway
+    build_the_novgorod_smolensk_railway = { #Novgorod_Smolensk Railway
         picture = whistlestop_tour
         potential = {
             tag = RUS
-            owns = 994
-            owns = 1008
+            owns = 943
+            owns = 1007
             owns = 1003
-            NOT = { has_global_flag = build_the_smr }
+            NOT = { has_global_flag = build_the_nsr }
         }
         allow = {
             money = 30000
@@ -137,20 +137,16 @@ political_decisions = {
                 early_railroad = 1
                 year = 1842
             }
-            owns = 994
-            owns = 1008
-            owns = 1003
         }
         effect = {
-            set_global_flag = build_the_smr
+            set_global_flag = build_the_nsr
             treasury = -30000
             994 = { infrastructure = 2 }
-            1003 = { infrastructure = 2 }
-            1005 = { infrastructure = 2 }
-            1000 = { infrastructure = 2 }
-            1009 = { infrastructure = 2 }
-            998 = { infrastructure = 2 }
-            1008 = { infrastructure = 2 }
+            943 = { infrastructure = 2 }
+            1007 = { infrastructure = 2 }
+            3419 = { infrastructure = 2 }
+            1006 = { infrastructure = 2 }
+            999 = { infrastructure = 2 }
         }
 
         ai_will_do = { factor = 1 }
