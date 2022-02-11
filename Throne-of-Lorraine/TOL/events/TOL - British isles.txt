@@ -118,9 +118,11 @@ country_event = {
     trigger = {
 	    tag = ENG
 	    NOT = { has_country_flag = irish_revolt }
-		any_pop = {
-		    has_pop_culture = irish
-	        average_militancy = 4
+		any_pop = { 
+		    limit = { 
+			    has_pop_culture = irish
+	            average_militancy = 4 
+			}
         }
 		OR = {
 		    263 = { owned_by = THIS }
@@ -177,6 +179,8 @@ country_event = {
 #Irish win
 country_event = {
     id = 28016
+	title = "ireland annexes the revolt"
+    desc = "amogus"
 	fire_only_once = yes
 
     trigger = {
@@ -268,8 +272,8 @@ country_event = {
         name = "We have to defend our brothers at all costs."
 		war = {
 	        target = SCO
-			attacker_goal = { casus_belli = [casus belli] }
-			defender_goal = { casus_belli = [casus belli] }
+			attacker_goal = { casus_belli = liberate_country country = IRR }
+			defender_goal = { casus_belli = humiliate_no_infamy }
 			call_ally = no
 		}
 		random = {
