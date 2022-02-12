@@ -1,5 +1,61 @@
 political_decisions = {
 
+
+	greater_saarland = {
+        picture = normandy_mines
+        potential = {
+		tag = SAA
+            NOT = { has_country_flag = saar_stzronk }
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+		prestige = 50
+     
+        }
+
+        effect = {
+		prestige = 45
+		set_country_flag = saar_stzronk
+        badboy = 5	   
+	    572 = { add_core = THIS }
+	    412 = { add_core = THIS }
+		397 = { add_core = THIS }		
+        }
+   }
+   
+   saarempire = {
+        picture = normandy_mines
+        potential = {
+		tag = SAA
+            NOT = { has_country_flag = saar_stzronk }
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+		prestige = 50
+     
+        }
+
+        effect = {
+		prestige = 45
+		set_country_flag = saar_stzronk
+        badboy = 5	   
+	    571 = { add_core = THIS }
+	    3377 = { add_core = THIS }
+		575 = { add_core = THIS }
+        570 = { add_core = THIS }
+	    574 = { add_core = THIS }
+		576 = { add_core = THIS }	
+        409 = { add_core = THIS }		
+        }
+   }
+
+
 	force_boehmen = {
 		picture = german_confederation
 		potential = {

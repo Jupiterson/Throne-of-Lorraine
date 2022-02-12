@@ -170,6 +170,7 @@ country_event = {
     picture = "Demonstration"
 
     trigger = {
+	NOT = { tag = JAN }
         average_militancy = 8
         nationalvalue = nv_liberty
     }
@@ -434,6 +435,7 @@ country_event = {
     picture = "Demonstration"
 
     trigger = {
+	    NOT = { tag = JAN }
         nationalvalue = nv_liberty
         OR = {
             government = presidential_dictatorship

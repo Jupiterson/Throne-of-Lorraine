@@ -9,7 +9,7 @@ political_decisions = {
                     is_vassal = yes
                 }
                 AND = {
-                    tag = UBD
+#                    tag = UBD
                     NOT = { vassal_of = RUS }
                     OR = {
                         in_sphere = GER
@@ -458,7 +458,7 @@ political_decisions = {
             is_vassal = no
             OR = {
                 government = colonial_company
-#				government = hanseatic
+				government = hanseatic
                 government = dominion
             }
             NOT = {
@@ -544,6 +544,24 @@ political_decisions = {
                     }
                 }
                 owner = { government = hms_government }
+            }
+			
+			random_owned = {
+                limit = {
+                    owner = {
+                        OR = {
+                            tag = POM
+							tag = HAN
+							tag = MST
+							tag = MEC
+							tag = MAG
+							tag = SWH
+							tag = DZG
+							tag = HNS
+                        }
+                    }
+                }
+                owner = { government = democracy }
             }
         }
 
