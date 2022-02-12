@@ -3146,7 +3146,7 @@ country_event = {
 		NOT = { tag = TMT }
 		NOT = { tag = TKG }
 		NOT = { has_country_flag = ghost_country }
-		NOT = { D24 = { exists = yes } }
+		NOT = { D05 = { exists = yes } }
 	}
 	
 	mean_time_to_happen = {
@@ -3160,22 +3160,22 @@ country_event = {
 				is_colonial = yes
 			}
 			any_owned = {
-				add_core = D24
+				add_core = D05
 			}
 		}
 		any_owned = {
 			limit = {
-				is_core = D24
+				is_core = D05
 			}
-			secede_province = D24
+			secede_province = D05
 		}
-		create_vassal = D24
-		inherit = D24
+		create_vassal = D05
+		inherit = D05
 		any_owned = {
 			limit = {
-				is_core = D24
+				is_core = D05
 			}
-			remove_core = D24
+			remove_core = D05
 		}
 	}
 }
