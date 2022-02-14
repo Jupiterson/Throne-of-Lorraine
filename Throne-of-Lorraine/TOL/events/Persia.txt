@@ -761,16 +761,18 @@ country_event = {
         war = no
         tag = TUR
         NOT = {
-            exists = RDL
-            exists = MKN
-            exists = BNB
-            exists = BTL
-            exists = BHT
-            exists = BDN
+			OR = {
+				exists = RDL
+				exists = MKN
+				exists = BNB
+				exists = BTL
+				exists = BHT
+				exists = BDN
+			}
         }
     }
 
-    mean_time_to_happen = { months = 1 }
+    mean_time_to_happen = { day = 1 }
     fire_only_once = yes
 
     option = {

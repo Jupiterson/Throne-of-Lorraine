@@ -586,6 +586,8 @@ country_event = {
         badboy = -2
         relation = { who = FROM value = 50 }
         prestige = 5
+		890 = { remove_core = PER }
+		892 = { remove_core = PER }
         all_core = {
             limit = { is_core = PER }
             remove_core = TUR
@@ -596,17 +598,23 @@ country_event = {
                 remove_core = PER
             }
         }
+		2548 = { secede_province = TUR }
         1118 = { secede_province = PER }
         1109 = { secede_province = PER }
         1110 = { secede_province = PER }
         1111 = { secede_province = PER }
-        924 = { secede_province = TUR }
-        925 = { secede_province = TUR }
-        924 = { secede_province = TUR }
+		1117 = { secede_province = PER }
+		3352 = { secede_province = PER }
+		3353 = { secede_province = PER }
+        923 = { secede_province = PER }
+        924 = { secede_province = PER }
+        925 = { secede_province = PER }
+		928 = { secede_province = PER }
         890 = { secede_province = TUR }
         891 = { secede_province = TUR }
         892 = { secede_province = TUR }
         2414 = { secede_province = TUR }
+		3294 = { secede_province = TUR }
         THIS = {
             relation = {
                 who = TUR

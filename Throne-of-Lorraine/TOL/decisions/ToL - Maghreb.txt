@@ -378,4 +378,199 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 modifier = { factor = 0 badboy = 0.7 } }
     }
+	
+	the_tunisian_hinterlands = {
+        picture = tunisia_map
+        potential = {
+			NOT = { has_global_flag = tunisia_claimed }
+            owns = 1725
+			NOT = {
+				owns = 1727			
+			}
+			NOT = {
+				OR = {
+					primary_culture = maghrebi
+					primary_culture = bedouin
+					primary_culture = berber
+				}
+			}
+			1727 = {
+				owner = {
+					AND = {
+						civilized = no
+						is_vassal = no
+						NOT = { truce_with = THIS }
+					}
+				}
+			}
+        }
+
+        allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			total_amount_of_ships = 15
+			nationalism_n_imperialism = 1
+        }
+
+        effect = {
+            set_global_flag = tunisia_claimed
+            prestige = 10
+            badboy = 4
+			random_country = {
+				limit = {
+					tag = TUN
+					owns = 1727
+				}
+				THIS = {
+					add_casus_belli = { 
+						target = TUN 
+						type = establish_protectorate_NI_casus_belli
+						months = 3 
+					} 
+					war = { 
+						target = TUN 
+						attacker_goal = { casus_belli = establish_protectorate_NI_casus_belli } 
+						call_ally = no
+					}
+				}
+            }
+            random_country = {
+				limit = {
+					tag = TRI
+					owns = 1727
+				}
+				THIS = { 
+					war = { 
+						target = TRI
+						attacker_goal = { casus_belli = demand_concession_casus_belli_no_infamy state_province_id = 1727 } 
+						call_ally = no
+					}
+				}
+            }
+        }
+        ai_will_do = { factor = 1 modifier = { factor = 0 badboy = 0.7 } }
+    }
+	
+	notre_dame_afrique = {
+        picture = notre_dame_afrique
+        potential = {
+            primary_culture = french
+            is_greater_power = yes
+            capital = 425
+            year = 1865
+            owns = 1700 #Algiers
+            NOT = { has_country_flag = bulit_notre_dame_afrique }
+        }
+        allow = {
+            impressionism = 1
+            war = no
+        }
+
+        effect = {
+            badboy = -1
+            prestige = 5
+            1700 = { add_province_modifier = { name = notre_dame_afrique duration = -1 } }
+            FRA = { set_country_flag = bulit_notre_dame_afrique }
+            BOR = { set_country_flag = bulit_notre_dame_afrique }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	the_constantine_hinterlands = {
+        picture = map_algeria
+        potential = {
+			has_global_flag = tunisia_claimed
+			NOT = { has_global_flag = constantine_claimed }
+            owns = 1709
+			NOT = {
+				owns = 1708		
+			}
+			NOT = {
+				OR = {
+					primary_culture = maghrebi
+					primary_culture = bedouin
+					primary_culture = berber
+				}
+			}
+			1708 = {
+				owner = {
+					AND = {
+						civilized = no
+						is_vassal = no
+						NOT = { truce_with = THIS }
+					}
+				}
+			}
+        }
+
+        allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			total_amount_of_ships = 15
+			nationalism_n_imperialism = 1
+        }
+
+        effect = {
+            set_global_flag = constantine_claimed
+            prestige = 10
+            badboy = 4
+            random_country = {
+				limit = {
+					tag = TRI
+					owns = 1708
+				}
+				THIS = { 
+					war = { 
+						target = TRI
+						attacker_goal = { casus_belli = demand_concession_casus_belli_no_infamy state_province_id = 1708 } 
+						call_ally = no
+					}
+				}
+            }
+			random_country = {
+				limit = {
+					tag = RGA
+					owns = 1708
+				}
+				THIS = { 
+					war = { 
+						target = RGA
+						attacker_goal = { casus_belli = demand_concession_casus_belli_no_infamy state_province_id = 1708 } 
+						call_ally = no
+					}
+				}
+            }
+			random_country = {
+				limit = {
+					tag = TLE
+					owns = 1708
+				}
+				THIS = { 
+					war = { 
+						target = TLE
+						attacker_goal = { casus_belli = demand_concession_casus_belli_no_infamy state_province_id = 1708 } 
+						call_ally = no
+					}
+				}
+            }
+			random_country = {
+				limit = {
+					tag = ALD
+					owns = 1708
+				}
+				THIS = { 
+					war = { 
+						target = ALD
+						attacker_goal = { casus_belli = demand_concession_casus_belli_no_infamy state_province_id = 1708 } 
+						call_ally = no
+					}
+				}
+            }
+        }
+        ai_will_do = { factor = 1 modifier = { factor = 0 badboy = 0.7 } }
+    }
 }
