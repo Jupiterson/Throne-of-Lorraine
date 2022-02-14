@@ -3,6 +3,10 @@ political_decisions = {
         picture = reform_the_uk
         potential = {
 		    OR = {
+			    NOT = { tag = SCO }
+				has_country_flag = gaelic_assimilation
+			}
+		    OR = {
 			    ai = no
 				OR = {
 			        AND = {

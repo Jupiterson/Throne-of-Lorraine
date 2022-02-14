@@ -2,6 +2,10 @@ political_decisions = {
     Celtic_Union = {
         potential = {
 		    OR = {
+			    NOT = { tag = SCO }
+				has_country_flag = gaelic_english_bilinguism
+			}
+			OR = {
 			    ai = no
 				has_country_flag = celtic_ai
 			}

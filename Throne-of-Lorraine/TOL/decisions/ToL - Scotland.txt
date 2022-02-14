@@ -158,6 +158,7 @@ centralize_ulster = {
         }
 
         effect = {
+		    prestige = 10
 		    add_country_modifier = {
                     name = gaelic_societies
                     duration = -1
@@ -173,9 +174,14 @@ centralize_ulster = {
 	gaelic_english_bilinguism = {
         picture = madnobles
         potential = {
+		    OR = {
+			    ai = no
+				has_country_flag = celtic_ai
+			}
             tag = SCO
 			has_country_flag = gaelic_societies
             NOT = { has_country_flag = gaelic_english_bilinguism}
+			NOT = { has_country_flag = gaelic_assimilation}
         }
 
         allow = {
@@ -183,11 +189,43 @@ centralize_ulster = {
         }
 
         effect = {
+		    prestige = 20
+			add_accepted_culture = gaidhlig
 		    add_country_modifier = {
-                    name = gaelic_english_bilinguism
-                    duration = -1
+                name = gaelic_english_bilinguism
+                duration = -1
             }
             set_country_flag = gaelic_english_bilinguism
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	gaelic_assimilation = {
+        picture = madnobles
+        potential = {
+            tag = SCO
+			has_country_flag = gaelic_societies
+            NOT = { has_country_flag = gaelic_english_bilinguism}
+			NOT = { has_country_flag = gaelic_assimilation}
+			OR = {
+			    ai = no
+				has_country_flag = britannia_ai
+			}
+        }
+
+        allow = {
+            positivism = 1
+        }
+
+        effect = {
+		    prestige = 5
+			random_owned = { limit = { is_capital = yes } assimilate = yes }
+			any_pop = { limit = { NOT = { is_primary_culture = yes } } militancy = 3 consciousness = 4 }
+			any_owned = { limit = { is_core = THIS } add_province_modifier = { name = cultural_resurgence duration = 3650 } }
+            set_country_flag = gaelic_assimilation
         }
 
         ai_will_do = {
