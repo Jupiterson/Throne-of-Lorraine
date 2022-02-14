@@ -1,0 +1,402 @@
+##################
+##-HANSA FLAVOUR-#
+##################
+country_event = {
+    id = 34611
+    title = "EVTNAME34610"
+    desc = "EVTDESC34610"
+    picture = "hamburg_great_fire"
+
+    trigger = {	    
+        NOT = { has_global_flag = hamburg_great_fire }
+		tag = BRN
+        owns = 549
+		year = 1843
+        549 = { NOT = { has_province_modifier = rebuilding_city } }
+    }
+
+    fire_only_once = yes
+
+      mean_time_to_happen = {
+        months = 15
+    }
+
+        option = {
+        name = "Completely rebuild Berlin and help those in need!"
+        set_global_flag = hamburg_great_fire
+        treasury = -1000000  #1mil
+        549 = { infrastructure = 1 }
+        random_list = {
+            33 = { 
+				549 = {
+					add_province_modifier = {
+						name = rebuilding_city
+						duration = 910
+                    }
+                }
+            }
+            33 = { 
+				549 = {
+					add_province_modifier = {
+						name = rebuilding_city
+						duration = 730
+                    }
+                }
+            }
+            33 = { 
+				549 = {
+					add_province_modifier = {
+						name = rebuilding_city
+						duration = 550
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 15
+		}
+	}
+	
+	option = {
+        name = "Relocate everything to Potsdam"
+        set_global_flag = hamburg_great_fire
+		set_global_flag = no_chatham
+        treasury = -50000
+        3376 = { infrastructure = 1 }
+		 549 = { any_pop = { limit = { has_pop_culture = north_german } move_pop = 3376 } }
+		BRN = {
+		capital = 3376
+		}
+        random_list = {
+            33 = { 3376 = {
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 910
+                        }
+                    }
+                }
+            33 = { 3376 = {
+                add_province_modifier = {
+                    name = recently_built_city
+                    duration = 730
+                            }
+                        }
+                    }
+            33 = { 3376 = {
+                add_province_modifier = {
+                    name = recently_built_city
+                    duration = 550
+                        }
+                    }
+                }
+            }
+        
+        ai_chance = {
+            factor = 75
+            }
+        }
+		
+
+    option = {
+        name = "Let them burn"
+        set_global_flag = hamburg_great_fire
+		set_global_flag = no_chatham
+	    BRN = {
+		capital = 3376
+		}
+        random_list = {
+                20 = { 549 = { any_pop = { reduce_pop = 0.50 } } }
+				20 = { 549 = { any_pop = { reduce_pop = 0.65 } } }
+                20 = { 549 = { any_pop = { reduce_pop = 0.75 } } }
+            }
+        549 = {
+					add_province_modifier = {
+						name = rebuilding_city
+						duration = 730
+                    }
+                }			
+        ai_chance = {
+            factor = 10
+        }
+ }
+}
+
+
+country_event = {
+
+    id = 100102
+    title = "EVTN100102"
+    desc = "EVTDESC100102"
+    picture = "db_frage"
+    trigger = {
+        tag = HNS
+		owns = 530
+        impressionism = 1 
+        NOT = {
+            has_country_flag = Cathedral
+            }
+        }
+        fire_only_once = yes
+    mean_time_to_happen =  {
+        months = 6
+
+        modifier = {
+            factor = 0.85 #increase likelihood to happen
+            year = 1853
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            year = 1860
+        }
+    }
+
+    option = {
+        name = "Greater and Grander!"
+		money = -3000
+        prestige = 15
+		badboy = 2
+		any_pop = { limit = { has_pop_religion = catholic } consciousness = -2 militancy = -2 }
+        set_country_flag = Cathedral
+    }
+	
+	
+    option = {
+        name = "Modest and Beautiful"
+		money = -1000
+        prestige = 5
+		badboy = -1
+		any_pop = { limit = { has_pop_religion = catholic } consciousness = -1 militancy = -1 }
+        set_country_flag = Cathedral
+    }
+	
+   option = {
+        name = "A waste of time and money"
+        prestige = -15
+		any_pop = { limit = { has_pop_religion = catholic } consciousness = 1 militancy = 1 }
+        set_country_flag = Cathedral
+    }
+}
+####################
+#-LORRAINE FLAVOUR-#
+####################
+
+#German anthem
+country_event = {
+    id = 100103
+    title = "An Anthem in Two Languages"
+    desc  = "EVTDESC100103"
+    picture = "Deutschlandlied"
+    fire_only_once = yes
+
+    trigger = {
+        NOT = { has_country_flag = german_anthem }
+        tag = LOR
+		empiricism = 1
+    }
+
+    mean_time_to_happen = { months = 12 }
+
+    option = {
+        name  = "Good joke"
+        prestige = 15
+        any_pop = {
+            limit = { is_culture_group = germanic }
+            ideology = { value = reactionary factor = 0.05 }
+            ideology = { value = conservative factor = 0.10 }
+            consciousness = -1
+        }
+		  any_pop = {
+            limit = { is_culture_group = germanic }
+            ideology = { value = reactionary factor = 0.05 }
+            ideology = { value = conservative factor = 0.10 }
+            consciousness = -1
+        }
+        set_country_flag = german_anthem
+
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 10
+                primary_culture = north_german
+            }
+            modifier = {
+                factor = 0
+                primary_culture = south_german
+            }
+            modifier = {
+                factor = 1.5
+                ruling_party_ideology = reactionary
+            }
+            modifier = {
+                factor = 0.25
+                ruling_party_ideology = liberal
+            }
+        }
+    }
+
+    option = {
+        name  = "Thats a great Anthem"
+        prestige = 25
+		badboy = -2
+        any_pop = {
+            limit = { is_culture_group = germanic }
+            ideology = { value = liberal factor = 0.15 }
+            consciousness = -3
+            militancy = -1
+        }
+		any_pop = {
+            limit = { has_pop_culture = french }
+            ideology = { value = liberal factor = 0.15 }
+            consciousness = -3
+            militancy = -1
+        }
+        set_country_flag = german_anthem
+
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 10
+                primary_culture = south_german
+            }
+            modifier = {
+                factor = 2.5
+                government = democracy
+            }
+            modifier = {
+                factor = 2.5
+                ruling_party_ideology = liberal
+            }
+        }
+    }
+
+    option = {
+        name  = "United but still seperate in nature"
+        prestige = 20
+        any_pop = {
+            limit = { is_culture_group = germanic }
+            ideology = { value = conservative factor = 0.05 }
+            ideology = { value = liberal factor = 0.10 }
+            consciousness = -1
+            militancy = -1
+        }
+		any_pop = {
+            limit = { has_pop_culture = germanic }
+            ideology = { value = conservative factor = 0.05 }
+            ideology = { value = liberal factor = 0.10 }
+            consciousness = -1
+            militancy = -1
+        }
+        set_country_flag = german_anthem
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 2.5
+                government = democracy
+            }
+            modifier = {
+                factor = 2.5
+                ruling_party_ideology = liberal
+            }
+        }
+    }
+
+    option = {
+        name  = "United in Nation but at heart different"
+        prestige = 20
+        any_pop = {
+            limit = { is_culture_group = germanic }
+            ideology = { value = conservative factor = 0.15 }
+            militancy = -5
+        }
+		  any_pop = {
+            limit = { has_pop_culture = french }
+            ideology = { value = conservative factor = 0.15 }
+            militancy = -5
+        }
+        set_country_flag = german_anthem
+
+        ai_chance = { factor = 10 }
+    }
+
+}
+
+country_event = {
+
+    id = 100100
+    title = "Opening of the First Franco German Garden"
+    desc = "EVTDESC100100"
+    picture = "frc_salvador"
+    trigger = {
+        tag = LOR
+        year = 1841
+        romanticism = 1 #has the romanticism tech
+        NOT = {
+            has_country_flag = Walhalla
+            }
+        }
+
+    mean_time_to_happen =  {
+        months = 6
+
+        modifier = {
+            factor = 0.85 #increase likelihood to happen
+            year = 1842
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            year = 1843
+        }
+    }
+
+    option = {
+        name = "United we stand!"
+        prestige = 10
+		badboy = -1
+        set_country_flag = Walhalla
+    }
+}
+
+
+country_event = {
+
+    id = 100101
+    title = "Construction of the 'Rue Charlemagne'"
+    desc = "EVTDESC100101"
+    picture = "underground_railroad"
+    trigger = {
+        tag = LOR
+        year = 1847
+        realism = 1 
+        NOT = {
+            has_country_flag = Charlemagnestr
+            }
+        }
+
+    mean_time_to_happen =  {
+        months = 6
+
+        modifier = {
+            factor = 0.85 #increase likelihood to happen
+            year = 1848
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            year = 1849
+        }
+    }
+
+    option = {
+        name = "In the Footsteps of Charlemagne"
+        prestige = 5
+		badboy = -1
+		any_pop = {
+            consciousness = -3
+            militancy = -3
+        }
+        set_country_flag = Charlemagnestr
+    }
+}
