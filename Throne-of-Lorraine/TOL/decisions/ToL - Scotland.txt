@@ -161,7 +161,7 @@ centralize_ulster = {
 		    prestige = 10
 		    add_country_modifier = {
                     name = gaelic_societies
-                    duration = -1
+                    duration = 1825
             }
             set_country_flag = gaelic_societies
         }
@@ -172,7 +172,7 @@ centralize_ulster = {
     }
 	
 	gaelic_english_bilinguism = {
-        picture = madnobles
+        picture = gaelicschool
         potential = {
 		    OR = {
 			    ai = no
@@ -192,8 +192,8 @@ centralize_ulster = {
 		    prestige = 20
 			add_accepted_culture = gaidhlig
 		    add_country_modifier = {
-                name = gaelic_english_bilinguism
-                duration = -1
+                name = national_confusion
+                duration = 365
             }
             set_country_flag = gaelic_english_bilinguism
         }
@@ -204,7 +204,7 @@ centralize_ulster = {
     }
 	
 	gaelic_assimilation = {
-        picture = madnobles
+        picture = antirishprop
         potential = {
             tag = SCO
 			has_country_flag = gaelic_societies
