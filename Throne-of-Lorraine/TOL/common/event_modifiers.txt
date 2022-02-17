@@ -608,7 +608,7 @@ penal_colony = {
 }
 
 indian_territory = {
-    immigrant_attract = -0.8
+#    immigrant_attract = -0.8
     local_RGO_output = -0.5
     pop_consciousness_modifier = 0.1
     pop_militancy_modifier = -0.20
@@ -4944,4 +4944,9 @@ christino_sympathies = {
 rebel_cell_discovered = {
     prestige = 0.01
     icon = 15
+}
+
+ottoman_asimilation = {
+    assimilation_rate = 3
+    icon = 19
 }

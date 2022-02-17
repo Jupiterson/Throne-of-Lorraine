@@ -313,6 +313,55 @@ country_event = {
     }
 }
 
+
+#Tunisian Revolt
+country_event = {
+    id = 123423
+    title = "The Tunisian revolt"
+    desc = "The Arabs are revolting against our rule."
+    fire_only_once = yes
+    picture = "ALB_revolt_5"
+    mean_time_to_happen = { months = 3 }
+    trigger = {
+		NOT = { has_global_flag = cleaning_up_ghosts }
+        tag = GEN
+        owns = 1725
+        exists = CRS 
+		exists = SYC 
+		exists = SRD
+		NOT = { exists = TUN }
+        year = 1837
+    }
+    option = {
+        name = "Crush them!"
+        any_owned = {
+            limit = { is_core = TUN }
+            secede_province = TUN 
+        }
+	   TUN = { government = absolute_monarchy }
+        war = {
+            target = TUN
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+    }
+    option = {
+        name = "Tunis shall be free!"
+        any_owned = {
+            limit = { is_core = TUN }
+            secede_province = TUN 
+        }
+	    TUN = { government = absolute_monarchy }
+        war = {
+            target = TUN
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = status_quo }
+        }
+        change_tag_no_core_switch = TUN
+    }
+}
+
+
 #Sardinian Revolt
 country_event = {
     id = 123480
@@ -320,17 +369,15 @@ country_event = {
     desc = "The Sardinian are revolting against our rule."
     fire_only_once = yes
     picture = "ALB_revolt_5"
-    mean_time_to_happen = { months = 5 }
+    mean_time_to_happen = { months = 2 }
     trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
-#        tag = GEN
+        tag = GEN
         owns = 765
         exists = CRS 
+		exists = SYC 
 		NOT = { exists = SRD }
-		any_pop = { 
-		average_militancy = 4
-        location = { is_core = SRD }
-		}
+        year = 1837
     }
     option = {
         name = "Crush them!"

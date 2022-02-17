@@ -136,9 +136,10 @@ political_decisions = {
 
         allow = {
             war = no			
-			prestige = 80
-			nationalism_n_imperialism = 1
-			state_n_government = 1
+			prestige = 120
+			revolution_n_counterrevolution = 1
+			empiricism = 1
+			phenomenalism = 1
         }
         effect = {
 			any_pop = { 
@@ -149,9 +150,34 @@ political_decisions = {
         consciousness = 2
 		} 
 		primary_culture = ottoman
-		add_accepted_culture = turkish
+		remove_accepted_culture = mashriqi
+		remove_accepted_culture = bedouin
 		set_country_flag = ottoman_change_culture
-		random_owned = { limit = { any_owned = TUR } assimilate = yes }
+		any_owned = {
+    		 limit = { 
+			  AND = {
+		    	 is_core = TUR 
+				 NOT = { 
+				         is_core = BYZ 
+                         is_core = KDS
+						 is_core = ARM
+						 is_core = PNT
+						 is_core = IRQ
+						 }
+				continent = oceania
+				 }
+				 
+			 }
+		 assimilate = yes 
+		 remove_core = ANT
+		 add_core = TUR
+		 }
+		 any_owned = {
+                add_province_modifier = {
+                    name = ottoman_asimilation
+                    duration = 11000
+                }
+            }
 
 		
        }

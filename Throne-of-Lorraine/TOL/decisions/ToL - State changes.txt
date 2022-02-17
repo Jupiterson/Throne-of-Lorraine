@@ -177,7 +177,7 @@ political_decisions = {
 		    OR = {
 		    	AND = {
                tag = FRZ
-		    	NOT { exists = FRA }
+		    	NOT = { exists = FRA }
 		     	}
 	   		AND = { 
 			tag = OCC
@@ -223,6 +223,39 @@ political_decisions = {
         }
     }
 	
+  hate_frenchies = {
+        picture = enact_dual_monarchy
+        potential = {
+		OR = {
+		tag = BRG
+		tag = PIC
+		tag = WLL
+		tag = ARP
+		tag = BRT
+		}
+            war = no
+			NOT = { has_country_flag = deleted_frenchies }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		    set_country_flag = deleted_frenchies
+            any_pop = {
+                limit = { has_pop_culture = french }
+                militancy = 4
+            }
+		    any_pop = { limit = { location = { is_core = THIS } culture = french} reduce_pop = 0.7 }
+            any_pop = { limit = { location = { is_core = THIS } culture = burgundian } reduce_pop = 1.7 }
+            any_pop = { limit = { location = { is_core = THIS } culture = arpitan } reduce_pop = 1.5 }
+            any_pop = { limit = { location = { is_core = THIS } culture = breton } reduce_pop = 1.3 }
+            any_pop = { limit = { location = { is_core = THIS } culture = belgican } reduce_pop = 1.5 }
+        }
+    }
+	
+	
   rem_core_occ = {
         picture = enact_dual_monarchy
         potential = {
@@ -263,6 +296,30 @@ political_decisions = {
                     name = french_cultural_unity
                     duration = -1
                 }
+            }
+        }
+    }
+	
+	decore_gen = {
+        picture = enact_dual_monarchy
+        potential = {
+		OR = {
+            tag = SYC
+			tag = SRD
+			tag = CRS
+			}
+            war = no
+			NOT = { has_country_flag = we_won }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		set_country_flag = we_won
+            THIS = {
+                all_core = { remove_core = GEN }
             }
         }
     }
