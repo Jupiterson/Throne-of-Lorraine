@@ -614,10 +614,8 @@ political_decisions = {
                 any_owned_province = {
                     OR = {
                         is_core = JOH
-                        is_core = PHG
-                        is_core = PRK
-                        is_core = SLG
                         is_core = PAT
+						is_core = BRU
                     }
                 }
                 JOH = {
@@ -627,28 +625,14 @@ political_decisions = {
                         vassal_of = THIS
                     }
                 }
-                PHG = {
-                    ai = yes
-                    OR = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                    }
-                }
-                PRK = {
-                    ai = yes
-                    OR = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                    }
-                }
-                SLG = {
-                    ai = yes
-                    OR = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                    }
-                }
                 PAT = {
+                    ai = yes
+                    OR = {
+                        in_sphere = THIS
+                        vassal_of = THIS
+                    }
+                }
+				BRU = {
                     ai = yes
                     OR = {
                         in_sphere = THIS
@@ -685,41 +669,7 @@ political_decisions = {
                     }
                 }
             }
-            PHG = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            OR = {
-                                civilized = no
-                                ai = yes
-                            }
-                            OR = {
-                                in_sphere = THIS
-                                vassal_of = THIS
-                            }
-                        }
-                    }
-                }
-            }
-            PRK = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            OR = {
-                                civilized = no
-                                ai = yes
-                            }
-                            OR = {
-                                in_sphere = THIS
-                                vassal_of = THIS
-                            }
-                        }
-                    }
-                }
-            }
-            SLG = {
+            PAT = {
                 all_core = {
                     OR = {
                         owned_by = THIS
@@ -753,27 +703,7 @@ political_decisions = {
             }
             random_country = {
                 limit = {
-                    tag = PHG
-                    OR = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                    }
-                }
-                annex_to = THIS
-            }
-            random_country = {
-                limit = {
-                    tag = PRK
-                    OR = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                    }
-                }
-                annex_to = THIS
-            }
-            random_country = {
-                limit = {
-                    tag = SLG
+                    tag = PAT
                     OR = {
                         in_sphere = THIS
                         vassal_of = THIS
@@ -801,28 +731,16 @@ political_decisions = {
                     remove_core = JOH
                 }
             }
-            SLG = {
+            PAT = {
                 all_core = {
                     add_core = MLY
                     remove_core = SLG
                 }
             }
-            PHG = {
-                all_core = {
-                    add_core = MLY
-                    remove_core = PHG
-                }
-            }
-            PRK = {
-                all_core = {
-                    add_core = MLY
-                    remove_core = PRK
-                }
-            }
             any_country = {
                 limit = {
                     OR = {
-                        #tag = BRU
+                        tag = BRU
                         tag = SWK
                         tag = KTI
                         tag = KLM
