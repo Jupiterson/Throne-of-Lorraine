@@ -42,6 +42,7 @@ taungoo_restoration = {
 			SIA = { all_core = { add_core = BUR } }
 			LXA = { all_core = { add_core = BUR } }
 			PAT = { all_core = { add_core = BUR } }
+			CHK = { all_core = { add_core = BUR } }
 			add_accepted_culture = lao
 			add_accepted_culture = thai
             badboy = 13
@@ -53,8 +54,11 @@ taungoo_restoration = {
     burma_takes_chiang_mai = {
         picture = burma_background
         potential = {
-            tag = BUR
-            SHA = { exists = yes vassal_of = BUR }
+			OR = {
+				tag = EOB
+				tag = BUR
+			}
+            is_our_vassal = SHA
             NOT = { has_country_flag = burma_takes_chiang_mai}
         }
 

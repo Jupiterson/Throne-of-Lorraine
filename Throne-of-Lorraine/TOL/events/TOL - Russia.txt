@@ -1124,6 +1124,7 @@ country_event = {
 		tag = RUS
 		war = no
 		NOT = { has_country_flag = altai_provocation }
+		NOT = { has_country_flag = altai_provocation_resolved }
 		NOT = { MGL = { vassal_of = RUS } }
 		NOT = { owns = 1078 }
 		owns = 1187
@@ -1187,7 +1188,7 @@ country_event = {
 		inherit = ALT
 		casus_belli = {
 			target = QNG
-			type = acquire_substate_region
+			type = release_vassal
 			months = 12
 		}
 		QNG = {
@@ -1200,8 +1201,8 @@ country_event = {
 		war = {
 			target = QNG
 			attacker_goal = {
-				casus_belli = acquire_substate_region 
-				state_province_id = 1079
+				casus_belli = release_vassal
+				country = MGL
 			}
 			defender_goal = {
 				casus_belli = liberate_country
@@ -1254,7 +1255,117 @@ country_event = {
 		RUS = { 1068 = { secede_province = TNT } }
 	}
 }
+#Russian victory
+country_event = {
+    id = 370023
+	title = "Muwar23.t" 
+	desc = "Muwar23.d"
+	picture = "vladivostok_manchu"
+	
+	trigger = {
+		tag = RUS
+		war = no
+		has_country_flag = altai_provocation
+		NOT = { has_country_flag = altai_provocation_resolved }
+		MGL = {
+			OR = {
+				is_our_vassal = yes
+				is_vassal = no
+			}
+		}
+	}
+	mean_time_to_happen = {
+		day = 1
+	}	
+	
+    option = {
+		name = "Take the Transbaikal!"
+		prestige = 25
+		badboy = 8
+		MGL = {
+			1078 = { secede_province = RUS add_core = RUS }
+			1079 = { secede_province = RUS add_core = RUS }
+			2670 = { secede_province = RUS add_core = RUS }
+			2671 = { secede_province = RUS add_core = RUS }
+		}
+		QNG = { create_vassal = MGL }
+		set_country_flag = altai_provocation_resolved
+		clr_country_flag = altai_provocation
+		QNG = { country_event = 370024 day = 7 }
+    }
+	
+}
 
+#Buyeo loss
+country_event = {
+    id = 370024
+	title = "Muwar24.t" 
+	desc = "Muwar24.d"
+	picture = "vladivostok_manchu"
+	
+	is_triggered_only = yes	
+	
+    option = {
+		name = "Can we control the Mongols after this?"
+		prestige = -15
+		any_pop = {
+			militancy = 2
+		}
+    }
+}
+
+#Russian loss
+country_event = {
+    id = 370025
+	title = "Muwar25.t" 
+	desc = "Muwar25.d"
+	picture = "vladivostok_manchu"
+	
+	trigger = {
+		tag = RUS
+		war = no
+		has_country_flag = altai_provocation
+		NOT = { has_country_flag = altai_provocation_resolved }
+		QNG = {
+			MGL = {
+				is_our_vassal = yes
+			}
+		}
+	}
+	mean_time_to_happen = {
+		month = 1
+	}	
+	
+    option = {
+		name = "The Baikal region falls..."
+		2671 = { secede_province = MGL add_core = MGL }
+		set_country_flag = altai_provocation_resolved
+		clr_country_flag = altai_provocation
+		QNG = { country_event = 370026 day = 1 }
+		prestige = -15
+		any_pop = {
+			militancy = 2
+		}
+    }
+}
+
+#Buyeo victory
+country_event = {
+    id = 370026
+	title = "Muwar26.t" 
+	desc = "Muwar26.d"
+	picture = "vladivostok_manchu"
+	
+	is_triggered_only = yes	
+	
+    option = {
+		name = "The Mongols are more loyal than ever!"
+		prestige = 15
+		any_pop = {
+			militancy = -2
+		}
+    }
+}
 #The Second Mongol-Uyghur War-War for Tarim
 country_event = {
 	id = 370005
@@ -1265,7 +1376,7 @@ country_event = {
 	trigger = {
 		tag = RUS
 		war = no
-		has_country_flag = altai_provocation
+		has_country_flag = altai_provocation_resolved
 		NOT = { has_country_flag = uighur_provocation }
 		NOT = { has_country_flag = uighur_provocation_resolved }
 		NOT = { MGL = { vassal_of = RUS } }
@@ -1432,9 +1543,9 @@ country_event = {
 		inherit = XIN
 		RUS = { 2679 = { secede_province = MGL } }
 		RUS = { 1599 = { secede_province = MGL } }
-		RUS = { 1596 = { secede_province = KSG } }
-		RUS = { 1595 = { secede_province = KSG } }
-		RUS = { 1600 = { secede_province = KSG } }
+		RUS = { 1596 = { secede_province = KSG add_core = KSG } }
+		RUS = { 1595 = { secede_province = KSG add_core = KSG } }
+		RUS = { 1600 = { secede_province = KSG add_core = KSG } }
 		RUS = { 1594 = { secede_province = XIN } }
 		RUS = { 1597 = { secede_province = XIN } }
 		RUS = { 1598 = { secede_province = XIN } }
@@ -1443,7 +1554,7 @@ country_event = {
 		RUS = { 3322 = { secede_province = XIN } }
 		set_country_flag = uighur_provocation_resolved
 		clr_country_flag = uighur_provocation
-		QNG = { country_event = 370011 day = 1 }
+		QNG = { country_event = 370011 day = 7 }
     }
 }
 
@@ -1460,7 +1571,9 @@ country_event = {
 		name = "The Russians march south..."
 		prestige = -15
 		RUS = { create_vassal = KSG }
+		KSG = { government = dominion }
 		QNG = { create_vassal = XIN }
+		XIN = { government = dominion }
 		any_pop = {
 			militancy = 2
 		}
@@ -1516,6 +1629,333 @@ country_event = {
     option = {
 		name = "The last defeat has been avenged!"
 		prestige = 15
+		any_pop = {
+			militancy = -2
+		}
+    }
+}
+
+#The Third Mongol-Uyghur War-War for Mongolia
+country_event = {
+	id = 370014
+	title = "Muwar14.t" 
+	desc = "Muwar14.d"
+	picture = "shamil_before_attack"
+	
+	trigger = {
+		tag = RUS
+		war = no
+		has_country_flag = uighur_provocation_resolved
+		NOT = { has_country_flag = push_to_vladivostok }
+		NOT = { has_country_flag = pushed_to_vladivostok }
+		NOT = { UOD = { vassal_of = RUS } }
+		KSG = { vassal_of = RUS }
+		NOT = { owns = 1082 }
+		MGL = { vassal_of = QNG }
+		year = 1875
+	}
+	
+	mean_time_to_happen = {
+		month = 10
+	}
+	
+	option = {
+		name = "The Buyeo really can't control their nomads..."
+		set_country_flag = push_to_vladivostok
+		prestige = 1
+		MGL = {
+			any_pop = {
+				militancy = 6
+			}
+		}
+		QNG = { country_event = { id = 370015 days = 2 } }
+	}
+}
+
+#Mongolian tribal problems
+country_event = {
+	id = 370015
+	title = "Muwar15.t" 
+	desc = "Muwar15.d"
+	picture = "shamil_before_attack"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "These demands are outragious!"
+		prestige = 5
+		RUS = { country_event = { id = 370016 days = 2 } }
+		ai_chance = {
+			factor = 2
+		}
+	}
+	
+	option = {
+		name = "We cannot afford yet another war with the Russians."
+		prestige = -25
+		MGL = { country_event = { id = 370027 days = 2 } }
+		release_vassal = MGL
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Russia declares war
+country_event = {
+	id = 370016
+	title = "Muwar16.t" 
+	desc = "Muwar16.d"
+	picture = "shamil_captured"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Mongolia must be secured!(Achieving the wargoal will trigger victory events)"
+		casus_belli = {
+			target = QNG
+			type = release_puppet
+			months = 12
+		}
+		war = {
+			target = QNG
+			attacker_goal = {
+				casus_belli = release_puppet
+				country = MGL
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally = yes
+		}
+		ai_chance = {
+			factor = 99
+		}
+	}
+	
+	option = {
+		name = "We need to back down from this. We are in control, not those governors in the Far east!"
+		prestige = -25
+		QNG = { country_event = { id = 370018 days = 2 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+#Buyeo fold
+country_event = {
+	id = 370017
+	title = "Muwar17.t" 
+	desc = "Muwar17.d"
+	picture = "shamil_captured"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Create the Uyghur-Mongol Governorate, and this time make sure the governor doesn't make calls by himself!"
+		set_country_flag = pushed_to_vladivostok
+		clr_country_flag = push_to_vladivostok
+		prestige = 15
+		create_vassal = UOD
+		UOD = { government = dominion }
+	}
+}
+#Russia fold
+country_event = {
+	id = 370018
+	title = "Muwar18.t" 
+	desc = "Muwar18.d"
+	picture = "shamil_captured"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This does not bode well for the future..."
+		prestige = 15
+	}
+}
+#Russian victory
+country_event = {
+    id = 370019
+	title = "Muwar19.t" 
+	desc = "Muwar19.d"
+	picture = "vladivostok_manchu"
+	
+	trigger = {
+		tag = RUS
+		war = no
+		has_country_flag = push_to_vladivostok
+		NOT = { has_country_flag = pushed_to_vladivostok }
+		MGL = {
+			OR = {
+				is_our_vassal = yes
+				is_vassal = no
+			}
+		}
+	}
+	mean_time_to_happen = {
+		day = 1
+	}	
+	
+    option = {
+		name = "Demand Vladivostok and Mongolia! Damn the consequences!"
+		prestige = 25
+		badboy = 8
+		QNG = {
+			1080 = { secede_province = RUS }
+			1081 = { secede_province = RUS }
+			1082 = { secede_province = RUS }
+			2697 = { secede_province = RUS }
+			1085 = { secede_province = RUS }
+			1084 = { secede_province = RUS }
+			1083 = { secede_province = RUS }
+			2617 = { secede_province = RUS }
+		}
+		MGL = { country_event = { id = 370027 days = 2 } }
+		set_country_flag = pushed_to_vladivostok
+		clr_country_flag = push_to_vladivostok
+		QNG = { country_event = 370020 day = 7 }
+		ai_chance = {
+			factor = 9
+		}
+    }
+	
+	option = {
+		name = "Mongolia was the target, not Vladivostok. We will only take the Mongolian territories."
+		prestige = 15
+		badboy = 4
+		MGL = { country_event = { id = 370027 days = 2 } }
+		set_country_flag = pushed_to_vladivostok
+		clr_country_flag = push_to_vladivostok
+		QNG = { country_event = 370020 day = 7 }
+		ai_chance = {
+			factor = 1
+		}
+    }
+}
+
+#Buyeo loss
+country_event = {
+    id = 370020
+	title = "Muwar20.t" 
+	desc = "Muwar20.d"
+	picture = "vladivostok_manchu"
+	
+	is_triggered_only = yes	
+	
+    option = {
+		name = "Our homelands are now in trouble!"
+		prestige = -15
+		RUS = { create_vassal = UOD }
+		UOD = { government = dominion }
+		any_pop = {
+			militancy = 2
+		}
+    }
+}
+
+#Russian loss
+country_event = {
+    id = 370021
+	title = "Muwar21.t" 
+	desc = "Muwar21.d"
+	picture = "vladivostok_manchu"
+	
+	trigger = {
+		tag = RUS
+		war = no
+		has_country_flag = push_to_vladivostok
+		NOT = { has_country_flag = pushed_to_vladivostok }
+		MGL = { vassal_of = QNG }
+	}
+	mean_time_to_happen = {
+		month = 1
+	}	
+	
+    option = {
+		name = "Years of progress gone!"
+		any_owned = {
+			limit = {
+				region = RUS_1072
+			}
+			secede_province = QNG
+			add_core = QNG
+			remove_core = RUS
+		}
+		set_country_flag = pushed_to_vladivostok
+		clr_country_flag = push_to_vladivostok
+		QNG = { country_event = 370022 day = 1 }
+		prestige = -15
+		any_pop = {
+			militancy = 2
+		}
+    }
+}
+
+#Buyeo victory
+country_event = {
+    id = 370022
+	title = "Muwar22.t" 
+	desc = "Muwar22.d"
+	picture = "vladivostok_manchu"
+	
+	is_triggered_only = yes	
+	
+    option = {
+		name = "The last defeat has been avenged!"
+		prestige = 15
+		any_pop = {
+			militancy = -2
+		}
+    }
+}
+
+#Dummy event for mongolia
+Buyeo victory
+country_event = {
+    id = 370027
+	title = "Muwar27.t" 
+	desc = "Muwar27.d"
+	picture = "vladivostok_manchu"
+	
+	is_triggered_only = yes	
+	
+    option = {
+		name = "Mongolian tag switch dummy event"
+		add_accepted_culture = kazak
+		add_accepted_culture = uighur
+		add_accepted_culture = hanhui
+		inherit = KSG
+		any_owned = {
+			limit = {
+				is_core = KSG
+			}
+			add_core = MGL
+			remove_core = KSG
+		}
+		XIN = {
+			any_owned = {
+				limit = {
+					is_core = XIN
+				}
+				add_core = MGL
+			}
+		}
+		QNG = {
+			any_owned = {
+				limit = {
+					is_core = XIN
+				}
+				add_core = MGL
+			}
+		}
+		1002 = { secede_province = QNG add_core = QNG }
+		1532 = { secede_province = QNG }
+		1534 = { secede_province = QNG }
+		1535 = { secede_province = QNG }
+		change_tag = UOD
+		research_points = 15000
+		RUS = { country_event = { id = 370017 days = 2 } }
 		any_pop = {
 			militancy = -2
 		}

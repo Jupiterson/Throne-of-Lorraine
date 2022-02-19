@@ -1484,13 +1484,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1500,13 +1498,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
-                    }
-                    NOT = { truce_with = THIS }
+					}
                     war = no
                 }
             }
@@ -1516,13 +1512,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1532,13 +1526,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1548,13 +1540,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1564,13 +1554,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1580,13 +1568,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1596,13 +1582,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1612,13 +1596,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1650,6 +1632,7 @@ form_ruthenia = {
                     }
                     OR = {
                         tag = DAI
+						tag = CHA
                         tag = KAR
                         tag = CAM
                         tag = SIA
