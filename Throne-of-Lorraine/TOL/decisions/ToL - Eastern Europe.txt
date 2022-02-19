@@ -604,7 +604,7 @@ political_decisions = {
         picture = unite_with_poland
         potential = {
             tag = KRA
-            exists = GLM
+            exists = SLV
             NOT = { has_country_flag = galicia_annex_krakow }
         }
 
@@ -613,9 +613,9 @@ political_decisions = {
             war = no
             OR = {
                 part_of_sphere = no
-                sphere_owner = { is_sphere_leader_of = GLM }
+                sphere_owner = { is_sphere_leader_of = SLV }
             }
-            GLM = {
+            SLV = {
                 war = no
                 neighbour = THIS
             }
@@ -626,7 +626,7 @@ political_decisions = {
             all_core = { remove_core = THIS }
             random_country = {
                 limit = {
-                    tag = GLM
+                    tag = SLV
                     ai = yes
                     THIS = { ai = yes }
                 }
@@ -634,7 +634,7 @@ political_decisions = {
             }
             random_country = {
                 limit = {
-                    tag = GLM
+                    tag = SLV
                     ai = yes
                     THIS = { ai = no }
                 }
@@ -644,17 +644,17 @@ political_decisions = {
                         limit = { province_id = 702 }
                         owner = { capital = 702 }
                     }
-                    change_tag = GLM
+                    change_tag = SLV
                 }
             }
             random_country = {
                 limit = {
-                    tag = GLM
+                    tag = SLV
                     ai = no
                 }
                 country_event = 60130
             }
-            703 = { add_core = GLM }
+            633 = { add_core = SLV }
         }
 
         ai_will_do = {
@@ -1007,62 +1007,7 @@ political_decisions = {
             factor = 1
         }
     }
-    buy_trinidad_tobago_poland = {
-        picture = trinidad_tobago
-        potential = {
-            OR = {
-                tag = PLC
-                tag = PLR
-            }
-            NOT = {
-                has_country_flag = trinidad_tobago_purchase
-            }
-            GEN = {
-                owns = 2237
-                owns = 2238
-            }
-        }
-        allow = {
-            relation = { who = GEN value = 100 }
-            money = 75000
-        }
-        effect = {
-            GEN = { country_event = 21370001 }
-            set_country_flag = trinidad_tobago_purchase
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    buy_gambia_poland = {
-        picture = map_gambia
-        potential = {
-            OR = {
-                tag = PLC
-                tag = PLR
-            }
-            NOT = {
-                has_country_flag = buy_gambia_polania
-            }
-            SCO = {
-                owns = 1785
-            }
-        }
-        allow = {
-            relation = { who = SCO value = 100 }
-            money = 50000
-        }
-        effect = {
-            SCO = { country_event = 21371001 }
-            set_country_flag = buy_gambia_polania
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
+  
 	
 	claim_prussia = {
         picture = map_ingria
@@ -1080,6 +1025,29 @@ political_decisions = {
         allow = {
         state_n_government = 1 
         owns = 3327
+     
+        }
+
+        effect = {
+        prestige = 5
+        badboy = 5
+        set_country_flag = prussia 
+        PRU_695 = { add_core = THIS }
+			
+        }
+   }
+   
+   claim_prussia_lit = {
+        picture = map_ingria
+        potential = {
+			tag = LIT
+            NOT = { has_country_flag = prussia }
+			owns = 698
+        }
+
+        allow = {
+        state_n_government = 1 
+        owns = 698
      
         }
 

@@ -361,3 +361,60 @@ country_event = {
         }
 	}
 }
+
+########################################
+
+########################################
+
+########################################
+
+country_event = {
+
+    id = 100107
+    title = "Unite Belgica"
+    desc = "With our dominance over the unified Belgican nation we have a chance to reform the nation under our rule, but is it worth it?"
+    picture = "treaty"
+
+    trigger = {
+        primary_culture = belgican
+        NOT = { tag = BEL }
+        exists = WLL
+		exists = PIC
+		is_vassal = no
+        NOT = {  has_country_flag = belgican_united }
+    }
+
+    mean_time_to_happen = {
+        days = 60
+    }
+
+    option = {
+        name = "A unification of Belgica under our rule is the only course of action!"
+		change_tag = BEL
+        inherit = WLL
+		inherit = PIC
+        prestige = 10
+        set_country_flag = belgican_united
+        ai_chance = {
+            factor = 0.9
+        }
+    }
+
+    option = {
+        name = "It's not worth it."
+        prestige = -2
+        set_country_flag = belgican_united
+        ai_chance = {
+            factor = 0.1
+            modifier = {
+                OR = {
+                    government = absolute_monarchy
+                    government = prussian_constitutionalism
+                    government = presidential_dictatorship
+                    pop_majority_ideology = fascist
+                }
+                factor = 0
+            }
+        }
+    }
+}

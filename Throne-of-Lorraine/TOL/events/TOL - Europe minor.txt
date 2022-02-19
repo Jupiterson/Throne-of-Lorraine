@@ -132,3 +132,93 @@ country_event = {
 
     }
 }
+
+#The Sude Marce Dominion
+country_event = {
+    id = 100108
+    title = "Moldavian Freedom?"
+    desc = "The Moldavians want their freedom"
+    picture = "alaska"
+
+    trigger = {
+        war = no
+        FRA = { war = no }
+		NOT = { exists = MOL 
+		has_country_flag = MOL_puppet
+		}
+        year = 1870
+        any_owned_province = {
+            is_core = MOL
+            controlled_by = THIS
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    option = {
+        name = "Sure, why not"
+		set_country_flag = MOL_puppet
+		badboy = -3
+        any_owned = {
+            limit = { is_core = MOL }
+            secede_province = MOL
+        }
+        diplomatic_influence = { who = MOL value = 100 }
+        relation = { who = MOL value = 50 }
+        ai_chance = { factor = 75 }
+    }
+	
+	 option = {
+        name = "On To Moldavaia"
+			set_country_flag = MOL_puppet
+        prestige = -10
+        badboy = -3
+        any_pop = {
+            limit = { location = { is_core = MOL } }
+            militancy = -10
+        }
+        any_owned = {
+            limit = { is_core = MOL }
+            secede_province = MOL
+        }
+        change_tag_no_core_switch = MOL
+        ai_chance = { factor = 0 }
+    }
+
+    option = {
+        name = "Well, Home rule is enough"
+			set_country_flag = MOL_puppet
+        prestige = -10
+        badboy = 3
+        any_pop = {
+            limit = { location = { is_core = MOL } }
+            militancy = -10
+        }
+        MOL = {
+            all_core = { remove_core = ARG remove_core = THIS }
+        }
+        release_vassal = MOL
+        diplomatic_influence = {
+            who = MOL
+            value = 200
+        }
+        ai_chance = { factor = 20 }
+    }
+	
+
+    option = {
+        name = "No?"
+			set_country_flag = MOL_puppet
+        any_owned = {
+            limit = { is_core = MOL }
+            any_pop = {
+                militancy = 7
+            }
+        }
+        ai_chance = { factor = 5 }
+    }
+
+
+}

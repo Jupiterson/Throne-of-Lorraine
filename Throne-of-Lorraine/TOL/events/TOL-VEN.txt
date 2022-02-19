@@ -8,15 +8,588 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Italiam e restituet"
+		name = "Italiam e Restituet"
 		prestige = 10
 		set_country_flag = restore_Italy
 
 	}
 	
 	option = {
-		name = "ad Africam!"
+		name = "Ad Africam!"
 		prestige = 10
 		set_country_flag = up_east
 	}
+}
+
+
+country_event = {
+    id = 100109
+    title = "Venice threatens our Status" #VEN Demands Northwest Territories!
+    desc = "EVTDESC100109"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "How dare they"
+		random_owned = {
+			limit = { owner = { VEN = { exists = yes } } }
+			owner = {
+				VEN = { country_event = 100110 }
+			}
+		}
+        any_pop = { militancy = -1 }
+        ai_chance = {
+            factor = 90
+        }
+    }
+
+    option = {
+        name = "We have to submit"
+        set_country_flag = no_submission
+        any_owned = {
+    		 limit = { 
+				continent = oceania
+				continent = north_america
+				continent = africa
+				continent = west_africa
+				continent = east_africa
+				continent = asia
+				continent = central_africa
+				continent = australia_new_zealand
+				continent = south_america
+				 }
+			 secede_province = VEN
+			 }
+		 }
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0
+                NOT = { OR = { in_sphere = VEN } }
+                part_of_sphere = yes
+            }
+            modifier = {
+                factor = 2
+                OR = { VEN = { brigades_compare = 2 } }
+            }
+            modifier = {
+                factor = 0.5
+                NOT = {
+                    OR = { VEN = { brigades_compare = 1 } }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+        }
+    }
+
+country_event = {
+    id = 100110
+    title = "Genoa refuses" #Mexico Has Refused!
+    desc = "EVTDESC44127"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Well, War it is..."
+        set_global_flag = merchant_war
+        war_exhaustion = -20
+        relation = { who = GEN value = -200 }
+        diplomatic_influence = { who = GEN value = -400 }
+        leave_alliance = GEN
+		random_owned = {
+			limit = { owner = { VEN = { exists = yes } } }
+			owner = {
+				war = {
+					target = GEN
+					attacker_goal = {
+						casus_belli = cut_down_to_size_no_add_wargoal
+						country = VEN
+					}
+					defender_goal = {
+						casus_belli = cut_down_to_size_no_add_wargoal
+						country = GEN
+					}
+				}
+			}
+		}
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = "Oh this was a mistake"
+        set_global_flag = no_merchant_war
+        prestige_factor = -0.4
+        any_pop = {
+            consciousness = 1
+            militancy = 1
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+#################################################
+		
+country_event = {
+    id = 123573
+    title = "The Peace with Venice"
+    desc = "After our devastating victory against Venice, the time has come to collect the spoils of war."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "We don't need more land."
+        prestige = 50
+        badboy = -10
+        random_owned = {
+			limit = { owner = { VEN = { exists = yes } } }
+			owner = { VEN = { country_event = 123574 } }
+		}
+    }
+    option = {
+        name = "Take the Levant and Oceania"
+        prestige = 30
+		random_owned = {
+			limit = { owner = { VEN = { exists = yes } } }
+			owner = { VEN = { country_event = 123575 } }
+		}
+        badboy = 8
+		set_country_flag = has_taken_oregon_or_more
+    }
+    option = {
+        name = "They need to be punished, take all their Colonies"
+        prestige = 40
+        random_owned = {
+			limit = { owner = { VEN = { exists = yes } } }
+			owner = { VEN = { country_event = 123576 } }
+		}
+        badboy = 15
+		set_country_flag = has_taken_oregon_or_more
+    }
+    option = {
+        name = "They shall never Rise again, Dismantle them"
+        prestige = 50
+		random_owned = {
+			limit = { owner = { VEN = { exists = yes } } }
+			owner = { VEN = { country_event = 200111 } }
+		}
+        badboy = 20
+		set_country_flag = has_taken_oregon_or_more
+    }
+}
+
+country_event = {
+    id = 123574
+    title = "The Genoese demands"
+    desc = "After losing the Merchant war, the Mexicans have decided to spare us."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "What a humiliation."
+		prestige = -50
+    }
+}
+
+country_event = {
+    id = 123575
+    title = "The Genoese demands"
+    desc = "After losing the Merchant war, we are forced to accept the Genoese demands."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "What a humiliation."
+		any_owned = {
+			limit = { 
+                 NOT = { 
+				 continent = europe 
+				 continent = oceania
+				 continent = south_america
+				 continent = central_africa
+				 continent = asia
+				 continent = east_africa
+				 continent = west_africa
+				 continent = north_america
+				 }
+				 }
+             secede_province = GEN
+		}
+        prestige = -30
+    }
+}
+country_event = {
+    id = 123576
+    title = "The Genoese demands"
+    desc = "After losing the Merchant war, we are forced to accept the Genoese demands."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "What a humiliation."
+		any_owned = {
+			limit = {
+				NOT = { continent = europe }
+			}
+			secede_province = GEN
+		}
+        prestige = -20
+    }
+}
+
+country_event = {
+    id = 200111
+    title = "The Genoese demands"
+    desc = "After losing the Merchant war, we are forced to accept the Genoese demands."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "What a humiliation."
+       any_owned = {
+                limit = {				
+				NOT = { continent = europe }
+			}
+                secede_province = GEN
+			}
+			any_owned = {
+			limit = {
+                is_core = GRE
+				}
+                secede_province = GRE
+			}
+			any_owned = {
+			limit = {
+                is_core = CRO
+				}
+                secede_province = CRO
+			}
+			any_owned = {
+			limit = {
+                is_core = SLO
+				}
+                secede_province = SLO
+			}
+    }
+}
+
+
+########################################################
+
+########################################################
+
+	country_event = {
+    id = 123560
+    title = "Peace with Genoa"
+    desc = "After defeating Genoa in the war, we now must negotiate how much land we shall take."
+    picture = "mexico-us-treaty"
+	
+	is_triggered_only = yes
+	
+    option = {
+        name = "Only some minor colonies"
+        badboy = -7
+        set_country_flag = alternate_history_us_mexico_war
+            GEN = { country_event = 123563 }
+            ai_chance = { factor = 0 }
+    }
+    option = {
+        name = "Release their Colonies"
+            set_global_flag = guadalupe_should_happen_now
+            GEN = { country_event = 123564 }
+            ai_chance = { factor = 0.1 }
+    }
+    option = {
+        name = "Take their Colonies"
+        badboy = 13
+        set_country_flag = alternate_history_us_mexico_war
+            GEN = { country_event = 123565 }
+            ai_chance = { factor = 0.8 }
+    }
+    option = {
+        name = "Dismantle them and release all Nations within their Borders"
+        badboy =  20
+        set_country_flag = alternate_history_us_mexico_war
+            GEN = { country_event = 123566 }
+            ai_chance = { factor = 0.1 }
+    }
+    option = {
+        name = "Dismantle them"
+        badboy = 30
+        set_country_flag = alternate_history_us_mexico_war
+            GEN = { country_event = 123567 }
+            ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = 123563
+    title = "The Venetians shall take a little land"
+    desc = "After losing the Merchant war, we are forced to accept the Venetian demands."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "Oh well."
+        any_owned = {
+            limit = {
+				NOT = {
+				 continent = europe 
+				 continent = oceania
+				 continent = south_america
+				 continent = asia
+				 continent = east_africa
+				 continent = west_africa
+				}
+                }
+            }
+            secede_province = VEN
+        }
+    }
+
+
+country_event = {
+    id = 123564
+    title = "They want our Colonies free!"
+    desc = "After losing the Merchant war, we are forced to accept the Venetian demands."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "Oh well."
+        any_owned = {
+            limit = {
+				 NOT = {
+				 continent = europe 
+				 continent = oceania
+				 continent = south_america
+#				 continent = north_america
+                 continent = australia_new_zealand
+                 continent = africa
+				 continent = asia
+				 continent = east_africa
+				 continent = west_africa
+				}
+            }
+            secede_province = PIR
+        }
+	
+		any_owned = {
+            limit = {
+				 NOT = {
+				 continent = europe 
+				 continent = oceania
+#				 continent = south_america
+                 continent = australia_new_zealand
+				 continent = north_america
+                 continent = africa
+				 continent = asia
+				 continent = east_africa
+				 continent = west_africa
+				}
+            }
+            secede_province = JES
+        any_owned = {
+            limit = {
+				 NOT = {
+				 continent = europe 
+				 continent = oceania
+				 continent = south_america
+                 continent = australia_new_zealand
+				 continent = north_america
+                 continent = africa
+				 continent = asia
+				 continent = east_africa
+				 continent = west_africa
+				}
+            }
+            secede_province = VEN
+        }
+    }
+
+}
+
+}
+country_event = {
+    id = 123565
+    title = "Venice wants our Colonies"
+    desc = "After losing the Merchant war, we are forced to accept the Venetian demands."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "Oh well."
+        any_owned = {
+            limit = {
+				 NOT = {
+				 continent = europe 
+				}
+            }
+            secede_province = VEN
+        }
+    }
+
+}
+country_event = {
+    id = 123566
+    title = "We will get dismantled"
+    desc = "After losing the Merchant war, we are forced to accept the Venetian demands."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "Oh well."
+                any_owned = {
+            limit = {
+				 NOT = {
+				 continent = europe 
+				 continent = oceania
+				 continent = south_america
+#				 continent = north_america
+                 continent = australia_new_zealand
+                 continent = africa
+				 continent = asia
+				 continent = east_africa
+				 continent = west_africa
+				}
+            }
+            secede_province = PIR
+        }
+		any_owned = {
+            limit = {
+				 NOT = {
+				 continent = europe 
+				 continent = oceania
+#				 continent = south_america
+                 continent = australia_new_zealand
+				 continent = north_america
+                 continent = africa
+				 continent = asia
+				 continent = east_africa
+				 continent = west_africa
+				}
+            }
+            secede_province = JES
+        any_owned = {
+            limit = {
+				 is_core = SYC
+            }
+            secede_province = SYC
+        }
+	   any_owned = {
+            limit = {
+				 is_core = TUN
+            }
+            secede_province = TUN
+        }
+	    any_owned = {
+            limit = {
+				 is_core = SRD
+            }
+            secede_province = SRD
+        }
+		any_owned = {
+            limit = {
+				 is_core = CRS
+            }
+            secede_province = CRS
+        }
+		any_owned = {
+            limit = {
+			NOT {
+				continent = europe 
+				}
+            }
+            secede_province = VEN
+        }
+    }
+
+}
+}
+country_event = {
+    id = 123567
+    title = "Venice shall dominate us"
+    desc = "After losing the Merchant war, we are forced to accept the Venetian demands."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "Oh well."
+		                any_owned = {
+            limit = {
+				 NOT = {
+				 continent = europe 
+				 continent = oceania
+				 continent = south_america
+#				 continent = north_america
+                 continent = australia_new_zealand
+                 continent = africa
+				 continent = asia
+				 continent = east_africa
+				 continent = west_africa
+				}
+            }
+            secede_province = VEN
+        }
+		any_owned = {
+            limit = {
+				 NOT = {
+				 continent = europe 
+				 continent = oceania
+#				 continent = south_america
+                 continent = australia_new_zealand
+				 continent = north_america
+                 continent = africa
+				 continent = asia
+				 continent = east_africa
+				 continent = west_africa
+				}
+            }
+            secede_province = VEN
+        any_owned = {
+            limit = {
+				 is_core = SYC
+            }
+            secede_province = VEN
+        }
+	   any_owned = {
+            limit = {
+				 is_core = TUN
+            }
+            secede_province = VEN
+        }
+	    any_owned = {
+            limit = {
+				 is_core = SRD
+            }
+            secede_province = VEN
+        }
+		any_owned = {
+            limit = {
+				 is_core = CRS
+            }
+            secede_province = VEN
+        }
+		any_owned = {
+            limit = {
+			NOT {
+				continent = europe 
+				}
+            }
+            secede_province = VEN
+        }
+    }
+
+}
 }
