@@ -1188,7 +1188,7 @@ country_event = {
 		inherit = ALT
 		casus_belli = {
 			target = QNG
-			type = release_vassal
+			type = release_puppet
 			months = 12
 		}
 		QNG = {
@@ -1201,7 +1201,7 @@ country_event = {
 		war = {
 			target = QNG
 			attacker_goal = {
-				casus_belli = release_vassal
+				casus_belli = release_puppet
 				country = MGL
 			}
 			defender_goal = {
