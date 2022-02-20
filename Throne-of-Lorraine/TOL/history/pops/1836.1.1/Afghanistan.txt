@@ -125,7 +125,7 @@
     farmers = {
         culture = hazara
         religion = shiite
-        size = 60662
+        size = 70662
     }
 
     slaves = {
@@ -157,23 +157,23 @@
         size = 1060
     }
     farmers = {
-        culture = neo_greek
-        religion = theravada
-        size = 57275
+        culture = pashtun
+        religion = sunni
+        size = 47275
     }
     aristocrats = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 1000
     }
     clergymen = {
-	culture = neo_greek
-        religion = theravada
+		culture = pashtun
+        religion = sunni
         size = 500
     }
     artisans = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 1250
     }
      
@@ -182,8 +182,8 @@
 #Balkh (516000/129000 POPS)
 1211 = {
     aristocrats = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 1300
     }
 
@@ -194,8 +194,8 @@
     } 
    
     clergymen = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 613
     }
 
@@ -212,14 +212,14 @@
     }
 
     artisans = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 1250
     }
      
     soldiers = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 6825
     }
 
@@ -230,8 +230,8 @@
     }
 
     farmers = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 50112
     }
 
@@ -1004,8 +1004,8 @@
     }
 
     aristocrats = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 500
     }
 
@@ -1016,8 +1016,8 @@
     }
     
     clergymen = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 200
     }
 
@@ -1028,8 +1028,8 @@
     }
 
     artisans = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 1000
     }
     
@@ -1040,8 +1040,8 @@
     }
 
     soldiers = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 1000
     }
 
@@ -1052,8 +1052,8 @@
     }
     
     farmers = {
-        culture = neo_greek
-        religion = theravada
+        culture = pashtun
+        religion = sunni
         size = 40000
     }
 
@@ -1186,19 +1186,37 @@
     aristocrats = {
         culture = tajik
         religion = sunni
-        size = 1650
+        size = 1250
     }
 
+    aristocrats = {
+        culture = pamiri
+        religion = mahayana
+        size = 400
+    }
+ 
     clergymen = {
         culture = tajik
         religion = sunni
-        size = 775
+        size = 575
+    }
+
+    clergymen = {
+        culture = pamiri
+        religion = mahayana
+        size = 200
     }
 
     artisans = {
         culture = tajik
         religion = sunni
-        size = 3750
+        size = 3000
+    }
+
+    artisans = {
+        culture = pamiri
+        religion = mahayana
+        size = 750
     }
 
     officers = {
@@ -1208,15 +1226,21 @@
     }
 
     soldiers = {
-        culture = tajik
-        religion = sunni
+        culture = pamiri
+        religion = mahayana
         size = 4000
     }
 
     farmers = {
         culture = tajik
         religion = sunni
-        size = 62825
+        size = 52825
+    }
+	
+	farmers = {
+        culture = pamiri
+        religion = mahayana
+        size = 10000
     }
 
     slaves = {

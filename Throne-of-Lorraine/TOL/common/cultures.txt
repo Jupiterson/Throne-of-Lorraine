@@ -41,7 +41,7 @@ donau_saxon = {
     }
 	
 	rhinelander = {
-        color = { 90 60 75 }
+        color = { 62 58 88 }
         first_names = { Adelbert Adolf Albrecht Alexander Alfred August Bernhard Burkhard Dieter
         Eduard Edwin Erwin Erich Ernst Florian Franz Friedrich Fritz Georg Günther
         Gustav Hasso Heinrich Helmuth Hermann Joachim Johann Jürgen Karl
@@ -1233,7 +1233,7 @@ pan_roman = {
     }
 	
 	neo_roman = {
-        color = { 116 46 129                                                             
+        color = { 116 46 129 }                                                            
         first_names = { Appius Aulus Caelus Decimus Decius Drusus Faustus Gaius Gnaeus Lucius Mamercus Manius Marcus Mettius Numerius Publius Quintus Secundus Septimus Servius Sextus Spurius Tertius Titus Tiberius Titus
 Albinus Albus Agricola Agrippa Aratus Asina Auspex Balbus Barbatus Bibulus Brutus Bubo Buteo 
 Caesar Calvus Calvinus Cato Catulus Cethegus Cicero Cinna Cotta Crispian Curio Dama Damasus Dentatus Dives Dolabella Donatus Draco Emeritus Eugenius Euphemius Falco Falx Felix Fimbria Flaccus Florus Fronto Gala Galerus Gemellus Gorgonius Gracchus Gracilis Habitus Herma Hilarius Horatius Ignatius Iuba Labeo Laenas Lepidus Leptis Lentulus Libo Longinus Longus Lucan Lucullus Lupius Macro Martialis Marullus Maximus Memmius Mercator Messalla Montanus Murena Mus Nasica Oceanus Octavianus Opis
@@ -1631,6 +1631,24 @@ turko_semitic = {
             Bey Pasha Hoca Efendi
         }
     }
+    ottoman = {
+        color = {10 51 21}
+        first_names = {
+            Abdullah Abdulhamid Abdulkerim Abdulrahim Ahmet Akif Ali Arif
+            Bahaeddin Bekir Cemal Cevad Celaleddin Cevdet Daud Edhem Emin Enver
+            Fahri Fevzi Ferid Fuat Hafiz Hamza Halil Halim Hasan Hayrullah Husrev
+            Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Lutfi
+            Mahmut Mehmet Mithat Muhtar Murat Musa Mustafa
+            Namik Nazim Nurettin Nuri Numan Omar Osman
+            Pertev Rauf Receb Reshad Refet Rifat Riza
+            Sabaheddin Said Selim Shevket Shukru Suleyman
+            Talat Tevfik Vefik Yusuf Yunus Ziya Ziyauddin
+        }
+
+        last_names = {
+            Bey Pasha Hoca Efendi
+        }
+    }
     qashqai = {
         color = {17 144 192}
         first_names = {
@@ -1975,19 +1993,19 @@ iranian_turanian = {
         radicalism = 35
 
     }
-    #pamiri = {
-    #    color = {132 117 151}
-    #        first_names = {
-    #        Abbas Abolghasem Abdolhossein Abdolsamad Abdolazim Ahmad Ali Bahram
-    #        Ebrahim Esmail "Fath Ali" Fazlollah Hamzeh Hasan Hossein Kamran Karim "Lotf Ali"
-    #        Mahmoud Mahsud Mirza Mohammad "Moin ed-Din" "Mozzafer ed-Din" Murad Muhsin
-    #        Nadir "Naser ed-Din" Nosret Reza
-    #        }
-    #    last_names = {
-    #        Khan Tajik Emomali Shohmurod Rahbar Ghoib Fayzullo Sabouri Furmuli Badakhshi Baghlani Mazari Panjsheri Kabuli Herati Kohistani
-    #        }
-    #    radicalism = 10
-    #}
+    pamiri = {
+        color = {132 117 151}
+            first_names = {
+            Abbas Abolghasem Abdolhossein Abdolsamad Abdolazim Ahmad Ali Bahram
+            Ebrahim Esmail "Fath Ali" Fazlollah Hamzeh Hasan Hossein Kamran Karim "Lotf Ali"
+            Mahmoud Mahsud Mirza Mohammad "Moin ed-Din" "Mozzafer ed-Din" Murad Muhsin
+            Nadir "Naser ed-Din" Nosret Reza
+            }
+        last_names = {
+             Khan Tajik Emomali Shohmurod Rahbar Ghoib Fayzullo Sabouri Furmuli Badakhshi Baghlani Mazari Panjsheri Kabuli Herati Kohistani
+            }
+        radicalism = 10
+    }
     tajik = {
         color = {135 108 90}
             first_names = {
@@ -3788,7 +3806,7 @@ west_african = {
     }
 }
 
-central_african = {
+bantu = {
     leader = african
 
     unit = AfricanGC
@@ -3832,6 +3850,40 @@ central_african = {
     #    last_names = { Mussa Mutato Bowelle Makeda Nzinga Sundiata
     #    }
     #}
+	swahili = {
+        color = {84 96 204}
+        first_names = { Ahmed Jabari Kamari Amiri  Asani Babu Balozi Darweshi Erevu Faraji Fupi Heri Hishima Ibada Huru Husani Imara Issa Jahidi Jalali Juma Jumaane Kafeel Khamisi Kifimbo Kivuli Kondo Lumbwi Machupa Mbwana Mosi Salehe Safi Zuberi
+        }
+
+        last_names = { Ahmed Jabari Kamari Amiri  Asani Babu Balozi Darweshi Erevu Faraji Fupi Heri Hishima Ibada Huru Husani Imara Issa Jahidi Jalali Juma Jumaane Kafeel Khamisi Kifimbo Kivuli Kondo Lumbwi Machupa Mbwana Mosi Salehe Safi Zuberi
+        }
+    }
+    lacustrine_bantu = {
+        color = {128 175 93}
+        first_names = { Mutesa Mwanga Kalema Kiweewa Ssemakookiro Jjunju Kyabaggo Namugala Kikulwe Kabulu
+        }
+
+        last_names = { Njovu Ndiga Ngo Nseenene Mmamba Ngonge Ngabi
+        }
+    }
+	    nyasa = {
+        color = {18 88 48}
+        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
+        }
+
+        last_names = { Mwale Phiri Mkunkhuntha Mbewe Kalimakudzulu
+        }
+    }
+	
+ southern_bantu = {
+        color = {192 167 66}
+        first_names = { Kinjikitile Fambaltate Songea Ebabruma Mputa Mbemchapa Atepa Matola Magobi Rjoroza Wasesse Rinyizea Chapwanya Chakoma Kapola Kapungu Kindunda Kinjalla Kiwanga Mahengu Mburu Mhavanginonya Namkina Ngosingosi Schabruma Sentambandu Uawula Ulanga
+        }
+
+        last_names = { Ngwale Farhenga Chimai Amari Kwira Mtemi Hanga Mwanawalifa Mbano
+        }
+    }
+	union = BTU
 }
 
 east_african = {
@@ -3858,22 +3910,6 @@ east_african = {
         last_names = { Nabushi Ntayitunda Muhigirwa
         }
     }
-    swahili = {
-        color = {84 96 204}
-        first_names = { Ahmed Jabari Kamari Amiri  Asani Babu Balozi Darweshi Erevu Faraji Fupi Heri Hishima Ibada Huru Husani Imara Issa Jahidi Jalali Juma Jumaane Kafeel Khamisi Kifimbo Kivuli Kondo Lumbwi Machupa Mbwana Mosi Salehe Safi Zuberi
-        }
-
-        last_names = { Ahmed Jabari Kamari Amiri  Asani Babu Balozi Darweshi Erevu Faraji Fupi Heri Hishima Ibada Huru Husani Imara Issa Jahidi Jalali Juma Jumaane Kafeel Khamisi Kifimbo Kivuli Kondo Lumbwi Machupa Mbwana Mosi Salehe Safi Zuberi
-        }
-    }
-    lacustrine_bantu = {
-        color = {128 175 93}
-        first_names = { Mutesa Mwanga Kalema Kiweewa Ssemakookiro Jjunju Kyabaggo Namugala Kikulwe Kabulu
-        }
-
-        last_names = { Njovu Ndiga Ngo Nseenene Mmamba Ngonge Ngabi
-        }
-    }
     cushitic = {
         color = {201 101 39}
         first_names = { "Ibn Muhammad" Abdullah "Abbas said" Ismail Mansur Rahman Abdallahi Hassan Malusi Tahir Wiraj Amsalu Nijam Bakri
@@ -3894,14 +3930,6 @@ southern_african = {
     leader = african
 
     unit = ZuluGC
-    nyasa = {
-        color = {18 88 48}
-        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
-        }
-
-        last_names = { Mwale Phiri Mkunkhuntha Mbewe Kalimakudzulu
-        }
-    }
     khoisan = {
         color = {122 46 133}
         first_names = { Naresib Gabeb Gorakhab Oasib Na-khom Tsawub Gaob Hanab O-Naib Khaub Khomab Hab
@@ -3916,14 +3944,6 @@ southern_african = {
         }
 
         last_names = { Tsiranana Ramanantsoa Ratsimandrava Andriamahazo Ratsiraka
-        }
-    }
-    southern_bantu = {
-        color = {192 167 66}
-        first_names = { Kinjikitile Fambaltate Songea Ebabruma Mputa Mbemchapa Atepa Matola Magobi Rjoroza Wasesse Rinyizea Chapwanya Chakoma Kapola Kapungu Kindunda Kinjalla Kiwanga Mahengu Mburu Mhavanginonya Namkina Ngosingosi Schabruma Sentambandu Uawula Ulanga
-        }
-
-        last_names = { Ngwale Farhenga Chimai Amari Kwira Mtemi Hanga Mwanawalifa Mbano
         }
     }
     sotho = {

@@ -6,6 +6,36 @@ vassal = {
     end_date = 1936.1.1
 }
 
+#Freiland Arizona
+vassal = {
+    first = TEX
+    second = NAV
+    start_date = 1830.1.1
+    end_date = 1936.1.1
+}
+
+vassal = {
+    first = TEX
+    second = ZUN
+    start_date = 1830.1.1
+    end_date = 1936.1.1
+}
+
+vassal = {
+    first = TEX
+    second = HOP
+    start_date = 1830.1.1
+    end_date = 1936.1.1
+}
+
+vassal = {
+    first = TEX
+    second = OOD
+    start_date = 1830.1.1
+    end_date = 1936.1.1
+}
+
+
 #Yemen Ethiopia
 vassal = {
     first = ETH
@@ -34,15 +64,6 @@ substate = {
 substate = {
     first = GER
     second = MIT
-    start_date = 1815.1.1
-    end_date = 1936.1.1
-}
-
-
-#Haiti
-substate = {
-    first = FRA
-    second = HAI
     start_date = 1815.1.1
     end_date = 1936.1.1
 }
@@ -530,14 +551,6 @@ substate = {
 #}
 
 
-#Russia - Bukei Horde
-vassal = {
-    first = RUS
-    second = AKH
-    start_date = 1801.1.1
-    end_date = 1865.1.1
-}
-
 
 #Ottoman Empire-Samos
 substate = {
@@ -666,14 +679,6 @@ vassal = {
     end_date = 1949.1.1
 }
 
-# Karlani Empire-Greco_Bactria
-vassal = {
-    first = AFG
-    second = BAC
-    start_date = 1818.1.1
-    end_date = 1949.1.1
-}
-
 # United Kingdom-Kutch
 #vassal = {
 #    first = NET
@@ -732,15 +737,15 @@ vassal = {
 
 ##########################China
 #China - Qinghai
-substate = {
-    first = QNG
-    second = XBI
-    start_date = 1836.1.1
-    end_date = 1937.1.1
-}
+#substate = {
+#    first = QNG
+#    second = XBI
+#    start_date = 1836.1.1
+#    end_date = 1937.1.1
+#}
 
 #China - Xinjiang
-substate = {
+vassal = {
     first = QNG
     second = XIN
     start_date = 1836.1.1
@@ -748,12 +753,12 @@ substate = {
 }
 
 #China - Kashgaria
-vassal = {
-    first = QNG
-    second = KML
-    start_date = 1836.1.1
-    end_date = 1937.1.1
-}
+#vassal = {
+#    first = QNG
+#    second = KML
+#    start_date = 1836.1.1
+#    end_date = 1937.1.1
+#}
 
 #China - Tannu Tuva
 vassal = {
@@ -796,7 +801,7 @@ substate = {
 #}
 
 #China/Mongolia
-vassal = {
+substate = {
     first = QNG
     second = MGL
     start_date = 1691.1.1
@@ -836,7 +841,7 @@ vassal = {
 #}
 
 # China/Guangxi
-vassal = {
+substate = {
     first = QNG
     second = GXI
     start_date = 1815.11.9
@@ -844,7 +849,7 @@ vassal = {
 }
 
 # China/Fujian
-vassal = {
+substate = {
     first = QNG
     second = FJN
     start_date = 1815.11.9
