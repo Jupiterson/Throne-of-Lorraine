@@ -507,7 +507,7 @@ country_event = {
         }
 		any_owned = {
             limit = {
-			NOT {
+			NOT = {
 				continent = europe 
 				}
             }
