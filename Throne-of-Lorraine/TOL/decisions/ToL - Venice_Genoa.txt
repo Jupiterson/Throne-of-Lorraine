@@ -169,10 +169,12 @@ expand_west = {
                 all_core = {
                     add_core = THIS
                 }
+				}
 						 SRD = {
                 all_core = {
                     add_core = THIS
                 }
+				}
 				
 							 CRS = {
                 all_core = {
@@ -280,10 +282,79 @@ expand_east = {
 # VENICE GENOA WAR #
 ####################
 
+   declare_merchant_war = {
+       picture = tresury_reforms
+        potential = {
+            tag = VEN
+#            NOT = { has_country_flag = hasmanifestdestiny }
+			NOT = { has_global_flag = merchant_war_threat }
+        }
+        allow = {
+            war = no
+  #          idealism = 1
+   #         state_n_government = 1
+            NOT = { truce_with = GEN }
+            NOT = { war_policy = pacifism }
+            NOT = { GEN = { any_owned_province = { country_units_in_province = VEN } } }
+            GEN = { is_vassal = no }
+			exists = GEN
+        }
+        effect = {
+#            VEN = { set_country_flag = hasmanifestdestiny }
+			set_global_flag = merchant_war_threat
+            random_list = {
+                25 = { }
+                25 = { badboy = 5 }
+                25 = { badboy = 7 }
+                25 = { badboy = 10 }
+            }
+            relation = { who = GEN value = -200 }
+            diplomatic_influence = { who = GEN value = -200 }
+            leave_alliance = GEN
+            random_country = {
+                limit = {
+                    tag = GEN
+                    vassal_of = THIS
+                }
+                THIS = { release_vassal = GEN }
+            }
+            random_country = {
+                limit = {
+                    is_our_vassal = GEN
+                    NOT = { tag = THIS }
+                }
+                relation = { who = THIS value = -200 }
+                leave_alliance = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = GEN
+                }
+                country_event = 100109
+            }
+            any_country = {
+                limit = {
+                    is_greater_power = yes
+                    NOT = { tag = THIS }
+                }
+                diplomatic_influence = { who = GEN value = -100 }
+            }
+            any_pop = {
+                dominant_issue = {
+                    factor = 0.05
+                    value = jingoism
+                }
+                consciousness = 2
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
 
 
     genoa_to_venice_peace = {
-        picture = us_mex_peace
+        picture = merchant_marine
         potential = {
             tag = GEN
             has_global_flag = merchant_war
@@ -308,7 +379,7 @@ expand_east = {
     }
 	
 	venice_to_genoa_peace = {
-        picture = us_mex_peace
+        picture = merchant_marine
         potential = {
              tag = VEN 
             has_global_flag = merchant_war

@@ -146,7 +146,7 @@ country_event = {
     id = 123573
     title = "The Peace with Venice"
     desc = "After our devastating victory against Venice, the time has come to collect the spoils of war."
-    picture = "mexico-us-treaty"
+    picture = "merchant_peace_gen"
     fire_only_once = yes
     is_triggered_only = yes
     option = {
@@ -193,8 +193,8 @@ country_event = {
 country_event = {
     id = 123574
     title = "The Genoese demands"
-    desc = "After losing the Merchant war, the Mexicans have decided to spare us."
-    picture = "mexico-us-treaty"
+    desc = "After losing the Merchant war, the Genoese have decided to spare us."
+    picture = "merchant_war"
     fire_only_once = yes
     is_triggered_only = yes
     option = {
@@ -207,7 +207,7 @@ country_event = {
     id = 123575
     title = "The Genoese demands"
     desc = "After losing the Merchant war, we are forced to accept the Genoese demands."
-    picture = "mexico-us-treaty"
+    picture = "merchant_war"
     fire_only_once = yes
     is_triggered_only = yes
     option = {
@@ -216,7 +216,6 @@ country_event = {
 			limit = { 
                  NOT = { 
 				 continent = europe 
-				 continent = oceania
 				 continent = south_america
 				 continent = central_africa
 				 continent = asia
@@ -234,7 +233,7 @@ country_event = {
     id = 123576
     title = "The Genoese demands"
     desc = "After losing the Merchant war, we are forced to accept the Genoese demands."
-    picture = "mexico-us-treaty"
+    picture = "merchant_war"
     fire_only_once = yes
     is_triggered_only = yes
     option = {
@@ -253,7 +252,7 @@ country_event = {
     id = 200111
     title = "The Genoese demands"
     desc = "After losing the Merchant war, we are forced to accept the Genoese demands."
-    picture = "mexico-us-treaty"
+    picture = "merchant_war"
     fire_only_once = yes
     is_triggered_only = yes
     option = {
@@ -294,7 +293,7 @@ country_event = {
     id = 123560
     title = "Peace with Genoa"
     desc = "After defeating Genoa in the war, we now must negotiate how much land we shall take."
-    picture = "mexico-us-treaty"
+    picture = "merchant_war"
 	
 	is_triggered_only = yes
 	
@@ -337,7 +336,7 @@ country_event = {
     id = 123563
     title = "The Venetians shall take a little land"
     desc = "After losing the Merchant war, we are forced to accept the Venetian demands."
-    picture = "mexico-us-treaty"
+    picture = "merchant_peace_gen"
     fire_only_once = yes
     is_triggered_only = yes
     option = {
@@ -353,8 +352,8 @@ country_event = {
 				 continent = west_africa
 				}
                 }
+				secede_province = VEN
             }
-            secede_province = VEN
         }
     }
 
@@ -363,7 +362,7 @@ country_event = {
     id = 123564
     title = "They want our Colonies free!"
     desc = "After losing the Merchant war, we are forced to accept the Venetian demands."
-    picture = "mexico-us-treaty"
+    picture = "merchant_peace_gen"
     fire_only_once = yes
     is_triggered_only = yes
     option = {
@@ -400,6 +399,7 @@ country_event = {
 				}
             }
             secede_province = JES
+			}
         any_owned = {
             limit = {
 				 NOT = {
@@ -420,12 +420,11 @@ country_event = {
 
 }
 
-}
 country_event = {
     id = 123565
     title = "Venice wants our Colonies"
     desc = "After losing the Merchant war, we are forced to accept the Venetian demands."
-    picture = "mexico-us-treaty"
+    picture = "merchant_peace_gen"
     fire_only_once = yes
     is_triggered_only = yes
     option = {
@@ -445,12 +444,12 @@ country_event = {
     id = 123566
     title = "We will get dismantled"
     desc = "After losing the Merchant war, we are forced to accept the Venetian demands."
-    picture = "mexico-us-treaty"
+    picture = "merchant_peace_gen"
     fire_only_once = yes
     is_triggered_only = yes
     option = {
         name = "Oh well."
-                any_owned = {
+        any_owned = {
             limit = {
 				 NOT = {
 				 continent = europe 
@@ -481,6 +480,7 @@ country_event = {
 				}
             }
             secede_province = JES
+			}
         any_owned = {
             limit = {
 				 is_core = SYC
@@ -516,17 +516,17 @@ country_event = {
     }
 
 }
-}
+
 country_event = {
     id = 123567
     title = "Venice shall dominate us"
     desc = "After losing the Merchant war, we are forced to accept the Venetian demands."
-    picture = "mexico-us-treaty"
+    picture = "merchant_peace_gen"
     fire_only_once = yes
     is_triggered_only = yes
     option = {
         name = "Oh well."
-		                any_owned = {
+	 any_owned = {
             limit = {
 				 NOT = {
 				 continent = europe 
@@ -557,6 +557,7 @@ country_event = {
 				}
             }
             secede_province = VEN
+			}
         any_owned = {
             limit = {
 				 is_core = SYC
@@ -583,7 +584,7 @@ country_event = {
         }
 		any_owned = {
             limit = {
-			NOT {
+			NOT = {
 				continent = europe 
 				}
             }
@@ -591,5 +592,4 @@ country_event = {
         }
     }
 
-}
 }
