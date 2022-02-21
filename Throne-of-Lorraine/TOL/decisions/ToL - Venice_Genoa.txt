@@ -291,8 +291,8 @@ expand_east = {
         }
         allow = {
             war = no
-  #          idealism = 1
-   #         state_n_government = 1
+            idealism = 1
+            state_n_government = 1
             NOT = { truce_with = GEN }
             NOT = { war_policy = pacifism }
             NOT = { GEN = { any_owned_province = { country_units_in_province = VEN } } }

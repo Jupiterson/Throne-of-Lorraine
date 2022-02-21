@@ -862,6 +862,23 @@ country_event = {
             }
             country_event = 11101
         }
+		GER = {
+			add_country_modifier = { name = outraged-europe duration = 18798 }
+		}
+		any_greater_power = {
+			limit = {
+				continent = europe
+				NOT = { alliance_with = GER }
+			}
+			add_country_modifier = { name = german-menace duration = 3700 }
+		}
+		any_neighbor_country = {
+			limit = {
+				continent = europe
+				NOT = { alliance_with = GER }
+			}
+			add_country_modifier = { name = german-menace duration = 3700 }
+		}
         political_reform = wealth_voting
         political_reform = population_equal_weight
         political_reform = yes_meeting

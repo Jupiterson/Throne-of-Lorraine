@@ -83,7 +83,7 @@ political_decisions = {
         }
     }
 
-    brg_alsace = {
+    brg_arpitan = {
         picture = alsace_lorraine_mines
         potential = {
             tag = BRG
@@ -111,14 +111,16 @@ political_decisions = {
         }
         effect = {
             set_country_flag = burgundy_restored
-            FRA_412 = {
-                add_core = THIS
+            ARP = {
+                all_core = {
+                    add_core = BRG
+                }
             }
         }
         ai_will_do = { factor = 1 }
     }
 
-    brg_wallonia = {
+    brg_savoie = {
         picture = become_wallonia
         potential = {
             tag = BRG
@@ -133,21 +135,9 @@ political_decisions = {
         }
 
         effect = {
-            WLL = {
+            SVY = {
                 all_core = {
                     add_core = BRG
-                }
-                all_core = {
-                    remove_core = WLL
-                }
-            }
-			
-			 PIC = {
-                all_core = {
-                    add_core = BRG
-                }
-                all_core = {
-                    remove_core = PIC
                 }
             }
         }

@@ -150,6 +150,7 @@ cut_down_to_size_no_add_wargoal
 cut_down_to_size_no_infamy
 liberate_puppet_no_infamy
 humiliate_no_infamy
+merchant_cb
 }
 
 # Great War CB's
@@ -1135,15 +1136,15 @@ conquest_minuscule = {
 claim_holy_land = {
     sprite_index = 23
     is_triggered_only = yes
-    months = 12
+ #   months = 12
 
     construction_speed = 0.8
 
-    badboy_factor = 0
+    badboy_factor = 5
     prestige_factor = 2
     peace_cost_factor = 0.7
     penalty_factor = 1
-    always = yes
+#    always = yes
 
     break_truce_prestige_factor = 5
     break_truce_infamy_factor = 2
@@ -1157,22 +1158,14 @@ claim_holy_land = {
     can_use = {
         NOT = { is_our_vassal = THIS }
         THIS = {
-            is_greater_power = yes
+            THIS = { government = theocracy }
             OR = {
-                tag = FRA
-                tag = RHI
                 tag = PAP
-				tag = VEN
-                tag = AUS
-                tag = KUK
-                tag = BYZ
-                is_culture_group = east_slavic
-                is_culture_group = south_slavic
-                is_culture_group = italian
-                is_culture_group = iberian
+				tag = KNI
+				tag = JES
+				tag = JER
+				tag = UBD
             }
-            ai = no
-            has_global_flag = abandoned_holy_land
         }
         OR = {
             THIS = {
@@ -1190,6 +1183,7 @@ claim_holy_land = {
             OR = {
                 is_core = PLS
                 is_core = JOR
+				is_core = ISR
                 is_core = LBN
                 is_core = SYR
             }
@@ -1207,6 +1201,7 @@ claim_holy_land = {
                 is_core = PLS
                 is_core = JOR
                 is_core = LBN
+				is_core = ISR
                 is_core = SYR
             }
         }
@@ -1648,7 +1643,7 @@ add_to_sphere = {
     }
 }
 
-# Unification Humiliate
+# Unification Humiliate #Assert Hegemony
 unification_humiliate_cb = {
     sprite_index = 24
     is_triggered_only = no
@@ -3096,7 +3091,7 @@ monroe_doctrine = {
 
     can_use = {
         THIS = {
-            tag = USA
+            tag = TEX
             government = democracy
             is_greater_power = yes
         }
@@ -9420,6 +9415,71 @@ treaty_port_casus_belli_no_infamy = {
         #}
     }
 }
+
+# Merchant CB
+merchant_cb = {
+    sprite_index = 32
+    is_triggered_only = yes
+    months = 12
+    construction_speed = 0.8
+
+    badboy_factor = 0
+    prestige_factor = 0.5
+    peace_cost_factor = 20
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 1
+    break_truce_militancy_factor = 1
+    truce_months = 48
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    can_use = {
+        OR = {
+            tag = VEN
+			tag = GEN
+			tag = HNS
+			tag = AKI
+        }
+        OR = {
+            war_with = THIS
+            AND = {
+                has_country_modifier = nationalization_in_progress
+                THIS = { has_country_modifier = factories_nationalized }
+            }
+        }
+        NOT = {
+            is_our_vassal = THIS
+            has_country_modifier = neutrality_modifier
+            has_country_modifier = no_more_war
+            has_country_flag = in_great_war
+        }
+        THIS = {
+            civilized = yes
+            NOT = { has_country_modifier = neutrality_modifier }
+        }
+    }
+
+    po_reparations = yes
+	po_remove_prestige = yes
+	po_disarmament = yes
+
+    war_name = WAR_NAME_MERCHANT
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.25
+        }
+    }
+
+   on_po_accepted = { THIS = { set_country_flag = merchant_war_cb } }
+}
+
 
 
 install_fascism_make_puppet = {

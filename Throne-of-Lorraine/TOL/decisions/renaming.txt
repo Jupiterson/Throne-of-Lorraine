@@ -1051,7 +1051,6 @@ political_decisions = {
             clr_global_flag = sudetes_rename_czh
             627 = {
                 change_province_name = "Karlsbad"
-                state_scope = { change_region_name = "Sudetenland" }
             }
             628 = { change_province_name = "Aussig" }
             629 = { change_province_name = "Pilsen" }
@@ -6413,7 +6412,7 @@ political_decisions = {
 
         effect = {
             set_global_flag = palz_saarland
-            prestige = 1o
+            prestige = 10
             571 = { change_province_name = "Dreckslautern" }
 
         }
