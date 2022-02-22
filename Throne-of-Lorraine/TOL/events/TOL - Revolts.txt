@@ -2745,3 +2745,252 @@ country_event = {
     }
 	
 }
+
+#End of Germany
+country_event = {
+
+    id = 100116
+
+    title = "The Collapse of the Germany" 
+    desc = "EVTDESC100114"
+    picture = "chicagofire"
+    fire_only_once = yes
+    trigger = {
+	tag = HNS
+    is_disarmed = yes
+	exists = POM
+	exists = BRN
+	NOT = { year = 1860 }
+    }
+
+    mean_time_to_happen = {
+        days = 12      
+    }
+
+    option = {
+        name = "Sad times for Germany"
+        prestige = -20
+		any_owned = {
+			limit = {
+                is_core = SAX
+				}
+                secede_province = SAX
+			}	
+		any_owned = {
+			limit = {
+                is_core = BOE
+				}
+                secede_province = BOE
+			}
+		any_owned = {
+			limit = {
+                is_core = LOR
+				}
+                secede_province = LOR
+			}
+		any_owned = {
+			limit = {
+                is_core = WUR
+				}
+                secede_province = WUR
+			}
+		any_owned = {
+			limit = {
+                is_core = WES
+				}
+                secede_province = WES
+			}
+		any_owned = {
+			limit = {
+                is_core = HNS
+				}
+                secede_province = HNS
+			}		
+		any_owned = {
+			limit = {
+                is_core = NET
+				}
+                secede_province = NET
+			}
+					any_owned = {
+		limit = {
+                is_core = SWI
+				}
+                secede_province = SWI
+			}
+		limit = {
+                is_core = UBD
+				}
+                secede_province = UBD
+			}
+		limit = {
+                is_core = RHI
+				}
+                secede_province = RHI
+			}
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+
+
+#End of Hansa
+country_event = {
+
+    id = 100115
+
+    title = "The Collapse of the Hansa" 
+    desc = "EVTDESC100114"
+    picture = "chicagofire"
+    fire_only_once = yes
+    trigger = {
+	tag = HNS
+    is_disarmed = yes
+	exists = POM
+	exists = BRN
+	NOT = { year = 1860 }
+    }
+
+    mean_time_to_happen = {
+        days = 12      
+    }
+
+    option = {
+        name = "Sad times for the Hansa"
+        prestige = -20
+		release_vassal = POM
+		release_vassal = HAN
+		release_vassal = MST
+		release_vassal = MEC
+		release_vassal = MAG
+		release_vassal = SWH
+		release_vassal = DZG
+		release_vassal = BRN
+		release_vassal = UBD
+		release_vassal = SAX
+		any_owned = {
+			limit = {
+                is_core = MEC
+				}
+                secede_province = MEC
+			}	
+		any_owned = {
+			limit = {
+                is_core = SCL
+				}
+                secede_province = SCL
+			}
+		any_owned = {
+			limit = {
+                is_core = HAN
+				}
+                secede_province = HAN
+			}
+		any_owned = {
+			limit = {
+                is_core = HAM
+				}
+                secede_province = HAM
+			}
+		any_owned = {
+			limit = {
+                is_core = BRE
+				}
+                secede_province = BRE
+			}
+		any_owned = {
+			limit = {
+                is_core = SWE
+				}
+                secede_province = SWE
+			}
+	    change_tag = LUB
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+#End of Rome
+country_event = {
+
+    id = 100114
+
+    title = "The Collapse of Rome" 
+    desc = "EVTDESC100114"
+    picture = "chicagofire"
+    fire_only_once = yes
+    trigger = {
+	tag = RME
+	
+       OR = {
+                is_disarmed = yes
+                is_greater_power = no
+      }
+    }
+
+    mean_time_to_happen = {
+        months = 12      
+    }
+
+    option = {
+        name = "Sad times for Rome"
+        prestige = -20
+		any_owned = {
+			limit = {
+                is_core = OCC
+				}
+                secede_province = OCC
+			}	
+		any_owned = {
+			limit = {
+                is_core = GER
+				}
+                secede_province = SGF
+			}				
+        any_owned = {
+			limit = {
+                is_core = ILL
+				}
+                secede_province = ILL
+			}		
+		any_owned = {
+			limit = {
+                is_core = FRA
+				}
+                secede_province = FRA
+			}		
+		any_owned = {
+			limit = {
+                is_core = IBR
+				}
+                secede_province = IBR
+			}
+			
+		any_owned = {
+			limit = {
+                is_core = MGH
+				}
+                secede_province = MGH
+			}
+			
+		any_owned = {
+			limit = {
+                is_core = COP
+				}
+                secede_province = COP
+			}
+			
+		any_owned = {
+			limit = {
+                is_core = GRE
+				}
+                secede_province = GRE
+			}
+        ai_chance = {
+            factor = 100
+        }
+    }
+}

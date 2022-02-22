@@ -6650,12 +6650,79 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 	
-	
-	
-	
-	
-	
-	
+    sicilian_rename = {
+        picture = gtfo
+        potential = {
+            OR = {
+                AND = {
+                    is_culture_group = arab
+                    OR = {
+                        AND = { owns = 762 NOT = { has_global_flag = muslim_rename_sicily } }
+                    }
+                }
+                AND = {
+                    NOT = { is_culture_group = arab }
+                    OR = {
+                        AND = { owns = 762 NOT = { has_global_flag = non_rename_sicily } }
+                    }
+                }
+            }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            ###Muslim###
+            random_owned = {
+                limit = {
+                    province_id = 762
+                    owner = {
+                        is_culture_group = arab
+                    }
+                }
+                762 = {
+                    change_province_name = "Bal'harm"
+                    state_scope = {
+                        change_region_name = "Siqiliya"
+                    }
+                }
+                763 = { change_province_name = "Misina" }
+				764 = { change_province_name = "Balad al-fil" }
+                owner = {
+                    set_global_flag = muslim_rename_sicily
+                    clr_global_flag = non_rename_sicily
+                }
+            }
+
+            random_owned = {
+                limit = {
+                    province_id = 762
+                    owner = {
+					NOT = {
+                        is_culture_group = arab
+						}
+                    }
+                }
+                762 = {
+                    change_province_name = "Palermo"
+                    state_scope = {
+                        change_region_name = "Sicily"
+                    }
+                }
+                763 = { change_province_name = "Messina" }
+				764 = { change_province_name = "Catania" }
+                owner = {
+                    set_global_flag = non_rename_sicily
+                    clr_global_flag = muslim_rename_sicily
+                }
+            }
+          
+        }
+        ai_will_do = { factor = 1 }
+    }
+
 	
 	
 }
