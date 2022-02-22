@@ -42,12 +42,12 @@ political_decisions = {
             years_of_research = 0.1
             add_accepted_culture = han_chinese
             any_pop = {
-                limit = { has_pop_culture = manchu }
+                limit = { has_pop_culture = buyeo }
                 militancy = 2
                 consciousness = 1
             }
             any_pop = {
-                limit = { NOT = { has_pop_culture = manchu } }
+                limit = { NOT = { has_pop_culture = buyeo } }
                 militancy = -2
                 consciousness = -1
             }
@@ -622,7 +622,7 @@ political_decisions = {
             capital = 1616
             prestige = 20
             add_accepted_culture = han_chinese
-            add_accepted_culture = manchu
+            add_accepted_culture = buyeo
             add_accepted_culture = hakka
             add_accepted_culture = miao
             add_accepted_culture = min
@@ -834,7 +834,7 @@ political_decisions = {
         effect = {
             clr_global_flag = warlord_era_has_begun
             add_accepted_culture = han_chinese
-            add_accepted_culture = manchu
+            add_accepted_culture = buyeo
             add_accepted_culture = hakka
             add_accepted_culture = miao
             add_accepted_culture = min
@@ -1208,7 +1208,7 @@ political_decisions = {
         effect = {
             clr_global_flag = warlord_era_has_begun
             add_accepted_culture = han_chinese
-            add_accepted_culture = manchu
+            add_accepted_culture = buyeo
             add_accepted_culture = hakka
             add_accepted_culture = miao
             add_accepted_culture = min

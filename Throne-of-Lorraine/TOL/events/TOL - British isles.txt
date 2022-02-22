@@ -30,11 +30,11 @@ country_event = {
         name = "A bit too dangerous but it provides good spectacle"		
 		prestige = 10
 	}
-
+}
 country_event = {
     id = 28013
-    title = Scotland ai path decision
-    desc = This is used to make ai choose what they formable/path they can form in the game. It doesnt change ai behaviour though.
+    title = "Scotland AI path decision"
+    desc = "This is used to make ai choose what they formable/path they can form in the game. It doesnt change ai behaviour though."
     fire_only_once = yes
 
     trigger = {
@@ -47,34 +47,34 @@ country_event = {
     mean_time_to_happen = { days = 10 }
 
     option = {
-	          name = Britannia
-			  set_country_flag = britannia_ai
-			  ai_chance = {
-                factor = 1
-              }
-			  }
+		name = "Britannia"
+		set_country_flag = britannia_ai
+		ai_chance = {
+			factor = 1
+        }
+	}
 
 	option = {
-	          name = Celtic Union
-			  set_country_flag = celtic_ai
-			  ai_chance = {
-                factor = 1
-              }
-			  }
+		name = "Celtic Union"
+		set_country_flag = celtic_ai
+		ai_chance = {
+			factor = 1
+        }
+	}
 			  
 	option = {
-	          name = Scotland-brazil
-			  set_country_flag = scotlandbrazil_ai
-			  ai_chance = {
-                factor = 1
-              }
-			  }
-			  }
+		name = "Scotland-Brazil"
+		set_country_flag = scotlandbrazil_ai
+		ai_chance = {
+			factor = 1
+        }
+	}
+}
 
 country_event = {
     id = 28014
-    title = Wales and Ireland ai path decision
-    desc = This is used to make ai choose what they formable/path they can form in the game. It doesnt change ai behaviour though.
+    title = "Wales and Ireland ai path decision"
+    desc = "This is used to make ai choose what they formable/path they can form in the game. It doesnt change ai behaviour though."
     fire_only_once = yes
 
     trigger = {
@@ -90,19 +90,18 @@ country_event = {
     mean_time_to_happen = { days = 10 }
 
     option = {
-	          name = Britannia
-			  set_country_flag = britannia_ai
-			  ai_chance = {
-                factor = 1
-              }
-			  }
+		name = "Britannia"
+		set_country_flag = britannia_ai
+		ai_chance = {
+			factor = 1
+        }
+	}
 
 	option = {
-	          name = Celtic Union
-			  set_country_flag = celtic_ai
-			  ai_chance = {
-                factor = 1
-              }
-			  }
-			  }
+		name = "Celtic Union"
+		set_country_flag = celtic_ai
+		ai_chance = {
+			factor = 1
+        }
+	}
 }
