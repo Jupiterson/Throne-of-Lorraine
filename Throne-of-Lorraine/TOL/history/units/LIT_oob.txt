@@ -2,7 +2,7 @@
 FRA = {value = -80}
 
 army = {
-    name = "Pagrindinė armija"
+    name = "Sostinė armija"
     location = 360
     regiment = {
         name= "1. pėstininkų divizija"
@@ -27,7 +27,7 @@ army = {
         type = infantry
         home = 941
     }
-	    regiment = {
+	regiment = {
         name= "5. pėstininkų divizija"
         type = infantry
         home = 937
@@ -36,13 +36,94 @@ army = {
     regiment = {
         name= "1. artilerijos divizija"
         type = artillery
-        home = 719
+        home = 361
     }
 
     regiment = {
         name= "2. artilerijos divizija"
         type = artillery
-        home = 1016
+        home = 362
+    }
+	
+	regiment = {
+        name= "3. artilerijos divizija"
+        type = artillery
+        home = 936
+    }
+	
+	regiment = {
+        name= "4. artilerijos divizija"
+        type = artillery
+        home = 937
+    }
+	
+	regiment = {
+        name= "5. artilerijos divizija"
+        type = artillery
+        home = 718
+    }
+}
+
+army = {
+    name = "Mogilev armija"
+    location = 948
+    regiment = {
+        name= "11. pėstininkų divizija"
+        type = infantry
+        home = 944
+    }
+
+    regiment = {
+        name= "12. pėstininkų divizija"
+        type = infantry
+        home = 945
+    }
+
+    regiment = {
+        name= "13. pėstininkų divizija"
+        type = infantry
+        home = 946
+    }
+
+    regiment = {
+        name= "14. pėstininkų divizija"
+        type = infantry
+        home = 948
+    }
+	regiment = {
+        name= "15. pėstininkų divizija"
+        type = infantry
+        home = 949
+    }
+
+    regiment = {
+        name= "9. artilerijos divizija"
+        type = artillery
+        home = 958
+    }
+
+    regiment = {
+        name= "10. artilerijos divizija"
+        type = artillery
+        home = 938
+    }
+	
+	regiment = {
+        name= "11. artilerijos divizija"
+        type = artillery
+        home = 939
+    }
+	
+	regiment = {
+        name= "12. artilerijos divizija"
+        type = artillery
+        home = 940
+    }
+	
+	regiment = {
+        name= "13. artilerijos divizija"
+        type = artillery
+        home = 947
     }
 }
 
@@ -66,9 +147,33 @@ army = {
         type = infantry
         home = 954
     }
+	
 	regiment = {
-        name= "3. artilerijos divizija"
+        name= "9. pėstininkų divizija"
+        type = infantry
+        home = 954
+    }
+	
+	regiment = {
+        name= "10. pėstininkų divizija"
+        type = infantry
+        home = 954
+    }
+	regiment = {
+        name= "6. artilerijos divizija"
         type = artillery
         home = 955
+    }
+	
+	regiment = {
+        name= "7. artilerijos divizija"
+        type = artillery
+        home = 954
+    }
+	
+	regiment = {
+        name= "8. artilerijos divizija"
+        type = artillery
+        home = 969
     }
 }
