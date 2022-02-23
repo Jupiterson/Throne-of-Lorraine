@@ -1,5 +1,25 @@
 political_decisions = {
+    #for clean up
+    conquer_sahara_dam = {
+        picture = form_the_rcmp
+        potential = {
+            tag = DAM
+			HAL = { vassal_of = THIS }
+            NOT = { has_country_flag = administrated_roads }
+			is_vassal = no
+        }
 
+        allow = {
+            war = no			
+			year = 1880
+        }
+
+        effect = {
+            set_country_flag = administrated_roads			
+			DAM = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+    }
+	
 incorparate_yemen = {
 		picture = become_yemen
 		potential = {

@@ -167,6 +167,9 @@ country_event = {
 		}
         badboy = 8
 		set_country_flag = has_taken_oregon_or_more
+		        ai_chance = {
+            factor = 10
+        }
     }
     option = {
         name = "They need to be punished, take all their Colonies"
@@ -177,6 +180,9 @@ country_event = {
 		}
         badboy = 15
 		set_country_flag = has_taken_oregon_or_more
+		ai_chance = {
+            factor = 80
+        }
     }
     option = {
         name = "They shall never Rise again, Dismantle them"
@@ -187,6 +193,9 @@ country_event = {
 		}
         badboy = 20
 		set_country_flag = has_taken_oregon_or_more
+	    ai_chance = {
+            factor = 10
+        }
     }
 }
 
