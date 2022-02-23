@@ -3,14 +3,15 @@ political_decisions = {
         picture = reform_the_uk
         potential = {
 		    OR = {
-			    ai = no
-				OR = {
 			        AND = {
 			            NOT = { tag = SCO }
 				        NOT = { tag = WHA }
 					}
+					AND = {
 				    has_country_flag = britannia_ai
-				}
+					ai = no
+					}
+				
 			}
             capital_scope = { continent = europe }
             NOT = { has_country_flag = post_colonial_country }
