@@ -28,6 +28,18 @@ country_event = {
             who = NEN
             value = 400
         }
+		        ai_chance = {
+            factor = 15
+        }
+    }
+	
+	
+    option = {
+        name = "Rather not"
+        badboy = 2
+		 ai_chance = {
+            factor = 85
+        }
     }
 }
 

@@ -3675,14 +3675,28 @@ political_decisions = {
 	setup_merchants = {
         potential = {
             tag = HNS
-            NOT = { has_country_flag = merchant_heaven 
+            NOT = {
+			has_country_flag = merchant_heaven 
 			year = 1837
 			}
         }
         allow = {
         }
         effect = {
-        set_country_flag = merchant_heaven          						
+        set_country_flag = merchant_heaven     
+        HNS = { tech_school = merchant_tech_school }		
+		VEN = { tech_school = merchant_tech_school }		
+		GEN = { tech_school = merchant_tech_school }	
+        POM = { tech_school = merchant_tech_school }	
+        HAN = { tech_school = merchant_tech_school }
+		AKI = { tech_school = merchant_tech_school }
+        MST = { tech_school = merchant_tech_school }
+        FER = { tech_school = merchant_tech_school }
+        MEC = { tech_school = merchant_tech_school }
+        MAG = { tech_school = merchant_tech_school }	
+        DZG = { tech_school = merchant_tech_school }	
+        BRN = { tech_school = merchant_tech_school }	
+        FER = { tech_school = merchant_tech_school }		
 	    	HNS = {
                 add_country_modifier = {
                     name = merchant_heaven

@@ -634,20 +634,35 @@ country_event = {
     option = {
         name = "Crush them!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
+		any_owned = {
+            limit = { is_core = ILL }
+            secede_province = STY 
+			add_core = STY
+        }
+		any_owned = {
+            limit = { is_core = SLO }
+            secede_province = STY 
+			add_core = STY
+        }
         618 = {
             secede_province = STY
+			add_core = STY
         }
         616 = {
             secede_province = STY
+			add_core = STY
         }
         3288 = {
             secede_province = STY
+			add_core = STY
         }
         617 = {
             secede_province = STY
+			add_core = STY
         }
 		615 = {
             secede_province = STY
+			add_core = STY
         }
         war = {
             target = STY
@@ -660,18 +675,33 @@ country_event = {
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
         618 = {
             secede_province = STY
+			add_core = STY
         }
         616 = {
             secede_province = STY
+			add_core = STY
         }
         3288 = {
             secede_province = STY
+			add_core = STY
         }
         617 = {
             secede_province = STY
+			add_core = STY
         }
 		615 = {
             secede_province = STY
+			add_core = STY
+        }
+		any_owned = {
+            limit = { is_core = ILL }
+            secede_province = STY 
+			add_core = STY
+        }
+		any_owned = {
+            limit = { is_core = SLO }
+            secede_province = STY 
+			add_core = STY
         }
         war = {
             target = STY
