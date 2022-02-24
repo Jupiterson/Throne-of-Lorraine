@@ -3,47 +3,41 @@ FRA = {value = -80}
 
 army = {
     name = "Arm na hÉireann"
-    location = 263
+    location = 260
     regiment = {
         name= "1ú rannán Coisithe"
-        type = infantry
-        home = 263
-    }
-
-    regiment = {
-        name= "2ú rannán Coisithee"
-        type = infantry
-        home = 265
-    }
-
-    regiment = {
-        name= "3ú rannán Coisithe"
-        type = infantry
-        home = 264
-    }
-
-    regiment = {
-        name= "4ú rannán Coisithe"
         type = infantry
         home = 260
     }
 
     regiment = {
-        name= "5ú rannán Coisithe"
+        name= "2ú rannán Coisithee"
         type = infantry
-        home = 258
+        home = 261
     }
 
     regiment = {
-        name= "1ú rannán airtléire"
+        name= "3ú rannán Coisithe"
+        type = infantry
+        home = 260
+    }
+
+    regiment = {
+        name= "4ú rannán Coisithe"
+        type = infantry
+        home = 265
+    }
+
+    regiment = {
+        name= "1ú rannán Airtléire"
         type = artillery
-        home = 261
+        home = 262
     }
 }
 
 navy = {
     name = "Cabhlach na hÉireann"
-    location = 263
+    location = 260
     ship = {
         name= "Saoirse"
         type = manowar
