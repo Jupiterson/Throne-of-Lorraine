@@ -183,10 +183,6 @@ political_decisions = {
 			tag = OCC
 			has_global_flag = occ_chose_violence
 			}
-		    	AND = { 
-		    	tag = FRA
-	    		government = democracy
-		    	}
 			}
             war = no
 			NOT = { has_global_flag = FRZ_cores_set }
@@ -211,6 +207,46 @@ political_decisions = {
                 all_core = { add_core = FRZ }
             }
 			change_tag = FRZ
+            any_pop = {
+                limit = { has_pop_culture = french }
+                militancy = 4
+            }
+			add_accepted_culture = occitan
+			add_accepted_culture = arpitan
+			add_accepted_culture = burgundian
+			add_accepted_culture = breton
+			add_accepted_culture = belgican
+        }
+    }
+	
+core_FRR = {
+        picture = enact_dual_monarchy
+        potential = {
+		    tag = FRA
+			government = democracy 
+            war = no
+			NOT = { has_global_flag = FRZ_cores_set }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		random_owned = { limit = { owner = { debt_law = serfdom } } owner = { political_reform = peonage  } }
+		    set_global_flag = FRZ_cores_set
+            prestige = -20
+			any_owned = {
+                limit = {
+                    has_province_modifier = french_terror
+                }
+                remove_province_modifier = french_terror
+            }
+			remove_country_modifier = nobility_fra
+            FRA = {
+                all_core = { add_core = FRR }
+            }
+			change_tag = FRR
             any_pop = {
                 limit = { has_pop_culture = french }
                 militancy = 4
