@@ -5,6 +5,7 @@ political_decisions = {
 		potential = {
 			OR = { 
 			       tag = BOR
+				   tag = FRR
 				   has_country_flag = federation_complete
 				   tag = FRZ
 				   }
@@ -36,6 +37,7 @@ political_decisions = {
 			OR = {
 			       tag = BOR
 				   tag = FRZ
+				   tag = FRR
 				   }
 				   has_country_flag = proclaim_gauls
 			NOT = {
@@ -674,6 +676,7 @@ centralize_power = {
             tag = FRZ
 			tag = BOR
 			tag = OCC
+			tag = FRR
 			tag = BEL
 			tag = ARP
 			tag = VIC
