@@ -578,3 +578,76 @@ country_event = {
         }
     }
 }
+
+country_event = {
+
+    id = 100119
+    title = "Indian Question"
+    desc = "The Native Indians of Columbia have long been a pain in our back, what shall we do with them?"
+    picture = "frc_salvador"
+	fire_only_once = yes
+    trigger = {
+        tag = VEL	 
+		nationalism_n_imperialism = 1
+		}
+    
+
+    mean_time_to_happen =  {
+        days = 30
+    }
+
+    option = {
+        name = "Lets put them down with force"
+        prestige = 15
+		badboy = 3
+		any_owned = {
+                limit = {
+                    has_province_modifier = indian_lands
+                }
+                remove_province_modifier = indian_lands
+				add_province_modifier = { name = new_states duration = 1200 }
+            }
+    }
+	
+	option = {
+        name = "Reconsile with them"
+		prestige = -5
+		badboy = -5
+		any_owned = {
+                limit = {
+                    has_province_modifier = indian_lands
+                }
+                remove_province_modifier = indian_lands
+				add_province_modifier = { name = new_states duration = 1200 }
+            }
+    }
+}
+
+country_event = {
+
+    id = 100120
+    title = "Return of Nieuw Hague"
+    desc = "Neu Hague has been out of our controll for long, lets welcome it back!"
+    picture = "frc_salvador"
+	fire_only_once = yes
+    trigger = {
+        tag = VEL	 
+		owns = 129
+		}
+    
+
+    mean_time_to_happen =  {
+        days = 5
+    }
+
+    option = {
+        name = "What a Glorious day"
+        prestige = 15
+		129 = {
+            change_province_name = "Nieuw Hague"
+			}
+		add_country_modifier = { name = land_of_the_free duration = 1000 }
+    }
+
+}
+

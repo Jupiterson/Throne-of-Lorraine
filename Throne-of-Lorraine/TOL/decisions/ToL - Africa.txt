@@ -1,12 +1,10 @@
 political_decisions = {
     #for clean up
-    conquer_sahara_dam = {
+    conquer_desert_dam = {
         picture = form_the_rcmp
         potential = {
-            tag = DAM
-			HAL = { vassal_of = THIS }
+            ai = yes
             NOT = { has_country_flag = administrated_roads }
-			is_vassal = no
         }
 
         allow = {
@@ -16,7 +14,7 @@ political_decisions = {
 
         effect = {
             set_country_flag = administrated_roads			
-			DAM = { all_core = { limit = { empty = yes } secede_province = THIS } }
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
         }
     }
 	
