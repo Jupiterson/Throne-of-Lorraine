@@ -141,18 +141,13 @@ country_event = {
 	option = {
         name = "Well then..."
 		set_country_flag = irish_revolt
-        any_owned = {
+        any_owned_province = {
             limit = { is_core = IRE }
             secede_province = IRR
         }
         diplomatic_influence = {
             who = IRR
             value = -400
-        }
-        casus_belli = {
-            target = IRR 
-            type = conquest
-            months = 12
         }
         war = {
             target = IRR 
