@@ -20,7 +20,7 @@ CAN_46 = { 46 57 55 51 56 52 53 54 } #Southern Ontario
 
 CAN_50 = { 49 50 47 48 2594 } #Northern Ontario
 
-CAN_58 = { 58 65 62 61 63 64 66 67 } #Southern Quebec
+CAN_58 = { 58 65 62 61 63 64 66 67 250 3280 } #Southern Quebec
 
 CAN_60 = { 9 59 2593 2626 2592 } #Northern Quebec
 
@@ -86,37 +86,37 @@ USA_176 = { 173 174 175 176 } #Michigan
 
 USA_178 = { 178 179 180 183 182 181 228 } #Ohio
 
-USA_185 = { 184 185 186 187 } #Kentucky
+USA_185 = { } #Kentucky
 
-USA_188 = { 188 190 2556 } #Tennessee
+USA_188 = { 184 185 186 187 188 } #Tennessee
 
 USA_194 = { 192 193 189 194 140 } #Mississippi
 
-USA_196 = { 195 196 191 } #Alabama
+USA_196 = { 195 196 191 198 197 } #Alabama
 
-USA_200 = { 200 199 198 3284 197 } #Florida
+USA_200 = { 200 199 3284 } #Florida
 
-USA_201 = { 201 202 204 2555 } #Georgia
+USA_201 = { } #Georgia
 
-USA_205 = { 205 206 } #South Carolina
+USA_205 = { 201 202 204 2555 205 206 } #South Carolina
 
-USA_2556 = { 209 207 208 210 } #North Carolina
+USA_2556 = { 209 207 208 210 214 2556 190 } #North Carolina
 
-USA_211 = { 60 211 212 213 214 215 216 } #Virginia
+USA_211 = { 211 213 216 60 } #Virginia
 
-USA_218 = { 218 217 } #West Virginia
+USA_218 = { 218 217 215 } #West Virginia
 
-USA_219 = { 2146 220 219 222 } #Maryland
+USA_219 = { 2146 220 219 222 212 } #Maryland
 
 USA_223 = { 223 224 225 226 227 2627 } #Pennsylvania
 
 USA_231 = { } #New Jersey
 
-USA_232 = { 232 233 234 245 241 229 231 230 } #New York
+USA_232 = { 232 233 234 245 241 229 231 230 243 244 242 } #New York
 
 USA_243 = { } #Massachusets
 
-USA_247 = { 247 246 248 249 250 243 244 242 3280 } #New England
+USA_247 = { 247 246 248 249 } #New England
 
 AKI_235 = { 235 236 237 238 239 240 } #New Brandenburg
 
@@ -137,17 +137,21 @@ ENG_271 = { 271 269 270 272 304 } #Lowlands
 
 ENG_273 = { 273 274 275 276 286 } #Wales
 
-ENG_277 = { 277 278 279 285 } #North West England
+ENG_277 = { 277 278 285 } #North West England
 
-ENG_280 = { 280 281 282 } #North East England
+SCO_279 = { 280 279 } #Scottish Marches
 
-ENG_284 = { 284 287 288 289 290 283 } #Midlands
+ENG_280 = { 281 282 } #North East England
 
-ENG_291 = { 291 292 293 295 } #Eastern Counties
+ENG_284 = { 284 287 288 289 295 283 } #Midlands
 
-ENG_296 = { 296 299 297 298 419 3268 3480 } #South West England
+ENG_291 = { 290 291 292 293 } #Eastern Counties
 
-ENG_300 = { 300 294 301 302 303 3269 } #South East England
+ENG_296 = { 298 299 419 3268 3480 } #South West England
+
+ENG_297 = { 297 296 294 303 } #Central England
+
+ENG_300 = { 300 301 302 3269 } #South East England
 
 
 ### Scandinavia
@@ -166,13 +170,13 @@ SWE_322 = { 322 324 326 325 } #Stockholm
 
 SWE_329 = { 329 328 327 323 330 } #Goteburg
 
-SWE_334 = { 334 332 331 333 335 } #Malmo
+SWE_334 = { 334 332 333 335 } #Malmo
 
 RUS_336 = { 336 337 338 3339 3340 } #Northern Finland
 
 RUS_343 = { 343 344 341 340 342 339 } #Helsinki
 
-RUS_345 = { 345 346 347 348 } #Turku
+RUS_345 = { 345 346 347 } #Turku
 
 DEN_367 = { 367 366 2557 } #Jylland
 
@@ -180,7 +184,7 @@ HOL_369 = { 369 530 529 } #Holstein
 
 SCH_370 = { 370 371 533 2236 } #Schleswig
 
-DEN_372 = { 372 373 374 } #Sjaelland
+DEN_372 = { 372 373 } #Sjaelland
 
 
 ### Low Countries
@@ -280,7 +284,7 @@ HAN_540 = { 581 539 540 543 542 538 541 1743 3259 } #East Friesland
 
 PRU_544 = { 544 545 3493 } #Mecklenburg
 
-PRU_546 = { 546 547 548 679 680 368 3364 } #Pomerania
+PRU_546 = { 546 547 548 679 680 } #Pomerania
 
 PRU_549 = { 549 550 551 681 3376 } #Brandenburg
 
@@ -290,7 +294,7 @@ LUS_552 = { 552 687 3418 3417 3337 } #Lusatia
 
 PRU_554 = { 554 561 562 563 3255 3256 3425 } #Thuringia
 
-SAX_558 = { 558 559 560 556 3416 } #Saxony
+SAX_558 = { 558 559 560 556 3416 628 627 } #Saxony
 
 HES_2560 = { 564 565 566 567 568 2560 3257 3270 570 } #Hessen
 
@@ -308,7 +312,7 @@ WUR_589 = { 589 590 591 593 594 3481 592 } #Wurttemburg
 
 BAV_595 = { 595 596 597 598 } #Franconia
 
-BAV_599 = { 599 600 601 602 } #Upper Bavaria
+BAV_599 = { 599 600 601 602 629 } #Upper Bavaria
 
 #BAV_601 = { 601 602 } #Lower Bavaria
 
@@ -326,6 +330,8 @@ PRU_695 = { 695 696 697 698 693 3326 3327 3328 3329 365 } #Ostpreu�en
 
 PRU_701 = { 701 699 700 } #Posen
 
+SWE_331 = { 331 374 368 353 348 3364 } #Saxony
+
 
 ### Austria
 
@@ -335,13 +341,13 @@ AUS_613 = { 616 617 618 3288 } #K�rnten-Steiermark
 
 AUS_624 = { 633 623 624 3286 } #Burgenland,Deutsch Mark
 
-AUS_619 = { 619 620 621 622 } #�sterreich
+AUS_619 = { 619 620 621 622 630 3426 } #�sterreich
 
 AUS_623 = { 639 640 642 643 644 } #Transdanubia
 
 AUS_625 = { 625 626 631 3333 3334 3335 3483 } #Bohemia
 
-AUS_626 = { 627 628 629 630 3426 } #Moravia/Sudetes
+#AUS_626 = { 627 628 629 630 3426 } #Moravia/Sudetes
 
 AUS_633 = { 635 633 634 636 637 638 950 3332 } #Slovakia
 
@@ -542,7 +548,7 @@ AFG_1214 = { 1213 1211 1210 } #Kunduz
 
 ### Russia
 
-RUS_349 = { 349 350 351 352 353 3367 3368 } #Estonia
+RUS_349 = { 349 350 351 352 3367 3368 } #Estonia
 
 RUS_354 = { 354 355 356 357 358 359 3365 3423 3424 } #Latvia
 
@@ -894,7 +900,7 @@ JAP_1675 = { 1646 1645 1675 1647 1648 1676 1677 3260 } #Chubu
 
 ### North Africa
 
-MOR_1696 = { 1696 1773 1774 } #Western Sahara
+MOR_1696 = { 1773 1774 } #Western Sahara
 
 MOR_1693 = { 1690 1693 1691 2563 1692 } #Morocco
 
@@ -904,7 +910,7 @@ MOR_1688 = { 1686 1688 1689 1687 2590 } #al Rif
 
 MOR_1683 = { 1683 1684 1697 } #Taza
 
-MOR_1694 = { 1694 1699 1698 1695 } #Agadir
+MOR_1694 = { 1694 1699 1698 1695 1696 } #Agadir
 
 FRA_1700 = { 1700 1706 1703 1813 } #Algiers
 
@@ -1162,7 +1168,7 @@ UCA_2197 = { 2197 2198 2199 2200 3491 3492 } #Nicaragua
 
 UCA_2201 = { 2201 2202 2203 3447 } #Costa Rica
 
-CLM_1723 = { 2204 1723 2205 2206 2208 } #Panama
+CLM_1723 = { 2204 1723 2205 2206 } #Panama
 
 
 ### Caribbean
@@ -1186,41 +1192,47 @@ ENG_1979 = { 2239 2240 2241 2242 2243 2245 2246 1979 } #Guyana
 
 VNZ_2234 = { 2268 2270 2271 2272 2273 } #Zulia
 
-VNZ_2265 = { 2264 2265 2266 2267 2274 } #Miranda
+VNZ_2265 = { 2264 2265 2266 2267 2274 2249 } #Miranda
 
 VNZ_2278 = { 2269 2275 2276 2277 2532 } #Bolivar
 
-CLM_2251 = { 2255 2252 2251 2253 2254 } #Antioquia
+CLM_2251 = { 2247 2252 2251 } #Antioquia
+
+CLM_2253 = { 2253 2254 2255 2208 } #New Colombian North Coast
 
 CLM_2262 = { 2262 2261 2260 2263 } #Guaviare
 
-CLM_2247 = { 2247 2250 2249 2248 } #Cundinamarca
+#CLM_2247 = { 2250 2248 } #Cundinamarca
 
-CLM_2259 = { 2256 2257 2258 2259 } #Cauca
+CLM_2259 = { 2256 2257 2258 2259 2250 2248 } #Cauca
 
-ECU_2279 = { 2279 2280 2281 2282 2283 2284 2285 } #Ecuador
+ECU_2279 = { 2279 2280 2281 2282 2285 } #Ecuador
 
-PEU_2289 = { 2286 2287 2288 2289 } #Pastaza
+PEU_2289 = { 2286 2288 2289 2300 } #Pastaza
+
+PEU_2287 = { 2287 2283 2284 } #West Antisuyu
 
 PEU_2291 = { 2290 2291 2292 2294 } #Cajamarca
 
-PEU_2297 = { 2302 2297 2299 2301 } #Ica
+PEU_2297 = { 2302 2297 2299 } #Ica
 
-PEU_2300 = { 2295 2300 2293 2296 2298 } #Lima
+PEU_2301 = { 2301 2319 2321 } #Southeast Antisuyu
+
+PEU_2300 = { 2295 2293 2296 2298 } #Lima
 
 PEU_2303 = { 2303 2304 2578 } #Arequipa
 
-BOL_2305 = { 2313 2314 2312 } #Atacama
+BOL_2305 = { 2313 2314 2312 2315 } #Atacama
 
 BOL_2309 = { 2305 2307 2308 2309 } #Antofagasta
 
-BOL_2317 = { 2317 2316 2318 } #Santa Cruz
+#BOL_2317 = { 2316 } #Santa Cruz
 
-BOL_2321 = { 2310 2321 2320 2319 2311 } #La Paz
+BOL_2321 = { 2310 2311 2316 } #La Paz
 
-PRG_2338 = { 2338 2337 } #Alto Paraguay
+PRG_2338 = { 2338 2337 2318 } #Alto Paraguay
 
-PRG_2343 = { 2339 2343 2341 2342 2340 } #Bajo Parguay
+PRG_2343 = { 2339 2343 2341 2342 2340 2554 2462 } #Bajo Parguay
 
 URU_2344 = { 2344 2345 2346 2347 } #Uruguay
 
@@ -1235,7 +1247,7 @@ BRZ_2408 = { 2410 2408 2412 2415 2413 2411 2600 } #Par�
 
 BRZ_2410 = { 2429 2424 2425 2427 2426 2430 } #Maranh�o
 
-BRZ_2416 = { 2419 2416 2417 2418 2420 2550 3380 3382 } #Mato Grosso
+BRZ_2416 = { 2419 2416 2417 2418 2420 2550 3380 3382 2317 2320  } #Mato Grosso
 
 BRZ_2421 = { 2421 2422 2423 } #Goi�s
 
@@ -1243,15 +1255,17 @@ BRZ_2428 = { 2432 2428 2431 2435 2434 2433 3482 } #Nordeste
 
 BRZ_2439 = { 2436 2439 2440 2437 2438 } #Bahia
 
-BRZ_2446_1 = { 3446 2443 2444 3445 } #Minas Gerais Norte
-BRZ_2446_2 = { 2446 2445 2441 } #Minas Gerais Sul
-BRZ_2446_3 = { 2442 3443 3444 } #Minas Gerais Centro
+BRZ_3446 = { 3446 2443 2444 3445 } #Minas Gerais Norte
+
+BRZ_2446 = { 2446 2445 2441 } #Minas Gerais Sul
+
+BRZ_3444 = { 2442 3443 3444 } #Minas Gerais Centro
 
 BRZ_2447 = { 2447 2448 2449 } #Rio de Janeiro
 
-BRZ_2461 = { 2461 2462 2459 } #Santa Catarina
+#BRZ_2461 = { 2461 2459 } #Santa Catarina
 
-BRZ_2462 = { 2457 2458 2460 } #Paran�
+BRZ_2462 = { 2457 2458 2460 2461 2459 } #Paran�
 
 BRZ_2467 = { 2463 2467 2464 2466 2465 } #Rio Grande do Sul
 
@@ -1266,21 +1280,21 @@ CHL_2327 = { 2329 2327 2331 2328 } #Los Rios
 
 CHL_2332 = { 2332 2333 2334 2335 2336 } #Araucania
 
-ARG_2355 = { 2348  2353 2354 2350 2351 2352 2349 2355 } #Buenos Aires
+ARG_2355 = { 2348 2354 2350 2351 2352 2349 } #Buenos Aires
 
-ARG_2363 = { 2362 2363 2361 } #Santa Fe
+ARG_2363 = { 2363 2361 2353 2355 } #Santa Fe
 
-ARG_2360 = { 2360 2359 2357 2358 2554 2356 } #Entre Rios
+ARG_2360 = { 2360 2359 2357 2358 2356 } #Entre Rios
 
-ARG_2368 = { 2368 2372 2371 2369 2370 2315 1714 } #Jujuy
+ARG_2368 = { 2368 2371 2369 2370 1714 2373 2376 } #Jujuy
 
 ARG_2374 = { 2374 2375 2385 2386 2387 2388 } #Catamarca
 
-ARG_2377 = { 2364 2365 2366 2367 } #Chaco
+ARG_2377 = { 2364 2365 2366 2367 2372 2362 2377 } #Chaco
 
-ARG_2384 = { 2384 2383 2382 2379 2381 2380 } #C�rdoba de Argentina
+ARG_2384 = { 2384 2383 2382 2379 2381 2380 2378 } #C�rdoba de Argentina
 
-ARG_2387 = { 2373 2376 2377 2378 } #Tucum�n
+#ARG_2387 = { 2378 } #Tucum�n
 
 ARG_2391 = { 2391 2392 2394 2396 2397 } #Patagonia Septentrional
 
