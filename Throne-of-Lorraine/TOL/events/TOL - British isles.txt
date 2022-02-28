@@ -118,21 +118,15 @@ country_event = {
     trigger = {
 	    tag = ENG
 	    NOT = { has_country_flag = irish_revolt }
-		any_pop = { 
-		    limit = { 
-			    has_pop_culture = irish
-	            average_militancy = 4 
-			}
-        }
 		OR = {
-		    263 = { owned_by = THIS }
-			254 = { owned_by = THIS }
+		    263 = { owned_by = ENG }
+			254 = { owned_by = ENG }
 		}
         NOT = { exists = IRR }
     }
 
     mean_time_to_happen = {
-        months = 3
+        months = 1
         modifier = {
             factor = 0.5
             average_militancy = 7
