@@ -1,0 +1,29 @@
+political_decisions = {
+
+	King_Mezzogiorno = {
+		picture = Regnum_Neapoli
+		potential = {
+			tag = NAP
+			year = 1845
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			is_vassal = no
+			has_country_flag = RegnumNeapoli
+			NOT = { has_country_flag = king_mezz }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = king_mezz 
+			NAP = { country_event = { id = 36579 days = 7 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}  
+
+}

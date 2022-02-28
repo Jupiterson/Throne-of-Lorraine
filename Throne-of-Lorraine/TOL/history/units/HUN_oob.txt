@@ -33,13 +33,7 @@ leader = {
 
 army = {
     name = "V. Armee"
-    location = 641
-    regiment = {
-        name= "1.2. Kavalleriedivision"
-        type = cuirassier
-        home = 622
-    }
-
+    location = 703
     regiment = {
         name= "2.2. Kavalleriedivision"
         type = cuirassier
@@ -47,32 +41,93 @@ army = {
     }
 
     regiment = {
-        name= "3.2. Kavalleriedivision"
-        type = cuirassier
-        home = 626
-    }
-
-    regiment = {
-        name= "1.1. Infanteriedivision"
-        type = infantry
-        home = 613
-    }
-
-    regiment = {
         name= "2.1. Infanteriedivision"
         type = infantry
         home = 644
+    }	
+	
+    regiment = {
+        name= "2.6. Infanteriedivision"
+        type = infantry
+        home = 640
     }
 
     regiment = {
-        name= "3.1. Infanteriedivision"
+        name= "2.7. Infanteriedivision"
         type = infantry
-        home = 625
+        home = 643
+    }
+	
+	regiment = {
+        name= "Hungarian Artillery"
+        type = artillery
+        home = 623
+    }
+		regiment = {
+        name= "Hungarian Artillery"
+        type = artillery
+        home = 623
+    }
+		regiment = {
+        name= "Hungarian Artillery"
+        type = artillery
+        home = 623
+    }
+		regiment = {
+        name= "Hungarian Artillery"
+        type = artillery
+        home = 624
+    }
+			regiment = {
+        name= "Hungarian Artillery"
+        type = artillery
+        home = 624
+    }
+	regiment = {
+        name= "Hungarian Artillery"
+        type = artillery
+        home = 624
+    }
+	
+	    regiment = {
+        name= "2.1. Infanteriedivision"
+        type = infantry
+        home = 639
+    }	
+	
+    regiment = {
+        name= "2.6. Infanteriedivision"
+        type = infantry
+        home = 639
     }
 
     regiment = {
-        name= "1.2. Infanteriedivision"
+        name= "2.7. Infanteriedivision"
         type = infantry
-        home = 616
+        home = 639
+    }
+	
+	    regiment = {
+        name= "2.6. Infanteriedivision"
+        type = infantry
+        home = 639
+    }
+
+    regiment = {
+        name= "2.7. Infanteriedivision"
+        type = infantry
+        home = 639
+    }
+	
+    regiment = {
+        name= "III. Kavalleriebrigade"
+        type = dragoon
+        home = 637
+    }
+	
+	    regiment = {
+        name= "2.7. Infanteriedivision"
+        type = infantry
+        home = 640
     }
 }

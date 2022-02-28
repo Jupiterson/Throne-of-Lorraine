@@ -116,6 +116,7 @@ country_event = {
 
     trigger = {
         nationalvalue = nv_liberty
+		NOT = { tag = JAN }
     }
 
     mean_time_to_happen = {
@@ -169,6 +170,7 @@ country_event = {
     picture = "Demonstration"
 
     trigger = {
+	NOT = { tag = JAN }
         average_militancy = 8
         nationalvalue = nv_liberty
     }
@@ -433,6 +435,7 @@ country_event = {
     picture = "Demonstration"
 
     trigger = {
+	    NOT = { tag = JAN }
         nationalvalue = nv_liberty
         OR = {
             government = presidential_dictatorship

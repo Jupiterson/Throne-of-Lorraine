@@ -1,5 +1,61 @@
 political_decisions = {
 
+
+	greater_saarland = {
+        picture = normandy_mines
+        potential = {
+		tag = SAA
+            NOT = { has_country_flag = saar_stzronk }
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+		prestige = 50
+     
+        }
+
+        effect = {
+		prestige = 45
+		set_country_flag = saar_stzronk
+        badboy = 5	   
+	    572 = { add_core = THIS }
+	    412 = { add_core = THIS }
+		397 = { add_core = THIS }		
+        }
+   }
+   
+   saarempire = {
+        picture = normandy_mines
+        potential = {
+		tag = SAA
+            NOT = { has_country_flag = saar_stzronk }
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+		prestige = 50
+     
+        }
+
+        effect = {
+		prestige = 45
+		set_country_flag = saar_stzronk
+        badboy = 5	   
+	    571 = { add_core = THIS }
+	    3377 = { add_core = THIS }
+		575 = { add_core = THIS }
+        570 = { add_core = THIS }
+	    574 = { add_core = THIS }
+		576 = { add_core = THIS }	
+        409 = { add_core = THIS }		
+        }
+   }
+
+
 	force_boehmen = {
 		picture = german_confederation
 		potential = {
@@ -46,7 +102,9 @@ political_decisions = {
               tag = PZN
               tag = UBD	
                 } 				 
-            NOT = { exists = GER }
+            NOT = { exists = GER 
+			        has_country_flag = joined_hre  
+					 }
         }
 
         allow = {
@@ -78,7 +136,12 @@ political_decisions = {
 					  add_core = GER
                     }
                 }
-            add_accepted_culture = north_german                           
+            add_accepted_culture = north_german 
+            add_accepted_culture = south_german  
+            add_country_modifier = {
+                    name = hre_member
+                    duration = -1
+                }   			
         }
         ai_will_do = { factor = 1 }
     }
@@ -125,7 +188,7 @@ political_decisions = {
             }
         }
         allow = {
-                        owns = 695
+                        owns = 618
 						state_n_government = 1
             }
         effect = {

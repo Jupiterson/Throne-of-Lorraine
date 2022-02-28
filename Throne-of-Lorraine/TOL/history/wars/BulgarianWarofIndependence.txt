@@ -1,0 +1,25 @@
+name = "The Bulgarian War of Independence"
+
+1835.4.19 = {
+    add_attacker = BUL
+    add_defender = TUR
+
+    war_goal = {
+        casus_belli = acquire_core_state
+		state_province_id = 808
+        actor = BUL
+        receiver = TUR
+    }
+
+    war_goal = {
+        casus_belli = conquest
+        actor = TUR
+        receiver = BUL
+    }
+
+}
+
+1840.9.3 = {
+    rem_attacker = TUR
+    rem_defender = BUL
+}

@@ -226,39 +226,6 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
-    option_disable_colonial_railroading = {
-        alert = no
-        picture = starting_options
-        potential = {
-            ai = no
-            has_country_flag = country_looking_through_options
-            NOT = { year = 1837 }
-            NOT = { has_global_flag = colonial_railroading_disabled }
-        }
-        allow = {}
-        effect = {
-            set_global_flag = colonial_railroading_disabled
-        }
-    }
-
-    option_enable_fantasy_countries = {
-        picture = starting_options
-        alert = no
-        potential = {
-            ai = no
-            has_country_flag = country_looking_through_options
-            NOT = { year = 1837 }
-            NOT = { has_global_flag = fantasy_countries_enabled }
-        }
-
-        allow = {
-        }
-
-        effect = {
-            set_global_flag = fantasy_countries_enabled
-        }
-        ai_will_do = { factor = 0 }
-    }
 	
 	option_enable_revolts = {
         picture = starting_options
@@ -278,22 +245,22 @@ political_decisions = {
         }
         ai_will_do = { factor = 0 }
     }
-
-    option_enable_easter_eggs = {
+	
+    option_disable_tiniri = {
         picture = starting_options
         alert = no
         potential = {
             ai = no
             has_country_flag = country_looking_through_options
             NOT = { year = 1837 }
-            NOT = { has_global_flag = easter_eggs_enabled }
+            NOT = { has_global_flag = tiniri_disabled }
         }
 
         allow = {
         }
 
         effect = {
-            set_global_flag = easter_eggs_enabled
+            set_global_flag = tiniri_disabled
         }
         ai_will_do = { factor = 0 }
     }
@@ -1997,6 +1964,15 @@ political_decisions = {
                 literacy = -0.15
             }
             any_pop = { limit = { OR = { has_pop_culture = maghrebi has_pop_culture = berber } } literacy = -0.99 }
+			any_owned = { 
+	        add_province_modifier = { name = french_terror duration = -1 } 
+         	}
+			FRA = {
+			add_country_modifier = {
+                    name = nobility_fra
+                    duration = -1
+               }   
+            }			   
             relation = { who = WOL value = -400 }
             relation = { who = TOO value = -400 }
             badboy = 6.03

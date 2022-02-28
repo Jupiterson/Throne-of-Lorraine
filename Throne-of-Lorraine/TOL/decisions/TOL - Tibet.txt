@@ -4,7 +4,6 @@ political_decisions = {
 		potential = {
 			tag = TIB
 			NOT = { has_global_flag = TIB_claimed_burma }
-			NOT = { has_global_flag = BUR_claimed_tibet }
 		}
 		allow = {
 			prestige = 10
@@ -14,6 +13,8 @@ political_decisions = {
 		effect = {
 			prestige = 15
 			add_accepted_culture = burmese
+			add_accepted_culture = shan
+			add_accepted_culture = kachin
 			any_country = {
 				limit = {
 					primary_culture = burmese

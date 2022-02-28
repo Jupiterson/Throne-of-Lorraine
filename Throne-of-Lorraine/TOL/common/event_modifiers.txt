@@ -608,7 +608,7 @@ penal_colony = {
 }
 
 indian_territory = {
-    immigrant_attract = -0.8
+#    immigrant_attract = -0.8
     local_RGO_output = -0.5
     pop_consciousness_modifier = 0.1
     pop_militancy_modifier = -0.20
@@ -624,6 +624,49 @@ indian_lands = {
     local_ruling_party_support = -0.80
     #goods_demand = -0.50
     icon = 1
+}
+
+new_states = {
+    immigrant_attract = 0.8
+    pop_consciousness_modifier = -0.5
+    pop_militancy_modifier = -0.10
+    assimilation_rate = 0.8
+    icon = 1
+}
+
+biobio_mining_reforms = {
+	factory_output = 0.05
+	factory_throughput = 0.10
+	factory_owner_cost = -0.15
+    pop_consciousness_modifier = 0.05
+    pop_militancy_modifier = 0.05
+    icon = 1
+}
+
+incan_industrial_reforms = {
+    factory_output = 0.1
+	factory_throughput = 0.15
+	factory_owner_cost = -0.25
+    pop_consciousness_modifier = 0.15
+    pop_militancy_modifier = 0.10
+	population_growth = 0.05
+    icon = 1
+}
+
+incan_reform_benefits_mining = {
+	population_growth = 0.01
+    immigrant_attract = 1.5
+	mine_rgo_eff = 0.2
+    mine_rgo_size = 1
+	icon = 11
+}
+
+incan_reform_benefits_farming = {
+	population_growth = 0.01
+    immigrant_attract = 1.5
+	mine_rgo_eff = 0.2
+    mine_rgo_size = 1
+	icon = 11
 }
 
 #you_are_going_to_the_usa = {
@@ -878,11 +921,12 @@ withdrew_from_geneva_convention = {
 genocide = {
     immigrant_attract = -2
     immigrant_push = 0.25
-    #life_rating = -0.25
+    life_rating = -0.25
     icon = 20
 }
 
 rebuilding_city = {
+    immigrant_attract = 0.50
     population_growth = 0.005
     local_RGO_output = 0.5
     icon = 11
@@ -1797,7 +1841,7 @@ philantropic_work = {
 ##Hansa
 
 kontor = {
-    population_growth = 0.005
+    population_growth = 0.0005
 	factory_owner_cost = -0.5
     immigrant_attract = 1.5
 	local_artisan_output = 0.75
@@ -2283,7 +2327,7 @@ irish_integration  = {
 ### Arabia ###
 
 rally_tribesmen = {
-    mobilisation_size = 0.76
+    mobilisation_size = 1.5
     mobilisation_economy_impact = -0.7
     core_pop_militancy_modifier = -0.1
     war_exhaustion = -0.03
@@ -2606,8 +2650,14 @@ vancouver_boom = {
 }
 
 america_new_world = {
-    global_immigrant_attract = 0.5
-    global_population_growth = 0.01
+    global_immigrant_attract = 0.75
+    global_population_growth = 0.005
+    icon = 17
+}
+
+open_territories = {
+    global_immigrant_attract = 2
+    global_population_growth = 0.005
     icon = 17
 }
 
@@ -4786,3 +4836,151 @@ gaelic_societies = {
 	pop_militancy_modifier = 0.05
     icon = 13
 }
+
+the_blessed_king = {
+    education_efficiency_modifier = 0.25
+    research_points = 0.1
+    icon = 3
+}
+
+the_illustrious_king = {
+    diplomatic_points_modifier = 0.2
+    prestige = 0.2
+    icon = 5
+}
+
+the_soldier_king = {
+    land_organisation = 0.1
+    mobilization_impact = -0.25
+    icon = 15
+}
+
+french_terror = {
+    immigrant_attract = -1.5
+#	war_exhaustion = 0.05
+	immigrant_push = 0.025
+    local_RGO_output = -0.5
+    pop_consciousness_modifier = 0.10
+    pop_militancy_modifier = 0.10
+	non_accepted_pop_consciousness_modifier = 0.1
+    non_accepted_pop_militancy_modifier = 0.1
+    local_ruling_party_support = -0.80
+    goods_demand = -0.05
+    icon = 1
+}
+
+#stubborn_nobility = {
+#    global_immigrant_attract = -0.75
+#    global_population_growth = -0.0025
+#	diplomatic_points_modifier = -0.1
+#	assimilation_rate = -0.1
+#	badboy = 0.1
+#	war_exhaustion = 0.5
+# #   icon = 20
+#}
+
+nobility_fra = {
+    global_immigrant_attract = -0.75
+    global_population_growth = -0.0025
+	diplomatic_points_modifier = -0.1
+    icon = 20
+}
+
+
+land_of_the_free = {
+    global_immigrant_attract = 0.75
+    global_population_growth = 0.005
+	assimilation_rate = 0.1
+	badboy = -0.1
+    icon = 19
+}
+
+segregation_and_rascism = {
+    global_immigrant_attract = -0.15
+	assimilation_rate = -0.025
+    icon = 20
+}
+
+merchant_heaven = {
+    global_immigrant_attract = 0.50
+    global_population_growth = 0.0025
+	diplomatic_points_modifier = 0.2
+	research_points_modifier = 0.1
+	war_exhaustion = -0.25
+	goods_demand = 0.05
+    icon = 11
+}
+
+hre_member = {
+    global_population_growth = 0.0025
+	diplomatic_points_modifier = -0.1
+	research_points_modifier = 0.05
+	war_exhaustion = -0.05
+	cb_generation_speed_modifier = 0.35
+    icon = 17
+}
+
+french_renaissance = {
+    global_population_growth = 0.0075
+	research_points_modifier = 0.1
+	pop_consciousness_modifier = -0.25
+    pop_militancy_modifier = -0.25
+	war_exhaustion = -0.05
+	goods_demand = 0.05
+    icon = 17
+}
+
+carlist_sympathies = {
+    #prestige = -0.01
+    pop_militancy_modifier = 0.15
+    core_pop_militancy_modifier = 0.01
+    local_RGO_throughput = -0.3
+    immigrant_push = -0.5
+    icon = 4
+}
+
+christino_sympathies = {
+    #prestige = -0.01
+    pop_militancy_modifier = 0.15
+    core_pop_militancy_modifier = 0.01
+    local_RGO_throughput = -0.3
+    immigrant_push = -0.5
+    icon = 4
+}
+
+rebel_cell_discovered = {
+    prestige = 0.01
+    icon = 15
+}
+
+ottoman_asimilation = {
+    assimilation_rate = 3
+    icon = 19
+}
+
+#Next two ripped from TGC
+outraged-europe = {
+		badboy = 0.07
+		import_cost = 0.1
+		diplomatic_points_modifier = -0.2
+		influence_modifier = -0.2
+		icon = 8
+	}
+
+german-menace = {
+		badboy = -0.01
+		influence_modifier = 0.2
+		diplomatic_points_modifier = 0.2
+		mobilisation_size = 0.06
+		icon = 15
+	}
+	
+	
+	
+	tiniri_menace = {
+		badboy = -0.01
+		influence_modifier = 0.2
+		diplomatic_points_modifier = 0.2
+		mobilisation_size = 0.06
+		icon = 15
+	}

@@ -1,7 +1,7 @@
 political_decisions = {
     build_the_tower_of_babylon = {
         potential = {
-            has_global_flag = fantasy_countries_enabled
+ #           has_global_flag = fantasy_countries_enabled
             tag = IRQ
             is_greater_power = yes
         }
@@ -31,7 +31,7 @@ political_decisions = {
         picture = the_holy_city
         potential = {
             tag = WAD
-            has_global_flag = fantasy_countries_enabled
+#            has_global_flag = fantasy_countries_enabled
         }
         allow = {
             owns = 926
@@ -166,7 +166,7 @@ political_decisions = {
     louis_hungarian = {
         potential = {
             tag = HUN
-            has_global_flag = fantasy_countries_enabled
+  #          has_global_flag = fantasy_countries_enabled
             NOT = {
                 tag = PHC
             }
@@ -289,6 +289,7 @@ political_decisions = {
             NOT = {
                 tag = JER
             }
+			NOT = { has_country_flag = tempfix }
 #            has_global_flag = fantasy_countries_enabled
         }
         allow = {
@@ -319,6 +320,7 @@ political_decisions = {
                 release = KNI
                 remove_core = 854
             }
+			Set_country_flag = tempfix
         }
     }
 }

@@ -1454,43 +1454,6 @@ country_event = {
         ai_chance = { factor = 0 }
     }
 }
-
-#Zeyla seceded
-country_event = {
-    id = 98648
-    title = "EVTNAME98648"
-    desc = "EVTDESC98648"
-    picture = "muhammad_ali"
-
-    fire_only_once = yes
-
-    trigger = {
-        owns = 1874
-        year = 1841
-        civilized = no
-    }
-
-    mean_time_to_happen = { months = 6 }
-
-
-    option = {
-        name = "EVT98648OPTA"
-        treasury = 20000
-        1874 = { secede_province = WRL }
-        ai_chance = { factor = 100 }
-    }
-
-    option = {
-        name = "EVT98648OPTB"
-        1874 = {
-            any_pop = {
-                militancy = 5
-                consciousness = 7
-            }
-        }
-        ai_chance = { factor = 0 }
-    }
-}
 #Montenegro turns Monarchy
 country_event = {
     id = 98649
@@ -1599,16 +1562,15 @@ country_event = {
     picture = "bedr_khan_massacres"
 
     trigger = {
-        tag = TUR
+        tag = PER
         OR = {
-            truce_with = EGY
-            EGY = { exists = no }
-            has_country_flag = egypt_limited_rule_agreed
+            truce_with = KHZ
+            KHZ = { exists = no }
+            has_country_flag = arab_incorparated
             owns = 917
         }
         war = no
         BHT = { exists = yes NOT = { has_country_flag = yazidi_kurdistan } }
-        EGY = { war = no }
         NOT = { year = 1860 }
         year = 1840
     }
@@ -1649,6 +1611,7 @@ country_event = {
 					tag = RDL
 					tag = MKN
 					tag = URM
+					tag = ASY
                 }
             }
             annex_to = BHT
@@ -1716,6 +1679,7 @@ country_event = {
 					tag = RDL
 					tag = MKN
 					tag = URM
+					tag = ASY
                 }
             }
             annex_to = BHT
@@ -1764,6 +1728,7 @@ country_event = {
                     tag = BTL
 					tag = RDL
 					tag = MKN
+					tag = ASY
 					tag = URM
                 }
             }

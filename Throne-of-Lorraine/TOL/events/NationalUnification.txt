@@ -575,152 +575,6 @@ country_event = {
     }
 }
 
-# Event to Inherit (For HNS & SGF )
-country_event = {
-    id = 11106
-    title = "EVTNAME11106"
-    desc = "EVTDESC11106"
-    picture = "threehurrahs"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVTOPTA11101"
-        set_country_flag = wants_to_unify
-        random_country = {
-            limit = {
-                primary_culture = north_german
-                OR = {
-                    tag = FROM
-                    tag = HNS
-                }
-            }
-            THIS = { all_core = { add_core = HNS }  #former NGF }
-            HNS = { country_event = 34627 }
-        }
-        random_country = {
-            limit = {
-                primary_culture = south_german
-                OR = {
-                tag = FROM
-                tag = SGF
-                }
-            }
-            THIS = {
-                all_core = { add_core = SGF }
-            }
-        }
-        any_country = {
-            limit = {
-                OR = {
-                    is_sphere_leader_of = THIS
-                    is_our_vassal = THIS
-                }
-                NOT = { tag = FROM }
-            }
-            relation = {
-                who = FROM
-                value = -25
-            }
-            casus_belli = {
-                target = FROM
-                type = free_peoples
-                months = 12
-            }
-            casus_belli = {
-                target = FROM
-                type = humiliate
-                months = 12
-            }
-        }
-        any_country = {
-            limit = {
-                is_culture_group = THIS
-                is_greater_power = yes
-                NOT = { tag = FROM }
-            }
-            casus_belli = {
-                target = FROM
-                type = free_peoples
-                months = 36
-            }
-        }
-        any_owned = {
-                secede_province = FROM
-        }
-        FROM = { inherit = THIS }
-        ai_chance = {
-            factor = 75
-            modifier = {
-                factor = 0.8
-                NOT = {
-                    relation = { who = FROM value = 50 }
-                }
-            }
-            modifier = {
-                factor = 0.5
-                NOT = {
-                    relation = { who = FROM value = 0 }
-                }
-            }
-        }
-    }
-
-    option = {
-        name = "EVTOPTB11101"
-        clr_country_flag = wants_to_unify
-        prestige = 1
-        relation = {
-            who = FROM
-            value = -200
-        }
-        FROM = {
-            diplomatic_influence = {
-                who = THIS
-                value = -200
-            }
-        }
-        leave_alliance = FROM
-        any_pop = {
-            militancy = 3
-            consciousness = 2
-        }
-        ai_chance = {
-            factor = 25
-            modifier = {
-                factor = 0
-                has_country_flag = wants_to_unify
-            }
-            modifier = {
-                factor = 0
-                vassal_of = FROM
-            }
-            modifier = {
-                factor = 0
-                in_sphere = FROM
-                FROM = { NOT = { has_country_flag = secondary_union_formation } }
-            }
-            modifier = {
-                factor = 2
-                NOT = { in_sphere = FROM }
-                FROM = { has_country_flag = secondary_union_formation }
-            }
-            modifier = {
-                factor = 0
-                FROM = { tag = HNS }  #former NGF
-                NOT = {
-                    OR = {
-                        any_owned_province = { port = yes }
-                        any_neighbor_country = { primary_culture = south_german }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
 # Event to Inherit (For NIF )
 country_event = {
     id = 11437
@@ -1008,6 +862,24 @@ country_event = {
             }
             country_event = 11101
         }
+		GER = {
+			add_country_modifier = { name = outraged-europe duration = 18798 }
+		}
+		any_greater_power = {
+			limit = {
+				continent = europe
+				NOT = { alliance_with = GER }
+			}
+			add_country_modifier = { name = german-menace duration = 3700 }
+		}
+		any_neighbor_country = {
+			limit = {
+				continent = europe
+				NOT = { alliance_with = GER }
+			}
+			add_country_modifier = { name = german-menace duration = 3700 }
+		}
+		remove_country_modifier = hre_member
         political_reform = wealth_voting
         political_reform = population_equal_weight
         political_reform = yes_meeting
@@ -1064,175 +936,175 @@ country_event = {
 }
 
 # Last-Ditch Formation of HNS
-country_event = {
-    id = 11110
-    title = "EVTNAME11110"
-    desc = "EVTDESC11110"
-    picture = "threehurrahs"
+#country_event = {
+#    id = 11110
+#    title = "EVTNAME11110"
+#    desc = "EVTDESC11110"
+#    picture = "threehurrahs"#
+#
+#    trigger = {
+#        primary_culture = north_german
+#        war = no
+#        is_vassal = no
+#        NOT = {
+#            exists = GER
+#            has_country_flag = refused_NGF_idea
+#        }
+#        OR = {
+#            is_greater_power = yes
+#            AND = {
+#                is_secondary_power = yes
+#                NOT = {
+#                    any_greater_power = {
+#                        primary_culture = north_german
+#                        NOT = { has_country_flag = refused_NGF_idea }
+#                    }
+#                }
+#            }
+#        }
+#        OR = {
+#            mass_politics = 1
+#            AND = {
+#                revolution_n_counterrevolution = 1
+#                GER = {
+#                    any_core = {
+#                        NOT = { province_id = 370 }
+#                        NOT = { province_id = 371 }
+#                        culture = north_german
+#                        owner = { NOT = { is_culture_group = germanic } }
+#                    }
+#                }
+#            }
+#        }
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 100
+ #       modifier = {
+  #          factor = 0.5
+   # #        GER = {
+    #            any_core = {
+   #                 NOT = { province_id = 370 }
+  #                  NOT = { province_id = 371 }
+ #                   culture = north_german
+#                    OR = {
+    #                    owned_by = FRA
+   #                     owned_by = BOR
+  #                  }
+ #               }
+#            }
+     #   }
+    #    modifier = {
+   #         factor = 0.8
+  #          exists = SGF
+ #       }
+#        modifier = {
+#            factor = 0.8
+#            year = 1880
+#        }
+ #       modifier = {
+#            factor = 0.6
+#            year = 1890
+#        }
+#        modifier = {
+#            factor = 0.4
+#            year = 1900
+#        }
+#        modifier = {
+#            factor = 1.5
+#            part_of_sphere = yes
+#        }
+#        modifier = {
+#            factor = 0.5
+#            OR = {
+#                government = hms_government
+#                government = constitutional_empire
+#                government = democracy
+#            }
+#        }
+#    }#
 
-    trigger = {
-        primary_culture = north_german
-        war = no
-        is_vassal = no
-        NOT = {
-            exists = GER
-            has_country_flag = refused_NGF_idea
-        }
-        OR = {
-            is_greater_power = yes
-            AND = {
-                is_secondary_power = yes
-                NOT = {
-                    any_greater_power = {
-                        primary_culture = north_german
-                        NOT = { has_country_flag = refused_NGF_idea }
-                    }
-                }
-            }
-        }
-        OR = {
-            mass_politics = 1
-            AND = {
-                revolution_n_counterrevolution = 1
-                GER = {
-                    any_core = {
-                        NOT = { province_id = 370 }
-                        NOT = { province_id = 371 }
-                        culture = north_german
-                        owner = { NOT = { is_culture_group = germanic } }
-                    }
-                }
-            }
-        }
-    }
+#    option = {
+ ##       name = "EVT11110OPTA"
+ #       prestige = -15
+ #       badboy = 10
+#        clr_country_flag = crown_from_the_gutter
+#        all_core = { add_core = HNS }  #former NGF
+#        change_tag = HNS
+#        random_owned = {
+#            limit = { owner = { is_culture_group = germanic accepted_culture = polish } }
+#            owner = { remove_accepted_culture = polish }
+#        }
+#        random_owned = {
+#            limit = { owner = { is_culture_group = germanic accepted_culture = french } }
+#            owner = { remove_accepted_culture = french }
+#        }
+#        random_owned = {
+#            limit = { owner = { is_culture_group = germanic accepted_culture = danish } }
+#            owner = { remove_accepted_culture = danish }
+#        }
+#        random_owned = {
+#            limit = { owner = { is_culture_group = germanic accepted_culture = hungarian } }
+#            owner = { remove_accepted_culture = hungarian }
+#        }
+#        set_country_flag = secondary_union_formation
+#        any_country = {
+#            limit = {
+#                primary_culture = north_german
+#                NOT = {
+#                    tag = THIS
+#                    has_country_flag = post_colonial_country
+#                    is_cultural_union = no
+#                }
+#            }
+#            all_core = { add_core = HNS }  #former NGF
+#        }
+#        any_country = {
+#            limit = {
+#                primary_culture = north_german
+#                exists = yes
+#                NOT = { tag = THIS }
+#                NOT = { tag = UBD }
+#                NOT = { tag = BAN }
+#                NOT = { tag = SIE }
+#                NOT = { tag = SWI }
+#            }
+#            country_event = 11106
+#        }
+#        ai_chance = {
+#            factor = 75
+#            modifier = {
+#                factor = 0.5
+#                badboy = 0.6
+#            }
+#        }
+#    }#
 
-    mean_time_to_happen = {
-        months = 100
-        modifier = {
-            factor = 0.5
-            GER = {
-                any_core = {
-                    NOT = { province_id = 370 }
-                    NOT = { province_id = 371 }
-                    culture = north_german
-                    OR = {
-                        owned_by = FRA
-                        owned_by = BOR
-                    }
-                }
-            }
-        }
-        modifier = {
-            factor = 0.8
-            exists = SGF
-        }
-        modifier = {
-            factor = 0.8
-            year = 1880
-        }
-        modifier = {
-            factor = 0.6
-            year = 1890
-        }
-        modifier = {
-            factor = 0.4
-            year = 1900
-        }
-        modifier = {
-            factor = 1.5
-            part_of_sphere = yes
-        }
-        modifier = {
-            factor = 0.5
-            OR = {
-                government = hms_government
-                government = constitutional_empire
-                government = democracy
-            }
-        }
-    }
-
-    option = {
-        name = "EVT11110OPTA"
-        prestige = -15
-        badboy = 10
-        clr_country_flag = crown_from_the_gutter
-        all_core = { add_core = HNS }  #former NGF
-        change_tag = HNS
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = polish } }
-            owner = { remove_accepted_culture = polish }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = french } }
-            owner = { remove_accepted_culture = french }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = danish } }
-            owner = { remove_accepted_culture = danish }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = hungarian } }
-            owner = { remove_accepted_culture = hungarian }
-        }
-        set_country_flag = secondary_union_formation
-        any_country = {
-            limit = {
-                primary_culture = north_german
-                NOT = {
-                    tag = THIS
-                    has_country_flag = post_colonial_country
-                    is_cultural_union = no
-                }
-            }
-            all_core = { add_core = HNS }  #former NGF
-        }
-        any_country = {
-            limit = {
-                primary_culture = north_german
-                exists = yes
-                NOT = { tag = THIS }
-                NOT = { tag = UBD }
-                NOT = { tag = BAN }
-                NOT = { tag = SIE }
-                NOT = { tag = SWI }
-            }
-            country_event = 11106
-        }
-        ai_chance = {
-            factor = 75
-            modifier = {
-                factor = 0.5
-                badboy = 0.6
-            }
-        }
-    }
-
-    option = {
-        name = "EVT11110OPTB"
-        clr_country_flag = crown_from_the_gutter
-        clr_country_flag = wants_to_unify
-        set_country_flag = refused_NGF_idea
-        any_pop = {
-            limit = { is_primary_culture = yes }
-            scaled_militancy = {
-                ideology = liberal
-                factor = 3
-            }
-            scaled_militancy = {
-                ideology = radical
-                factor = 6
-            }
-        }
-        ai_chance = {
-            factor = 25
-            modifier = {
-                factor = 0
-                is_greater_power = yes
-            }
-        }
-    }
-}
+#    option = {
+#        name = "EVT11110OPTB"
+#        clr_country_flag = crown_from_the_gutter
+#        clr_country_flag = wants_to_unify
+#        set_country_flag = refused_NGF_idea
+#        any_pop = {
+#            limit = { is_primary_culture = yes }
+#            scaled_militancy = {
+#                ideology = liberal
+ #               factor = 3
+#            }
+#            scaled_militancy = {
+#                ideology = radical
+#                factor = 6
+#            }
+#        }
+#        ai_chance = {
+#            factor = 25
+#            modifier = {
+#                factor = 0
+#                is_greater_power = yes
+#            }
+#        }
+#    }
+#}
 
 country_event = {
     id = 11120

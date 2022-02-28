@@ -3,11 +3,9 @@ political_decisions = {
 		picture = burma_coat_of_arms
 		potential = {
 			tag = BUR
-			NOT = { has_global_flag = TIB_claimed_burma }
 			NOT = { has_global_flag = BUR_claimed_tibet }
 		}
 		allow = {
-			has_country_flag = burma_claim_dali
 			prestige = 20
 			owns = 1602		#tag of Dali
 			war = no
@@ -37,16 +35,18 @@ taungoo_restoration = {
 		}
 		allow = {
             war = no
-			prestige = 20
 			year = 1840
+			prestige = 16
         }
         effect = {
 			SIA = { all_core = { add_core = BUR } }
 			LXA = { all_core = { add_core = BUR } }
 			PAT = { all_core = { add_core = BUR } }
+			CHK = { all_core = { add_core = BUR } }
 			add_accepted_culture = lao
 			add_accepted_culture = thai
             badboy = 13
+			prestige = 7
 			set_country_flag = taungoo_restoration
         }
 		ai_will_do = { factor = 1 }
@@ -54,15 +54,17 @@ taungoo_restoration = {
     burma_takes_chiang_mai = {
         picture = burma_background
         potential = {
-            tag = BUR
-            SHA = { exists = yes vassal_of = BUR }
+			OR = {
+				tag = EOB
+				tag = BUR
+			}
+            is_our_vassal = SHA
             NOT = { has_country_flag = burma_takes_chiang_mai}
         }
 
         allow = {
             war = no
             is_our_vassal = SHA
-			year = 1850
 			civilized = yes
         }
 
@@ -71,6 +73,7 @@ taungoo_restoration = {
             inherit = SHA
             set_country_flag = burma_takes_chiang_mai
         }
+		ai_will_do = { factor = 1 }
     }
 	burma_form_eob = {
         picture = burma_coat_of_arms
@@ -102,14 +105,16 @@ taungoo_restoration = {
             }
 
         allow = {
-			prestige = 20
             war = no
-			year = 1843
+			owns = 1602
         }
 		effect = {
-            prestige = 5
+            prestige = 8
             set_country_flag = burma_claim_dali
-			add_core = 1602
+			1602 = { change_province_name = Taihan }
+			1602 = { remove_core = CHI }
+			1602 = { remove_core = YNN }
+			1602 = { remove_core = MIN }
         }
 		ai_will_do = { factor = 1 }
 	}

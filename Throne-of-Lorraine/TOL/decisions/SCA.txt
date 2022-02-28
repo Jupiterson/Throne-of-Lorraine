@@ -669,7 +669,12 @@ political_decisions = {
         potential = {
             tag = DNN
             NOT = { has_country_flag = danelaw }
-            has_global_flag = fantasy_countries_enabled
+#            has_global_flag = fantasy_countries_enabled
+            OR = {
+                owns = 300
+                owns = 292
+                owns = 281
+            }
         }
         allow = {
             war = no

@@ -1,0 +1,44 @@
+country_event = {
+    id = 590001
+    title = "Arizona pacified"
+    desc = "Arizona has been pacified! The four border tribes have been conqueared, and their lands are up for colonization. Our people march west!"
+    fire_only_once = yes
+    picture = "goshute_war"
+    mean_time_to_happen = { day = 1 }
+    trigger = {
+        owns = 2148
+        owns = 100
+		owns = 101
+		owns = 102
+		owns = 103
+		owns = 105
+        owns = 198
+		owns = 3456
+		owns = 3460
+    }
+    option = {
+        name = "Wagons West!"
+        100 = { remove_province_modifier = indian_lands }
+        101 = { remove_province_modifier = indian_lands }
+		102 = { remove_province_modifier = indian_lands }
+		103 = { remove_province_modifier = indian_lands }
+		105 = { remove_province_modifier = indian_lands }
+        2148 = { remove_province_modifier = indian_lands }
+		3456 = { remove_province_modifier = indian_lands }
+		3460 = { remove_province_modifier = indian_lands }
+		
+		100 = { add_province_modifier = { name = new_states duration = 1825 } }
+		101 = { add_province_modifier = { name = new_states duration = 1825 } }
+		102 = { add_province_modifier = { name = new_states duration = 1825 } }
+		103 = { add_province_modifier = { name = new_states duration = 1825 } }
+		105 = { add_province_modifier = { name = new_states duration = 1825 } }
+		2148 = { add_province_modifier = { name = new_states duration = 1825 } }
+		3456 = { add_province_modifier = { name = new_states duration = 1825 } }
+		3460 = { add_province_modifier = { name = new_states duration = 1825 } }
+		
+        add_country_modifier = {
+            name = open_territories
+            duration = 1825
+		}	
+    }
+}

@@ -259,6 +259,7 @@ political_decisions = {
             year = 1837
 			NOT = { tag = TMT }
 			NOT = { has_country_flag = ghost_country }
+			NOT = { has_country_flag = government_flagged }
             OR = {
                 AND = { government = theocracy NOT = { has_country_flag = theocratic_government } }
                 AND = { government = proletarian_dictatorship NOT = { has_country_flag = communist_gov } }
@@ -296,6 +297,7 @@ political_decisions = {
         }
 
         effect = {
+		set_country_flag = government_flagged
             clr_country_flag = theocratic_government
             clr_country_flag = communist_gov
             clr_country_flag = absolute_monarchy_gov

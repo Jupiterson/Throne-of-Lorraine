@@ -3,7 +3,7 @@ primary_culture = french
 religion = catholic
 government = absolute_monarchy
 plurality = 25
-nationalvalue = nv_equality
+nationalvalue = nv_tradition
 literacy = 0.25
 non_state_culture_literacy = 0.1
 civilized = yes
@@ -14,7 +14,7 @@ prestige = 120
 # Political reforms
 slavery = yes_slavery
 upper_house_composition = appointed
-vote_franschise = wealth_voting
+vote_franschise = none_voting
 public_meetings = yes_meeting
 press_rights = censored_press
 trade_unions = no_trade_unions
@@ -58,12 +58,10 @@ the_command_principle = 1
 private_banks = 1
 no_standard = 1
 early_classical_theory_and_critique = 1
-freedom_of_trade = 1
 guild_based_production = 1
 classicism_n_early_romanticism = 1
 late_enlightenment_philosophy = 1
 malthusian_thought = 1
-enlightenment_thought = 1
 introspectionism = 1
 piston_steam_engine = 1
 mechanical_production = 1
@@ -87,13 +85,13 @@ social_conscience = yes
 consciousness = 3
 nonstate_consciousness = 1
 
-ruling_party = FRA_conservative
+ruling_party = FRA_reactionary
 last_election = 1834.6.21
 upper_house = {
     fascist = 0
-    liberal = 12
-    conservative = 70
-    reactionary = 18
+    liberal = 22
+    conservative = 28
+    reactionary = 50
     radical = 0
     socialist = 0
     communist = 0
@@ -101,7 +99,7 @@ upper_house = {
 
 schools = culture_tech_school
 decision = france_1836_setup
-decision = lorraine_rename
+#decision = setup_terror_terror
 
 set_country_flag = france
 

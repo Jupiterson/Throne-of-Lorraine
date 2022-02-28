@@ -42,6 +42,108 @@ leader = {
     personality = charismatic
     background = innovative_tactician
 }
+
+army = {
+    name = "Army of the Sultan of Sokoto"
+    location = 1948
+    regiment = {
+        name= "1.Fulbe"
+        type = cavalry
+        home = 1948
+    }
+
+    regiment = {
+        name= "2.Fulbe"
+        type = irregular
+        home = 1945
+    }
+
+    regiment = {
+        name= "3.Fulbe"
+        type = irregular
+        home = 1947
+    }
+
+    regiment = {
+        name= "6. Fulbe"
+        type = irregular
+        home = 1939
+    }
+
+    regiment = {
+        name= "7. Fulbe"
+        type = irregular
+        home = 1946
+    }
+
+}
+
+army = {
+    name = "Army of the Mossi"
+    location = 1901
+regiment = {
+        name= "Mogho Naba's Cavalry"
+    type = cavalry
+        home = 1901    }
+
+
+regiment = {
+        name= "1st Mossi Warriors"
+        type = irregular
+
+home = 1902    }
+
+regiment = {
+        name= "Askiya's Cavalry"
+    type = cavalry
+        home = 1808    }
+
+
+    regiment = {
+        name= "Songhai Warriors"
+        type = irregular
+        home = 1809
+    }
+
+
+regiment = {
+        name= "2nd Mossi Warriors"
+    type = irregular
+    home = 1903
+    }
+}
+
+
+army = {
+    name = "Army of the Empire of Segu"
+    location = 1800
+
+    regiment = {
+        name= "Guards of Segu"
+        type = irregular
+        home = 1800
+    }
+
+    regiment = {
+        name= "Guards of Segu"
+        type = irregular
+        home = 1800
+    }
+
+    regiment = {
+        name= "Bambara Warriors"
+        type = irregular
+        home = 1794
+    }
+
+    regiment = {
+        name= "Bambara Warriors"
+        type = irregular
+        home = 1799
+    }
+}
+
+
 army = {
     name = "Army of the Massina Jihad"
     location = 1804

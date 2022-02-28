@@ -710,7 +710,7 @@ political_decisions = {
                     }
                     3273 = { empty = yes } #Seiyun
                     OR = {
-                        year = 1920
+                        year = 1870
                         AND = {
                             state_n_government = 1
                             NOT = { capital_scope = { continent = europe } }
@@ -721,7 +721,7 @@ political_decisions = {
                     owns = 1166 #Sana'a
                     1172 = { empty = yes } #Taizz
                     OR = {
-                        year = 1920
+                        year = 1870
                         AND = {
                             state_n_government = 1
                             NOT = { capital_scope = { continent = europe } }
@@ -775,23 +775,26 @@ political_decisions = {
                         OR = {
                             owns = 1178
                             owns = 1173
+							owns = 1174
                             owns = 1176
                         }
                         3273 = { empty = yes } #Seiyun
+						1172 = { empty = yes } #Seiyun
                     }
                 }
                 3273 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
+				1172 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
                 owner = { prestige = 1 }
             }
             #Oman#
             random_owned = {
                 limit = {
                     owner = {
-                        owns = 1166 #Sana'a
-                        1172 = { empty = yes } #Taizz
+                        owns = 1166 #Muscat
+                        1170 = { empty = yes } #Taizz
                     }
                 }
-                1172 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 15 }
+                1170 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 15 }
                 owner = { prestige = 1 }
             }
             #Arabia#

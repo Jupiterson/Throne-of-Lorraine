@@ -4,7 +4,7 @@ culture = low_german
 religion = protestant
 government = hanseatic
 plurality = 25.0
-nationalvalue = nv_liberty
+nationalvalue = nv_order
 literacy = 0.8
 non_state_culture_literacy = 0.8
 civilized = yes
@@ -38,6 +38,11 @@ citizens_rights = culture_voting_only
 border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
+
+1835.1.1 = {
+    decision = setup_merchants
+	decision = setup_hre
+}
 
 set_country_flag = protestant_country
 set_country_flag = german_nation
@@ -73,7 +78,12 @@ introspectionism = 1
 private_banks = 1
 no_standard = 1
 early_classical_theory_and_critique = 1
+
 freedom_of_trade = 1
+market_structure = 1
+stock_exchange = 1
+ad_hoc_money_bill_printing = 1
+
 guild_based_production = 1
 piston_steam_engine = 1
 mechanical_production = 1

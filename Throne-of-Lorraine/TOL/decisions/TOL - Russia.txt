@@ -69,6 +69,50 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
 	}
+	claim_moldavia = {
+        picture = romanians_marching
+        potential = {
+			tag = RUS
+			TNR = { owns = 968 }
+        }
+
+        allow = {
+            war = no
+            TNR = { in_sphere = RUS }
+            TNR = { war = no }
+			mass_politics = 1
+        }
+
+        effect = {
+            prestige = 5
+			badboy = 4
+			TNR = { any_owned = { add_core = RUS } }
+			inherit = TNR
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	claim_bryansk = {
+        picture = romanians_marching
+        potential = {
+			tag = RUS
+			owns = 944
+			owns = 949
+			1016 = { NOT = { is_core = THIS } }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            prestige = 1
+			badboy = 1
+			1016 = { add_core = RUS }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
 	Take_Black_Sea_coast = {
         picture = beiyang_fleet
         potential = {

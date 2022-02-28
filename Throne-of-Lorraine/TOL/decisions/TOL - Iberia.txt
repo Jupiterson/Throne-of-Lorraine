@@ -119,6 +119,31 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+		cede_mallorca = {
+        picture = italian_dalmatia
+        potential = {
+            tag = ARN
+            NOT = { has_country_flag = mallorca }
+			exists = SRD
+			exists = CRS
+			exists = TUN 
+			exists = SYC
+			NOT = { year = 1845 }
+        }
+
+        allow = {
+        
+        }
+
+        effect = {
+         prestige = 5
+		 badboy = 2
+       set_country_flag = mallorca
+             502 = { secede_province = THIS }
+			
+        }
+	}
+	
 	
 	portugal_sevilla = {
         picture = reino_undino
@@ -502,6 +527,41 @@ political_decisions = {
         }
 	}
 	
+  remove_mozarabics = {
+        picture = establish_panslavism
+        potential = {
+		AND = {
+		OR = {
+                        ruling_party_ideology = communist
+                        ruling_party_ideology = fascist
+                    }
+		OR = {
+            tag = LEO
+			tag = SPA
+			tag = POR
+			tag = ARN
+			}
+			}
+			
+            NOT = { has_country_flag = genocide_arabas }
+        }
+
+        allow = {
+        revolution_n_counterrevolution = 1 
+        NOT = { exists = GNA }
+     
+        }
+
+        effect = {
+         prestige = -30
+		 badboy = 15
+		 any_pop = { limit = { location = { is_core = IBR } culture = spanish } reduce_pop = 5.0 }
+		 any_pop = { limit = { location = { is_core = IBR } culture = portuguese } reduce_pop = 5.0 }
+		 any_pop = { limit = { location = { is_core = IBR } culture = catalan } reduce_pop = 5.0 }
+         any_pop = { limit = { location = { is_core = IBR } culture = mozarabic } literacy = -0.8 reduce_pop = 0.25 }
+       set_country_flag = genocide_arabas	
+        }
+	}
 	
 	
 }

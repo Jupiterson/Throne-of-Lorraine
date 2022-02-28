@@ -12,6 +12,7 @@ political_decisions = {
             tag = UBD
 			owns = 695
             NOT = {
+				has_country_flag = became_prussia
                 exists = PRU
                 any_owned_province = { is_core = EST }
 				any_owned_province = { is_core = LAT }
@@ -24,6 +25,7 @@ political_decisions = {
         }
 
         effect = {
+			set_country_flag = became_prussia
             change_tag_no_core_switch = PRU
             remove_accepted_culture = latvian
             remove_accepted_culture = estonian
@@ -53,6 +55,7 @@ political_decisions = {
             tag = UBD
 		    owns = 354
             NOT = {
+				has_country_flag = became_latvia
                 exists = LAT
                 any_owned_province = { is_core = EST }
 				any_owned_province = { is_core = PRU }
@@ -65,6 +68,7 @@ political_decisions = {
         }
 
         effect = {
+			set_country_flag = became_latvia
             change_tag_no_core_switch = LAT
             remove_accepted_culture = volga_german
             remove_accepted_culture = estonian
@@ -94,6 +98,7 @@ political_decisions = {
             tag = UBD
 			owns = 349
             NOT = {
+				has_country_flag = became_estonia
                 exists = EST
                 any_owned_province = { is_core = LAT }
 				any_owned_province = { is_core = PRU }
@@ -106,6 +111,7 @@ political_decisions = {
         }
 
         effect = {
+			set_country_flag = became_estonia
             change_tag_no_core_switch = EST
             remove_accepted_culture = volga_german
             remove_accepted_culture = latvian
@@ -135,6 +141,7 @@ political_decisions = {
             tag = LIT
 			owns = 698
             NOT = {
+				has_country_flag = became_memel
                 exists = MML
 				owns = 360
                 any_owned_province = { is_core = UKR }
@@ -148,7 +155,8 @@ political_decisions = {
         }
 
         effect = {
-            change_tag_no_core_switch = = MML
+			set_country_flag = became_memel
+            change_tag_no_core_switch = MML
             remove_accepted_culture = polish
             remove_accepted_culture = ruthenyian
             primary_culture = volga_german
@@ -166,8 +174,18 @@ political_decisions = {
 	core_FRZ = {
         picture = enact_dual_monarchy
         potential = {
-            tag = FRZ
+		    OR = {
+		    	AND = {
+               tag = FRZ
+		    	NOT = { exists = FRA }
+		     	}
+	   		AND = { 
+			tag = OCC
+			has_global_flag = occ_chose_violence
+			}
+			}
             war = no
+			NOT = { has_global_flag = FRZ_cores_set }
         }
 
         allow = {
@@ -175,13 +193,211 @@ political_decisions = {
         }
 
         effect = {
+		random_owned = { limit = { owner = { debt_law = serfdom } } owner = { political_reform = peonage  } }
+		    set_global_flag = FRZ_cores_set
             prestige = -20
+			any_owned = {
+                limit = {
+                    has_province_modifier = french_terror
+                }
+                remove_province_modifier = french_terror
+            }
+			remove_country_modifier = nobility_fra
             FRA = {
                 all_core = { add_core = FRZ }
             }
+			change_tag = FRZ
             any_pop = {
                 limit = { has_pop_culture = french }
                 militancy = 4
+            }
+			add_accepted_culture = occitan
+			add_accepted_culture = arpitan
+			add_accepted_culture = burgundian
+			add_accepted_culture = breton
+			add_accepted_culture = belgican
+        }
+    }
+	
+core_FRR = {
+        picture = enact_dual_monarchy
+        potential = {
+		    tag = FRA
+			government = democracy 
+            war = no
+			NOT = { has_global_flag = FRZ_cores_set }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		random_owned = { limit = { owner = { debt_law = serfdom } } owner = { political_reform = peonage  } }
+		    set_global_flag = FRZ_cores_set
+            prestige = -20
+			any_owned = {
+                limit = {
+                    has_province_modifier = french_terror
+                }
+                remove_province_modifier = french_terror
+            }
+			remove_country_modifier = nobility_fra
+            FRA = {
+                all_core = { add_core = FRR }
+            }
+			change_tag = FRR
+            any_pop = {
+                limit = { has_pop_culture = french }
+                militancy = 4
+            }
+			add_accepted_culture = occitan
+			add_accepted_culture = arpitan
+			add_accepted_culture = burgundian
+			add_accepted_culture = breton
+			add_accepted_culture = belgican
+        }
+    }
+	
+  hate_frenchies = {
+        picture = enact_dual_monarchy
+        potential = {
+		OR = {
+		tag = BRG
+		tag = PIC
+		tag = WLL
+		tag = ARP
+		tag = BRT
+		}
+            war = no
+			NOT = { has_country_flag = deleted_frenchies }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		    set_country_flag = deleted_frenchies
+            any_pop = {
+                limit = { has_pop_culture = french }
+                militancy = 4
+            }
+		    any_pop = { limit = { location = { is_core = THIS } culture = french} reduce_pop = 0.7 }
+            any_pop = { limit = { location = { is_core = THIS } culture = burgundian } reduce_pop = 1.7 }
+            any_pop = { limit = { location = { is_core = THIS } culture = arpitan } reduce_pop = 1.5 }
+            any_pop = { limit = { location = { is_core = THIS } culture = breton } reduce_pop = 1.3 }
+            any_pop = { limit = { location = { is_core = THIS } culture = belgican } reduce_pop = 1.5 }
+        }
+    }
+	
+	
+  rem_core_occ = {
+        picture = enact_dual_monarchy
+        potential = {
+			AND = { 
+			tag = OCC
+			has_global_flag = occ_chose_peace
+			}
+            war = no
+			NOT = { has_global_flag = occ_cores }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		random_owned = { limit = { owner = { debt_law = serfdom } } owner = { political_reform = peonage  } }
+		    set_global_flag = occ_cores
+            prestige = -20
+			any_owned = {
+                limit = {
+                    has_province_modifier = french_terror
+                }
+                remove_province_modifier = french_terror
+            }
+			remove_country_modifier = nobility_fra
+            OCC = { all_core = { remove_core = FRA } }
+            any_pop = {
+                limit = { has_pop_culture = french }
+                militancy = 4
+            }
+			any_owned = {
+                limit = {
+                    is_core = THIS
+					is_overseas = no
+                }
+                add_province_modifier = {
+                    name = french_cultural_unity
+                    duration = -1
+                }
+            }
+        }
+    }
+	
+	decore_gen = {
+        picture = enact_dual_monarchy
+        potential = {
+		OR = {
+            tag = SYC
+			tag = SRD
+			tag = CRS
+			}
+            war = no
+			NOT = { has_country_flag = we_won }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		set_country_flag = we_won
+            THIS = {
+                all_core = { remove_core = GEN }
+            }
+        }
+    }
+	
+	core_UOW = {
+        picture = enact_dual_monarchy
+        potential = {
+            tag = UOW
+            war = no
+			NOT = { exists = ENL }
+			NOT = { has_global_flag = UOW_won }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		set_global_flag = UOW_won
+            UOW = {
+                all_core = { remove_core = ENL }
+            }
+        }
+    }
+	
+	core_ENL = {
+        picture = enact_dual_monarchy
+        potential = {
+            tag = ENL
+            war = no
+			NOT = { exists = UOW }
+			NOT = { has_global_flag = ENL_won }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		set_global_flag = ENL_won
+            ENL = {
+                all_core = { remove_core = UOW }
             }
         }
     }
@@ -195,6 +411,7 @@ political_decisions = {
         }
 
         allow = {
+		NOT = { has_country_flag = became_denmark }
             war = no
             OR = {
                 AND = {
@@ -213,6 +430,7 @@ political_decisions = {
         }
 
         effect = {
+	    	set_country_flag = became_denmark
             prestige = -20
             NOR = {
                 all_core = { remove_core = DNN }
@@ -323,6 +541,10 @@ unite_saarland = {
         potential = {
             tag = PRO
             exists = OCC
+			NOT = { 
+			is_greater_power = yes
+			is_secondary_power = yes
+			}
 			NOT = { has_global_flag = Occ_annex_pro }
         }
 

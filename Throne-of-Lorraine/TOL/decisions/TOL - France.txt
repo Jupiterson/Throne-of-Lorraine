@@ -5,6 +5,7 @@ political_decisions = {
 		potential = {
 			OR = { 
 			       tag = BOR
+				   tag = FRR
 				   has_country_flag = federation_complete
 				   tag = FRZ
 				   }
@@ -36,6 +37,7 @@ political_decisions = {
 			OR = {
 			       tag = BOR
 				   tag = FRZ
+				   tag = FRR
 				   }
 				   has_country_flag = proclaim_gauls
 			NOT = {
@@ -190,6 +192,14 @@ political_decisions = {
                 consciousness = 9
                 militancy = 9
             }
+			
+			any_owned = {
+                limit = {
+                    has_province_modifier = french_terror
+                }
+                remove_province_modifier = french_terror
+            }
+			remove_country_modifier = nobility_fra
         }
 
         ai_will_do = { factor = 0.5 }
@@ -442,12 +452,14 @@ centralize_power = {
 	 french_language_schooling = {
         picture = jesuites_school2
         potential = {
-            primary_culture = french
+            tag = FRA
             is_greater_power = yes
             capital = 425
             any_owned_province = { is_core = OCC }
             BRT = { exists = no }
-            NOT = { has_country_flag = enacted_french_schooling     }
+			BOR = { exists = no }
+            NOT = { has_country_flag = enacted_french_schooling  }
+			has_country_flag = order_embraced
         }
 
         allow = {
@@ -579,6 +591,14 @@ centralize_power = {
 								}
 								add_core = FRZ 
 							}
+							
+			any_owned = {
+                limit = {
+                    has_province_modifier = french_terror
+                }
+                remove_province_modifier = french_terror
+            }
+			remove_country_modifier = nobility_fra
         }
 
         ai_will_do = { factor = 1 }
@@ -646,6 +666,37 @@ centralize_power = {
         }
 
         ai_will_do = { factor = 1 }
+    }
+	
+	
+	french_renaissance = {
+        picture = british_propaganda
+        potential = {
+		OR = {
+            tag = FRZ
+			tag = BOR
+			tag = OCC
+			tag = FRR
+			tag = BEL
+			tag = ARP
+			tag = VIC
+			}
+            war = no
+			NOT = { exists = FRA }
+			NOT = { has_global_flag = french_ren }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+		    set_global_flag = french_ren
+            add_country_modifier = {
+                    name = french_renaissance
+                    duration = 10657
+                }
+        }
     }
    
 

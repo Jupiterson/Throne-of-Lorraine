@@ -2,20 +2,18 @@ capital = 1003
 primary_culture = russian
 culture = cossack
 religion = orthodox
-government = hms_government
+government = merchant_republic
 plurality = 5.0
 nationalvalue = nv_autocracy
 literacy = 0.3
 non_state_culture_literacy = 0.03
 civilized = yes
 
-set_country_flag = serfdom_not_abolished
-
 #GreaterPowers = prestige
 prestige = 70
 
 # Political reforms
-slavery = no_slavery
+slavery = yes_slavery
 upper_house_composition = appointed
 vote_franschise = landed_voting
 public_meetings = yes_meeting
@@ -35,11 +33,11 @@ school_reforms = no_schools
 
 #New Reforms
 conscription = two_year_draft
-debt_law = serfdom
+debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
-border_policy = closed_borders
+border_policy = open_borders
 centralization = regionalism
 colonial_policy = settlement
 
@@ -77,6 +75,12 @@ introspectionism = 1
 private_banks = 1
 no_standard = 1
 early_classical_theory_and_critique = 1
+
+freedom_of_trade = 1
+market_structure = 1
+stock_exchange = 1
+ad_hoc_money_bill_printing = 1
+
 guild_based_production = 1
 mechanical_production = 1
 hot_blast = 1

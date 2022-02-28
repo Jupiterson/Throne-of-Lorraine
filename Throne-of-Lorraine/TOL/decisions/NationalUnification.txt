@@ -124,7 +124,7 @@ political_decisions = {
                         vassal_of = THIS
                     }
                 }
-                country_event = 11106
+                country_event = 100106
             }
         }
         ai_will_do = {
@@ -156,7 +156,6 @@ political_decisions = {
                 war_with = FRA
                 war_with = BOR
             }
-            OR = {
                 GER = {
                     all_core = {
                         OR = {
@@ -173,93 +172,7 @@ political_decisions = {
                         }
                     }
                 }
-                AND = {
-                    HNS = {
-                        all_core = {
-                            OR = {
-                                owned_by = THIS
-                                owner = {
-                                    in_sphere = THIS
-                                    OR = {
-                                        vassal_of = THIS
-                                    }
-                                    war = no
-                                    is_greater_power = no
-                                }
-                            }
-                        }
-                    }
-                    OR = {
-                        BAV = {
-                            is_greater_power = yes
-                            ai = yes
-                     
-                        }
-                        AND = {
-                            HNS = {
-                                ai = yes
-                            }
-                            BAV = {
-                                ai = yes
-                                is_greater_power = yes
-                            }
-                        }
-                        BAV = {
-                            ai = yes
-                            is_greater_power = no
-                            part_of_sphere = no
-                        }
-                        BAV = {
-                            all_core = {
-                                OR = {
-                                    owned_by = THIS
-                                    owner = {
-                                        in_sphere = THIS
-                                        OR = {
-                                            is_vassal = no
-                                            vassal_of = THIS
-                                        }
-                                        war = no
-                                        is_greater_power = no
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    WUR = {
-                        all_core = {
-                            OR = {
-                                owned_by = THIS
-                                owner = {
-                                    in_sphere = THIS
-                                    OR = {
-                                        is_vassal = no
-                                        vassal_of = THIS
-                                    }
-                                    war = no
-                                    is_greater_power = no
-                                }
-                            }
-                        }
-                    }
-                    BAD = {
-                        all_core = {
-                            OR = {
-                                owned_by = THIS
-                                owner = {
-                                    in_sphere = THIS
-                                    OR = {
-                                        is_vassal = no
-                                        vassal_of = THIS
-                                    }
-                                    war = no
-                                    is_greater_power = no
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            
         }
 
         effect = {
@@ -443,6 +356,26 @@ political_decisions = {
             SAX_558 = { add_core = SAX }
             539 = { add_core = BRE }
             528 = { add_core = HAM }
+			
+        #Ripped from TGC
+	    GER = {
+			add_country_modifier = { name = outraged-europe duration = 18798 }
+		}
+		any_greater_power = {
+			limit = {
+				continent = europe
+				NOT = { alliance_with = GER }
+			}
+			add_country_modifier = { name = german-menace duration = 3700 }
+		}
+		any_neighbor_country = {
+			limit = {
+				continent = europe
+				NOT = { alliance_with = GER }
+			}
+			add_country_modifier = { name = german-menace duration = 3700 }
+		}
+		remove_country_modifier = hre_member
 
         }
         ai_will_do = { factor = 1 }
@@ -466,11 +399,9 @@ political_decisions = {
             nationalism_n_imperialism = 1
             is_greater_power = yes
             war = no
-            ALS = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { vassal_of = THIS } war = no is_greater_power = no } } } }
-            OR = {
-                GER = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { vassal_of = THIS } war = no is_greater_power = no } } } }
+            GER = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { vassal_of = THIS } war = no is_greater_power = no } } } }
                 
-            }
+            
         }
 
         effect = {
@@ -492,7 +423,8 @@ political_decisions = {
             capital = 619
             add_accepted_culture = north_german
             add_accepted_culture = volga_german
-            add_accepted_culture = rheinlander
+			add_accepted_culture = south_german
+            add_accepted_culture = rhinlander
 			add_accepted_culture = low_german
             set_global_flag = 3hurrahs
             any_country = {
@@ -551,6 +483,26 @@ political_decisions = {
                 }
                 country_event = 11101
             }
+			  #Ripped from TGC
+	GCF = {
+			add_country_modifier = { name = outraged-europe duration = 18798 }
+		}
+		any_greater_power = {
+			limit = {
+				continent = europe
+				NOT = { alliance_with = GCF }
+			}
+			add_country_modifier = { name = german-menace duration = 3700 }
+		}
+		any_neighbor_country = {
+			limit = {
+				continent = europe
+				NOT = { alliance_with = GCF }
+			}
+			add_country_modifier = { name = german-menace duration = 3700 }
+		}
+		remove_country_modifier = hre_member
+
         }
         ai_will_do = {
             factor = 1
@@ -620,6 +572,8 @@ political_decisions = {
                 has_country_flag = post_colonial_country
                 exists = ITA
                 exists = ITS
+				tag = FRZ
+				tag = OCC
             }
         }
 
@@ -667,6 +621,7 @@ political_decisions = {
 			add_accepted_culture = central_italian
 			add_accepted_culture = sicilian
 			add_accepted_culture = provencial
+			add_accepted_culture = venetian
 			PRO = {
                 all_core = {
                     add_core = THIS
@@ -938,7 +893,7 @@ political_decisions = {
                         vassal_of = THIS
                     }
                 }
-                country_event = 11106
+                country_event = 100106
             }
         }
         ai_will_do = {
@@ -1053,7 +1008,7 @@ political_decisions = {
                         vassal_of = THIS
                     }
                 }
-                country_event = 11106
+                country_event = 100106
             }
         }
         ai_will_do = {
@@ -1569,13 +1524,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1585,13 +1538,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
-                    }
-                    NOT = { truce_with = THIS }
+					}
                     war = no
                 }
             }
@@ -1601,13 +1552,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1617,13 +1566,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1633,13 +1580,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1649,13 +1594,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1665,13 +1608,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1681,13 +1622,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1697,13 +1636,11 @@ form_ruthenia = {
                         tag = THIS
                         in_sphere = THIS
                         vassal_of = THIS
-                        has_country_flag = newly_released_nation
                     }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
                     }
-                    NOT = { truce_with = THIS }
                     war = no
                 }
             }
@@ -1735,6 +1672,7 @@ form_ruthenia = {
                     }
                     OR = {
                         tag = DAI
+						tag = CHA
                         tag = KAR
                         tag = CAM
                         tag = SIA
@@ -1772,6 +1710,7 @@ form_ruthenia = {
 			primary_culture = low_german
             primary_culture = rhinelander
 			}
+			neighbour = HNS
             capital_scope = { continent = europe }
             NOT = {
                 has_country_flag = post_colonial_country

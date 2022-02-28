@@ -278,7 +278,7 @@ form_byzantium = {
         potential = {
 		    is_culture_group = pan_roman
             BYZ = { exists = no }
-			NOT = { or = { tag = NIR tag = RME } }
+			NOT = { OR = { tag = NIR tag = RME } }
         }
 
         allow = {
@@ -627,10 +627,64 @@ form_byzantium = {
 			badboy = -10
             set_country_flag = AETERNA_VITTRIX
             change_tag = RME
+			add_accepted_culture = north_italian
+            add_accepted_culture = venetian				
 			capital = 749
         }
 
         ai_will_do = { factor = 1 }
     }
+	
+    coast_romans = {
+        picture = roman_map
+        potential = {
+            tag = RME
+            ai = no 
+			has_country_flag = AETERNA_VITTRIX
+            NOT = { has_country_flag = coast_romans }
+        }
+
+        allow = {
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 15
+			OCC = {
+				all_core = {
+                    add_core = THIS
+                    }
+                } 
+		    ARP = {
+				all_core = {
+                    add_core = THIS
+                    }
+                } 
+            ITA = {
+                all_core = {
+                    add_core = THIS
+                    }
+                } 
+			ARN = {
+                all_core = {
+                    add_core = THIS
+                    }
+                }		
+            ILL = {
+                all_core = {
+                    add_core = THIS
+                    }
+                }				
+            set_country_flag = coast_romans
+			add_accepted_culture = occitan 
+            add_accepted_culture = provencial
+            add_accepted_culture = cataln
+            add_accepted_culture = romansh
+            add_accepted_culture = aragonese
+            add_accepted_culture = arpitan				
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
 	
 }

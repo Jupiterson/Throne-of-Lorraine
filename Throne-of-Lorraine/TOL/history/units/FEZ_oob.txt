@@ -5,7 +5,7 @@ leader = {
     name = "Ahmed Dlimi"
     type = land
     date = 1836.1.1
-    personality = calm
+    personality = defiant
     background = school_of_offense
 }
 
@@ -25,9 +25,15 @@ army = {
     }
 	
 	regiment = {
-        name= "Meknes Cavalry"
+        name= "Wazzan Brigade"
+        type = infantry
+        home = 1681
+    }
+	
+	regiment = {
+        name= "Huribka Cavalry"
         type = cavalry
-        home = 1682
+        home = 1692
     }
 
     regiment = {
@@ -37,8 +43,14 @@ army = {
     }
 
     regiment = {
-        name= "Rabat Artillery"
-        type = infantry
+        name= "Rabat First Artillery"
+        type = artillery
+        home = 1685
+    }
+	
+	regiment = {
+        name= "Rabat Second Artillery"
+        type = artillery
         home = 1685
     }
 

@@ -32,3 +32,439 @@ country_event = {
 			}
     }
 }
+
+#Become Ile de France
+country_event = {
+    id = 100113
+    title = "End of France"
+    desc = "Wih the Fall of our Empire, we no longer deserve to call ourselfs France, merely Ile de France"
+    picture = "popularrevolt"
+
+    trigger = {
+	war = no
+	ai = yes
+	tag = FRA
+	NOT = { is_greater_power = yes }
+        OR = {
+            AND = {
+                exists = FRA
+				OR = {
+			       exists = FRZ
+				   exists = OCC
+				}
+				exists = BRG
+				OR = {
+				exists = PIC
+				exists = WLL
+				exists = BEL
+				}
+            }
+       
+        }
+        NOT = { tag = IDF }
+        IDF = { exists = no }
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = { days = 14 }
+
+    option = {
+        name = "We have fallen"
+		 any_owned = {
+    		 limit = { 
+		    	 is_core = FRA			 			 
+			 }
+		 add_core = IDF
+		 }
+        change_tag_no_core_switch = IDF
+		add_country_modifier = { name = global_baby_boom duration = 5475 }
+        any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } militancy = -4 }
+    }
+}
+
+#############################################################
+#                                                            #
+#                French Revolution Events                    #
+#                                                            #
+#############################################################
+
+country_event = {
+       id = 45254
+
+    title = "EVTNAME45254"
+    desc = "EVTDESC45254"
+    picture = "french_revolution_1848"
+
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+	    NOT = { exists = OCC }
+        tag = FRA
+        NOT = { government = democracy }
+        OR = {
+            has_country_modifier = springtime_of_nations
+            has_country_flag = liberal_revolution_in_progress
+            year = 1848
+        }
+        OR = {
+            AND = {
+                average_militancy = 4
+                has_country_modifier = springtime_of_nations
+            }
+            AND = {
+                average_militancy = 6
+                NOT = { has_country_modifier = springtime_of_nations }
+            }
+            any_owned_province = {
+                is_capital = yes
+                controlled_by = REB
+            }
+            revolt_percentage = 0.50
+            AND = {
+                year = 1848
+                ai = yes
+            }
+        }
+    }
+
+    mean_time_to_happen =  {
+        months = 1
+        modifier = {
+            factor = 0.5
+            has_country_modifier = springtime_of_nations
+        }
+        modifier = {
+            factor = 1.5
+            NOT = { has_country_modifier = springtime_of_nations }
+        }
+        modifier = {
+            factor = 0.01
+            capital_scope = { controlled_by = REB }
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 6
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 7
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 8
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 9
+        }
+        modifier = {
+            factor = 0.6
+            revolt_percentage = 0.60
+        }
+        modifier = {
+            factor = 0.6
+            revolt_percentage = 0.70
+        }
+        modifier = {
+            factor = 0.6
+            revolt_percentage = 0.80
+        }
+    }
+
+    immediate = {
+        FRA = {
+            set_country_flag = 2nd_republic
+			set_country_flag = french_rev_sanity_check
+            set_global_flag = french_revolution_1848
+            clr_country_flag = liberal_revolution_fired
+            clr_country_flag = liberal_revolution_in_progress
+            set_country_flag = had_liberal_revolution
+        }
+    }
+
+    option = {
+        name = "Down with the Occitans"
+        set_country_flag = fra_revolt
+        set_country_flag = french_revolution
+        remove_accepted_culture = occitan
+        remove_accepted_culture = catalan
+        any_owned = {
+            limit = { OR = {
+			
+			is_core = OCC 
+            is_core = CAT 
+            is_core = ARP }	}
+            any_pop = { militancy = -9 consciousness = -9 }
+            remove_province_modifier = nationalist_agitation
+            secede_province = FRZ 
+        }
+#       3309 = { secede_province = FRZ }
+        FRZ = {
+            define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
+            add_country_modifier = { name = unrecognized_country duration = 3650 }
+        }
+        relation = { who = FRZ value = -400 }
+        
+        FRZ = {
+            capital_scope = {
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = cavalry value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+            }
+        }
+        war = {
+            target = FRZ 
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = civil_war }
+        }
+        ai_chance = { factor = 100 }
+    
+    }
+    option = {
+        name = "Viva la França"
+        any_owned = {
+            limit = { OR = {
+			
+			is_core = OCC 
+            is_core = CAT 
+            is_core = ARP } }
+            any_pop = { militancy = -9 consciousness = -9 }
+            remove_province_modifier = nationalist_agitation
+           secede_province = FRZ 
+        }
+        FRZ = {
+            define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
+            add_accepted_culture = catalan
+        }
+        relation = { who = FRZ value = -400 }
+        war = {
+            target = FRZ 
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = civil_war }
+        }
+        change_tag_no_core_switch = FRZ 
+		
+        ai_chance = { factor = 0 }
+      }
+ }
+    
+##### OCCITAN VERSION #####
+
+country_event = {
+       id = 45257
+
+    title = "EVTNAME45254"
+    desc = "EVTDESC45254"
+    picture = "french_revolution_1848"
+
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+	    
+		exists = OCC
+        tag = FRA
+        NOT = { government = democracy }
+        OR = {
+            has_country_modifier = springtime_of_nations
+            has_country_flag = liberal_revolution_in_progress
+            year = 1848
+        }
+        OR = {
+            AND = {
+                average_militancy = 4
+                has_country_modifier = springtime_of_nations
+            }
+            AND = {
+                average_militancy = 6
+                NOT = { has_country_modifier = springtime_of_nations }
+            }
+            any_owned_province = {
+                is_capital = yes
+                controlled_by = REB
+            }
+            revolt_percentage = 0.50
+            AND = {
+                year = 1848
+                ai = yes
+            }
+        }
+    }
+
+    mean_time_to_happen =  {
+        months = 1
+        modifier = {
+            factor = 0.5
+            has_country_modifier = springtime_of_nations
+        }
+        modifier = {
+            factor = 1.5
+            NOT = { has_country_modifier = springtime_of_nations }
+        }
+        modifier = {
+            factor = 0.01
+            capital_scope = { controlled_by = REB }
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 6
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 7
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 8
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 9
+        }
+        modifier = {
+            factor = 0.6
+            revolt_percentage = 0.60
+        }
+        modifier = {
+            factor = 0.6
+            revolt_percentage = 0.70
+        }
+        modifier = {
+            factor = 0.6
+            revolt_percentage = 0.80
+        }
+    }
+
+    immediate = {
+        FRA = {
+            set_country_flag = 2nd_republic
+			set_country_flag = french_rev_sanity_check
+            set_global_flag = french_revolution_1848
+            clr_country_flag = liberal_revolution_fired
+            clr_country_flag = liberal_revolution_in_progress
+            set_country_flag = had_liberal_revolution
+        }
+    }
+
+    option = {
+        name = "Reunite France!"
+        set_country_flag = fra_revolt
+        set_country_flag = french_revolution
+        remove_accepted_culture = occitan
+        remove_accepted_culture = catalan
+#       3309 = { secede_province = OCC }
+        relation = { who = OCC value = -400 }
+        OCC = { country_event = 45357 }
+        ai_chance = { factor = 100 }
+    
+    }
+    option = {
+        name = "Down with the Tyrans!"
+        relation = { who = OCC value = -400 }
+
+        change_tag_no_core_switch = OCC 
+		 war = {
+            target = FRA 
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = install_democracy }
+        }		
+        ai_chance = { factor = 0 }
+      }
+ }
+    
+	
+	#France declared war!
+country_event = {
+	id = 45357
+	title = "France Attackd!"
+	desc = "France attacked to unite their realm and ours"
+	picture = "meeting3"
+	is_triggered_only = yes
+	option = {
+		name = "Unite France?"
+		prestige = 15	
+        set_global_flag = occ_chose_violence		
+        war = {
+            target = FRA 
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = civil_war }
+        }
+	}
+	
+	option = {
+		name = "We are seperate"
+		prestige = 15		
+		 set_global_flag = occ_chose_peace
+		 war = {
+            target = FRA 
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = install_democracy }
+        }
+	}
+}
+
+########################################
+
+########################################
+
+########################################
+
+country_event = {
+
+    id = 100107
+    title = "Unite Belgica"
+    desc = "With our dominance over the unified Belgican nation we have a chance to reform the nation under our rule, but is it worth it?"
+    picture = "treaty"
+
+    trigger = {
+        primary_culture = belgican
+        NOT = { tag = BEL }
+        exists = WLL
+		exists = PIC
+		is_vassal = no
+        NOT = {  has_country_flag = belgican_united }
+    }
+
+    mean_time_to_happen = {
+        days = 60
+    }
+
+    option = {
+        name = "A unification of Belgica under our rule is the only course of action!"
+		change_tag = BEL
+        inherit = WLL
+		inherit = PIC
+        prestige = 10
+        set_country_flag = belgican_united
+        ai_chance = {
+            factor = 0.9
+        }
+    }
+
+    option = {
+        name = "It's not worth it."
+        prestige = -2
+        set_country_flag = belgican_united
+        ai_chance = {
+            factor = 0.1
+            modifier = {
+                OR = {
+                    government = absolute_monarchy
+                    government = prussian_constitutionalism
+                    government = presidential_dictatorship
+                    pop_majority_ideology = fascist
+                }
+                factor = 0
+            }
+        }
+    }
+}

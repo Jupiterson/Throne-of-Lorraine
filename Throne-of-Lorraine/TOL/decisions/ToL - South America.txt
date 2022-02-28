@@ -22,6 +22,193 @@ political_decisions = {
 			BRZ = { all_core = { limit = { empty = yes } secede_province = THIS } }
         }
     }
+	biobio_mining_boom = {
+        picture = essen_ruhr
+        potential = {
+            tag = PEU
+            NOT = { has_country_flag = biobio_mining }
+			all_core = { owned_by = THIS }
+			is_vassal = no
+        }
+
+        allow = {
+            war = no			
+			regenerative_furnaces = 1
+			inorganic_chemistry = 1
+			market_structure = 1
+			money = 50000
+        }
+
+        effect = {
+			money = -25000
+            set_country_flag = biobio_mining
+			2327 = { add_core = PEU }
+			2328 = { add_core = PEU }
+			2329 = { add_core = PEU }
+			2331 = { add_core = PEU }
+			PEU = { all_core = { limit = { empty = yes } secede_province = THIS } }
+			random_owned = {
+				limit = {
+					NOT = { owner = { tech_school = incan_tech_school } }
+				}
+				owner = { 
+					add_country_modifier = {
+						name = academic_confusion
+						duration = 3650
+					}
+					tech_school = incan_tech_school
+				}
+			}
+			random_owned = {
+				limit = {
+					province_id = 2330 #Santiago
+					state_scope = {
+						NOT = { has_building = steel_factory }
+					}
+				}
+				owner = { 
+					capital = 2330
+					build_factory_in_capital_state = steel_factory
+				}
+			}
+			add_country_modifier = {
+				name = biobio_mining_reforms
+				duration = 3650
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						region = CHL_2322 #Santiago
+						region = CHL_2327 #Los Rios
+					}
+				}
+				add_province_modifier = {
+					name = incan_reform_benefits_mining
+					duration = 3650
+				}
+			}
+			
+			any_pop = {
+				limit = {
+					has_pop_culture = quechua
+					type = labourers
+					location = { OR = { province_id = 2288 province_id = 2289 } }
+				}
+				move_pop = 2330
+			}
+			
+			any_pop = {
+				limit = {
+					has_pop_culture = quechua
+					type = labourers
+					location = { OR = { province_id = 2286 province_id = 2300 } }
+				}
+				move_pop = 2331
+			}
+			
+			any_pop = {
+				limit = {
+					has_pop_culture = quechua
+					type = labourers
+					location = { OR = { province_id = 2301 province_id = 2321 } }
+				}
+				move_pop = 2329
+			}
+			
+			capital = 2302
+        }
+    }
+	
+	quito_land_reforms = {
+        picture = incan_agriculture
+        potential = {
+            tag = PEU
+            NOT = { has_country_flag = quito_reforms }
+			owns = 2279
+			is_vassal = no
+        }
+
+        allow = {
+            war = no			
+			compound_steam_engines = 1
+			inorganic_chemistry = 1
+			market_structure = 1
+			money = 50000
+        }
+
+        effect = {
+			money = -25000
+            set_country_flag = quito_reforms
+			random_owned = {
+				limit = {
+					NOT = { owner = { tech_school = incan_tech_school } }
+				}
+				owner = { 
+					add_country_modifier = {
+						name = academic_confusion
+						duration = 3650
+					}
+					tech_school = incan_tech_school
+				}
+			}
+			random_owned = {
+				limit = {
+					province_id = 2279 #quito
+					state_scope = {
+						NOT = { has_building = liquor_distillery }
+					}
+				}
+				owner = { 
+					capital = 2279
+					build_factory_in_capital_state = liquor_distillery
+				}
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						region = CLM_2247 #Cundinamarca
+						region = CLM_2259 #Cauca
+						region = ECU_2279 #Ecuador
+					}
+				}
+				add_province_modifier = {
+					name = incan_reform_benefits_farming
+					duration = 3650
+				}
+			}
+			capital = 2302
+        }
+    }
+	
+	incan_final_industry_reforms = {
+        picture = incan_industrial_boom
+        potential = {
+            tag = PEU
+			has_country_flag = quito_reforms
+			has_country_flag = biobio_mining
+			NOT = { has_country_flag = incan_final_reforms }
+			is_vassal = no
+        }
+
+        allow = {
+            war = no			
+			organic_chemistry = 1
+			business_banks
+			money = 50000
+        }
+
+        effect = {
+			money = -25000
+            set_country_flag = incan_final_reforms
+			remove_country_modifier = biobio_mining_reforms
+			capital = 2302
+			add_country_modifier = {
+				name = incan_industrial_reforms
+				duration = 1825
+			}
+        }
+    }
+	
 	form_amazonas = {
         picture = create_iberia
         potential = {
