@@ -638,7 +638,7 @@ political_decisions = {
         potential = {
             tag = KNI
             NOT = { has_country_flag = Ionia_claimed }
-            has_global_flag = fantasy_countries_enabled
+#            has_global_flag = fantasy_countries_enabled
 			ai = no
         }
         allow = {
@@ -674,7 +674,7 @@ political_decisions = {
         potential = {
             tag = KNI
             NOT = { has_country_flag = Italian_claimed }
-            has_global_flag = fantasy_countries_enabled
+#            has_global_flag = fantasy_countries_enabled
 			ai = no
         }
         allow = {
@@ -717,7 +717,7 @@ political_decisions = {
         potential = {
             tag = KNI
             NOT = { has_country_flag = Greek_claimed }
-            has_global_flag = fantasy_countries_enabled
+ #           has_global_flag = fantasy_countries_enabled
 			ai = no
         }
         allow = {
@@ -763,7 +763,7 @@ political_decisions = {
         potential = {
             tag = MOR
             NOT = { has_country_flag = Grenada_claimed }
-            has_global_flag = fantasy_countries_enabled
+#            has_global_flag = fantasy_countries_enabled
 			ai = no
         }
         allow = {
@@ -2686,7 +2686,7 @@ political_decisions = {
         potential = {
             tag = MCD
             NOT = { has_country_flag = Alex_claimed }
-            has_global_flag = fantasy_countries_enabled
+ #           has_global_flag = fantasy_countries_enabled
 			OR = {
 				AND = {
 					is_vassal = no
@@ -4202,7 +4202,6 @@ political_decisions = {
     finish_off_dahomey = {
         picture = second_dahomey_war
         potential = {
-			NOT = { has_global_flag = colonial_railroading_disabled }
             owns = 1919
             NOT = {
                 AND = {

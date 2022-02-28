@@ -298,6 +298,141 @@ collapse_modifier_isa = {
         ai_will_do = { factor = 1 }
     }
 	
+	#####################
+	#####################
+	#  TINIRI SULTANATE #
+	#####################
+	#####################
+	
+		claim_east_sahara = {
+        picture = form_the_rcmp
+        potential = {
+            tag = TIN
+            NOT = { has_country_flag = east_sahara }
+        }
 
+        allow = {
+#		    admin_reform = yes_admin_reform
+  #          land_reform = yes_land_reform
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 7
+            COP = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                }      
+            EGY = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                }
+            TRI_1735 = {
+                add_core = THIS
+            } 
+            TRI_1731 = {
+                add_core = THIS
+            } 
+			FRA_1813 = {
+                add_core = THIS
+            } 
+            ENG_1825 = {
+                add_core = THIS
+            } 
+            ENG_1818 = {
+                add_core = THIS
+            } 
+            EGY_1758 = {
+                add_core = THIS
+            } 			
+            set_country_flag = east_sahara
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+		ai_will_do = { factor = 1 }
+    }
+
+
+	claim_mecca = {
+        picture = form_the_rcmp
+        potential = {
+            tag = TIN
+			has_country_flag = east_sahara
+            NOT = { has_country_flag = mecca_claimed }
+        }
+
+        allow = {
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 10
+            HDJ = {
+                all_core = {
+                                        add_core = THIS
+                                        }
+                }      
+            EGY_1827 = {
+                add_core = THIS
+            } 
+            EGY_1834 = {
+                add_core = THIS
+            } 
+            EGY_1771 = {
+                add_core = THIS
+            } 		
+            set_country_flag = mecca_claimed
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+	declare_caliphate = {
+        picture = form_the_rcmp
+        potential = {
+            tag = TIN
+			has_country_flag = mecca_claimed
+            NOT = { has_country_flag = caliphate }
+        }
+
+        allow = {
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            badboy = 3
+			add_accepted_culture = bedouin
+			add_accepted_culture = mashriqi
+			add_accepted_culture = misri
+			add_accepted_culture = songhai
+			add_accepted_culture = hausa
+            any_country = {
+            limit = {
+                NOT = {
+				tag = TIN 
+				tag = BOS
+				tag = SEV
+				tag = TAR
+				tag = KRN
+				tag = AGC
+				is_culture_group = indo_iranian
+				is_culture_group = central_asia
+				is_culture_group = east_asian
+				}
+				OR = {
+                has_country_flag = sunni_country
+				has_country_flag = shiite_country
+				}
+            }
+            country_event = 100119
+        }
+            set_country_flag = caliphate
+			government = absolute_empire
+        }
+		ai_will_do = { factor = 1 }
+    }
+	
+	
 	
 	}

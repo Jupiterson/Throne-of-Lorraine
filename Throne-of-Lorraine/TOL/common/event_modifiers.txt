@@ -2327,7 +2327,7 @@ irish_integration  = {
 ### Arabia ###
 
 rally_tribesmen = {
-    mobilisation_size = 0.76
+    mobilisation_size = 1.5
     mobilisation_economy_impact = -0.7
     core_pop_militancy_modifier = -0.1
     war_exhaustion = -0.03
@@ -4961,6 +4961,16 @@ outraged-europe = {
 	}
 
 german-menace = {
+		badboy = -0.01
+		influence_modifier = 0.2
+		diplomatic_points_modifier = 0.2
+		mobilisation_size = 0.06
+		icon = 15
+	}
+	
+	
+	
+	tiniri_menace = {
 		badboy = -0.01
 		influence_modifier = 0.2
 		diplomatic_points_modifier = 0.2
