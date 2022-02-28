@@ -1,33 +1,33 @@
-capital = 269
-primary_culture = scottish
-religion = reformed
+capital = 263
+primary_culture = irish
+religion = catholic
 government = hms_government
 plurality = 0.1
 nationalvalue = nv_order
 literacy = 0.55
 civilized = yes
+is_releasable_vassal = no
 
-prestige = 40
-
+oob = "IRE_oob.txt"
 
 # Political reforms
 slavery = no_slavery
-upper_house_composition = appointed
+upper_house_composition = population_equal_weight
 vote_franschise = wealth_voting
 public_meetings = yes_meeting
 press_rights = censored_press
-trade_unions = non_socialist
-voting_system = jefferson_method
+trade_unions = no_trade_unions
+voting_system = proportional_representation
 political_parties = non_secret_ballots
 
 # Social Reforms
 wage_reform = no_minimum_wage
 work_hours = no_work_hour_limit
-safety_regulations = trinket_safety
-health_care = trinket_health_care
-unemployment_subsidies = trinket_subsidies
+safety_regulations = no_safety
+health_care = no_health_care
+unemployment_subsidies = no_subsidies
 pensions = no_pensions
-school_reforms = low_schools
+school_reforms = no_schools
 
 # Technologies
 post_napoleonic_thought = 1
@@ -36,7 +36,6 @@ bronze_muzzle_loaded_artillery = 1
 military_staff_system = 1
 army_command_principle = 1
 post_nelsonian_thought = 1
-battleship_column_doctrine = 1
 clipper_design = 1
 classicism_n_early_romanticism = 1
 late_enlightenment_philosophy = 1
@@ -52,9 +51,6 @@ piston_steam_engine = 1
 mechanical_production = 1
 hot_blast = 1
 basic_chemistry = 1
-experimental_railroad = 1
-early_railroad = 1
-
 
 #New Reforms
 conscription = two_year_draft
@@ -66,30 +62,26 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
-set_country_flag = protestant_country
+set_country_flag = catholic_country
+
 
 set_country_flag = celtic_heritage
 
-ruling_party = SCO_conservative_2
+govt_flag = {
+    government = republic
+    flag = democracy
+}
+
+ruling_party = IRE_conservative
 upper_house = {
     fascist = 0
-    liberal = 59
-    conservative = 29
-    reactionary = 12
+    liberal = 15
+    conservative = 75
+    reactionary = 10
     radical = 0
     socialist = 0
     communist = 0
 }
-
-decision = nobles_autonomy_SCO
-
-oob = "SCO_oob.txt"
-
-govt_flag = {
-    government = absolute_monarchy
-    flag = theocracy
-}
-
 
 1861.1.1 = {
 # Technologies

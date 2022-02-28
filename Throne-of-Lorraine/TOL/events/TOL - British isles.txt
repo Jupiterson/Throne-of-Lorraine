@@ -50,7 +50,7 @@ country_event = {
 	          name = Britannia
 			  set_country_flag = britannia_ai
 			  ai_chance = {
-                factor = 1
+                factor = 40
               }
 			  }
 
@@ -58,7 +58,7 @@ country_event = {
 	          name = Celtic Union
 			  set_country_flag = celtic_ai
 			  ai_chance = {
-                factor = 1
+                factor = 40
               }
 			  }
 			  
@@ -66,7 +66,7 @@ country_event = {
 	          name = Scotland-brazil
 			  set_country_flag = scotlandbrazil_ai
 			  ai_chance = {
-                factor = 1
+                factor = 20
               }
 			  }
 			  }
@@ -93,7 +93,7 @@ country_event = {
 	          name = Britannia
 			  set_country_flag = britannia_ai
 			  ai_chance = {
-                factor = 1
+                factor = 50
               }
 			  }
 
@@ -101,8 +101,206 @@ country_event = {
 	          name = Celtic Union
 			  set_country_flag = celtic_ai
 			  ai_chance = {
-                factor = 1
+                factor = 50
               }
 			  }
 			  }
+}
+
+#Irish Revolt
+country_event = {
+    id = 28015
+    title = "EVTNAME28015"
+    desc = "EVTDESC28015"
+    picture = irish_win
+	fire_only_once = yes
+
+    trigger = {
+	    tag = ENG
+	    NOT = { has_country_flag = irish_revolt }
+		OR = {
+		    263 = { owned_by = ENG }
+			254 = { owned_by = ENG }
+		}
+        NOT = { exists = IRR }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+        modifier = {
+            factor = 0.5
+            average_militancy = 7
+        }
+
+        modifier = {
+            factor = 0.5
+            has_recently_lost_war = yes
+        }
+    }
+	
+	option = {
+        name = "Well then..."
+		set_country_flag = irish_revolt
+        any_owned = {
+            limit = { is_core = IRE }
+            secede_province = IRR
+        }
+        diplomatic_influence = {
+            who = IRR
+            value = -400
+        }
+        casus_belli = {
+            target = IRR 
+            type = conquest
+            months = 12
+        }
+        war = {
+            target = IRR 
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = status_quo }
+        }
+		IRE = country_event = 28018
+		random = {
+		    chance = 0.2
+	        set_country_flag = irish_integration
+	    }
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+#Irish win
+country_event = {
+    id = 28016
+	title = "ireland annexes the revolt"
+    desc = "amogus"
+	picture = irish_home_rule
+	fire_only_once = yes
+	
+    trigger = {
+	    tag = IRR
+		war = no
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+	
+	option = {
+        name = "sium"
+		any_owned_province = {
+		    secede_province = IRE
+		}
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+#Britannia integrates Irish
+country_event = {
+    id = 28017
+	title = "EVTNAME28017"
+    desc = "EVTDESC28017"
+    picture = irish_integration
+	fire_only_once = yes
+
+    trigger = {
+	    has_country_flag = irish_integration
+	    tag = ENG
+		war = no
+    }
+
+    mean_time_to_happen = {
+        days = 20
+    }
+	
+	option = {
+        name = "Integrate the Irish culture then."
+		add_accepted_culture = irish
+		any_pop = {
+		    limit = { 
+			    NOT = has_pop_culture = irish
+			}
+	        average_militancy = 4
+        }
+		any_pop = {
+		    limit = { 
+			    has_pop_culture = irish
+			}
+	        average_militancy = -2
+        }
+        ai_chance = {
+            factor = 70
+        }
+    }
+	option = {
+        name = "We will stick with our previous decision."
+		any_pop = {
+		    limit = { 
+			    NOT = has_pop_culture = irish
+			}
+	        average_militancy = -2
+        }
+		any_pop = {
+		    limit = { 
+			    has_pop_culture = irish
+			}
+	        average_militancy = 4
+        }
+        ai_chance = {
+            factor = 70
+        }
+    }
+}
+
+#Ireland intervenes
+country_event = {
+    id = 28018
+	title = "EVTNAME28018"
+    desc = "EVTDESC28018"
+    picture = irish_republican_brotherhood
+	is_triggered_only = yes
+	
+	option = {
+        name = "We have to defend our brothers at all costs."
+		war = {
+	        target = SCO
+			attacker_goal = { casus_belli = liberate_country country = IRR }
+			defender_goal = { casus_belli = humiliate_no_infamy }
+			call_ally = no
+		}
+		random = {
+		    chance = 0.25
+			relation = {
+		        who = SCO
+			    value = -75
+		    }
+		}
+        ai_chance = {
+            factor = 25
+        }
+    }
+	option = {
+        name = "Secretly give them supplies."
+		money = -10000
+		IRR = {
+            small_arms = 300
+            ammunition = 300
+		}
+        ai_chance = {
+            factor = 50
+        }
+    }
+	option = {
+        name = "We can't do nothing."
+		relation = {
+		    who = SCO
+			value = 25
+		}
+        ai_chance = {
+            factor = 25
+        }
+    }
 }

@@ -2,6 +2,10 @@ political_decisions = {
     Celtic_Union = {
         potential = {
 		    OR = {
+			    NOT = { tag = SCO }
+				has_country_flag = gaelic_english_bilinguism
+			}
+			OR = {
 			    ai = no
 				has_country_flag = celtic_ai
 			}
@@ -141,6 +145,7 @@ political_decisions = {
     }
 	
     Claim_BRT = {
+	    picture = brittany
         potential = {
             tag = CLT
             NOT = { has_country_flag = BRT_claimed }
@@ -204,7 +209,7 @@ political_decisions = {
 	}
 	
 	english_expansion = {
-        picture = galicia
+        picture = northenglandmap
         potential = {
 		    tag = CLT
             NOT = { has_country_flag = english_expansion }

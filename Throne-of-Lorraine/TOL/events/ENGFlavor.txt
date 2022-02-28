@@ -3282,31 +3282,31 @@ country_event = {
 }
 
 #Turning a few pops
-country_event = {
+#country_event = {
 
-    id = 315003
-    title = "EVTNAME315003"
-    desc = "EVTDESC315003"
-    picture = "glasgow_bridge"
+    #id = 315003
+    #title = "EVTNAME315003"
+    #desc = "EVTDESC315003"
+    #picture = "glasgow_bridge"
 
-    trigger = {
-        tag = SCO
-        NOT = { any_pop = { has_pop_culture = scottish } }
-    }
+    #trigger = {
+        #tag = SCO
+        #NOT = { any_pop = { has_pop_culture = scottish } }
+    #}
 
-    fire_only_once = yes
+    #fire_only_once = yes
 
-    immediate = { primary_culture = scottish }
+    #immediate = { primary_culture = scottish }
 
-    mean_time_to_happen = { months = 2 }
+    #mean_time_to_happen = { months = 2 }
 
-    option = {
-        name = "EVTOPTA315003"
-        random_owned = { limit = { is_capital = yes } assimilate = yes }
-        any_pop = { limit = { NOT = { is_primary_culture = yes } } militancy = 3 consciousness = 4 }
-        any_owned = { limit = { is_core = THIS } add_province_modifier = { name = cultural_resurgence duration = 3650 } }
-    }
-}
+    #option = {
+        #name = "EVTOPTA315003"
+        #random_owned = { limit = { is_capital = yes } assimilate = yes }
+        #any_pop = { limit = { NOT = { is_primary_culture = yes } } militancy = 3 consciousness = 4 }
+        #any_owned = { limit = { is_core = THIS } add_province_modifier = { name = cultural_resurgence duration = 3650 } }
+    #}
+#}
 
 #David Livingstone is Found
 country_event = {

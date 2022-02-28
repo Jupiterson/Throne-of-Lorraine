@@ -3,6 +3,12 @@ political_decisions = {
         picture = reform_the_uk
         potential = {
 		    OR = {
+			    NOT = { tag = SCO }
+				has_country_flag = gaelic_assimilation
+			}
+		    OR = {
+			    ai = no
+				OR = {
 			        AND = {
 			            NOT = { tag = SCO }
 				        NOT = { tag = WHA }
@@ -86,11 +92,6 @@ political_decisions = {
                     add_core = ENG
                 }
 			}
-            IRE = {
-                all_core = {
-                    add_core = ENG
-                }
-            }
             WHA = {
                 all_core = {
                     add_core = ENG
@@ -184,7 +185,7 @@ political_decisions = {
 	}
 	
 	reclaim_angevin_lands = {
-        picture = brittany
+        picture = map_angevin
         potential = {
             tag = ENG
 			has_country_flag = williams_back
@@ -212,7 +213,7 @@ political_decisions = {
 	}
 	
 	french_kingdom_status = {
-        picture = brittany
+        picture = angevin_coatofarms
         potential = {
             tag = ENG
 		    has_country_flag = angevin_claimed
@@ -232,7 +233,7 @@ political_decisions = {
 
         effect = {
             prestige = 25
-		    badboy = 5
+		    badboy = 8
 			add_accepted_culture = french
 			relation = {
 			    who = FRA
