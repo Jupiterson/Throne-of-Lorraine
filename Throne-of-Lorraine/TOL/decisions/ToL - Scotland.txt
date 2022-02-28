@@ -16,12 +16,14 @@ political_decisions = {
 				    OR = {
 					    province_id = 279
 					    province_id = 280
-					    province_id = 281
-					    province_id = 282
 					    province_id = 254
 					    province_id = 255
 			            province_id = 256
 						province_id = 257
+						province_id = 258
+						province_id = 259
+						province_id = 263
+						province_id = 264
 					    province_id = 3378
 					}
                 }
@@ -67,6 +69,47 @@ political_decisions = {
 	  	ai_will_do = { factor = 1 }
 }
 
+centralize_ulster = {
+        picture = ulster_scot
+        potential = {
+            tag = SCO
+            is_vassal = no
+            NOT = { has_country_flag = ulster_scot }
+        }
+
+        allow = {
+            is_greater_power = yes
+            ideological_thought = 1
+            war = no
+        }
+
+        effect = {
+		    any_owned = {
+                limit = {
+				    OR = {
+					    province_id = 254
+					    province_id = 255
+			            province_id = 256
+						province_id = 257
+						province_id = 258
+						province_id = 259
+						province_id = 263
+						province_id = 264
+					    province_id = 3378
+					}	
+                }
+                remove_province_modifier = nobles_autonomy_SCO
+				rich_strata = { consciousness = 5 militancy = 10 }
+				poor_strata = { consciousness = 2 militancy = 4 }
+			}
+            set_country_flag = ulster_scot
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
     centralize_northumbria = {
         picture = madnobles
         potential = {
@@ -88,8 +131,6 @@ political_decisions = {
 				    OR = {
 					    province_id = 279
 					    province_id = 280
-					    province_id = 281
-					    province_id = 282
 					}	
                 }
                 remove_province_modifier = nobles_autonomy_SCO
@@ -97,6 +138,94 @@ political_decisions = {
 				poor_strata = { consciousness = 2 militancy = 4 }
 			}
             set_country_flag = centralize_northumbria
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	## gaelic larp
+	gaelic_societies = {
+        picture = celtic_society
+        potential = {
+            tag = SCO
+            NOT = { has_country_flag = gaelic_societies}
+        }
+
+        allow = {
+            romanticism = 1
+        }
+
+        effect = {
+		    prestige = 10
+		    add_country_modifier = {
+                    name = gaelic_societies
+                    duration = 1825
+            }
+            set_country_flag = gaelic_societies
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	gaelic_english_bilinguism = {
+        picture = gaelicschool
+        potential = {
+		    OR = {
+			    ai = no
+				has_country_flag = celtic_ai
+			}
+            tag = SCO
+			has_country_flag = gaelic_societies
+            NOT = { has_country_flag = gaelic_english_bilinguism}
+			NOT = { has_country_flag = gaelic_assimilation}
+        }
+
+        allow = {
+            positivism = 1
+        }
+
+        effect = {
+		    prestige = 20
+			add_accepted_culture = gaidhlig
+		    add_country_modifier = {
+                name = national_confusion
+                duration = 365
+            }
+            set_country_flag = gaelic_english_bilinguism
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	gaelic_assimilation = {
+        picture = antirishprop
+        potential = {
+            tag = SCO
+			has_country_flag = gaelic_societies
+            NOT = { has_country_flag = gaelic_english_bilinguism}
+			NOT = { has_country_flag = gaelic_assimilation}
+			OR = {
+			    ai = no
+				has_country_flag = britannia_ai
+			}
+        }
+
+        allow = {
+            positivism = 1
+        }
+
+        effect = {
+		    prestige = 5
+			random_owned = { limit = { is_capital = yes } assimilate = yes }
+			any_pop = { limit = { NOT = { is_primary_culture = yes } } militancy = 3 consciousness = 4 }
+			any_owned = { limit = { is_core = THIS } add_province_modifier = { name = cultural_resurgence duration = 5475 } }
+            set_country_flag = gaelic_assimilation
         }
 
         ai_will_do = {
