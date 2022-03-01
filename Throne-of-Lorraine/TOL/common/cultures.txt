@@ -1431,16 +1431,19 @@ east_slavic = {
     unit = RussianGC
     russian = {
         color = {0 70 10}
-           first_names = { Aleksandr Alexei Andrei Anton Boris Dmitry Fyodor Gennady
-                         Giorgi Grigoriy Igor Ivan Kirill Konstantin Lavr Leonid Lev Maxim
-                         Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei
-                         Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri }
-
-           last_names = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin
-                          Dragomirov Frolov Golivin Grishin Gurko Ivanov Konev Konstantinov Kornilov
-                          Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov
-                          Nikolaevich Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev
-                          Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+		first_names = {
+			Aleksandr Alexei Andrei Anton Boris Dmitry Fyodor Gennady
+			Giorgi Grigoriy Igor Ivan Kirill Konstantin Lavr Leonid Lev Maxim
+			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri 
+		}
+		last_names = {
+			Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin
+			Dragomirov Frolov Golivin Grishin Gurko Ivanov Konev Konstantinov Kornilov
+			Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov
+			Nikolaevich Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev
+			Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+		}
     }
 }
 
@@ -1450,34 +1453,34 @@ ruthenian = {
 
     ruthenyan = {
         color = {128 113 72 }
-            first_names = { Alexei Andrei Anton Arkadiy Borys Cyril Dmitro Fyodor Hryhoriy Ivan Lavr Leonid Lev
-                            Mikhail Mykola Nikita Oleksandr Pavel Petro Piotr Roman Ryhor Semyon Sergiy Stanislaw Uladzimir Valeriy
-                            Viktor Volodimir Vladislav Yuriy }
+		first_names = { Alexei Andrei Anton Arkadiy Borys Cyril Dmitro Fyodor Hryhoriy Ivan Lavr Leonid Lev
+						Mikhail Mykola Nikita Oleksandr Pavel Petro Piotr Roman Ryhor Semyon Sergiy Stanislaw Uladzimir Valeriy
+						Viktor Volodimir Vladislav Yuriy }
 
-            last_names = { Alexseyev Bezruchko "Bulak-Balachowicz" Chernyakhovsky Chibisov Dyachenko Gamula Grigoriev Hrekov
-                           Ivanenko Ivanov Kapustiansky Kolchak Kondratenko Leshchenko Leshchinskiy "Omelianovych-Pavlenko" Paskevich
-                           Petliura Radchenko Rozhestvensky Shevchenko Skoropadskyi Stefaniv Tymoshenko Vitovsky Zhauryd }
-            radicalism = 10
+		last_names = { Alexseyev Bezruchko "Bulak-Balachowicz" Chernyakhovsky Chibisov Dyachenko Gamula Grigoriev Hrekov
+					   Ivanenko Ivanov Kapustiansky Kolchak Kondratenko Leshchenko Leshchinskiy "Omelianovych-Pavlenko" Paskevich
+					   Petliura Radchenko Rozhestvensky Shevchenko Skoropadskyi Stefaniv Tymoshenko Vitovsky Zhauryd }
+		radicalism = 10
 
         }
     cossack = {
-        color = {60 160 160}
-        first_names = {
-            Bohdan Yermak Yemelyan Stepan Andrei Ivan Pyotr Yuriy Kirill Foma
-            Pavel Vasily Alexey Danylo Mykhailo Lavr Tymofiy Semyon Mstislav
-            Ilyas Blazh Ruslan Roman Vladimir Igor Feofil Onisim Yakim Akim Yevgeniy
-            Nazariy Gleb Bulan Nikita Vitaly Nikolai Isaj Smaga Naum Kornilij Anatoliy
-            Frol Lukjan Gnat Gavrylo Olifer Epiphan Ermak Lyapun Susar Olek Faddey Dorofey
-            Rurik Leo Andrey Bogdan
-        }
-        last_names = {
-            Lyantskoronsky Kishka "Vishnevetsky-Bayda" Vishnevetsky Bayda Svirgovsky Ruzhinsky Pidkova
-            Shakh Chornynsky Skalozub Chanovytsky Kosynsky Loboda Shaula Krempsky Nech Vassylevsky
-            Baybuza Polous Kortnevych Kutskovych Maryshchuk Zborovsky Andriyevch Tyskinevych Sagaydachny Golub
-            Doroshenko Vovk Sulyma Chorny Orendarenko Kulaga Gavrylovych Tomylenko Sava Pavlyuk Gunya
-            Gulak-Bulyuk Khmelnitsky Mazep Polubotok Rozumovsky Fedorov Filimonov Cherkashenin Timofeevich
-            Kishkin Mashlykin Karela Martimjarov Tatarinov Rodilov Vasiliev Jakovlev Minaev Maksimov Bulavin
-        }
+		color = {60 160 160}
+		first_names = {
+			Bohdan Yermak Yemelyan Stepan Andrei Ivan Pyotr Yuriy Kirill Foma
+			Pavel Vasily Alexey Danylo Mykhailo Lavr Tymofiy Semyon Mstislav
+			Ilyas Blazh Ruslan Roman Vladimir Igor Feofil Onisim Yakim Akim Yevgeniy
+			Nazariy Gleb Bulan Nikita Vitaly Nikolai Isaj Smaga Naum Kornilij Anatoliy
+			Frol Lukjan Gnat Gavrylo Olifer Epiphan Ermak Lyapun Susar Olek Faddey Dorofey
+			Rurik Leo Andrey Bogdan
+		}
+		last_names = {
+			Lyantskoronsky Kishka "Vishnevetsky-Bayda" Vishnevetsky Bayda Svirgovsky Ruzhinsky Pidkova
+			Shakh Chornynsky Skalozub Chanovytsky Kosynsky Loboda Shaula Krempsky Nech Vassylevsky
+			Baybuza Polous Kortnevych Kutskovych Maryshchuk Zborovsky Andriyevch Tyskinevych Sagaydachny Golub
+			Doroshenko Vovk Sulyma Chorny Orendarenko Kulaga Gavrylovych Tomylenko Sava Pavlyuk Gunya
+			Gulak-Bulyuk Khmelnitsky Mazep Polubotok Rozumovsky Fedorov Filimonov Cherkashenin Timofeevich
+			Kishkin Mashlykin Karela Martimjarov Tatarinov Rodilov Vasiliev Jakovlev Minaev Maksimov Bulavin
+		}
         radicalism = 10
     }
 	union = RUT
