@@ -1207,56 +1207,56 @@ country_event = {
 }
 
 #country_event = {
-    id = 1010034
-    title = "EVTNAME1010034" #Clean up event for Irish RGO size
-    desc = "EVTDESC1010034"
-    picture = "ireland_poverty"
-
-    trigger = {
-        any_owned_province = {
-            OR = {
-                province_id = 254
-                province_id = 255
-                province_id = 256
-                province_id = 257
-                province_id = 258
-                province_id = 259
-                province_id = 260
-                province_id = 261
-                province_id = 262
-                province_id = 263
-                province_id = 264
-                province_id = 265
-            }
-            NOT = { has_province_modifier = enclosures }
-        }
-        NOT = { tag = IRE }
-        NOT = { tag = CLT }
-        NOT = { accepted_culture = irish }
-    }
-
-    mean_time_to_happen = { days = 1 }
-
-    option = {
-        name = "EVT1010034OPTA"
-        any_owned = {
-            limit = {
-                OR = {
-                    province_id = 254
-                    province_id = 255
-                    province_id = 256
-                    province_id = 257
-                    province_id = 258
-                    province_id = 259
-                    province_id = 260
-                    province_id = 261
-                    province_id = 262
-                    province_id = 263
-                    province_id = 264
-                    province_id = 265
-                }
-            }
-        add_province_modifier = { name = enclosures duration = -1 }
-        }
-    }
-}
+#    id = 1010034
+#    title = "EVTNAME1010034" #Clean up event for Irish RGO size
+#    desc = "EVTDESC1010034"
+#    picture = "ireland_poverty"#
+#
+#    trigger = {
+#        any_owned_province = {
+#            OR = {
+#                province_id = 254
+#                province_id = 255
+#                province_id = 256
+#                province_id = 257
+#                province_id = 258
+#                province_id = 259
+#                province_id = 260
+#                province_id = 261
+#                province_id = 262
+#                province_id = 263
+#                province_id = 264
+#                province_id = 265
+#            }
+#            NOT = { has_province_modifier = enclosures }
+#        }
+#        NOT = { tag = IRE }
+#        NOT = { tag = CLT }
+#        NOT = { accepted_culture = irish }
+# #   }#
+#
+#    mean_time_to_happen = { days = 1 }#
+#
+#    option = {
+#        name = "EVT1010034OPTA"
+#        any_owned = {
+#            limit = {
+#                OR = {
+#                    province_id = 254
+#                    province_id = 255
+#                    province_id = 256
+#                    province_id = 257
+#                    province_id = 258
+#                    province_id = 259
+#                    province_id = 260
+#                    province_id = 261
+#                    province_id = 262
+#                    province_id = 263
+#                    province_id = 264
+#                    province_id = 265
+#                }
+#            }
+#        add_province_modifier = { name = enclosures duration = -1 }
+#        }
+#    }
+#}

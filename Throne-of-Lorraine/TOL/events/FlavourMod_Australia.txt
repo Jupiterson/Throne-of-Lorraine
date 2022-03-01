@@ -1,42 +1,6 @@
 #99905 China Research Fix
 
-#country_event = {
-    id = 99902
-    title = "EVTNAME99902"
-    desc = "EVTDESC99902"
-    fire_only_once = yes
-    picture = "australia1st"
-
-    trigger = {
-        tag = ENG
-        year = 1843
-        NOT = { has_country_flag = australian_migration }
-    }
-
-    option = {
-        name = "EVTOPT99902"
-        2478 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2469 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2472 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2473 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2474 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2475 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2476 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2483 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2487 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2488 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2491 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2492 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2494 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2497 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2498 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2505 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        2508 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
-        set_country_flag = australian_migration
-    }
-}
-
-#country_event = {
+country_event = {
     id = 99904
     title = "EVTNAME99928"
     desc = "EVTDESC99902"
@@ -45,11 +9,10 @@
 
     trigger = {
         OR = {
-            tag = ENG
-            tag = FRA
-            tag = BOR
+            tag = ITA
+            tag = VEN
+            tag = GEN
             tag = AST
-            tag = FAS
         }
         owns = 2478
         owns = 2469
@@ -85,7 +48,7 @@
     }
 }
 
-#country_event = {
+country_event = {
     id = 99928
     title = "EVTNAME99928"
     desc = "EVTDESC99928"
@@ -94,11 +57,10 @@
 
     trigger = {
         OR = {
-            tag = ENG
-            tag = FRA
-            tag = BOR
+            tag = ITA
+            tag = VEN
+            tag = GEN
             tag = AST
-            tag = FAS
         }
         owns = 2478
         owns = 2469
