@@ -47,6 +47,11 @@ IRE = {
     level = 5
     influence_value = 0
 }
+IOM = {
+    value = 25
+    level = 4
+    influence_value = 0
+}
 
 #South America
 VNZ = {
@@ -58,11 +63,6 @@ URU = {
     value = 125        #relation
     level = 4        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 0
-}
-MSK = {
-    value = 150
-    level = 5
-    influence_value = 100
 }
 
 #Other
@@ -233,7 +233,7 @@ army = {
     regiment = {
         name= "Division 2"
         type = infantry
-        home = 281
+        home = 266
     }
 
     regiment = {
@@ -297,7 +297,7 @@ army = {
     regiment = {
         name= "Cavalry Division 2"
         type = hussar
-        home = 281
+        home = 258
     }
 
     regiment = {
@@ -344,7 +344,7 @@ army = {
     regiment = {
         name= "Division 5"
         type = infantry
-        home = 281
+        home = 263
     }
 
     regiment = {
@@ -381,7 +381,7 @@ army = {
 
 army = {
     name = "English Border Division"
-    location = 282
+    location = 280
     regiment = {
         name= "Division 9"
         type = infantry
@@ -446,11 +446,6 @@ army = {
         type = infantry
         home = 269
     }
-	    regiment = {
-        name= "Sumatra division 20"
-        type = infantry
-        home = 2087
-    }
 }
 army = {
     name = "The South Africa Garrison"
@@ -459,7 +454,7 @@ army = {
     regiment = {
         name= "South African Regiment 1"
         type = infantry
-        home = 282
+        home = 2087
     }
 
     regiment = {
@@ -705,7 +700,7 @@ navy = {
 
 navy = {
     name = "1st Transport Squadron"
-    location = 281
+    location = 279
     ship = {
         name= "1st Transport Flotilla"
         type = clipper_transport

@@ -691,14 +691,7 @@ britannian = {
         Moresby Mundy Napier Odoni "of Hannover" "of Saxe-Coburg-Gotha" Plummer Ragland Roberts Seaton Seymour
         Smith Smith-Dorrien Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood }
     }
-    scottish = {
-        color = { 0 71 182 }
-        radicalism = 5
-        first_names = { Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace}
-
-        last_names = { Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison Sanders    }
-    }
-	irish = {
+    irish = {
         color = { 35 140 50}
         first_names = { Alexander Arthur Brian Cathal Christopher Con Daniel Denis Desmond Éamon
         Edward Ernes Fionán Frank George Harry Jack James John Joseph
@@ -707,6 +700,13 @@ britannian = {
         last_names = { Aiken Ashe Breen Brugha Collins Connolly Cosgrave Craig "de Valera" Donnelly
         FitzGerald Griffith Kelly Larkin Lynch Mallin McCartan McCullough McGarry McGuinness
         Mulcahy O'Brien O'Connor O'Doherty O'Higgins O'Leary O'Mara Pearse Plunket White }
+    }
+	scottish = {
+        color = { 0 71 182 }
+        radicalism = 5
+        first_names = { Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace}
+
+        last_names = { Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison Sanders    }
     }
     welsh = {
         color = { 35 100 20}
@@ -737,14 +737,14 @@ celtic = {
     #    last_names = { Angwin Arundell Bosanko Chenoweth Coon Pomeroy Rickard Gummo Nanscawen
     #    Pendarvis Penhale Pentrith Penketh Trelawney Tremaine Trevithick }
     #}
-    #highlander = {
-    #    color = { 35 100 70 }
-    #    first_names = { Rory Donald Seumas Hamish Ian Alastair Alexander Archibald Rabairt Michael
-    #    George Glenn Grant Henry Brian Thomas Norman Robert }
-	#
-    #    last_names = { MacDonald McAlastair MacDougall McKell Fraser Stuart Brown Cameron Cambell
-    #    Canmore Lewis McCloud Duncan McIver MacIntosh Ogilvie Clegg Kenmore Marshall Wallace Scott Wilson}
-    #}
+    gaidhlig = {
+        color = { 22 56 122 }
+        first_names = { Rory Donald Seumas Hamish Ian Alastair Alexander Archibald Rabairt Michael
+        George Glenn Grant Henry Brian Thomas Norman Robert }
+		
+        last_names = { MacDonald McAlastair MacDougall McKell Fraser Stuart Brown Cameron Cambell
+        Canmore Lewis McCloud Duncan McIver MacIntosh Ogilvie Clegg Kenmore Marshall Wallace Scott Wilson}
+    }
     breton = {
         color = {100 110 100}
         first_names = { Yann Yannic Pierre Jakez Elouan Frañsez Jaoua Paol Segal Alain Henri Hoël Michel Théodore }
@@ -815,14 +815,6 @@ italian = {
         Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro
         Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
     }
-
-    provencial = {
-        color = { 150 140 40 }
-        first_names = { Alban Andieu Alòi Beròt Carles Estève Fidèl Frederic Girard Jan Jacin Laurenç Martin Nicolau Privat Roman Vincenç }
-
-        last_names = { Amiel Benet Dardier Delpuech Ladivèze Gilbert Mistral Lacroux Laffont Maury Miquel Montagut Poujade Pujol Vidal Ros Tisseyre }
-    }
-
 
     #sardinian = {
     #    color = { 60 180 60}
@@ -1075,6 +1067,13 @@ burgundian = {
 
         last_names = { Amiel Benet Dardier Delpuech Ladivèze Gilbert Mistral Lacroux Laffont Maury Miquel Montagut Poujade Pujol Vidal Ros Tisseyre }
     }
+	provencial = {
+        color = { 150 140 40 }
+        first_names = { Alban Andieu Alòi Beròt Carles Estève Fidèl Frederic Girard Jan Jacin Laurenç Martin Nicolau Privat Roman Vincenç }
+
+        last_names = { Amiel Benet Dardier Delpuech Ladivèze Gilbert Mistral Lacroux Laffont Maury Miquel Montagut Poujade Pujol Vidal Ros Tisseyre }
+    }
+
 
 
     #picard = {
@@ -1105,6 +1104,7 @@ burgundian = {
         Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert
         Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Petain Vaillant }
     }
+	union = FRA
 }
 
 south_slavic = {
