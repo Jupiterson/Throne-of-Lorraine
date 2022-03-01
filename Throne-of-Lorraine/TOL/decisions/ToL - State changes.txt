@@ -545,12 +545,14 @@ unite_saarland = {
 			is_greater_power = yes
 			is_secondary_power = yes
 			}
+			
 			NOT = { has_global_flag = Occ_annex_pro }
         }
 
         allow = {
             war = no
 			OCC = { war = no }
+			nationalism_n_imperialism = 1
             OR = {
                 AND = {
                     exists = OCC
@@ -578,6 +580,7 @@ unite_saarland = {
 			OCC = {
                 inherit = PRO
             }
+			primary_culture = occitan
 			add_accepted_culture = north_italian
 			add_accepted_culture = provencial
         }
