@@ -1,6 +1,6 @@
-capital = 1211
-primary_culture = neo_greek
-religion = theravada
+capital = 1208
+primary_culture = pamiri
+religion = mahayana
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_order
@@ -36,7 +36,7 @@ border_policy = open_borders
 centralization = regionalism
 colonial_policy = no_colonies
 
-ruling_party = GRE_conservative
+ruling_party = AFG_conservative
 upper_house = {
     fascist = 0
     liberal = 15
@@ -47,7 +47,7 @@ upper_house = {
     communist = 0
 }
 
-set_country_flag = theravada_country
+set_country_flag = mahayana_country
 foreign_weapons = yes_foreign_weapons
 
 # Technologies
@@ -58,10 +58,6 @@ flintlock_rifles = 1
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0
-
-1861.1.1 = {
-    oob = "/1861/AFG_oob.txt"
-}
 
 1861.1.1 = {
     #Military Reforms

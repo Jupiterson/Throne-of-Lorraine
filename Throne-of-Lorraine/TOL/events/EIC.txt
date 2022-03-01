@@ -1131,3 +1131,53 @@ country_event = {
         }
     }
 }
+
+country_event = {
+
+    id = 9990015
+    title = "EVTNAME9990015"
+    desc = "EVTDESC9990015"
+    picture = "confederation"
+
+    trigger = {
+        tag = EIC
+        is_vassal = yes
+        government = colonial_company
+        AND = {
+            year = 1845
+			OR = { 
+				FRZ = { exists = yes }
+				OCC = { exists = yes } 
+			}
+		}
+        war = no
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "EVTOPT9990015"
+        FRA = {
+            any_owned = {
+                limit = {
+					OR = { 
+						is_core = DRA
+						is_core = HND
+					}
+                    is_overseas = yes
+                }
+                secede_province = THIS
+				add_core = THIS 
+            }
+        }
+		any_pop = {
+            limit = {
+                culture = telegu
+                location = { is_core = DRA }
+            }
+            consciousness = 10
+        }
+    }
+}
