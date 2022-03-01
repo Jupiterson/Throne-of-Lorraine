@@ -1,6 +1,6 @@
 #99905 China Research Fix
 
-country_event = {
+#country_event = {
     id = 99902
     title = "EVTNAME99902"
     desc = "EVTDESC99902"
@@ -10,7 +10,7 @@ country_event = {
     trigger = {
         tag = ENG
         year = 1843
-        NOT = { has_country_flag =     australian_migration }
+        NOT = { has_country_flag = australian_migration }
     }
 
     option = {
@@ -36,7 +36,7 @@ country_event = {
     }
 }
 
-country_event = {
+#country_event = {
     id = 99904
     title = "EVTNAME99928"
     desc = "EVTDESC99902"
@@ -85,7 +85,7 @@ country_event = {
     }
 }
 
-country_event = {
+#country_event = {
     id = 99928
     title = "EVTNAME99928"
     desc = "EVTDESC99928"
