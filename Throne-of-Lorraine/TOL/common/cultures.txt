@@ -762,6 +762,12 @@ italian = {
          first_names = { Achille Adriano Agostino Alberto Alessandro Alfredo Ambrogio Amedeo Amilcare Andrea Angelo Antonio Armando Arturo Attilio Augusto Aurelio Benedetto Bernardo Bruno Calogero Carlo Carmine Cesare Claudio Clemente Corrado Daniele Davide Diego Dino Domenico Edoardo Egidio Emanuele Emiliano Enrico Ernesto Ettore Eugenio Fabio Fabrizio Fausto Federico Felice Ferdinando Filippo Francesco Franco Fulvio Gabriele Gaetano Gennaro Germano Giacomo Gianfranco Gianluigi Giordano Giorgio Giuliano Giulio Giuseppe Gregorio Guglielmo Guido Ignazio Italo Jacopo Leonardo Leone Lorenzo Luca Luciano Ludovico Luigi Manfredi Marco Mario Massimiliano Matteo Mauro Michelangelo Modesto Nicola Onorio Orlando Oscar Ottavio Palmiro Paolo Pierfrancesco Piergiorgio Piero Pierpaolo Pietro Primo Prospero Raffaele Raniero Riccardo Roberto Romano Ruggero Salvatore Sauro Saverio Sebastiano Severino Silvestro Silvio Simone Stefano Tiziano Tommaso Tullio Ulisse Umberto Valerio Vincenzo Vinicio Vittorio Walter }
          last_names = { Acciaioli Accorsi Aiello Albanese Alemanno Altobelli Amendola Antonelli Arbore Arcuri Arena Argenti Arpino Arrigoni Balbo Balestrieri Barzaghi Basile Battaglia Bellocchio Bencivenga Bergamasco Bevilacqua Bianchi Biral Bisceglie Borghese Bruni Cacciari Cafiero Caligari Cantoni Caracciolo Castelli Catalano Coppola D'Amico "De Fabritiis" "De Sanctis" "Di Stefano" Esposito Fabris Falcone Fenoglio Ferreri Genovese Grandi Graziani Grimaldi Iacono Iodice "La Terza" Locatelli Longaro Lopez Luzzati Maggio Magris Mainardi Malatesta Manin Marchegiani Marchese Masi Mastandrea Montani Morone Nardi Nicotra Nobile Nodari Ottaviano Pacifico Padovan Palazzi Pallavicino Palmas Palmieri Palumbo Pandolfi Pardo Pavese Pellizzon Prestigiacomo Quilici Ragonese Ranieri Riccardi Rizzo Romanelli Rossi Rovere Russo Sabatini Salvemini Santoro Schiaffino Servillo Severin Sonzogno Spagnoli Spinelli Tebaldi Tedeschi Torreggiani Torrisi Trevisan Turati Urbano Venier Venturi Veronesi Vicari Volpe Zambon Zeppilli Zerbin }
     }
+    provencial = {
+        color = { 150 140 40 }
+        first_names = { Alban Andieu Alòi Beròt Carles Estève Fidèl Frederic Girard Jan Jacin Laurenç Martin Nicolau Privat Roman Vincenç }
+
+        last_names = { Amiel Benet Dardier Delpuech Ladivèze Gilbert Mistral Lacroux Laffont Maury Miquel Montagut Poujade Pujol Vidal Ros Tisseyre }
+    }
     north_italian = {
         color = { 90 210 130}
         first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo
@@ -1063,12 +1069,6 @@ burgundian = {
     }
     occitan = {
         color = {110 110 50}
-        first_names = { Alban Andieu Alòi Beròt Carles Estève Fidèl Frederic Girard Jan Jacin Laurenç Martin Nicolau Privat Roman Vincenç }
-
-        last_names = { Amiel Benet Dardier Delpuech Ladivèze Gilbert Mistral Lacroux Laffont Maury Miquel Montagut Poujade Pujol Vidal Ros Tisseyre }
-    }
-	provencial = {
-        color = { 150 140 40 }
         first_names = { Alban Andieu Alòi Beròt Carles Estève Fidèl Frederic Girard Jan Jacin Laurenç Martin Nicolau Privat Roman Vincenç }
 
         last_names = { Amiel Benet Dardier Delpuech Ladivèze Gilbert Mistral Lacroux Laffont Maury Miquel Montagut Poujade Pujol Vidal Ros Tisseyre }
@@ -3437,7 +3437,7 @@ american_cultures = {
     #            Wilson Wright Young
     #    }
     #}
-    union = USA
+#    union = USA
 }
 
 amazonic = {

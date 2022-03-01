@@ -79,20 +79,20 @@ country_event = {
     }
 }
 
-country_event = {
-
-    id = 100106
-    title = "You are gonna get Annexed Bruv" #The Spanish Have Refused
-    desc = "Annexation Placeholder as the normal one is broken"
-    picture = "administration"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "Oh well"
-        FROM = { inherit = THIS }
-    }
-}
+#country_event = {
+#
+#    id = 100106
+#    title = "You are gonna get Annexed Bruv" #Removed
+#    desc = "Annexation Placeholder as the normal one is broken"
+#    picture = "administration"
+#
+#    is_triggered_only = yes
+#
+#    option = {
+#        name = "Oh well"
+#        FROM = { inherit = THIS }
+#    }
+#}
 
 country_event = {
 
