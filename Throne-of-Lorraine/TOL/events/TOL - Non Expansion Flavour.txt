@@ -651,3 +651,141 @@ country_event = {
 
 }
 
+country_event = {
+
+    id = 100122
+    title = "The Magician of Kikako"
+    desc = "MAGICMAN"
+    picture = "blues"
+    trigger = {
+        tag = VEL
+        realism = 1 
+		owns = 163
+        NOT = {
+            has_country_flag = Magicman
+            }
+        }
+
+    mean_time_to_happen =  {
+        months = 50
+
+        modifier = {
+            factor = 0.85 #increase likelihood to happen
+            year = 1848
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            year = 1849
+        }
+    }
+
+    option = {
+        name = "Witchcraft!"
+        prestige = -5
+		any_pop = {
+            consciousness = -3
+            militancy = -3
+        }
+        set_country_flag = Magicman
+    }
+	
+	 option = {
+        name = "Give that man an Award"
+        prestige = 5
+		any_pop = {
+            consciousness = 2
+            militancy = 3
+        }
+        set_country_flag = Magicman
+    }
+}
+
+country_event = {
+
+    id = 100123
+    title = "The Kings Image"
+    desc = "LOUISMAN"
+    picture = "louis_xiv"
+    trigger = {
+        NOT = {
+            has_country_flag = louis_image
+            }
+	 average_militancy = 4
+        }
+
+    mean_time_to_happen =  {
+        months = 10
+
+        modifier = {
+            factor = 0.85 #increase likelihood to happen
+            year = 1848
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            year = 1849
+        }
+    }
+
+    option = {
+        name = "He should Apologise"
+        prestige = -10
+		any_pop = {
+            consciousness = -3
+            militancy = -4
+        }
+        set_country_flag = louis_image
+		set_country_flag = louis_image_nice
+    }
+	
+	 option = {
+        name = "Show Might and stregth"
+        prestige = 5
+		any_pop = {
+            consciousness = 1
+            militancy = 1
+        }
+        set_country_flag = louis_image
+    }
+}
+
+country_event = {
+
+    id = 100124
+    title = "The French Rejoice!"
+    desc = "LOUISMAN2"
+    picture = "louis_xiv"
+    trigger = {
+	has_country_flag = louis_image_nice
+        NOT = {
+            has_country_flag = rejoice
+            }
+        }
+
+    mean_time_to_happen =  {
+        months = 1
+
+        modifier = {
+            factor = 0.85 #increase likelihood to happen
+            year = 1848
+        }
+
+        modifier = {
+            factor = 0.95 #increase likelihood to happen
+            year = 1849
+        }
+    }
+
+    option = {
+        name = "Isn't he great?"
+        prestige = 3
+		any_pop = {
+            consciousness = -1
+            militancy = -1
+        }
+        set_country_flag = rejoice
+    }
+
+}
+

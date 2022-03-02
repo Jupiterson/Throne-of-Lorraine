@@ -1,0 +1,155 @@
+#based of AoE's thing
+
+country_event = {
+	id = 100121
+	title = "The Slave Trade"
+	desc = EVTDESC690004
+	picture = "auction"
+
+	trigger = {
+	
+	 slavery = yes_slavery
+		 
+     NOT = { 
+	  has_country_modifier = slavepopupdated
+      has_country_flag = slave_abolished
+	  }
+	  
+	  any_owned_province = {
+	  OR = {
+           continent = central_africa
+		   continent = africa
+		   continent = west_africa
+		   continent = east_africa
+        }
+	 }
+	 }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		add_country_modifier = {
+		name = slavepopupdated
+		duration = 365
+		}
+	}
+
+	option = {
+		name = "The Slave trade is great" 
+		
+		 random_country = {
+            limit = {
+			capital_scope = {
+			OR = {
+                continent = north_america
+				continent = south_america
+				}
+            }
+			}
+			any_pop = {
+				limit = {
+					type = slaves 
+					location = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = australia_new_zealand
+						}
+						OR = {
+							is_overseas = yes
+							is_core = THIS
+						}
+					}
+				}
+				reduce_pop = 1.05
+			}
+			}
+			
+			random_country = {
+            limit = {
+			capital_scope = {
+			continent = europe
+			}
+            }
+			any_pop = {
+				limit = {
+					type = slaves 
+					location = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = australia_new_zealand
+						}
+						OR = {
+							is_overseas = yes
+							is_core = THIS
+						}
+					}
+				}
+				reduce_pop = 1.25
+			}
+			}
+			
+			random_country = {
+            limit = {
+			capital_scope = {
+			continent = asia
+			}
+            }
+			any_pop = {
+				limit = {
+					type = slaves 
+					location = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = australia_new_zealand
+						}
+						OR = {
+							is_overseas = yes
+							is_core = THIS
+						}
+					}
+				}
+				reduce_pop = 1.75
+			}
+			}
+			
+			any_pop = {
+				limit = { 
+					type = labourers 
+					location = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = australia_new_zealand
+						}
+						OR = {
+							is_overseas = yes
+							is_core = THIS
+						}
+					}
+				}
+				money = -50
+			}
+			any_pop = {
+				limit = { 
+					type = aristocrats 
+					location = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = australia_new_zealand
+						}
+						OR = {
+							is_overseas = yes
+							is_core = THIS
+						}
+					}
+				}
+				money = -75
+			}
+	}
+}
