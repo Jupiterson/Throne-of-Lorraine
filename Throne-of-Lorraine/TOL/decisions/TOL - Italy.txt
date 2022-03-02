@@ -47,9 +47,11 @@ form_north_italian_union = {
                 political_reform = federalism
             }
             any_country = {
-                limit = {                    
-                    primary_culture = north_italian
-					primary_culture = venetian                   
+                limit = {
+					OR = {
+						primary_culture = north_italian
+						primary_culture = venetian
+					}
                     in_sphere = THIS
                     NOT = { tag = THIS }
                     NOT = { has_country_flag = post_colonial_country }
@@ -202,9 +204,9 @@ claim_griko_lands = {
         }
 
         allow = {
-            OR = {                
+            #OR = {                
                 year = 1845
-            }
+            #}
         }
 
         effect = {
@@ -219,7 +221,7 @@ claim_griko_lands = {
 embrace_the_greeks_ven = {
         picture = unite_with_greece
         potential = {
-		Or = {
+		OR = {
             tag = VEN
 			tag = ITA
 			tag = NIF
@@ -283,7 +285,7 @@ claim_greece_italy = {
 embrace_the_greeks_syc = {
         picture = unite_with_greece
         potential = {
-		Or = {
+		OR = {
             tag = SYC
 			tag = ITA
 			tag = ITS
@@ -373,9 +375,9 @@ claim_tunis = {
         }
 
         allow = {
-            OR = {
+            #OR = {
                 nationalism_n_imperialism = 1
-            }
+            #}
         }
 
         effect = {

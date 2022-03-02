@@ -58,8 +58,10 @@ political_decisions = {
 	colonial_militia = {
 		picture = form_the_ikhwan
 		potential = {
-			tag = VEL
-                        tag = GEK
+			OR = {
+				tag = VEL
+                tag = GEK
+			}
 			NOT = { has_country_flag = colonial_militia }
 		}
 		

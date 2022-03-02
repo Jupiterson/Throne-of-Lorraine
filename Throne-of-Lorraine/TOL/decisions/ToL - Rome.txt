@@ -4,7 +4,7 @@ political_decisions = {
         potential = {
             tag = NIR
             NOT = { has_country_flag = corpus_iuris_civilis }
-			civilization_progress = 50
+			civilization_progress = 0.50
         }
 
         allow = {
@@ -205,10 +205,12 @@ political_decisions = {
             EGY_1758 = {
                 add_core = NIR
             }          
-                any_country = {
+			any_country = {
                 limit = {
-                    primary_culture = maghrebi
-					primary_culture = berber
+					OR = {
+						primary_culture = maghrebi
+						primary_culture = berber
+					}
                 }
                 relation = {
                     who = THIS
@@ -258,8 +260,10 @@ political_decisions = {
             }         
                 any_country = {
                 limit = {
-                    primary_culture = forest_bantu
-					primary_culture = yoruba
+					OR = {
+						primary_culture = forest_bantu
+						primary_culture = yoruba
+					}
                 }
                 relation = {
                     who = THIS
@@ -678,7 +682,7 @@ form_byzantium = {
             set_country_flag = coast_romans
 			add_accepted_culture = occitan 
             add_accepted_culture = provencial
-            add_accepted_culture = cataln
+            add_accepted_culture = catalan
             add_accepted_culture = romansh
             add_accepted_culture = aragonese
             add_accepted_culture = arpitan				

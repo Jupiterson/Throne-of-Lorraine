@@ -333,14 +333,16 @@ political_decisions = {
         }
 
         allow = {
-            				government = democracy
-                government = hanseatic
+			OR = {
+				government = democracy
+				government = hanseatic
+			}
             exists = ITA
             ITA = {
                 is_greater_power = yes
                 OR = {
-                    				government = democracy
-                government = hanseatic
+					government = democracy
+					government = hanseatic
                     government = hms_government
                     government = prussian_constitutionalism
                     government = semi_constitutional_empire

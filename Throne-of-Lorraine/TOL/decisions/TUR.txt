@@ -361,8 +361,10 @@ political_decisions = {
     republican_reforms = {
         potential = {
             tag = TUR
-            				government = democracy
+			OR = {
+            	government = democracy
                 government = hanseatic
+			}
             NOT = { has_country_flag = had_ataturk_reforms }
         }
 

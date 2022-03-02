@@ -665,7 +665,7 @@ political_decisions = {
                 AND = { #Trucial States
                     owns = 1167 #Abu Dhabi
                     12 = { empty = yes } #Liwa
-                
+                }
                 AND = { #Yemen
                     OR = {
                         owns = 1175
@@ -826,5 +826,4 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-}
 }

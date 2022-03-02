@@ -6422,9 +6422,11 @@ political_decisions = {
 	lemanique_rename_french = {
         picture = declare_republic_of_neuchatel
         potential = {
-           primary_culture = french     
-           primary_culture = occitan  
-              primary_culture = burgundian		   
+			OR = {
+				primary_culture = french     
+				primary_culture = occitan  
+				primary_culture = burgundian	
+			}
             owns = 608
             owns = 3250
             owns = 3317

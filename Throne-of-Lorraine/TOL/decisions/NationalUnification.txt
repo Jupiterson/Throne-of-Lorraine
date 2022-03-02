@@ -804,8 +804,10 @@ political_decisions = {
                 change_province_name = "Strasbourg"
                 state_scope = { change_region_name = "Alsace-Lorraine" }
             }
-            ALS = { 				government = democracy
-                government = hanseatic }
+            ALS = {
+				government = democracy
+                #government = hanseatic
+			}
             remove_country_modifier = la_tache_noire
             prestige = 10
             clr_global_flag = germany_has_renamed_elsass

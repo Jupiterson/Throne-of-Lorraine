@@ -1,4 +1,4 @@
-political_decisions = {
+	political_decisions = {
 
     # HPM 0.4.5.2 port: upstream PR
     conquest_of_the_saharan_desert = {
@@ -4703,12 +4703,10 @@ political_decisions = {
             ALD = {
                 tech_school = unciv_tech_school # HPM 0.4.5.2 port: use old HFM tech school name
                 set_country_flag = post_colonial_country
-                				government = democracy
-                 
+                government = democracy
                 political_reform = landed_voting
                 capital = 1700
                 primary_culture = maghrebi
-                add_accepted_culture = berber
                 add_accepted_culture = berber
             }
         }

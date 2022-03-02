@@ -444,12 +444,12 @@ political_decisions = {
 
         ai_will_do = {
             factor = 1
-            }
             modifier = {
                 factor = 0
                 war = yes
             }
         }
+	}
     
 	claim_switzerland_bav = {
         picture = declare_neutrality
@@ -468,8 +468,8 @@ political_decisions = {
         }
 
         effect = {
-         prestige = 5
-       set_country_flag = schwiss_weak
+			prestige = 5
+			set_country_flag = schwiss_weak
             SWI = {
                 all_core = {
                     add_core = THIS
@@ -641,7 +641,7 @@ political_decisions = {
                 }              
             }
             BAV = { country_event = 40020 }
-            3290 = { secede = BAV } 
+            3290 = { secede_province = BAV } 
         }
 
         ai_will_do = { factor = 1 }

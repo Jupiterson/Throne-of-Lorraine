@@ -488,9 +488,9 @@ political_decisions = {
             random_owned = {
                 limit = { owner = { civilized = yes } }
                 owner = { 	
-				OR = {
-                  government = democracy
-#                  government = hanseatic
+					OR = {
+						government = democracy
+#                  		government = hanseatic
 		        	}
 			    }
             }

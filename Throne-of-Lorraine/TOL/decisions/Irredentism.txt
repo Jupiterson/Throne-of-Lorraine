@@ -1210,42 +1210,42 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    centralize_ulster = {
-        picture = ulster_scot
-        potential = {
-            tag = SCO
-            is_vassal = no
-            NOT = { has_country_flag = ulster_scot }
-        }
-
-        allow = {
-            is_greater_power = yes
-            ideological_thought = 1
-            war = no
-        }
-
-        effect = {
-		    any_owned = {
-                limit = {
-				    OR = {
-					    province_id = 254
-					    province_id = 255
-					    province_id = 256
-					    province_id = 257
-					    province_id = 3378
-					}	
-                }
-                remove_province_modifier = nobles_autonomy_SCO
-				rich_strata = { consciousness = 5 militancy = 10 }
-				poor_strata = { consciousness = 2 militancy = 4 }
-			}
-            set_country_flag = ulster_scot
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
+    #centralize_ulster = {
+    #    picture = ulster_scot
+    #    potential = {
+    #        tag = SCO
+    #        is_vassal = no
+    #        NOT = { has_country_flag = ulster_scot }
+    #    }
+	#
+    #    allow = {
+    #        is_greater_power = yes
+    #        ideological_thought = 1
+    #        war = no
+    #   }
+	#
+    #    effect = {
+	#	    any_owned = {
+    #            limit = {
+	#			    OR = {
+	#				    province_id = 254
+	#				    province_id = 255
+	#				    province_id = 256
+	#				    province_id = 257
+	#				    province_id = 3378
+	#				}	
+    #            }
+    #            remove_province_modifier = nobles_autonomy_SCO
+	#			rich_strata = { consciousness = 5 militancy = 10 }
+	#			poor_strata = { consciousness = 2 militancy = 4 }
+	#		}
+    #        set_country_flag = ulster_scot
+    #    }
+	#
+    #    ai_will_do = {
+    #        factor = 1
+    #    }
+    #}
     
     greater_minisrael = {
     picture = map_arabia

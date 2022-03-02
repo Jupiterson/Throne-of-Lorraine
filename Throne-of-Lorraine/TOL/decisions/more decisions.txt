@@ -129,6 +129,7 @@ political_decisions = {
             }
             country_event = {
                 id = 5329627
+                days = 1
             }
         }
         ai_will_do = {
@@ -164,40 +165,6 @@ political_decisions = {
             AUS_734 = { secede_province = ITA }    #Trent
             AUS_736 = { secede_province = ITA }    #Littoral
             AUS_780 = { secede_province = ITA }    #Dalmatia
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    outside_italia_irredenta_ITS = {
-        potential = {
-            NOT = {
-                tag = AUS
-                tag = KUK
-                tag = YUG
-            }
-            is_greater_power = yes
-            exists = ITS
-            ITS = {    vassal_of = THIS }
-            OR = {
-                AUS_729 = { owned_by = THIS }    #Venetia
-                AUS_734 = { owned_by = THIS }    #Trent
-                AUS_736 = { owned_by = THIS }    #Littoral
-                AUS_780 = { owned_by = THIS }    #Dalmatia
-            }
-        }
-        allow = {
-            relation = {
-                who = ITS
-                value = 150
-            }
-        }
-
-        effect = {
-            AUS_729 = { secede_province = ITS }    #Venetia
-            AUS_734 = { secede_province = ITS }    #Trent
-            AUS_736 = { secede_province = ITS }    #Littoral
-            AUS_780 = { secede_province = ITS }    #Dalmatia
         }
         ai_will_do = {
             factor = 1
@@ -454,11 +421,13 @@ political_decisions = {
             AUS = {
                 country_event = {
                     id = 72753
+					days = 1
                 }
             }
             KUK = {
                 country_event = {
                     id = 72753
+					days = 1
                 }
             }
         }
@@ -664,6 +633,7 @@ political_decisions = {
             }
             country_event = {
                 id = 72750
+                days = 1
             }
             any_country = {
                 limit = {
@@ -677,6 +647,7 @@ political_decisions = {
                 }
                 country_event = {
                     id = 72664
+					days = 1
                 }
             }
         }
@@ -823,6 +794,7 @@ political_decisions = {
                 }
                 country_event = {
                     id = 72664
+					days = 1
                 }
             }
         }
@@ -877,6 +849,7 @@ political_decisions = {
                 }
                 country_event = {
                     id = 72664
+					days = 1
                 }
             }
             THIS = {
@@ -939,6 +912,7 @@ political_decisions = {
                 }
                 country_event = {
                     id = 72664
+					days = 1
                 }
             }
             THIS = {
@@ -1001,6 +975,7 @@ political_decisions = {
                 }
                 country_event = {
                     id = 72664
+					days = 1
                 }
             }
             THIS = {
@@ -1142,7 +1117,7 @@ political_decisions = {
                         tag = DES
                     }
                 }
-                country_event = { id = 72739 }
+                country_event = { id = 72739 days = 1 }
             }
             MEX_85_1 = { add_core = MEX } #Northern California
             MEX_85_2 = { add_core = MEX } #Southern California
@@ -1234,6 +1209,7 @@ political_decisions = {
             USA = {
                 country_event = {
                     id = 72881
+					days = 1
                 }
             }
             add_accepted_culture = kreol
@@ -1270,6 +1246,7 @@ political_decisions = {
             USA = {
                 country_event = {
                     id = 56278
+					days = 1
                 }
             }
         }
@@ -1300,6 +1277,7 @@ political_decisions = {
             }
             country_event = {
                 id = 56277
+				days = 1
             }
         }
         ai_will_do = {
@@ -1380,7 +1358,7 @@ political_decisions = {
             badboy = -5
             set_country_flag = treaty_of_elass_lorraine_propose
             FRA = {
-             country_event = 6542984
+				country_event = 6542984
             }
         }
         ai_will_do = {
@@ -1650,6 +1628,7 @@ political_decisions = {
                 }
                 country_event = {
                     id = 2159212
+					days = 1
                 }
             }
         }
@@ -1770,6 +1749,7 @@ political_decisions = {
                 }
                 country_event = {
                     id = 2159212
+					days = 1
                 }
             }
         }

@@ -1441,7 +1441,6 @@ political_decisions = {
                 limit = {
                     OR = {
                         has_pop_culture = ruthenyan
-                        has_pop_culture = ruthenyan
                     }
                 }
                 literacy = -0.02
@@ -2859,7 +2858,7 @@ political_decisions = {
             ENG = {
                 any_owned = { limit = { is_core = ENG }
                     any_pop = {
-                        limit = { is_culture_group = british }
+                        limit = { is_culture_group = britannian }
                         ideology = { factor = 0.2 value = liberal }
                     }
                 }

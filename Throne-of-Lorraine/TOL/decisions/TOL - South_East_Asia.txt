@@ -122,11 +122,11 @@ taungoo_restoration = {
         picture = suv_emblem
         potential = {
             NOT = { has_country_flag = suvarnabhumi_formation }
-			OR {
+			OR = {
 				tag = SIA
 				tag = LXA
 				tag = CHK
-				}
+			}
 			SUV = {exists = no}
 		}
         allow = {
@@ -157,18 +157,22 @@ taungoo_restoration = {
         picture = lao_troops
         potential = {
             NOT = { has_country_flag = laos_conquer_siam }
-			OR {
+			OR = {
 				tag = LXA
 				tag = CHK
-				}
+			}
 		}
         allow = {
             prestige = 15
         }
 		effect = {
-			SIA = {add_core = { all_core = THIS } }
-			prestiege = 3
-			bad boy = 10
+			SIA = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			prestige = 3
+			badboy = 10
 			set_country_flag = laos_conquer_siam
         }
 		ai_will_do = { factor = 1 }
@@ -183,10 +187,18 @@ taungoo_restoration = {
 			prestige = 15
         }
 		effect = {
-			prestiege = 3
-			bad boy = 10
-			LXA = {add_core = { all_core = SIA } }
-			CHK = {add_core = { all_core = SIA } }
+			prestige = 3
+			badboy = 10
+			LXA = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			CHK = {
+				all_core = {
+					add_core = THIS
+				}
+			}
             set_country_flag = siam_conquer_laos
         }
 		ai_will_do = { factor = 1 }
@@ -201,8 +213,12 @@ taungoo_restoration = {
 			prestige = 40
         }
 		effect = {
-			bad boy = 10
-			DAI = {add_core = { all_core = SUV } }
+			badboy = 10
+			DAI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
 			add_core = 1603
 			add_core = 1502
             set_country_flag = suvarnabhumi_expands
@@ -219,8 +235,12 @@ taungoo_restoration = {
 			prestige = 20
         }
 		effect = {
-			bad boy = 4
-			SHA = {add_core = { all_core = SUV } }
+			badboy = 4
+			SHA = {
+				all_core = {
+					add_core = THIS
+				}
+			}
             set_country_flag = suvarnabhumi_takes_shan
         }
 		ai_will_do = { factor = 1 }
