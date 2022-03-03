@@ -143,11 +143,9 @@ ENG_277 = { 277 278 285 } #North West England
 
 ENG_281 = { 281 282 283 } #North East England
 
-ENG_284 = { 284 287 288 289 290 } #Midlands
+ENG_284 = { 284 287 288 289 283 } #Midlands
 
-ENG_284 = { 284 287 288 289 295 283 } #Midlands
-
-ENG_291 = { 290 291 292 293 } #Eastern Counties
+ENG_291 = { 290 291 292 293 295 } #Eastern Counties
 
 ENG_296 = { 298 299 419 3268 3480 } #South West England
 
@@ -1139,38 +1137,46 @@ MAD_2121 = { 2121 2115 2120 2119 } #North Madagascar
 
 ### Mexico
 
-MEX_2138 = { 2137 2140 2141 2157 } #Sonora
+MEX_2138 = { 2140 2141 2157 } #Sonora
 
-MEX_2142 = { 2142 2143 2144 2145 } #Chihuahua
+MEX_2142 = { 2137 2142 2143 2144 2147 2152 } #Chihuahua
 
-MEX_2149 = { 2149 2150 2151 2147 2152 2155 } #Cohauila
+MEX_2149 = { 2149 2150 2151 } #Cohauila
 
-MEX_2151 = { 2153 2154 2156 2158 2160 } #Durango
+MEX_2151 = { 2154 2145 2158 2155 2159 } #Durango
 
-MEX_2159 = { 2159 2162 2163 2164 } #Veracruz
+MEX_2150 = { 2153 2160 2166 }
 
-MEX_2183 = { 2183 2185 2184 } #Yucatan
+MEX_2159 = { 2162 2163 2164 } #Veracruz
 
-MEX_2161 = { 2161 2168 2166 2169 2167 } #Jalisco
+MEX_2183 = { 2183 2185 2184 2181 2165 } #Yucatan
 
-MEX_2170 = { 2170 2171 2177 2178 2179 2180 } #Guerrero
+MEX_2161 = { 2156 2161 2168 2169 } #Jalisco
 
-MEX_2172 = { 2172 2173 2174 2175 2176 } #Mexico
+MEX_2170 = { 2171 2178 2179 } #Guerrero
+
+MEX_2174 = { 2170 2174 2180 }
+
+MEX_2177 = { 2177 2176 }
+
+MEX_2172 = { 2172 2173 2175 2167 } #Mexico
 
 #MEX_2181 = {   } #Oasaca
 
-MEX_2181 = { 2181 2182 2165 3402 } #Chiapas
+#MEX_2181 = {   } #Chiapas
 
 
 ### Central America
 
-UCA_2186 = { 2186 2187 2188 2189 2190 2628 3410 } #Guatemala
+UCA_2186 = { 2186 2187 2188 2189 2190 2628 3410 2182 3402 } #Guatemala
 
-UCA_2191 = { 2191 2192 } #El Salvador
+UCA_2191 = { 2191 2192 2193 2194 } #El Salvador
 
-UCA_2193 = { 2193 2194 2195 2196 } #Honduras
+#UCA_2193 = {  } #Honduras
 
-UCA_2197 = { 2197 2198 2199 2200 3491 3492 } #Nicaragua
+UCA_2195 = { 2195 2196 3492 2200 3491 }
+
+UCA_2197 = { 2197 2198 2199 } #Nicaragua
 
 UCA_2201 = { 2201 2202 2203 3447 } #Costa Rica
 

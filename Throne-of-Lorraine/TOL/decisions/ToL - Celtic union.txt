@@ -184,6 +184,7 @@ political_decisions = {
         }
 
         allow = {
+		owns = 420
 		war = no
 		is_greater_power = yes
 		is_disarmed = no
@@ -197,7 +198,6 @@ political_decisions = {
         effect = {
 		    prestige = 25
 		    badboy = 10
-			add_accepted_culture = breton
 			add_accepted_culture = galician
 			set_country_flag = unite_celtiberians
             BSQ_474 = { add_core = THIS }
