@@ -492,24 +492,29 @@ political_decisions = {
                         civilized = yes
                         AND = {
                             civilization_progress = 0.65
-                            1142 = {
-                                owner = {
-                                    part_of_sphere = no
-                                }
-                            }
-                        }
-                        AND = {
-                            civilization_progress = 0.65
-                            1142 = { owner = { in_sphere = ENG } }
-                            THIS = { in_sphere = ENG }
-                            relation = { who = ENG value = 100 }
+                            1142 = { 
+								owner = {
+									OR = { 
+										in_sphere = VEN 
+										in_sphere = ITA 
+									}
+								}
+							}
+                            THIS = { 
+								OR = { 
+									in_sphere = VEN
+								    in_sphere = ITA
+								}
+							}
+							OR = { 
+								relation = { who = VEN value = 100 }
+								relation = { who = ITA value = 100 }
+							}
                         }
                         1142 = { owner = { vassal_of = THIS } }
                     }
                 }
                 AND = {
-                    owns = 1142 #Bandar Abbas
-                    owns = 1144 #Zahedan
                     1146 = { owner = { civilized = no } NOT = { owned_by = PER } } #Chabahar
                     OR = {
                         civilized = yes
@@ -531,9 +536,6 @@ political_decisions = {
                     }
                 }
                 AND = {
-                    owns = 1142 #Bandar Abbas
-                    owns = 1146 #Chabahar
-                    owns = 2643 #Hajjiabad
                     1145 = { owner = { civilized = no } NOT = { owned_by = PER } } #Chabahar
                     OR = {
                         civilized = yes
