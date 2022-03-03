@@ -204,8 +204,6 @@ country_event = {
                     NOT = { tag = KUK }
                     NOT = { tag = MOL }
                     NOT = { tag = SIE }
-                    NOT = { tag = LUX }
-                    NOT = { tag = LIE }
                     NOT = { tag = BAN }
                     NOT = { tag = SIE }
                     NOT = { tag = VLG }
@@ -223,7 +221,6 @@ country_event = {
         random_owned = {
             limit = { owner = { is_culture_group = italian } }
             owner = {
-                any_owned = { limit = { is_core = SYC } remove_core = SYC }
                 any_owned = { limit = { is_core = SRD } remove_core = SRD }
                 any_owned = { limit = { is_core = RMG } remove_core = RMG }
             }

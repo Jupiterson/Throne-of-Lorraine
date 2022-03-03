@@ -187,10 +187,6 @@ political_decisions = {
             add_accepted_culture = south_german
             add_accepted_culture = volga_german
 			add_accepted_culture = rhinelander
-            random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
-            random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
-            random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
-            random_owned = { limit = { owner = { accepted_culture = hungarian } } owner = { remove_accepted_culture = hungarian } }
             set_global_flag = 3hurrahs
             random_country = {
                 limit = {
@@ -243,71 +239,6 @@ political_decisions = {
                     }
                 }
                 country_event = 31515
-            }
-            any_country = {
-                limit = {
-                    is_culture_group = germanic
-                    exists = no
-                    NOT = { tag = AUS }
-                    NOT = { tag = AUB }
-                    NOT = { tag = KUK }
-                    NOT = { tag = DNB }
-                    NOT = { tag = PRU }
-                    NOT = { tag = BAN }
-					NOT = { tag = DAN }
-                    NOT = { tag = SWI }
-                    NOT = { tag = UBD }
-                    NOT = { tag = SIE }
-                    NOT = { has_country_flag = post_colonial_country }
-                    OR = {
-                        all_core = { owned_by = THIS }
-                        tag = NGF
-                        tag = SGF
-                    }
-                }
-                country_event = 11105
-            }
-            any_country = {
-                limit = {
-                    OR = {
-                        tag = AUS
-                        tag = AUB
-                        tag = KUK
-                        tag = DNB
-                    }
-                    exists = no
-                    THIS = { capital = 619 }
-                }
-                country_event = 11105
-            }
-            any_country = {
-                limit = {
-                    tag = PRU
-                    exists = no
-                    THIS = { capital = 549 }
-                }
-                country_event = 11105
-            }
-            any_country = {
-                limit = {
-                    tag = BAV
-                    exists = no
-                }
-                country_event = 11105
-            }
-            any_country = {
-                limit = {
-                    tag = BAD
-                    exists = no
-                }
-                country_event = 11105
-            }
-            any_country = {
-                limit = {
-                    tag = WUR
-                    exists = no
-                }
-                country_event = 11105
             }
             any_country = {
                 limit = {

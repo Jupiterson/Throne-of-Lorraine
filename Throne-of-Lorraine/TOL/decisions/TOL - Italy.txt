@@ -1,46 +1,66 @@
 political_decisions = {	
 
-form_north_italian_union = {
-        picture = italy_flag
-		potential = {
-		OR = {
-			primary_culture = north_italian
+	   form_north_italian_union = {
+        potential = {
+            is_greater_power = yes
+			OR = {
+            primary_culture = north_italian
 			primary_culture = venetian
-			has_country_flag = lego_lombardia
 			}
-			NOT = {
-				exists = ITA
-				exists = NIF
-			}
-		}	
-		allow = {
-		is_greater_power = yes
-			war = no
-			ITA = {
-				all_core = {
-					OR = {
-						OR = {
-							owned_by = THIS
-							owner = {
-								in_sphere = THIS
-							}
-						}
-						NOT = {
-							culture = north_italian
+            capital_scope = { continent = europe }
+            NOT = {
+                has_country_flag = post_colonial_country
+                exists = ITA
+                exists = ITS
+                exists = NIF
+            }
+        }
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+            OR = {
+                ITA = {
+                    all_core = {
+                        OR = {
+                            OR = {
+                                owned_by = THIS
+                                owner = {
+                                    in_sphere = THIS
+                                    OR = {
+                                        is_vassal = no
+                                        vassal_of = THIS
+                                    }
+                                    war = no
+                                    is_greater_power = no
+                                }
+                            }
+                            NOT = { 
+							culture = north_italian 
 							culture = venetian
-						}
-					}
-				}
-			}
-		}
-		
-		 effect = {
-            prestige = 15                  
+							}
+                        }
+                    }
+                }     
+            }
+        }
+
+        effect = {
+            prestige = 15
             all_core = { add_core = NIF }
-              ITA = {
-                all_core = {
-                    add_core = NIF
+            any_owned = {
+                limit = {
+                    NOT = { is_core = THIS }
+                    any_core = {
+                        exists = no
+						OR = {
+                        primary_culture = north_italian
+						primary_culture = venetian
+						}
+                        has_country_flag = wants_to_unify
+                        NOT = { has_country_flag = post_colonial_country }
+                    }
                 }
+                add_core = NIF
             }
             change_tag = NIF
             NIF = {
@@ -48,10 +68,11 @@ form_north_italian_union = {
             }
             any_country = {
                 limit = {
-					OR = {
-						primary_culture = north_italian
+                    OR = {
+                        primary_culture = north_italian
 						primary_culture = venetian
-					}
+                        tag = SCH
+                    }
                     in_sphere = THIS
                     NOT = { tag = THIS }
                     NOT = { has_country_flag = post_colonial_country }
@@ -62,13 +83,18 @@ form_north_italian_union = {
                 }
                 country_event = 100106
             }
-            
+            random_country = {
+                limit = {
+                    tag = SCH
+                    in_sphere = THIS
+                }
+                country_event = 100106
+            }
         }
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
+        ai_will_do = {
+            factor = 1
+        }
+    }
 	
 	we_lost_venice = {
         potential = {
