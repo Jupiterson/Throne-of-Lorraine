@@ -34,7 +34,7 @@ political_decisions = {
 			is_disarmed = no
             war = no
             AND = {
-                ENG = {
+                ENL = {
                     all_core = {
                         OR = {
                             owned_by = THIS
@@ -118,6 +118,7 @@ political_decisions = {
             add_accepted_culture = scottish
             add_accepted_culture = british
 			add_accepted_culture = welsh
+			3480 = add_core = ENG
 			any_pop = {
 			    limit = {
 				    has_pop_culture = irish
@@ -134,7 +135,6 @@ political_decisions = {
         picture = normandy
         potential = {
 		    tag = ENG
-			has_country_flag = brittany_claimed
             NOT = { has_country_flag = williams_back }
         }
 
@@ -187,11 +187,16 @@ political_decisions = {
         picture = map_angevin
         potential = {
             tag = ENG
-			has_country_flag = williams_back
+			OR = {
+			    has_country_flag = brittany_claimed
+				has_country_flag = williams_back
+			}
             NOT = { has_country_flag = angevin_claimed }
 		}
 
         allow = {
+		    owns = 420
+			owns = 418
 		    is_greater_power = yes
 		    is_disarmed = no
 		    war = no
