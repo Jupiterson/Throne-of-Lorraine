@@ -109,9 +109,45 @@ political_decisions = {
         }
     }
 
-   
-
-   
+	conquest_of_the_south = {
+		picture = conquest_of_the_south
+		potential = {
+			tag = ETH
+			exists = yes
+			NOT = { has_country_flag = conquest_of_the_south }
+			#1864 = { empty = yes }
+			#1866 = { empty = yes }
+			#1867 = { empty = yes }
+		}
+		
+		allow = {
+			war = no
+			owns = 1860
+			owns = 1861
+			owns = 1865
+			OR = {
+				land_reform = yes_land_reform
+				admin_reform = yes_admin_reform
+				AND = {
+					foreign_weapons = yes_foreign_weapons
+					foreign_officers = yes_foreign_officers
+				}
+				civilization_progress = 0.4
+				civilized = yes
+				year = 1885
+			}
+		}
+		
+		effect = {
+			set_country_flag = conquest_of_the_south
+			years_of_research = 1
+			#1864 = { add_core = ETH secede_province = ETH any_pop = { literacy = -0.99 } life_rating = 21 }
+			#1866 = { add_core = ETH secede_province = ETH any_pop = { literacy = -0.99 } life_rating = 21 }
+			#1867 = { add_core = ETH secede_province = ETH any_pop = { literacy = -0.99 } life_rating = 21 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
 
     build_addis_ababa = {
         picture = addis_ababa_building

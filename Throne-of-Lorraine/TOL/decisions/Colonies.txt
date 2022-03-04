@@ -620,8 +620,8 @@ political_decisions = {
             2035 = { add_province_modifier = { name = plantation duration = -1 } }
             random_owned = {
                 limit = { owner = { NOT = { has_global_flag = rwandan_life_rating } } }
-                2034 = { life_rating = 23 }
-                2035 = { life_rating = 23 }
+                2034 = { life_rating = 10 }
+                2035 = { life_rating = 10 }
                 owner = { set_global_flag = rwandan_life_rating  }
             }
         }

@@ -674,7 +674,16 @@
             set_country_flag = togo_master
             prestige = 5
             country_event = 199039
-
+			any_owned = {
+                limit = {
+					OR = {
+						region = ASH_1910
+						region = FRA_1914
+					}
+                    NOT = { life_rating = 12 }
+                }
+                life_rating = 25
+            }
             TOG = {
                 primary_culture = THIS
                 add_accepted_culture = east_kwa
@@ -866,6 +875,12 @@
             prestige = 5
             set_country_flag = ivc_master
             country_event = 199040
+			any_owned = {
+                limit = {
+                    province_id = 1893
+                }
+                life_rating = 25
+            }
             1892 = { change_province_name = "Abidjan" }
             FRA_1892 = { add_core = IVC }
             FRA_1893 = { add_core = IVC }
@@ -938,10 +953,10 @@
             NOT = {
                 has_country_flag = ivc_master
                 capital_scope = { continent = africa }
- capital_scope = { continent = west_africa }
- capital_scope = { continent = east_africa }
- capital_scope = { continent = central_africa }
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa }
+				capital_scope = { continent = east_africa }
+				capital_scope = { continent = central_africa }
+				capital_scope = { continent = south_west_africa }
             }
         }
 
@@ -1846,14 +1861,27 @@
             prestige = 5
             set_country_flag = cameroon_master
             country_event = 199046
-
+			any_owned = {
+                limit = {
+                    OR = {
+                        region = ENG_1956
+                        region = SOK_1963
+                    }
+					NOT = {
+						province_id = 1956
+						province_id = 1957
+						province_id = 1958
+						province_id = 1963
+					}
+                    NOT = { life_rating = 12 }
+                }
+                life_rating = 25
+            }
             ENG_1956 = {
                 add_core = CMR
-                life_rating = 25
             }
             SOK_1963 = {
                 add_core = CMR
-                life_rating = 25
             }
             random_owned = {
                 limit = { owner = { is_culture_group = germanic } }
@@ -2236,25 +2264,21 @@
                 change_province_name = "Brazzaville"
                 add_core = CGO
             }
-
             1978 = {
-                life_rating = 4
+                #life_rating = 4
                 add_core = CGO
             }
-
             1980 = {
                 add_core = CGO
             }
-
             1981 = {
                 add_core = CGO
             }
-
             2624 = {
                 add_core = CGO
             }
 
-            any_owned = { limit = { is_core = CGO NOT = {life_rating = 12 } } life_rating = 25 }
+            any_owned = { limit = { is_core = CGO NOT = { life_rating = 12 } } life_rating = 25 }
 
             any_owned = { limit = { is_core = CGO } remove_core = LOA }
             CGO = {
@@ -2731,15 +2755,31 @@
                 remove_core = KZB
                 remove_core = LUA
             }
-            any_owned = {
+			any_owned = {
                 limit = {
                     OR = {
                         region = ENG_2014
                         region = ENG_2016
                     }
+					NOT = {
+						province_id = 2014
+						province_id = 2016
+						province_id = 2017
+					}
                     NOT = { life_rating = 12 }
                 }
                 life_rating = 25
+            }
+			any_owned = {
+                limit = {
+					OR = {
+						province_id = 2014
+						province_id = 2016
+						province_id = 2017
+					}
+                    NOT = { life_rating = 35 }
+                }
+                life_rating = 10
             }
             ZAM = {
                 primary_culture = THIS
@@ -4284,7 +4324,35 @@
                 limit = { is_core = ANG }
                 remove_core = KON
             }
-
+			any_owned = {
+                limit = {
+                    OR = {
+                        region = POR_2003
+                        region = POR_2006
+                        region = POR_1999
+                    }
+					NOT = {
+						province_id = 2002
+						province_id = 2009
+						province_id = 2010
+						province_id = 2011
+					}
+                    NOT = { life_rating = 12 }
+                }
+                life_rating = 25
+            }
+			any_owned = {
+                limit = {
+					OR = {
+						province_id = 2002
+						province_id = 2009
+						province_id = 2010
+						province_id = 2011
+					}
+                    NOT = { life_rating = 35 }
+                }
+                life_rating = 10
+            }
             random_owned = { limit = { owner = { has_country_flag = catholic_country } } ANG = { religion = catholic set_country_flag = catholic_country } }
             random_owned = {
                 limit = { owner = { has_country_flag = protestant_country } }
@@ -4489,7 +4557,20 @@
                     remove_core = SHO
                 }
             }
-
+			
+			any_owned = {
+                limit = {
+                    OR = {
+                        region = POR_2060
+                        region = POR_2053
+                        region = POR_2054
+                        region = POR_2049
+                    }
+                    NOT = { life_rating = 12 }
+                }
+                life_rating = 25
+            }
+			
             random_owned = { limit = { owner = { has_country_flag = catholic_country } } MOZ = { religion = catholic set_country_flag = catholic_country } }
             random_owned = {
                 limit = { owner = { has_country_flag = protestant_country } }
@@ -4518,7 +4599,7 @@
             random_owned = {
                 limit = { province_id = 2581 owner = { tag = POR } }
                 change_province_name = "Vila Cabral"
-                life_rating = 5
+                #life_rating = 5
             }
             random_owned = {
                 limit = { province_id = 2058 owner = { tag = POR } }
@@ -4744,14 +4825,29 @@
             set_global_flag = uganda_organized
             prestige = 5
             set_country_flag = uganda_master
-            country_event = 199058
-
-            any_owned = {
+            country_event = 199058            
+			any_owned = {
                 limit = {
                     region = ENG_2019
+					NOT = {
+						province_id = 2019
+						province_id = 2020
+						province_id = 2023
+					}
                     NOT = { life_rating = 12 }
                 }
                 life_rating = 25
+            }
+			any_owned = {
+                limit = {
+					OR = {
+						province_id = 2019
+						province_id = 2020
+						province_id = 2023
+					}
+                    NOT = { life_rating = 35 }
+                }
+                life_rating = 10
             }
             BUG = {
                 set_country_flag = post_colonial_country
@@ -4913,6 +5009,13 @@
             machine_guns = 1
             market_regulations = 1
             owns = 2074
+        }
+		any_owned = {
+			limit = {
+				region = ENG_2074
+				NOT = { life_rating = 22 }
+			}
+			life_rating = 20
         }
 
         effect = {
@@ -5624,6 +5727,13 @@
             set_global_flag = mauretania_organized
             prestige = 3
             FRA_1775 = { add_core = TRZ }
+			any_owned = {
+                limit = {
+                    province_id = 1801
+                    NOT = { life_rating = 12 }
+                }
+                life_rating = 22
+            }
             1782 = {
 				trade_goods = iron
             }
@@ -6962,7 +7072,36 @@
             prestige = 5
             set_country_flag = zimbabwe_master
             country_event = 199067
-
+			any_owned = {
+                limit = {
+                    OR = {
+                        region = ENG_2068
+                        region = ENG_2071
+                    }
+                    NOT = { life_rating = 12 }
+                }
+                life_rating = 25
+            }
+			any_owned = {
+                limit = {
+                    OR = {
+                        region = ENG_2068
+                        region = ENG_2071
+                    }
+                    NOT = { life_rating = 22 }
+                }
+                life_rating = 15
+            }
+			any_owned = {
+                limit = {
+                    OR = {
+                        region = ENG_2068
+                        region = ENG_2071
+                    }
+                    NOT = { life_rating = 34 }
+                }
+                life_rating = 5
+            }
             ZBW = { all_core = { remove_core = MAT } }
             ZBW = {
                 set_country_flag = post_colonial_country

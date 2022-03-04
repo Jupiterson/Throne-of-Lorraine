@@ -194,10 +194,10 @@ administrate_sand_copt = {
                     add_accepted_culture = copt
                     all_core = {
                         add_core = UCO
-                        remove_core = HUN
+                        remove_core = ETH
                     }
                 }
-                POL = {
+                COP = {
                     all_core = { add_core = UCO }
                 }
             }
@@ -214,18 +214,7 @@ administrate_sand_copt = {
                 }
             }
             change_tag = UCO
-            capital = 703
-            any_greater_power = {
-                limit = {
-                    OR = {
-                        primary_culture = russian
-                        is_culture_group = germanic
-                    }
-                    neighbour = THIS
-                }
-                relation = { who = THIS value = -200 }
-                leave_alliance = THIS
-            }
+            #capital = 703
         }
         ai_will_do = {
             factor = 1

@@ -7,8 +7,11 @@ country_event = {
     picture = "guinea_coast"
 
     trigger = {
+        owns = 1884
         owns = 1887
         owns = 1888
+        1885 = { empty = yes }
+        1886 = { empty = yes }
         1889 = { empty = yes }
         1890 = { empty = yes }
         1891 = { empty = yes }
@@ -22,6 +25,16 @@ country_event = {
     option = {
         name = "EVTOPTA441277"
         NFL = { add_accepted_culture = kru political_reform = culture_voting_only }
+        1885 = {
+            secede_province = THIS
+            add_core = THIS
+            life_rating = 15
+        }
+        1886 = {
+            secede_province = THIS
+            add_core = THIS
+            life_rating = 15
+        }
         1889 = {
             secede_province = THIS
             add_core = THIS
