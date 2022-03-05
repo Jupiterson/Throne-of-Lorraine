@@ -30,12 +30,12 @@ political_decisions = {
 			}
 			set_country_flag = kni_pap_reconcile
 			any_owned = {
-                limit = {
-                    is_core = KNI
+				limit = {
+					is_core = KNI
 					is_capital = yes
-                }
-                add_province_modifier = { name = small_baby_boom duration = 365 }
-            }
+				}
+				add_province_modifier = { name = small_baby_boom duration = 365 }
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -60,14 +60,14 @@ political_decisions = {
 		effect = {
 			prestige = 5
 			random_country = {
-                limit = {
-                    tag = RUS
-                }
+				limit = {
+					tag = RUS
+				}
 				country_event = {
 					id = 950000
 					days = 0
 				}
-            }
+			}
 			set_country_flag = kni_rus_reconcile
 		}
 		ai_will_do = {
@@ -97,21 +97,21 @@ political_decisions = {
 #			}
 #		}
 #		effect = {
- #           prestige = 20
-  #          all_core = {
-   #             remove_core = KNI
-    #            add_core = MLT
-     #       }
-      #      change_tag = MLT
+ #		   prestige = 20
+  #		  all_core = {
+   #			 remove_core = KNI
+	#			add_core = MLT
+	 #	   }
+	  #	  change_tag = MLT
 		#	remove_accepted_culture = french
 #			remove_accepted_culture = maltese
 #			remove_accepted_culture = greek
 #			primary_culture = maltese
 #			set_country_flag = kni_become_mlt
 #			political_reform = universal_voting
- #           				government = democracy
-  #              government = hanseatic
-   #         any_pop = { militancy = -2 }
+ #		   				government = democracy
+  #			  government = hanseatic
+   #		 any_pop = { militancy = -2 }
 	#	}
 #	}
 	
@@ -126,26 +126,26 @@ political_decisions = {
 			war = no
 			# Some kind of reactionary government is in power
 			OR = {
-                government = fascist_dictatorship
-                government = theocracy
+				government = fascist_dictatorship
+				government = theocracy
 				ruling_party_ideology = reactionary
 				ruling_party_ideology = fascist
-            }
+			}
 		}
 		effect = {
-            prestige = 20
-            all_core = {
-                remove_core = MLT
-                add_core = KNI
-            }
-            change_tag = KNI
+			prestige = 20
+			all_core = {
+				remove_core = MLT
+				add_core = KNI
+			}
+			change_tag = KNI
 			primary_culture = french
 			add_accepted_culture = maltese
 			add_accepted_culture = greek
 			set_country_flag = mlt_become_kni
 			political_reform = none_voting
-            government = theocracy
-            any_pop = { militancy = -2 }
+			government = theocracy
+			any_pop = { militancy = -2 }
 		}
 	}
 
@@ -221,14 +221,14 @@ political_decisions = {
 		}
 		effect = {
 			random_country = {
-                limit = {
-                    owns = 2223
-                }
+				limit = {
+					owns = 2223
+				}
 				country_event = {
 					id = 950010
 					days = 0
 				}
-            }
+			}
 			set_country_flag = kni_buy_croix
 		}
 	}
@@ -251,14 +251,14 @@ political_decisions = {
 		}
 		effect = {
 			random_country = {
-                limit = {
-                    owns = 3246
-                }
+				limit = {
+					owns = 3246
+				}
 				country_event = {
 					id = 950020
 					days = 0
 				}
-            }
+			}
 			set_country_flag = kni_buy_barth
 		}
 	
@@ -282,14 +282,14 @@ political_decisions = {
 		}
 		effect = {
 			random_country = {
-                limit = {
-                    owns = 45
-                }
+				limit = {
+					owns = 45
+				}
 				country_event = {
 					id = 950030
 					days = 0
 				}
-            }
+			}
 			set_country_flag = kni_buy_martin
 		}	
 	}
@@ -312,14 +312,14 @@ political_decisions = {
 		}
 		effect = {
 			random_country = {
-                limit = {
-                    owns = 2227
-                }
+				limit = {
+					owns = 2227
+				}
 				country_event = {
 					id = 950040
 					days = 0
 				}
-            }
+			}
 			set_country_flag = kni_buy_kitts
 		}	
 	}

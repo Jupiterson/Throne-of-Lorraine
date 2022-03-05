@@ -1,35 +1,35 @@
 political_decisions = {
 
-    become_greece = {
+	become_greece = {
    picture = unite_with_greece
-        potential = {
-            primary_culture = greek
-            NOT = { has_country_flag = post_colonial_country }
-            NOT = { tag = BYZ }
-            NOT = { tag = GRE }
+		potential = {
+			primary_culture = greek
+			NOT = { has_country_flag = post_colonial_country }
+			NOT = { tag = BYZ }
+			NOT = { tag = GRE }
 			NOT = { tag = RME }
-            NOT = { has_global_flag = sw_set }
-        }
+			NOT = { has_global_flag = sw_set }
+		}
 
-        allow = {
-            
-                prestige = 25
-                is_secondary_power = yes            
-            
-            war = no
-            is_vassal = no
-            owns = 834
-        }
+		allow = {
+			
+				prestige = 25
+				is_secondary_power = yes			
+			
+			war = no
+			is_vassal = no
+			owns = 834
+		}
 
-        effect = {
-            prestige = 20
-            change_tag = GRE
-            capital = 834
+		effect = {
+			prestige = 20
+			change_tag = GRE
+			capital = 834
 
-        }
+		}
 
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

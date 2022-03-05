@@ -1,24 +1,24 @@
 political_decisions = {
-    Celtic_Union = {
-        potential = {
-		    OR = {
-			    NOT = { tag = SCO }
+	Celtic_Union = {
+		potential = {
+			OR = {
+				NOT = { tag = SCO }
 				has_country_flag = gaelic_english_bilinguism
 			}
 			OR = {
-			    ai = no
+				ai = no
 				has_country_flag = celtic_ai
 			}
-            OR = {
+			OR = {
 				tag = IRE
 				tag = SCO
 				tag = WHA
 				tag = CRN
 				tag = IOM
-            }
-            NOT = {
+			}
+			NOT = {
 				has_global_flag = Celtic_Union_Formed
-            }
+			}
 			OR = {
 				AND = {
 					war = no
@@ -37,170 +37,170 @@ political_decisions = {
 				}
 				ai = no
 			}
-        }
-        allow = {
+		}
+		allow = {
 			SCO = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            in_sphere = THIS
-                            war = no
-                        }
-                        owner = {
-                            vassal_of = THIS
-                            war = no
-                        }
-                    }
-                }
-            }
-            IRE = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            in_sphere = THIS
-                            war = no
-                        }
-                        owner = {
-                            vassal_of = THIS
-                            war = no
-                        }
-                    }
-                }
-            }
-            WHA = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            in_sphere = THIS
-                            war = no
-                        }
-                        owner = {
-                            vassal_of = THIS
-                            war = no
-                        }
-                    }
-                }
-            }
-            war = no
-            prestige = 50
-            is_disarmed = no
-            NOT = {
-            in_sphere = ENG
-            }
-            nationalism_n_imperialism = 1
-            is_greater_power = yes
-        }
-        effect = {
-            badboy = 7
-            prestige = 35
-            set_global_flag = Celtic_Union_Formed
-            WHA = {
-                all_core = {
-                    add_core = CLT
-                }
-            }
-            IRE = {
-                all_core = {
-                    add_core = CLT
-                }
-            }
-            SCO = {
-                all_core = {
-                    add_core = CLT
-                }
-            }
-            CRN = {
-                all_core = {
-                    add_core = CLT
-                }
-            }
-            IOM = {
-                all_core = {
-                    add_core = CLT
-                }
-            }
-            change_tag = CLT
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			IRE = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			WHA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			war = no
+			prestige = 50
+			is_disarmed = no
+			NOT = {
+			in_sphere = ENG
+			}
+			nationalism_n_imperialism = 1
+			is_greater_power = yes
+		}
+		effect = {
+			badboy = 7
+			prestige = 35
+			set_global_flag = Celtic_Union_Formed
+			WHA = {
+				all_core = {
+					add_core = CLT
+				}
+			}
+			IRE = {
+				all_core = {
+					add_core = CLT
+				}
+			}
+			SCO = {
+				all_core = {
+					add_core = CLT
+				}
+			}
+			CRN = {
+				all_core = {
+					add_core = CLT
+				}
+			}
+			IOM = {
+				all_core = {
+					add_core = CLT
+				}
+			}
+			change_tag = CLT
 			CLT = {
-                inherit = SCO
-            }
+				inherit = SCO
+			}
 			CLT = {
-                inherit = IRE
-            }
-		    CLT = {
-                inherit = WHA
-            }
+				inherit = IRE
+			}
 			CLT = {
-                inherit = IOM
-            }
-            add_accepted_culture = irish
-            add_accepted_culture = welsh
-            add_accepted_culture = scottish
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+				inherit = WHA
+			}
+			CLT = {
+				inherit = IOM
+			}
+			add_accepted_culture = irish
+			add_accepted_culture = welsh
+			add_accepted_culture = scottish
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
-    Claim_BRT = {
-	    picture = brittany
-        potential = {
-            tag = CLT
-            NOT = { has_country_flag = BRT_claimed }
-        }
-        allow = {
-		    war = no
-		    is_greater_power = yes
-            revolution_n_counterrevolution = 1 
+	Claim_BRT = {
+		picture = brittany
+		potential = {
+			tag = CLT
+			NOT = { has_country_flag = BRT_claimed }
+		}
+		allow = {
+			war = no
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1 
 			naval_plans = 1
 			is_disarmed = no
-            all_core = {
-                owned_by = THIS
-            }
-        }
-        effect = {
-            badboy = 5
-            prestige = 10
-            set_country_flag = BRT_claimed
-            BRT = {
-                all_core = {
-                    add_core = CLT
-                }
-            }
-            add_accepted_culture = breton
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+			all_core = {
+				owned_by = THIS
+			}
+		}
+		effect = {
+			badboy = 5
+			prestige = 10
+			set_country_flag = BRT_claimed
+			BRT = {
+				all_core = {
+					add_core = CLT
+				}
+			}
+			add_accepted_culture = breton
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	unite_celtiberians = {
-        picture = galicia
-        potential = {
-		    tag = CLT
-            NOT = { has_country_flag = unite_celtiberians }
-        }
+		picture = galicia
+		potential = {
+			tag = CLT
+			NOT = { has_country_flag = unite_celtiberians }
+		}
 
-        allow = {
+		allow = {
 		owns = 420
 		war = no
 		is_greater_power = yes
 		is_disarmed = no
-        revolution_n_counterrevolution = 1 
+		revolution_n_counterrevolution = 1 
 		naval_logistics = 1
-            all_core = {
-                owned_by = THIS
-            }
-        }
+			all_core = {
+				owned_by = THIS
+			}
+		}
 
-        effect = {
-		    prestige = 25
-		    badboy = 10
+		effect = {
+			prestige = 25
+			badboy = 10
 			add_accepted_culture = galician
 			set_country_flag = unite_celtiberians
-            BSQ_474 = { add_core = THIS }
+			BSQ_474 = { add_core = THIS }
 			SPA_474 = { add_core = THIS }
 			475 = { add_core = THIS }
 			477 = { add_core = THIS }
@@ -209,27 +209,27 @@ political_decisions = {
 	}
 	
 	english_expansion = {
-        picture = northenglandmap
-        potential = {
-		    tag = CLT
-            NOT = { has_country_flag = english_expansion }
-        }
+		picture = northenglandmap
+		potential = {
+			tag = CLT
+			NOT = { has_country_flag = english_expansion }
+		}
 
-        allow = {
+		allow = {
 		war = no
 		is_greater_power = yes
 		is_disarmed = no
-        mass_politics = 1 
-            all_core = {
-                owned_by = THIS
-            }
-        }
+		mass_politics = 1 
+			all_core = {
+				owned_by = THIS
+			}
+		}
 
-        effect = {
-		    prestige = 10
-		    badboy = 8
+		effect = {
+			prestige = 10
+			badboy = 8
 			set_country_flag = english_expansion
-            ENG_277 = { add_core = THIS }
+			ENG_277 = { add_core = THIS }
 		}
 	}
 }

@@ -1,5 +1,5 @@
 political_decisions = {
-    down_the_danube = {
+	down_the_danube = {
 		picture = form_the_rcmp
 		potential = {
 			OR = {
@@ -18,16 +18,16 @@ political_decisions = {
 		effect = {
 			set_country_flag = down_the_danube
 			WAL = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
+				all_core = {
+					add_core = THIS
+				}
+			}
 			
 			MOL = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
+				all_core = {
+					add_core = THIS
+				}
+			}
 			badboy = 10
 		}
 		ai_will_do = {
@@ -36,117 +36,117 @@ political_decisions = {
 	}
 	
 	illyrian_union = {
-        picture = greater_croatia_map
-        potential = {
+		picture = greater_croatia_map
+		potential = {
 			OR = {
 				tag = HUN
 				tag = PHC
 			}
-            NOT = { has_country_flag = ill_union }
+			NOT = { has_country_flag = ill_union }
 			has_country_flag = illyrian_rev
-        }
+		}
 
-        allow = {
-        state_n_government = 1    
-        }
+		allow = {
+		state_n_government = 1	
+		}
 
-        effect = {
-         prestige = 25
-       set_country_flag = ill_union
-            ILL = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
+		effect = {
+		 prestige = 25
+	   set_country_flag = ill_union
+			ILL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
 			
 			SER = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
+				all_core = {
+					add_core = THIS
+				}
+			}
 			
 			SLO = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
+				all_core = {
+					add_core = THIS
+				}
+			}
 			add_accepted_culture = serb
 			add_accepted_culture = slovene
 			add_accepted_culture = illyrian
 			
 			any_pop = {
-                limit = { has_pop_culture = romanian }
-                consciousness = 5
-                militancy = 5
-            }
+				limit = { has_pop_culture = romanian }
+				consciousness = 5
+				militancy = 5
+			}
 			
 			any_pop = {
-                limit = { has_pop_culture = slovak }
-                consciousness = 5
-                militancy = 5
-            }
+				limit = { has_pop_culture = slovak }
+				consciousness = 5
+				militancy = 5
+			}
 			
 			any_pop = {
-                limit = { has_pop_culture = south_german }
-                consciousness = 5
-                militancy = 5
-            }
+				limit = { has_pop_culture = south_german }
+				consciousness = 5
+				militancy = 5
+			}
 			
 			any_pop = {
-                limit = { has_pop_culture = illyrian }
-                consciousness = -5
-                militancy = -5
-            }
+				limit = { has_pop_culture = illyrian }
+				consciousness = -5
+				militancy = -5
+			}
 			
-        }
+		}
 	}
 	
   reconsile_serbia = {
-        picture = knights_hospitaller_paul
-        potential = {
-            tag = HUN
-            NOT = { has_country_flag = serb_stuff }
-        }
+		picture = knights_hospitaller_paul
+		potential = {
+			tag = HUN
+			NOT = { has_country_flag = serb_stuff }
+		}
 
-        allow = {
-        nationalism_n_imperialism = 1      
-        }
+		allow = {
+		nationalism_n_imperialism = 1	  
+		}
 
-        effect = {
+		effect = {
 		HUN = {
-                any_pop = {
-                    limit = {
-                        culture = serb
-                    }
-                    move_pop = 791
-                }
-            }
-        prestige = 25
-        badboy = -5
-        set_country_flag = serb_stuff 
-        2538 = { remove_core = SER }
+				any_pop = {
+					limit = {
+						culture = serb
+					}
+					move_pop = 791
+				}
+			}
+		prestige = 25
+		badboy = -5
+		set_country_flag = serb_stuff 
+		2538 = { remove_core = SER }
 		792 = { remove_core = SER }
 		791 = { remove_core = HUN }
 		
 		any_pop = {
-                limit = { has_pop_culture = romanian }
-                consciousness = 5
-                militancy = 5
-            }
+				limit = { has_pop_culture = romanian }
+				consciousness = 5
+				militancy = 5
+			}
 			
 			any_pop = {
-                limit = { has_pop_culture = slovak }
-                consciousness = 5
-                militancy = 5
-            }
+				limit = { has_pop_culture = slovak }
+				consciousness = 5
+				militancy = 5
+			}
 			
 			any_pop = {
-                limit = { has_pop_culture = south_german }
-                consciousness = 5
-                militancy = 5
-            }
+				limit = { has_pop_culture = south_german }
+				consciousness = 5
+				militancy = 5
+			}
 			
-        }
+		}
    }
 	
 	

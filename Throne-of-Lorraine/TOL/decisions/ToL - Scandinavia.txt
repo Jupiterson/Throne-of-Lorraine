@@ -41,8 +41,8 @@ political_decisions = {
 		allow = {
 		is_greater_power = yes
 			all_core = {
-                owned_by = THIS
-            }
+				owned_by = THIS
+			}
 		}
 		effect = {
 			
@@ -67,7 +67,7 @@ political_decisions = {
 		potential = {
 		OR = {
 			tag = DEN
-             tag = DNN
+			 tag = DNN
 			 tag = SCA
 			 }
 			NOT = {
@@ -76,8 +76,8 @@ political_decisions = {
 		}
 		allow = {
 			all_core = {
-                owned_by = THIS
-            }
+				owned_by = THIS
+			}
 		}
 		effect = {
 			HOL_369 = {
@@ -99,7 +99,7 @@ danish_north_germany = {
 		potential = {
 		OR = {
 			tag = DEN
-             tag = DNN
+			 tag = DNN
 			 tag = SCA
 			 }
 			has_country_flag = holsten
@@ -109,8 +109,8 @@ danish_north_germany = {
 		}
 		allow = {
 			all_core = {
-                owned_by = THIS
-            }
+				owned_by = THIS
+			}
 		}
 		effect = {
 			PRU_544 = {
@@ -128,12 +128,12 @@ danish_north_germany = {
 		}
 	}
 
-     danish_pommerania = {
+	 danish_pommerania = {
 		picture = map_brandeburg
 		potential = {
 		OR = {
 			tag = DEN
-             tag = DNN
+			 tag = DNN
 			 tag = SCA
 			 }
 			 has_country_flag = north_germany

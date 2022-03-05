@@ -1,342 +1,342 @@
 political_decisions = {
-    kruger_wildlife_preserve = {
-        picture = kruger_national_park
+	kruger_wildlife_preserve = {
+		picture = kruger_national_park
 
-        potential = {
-            OR = {
-                tag = TRN
-                tag = SAF
-                tag = VLK
-            }
-            NOT = { has_country_flag = kruger_wildlife_preserve_formed }
-        }
+		potential = {
+			OR = {
+				tag = TRN
+				tag = SAF
+				tag = VLK
+			}
+			NOT = { has_country_flag = kruger_wildlife_preserve_formed }
+		}
 
-        allow = {
-            steam_turbine = 1
-            owns = 2105    #Tky-Gariep state minus the Suazi province
-            owns = 2106
-            owns = 2107
-            owns = 2108
-            owns = 2109
-            owns = 2110
-            OR = {
-                is_greater_power = yes
-                year = 1926
-            }
-        }
+		allow = {
+			steam_turbine = 1
+			owns = 2105	#Tky-Gariep state minus the Suazi province
+			owns = 2106
+			owns = 2107
+			owns = 2108
+			owns = 2109
+			owns = 2110
+			OR = {
+				is_greater_power = yes
+				year = 1926
+			}
+		}
 
-        effect = {
-            prestige = 20
-            treasury = -20000
-            set_country_flag = kruger_wildlife_preserve_formed
-            2105 = {
-                life_rating = 5
-                add_province_modifier = {
-                    name = kruger_reserve
-                    duration = 1750
-                }
-            }
-            2106 = {
-                life_rating = 5
-                add_province_modifier = {
-                    name = kruger_reserve
-                    duration = 1750
-                }
-            }
-            2107 = {
-                life_rating = 5
-                add_province_modifier = {
-                    name = kruger_reserve
-                    duration = 1750
-                }
-            }
-            2108 = {
-                life_rating = 5
-                add_province_modifier = {
-                    name = kruger_reserve
-                    duration = 1750
-                }
-            }
-            2109 = {
-                life_rating = 5
-                add_province_modifier = {
-                    name = kruger_reserve
-                    duration = 1750
-                }
-            }
-            2110 = {
-                life_rating = 5
-                add_province_modifier = {
-                    name = kruger_reserve
-                    duration = 1750
-                }
-            }
+		effect = {
+			prestige = 20
+			treasury = -20000
+			set_country_flag = kruger_wildlife_preserve_formed
+			2105 = {
+				life_rating = 5
+				add_province_modifier = {
+					name = kruger_reserve
+					duration = 1750
+				}
+			}
+			2106 = {
+				life_rating = 5
+				add_province_modifier = {
+					name = kruger_reserve
+					duration = 1750
+				}
+			}
+			2107 = {
+				life_rating = 5
+				add_province_modifier = {
+					name = kruger_reserve
+					duration = 1750
+				}
+			}
+			2108 = {
+				life_rating = 5
+				add_province_modifier = {
+					name = kruger_reserve
+					duration = 1750
+				}
+			}
+			2109 = {
+				life_rating = 5
+				add_province_modifier = {
+					name = kruger_reserve
+					duration = 1750
+				}
+			}
+			2110 = {
+				life_rating = 5
+				add_province_modifier = {
+					name = kruger_reserve
+					duration = 1750
+				}
+			}
 
-        }
-    }
-    adopt_die_stem = {
-        picture = adopt_die_stem
-        potential = {
-            OR = {
-                tag = SAF
-                tag = VLK
-            }
-            NOT = {
-                has_country_flag = has_die_stem
-            }
-        }
+		}
+	}
+	adopt_die_stem = {
+		picture = adopt_die_stem
+		potential = {
+			OR = {
+				tag = SAF
+				tag = VLK
+			}
+			NOT = {
+				has_country_flag = has_die_stem
+			}
+		}
 
-        allow = {
-            mass_culture_n_the_avant_garde = 1
-        }
+		allow = {
+			mass_culture_n_the_avant_garde = 1
+		}
 
-        effect = {
-            prestige = 5
-            set_country_flag = has_die_stem
-        }
-    }
-
-
-    create_south_africa = {
-        picture = form_south_africa
-        alert = no
-        potential = {
-            any_owned_province = { is_core = SAF }
-            SAF = { exists = no }
-            NOT = { has_global_flag = south_africa_formed }
-            NOT = {
-                capital_scope = { continent = africa }
-                capital_scope = { continent = west_africa }
-                capital_scope = { continent = central_africa }
-                capital_scope = { continent = east_africa }
-                capital_scope = { continent = south_west_africa }
-            }
-            civilized = yes
-            revolution_n_counterrevolution = 1
-        }
-
-        allow = {
-            war = no
-            SAF = { all_core = {
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                            in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        effect = {
-            set_global_flag = south_africa_formed
-            prestige = 20
-            any_country = {
-                limit = {
-                    ai = yes
-                    exists = yes
-                    OR = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                    }
-                }
-                any_owned = { limit = { is_core = SAF }
-                secede_province = THIS
-                }
-            }
-            SAF = { set_country_flag = post_colonial_country neutrality = yes government = hms_government }
-            random_owned = { limit = { province_id = 2113 } change_province_name = "Richards Bay" add_core = SAF }
-            random_owned = { limit = { province_id = 2112 } change_province_name = "Ladysmith" add_core = SAF }
-            random_owned = { limit = { province_id = 2100 } change_province_name = "Port St. Johns" add_core = SAF }
-            random_owned = { limit = { province_id = 2101 } change_province_name = "Bloemfontein" add_core = SAF }
-            random_owned = { limit = { province_id = 2102 } change_province_name = "Winburg" add_core = SAF }
-            random_owned = { limit = { province_id = 2103 } change_province_name = "Philippolis" add_core = SAF }
-            random_owned = { limit = { province_id = 2105 } change_province_name = "Pretoria" add_core = SAF }
-            random_owned = { limit = { province_id = 2106 } change_province_name = "Johannesburg" add_core = SAF }
-            random_owned = { limit = { province_id = 2107 } change_province_name = "Klerksdorp" add_core = SAF }
-            random_owned = { limit = { province_id = 2108 } change_province_name = "Nylstroom" add_core = SAF }
-            random_owned = { limit = { province_id = 2109 } change_province_name = "Lydenburg" add_core = SAF }
-            random_owned = { limit = { province_id = 2110 } change_province_name = "Hoedspruit" add_core = SAF }
-            random_owned = { limit = { province_id = 2088 } change_province_name = "Springbok" add_core = SAF }
-            random_owned = { limit = { province_id = 2558 } change_province_name = "De Aar" add_core = SAF }
-            random_owned = { limit = { province_id = 2093 } change_province_name = "Calvinia" add_core = SAF }
-            random_owned = { limit = { province_id = 2094 } change_province_name = "Kimberley" add_core = SAF }
-            random_owned = { limit = { province_id = 2111 } change_province_name = "Durban" add_core = SAF }
-            random_owned = { limit = { province_id = 2105 } state_scope = { change_region_name = "Transvaal" } }
-            random_owned = { limit = { province_id = 2102 } state_scope = { change_region_name = "Vrystaat" } }
-            random_owned = { limit = { province_id = 2111 } state_scope = { change_region_name = "Natal" } }
-            release_vassal = SAF
-            create_alliance = SAF
-            diplomatic_influence = {
-                who = SAF
-                value = 400
-            }
-        }
-
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                NOT = { year = 1905 }
-            }
-        }
-    }
-    clearances_in_natal = {
-        picture = tea_production
-
-        potential = {
-            OR = {
-                owns = 2111
-                owns = 2112
-            }
-            OR = {
-                2111 = { NOT = { has_province_modifier = plantation } }
-                2112 = { NOT = { has_province_modifier = plantation } }
-            }
-            civilized = yes
-            OR = {
-                tag = NAL
-                AND = {
-                    tag = SAF
-                    is_vassal = no
-                }
-            }
-        }
+		effect = {
+			prestige = 5
+			set_country_flag = has_die_stem
+		}
+	}
 
 
-        allow = {
-            war = no
-            compound_steam_engines = 1
-            money = 150000
-        }
+	create_south_africa = {
+		picture = form_south_africa
+		alert = no
+		potential = {
+			any_owned_province = { is_core = SAF }
+			SAF = { exists = no }
+			NOT = { has_global_flag = south_africa_formed }
+			NOT = {
+				capital_scope = { continent = africa }
+				capital_scope = { continent = west_africa }
+				capital_scope = { continent = central_africa }
+				capital_scope = { continent = east_africa }
+				capital_scope = { continent = south_west_africa }
+			}
+			civilized = yes
+			revolution_n_counterrevolution = 1
+		}
 
-        effect = {
-            2111 = { add_province_modifier = { name = plantation duration = -1 } }
-            2112 = { add_province_modifier = { name = plantation duration = -1 } }
-            random_owned = {
-                limit = { owner = { NOT = { has_global_flag = natal_life_rating } } }
-                2112 = { life_rating = 1 }
-                2111 = { life_rating = 2 }
-                owner = { set_global_flag = natal_life_rating  }
-            }
-            money = -100000
-        }
+		allow = {
+			war = no
+			SAF = { all_core = {
+				OR = {
+					owned_by = THIS
+					owner = {
+							in_sphere = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		effect = {
+			set_global_flag = south_africa_formed
+			prestige = 20
+			any_country = {
+				limit = {
+					ai = yes
+					exists = yes
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				any_owned = { limit = { is_core = SAF }
+				secede_province = THIS
+				}
+			}
+			SAF = { set_country_flag = post_colonial_country neutrality = yes government = hms_government }
+			random_owned = { limit = { province_id = 2113 } change_province_name = "Richards Bay" add_core = SAF }
+			random_owned = { limit = { province_id = 2112 } change_province_name = "Ladysmith" add_core = SAF }
+			random_owned = { limit = { province_id = 2100 } change_province_name = "Port St. Johns" add_core = SAF }
+			random_owned = { limit = { province_id = 2101 } change_province_name = "Bloemfontein" add_core = SAF }
+			random_owned = { limit = { province_id = 2102 } change_province_name = "Winburg" add_core = SAF }
+			random_owned = { limit = { province_id = 2103 } change_province_name = "Philippolis" add_core = SAF }
+			random_owned = { limit = { province_id = 2105 } change_province_name = "Pretoria" add_core = SAF }
+			random_owned = { limit = { province_id = 2106 } change_province_name = "Johannesburg" add_core = SAF }
+			random_owned = { limit = { province_id = 2107 } change_province_name = "Klerksdorp" add_core = SAF }
+			random_owned = { limit = { province_id = 2108 } change_province_name = "Nylstroom" add_core = SAF }
+			random_owned = { limit = { province_id = 2109 } change_province_name = "Lydenburg" add_core = SAF }
+			random_owned = { limit = { province_id = 2110 } change_province_name = "Hoedspruit" add_core = SAF }
+			random_owned = { limit = { province_id = 2088 } change_province_name = "Springbok" add_core = SAF }
+			random_owned = { limit = { province_id = 2558 } change_province_name = "De Aar" add_core = SAF }
+			random_owned = { limit = { province_id = 2093 } change_province_name = "Calvinia" add_core = SAF }
+			random_owned = { limit = { province_id = 2094 } change_province_name = "Kimberley" add_core = SAF }
+			random_owned = { limit = { province_id = 2111 } change_province_name = "Durban" add_core = SAF }
+			random_owned = { limit = { province_id = 2105 } state_scope = { change_region_name = "Transvaal" } }
+			random_owned = { limit = { province_id = 2102 } state_scope = { change_region_name = "Vrystaat" } }
+			random_owned = { limit = { province_id = 2111 } state_scope = { change_region_name = "Natal" } }
+			release_vassal = SAF
+			create_alliance = SAF
+			diplomatic_influence = {
+				who = SAF
+				value = 400
+			}
+		}
 
-    move_capital = {
-        picture = map_africa
-        potential = {
-            OR = {
-                tag = SAF
-                tag = VLK
-            }
-            NOT = { has_country_flag = moved_capital_saf }
-        }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1905 }
+			}
+		}
+	}
+	clearances_in_natal = {
+		picture = tea_production
 
-        allow = {
-            war = no
-            money = 150000
-            2087 = { owned_by = THIS }
-            2111 = { owned_by = THIS }
-            2101 = { owned_by = THIS }
-            2105 = { owned_by = THIS }
-            2106 = { owned_by = THIS }
-        }
+		potential = {
+			OR = {
+				owns = 2111
+				owns = 2112
+			}
+			OR = {
+				2111 = { NOT = { has_province_modifier = plantation } }
+				2112 = { NOT = { has_province_modifier = plantation } }
+			}
+			civilized = yes
+			OR = {
+				tag = NAL
+				AND = {
+					tag = SAF
+					is_vassal = no
+				}
+			}
+		}
 
-        effect = {
-            set_country_flag = moved_capital_saf
-            country_event = 6013
-            money = -100000
-        }
 
-        ai_will_do = {
-                factor = 1
-        }
-    }
+		allow = {
+			war = no
+			compound_steam_engines = 1
+			money = 150000
+		}
 
-    claim_namibia = {
-        picture = map_africa
-        potential = {
-            OR = {
-                tag = SAF
-                tag = VLK
-            }
-            2084 = { empty = yes }
-            2085 = { empty = yes }
-            2086 = { empty = yes }
-            revolution_n_counterrevolution = 1
-            NOT = { has_country_flag = claimed_namibia }
-        }
+		effect = {
+			2111 = { add_province_modifier = { name = plantation duration = -1 } }
+			2112 = { add_province_modifier = { name = plantation duration = -1 } }
+			random_owned = {
+				limit = { owner = { NOT = { has_global_flag = natal_life_rating } } }
+				2112 = { life_rating = 1 }
+				2111 = { life_rating = 2 }
+				owner = { set_global_flag = natal_life_rating  }
+			}
+			money = -100000
+		}
 
-        allow = {
-            year = 1870
-            war = no
-            invention = manifest_destiny
-            invention = colonial_negotiations
-            2083 = { owned_by = THIS }
-        }
+		ai_will_do = { factor = 1 }
+	}
 
-        effect = {
-            prestige = 5
-            2084 = { add_core = THIS secede_province = THIS change_province_name = "Lüderitz" any_pop = { literacy = -0.99 } life_rating = 5 }
-            2086 = { add_core = THIS secede_province = THIS change_province_name = "Keetmanshoop" any_pop = { literacy = -0.99 } life_rating = 5 }
-            2085 = { add_core = THIS secede_province = THIS change_province_name = "Maltahöe" any_pop = { literacy = -0.99 } life_rating = 5 }
-            set_country_flag = claimed_namibia
-        }
+	move_capital = {
+		picture = map_africa
+		potential = {
+			OR = {
+				tag = SAF
+				tag = VLK
+			}
+			NOT = { has_country_flag = moved_capital_saf }
+		}
 
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		allow = {
+			war = no
+			money = 150000
+			2087 = { owned_by = THIS }
+			2111 = { owned_by = THIS }
+			2101 = { owned_by = THIS }
+			2105 = { owned_by = THIS }
+			2106 = { owned_by = THIS }
+		}
 
-    open_the_frontiers = {
-        picture = die_groot_trek
-        potential = {
-            OR = {
-                tag = VLK
-                tag = SAF
-            }
-            2106 = { owned_by = THIS }
-            2111 = { owned_by = THIS }
-            2105 = { owned_by = THIS }
-            2087 = { owned_by = THIS }
-            2098 = { owned_by = THIS }
-            2088 = { owned_by = THIS }
-            NOT = { has_country_flag = open_frontiers }
-        }
+		effect = {
+			set_country_flag = moved_capital_saf
+			country_event = 6013
+			money = -100000
+		}
 
-        allow = {
-            money = 50000
-            invention = manifest_destiny
-            THIS = {
-                OR = {
-                    is_greater_power = yes
-                    is_secondary_power = yes
-                }
-            }
-        }
+		ai_will_do = {
+				factor = 1
+		}
+	}
 
-        effect = {
-            money = -50000
-            set_country_flag = open_frontiers
-            THIS = {
-                add_country_modifier = {
-                    name = opened_frontiers
-                    duration = -1
-                }
-                remove_country_modifier = trek_scottishs
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+	claim_namibia = {
+		picture = map_africa
+		potential = {
+			OR = {
+				tag = SAF
+				tag = VLK
+			}
+			2084 = { empty = yes }
+			2085 = { empty = yes }
+			2086 = { empty = yes }
+			revolution_n_counterrevolution = 1
+			NOT = { has_country_flag = claimed_namibia }
+		}
+
+		allow = {
+			year = 1870
+			war = no
+			invention = manifest_destiny
+			invention = colonial_negotiations
+			2083 = { owned_by = THIS }
+		}
+
+		effect = {
+			prestige = 5
+			2084 = { add_core = THIS secede_province = THIS change_province_name = "Lüderitz" any_pop = { literacy = -0.99 } life_rating = 5 }
+			2086 = { add_core = THIS secede_province = THIS change_province_name = "Keetmanshoop" any_pop = { literacy = -0.99 } life_rating = 5 }
+			2085 = { add_core = THIS secede_province = THIS change_province_name = "Maltahöe" any_pop = { literacy = -0.99 } life_rating = 5 }
+			set_country_flag = claimed_namibia
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	open_the_frontiers = {
+		picture = die_groot_trek
+		potential = {
+			OR = {
+				tag = VLK
+				tag = SAF
+			}
+			2106 = { owned_by = THIS }
+			2111 = { owned_by = THIS }
+			2105 = { owned_by = THIS }
+			2087 = { owned_by = THIS }
+			2098 = { owned_by = THIS }
+			2088 = { owned_by = THIS }
+			NOT = { has_country_flag = open_frontiers }
+		}
+
+		allow = {
+			money = 50000
+			invention = manifest_destiny
+			THIS = {
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
+			}
+		}
+
+		effect = {
+			money = -50000
+			set_country_flag = open_frontiers
+			THIS = {
+				add_country_modifier = {
+					name = opened_frontiers
+					duration = -1
+				}
+				remove_country_modifier = trek_scottishs
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	annex_SAF_minors = {
 		picture = cape_map

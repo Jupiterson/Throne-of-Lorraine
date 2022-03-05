@@ -1,23 +1,23 @@
 political_decisions = {
 	claim_nogai_lands = {
-        picture = treaty_of_turkmanchay
-        potential = {
+		picture = treaty_of_turkmanchay
+		potential = {
 			tag = RUS
 			OR = {
 				BKY = { owns = 1046 }
 				BKY = { owns = 1182 }
 			}
-        }
+		}
 
-        allow = {
-            war = no
-            BKY = { in_sphere = RUS }
-            BKY = { war = no }
+		allow = {
+			war = no
+			BKY = { in_sphere = RUS }
+			BKY = { war = no }
 			medicine = 1
-        }
+		}
 
-        effect = {
-            prestige = 5
+		effect = {
+			prestige = 5
 			badboy = 4
 			BKY= {
 				1046 = { secede_province = RUS }
@@ -25,141 +25,141 @@ political_decisions = {
 				1183 = { secede_province = RUS }
 				2702 = { secede_province = RUS }
 			}
-       
+	   
 
-        }
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 	annex_the_Kazakhs = {
 		picture = military_aid
 		potential = {
 			tag = RUS
 			is_our_vassal = KAZ
-        } 
+		} 
 		allow = {
-            war = no
-            KAZ = { in_sphere = RUS }
+			war = no
+			KAZ = { in_sphere = RUS }
 			state_n_government  = 1
-        }
+		}
 		effect = {
-            prestige = 10
+			prestige = 10
 			badboy = 4
 			inherit = KAZ
-        }
+		}
 
-        ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 1 }
 	}
 	annex_Bukkhara = {
 		picture = ever_victorious
 		potential = {
 			tag = RUS
 			is_our_vassal = BUK
-        } 
+		} 
 		allow = {
-            war = no
-            BUK = { in_sphere = RUS }
+			war = no
+			BUK = { in_sphere = RUS }
 			nationalism_n_imperialism  = 1
-        }
+		}
 		effect = {
-            prestige = 10
+			prestige = 10
 			badboy = 4
 			inherit = BUK
-        }
+		}
 
-        ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 1 }
 	}
 	claim_moldavia = {
-        picture = romanians_marching
-        potential = {
+		picture = romanians_marching
+		potential = {
 			tag = RUS
 			TNR = { owns = 968 }
-        }
+		}
 
-        allow = {
-            war = no
-            TNR = { in_sphere = RUS }
-            TNR = { war = no }
+		allow = {
+			war = no
+			TNR = { in_sphere = RUS }
+			TNR = { war = no }
 			mass_politics = 1
-        }
+		}
 
-        effect = {
-            prestige = 5
+		effect = {
+			prestige = 5
 			badboy = 4
 			TNR = { any_owned = { add_core = RUS } }
 			inherit = TNR
-        }
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 	claim_bryansk = {
-        picture = romanians_marching
-        potential = {
+		picture = romanians_marching
+		potential = {
 			tag = RUS
 			owns = 944
 			owns = 949
 			1016 = { NOT = { is_core = THIS } }
-        }
+		}
 
-        allow = {
-            war = no
-        }
+		allow = {
+			war = no
+		}
 
-        effect = {
-            prestige = 1
+		effect = {
+			prestige = 1
 			badboy = 1
 			1016 = { add_core = RUS }
-        }
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 	Take_Black_Sea_coast = {
-        picture = beiyang_fleet
-        potential = {
+		picture = beiyang_fleet
+		potential = {
 			tag = RUS
 			FER = { owns = 967 }
 			FER = { owns = 979 }
 			FER = { owns = 1047 }
 			RUS = { owns = 1046 }
 			NOT = { has_country_flag = a_port_in_Azov }
-        }
+		}
 
-        allow = {
+		allow = {
 			is_greater_power = yes
-            war = no
-            money = 100000
+			war = no
+			money = 100000
 			experimental_railroad = 1
 			state_n_government = 1
-        }
+		}
 
-        effect = {
+		effect = {
 			set_country_flag = a_port_in_Azov
-            RUS = { country_event = 340001 }
-        }
+			RUS = { country_event = 340001 }
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 	Take_Nogai = {
-        picture = embrace_the_jews
-        potential = {
+		picture = embrace_the_jews
+		potential = {
 			tag = RUS
 			BKY = { in_sphere = RUS }
-        }
+		}
 
-        allow = {
+		allow = {
 			is_greater_power = yes
-            war = no
-            money = 100000
+			war = no
+			money = 100000
 			iron_railroad = 1
 			nationalism_n_imperialism  = 1
-        }
+		}
 
-        effect = {
-            prestige = 10
+		effect = {
+			prestige = 10
 			badboy = 4
 			inherit = BKY
-        }
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 }	

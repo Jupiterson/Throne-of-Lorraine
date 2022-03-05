@@ -1,12 +1,12 @@
 political_decisions = {
 
-        conquest_of_levant = {
+		conquest_of_levant = {
 		picture = map_levant
 		potential = {
 		OR = {
 		
 			tag = COP
-                        tag = UCO
+						tag = UCO
 						}
 			NOT = { has_country_flag = conquest_of_levant }
 		}
@@ -34,192 +34,192 @@ political_decisions = {
 
 	embrace_the_syriacs = { 
 	potential = { 
-	     OR = {
+		 OR = {
 		 tag = COP
 		 tag = GEO
-	         tag = ARM
+			 tag = ARM
 		 tag = ASY
-	     }
-	     NOT = {
-                OR = {
-                    accepted_culture = syriac
-                    has_country_flag = embraced_syriac
-                }
-            }
-        }
+		 }
+		 NOT = {
+				OR = {
+					accepted_culture = syriac
+					has_country_flag = embraced_syriac
+				}
+			}
+		}
 	
 	allow = {
-            year = 1850
-            prestige = 70
-	    owns = 917
-	    owns = 902
-	    owns = 900
-	    owns = 913
-	    owns = 897
-        }
+			year = 1850
+			prestige = 70
+		owns = 917
+		owns = 902
+		owns = 900
+		owns = 913
+		owns = 897
+		}
 	
 	 effect = {
-            set_country_flag = embraced_syriac
-            add_accepted_culture = syriac
-            prestige = 25            
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+			set_country_flag = embraced_syriac
+			add_accepted_culture = syriac
+			prestige = 25			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
-        embrace_the_misri = {
-        picture = embrace_minority
-        potential = {
-            tag = COP
-            NOT = {
-                OR = {
-                    accepted_culture = misri
-                    has_country_flag = embraced_misri
-                }
-            }
-        }
+		embrace_the_misri = {
+		picture = embrace_minority
+		potential = {
+			tag = COP
+			NOT = {
+				OR = {
+					accepted_culture = misri
+					has_country_flag = embraced_misri
+				}
+			}
+		}
 
-        allow = {
-            year = 1850
-            prestige = 50
-        }
+		allow = {
+			year = 1850
+			prestige = 50
+		}
 
-        effect = {
-            set_country_flag = embraced_misri
-            add_accepted_culture = misri
-            prestige = 25            
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		effect = {
+			set_country_flag = embraced_misri
+			add_accepted_culture = misri
+			prestige = 25			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 
 administrate_sand_copt = {
-        picture = form_the_rcmp
-        potential = {
-            tag = COP
-            NOT = { has_country_flag = sad_abe }
+		picture = form_the_rcmp
+		potential = {
+			tag = COP
+			NOT = { has_country_flag = sad_abe }
 			is_vassal = no
-        }
+		}
 
-        allow = {
-            war = no			
+		allow = {
+			war = no			
 			prestige = 40
-        }
+		}
 
-        effect = {
-            set_country_flag = sad_abe
+		effect = {
+			set_country_flag = sad_abe
 			1754 = { add_core = COP }
 			1759 = { add_core = COP }
 			1760 = { add_core = COP }
 			1761 = { add_core = COP }
 			1772 = { add_core = COP }					
 			COP = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
-    }
+		}
+	}
 	
-        unite_the_copts = {
-        picture = become_poland_lithuania
+		unite_the_copts = {
+		picture = become_poland_lithuania
 
-        potential = {
-            OR = {
-                primary_culture = ethiopian
-                primary_culture = copt
-            }
-            NOT = { exists = UCO }
-        }
+		potential = {
+			OR = {
+				primary_culture = ethiopian
+				primary_culture = copt
+			}
+			NOT = { exists = UCO }
+		}
 
-        allow = {
-            war = no
-            ETH = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            ai = yes
-                            in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
-                            war = no
-                            is_greater_power = no
-                        }
-                    }
-                }
-            }
-            COP = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            ai = yes
-                            in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
-                            war = no
-                            is_greater_power = no
-                        }
-                    }
-                }
-            }
-        }
-        effect = {
-            prestige = 30        
-            random_owned = {
-                limit = { owner = { accepted_culture = misri } } owner = { remove_accepted_culture = misri }
-            }
-            random_owned = {
-                limit = { owner = { primary_culture = copt } }
-                owner = {
-                    add_accepted_culture = ethiopian
-                    all_core = {
-                        add_core = UCO
-                        remove_core = COP
-                    }
-                }
-                ETH = {
-                    all_core = { add_core = UCO }
-                }
-            }
-            random_owned = {
-                limit = {
-                    owner = { primary_culture = ethiopian }
-                }
-                owner = {
-                    add_accepted_culture = copt
-                    all_core = {
-                        add_core = UCO
-                        remove_core = ETH
-                    }
-                }
-                COP = {
-                    all_core = { add_core = UCO }
-                }
-            }
-            any_country = {
-                limit = {
-                    OR = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                    }
-                }
-                any_owned = {
-                    limit = { is_core = UCO }
-                    secede_province = THIS
-                }
-            }
-            change_tag = UCO
-            #capital = 703
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		allow = {
+			war = no
+			ETH = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							ai = yes
+							in_sphere = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
+							war = no
+							is_greater_power = no
+						}
+					}
+				}
+			}
+			COP = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							ai = yes
+							in_sphere = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
+							war = no
+							is_greater_power = no
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 30		
+			random_owned = {
+				limit = { owner = { accepted_culture = misri } } owner = { remove_accepted_culture = misri }
+			}
+			random_owned = {
+				limit = { owner = { primary_culture = copt } }
+				owner = {
+					add_accepted_culture = ethiopian
+					all_core = {
+						add_core = UCO
+						remove_core = COP
+					}
+				}
+				ETH = {
+					all_core = { add_core = UCO }
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { primary_culture = ethiopian }
+				}
+				owner = {
+					add_accepted_culture = copt
+					all_core = {
+						add_core = UCO
+						remove_core = ETH
+					}
+				}
+				COP = {
+					all_core = { add_core = UCO }
+				}
+			}
+			any_country = {
+				limit = {
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				any_owned = {
+					limit = { is_core = UCO }
+					secede_province = THIS
+				}
+			}
+			change_tag = UCO
+			#capital = 703
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 
 	
@@ -228,7 +228,7 @@ administrate_sand_copt = {
 		potential = {
 		OR = {
 			tag = COP
-                        tag = UCO
+						tag = UCO
 						}
 			NOT = { has_country_flag = conquest_of_syria }
 		}

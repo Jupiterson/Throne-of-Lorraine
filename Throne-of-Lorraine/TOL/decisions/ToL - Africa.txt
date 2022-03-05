@@ -1,22 +1,22 @@
 political_decisions = {
-    #for clean up
-    conquer_desert_dam = {
-        picture = form_the_rcmp
-        potential = {
-            ai = yes
-            NOT = { has_country_flag = administrated_roads }
-        }
+	#for clean up
+	conquer_desert_dam = {
+		picture = form_the_rcmp
+		potential = {
+			ai = yes
+			NOT = { has_country_flag = administrated_roads }
+		}
 
-        allow = {
-            war = no			
+		allow = {
+			war = no			
 			year = 1880
-        }
+		}
 
-        effect = {
-            set_country_flag = administrated_roads			
+		effect = {
+			set_country_flag = administrated_roads			
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
-    }
+		}
+	}
 	
 incorparate_yemen = {
 		picture = become_yemen
@@ -25,264 +25,264 @@ incorparate_yemen = {
 			YEM = { vassal_of = THIS }
 		}
 		allow = {
-            year = 1846
+			year = 1846
 		}
 		effect = {
-    prestige = 5
-    set_country_flag = incorparated
+	prestige = 5
+	set_country_flag = incorparated
 	random_country = {
-                limit = {
-                    tag = YEM
-                    exists = yes
-                    ai = yes
-                }
-                THIS = { inherit = YEM }
-            }
+				limit = {
+					tag = YEM
+					exists = yes
+					ai = yes
+				}
+				THIS = { inherit = YEM }
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
 	
 collapse_modifier_isa = {
-        picture = embrace_minority
-        potential = {
-            tag = MAS
-            NOT = { has_country_flag = collapsing }
-        }
+		picture = embrace_minority
+		potential = {
+			tag = MAS
+			NOT = { has_country_flag = collapsing }
+		}
 
-        allow = {
-            war = no
-        }
+		allow = {
+			war = no
+		}
 
-        effect = {
-           badboy = 6
+		effect = {
+		   badboy = 6
 		   set_country_flag = collapsing
 		  add_country_modifier = {
-                name = collapsing_nation
-                duration = -1
-            }
-        }
-        ai_will_do = { factor = 1 }
-    }
+				name = collapsing_nation
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 	
 	reform_caliphate = {
-        picture = tanzania_shop
-        potential = {
-            tag = MAS
-            NOT = { has_country_flag = reformed_nation }
-        }
+		picture = tanzania_shop
+		potential = {
+			tag = MAS
+			NOT = { has_country_flag = reformed_nation }
+		}
 
-        allow = {
-            war = no
-            money = 10000
-            admin_reform = yes_admin_reform
-            land_reform = yes_land_reform
+		allow = {
+			war = no
+			money = 10000
+			admin_reform = yes_admin_reform
+			land_reform = yes_land_reform
 			finance_reform = yes_finance_reform
-        }
+		}
 
-        effect = {
+		effect = {
 		remove_country_modifier = collapsing_nation
-        set_country_flag = reformed_nation
-            money = -10000
-            
-        }
-        ai_will_do = { factor = 1 }
-    }
+		set_country_flag = reformed_nation
+			money = -10000
+			
+		}
+		ai_will_do = { factor = 1 }
+	}
 	
 	
 	###############
 	#----Kongo----#
-    ###############	
+	###############	
 	
 	claim_loango = {
-        picture = map_congo
-        potential = {
-            tag = KON
-            NOT = { has_country_flag = loango }
-        }
+		picture = map_congo
+		potential = {
+			tag = KON
+			NOT = { has_country_flag = loango }
+		}
 
-        allow = {
-		    admin_reform = yes_admin_reform
-            land_reform = yes_land_reform
+		allow = {
+			admin_reform = yes_admin_reform
+			land_reform = yes_land_reform
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 3
-            LOA = {
-                all_core = {
-                                        add_core = THIS
-                                        }
-                }                   
-            set_country_flag = loango
+		effect = {
+			badboy = 3
+			LOA = {
+				all_core = {
+										add_core = THIS
+										}
+				}				   
+			set_country_flag = loango
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	claim_lunda = {
-        picture = map_congo_free_state
-        potential = {
-            tag = KON
+		picture = map_congo_free_state
+		potential = {
+			tag = KON
 			has_country_flag = loango
-            NOT = { has_country_flag = lunda }
-        }
+			NOT = { has_country_flag = lunda }
+		}
 
-        allow = {
+		allow = {
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 4
-            LUN = {
-                all_core = {
-                                        add_core = THIS
-                                        }
-                }                   
-            set_country_flag = lunda
+		effect = {
+			badboy = 4
+			LUN = {
+				all_core = {
+										add_core = THIS
+										}
+				}				   
+			set_country_flag = lunda
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	claim_south_central = {
-        picture = banda_oriental
-        potential = {
-            tag = KON
+		picture = banda_oriental
+		potential = {
+			tag = KON
 			has_country_flag = lunda
-            NOT = { has_country_flag = south_central }
-        }
+			NOT = { has_country_flag = south_central }
+		}
 
-        allow = {
+		allow = {
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 4
-            ENG_2014 = {
-                add_core = THIS
-            } 
-            POR_2003 = {
-                add_core = THIS
-            } 
-            POR_2006 = {
-                add_core = THIS
-            } 
-            BEL_1984 = {
-                add_core = THIS
-            } 	
+		effect = {
+			badboy = 4
+			ENG_2014 = {
+				add_core = THIS
+			} 
+			POR_2003 = {
+				add_core = THIS
+			} 
+			POR_2006 = {
+				add_core = THIS
+			} 
+			BEL_1984 = {
+				add_core = THIS
+			} 	
 			2080 = { add_core = THIS }	
 			2082 = { add_core = THIS }	
 			2076 = { add_core = THIS }	
 			2081 = { add_core = THIS }	
-            set_country_flag = south_central
+			set_country_flag = south_central
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	jungle_conquest = {
-        picture = banatia_map
-        potential = {
-            tag = KON
+		picture = banatia_map
+		potential = {
+			tag = KON
 			has_country_flag = south_central
-            NOT = { has_country_flag = jungle }
-        }
+			NOT = { has_country_flag = jungle }
+		}
 
-        allow = {
+		allow = {
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 4
-            FRA_1978 = {
-                add_core = THIS
-            } 
-            FRA_1972 = {
-                add_core = THIS
-            } 
-            BEL_1992 = {
-                add_core = THIS
-            } 
-            BEL_1996 = {
-                add_core = THIS
-            } 				   
+		effect = {
+			badboy = 4
+			FRA_1978 = {
+				add_core = THIS
+			} 
+			FRA_1972 = {
+				add_core = THIS
+			} 
+			BEL_1992 = {
+				add_core = THIS
+			} 
+			BEL_1996 = {
+				add_core = THIS
+			} 				   
 			BEL_1990 = {
-                add_core = THIS
-            } 
-            set_country_flag = jungle
+				add_core = THIS
+			} 
+			set_country_flag = jungle
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 		
 	claim_tangyika = {
-        picture = banatia_map
-        potential = {
-            tag = KON
+		picture = banatia_map
+		potential = {
+			tag = KON
 			has_country_flag = jungle
-            NOT = { has_country_flag = tangyska }
-        }
+			NOT = { has_country_flag = tangyska }
+		}
 
-        allow = {
+		allow = {
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 4
-            RWA = {
-                all_core = {
-                                        add_core = THIS
-                                        }
-                }  
-            UBH = {
-                all_core = {
-                                        add_core = THIS
-                                        }
-                }	
-            KZB = {
-                all_core = {
-                                        add_core = THIS
-                                        }
-                }				
+		effect = {
+			badboy = 4
+			RWA = {
+				all_core = {
+										add_core = THIS
+										}
+				}  
+			UBH = {
+				all_core = {
+										add_core = THIS
+										}
+				}	
+			KZB = {
+				all_core = {
+										add_core = THIS
+										}
+				}				
 			ENG_2016 = {
-                add_core = THIS
-            } 
+				add_core = THIS
+			} 
 			2020 = { add_core = THIS }	
 			2035 = { add_core = THIS }	
-            set_country_flag = tangyska
+			set_country_flag = tangyska
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	
-    form_bantu	= {
-        picture = form_rajputana
-        potential = {
-		    tag = KON
+	form_bantu	= {
+		picture = form_rajputana
+		potential = {
+			tag = KON
 			has_country_flag = tangyska
-        }
+		}
 
-        allow = {
+		allow = {
 		civilized = yes
-            KON = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = { in_sphere = THIS }
-                        owner = { vassal_of = THIS }
-                    }
-                }
-            }
-            
-        }
+			KON = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
+			
+		}
 
-        effect = {
-            prestige = 50
+		effect = {
+			prestige = 50
 			badboy = -10
-            set_country_flag = bantu_unite
-            change_tag = BTU
+			set_country_flag = bantu_unite
+			change_tag = BTU
 			add_accepted_culture = bakongo
 			add_accepted_culture = mongo
 			add_accepted_culture = forest_bantu
@@ -291,10 +291,10 @@ collapse_modifier_isa = {
 			add_accepted_culture = lacustrine_bantu
 			add_accepted_culture = nyasa
 			add_accepted_culture = southern_bantu
-        }
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 	
 	#####################
 	#####################
@@ -303,111 +303,111 @@ collapse_modifier_isa = {
 	#####################
 	
 		claim_east_sahara = {
-        picture = form_the_rcmp
-        potential = {
-            tag = TIN
-            NOT = { has_country_flag = east_sahara }
-        }
+		picture = form_the_rcmp
+		potential = {
+			tag = TIN
+			NOT = { has_country_flag = east_sahara }
+		}
 
-        allow = {
-		    admin_reform = yes_admin_reform
-            land_reform = yes_land_reform
+		allow = {
+			admin_reform = yes_admin_reform
+			land_reform = yes_land_reform
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 7
-            COP = {
-                all_core = {
-                                        add_core = THIS
-                                        }
-                }      
-            EGY = {
-                all_core = {
-                                        add_core = THIS
-                                        }
-                }
-            TRI_1735 = {
-                add_core = THIS
-            } 
-            TRI_1731 = {
-                add_core = THIS
-            } 
+		effect = {
+			badboy = 7
+			COP = {
+				all_core = {
+										add_core = THIS
+										}
+				}	  
+			EGY = {
+				all_core = {
+										add_core = THIS
+										}
+				}
+			TRI_1735 = {
+				add_core = THIS
+			} 
+			TRI_1731 = {
+				add_core = THIS
+			} 
 			FRA_1813 = {
-                add_core = THIS
-            } 
-            ENG_1825 = {
-                add_core = THIS
-            } 
-            ENG_1818 = {
-                add_core = THIS
-            } 
-            EGY_1758 = {
-                add_core = THIS
-            } 			
-            set_country_flag = east_sahara
+				add_core = THIS
+			} 
+			ENG_1825 = {
+				add_core = THIS
+			} 
+			ENG_1818 = {
+				add_core = THIS
+			} 
+			EGY_1758 = {
+				add_core = THIS
+			} 			
+			set_country_flag = east_sahara
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 
 
 	claim_mecca = {
-        picture = form_the_rcmp
-        potential = {
-            tag = TIN
+		picture = form_the_rcmp
+		potential = {
+			tag = TIN
 			has_country_flag = east_sahara
-            NOT = { has_country_flag = mecca_claimed }
-        }
+			NOT = { has_country_flag = mecca_claimed }
+		}
 
-        allow = {
+		allow = {
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 10
-            HDJ = {
-                all_core = {
-                                        add_core = THIS
-                                        }
-                }      
-            EGY_1827 = {
-                add_core = THIS
-            } 
-            EGY_1834 = {
-                add_core = THIS
-            } 
-            EGY_1771 = {
-                add_core = THIS
-            } 		
-            set_country_flag = mecca_claimed
+		effect = {
+			badboy = 10
+			HDJ = {
+				all_core = {
+										add_core = THIS
+										}
+				}	  
+			EGY_1827 = {
+				add_core = THIS
+			} 
+			EGY_1834 = {
+				add_core = THIS
+			} 
+			EGY_1771 = {
+				add_core = THIS
+			} 		
+			set_country_flag = mecca_claimed
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	declare_caliphate = {
-        picture = form_the_rcmp
-        potential = {
-            tag = TIN
+		picture = form_the_rcmp
+		potential = {
+			tag = TIN
 			has_country_flag = mecca_claimed
-            NOT = { has_country_flag = caliphate }
-        }
+			NOT = { has_country_flag = caliphate }
+		}
 
-        allow = {
+		allow = {
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 3
+		effect = {
+			badboy = 3
 			add_accepted_culture = bedouin
 			add_accepted_culture = mashriqi
 			add_accepted_culture = misri
 			add_accepted_culture = songhai
 			add_accepted_culture = hausa
-            any_country = {
-            limit = {
-                NOT = {
+			any_country = {
+			limit = {
+				NOT = {
 				tag = TIN 
 				tag = BOS
 				tag = SEV
@@ -419,17 +419,17 @@ collapse_modifier_isa = {
 				is_culture_group = east_asian
 				}
 				OR = {
-                has_country_flag = sunni_country
+				has_country_flag = sunni_country
 				has_country_flag = shiite_country
 				}
-            }
-            country_event = 100119
-        }
-            set_country_flag = caliphate
+			}
+			country_event = 100119
+		}
+			set_country_flag = caliphate
 			government = absolute_empire
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	
 	

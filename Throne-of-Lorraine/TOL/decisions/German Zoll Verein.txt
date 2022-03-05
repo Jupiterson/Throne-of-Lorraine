@@ -1,39 +1,39 @@
 political_decisions = {
 #Originally scripted by Paradox for Victoria
 #stolen by me
-    german_zoll_verein = {
-        picture = lmu
-        potential = {
-            has_country_flag = german_nation
-            NOT = {
-                has_country_flag = joined_lmu
-            }
-        }
-        allow = {
-            year = 1845
-            invention = silver_standard
-            NOT = { war_with = BAV }
-            NOT = { war_with = LOR }
-            NOT = { war_with = HNS }
-        }
+	german_zoll_verein = {
+		picture = lmu
+		potential = {
+			has_country_flag = german_nation
+			NOT = {
+				has_country_flag = joined_lmu
+			}
+		}
+		allow = {
+			year = 1845
+			invention = silver_standard
+			NOT = { war_with = BAV }
+			NOT = { war_with = LOR }
+			NOT = { war_with = HNS }
+		}
 
-        effect = {
-            prestige = 25
-            add_country_modifier = {
-                name = latin_monetary_union
-                duration = -1
-            }
-            set_country_flag = joined_lmu
-            add_country_modifier = {
-                name = customs_union
-                duration = -1
-            }
-#            425 = { trade_goods = precious_goods }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		effect = {
+			prestige = 25
+			add_country_modifier = {
+				name = latin_monetary_union
+				duration = -1
+			}
+			set_country_flag = joined_lmu
+			add_country_modifier = {
+				name = customs_union
+				duration = -1
+			}
+#			425 = { trade_goods = precious_goods }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 
 }

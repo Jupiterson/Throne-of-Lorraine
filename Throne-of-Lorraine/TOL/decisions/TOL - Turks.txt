@@ -1,89 +1,89 @@
 political_decisions = {	
   #the realistic map ABE!
-    administrate_roads = {
-        picture = form_the_rcmp
-        potential = {
-            tag = TUR
+	administrate_roads = {
+		picture = form_the_rcmp
+		potential = {
+			tag = TUR
 			HAL = { vassal_of = THIS }
-            NOT = { has_country_flag = administrated_roads }
+			NOT = { has_country_flag = administrated_roads }
 			is_vassal = no
-        }
+		}
 
-        allow = {
-            war = no			
+		allow = {
+			war = no			
 			state_n_government = 1
 			prestige = 30
-        }
+		}
 
-        effect = {
+		effect = {
 		 random_country = {
-                limit = {
-                    tag = HAL
-                    exists = yes
-                    ai = yes
-                }
-                THIS = { inherit = HAL }
-            }
-            set_country_flag = administrated_roads
+				limit = {
+					tag = HAL
+					exists = yes
+					ai = yes
+				}
+				THIS = { inherit = HAL }
+			}
+			set_country_flag = administrated_roads
 			1160 = { add_core = TUR }				
 			TUR = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
-    }
+		}
+	}
 	
 	end_armenia = {
-        picture = alg_regency
-        potential = {
+		picture = alg_regency
+		potential = {
 		ARM = { vassal_of = THIS }
 		NOT = { HAL = { vassal_of = THIS } }
-            tag = TUR
-            NOT = { has_country_flag = ended_armenia }
+			tag = TUR
+			NOT = { has_country_flag = ended_armenia }
 			is_vassal = no
-        }
+		}
 
-        allow = {
-            war = no			
+		allow = {
+			war = no			
 			state_n_government = 1
 			prestige = 30
-        }
+		}
 
-        effect = {
+		effect = {
 		 random_country = {
-                limit = {
-                    tag = ARM
-                    exists = yes
-                    ai = yes
-                }
-                THIS = { inherit = HAL }
-            }
-            set_country_flag = ended_armenia
-        }
-    }
+				limit = {
+					tag = ARM
+					exists = yes
+					ai = yes
+				}
+				THIS = { inherit = HAL }
+			}
+			set_country_flag = ended_armenia
+		}
+	}
 	steal_yemen = {
-        picture = become_saudi_arabia
-        potential = {
+		picture = become_saudi_arabia
+		potential = {
 		tag = TUR
 		YEM = { vassal_of = ETH }
-        NOT = { has_country_flag = steal_yemen }
-        }
+		NOT = { has_country_flag = steal_yemen }
+		}
 
-        allow = {
-            war = no
+		allow = {
+			war = no
 			prestige = 60
 			year = 1946
-        }
+		}
 
-        effect = {
+		effect = {
 		war = {
-            target = ETH
-            attacker_goal = {
-                casus_belli = steal_puppet
-                country = YEM
-            }
-            defender_goal = {
-                casus_belli = status_quo
-            }
-            call_ally = yes
-        }
+			target = ETH
+			attacker_goal = {
+				casus_belli = steal_puppet
+				country = YEM
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally = yes
+		}
 			
 		relation = {
 			who = ETH
@@ -91,26 +91,26 @@ political_decisions = {
 		}
 		set_country_flag = steal_yemen
 		badboy = 7
-        }
+		}
 		ai_will_do ={ factor = 1 }
-    }
+	}
 	
 	ottoman_conquer_egypt = {
-        picture = egypt
-        potential = {
+		picture = egypt
+		potential = {
 		tag = TUR
-        NOT = { has_country_flag = ottoman_conquer_egypt }
+		NOT = { has_country_flag = ottoman_conquer_egypt }
 		is_vassal = no
-        }
+		}
 
-        allow = {
-            war = no			
+		allow = {
+			war = no			
 			is_greater_power = yes
 			prestige = 70
 			nationalism_n_imperialism = 1
-        }
+		}
 
-        effect = {
+		effect = {
 		add_core = 1755
 		add_core = 1746
 		add_core = 1751
@@ -123,43 +123,43 @@ political_decisions = {
 		}
 		set_country_flag = ottoman_conquer_egypt
 		badboy = 7
-        }
+		}
 		ai_will_do ={ factor = 1 }
-    }
+	}
 	
 	ottoman_change_culture = {
-        picture = ottoman_symbol
-        potential = {
+		picture = ottoman_symbol
+		potential = {
 		tag = TUR
-        NOT = { has_country_flag = ottoman_change_culture }
-        }
+		NOT = { has_country_flag = ottoman_change_culture }
+		}
 
-        allow = {
-            war = no			
+		allow = {
+			war = no			
 			prestige = 120
 			revolution_n_counterrevolution = 1
 			empiricism = 1
 			phenomenalism = 1
-        }
-        effect = {
+		}
+		effect = {
 			any_pop = { 
 			limit = {
-            NOT = { has_pop_culture = turkish }
+			NOT = { has_pop_culture = turkish }
 			NOT = { has_pop_culture = ottoman }
-        }
-        consciousness = 2
+		}
+		consciousness = 2
 		} 
 		primary_culture = ottoman
 		remove_accepted_culture = mashriqi
 		remove_accepted_culture = bedouin
 		set_country_flag = ottoman_change_culture
 		any_owned = {
-    		 limit = { 
+			 limit = { 
 			  AND = {
-		    	 is_core = TUR 
+				 is_core = TUR 
 				 NOT = { 
-				         is_core = BYZ 
-                         is_core = KDS
+						 is_core = BYZ 
+						 is_core = KDS
 						 is_core = ARM
 						 is_core = PNT
 						 is_core = IRQ
@@ -173,37 +173,37 @@ political_decisions = {
 		 add_core = TUR
 		 }
 		 any_owned = {
-                add_province_modifier = {
-                    name = ottoman_asimilation
-                    duration = 11000
-                }
-            }
+				add_province_modifier = {
+					name = ottoman_asimilation
+					duration = 11000
+				}
+			}
 
 		
-       }
+	   }
 		ai_will_do ={ factor = 1 }
-    }
+	}
 	ottoman_factories = {
-        picture = byzantine_triumph
-        potential = {
+		picture = byzantine_triumph
+		potential = {
 		tag = TUR
-        NOT = { has_country_flag = ottoman_factories }
-        }
+		NOT = { has_country_flag = ottoman_factories }
+		}
 
-        allow = {
-            war = no			
+		allow = {
+			war = no			
 			prestige = 60
 			money = 30000
 			state_n_government = 1
-        }
-        effect = {
+		}
+		effect = {
 		money = -25000
 		build_factory_in_capital_state = artillery_factory
 		build_factory_in_capital_state = small_arms_factory
 		build_factory_in_capital_state = ammunition_factory
 		build_factory_in_capital_state = machine_parts_factory
-       }
+	   }
 		ai_will_do ={ factor = 1 }
-    }
+	}
 	
 	}

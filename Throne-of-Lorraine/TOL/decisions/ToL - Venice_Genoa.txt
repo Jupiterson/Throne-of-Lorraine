@@ -1,71 +1,71 @@
 political_decisions = {
 	maghera_expansion = {
-        picture = budapest_city
-        potential = {
-            OR = {
-                tag = VEN
-                tag = ITA
-                tag = NIF
-            }
-            owns = 729
-            NOT = { has_global_flag = venice_expanded }
-        }
+		picture = budapest_city
+		potential = {
+			OR = {
+				tag = VEN
+				tag = ITA
+				tag = NIF
+			}
+			owns = 729
+			NOT = { has_global_flag = venice_expanded }
+		}
 
-        allow = {
-            revolution_n_counterrevolution = 1
-            money = 50000
-        }
+		allow = {
+			revolution_n_counterrevolution = 1
+			money = 50000
+		}
 
-        effect = {
-            treasury = -50000
-            set_country_flag = venice_expanded
+		effect = {
+			treasury = -50000
+			set_country_flag = venice_expanded
    
-            729 = {
-                life_rating = 5
-                add_province_modifier = { name = recently_built_city duration = 1825 }
-            }
-        }
+			729 = {
+				life_rating = 5
+				add_province_modifier = { name = recently_built_city duration = 1825 }
+			}
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 	
 	assimilate_dalmatia = {
-        picture = embrace_minority
-        potential = {
-            tag = VEN
-            NOT = { has_country_flag = schooling }
-        }
+		picture = embrace_minority
+		potential = {
+			tag = VEN
+			NOT = { has_country_flag = schooling }
+		}
 
-        allow = {
+		allow = {
 		medicine = 1
 		NOT = { school_reforms = no_schools }
-        invention = biased_multiculturalism
-        invention = social_darwinism
-        war = no
-        }
+		invention = biased_multiculturalism
+		invention = social_darwinism
+		war = no
+		}
 
-        effect = {
+		effect = {
 		set_country_flag = can_ignore_cultural_core
-           badboy = 6
+		   badboy = 6
 		   set_country_flag = schooling
 		   any_owned = { limit = { is_core = ILL } add_province_modifier = { name = croat_teacher duration = -1 } }
 		  
-        }
-        ai_will_do = { factor = 1 }
-    }
+		}
+		ai_will_do = { factor = 1 }
+	}
 
 #stolen from AOE
    demand_milan = {
 		picture = italian_trentino
 		potential = {
-                        tag = VEN
+						tag = VEN
 			NOT = { has_country_flag = demand_milan_done }
 		}
 		
 		allow = {
 			all_core = {
-                owned_by = THIS
-            }
+				owned_by = THIS
+			}
 			state_n_government = 1
 			is_greater_power = yes
 			war = no
@@ -75,10 +75,10 @@ political_decisions = {
 			set_country_flag = demand_milan_done
 			 
 			 LOM = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
+				all_core = {
+					add_core = THIS
+				}
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -87,7 +87,7 @@ political_decisions = {
 expand_west = {
 		picture = italian_islands
 		potential = {
-                        tag = VEN
+						tag = VEN
 			NOT = {
 				has_country_flag = expanded_west
 			}
@@ -96,13 +96,13 @@ expand_west = {
 			is_greater_power = yes			
 			military_score = 25
 			war = no
-                        
+						
 			
 
 		}
 		
 		allow = {
-            nationalism_n_imperialism = 1
+			nationalism_n_imperialism = 1
 			war = no
 		}
 		
@@ -147,7 +147,7 @@ expand_west = {
 		picture = italian_trentino
 		potential = {
 		AND = {
-            tag = GEN
+			tag = GEN
 			government = presidential_dictatorship
 			}
 			NOT = { has_country_flag = recoqnuer_genoa }
@@ -159,7 +159,7 @@ expand_west = {
 		
 		allow = {
 			is_greater_power = yes
-		    state_n_government = 1
+			state_n_government = 1
 			war = no
 		}
 		
@@ -167,21 +167,21 @@ expand_west = {
 			set_country_flag = recoqnuer_genoa
 			 
 			 SYC = {
-                all_core = {
-                    add_core = THIS
-                }
+				all_core = {
+					add_core = THIS
+				}
 				}
 						 SRD = {
-                all_core = {
-                    add_core = THIS
-                }
+				all_core = {
+					add_core = THIS
+				}
 				}
 				
 							 CRS = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
+				all_core = {
+					add_core = THIS
+				}
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -189,7 +189,7 @@ expand_west = {
 	greater_genoa = {
 		picture = italian_islands
 		potential = {
-                        tag = GEN
+						tag = GEN
 			NOT = {
 				has_country_flag = greater_genoa
 			}
@@ -198,15 +198,15 @@ expand_west = {
 			is_greater_power = yes
 			military_score = 15
 			war = no
-                        
+						
 			
 
 		}
 		
 	  allow = {
-        nationalism_n_imperialism = 1 
-         prestige = 50
-      }
+		nationalism_n_imperialism = 1 
+		 prestige = 50
+	  }
 		effect = {
 			740 = {
 				add_core = THIS 
@@ -224,28 +224,28 @@ expand_west = {
 expand_east = {
 		picture = reclaim_italian_lands
 		potential = {
-                        tag = GEN
+						tag = GEN
 			NOT = {
 				has_country_flag = expanded_east
 			}
 			exists = yes
-                        has_country_flag = greater_genoa
+						has_country_flag = greater_genoa
 		
 			is_greater_power = yes
 			military_score = 45
 			war = no
-                        
+						
 			
 
 		}
 		
 		allow = {
-        nationalism_n_imperialism = 1 
-            all_core = {
-                owned_by = THIS
-            }
-     }
-        
+		nationalism_n_imperialism = 1 
+			all_core = {
+				owned_by = THIS
+			}
+	 }
+		
 		
 		effect = {
 			745 = {
@@ -284,123 +284,123 @@ expand_east = {
 ####################
 
    declare_merchant_war = {
-       picture = tresury_reforms
-        potential = {
-            tag = VEN
-#            NOT = { has_country_flag = hasmanifestdestiny }
+	   picture = tresury_reforms
+		potential = {
+			tag = VEN
+#			NOT = { has_country_flag = hasmanifestdestiny }
 			NOT = { has_global_flag = merchant_war_threat }
-        }
-        allow = {
-            war = no
-            idealism = 1
-            state_n_government = 1
-            NOT = { truce_with = GEN }
-            NOT = { war_policy = pacifism }
-            NOT = { GEN = { any_owned_province = { country_units_in_province = VEN } } }
-            GEN = { is_vassal = no }
+		}
+		allow = {
+			war = no
+			idealism = 1
+			state_n_government = 1
+			NOT = { truce_with = GEN }
+			NOT = { war_policy = pacifism }
+			NOT = { GEN = { any_owned_province = { country_units_in_province = VEN } } }
+			GEN = { is_vassal = no }
 			exists = GEN
-        }
-        effect = {
-#            VEN = { set_country_flag = hasmanifestdestiny }
+		}
+		effect = {
+#			VEN = { set_country_flag = hasmanifestdestiny }
 			set_global_flag = merchant_war_threat
-            random_list = {
-                25 = { }
-                25 = { badboy = 5 }
-                25 = { badboy = 7 }
-                25 = { badboy = 10 }
-            }
-            relation = { who = GEN value = -200 }
-            diplomatic_influence = { who = GEN value = -200 }
-            leave_alliance = GEN
-            random_country = {
-                limit = {
-                    tag = GEN
-                    vassal_of = THIS
-                }
-                THIS = { release_vassal = GEN }
-            }
-            random_country = {
-                limit = {
-                    is_our_vassal = GEN
-                    NOT = { tag = THIS }
-                }
-                relation = { who = THIS value = -200 }
-                leave_alliance = THIS
-            }
-            random_country = {
-                limit = {
-                    tag = GEN
-                }
-                country_event = 100109
-            }
-            any_country = {
-                limit = {
-                    is_greater_power = yes
-                    NOT = { tag = THIS }
-                }
-                diplomatic_influence = { who = GEN value = -100 }
-            }
-            any_pop = {
-                dominant_issue = {
-                    factor = 0.05
-                    value = jingoism
-                }
-                consciousness = 2
-            }
-        }
+			random_list = {
+				25 = { }
+				25 = { badboy = 5 }
+				25 = { badboy = 7 }
+				25 = { badboy = 10 }
+			}
+			relation = { who = GEN value = -200 }
+			diplomatic_influence = { who = GEN value = -200 }
+			leave_alliance = GEN
+			random_country = {
+				limit = {
+					tag = GEN
+					vassal_of = THIS
+				}
+				THIS = { release_vassal = GEN }
+			}
+			random_country = {
+				limit = {
+					is_our_vassal = GEN
+					NOT = { tag = THIS }
+				}
+				relation = { who = THIS value = -200 }
+				leave_alliance = THIS
+			}
+			random_country = {
+				limit = {
+					tag = GEN
+				}
+				country_event = 100109
+			}
+			any_country = {
+				limit = {
+					is_greater_power = yes
+					NOT = { tag = THIS }
+				}
+				diplomatic_influence = { who = GEN value = -100 }
+			}
+			any_pop = {
+				dominant_issue = {
+					factor = 0.05
+					value = jingoism
+				}
+				consciousness = 2
+			}
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 	
 
 
-    genoa_to_venice_peace = {
-        picture = merchant_marine
-        potential = {
-            tag = GEN
-            has_global_flag = merchant_war
-		    VEN = {
+	genoa_to_venice_peace = {
+		picture = merchant_marine
+		potential = {
+			tag = GEN
+			has_global_flag = merchant_war
+			VEN = {
 					#is_disarmed = yes
 					exists = yes
 					truce_with = THIS
-		    }
+			}
 			has_country_flag = won_GEN_VEN_war
-            NOT = { has_country_flag = GEN_US_peace_agreement }
-        }
-        allow = {
-        }
-        effect = {
-            country_event = 123573
-            set_country_flag = GEN_US_peace_agreement
-            set_global_flag = genoese_victory
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+			NOT = { has_country_flag = GEN_US_peace_agreement }
+		}
+		allow = {
+		}
+		effect = {
+			country_event = 123573
+			set_country_flag = GEN_US_peace_agreement
+			set_global_flag = genoese_victory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	venice_to_genoa_peace = {
-        picture = merchant_marine
-        potential = {
-             tag = VEN 
-            has_global_flag = merchant_war
-            GEN = {
-                is_disarmed = yes
-                truce_with = THIS
-            }
-            NOT = { has_country_flag = US_GEN_peace_agreement }
+		picture = merchant_marine
+		potential = {
+			 tag = VEN 
+			has_global_flag = merchant_war
+			GEN = {
+				is_disarmed = yes
+				truce_with = THIS
+			}
+			NOT = { has_country_flag = US_GEN_peace_agreement }
 			NOT = { has_global_flag = genoese_victory }
-        }
-        allow = {
-        }
-        effect = {
-            country_event = 123560
-            VEN = { set_country_flag = US_GEN_peace_agreement }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		}
+		allow = {
+		}
+		effect = {
+			country_event = 123560
+			VEN = { set_country_flag = US_GEN_peace_agreement }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 			
 
 

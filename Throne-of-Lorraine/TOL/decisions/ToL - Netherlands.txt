@@ -1,145 +1,145 @@
 political_decisions = {
 
  embrace_low_germans = {
-        picture = embrace_minority
-        potential = {
-            tag = NET
-            any_owned_province = { any_pop = { has_pop_culture = low_german } }
-            NOT = {
-                primary_culture = low_german
-                accepted_culture = low_german
-            }
-        }
+		picture = embrace_minority
+		potential = {
+			tag = NET
+			any_owned_province = { any_pop = { has_pop_culture = low_german } }
+			NOT = {
+				primary_culture = low_german
+				accepted_culture = low_german
+			}
+		}
 
-        allow = {
-            NOT = { government = theocracy }
-            citizenship_policy = full_citizenship
-            citizens_rights = all_voting_pops
-            prestige = 50
-            state_n_government = 1
-            experimental_psychology = 1
-            NOT = {
-                any_owned_province = {
-                    culture = low_german
-                    average_militancy = 2
-                }
-            }
-        }
+		allow = {
+			NOT = { government = theocracy }
+			citizenship_policy = full_citizenship
+			citizens_rights = all_voting_pops
+			prestige = 50
+			state_n_government = 1
+			experimental_psychology = 1
+			NOT = {
+				any_owned_province = {
+					culture = low_german
+					average_militancy = 2
+				}
+			}
+		}
 
-        effect = {
-            add_accepted_culture = low_german
-            prestige = -5
-            any_pop = {
-                limit = { has_pop_culture = low_german }
-                consciousness = -4
-                militancy = -4
-            }
-            any_pop = {
-                limit = {
-                    is_primary_culture = no
-                    is_accepted_culture = no
-                }
-                consciousness = 8
-                militancy = 6
-            }
-        }
-    }
+		effect = {
+			add_accepted_culture = low_german
+			prestige = -5
+			any_pop = {
+				limit = { has_pop_culture = low_german }
+				consciousness = -4
+				militancy = -4
+			}
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
+				consciousness = 8
+				militancy = 6
+			}
+		}
+	}
 	
 	
 claim_north_sea = {
-        picture = londonderry_quay
-        potential = {
+		picture = londonderry_quay
+		potential = {
 		tag = NET		
-            NOT = {
-                has_country_flag = plattduetschnr1
-            }
-        }
-        allow = {
-                        nationalism_n_imperialism = 1 
+			NOT = {
+				has_country_flag = plattduetschnr1
+			}
+		}
+		allow = {
+						nationalism_n_imperialism = 1 
 						is_greater_power = yes
 						all_core = {
-                owned_by = THIS
-            }
-            }
-        effect = {
-            set_country_flag = plattduetschnr1
-            NET_385 = {
-                add_core = THIS
-            }
+				owned_by = THIS
+			}
+			}
+		effect = {
+			set_country_flag = plattduetschnr1
+			NET_385 = {
+				add_core = THIS
+			}
 			HAN_540 = {
-                add_core = THIS
-            }
+				add_core = THIS
+			}
 			HAN = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
+				all_core = {
+					add_core = THIS
+				}
+			}
 			528 = { add_core = THIS }
 			582 = { add_core = THIS }
 			3254 = { add_core = THIS }
-        }
-        ai_will_do = {
-            factor = 1
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	
 	
 	claim_low_germany = {
-        picture = form_south_german_confederation
-        potential = {
+		picture = form_south_german_confederation
+		potential = {
 		tag = NET	
-        has_country_flag = plattduetschnr1		
-            NOT = {
-                has_country_flag = plattduetschnr2
-            }
-        }
-        allow = {
-           empiricism = 1
+		has_country_flag = plattduetschnr1		
+			NOT = {
+				has_country_flag = plattduetschnr2
+			}
+		}
+		allow = {
+		   empiricism = 1
 		   all_core = {
-                owned_by = THIS
-            }
-            }
-        effect = {
-            set_country_flag = plattduetschnr2
-            PRU_544 = {
-                add_core = THIS
-            }
+				owned_by = THIS
+			}
+			}
+		effect = {
+			set_country_flag = plattduetschnr2
+			PRU_544 = {
+				add_core = THIS
+			}
 			PRU_546 = {
-                add_core = THIS
-            }
+				add_core = THIS
+			}
 			HOL_369 = {
-                add_core = THIS
-            }
+				add_core = THIS
+			}
 			2236 = { add_core = THIS }
-        }
-        ai_will_do = {
-            factor = 1
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	
 	unite_low_germany = {
-        picture = german_confederation
-        potential = {
+		picture = german_confederation
+		potential = {
 		tag = NET	
-        has_country_flag = plattduetschnr2		
-            NOT = {
-                has_country_flag = low_germany
-            }
-        }
-        allow = {
-           empiricism = 1
+		has_country_flag = plattduetschnr2		
+			NOT = {
+				has_country_flag = low_germany
+			}
+		}
+		allow = {
+		   empiricism = 1
 		   all_core = {
-                owned_by = THIS
-            }
-            }
-        effect = {
-            set_country_flag = low_germany
+				owned_by = THIS
+			}
+			}
+		effect = {
+			set_country_flag = low_germany
 			change_tag = NGF
 			 primary_culture = low_german
 			 add_accepted_culture = dutch
-        }
-        ai_will_do = {
-            factor = 1
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 

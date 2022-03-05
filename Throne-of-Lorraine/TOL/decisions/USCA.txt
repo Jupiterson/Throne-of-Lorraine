@@ -1,50 +1,50 @@
 political_decisions = {
-    
-    belize_purchase = {
-        picture = map_central_america
-        potential = {
-            2190 = { NOT = { owned_by = THIS } owner = { NOT = { capital_scope = { continent = north_america } } } }
-            2189 = {
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                        war = no
-                        is_greater_power = no
-                    }
-                }
-            }
-            BLZ = { exists = no }
-            OR = {
-                primary_culture = central_american
-                primary_culture = mexican
-                primary_culture = mayan
-            }
-            NOT = { has_country_flag = belize_purchase }
-        }
+	
+	belize_purchase = {
+		picture = map_central_america
+		potential = {
+			2190 = { NOT = { owned_by = THIS } owner = { NOT = { capital_scope = { continent = north_america } } } }
+			2189 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						in_sphere = THIS
+						vassal_of = THIS
+						war = no
+						is_greater_power = no
+					}
+				}
+			}
+			BLZ = { exists = no }
+			OR = {
+				primary_culture = central_american
+				primary_culture = mexican
+				primary_culture = mayan
+			}
+			NOT = { has_country_flag = belize_purchase }
+		}
 
-        allow = {
-            war = no
-            money = 55000
-            OR = {
-                is_secondary_power = yes
-                is_greater_power = yes
-            }
-            2190 = {
-                owner = {
-                    war = no
-                    relation = { who = THIS value = 100 }
-                }
-            }
-        }
+		allow = {
+			war = no
+			money = 55000
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			2190 = {
+				owner = {
+					war = no
+					relation = { who = THIS value = 100 }
+				}
+			}
+		}
 
-        effect = {
-            set_country_flag = belize_purchase
-            2190 = { owner = { country_event = 32550 } }
-        }
+		effect = {
+			set_country_flag = belize_purchase
+			2190 = { owner = { country_event = 32550 } }
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 
 }

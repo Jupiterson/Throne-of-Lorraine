@@ -1,48 +1,48 @@
 political_decisions = {
-    bul_claim_macedonia = {
+	bul_claim_macedonia = {
    picture = bulgarian_miracle
-        potential = {
+		potential = {
 			tag = BUL
-            NOT = { has_country_flag = bul_claim_macedonia }
-        }
+			NOT = { has_country_flag = bul_claim_macedonia }
+		}
 
-        allow = {         
-            war = no
-            is_vassal = no
+		allow = {		 
+			war = no
+			is_vassal = no
 			muzzle_loaded_rifles = 1
-        }
+		}
 
-        effect = {
+		effect = {
 			badboy = 8
 			TUR_806 = { add_core = BUL }
 			TUR_823 = { add_core = BUL }
 			add_core = 3371
 			add_core = 674
 			set_country_flag = bul_claim_macedonia
-        }
+		}
 
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    claim_greater_bulgaria = {
-    picture = greater_bulgaria
-        potential = {
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_greater_bulgaria = {
+	picture = greater_bulgaria
+		potential = {
 			tag = BUL
-            NOT = { has_country_flag = claim_greater_bulgaria }
-        }
+			NOT = { has_country_flag = claim_greater_bulgaria }
+		}
 
-        allow = {         
-            war = no
-            is_vassal = no
+		allow = {		 
+			war = no
+			is_vassal = no
 			nationalism_n_imperialism = 1
 			OR = {
 				is_greater_power = yes
 				is_secondary_power = yes
 			}
-        }
+		}
 
-        effect = {
+		effect = {
 			badboy = 8
 			TUR_805 = { add_core = BUL }
 			TUR_823 = { add_core = BUL }
@@ -52,52 +52,52 @@ political_decisions = {
 			add_core = 828
 			add_core = 3302
 			set_country_flag = claim_greater_bulgaria
-        }
+		}
 
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    bulgaria_take_constantinople = {
-    picture = bul_emblem
-        potential = {
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bulgaria_take_constantinople = {
+	picture = bul_emblem
+		potential = {
 			tag = BUL
-            NOT = { has_country_flag = bulgaria_take_constantinople }
+			NOT = { has_country_flag = bulgaria_take_constantinople }
 			860 = { owned_by = TUR }
-        }
+		}
 
-        allow = {         
-            war = no
+		allow = {		 
+			war = no
 			nationalism_n_imperialism = 1
 			state_n_government = 1
 			is_greater_power = yes
-        }
+		}
 
-        effect = {
+		effect = {
 			badboy = 8
 			TUR_860 = { add_core = BUL }
 			set_country_flag = bulgaria_take_constantinople
-        }
+		}
 
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    bul_claim_romania_albania = {
-    picture = first_bulgarian_empire
-        potential = {
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bul_claim_romania_albania = {
+	picture = first_bulgarian_empire
+		potential = {
 			tag = BUL
-            NOT = { has_country_flag = bul_claim_romania_albania }
-        }
+			NOT = { has_country_flag = bul_claim_romania_albania }
+		}
 
-        allow = {
+		allow = {
 			nationalism_n_imperialism = 1
 			state_n_government = 1
 			is_greater_power = yes
 			prestige = 40
-        }
+		}
 
-        effect = {
+		effect = {
 			badboy = 14
 			WAL_665 = { add_core = BUL }
 			MOL_673 = { add_core = BUL }
@@ -106,10 +106,10 @@ political_decisions = {
 			add_accepted_culture = greek
 			add_accepted_culture = albanian
 			set_country_flag = bul_claim_romania_albania
-        }
+		}
 
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

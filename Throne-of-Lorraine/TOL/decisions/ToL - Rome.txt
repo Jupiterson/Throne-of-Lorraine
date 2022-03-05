@@ -1,135 +1,135 @@
 political_decisions = {
-    corpus_iuris_civilis = {
-        picture = law_of_equality
-        potential = {
-            tag = NIR
-            NOT = { has_country_flag = corpus_iuris_civilis }
+	corpus_iuris_civilis = {
+		picture = law_of_equality
+		potential = {
+			tag = NIR
+			NOT = { has_country_flag = corpus_iuris_civilis }
 			civilization_progress = 0.50
-        }
+		}
 
-        allow = {
-            war = no
-        }
+		allow = {
+			war = no
+		}
 
-        effect = {
-            set_country_flag = corpus_iuris_civilis
+		effect = {
+			set_country_flag = corpus_iuris_civilis
 			add_country_modifier = {
-                    name = corpus_iuris_civilis
-                    duration = 3650
-                }
-        }
+					name = corpus_iuris_civilis
+					duration = 3650
+				}
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
-    roman_romanization_edict_1 = { 
-        picture = romanization
-        potential = {
-            tag = NIR
-            has_country_flag = expanded_empire
-            NOT = { has_country_flag = romanization_edict }
-        }
+	roman_romanization_edict_1 = { 
+		picture = romanization
+		potential = {
+			tag = NIR
+			has_country_flag = expanded_empire
+			NOT = { has_country_flag = romanization_edict }
+		}
 
-        allow = {
-            all_core = { owned_by = THIS }
-            war = no
-        }
+		allow = {
+			all_core = { owned_by = THIS }
+			war = no
+		}
 
-        effect = {
-            set_country_flag = romanization_edict
-            any_owned = {
-                limit = {
-                    is_core = NIR
-                }
-                add_province_modifier = {
-                    name = roman_cultural_unity_1
-                    duration = -1
-                }
-            }
-        }
+		effect = {
+			set_country_flag = romanization_edict
+			any_owned = {
+				limit = {
+					is_core = NIR
+				}
+				add_province_modifier = {
+					name = roman_cultural_unity_1
+					duration = -1
+				}
+			}
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	 roman_romanization_edict_3 = {
-        picture = romanization
-        potential = {
-            tag = NIR
+		picture = romanization
+		potential = {
+			tag = NIR
 			OR = {
-            has_country_flag = africa_will_be_retaken 
+			has_country_flag = africa_will_be_retaken 
 			has_country_flag = da_wae
-            }			 
-            NOT = { has_country_flag = romanization_edict }
-        }
+			}			 
+			NOT = { has_country_flag = romanization_edict }
+		}
 
-        allow = {
-            all_core = { owned_by = THIS }
-            war = no
-        }
+		allow = {
+			all_core = { owned_by = THIS }
+			war = no
+		}
 
-        effect = {
-            set_country_flag = romanization_edict
-            any_owned = {
-                limit = {
-                    is_core = NIR
+		effect = {
+			set_country_flag = romanization_edict
+			any_owned = {
+				limit = {
+					is_core = NIR
 					NOT = {
 					has_province_modifier = roman_cultural_unity_1
 					}
-                }
-                add_province_modifier = {
-                    name = roman_cultural_unity_2
-                    duration = -1
-                }
-            }
-        }
+				}
+				add_province_modifier = {
+					name = roman_cultural_unity_2
+					duration = -1
+				}
+			}
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	expand_the_empire = {
-        picture = roman_temple
-        potential = {
-            tag = NIR
-            ai = no 
-            NOT = { has_country_flag = expanded_empire }
-        }
+		picture = roman_temple
+		potential = {
+			tag = NIR
+			ai = no 
+			NOT = { has_country_flag = expanded_empire }
+		}
 
-        allow = {
-            is_secondary_power = yes
-            empiricism = 1
+		allow = {
+			is_secondary_power = yes
+			empiricism = 1
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 15
-            FRA_1813 = {
-                add_core = THIS
-            }
+		effect = {
+			badboy = 15
 			FRA_1813 = {
-                add_core = THIS
-            }
-		    ENG_1825 = {
-                add_core = THIS
-            }
+				add_core = THIS
+			}
+			FRA_1813 = {
+				add_core = THIS
+			}
+			ENG_1825 = {
+				add_core = THIS
+			}
 			ENG_1818 = {
-                add_core = THIS
-            }
+				add_core = THIS
+			}
 			SOK_1963 = {
-                add_core = THIS
-            }
+				add_core = THIS
+			}
 			SOK_1937 = {
-                add_core = THIS
-            }
+				add_core = THIS
+			}
 			SOK_1945 = {
-                add_core = THIS
-            }
-		                      
-            set_country_flag = expanded_empire
+				add_core = THIS
+			}
+							  
+			set_country_flag = expanded_empire
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	###Romes's Expansion###
 	#Stolen from AoE
-     #restore_Italy  (normal rome)
+	 #restore_Italy  (normal rome)
 	 #up_east (africa)
 	the_future_of_rome = {
 		picture = roman_temple
@@ -142,7 +142,7 @@ political_decisions = {
 			
 		allow = {
 			war = no
-            all_core = { owned_by = THIS }
+			all_core = { owned_by = THIS }
 			is_secondary_power = yes
 		}
 		
@@ -158,537 +158,537 @@ political_decisions = {
 	
 	
 
-    reclaim_north_africa = {
-        picture = carthage_map
-        potential = {
-            tag = NIR
-            has_country_flag = restore_Italy			
-            NOT = { has_country_flag = africa_will_be_retaken }
-        }
+	reclaim_north_africa = {
+		picture = carthage_map
+		potential = {
+			tag = NIR
+			has_country_flag = restore_Italy			
+			NOT = { has_country_flag = africa_will_be_retaken }
+		}
 
-        allow = {
-            is_secondary_power = yes
+		allow = {
+			is_secondary_power = yes
 			all_core = { owned_by = THIS }
 
-        }
+		}
 
-        effect = {
-            badboy = 15
+		effect = {
+			badboy = 15
 			
-            MOR_1683 = {
-                add_core = NIR
-            }
-            FRA_1700 = {
-                add_core = NIR
-            }
-            ALD_1704 = {
-                add_core = NIR
-            }
-            ALD_1708 = {
-                add_core = NIR
-            }
-            ALD_1718 = {
-                add_core = NIR
-            }
-            ALD_1713 = {
-                add_core = NIR
-            }
-            TUN_1726 = {
-                add_core = NIR
-            }
-            TRI_1731 = {
-                add_core = NIR
-            }
-            TRI_1735 = {
-                add_core = NIR
-            } 
-            EGY_1758 = {
-                add_core = NIR
-            }          
+			MOR_1683 = {
+				add_core = NIR
+			}
+			FRA_1700 = {
+				add_core = NIR
+			}
+			ALD_1704 = {
+				add_core = NIR
+			}
+			ALD_1708 = {
+				add_core = NIR
+			}
+			ALD_1718 = {
+				add_core = NIR
+			}
+			ALD_1713 = {
+				add_core = NIR
+			}
+			TUN_1726 = {
+				add_core = NIR
+			}
+			TRI_1731 = {
+				add_core = NIR
+			}
+			TRI_1735 = {
+				add_core = NIR
+			} 
+			EGY_1758 = {
+				add_core = NIR
+			}		  
 			any_country = {
-                limit = {
+				limit = {
 					OR = {
 						primary_culture = maghrebi
 						primary_culture = berber
 					}
-                }
-                relation = {
-                    who = THIS
-                    value = -200
-                }
-            }
-            set_country_flag = africa_will_be_retaken
+				}
+				relation = {
+					who = THIS
+					value = -200
+				}
+			}
+			set_country_flag = africa_will_be_retaken
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 
 
-    claim_africa = {
-        picture = carthage_map
-        potential = {
-            tag = NIR
-            has_country_flag = up_east 
-            NOT = { has_country_flag = da_wae }
-        }
+	claim_africa = {
+		picture = carthage_map
+		potential = {
+			tag = NIR
+			has_country_flag = up_east 
+			NOT = { has_country_flag = da_wae }
+		}
 
-        allow = {
-            is_secondary_power = yes
+		allow = {
+			is_secondary_power = yes
 			all_core = { owned_by = THIS }
 
-        }
+		}
 
-        effect = {
-            badboy = 15
+		effect = {
+			badboy = 15
 			
-            OYO = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
-            EGY_1842 = {
-                add_core = NIR
-            }
-            FRA_1927 = {
-                add_core = NIR
-            }
-            FRA_1965 = {
-                add_core = NIR
-            }
-            ENG_1956 = {
-                add_core = NIR
-            }         
-                any_country = {
-                limit = {
+			OYO = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			EGY_1842 = {
+				add_core = NIR
+			}
+			FRA_1927 = {
+				add_core = NIR
+			}
+			FRA_1965 = {
+				add_core = NIR
+			}
+			ENG_1956 = {
+				add_core = NIR
+			}		 
+				any_country = {
+				limit = {
 					OR = {
 						primary_culture = forest_bantu
 						primary_culture = yoruba
 					}
-                }
-                relation = {
-                    who = THIS
-                    value = -200
-                }
-            }
-            set_country_flag = da_wae
+				}
+				relation = {
+					who = THIS
+					value = -200
+				}
+			}
+			set_country_flag = da_wae
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 
 		
 form_byzantium = {
-        picture = byzantine_triumph
-        potential = {
-		    is_culture_group = pan_roman
-            BYZ = { exists = no }
+		picture = byzantine_triumph
+		potential = {
+			is_culture_group = pan_roman
+			BYZ = { exists = no }
 			NOT = { OR = { tag = NIR tag = RME } }
-        }
+		}
 
-        allow = {
+		allow = {
 			
-            war = no
-            is_vassal = no
-            nationalism_n_imperialism = 1
-            BYZ = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = { in_sphere = THIS }
-                        owner = { vassal_of = THIS }
-                    }
-                }
-            }
-            
-        }
+			war = no
+			is_vassal = no
+			nationalism_n_imperialism = 1
+			BYZ = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
+			
+		}
 
-        effect = {
-            prestige = 50
+		effect = {
+			prestige = 50
 			badboy = -10
-            869 = {
-                change_province_name = "Smyrna"
-            }
-            862 = {
-                change_province_name = "Nicomedia"
-            }
-            861 = {
-                change_province_name = "Skoutarion"
-            }
-            863 = {
-                change_province_name = "Prusa"
-            }
-            864 = {
-                change_province_name = "Palaeokastron"
-            }
-            865 = {
-                change_province_name = "Dardanellia"
-            }
-            867 = {
-                change_province_name = "Cotyaeum"
-            }
-            870 = {
-                change_province_name = "Magnesia"
-            }
-            871 = {
-                change_province_name = "Laodicea"
-            }
-            872 = {
-                change_province_name = "Mylasa"
-            }
-            853 = {
-                change_province_name = "Argyrocastron"
-            }
-            824 = {
-                change_province_name = "Ioannina"
-            }
-            823 = {
-                change_province_name = "Christoupolis"
-            }
-            830 = {
-                change_province_name = "Alexandroupoli"
-            }
-            828 = {
-                change_province_name = "Adrianople"
-            }
-            858 = {
-                change_province_name = "Saranta Ekklisies"
-            }
-            859 = {
-                change_province_name = "Callipolis"
-            }
-            set_country_flag = byzantine_revival
-            change_tag = BYZ
+			869 = {
+				change_province_name = "Smyrna"
+			}
+			862 = {
+				change_province_name = "Nicomedia"
+			}
+			861 = {
+				change_province_name = "Skoutarion"
+			}
+			863 = {
+				change_province_name = "Prusa"
+			}
+			864 = {
+				change_province_name = "Palaeokastron"
+			}
+			865 = {
+				change_province_name = "Dardanellia"
+			}
+			867 = {
+				change_province_name = "Cotyaeum"
+			}
+			870 = {
+				change_province_name = "Magnesia"
+			}
+			871 = {
+				change_province_name = "Laodicea"
+			}
+			872 = {
+				change_province_name = "Mylasa"
+			}
+			853 = {
+				change_province_name = "Argyrocastron"
+			}
+			824 = {
+				change_province_name = "Ioannina"
+			}
+			823 = {
+				change_province_name = "Christoupolis"
+			}
+			830 = {
+				change_province_name = "Alexandroupoli"
+			}
+			828 = {
+				change_province_name = "Adrianople"
+			}
+			858 = {
+				change_province_name = "Saranta Ekklisies"
+			}
+			859 = {
+				change_province_name = "Callipolis"
+			}
+			set_country_flag = byzantine_revival
+			change_tag = BYZ
 			
-        }
+		}
 
-        ai_will_do = { factor = 1 }
-    }
-	
-    balkan_themes_retaken = {
-        picture = byzantine_triumph
-        potential = {
-            tag = BYZ
-            has_country_flag = balkan_themes_will_be_retaken
-            NOT = { has_country_flag = byzantine_next_step }
-        }
-
-        allow = {
-            NOT = { has_country_flag = byzantine_next_step }
-            is_greater_power = yes
-            all_core = { owned_by = THIS }
-            war = no
-        }
-
-        effect = {
-            prestige = 45
-            809 = { change_province_name = "Serdonpolis" }
-            810 = { change_province_name = "Bononia" }
-            812 = { change_province_name = "Storgosia" }
-            811 = { change_province_name = "Sexaginta Prista" }
-            813 = { change_province_name = "Fyllovolos" }
-            814 = { change_province_name = "Theodorias" }
-            817 = { change_province_name = "Pyrgos" }
-            815 = { change_province_name = "Philippopolis" }
-            816 = { change_province_name = "Irinopolis" }
-            808 = { change_province_name = "Skaptopara" }
-            806 = { change_province_name = "Scupi" }
-            1780 = { change_province_name = "Deborus" }
-            818 = { change_province_name = "Dorostolon" }
-            674 = { change_province_name = "Konstantia" }
-            3371 = { change_province_name = "Callatis" }
-            675 = { change_province_name = "Aegyssus" }
-            852 = { change_province_name = "Aulon" }
-            807 = { change_province_name = "Voutelion" }
-            849 = { change_province_name = "Theranda" }
-            851 = { change_province_name = "Dyrrhachium" }
-            850 = { change_province_name = "Scodra" }
-            2582 = { change_province_name = "Ascruvium" }
-            2583 = { change_province_name = "Ketigni" }
-            800 = { change_province_name = "Olcinium" }
-            2569 = { change_province_name = "Anagastum" }
-            2577 = { change_province_name = "Pirustavium" }
-            798 = { change_province_name = "Nysos" }
-            802 = { change_province_name = "Justiniana Secunda" }
-            803 = { change_province_name = "Theranda" }
-            804 = { change_province_name = "Nea Agora" }
-            799 = { change_province_name = "Dendra" }
-            809 = { state_scope = { change_region_name = "Moesia" } }
-            817 = { state_scope = { change_region_name = "Paristrion" } }
-            818 = { state_scope = { change_region_name = "Karvuna" } }
-            849 = { state_scope = { change_region_name = "Dyrrhachium" } }
-            2582 = { state_scope = { change_region_name = "Praevalitana" } }
-            798 = { state_scope = { change_region_name = "Dardania" } }
-            any_pop = {
-                    limit = { culture = serb }
-                    militancy = 6
-                    consciousness = 6
-            }
-            any_pop = {
-                    limit = { culture = bulgarian }
-                    militancy = 9
-                    consciousness = 9
-            }
-            any_pop = {
-                    limit = { culture = albanian }
-                    militancy = 8
-                    consciousness = 8
-            }
-            any_pop = {
-                    limit = { culture = romanian }
-                    militancy = 3
-                    consciousness = 3
-            }
-            set_country_flag = byzantine_next_step
-        }
 		ai_will_do = { factor = 1 }
-    }
+	}
+	
+	balkan_themes_retaken = {
+		picture = byzantine_triumph
+		potential = {
+			tag = BYZ
+			has_country_flag = balkan_themes_will_be_retaken
+			NOT = { has_country_flag = byzantine_next_step }
+		}
+
+		allow = {
+			NOT = { has_country_flag = byzantine_next_step }
+			is_greater_power = yes
+			all_core = { owned_by = THIS }
+			war = no
+		}
+
+		effect = {
+			prestige = 45
+			809 = { change_province_name = "Serdonpolis" }
+			810 = { change_province_name = "Bononia" }
+			812 = { change_province_name = "Storgosia" }
+			811 = { change_province_name = "Sexaginta Prista" }
+			813 = { change_province_name = "Fyllovolos" }
+			814 = { change_province_name = "Theodorias" }
+			817 = { change_province_name = "Pyrgos" }
+			815 = { change_province_name = "Philippopolis" }
+			816 = { change_province_name = "Irinopolis" }
+			808 = { change_province_name = "Skaptopara" }
+			806 = { change_province_name = "Scupi" }
+			1780 = { change_province_name = "Deborus" }
+			818 = { change_province_name = "Dorostolon" }
+			674 = { change_province_name = "Konstantia" }
+			3371 = { change_province_name = "Callatis" }
+			675 = { change_province_name = "Aegyssus" }
+			852 = { change_province_name = "Aulon" }
+			807 = { change_province_name = "Voutelion" }
+			849 = { change_province_name = "Theranda" }
+			851 = { change_province_name = "Dyrrhachium" }
+			850 = { change_province_name = "Scodra" }
+			2582 = { change_province_name = "Ascruvium" }
+			2583 = { change_province_name = "Ketigni" }
+			800 = { change_province_name = "Olcinium" }
+			2569 = { change_province_name = "Anagastum" }
+			2577 = { change_province_name = "Pirustavium" }
+			798 = { change_province_name = "Nysos" }
+			802 = { change_province_name = "Justiniana Secunda" }
+			803 = { change_province_name = "Theranda" }
+			804 = { change_province_name = "Nea Agora" }
+			799 = { change_province_name = "Dendra" }
+			809 = { state_scope = { change_region_name = "Moesia" } }
+			817 = { state_scope = { change_region_name = "Paristrion" } }
+			818 = { state_scope = { change_region_name = "Karvuna" } }
+			849 = { state_scope = { change_region_name = "Dyrrhachium" } }
+			2582 = { state_scope = { change_region_name = "Praevalitana" } }
+			798 = { state_scope = { change_region_name = "Dardania" } }
+			any_pop = {
+					limit = { culture = serb }
+					militancy = 6
+					consciousness = 6
+			}
+			any_pop = {
+					limit = { culture = bulgarian }
+					militancy = 9
+					consciousness = 9
+			}
+			any_pop = {
+					limit = { culture = albanian }
+					militancy = 8
+					consciousness = 8
+			}
+			any_pop = {
+					limit = { culture = romanian }
+					militancy = 3
+					consciousness = 3
+			}
+			set_country_flag = byzantine_next_step
+		}
+		ai_will_do = { factor = 1 }
+	}
 	
 	#################
 	#------BYZ------#
 	#################
 	
 	reclaim_levant_byz = {
-        picture = map_levant
-        potential = {
-            tag = BYZ
-            ai = no 
-            NOT = { has_country_flag = levant }
-        }
+		picture = map_levant
+		potential = {
+			tag = BYZ
+			ai = no 
+			NOT = { has_country_flag = levant }
+		}
 
-        allow = {
-            empiricism = 1
+		allow = {
+			empiricism = 1
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 8
-            EGY_903 = {
-                add_core = THIS
-            }
+		effect = {
+			badboy = 8
+			EGY_903 = {
+				add_core = THIS
+			}
 			EGY_897 = {
-                add_core = THIS
-            }
-		    EGY_915 = {
-                add_core = THIS
-            }
+				add_core = THIS
+			}
+			EGY_915 = {
+				add_core = THIS
+			}
 			EGY_910 = {
-                add_core = THIS
-            }
+				add_core = THIS
+			}
 			EGY_921 = {
-                add_core = THIS
-            }
+				add_core = THIS
+			}
 			EGY_1755 = {
-                add_core = THIS
-            }	                      
-            set_country_flag = levant
+				add_core = THIS
+			}						  
+			set_country_flag = levant
 			add_accepted_culture = syriac   
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	reclaim_egypt = {
-        picture = egypt
-        potential = {
-            tag = BYZ
-            ai = no 
+		picture = egypt
+		potential = {
+			tag = BYZ
+			ai = no 
 			has_country_flag = levant
-            NOT = { has_country_flag = egypt }
-        }
+			NOT = { has_country_flag = egypt }
+		}
 
-        allow = {
-            empiricism = 1
+		allow = {
+			empiricism = 1
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 8
-            COP = {
-                all_core = {
-                                        add_core = THIS
-                                        }
-                }                   
-            set_country_flag = egypt
+		effect = {
+			badboy = 8
+			COP = {
+				all_core = {
+										add_core = THIS
+										}
+				}				   
+			set_country_flag = egypt
 			add_accepted_culture = copt   
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	reclaim_maghreb = {
-        picture = form_maghreb
-        potential = {
-            tag = BYZ
-            ai = no 
+		picture = form_maghreb
+		potential = {
+			tag = BYZ
+			ai = no 
 			has_country_flag = egypt
-            NOT = { has_country_flag = maghreb }
-        }
+			NOT = { has_country_flag = maghreb }
+		}
 
-        allow = {
+		allow = {
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 8
-            TUN = {
-                all_core = {
-                                        add_core = THIS
-                                        }
-                } 
-            FRA_1700 = {
-                add_core = THIS
-            }	
-            ALD_1704 = {
-                add_core = THIS
-            }
-            ALD_1708 = {
-                add_core = THIS
-            }		
-            3290 = { add_core = THIS }	
-            1736 = { add_core = THIS }
+		effect = {
+			badboy = 8
+			TUN = {
+				all_core = {
+										add_core = THIS
+										}
+				} 
+			FRA_1700 = {
+				add_core = THIS
+			}	
+			ALD_1704 = {
+				add_core = THIS
+			}
+			ALD_1708 = {
+				add_core = THIS
+			}		
+			3290 = { add_core = THIS }	
+			1736 = { add_core = THIS }
 			1734 = { add_core = THIS }			
-            1735 = { add_core = THIS }	
-            1737 = { add_core = THIS }	
-            1740 = { add_core = THIS }	
-            1732 = { add_core = THIS }	
-            1733 = { add_core = THIS }	
-            1731 = { add_core = THIS }					
-            set_country_flag = maghreb
+			1735 = { add_core = THIS }	
+			1737 = { add_core = THIS }	
+			1740 = { add_core = THIS }	
+			1732 = { add_core = THIS }	
+			1733 = { add_core = THIS }	
+			1731 = { add_core = THIS }					
+			set_country_flag = maghreb
 			add_accepted_culture = copt   
-        }
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	
 	on_to_italia = {
-        picture = italian_islands
-        potential = {
-            tag = BYZ
-            ai = no 
+		picture = italian_islands
+		potential = {
+			tag = BYZ
+			ai = no 
 			has_country_flag = maghreb
-            NOT = { has_country_flag = o_t_italia }
-        }
+			NOT = { has_country_flag = o_t_italia }
+		}
 
-        allow = {
+		allow = {
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 8
+		effect = {
+			badboy = 8
 			PAP = {
 				all_core = {
-                    add_core = THIS
-                    }
-                } 
-            NAP = {
-                all_core = {
-                    add_core = THIS
-                    }
-                } 
+					add_core = THIS
+					}
+				} 
+			NAP = {
+				all_core = {
+					add_core = THIS
+					}
+				} 
 			SYC = {
-                all_core = {
-                    add_core = THIS
-                    }
-                }
+				all_core = {
+					add_core = THIS
+					}
+				}
 			TCS = {
-                all_core = {
-                    add_core = THIS
-                    }
-                }
-            SAR_765 = {
-                add_core = THIS
-            }				
-            set_country_flag = o_t_italia
+				all_core = {
+					add_core = THIS
+					}
+				}
+			SAR_765 = {
+				add_core = THIS
+			}				
+			set_country_flag = o_t_italia
 			add_accepted_culture = central_italian 
-            add_accepted_culture = south_italian
-            add_accepted_culture = sicilian		
-        }
+			add_accepted_culture = south_italian
+			add_accepted_culture = sicilian		
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	form_rome = {
-        picture = roman_map
-        potential = {
-		    tag = BYZ
+		picture = roman_map
+		potential = {
+			tag = BYZ
 			has_country_flag = o_t_italia
-        }
+		}
 
-        allow = {
+		allow = {
 			owns = 749
-            war = no
-            BYZ = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = { in_sphere = THIS }
-                        owner = { vassal_of = THIS }
-                    }
-                }
-            }
-            
-        }
+			war = no
+			BYZ = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
+			
+		}
 
-        effect = {
-            prestige = 50
+		effect = {
+			prestige = 50
 			badboy = -10
-            set_country_flag = AETERNA_VITTRIX
-            change_tag = RME
+			set_country_flag = AETERNA_VITTRIX
+			change_tag = RME
 			add_accepted_culture = north_italian
-            add_accepted_culture = venetian				
+			add_accepted_culture = venetian				
 			capital = 749
-        }
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 	
-    coast_romans = {
-        picture = roman_map
-        potential = {
-            tag = RME
-            ai = no 
+	coast_romans = {
+		picture = roman_map
+		potential = {
+			tag = RME
+			ai = no 
 			has_country_flag = AETERNA_VITTRIX
-            NOT = { has_country_flag = coast_romans }
-        }
+			NOT = { has_country_flag = coast_romans }
+		}
 
-        allow = {
+		allow = {
 			all_core = { owned_by = THIS }
-        }
+		}
 
-        effect = {
-            badboy = 15
+		effect = {
+			badboy = 15
 			OCC = {
 				all_core = {
-                    add_core = THIS
-                    }
-                } 
-		    ARP = {
+					add_core = THIS
+					}
+				} 
+			ARP = {
 				all_core = {
-                    add_core = THIS
-                    }
-                } 
-            ITA = {
-                all_core = {
-                    add_core = THIS
-                    }
-                } 
+					add_core = THIS
+					}
+				} 
+			ITA = {
+				all_core = {
+					add_core = THIS
+					}
+				} 
 			ARN = {
-                all_core = {
-                    add_core = THIS
-                    }
-                }		
-            ILL = {
-                all_core = {
-                    add_core = THIS
-                    }
-                }				
-            set_country_flag = coast_romans
+				all_core = {
+					add_core = THIS
+					}
+				}		
+			ILL = {
+				all_core = {
+					add_core = THIS
+					}
+				}				
+			set_country_flag = coast_romans
 			add_accepted_culture = occitan 
-            add_accepted_culture = provencial
-            add_accepted_culture = catalan
-            add_accepted_culture = romansh
-            add_accepted_culture = aragonese
-            add_accepted_culture = arpitan				
-        }
+			add_accepted_culture = provencial
+			add_accepted_culture = catalan
+			add_accepted_culture = romansh
+			add_accepted_culture = aragonese
+			add_accepted_culture = arpitan				
+		}
 		ai_will_do = { factor = 1 }
-    }
+	}
 	
 	
 }
