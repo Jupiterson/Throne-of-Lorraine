@@ -1,45 +1,45 @@
 province_event = {
-    id = 60168004
-    title = "EVTNAME60168004"
-    desc = "EVTDESC60168004"
+	id = 60168004
+	title = "EVTNAME60168004"
+	desc = "EVTDESC60168004"
 
-    allow_multiple_instances = no
+	allow_multiple_instances = no
 
-    trigger = {
-        OR = {
-            unit_in_battle = yes
-            country_units_in_province = REB
-        }
-        has_building = fort
-    }
+	trigger = {
+		OR = {
+			unit_in_battle = yes
+			country_units_in_province = REB
+		}
+		has_building = fort
+	}
 
-    mean_time_to_happen = { months = 600 }
+	mean_time_to_happen = { months = 600 }
 
-    option = {
-        name = "EVT60168004OPTA"
-        fort = -1
-    }
+	option = {
+		name = "EVT60168004OPTA"
+		fort = -1
+	}
 }
 
 province_event = {
-    id = 60168005
-    title = "EVTNAME60168005"
-    desc = "EVTDESC60168005"
+	id = 60168005
+	title = "EVTNAME60168005"
+	desc = "EVTDESC60168005"
 
-    allow_multiple_instances = no
+	allow_multiple_instances = no
 
-    trigger = {
-        OR = {
-            unit_in_battle = yes
-            country_units_in_province = REB
-        }
-        has_building = railroad
-    }
+	trigger = {
+		OR = {
+			unit_in_battle = yes
+			country_units_in_province = REB
+		}
+		has_building = railroad
+	}
 
-    mean_time_to_happen = { months = 600 }
+	mean_time_to_happen = { months = 600 }
 
-    option = {
-        name = "EVT60168005OPTA"
-        infrastructure = -1
-    }
+	option = {
+		name = "EVT60168005OPTA"
+		infrastructure = -1
+	}
 }

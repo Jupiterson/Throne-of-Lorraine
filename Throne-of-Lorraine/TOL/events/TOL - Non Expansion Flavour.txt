@@ -2,180 +2,180 @@
 ##-HANSA FLAVOUR-#
 ##################
 country_event = {
-    id = 34611
-    title = "EVTNAME34610"
-    desc = "EVTDESC34610"
-    picture = "hamburg_great_fire"
+	id = 34611
+	title = "EVTNAME34610"
+	desc = "EVTDESC34610"
+	picture = "hamburg_great_fire"
 
-    trigger = {	    
-        NOT = { has_global_flag = hamburg_great_fire }
+	trigger = {		
+		NOT = { has_global_flag = hamburg_great_fire }
 		tag = BRN
-        owns = 549
+		owns = 549
 		year = 1843
-        549 = { NOT = { has_province_modifier = rebuilding_city } }
-    }
+		549 = { NOT = { has_province_modifier = rebuilding_city } }
+	}
 
-    fire_only_once = yes
+	fire_only_once = yes
 
-      mean_time_to_happen = {
-        months = 15
-    }
+	  mean_time_to_happen = {
+		months = 15
+	}
 
-        option = {
-        name = "Completely rebuild Berlin and help those in need!"
-        set_global_flag = hamburg_great_fire
-        treasury = -1000000  #1mil
-        549 = { infrastructure = 1 }
-        random_list = {
-            33 = { 
+		option = {
+		name = "Completely rebuild Berlin and help those in need!"
+		set_global_flag = hamburg_great_fire
+		treasury = -1000000  #1mil
+		549 = { infrastructure = 1 }
+		random_list = {
+			33 = { 
 				549 = {
 					add_province_modifier = {
 						name = rebuilding_city
 						duration = 910
-                    }
-                }
-            }
-            33 = { 
+					}
+				}
+			}
+			33 = { 
 				549 = {
 					add_province_modifier = {
 						name = rebuilding_city
 						duration = 730
-                    }
-                }
-            }
-            33 = { 
+					}
+				}
+			}
+			33 = { 
 				549 = {
 					add_province_modifier = {
 						name = rebuilding_city
 						duration = 550
-                    }
-                }
-            }
-        }
-        ai_chance = {
-            factor = 15
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 15
 		}
 	}
 	
 	option = {
-        name = "Relocate everything to Potsdam"
-        set_global_flag = hamburg_great_fire
+		name = "Relocate everything to Potsdam"
+		set_global_flag = hamburg_great_fire
 		set_global_flag = no_chatham
-        treasury = -50000
-        3376 = { infrastructure = 1 }
+		treasury = -50000
+		3376 = { infrastructure = 1 }
 		 549 = { any_pop = { limit = { has_pop_culture = north_german } move_pop = 3376 } }
 		BRN = {
 		capital = 3376
 		}
-        random_list = {
-            33 = { 3376 = {
-            add_province_modifier = {
-                name = recently_built_city
-                duration = 910
-                        }
-                    }
-                }
-            33 = { 3376 = {
-                add_province_modifier = {
-                    name = recently_built_city
-                    duration = 730
-                            }
-                        }
-                    }
-            33 = { 3376 = {
-                add_province_modifier = {
-                    name = recently_built_city
-                    duration = 550
-                        }
-                    }
-                }
-            }
-        
-        ai_chance = {
-            factor = 75
-            }
-        }
+		random_list = {
+			33 = { 3376 = {
+			add_province_modifier = {
+				name = recently_built_city
+				duration = 910
+						}
+					}
+				}
+			33 = { 3376 = {
+				add_province_modifier = {
+					name = recently_built_city
+					duration = 730
+							}
+						}
+					}
+			33 = { 3376 = {
+				add_province_modifier = {
+					name = recently_built_city
+					duration = 550
+						}
+					}
+				}
+			}
+		
+		ai_chance = {
+			factor = 75
+			}
+		}
 		
 
-    option = {
-        name = "Let them burn"
-        set_global_flag = hamburg_great_fire
+	option = {
+		name = "Let them burn"
+		set_global_flag = hamburg_great_fire
 		set_global_flag = no_chatham
-	    BRN = {
+		BRN = {
 		capital = 3376
 		}
-        random_list = {
-                20 = { 549 = { any_pop = { reduce_pop = 0.50 } } }
+		random_list = {
+				20 = { 549 = { any_pop = { reduce_pop = 0.50 } } }
 				20 = { 549 = { any_pop = { reduce_pop = 0.65 } } }
-                20 = { 549 = { any_pop = { reduce_pop = 0.75 } } }
-            }
-        549 = {
+				20 = { 549 = { any_pop = { reduce_pop = 0.75 } } }
+			}
+		549 = {
 					add_province_modifier = {
 						name = rebuilding_city
 						duration = 730
-                    }
-                }			
-        ai_chance = {
-            factor = 10
-        }
+					}
+				}			
+		ai_chance = {
+			factor = 10
+		}
  }
 }
 
 
 country_event = {
 
-    id = 100102
-    title = "EVTN100102"
-    desc = "EVTDESC100102"
-    picture = "db_frage"
-    trigger = {
-        tag = HNS
+	id = 100102
+	title = "EVTN100102"
+	desc = "EVTDESC100102"
+	picture = "db_frage"
+	trigger = {
+		tag = HNS
 		owns = 530
-        impressionism = 1 
-        NOT = {
-            has_country_flag = Cathedral
-            }
-        }
-        fire_only_once = yes
-    mean_time_to_happen =  {
-        months = 6
+		impressionism = 1 
+		NOT = {
+			has_country_flag = Cathedral
+			}
+		}
+		fire_only_once = yes
+	mean_time_to_happen =  {
+		months = 6
 
-        modifier = {
-            factor = 0.85 #increase likelihood to happen
-            year = 1853
-        }
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1853
+		}
 
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1860
-        }
-    }
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1860
+		}
+	}
 
-    option = {
-        name = "Greater and Grander!"
+	option = {
+		name = "Greater and Grander!"
 		money = -3000
-        prestige = 15
+		prestige = 15
 		badboy = 2
 		any_pop = { limit = { has_pop_religion = catholic } consciousness = -2 militancy = -2 }
-        set_country_flag = Cathedral
-    }
+		set_country_flag = Cathedral
+	}
 	
 	
-    option = {
-        name = "Modest and Beautiful"
+	option = {
+		name = "Modest and Beautiful"
 		money = -1000
-        prestige = 5
+		prestige = 5
 		badboy = -1
 		any_pop = { limit = { has_pop_religion = catholic } consciousness = -1 militancy = -1 }
-        set_country_flag = Cathedral
-    }
+		set_country_flag = Cathedral
+	}
 	
    option = {
-        name = "A waste of time and money"
-        prestige = -15
+		name = "A waste of time and money"
+		prestige = -15
 		any_pop = { limit = { has_pop_religion = catholic } consciousness = 1 militancy = 1 }
-        set_country_flag = Cathedral
-    }
+		set_country_flag = Cathedral
+	}
 }
 ####################
 #-LORRAINE FLAVOUR-#
@@ -183,222 +183,222 @@ country_event = {
 
 #German anthem
 country_event = {
-    id = 100103
-    title = "An Anthem in Two Languages"
-    desc  = "EVTDESC100103"
-    picture = "Deutschlandlied"
-    fire_only_once = yes
+	id = 100103
+	title = "An Anthem in Two Languages"
+	desc  = "EVTDESC100103"
+	picture = "Deutschlandlied"
+	fire_only_once = yes
 
-    trigger = {
-        NOT = { has_country_flag = german_anthem }
-        tag = LOR
+	trigger = {
+		NOT = { has_country_flag = german_anthem }
+		tag = LOR
 		empiricism = 1
-    }
+	}
 
-    mean_time_to_happen = { months = 12 }
+	mean_time_to_happen = { months = 12 }
 
-    option = {
-        name  = "Good joke"
-        prestige = 15
-        any_pop = {
-            limit = { is_culture_group = germanic }
-            ideology = { value = reactionary factor = 0.05 }
-            ideology = { value = conservative factor = 0.10 }
-            consciousness = -1
-        }
+	option = {
+		name  = "Good joke"
+		prestige = 15
+		any_pop = {
+			limit = { is_culture_group = germanic }
+			ideology = { value = reactionary factor = 0.05 }
+			ideology = { value = conservative factor = 0.10 }
+			consciousness = -1
+		}
 		  any_pop = {
-            limit = { is_culture_group = germanic }
-            ideology = { value = reactionary factor = 0.05 }
-            ideology = { value = conservative factor = 0.10 }
-            consciousness = -1
-        }
-        set_country_flag = german_anthem
+			limit = { is_culture_group = germanic }
+			ideology = { value = reactionary factor = 0.05 }
+			ideology = { value = conservative factor = 0.10 }
+			consciousness = -1
+		}
+		set_country_flag = german_anthem
 
-        ai_chance = {
-            factor = 40
-            modifier = {
-                factor = 10
-                primary_culture = north_german
-            }
-            modifier = {
-                factor = 0
-                primary_culture = south_german
-            }
-            modifier = {
-                factor = 1.5
-                ruling_party_ideology = reactionary
-            }
-            modifier = {
-                factor = 0.25
-                ruling_party_ideology = liberal
-            }
-        }
-    }
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 10
+				primary_culture = north_german
+			}
+			modifier = {
+				factor = 0
+				primary_culture = south_german
+			}
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 0.25
+				ruling_party_ideology = liberal
+			}
+		}
+	}
 
-    option = {
-        name  = "Thats a great Anthem"
-        prestige = 25
+	option = {
+		name  = "Thats a great Anthem"
+		prestige = 25
 		badboy = -2
-        any_pop = {
-            limit = { is_culture_group = germanic }
-            ideology = { value = liberal factor = 0.15 }
-            consciousness = -3
-            militancy = -1
-        }
 		any_pop = {
-            limit = { has_pop_culture = french }
-            ideology = { value = liberal factor = 0.15 }
-            consciousness = -3
-            militancy = -1
-        }
-        set_country_flag = german_anthem
-
-        ai_chance = {
-            factor = 40
-            modifier = {
-                factor = 10
-                primary_culture = south_german
-            }
-            modifier = {
-                factor = 2.5
-                government = democracy
-            }
-            modifier = {
-                factor = 2.5
-                ruling_party_ideology = liberal
-            }
-        }
-    }
-
-    option = {
-        name  = "United but still seperate in nature"
-        prestige = 20
-        any_pop = {
-            limit = { is_culture_group = germanic }
-            ideology = { value = conservative factor = 0.05 }
-            ideology = { value = liberal factor = 0.10 }
-            consciousness = -1
-            militancy = -1
-        }
+			limit = { is_culture_group = germanic }
+			ideology = { value = liberal factor = 0.15 }
+			consciousness = -3
+			militancy = -1
+		}
 		any_pop = {
-            limit = { has_pop_culture = germanic }
-            ideology = { value = conservative factor = 0.05 }
-            ideology = { value = liberal factor = 0.10 }
-            consciousness = -1
-            militancy = -1
-        }
-        set_country_flag = german_anthem
+			limit = { has_pop_culture = french }
+			ideology = { value = liberal factor = 0.15 }
+			consciousness = -3
+			militancy = -1
+		}
+		set_country_flag = german_anthem
 
-        ai_chance = {
-            factor = 10
-            modifier = {
-                factor = 2.5
-                government = democracy
-            }
-            modifier = {
-                factor = 2.5
-                ruling_party_ideology = liberal
-            }
-        }
-    }
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 10
+				primary_culture = south_german
+			}
+			modifier = {
+				factor = 2.5
+				government = democracy
+			}
+			modifier = {
+				factor = 2.5
+				ruling_party_ideology = liberal
+			}
+		}
+	}
 
-    option = {
-        name  = "United in Nation but at heart different"
-        prestige = 20
-        any_pop = {
-            limit = { is_culture_group = germanic }
-            ideology = { value = conservative factor = 0.15 }
-            militancy = -5
-        }
+	option = {
+		name  = "United but still seperate in nature"
+		prestige = 20
+		any_pop = {
+			limit = { is_culture_group = germanic }
+			ideology = { value = conservative factor = 0.05 }
+			ideology = { value = liberal factor = 0.10 }
+			consciousness = -1
+			militancy = -1
+		}
+		any_pop = {
+			limit = { has_pop_culture = germanic }
+			ideology = { value = conservative factor = 0.05 }
+			ideology = { value = liberal factor = 0.10 }
+			consciousness = -1
+			militancy = -1
+		}
+		set_country_flag = german_anthem
+
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2.5
+				government = democracy
+			}
+			modifier = {
+				factor = 2.5
+				ruling_party_ideology = liberal
+			}
+		}
+	}
+
+	option = {
+		name  = "United in Nation but at heart different"
+		prestige = 20
+		any_pop = {
+			limit = { is_culture_group = germanic }
+			ideology = { value = conservative factor = 0.15 }
+			militancy = -5
+		}
 		  any_pop = {
-            limit = { has_pop_culture = french }
-            ideology = { value = conservative factor = 0.15 }
-            militancy = -5
-        }
-        set_country_flag = german_anthem
+			limit = { has_pop_culture = french }
+			ideology = { value = conservative factor = 0.15 }
+			militancy = -5
+		}
+		set_country_flag = german_anthem
 
-        ai_chance = { factor = 10 }
-    }
+		ai_chance = { factor = 10 }
+	}
 
 }
 
 country_event = {
 
-    id = 100100
-    title = "Opening of the First Franco German Garden"
-    desc = "EVTDESC100100"
-    picture = "frc_salvador"
-    trigger = {
-        tag = LOR
-        year = 1841
-        romanticism = 1 #has the romanticism tech
-        NOT = {
-            has_country_flag = Walhalla
-            }
-        }
+	id = 100100
+	title = "Opening of the First Franco German Garden"
+	desc = "EVTDESC100100"
+	picture = "frc_salvador"
+	trigger = {
+		tag = LOR
+		year = 1841
+		romanticism = 1 #has the romanticism tech
+		NOT = {
+			has_country_flag = Walhalla
+			}
+		}
 
-    mean_time_to_happen =  {
-        months = 6
+	mean_time_to_happen =  {
+		months = 6
 
-        modifier = {
-            factor = 0.85 #increase likelihood to happen
-            year = 1842
-        }
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1842
+		}
 
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1843
-        }
-    }
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1843
+		}
+	}
 
-    option = {
-        name = "United we stand!"
-        prestige = 10
+	option = {
+		name = "United we stand!"
+		prestige = 10
 		badboy = -1
-        set_country_flag = Walhalla
-    }
+		set_country_flag = Walhalla
+	}
 }
 
 
 country_event = {
 
-    id = 100101
-    title = "Construction of the 'Rue Charlemagne'"
-    desc = "EVTDESC100101"
-    picture = "underground_railroad"
-    trigger = {
-        tag = LOR
-        year = 1847
-        realism = 1 
-        NOT = {
-            has_country_flag = Charlemagnestr
-            }
-        }
+	id = 100101
+	title = "Construction of the 'Rue Charlemagne'"
+	desc = "EVTDESC100101"
+	picture = "underground_railroad"
+	trigger = {
+		tag = LOR
+		year = 1847
+		realism = 1 
+		NOT = {
+			has_country_flag = Charlemagnestr
+			}
+		}
 
-    mean_time_to_happen =  {
-        months = 6
+	mean_time_to_happen =  {
+		months = 6
 
-        modifier = {
-            factor = 0.85 #increase likelihood to happen
-            year = 1848
-        }
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1848
+		}
 
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1849
-        }
-    }
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1849
+		}
+	}
 
-    option = {
-        name = "In the Footsteps of Charlemagne"
-        prestige = 5
+	option = {
+		name = "In the Footsteps of Charlemagne"
+		prestige = 5
 		badboy = -1
 		any_pop = {
-            consciousness = -3
-            militancy = -3
-        }
-        set_country_flag = Charlemagnestr
-    }
+			consciousness = -3
+			militancy = -3
+		}
+		set_country_flag = Charlemagnestr
+	}
 }
 
 
@@ -407,472 +407,472 @@ country_event = {
 #########
 
 country_event = {
-    id = 100105
-    title = "Rivoluzione Genovese" #The Genoese Revolution
-    desc = "EVTDESC100105"
-    picture = "MazzinianRevolution"
+	id = 100105
+	title = "Rivoluzione Genovese" #The Genoese Revolution
+	desc = "EVTDESC100105"
+	picture = "MazzinianRevolution"
 
-    fire_only_once = yes
-    major = yes
+	fire_only_once = yes
+	major = yes
 
-    trigger = {
-        tag = GEN
+	trigger = {
+		tag = GEN
 	 AND = {
 	 OR = {
 				government = democracy
 				government = merchant_republic
 			 }
-        OR = {
-            AND = {
-                average_militancy = 4
-                has_country_modifier = springtime_of_nations
-            }
-            any_owned_province = {
-                is_capital = yes
-                controlled_by = REB
-            }
+		OR = {
+			AND = {
+				average_militancy = 4
+				has_country_modifier = springtime_of_nations
+			}
+			any_owned_province = {
+				is_capital = yes
+				controlled_by = REB
+			}
 			exists = CRS
-            revolt_percentage = 0.50
-        }
+			revolt_percentage = 0.50
+		}
 		exists = SYC
 		exists = PIR
 		
 		}
-    }
+	}
 
-    mean_time_to_happen =  {
-        days = 15
-        modifier = {
-            factor = 0.5
-            has_country_modifier = springtime_of_nations
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { has_country_modifier = springtime_of_nations }
-        }
-        modifier = {
-            factor = 0.01
-            capital_scope = { controlled_by = REB }
-        }
-        modifier = {
-            factor = 0.8
-            average_militancy = 6
-        }
-        modifier = {
-            factor = 0.8
-            average_militancy = 7
-        }
-        modifier = {
-            factor = 0.8
-            average_militancy = 8
-        }
-        modifier = {
-            factor = 0.8
-            average_militancy = 9
-        }
-        modifier = {
-            factor = 0.6
-            revolt_percentage = 0.60
-        }
-        modifier = {
-            factor = 0.6
-            revolt_percentage = 0.70
-        }
-        modifier = {
-            factor = 0.6
-            revolt_percentage = 0.80
-        }
-    }
+	mean_time_to_happen =  {
+		days = 15
+		modifier = {
+			factor = 0.5
+			has_country_modifier = springtime_of_nations
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { has_country_modifier = springtime_of_nations }
+		}
+		modifier = {
+			factor = 0.01
+			capital_scope = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 6
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 7
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 8
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 9
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.60
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.70
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.80
+		}
+	}
 
-    immediate = {
-        GEN = {
-            set_country_flag = mazzini_chad
-        }
-    }
+	immediate = {
+		GEN = {
+			set_country_flag = mazzini_chad
+		}
+	}
 
-    option = {
-        name = "Long live Mazzini!"
-        prestige = -25
-        any_owned = { remove_province_modifier = liberal_agitation }
-        remove_country_modifier = springtime_of_nations
-        remove_country_modifier = global_liberal_agitation
-        random_owned = {
-            limit = {
-                is_capital = yes
-                controlled_by_rebels = yes
-            }
-            change_controller = THIS
-        }
-        government = presidential_dictatorship
-        ruling_party_ideology = reactionary
-        political_reform = none_voting
-        political_reform = population_equal_weight
-        political_reform = no_meeting
-        political_reform = free_press
-        random_owned = {
-            limit = { owner = { NOT = { political_parties = secret_ballots } } }
-            owner = { political_reform = non_secret_ballots }
-        }
-        random_owned = {
-            limit = { owner = { NOT = { trade_unions = all_trade_unions } } }
-            owner = { political_reform = non_socialist }
-        }
-        add_country_modifier = {
-            name = power_vacuum
-            duration = 1825
-        }
-        any_pop = {
-            limit = {
-                is_primary_culture = yes
-                is_accepted_culture = yes
-                OR = {
-                    type = soldiers
-                    type = officers
-                }
-            }
-            ideology = { factor = 0.3 value = conservative }
-            dominant_issue = { factor = 0.20 value = jingoism }
-        }
-        any_pop = {
-            limit = {
-                strata = poor
-                is_culture_group = north_italian
-                location = { is_core = THIS }
-            }
-            ideology = { factor = 0.25 value = conservative }
-            dominant_issue = { factor = 0.10 value = jingoism }
-        }
-        any_pop = {
-            limit = {
-                location = { is_core = THIS }
-            }
-            scaled_militancy = {
-                ideology = reactionary
-                factor = 4
-            }
-            scaled_militancy = {
-                ideology = conservative
-                factor = -6
-            }
-            scaled_militancy = {
-                ideology = liberal
-                factor = -6
-            }
-            scaled_militancy = {
-                ideology = socialist
-                factor = -2
-            }
-        }
+	option = {
+		name = "Long live Mazzini!"
+		prestige = -25
+		any_owned = { remove_province_modifier = liberal_agitation }
+		remove_country_modifier = springtime_of_nations
+		remove_country_modifier = global_liberal_agitation
+		random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = population_equal_weight
+		political_reform = no_meeting
+		political_reform = free_press
+		random_owned = {
+			limit = { owner = { NOT = { political_parties = secret_ballots } } }
+			owner = { political_reform = non_secret_ballots }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { trade_unions = all_trade_unions } } }
+			owner = { political_reform = non_socialist }
+		}
+		add_country_modifier = {
+			name = power_vacuum
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+				OR = {
+					type = soldiers
+					type = officers
+				}
+			}
+			ideology = { factor = 0.3 value = conservative }
+			dominant_issue = { factor = 0.20 value = jingoism }
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+				is_culture_group = north_italian
+				location = { is_core = THIS }
+			}
+			ideology = { factor = 0.25 value = conservative }
+			dominant_issue = { factor = 0.10 value = jingoism }
+		}
+		any_pop = {
+			limit = {
+				location = { is_core = THIS }
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 4
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = -6
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = -6
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = -2
+			}
+		}
    
-        any_country = {
-            limit = {
-                alliance_with = THIS
-                NOT = {
-                    vassal_of = THIS
-                    substate_of = THIS
-                    in_sphere = THIS
-                }
-            }
-            relation = { who = THIS value = -100 }
-            leave_alliance = THIS
-        }
-    }
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+	}
 }
 
 country_event = {
 
-    id = 100119
-    title = "Indian Question"
-    desc = "The Native Indians of Columbia have long been a pain in our back, what shall we do with them?"
-    picture = "frc_salvador"
+	id = 100119
+	title = "Indian Question"
+	desc = "The Native Indians of Columbia have long been a pain in our back, what shall we do with them?"
+	picture = "frc_salvador"
 	fire_only_once = yes
-    trigger = {
-        tag = VEL	 
+	trigger = {
+		tag = VEL	 
 		nationalism_n_imperialism = 1
 		}
-    
+	
 
-    mean_time_to_happen =  {
-        days = 30
-    }
+	mean_time_to_happen =  {
+		days = 30
+	}
 
-    option = {
-        name = "Lets put them down with force"
-        prestige = 15
+	option = {
+		name = "Lets put them down with force"
+		prestige = 15
 		badboy = 3
 		any_owned = {
-                limit = {
-                    has_province_modifier = indian_lands
-                }
-                remove_province_modifier = indian_lands
+				limit = {
+					has_province_modifier = indian_lands
+				}
+				remove_province_modifier = indian_lands
 				add_province_modifier = { name = new_states duration = 1200 }
-            }
-    }
+			}
+	}
 	
 	option = {
-        name = "Reconsile with them"
+		name = "Reconsile with them"
 		prestige = -5
 		badboy = -5
 		any_owned = {
-                limit = {
-                    has_province_modifier = indian_lands
-                }
-                remove_province_modifier = indian_lands
+				limit = {
+					has_province_modifier = indian_lands
+				}
+				remove_province_modifier = indian_lands
 				add_province_modifier = { name = new_states duration = 1200 }
-            }
-    }
+			}
+	}
 }
 
 country_event = {
 
-    id = 100120
-    title = "Return of Nieuw Hague"
-    desc = "Neu Hague has been out of our controll for long, lets welcome it back!"
-    picture = "frc_salvador"
+	id = 100120
+	title = "Return of Nieuw Hague"
+	desc = "Neu Hague has been out of our controll for long, lets welcome it back!"
+	picture = "frc_salvador"
 	fire_only_once = yes
-    trigger = {
-        tag = VEL	 
+	trigger = {
+		tag = VEL	 
 		owns = 129
 		}
-    
+	
 
-    mean_time_to_happen =  {
-        days = 5
-    }
+	mean_time_to_happen =  {
+		days = 5
+	}
 
-    option = {
-        name = "What a Glorious day"
-        prestige = 15
+	option = {
+		name = "What a Glorious day"
+		prestige = 15
 		129 = {
-            change_province_name = "Nieuw Hague"
+			change_province_name = "Nieuw Hague"
 			}
 		add_country_modifier = { name = land_of_the_free duration = 1000 }
-    }
+	}
 
 }
 
 country_event = {
 
-    id = 100122
-    title = "The Magician of Kikako"
-    desc = "MAGICMAN"
-    picture = "blues"
-    trigger = {
-        tag = VEL
-        realism = 1 
+	id = 100122
+	title = "The Magician of Kikako"
+	desc = "MAGICMAN"
+	picture = "blues"
+	trigger = {
+		tag = VEL
+		realism = 1 
 		owns = 163
-        NOT = {
-            has_country_flag = Magicman
-            }
-        }
+		NOT = {
+			has_country_flag = Magicman
+			}
+		}
 
-    mean_time_to_happen =  {
-        months = 50
+	mean_time_to_happen =  {
+		months = 50
 
-        modifier = {
-            factor = 0.85 #increase likelihood to happen
-            year = 1848
-        }
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1848
+		}
 
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1849
-        }
-    }
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1849
+		}
+	}
 
-    option = {
-        name = "Witchcraft!"
-        prestige = -5
+	option = {
+		name = "Witchcraft!"
+		prestige = -5
 		any_pop = {
-            consciousness = -3
-            militancy = -3
-        }
-        set_country_flag = Magicman
-    }
+			consciousness = -3
+			militancy = -3
+		}
+		set_country_flag = Magicman
+	}
 	
 	 option = {
-        name = "Give that man an Award"
-        prestige = 5
+		name = "Give that man an Award"
+		prestige = 5
 		any_pop = {
-            consciousness = 2
-            militancy = 3
-        }
-        set_country_flag = Magicman
-    }
+			consciousness = 2
+			militancy = 3
+		}
+		set_country_flag = Magicman
+	}
 }
 
 country_event = {
 
-    id = 100123
-    title = "The Kings Image"
-    desc = "LOUISMAN"
-    picture = "louis_xiv"
-    trigger = {
-        NOT = {
-            has_country_flag = louis_image
-            }
+	id = 100123
+	title = "The Kings Image"
+	desc = "LOUISMAN"
+	picture = "louis_xiv"
+	trigger = {
+		NOT = {
+			has_country_flag = louis_image
+			}
 	 average_militancy = 4
-        }
+		}
 
-    mean_time_to_happen =  {
-        months = 10
+	mean_time_to_happen =  {
+		months = 10
 
-        modifier = {
-            factor = 0.85 #increase likelihood to happen
-            year = 1848
-        }
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1848
+		}
 
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1849
-        }
-    }
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1849
+		}
+	}
 
-    option = {
-        name = "He should Apologise"
-        prestige = -10
+	option = {
+		name = "He should Apologise"
+		prestige = -10
 		any_pop = {
-            consciousness = -3
-            militancy = -4
-        }
-        set_country_flag = louis_image
+			consciousness = -3
+			militancy = -4
+		}
+		set_country_flag = louis_image
 		set_country_flag = louis_image_nice
-    }
+	}
 	
 	 option = {
-        name = "Show Might and Stregth"
-        prestige = 5
+		name = "Show Might and Stregth"
+		prestige = 5
 		any_pop = {
-            consciousness = 1
-            militancy = 1
-        }
-        set_country_flag = louis_image
-    }
+			consciousness = 1
+			militancy = 1
+		}
+		set_country_flag = louis_image
+	}
 }
 
 country_event = {
 
-    id = 100124
-    title = "The French Rejoice!"
-    desc = "LOUISMAN2"
-    picture = "louis_xiv"
-    trigger = {
+	id = 100124
+	title = "The French Rejoice!"
+	desc = "LOUISMAN2"
+	picture = "louis_xiv"
+	trigger = {
 	has_country_flag = louis_image_nice
-        NOT = {
-            has_country_flag = rejoice
-            }
-        }
+		NOT = {
+			has_country_flag = rejoice
+			}
+		}
 
-    mean_time_to_happen =  {
-        months = 1
+	mean_time_to_happen =  {
+		months = 1
 
-        modifier = {
-            factor = 0.85 #increase likelihood to happen
-            year = 1848
-        }
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1848
+		}
 
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1849
-        }
-    }
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1849
+		}
+	}
 
-    option = {
-        name = "Isn't he great?"
-        prestige = 3
+	option = {
+		name = "Isn't he great?"
+		prestige = 3
 		any_pop = {
-            consciousness = -1
-            militancy = -1
-        }
-        set_country_flag = rejoice
-    }
+			consciousness = -1
+			militancy = -1
+		}
+		set_country_flag = rejoice
+	}
 
 }
 
 
 country_event = {
 
-    id = 100125
-    title = "The Kaiser Crown Was Stolen!"
-    desc = "KAISERCROWN"
-    picture = "monarch_death"
-    trigger = {
-        NOT = {
-            has_country_flag = kaiser_krone
-            }
+	id = 100125
+	title = "The Kaiser Crown Was Stolen!"
+	desc = "KAISERCROWN"
+	picture = "monarch_death"
+	trigger = {
+		NOT = {
+			has_country_flag = kaiser_krone
+			}
 	 year = 1841
-        }
+		}
 
-    mean_time_to_happen =  {
-        months = 10
+	mean_time_to_happen =  {
+		months = 10
 
-        modifier = {
-            factor = 0.85 #increase likelihood to happen
-            year = 1848
-        }
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1848
+		}
 
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1849
-        }
-    }
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1849
+		}
+	}
 
-    option = {
-        name = "These Pesky Bavarians"
-        prestige = -10
+	option = {
+		name = "These Pesky Bavarians"
+		prestige = -10
 		any_pop = {
-            consciousness = -1
-            militancy = -1
-        }
+			consciousness = -1
+			militancy = -1
+		}
 		BAV = {
-            leave_alliance = THIS
-            relation = { who = THIS value = -50 }
+			leave_alliance = THIS
+			relation = { who = THIS value = -50 }
 			country_event = 100126
-        }
-        set_country_flag = kaiser_krone
-    }
+		}
+		set_country_flag = kaiser_krone
+	}
 	
 	 option = {
-        name = "It was Lorraine!"
-        prestige = -10
+		name = "It was Lorraine!"
+		prestige = -10
 		any_pop = {
-            consciousness = -1
-            militancy = -1
-        }
+			consciousness = -1
+			militancy = -1
+		}
 		LOR = {
-            leave_alliance = THIS
-            relation = { who = THIS value = -50 }
+			leave_alliance = THIS
+			relation = { who = THIS value = -50 }
 			country_event = 100126 
-        }
-        set_country_flag = kaiser_krone
-    }
+		}
+		set_country_flag = kaiser_krone
+	}
 	
 	 option = {
-        name = "Search among the Populous"
-        prestige = -10
+		name = "Search among the Populous"
+		prestige = -10
 		any_pop = {
-            consciousness = 4
-            militancy = 4
-        }
-        set_country_flag = kaiser_krone
-    }
+			consciousness = 4
+			militancy = 4
+		}
+		set_country_flag = kaiser_krone
+	}
 }
 
 country_event = {
 
-    id = 100126
-    title = "The Bohemians claim that we stole the Crown"
-    desc = "KAISERCROWN"
-    picture = "monarch_death"
+	id = 100126
+	title = "The Bohemians claim that we stole the Crown"
+	desc = "KAISERCROWN"
+	picture = "monarch_death"
    	is_triggered_only = yes
 
-    option = {
-        name = "Scum"
-        prestige = -3
+	option = {
+		name = "Scum"
+		prestige = -3
 		any_pop = {
-            consciousness = 3
-            militancy = 3
-        }
-    }
+			consciousness = 3
+			militancy = 3
+		}
+	}
 
 }

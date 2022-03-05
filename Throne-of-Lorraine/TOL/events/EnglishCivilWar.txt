@@ -1,21 +1,21 @@
 country_event = {
-    id = 51390
+	id = 51390
 
-    title = "EVTNAME51390"
-    desc = "EVTDESC51390"
-    picture = "english_civil_war"
+	title = "EVTNAME51390"
+	desc = "EVTDESC51390"
+	picture = "english_civil_war"
 
-    trigger = {
-        tag = UOW
-        year = 1836
-        exists = ENL
+	trigger = {
+		tag = UOW
+		year = 1836
+		exists = ENL
 		exists = UOW
-        NOT = { year = 1838 }
-    }
-    fire_only_once = yes
+		NOT = { year = 1838 }
+	}
+	fire_only_once = yes
 	
-    option = {
-        name = "EVT51390OPTA"
+	option = {
+		name = "EVT51390OPTA"
 		war = {
 			target = ENL
 			attacker_goal = { casus_belli = civil_war }
@@ -23,25 +23,25 @@ country_event = {
 			call_ally = no
 		}
 
-        ai_chance = {
-            factor = 100
-        }
-    }
+		ai_chance = {
+			factor = 100
+		}
+	}
 ai_will_do = { factor = 1 }
 }
 
 country_event = {
 
-    id = 33409
+	id = 33409
 
-    title = "EVTNAME33409"
-    desc = "EVTDESC33409"
-    picture = "australia1st"
+	title = "EVTNAME33409"
+	desc = "EVTDESC33409"
+	picture = "australia1st"
 	is_triggered_only = yes
 
 	
-    option = {
-        name = "EVT33409OPTA"
+	option = {
+		name = "EVT33409OPTA"
 		money = 6000
 		relation = {
 				who = SCO
@@ -50,58 +50,58 @@ country_event = {
 		small_arms = 40
 		canned_food = 40
 		ammunition = 20
-        ai_chance = {
-            factor = 100
-        }
-    }
+		ai_chance = {
+			factor = 100
+		}
+	}
 	ai_will_do = { factor = 1 }
 }
 country_event = {
-    id = 30657
-    title = "Should we change our capital to London?"
-    desc = "We have won the civil war and united England under one nation but should we change our capital back to London?"
-    picture = "english_parliment"
+	id = 30657
+	title = "Should we change our capital to London?"
+	desc = "We have won the civil war and united England under one nation but should we change our capital back to London?"
+	picture = "english_parliment"
 
-    trigger = {
-        tag = ENL
-        exists = ENL
+	trigger = {
+		tag = ENL
+		exists = ENL
 		NOT = {exists = UOW}
 		owns = 300
-    }
-    fire_only_once = yes
+	}
+	fire_only_once = yes
 	
-    option = {
-        name = "We don't need to change our capital"
+	option = {
+		name = "We don't need to change our capital"
 		ENL = { all_core = { remove_core = UOW } }
 		any_pop = { militancy = -2 }
 		any_pop = { consciousness = -2 }
-    }
-    option = {
-        name = "We'll change our capital back to London"
+	}
+	option = {
+		name = "We'll change our capital back to London"
 		ENL = { all_core = { remove_core = UOW } }
 		any_pop = { militancy = -2 }
 		any_pop = { consciousness = -2 }
 		capital = 300
-    }
+	}
 }
 country_event = {
-    id = 30658
-    title = "We won the English civil war!"
-    desc = "After fighting in a bloody civil war we have won and united England!"
-    picture = "english_parliment"
+	id = 30658
+	title = "We won the English civil war!"
+	desc = "After fighting in a bloody civil war we have won and united England!"
+	picture = "english_parliment"
 
-    trigger = {
-        tag = UOW
-        exists = UOW
+	trigger = {
+		tag = UOW
+		exists = UOW
 		NOT = {exists = ENL}
 		owns = 277
-    }
-    fire_only_once = yes
+	}
+	fire_only_once = yes
 	
-    option = {
-        name = "We win!!!!"
+	option = {
+		name = "We win!!!!"
 		UOW = { all_core = { remove_core = ENL } }
 		any_pop = { militancy = -2 }
 		any_pop = { consciousness = -2 }
-    }
+	}
 }

@@ -1,48 +1,41 @@
 #EndofIsolation
 country_event = {
-    id = 97992
-    title = "EVTNAME97992"
-    desc = "EVTDESC97992"
-    major = yes
+	id = 97992
+	title = "EVTNAME97992"
+	desc = "EVTDESC97992"
+	major = yes
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVT97992OPTA" 
-        set_global_flag = coastdiscovered
-
-          any_country = {
+	option = {
+		name = "EVT97992OPTA" 
+		set_global_flag = coastdiscovered
+		any_country = {
 			any_owned = {
-					limit = {
-						OR = {    
-                          
-                    region = CAN_13    
-                    region = USA_78   
-                    region = USA_81   
-                    region = MEX_85_1   
-                    region = MEX_85_2   
-                    region = MEX_94   
-                     province_id = 1   
-		     province_id = 2   
-		     province_id = 3013   
-		     province_id = 91   
-                     province_id = 92   
-		     province_id = 3476     
-		     province_id = 3475   
-                    }
-
-                     NOT = {
-				province_id = 18
-				province_id = 2629
-				province_id = 21
+				limit = {
+					OR = {
+						region = CAN_13	
+						region = USA_78   
+						region = USA_81   
+						region = MEX_85_1   
+						region = MEX_85_2   
+						region = MEX_94   
+						province_id = 1   
+						province_id = 2   
+						province_id = 3013   
+						province_id = 91   
+						province_id = 92   
+						province_id = 3476	 
+						province_id = 3475   
 					}
-           }
-    
-					
-				
-         secede_province = GEK
-
-                      }
-                   }
-             }
+					NOT = {
+						province_id = 18
+						province_id = 2629
+						province_id = 21
+					}
+				}
+				secede_province = GKS
+			}
+		}
+	}
 }

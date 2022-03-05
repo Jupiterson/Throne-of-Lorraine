@@ -1,6 +1,6 @@
 #########################################################
 #														#
-#        	Revolt of the Three Feudatories				#
+#			Revolt of the Three Feudatories				#
 #														#
 #########################################################
 
@@ -227,10 +227,10 @@ country_event = {
 	}
 	
 country_event = {
-    id = 310007 #Three Feudatories Revolt
-    title = "FEU7.T"
-    desc = "FEU7.D"
-    picture = "Start_of_the_three_feudatories"
+	id = 310007 #Three Feudatories Revolt
+	title = "FEU7.T"
+	desc = "FEU7.D"
+	picture = "Start_of_the_three_feudatories"
 	
 	trigger = {
 		tag = QNG
@@ -261,45 +261,45 @@ country_event = {
 		}
 	}	
 	
-    option = {
-        name = "Mobilize the Troops."
+	option = {
+		name = "Mobilize the Troops."
 		money = 100000
 		QNG = { release_vassal = GXI }
 		QNG = { release_vassal = YNN }
 		QNG = { release_vassal = FJN }
-        war = {
-            target = GXI
-            attacker_goal = {
-                casus_belli = conquest
-            }
+		war = {
+			target = GXI
+			attacker_goal = {
+				casus_belli = conquest
+			}
 			defender_goal = {
 				casus_belli = liberate_country
 				country = JCH
 			}
 			call_ally = yes
-        }
-        war = {
-            target = YNN
-            attacker_goal = {
-                casus_belli = conquest
-            }
+		}
+		war = {
+			target = YNN
+			attacker_goal = {
+				casus_belli = conquest
+			}
 			defender_goal = {
 				casus_belli = liberate_country
 				country = JCH
 			}
 			call_ally = yes
-        }
-        war = {
-            target = FJN
-            attacker_goal = {
-                casus_belli = conquest
-            }
+		}
+		war = {
+			target = FJN
+			attacker_goal = {
+				casus_belli = conquest
+			}
 			defender_goal = {
 				casus_belli = liberate_country
 				country = JCH
 			}
 			call_ally = yes
-        }
+		}
 		prestige = 10
 		badboy = -60
 		TIB = { country_event = 310008 }
@@ -307,47 +307,47 @@ country_event = {
 		GXI = { country_event = 310010 }
 		FJN = { country_event = 310011 }
 		set_country_flag = feudatories_war_happened
-    }
+	}
 }
 #Tibet invades Xikang
 country_event = {
-    id = 310008 
-    title = "FEU8.T"
-    desc = "FEU8.D"
-    picture = "Start_of_the_three_feudatories"
+	id = 310008 
+	title = "FEU8.T"
+	desc = "FEU8.D"
+	picture = "Start_of_the_three_feudatories"
 	
 	is_triggered_only = yes	
 	
-    option = {
-        name = "To Kham!"
-        war = {
-            target = YNN
-            attacker_goal = {
-                casus_belli = acquire_core_state
+	option = {
+		name = "To Kham!"
+		war = {
+			target = YNN
+			attacker_goal = {
+				casus_belli = acquire_core_state
 				state_province_id = 1586
-            }
-        }
-    }
+			}
+		}
+	}
 }
 #Burma invades Dehong
 country_event = {
-    id = 310009
-    title = "FEU9.T"
-    desc = "FEU9.D"
-    picture = "Burmese_Intervention"
+	id = 310009
+	title = "FEU9.T"
+	desc = "FEU9.D"
+	picture = "Burmese_Intervention"
 	
 	is_triggered_only = yes	
 	
-    option = {
-        name = "To Dehong!"
-        war = {
-            target = YNN
-            attacker_goal = {
-                casus_belli = acquire_core_state
+	option = {
+		name = "To Dehong!"
+		war = {
+			target = YNN
+			attacker_goal = {
+				casus_belli = acquire_core_state
 				state_province_id = 1602
-            }
-        }
-    }
+			}
+		}
+	}
 }
 #Dai nam Rebellion
 country_event = {
@@ -369,11 +369,11 @@ country_event = {
 			secede_province = DAI
 		}
 		 war = {
-            target = DAI
-            attacker_goal = {
-                casus_belli = unification_annex_casus_belli
-            }
-        }
+			target = DAI
+			attacker_goal = {
+				casus_belli = unification_annex_casus_belli
+			}
+		}
 	}
 }
 #Taiwan Rebellion
@@ -397,19 +397,19 @@ country_event = {
 		CHI_1485 = { add_core = TAI }
 		}
 		 war = {
-            target = TAI
-            attacker_goal = {
-                casus_belli = unification_annex_casus_belli
-            }
-        }
+			target = TAI
+			attacker_goal = {
+				casus_belli = unification_annex_casus_belli
+			}
+		}
 	}
 }
 #Victory of the Empire
 country_event = {
-    id = 310012
-    title = "FEU12.T"
-    desc = "FEU12.D"
-    picture = "Start_of_the_three_feudatories"
+	id = 310012
+	title = "FEU12.T"
+	desc = "FEU12.D"
+	picture = "Start_of_the_three_feudatories"
 	
 	trigger = {
 		tag = QNG
@@ -424,21 +424,21 @@ country_event = {
 		months = 1
 	}	
 	
-    option = {
+	option = {
 	name = "Hang those traitors!"
 	prestige = 35
-        any_pop = {
+		any_pop = {
 			militancy = -4
 		}
 		set_country_flag = victory_of_Buyeo
-    }
+	}
 }
 #Victory of the feudatories
 country_event = {
 	id = 310013
 	title = "FEU13.T"
 	desc = "FEU13.D"
-    picture = "Start_of_the_three_feudatories"
+	picture = "Start_of_the_three_feudatories"
 	
 	trigger = {
 		OR = {
@@ -487,7 +487,7 @@ country_event = {
 		option = {
 		name = "Southern China is now free!"
 		prestige = 35
-        any_pop = {
+		any_pop = {
 			militancy = -4
 		}
 	}
@@ -503,7 +503,7 @@ country_event = {
 		option = {
 		name = "This is very, very bad..."
 		prestige = -50
-        any_pop = {
+		any_pop = {
 			militancy = 2
 		}
 		any_owned = {

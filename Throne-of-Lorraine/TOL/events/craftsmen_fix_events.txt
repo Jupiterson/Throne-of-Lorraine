@@ -10,25 +10,25 @@ country_event = {
 	option = {
 		name = "USE THIS OPTION FIRST"
 		any_owned = {
-		    limit = {
-			    is_core = THIS
-			    OR = {
-				    trade_goods = cattle
-				    trade_goods = horses
-				    trade_goods = coffee
-				    trade_goods = cotton
-				    trade_goods = dye
-				    trade_goods = fish
-				    trade_goods = opium
-				    trade_goods = fruit
-				    trade_goods = wool
-				    trade_goods = silk
-				    trade_goods = spices
-				    trade_goods = sugar
-				    trade_goods = tea
-				    trade_goods = tobacco
-			    }
-			    }
+			limit = {
+				is_core = THIS
+				OR = {
+					trade_goods = cattle
+					trade_goods = horses
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = dye
+					trade_goods = fish
+					trade_goods = opium
+					trade_goods = fruit
+					trade_goods = wool
+					trade_goods = silk
+					trade_goods = spices
+					trade_goods = sugar
+					trade_goods = tea
+					trade_goods = tobacco
+				}
+				}
 				any_pop = {
 					limit = { 
 						AND = {
@@ -42,25 +42,25 @@ country_event = {
 				
 		}
 		any_owned = {
-		    limit = {
-			    is_core = THIS
-			    OR = {
-				    trade_goods = cattle
-				    trade_goods = horses
-				    trade_goods = coffee
-				    trade_goods = cotton
-				    trade_goods = dye
-				    trade_goods = fish
-				    trade_goods = opium
-				    trade_goods = fruit
-				    trade_goods = wool
-				    trade_goods = silk
-				    trade_goods = spices
-				    trade_goods = sugar
-				    trade_goods = tea
-				    trade_goods = tobacco
-			    }
-			    }
+			limit = {
+				is_core = THIS
+				OR = {
+					trade_goods = cattle
+					trade_goods = horses
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = dye
+					trade_goods = fish
+					trade_goods = opium
+					trade_goods = fruit
+					trade_goods = wool
+					trade_goods = silk
+					trade_goods = spices
+					trade_goods = sugar
+					trade_goods = tea
+					trade_goods = tobacco
+				}
+				}
 				any_pop = {
 					limit = { 
 						AND = {
@@ -73,25 +73,25 @@ country_event = {
 				}
 		}
 		any_owned = {
-		    limit = {
-			    is_core = THIS
-			    OR = {
-				    trade_goods = cattle
-				    trade_goods = horses
-				    trade_goods = coffee
-				    trade_goods = cotton
-				    trade_goods = dye
-				    trade_goods = fish
-				    trade_goods = opium
-				    trade_goods = fruit
-				    trade_goods = wool
-				    trade_goods = silk
-				    trade_goods = spices
-				    trade_goods = sugar
-				    trade_goods = tea
-				    trade_goods = tobacco
-			    }
-			    }
+			limit = {
+				is_core = THIS
+				OR = {
+					trade_goods = cattle
+					trade_goods = horses
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = dye
+					trade_goods = fish
+					trade_goods = opium
+					trade_goods = fruit
+					trade_goods = wool
+					trade_goods = silk
+					trade_goods = spices
+					trade_goods = sugar
+					trade_goods = tea
+					trade_goods = tobacco
+				}
+				}
 				any_pop = {
 					limit = { 
 						AND = {
@@ -105,25 +105,25 @@ country_event = {
 				
 		}
 		any_owned = {
-		    limit = {
-			    is_core = THIS
-			    OR = {
-				    trade_goods = cattle
-				    trade_goods = horses
-				    trade_goods = coffee
-				    trade_goods = cotton
-				    trade_goods = dye
-				    trade_goods = fish
-				    trade_goods = opium
-				    trade_goods = fruit
-				    trade_goods = wool
-				    trade_goods = silk
-				    trade_goods = spices
-				    trade_goods = sugar
-				    trade_goods = tea
-				    trade_goods = tobacco
-			    }
-			    }
+			limit = {
+				is_core = THIS
+				OR = {
+					trade_goods = cattle
+					trade_goods = horses
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = dye
+					trade_goods = fish
+					trade_goods = opium
+					trade_goods = fruit
+					trade_goods = wool
+					trade_goods = silk
+					trade_goods = spices
+					trade_goods = sugar
+					trade_goods = tea
+					trade_goods = tobacco
+				}
+				}
 				any_pop = {
 					limit = { 
 						AND = {
@@ -152,23 +152,23 @@ country_event = {
 		name = "USE THIS OPTION SECOND"
 		
 		any_owned = {
-		    limit = {
-			    OR = {
-				    trade_goods = cattle
-				    trade_goods = horses
-				    trade_goods = coffee
-				    trade_goods = cotton
-				    trade_goods = dye
-				    trade_goods = fish
-				    trade_goods = opium
-				    trade_goods = fruit
-				    trade_goods = wool
-				    trade_goods = silk
-				    trade_goods = spices
-				    trade_goods = sugar
-				    trade_goods = tea
-				    trade_goods = tobacco
-			    }
+			limit = {
+				OR = {
+					trade_goods = cattle
+					trade_goods = horses
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = dye
+					trade_goods = fish
+					trade_goods = opium
+					trade_goods = fruit
+					trade_goods = wool
+					trade_goods = silk
+					trade_goods = spices
+					trade_goods = sugar
+					trade_goods = tea
+					trade_goods = tobacco
+				}
 			}
 			any_pop = {
 				limit = {
@@ -178,8 +178,8 @@ country_event = {
 			}	
 		}
 		any_owned = {
-		    limit = {
-			    OR = {
+			limit = {
+				OR = {
 				trade_goods = coal
 				trade_goods = copper
 				trade_goods = iron
@@ -191,7 +191,7 @@ country_event = {
 				trade_goods = sulphur
 				trade_goods = timber
 				trade_goods = tropical_wood
-			    }
+				}
 			}
 			any_pop = {
 				limit = {

@@ -112,8 +112,8 @@ country_event = {
 			is_our_vassal = KIE
 			has_country_flag = the_metropolitans_revolt
 			has_country_flag = the_metropolitans_revolt_resolved
-            has_country_flag = ruthenyans_accepted_culture
-        }		
+			has_country_flag = ruthenyans_accepted_culture
+		}		
 		owns = 958
 		OR = {
 			owns = 949
@@ -335,21 +335,21 @@ country_event = {
 		any_pop = {
 			militancy = 1
 		}
-        ai_chance = {
-            factor = 2
+		ai_chance = {
+			factor = 2
 			modifier = {
-                factor = 2
-                relation = { who = POL value = 50 }
-            }
-            modifier = {
-                factor = 4
-                POL = { is_greater_power = yes }
-            }
+				factor = 2
+				relation = { who = POL value = 50 }
+			}
 			modifier = {
-                factor = 2
-                POL = { is_secondary_power = yes }
-            }
-        }
+				factor = 4
+				POL = { is_greater_power = yes }
+			}
+			modifier = {
+				factor = 2
+				POL = { is_secondary_power = yes }
+			}
+		}
 	}
 }
 #Polish annexation
@@ -367,7 +367,7 @@ country_event = {
 		LIT = {
 			any_owned = { add_core = PLC }
 		}
-        inherit = LIT
+		inherit = LIT
 		change_tag = PLC
 		any_owned = {
 			limit = {
@@ -714,10 +714,10 @@ country_event = {
 		set_country_flag = the_crimean_war_alone
 		prestige = 5
 		casus_belli = {
-                target = TUR
-                type = steal_puppet
-                months = 12
-        }
+				target = TUR
+				type = steal_puppet
+				months = 12
+		}
 		war = {
 			target = TUR
 			attacker_goal = {
@@ -775,10 +775,10 @@ country_event = {
 		set_country_flag = the_crimean_war 
 		prestige = 5
 		casus_belli = {
-                target = TUR
-                type = steal_puppet
-                months = 12
-        }
+				target = TUR
+				type = steal_puppet
+				months = 12
+		}
 		war = {
 			target = TUR
 			attacker_goal = {
@@ -806,10 +806,10 @@ country_event = {
 		set_country_flag = the_crimean_war_alone
 		prestige = 5
 		casus_belli = {
-                target = TUR
-                type = steal_puppet
-                months = 12
-        }
+				target = TUR
+				type = steal_puppet
+				months = 12
+		}
 		war = {
 			target = TUR
 			attacker_goal = {
@@ -853,9 +853,9 @@ country_event = {
 		inherit = CRI
 		FER = { any_owned = { add_core = RUS } }
 		any_pop = {
-            consciousness = -1
+			consciousness = -1
 			militancy = -1
-        }
+		}
 	}
 }
 #Crimean war victory-Lithuanians get a slice
@@ -902,9 +902,9 @@ country_event = {
 			secede_province = LIT
 		}
 		any_pop = {
-            consciousness = -1
+			consciousness = -1
 			militancy = -1
-        }
+		}
 	}
 }
 #Crimean war lost
@@ -936,9 +936,9 @@ country_event = {
 		set_country_flag = the_crimean_war_resolved
 		prestige = -25
 		any_pop = {
-            consciousness = 3
+			consciousness = 3
 			militancy = 3
-        }
+		}
 	}
 }
 #The Georgian Crisis
@@ -989,10 +989,10 @@ country_event = {
 		set_country_flag = the_georgian_war
 		prestige = 5
 		casus_belli = {
-                target = GEO
-                type = make_puppet
-                months = 12
-        }
+				target = GEO
+				type = make_puppet
+				months = 12
+		}
 		TUR = { country_event = { id = 360001 days = 7 } }
 		war = {
 			target = GEO
@@ -1077,9 +1077,9 @@ country_event = {
 		clr_country_flag = the_georgian_war
 		prestige = 25
 		any_pop = {
-            consciousness = -1
+			consciousness = -1
 			militancy = -1
-        }
+		}
 	}
 }
 #Georgian war lost
@@ -1108,9 +1108,9 @@ country_event = {
 		clr_country_flag = the_georgian_war
 		prestige = -15
 		any_pop = {
-            consciousness = 2
+			consciousness = 2
 			militancy = 2
-        }
+		}
 	}
 }
 #The First Mongol-Uyghur War-War for Altai
@@ -1257,7 +1257,7 @@ country_event = {
 }
 #Russian victory
 country_event = {
-    id = 370023
+	id = 370023
 	title = "Muwar23.t" 
 	desc = "Muwar23.d"
 	picture = "vladivostok_manchu"
@@ -1278,7 +1278,7 @@ country_event = {
 		day = 1
 	}	
 	
-    option = {
+	option = {
 		name = "Take the Transbaikal!"
 		prestige = 25
 		badboy = 8
@@ -1292,31 +1292,31 @@ country_event = {
 		set_country_flag = altai_provocation_resolved
 		clr_country_flag = altai_provocation
 		QNG = { country_event = 370024 day = 7 }
-    }
+	}
 	
 }
 
 #Buyeo loss
 country_event = {
-    id = 370024
+	id = 370024
 	title = "Muwar24.t" 
 	desc = "Muwar24.d"
 	picture = "vladivostok_manchu"
 	
 	is_triggered_only = yes	
 	
-    option = {
+	option = {
 		name = "Can we control the Mongols after this?"
 		prestige = -15
 		any_pop = {
 			militancy = 2
 		}
-    }
+	}
 }
 
 #Russian loss
 country_event = {
-    id = 370025
+	id = 370025
 	title = "Muwar25.t" 
 	desc = "Muwar25.d"
 	picture = "vladivostok_manchu"
@@ -1336,7 +1336,7 @@ country_event = {
 		month = 1
 	}	
 	
-    option = {
+	option = {
 		name = "The Baikal region falls..."
 		2671 = { secede_province = MGL add_core = MGL }
 		set_country_flag = altai_provocation_resolved
@@ -1346,25 +1346,25 @@ country_event = {
 		any_pop = {
 			militancy = 2
 		}
-    }
+	}
 }
 
 #Buyeo victory
 country_event = {
-    id = 370026
+	id = 370026
 	title = "Muwar26.t" 
 	desc = "Muwar26.d"
 	picture = "vladivostok_manchu"
 	
 	is_triggered_only = yes	
 	
-    option = {
+	option = {
 		name = "The Mongols are more loyal than ever!"
 		prestige = 15
 		any_pop = {
 			militancy = -2
 		}
-    }
+	}
 }
 #The Second Mongol-Uyghur War-War for Tarim
 country_event = {
@@ -1511,7 +1511,7 @@ country_event = {
 }
 #Russian victory
 country_event = {
-    id = 370010
+	id = 370010
 	title = "Muwar10.t" 
 	desc = "Muwar10.d"
 	picture = "Yarkand"
@@ -1523,16 +1523,16 @@ country_event = {
 		NOT = { has_country_flag = uighur_provocation_resolved }
 		XIN = {
 			OR = {
-                is_vassal = no
-                vassal_of = THIS
-            } 
+				is_vassal = no
+				vassal_of = THIS
+			} 
 		}	
 	}
 	mean_time_to_happen = {
 		day = 1
 	}	
 	
-    option = {
+	option = {
 		name = "Our domain over Xinjiang has been secured!"
 		prestige = 15
 		1186 = {
@@ -1555,19 +1555,19 @@ country_event = {
 		set_country_flag = uighur_provocation_resolved
 		clr_country_flag = uighur_provocation
 		QNG = { country_event = 370011 day = 7 }
-    }
+	}
 }
 
 #Buyeo loss
 country_event = {
-    id = 370011
+	id = 370011
 	title = "Muwar11.t" 
 	desc = "Muwar11.d"
 	picture = "Yarkand"
 	
 	is_triggered_only = yes	
 	
-    option = {
+	option = {
 		name = "The Russians march south..."
 		prestige = -15
 		RUS = { create_vassal = KSG }
@@ -1577,12 +1577,12 @@ country_event = {
 		any_pop = {
 			militancy = 2
 		}
-    }
+	}
 }
 
 #Russian loss
 country_event = {
-    id = 370012
+	id = 370012
 	title = "Muwar12.t" 
 	desc = "Muwar12.d"
 	picture = "Yarkand"
@@ -1598,7 +1598,7 @@ country_event = {
 		day = 1
 	}	
 	
-    option = {
+	option = {
 		name = "Years of progress gone!"
 		any_owned = {
 			limit = {
@@ -1614,25 +1614,25 @@ country_event = {
 		any_pop = {
 			militancy = 2
 		}
-    }
+	}
 }
 
 #Buyeo victory
 country_event = {
-    id = 370013
+	id = 370013
 	title = "Muwar13.t" 
 	desc = "Muwar13.d"
 	picture = "Yarkand"
 	
 	is_triggered_only = yes	
 	
-    option = {
+	option = {
 		name = "The last defeat has been avenged!"
 		prestige = 15
 		any_pop = {
 			militancy = -2
 		}
-    }
+	}
 }
 
 #The Third Mongol-Uyghur War-War for Mongolia
@@ -1776,7 +1776,7 @@ country_event = {
 }
 #Russian victory
 country_event = {
-    id = 370019
+	id = 370019
 	title = "Muwar19.t" 
 	desc = "Muwar19.d"
 	picture = "vladivostok_manchu"
@@ -1797,7 +1797,7 @@ country_event = {
 		day = 1
 	}	
 	
-    option = {
+	option = {
 		name = "Demand Vladivostok and Mongolia! Damn the consequences!"
 		prestige = 25
 		badboy = 8
@@ -1818,7 +1818,7 @@ country_event = {
 		ai_chance = {
 			factor = 9
 		}
-    }
+	}
 	
 	option = {
 		name = "Mongolia was the target, not Vladivostok. We will only take the Mongolian territories."
@@ -1831,19 +1831,19 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-    }
+	}
 }
 
 #Buyeo loss
 country_event = {
-    id = 370020
+	id = 370020
 	title = "Muwar20.t" 
 	desc = "Muwar20.d"
 	picture = "vladivostok_manchu"
 	
 	is_triggered_only = yes	
 	
-    option = {
+	option = {
 		name = "Our homelands are now in trouble!"
 		prestige = -15
 		RUS = { create_vassal = UOD }
@@ -1851,12 +1851,12 @@ country_event = {
 		any_pop = {
 			militancy = 2
 		}
-    }
+	}
 }
 
 #Russian loss
 country_event = {
-    id = 370021
+	id = 370021
 	title = "Muwar21.t" 
 	desc = "Muwar21.d"
 	picture = "vladivostok_manchu"
@@ -1872,7 +1872,7 @@ country_event = {
 		month = 1
 	}	
 	
-    option = {
+	option = {
 		name = "Years of progress gone!"
 		any_owned = {
 			limit = {
@@ -1889,38 +1889,38 @@ country_event = {
 		any_pop = {
 			militancy = 2
 		}
-    }
+	}
 }
 
 #Buyeo victory
 country_event = {
-    id = 370022
+	id = 370022
 	title = "Muwar22.t" 
 	desc = "Muwar22.d"
 	picture = "vladivostok_manchu"
 	
 	is_triggered_only = yes	
 	
-    option = {
+	option = {
 		name = "The last defeat has been avenged!"
 		prestige = 15
 		any_pop = {
 			militancy = -2
 		}
-    }
+	}
 }
 
 #Dummy event for mongolia
 #Buyeo victory
 country_event = {
-    id = 370027
+	id = 370027
 	title = "Muwar27.t" 
 	desc = "Muwar27.d"
 	picture = "vladivostok_manchu"
 	
 	is_triggered_only = yes	
 	
-    option = {
+	option = {
 		name = "Mongolian tag switch dummy event"
 		add_accepted_culture = kazak
 		add_accepted_culture = uighur
@@ -1959,5 +1959,5 @@ country_event = {
 		any_pop = {
 			militancy = -2
 		}
-    }
+	}
 }

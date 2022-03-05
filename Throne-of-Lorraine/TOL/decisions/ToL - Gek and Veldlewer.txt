@@ -6,7 +6,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				tag = MEX
-				tag = GEK
+				tag = GKS
 				tag = PAC
 			}
 			NOT = {	has_global_flag = rancho }
@@ -60,7 +60,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				tag = VEL
-				tag = GEK
+				tag = GKS
 			}
 			NOT = { has_country_flag = colonial_militia }
 		}
@@ -114,7 +114,7 @@ political_decisions = {
 #		potential = {
 #
 #			tag = TEX
-#			GEK = { exists = yes owns = 3467 }
+#			GKS = { exists = yes owns = 3467 }
 #			
 #			NOT = { has_country_flag = scrambled_egg }
 #		}

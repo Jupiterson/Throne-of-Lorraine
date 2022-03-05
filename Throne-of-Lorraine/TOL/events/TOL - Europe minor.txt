@@ -1,224 +1,224 @@
 country_event = {
 
-    id = 90131
-    title = "EVTNAME37704" #Is Cuba For Sale?
-    desc = "EVTDESC37704"
-    picture = "administration"
+	id = 90131
+	title = "EVTNAME37704" #Is Cuba For Sale?
+	desc = "EVTDESC37704"
+	picture = "administration"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVTOPTA37704" #No
-        FROM = { country_event = 90132 }
-        ai_chance = {
-            factor = 90
-            modifier = {
-                factor = 0.25
-                 502 = { owner = { 
-                    OR = {
-                        has_country_modifier = in_bankrupcy
-                        has_country_modifier = generalised_debt_default
-                    }
-                }
-            }
-			}
-			}
-            modifier = {
-                factor = 0.8
-                502 = { owner = { war = yes } }
-            }
-            modifier = {
-                factor = 0.8
-                502 = { owner = {
-                    is_secondary_power = no
-                    is_greater_power = no
-                }
+	option = {
+		name = "EVTOPTA37704" #No
+		FROM = { country_event = 90132 }
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.25
+				 502 = { owner = { 
+					OR = {
+						has_country_modifier = in_bankrupcy
+						has_country_modifier = generalised_debt_default
+					}
 				}
-            }
-            modifier = {
-                factor = 0.8
-                relation = { who = FROM value = 100 }
-            }
-            modifier = {
-                factor = 0.8
-                alliance_with = FROM
-            }
-        }
-    
+			}
+			}
+			}
+			modifier = {
+				factor = 0.8
+				502 = { owner = { war = yes } }
+			}
+			modifier = {
+				factor = 0.8
+				502 = { owner = {
+					is_secondary_power = no
+					is_greater_power = no
+				}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				relation = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 0.8
+				alliance_with = FROM
+			}
+		}
+	
 
-    option = {
-        name = "EVTOPTB37704" #Yes
-        random_owned = {
+	option = {
+		name = "EVTOPTB37704" #Yes
+		random_owned = {
 			limit = { owner = { SPA = { exists = yes } } }
 			owner = { SPA = { country_event = 90133 } }
 		}
-        money = 1000000
-        limit = {
-                    province_id = 502
-                }
-                secede_province = SPA
-        ai_chance = {
-            factor = 25
-            modifier = {
-                factor = 0
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.5
-                NOT = {
-                    relation = { who = FROM value = 50 }
-                }
-            }
-            modifier = {
-                factor = 0.25
-                NOT = {
-                    relation = { who = FROM value = -50 }
-                }
-            }
-        }
-    }
+		money = 1000000
+		limit = {
+					province_id = 502
+				}
+				secede_province = SPA
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = FROM value = 50 }
+				}
+			}
+			modifier = {
+				factor = 0.25
+				NOT = {
+					relation = { who = FROM value = -50 }
+				}
+			}
+		}
+	}
 }
 
 #country_event = {
 #
-#    id = 100106
-#    title = "You are gonna get Annexed Bruv" #Removed
-#    desc = "Annexation Placeholder as the normal one is broken"
-#    picture = "administration"
+#	id = 100106
+#	title = "You are gonna get Annexed Bruv" #Removed
+#	desc = "Annexation Placeholder as the normal one is broken"
+#	picture = "administration"
 #
-#    is_triggered_only = yes
+#	is_triggered_only = yes
 #
-#    option = {
-#        name = "Oh well"
-#        FROM = { inherit = THIS }
-#    }
+#	option = {
+#		name = "Oh well"
+#		FROM = { inherit = THIS }
+#	}
 #}
 
 country_event = {
 
-    id = 90132
-    title = "EVTNAME90132" #The Spanish Have Refused
-    desc = "EVTDESC90132"
-    picture = "administration"
+	id = 90132
+	title = "EVTNAME90132" #The Spanish Have Refused
+	desc = "EVTDESC90132"
+	picture = "administration"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVT90132OPTA"
-        relation = {
-            who = GEN
-            value = -50
-        }
-    }
+	option = {
+		name = "EVT90132OPTA"
+		relation = {
+			who = GEN
+			value = -50
+		}
+	}
 }
 
 country_event = {
 
-    id = 90133
-    title = "EVTNAME90133" #Cuba is Ours
-    desc = "EVTDESC90133"
-    picture = "Celebration"
+	id = 90133
+	title = "EVTNAME90133" #Cuba is Ours
+	desc = "EVTDESC90133"
+	picture = "Celebration"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVT90133OPTA"
-        prestige = 20
-        money = -1000000
-        relation = {
-            who = SPA
-            value = 100
-        }
+	option = {
+		name = "EVT90133OPTA"
+		prestige = 20
+		money = -1000000
+		relation = {
+			who = SPA
+			value = 100
+		}
 
-    }
+	}
 }
 
 #The Sude Marce Dominion
 country_event = {
-    id = 100108
-    title = "Moldavian Freedom?"
-    desc = "The Moldavians want their freedom"
-    picture = "alaska"
+	id = 100108
+	title = "Moldavian Freedom?"
+	desc = "The Moldavians want their freedom"
+	picture = "alaska"
 
-    trigger = {
-        war = no
-        FRA = { war = no }
+	trigger = {
+		war = no
+		FRA = { war = no }
 		NOT = { exists = MOL 
 		has_country_flag = MOL_puppet
 		}
-        year = 1870
-        any_owned_province = {
-            is_core = MOL
-            controlled_by = THIS
-        }
-    }
+		year = 1870
+		any_owned_province = {
+			is_core = MOL
+			controlled_by = THIS
+		}
+	}
 
-    mean_time_to_happen = {
-        months = 6
-    }
+	mean_time_to_happen = {
+		months = 6
+	}
 
-    option = {
-        name = "Sure, why not"
+	option = {
+		name = "Sure, why not"
 		set_country_flag = MOL_puppet
 		badboy = -3
-        any_owned = {
-            limit = { is_core = MOL }
-            secede_province = MOL
-        }
-        diplomatic_influence = { who = MOL value = 100 }
-        relation = { who = MOL value = 50 }
-        ai_chance = { factor = 75 }
-    }
+		any_owned = {
+			limit = { is_core = MOL }
+			secede_province = MOL
+		}
+		diplomatic_influence = { who = MOL value = 100 }
+		relation = { who = MOL value = 50 }
+		ai_chance = { factor = 75 }
+	}
 	
 	 option = {
-        name = "On To Moldavaia"
+		name = "On To Moldavaia"
 			set_country_flag = MOL_puppet
-        prestige = -10
-        badboy = -3
-        any_pop = {
-            limit = { location = { is_core = MOL } }
-            militancy = -10
-        }
-        any_owned = {
-            limit = { is_core = MOL }
-            secede_province = MOL
-        }
-        change_tag_no_core_switch = MOL
-        ai_chance = { factor = 0 }
-    }
+		prestige = -10
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = MOL } }
+			militancy = -10
+		}
+		any_owned = {
+			limit = { is_core = MOL }
+			secede_province = MOL
+		}
+		change_tag_no_core_switch = MOL
+		ai_chance = { factor = 0 }
+	}
 
-    option = {
-        name = "Well, Home rule is enough"
+	option = {
+		name = "Well, Home rule is enough"
 			set_country_flag = MOL_puppet
-        prestige = -10
-        badboy = 3
-        any_pop = {
-            limit = { location = { is_core = MOL } }
-            militancy = -10
-        }
-        MOL = {
-            all_core = { remove_core = ARG remove_core = THIS }
-        }
-        release_vassal = MOL
-        diplomatic_influence = {
-            who = MOL
-            value = 200
-        }
-        ai_chance = { factor = 20 }
-    }
+		prestige = -10
+		badboy = 3
+		any_pop = {
+			limit = { location = { is_core = MOL } }
+			militancy = -10
+		}
+		MOL = {
+			all_core = { remove_core = ARG remove_core = THIS }
+		}
+		release_vassal = MOL
+		diplomatic_influence = {
+			who = MOL
+			value = 200
+		}
+		ai_chance = { factor = 20 }
+	}
 	
 
-    option = {
-        name = "No?"
+	option = {
+		name = "No?"
 			set_country_flag = MOL_puppet
-        any_owned = {
-            limit = { is_core = MOL }
-            any_pop = {
-                militancy = 7
-            }
-        }
-        ai_chance = { factor = 5 }
-    }
+		any_owned = {
+			limit = { is_core = MOL }
+			any_pop = {
+				militancy = 7
+			}
+		}
+		ai_chance = { factor = 5 }
+	}
 
 
 }

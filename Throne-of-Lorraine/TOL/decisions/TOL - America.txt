@@ -256,7 +256,7 @@ political_decisions = {
         potential = {
             OR = {
                 tag = VEL
-                tag = GEK
+                tag = GKS
             }
             NOT = {
                 exists = VEP
@@ -268,7 +268,7 @@ political_decisions = {
 			any_neighbor_country = {
 				OR = {
 					tag = VEL
-					tag = GEK
+					tag = GKS
 				}
 				war = no
 			}	
@@ -302,7 +302,7 @@ political_decisions = {
                     }
                 }
             }
-            GEK = {
+            GKS = {
                 OR = {
                     AND = {
                         exists = yes
@@ -326,28 +326,29 @@ political_decisions = {
                     }
                 }
             }
-        #}
+        }
 		#The "#" above must be left alone. Do not fix this. Also GEK tag is cursed
+		#ignore above, problem solved
 
         effect = {
             set_global_flag = gewesten_formed
             prestige = 10
-			any_country = {
-				limit = {
-					OR = {
-						primary_culture = gek
-						primary_culture = veldlewer
-					}
-					all_core = { add_core = VEP }
-				}
-			}
+			#any_country = {
+			#	limit = {
+			#		OR = {
+			#			primary_culture = gek
+			#			primary_culture = veldlewer
+			#		}
+			#		all_core = { add_core = VEP }
+			#	}
+			#}
             VEL = { all_core = { add_core = VEP } }
-            GEK = { all_core = { add_core = VEP } }
+            GKS = { all_core = { add_core = VEP } }
             add_accepted_culture = gek
             add_accepted_culture = veldlewer
             change_tag = VEP
 			inherit = VEL
-			inherit = GEK
+			inherit = GKS
         }
 
         ai_will_do = {

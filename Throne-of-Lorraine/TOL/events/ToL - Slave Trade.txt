@@ -10,18 +10,18 @@ country_event = {
 	
 	 slavery = yes_slavery
 		 
-     NOT = { 
+	 NOT = { 
 	  has_country_modifier = slavepopupdated
-      has_country_flag = slave_abolished
+	  has_country_flag = slave_abolished
 	  }
 	  
 	  any_owned_province = {
 	  OR = {
-           continent = central_africa
+		   continent = central_africa
 		   continent = africa
 		   continent = west_africa
 		   continent = east_africa
-        }
+		}
 	 }
 	 }
 
@@ -40,13 +40,13 @@ country_event = {
 		name = "The Slave trade is great" 
 		
 		 random_country = {
-            limit = {
+			limit = {
 			capital_scope = {
 			OR = {
-                continent = north_america
+				continent = north_america
 				continent = south_america
 				}
-            }
+			}
 			}
 			any_pop = {
 				limit = {
@@ -68,11 +68,11 @@ country_event = {
 			}
 			
 			random_country = {
-            limit = {
+			limit = {
 			capital_scope = {
 			continent = europe
 			}
-            }
+			}
 			any_pop = {
 				limit = {
 					type = slaves 
@@ -93,11 +93,11 @@ country_event = {
 			}
 			
 			random_country = {
-            limit = {
+			limit = {
 			capital_scope = {
 			continent = asia
 			}
-            }
+			}
 			any_pop = {
 				limit = {
 					type = slaves 

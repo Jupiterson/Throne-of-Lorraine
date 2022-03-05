@@ -1,1183 +1,1183 @@
 country_event = {
 
-    id = 9990001
-    title = "EVTNAME9990001"
-    desc = "EVTDESC9990001"
-    picture = "confederation"
+	id = 9990001
+	title = "EVTNAME9990001"
+	desc = "EVTDESC9990001"
+	picture = "confederation"
 
-    trigger = {
-        tag = EIC
-        is_vassal = yes
-        OR = {
-            BUR = {
-                any_core = {
-                    owned_by = NET
-                }
-            }
-            HND = {
-                any_core = {
-                    owned_by = NET
-                }
-            }
-        }
-    }
+	trigger = {
+		tag = EIC
+		is_vassal = yes
+		OR = {
+			BUR = {
+				any_core = {
+					owned_by = NET
+				}
+			}
+			HND = {
+				any_core = {
+					owned_by = NET
+				}
+			}
+		}
+	}
 
-    mean_time_to_happen = {
-        days = 1
-    }
+	mean_time_to_happen = {
+		days = 1
+	}
 
-    option = {
-        name = "EVT9990001OPTA"
-        NET = {
-            any_owned = {
-                limit = {
-                    is_core = BUR
-                    is_overseas = yes
-                }
-                secede_province = THIS
-            }
-            any_owned = {
-                limit = {
-                    is_core = HND
-                    is_overseas = yes
-                }
-                secede_province = THIS
-            }
-        }
-    }
+	option = {
+		name = "EVT9990001OPTA"
+		NET = {
+			any_owned = {
+				limit = {
+					is_core = BUR
+					is_overseas = yes
+				}
+				secede_province = THIS
+			}
+			any_owned = {
+				limit = {
+					is_core = HND
+					is_overseas = yes
+				}
+				secede_province = THIS
+			}
+		}
+	}
 }
 
 country_event = {
-    id = 9990002
-    title = "EVTNAME9990000"
-    desc = "EVTDESC9990002"
-    picture = "deliberation"
-    is_triggered_only = yes
+	id = 9990002
+	title = "EVTNAME9990000"
+	desc = "EVTDESC9990002"
+	picture = "deliberation"
+	is_triggered_only = yes
 
-    option = {
-        name = "EVT9990002OPTA"
-        3263 = { add_core = HND }
-        remove_country_modifier = eic_balance
-        research_points = 10000
-        civilized = yes
-        FROM = {
-            any_owned = {
-                limit = {
-                    is_core = BUR
-                    is_overseas = yes
-                }
-                secede_province = THIS
-            }
-            any_owned = {
-                limit = {
-                    is_core = HND
-                    is_overseas = yes
-                }
-                secede_province = THIS
-            }
-        }
-        FROM = { country_event = 9990003 }
-        EIC = {
-            any_pop = { limit = { is_primary_culture = no }
-            militancy = 4
-            }
-        }
-        ai_chance = { factor = 0 }
-    }
+	option = {
+		name = "EVT9990002OPTA"
+		3263 = { add_core = HND }
+		remove_country_modifier = eic_balance
+		research_points = 10000
+		civilized = yes
+		FROM = {
+			any_owned = {
+				limit = {
+					is_core = BUR
+					is_overseas = yes
+				}
+				secede_province = THIS
+			}
+			any_owned = {
+				limit = {
+					is_core = HND
+					is_overseas = yes
+				}
+				secede_province = THIS
+			}
+		}
+		FROM = { country_event = 9990003 }
+		EIC = {
+			any_pop = { limit = { is_primary_culture = no }
+			militancy = 4
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
 
-    option = {
-        name = "EVT9990002OPTB"
-        3263 = { add_core = HND }
-        FROM = { country_event = 9990004 }
+	option = {
+		name = "EVT9990002OPTB"
+		3263 = { add_core = HND }
+		FROM = { country_event = 9990004 }
 
-        ai_chance = {
-            factor = 100
-        }
-    }
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 country_event = {
-    id = 9990003
-    title = "EVTNAME9990003"
-    desc = "EVTDESC9990003"
-    picture = "deliberation"
-    major = yes
-    is_triggered_only = yes
+	id = 9990003
+	title = "EVTNAME9990003"
+	desc = "EVTDESC9990003"
+	picture = "deliberation"
+	major = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVT9990003OPTA"
-        badboy = -10
-        release_vassal = EIC
-        diplomatic_influence = {
-            who = EIC
-            value = -400
-        }
-        any_country = {
-            limit = {
-                vassal_of = NET
-                is_culture_group = south_asian
-            }
-            create_alliance = NET
-        }
-        leave_alliance = EIC
-        FROM = {
-            country_event = 9990012
-            country_event = 9990013
-        }
-        war = {
-            target = EIC
-            attacker_goal = { casus_belli = civil_war }
-            defender_goal = { casus_belli = status_quo }
-            call_ally = yes
-        }
-        set_global_flag = war_with_EIC
-    }
+	option = {
+		name = "EVT9990003OPTA"
+		badboy = -10
+		release_vassal = EIC
+		diplomatic_influence = {
+			who = EIC
+			value = -400
+		}
+		any_country = {
+			limit = {
+				vassal_of = NET
+				is_culture_group = south_asian
+			}
+			create_alliance = NET
+		}
+		leave_alliance = EIC
+		FROM = {
+			country_event = 9990012
+			country_event = 9990013
+		}
+		war = {
+			target = EIC
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		set_global_flag = war_with_EIC
+	}
 }
 
 country_event = {
-    id = 9990004
-    title = "EVTNAME9990000"
-    desc = "EVTDESC9990004"
-    picture = "deliberation"
+	id = 9990004
+	title = "EVTNAME9990000"
+	desc = "EVTDESC9990004"
+	picture = "deliberation"
 
-    major = yes
-    is_triggered_only = yes
+	major = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVT9990004OPTA"
-        treasury = 50000
-        3263 = { naval_base = -2 }
-        EIC = { country_event = 9990007 }
-    }
+	option = {
+		name = "EVT9990004OPTA"
+		treasury = 50000
+		3263 = { naval_base = -2 }
+		EIC = { country_event = 9990007 }
+	}
 }
 
 country_event = {
-    id = 9990005
-    title = "EVTNAME9990005"
-    desc = "EVTDESC9990005"
-    picture = sepoy
-    major = yes
+	id = 9990005
+	title = "EVTNAME9990005"
+	desc = "EVTDESC9990005"
+	picture = sepoy
+	major = yes
 
-    trigger = {
-        tag = EIC
-        has_global_flag = war_with_EIC
-        war = no
-        is_vassal = no
-    }
+	trigger = {
+		tag = EIC
+		has_global_flag = war_with_EIC
+		war = no
+		is_vassal = no
+	}
 
-    fire_only_once = yes
+	fire_only_once = yes
 
-    mean_time_to_happen = {
-        days = 1
-    }
+	mean_time_to_happen = {
+		days = 1
+	}
 
-    option = {
-        name = "EVT9990005OPTA"
-        prestige = 50
-        civilized = yes
-        government = prussian_constitutionalism
-        any_pop = {
-            limit = {
-                culture = british
-                location = { is_core = HND }
-            }
-            reduce_pop = 1.5
-            militancy = -10
-            consciousness = -10
-        }
-        NET = {
-            prestige = -100
-            release_vassal = EIC
-            diplomatic_influence = {
-                who = EIC
-                value = -400
-            }
-            any_owned = {
-                limit = {
-                    is_core = HND
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            any_owned = {
-                limit = {
-                    is_core = SRI
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            any_owned = {
-                limit = {
-                    is_core = JOH
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            any_owned = {
-                limit = {
-                    is_core = CHI
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            any_owned = {
-                limit = {
-                    is_core = BUR
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            any_owned = {
-                limit = {
-                    is_core = AFG
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            any_owned = {
-                limit = {
-                    is_core = MLD
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            any_owned = {
-                limit = {
-                    is_core = PER
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            any_owned = {
-                limit = {
-                    is_core = SIA
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            any_owned = {
-                limit = {
-                    is_core = SLG
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            any_owned = {
-                limit = {
-                    is_core = PRK
-                    is_overseas = yes
-                }
-                secede_province = EIC
-            }
-            2128 = {
-                secede_province = EIC
-            }
-            2125 = {
-                secede_province = EIC
-            }
-        }
-        any_country = {
-            limit = {
-                vassal_of = NET
-                OR = {
-                    is_culture_group = indo_iranian
-                    is_culture_group = southeast_asian
-                    is_culture_group = south_asian
-                    is_culture_group = central_asian
-                }
-            }
-            country_event = 9990006
-        }
+	option = {
+		name = "EVT9990005OPTA"
+		prestige = 50
+		civilized = yes
+		government = prussian_constitutionalism
+		any_pop = {
+			limit = {
+				culture = british
+				location = { is_core = HND }
+			}
+			reduce_pop = 1.5
+			militancy = -10
+			consciousness = -10
+		}
+		NET = {
+			prestige = -100
+			release_vassal = EIC
+			diplomatic_influence = {
+				who = EIC
+				value = -400
+			}
+			any_owned = {
+				limit = {
+					is_core = HND
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			any_owned = {
+				limit = {
+					is_core = SRI
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			any_owned = {
+				limit = {
+					is_core = JOH
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			any_owned = {
+				limit = {
+					is_core = CHI
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			any_owned = {
+				limit = {
+					is_core = BUR
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			any_owned = {
+				limit = {
+					is_core = AFG
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			any_owned = {
+				limit = {
+					is_core = MLD
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			any_owned = {
+				limit = {
+					is_core = PER
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			any_owned = {
+				limit = {
+					is_core = SIA
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			any_owned = {
+				limit = {
+					is_core = SLG
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			any_owned = {
+				limit = {
+					is_core = PRK
+					is_overseas = yes
+				}
+				secede_province = EIC
+			}
+			2128 = {
+				secede_province = EIC
+			}
+			2125 = {
+				secede_province = EIC
+			}
+		}
+		any_country = {
+			limit = {
+				vassal_of = NET
+				OR = {
+					is_culture_group = indo_iranian
+					is_culture_group = southeast_asian
+					is_culture_group = south_asian
+					is_culture_group = central_asian
+				}
+			}
+			country_event = 9990006
+		}
 
-        NET_1251 = {
-            add_core = EIC
-        }
-        1304 = {
-            add_core = EIC
-        }
-        1297 = {
-            add_core = EIC
-        }
-        remove_country_modifier = sepoy_mutiny
-        set_global_flag = EIC_independence
-    }
+		NET_1251 = {
+			add_core = EIC
+		}
+		1304 = {
+			add_core = EIC
+		}
+		1297 = {
+			add_core = EIC
+		}
+		remove_country_modifier = sepoy_mutiny
+		set_global_flag = EIC_independence
+	}
 }
 
 country_event = {
-    id = 9990006
-    title = "EVTNAME9990005"
-    desc = "EVTDESC9990006"
-    picture = sepoy
+	id = 9990006
+	title = "EVTNAME9990005"
+	desc = "EVTDESC9990006"
+	picture = sepoy
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVT9990006OPTA"
-        leave_alliance = NET
-        prestige = -50
-        NET = {
-            release_vassal = THIS
-            diplomatic_influence = {
-                who = THIS
-                value = -1000
-            }
-        }
-        EIC = {
-            create_vassal = THIS
-            create_alliance = THIS
-            military_access = THIS
-            relation = {
-                who = THIS
-                value = 200
-            }
-        }
-        government = absolute_monarchy
-        ai_chance = {
-            factor = 60
-        }
-    }
+	option = {
+		name = "EVT9990006OPTA"
+		leave_alliance = NET
+		prestige = -50
+		NET = {
+			release_vassal = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -1000
+			}
+		}
+		EIC = {
+			create_vassal = THIS
+			create_alliance = THIS
+			military_access = THIS
+			relation = {
+				who = THIS
+				value = 200
+			}
+		}
+		government = absolute_monarchy
+		ai_chance = {
+			factor = 60
+		}
+	}
 
-    option = {
-        name = "EVT9990006OPTB"
-        leave_alliance = NET
-        prestige = -50
-        NET = {
-            release_vassal = THIS
-            diplomatic_influence = {
-                who = THIS
-                value = -1000
-            }
-        }
-        EIC = {
-            casus_belli = {
-                target = THIS
-                type = make_puppet
-                months = 60
-            }
-            country_event = 9990011
-        }
-        ai_chance = {
-            factor = 40
-        }
-    }
+	option = {
+		name = "EVT9990006OPTB"
+		leave_alliance = NET
+		prestige = -50
+		NET = {
+			release_vassal = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -1000
+			}
+		}
+		EIC = {
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 60
+			}
+			country_event = 9990011
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
 }
 
 country_event = {
-    id = 9990007
-    title = "EVTNAME9990000"
-    desc = "EVTDESC9990004"
-    picture = "deliberation"
+	id = 9990007
+	title = "EVTNAME9990000"
+	desc = "EVTDESC9990004"
+	picture = "deliberation"
 
-    is_triggered_only = yes
-    fire_only_once = yes
+	is_triggered_only = yes
+	fire_only_once = yes
 
-    option = {
-        name = "EVT9990007OPTA"
-        any_owned = { secede_province = FROM }
-        FROM = { inherit = THIS }
-    }
+	option = {
+		name = "EVT9990007OPTA"
+		any_owned = { secede_province = FROM }
+		FROM = { inherit = THIS }
+	}
 }
 
 country_event = {
-    id = 9990008
-    title = "EVTNAME9990008"
-    desc = "EVTDESC9990008"
-    picture = "deliberation"
+	id = 9990008
+	title = "EVTNAME9990008"
+	desc = "EVTDESC9990008"
+	picture = "deliberation"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVT9990002OPTA"
-    }
+	option = {
+		name = "EVT9990002OPTA"
+	}
 }
 
 country_event = {
-    id = 9990009
-    title = "EVTNAME9990009"
-    desc = "EVTDESC9990009"
-    picture = Artillery
+	id = 9990009
+	title = "EVTNAME9990009"
+	desc = "EVTDESC9990009"
+	picture = Artillery
 
-    trigger = {
-        tag = EIC
-        substate_of = NET
-        OR = {
-            AND = {
-                NET = {
-                    strategic_mobility = 1
-                }
-                NOT = {
-                    EIC = {
-                        strategic_mobility = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    point_defense_system = 1
-                }
-                NOT = {
-                    EIC = {
-                        point_defense_system = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    muzzle_loaded_rifles = 1
-                }
-                NOT = {
-                    EIC = {
-                        muzzle_loaded_rifles = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    breech_loaded_rifles = 1
-                }
-                NOT = {
-                    EIC = {
-                        breech_loaded_rifles = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    iron_muzzle_loaded_artillery = 1
-                }
-                NOT = {
-                    EIC = {
-                        iron_muzzle_loaded_artillery = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    iron_breech_loaded_artillery = 1
-                }
-                NOT = {
-                    EIC = {
-                        iron_breech_loaded_artillery = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    military_plans = 1
-                }
-                NOT = {
-                    EIC = {
-                        military_plans = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    military_statistics = 1
-                }
-                NOT = {
-                    EIC = {
-                        military_statistics = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    army_professionalism = 1
-                }
-                NOT = {
-                    EIC = {
-                        army_professionalism = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    army_decision_making = 1
-                }
-                NOT = {
-                    EIC = {
-                        army_decision_making = 1
-                    }
-                }
-            }
-        }
-    }
+	trigger = {
+		tag = EIC
+		substate_of = NET
+		OR = {
+			AND = {
+				NET = {
+					strategic_mobility = 1
+				}
+				NOT = {
+					EIC = {
+						strategic_mobility = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					point_defense_system = 1
+				}
+				NOT = {
+					EIC = {
+						point_defense_system = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					muzzle_loaded_rifles = 1
+				}
+				NOT = {
+					EIC = {
+						muzzle_loaded_rifles = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					breech_loaded_rifles = 1
+				}
+				NOT = {
+					EIC = {
+						breech_loaded_rifles = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					iron_muzzle_loaded_artillery = 1
+				}
+				NOT = {
+					EIC = {
+						iron_muzzle_loaded_artillery = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					iron_breech_loaded_artillery = 1
+				}
+				NOT = {
+					EIC = {
+						iron_breech_loaded_artillery = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					military_plans = 1
+				}
+				NOT = {
+					EIC = {
+						military_plans = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					military_statistics = 1
+				}
+				NOT = {
+					EIC = {
+						military_statistics = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					army_professionalism = 1
+				}
+				NOT = {
+					EIC = {
+						army_professionalism = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					army_decision_making = 1
+				}
+				NOT = {
+					EIC = {
+						army_decision_making = 1
+					}
+				}
+			}
+		}
+	}
 
-    mean_time_to_happen = {
-        months = 1
-    }
+	mean_time_to_happen = {
+		months = 1
+	}
 
-    option = {
-        name = "EVTOPT99910"
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        strategic_mobility = 1
-                    }
-                }
-                NET = {
-                    strategic_mobility = 1
-                }
-            }
-            owner = {
-                activate_technology = strategic_mobility
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        point_defense_system = 1
-                    }
-                }
-                NET = {
-                    point_defense_system = 1
-                }
-            }
-            owner = {
-                activate_technology = point_defense_system
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        muzzle_loaded_rifles = 1
-                    }
-                }
-                NET = {
-                    muzzle_loaded_rifles = 1
-                }
-            }
-            owner = {
-                activate_technology = muzzle_loaded_rifles
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        breech_loaded_rifles = 1
-                    }
-                }
-                NET = {
-                    breech_loaded_rifles = 1
-                }
-            }
-            owner = {
-                activate_technology = breech_loaded_rifles
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        iron_muzzle_loaded_artillery = 1
-                    }
-                }
-                NET = {
-                    iron_muzzle_loaded_artillery = 1
-                }
-            }
-            owner = {
-                activate_technology = iron_muzzle_loaded_artillery
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        iron_breech_loaded_artillery = 1
-                    }
-                }
-                NET = {
-                    iron_breech_loaded_artillery = 1
-                }
-            }
-            owner = {
-                activate_technology = iron_breech_loaded_artillery
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        military_plans = 1
-                    }
-                }
-                NET = {
-                    military_plans = 1
-                }
-            }
-            owner = {
-                activate_technology = military_plans
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        military_statistics = 1
-                    }
-                }
-                NET = {
-                    military_statistics = 1
-                }
-            }
-            owner = {
-                activate_technology = military_statistics
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        army_professionalism = 1
-                    }
-                }
-                NET = {
-                    army_professionalism = 1
-                }
-            }
-            owner = {
-                activate_technology = army_professionalism
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        army_decision_making = 1
-                    }
-                }
-                NET = {
-                    army_decision_making = 1
-                }
-            }
-            owner = {
-                activate_technology = army_decision_making
-            }
-        }
-    }
+	option = {
+		name = "EVTOPT99910"
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						strategic_mobility = 1
+					}
+				}
+				NET = {
+					strategic_mobility = 1
+				}
+			}
+			owner = {
+				activate_technology = strategic_mobility
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						point_defense_system = 1
+					}
+				}
+				NET = {
+					point_defense_system = 1
+				}
+			}
+			owner = {
+				activate_technology = point_defense_system
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						muzzle_loaded_rifles = 1
+					}
+				}
+				NET = {
+					muzzle_loaded_rifles = 1
+				}
+			}
+			owner = {
+				activate_technology = muzzle_loaded_rifles
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						breech_loaded_rifles = 1
+					}
+				}
+				NET = {
+					breech_loaded_rifles = 1
+				}
+			}
+			owner = {
+				activate_technology = breech_loaded_rifles
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						iron_muzzle_loaded_artillery = 1
+					}
+				}
+				NET = {
+					iron_muzzle_loaded_artillery = 1
+				}
+			}
+			owner = {
+				activate_technology = iron_muzzle_loaded_artillery
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						iron_breech_loaded_artillery = 1
+					}
+				}
+				NET = {
+					iron_breech_loaded_artillery = 1
+				}
+			}
+			owner = {
+				activate_technology = iron_breech_loaded_artillery
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						military_plans = 1
+					}
+				}
+				NET = {
+					military_plans = 1
+				}
+			}
+			owner = {
+				activate_technology = military_plans
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						military_statistics = 1
+					}
+				}
+				NET = {
+					military_statistics = 1
+				}
+			}
+			owner = {
+				activate_technology = military_statistics
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						army_professionalism = 1
+					}
+				}
+				NET = {
+					army_professionalism = 1
+				}
+			}
+			owner = {
+				activate_technology = army_professionalism
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						army_decision_making = 1
+					}
+				}
+				NET = {
+					army_decision_making = 1
+				}
+			}
+			owner = {
+				activate_technology = army_decision_making
+			}
+		}
+	}
 }
 
 country_event = {
-    id = 9990010
-    title = "EVTNAME9990009"
-    desc = "EVTDESC9990009"
-    picture = Artillery
+	id = 9990010
+	title = "EVTNAME9990009"
+	desc = "EVTDESC9990009"
+	picture = Artillery
 
-    trigger = {
-        tag = EIC
-        substate_of = NET
-        OR = {
-            AND = {
-                NET = {
-                    high_pressure_steam_engine = 1
-                }
-                NOT = {
-                    EIC = {
-                        high_pressure_steam_engine = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    compound_steam_engines = 1
-                }
-                NOT = {
-                    EIC = {
-                        compound_steam_engines = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    steam_turbine = 1
-                }
-                NOT = {
-                    EIC = {
-                        steam_turbine = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    interchangeable_parts = 1
-                }
-                NOT = {
-                    EIC = {
-                        interchangeable_parts = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    semi_automatization = 1
-                }
-                NOT = {
-                    EIC = {
-                        semi_automatization = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    hot_blast = 1
-                }
-                NOT = {
-                    EIC = {
-                        hot_blast = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    mechanized_mining = 1
-                }
-                NOT = {
-                    EIC = {
-                        mechanized_mining = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    early_railroad = 1
-                }
-                NOT = {
-                    EIC = {
-                        early_railroad = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    iron_railroad = 1
-                }
-                NOT = {
-                    EIC = {
-                        iron_railroad = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    medicine = 1
-                }
-                NOT = {
-                    EIC = {
-                        medicine = 1
-                    }
-                }
-            }
-            AND = {
-                NET = {
-                    inorganic_chemistry = 1
-                }
-                NOT = {
-                    EIC = {
-                        inorganic_chemistry = 1
-                    }
-                }
-            }
-        }
-    }
+	trigger = {
+		tag = EIC
+		substate_of = NET
+		OR = {
+			AND = {
+				NET = {
+					high_pressure_steam_engine = 1
+				}
+				NOT = {
+					EIC = {
+						high_pressure_steam_engine = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					compound_steam_engines = 1
+				}
+				NOT = {
+					EIC = {
+						compound_steam_engines = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					steam_turbine = 1
+				}
+				NOT = {
+					EIC = {
+						steam_turbine = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					interchangeable_parts = 1
+				}
+				NOT = {
+					EIC = {
+						interchangeable_parts = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					semi_automatization = 1
+				}
+				NOT = {
+					EIC = {
+						semi_automatization = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					hot_blast = 1
+				}
+				NOT = {
+					EIC = {
+						hot_blast = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					mechanized_mining = 1
+				}
+				NOT = {
+					EIC = {
+						mechanized_mining = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					early_railroad = 1
+				}
+				NOT = {
+					EIC = {
+						early_railroad = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					iron_railroad = 1
+				}
+				NOT = {
+					EIC = {
+						iron_railroad = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					medicine = 1
+				}
+				NOT = {
+					EIC = {
+						medicine = 1
+					}
+				}
+			}
+			AND = {
+				NET = {
+					inorganic_chemistry = 1
+				}
+				NOT = {
+					EIC = {
+						inorganic_chemistry = 1
+					}
+				}
+			}
+		}
+	}
 
-    mean_time_to_happen = {
-        days = 1
-    }
+	mean_time_to_happen = {
+		days = 1
+	}
 
-    option = {
-        name = "EVTOPT99910"
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        high_pressure_steam_engine = 1
-                    }
-                }
-                NET = {
-                    high_pressure_steam_engine = 1
-                }
-            }
-            owner = {
-                activate_technology = high_pressure_steam_engine
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        compound_steam_engines = 1
-                    }
-                }
-                NET = {
-                    compound_steam_engines = 1
-                }
-            }
-            owner = {
-                activate_technology = compound_steam_engines
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        steam_turbine = 1
-                    }
-                }
-                NET = {
-                    steam_turbine = 1
-                }
-            }
-            owner = {
-                activate_technology = steam_turbine
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        interchangeable_parts = 1
-                    }
-                }
-                NET = {
-                    interchangeable_parts = 1
-                }
-            }
-            owner = {
-                activate_technology = interchangeable_parts
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        semi_automatization = 1
-                    }
-                }
-                NET = {
-                    semi_automatization = 1
-                }
-            }
-            owner = {
-                activate_technology = semi_automatization
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        hot_blast = 1
-                    }
-                }
-                NET = {
-                    hot_blast = 1
-                }
-            }
-            owner = {
-                activate_technology = hot_blast
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        mechanized_mining = 1
-                    }
-                }
-                NET = {
-                    mechanized_mining = 1
-                }
-            }
-            owner = {
-                activate_technology = mechanized_mining
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        early_railroad = 1
-                    }
-                }
-                NET = {
-                    early_railroad = 1
-                }
-            }
-            owner = {
-                activate_technology = early_railroad
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        iron_railroad = 1
-                    }
-                }
-                NET = {
-                    iron_railroad = 1
-                }
-            }
-            owner = {
-                activate_technology = iron_railroad
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        medicine = 1
-                    }
-                }
-                NET = {
-                    medicine = 1
-                }
-            }
-            owner = {
-                activate_technology = medicine
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = {
-                        inorganic_chemistry = 1
-                    }
-                }
-                NET = {
-                    inorganic_chemistry = 1
-                }
-            }
-            owner = {
-                activate_technology = inorganic_chemistry
-            }
-        }
-    }
+	option = {
+		name = "EVTOPT99910"
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						high_pressure_steam_engine = 1
+					}
+				}
+				NET = {
+					high_pressure_steam_engine = 1
+				}
+			}
+			owner = {
+				activate_technology = high_pressure_steam_engine
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						compound_steam_engines = 1
+					}
+				}
+				NET = {
+					compound_steam_engines = 1
+				}
+			}
+			owner = {
+				activate_technology = compound_steam_engines
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						steam_turbine = 1
+					}
+				}
+				NET = {
+					steam_turbine = 1
+				}
+			}
+			owner = {
+				activate_technology = steam_turbine
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						interchangeable_parts = 1
+					}
+				}
+				NET = {
+					interchangeable_parts = 1
+				}
+			}
+			owner = {
+				activate_technology = interchangeable_parts
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						semi_automatization = 1
+					}
+				}
+				NET = {
+					semi_automatization = 1
+				}
+			}
+			owner = {
+				activate_technology = semi_automatization
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						hot_blast = 1
+					}
+				}
+				NET = {
+					hot_blast = 1
+				}
+			}
+			owner = {
+				activate_technology = hot_blast
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						mechanized_mining = 1
+					}
+				}
+				NET = {
+					mechanized_mining = 1
+				}
+			}
+			owner = {
+				activate_technology = mechanized_mining
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						early_railroad = 1
+					}
+				}
+				NET = {
+					early_railroad = 1
+				}
+			}
+			owner = {
+				activate_technology = early_railroad
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						iron_railroad = 1
+					}
+				}
+				NET = {
+					iron_railroad = 1
+				}
+			}
+			owner = {
+				activate_technology = iron_railroad
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						medicine = 1
+					}
+				}
+				NET = {
+					medicine = 1
+				}
+			}
+			owner = {
+				activate_technology = medicine
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						inorganic_chemistry = 1
+					}
+				}
+				NET = {
+					inorganic_chemistry = 1
+				}
+			}
+			owner = {
+				activate_technology = inorganic_chemistry
+			}
+		}
+	}
 }
 
 country_event = {
-    id = 9990011
-    title = "EVTNAME9990011"
-    desc = "EVTDESC9990011"
-    picture = "deliberation"
+	id = 9990011
+	title = "EVTNAME9990011"
+	desc = "EVTDESC9990011"
+	picture = "deliberation"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVT9990011OPTA"
-        casus_belli = {
-            target = FROM
-            type = make_puppet
-            months = 60
-        }
-    }
+	option = {
+		name = "EVT9990011OPTA"
+		casus_belli = {
+			target = FROM
+			type = make_puppet
+			months = 60
+		}
+	}
 }
 
 country_event = {
-    id = 9990012
-    title = "EVTNAME9990012"
-    desc = "EVTDESC9990012"
-    picture = "scottish_war"
+	id = 9990012
+	title = "EVTNAME9990012"
+	desc = "EVTDESC9990012"
+	picture = "scottish_war"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVTDESC9990012OPTA"
-        release = MAH
-        release = BER
-        NET = {
-            inherit = MAH
-            inherit = BER
-        }
-    }
+	option = {
+		name = "EVTDESC9990012OPTA"
+		release = MAH
+		release = BER
+		NET = {
+			inherit = MAH
+			inherit = BER
+		}
+	}
 }
 
 country_event = {
-    id = 9990013
-    title = "EVTNAME9990013"
-    desc = "EVTDESC9990013"
-    picture = "PDA_Blockade"
+	id = 9990013
+	title = "EVTNAME9990013"
+	desc = "EVTDESC9990013"
+	picture = "PDA_Blockade"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "EVTDESC9990013OPTA"
-        release = SRI
-        NET = {
-            inherit = SRI
-        }
-        1321 = {
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = manowar value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = commerce_raider value = current }
-            sub_unit = { type = steam_transport value = current }
-            sub_unit = { type = steam_transport value = current }
-            sub_unit = { type = steam_transport value = current }
-            sub_unit = { type = steam_transport value = current }
-            sub_unit = { type = steam_transport value = current }
-            sub_unit = { type = steam_transport value = current }
-            sub_unit = { type = steam_transport value = current }
-            sub_unit = { type = steam_transport value = current }
+	option = {
+		name = "EVTDESC9990013OPTA"
+		release = SRI
+		NET = {
+			inherit = SRI
+		}
+		1321 = {
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
 
-        }
-    }
+		}
+	}
 }
 
 country_event = {
 
-    id = 9990014
-    title = "EVTNAME9990001"
-    desc = "EVTDESC9990001"
-    picture = "confederation"
+	id = 9990014
+	title = "EVTNAME9990001"
+	desc = "EVTDESC9990001"
+	picture = "confederation"
 
-    trigger = {
-        tag = RPL
-        is_vassal = yes
-        government = colonial_company
-        OR = {
-            AND = {
-                COL = {
-                    any_core = {
-                        owned_by = NET
+	trigger = {
+		tag = RPL
+		is_vassal = yes
+		government = colonial_company
+		OR = {
+			AND = {
+				COL = {
+					any_core = {
+						owned_by = NET
 						NOT = { is_core = USA }
-                    }
-                }
-                COL = {
-                    exists = no
-                }
-            }
-            RPL = {
-                any_core = {
-                    owned_by = NET
+					}
+				}
+				COL = {
+					exists = no
+				}
+			}
+			RPL = {
+				any_core = {
+					owned_by = NET
 					NOT = { is_core = USA }
-                }
-            }
-        }
-        NET = {
-            war = no
-        }
-        war = no
-    }
+				}
+			}
+		}
+		NET = {
+			war = no
+		}
+		war = no
+	}
 
-    mean_time_to_happen = {
-        days = 1
-    }
+	mean_time_to_happen = {
+		days = 1
+	}
 
-    option = {
-        name = "EVTOPT99910"
-        NET = {
-            any_owned = {
-                limit = {
-                    is_core = COL
-                    is_overseas = yes
+	option = {
+		name = "EVTOPT99910"
+		NET = {
+			any_owned = {
+				limit = {
+					is_core = COL
+					is_overseas = yes
 					NOT = { is_core = USA }
-                }
-                secede_province = THIS
-            }
-            any_owned = {
-                limit = {
-                    is_core = RPL
-                    is_overseas = yes
+				}
+				secede_province = THIS
+			}
+			any_owned = {
+				limit = {
+					is_core = RPL
+					is_overseas = yes
 					NOT = { is_core = USA }
-                }
-                secede_province = THIS
-                remove_core = THIS
-            }
-        }
-    }
+				}
+				secede_province = THIS
+				remove_core = THIS
+			}
+		}
+	}
 }
 
 country_event = {
 
-    id = 9990015
-    title = "EVTNAME9990015"
-    desc = "EVTDESC9990015"
-    picture = "confederation"
+	id = 9990015
+	title = "EVTNAME9990015"
+	desc = "EVTDESC9990015"
+	picture = "confederation"
 
-    trigger = {
-        tag = EIC
-        is_vassal = yes
-        government = colonial_company
-        AND = {
-            year = 1845
+	trigger = {
+		tag = EIC
+		is_vassal = yes
+		government = colonial_company
+		AND = {
+			year = 1845
 			OR = { 
 				FRZ = { exists = yes }
 				OCC = { exists = yes } 
 			}
 		}
-        war = no
-    }
+		war = no
+	}
 
-    mean_time_to_happen = {
-        days = 1
-    }
+	mean_time_to_happen = {
+		days = 1
+	}
 
-    option = {
-        name = "EVTOPT9990015"
-        FRA = {
-            any_owned = {
-                limit = {
+	option = {
+		name = "EVTOPT9990015"
+		FRA = {
+			any_owned = {
+				limit = {
 					OR = { 
 						is_core = DRA
 						is_core = HND
 					}
-                    is_overseas = yes
-                }
-                secede_province = THIS
+					is_overseas = yes
+				}
+				secede_province = THIS
 				add_core = THIS 
-            }
-        }
+			}
+		}
 		any_pop = {
-            limit = {
-                culture = telegu
-                location = { is_core = DRA }
-            }
-            consciousness = 10
-        }
-    }
+			limit = {
+				culture = telegu
+				location = { is_core = DRA }
+			}
+			consciousness = 10
+		}
+	}
 }

@@ -1,1064 +1,1064 @@
 #Finish Revolt 
 country_event = {
-    id = 998500
-    title = "A Finnish Revolt"
-    desc = "EVTDESC998500"
-    picture = "crete_revolt"
+	id = 998500
+	title = "A Finnish Revolt"
+	desc = "EVTDESC998500"
+	picture = "crete_revolt"
 #   fire_only_once = yes
 
-    trigger = {
-        any_pop = {
+	trigger = {
+		any_pop = {
 		has_pop_culture = finnish 
 		average_militancy = 6 
 #		location = { is_core = FIE }
 		}
 		tag = SWE
-        343 = { owned_by = THIS }
-        #war = no
-        NOT = { exists = FIN }
+		343 = { owned_by = THIS }
+		#war = no
+		NOT = { exists = FIN }
 		NOT = { has_country_modifier = revolt_cooldown }
-    }
+	}
 
-    mean_time_to_happen = {
-        months = 48
+	mean_time_to_happen = {
+		months = 48
 
-        modifier = {
-            factor = 0.5
-            average_militancy = 6
-        }
+		modifier = {
+			factor = 0.5
+			average_militancy = 6
+		}
 
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
 
-    option = {
-        name = "They shall pay"
-        any_owned = {
-            limit = { is_core = FIN }
-            secede_province = FIN 
-        }
-        diplomatic_influence = {
-            who = FIN 
-            value = -400
-        }
-        casus_belli = {
-            target = FIN 
-            type = conquest
-            months = 12
-        }
-	    add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        war = {
-            target = FIN 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+	option = {
+		name = "They shall pay"
+		any_owned = {
+			limit = { is_core = FIN }
+			secede_province = FIN 
+		}
+		diplomatic_influence = {
+			who = FIN 
+			value = -400
+		}
+		casus_belli = {
+			target = FIN 
+			type = conquest
+			months = 12
+		}
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
+		war = {
+			target = FIN 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 }
 
 #Burgundian Revolt
 country_event = {
-    id = 998501
-    title = "Burgundy in Revolt"
-    desc = "EVTDESC998501"
-    picture = "crete_revolt"
-#    fire_only_once = yes
+	id = 998501
+	title = "Burgundy in Revolt"
+	desc = "EVTDESC998501"
+	picture = "crete_revolt"
+#	fire_only_once = yes
 
-    trigger = {
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = burgundian 
 		average_militancy = 6 
 #		location = { is_core = BRG }
 		}
-        OR = {
-            tag = LOR
-            tag = FRA
-        }
-        432 = { owned_by = THIS }
-        #war = no
-        NOT = { exists = BRG }
-    }
+		OR = {
+			tag = LOR
+			tag = FRA
+		}
+		432 = { owned_by = THIS }
+		#war = no
+		NOT = { exists = BRG }
+	}
 
-    mean_time_to_happen = {
-        months = 48
-
-
-        modifier = {
-            factor = 0.5
-            average_militancy = 6
-        }
-
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
+	mean_time_to_happen = {
+		months = 48
 
 
-    option = {
-        name = "Well then..."
+		modifier = {
+			factor = 0.5
+			average_militancy = 6
+		}
+
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
+
+
+	option = {
+		name = "Well then..."
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = BRG }
-            secede_province = BRG 
-        }
-        diplomatic_influence = {
-            who = BRG 
-            value = -400
-        }
-        casus_belli = {
-            target = BRG 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = BRG 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		any_owned = {
+			limit = { is_core = BRG }
+			secede_province = BRG 
+		}
+		diplomatic_influence = {
+			who = BRG 
+			value = -400
+		}
+		casus_belli = {
+			target = BRG 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = BRG 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 #Albanian Revolt
 country_event = {
-    id = 123467
-    title = "The Albanian revolt"
-    desc = "The Albanians are revolting against our rule."
+	id = 123467
+	title = "The Albanian revolt"
+	desc = "The Albanians are revolting against our rule."
  #   fire_only_once = yes
-    picture = "ALB_revolt_1"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	picture = "ALB_revolt_1"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = TUR
-        owns = 852
-        owns = 849
-        any_pop = {
+		tag = TUR
+		owns = 852
+		owns = 849
+		any_pop = {
 		has_pop_culture = albanian 
 		average_militancy = 5 
 		}
-        NOT = { exists = ALB }
-    }
-    option = {
-        name = "Crush them!"
+		NOT = { exists = ALB }
+	}
+	option = {
+		name = "Crush them!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_pop = {
-            limit = {
-                has_pop_culture = albanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        any_owned = {
-            limit = { is_core = ALB }
-            secede_province = ALB
-        }
-        war = {
-            target = ALB
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Albania shall be free!"
+		any_pop = {
+			limit = {
+				has_pop_culture = albanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		any_owned = {
+			limit = { is_core = ALB }
+			secede_province = ALB
+		}
+		war = {
+			target = ALB
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Albania shall be free!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_pop = {
-            limit = {
-                has_pop_culture = albanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        any_owned = {
-            limit = { is_core = ALB }
-            secede_province = ALB
-        }
-        war = {
-            target = ALB
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = ALB
-    }
+		any_pop = {
+			limit = {
+				has_pop_culture = albanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		any_owned = {
+			limit = { is_core = ALB }
+			secede_province = ALB
+		}
+		war = {
+			target = ALB
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = ALB
+	}
 }
 
 #Silesian uprising
 country_event = {
-    id = 123468
-    title = "The Silesian Uprising"
-    desc = "The Silesians are revolting against our rule."
-#    fire_only_once = yes
-    picture = "ALB_revolt_2"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 123468
+	title = "The Silesian Uprising"
+	desc = "The Silesians are revolting against our rule."
+#	fire_only_once = yes
+	picture = "ALB_revolt_2"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = SAX
-        owns = 682
-        owns = 684
-        owns = 3277
+		tag = SAX
+		owns = 682
+		owns = 684
+		owns = 3277
 		
 		any_pop = { 
 		average_militancy = 5
-        OR = {	 	
+		OR = {	 	
 		location = 682
 		location = 684
 	  	   }
 		}
-        NOT = { exists = SLS }
-    }
-    option = {
-        name = "Crush them!"
+		NOT = { exists = SLS }
+	}
+	option = {
+		name = "Crush them!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_pop = {
-            limit = {
-                has_pop_culture = polish
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        682 = {
-            secede_province = SLS
-        }
-        684 = {
-            secede_province = SLS
-        }
-        3277 = {
-            secede_province = SLS
-        }
-        war = {
-            target = SLS
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = acquire_core_state state_province_id = 682 }
-        }
-    }
-    option = {
-        name = "Silesia shall be free!"
+		any_pop = {
+			limit = {
+				has_pop_culture = polish
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		682 = {
+			secede_province = SLS
+		}
+		684 = {
+			secede_province = SLS
+		}
+		3277 = {
+			secede_province = SLS
+		}
+		war = {
+			target = SLS
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = acquire_core_state state_province_id = 682 }
+		}
+	}
+	option = {
+		name = "Silesia shall be free!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_pop = {
-            limit = {
-                has_pop_culture = polish
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        682 = {
-            secede_province = SLS
-        }
-        684 = {
-            secede_province = SLS
-        }
-        3277 = {
-            secede_province = SLS
-        }
-        war = {
-            target = SLS
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = acquire_core_state state_province_id = 682 }
-        }
-        change_tag_no_core_switch = SLS
-    }
+		any_pop = {
+			limit = {
+				has_pop_culture = polish
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		682 = {
+			secede_province = SLS
+		}
+		684 = {
+			secede_province = SLS
+		}
+		3277 = {
+			secede_province = SLS
+		}
+		war = {
+			target = SLS
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = acquire_core_state state_province_id = 682 }
+		}
+		change_tag_no_core_switch = SLS
+	}
 }
 
 #Corsican Revolt
 country_event = {
-    id = 123469
-    title = "The Corsican revolt"
-    desc = "The Corsicans are revolting against our rule."
-    fire_only_once = yes
-    picture = "ALB_revolt_3"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 123469
+	title = "The Corsican revolt"
+	desc = "The Corsicans are revolting against our rule."
+	fire_only_once = yes
+	picture = "ALB_revolt_3"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = GEN
-        owns = 473
-        year = 1837
-        NOT = { year = 1842 }
-        NOT = { exists = CRS }
-    }
-    option = {
-        name = "Crush them!"
+		tag = GEN
+		owns = 473
+		year = 1837
+		NOT = { year = 1842 }
+		NOT = { exists = CRS }
+	}
+	option = {
+		name = "Crush them!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        473 = {
-            secede_province = CRS
-        }
-        war = {
-            target = CRS
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Corsica shall be free!"
+		473 = {
+			secede_province = CRS
+		}
+		war = {
+			target = CRS
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Corsica shall be free!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        473 = {
-            secede_province = CRS
-        }
-        war = {
-            target = CRS
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = CRS
-    }
+		473 = {
+			secede_province = CRS
+		}
+		war = {
+			target = CRS
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = CRS
+	}
 }
 
 
 #Tunisian Revolt
 country_event = {
-    id = 123423
-    title = "The Tunisian revolt"
-    desc = "The Arabs are revolting against our rule."
-    fire_only_once = yes
-    picture = "ALB_revolt_5"
-    mean_time_to_happen = { months = 3 }
-    trigger = {
+	id = 123423
+	title = "The Tunisian revolt"
+	desc = "The Arabs are revolting against our rule."
+	fire_only_once = yes
+	picture = "ALB_revolt_5"
+	mean_time_to_happen = { months = 3 }
+	trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = GEN
-        owns = 1725
-        exists = CRS 
+		tag = GEN
+		owns = 1725
+		exists = CRS 
 		exists = SYC 
 		exists = SRD
 		NOT = { exists = TUN }
-        year = 1837
-    }
-    option = {
-        name = "Crush them!"
-        any_owned = {
-            limit = { is_core = TUN }
-            secede_province = TUN 
-        }
+		year = 1837
+	}
+	option = {
+		name = "Crush them!"
+		any_owned = {
+			limit = { is_core = TUN }
+			secede_province = TUN 
+		}
 	   TUN = { government = absolute_monarchy }
-        war = {
-            target = TUN
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Tunis shall be free!"
-        any_owned = {
-            limit = { is_core = TUN }
-            secede_province = TUN 
-        }
-	    TUN = { government = absolute_monarchy }
-        war = {
-            target = TUN
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = TUN
-    }
+		war = {
+			target = TUN
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Tunis shall be free!"
+		any_owned = {
+			limit = { is_core = TUN }
+			secede_province = TUN 
+		}
+		TUN = { government = absolute_monarchy }
+		war = {
+			target = TUN
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = TUN
+	}
 }
 
 
 #Sardinian Revolt
 country_event = {
-    id = 123480
-    title = "The Sardinian revolt"
-    desc = "The Sardinian are revolting against our rule."
-    fire_only_once = yes
-    picture = "ALB_revolt_5"
-    mean_time_to_happen = { months = 2 }
-    trigger = {
+	id = 123480
+	title = "The Sardinian revolt"
+	desc = "The Sardinian are revolting against our rule."
+	fire_only_once = yes
+	picture = "ALB_revolt_5"
+	mean_time_to_happen = { months = 2 }
+	trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = GEN
-        owns = 765
-        exists = CRS 
+		tag = GEN
+		owns = 765
+		exists = CRS 
 		exists = SYC 
 		NOT = { exists = SRD }
-        year = 1837
-    }
-    option = {
-        name = "Crush them!"
-        any_owned = {
-            limit = { is_core = SRD }
-            secede_province = SRD 
-        }
-        war = {
-            target = SRD
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Sardinia shall be free!"
-        any_owned = {
-            limit = { is_core = SRD }
-            secede_province = SRD 
-        }
-        war = {
-            target = SRD
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = SRD
-    }
+		year = 1837
+	}
+	option = {
+		name = "Crush them!"
+		any_owned = {
+			limit = { is_core = SRD }
+			secede_province = SRD 
+		}
+		war = {
+			target = SRD
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Sardinia shall be free!"
+		any_owned = {
+			limit = { is_core = SRD }
+			secede_province = SRD 
+		}
+		war = {
+			target = SRD
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = SRD
+	}
 }
 
 
 #Dalmatian Revolt
 country_event = {
-    id = 123354
-    title = "The Dalmatian revolt"
-    desc = "The Dalmatian are revolting against our rule."
-    fire_only_once = yes
-    picture = "ALB_revolt_5"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 123354
+	title = "The Dalmatian revolt"
+	desc = "The Dalmatian are revolting against our rule."
+	fire_only_once = yes
+	picture = "ALB_revolt_5"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = VEN
-        owns = 781
-        exists = CRS 
+		tag = VEN
+		owns = 781
+		exists = CRS 
 		NOT = { exists = DLM }
 		any_pop = { 
 		average_militancy = 4
-        location = { is_core = DLM }
+		location = { is_core = DLM }
 		}
-    }
-    option = {
-        name = "Crush them!"
-        any_owned = {
-            limit = { is_core = DLM }
-            secede_province = DLM 
-        }
-        war = {
-            target = DLM
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Dalmatia shall be free!"
-        any_owned = {
-            limit = { is_core = DLM }
-            secede_province = DLM 
-        }
-        war = {
-            target = DLM
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = DLM
-    }
+	}
+	option = {
+		name = "Crush them!"
+		any_owned = {
+			limit = { is_core = DLM }
+			secede_province = DLM 
+		}
+		war = {
+			target = DLM
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Dalmatia shall be free!"
+		any_owned = {
+			limit = { is_core = DLM }
+			secede_province = DLM 
+		}
+		war = {
+			target = DLM
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = DLM
+	}
 }
 
 #Holstein
 country_event = {
-    id = 123471
-    title = "The German rebellion"
-    desc = "The Holstein are revolting against our rule."
-#    fire_only_once = yes
-    picture = "ALB_revolt_5"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 123471
+	title = "The German rebellion"
+	desc = "The Holstein are revolting against our rule."
+#	fire_only_once = yes
+	picture = "ALB_revolt_5"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
 		OR = {
-        tag = DNN
+		tag = DNN
 		tag = DEN
 		}
-        owns = 2236
-        owns = 370
-        owns = 371
-        any_pop = { 
+		owns = 2236
+		owns = 370
+		owns = 371
+		any_pop = { 
 		average_militancy = 5
-	    has_pop_culture = north_german
-        OR = {			
+		has_pop_culture = north_german
+		OR = {			
 		location = 370
 		location = 371
 	  	   }
 		}
-        NOT = { exists = SWH }
-    }
-    option = {
-        name = "Crush them!"
+		NOT = { exists = SWH }
+	}
+	option = {
+		name = "Crush them!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_pop = {
-            limit = {
-                has_pop_culture = albanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        2236 = {
-            secede_province = SWH
-        }
-        370 = {
-            secede_province = SWH
-        }
-        371 = {
-            secede_province = SWH
-        }
-        war = {
-            target = SWH
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "The Germans shall be free!"
+		any_pop = {
+			limit = {
+				has_pop_culture = albanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		2236 = {
+			secede_province = SWH
+		}
+		370 = {
+			secede_province = SWH
+		}
+		371 = {
+			secede_province = SWH
+		}
+		war = {
+			target = SWH
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "The Germans shall be free!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_pop = {
-            limit = {
-                has_pop_culture = albanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        2236 = {
-            secede_province = SWH
-        }
-        370 = {
-            secede_province = SWH
-        }
-        371 = {
-            secede_province = SWH
-        }
-        war = {
-            target = SWH
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = SWH
-    }
+		any_pop = {
+			limit = {
+				has_pop_culture = albanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		2236 = {
+			secede_province = SWH
+		}
+		370 = {
+			secede_province = SWH
+		}
+		371 = {
+			secede_province = SWH
+		}
+		war = {
+			target = SWH
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = SWH
+	}
 }
 
 #Three Leagues Revolt
 country_event = {
-    id = 123472
-    title = "The Romansh Revolution"
-    desc = "The Romansh are revolting against our rule as they feel under represented"
+	id = 123472
+	title = "The Romansh Revolution"
+	desc = "The Romansh are revolting against our rule as they feel under represented"
  #   fire_only_once = yes
-    picture = "ALB_revolt_6"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	picture = "ALB_revolt_6"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 	any_pop = { 
 		average_militancy = 5
 		has_pop_culture = romansh
-        OR = {	 	
+		OR = {	 	
 		location = 611
 		location = 2669
 	  	   }
 		}
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = SWI
-        owns = 611
-        owns = 2669
-        NOT = { exists = TTL }
-    }
-    option = {
-        name = "Crush them!"
+		tag = SWI
+		owns = 611
+		owns = 2669
+		NOT = { exists = TTL }
+	}
+	option = {
+		name = "Crush them!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_pop = {
-            limit = {
-                has_pop_culture = romansh
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        611 = {
-            secede_province = TTL
-        }
-        2669 = {
-            secede_province = TTL
-        }
-        war = {
-            target = TTL
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Rights for the Romansh people!"
+		any_pop = {
+			limit = {
+				has_pop_culture = romansh
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		611 = {
+			secede_province = TTL
+		}
+		2669 = {
+			secede_province = TTL
+		}
+		war = {
+			target = TTL
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Rights for the Romansh people!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_pop = {
-            limit = {
-                has_pop_culture = romansh
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        611 = {
-            secede_province = TTL
-        }
-        2669 = {
-            secede_province = TTL
-        }
-        war = {
-            target = TTL
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = TTL
-    }
+		any_pop = {
+			limit = {
+				has_pop_culture = romansh
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		611 = {
+			secede_province = TTL
+		}
+		2669 = {
+			secede_province = TTL
+		}
+		war = {
+			target = TTL
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = TTL
+	}
 }
 
 country_event = {
-    id = 123470
-    title = "Styrian Uprising"
-    desc = "The Styrians decided that they will nolonger follow Bavarian rule."
-#    fire_only_once = yes
-    picture = "dervish_attack"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 123470
+	title = "Styrian Uprising"
+	desc = "The Styrians decided that they will nolonger follow Bavarian rule."
+#	fire_only_once = yes
+	picture = "dervish_attack"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
 		any_pop = { 
 		average_militancy = 5
-        OR = {	 	
+		OR = {	 	
 		location = 618
 		location = 616
 		location = 615
 		location = 617
 	  	   }
 		}
-        tag = BAV
-        owns = 618
-        owns = 616
-        owns = 615
-        owns = 617
-        NOT = { exists = STY }
-    }
-    option = {
-        name = "Crush them!"
+		tag = BAV
+		owns = 618
+		owns = 616
+		owns = 615
+		owns = 617
+		NOT = { exists = STY }
+	}
+	option = {
+		name = "Crush them!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
 		any_owned = {
-            limit = { is_core = ILL }
-            secede_province = STY 
+			limit = { is_core = ILL }
+			secede_province = STY 
 			add_core = STY
-        }
+		}
 		any_owned = {
-            limit = { is_core = SLO }
-            secede_province = STY 
+			limit = { is_core = SLO }
+			secede_province = STY 
 			add_core = STY
-        }
-        618 = {
-            secede_province = STY
+		}
+		618 = {
+			secede_province = STY
 			add_core = STY
-        }
-        616 = {
-            secede_province = STY
+		}
+		616 = {
+			secede_province = STY
 			add_core = STY
-        }
-        3288 = {
-            secede_province = STY
+		}
+		3288 = {
+			secede_province = STY
 			add_core = STY
-        }
-        617 = {
-            secede_province = STY
+		}
+		617 = {
+			secede_province = STY
 			add_core = STY
-        }
+		}
 		615 = {
-            secede_province = STY
+			secede_province = STY
 			add_core = STY
-        }
-        war = {
-            target = STY
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Styria shall be free!"
+		}
+		war = {
+			target = STY
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Styria shall be free!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        618 = {
-            secede_province = STY
+		618 = {
+			secede_province = STY
 			add_core = STY
-        }
-        616 = {
-            secede_province = STY
+		}
+		616 = {
+			secede_province = STY
 			add_core = STY
-        }
-        3288 = {
-            secede_province = STY
+		}
+		3288 = {
+			secede_province = STY
 			add_core = STY
-        }
-        617 = {
-            secede_province = STY
+		}
+		617 = {
+			secede_province = STY
 			add_core = STY
-        }
+		}
 		615 = {
-            secede_province = STY
+			secede_province = STY
 			add_core = STY
-        }
+		}
 		any_owned = {
-            limit = { is_core = ILL }
-            secede_province = STY 
+			limit = { is_core = ILL }
+			secede_province = STY 
 			add_core = STY
-        }
+		}
 		any_owned = {
-            limit = { is_core = SLO }
-            secede_province = STY 
+			limit = { is_core = SLO }
+			secede_province = STY 
 			add_core = STY
-        }
-        war = {
-            target = STY
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = STY
-    }
+		}
+		war = {
+			target = STY
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = STY
+	}
 }
 
 country_event = {
-    id = 99539
-    title = "Illyrian Revot"
-    desc = "The Illyrians and southern Slavs are Revolting"
-    picture = "hungarian_revolution_1848"
+	id = 99539
+	title = "Illyrian Revot"
+	desc = "The Illyrians and southern Slavs are Revolting"
+	picture = "hungarian_revolution_1848"
 
-    trigger = {
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
-        any_pop = { 
+		any_pop = { 
 		average_militancy = 7
 		has_pop_culture = illyrian
-        OR = {	 	
+		OR = {	 	
 		location = 771
 	  	   }
 		}
 		any_pop = { 
 		average_militancy = 7
 		has_pop_culture = illyrian
-        OR = {	 	
+		OR = {	 	
 		location = 783
 	  	   }
 		}
-        tag = HUN
-        owns = 783
+		tag = HUN
+		owns = 783
 		owns = 771		
-    }
+	}
 
-    mean_time_to_happen = {
-        months = 12
-    }
+	mean_time_to_happen = {
+		months = 12
+	}
 
-    option = {
-        name = "Crush them!"
+	option = {
+		name = "Crush them!"
 		set_country_flag = illyrian_rev
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = ILL }
-            secede_province = ILL 
-        }	
-        relation = { who = ILL value = -100 }
-        ILL = {
-            capital = 783
-            small_arms = 400
-            regular_clothes = 400
-            canned_food = 500
-            treasury = 35000         
-        }
+		any_owned = {
+			limit = { is_core = ILL }
+			secede_province = ILL 
+		}	
+		relation = { who = ILL value = -100 }
+		ILL = {
+			capital = 783
+			small_arms = 400
+			regular_clothes = 400
+			canned_food = 500
+			treasury = 35000		 
+		}
 		
 		 war = {
-            target = ILL
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
+			target = ILL
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
 	
-	    option = {
-        name = "Free the Slavs!"
+		option = {
+		name = "Free the Slavs!"
 		set_country_flag = illyrian_rev
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = ILL }
-            secede_province = ILL 
-        }	
-        relation = { who = ILL value = -100 }
-        ILL = {
-            capital = 783
-            small_arms = 400
-            regular_clothes = 400
-            canned_food = 500
-            treasury = 35000         
-        }
+		any_owned = {
+			limit = { is_core = ILL }
+			secede_province = ILL 
+		}	
+		relation = { who = ILL value = -100 }
+		ILL = {
+			capital = 783
+			small_arms = 400
+			regular_clothes = 400
+			canned_food = 500
+			treasury = 35000		 
+		}
 		
 		 war = {
-            target = ILL
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = ILL
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		change_tag_no_core_switch = ILL
-    }
+	}
 }
 
 
 country_event = {
-    id = 123473
-    title = "Moldavian revolt"
-    desc = "The Moldavians are revolting against our rule."
-    #fire_only_once = yes
-    picture = "BOS_revolt"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 123473
+	title = "Moldavian revolt"
+	desc = "The Moldavians are revolting against our rule."
+	#fire_only_once = yes
+	picture = "BOS_revolt"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = POL
+		tag = POL
 		tag = PLC
-        owns = 670
-        any_pop = { 
+		owns = 670
+		any_pop = { 
 		average_militancy = 4
 		has_pop_culture = romanian
 		}
-        NOT = { exists = MOL }
-    }
-    option = {
-        name = "Crush them!"
+		NOT = { exists = MOL }
+	}
+	option = {
+		name = "Crush them!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_pop = {
-            limit = {
-                has_pop_culture = romanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        any_owned = {
-            limit = { is_core = MOL }
-            secede_province = MOL 
-        }	
-        war = {
-            target = MOL
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Moldova shall be free!"
+		any_pop = {
+			limit = {
+				has_pop_culture = romanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		any_owned = {
+			limit = { is_core = MOL }
+			secede_province = MOL 
+		}	
+		war = {
+			target = MOL
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Moldova shall be free!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_pop = {
-            limit = {
-                has_pop_culture = romanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-         any_owned = {
-            limit = { is_core = MOL }
-            secede_province = MOL 
-        }	
-        war = {
-            target = MOL
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = MOL
-    }
+		any_pop = {
+			limit = {
+				has_pop_culture = romanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		 any_owned = {
+			limit = { is_core = MOL }
+			secede_province = MOL 
+		}	
+		war = {
+			target = MOL
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = MOL
+	}
 }
 
 #Transylvanian Revolt
 country_event = {
-    id = 998504
-    title = "Transylvania in Revolt"
-    desc = "the Romanians in Transylvanmia are revolting"
-    picture = "crete_revolt"
-#    fire_only_once = yes
+	id = 998504
+	title = "Transylvania in Revolt"
+	desc = "the Romanians in Transylvanmia are revolting"
+	picture = "crete_revolt"
+#	fire_only_once = yes
 
-    trigger = {
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = romanian 
 		average_militancy = 5 
 		location = { is_core = SIE }
 		}
-        tag = HUN
-        #war = no
-        NOT = { exists = ROM 
-		        exists = SIE
+		tag = HUN
+		#war = no
+		NOT = { exists = ROM 
+				exists = SIE
 				}
-    }
+	}
 
-    mean_time_to_happen = {
-        months = 6
+	mean_time_to_happen = {
+		months = 6
 
-        modifier = {
-            factor = 0.5
-            year = 1859
-        }
+		modifier = {
+			factor = 0.5
+			year = 1859
+		}
 
-        modifier = {
-            factor = 0.5
-            average_militancy = 6
-        }
+		modifier = {
+			factor = 0.5
+			average_militancy = 6
+		}
 
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
 
-#    immediate = {
-#        prestige = -15
-#        badboy = 3
-#        FIN = { government = democracy }
-#    }
+#	immediate = {
+#		prestige = -15
+#		badboy = 3
+#		FIN = { government = democracy }
+#	}
 
-    option = {
-        name = "Well then..."
+	option = {
+		name = "Well then..."
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = SIE }
-            secede_province = SIE 
-        }
-        diplomatic_influence = {
-            who = SIE 
-            value = -400
-        }
-        casus_belli = {
-            target = SIE 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = SIE 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		any_owned = {
+			limit = { is_core = SIE }
+			secede_province = SIE 
+		}
+		diplomatic_influence = {
+			who = SIE 
+			value = -400
+		}
+		casus_belli = {
+			target = SIE 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = SIE 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 	option = {
-        name = "Down with the oppressors"
+		name = "Down with the oppressors"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = SIE }
-            secede_province = SIE 
-        }
+		any_owned = {
+			limit = { is_core = SIE }
+			secede_province = SIE 
+		}
 		change_tag_no_core_switch = SIE
-        diplomatic_influence = {
-            who = SIE 
-            value = -400
-        }
-        casus_belli = {
-            target = SIE 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = SIE 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		diplomatic_influence = {
+			who = SIE 
+			value = -400
+		}
+		casus_belli = {
+			target = SIE 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = SIE 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 #Bulgarian Revolt
 country_event = {
-    id = 998505
-    title = "Bulgaria in Revolt"
-    desc = "the Bulgarians are revolting"
-    picture = "crete_revolt"
-#    fire_only_once = yes
+	id = 998505
+	title = "Bulgaria in Revolt"
+	desc = "the Bulgarians are revolting"
+	picture = "crete_revolt"
+#	fire_only_once = yes
 
-    trigger = {
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = bulgarian 
 		average_militancy = 5 
 		location = { is_core = BUL }
 		}
-        tag = TUR
-        #war = no
-        NOT = { exists = BUL }
-    }
+		tag = TUR
+		#war = no
+		NOT = { exists = BUL }
+	}
 
-    mean_time_to_happen = {
-        months = 9    
-        modifier = {
-            factor = 0.5
-            average_militancy = 6
-        }
+	mean_time_to_happen = {
+		months = 9	
+		modifier = {
+			factor = 0.5
+			average_militancy = 6
+		}
 
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
 
-#    immediate = {
-#        prestige = -15
-#        badboy = 3
-#        FIN = { government = democracy }
-#    }
+#	immediate = {
+#		prestige = -15
+#		badboy = 3
+#		FIN = { government = democracy }
+#	}
 
-    option = {
-        name = "Well then..."
+	option = {
+		name = "Well then..."
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = BUL }
-            secede_province = BUL 
-        }
-        diplomatic_influence = {
-            who = BUL 
-            value = -400
-        }
-        casus_belli = {
-            target = BUL 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = BUL 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		any_owned = {
+			limit = { is_core = BUL }
+			secede_province = BUL 
+		}
+		diplomatic_influence = {
+			who = BUL 
+			value = -400
+		}
+		casus_belli = {
+			target = BUL 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = BUL 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 	option = {
-        name = "Down with the oppressors"
+		name = "Down with the oppressors"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = BUL }
-            secede_province = BUL 
-        }
+		any_owned = {
+			limit = { is_core = BUL }
+			secede_province = BUL 
+		}
 		change_tag_no_core_switch = BUL
-        diplomatic_influence = {
-            who = BUL 
-            value = -400
-        }
-        casus_belli = {
-            target = BUL 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = BUL 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		diplomatic_influence = {
+			who = BUL 
+			value = -400
+		}
+		casus_belli = {
+			target = BUL 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = BUL 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 #Arpitan Revolt
 country_event = {
-    id = 998506
-    title = "Arpitania in Revolt"
-    desc = "the Arpitans are revolting"
-    picture = "crete_revolt"
-#    fire_only_once = yes
+	id = 998506
+	title = "Arpitania in Revolt"
+	desc = "the Arpitans are revolting"
+	picture = "crete_revolt"
+#	fire_only_once = yes
 
-    trigger = {
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = arpitan 
@@ -1067,94 +1067,94 @@ country_event = {
 		}
 		OR = {
 		tag = LOR
-        tag = FRA
+		tag = FRA
 		}
-        #war = no
-        NOT = { exists = ARP }
-    }
+		#war = no
+		NOT = { exists = ARP }
+	}
 
-    mean_time_to_happen = {
-        months = 6    
-        modifier = {
-            factor = 0.5
-            average_militancy = 6
-        }
+	mean_time_to_happen = {
+		months = 6	
+		modifier = {
+			factor = 0.5
+			average_militancy = 6
+		}
 
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
 
-#    immediate = {
-#        prestige = -15
-#        badboy = 3
-#        FIN = { government = democracy }
-#    }
+#	immediate = {
+#		prestige = -15
+#		badboy = 3
+#		FIN = { government = democracy }
+#	}
 
-    option = {
-        name = "Well then..."
+	option = {
+		name = "Well then..."
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = ARP }
-            secede_province = ARP 
-        }
-        diplomatic_influence = {
-            who = ARP 
-            value = -400
-        }
-        casus_belli = {
-            target = ARP 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = ARP 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		any_owned = {
+			limit = { is_core = ARP }
+			secede_province = ARP 
+		}
+		diplomatic_influence = {
+			who = ARP 
+			value = -400
+		}
+		casus_belli = {
+			target = ARP 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = ARP 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 	option = {
-        name = "Down with the oppressors"
+		name = "Down with the oppressors"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = ARP }
-            secede_province = ARP 
-        }
+		any_owned = {
+			limit = { is_core = ARP }
+			secede_province = ARP 
+		}
 		change_tag_no_core_switch = ARP
-        diplomatic_influence = {
-            who = ARP 
-            value = -400
-        }
-        casus_belli = {
-            target = ARP 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = ARP 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		diplomatic_influence = {
+			who = ARP 
+			value = -400
+		}
+		casus_belli = {
+			target = ARP 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = ARP 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 #Breton Revolt
 country_event = {
-    id = 998507
-    title = "Brittany in Revolt"
-    desc = "The Bretons are revolting"
-    picture = "crete_revolt"
-#    fire_only_once = yes
+	id = 998507
+	title = "Brittany in Revolt"
+	desc = "The Bretons are revolting"
+	picture = "crete_revolt"
+#	fire_only_once = yes
 
-    trigger = {
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = breton 
@@ -1162,202 +1162,202 @@ country_event = {
 		location = { is_core = BRT }
 		}
 		owns = 420
-        tag = FRA
-        #war = no
-        NOT = { exists = BRT }
-    }
+		tag = FRA
+		#war = no
+		NOT = { exists = BRT }
+	}
 
-    mean_time_to_happen = {
-        months = 6    
-        modifier = {
-            factor = 0.5
-            average_militancy = 6
-        }
+	mean_time_to_happen = {
+		months = 6	
+		modifier = {
+			factor = 0.5
+			average_militancy = 6
+		}
 
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
 
-#    immediate = {
-#        prestige = -15
-#        badboy = 3
-#        FIN = { government = democracy }
-#    }
+#	immediate = {
+#		prestige = -15
+#		badboy = 3
+#		FIN = { government = democracy }
+#	}
 
-    option = {
-        name = "Well then..."
+	option = {
+		name = "Well then..."
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = BRT }
-            secede_province = BRT 
-        }
-        diplomatic_influence = {
-            who = BRT 
-            value = -400
-        }
-        casus_belli = {
-            target = BRT 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = BRT 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		any_owned = {
+			limit = { is_core = BRT }
+			secede_province = BRT 
+		}
+		diplomatic_influence = {
+			who = BRT 
+			value = -400
+		}
+		casus_belli = {
+			target = BRT 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = BRT 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 	option = {
-        name = "Down with the oppressors"
+		name = "Down with the oppressors"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = BRT }
-            secede_province = BRT 
-        }
+		any_owned = {
+			limit = { is_core = BRT }
+			secede_province = BRT 
+		}
 		change_tag_no_core_switch = BRT
-        diplomatic_influence = {
-            who = BRT 
-            value = -400
-        }
-        casus_belli = {
-            target = BRT 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = BRT 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		diplomatic_influence = {
+			who = BRT 
+			value = -400
+		}
+		casus_belli = {
+			target = BRT 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = BRT 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 #Belgian Revolt 
 country_event = {
-    id = 999520
-    title = "A Belgican Revolt"
-    desc = "EVTDESC998500"
-    picture = "crete_revolt"
+	id = 999520
+	title = "A Belgican Revolt"
+	desc = "EVTDESC998500"
+	picture = "crete_revolt"
 #   fire_only_once = yes
 
-    trigger = {
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
-        any_pop = {
+		any_pop = {
 		has_pop_culture = belgican 
 		average_militancy = 5 
 		location = { 
 		OR = { is_core = WLL
-               is_core = PIC	
+			   is_core = PIC	
 			   }
 		}
 		}
 		tag = BEL
-        #war = no
-        NOT = { 
-		        exists = BEL
-                exists = WLL
-                exists = PIC
+		#war = no
+		NOT = { 
+				exists = BEL
+				exists = WLL
+				exists = PIC
 			   }
-    }
+	}
 
-    mean_time_to_happen = {
-        months = 6
+	mean_time_to_happen = {
+		months = 6
 
-        modifier = {
-            factor = 0.5
-            average_militancy = 6
-        }
+		modifier = {
+			factor = 0.5
+			average_militancy = 6
+		}
 
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
-	
-    option = {
-        name = "They shall pay"
-		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = {
-			OR = {
-			is_core = PIC
-            is_core = WLL 
-			}
-					  }
-            secede_province = BEL 
-			add_core = BEL
-        }
-        diplomatic_influence = {
-            who = BEL 
-            value = -400
-        }
-        casus_belli = {
-            target = BEL
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = BEL 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
 	
 	option = {
-        name = "Vivre Belgica!"
+		name = "They shall pay"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { OR = {
+		any_owned = {
+			limit = {
+			OR = {
 			is_core = PIC
-            is_core = WLL 
+			is_core = WLL 
+			}
+					  }
+			secede_province = BEL 
+			add_core = BEL
+		}
+		diplomatic_influence = {
+			who = BEL 
+			value = -400
+		}
+		casus_belli = {
+			target = BEL
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = BEL 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "Vivre Belgica!"
+		add_country_modifier = { name = revolt_cooldown duration = 1825 }
+		any_owned = {
+			limit = { OR = {
+			is_core = PIC
+			is_core = WLL 
 			}
 					  }
 			add_core = BEL
-            secede_province = BEL 
-        }
-        diplomatic_influence = {
-            who = BEL 
-            value = -400
-        }
-        casus_belli = {
-            target = BEL
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = BEL 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
+			secede_province = BEL 
+		}
+		diplomatic_influence = {
+			who = BEL 
+			value = -400
+		}
+		casus_belli = {
+			target = BEL
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = BEL 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
 		change_tag_no_core_switch = BEL
-    }
+	}
 	
 }
 
 
 #Galician Revolt
 country_event = {
-    id = 998505
-    title = "Galicia in Revolt"
-    desc = "The Galicians are revolting"
-    picture = "crete_revolt"
-#    fire_only_once = yes
+	id = 998505
+	title = "Galicia in Revolt"
+	desc = "The Galicians are revolting"
+	picture = "crete_revolt"
+#	fire_only_once = yes
 
-    trigger = {
+	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
 		has_pop_culture = galician 
@@ -1365,78 +1365,78 @@ country_event = {
 		location = { is_core = GLC }
 		}
 		OR = {
-        tag = IBR
+		tag = IBR
 		tag = LEO
 		}
-        #war = no
-        NOT = { exists = GLC }
-    }
+		#war = no
+		NOT = { exists = GLC }
+	}
 
-    mean_time_to_happen = {
-        months = 6    
-        modifier = {
-            factor = 0.5
-            average_militancy = 6
-        }
+	mean_time_to_happen = {
+		months = 6	
+		modifier = {
+			factor = 0.5
+			average_militancy = 6
+		}
 
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
 
-    option = {
-        name = "Well then..."
+	option = {
+		name = "Well then..."
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = GLC }
-            secede_province = GLC 
-        }
-        diplomatic_influence = {
-            who = GLC 
-            value = -400
-        }
-        casus_belli = {
-            target = GLC 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = GLC 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		any_owned = {
+			limit = { is_core = GLC }
+			secede_province = GLC 
+		}
+		diplomatic_influence = {
+			who = GLC 
+			value = -400
+		}
+		casus_belli = {
+			target = GLC 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = GLC 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 	option = {
-        name = "Down with the oppressors"
+		name = "Down with the oppressors"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-        any_owned = {
-            limit = { is_core = GLC }
-            secede_province = GLC 
-        }
+		any_owned = {
+			limit = { is_core = GLC }
+			secede_province = GLC 
+		}
 		change_tag_no_core_switch = GLC
-        diplomatic_influence = {
-            who = GLC 
-            value = -400
-        }
-        casus_belli = {
-            target = GLC 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = GLC
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+		diplomatic_influence = {
+			who = GLC 
+			value = -400
+		}
+		casus_belli = {
+			target = GLC 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = GLC
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 
@@ -1450,601 +1450,601 @@ country_event = {
 
 #Finish Revolt 
 country_event = {
-    id = 999500
-    title = "A Finnish Revolt"
-    desc = "EVTDESC998500"
-    picture = "crete_revolt"
+	id = 999500
+	title = "A Finnish Revolt"
+	desc = "EVTDESC998500"
+	picture = "crete_revolt"
    fire_only_once = yes
 
-    trigger = {
-        OR = {
-		    tag = SCA
-            tag = SWE
-        }
-        343 = { owned_by = THIS }
-        #war = no
-        NOT = { exists = FIN }
+	trigger = {
+		OR = {
+			tag = SCA
+			tag = SWE
+		}
+		343 = { owned_by = THIS }
+		#war = no
+		NOT = { exists = FIN }
 		year = 1843
 		has_global_flag = revolts_enabled
-    }
+	}
 
-    mean_time_to_happen = {
-        months = 48
+	mean_time_to_happen = {
+		months = 48
 
-        modifier = {
-            factor = 0.5
-            year = 1854
-        }
+		modifier = {
+			factor = 0.5
+			year = 1854
+		}
 
-        modifier = {
-            factor = 0.5
-            average_militancy = 6
-        }
+		modifier = {
+			factor = 0.5
+			average_militancy = 6
+		}
 
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
 
-    immediate = {
-        prestige = -15
-        badboy = 3
-        FIN = { government = democracy }
-    }
+	immediate = {
+		prestige = -15
+		badboy = 3
+		FIN = { government = democracy }
+	}
 
-    option = {
-        name = "They shall pay"
-        any_owned = {
-            limit = { is_core = FIN }
-            secede_province = FIN 
-        }
-        diplomatic_influence = {
-            who = FIN 
-            value = -400
-        }
-        casus_belli = {
-            target = FIN 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = FIN 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+	option = {
+		name = "They shall pay"
+		any_owned = {
+			limit = { is_core = FIN }
+			secede_province = FIN 
+		}
+		diplomatic_influence = {
+			who = FIN 
+			value = -400
+		}
+		casus_belli = {
+			target = FIN 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = FIN 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 }
 
 #Burgundian Revolt
 country_event = {
-    id = 999501
-    title = "Burgundy in Revolt"
-    desc = "EVTDESC998501"
-    picture = "crete_revolt"
-    fire_only_once = yes
+	id = 999501
+	title = "Burgundy in Revolt"
+	desc = "EVTDESC998501"
+	picture = "crete_revolt"
+	fire_only_once = yes
 
-    trigger = {
-	    year = 1848
+	trigger = {
+		year = 1848
 		has_global_flag = revolts_enabled
-        OR = {
-            tag = LOR
-            tag = FRA
-        }
-        432 = { owned_by = THIS }
-        #war = no
-        NOT = { exists = BRG }
-    }
+		OR = {
+			tag = LOR
+			tag = FRA
+		}
+		432 = { owned_by = THIS }
+		#war = no
+		NOT = { exists = BRG }
+	}
 
-    mean_time_to_happen = {
-        months = 48
+	mean_time_to_happen = {
+		months = 48
 
-        modifier = {
-            factor = 0.5
-            year = 1859
-        }
+		modifier = {
+			factor = 0.5
+			year = 1859
+		}
 
-        modifier = {
-            factor = 0.5
-            average_militancy = 6
-        }
+		modifier = {
+			factor = 0.5
+			average_militancy = 6
+		}
 
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
 
-    immediate = {
-        prestige = -15
-        badboy = 3
-        BRG = { government = democracy }
-    }
+	immediate = {
+		prestige = -15
+		badboy = 3
+		BRG = { government = democracy }
+	}
 
-    option = {
-        name = "Well then..."
-        any_owned = {
-            limit = { is_core = BRG }
-            secede_province = BRG 
-        }
-        diplomatic_influence = {
-            who = BRG 
-            value = -400
-        }
-        casus_belli = {
-            target = BRG 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = BRG 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+	option = {
+		name = "Well then..."
+		any_owned = {
+			limit = { is_core = BRG }
+			secede_province = BRG 
+		}
+		diplomatic_influence = {
+			who = BRG 
+			value = -400
+		}
+		casus_belli = {
+			target = BRG 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = BRG 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 #Albanian Revolt
 country_event = {
-    id = 124467
-    title = "The Albanian revolt"
-    desc = "The Albanians are revolting against our rule."
-    fire_only_once = yes
-    picture = "ALB_revolt_1"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 124467
+	title = "The Albanian revolt"
+	desc = "The Albanians are revolting against our rule."
+	fire_only_once = yes
+	picture = "ALB_revolt_1"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = TUR
-        owns = 852
-        owns = 849
-        year = 1840
+		tag = TUR
+		owns = 852
+		owns = 849
+		year = 1840
 		has_global_flag = revolts_enabled
-        NOT = { exists = ALB }
-    }
-    option = {
-        name = "Crush them!"
-        any_pop = {
-            limit = {
-                has_pop_culture = albanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        any_owned = {
-            limit = { is_core = ALB }
-            secede_province = ALB
-        }
-        war = {
-            target = ALB
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Albania shall be free!"
-        any_pop = {
-            limit = {
-                has_pop_culture = albanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        any_owned = {
-            limit = { is_core = ALB }
-            secede_province = ALB
-        }
-        war = {
-            target = ALB
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = ALB
-    }
+		NOT = { exists = ALB }
+	}
+	option = {
+		name = "Crush them!"
+		any_pop = {
+			limit = {
+				has_pop_culture = albanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		any_owned = {
+			limit = { is_core = ALB }
+			secede_province = ALB
+		}
+		war = {
+			target = ALB
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Albania shall be free!"
+		any_pop = {
+			limit = {
+				has_pop_culture = albanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		any_owned = {
+			limit = { is_core = ALB }
+			secede_province = ALB
+		}
+		war = {
+			target = ALB
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = ALB
+	}
 }
 
 #Silesian uprising
 country_event = {
-    id = 124468
-    title = "The Silesian Uprising"
-    desc = "The Silesians are revolting against our rule."
-    fire_only_once = yes
-    picture = "ALB_revolt_2"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 124468
+	title = "The Silesian Uprising"
+	desc = "The Silesians are revolting against our rule."
+	fire_only_once = yes
+	picture = "ALB_revolt_2"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = SAX
-        owns = 682
-        owns = 684
-        owns = 3277
+		tag = SAX
+		owns = 682
+		owns = 684
+		owns = 3277
 		year = 1854
 		has_global_flag = revolts_enabled
-        NOT = { exists = SLS }
-    }
-    option = {
-        name = "Crush them!"
-        any_pop = {
-            limit = {
-                has_pop_culture = polish
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        682 = {
-            secede_province = SLS
-        }
-        684 = {
-            secede_province = SLS
-        }
-        3277 = {
-            secede_province = SLS
-        }
-        war = {
-            target = SLS
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = acquire_core_state state_province_id = 682 }
-        }
-    }
-    option = {
-        name = "Silesia shall be free!"
-        any_pop = {
-            limit = {
-                has_pop_culture = polish
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        682 = {
-            secede_province = SLS
-        }
-        684 = {
-            secede_province = SLS
-        }
-        3277 = {
-            secede_province = SLS
-        }
-        war = {
-            target = SLS
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = acquire_core_state state_province_id = 682 }
-        }
-        change_tag_no_core_switch = SLS
-    }
+		NOT = { exists = SLS }
+	}
+	option = {
+		name = "Crush them!"
+		any_pop = {
+			limit = {
+				has_pop_culture = polish
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		682 = {
+			secede_province = SLS
+		}
+		684 = {
+			secede_province = SLS
+		}
+		3277 = {
+			secede_province = SLS
+		}
+		war = {
+			target = SLS
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = acquire_core_state state_province_id = 682 }
+		}
+	}
+	option = {
+		name = "Silesia shall be free!"
+		any_pop = {
+			limit = {
+				has_pop_culture = polish
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		682 = {
+			secede_province = SLS
+		}
+		684 = {
+			secede_province = SLS
+		}
+		3277 = {
+			secede_province = SLS
+		}
+		war = {
+			target = SLS
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = acquire_core_state state_province_id = 682 }
+		}
+		change_tag_no_core_switch = SLS
+	}
 }
 
 #Holstein
 country_event = {
-    id = 124471
-    title = "The German rebellion"
-    desc = "The Holstein are revolting against our rule."
-    fire_only_once = yes
-    picture = "ALB_revolt_5"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 124471
+	title = "The German rebellion"
+	desc = "The Holstein are revolting against our rule."
+	fire_only_once = yes
+	picture = "ALB_revolt_5"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
 		OR = {
-        tag = DNN
+		tag = DNN
 		tag = DEN
 		}
-        owns = 2236
-        owns = 370
-        owns = 371
-        year = 1846
+		owns = 2236
+		owns = 370
+		owns = 371
+		year = 1846
 		has_global_flag = revolts_enabled
-        NOT = { year = 1848 }
-        NOT = { exists = SWH }
-    }
-    option = {
-        name = "Crush them!"
-        any_pop = {
-            limit = {
-                has_pop_culture = albanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        2236 = {
-            secede_province = SWH
-        }
-        370 = {
-            secede_province = SWH
-        }
-        371 = {
-            secede_province = SWH
-        }
-        war = {
-            target = SWH
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "The Germans shall be free!"
-        any_pop = {
-            limit = {
-                has_pop_culture = albanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        2236 = {
-            secede_province = SWH
-        }
-        370 = {
-            secede_province = SWH
-        }
-        371 = {
-            secede_province = SWH
-        }
-        war = {
-            target = SWH
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = SWH
-    }
+		NOT = { year = 1848 }
+		NOT = { exists = SWH }
+	}
+	option = {
+		name = "Crush them!"
+		any_pop = {
+			limit = {
+				has_pop_culture = albanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		2236 = {
+			secede_province = SWH
+		}
+		370 = {
+			secede_province = SWH
+		}
+		371 = {
+			secede_province = SWH
+		}
+		war = {
+			target = SWH
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "The Germans shall be free!"
+		any_pop = {
+			limit = {
+				has_pop_culture = albanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		2236 = {
+			secede_province = SWH
+		}
+		370 = {
+			secede_province = SWH
+		}
+		371 = {
+			secede_province = SWH
+		}
+		war = {
+			target = SWH
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = SWH
+	}
 }
 
 #Three Leagues Revolt
 country_event = {
-    id = 124472
-    title = "The Romansh Revolution"
-    desc = "The Romansh are revolting against our rule as they feel under represented"
-    fire_only_once = yes
-    picture = "ALB_revolt_6"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
-	    year = 1853
+	id = 124472
+	title = "The Romansh Revolution"
+	desc = "The Romansh are revolting against our rule as they feel under represented"
+	fire_only_once = yes
+	picture = "ALB_revolt_6"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
+		year = 1853
 		has_global_flag = revolts_enabled
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = SWI
-        owns = 611
-        owns = 2669
-        NOT = { year = 1850 }
-        NOT = { exists = TTL }
-    }
-    option = {
-        name = "Crush them!"
-        any_pop = {
-            limit = {
-                has_pop_culture = romansh
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        611 = {
-            secede_province = TTL
-        }
-        2669 = {
-            secede_province = TTL
-        }
-        war = {
-            target = TTL
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Rights for the Romansh people!"
-        any_pop = {
-            limit = {
-                has_pop_culture = romansh
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        611 = {
-            secede_province = TTL
-        }
-        2669 = {
-            secede_province = TTL
-        }
-        war = {
-            target = TTL
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = TTL
-    }
+		tag = SWI
+		owns = 611
+		owns = 2669
+		NOT = { year = 1850 }
+		NOT = { exists = TTL }
+	}
+	option = {
+		name = "Crush them!"
+		any_pop = {
+			limit = {
+				has_pop_culture = romansh
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		611 = {
+			secede_province = TTL
+		}
+		2669 = {
+			secede_province = TTL
+		}
+		war = {
+			target = TTL
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Rights for the Romansh people!"
+		any_pop = {
+			limit = {
+				has_pop_culture = romansh
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		611 = {
+			secede_province = TTL
+		}
+		2669 = {
+			secede_province = TTL
+		}
+		war = {
+			target = TTL
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = TTL
+	}
 }
 
 country_event = {
-    id = 124470
-    title = "Styrian Uprising"
-    desc = "The Styrians decided that they will nolonger follow Bavarian rule."
-    fire_only_once = yes
-    picture = "dervish_attack"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 124470
+	title = "Styrian Uprising"
+	desc = "The Styrians decided that they will nolonger follow Bavarian rule."
+	fire_only_once = yes
+	picture = "dervish_attack"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
 		year = 1857
 		has_global_flag = revolts_enabled
 		OR = {
-        tag = BAV
+		tag = BAV
 		tag = SGF
 		}
-        owns = 618
-        owns = 616
-        owns = 615
-        owns = 617
-        NOT = { exists = STY }
-    }
-    option = {
-        name = "Crush them!"
-        618 = {
-            secede_province = STY
-        }
-        616 = {
-            secede_province = STY
-        }
-        3288 = {
-            secede_province = STY
-        }
-        617 = {
-            secede_province = STY
-        }
+		owns = 618
+		owns = 616
+		owns = 615
+		owns = 617
+		NOT = { exists = STY }
+	}
+	option = {
+		name = "Crush them!"
+		618 = {
+			secede_province = STY
+		}
+		616 = {
+			secede_province = STY
+		}
+		3288 = {
+			secede_province = STY
+		}
+		617 = {
+			secede_province = STY
+		}
 		615 = {
-            secede_province = STY
-        }
-        war = {
-            target = STY
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Styria shall be free!"
-        618 = {
-            secede_province = STY
-        }
-        616 = {
-            secede_province = STY
-        }
-        3288 = {
-            secede_province = STY
-        }
-        617 = {
-            secede_province = STY
-        }
+			secede_province = STY
+		}
+		war = {
+			target = STY
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Styria shall be free!"
+		618 = {
+			secede_province = STY
+		}
+		616 = {
+			secede_province = STY
+		}
+		3288 = {
+			secede_province = STY
+		}
+		617 = {
+			secede_province = STY
+		}
 		615 = {
-            secede_province = STY
-        }
-        war = {
-            target = STY
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = STY
-    }
+			secede_province = STY
+		}
+		war = {
+			target = STY
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = STY
+	}
 }
 
 country_event = {
-    id = 99812
-    title = "Illyrian Revot"
-    desc = "The Illyrians and southern Slavs are Revolting"
-    picture = "hungarian_revolution_1848"
+	id = 99812
+	title = "Illyrian Revot"
+	desc = "The Illyrians and southern Slavs are Revolting"
+	picture = "hungarian_revolution_1848"
 
-    trigger = {
-    	year = 1847
+	trigger = {
+		year = 1847
 		has_global_flag = revolts_enabled
-        tag = HUN
-        owns = 783
+		tag = HUN
+		owns = 783
 		owns = 771		
-    }
+	}
 
-    mean_time_to_happen = {
-        months = 12
-    }
+	mean_time_to_happen = {
+		months = 12
+	}
 
-    option = {
-        name = "Crush them!"
-        any_owned = {
-            limit = { is_core = ILL }
-            secede_province = ILL 
-        }	
-        relation = { who = ILL value = -100 }
-        ILL = {
-            capital = 783
-            small_arms = 400
-            regular_clothes = 400
-            canned_food = 500
-            treasury = 35000         
-        }
+	option = {
+		name = "Crush them!"
+		any_owned = {
+			limit = { is_core = ILL }
+			secede_province = ILL 
+		}	
+		relation = { who = ILL value = -100 }
+		ILL = {
+			capital = 783
+			small_arms = 400
+			regular_clothes = 400
+			canned_food = 500
+			treasury = 35000		 
+		}
 		
 		 war = {
-            target = ILL
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
+			target = ILL
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
 	
-	    option = {
-        name = "Free the Slavs!"
-        any_owned = {
-            limit = { is_core = ILL }
-            secede_province = ILL 
-        }	
-        relation = { who = ILL value = -100 }
-        ILL = {
-            capital = 783
-            small_arms = 400
-            regular_clothes = 400
-            canned_food = 500
-            treasury = 35000         
-        }
+		option = {
+		name = "Free the Slavs!"
+		any_owned = {
+			limit = { is_core = ILL }
+			secede_province = ILL 
+		}	
+		relation = { who = ILL value = -100 }
+		ILL = {
+			capital = 783
+			small_arms = 400
+			regular_clothes = 400
+			canned_food = 500
+			treasury = 35000		 
+		}
 		
 		 war = {
-            target = ILL
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = ILL
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		change_tag_no_core_switch = ILL
-    }
+	}
 }
 
 country_event = {
-    id = 123466
-    title = "Moldavian revolt"
-    desc = "The Moldavians are revolting against our rule."
-    fire_only_once = yes
-    picture = "BOS_revolt"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 123466
+	title = "Moldavian revolt"
+	desc = "The Moldavians are revolting against our rule."
+	fire_only_once = yes
+	picture = "BOS_revolt"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = POL
+		tag = POL
 		tag = PLC
-        owns = 670
-        year = 1851
+		owns = 670
+		year = 1851
 		has_global_flag = revolts_enabled
-        NOT = { exists = MOL }
-    }
-    option = {
-        name = "Crush them!"
+		NOT = { exists = MOL }
+	}
+	option = {
+		name = "Crush them!"
 		set_country_flag = illyrian_rev
-        any_pop = {
-            limit = {
-                has_pop_culture = romanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-        any_owned = {
-            limit = { is_core = MOL }
-            secede_province = MOL 
-        }	
-        war = {
-            target = MOL
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "Moldova shall be free!"
+		any_pop = {
+			limit = {
+				has_pop_culture = romanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		any_owned = {
+			limit = { is_core = MOL }
+			secede_province = MOL 
+		}	
+		war = {
+			target = MOL
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "Moldova shall be free!"
 		set_country_flag = illyrian_rev
-        any_pop = {
-            limit = {
-                has_pop_culture = romanian
-            }
-            consciousness = 2
-            militancy = 2
-        }
-         any_owned = {
-            limit = { is_core = MOL }
-            secede_province = MOL 
-        }	
-        war = {
-            target = MOL
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = MOL
-    }
+		any_pop = {
+			limit = {
+				has_pop_culture = romanian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		 any_owned = {
+			limit = { is_core = MOL }
+			secede_province = MOL 
+		}	
+		war = {
+			target = MOL
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = MOL
+	}
 }
 
 ##########################
@@ -2054,648 +2054,648 @@ country_event = {
 ##########################
 
 country_event = {
-    id = 993466
-    title = "The great French Collapse"
-    desc = "With our attempt of unity, the minorities in our nation started revolting"
-    picture = "crete_revolt"
-    fire_only_once = yes
+	id = 993466
+	title = "The great French Collapse"
+	desc = "With our attempt of unity, the minorities in our nation started revolting"
+	picture = "crete_revolt"
+	fire_only_once = yes
 	
 	trigger = {
-        tag = FRA
+		tag = FRA
 		tag = VIC
 		any_pop = {
 		average_militancy = 4 
 		location = { is_core = THIS }
 		}
 		has_country_flag = enacted_french_schooling
-    }
+	}
 	
 	 mean_time_to_happen = { months = 1 }
 	
-    option = {
-        name = "The French will thrive united!"
-        any_owned = {
-            limit = { is_core = PRO }
-            secede_province = PRO 
-        }
+	option = {
+		name = "The French will thrive united!"
 		any_owned = {
-            limit = { is_core = CAT }
-            secede_province = CAT 
-        }
+			limit = { is_core = PRO }
+			secede_province = PRO 
+		}
 		any_owned = {
-            limit = { is_core = BSQ }
-            secede_province = BSQ 
-        }
-	    any_owned = {
-            limit = { is_core = BRG }
-            secede_province = BRG 
-        }
-	    any_owned = {
-            limit = { is_core = BRT }
-            secede_province = BRT 
-        }
-	    any_owned = {
-            limit = { is_core = ARP }
-            secede_province = ARP 
-        }
+			limit = { is_core = CAT }
+			secede_province = CAT 
+		}
 		any_owned = {
-            limit = { is_core = OCC }
-            secede_province = OCC 
-        }
-	    any_owned = {
-            limit = { is_core = LOR }
-            secede_province = LOR 
-        }
-	    any_owned = {
-            limit = { is_core = WLL }
-            secede_province = WLL 
-        }
-	    any_owned = {
-            limit = { is_core = NRM }
-            secede_province = NRM 
-        }
-	    any_owned = {
-            limit = { is_core = PIC }
-            secede_province = PIC 
-        }
-        diplomatic_influence = {
-            who = PRO 
-            value = -400
-        }
+			limit = { is_core = BSQ }
+			secede_province = BSQ 
+		}
+		any_owned = {
+			limit = { is_core = BRG }
+			secede_province = BRG 
+		}
+		any_owned = {
+			limit = { is_core = BRT }
+			secede_province = BRT 
+		}
+		any_owned = {
+			limit = { is_core = ARP }
+			secede_province = ARP 
+		}
+		any_owned = {
+			limit = { is_core = OCC }
+			secede_province = OCC 
+		}
+		any_owned = {
+			limit = { is_core = LOR }
+			secede_province = LOR 
+		}
+		any_owned = {
+			limit = { is_core = WLL }
+			secede_province = WLL 
+		}
+		any_owned = {
+			limit = { is_core = NRM }
+			secede_province = NRM 
+		}
+		any_owned = {
+			limit = { is_core = PIC }
+			secede_province = PIC 
+		}
 		diplomatic_influence = {
-            who = CAT 
-            value = -400
-        }
+			who = PRO 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = BSQ 
-            value = -400
-        }
+			who = CAT 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = BRG 
-            value = -400
-        }        
+			who = BSQ 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = BRT 
-            value = -400
-        }
+			who = BRG 
+			value = -400
+		}		
 		diplomatic_influence = {
-            who = ARP 
-            value = -400
-        }
+			who = BRT 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = OCC 
-            value = -400
-        }
+			who = ARP 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = LOR 
-            value = -400
-        }
+			who = OCC 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = WLL 
-            value = -400
-        }
+			who = LOR 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = NRM 
-            value = -400
-        }		
+			who = WLL 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = PIC 
-            value = -400
-        }
-        casus_belli = {
-            target = PRO 
-            type = conquest
-            months = 12
-        }
+			who = NRM 
+			value = -400
+		}		
+		diplomatic_influence = {
+			who = PIC 
+			value = -400
+		}
 		casus_belli = {
-            target = CAT 
-            type = conquest
-            months = 12
-        }
+			target = PRO 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = BSQ 
-            type = conquest
-            months = 12
-        }
+			target = CAT 
+			type = conquest
+			months = 12
+		}
+		casus_belli = {
+			target = BSQ 
+			type = conquest
+			months = 12
+		}
 		
 		casus_belli = {
-            target = BRG 
-            type = conquest
-            months = 12
-        }
+			target = BRG 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = BRT 
-            type = conquest
-            months = 12
-        }
+			target = BRT 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = ARP 
-            type = conquest
-            months = 12
-        }
+			target = ARP 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = OCC 
-            type = conquest
-            months = 12
-        }
+			target = OCC 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = NRM 
-            type = conquest
-            months = 12
-        }
+			target = NRM 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = WLL 
-            type = conquest
-            months = 12
-        }
+			target = WLL 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = PIC 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = PIC 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = PIC 
+			type = conquest
+			months = 12
+		}
 		war = {
-            target = WLL 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = PIC 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = NRM 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        war = {
-            target = OCC 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = WLL 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = ARP 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }     
+			target = NRM 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = BRT 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }      
+			target = OCC 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = BRG 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }     
+			target = ARP 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	 
 		war = {
-            target = BSQ 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }      
+			target = BRT 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	  
 		war = {
-            target = CAT 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }      
+			target = BRG 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	 
+		war = {
+			target = BSQ 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	  
+		war = {
+			target = CAT 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	  
 		
-        ai_chance = {
-            factor = 100
-        }
-    }
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 	option = {
-        name = "The Occitans are the way to go!"
-        any_owned = {
-            limit = { is_core = PRO }
-            secede_province = PRO 
-        }
+		name = "The Occitans are the way to go!"
 		any_owned = {
-            limit = { is_core = CAT }
-            secede_province = CAT 
-        }
+			limit = { is_core = PRO }
+			secede_province = PRO 
+		}
 		any_owned = {
-            limit = { is_core = BSQ }
-            secede_province = BSQ 
-        }
-	    any_owned = {
-            limit = { is_core = BRG }
-            secede_province = BRG 
-        }
-	    any_owned = {
-            limit = { is_core = BRT }
-            secede_province = BRT 
-        }
-	    any_owned = {
-            limit = { is_core = ARP }
-            secede_province = ARP 
-        }
+			limit = { is_core = CAT }
+			secede_province = CAT 
+		}
 		any_owned = {
-            limit = { is_core = OCC }
-            secede_province = OCC 
-        }
-	    any_owned = {
-            limit = { is_core = LOR }
-            secede_province = LOR 
-        }
-	    any_owned = {
-            limit = { is_core = WLL }
-            secede_province = WLL 
-        }
-	    any_owned = {
-            limit = { is_core = NRM }
-            secede_province = NRM 
-        }
-	    any_owned = {
-            limit = { is_core = PIC }
-            secede_province = PIC 
-        }
-        diplomatic_influence = {
-            who = PRO 
-            value = -400
-        }
+			limit = { is_core = BSQ }
+			secede_province = BSQ 
+		}
+		any_owned = {
+			limit = { is_core = BRG }
+			secede_province = BRG 
+		}
+		any_owned = {
+			limit = { is_core = BRT }
+			secede_province = BRT 
+		}
+		any_owned = {
+			limit = { is_core = ARP }
+			secede_province = ARP 
+		}
+		any_owned = {
+			limit = { is_core = OCC }
+			secede_province = OCC 
+		}
+		any_owned = {
+			limit = { is_core = LOR }
+			secede_province = LOR 
+		}
+		any_owned = {
+			limit = { is_core = WLL }
+			secede_province = WLL 
+		}
+		any_owned = {
+			limit = { is_core = NRM }
+			secede_province = NRM 
+		}
+		any_owned = {
+			limit = { is_core = PIC }
+			secede_province = PIC 
+		}
 		diplomatic_influence = {
-            who = CAT 
-            value = -400
-        }
+			who = PRO 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = BSQ 
-            value = -400
-        }
+			who = CAT 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = BRG 
-            value = -400
-        }        
+			who = BSQ 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = BRT 
-            value = -400
-        }
+			who = BRG 
+			value = -400
+		}		
 		diplomatic_influence = {
-            who = ARP 
-            value = -400
-        }
+			who = BRT 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = OCC 
-            value = -400
-        }
+			who = ARP 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = LOR 
-            value = -400
-        }
+			who = OCC 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = WLL 
-            value = -400
-        }
+			who = LOR 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = NRM 
-            value = -400
-        }		
+			who = WLL 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = PIC 
-            value = -400
-        }
-        casus_belli = {
-            target = PRO 
-            type = conquest
-            months = 12
-        }
+			who = NRM 
+			value = -400
+		}		
+		diplomatic_influence = {
+			who = PIC 
+			value = -400
+		}
 		casus_belli = {
-            target = CAT 
-            type = conquest
-            months = 12
-        }
+			target = PRO 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = BSQ 
-            type = conquest
-            months = 12
-        }
+			target = CAT 
+			type = conquest
+			months = 12
+		}
+		casus_belli = {
+			target = BSQ 
+			type = conquest
+			months = 12
+		}
 		
 		casus_belli = {
-            target = BRG 
-            type = conquest
-            months = 12
-        }
+			target = BRG 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = BRT 
-            type = conquest
-            months = 12
-        }
+			target = BRT 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = ARP 
-            type = conquest
-            months = 12
-        }
+			target = ARP 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = OCC 
-            type = conquest
-            months = 12
-        }
+			target = OCC 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = NRM 
-            type = conquest
-            months = 12
-        }
+			target = NRM 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = WLL 
-            type = conquest
-            months = 12
-        }
+			target = WLL 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = PIC 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = PIC 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = PIC 
+			type = conquest
+			months = 12
+		}
 		war = {
-            target = WLL 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = PIC 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = NRM 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        war = {
-            target = OCC 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = WLL 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = ARP 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }     
+			target = NRM 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = BRT 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }      
+			target = OCC 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = BRG 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }     
+			target = ARP 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	 
 		war = {
-            target = BSQ 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }      
+			target = BRT 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	  
 		war = {
-            target = CAT 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }     
-        change_tag_no_core_switch = OCC		
+			target = BRG 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	 
+		war = {
+			target = BSQ 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	  
+		war = {
+			target = CAT 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	 
+		change_tag_no_core_switch = OCC		
 		
-        ai_chance = {
-            factor = 100
-        }
-    }
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 	option = {
-        name = "The Belgicans are are nice too..."
-        any_owned = {
-            limit = { is_core = PRO }
-            secede_province = PRO 
-        }
+		name = "The Belgicans are are nice too..."
 		any_owned = {
-            limit = { is_core = CAT }
-            secede_province = CAT 
-        }
+			limit = { is_core = PRO }
+			secede_province = PRO 
+		}
 		any_owned = {
-            limit = { is_core = BSQ }
-            secede_province = BSQ 
-        }
-	    any_owned = {
-            limit = { is_core = BRG }
-            secede_province = BRG 
-        }
-	    any_owned = {
-            limit = { is_core = BRT }
-            secede_province = BRT 
-        }
-	    any_owned = {
-            limit = { is_core = ARP }
-            secede_province = ARP 
-        }
+			limit = { is_core = CAT }
+			secede_province = CAT 
+		}
 		any_owned = {
-            limit = { is_core = OCC }
-            secede_province = OCC 
-        }
-	    any_owned = {
-            limit = { is_core = LOR }
-            secede_province = LOR 
-        }
-	    any_owned = {
-            limit = { is_core = WLL }
-            secede_province = WLL 
-        }
-	    any_owned = {
-            limit = { is_core = NRM }
-            secede_province = NRM 
-        }
-	    any_owned = {
-            limit = { is_core = PIC }
-            secede_province = PIC 
-        }
-        diplomatic_influence = {
-            who = PRO 
-            value = -400
-        }
+			limit = { is_core = BSQ }
+			secede_province = BSQ 
+		}
+		any_owned = {
+			limit = { is_core = BRG }
+			secede_province = BRG 
+		}
+		any_owned = {
+			limit = { is_core = BRT }
+			secede_province = BRT 
+		}
+		any_owned = {
+			limit = { is_core = ARP }
+			secede_province = ARP 
+		}
+		any_owned = {
+			limit = { is_core = OCC }
+			secede_province = OCC 
+		}
+		any_owned = {
+			limit = { is_core = LOR }
+			secede_province = LOR 
+		}
+		any_owned = {
+			limit = { is_core = WLL }
+			secede_province = WLL 
+		}
+		any_owned = {
+			limit = { is_core = NRM }
+			secede_province = NRM 
+		}
+		any_owned = {
+			limit = { is_core = PIC }
+			secede_province = PIC 
+		}
 		diplomatic_influence = {
-            who = CAT 
-            value = -400
-        }
+			who = PRO 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = BSQ 
-            value = -400
-        }
+			who = CAT 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = BRG 
-            value = -400
-        }        
+			who = BSQ 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = BRT 
-            value = -400
-        }
+			who = BRG 
+			value = -400
+		}		
 		diplomatic_influence = {
-            who = ARP 
-            value = -400
-        }
+			who = BRT 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = OCC 
-            value = -400
-        }
+			who = ARP 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = LOR 
-            value = -400
-        }
+			who = OCC 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = WLL 
-            value = -400
-        }
+			who = LOR 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = NRM 
-            value = -400
-        }		
+			who = WLL 
+			value = -400
+		}
 		diplomatic_influence = {
-            who = PIC 
-            value = -400
-        }
-        casus_belli = {
-            target = PRO 
-            type = conquest
-            months = 12
-        }
+			who = NRM 
+			value = -400
+		}		
+		diplomatic_influence = {
+			who = PIC 
+			value = -400
+		}
 		casus_belli = {
-            target = CAT 
-            type = conquest
-            months = 12
-        }
+			target = PRO 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = BSQ 
-            type = conquest
-            months = 12
-        }
+			target = CAT 
+			type = conquest
+			months = 12
+		}
+		casus_belli = {
+			target = BSQ 
+			type = conquest
+			months = 12
+		}
 		
 		casus_belli = {
-            target = BRG 
-            type = conquest
-            months = 12
-        }
+			target = BRG 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = BRT 
-            type = conquest
-            months = 12
-        }
+			target = BRT 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = ARP 
-            type = conquest
-            months = 12
-        }
+			target = ARP 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = OCC 
-            type = conquest
-            months = 12
-        }
+			target = OCC 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = NRM 
-            type = conquest
-            months = 12
-        }
+			target = NRM 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = WLL 
-            type = conquest
-            months = 12
-        }
+			target = WLL 
+			type = conquest
+			months = 12
+		}
 		casus_belli = {
-            target = PIC 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = PIC 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = PIC 
+			type = conquest
+			months = 12
+		}
 		war = {
-            target = WLL 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = PIC 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = NRM 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        war = {
-            target = OCC 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+			target = WLL 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = ARP 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }     
+			target = NRM 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = BRT 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }      
+			target = OCC 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		war = {
-            target = BRG 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }     
+			target = ARP 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	 
 		war = {
-            target = BSQ 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }      
+			target = BRT 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	  
 		war = {
-            target = CAT 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }     
-        change_tag_no_core_switch = WLL		
+			target = BRG 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	 
+		war = {
+			target = BSQ 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	  
+		war = {
+			target = CAT 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}	 
+		change_tag_no_core_switch = WLL		
 		
-        ai_chance = {
-            factor = 100
-        }
-    }
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 
 country_event = {
-    id = 123443
-    title = "The French Revolution"
-    desc = "The French are staging a Revolution in our Capital"
-    fire_only_once = yes
-    picture = "BOS_revolt"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
+	id = 123443
+	title = "The French Revolution"
+	desc = "The French are staging a Revolution in our Capital"
+	fire_only_once = yes
+	picture = "BOS_revolt"
+	mean_time_to_happen = { months = 5 }
+	trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
-        tag = FRA
+		tag = FRA
 		tag = BOS
 		any_pop = {
 		average_militancy = 4 
 		location = { is_core = THIS }
 		}
-        NOT = { exists = IDF }
+		NOT = { exists = IDF }
 		has_country_flag = order_embraced
-    }
-    mean_time_to_happen = { months = 1 }
-    option = {
-        name = "Crush them!"
-        any_owned = {
-            limit = { is_core = IDF }
-            secede_province = IDF 
-        }	
-        war = {
-            target = IDF
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-    }
-    option = {
-        name = "The French are superior!"
-         any_owned = {
-            limit = { is_core = IDF }
-            secede_province = IDF 
-        }	
-        war = {
-            target = IDF
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = IDF
-    }
+	}
+	mean_time_to_happen = { months = 1 }
+	option = {
+		name = "Crush them!"
+		any_owned = {
+			limit = { is_core = IDF }
+			secede_province = IDF 
+		}	
+		war = {
+			target = IDF
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "The French are superior!"
+		 any_owned = {
+			limit = { is_core = IDF }
+			secede_province = IDF 
+		}	
+		war = {
+			target = IDF
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+		}
+		change_tag_no_core_switch = IDF
+	}
 }
 
 
@@ -2705,165 +2705,165 @@ country_event = {
 
 #New Zealand Revolt 
 country_event = {
-    id = 100112
-    title = "The Newzealand Revolt"
-    desc = "The People of New Zealand are not happy with their new overlord"
-    picture = "crete_revolt"
+	id = 100112
+	title = "The Newzealand Revolt"
+	desc = "The People of New Zealand are not happy with their new overlord"
+	picture = "crete_revolt"
    fire_only_once = yes
 
-    trigger = {
+	trigger = {
 		tag = GEN
-        2509 = { owned_by = THIS }
-        #war = no
-        NOT = { exists = NZL }
+		2509 = { owned_by = THIS }
+		#war = no
+		NOT = { exists = NZL }
 		NOT = { has_country_modifier = revolt_cooldown }
-    }
+	}
 
-    mean_time_to_happen = {
-        months = 2
-    }
+	mean_time_to_happen = {
+		months = 2
+	}
 
-    option = {
-        name = "They shall pay"
-        any_owned = {
-            limit = { is_core = NZL }
-            secede_province = NZL 
-        }
-        diplomatic_influence = {
-            who = NZL			
-            value = -400
-        }
-        casus_belli = {
-            target = NZL 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = NZL 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
-    }
+	option = {
+		name = "They shall pay"
+		any_owned = {
+			limit = { is_core = NZL }
+			secede_province = NZL 
+		}
+		diplomatic_influence = {
+			who = NZL			
+			value = -400
+		}
+		casus_belli = {
+			target = NZL 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = NZL 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 	option = {
-        name = "We will never bow down to Genoa"
-        any_owned = {
-            limit = { is_core = NZL }
-            secede_province = NZL 
-        }
-        diplomatic_influence = {
-            who = NZL			
-            value = -400
-        }
-        casus_belli = {
-            target = NZL 
-            type = conquest
-            months = 12
-        }
-        war = {
-            target = NZL 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+		name = "We will never bow down to Genoa"
+		any_owned = {
+			limit = { is_core = NZL }
+			secede_province = NZL 
+		}
+		diplomatic_influence = {
+			who = NZL			
+			value = -400
+		}
+		casus_belli = {
+			target = NZL 
+			type = conquest
+			months = 12
+		}
+		war = {
+			target = NZL 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		change_tag_no_core_switch = NZL
-        ai_chance = {
-            factor = 0
-        }
-    }
+		ai_chance = {
+			factor = 0
+		}
+	}
 	
 }
 
 #End of Germany
 country_event = {
 
-    id = 100116
+	id = 100116
 
-    title = "The Collapse of the Germany" 
-    desc = "EVTDESC100114"
-    picture = "chicagofire"
-    fire_only_once = yes
-    trigger = {
+	title = "The Collapse of the Germany" 
+	desc = "EVTDESC100114"
+	picture = "chicagofire"
+	fire_only_once = yes
+	trigger = {
 	tag = HNS
-    is_disarmed = yes
+	is_disarmed = yes
 	exists = POM
 	exists = BRN
 	NOT = { year = 1860 }
-    }
+	}
 
-    mean_time_to_happen = {
-        days = 12      
-    }
+	mean_time_to_happen = {
+		days = 12	  
+	}
 
-    option = {
-        name = "Sad times for Germany"
-        prestige = -20
+	option = {
+		name = "Sad times for Germany"
+		prestige = -20
 		any_owned = {
 			limit = {
-                is_core = SAX
+				is_core = SAX
 				}
-                secede_province = SAX
+				secede_province = SAX
 			}	
 		any_owned = {
 			limit = {
-                is_core = BOE
+				is_core = BOE
 				}
-                secede_province = BOE
+				secede_province = BOE
 			}
 		any_owned = {
 			limit = {
-                is_core = LOR
+				is_core = LOR
 				}
-                secede_province = LOR
+				secede_province = LOR
 			}
 		any_owned = {
 			limit = {
-                is_core = WUR
+				is_core = WUR
 				}
-                secede_province = WUR
+				secede_province = WUR
 			}
 		any_owned = {
 			limit = {
-                is_core = WES
+				is_core = WES
 				}
-                secede_province = WES
+				secede_province = WES
 			}
 		any_owned = {
 			limit = {
-                is_core = HNS
+				is_core = HNS
 				}
-                secede_province = HNS
+				secede_province = HNS
 			}		
 		any_owned = {
 			limit = {
-                is_core = NET
+				is_core = NET
 				}
-                secede_province = NET
+				secede_province = NET
 			}
 					any_owned = {
 		limit = {
-                is_core = SWI
+				is_core = SWI
 				}
-                secede_province = SWI
+				secede_province = SWI
 			}
 			any_owned = {
 		limit = {
-                is_core = UBD
+				is_core = UBD
 				}
-                secede_province = UBD
+				secede_province = UBD
 			}
 			any_owned = {
 		limit = {
-                is_core = RHI
+				is_core = RHI
 				}
-                secede_province = RHI
+				secede_province = RHI
 			}
-        ai_chance = {
-            factor = 100
-        }
-    }
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 
@@ -2871,27 +2871,27 @@ country_event = {
 #End of Hansa
 country_event = {
 
-    id = 100115
+	id = 100115
 
-    title = "The Collapse of the Hansa" 
-    desc = "EVTDESC100114"
-    picture = "chicagofire"
-    fire_only_once = yes
-    trigger = {
+	title = "The Collapse of the Hansa" 
+	desc = "EVTDESC100114"
+	picture = "chicagofire"
+	fire_only_once = yes
+	trigger = {
 	tag = HNS
-    is_disarmed = yes
+	is_disarmed = yes
 	exists = POM
 	exists = BRN
 	NOT = { year = 1860 }
-    }
+	}
 
-    mean_time_to_happen = {
-        days = 12      
-    }
+	mean_time_to_happen = {
+		days = 12	  
+	}
 
-    option = {
-        name = "Sad times for the Hansa"
-        prestige = -20
+	option = {
+		name = "Sad times for the Hansa"
+		prestige = -20
 		release_vassal = POM
 		release_vassal = HAN
 		release_vassal = MST
@@ -2904,125 +2904,125 @@ country_event = {
 		release_vassal = SAX
 		any_owned = {
 			limit = {
-                is_core = MEC
+				is_core = MEC
 				}
-                secede_province = MEC
+				secede_province = MEC
 			}	
 		any_owned = {
 			limit = {
-                is_core = SCL
+				is_core = SCL
 				}
-                secede_province = SCL
+				secede_province = SCL
 			}
 		any_owned = {
 			limit = {
-                is_core = HAN
+				is_core = HAN
 				}
-                secede_province = HAN
+				secede_province = HAN
 			}
 		any_owned = {
 			limit = {
-                is_core = HAM
+				is_core = HAM
 				}
-                secede_province = HAM
+				secede_province = HAM
 			}
 		any_owned = {
 			limit = {
-                is_core = BRE
+				is_core = BRE
 				}
-                secede_province = BRE
+				secede_province = BRE
 			}
 		any_owned = {
 			limit = {
-                is_core = SWE
+				is_core = SWE
 				}
-                secede_province = SWE
+				secede_province = SWE
 			}
-	    change_tag = LUB
-        ai_chance = {
-            factor = 100
-        }
-    }
+		change_tag = LUB
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 #End of Rome
 country_event = {
 
-    id = 100114
+	id = 100114
 
-    title = "The Collapse of Rome" 
-    desc = "EVTDESC100114"
-    picture = "chicagofire"
-    fire_only_once = yes
-    trigger = {
+	title = "The Collapse of Rome" 
+	desc = "EVTDESC100114"
+	picture = "chicagofire"
+	fire_only_once = yes
+	trigger = {
 	tag = RME
 	
-       OR = {
-                is_disarmed = yes
-                is_greater_power = no
-      }
-    }
+	   OR = {
+				is_disarmed = yes
+				is_greater_power = no
+	  }
+	}
 
-    mean_time_to_happen = {
-        months = 12      
-    }
+	mean_time_to_happen = {
+		months = 12	  
+	}
 
-    option = {
-        name = "Sad times for Rome"
-        prestige = -20
+	option = {
+		name = "Sad times for Rome"
+		prestige = -20
 		any_owned = {
 			limit = {
-                is_core = OCC
+				is_core = OCC
 				}
-                secede_province = OCC
+				secede_province = OCC
 			}	
 		any_owned = {
 			limit = {
-                is_core = GER
+				is_core = GER
 				}
-                secede_province = SGF
+				secede_province = SGF
 			}				
-        any_owned = {
+		any_owned = {
 			limit = {
-                is_core = ILL
+				is_core = ILL
 				}
-                secede_province = ILL
+				secede_province = ILL
 			}		
 		any_owned = {
 			limit = {
-                is_core = FRA
+				is_core = FRA
 				}
-                secede_province = FRA
+				secede_province = FRA
 			}		
 		any_owned = {
 			limit = {
-                is_core = IBR
+				is_core = IBR
 				}
-                secede_province = IBR
+				secede_province = IBR
 			}
 			
 		any_owned = {
 			limit = {
-                is_core = MGH
+				is_core = MGH
 				}
-                secede_province = MGH
+				secede_province = MGH
 			}
 			
 		any_owned = {
 			limit = {
-                is_core = COP
+				is_core = COP
 				}
-                secede_province = COP
+				secede_province = COP
 			}
 			
 		any_owned = {
 			limit = {
-                is_core = GRE
+				is_core = GRE
 				}
-                secede_province = GRE
+				secede_province = GRE
 			}
-        ai_chance = {
-            factor = 100
-        }
-    }
+		ai_chance = {
+			factor = 100
+		}
+	}
 }

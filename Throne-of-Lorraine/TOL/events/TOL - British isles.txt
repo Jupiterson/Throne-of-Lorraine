@@ -1,57 +1,57 @@
 country_event = {
-    id = 28012
-    title = "The first Isle of Man TT"
-    desc = "EVTDESC28012"
-    fire_only_once = yes
-    picture = motocycles
+	id = 28012
+	title = "The first Isle of Man TT"
+	desc = "EVTDESC28012"
+	fire_only_once = yes
+	picture = motocycles
 
-    trigger = {
-	    year = 1905
+	trigger = {
+		year = 1905
 		owns = 304
-    }
+	}
 	
 	mean_time_to_happen = {
-	    months = 6
-        modifier = {
-            factor = 0.3
-            year = 1905
-        }
-        modifier = {
-            factor = 0.5
-            year = 1906
-        }
+		months = 6
 		modifier = {
-            factor = 1
-            year = 1907
-        }
-    }
+			factor = 0.3
+			year = 1905
+		}
+		modifier = {
+			factor = 0.5
+			year = 1906
+		}
+		modifier = {
+			factor = 1
+			year = 1907
+		}
+	}
 	
    option = {
-        name = "A bit too dangerous but it provides good spectacle"		
+		name = "A bit too dangerous but it provides good spectacle"		
 		prestige = 10
 	}
 }
 country_event = {
-    id = 28013
-    title = "Scotland AI path decision"
-    desc = "This is used to make ai choose what they formable/path they can form in the game. It doesnt change ai behaviour though."
-    fire_only_once = yes
+	id = 28013
+	title = "Scotland AI path decision"
+	desc = "This is used to make ai choose what they formable/path they can form in the game. It doesnt change ai behaviour though."
+	fire_only_once = yes
 
-    trigger = {
-	    AND = {
+	trigger = {
+		AND = {
 			tag = SCO
 			ai = yes
 		}
-    }
+	}
 
-    mean_time_to_happen = { days = 10 }
+	mean_time_to_happen = { days = 10 }
 
-    option = {
+	option = {
 		name = "Britannia"
 		set_country_flag = britannia_ai
 		ai_chance = {
 			factor = 1
-        }
+		}
 	}
 
 	option = {
@@ -59,7 +59,7 @@ country_event = {
 		set_country_flag = celtic_ai
 		ai_chance = {
 			factor = 1
-        }
+		}
 	}
 			  
 	option = {
@@ -67,34 +67,34 @@ country_event = {
 		set_country_flag = scotlandbrazil_ai
 		ai_chance = {
 			factor = 1
-        }
+		}
 	}
 }
 
 country_event = {
-    id = 28014
-    title = "Wales and Ireland ai path decision"
-    desc = "This is used to make ai choose what they formable/path they can form in the game. It doesnt change ai behaviour though."
-    fire_only_once = yes
+	id = 28014
+	title = "Wales and Ireland ai path decision"
+	desc = "This is used to make ai choose what they formable/path they can form in the game. It doesnt change ai behaviour though."
+	fire_only_once = yes
 
-    trigger = {
-	    AND = {
-		    OR = {
-			    tag = WHA
-			    tag = IRE		
+	trigger = {
+		AND = {
+			OR = {
+				tag = WHA
+				tag = IRE		
 			}
 			ai = yes
 		}
-    }
+	}
 
-    mean_time_to_happen = { days = 10 }
+	mean_time_to_happen = { days = 10 }
 
-    option = {
+	option = {
 		name = "Britannia"
 		set_country_flag = britannia_ai
 		ai_chance = {
 			factor = 1
-        }
+		}
 	}
 
 	option = {
@@ -102,199 +102,199 @@ country_event = {
 		set_country_flag = celtic_ai
 		ai_chance = {
 			factor = 1
-        }
+		}
 	}
 }
 
 #Irish Revolt
 country_event = {
-    id = 28015
-    title = "EVTNAME28015"
-    desc = "EVTDESC28015"
-    picture = irish_win
+	id = 28015
+	title = "EVTNAME28015"
+	desc = "EVTDESC28015"
+	picture = irish_win
 	fire_only_once = yes
 
-    trigger = {
-	    tag = ENG
-	    NOT = { has_country_flag = irish_revolt }
+	trigger = {
+		tag = ENG
+		NOT = { has_country_flag = irish_revolt }
 		OR = {
-		    263 = { owned_by = ENG }
+			263 = { owned_by = ENG }
 			254 = { owned_by = ENG }
 		}
-        NOT = { exists = IRR }
-    }
+		NOT = { exists = IRR }
+	}
 
-    mean_time_to_happen = {
-        months = 1
-        modifier = {
-            factor = 0.5
-            average_militancy = 7
-        }
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			average_militancy = 7
+		}
 
-        modifier = {
-            factor = 0.5
-            has_recently_lost_war = yes
-        }
-    }
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
 	
 	option = {
-        name = "Well then..."
+		name = "Well then..."
 		set_country_flag = irish_revolt
-        any_owned_province = {
-            limit = { is_core = IRE }
-            secede_province = IRR
-        }
-        diplomatic_influence = {
-            who = IRR
-            value = -400
-        }
-        war = {
-            target = IRR 
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
+		any_owned_province = {
+			limit = { is_core = IRE }
+			secede_province = IRR
+		}
+		diplomatic_influence = {
+			who = IRR
+			value = -400
+		}
+		war = {
+			target = IRR 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
 		IRE = { country_event = 28018 }
 		random = {
-		    chance = 0.2
-	        set_country_flag = irish_integration
-	    }
-        ai_chance = {
-            factor = 100
-        }
-    }
+			chance = 0.2
+			set_country_flag = irish_integration
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 #Irish win
 country_event = {
-    id = 28016
+	id = 28016
 	title = "ireland annexes the revolt"
-    desc = "amogus"
+	desc = "amogus"
 	picture = irish_home_rule
 	fire_only_once = yes
 	
-    trigger = {
-	    tag = IRR
+	trigger = {
+		tag = IRR
 		war = no
-    }
+	}
 
-    mean_time_to_happen = {
-        days = 1
-    }
+	mean_time_to_happen = {
+		days = 1
+	}
 	
 	option = {
-        name = "sium"
+		name = "sium"
 		any_owned_province = {
-		    secede_province = IRE
+			secede_province = IRE
 		}
-        ai_chance = {
-            factor = 100
-        }
-    }
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 
 #Britannia integrates Irish
 country_event = {
-    id = 28017
+	id = 28017
 	title = "EVTNAME28017"
-    desc = "EVTDESC28017"
-    picture = irish_integration
+	desc = "EVTDESC28017"
+	picture = irish_integration
 	fire_only_once = yes
 
-    trigger = {
-	    has_country_flag = irish_integration
-	    tag = ENG
+	trigger = {
+		has_country_flag = irish_integration
+		tag = ENG
 		war = no
-    }
+	}
 
-    mean_time_to_happen = {
-        days = 20
-    }
+	mean_time_to_happen = {
+		days = 20
+	}
 	
 	option = {
-        name = "Integrate the Irish culture then."
+		name = "Integrate the Irish culture then."
 		add_accepted_culture = irish
 		any_pop = {
-		    limit = { 
-			    NOT = { has_pop_culture = irish }
+			limit = { 
+				NOT = { has_pop_culture = irish }
 			}
-	        average_militancy = 4
-        }
+			average_militancy = 4
+		}
 		any_pop = {
-		    limit = { 
-			    has_pop_culture = irish
+			limit = { 
+				has_pop_culture = irish
 			}
-	        average_militancy = -2
-        }
-        ai_chance = {
-            factor = 70
-        }
-    }
+			average_militancy = -2
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
 	option = {
-        name = "We will stick with our previous decision."
+		name = "We will stick with our previous decision."
 		any_pop = {
-		    limit = { 
-			    NOT = { has_pop_culture = irish }
+			limit = { 
+				NOT = { has_pop_culture = irish }
 			}
-	        average_militancy = -2
-        }
+			average_militancy = -2
+		}
 		any_pop = {
-		    limit = { 
-			    has_pop_culture = irish
+			limit = { 
+				has_pop_culture = irish
 			}
-	        average_militancy = 4
-        }
-        ai_chance = {
-            factor = 70
-        }
-    }
+			average_militancy = 4
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
 }
 
 #Ireland intervenes
 country_event = {
-    id = 28018
+	id = 28018
 	title = "EVTNAME28018"
-    desc = "EVTDESC28018"
-    picture = irish_republican_brotherhood
+	desc = "EVTDESC28018"
+	picture = irish_republican_brotherhood
 	is_triggered_only = yes
 	
 	option = {
-        name = "We have to defend our brothers at all costs."
+		name = "We have to defend our brothers at all costs."
 		war = {
-	        target = SCO
+			target = SCO
 			attacker_goal = { casus_belli = liberate_country country = IRR }
 			defender_goal = { casus_belli = humiliate_no_infamy }
 			call_ally = no
 		}
 		random = {
-		    chance = 0.25
+			chance = 0.25
 			relation = {
-		        who = SCO
-			    value = -75
-		    }
+				who = SCO
+				value = -75
+			}
 		}
-        ai_chance = {
-            factor = 25
-        }
-    }
+		ai_chance = {
+			factor = 25
+		}
+	}
 	option = {
-        name = "Secretly give them supplies."
+		name = "Secretly give them supplies."
 		money = -10000
 		IRR = {
-            small_arms = 300
-            ammunition = 300
+			small_arms = 300
+			ammunition = 300
 		}
-        ai_chance = {
-            factor = 50
-        }
-    }
+		ai_chance = {
+			factor = 50
+		}
+	}
 	option = {
-        name = "We can't do nothing."
+		name = "We can't do nothing."
 		relation = {
-		    who = SCO
+			who = SCO
 			value = 25
 		}
-        ai_chance = {
-            factor = 25
-        }
-    }
+		ai_chance = {
+			factor = 25
+		}
+	}
 }
