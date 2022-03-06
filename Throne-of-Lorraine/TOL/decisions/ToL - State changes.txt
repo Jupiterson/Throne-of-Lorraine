@@ -176,13 +176,13 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
-			   tag = FRZ
+					tag = FRZ
 				NOT = { exists = FRA }
 			 	}
-	   		AND = { 
-			tag = OCC
-			has_global_flag = occ_chose_violence
-			}
+				AND = { 
+					tag = OCC
+					has_global_flag = occ_chose_violence
+				}
 			}
 			war = no
 			NOT = { has_global_flag = FRZ_cores_set }
@@ -217,9 +217,10 @@ political_decisions = {
 			add_accepted_culture = breton
 			add_accepted_culture = belgican
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
-core_FRR = {
+	core_FRR = {
 		picture = enact_dual_monarchy
 		potential = {
 			tag = FRA
@@ -257,18 +258,19 @@ core_FRR = {
 			add_accepted_culture = breton
 			add_accepted_culture = belgican
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
-  hate_frenchies = {
+	hate_frenchies = {
 		picture = enact_dual_monarchy
 		potential = {
-		OR = {
-		tag = BRG
-		tag = PIC
-		tag = WLL
-		tag = ARP
-		tag = BRT
-		}
+			OR = {
+				tag = BRG
+				tag = PIC
+				tag = WLL
+				tag = ARP
+				tag = BRT
+			}
 			war = no
 			NOT = { has_country_flag = deleted_frenchies }
 		}
@@ -289,15 +291,16 @@ core_FRR = {
 			any_pop = { limit = { location = { is_core = THIS } culture = breton } reduce_pop = 1.3 }
 			any_pop = { limit = { location = { is_core = THIS } culture = belgican } reduce_pop = 1.5 }
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	
-  rem_core_occ = {
+	rem_core_occ = {
 		picture = enact_dual_monarchy
 		potential = {
 			AND = { 
 			tag = OCC
-			has_global_flag = occ_chose_peace
+				has_global_flag = occ_chose_peace
 			}
 			war = no
 			NOT = { has_global_flag = occ_cores }
@@ -334,6 +337,7 @@ core_FRR = {
 				}
 			}
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	decore_gen = {
@@ -358,6 +362,7 @@ core_FRR = {
 				all_core = { remove_core = GEN }
 			}
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	core_UOW = {
@@ -380,6 +385,7 @@ core_FRR = {
 			}
 			capital = 300
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	core_ENL = {
@@ -402,6 +408,7 @@ core_FRR = {
 			}
 			capital = 300
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	
@@ -448,6 +455,7 @@ core_FRR = {
 			remove_accepted_culture = norwegian
 			change_tag = DEN
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	
@@ -457,7 +465,7 @@ core_FRR = {
 	#  unite with xyz #
 	###################
 	
-unite_saarland = {
+	unite_saarland = {
 		picture = enact_dual_monarchy
 		potential = {
 			tag = SAL
@@ -478,7 +486,6 @@ unite_saarland = {
 #						is_core = SAA
 #					}
 #				}
- 
 			}
 		}
 
@@ -498,6 +505,7 @@ unite_saarland = {
 				inherit = SAL
 			}
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	unite_aragon = {
@@ -536,6 +544,7 @@ unite_saarland = {
 				inherit = CAT
 			}
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	unite_occitania = {
@@ -567,7 +576,7 @@ unite_saarland = {
 		}
 
 		effect = {
-		set_global_flag = Occ_annex_pro
+			set_global_flag = Occ_annex_pro
 #			PRO = {
 #				all_core = { remove_core = FRA }
 #			}
@@ -586,6 +595,7 @@ unite_saarland = {
 			add_accepted_culture = north_italian
 			add_accepted_culture = provencial
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	unite_illyria = {
@@ -623,6 +633,7 @@ unite_saarland = {
 			}
 			add_accepted_culture = illyrian
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	unite_prussia = {
@@ -650,10 +661,6 @@ unite_saarland = {
 				inherit = MML
 			}
 		}
+		ai_will_do = { factor = 1 }
 	}
-	
-	
-	
-	
-	
 }
