@@ -708,6 +708,7 @@ country_event = {
 	desc = "LOUISMAN"
 	picture = "louis_xiv"
 	trigger = {
+	tag = FRA
 		NOT = {
 			has_country_flag = louis_image
 			}
@@ -758,6 +759,7 @@ country_event = {
 	picture = "louis_xiv"
 	trigger = {
 	has_country_flag = louis_image_nice
+	tag = FRA
 		NOT = {
 			has_country_flag = rejoice
 			}
@@ -799,6 +801,10 @@ country_event = {
 	trigger = {
 		NOT = {
 			has_country_flag = kaiser_krone
+		}
+		OR = {
+		tag = BOH
+		tag = BOE
 		}
 		year = 1841
 	}
