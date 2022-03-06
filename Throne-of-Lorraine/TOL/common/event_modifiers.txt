@@ -1841,13 +1841,18 @@ philantropic_work = {
 ##Hansa
 
 kontor = {
-    population_growth = 0.0005
-	factory_owner_cost = -0.5
+    population_growth = 0.0002
     immigrant_attract = 1.5
-	local_artisan_output = 0.75
-	pop_militancy_modifier = -0.1
-    pop_consciousness_modifier = 0.1
-	factory_throughput = 0.05
+	local_artisan_output = 0.5
+	local_RGO_throughput = 0.05
+	local_RGO_output = 0.05
+	farm_rgo_eff = 0.05
+	mine_rgo_eff = 0.05
+	farm_rgo_size = 0.05
+	mine_rgo_size = 0.05
+	local_ship_build = -0.2
+	local_factory_throughput = 0.05
+	local_repair = 0.2
     icon = 13
 }
 
