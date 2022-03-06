@@ -1,5 +1,5 @@
 political_decisions = {
-  form_britannia = {
+	form_britannia = {
 		picture = reform_the_uk
 		potential = {
 			OR = {
@@ -14,8 +14,8 @@ political_decisions = {
 						NOT = { tag = WHA }
 					}
 					AND = {
-					has_country_flag = britannia_ai
-					ai = no
+						has_country_flag = britannia_ai
+						ai = no
 					}
 				}
 			}

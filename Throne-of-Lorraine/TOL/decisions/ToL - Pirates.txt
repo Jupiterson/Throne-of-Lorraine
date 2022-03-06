@@ -84,9 +84,9 @@ political_decisions = {
 		picture = embrace_minority
 		potential = {
 			ai = no
-					OR = {
-			tag = PIR
-			tag = TEX
+			OR = {
+				tag = PIR
+				tag = TEX
 			}
 			NOT = { has_country_modifier = law_changed_by_force }
 			NOT = { has_country_flag = wealth_distribution_used }
