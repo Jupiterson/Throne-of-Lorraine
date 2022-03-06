@@ -1256,6 +1256,7 @@ political_decisions = {
 			revolution_n_counterrevolution = 1
 			NOT = { has_country_flag = finland_russification }
 			NOT = { government = democracy }
+			NOT = { government = parliamentary_republic }
 			NOT = { has_country_flag = Conceded_Finland }
 			NOT = { has_country_flag = finland_is_recognized }
 		}
