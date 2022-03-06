@@ -31,31 +31,33 @@ political_decisions = {
 			}
 			set_country_flag = buy_neumark
 		}
-	
 	}
 	
 	
 	embraced_jews_in_hanse = {
 	picture = embrace_the_jews
 		potential = {
-		   
-				tag = HNS			   
-			
+			tag = HNS			   
 			NOT = { has_country_flag = embraced_jews }
 		}
 
 		allow = {
 			war = no
-		   year = 1850
+			year = 1850
 			OR = {
 				government = hms_government
-				government = democracy
-				government = hanseatic
 				government = prussian_constitutionalism
 				government = absolute_monarchy
 				government = absolute_empire
 				government = semi_constitutional_empire
 				government = constitutional_empire
+				government = democracy
+				government = hanseatic
+				government = parliamentary_republic
+				government = federal_democracy
+				government = dominion
+				government = peasant_republic
+				government = pirate_republic
 			}
 		}
 
@@ -90,103 +92,89 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-reestablish_kontors ={
+	reestablish_kontors ={
 		picture = belgrade_view
 		potential = {
 			tag = HNS
-		   
 			NOT = {
-				
-					has_country_flag = kontors_established
-				
+				has_country_flag = kontors_established
 			}
 		}
 
 		allow = {
-		 money = 70000
-			
-			
+			money = 70000
 		}
-
+		
 		effect = {
-		treasury = -70000
-		prestige = 20
+			treasury = -70000
+			prestige = 20
 			set_country_flag = kontors_established
-				   300 = { add_province_modifier = { name = kontor duration = -1 } }
-				   309 = { add_province_modifier = { name = kontor duration = -1 } }
-				   1003 = { add_province_modifier = { name = kontor duration = -1 } }
-				   388 = { add_province_modifier = { name = kontor duration = -1 } }
-		 any_pop = {
-				
-			
-			HAN = {
-				any_pop = {
-					limit = {
-						culture = north_german
-						type = artisans
+			300 = { add_province_modifier = { name = kontor duration = -1 } }
+			309 = { add_province_modifier = { name = kontor duration = -1 } }
+			1003 = { add_province_modifier = { name = kontor duration = -1 } }
+			388 = { add_province_modifier = { name = kontor duration = -1 } }
+			any_pop = {
+				HAN = {
+					any_pop = {
+						limit = {
+							culture = north_german
+							type = artisans
+						}
+						move_pop = 309
 					}
-					move_pop = 309
+				}
+				MEC = {
+					any_pop = {
+						limit = {
+							culture = north_german
+							type = artisans
+						}
+						move_pop = 1003
+					}
+				}
+				369 = {
+					any_pop = {
+						limit = {
+							culture = north_german
+							type = artisans
+						}
+						move_pop = 300
+					}
+				}
+				532 = {
+					any_pop = {
+						limit = {
+							culture = north_german
+							type = artisans
+						}
+						move_pop = 388
+					}
 				}
 			}
-			MEC = {
-				any_pop = {
-					limit = {
-						culture = north_german
-						type = artisans
-					}
-					move_pop = 1003
-				}
-			}
-			369 = {
-				any_pop = {
-					limit = {
-						culture = north_german
-						type = artisans
-					}
-					move_pop = 300
-				}
-			}
-			532 = {
-				any_pop = {
-					limit = {
-						culture = north_german
-						type = artisans
-					}
-					move_pop = 388
-				}
-			}
-			
 		}
-		}
-
 		ai_will_do = { factor = 1 }
 	}
 	
-  reinstate_newworld_kontors = {
+	reinstate_newworld_kontors = {
 		picture = belgrade_view
 		potential = {
 			tag = HNS
 			has_country_flag = kontors_established
 			NOT = {
-				
-					has_country_flag = new_kontors_established
-				
+				has_country_flag = new_kontors_established				
 			}
 		}
-
+		
 		allow = {
-		 money = 100000
-			
-			
+			money = 100000			
 		}
 
 		effect = {
-		prestige = 20
-		treasury = -100000
+			prestige = 20
+			treasury = -100000
 			set_country_flag = new_kontors_established
-				   74 = { add_province_modifier = { name = kontor duration = -1 } }
-				   232 = { add_province_modifier = { name = kontor duration = -1 } }
-			   
+		   74 = { add_province_modifier = { name = kontor duration = -1 } }
+		   232 = { add_province_modifier = { name = kontor duration = -1 } }			   
 		}
 
 		ai_will_do = { factor = 1 }
@@ -197,38 +185,33 @@ reestablish_kontors ={
 		potential = {
 			tag = HNS
 			has_country_flag = new_kontors_established
-			NOT = {
-				
-					has_country_flag = take_kontors
-				
+			NOT = {				
+				has_country_flag = take_kontors
 			}
 		}
 
 		allow = {
-		 money = 150000
-		 nationalism_n_imperialism = 1
-		 is_greater_power = yes
-			
+			money = 150000
+			nationalism_n_imperialism = 1
+			is_greater_power = yes	
 		}
 
 		effect = {
 		prestige = 20
 		badboy = 15
 		treasury = -100000
-			set_country_flag = take_kontors
-				  300 = { add_core = THIS }
-				  309 = { add_core = THIS }
-				  1003 = { add_core = THIS }
-				  388 = { add_core = THIS }
-				  74 = { add_core = THIS }
-				  
-			   
+		set_country_flag = take_kontors
+		300 = { add_core = THIS }
+		309 = { add_core = THIS }
+		1003 = { add_core = THIS }
+		388 = { add_core = THIS }
+		74 = { add_core = THIS }  
 		}
 
 		ai_will_do = { factor = 1 }
 	}
 	
-edict_of_lubeck = {
+	edict_of_lubeck = {
 		picture = passports
 		potential = {
 			tag = HNS
@@ -245,23 +228,26 @@ edict_of_lubeck = {
 			set_country_flag = the_confederation_is_legitime
 			prestige = 10
 			random_owned = {
-				limit = { owner = { NOT = { has_country_flag = end_of_the_confederation } } }
+				limit = {
+					owner = {
+						NOT = {
+							has_country_flag = end_of_the_confederation
+						}
+					}
+				}
 				POM = { all_core = { add_core = HNS } }
 				HAN = { all_core = { add_core = HNS } }
 				MEC = { all_core = { add_core = HNS } }
 				SWH = { all_core = { add_core = HNS } }
 				DZG = { all_core = { add_core = HNS } }				
-				BRN = { all_core = { add_core = HNS } }			   
-
-
+				BRN = { all_core = { add_core = HNS } }
 			}
 		}
-
 		ai_will_do = { factor = 1 }
 	}
 
 #stolen from AoE
- hanseatic_frisia = {
+	hanseatic_frisia = {
 		picture = german_confederation
 		potential = {
 			tag = HNS
@@ -317,19 +303,19 @@ edict_of_lubeck = {
 			HAN = { vassal_of = THIS }
 		}
 		allow = {
-				   year = 1850
+			year = 1850
 			BRN = { vassal_of = THIS }
 			POM = { vassal_of = THIS }
 			HAN = { vassal_of = THIS }
 			OR = {			
-			nationalism_n_imperialism = 1
+				nationalism_n_imperialism = 1
 				AND = {
 					is_greater_power = yes
 				}
 			}
 		}
 		effect = {
-						set_country_flag = united_hanse
+			set_country_flag = united_hanse
 			any_country = {
 				limit = {
 					primary_culture = north_german
@@ -340,11 +326,6 @@ edict_of_lubeck = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-
-
-
-
-
 
 
 embraced_south_in_hanse = {
@@ -361,13 +342,18 @@ embraced_south_in_hanse = {
 			year = 1850
 			OR = {
 				government = hms_government
-				 				government = democracy
-				government = hanseatic
 				government = prussian_constitutionalism
 				government = absolute_monarchy
 				government = absolute_empire
 				government = semi_constitutional_empire
 				government = constitutional_empire
+				government = democracy
+				government = hanseatic
+				government = parliamentary_republic
+				government = federal_democracy
+				government = dominion
+				government = peasant_republic
+				government = pirate_republic
 			}
 		}
 
@@ -402,11 +388,10 @@ embraced_south_in_hanse = {
 		ai_will_do = { factor = 1 }
 	}
    
-unite_the_coast = {
+	unite_the_coast = {
 		picture = annex_united_baltic_duchy
 		potential = {
-			OR = { 
-				
+			OR = {
 				tag = HNS			  
 			}
 			NOT = { has_country_flag = big_hanse}
@@ -440,13 +425,10 @@ unite_the_coast = {
 			}
 
 			UBD = { all_core = { add_core = HNS } }
-		   
 			add_accepted_culture = volga_german
 			add_accepted_culture = latvian
 			add_accepted_culture = estonian
-
 			change_tag = HNS
-
 			set_country_flag = big_hanse
 		}
 	}
@@ -455,8 +437,7 @@ unite_the_coast = {
 	unite_the_coast_ubd = {
 		picture = annex_united_baltic_duchy
 		potential = {
-			OR = { 
-				
+			OR = {
 				tag = UBD			  
 			}
 			NOT = { has_country_flag = big_baltic}
@@ -474,24 +455,19 @@ unite_the_coast = {
 						vassal_of = THIS
 					}
 				}
-				
 			}
 		}
 
 		effect = {
 			prestige = 30
 			badboy = 20
-
 			any_country = {
 				limit = {
 					tag = HNS
 				}
 				annex_to = THIS
 			}
-			
 			HNS = { all_core = { add_core = UBD } }
-		  
-
 			set_country_flag = big_baltic
 		}
 	}

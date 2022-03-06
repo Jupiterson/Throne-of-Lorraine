@@ -19,7 +19,7 @@ political_decisions = {
 			is_secondary_power = no
 			OR = {
 				government = democracy
-				government = hanseatic
+				government = parliamentary_republic
 			}
 			OR = {
 				part_of_sphere = no
@@ -30,7 +30,7 @@ political_decisions = {
 				war = no
 				OR = {
 					government = democracy
-					government = hanseatic
+					government = parliamentary_republic
 				}
 				NOT = { truce_with = THIS }
 			}
@@ -68,7 +68,7 @@ political_decisions = {
 			is_secondary_power = no
 			OR = {
 				government = democracy
-				government = hanseatic
+				government = parliamentary_republic
 			}
 			OR = {
 				part_of_sphere = no
@@ -79,7 +79,7 @@ political_decisions = {
 				war = no
 				OR = {
 					government = democracy
-					government = hanseatic
+					government = parliamentary_republic
 				}
 				NOT = { truce_with = THIS }
 			}

@@ -533,10 +533,10 @@ political_decisions = {
 		allow = {
 			civilized = yes
 			is_greater_power = yes
-			NOT = { 				government = democracy
-				government = hanseatic }
-			NOT = { 				government = democracy
-				government = hanseatic }
+			NOT = { 
+				government = democracy
+				government = parliamentary_republic
+			}
 			nationalism_n_imperialism = 1
 		}
 

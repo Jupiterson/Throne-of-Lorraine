@@ -56,8 +56,8 @@ political_decisions = {
 			is_vassal = no
 			nationalism_n_imperialism = 1
 			NOT = { government = hms_government }
-			NOT = { 				government = democracy
-				government = hanseatic }
+			NOT = { government = democracy }
+			NOT = { government = parliamentary_republic }
 			NOT = { government = constitutional_empire }
 			war_policy = jingoism
 			OR = {
@@ -416,8 +416,8 @@ political_decisions = {
 		allow = {
 			is_vassal = no
 			war_policy = jingoism
-			NOT = { 				government = democracy
-				government = hanseatic }
+			NOT = { government = democracy }
+			NOT = { government = parliamentary_republic }
 			OR = {
 				is_secondary_power = yes
 				is_greater_power = yes

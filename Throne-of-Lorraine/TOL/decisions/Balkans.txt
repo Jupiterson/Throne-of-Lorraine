@@ -588,15 +588,15 @@ political_decisions = {
 			modifier = {
 				factor = 0
 				OR = {
-									government = democracy
-				government = hanseatic
+					government = democracy
+					government = parliamentary_republic
 					government = hms_government
 					government = constitutional_empire
 				}
 				CRO = {
 					NOT = {
-										government = democracy
-				government = hanseatic
+						government = democracy
+						government = parliamentary_republic
 						government = hms_government
 						government = constitutional_empire
 					}
@@ -606,15 +606,15 @@ political_decisions = {
 				factor = 0
 				CRO = {
 					OR = {
-										government = democracy
-				government = hanseatic
+						government = democracy
+						government = parliamentary_republic
 						government = hms_government
 						government = constitutional_empire
 					}
 				}
 				NOT = {
-									government = democracy
-				government = hanseatic
+					government = democracy
+					government = parliamentary_republic
 					government = hms_government
 					government = constitutional_empire
 				}
@@ -2325,8 +2325,8 @@ political_decisions = {
 				has_country_modifier = turkish_oppression
 				vassal_of = TUR
 				government = proletarian_dictatorship
-								government = democracy
-				government = hanseatic
+				government = democracy
+				government = parliamentary_republic
 				nationalvalue = nv_liberty
 				nationalvalue = nv_equality
 			}

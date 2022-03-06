@@ -102,8 +102,13 @@ political_decisions = {
 				government = semi_constitutional_empire
 				government = hms_government
 				government = constitutional_empire
-								government = democracy
+				government = democracy
 				government = hanseatic
+				government = parliamentary_republic
+				government = federal_democracy
+				government = dominion
+				government = peasant_republic
+				government = pirate_republic
 			}
 			OR = {
 				vote_franschise = universal_weighted_voting
@@ -803,8 +808,13 @@ political_decisions = {
 			OR = {
 				government = hms_government
 				government = constitutional_empire
-								government = democracy
+				government = democracy
 				government = hanseatic
+				government = parliamentary_republic
+				government = federal_democracy
+				government = dominion
+				government = peasant_republic
+				government = pirate_republic
 			}
 			NOT = { any_pop = { type = slaves } }
 			year = 1886
@@ -1846,10 +1856,15 @@ political_decisions = {
 			modifier = {
 				factor = 0
 				OR = {
-									government = democracy
-				government = hanseatic
 					government = hms_government
 					government = constitutional_empire
+					government = democracy
+					government = hanseatic
+					government = parliamentary_republic
+					government = federal_democracy
+					government = dominion
+					government = peasant_republic
+					government = pirate_republic
 				}
 			}
 		}

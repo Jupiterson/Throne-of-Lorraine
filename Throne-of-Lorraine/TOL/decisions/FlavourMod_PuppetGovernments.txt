@@ -78,7 +78,7 @@ political_decisions = {
 			exists = yes
 			OR = {
 				government = democracy
- #			   government = hanseatic
+			   	government = parliamentary_republic
 				government = prussian_constitutionalism
 				government = hms_government
 				government = absolute_monarchy
@@ -458,7 +458,7 @@ political_decisions = {
 			is_vassal = no
 			OR = {
 				government = colonial_company
-				government = hanseatic
+				government = parliamentary_republic
 				government = dominion
 			}
 			NOT = {
@@ -490,7 +490,7 @@ political_decisions = {
 				owner = { 	
 					OR = {
 						government = democracy
-#				  		government = hanseatic
+				  		government = parliamentary_republic
 					}
 				}
 			}
