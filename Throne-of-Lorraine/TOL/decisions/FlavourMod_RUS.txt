@@ -3,7 +3,7 @@ political_decisions = {
 		picture = dmitry_milyutin
 		potential = {
 			tag = RUS
-			ai = yes
+			#ai = yes
 			OR = {
 				has_country_flag = crimean_war
 				year = 1870
@@ -13,16 +13,16 @@ political_decisions = {
 		}
 		allow = {
 			war = no
-			money = 50001
-			OR = {
-				has_recently_lost_war = yes
-				ai = yes
-			}
+			money = 100001
+			#OR = {
+			#	has_recently_lost_war = yes
+			#	ai = yes
+			#}
 		}
 		effect = {
-			treasury = -50000
-			random_owned = {
-				limit = { owner = { ai = yes } }
+			treasury = -100000
+			#random_owned = {
+			#	limit = { owner = { ai = yes } }
 				owner = {
 					activate_technology = muzzle_loaded_rifles
 					activate_technology = breech_loaded_rifles
@@ -31,8 +31,8 @@ political_decisions = {
 					activate_technology = army_professionalism
 					political_reform = mandatory_service
 					social_reform = low_schools
-				}
-			}
+			#	}
+			#}
 			set_country_flag = dmitry_reforms
 			add_country_modifier = {
 				name = russian_army_education
@@ -55,7 +55,7 @@ political_decisions = {
 		}
 		allow = {
 			year = 1865
-			money = 50000
+			money = 100001
 			war = no
 		}
 		effect = {
@@ -74,8 +74,10 @@ political_decisions = {
 				limit = { owner = { ai = no } }
 				owner = {
 					activate_technology = battleship_column_doctrine
+					activate_technology = raider_group_doctrine
 					activate_technology = steamers
-					treasury = -75000
+					activate_technology = iron_steamers
+					treasury = -100000
 				}
 			}
 			set_country_flag = russian_naval_reform
@@ -534,129 +536,66 @@ political_decisions = {
 		}
 	}
 
-	claim_galicia_lodomeria = {
-		picture = claim_galicia
-		potential = {
-			tag = RUS
-			is_greater_power = yes
-			is_disarmed = no
-			OR = {
-				owns = 702
-				owns = 705
-			}
-			OR = {
-				706 = { is_core = RUS }
-				705 = { is_core = RUS }
-			}
-			OR = {
-				KUK = {
-					exists = yes
-					is_greater_power = no
-					NOT = { truce_with = RUS }
-					OR = {
-						owns = 705
-						owns = 704
-					}
-				}
-				AUS = {
-					exists = yes
-					is_greater_power = no
-					NOT = { truce_with = RUS }
-					OR = {
-						owns = 705
-						owns = 704
-					}
-				}
-				GCF = {
-					exists = yes
-					is_greater_power = no
-					NOT = { truce_with = RUS }
-					OR = {
-						owns = 705
-						owns = 704
-					}
-				}
-			}
-			NOT = { has_country_flag = claim_galicia }
-		}
-		allow = {
-			OR = {
-				 AND = {
-					702 = { is_core = RUS }
-					952 = { is_core = RUS }
-					953 = { is_core = RUS }
-					951 = { is_core = RUS }
-				}
-				AND = {
-					705 = { is_core = RUS }
-					704 = { is_core = RUS }
-					714 = { is_core = RUS }
-				}
-			}
-			war = no
-			war_policy = jingoism
-			OR = {
-				KUK = {
-					exists = yes
-					is_greater_power = no
-					NOT = { truce_with = RUS }
-					OR = {
-						owns = 705
-						owns = 704
-					}
-				}
-				AUS = {
-					exists = yes
-					is_greater_power = no
-					NOT = { truce_with = RUS }
-					OR = {
-						owns = 705
-						owns = 704
-					}
-				}
-				GCF = {
-					exists = yes
-					is_greater_power = no
-					NOT = { truce_with = RUS }
-					OR = {
-						owns = 705
-						owns = 704
-					}
-				}
-			}
-		}
-		effect = {
-			set_country_flag = claim_galicia
-			random_country = {
-				limit = {
-					OR = {
-						tag = KUK
-						tag = AUS
-						tag = GCF
-					}
-					OR = {
-						owns = 705
-						owns = 704
-					}
-				}
-				any_owned = {
-					limit = {
-						is_core = GLM
-					}
-					add_core = RUS
-				}
-			}
-			badboy = 5
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.5
-			}
-		}
-	}
+	#claim_galicia_lodomeria = {
+	#	picture = claim_galicia
+	#	potential = {
+	#		tag = RUS
+	#		is_greater_power = yes
+	#		is_disarmed = no
+	#		OR = {
+	#			owns = 702
+	#			owns = 705
+	#		}
+	#		OR = {
+	#			706 = { is_core = RUS }
+	#			705 = { is_core = RUS }
+	#		}
+	#		NOT = { has_country_flag = claim_galicia }
+	#	}
+	#	allow = {
+	#		OR = {
+	#			 AND = {
+	#				702 = { is_core = RUS }
+	#				952 = { is_core = RUS }
+	#				953 = { is_core = RUS }
+	#				951 = { is_core = RUS }
+	#			}
+	#			AND = {
+	#				705 = { is_core = RUS }
+	#				704 = { is_core = RUS }
+	#				714 = { is_core = RUS }
+	#			}
+	#		}
+	#		war = no
+	#		war_policy = jingoism
+	#	}
+	#	effect = {
+	#		set_country_flag = claim_galicia
+	#		random_country = {
+	#			limit = {
+	#				OR = {
+	#					owns = 705
+	#					owns = 704
+	#				}
+	#			}
+	#			any_owned = {
+	#				limit = {
+	#					is_core = UKR
+	#				}
+	#				add_core = RUS
+	#			}
+	#		}
+	#		badboy = 5
+	#	}
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#		modifier = {
+	#			factor = 0
+	#			badboy = 0.5
+	#		}
+	#	}
+	#}
 
 	integrate_svaneti = {
 		picture = integrate_abkhazia

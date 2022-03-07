@@ -803,10 +803,10 @@ political_decisions = {
 				#all_core = { remove_core = UBD }
 				government = absolute_monarchy
 			}
-			1037 = {
-				add_core = VLG
-				add_province_modifier = { name = russoification duration = -1 }
-			}
+			#1037 = {
+			#	add_core = VLG
+			#	add_province_modifier = { name = russoification duration = -1 }
+			#}
 			inherit = UBD
 			political_reform = unitary
 			any_pop = {
