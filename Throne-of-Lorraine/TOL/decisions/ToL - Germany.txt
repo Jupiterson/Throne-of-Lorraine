@@ -622,65 +622,6 @@ political_decisions = {
 	#########
 	#Bavaria#
 	#########
-	nord_africa = {
-		picture = conquest_of_the_desert
-		potential = {
-			tag = BAV		  
-		   has_country_flag = has_asked_for_jade
-		   NOT = { owns = 3290 }
-		}
-
-		allow = {
-			money = 35000		  
-		}
-
-		effect = {
-			set_country_flag = has_asked_for_jade
-			random_owned = {
-				limit = {
-					owner = { ai = yes }
-				}			  
-			}
-			BAV = { country_event = 40020 }
-			3290 = { secede_province = BAV } 
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
-	the_murano_purchase = {
-		picture = wilhelmshaven
-		potential = {
-			tag = BAV
-			NOT = { has_country_flag = has_asked_for_jade }
-			NOT = { owns = 717 }
-		}
-
-		allow = {
-			is_greater_power = yes
-			money = 35000
-			OR = {
-				state_n_government = 1
-				year = 1843
-			}
-		}
-
-		effect = {
-			set_country_flag = has_asked_for_jade
-			random_owned = {
-				limit = {
-					owner = { ai = yes }
-				}
-				owner = {
-					activate_technology = post_nelsonian_thought
-					activate_technology = naval_design_bureaus
-				}
-			}
-			VEN = { country_event = 40004 }
-		}
-
-		ai_will_do = { factor = 1 }
-	}
 
 	hesse_unite = {
 		picture = german_confederation
