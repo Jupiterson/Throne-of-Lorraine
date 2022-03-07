@@ -13,43 +13,44 @@ state_building = {
     building = steamer_shipyard
     upgrade = yes
 }
-    state_building = {
-        level = 2
-        building = ammunition_factory
-        upgrade = yes
-    }
-    state_building = {
-        level = 2
-        building = machine_parts_factory
-        upgrade = yes
-    }
-    state_building = {
+    
+state_building = {
     level = 2
-    building = small_arms_factory
+    building = machine_parts_factory
     upgrade = yes
-    }
+}
+state_building = {
+	level = 2
+	building = small_arms_factory
+    upgrade = yes
+}
 
-    state_building = {
-        level = 2
-        building = canned_food_factory
-        upgrade = yes
-    }
-    state_building = {
-        level = 1
-        building = liquor_distillery
-        upgrade = yes
-    }
-    state_building = {
-        level = 3
-        building = steel_factory
-        upgrade = yes
-    }
+state_building = {
+    level = 2
+    building = canned_food_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = liquor_distillery
+    upgrade = yes
+}
+state_building = {
+    level = 3
+    building = steel_factory
+    upgrade = yes
+}
  state_building = {
-        level = 1
-        building = luxury_furniture_factory
-        upgrade = yes
-    }
+    level = 1
+    building = luxury_furniture_factory
+    upgrade = yes
+}
 
+state_building = {
+    level = 1
+    building = glass_factory
+    upgrade = yes
+}
 
 party_loyalty = {
     ideology = liberal
