@@ -13,70 +13,55 @@ JES = {
 FRA = {value = -20}
 
 leader = {
-    name = "Andres de Santa Cruz"
+    name = "Atahualpa Ninancoro"
     type = land
     date = 1836.1.1
     personality = arrogant
     background = old_school
 }
 
-navy = {
-    name = "Marina de Guerra del Peru"
-    location = 2295
-    ship = {
-        name= "Monteagudo"
-        type = frigate
-    }
-
-    ship = {
-        name= "Santa Cruz"
-        type = frigate
-    }
-
-}
-
 army = {
-    name = "Army of the Incan Empire"
+    name = "Sapa Inca's Guard"
     location = 2295
     regiment = {
-        name= "1. Infantry Division"
+        name= "Huk Qusqu"
         type = infantry
         home = 2295
     }
 
     regiment = {
-        name= "2. Infantry Division"
+        name= "Iskay Qusqu"
         type = infantry
         home = 2295
     }
 
     regiment = {
-        name= "3. Infantry Division"
+        name= "Kimsa Qusqu"
         type = infantry
         home = 2302
     }
 	    regiment = {
-        name= "4. Infantry Division"
+        name= "Tawa Qusqu"
         type = infantry
         home = 2302
     }
 	    regiment = {
-        name= "5. Brigada de Infantería"
+        name= "Pichqa Qusqu"
         type = infantry
         home = 2305
     }
 	    regiment = {
-        name= "6. Infantry Division"
+        name= "Suqta Qusqu"
         type = infantry
         home = 2308
     }
 		regiment = {
-        name= "6. Infantry Division"
+        name= "Qanchis Qusqu"
         type = infantry
         home = 2297
     }
 		regiment = {
-        name= "7. Infantry Division"
+        name= "Pusaq Qusqu"
         type = infantry
         home = 2303
     }
@@ -84,97 +69,106 @@ army = {
 }
 
 army = {
-    name = "Ejército de Chile"
+    name = "Army of Collasuyu"
     location = 2324
     regiment = {
-        name= "1. Brigada de artillería"
+        name= "Huk Collasuyu Hatun"
         type = artillery
         home = 2324
     }
 
     regiment = {
-        name= "1. Brigada de Infantería"
+        name= "Huk Collasuyu"
         type = infantry
         home = 2324
     }
 
     regiment = {
-        name= "2. Brigada de Infantería"
+        name= "Iskay Collasuyu"
         type = infantry
         home = 2325
     }
 
     regiment = {
-        name= "3. Brigada de Infantería"
+        name= "Kimsa Collasuyu"
         type = infantry
         home = 2328
     }
 
     regiment = {
-        name= "1. Brigada de Caballería"
+        name= "Huk Collasuyu Kawallu"
         type = cuirassier
         home = 2324
     }
 }
 
 navy = {
-    name = "Chilean Navy"
+    name = "Wamp'u runa Tawantinsuyu"
     location = 2325
     ship = {
-        name = "Aquiles"
+        name = "Ancka"
         type = frigate
     }
 
     ship = {
-        name = "Voltaire"
+        name = "Irpa"
         type = frigate
     }
 
     ship = {
-        name = "Orbegoso"
+        name = "Kuntur"
         type = frigate
     }
 
     ship = {
-        name = "Valparaiso"
+        name = "Hoatzin"
         type = frigate
     }
 
     ship = {
-        name = "Libertad"
+        name = "Palanta Pisqu"
         type = frigate
     }
 
     ship = {
-        name = "1. Buque de transporte"
+        name = "Huk transporte"
         type = clipper_transport
     }
 
 
     ship = {
-        name = "2. Buque de transporte"
+        name = "Iskay transporte"
         type = clipper_transport
     }
 
+    ship = {
+        name= "Pinsha"
+        type = frigate
+    }
+
+    ship = {
+        name= "Ch'usiqa"
+        type = frigate
+    }
 }
 
 army = {
-    name = "Ejército de Bolivia"
+    name = "Army of Antisuyu"
     location = 2313 #Chuquisaca (Sucre)
     regiment = {
-        name= "1. Brigada de Infanteria"
+        name= "Huk Antisuyu"
         type = infantry
         home = 2313
     }
 
     regiment = {
-        name= "2. Brigada de Infanteria"
+        name= "Iskay Antisuyu"
         type = infantry
         home = 2310
     }
 
     regiment = {
-        name= "3. Brigada de Infanteria"
+        name= "Kimsa Antisuyu"
         type = infantry
         home = 2311
     }
@@ -182,22 +176,22 @@ army = {
 
 
 army = {
-    name = "Ejército de Ecuador"
+    name = "Army of Chinchansuyu"
     location = 2279
     regiment = {
-        name= "1. Brigada de Infantería"
+        name= "Huk Chinchansuyu"
         type = infantry
         home = 2279
     }
 
     regiment = {
-        name= "2. Brigada de Infantería"
+        name= "Iskay Chinchansuyu"
         type = infantry
         home = 2279
     }
 
     regiment = {
-        name= "3. Brigada de Infantería"
+        name= "Kimsa Chinchansuyu"
         type = infantry
         home = 2283
     }
