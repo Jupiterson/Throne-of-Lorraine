@@ -732,17 +732,20 @@ emigration_chance = {
 		OR = {
 			location = { continent = north_america }
 			location = { continent = south_america }
+			location = { is_core = NFL }
 			location = { continent = australia_new_zealand }
 		}
 		country = {
 			has_country_flag = new_world_nation
 			OR = {
 				government = democracy
+				government = constitutional_theocracy
 				government = parliamentary_republic
 				government = constitutional_empire
 				government = hms_government
 				government = dominion
 				government = colonial_company
+				government = merchant_republic
 				government = presidential_dictatorship
 			}
 		}
@@ -1095,6 +1098,39 @@ assimilation_chance = {
 		has_pop_religion = jewish
 		not = { country = { has_country_flag = jewish_country } }
 	}
+	
+	modifier = {
+		factor = -0.95
+		has_pop_culture = french
+		location = { continent = europe }
+		NOT = { location = { AND = { is_core = LOR is_core = FRA is_core = PRO is_core = SWI } } }
+	}
+	
+	modifier = {
+		factor = -0.5
+		OR = {
+			has_pop_religion = occitan
+			has_pop_religion = burgundian
+			has_pop_culture = breton
+			has_pop_culture = belgican
+			has_pop_culture = provencial
+		}
+		location = { is_core = FRA }
+		country = { tag = FRA }
+	}
+	
+	#For Greeks
+	modifier = {
+		factor = 1
+		country = { primary_culture = greek }
+	}
+	
+	#For Romans
+	modifier = {
+		factor = 1.5
+		country = { primary_culture = neo_roman }
+	}
+
 
 	modifier = {
 		factor = -1
@@ -1387,7 +1423,7 @@ conversion_chance = {
 		has_pop_culture = ainu
 		country = { primary_culture = japanese }
 	}
-
+	
 
 	modifier = {
 		factor = 0.1
