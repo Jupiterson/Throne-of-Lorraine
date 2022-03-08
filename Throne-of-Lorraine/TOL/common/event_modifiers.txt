@@ -649,12 +649,12 @@ incan_industrial_reforms = {
 	factory_owner_cost = -0.25
 	pop_consciousness_modifier = 0.15
 	pop_militancy_modifier = 0.10
-	population_growth = 0.005
+	global_population_growth = 0.005
 	icon = 1
 }
 
 incan_reform_benefits_mining = {
-	population_growth = 0.005
+	population_growth = 0.01
 	immigrant_attract = 1.5
 	mine_rgo_eff = 0.2
 	mine_rgo_size = 1
@@ -662,10 +662,10 @@ incan_reform_benefits_mining = {
 }
 
 incan_reform_benefits_farming = {
-	population_growth = 0.001
+	population_growth = 0.005
 	immigrant_attract = 1.5
-	mine_rgo_eff = 0.2
-	mine_rgo_size = 1
+	farm_rgo_eff = 0.2
+	farm_rgo_size = 1
 	icon = 11
 }
 
@@ -3180,6 +3180,7 @@ great_eastern_crisis = {
 
 russoification = {
 	immigrant_attract = 1.50
+	assimilation_rate = 0.75
 	farm_RGO_size = 0.1
 	mine_RGO_size = 0.1
 	pop_consciousness_modifier = -0.02

@@ -4,7 +4,7 @@ political_decisions = {
 	greater_saarland = {
 		picture = normandy_mines
 		potential = {
-		tag = SAA
+			tag = SAA
 			NOT = { has_country_flag = saar_stzronk }
 		}
 
@@ -13,16 +13,15 @@ political_decisions = {
 				owned_by = THIS
 			}
 		prestige = 50
-	 
 		}
 
 		effect = {
-		prestige = 45
-		set_country_flag = saar_stzronk
-		badboy = 5	   
-		572 = { add_core = THIS }
-		412 = { add_core = THIS }
-		397 = { add_core = THIS }		
+			prestige = 45
+			set_country_flag = saar_stzronk
+			badboy = 5	   
+			572 = { add_core = THIS }
+			412 = { add_core = THIS }
+			397 = { add_core = THIS }		
 		}
    }
    
@@ -64,24 +63,22 @@ political_decisions = {
 		}
 		allow = {
 			BOH = { vassal_of = THIS }
-					is_greater_power = yes
-				}
-			
-		
+			is_greater_power = yes
+		}
 		effect = {
-		BOH = {
+			BOH = {
 				all_core = {
 					add_core = GER
 				}
 			}
-		BOH = {
+			BOH = {
 				all_core = {
 					add_core = BOE
 					remove_core = BOH
 				}
 			}
-					prestige = 5
-					set_country_flag = boh_incorparated
+			prestige = 5
+			set_country_flag = boh_incorparated
 			any_country = {
 				limit = {
 					primary_culture = czech
@@ -96,52 +93,53 @@ political_decisions = {
 	join_hre = {
 		picture = german_confederation
 		potential = {		
-				OR = {
-			  tag = SLO
-			  tag = DEN
-			  tag = PZN
-			  tag = UBD	
-				} 				 
-			NOT = { exists = GER 
-					has_country_flag = joined_hre  
-					 }
+			OR = {
+				tag = SLO
+				tag = DEN
+				tag = PZN
+				tag = UBD	
+			} 				 
+			NOT = {
+				exists = GER 
+				has_country_flag = joined_hre  
+			}
 		}
 
 		allow = {
 			prestige = 125
 			nationalism_n_imperialism = 1					   
-				THIS = {
-					all_core = {
-						OR = {
-							owned_by = THIS
-							owner = {
-								in_sphere = THIS
-								OR = {
-									is_vassal = no
-									vassal_of = THIS
-								}
-								war = no
-								is_greater_power = no
+			THIS = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
 							}
+							war = no
+							is_greater_power = no
 						}
 					}
 				}
+			}
 		}
 
 		effect = {
-		 set_country_flag = joined_hre	
+			set_country_flag = joined_hre	
 			prestige = 20
-			 THIS = {
-					all_core = {
-					  add_core = GER
-					}
+			THIS = {
+				all_core = {
+				  add_core = GER
 				}
+			}
 			add_accepted_culture = north_german 
 			add_accepted_culture = south_german  
 			add_country_modifier = {
-					name = hre_member
-					duration = -1
-				}   			
+				name = hre_member
+				duration = -1
+			}   			
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -149,18 +147,18 @@ political_decisions = {
 	reclaim_east_frisia = {
 		picture = form_germany
 		potential = {
-		OR = {
-			tag = GER	
-			tag = HNS
+			OR = {
+				tag = GER	
+				tag = HNS
 			}			
 			NOT = {
 				has_country_flag = reclaimed_east_frisia
 			}
 		}
 		allow = {
-						owns = 543
-						is_greater_power = yes
-			}
+			owns = 543
+			is_greater_power = yes
+		}
 		effect = {
 			set_country_flag = reclaimed_east_frisia
 						add_accepted_culture = low_german
@@ -188,22 +186,21 @@ political_decisions = {
 			}
 		}
 		allow = {
-						owns = 618
-						state_n_government = 1
-			}
+			owns = 618
+			state_n_government = 1
+		}
 		effect = {
 			set_country_flag = consolidate_krain
 			SLO = {
 				all_core = {
-										add_core = THIS
-										}
-				}
-				
-			 SLO = {
+					add_core = THIS
+					}
+				}				
+			SLO = {
 				all_core = {
-										add_core = GER
-										}
+					add_core = GER
 				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -213,53 +210,52 @@ political_decisions = {
 	unite_bishops = {
 		picture = annex_united_baltic_duchy
 		potential = {
-		OR = {
-		tag = DOR
-		tag = KOL
-		tag = WBG
-		tag = TER
-		tag = MAI
-		}
+			OR = {
+				tag = DOR
+				tag = KOL
+				tag = WBG
+				tag = TER
+				tag = MAI
+			}
 			NOT = { has_country_flag = theocracy_stronk }
 		}
 
 		allow = {
-		is_greater_power = yes
+			is_greater_power = yes
 			all_core = {
 				owned_by = THIS
 			}
-		prestige = 50
-	 
+			prestige = 50
 		}
 
 		effect = {
-		prestige = 45
-		set_country_flag = theocracy_stronk
-		badboy = 5	   
-		572 = { add_core = THIS }
-		3379 = { add_core = THIS }
-		KOL = {
+			prestige = 45
+			set_country_flag = theocracy_stronk
+			badboy = 5	   
+			572 = { add_core = THIS }
+			3379 = { add_core = THIS }
+			KOL = {
 				all_core = {
 					add_core = THIS
 				}
 			}
-		DOR = {
+			DOR = {
 				all_core = {
 					add_core = THIS
 				}
 			}
-		MAI = {
+			MAI = {
 				all_core = {
 					add_core = THIS
 				}
 			}
-		WBG = {
+			WBG = {
 				all_core = {
 					add_core = THIS
 				}
 			}			
 		}
-   }
+	}
 
 	claim_ingriya = {
 		picture = map_ingria
@@ -269,19 +265,17 @@ political_decisions = {
 		}
 
 		allow = {
-		state_n_government = 1 
+			state_n_government = 1 
 			all_core = {
 				owned_by = THIS
 			}
-	 
 		}
 
 		effect = {
-		prestige = 5
-		badboy = 5
-		set_country_flag = ingija 
-		RUS_994 = { add_core = THIS }
-			
+			prestige = 5
+			badboy = 5
+			set_country_flag = ingija 
+			RUS_994 = { add_core = THIS }
 		}
    }
    
@@ -297,24 +291,22 @@ political_decisions = {
 		nationalism_n_imperialism = 1 
 			all_core = {
 				owned_by = THIS
-			}
-	 
+			}	 
 		}
 
 		effect = {
-		 prestige = 5
-		badboy = 5
-		set_country_flag = coastal 
-		339 = { add_core = THIS }
-		343 = { add_core = THIS }
-		345 = { add_core = THIS }
-		346 = { add_core = THIS }
-		348 = { add_core = THIS }
-		331 = { add_core = THIS }
-		995 = { add_core = THIS }
-			
+			prestige = 5
+			badboy = 5
+			set_country_flag = coastal 
+			339 = { add_core = THIS }
+			343 = { add_core = THIS }
+			345 = { add_core = THIS }
+			346 = { add_core = THIS }
+			348 = { add_core = THIS }
+			331 = { add_core = THIS }
+			995 = { add_core = THIS }			
 		}
-   }
+	}
    
 	incorparate_vassals = {
 		picture = thuringia
@@ -393,12 +385,9 @@ political_decisions = {
 			all_core = {
 				add_core = ALE
 			}
-		   
-			
 			change_tag = ALE
 			add_accepted_culture = north_german
-			set_global_flag = allemannia_united		 
-			
+			set_global_flag = allemannia_united			
 		}
 		ai_will_do = { factor = 1 }
 	}

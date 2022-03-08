@@ -78,8 +78,10 @@ political_decisions = {
 			any_owned = {
 				limit = {
 					OR = {
-						region = CHL_2322 #Santiago
-						region = CHL_2327 #Los Rios
+						province_id = 2330
+						province_id = 2322
+						province_id = 2329
+						province_id = 2331
 					}
 				}
 				add_province_modifier = {
@@ -240,12 +242,11 @@ political_decisions = {
 
 		effect = {
 			prestige = 20
-			 change_tag = AMZ
+			change_tag = AMZ
 			add_accepted_culture = amazonian
 			add_accepted_culture = hets
 			add_accepted_culture = guarani
-			set_global_flag = amazon_united		 
-					 
+			set_global_flag = amazon_united
 		}
 		ai_will_do = { factor = 1 }
 	}
