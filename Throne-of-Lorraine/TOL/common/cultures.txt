@@ -136,8 +136,8 @@ low_german = {
 }
 
 neo_germanic = {
- leader = european
- akino_german = {
+	leader = european
+	akino_german = {
 		color = { 90 50 60}
 		first_names = { Adelbert Adolf Albrecht Alexander Alfred August Bernhard Burkhard Dieter
 		Eduard Edwin Erwin Erich Ernst Florian Franz Friedrich Fritz Georg Günther
@@ -154,7 +154,7 @@ neo_germanic = {
 		"von Wrangel" "von Zieten" "zur Lippe" "von Roon" }
 	}
 
-american_german = {
+	american_german = {
 		color = { 70 40 40}
 		first_names = { Adelbert Adolf Albrecht Alexander Alfred August Bernhard Burkhard Dieter
 		Eduard Edwin Erwin Erich Ernst Florian Franz Friedrich Fritz Georg Günther
@@ -171,7 +171,7 @@ american_german = {
 		"von Wrangel" "von Zieten" "zur Lippe" "von Roon" }
 	}
 
-free_german = {
+	free_german = {
 		color = { 61 61 41 }
 		first_names = { Adelbert Adolf Albrecht Alexander Alfred August Bernhard Burkhard Dieter
 		Eduard Edwin Erwin Erich Ernst Florian Franz Friedrich Fritz Georg Günther
@@ -233,122 +233,6 @@ beneluxian = {
 	unit = EuropeanGC
 	dutch = {
 		color = { 230 130 50}
-		first_names = {
-			Adolf Adriaan Alexander Andreas Antoon Andries Antonius Abraham
-			Barthout
-			Casimir Constantijn Cornelis Christiaan Christoffel
-			Daniël David Dominicus Daniel Dirk
-			Elias Ernst Erwin Eise
-			Frans Frederik
-			Gijsbert Godfried Gustaaf Gaspar Gabriel Gerard Gerben
-			Hendrik Hans Hugo
-			Isaac
-			Johan Jurgen Jacob Jeroen Jan Joost
-			Karel Kasper
-			Luuk Lodewijk Laurens
-			Marius Matthijs Maximiliaam Merkus Moritz Maurits
-			Nikolaas
-			Pauwel Paul Pieter
-			Quinten
-			Rafaël Ruben Rudolf Roeland Rogier Rutger
-			Stefan Simon
-			Thomas
-			Victor Willem Vincent
-			Zacharias
-		}
-
-		last_names = {
-			"van der Aa" "van Assendelft"
-			Boetge Boumeester "van Bronkhorst" Batenburg Bentinck Boreel Brandt "van Brederode" Brouwer Buyskes "van Braam Houckgeest"
-			"van der Capellen" Chassé Cochius Coops "de Casembroot" Cleerens Coehoorn Coen "de Constant Rebecque" Crijnssen
-
-			"van Culemborg"
-			Duycker	"de Eerens" "de Kock" Deijkerhoff "den Beer Poortugael" Daendels "van Diemen" "van der Does" "van Duivenvoorde"
-			Ellis Engels Engelvaart "van Egmont" Evertzen
-			Fabius
-			Gregory "van Galen" "de Grouwe" "van Geen"
-			"van Ham" "van Haren" "van Heemskerck" "van Heutsz" "Cort-Heyligers" "de Houtman" "van Huchtenbroek"
-			"van Ilpendam"
-			Janssens
-			Köhler Kool Kruys Kater "van Keppel" Kortenaer
-			List Lucas
-			Michiels "van Marnix" Martena "de Moor" "Melvill van Carnbee"
-			Nepveu Nachtegaal "van Nieuwenaar" "van Noort"
-			Ongerscottish
-			"van Pallandt"
-			Rijk Röell "van Raephorst" "van Rechteren" Reijersen "van Renesse" "van Riebeeck" "de Rijk" "van Rossum"
-			Sabron "Schimmelpenninck van der Oye" "van Saksen-Weimar" "van Spilbergen" Staal Stokhuyzen Schouten Schenk Spiegel
-
-			Steltman Stuyvesant
-			Tasman "van Troyen" Trip
-			"van Dambenoy" "van den Bosch" "van der Heijden" "van Hoensbroeck" "van Oranje-Nassau" "van Swieten"
-			"van Vredenburch" Verspijck Vetter Weitzel "Van Utenhove"
-			"van Walbeeck" "van Wassenaer" "van der Werff" "van Wesembeke" "van Wingle" "van der Wijck" "van Wijngaarden" "de Winter"
-			Wolterbeek
-		}
-	}
-
-
-veldlewer = {
-		color = { 206 135 25}
-		first_names = {
-			Adolf Adriaan Alexander Andreas Antoon Andries Antonius Abraham
-			Barthout
-			Casimir Constantijn Cornelis Christiaan Christoffel
-			Daniël David Dominicus Daniel Dirk
-			Elias Ernst Erwin Eise
-			Frans Frederik
-			Gijsbert Godfried Gustaaf Gaspar Gabriel Gerard Gerben
-			Hendrik Hans Hugo
-			Isaac
-			Johan Jurgen Jacob Jeroen Jan Joost
-			Karel Kasper
-			Luuk Lodewijk Laurens
-			Marius Matthijs Maximiliaam Merkus Moritz Maurits
-			Nikolaas
-			Pauwel Paul Pieter
-			Quinten
-			Rafaël Ruben Rudolf Roeland Rogier Rutger
-			Stefan Simon
-			Thomas
-			Victor Willem Vincent
-			Zacharias
-		}
-
-		last_names = {
-			"van der Aa" "van Assendelft"
-			Boetge Boumeester "van Bronkhorst" Batenburg Bentinck Boreel Brandt "van Brederode" Brouwer Buyskes "van Braam Houckgeest"
-			"van der Capellen" Chassé Cochius Coops "de Casembroot" Cleerens Coehoorn Coen "de Constant Rebecque" Crijnssen
-
-			"van Culemborg"
-			Duycker	"de Eerens" "de Kock" Deijkerhoff "den Beer Poortugael" Daendels "van Diemen" "van der Does" "van Duivenvoorde"
-			Ellis Engels Engelvaart "van Egmont" Evertzen
-			Fabius
-			Gregory "van Galen" "de Grouwe" "van Geen"
-			"van Ham" "van Haren" "van Heemskerck" "van Heutsz" "Cort-Heyligers" "de Houtman" "van Huchtenbroek"
-			"van Ilpendam"
-			Janssens
-			Köhler Kool Kruys Kater "van Keppel" Kortenaer
-			List Lucas
-			Michiels "van Marnix" Martena "de Moor" "Melvill van Carnbee"
-			Nepveu Nachtegaal "van Nieuwenaar" "van Noort"
-			Ongerscottish
-			"van Pallandt"
-			Rijk Röell "van Raephorst" "van Rechteren" Reijersen "van Renesse" "van Riebeeck" "de Rijk" "van Rossum"
-			Sabron "Schimmelpenninck van der Oye" "van Saksen-Weimar" "van Spilbergen" Staal Stokhuyzen Schouten Schenk Spiegel
-
-			Steltman Stuyvesant
-			Tasman "van Troyen" Trip
-			"van Dambenoy" "van den Bosch" "van der Heijden" "van Hoensbroeck" "van Oranje-Nassau" "van Swieten"
-			"van Vredenburch" Verspijck Vetter Weitzel "Van Utenhove"
-			"van Walbeeck" "van Wassenaer" "van der Werff" "van Wesembeke" "van Wingle" "van der Wijck" "van Wijngaarden" "de Winter"
-			Wolterbeek
-		}
-	}
-
-
-gek = {
-		color = { 210 105 35}
 		first_names = {
 			Adolf Adriaan Alexander Andreas Antoon Andries Antonius Abraham
 			Barthout
@@ -3441,13 +3325,129 @@ american_cultures = {
 	#			Wilson Wright Young
 	#	}
 	#}
-#	union = USA
+
+
+	veldlewer = {
+		color = { 206 135 25}
+		first_names = {
+			Adolf Adriaan Alexander Andreas Antoon Andries Antonius Abraham
+			Barthout
+			Casimir Constantijn Cornelis Christiaan Christoffel
+			Daniël David Dominicus Daniel Dirk
+			Elias Ernst Erwin Eise
+			Frans Frederik
+			Gijsbert Godfried Gustaaf Gaspar Gabriel Gerard Gerben
+			Hendrik Hans Hugo
+			Isaac
+			Johan Jurgen Jacob Jeroen Jan Joost
+			Karel Kasper
+			Luuk Lodewijk Laurens
+			Marius Matthijs Maximiliaam Merkus Moritz Maurits
+			Nikolaas
+			Pauwel Paul Pieter
+			Quinten
+			Rafaël Ruben Rudolf Roeland Rogier Rutger
+			Stefan Simon
+			Thomas
+			Victor Willem Vincent
+			Zacharias
+		}
+
+		last_names = {
+			"van der Aa" "van Assendelft"
+			Boetge Boumeester "van Bronkhorst" Batenburg Bentinck Boreel Brandt "van Brederode" Brouwer Buyskes "van Braam Houckgeest"
+			"van der Capellen" Chassé Cochius Coops "de Casembroot" Cleerens Coehoorn Coen "de Constant Rebecque" Crijnssen
+
+			"van Culemborg"
+			Duycker	"de Eerens" "de Kock" Deijkerhoff "den Beer Poortugael" Daendels "van Diemen" "van der Does" "van Duivenvoorde"
+			Ellis Engels Engelvaart "van Egmont" Evertzen
+			Fabius
+			Gregory "van Galen" "de Grouwe" "van Geen"
+			"van Ham" "van Haren" "van Heemskerck" "van Heutsz" "Cort-Heyligers" "de Houtman" "van Huchtenbroek"
+			"van Ilpendam"
+			Janssens
+			Köhler Kool Kruys Kater "van Keppel" Kortenaer
+			List Lucas
+			Michiels "van Marnix" Martena "de Moor" "Melvill van Carnbee"
+			Nepveu Nachtegaal "van Nieuwenaar" "van Noort"
+			Ongerscottish
+			"van Pallandt"
+			Rijk Röell "van Raephorst" "van Rechteren" Reijersen "van Renesse" "van Riebeeck" "de Rijk" "van Rossum"
+			Sabron "Schimmelpenninck van der Oye" "van Saksen-Weimar" "van Spilbergen" Staal Stokhuyzen Schouten Schenk Spiegel
+
+			Steltman Stuyvesant
+			Tasman "van Troyen" Trip
+			"van Dambenoy" "van den Bosch" "van der Heijden" "van Hoensbroeck" "van Oranje-Nassau" "van Swieten"
+			"van Vredenburch" Verspijck Vetter Weitzel "Van Utenhove"
+			"van Walbeeck" "van Wassenaer" "van der Werff" "van Wesembeke" "van Wingle" "van der Wijck" "van Wijngaarden" "de Winter"
+			Wolterbeek
+		}
+	}
+
+
+	gek = {
+		color = { 210 105 35}
+		first_names = {
+			Adolf Adriaan Alexander Andreas Antoon Andries Antonius Abraham
+			Barthout
+			Casimir Constantijn Cornelis Christiaan Christoffel
+			Daniël David Dominicus Daniel Dirk
+			Elias Ernst Erwin Eise
+			Frans Frederik
+			Gijsbert Godfried Gustaaf Gaspar Gabriel Gerard Gerben
+			Hendrik Hans Hugo
+			Isaac
+			Johan Jurgen Jacob Jeroen Jan Joost
+			Karel Kasper
+			Luuk Lodewijk Laurens
+			Marius Matthijs Maximiliaam Merkus Moritz Maurits
+			Nikolaas
+			Pauwel Paul Pieter
+			Quinten
+			Rafaël Ruben Rudolf Roeland Rogier Rutger
+			Stefan Simon
+			Thomas
+			Victor Willem Vincent
+			Zacharias
+		}
+
+		last_names = {
+			"van der Aa" "van Assendelft"
+			Boetge Boumeester "van Bronkhorst" Batenburg Bentinck Boreel Brandt "van Brederode" Brouwer Buyskes "van Braam Houckgeest"
+			"van der Capellen" Chassé Cochius Coops "de Casembroot" Cleerens Coehoorn Coen "de Constant Rebecque" Crijnssen
+
+			"van Culemborg"
+			Duycker	"de Eerens" "de Kock" Deijkerhoff "den Beer Poortugael" Daendels "van Diemen" "van der Does" "van Duivenvoorde"
+			Ellis Engels Engelvaart "van Egmont" Evertzen
+			Fabius
+			Gregory "van Galen" "de Grouwe" "van Geen"
+			"van Ham" "van Haren" "van Heemskerck" "van Heutsz" "Cort-Heyligers" "de Houtman" "van Huchtenbroek"
+			"van Ilpendam"
+			Janssens
+			Köhler Kool Kruys Kater "van Keppel" Kortenaer
+			List Lucas
+			Michiels "van Marnix" Martena "de Moor" "Melvill van Carnbee"
+			Nepveu Nachtegaal "van Nieuwenaar" "van Noort"
+			Ongerscottish
+			"van Pallandt"
+			Rijk Röell "van Raephorst" "van Rechteren" Reijersen "van Renesse" "van Riebeeck" "de Rijk" "van Rossum"
+			Sabron "Schimmelpenninck van der Oye" "van Saksen-Weimar" "van Spilbergen" Staal Stokhuyzen Schouten Schenk Spiegel
+
+			Steltman Stuyvesant
+			Tasman "van Troyen" Trip
+			"van Dambenoy" "van den Bosch" "van der Heijden" "van Hoensbroeck" "van Oranje-Nassau" "van Swieten"
+			"van Vredenburch" Verspijck Vetter Weitzel "Van Utenhove"
+			"van Walbeeck" "van Wassenaer" "van der Werff" "van Wesembeke" "van Wingle" "van der Wijck" "van Wijngaarden" "de Winter"
+			Wolterbeek
+		}
+	}
+	#union = USA
 }
 
 amazonic = {
 	leader = european
 
-   amazonian = {
+	amazonian = {
 		color = {4 255 84}
 		first_names = { Aníbal Augusto Bento Bernardo César Daniel David Donato Duarte Ernesto
 		Estevão Fernando Francisco Gabriel Graciano Hugo João Julio Leopoldo Lucas
@@ -3491,10 +3491,7 @@ neo_european_cultures = {
 		}
 		last_names = { Hope Tennyson Northcote War Thesinger Denman Forster Baird Issac Stewart Fisher Cook Davis Armstrong Anderson Mitchell MacKenzie
 		}
-	}
-  
- 
-
+	} 
 }
 
 latin_american_cultures = {
