@@ -145,16 +145,12 @@ country_migration_target = {
                 THIS = { is_culture_group = germanic }
                 OR = {
                     is_culture_group = american_cultures
+					is_culture_group = neo_germanic
                     AND = {
                         primary_culture = dutch
                         is_vassal = yes
                     }
                 }
-            }
-
-            AND = {
-                THIS = { is_culture_group = polish_culture_group }
-                is_culture_group = french
             }
         }
     }
@@ -168,7 +164,7 @@ country_migration_target = {
                 is_culture_group = latin_american_cultures
             }
             AND = {
-                THIS = { has_pop_culture = dutch }
+                THIS = { has_pop_culture = scottish }
                 primary_culture = scottish
             }
             AND = {
@@ -185,35 +181,28 @@ country_migration_target = {
                 }
             }
             AND = {
-                THIS = { is_culture_group = british }
-                OR = {
-                    is_culture_group = american_cultures
-                    primary_culture = australian
-                    primary_culture = anglo_canadian
-                }
+                THIS = { is_culture_group = italian }
+                primary_culture = australian
             }
             AND = {
                 THIS = { is_culture_group = polish_culture_group }
-                OR = {
-                    is_culture_group = polish_culture_group
-                    primary_culture = french
-                }
+                is_culture_group = polish_culture_group
             }
             AND = {
                 THIS = { is_culture_group = germanic }
                 OR = {
                     is_culture_group = germanic
                     is_culture_group = pan_swiss
+					is_culture_group = neo_germanic
                 }
-                NOT = { continent = asia }
             }
         }
     }
 	
-	modifier = {
-		factor = 0.1
-		primary_culture = british
-	}
+	#modifier = {
+	#	factor = 0.1
+	#	primary_culture = british
+	#}
 
     modifier = {
         factor = 4.0
@@ -224,8 +213,6 @@ country_migration_target = {
 			capital_scope = { is_colonial = no continent = south_america }
 			capital_scope = { is_colonial = no continent = australia_new_zealand }
             primary_culture = australian
-            primary_culture = neo_zelandais
-            primary_culture = australian
         }
         OR = {
             government = democracy
@@ -235,6 +222,10 @@ country_migration_target = {
             government = dominion
             government = colonial_company
 			government = presidential_dictatorship
+			government = federal_democracy
+			government = parliamentary_republic
+			government = peasant_republic
+			government = pirate_republic
         }
     }
     modifier = {
@@ -247,8 +238,6 @@ country_migration_target = {
 			capital_scope = { is_colonial = no continent = south_america }
 			capital_scope = { is_colonial = no continent = australia_new_zealand }
             primary_culture = australian
-            primary_culture = neo_zelandais
-            primary_culture = australian
         }
         OR = {
             government = democracy
@@ -258,6 +247,10 @@ country_migration_target = {
             government = dominion
             government = colonial_company
 			government = presidential_dictatorship
+			government = federal_democracy
+			government = parliamentary_republic
+			government = peasant_republic
+			government = pirate_republic
         }
     }
 }
@@ -445,9 +438,9 @@ migration_target = {
         }
     }
 
-    modifier = {
-        factor = 2.5
-        continent = europe
+   modifier = {
+        factor = 5.0
+        continent = asia
         country = { primary_culture = russian }
     }
 
@@ -514,11 +507,8 @@ migration_target = {
         OR = {
             continent = australia_new_zealand
             continent = north_america
-            state_id = 254
-            state_id = 263
-            state_id = 273
         }
-        country = { primary_culture = british }
+        country = { is_culture_group = britannian }
     }
 
     modifier = {
@@ -530,14 +520,7 @@ migration_target = {
             is_core = RHO
             is_core = CHI
         }
-        country = { primary_culture = british }
-    }
-
-    modifier = {
-        factor = 0.1
-        is_core = SAF
-        NOT = { year = 1855 }
-        country = { primary_culture = british }
+        country = { is_culture_group = britannian }
     }
 
     modifier = {
@@ -553,7 +536,7 @@ migration_target = {
             continent = africa
             continent = indochina
         }
-        country = { primary_culture = french }
+        country = { is_culture_group = french }
     }
 
     modifier = {
