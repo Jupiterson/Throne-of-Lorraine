@@ -249,11 +249,15 @@ the_holy_needle = {
 		
 		allow = {
 			war = no
-			organic_chemistry = 1
+			invention = vaccination
 		}
 		
 		effect = {
 			social_reform = acceptable_health_care
+			add_country_modifier = { 
+			    name = global_baby_boom
+			    duration = 1825 
+			}
 			set_country_flag = the_holy_needle
 		}
 		

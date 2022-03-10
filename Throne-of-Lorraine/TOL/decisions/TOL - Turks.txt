@@ -1,5 +1,5 @@
 political_decisions = {	
-  #the realistic map ABE!
+	#the realistic map ABE!
 	administrate_roads = {
 		picture = form_the_rcmp
 		potential = {
@@ -98,9 +98,9 @@ political_decisions = {
 	ottoman_conquer_egypt = {
 		picture = egypt
 		potential = {
-		tag = TUR
-		NOT = { has_country_flag = ottoman_conquer_egypt }
-		is_vassal = no
+			tag = TUR
+			NOT = { has_country_flag = ottoman_conquer_egypt }
+			is_vassal = no
 		}
 
 		allow = {
@@ -111,18 +111,18 @@ political_decisions = {
 		}
 
 		effect = {
-		add_core = 1755
-		add_core = 1746
-		add_core = 1751
-		add_core = 1752
-		add_core = 1753
-		add_core = 1737
-		relation = {
-			who = COP
-			value = -100
-		}
-		set_country_flag = ottoman_conquer_egypt
-		badboy = 7
+			add_core = 1755
+			add_core = 1746
+			add_core = 1751
+			add_core = 1752
+			add_core = 1753
+			add_core = 1737
+			relation = {
+				who = COP
+				value = -100
+			}
+			set_country_flag = ottoman_conquer_egypt
+			badboy = 7
 		}
 		ai_will_do ={ factor = 1 }
 	}
@@ -143,51 +143,49 @@ political_decisions = {
 		}
 		effect = {
 			any_pop = { 
-			limit = {
-			NOT = { has_pop_culture = turkish }
-			NOT = { has_pop_culture = ottoman }
-		}
-		consciousness = 2
-		} 
-		primary_culture = ottoman
-		remove_accepted_culture = mashriqi
-		remove_accepted_culture = bedouin
-		set_country_flag = ottoman_change_culture
-		any_owned = {
-			 limit = { 
-			  AND = {
-				 is_core = TUR 
-				 NOT = { 
-						 is_core = BYZ 
-						 is_core = KDS
-						 is_core = ARM
-						 is_core = PNT
-						 is_core = IRQ
-						 }
-				continent = oceania
-				 }
-				 
-			 }
-		 assimilate = yes 
-		 remove_core = ANT
-		 add_core = TUR
-		 }
-		 any_owned = {
+				limit = {
+					NOT = { has_pop_culture = turkish }
+					NOT = { has_pop_culture = ottoman }
+				}
+			consciousness = 2
+			} 
+			primary_culture = ottoman
+			remove_accepted_culture = mashriqi
+			remove_accepted_culture = bedouin
+			set_country_flag = ottoman_change_culture
+			any_owned = {
+				limit = { 
+					AND = {
+						is_core = TUR 
+						NOT = { 
+							is_core = BYZ 
+							is_core = KDS
+							is_core = ARM
+							is_core = PNT
+							is_core = IRQ
+						}
+						continent = oceania
+					}
+				}
+				assimilate = yes 
+				remove_core = ANT
+				add_core = TUR
+			}
+			any_owned = {
 				add_province_modifier = {
 					name = ottoman_asimilation
 					duration = 11000
 				}
 			}
-
-		
-	   }
+		}
 		ai_will_do ={ factor = 1 }
 	}
+	
 	ottoman_factories = {
 		picture = byzantine_triumph
 		potential = {
-		tag = TUR
-		NOT = { has_country_flag = ottoman_factories }
+			tag = TUR
+			NOT = { has_country_flag = ottoman_factories }
 		}
 
 		allow = {
@@ -197,13 +195,13 @@ political_decisions = {
 			state_n_government = 1
 		}
 		effect = {
-		money = -25000
-		build_factory_in_capital_state = artillery_factory
-		build_factory_in_capital_state = small_arms_factory
-		build_factory_in_capital_state = ammunition_factory
-		build_factory_in_capital_state = machine_parts_factory
-	   }
+			money = -25000
+			build_factory_in_capital_state = artillery_factory
+			build_factory_in_capital_state = small_arms_factory
+			build_factory_in_capital_state = ammunition_factory
+			build_factory_in_capital_state = machine_parts_factory
+		}
 		ai_will_do ={ factor = 1 }
 	}
 	
-	}
+}

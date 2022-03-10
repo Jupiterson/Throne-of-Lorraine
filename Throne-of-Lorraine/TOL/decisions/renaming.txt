@@ -3123,7 +3123,7 @@ political_decisions = {
 				change_province_name = "Kishinyov"
 				state_scope = { change_region_name = "Bessarabiya"}
 			}
-			677 = { change_province_name = "Belgorod" }
+			677 = { change_province_name = "Bilhorod" }
 			678 = { change_province_name = "Izmail" }
 			673 = { change_province_name = "Kagul" }
 			3283 = { change_province_name = "Kelmentsi" }
@@ -4340,28 +4340,14 @@ political_decisions = {
 	latvia_rename = {
 		picture = gtfo
 		potential = {
-			OR = {
-				AND = {
-					is_culture_group = germanic
-					owns = 354
-					owns = 356
-					NOT = { has_global_flag = german_renamed_lativa }
+			AND = {
+				OR = {
+					primary_culture = latvian
+					is_culture_group = baltic
 				}
-				AND = {
-					OR = {
-						primary_culture = latvian
-						is_culture_group = baltic
-					}
-					owns = 354
-					owns = 356
-					NOT = { has_global_flag = latvian_renamed_lativa }					
-				}
-				AND = {
-					is_culture_group = east_slavic
-					owns = 354
-					owns = 356
-					NOT = { has_global_flag = russian_renamed_lativa }
-				}
+				owns = 354
+				owns = 356
+				NOT = { has_global_flag = latvian_renamed_latvia }					
 			}
 		}
 
@@ -4370,30 +4356,6 @@ political_decisions = {
 		}
 
 		effect = {
-			###German###
-			random_owned = {
-				limit = {
-					province_id = 354
-					owner = {
-						is_culture_group = germanic
-					}
-				}
-				355 = { change_province_name = "Wolmar" }
-				356 = { change_province_name = "Dünaburg"  }
-				357 = {
-					change_province_name = "Mitau"
-					state_scope = {
-						change_region_name = "Kurland-Semgallen"
-					}
-				}
-				358 = { change_province_name = "Windau" }
-				359 = { change_province_name = "Libau" }
-				owner = {
-					set_global_flag = german_renamed_lativa
-					clr_global_flag = latvian_renamed_lativa
-					clr_global_flag = russian_renamed_lativa
-				}
-			}
 			###Latvian###
 			random_owned = {
 				limit = {
@@ -4413,34 +4375,9 @@ political_decisions = {
 				358 = { change_province_name = "Ventspils" }
 				359 = { change_province_name = "Liepaja" }
 				owner = {
-					set_global_flag = latvian_renamed_lativa
-					clr_global_flag = german_renamed_lativa
-					clr_global_flag = russian_renamed_lativa
-				}
-			}
-
-			###Russian###
-			random_owned = {
-				limit = {
-					province_id = 354
-					owner = {
-						is_culture_group = east_slavic
-					}
-				}
-				355 = { change_province_name = "Vol'mar" }
-				356 = { change_province_name = "Daugavpils"  }
-				357 = {
-					change_province_name = "Elgava"
-					state_scope = {
-						change_region_name = "Kurlyandiya"
-					}
-				}
-				358 = { change_province_name = "Vindava" }
-				359 = { change_province_name = "Liepaja" }
-				owner = {
-					set_global_flag = russian_renamed_lativa
-					clr_global_flag = latvian_renamed_lativa
-					clr_global_flag = german_renamed_lativa
+					set_global_flag = latvian_renamed_latvia
+					clr_global_flag = german_renamed_latvia
+					clr_global_flag = russian_renamed_latvia
 				}
 			}
 		}
@@ -5991,8 +5928,13 @@ political_decisions = {
 			clr_global_flag = latvia_renamed_swe
 			354 = { change_province_name = "Riga" }
 			355 = { change_province_name = "Volodimirec" }
-			356 = { change_province_name = "Borisoglebsk" }
-			357 = { change_province_name = "Jelgava" }
+			356 = { change_province_name = "Dvinsk" }
+			357 = {
+				change_province_name = "Jelgava"
+				state_scope = {
+					change_region_name = "Kurlyandiya"
+				}
+			}
 			358 = { change_province_name = "Vindava" }
 			359 = { change_province_name = "Libava" }
 			3424 = { change_province_name = "Salacgriva" }
@@ -6006,9 +5948,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_global_flag = latvia_renamed_ubd }
 			OR = {
-				primary_culture = north_german
-				primary_culture = south_german
-				primary_culture = volga_german
+				is_culture_group = germanic
 			}
 			OR = {
 			   354 = { owned_by = THIS }
@@ -6044,7 +5984,12 @@ political_decisions = {
 			354 = { change_province_name = "Riga" }
 			355 = { change_province_name = "Wolmar" }
 			356 = { change_province_name = "Dünaburg" }
-			357 = { change_province_name = "Mitau" }
+			357 = {
+				change_province_name = "Mitau"
+				state_scope = {
+					change_region_name = "Kurland-Semgallen"
+				}
+			}
 			358 = { change_province_name = "Windau" }
 			359 = { change_province_name = "Libau" }
 			3424 = { change_province_name = "Neubad" }
@@ -6092,7 +6037,12 @@ political_decisions = {
 			354 = { change_province_name = "Riga" }
 			355 = { change_province_name = "Valdemar" }
 			356 = { change_province_name = "Dünaburg" }
-			357 = { change_province_name = "Mitau" }
+			357 = {
+				change_province_name = "Mitau"
+				state_scope = {
+					change_region_name = "Kurland-Semgallen"
+				}
+			}
 			358 = { change_province_name = "Vindau" }
 			359 = { change_province_name = "Libau" }
 			3424 = { change_province_name = "Solkustarna" }

@@ -502,9 +502,9 @@ persistant;Persistent;Persévérant;Hartnäckig;;Persistente;;;;;;;;;
 brilliant;Brilliant;Brillant;Brilliant;;Brillante;;;;;;;;;
 maladroit;Maladroit;Maladroit;Unbeholfen;;Torpe;;;;;;;;;
 bureaucrat_speed;Bureaucrat Speed;Vitesse de bureaucrate;Bürokratische Geschwindigkeit;;Chupatintas;;;;;;;;;
-colonial_b;Colonial;Colonial;Kolonial;;Colonial;;;;;;;;;
+colonial_b;Colonist: §RDefence -2;;;;;;;;;;;;;
 eccentric_genius;Eccentric Genius;Génie excentrique;Exzentrisches Genie;;Genio excéntrico;;;;;;;;;
-school_of_offense;School of Offense;École d'attaque;Schule der Offensive;;Escuela del ataque;;;;;;;;;
+school_of_offense;School of Offense §GAttack +1;École d'attaque;Schule der Offensive;;Escuela del ataque;;;;;;;;;
 TYPE_INF;Infantry;Infanterie;Infanterie;;Infantería;;;;;;;;;
 TYPE_CAV;Cavalry;Cavalerie;Kavallerie;;Caballería;;;;;;;;;
 TYPE_TANKS;Tanks;Blindés;Panzer;;Tanques;;;;;;;;;
@@ -13061,21 +13061,21 @@ LEADERDIED_BTN1;OK;OK;OK;$TYPE$ $NAME$ umiera.;Aceptar;$TYPE$ $NAME$ ?morto.;$NA
 LEADERDIED_BTN2;OK;OK;OK;OK;Aceptar;OK;Rendben;OK;;;;;;
 LEADERDIED_BTN3;Goto;ALLER ?Goto;OK;Ir all?OK;Rendben;OK;;;;;;
 LEADERDIED_MAP;*;*;*;Id?do;*;Andare;Ugrás;Pøejít na;;;;;;
-american_german;Columbian German;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-akino_german;Akino German;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-gek;Gekke;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-afro_german;Afro German;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-free_german;Freilander;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-veldlewer;Veldleuwer;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-VEL;Veldleuwer;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-VEL_ADJ;Veldleuwer;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-NIR;Terra Lacus;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-NIR_ADJ;Roman;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-neo_roman;Superstites;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-JES;Jesuite Order;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-JES_ADJ;Jesuite;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-jesuite;Jesuite;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-hets;Hets;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+american_german;Columbian German;;;;;;;;;;;;
+akino_german;Akino German;;;;;;;;;;;;
+gek;Gekke;;;;;;;;;;;;
+afro_german;Afro German;;;;;;;;;;;;
+free_german;Freilander;;;;;;;;;;;;
+veldlewer;Veldleuwer;;;;;;;;;;;;
+VEL;Veldleuwer;;;;;;;;;;;;
+VEL_ADJ;Veldleuwer;;;;;;;;;;;;
+NIR;Terra Lacus;;;;;;;;;;;;
+NIR_ADJ;Roman;;;;;;;;;;;;
+neo_roman;Superstites;;;;;;;;;;;;
+JES;Jesuite Order;;;;;;;;;;;;
+JES_ADJ;Jesuite;;;;;;;;;;;;
+jesuite;Jesuite;;;;;;;;;;;;
+hets;Hets;;;;;;;;;;;;
 form_ruthenia_title;Unite Ruthenia;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 form_ruthenia_desc;After years of separation and discrimination we can finally unite Ruthenia. Nareshti yedyni!;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 sax_waldenburg_title;Reclaim Waldenburg;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13088,8 +13088,8 @@ claim_switzerland_title;Claim Switzerland;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,
 claim_switzerland_desc;Our People demand more.More Land,more people and more glory and Switzerland is a great target! To the Alps!;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 sudeteland_exchange_title;Suedetenland Exchange;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 sudeteland_exchange_desc;With our growing power we can convince the Bohemians to give us their german land;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-NFL;Nij Fryslân;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-NFL_ADJ;Nij Frysk;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+NFL;Nij Fryslân;;;;;;;;;;;;
+NFL_ADJ;Nij Frysk;;;;;;;;;;;;
 nij_frysk_constitution_title;Nij Frysk Constitution;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 centralize_nij_fryslan_title;Conquer the East;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 nij_frysk_constitution_desc;We have finally gained our freedom and now is the time to write our own constitution.;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13111,20 +13111,20 @@ rush_east_title;Rush East;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 rush_east_desc;With the discovery of the Coast we have to secure a bit of it before the other Nations can;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 scramble_for_america_title;Scramble for Columbia;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 scramble_for_america_desc;With the discovery of the Coast we have to secure the East before the other Nations can;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-low_german;Low German;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-frisian_farms;Frisian Farms;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-FER;Fareynikte;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-FER_ADJ;Fareynikt;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+low_german;Low German;;;;;;;;;;;;
+frisian_farms;Frisian Farms;;;;;;;;;;;;
+FER;Fareynikte;;;;;;;;;;;;
+FER_ADJ;Fareynikt;;;;;;;;;;;;
 unite_the_kingdom_title;Unite Scottland and Sgirùr;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 unite_the_kingdom_desc;With the cultural similarities it may be a good Idea to Unite the two Nations;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-PIR;Federazione Corsara;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-PIR_ADJ;Pirata;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-pirate;Pirate;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-KIE;Kiev;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-KIE_ADJ;Kievan;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-hindustani;Hindustani;x;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-BAC;Pamiristan;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-BAC_ADJ;Pamiri;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PIR;Federazione Corsara;;;;;;;;;;;;
+PIR_ADJ;Pirata;;;;;;;;;;;;
+pirate;Pirate;;;;;;;;;;;;
+KIE;Kiev;;;;;;;;;;;;
+KIE_ADJ;Kievan;;;;;;;;;;;;
+hindustani;Hindustani;x;;;;;;;;;;;;
+BAC;Pamiristan;;;;;;;;;;;;
+BAC_ADJ;Pamiri;;;;;;;;;;;;
 BOL_2305;Mama Cocha;Mama Cocha;Mama Cocha;;Mama Cocha;;;;;;;;;
 rusoni;Rusoni;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PEU_2301;Mowimaj;Mowimaj;Mowimaj;;;;;;;;;

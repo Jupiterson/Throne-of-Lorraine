@@ -6,6 +6,7 @@ political_decisions = {
 			NOT = { has_country_flag = post_colonial_country }
 			is_culture_group = iberian
 			NOT = { exists = IBR }
+			NOT = { tag = GNA }
 		}
 
 		allow = {
@@ -206,8 +207,8 @@ political_decisions = {
 		effect = {
 			prestige = 20
 			all_core = {
-				remove_core = THIS
 				add_core = AND
+				remove_core = THIS
 			}
 			change_tag = AND		   
 			set_global_flag = andalus_united
