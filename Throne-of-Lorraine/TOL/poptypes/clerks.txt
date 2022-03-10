@@ -76,6 +76,26 @@ country_migration_target = {
     }
 
     modifier = {
+        factor = -10.0
+        OR = {
+            country = { is_culture_group = american_cultures }
+            country = { is_culture_group = african_diaspora_cultures }
+            country = { is_culture_group = neo_germanic }
+            country = { tag = NFL }
+        }
+        THIS = {
+            capital_scope = {
+                OR = {
+                    continent = asia
+                    continent = east_indies
+                    continent = indochina
+                }
+            }
+        }
+        NOT = { year = 1880 }
+    }  
+
+    modifier = {
         factor = 0.9
         unemployment = 0.05
 		NOT = { unemployment = 1 }
