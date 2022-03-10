@@ -20,7 +20,7 @@ political_decisions = {
 			prestige = 5
 			badboy = 4
 			BKY= {
-				1046 = { secede_province = RUS }
+				1046 = { secede_province = RUS add_core = RUS }
 				1182 = { secede_province = RUS }
 				1183 = { secede_province = RUS }
 				2702 = { secede_province = RUS }
@@ -158,6 +158,9 @@ political_decisions = {
 			prestige = 10
 			badboy = 4
 			inherit = BKY
+			RUS_1041 = { add_core = RUS }
+			RUS_1048 = { add_core = RUS }
+			RUS_1052 = { add_core = RUS }
 		}
 
 		ai_will_do = { factor = 1 }
