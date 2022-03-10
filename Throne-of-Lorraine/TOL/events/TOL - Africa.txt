@@ -1,7 +1,6 @@
 #Kristiene-Oyo thing
 country_event = {
-	   id = 23299
-
+	id = 23299
 	title = "Ile Kristieni"
 	desc = "With us expelling the Christians ,they have formed their own nation in the new world"
 	picture = "french_revolution_1848"
@@ -272,17 +271,17 @@ country_event = {
 		NOT = { has_global_flag = tiniri_disabled }
 		year = 1856
 		OR = {
-		owns = 1699
-		AND = {
-		ai = no 
-		OR = {
-		tag = MAS
-		tag = DAM
-		tag = MOR
-		tag = FEZ
-		tag = MRR
-		}
-		}
+			owns = 1699
+			AND = {
+				ai = no 
+				OR = {
+					tag = MAS
+					tag = DAM
+					tag = MOR
+					tag = FEZ
+					tag = MRR
+				}
+			}
 		}
 	} 
 
@@ -291,340 +290,328 @@ country_event = {
 	}
 	option = {
 		name = "They shall rise"
-		
-		#Territory 1
 		random_list = {
-		453 = {
-					 1699 = { secede_province = TIN add_core = TIN }
-					 1698 = { secede_province = TIN add_core = TIN }
-					 1722 = { secede_province = TIN add_core = TIN }
-					 1697 = { secede_province = TIN add_core = TIN }
-					 1720 = { secede_province = TIN add_core = TIN }
-					 1718 = { secede_province = TIN add_core = TIN }
-					 1716 = { secede_province = TIN add_core = TIN }				 
-					 TIN = { all_core = { secede_province = TIN } }
-					 set_gloabl_flag = Territory_1
-			1715 = { add_core = TIN }
-			1713 = { add_core = TIN }
-			1711 = { add_core = TIN }
-			1719 = { add_core = TIN }
-			2609 = { add_core = TIN }
-			3431 = { add_core = TIN }
-			1781 = { add_core = TIN }
-			1801 = { add_core = TIN }
-			1779 = { add_core = TIN }
-			1775 = { add_core = TIN }
-			1774 = { add_core = TIN }
-			1782 = { add_core = TIN }
-			1773 = { add_core = TIN }
-			1696 = { add_core = TIN }
-			3430 = { add_core = TIN }
-			1680 = { add_core = TIN }
+			#Territory 1
+			453 = {
+				1699 = { secede_province = TIN add_core = TIN }
+				1698 = { secede_province = TIN add_core = TIN }
+				1722 = { secede_province = TIN add_core = TIN }
+				1697 = { secede_province = TIN add_core = TIN }
+				1720 = { secede_province = TIN add_core = TIN }
+				1718 = { secede_province = TIN add_core = TIN }
+				1716 = { secede_province = TIN add_core = TIN }				 
+				TIN = { all_core = { secede_province = TIN } }
+				set_gloabl_flag = Territory_1
+				1715 = { add_core = TIN }
+				1713 = { add_core = TIN }
+				1711 = { add_core = TIN }
+				1719 = { add_core = TIN }
+				2609 = { add_core = TIN }
+				3431 = { add_core = TIN }
+				1781 = { add_core = TIN }
+				1801 = { add_core = TIN }
+				1779 = { add_core = TIN }
+				1775 = { add_core = TIN }
+				1774 = { add_core = TIN }
+				1782 = { add_core = TIN }
+				1773 = { add_core = TIN }
+				1696 = { add_core = TIN }
+				3430 = { add_core = TIN }
+				1680 = { add_core = TIN }
+			}
+			#Territory 2
+			453 = {
+				1699 = { secede_province = TIN add_core = TIN  }
+				1698 = { secede_province = TIN add_core = TIN  }
+				1722 = { secede_province = TIN add_core = TIN  }
+				1697 = { secede_province = TIN add_core = TIN  }
+				1720 = { secede_province = TIN add_core = TIN }
+				1718 = { secede_province = TIN add_core = TIN }
+				1716 = { secede_province = TIN add_core = TIN }
+				1715 = { secede_province = TIN add_core = TIN }
+				1713 = { secede_province = TIN add_core = TIN }
+				1711 = { secede_province = TIN add_core = TIN }
+				1719 = { secede_province = TIN add_core = TIN }
+				2609 = { secede_province = TIN add_core = TIN }
+				3431 = { secede_province = TIN add_core = TIN }
+				1781 = { secede_province = TIN add_core = TIN }
+				1801 = { secede_province = TIN add_core = TIN }
+				1779 = { secede_province = TIN add_core = TIN }
+				1775 = { secede_province = TIN add_core = TIN }
+				1774 = { secede_province = TIN add_core = TIN }
+				1782 = { secede_province = TIN add_core = TIN }
+				1773 = { secede_province = TIN add_core = TIN }
+				1696 = { secede_province = TIN add_core = TIN }
+				3430 = { secede_province = TIN add_core = TIN }
+				1680 = { secede_province = TIN add_core = TIN }
+				1807 = { secede_province = TIN add_core = TIN }
+				1702 = { add_core = TIN }
+				1717 = { add_core = TIN }
+				TIN = { all_core = { secede_province = TIN } }
+				set_gloabl_flag = Territory_2
+				1694 = { add_core = TIN }
+				1693 = { add_core = TIN }
+				1690 = { add_core = TIN }
+				2563 = { add_core = TIN }
+				1692 = { add_core = TIN }
+				1682 = { add_core = TIN }
+				1685 = { add_core = TIN }
+				1681 = { add_core = TIN }
+				1683 = { add_core = TIN }
+				1684 = { add_core = TIN }
+				1715 = { add_core = TIN }
+				1707 = { add_core = TIN }
+				1703 = { add_core = TIN }
+				1712 = { add_core = TIN }
+				1710 = { add_core = TIN }
+				1708 = { add_core = TIN }
+				1727 = { add_core = TIN }
+				1729 = { add_core = TIN }
+				1732 = { add_core = TIN }
+				1744 = { add_core = TIN }
+				3394 = { add_core = TIN }
+				3395 = { add_core = TIN }
+				1741 = { add_core = TIN }
+				1814 = { add_core = TIN }
+				1812 = { add_core = TIN }
+				1811 = { add_core = TIN }
+				1815 = { add_core = TIN }
+			}
+			#Territory 3
+			453 = {
+				1699 = { secede_province = TIN add_core = TIN }
+				1698 = { secede_province = TIN add_core = TIN }
+				1722 = { secede_province = TIN add_core = TIN }
+				1697 = { secede_province = TIN add_core = TIN }
+				1720 = { secede_province = TIN add_core = TIN }
+				1718 = { secede_province = TIN add_core = TIN }
+				1716 = { secede_province = TIN add_core = TIN }
+				1715 = { secede_province = TIN add_core = TIN }
+				1713 = { secede_province = TIN add_core = TIN }
+				1711 = { secede_province = TIN add_core = TIN }
+				1719 = { secede_province = TIN add_core = TIN }
+				2609 = { secede_province = TIN add_core = TIN }
+				3431 = { secede_province = TIN add_core = TIN }
+				1781 = { secede_province = TIN add_core = TIN }
+				1801 = { secede_province = TIN add_core = TIN }
+				1779 = { secede_province = TIN add_core = TIN }
+				1775 = { secede_province = TIN add_core = TIN }
+				1774 = { secede_province = TIN add_core = TIN }
+				1782 = { secede_province = TIN add_core = TIN }
+				1773 = { secede_province = TIN add_core = TIN }
+				1696 = { secede_province = TIN add_core = TIN }
+				3430 = { secede_province = TIN add_core = TIN }
+				1694 = { secede_province = TIN add_core = TIN }
+				1693 = { secede_province = TIN add_core = TIN }
+				1690 = { secede_province = TIN add_core = TIN }
+				2563 = { secede_province = TIN add_core = TIN }
+				1692 = { secede_province = TIN add_core = TIN }
+				1682 = { secede_province = TIN add_core = TIN }
+				1685 = { secede_province = TIN add_core = TIN }
+				1681 = { secede_province = TIN add_core = TIN }
+				1683 = { secede_province = TIN add_core = TIN }
+				1684 = { secede_province = TIN add_core = TIN }
+				1715 = { secede_province = TIN add_core = TIN }
+				1707 = { secede_province = TIN add_core = TIN }
+				1703 = { secede_province = TIN add_core = TIN }
+				1712 = { secede_province = TIN add_core = TIN }
+				1710 = { secede_province = TIN add_core = TIN }
+				1708 = { secede_province = TIN add_core = TIN }
+				1727 = { secede_province = TIN add_core = TIN }
+				1729 = { secede_province = TIN add_core = TIN }
+				1732 = { secede_province = TIN add_core = TIN }
+				1744 = { secede_province = TIN add_core = TIN }
+				3394 = { secede_province = TIN add_core = TIN }
+				3395 = { secede_province = TIN add_core = TIN }
+				1741 = { secede_province = TIN add_core = TIN }
+				1814 = { secede_province = TIN add_core = TIN }
+				1812 = { secede_province = TIN add_core = TIN }
+				1811 = { secede_province = TIN add_core = TIN }
+				1815 = { secede_province = TIN add_core = TIN }
+				1680 = { secede_province = TIN add_core = TIN }
+				1807 = { secede_province = TIN add_core = TIN }
+				1702 = { secede_province = TIN add_core = TIN }
+				1717 = { secede_province = TIN add_core = TIN }
+				TIN = { all_core = { secede_province = TIN } }
+				set_gloabl_flag = Territory_3
+				1791 = { add_core = TIN }
+				1793 = { add_core = TIN }
+				1792 = { add_core = TIN }
+				1877 = { add_core = TIN }
+				1878 = { add_core = TIN }
+				1797 = { add_core = TIN }
+				1795 = { add_core = TIN }
+				1880 = { add_core = TIN }
+				1879 = { add_core = TIN }
+				TRZ = { all_core = { add_core = TIN } }
+				WOL = { all_core = { add_core = TIN } }
+			}
 		}
-		 
-		#Territory 2
-		453 = {
-					 1699 = { secede_province = TIN add_core = TIN  }
-					 1698 = { secede_province = TIN add_core = TIN  }
-					 1722 = { secede_province = TIN add_core = TIN  }
-					 1697 = { secede_province = TIN add_core = TIN  }
-					 1720 = { secede_province = TIN add_core = TIN }
-					 1718 = { secede_province = TIN add_core = TIN }
-					 1716 = { secede_province = TIN add_core = TIN }
-					 1715 = { secede_province = TIN add_core = TIN }
-					 1713 = { secede_province = TIN add_core = TIN }
-					 1711 = { secede_province = TIN add_core = TIN }
-					 1719 = { secede_province = TIN add_core = TIN }
-					 2609 = { secede_province = TIN add_core = TIN }
-					 3431 = { secede_province = TIN add_core = TIN }
-					 1781 = { secede_province = TIN add_core = TIN }
-					 1801 = { secede_province = TIN add_core = TIN }
-					 1779 = { secede_province = TIN add_core = TIN }
-					 1775 = { secede_province = TIN add_core = TIN }
-					 1774 = { secede_province = TIN add_core = TIN }
-					 1782 = { secede_province = TIN add_core = TIN }
-					 1773 = { secede_province = TIN add_core = TIN }
-					 1696 = { secede_province = TIN add_core = TIN }
-					 3430 = { secede_province = TIN add_core = TIN }
-					 1680 = { secede_province = TIN add_core = TIN }
-					 1807 = { secede_province = TIN add_core = TIN }
-					 1807 = { add_core = TIN }
-					 1702 = { add_core = TIN }
-					 1717 = { add_core = TIN }
-					 TIN = { all_core = { secede_province = TIN } }
-		 			 set_gloabl_flag = Territory_2
-			1694 = { add_core = TIN }
-			1693 = { add_core = TIN }
-			1690 = { add_core = TIN }
-			2563 = { add_core = TIN }
-			1692 = { add_core = TIN }
-			1682 = { add_core = TIN }
-			1685 = { add_core = TIN }
-			1681 = { add_core = TIN }
-			1683 = { add_core = TIN }
-			1684 = { add_core = TIN }
-			1715 = { add_core = TIN }
-			1707 = { add_core = TIN }
-			1703 = { add_core = TIN }
-			1712 = { add_core = TIN }
-			1710 = { add_core = TIN }
-			1708 = { add_core = TIN }
-			1727 = { add_core = TIN }
-			1729 = { add_core = TIN }
-			1732 = { add_core = TIN }
-			1744 = { add_core = TIN }
-			3394 = { add_core = TIN }
-			3395 = { add_core = TIN }
-			1741 = { add_core = TIN }
-			1814 = { add_core = TIN }
-			1812 = { add_core = TIN }
-			1811 = { add_core = TIN }
-			1815 = { add_core = TIN }
-		}
-
-		#Territory 3
-		453 = {
-					 1699 = { secede_province = TIN add_core = TIN }
-					 1698 = { secede_province = TIN add_core = TIN }
-					 1722 = { secede_province = TIN add_core = TIN }
-					 1697 = { secede_province = TIN add_core = TIN }
-					 1720 = { secede_province = TIN add_core = TIN }
-					 1718 = { secede_province = TIN add_core = TIN }
-					 1716 = { secede_province = TIN add_core = TIN }
-					 1715 = { secede_province = TIN add_core = TIN }
-					 1713 = { secede_province = TIN add_core = TIN }
-					 1711 = { secede_province = TIN add_core = TIN }
-					 1719 = { secede_province = TIN add_core = TIN }
-					 2609 = { secede_province = TIN add_core = TIN }
-					 3431 = { secede_province = TIN add_core = TIN }
-					 1781 = { secede_province = TIN add_core = TIN }
-					 1801 = { secede_province = TIN add_core = TIN }
-					 1779 = { secede_province = TIN add_core = TIN }
-					 1775 = { secede_province = TIN add_core = TIN }
-					 1774 = { secede_province = TIN add_core = TIN }
-					 1782 = { secede_province = TIN add_core = TIN }
-					 1773 = { secede_province = TIN add_core = TIN }
-					 1696 = { secede_province = TIN add_core = TIN }
-					 3430 = { secede_province = TIN add_core = TIN }
-					
-					 1694 = { secede_province = TIN add_core = TIN }
-					 1693 = { secede_province = TIN add_core = TIN }
-					 1690 = { secede_province = TIN add_core = TIN }
-					 2563 = { secede_province = TIN add_core = TIN }
-					 1692 = { secede_province = TIN add_core = TIN }
-					 1682 = { secede_province = TIN add_core = TIN }
-					 1685 = { secede_province = TIN add_core = TIN }
-					 1681 = { secede_province = TIN add_core = TIN }
-					 1683 = { secede_province = TIN add_core = TIN }
-					 1684 = { secede_province = TIN add_core = TIN }
-					 1715 = { secede_province = TIN add_core = TIN }
-					 1707 = { secede_province = TIN add_core = TIN }
-					 1703 = { secede_province = TIN add_core = TIN }
-					 1712 = { secede_province = TIN add_core = TIN }
-					 1710 = { secede_province = TIN add_core = TIN }
-					 1708 = { secede_province = TIN add_core = TIN }
-					 1727 = { secede_province = TIN add_core = TIN }
-					 1729 = { secede_province = TIN add_core = TIN }
-					 1732 = { secede_province = TIN add_core = TIN }
-					 1744 = { secede_province = TIN add_core = TIN }
-					 3394 = { secede_province = TIN add_core = TIN }
-					 3395 = { secede_province = TIN add_core = TIN }
-					 1741 = { secede_province = TIN add_core = TIN }
-					 1814 = { secede_province = TIN add_core = TIN }
-					 1812 = { secede_province = TIN add_core = TIN }
-					 1811 = { secede_province = TIN add_core = TIN }
-					 1815 = { secede_province = TIN add_core = TIN }
-					 1807 = { secede_province = TIN add_core = TIN }
-					 1680 = { add_core = TIN }
-					 1807 = { add_core = TIN }
-					 1702 = { add_core = TIN }
-					 1717 = { add_core = TIN }
-					 TIN = { all_core = { secede_province = TIN } }
-					 set_gloabl_flag = Territory_3
-			1791 = { add_core = TIN }
-			1793 = { add_core = TIN }
-			1792 = { add_core = TIN }
-			1877 = { add_core = TIN }
-			1878 = { add_core = TIN }
-			1797 = { add_core = TIN }
-			1795 = { add_core = TIN }
-			1880 = { add_core = TIN }
-			1879 = { add_core = TIN }
-			TRZ = { all_core = { add_core = TIN } }
-			WOL = { all_core = { add_core = TIN } }
-		}
-	}
 		TIN = { country_event = 100118 }
 	}
 	
 	option = {
 		name = "We shall rise"
-		
-		#Territory 1
 		random_list = {
-		453 = {
-					 1699 = { secede_province = TIN add_core = TIN }
-					 1698 = { secede_province = TIN add_core = TIN }
-					 1722 = { secede_province = TIN add_core = TIN }
-					 1697 = { secede_province = TIN add_core = TIN }
-					 1720 = { secede_province = TIN add_core = TIN }
-					 1718 = { secede_province = TIN add_core = TIN }
-					 1716 = { secede_province = TIN add_core = TIN }				 
-					 TIN = { all_core = { secede_province = TIN } }
-					 set_gloabl_flag = Territory_1
-			1715 = { add_core = TIN }
-			1713 = { add_core = TIN }
-			1711 = { add_core = TIN }
-			1719 = { add_core = TIN }
-			2609 = { add_core = TIN }
-			3431 = { add_core = TIN }
-			1781 = { add_core = TIN }
-			1801 = { add_core = TIN }
-			1779 = { add_core = TIN }
-			1775 = { add_core = TIN }
-			1774 = { add_core = TIN }
-			1782 = { add_core = TIN }
-			1773 = { add_core = TIN }
-			1696 = { add_core = TIN }
-			3430 = { add_core = TIN }
-
+			#Territory 1
+			453 = {
+				1699 = { secede_province = TIN add_core = TIN }
+				1698 = { secede_province = TIN add_core = TIN }
+				1722 = { secede_province = TIN add_core = TIN }
+				1697 = { secede_province = TIN add_core = TIN }
+				1720 = { secede_province = TIN add_core = TIN }
+				1718 = { secede_province = TIN add_core = TIN }
+				1716 = { secede_province = TIN add_core = TIN }				 
+				TIN = { all_core = { secede_province = TIN } }
+				set_gloabl_flag = Territory_1
+				1715 = { add_core = TIN }
+				1713 = { add_core = TIN }
+				1711 = { add_core = TIN }
+				1719 = { add_core = TIN }
+				2609 = { add_core = TIN }
+				3431 = { add_core = TIN }
+				1781 = { add_core = TIN }
+				1801 = { add_core = TIN }
+				1779 = { add_core = TIN }
+				1775 = { add_core = TIN }
+				1774 = { add_core = TIN }
+				1782 = { add_core = TIN }
+				1773 = { add_core = TIN }
+				1696 = { add_core = TIN }
+				3430 = { add_core = TIN }
+				1680 = { add_core = TIN }
+			}
+			#Territory 2
+			453 = {
+				1699 = { secede_province = TIN add_core = TIN  }
+				1698 = { secede_province = TIN add_core = TIN  }
+				1722 = { secede_province = TIN add_core = TIN  }
+				1697 = { secede_province = TIN add_core = TIN  }
+				1720 = { secede_province = TIN add_core = TIN }
+				1718 = { secede_province = TIN add_core = TIN }
+				1716 = { secede_province = TIN add_core = TIN }
+				1715 = { secede_province = TIN add_core = TIN }
+				1713 = { secede_province = TIN add_core = TIN }
+				1711 = { secede_province = TIN add_core = TIN }
+				1719 = { secede_province = TIN add_core = TIN }
+				2609 = { secede_province = TIN add_core = TIN }
+				3431 = { secede_province = TIN add_core = TIN }
+				1781 = { secede_province = TIN add_core = TIN }
+				1801 = { secede_province = TIN add_core = TIN }
+				1779 = { secede_province = TIN add_core = TIN }
+				1775 = { secede_province = TIN add_core = TIN }
+				1774 = { secede_province = TIN add_core = TIN }
+				1782 = { secede_province = TIN add_core = TIN }
+				1773 = { secede_province = TIN add_core = TIN }
+				1696 = { secede_province = TIN add_core = TIN }
+				3430 = { secede_province = TIN add_core = TIN }
+				1680 = { secede_province = TIN add_core = TIN }
+				1807 = { secede_province = TIN add_core = TIN }
+				1702 = { secede_province = TIN add_core = TIN }
+				1717 = { secede_province = TIN add_core = TIN }
+				TIN = { all_core = { secede_province = TIN } }
+				set_gloabl_flag = Territory_2
+				1694 = { add_core = TIN }
+				1693 = { add_core = TIN }
+				1690 = { add_core = TIN }
+				2563 = { add_core = TIN }
+				1692 = { add_core = TIN }
+				1682 = { add_core = TIN }
+				1685 = { add_core = TIN }
+				1681 = { add_core = TIN }
+				1683 = { add_core = TIN }
+				1684 = { add_core = TIN }
+				1715 = { add_core = TIN }
+				1707 = { add_core = TIN }
+				1703 = { add_core = TIN }
+				1712 = { add_core = TIN }
+				1710 = { add_core = TIN }
+				1708 = { add_core = TIN }
+				1727 = { add_core = TIN }
+				1729 = { add_core = TIN }
+				1732 = { add_core = TIN }
+				1744 = { add_core = TIN }
+				3394 = { add_core = TIN }
+				3395 = { add_core = TIN }
+				1741 = { add_core = TIN }
+				1814 = { add_core = TIN }
+				1812 = { add_core = TIN }
+				1811 = { add_core = TIN }
+				1815 = { add_core = TIN }
+			}
+			#Territory 3
+			453 = {
+				1699 = { secede_province = TIN add_core = TIN }
+				1698 = { secede_province = TIN add_core = TIN }
+				1722 = { secede_province = TIN add_core = TIN }
+				1697 = { secede_province = TIN add_core = TIN }
+				1720 = { secede_province = TIN add_core = TIN }
+				1718 = { secede_province = TIN add_core = TIN }
+				1716 = { secede_province = TIN add_core = TIN }
+				1715 = { secede_province = TIN add_core = TIN }
+				1713 = { secede_province = TIN add_core = TIN }
+				1711 = { secede_province = TIN add_core = TIN }
+				1719 = { secede_province = TIN add_core = TIN }
+				2609 = { secede_province = TIN add_core = TIN }
+				3431 = { secede_province = TIN add_core = TIN }
+				1781 = { secede_province = TIN add_core = TIN }
+				1801 = { secede_province = TIN add_core = TIN }
+				1779 = { secede_province = TIN add_core = TIN }
+				1775 = { secede_province = TIN add_core = TIN }
+				1774 = { secede_province = TIN add_core = TIN }
+				1782 = { secede_province = TIN add_core = TIN }
+				1773 = { secede_province = TIN add_core = TIN }
+				1696 = { secede_province = TIN add_core = TIN }
+				3430 = { secede_province = TIN add_core = TIN }
+				1694 = { secede_province = TIN add_core = TIN }
+				1693 = { secede_province = TIN add_core = TIN }
+				1690 = { secede_province = TIN add_core = TIN }
+				2563 = { secede_province = TIN add_core = TIN }
+				1692 = { secede_province = TIN add_core = TIN }
+				1682 = { secede_province = TIN add_core = TIN }
+				1685 = { secede_province = TIN add_core = TIN }
+				1681 = { secede_province = TIN add_core = TIN }
+				1683 = { secede_province = TIN add_core = TIN }
+				1684 = { secede_province = TIN add_core = TIN }
+				1715 = { secede_province = TIN add_core = TIN }
+				1707 = { secede_province = TIN add_core = TIN }
+				1703 = { secede_province = TIN add_core = TIN }
+				1712 = { secede_province = TIN add_core = TIN }
+				1710 = { secede_province = TIN add_core = TIN }
+				1708 = { secede_province = TIN add_core = TIN }
+				1727 = { secede_province = TIN add_core = TIN }
+				1729 = { secede_province = TIN add_core = TIN }
+				1732 = { secede_province = TIN add_core = TIN }
+				1744 = { secede_province = TIN add_core = TIN }
+				3394 = { secede_province = TIN add_core = TIN }
+				3395 = { secede_province = TIN add_core = TIN }
+				1741 = { secede_province = TIN add_core = TIN }
+				1814 = { secede_province = TIN add_core = TIN }
+				1812 = { secede_province = TIN add_core = TIN }
+				1811 = { secede_province = TIN add_core = TIN }
+				1815 = { secede_province = TIN add_core = TIN }
+				1680 = { secede_province = TIN add_core = TIN }
+				1807 = { secede_province = TIN add_core = TIN }
+				1702 = { add_core = TIN }
+				1717 = { add_core = TIN }
+				TIN = { all_core = { secede_province = TIN } }
+				set_gloabl_flag = Territory_3
+				1791 = { add_core = TIN }
+				1793 = { add_core = TIN }
+				1792 = { add_core = TIN }
+				1877 = { add_core = TIN }
+				1878 = { add_core = TIN }
+				1797 = { add_core = TIN }
+				1795 = { add_core = TIN }
+				1880 = { add_core = TIN }
+				1879 = { add_core = TIN }
+				TRZ = { all_core = { add_core = TIN } }
+				WOL = { all_core = { add_core = TIN } }
+			}
 		}
-		 
-		#Territory 2
-		453 = {
-					 1699 = { secede_province = TIN add_core = TIN  }
-					 1698 = { secede_province = TIN add_core = TIN  }
-					 1722 = { secede_province = TIN add_core = TIN  }
-					 1697 = { secede_province = TIN add_core = TIN  }
-					 1720 = { secede_province = TIN add_core = TIN }
-					 1718 = { secede_province = TIN add_core = TIN }
-					 1716 = { secede_province = TIN add_core = TIN }
-					 1715 = { secede_province = TIN add_core = TIN }
-					 1713 = { secede_province = TIN add_core = TIN }
-					 1711 = { secede_province = TIN add_core = TIN }
-					 1719 = { secede_province = TIN add_core = TIN }
-					 2609 = { secede_province = TIN add_core = TIN }
-					 3431 = { secede_province = TIN add_core = TIN }
-					 1781 = { secede_province = TIN add_core = TIN }
-					 1801 = { secede_province = TIN add_core = TIN }
-					 1779 = { secede_province = TIN add_core = TIN }
-					 1775 = { secede_province = TIN add_core = TIN }
-					 1774 = { secede_province = TIN add_core = TIN }
-					 1782 = { secede_province = TIN add_core = TIN }
-					 1773 = { secede_province = TIN add_core = TIN }
-					 1696 = { secede_province = TIN add_core = TIN }
-					 3430 = { secede_province = TIN add_core = TIN }
-					 1680 = { secede_province = TIN add_core = TIN }
-					 1807 = { secede_province = TIN add_core = TIN }
-					 1702 = { secede_province = TIN add_core = TIN }
-					 1717 = { secede_province = TIN add_core = TIN }
-					 TIN = { all_core = { secede_province = TIN } }
-		 			 set_gloabl_flag = Territory_2
-			1694 = { add_core = TIN }
-			1693 = { add_core = TIN }
-			1690 = { add_core = TIN }
-			2563 = { add_core = TIN }
-			1692 = { add_core = TIN }
-			1682 = { add_core = TIN }
-			1685 = { add_core = TIN }
-			1681 = { add_core = TIN }
-			1683 = { add_core = TIN }
-			1684 = { add_core = TIN }
-			1715 = { add_core = TIN }
-			1707 = { add_core = TIN }
-			1703 = { add_core = TIN }
-			1712 = { add_core = TIN }
-			1710 = { add_core = TIN }
-			1708 = { add_core = TIN }
-			1727 = { add_core = TIN }
-			1729 = { add_core = TIN }
-			1732 = { add_core = TIN }
-			1744 = { add_core = TIN }
-			3394 = { add_core = TIN }
-			3395 = { add_core = TIN }
-			1741 = { add_core = TIN }
-			1814 = { add_core = TIN }
-			1812 = { add_core = TIN }
-			1811 = { add_core = TIN }
-			1815 = { add_core = TIN }
-		}
-
-		#Territory 3
-		453 = {
-					 1699 = { secede_province = TIN add_core = TIN }
-					 1698 = { secede_province = TIN add_core = TIN }
-					 1722 = { secede_province = TIN add_core = TIN }
-					 1697 = { secede_province = TIN add_core = TIN }
-					 1720 = { secede_province = TIN add_core = TIN }
-					 1718 = { secede_province = TIN add_core = TIN }
-					 1716 = { secede_province = TIN add_core = TIN }
-					 1715 = { secede_province = TIN add_core = TIN }
-					 1713 = { secede_province = TIN add_core = TIN }
-					 1711 = { secede_province = TIN add_core = TIN }
-					 1719 = { secede_province = TIN add_core = TIN }
-					 2609 = { secede_province = TIN add_core = TIN }
-					 3431 = { secede_province = TIN add_core = TIN }
-					 1781 = { secede_province = TIN add_core = TIN }
-					 1801 = { secede_province = TIN add_core = TIN }
-					 1779 = { secede_province = TIN add_core = TIN }
-					 1775 = { secede_province = TIN add_core = TIN }
-					 1774 = { secede_province = TIN add_core = TIN }
-					 1782 = { secede_province = TIN add_core = TIN }
-					 1773 = { secede_province = TIN add_core = TIN }
-					 1696 = { secede_province = TIN add_core = TIN }
-					 3430 = { secede_province = TIN add_core = TIN }
-					
-					 1694 = { secede_province = TIN add_core = TIN }
-					 1693 = { secede_province = TIN add_core = TIN }
-					 1690 = { secede_province = TIN add_core = TIN }
-					 2563 = { secede_province = TIN add_core = TIN }
-					 1692 = { secede_province = TIN add_core = TIN }
-					 1682 = { secede_province = TIN add_core = TIN }
-					 1685 = { secede_province = TIN add_core = TIN }
-					 1681 = { secede_province = TIN add_core = TIN }
-					 1683 = { secede_province = TIN add_core = TIN }
-					 1684 = { secede_province = TIN add_core = TIN }
-					 1715 = { secede_province = TIN add_core = TIN }
-					 1707 = { secede_province = TIN add_core = TIN }
-					 1703 = { secede_province = TIN add_core = TIN }
-					 1712 = { secede_province = TIN add_core = TIN }
-					 1710 = { secede_province = TIN add_core = TIN }
-					 1708 = { secede_province = TIN add_core = TIN }
-					 1727 = { secede_province = TIN add_core = TIN }
-					 1729 = { secede_province = TIN add_core = TIN }
-					 1732 = { secede_province = TIN add_core = TIN }
-					 1744 = { secede_province = TIN add_core = TIN }
-					 3394 = { secede_province = TIN add_core = TIN }
-					 3395 = { secede_province = TIN add_core = TIN }
-					 1741 = { secede_province = TIN add_core = TIN }
-					 1814 = { secede_province = TIN add_core = TIN }
-					 1812 = { secede_province = TIN add_core = TIN }
-					 1811 = { secede_province = TIN add_core = TIN }
-					 1815 = { secede_province = TIN add_core = TIN }
-					 1680 = { add_core = TIN }
-					 1807 = { add_core = TIN }
-					 1702 = { add_core = TIN }
-					 1717 = { add_core = TIN }
-					 TIN = { all_core = { secede_province = TIN } }
-					 set_gloabl_flag = Territory_3
-			1791 = { add_core = TIN }
-			1793 = { add_core = TIN }
-			1792 = { add_core = TIN }
-			1877 = { add_core = TIN }
-			1878 = { add_core = TIN }
-			1797 = { add_core = TIN }
-			1795 = { add_core = TIN }
-			1880 = { add_core = TIN }
-			1879 = { add_core = TIN }
-			TRZ = { all_core = { add_core = TIN } }
-			WOL = { all_core = { add_core = TIN } }
-						
-		}
+		TIN = { country_event = 100118 }
+		change_tag_no_core_switch = TIN
 	}
-	TIN = { country_event = 100118 }
-	change_tag_no_core_switch = TIN
-	}
-
 }
 
 country_event = {
@@ -638,18 +625,19 @@ country_event = {
 	mean_time_to_happen = {
 		day = 1
 	}
+	
 	option = {
 		name = "Lets take our Land"
-				capital = 1699
-				1807 = { add_core = TIN }
-				TIN = { all_core = { secede_province = THIS } }  	
-				random_list = {
-				20 = { 1699 = { any_pop = { reduce_pop = 3.5 } } }
-				20 = { 1699 = { any_pop = { reduce_pop = 5 } } }
-				20 = { 1699 = { any_pop = { reduce_pop = 7.5 } } }
-			}
-			MGH = { all_core = { add_core = THIS } } 
-			TIN = { all_core = { limit = { empty = yes } secede_province = THIS } }  			
+		capital = 1699
+		1807 = { add_core = TIN }
+		TIN = { all_core = { secede_province = THIS } }  	
+		random_list = {
+			20 = { 1699 = { any_pop = { reduce_pop = 3.5 } } }
+			20 = { 1699 = { any_pop = { reduce_pop = 5 } } }
+			20 = { 1699 = { any_pop = { reduce_pop = 7.5 } } }
+		}
+		MGH = { all_core = { add_core = THIS } } 
+		TIN = { all_core = { limit = { empty = yes } secede_province = THIS } }  			
 		any_country = {
 			limit = {
 			   OR = {
@@ -691,7 +679,7 @@ country_event = {
 		add_country_modifier = { name = rally_tribesmen duration = 4800 }
 		
 	}
-	}
+}
 	
 	country_event = {
 	id = 100119
@@ -707,12 +695,12 @@ country_event = {
 		name = "Join the Caliphate!"	 
 		all_core = { add_core = TIN }		
 		any_owned = {
-				secede_province = TIN
+			secede_province = TIN
 		}
 		TIN = { inherit = THIS }
-	TIN = { all_core = { limit = { empty = yes } secede_province = TIN } }  
-	  change_tag_no_core_switch = TIN
-	  ai_chance = {
+		TIN = { all_core = { limit = { empty = yes } secede_province = TIN } }  
+		change_tag_no_core_switch = TIN
+		ai_chance = {
 			factor = 10
 			modifier = {
 				factor = 95
@@ -725,7 +713,6 @@ country_event = {
 				neighbour = TIN
 			}
 		}
-		
 	}
 	
 	option = {
@@ -747,4 +734,4 @@ country_event = {
 			}
 		}
 	}
-	}
+}
