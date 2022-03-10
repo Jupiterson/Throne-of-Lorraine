@@ -850,8 +850,9 @@ country_event = {
 		set_country_flag = the_crimean_war_resolved
 		clr_country_flag = the_crimean_war
 		prestige = 25
-		inherit = CRI
+		CRI = { any_owned = { add_core = RUS } }
 		FER = { any_owned = { add_core = RUS } }
+		inherit = CRI
 		any_pop = {
 			consciousness = -1
 			militancy = -1
@@ -892,15 +893,16 @@ country_event = {
 			secede_province = LIT
 			}
 		}
-		prestige = 25
-		inherit = CRI
-		FER = { any_owned = { add_core = RUS } }
 		any_owned = {
 				limit = {
 					region = CRI_970
 				}
 			secede_province = LIT
 		}
+		prestige = 25
+		CRI = { any_owned = { add_core = RUS } }
+		FER = { any_owned = { add_core = RUS } }
+		inherit = CRI
 		any_pop = {
 			consciousness = -1
 			militancy = -1
