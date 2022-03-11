@@ -176,7 +176,7 @@ political_decisions = {
 				tag = GNA
 				tag = SEV
 			}
-			NOT = { exists = AND }
+			NOT = { exists = ADU }
 		}
 
 		allow = {
@@ -207,10 +207,10 @@ political_decisions = {
 		effect = {
 			prestige = 20
 			all_core = {
-				add_core = AND
+				add_core = ADU
 				remove_core = THIS
 			}
-			change_tag = AND		   
+			change_tag = ADU		   
 			set_global_flag = andalus_united
 		}
 		ai_will_do = { factor = 1 }
@@ -509,11 +509,11 @@ political_decisions = {
 	remove_mozarabics = {
 		picture = establish_panslavism
 			potential = {
-				AND = {
-					OR = {
-						ruling_party_ideology = communist
-						ruling_party_ideology = fascist
-					}
+			AND = {
+				OR = {
+					ruling_party_ideology = communist
+					ruling_party_ideology = fascist
+				}
 				OR = {
 					tag = LEO
 					tag = SPA

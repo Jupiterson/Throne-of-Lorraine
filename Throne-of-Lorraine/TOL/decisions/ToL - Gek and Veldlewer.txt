@@ -114,13 +114,22 @@ gekke_immigration_setup = {
 	} 
 	effect = { 
 		set_country_flag = gekke_immigration_setup
-		add_country_modifier = { 
-			name = land_of_the_free
-			duration = -1 
+		GKS = {
+			add_country_modifier = { 
+				name = land_of_the_free
+				duration = -1 
+			}
 		}
+		VEL = {
+			add_country_modifier = {
+				name = land_of_the_free
+				duration = -1 
+			}
 		}
-		ai_will_do = { factor = 1 }
 	}
+	
+	ai_will_do = { factor = 1 }
+}
 
 
 
