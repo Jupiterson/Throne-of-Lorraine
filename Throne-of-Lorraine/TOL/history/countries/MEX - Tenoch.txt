@@ -1,10 +1,11 @@
 capital = 2172
 primary_culture = mexican
+culture = basque
 religion = catholic
 government = constitutional_empire
 plurality = 25.0
 nationalvalue = nv_autocracy
-literacy = 0.03
+literacy = 0.1
 non_state_culture_literacy = 0.01
 civilized = yes
 prestige = 3
@@ -12,8 +13,8 @@ prestige = 3
 
 # Political reforms
 slavery = no_slavery
-upper_house_composition = appointed
-vote_franschise = none_voting
+upper_house_composition = state_equal_weight
+vote_franschise = wealth_weighted_voting
 public_meetings = no_meeting
 press_rights = state_press
 trade_unions = no_trade_unions
@@ -30,23 +31,23 @@ school_reforms = no_schools
 
 # New Reforms
 conscription = four_year_draft
-debt_law = serfdom
+debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = culture_voting_only
-border_policy = closed_borders
+border_policy = quota_immigration
 centralization = confederalism
 colonial_policy = no_colonies
 
 set_country_flag = catholic_country
 
-ruling_party = MEX_reactionary
+ruling_party = MEX_conservative
 last_election = 1835.1.28
 upper_house = {
     fascist = 0
-    liberal = 25
-    conservative = 40
-    reactionary = 35
+    liberal = 35
+    conservative = 55
+    reactionary = 10
     radical = 0
     socialist = 0
     communist = 0
