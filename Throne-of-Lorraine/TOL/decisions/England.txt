@@ -51,9 +51,9 @@ political_decisions = {
 #	reclaim_the_UK = {
 #		picture = reform_the_UK
 #		potential = {
-#		OR = {
-#			tag = ENL
-#			tag = UOW
+#			OR = {
+#				tag = ENL
+#				tag = UOW
 #			}
 #			NOT = { has_country_flag = reclaimed_the_uk }
 #		}
@@ -73,12 +73,12 @@ political_decisions = {
 #			set_country_flag = reclaimed_the_uk
 #			prestige = 10
 #			SCO = {
-#				all_core = { add_core = ENL }
+#				all_core = { add_core = THIS }
 #			}
 #			WHA = {
-#				all_core = { add_core = ENL }
+#				all_core = { add_core = THIS }
 #			}
-#			ENG_254 = { add_core = ENL }
+#			ENG_254 = { add_core = THIS }
 #			any_country = {
 #				limit = {
 #					any_owned_province = {
@@ -98,7 +98,10 @@ political_decisions = {
 #
 #	reform_the_UK = {
 #		potential = {
-#			tag = ENL
+#			OR = {
+#				tag = ENL
+#				tag = UOW
+#			}
 #			has_country_flag = reclaimed_the_uk
 #			NOT = { exists = ENG }
 #		}
@@ -129,8 +132,8 @@ political_decisions = {
 #		effect = {
 #			prestige = 20
 #			all_core = {
-#				remove_core = ENL
 #				add_core = ENG
+#				remove_core = THIS
 #			}
 #			change_tag = ENG
 #			random_country = {
@@ -188,6 +191,5 @@ political_decisions = {
 #			}
 #		}
 #	}
-#
- #  
+
 }

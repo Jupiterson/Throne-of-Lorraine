@@ -289,9 +289,9 @@ country_event = {
 		badboy = 15
 		prestige = 25
 		1016 = { add_core = RUS }
-		LIT = { any_owned = { limit = { is_core = BYE } add_core = RUS } }
-		LIT = { any_owned = { limit = { is_core = UKR } add_core = RUS } }
-		LIT = { any_owned = { limit = { is_core = KIE } secede_province = RUS } }
+		LIT = { all_core = { limit = { is_core = BYE } add_core = RUS } }
+		LIT = { all_core = { limit = { is_core = UKR } add_core = RUS } }
+		LIT = { all_core = { limit = { is_core = KIE } secede_province = RUS } }
 		add_accepted_culture = ruthenyan
 		release_vassal = LIT
 		diplomatic_influence = {
