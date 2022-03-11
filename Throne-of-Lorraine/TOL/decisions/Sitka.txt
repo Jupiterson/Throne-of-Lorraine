@@ -3639,9 +3639,10 @@ political_decisions = {
    setup_freiland = {
 		potential = {
 			tag = TEX
-			NOT = { has_country_flag = land_free 
-					year = 1837
-					}
+			NOT = {
+				has_country_flag = land_free 
+				year = 1837
+			}
 		}
 		allow = {
 		}
