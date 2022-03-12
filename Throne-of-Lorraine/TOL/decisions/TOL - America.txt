@@ -107,12 +107,14 @@ political_decisions = {
         }
 
         effect = {
-         prestige = 5
-       badboy = 10
-       set_country_flag = border_lands 
-       TEX_132 = { add_core = THIS }
-	   MEX_103 = { add_core = THIS }
-			
+			prestige = 5
+			badboy = 10
+			set_country_flag = border_lands 
+			TEX_132 = { add_core = THIS }
+			105 = { add_core = THIS } 
+			103 = { add_core = THIS }
+			2148 = { add_core = THIS }
+			MEX_100 = { add_core = THIS }
         }
    }
 	
