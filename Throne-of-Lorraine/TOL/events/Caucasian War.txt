@@ -17,6 +17,7 @@ country_event = {
 			owns = 1056
 			owns = 1053
 		}
+		NOT = { has_global_flag = 1st_caucasian_war_end }
 	}
 
 	mean_time_to_happen = {
@@ -25,6 +26,7 @@ country_event = {
 
 	option = {
 		name = "EVT32513OPTA"
+		set_global_flag = 1nd_caucasian_war_end
 		1049 = { change_province_name = "Novorossiysk" add_core = RUS }
 		1049 = { state_scope = { change_region_name = "Yekaterinodar" } }
 		1103 = { secede_province = TCA }
@@ -217,6 +219,7 @@ country_event = {
 		year = 1846
 		NOT = { has_country_flag = shamil_captured }
 		NOT = { has_country_flag = shamil_killed }
+		NOT = { has_global_flag = 1st_caucasian_war_end }
 		NOT = { has_global_flag = 2nd_caucasian_war }
 		NOT = { truce_with = CIR }
 		any_owned_province = {
@@ -233,7 +236,7 @@ country_event = {
 		set_global_flag = 2nd_caucasian_war
 		any_owned = {
 			limit = {
-				NOT = { is_core = RUS }
+				#NOT = { is_core = RUS }
 				is_core = CIR
 				pop_majority_culture = circassian
 			}

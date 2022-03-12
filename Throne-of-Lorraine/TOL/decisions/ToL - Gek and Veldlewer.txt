@@ -103,32 +103,33 @@ political_decisions = {
 		}
 	}
 
-gekke_immigration_setup = {
-    potential = {
-	    tag = GKS
-		NOT = { has_country_flag = gekke_immigration_setup }
-	}
+	gekke_immigration_setup = {
+		potential = {
+			tag = GKS
+			NOT = { has_country_flag = gekke_immigration_setup }
+		}
+			
+		allow = {
+			tag = GKS
+		} 
+		effect = { 
+			set_country_flag = gekke_immigration_setup
+			GKS = {
+				add_country_modifier = { 
+					name = land_of_the_free
+					duration = -1 
+				}
+			}
+			VEL = {
+				add_country_modifier = {
+					name = land_of_the_free
+					duration = -1 
+				}
+			}
+		}
 		
-	allow = {
-		tag = GKS
-	} 
-	effect = { 
-		set_country_flag = gekke_immigration_setup
-		GKS = {
-			add_country_modifier = { 
-				name = land_of_the_free
-				duration = -1 
-			}
-		}
-		VEL = {
-			add_country_modifier = {
-				name = land_of_the_free
-				duration = -1 
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
-	
-	ai_will_do = { factor = 1 }
 }
 
 
