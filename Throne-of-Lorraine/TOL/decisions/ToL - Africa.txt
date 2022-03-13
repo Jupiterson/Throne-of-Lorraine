@@ -18,7 +18,7 @@ political_decisions = {
 		}
 	}
 	
-incorparate_yemen = {
+	incorparate_yemen = {
 		picture = become_yemen
 		potential = {
 			tag = ETH
@@ -28,9 +28,9 @@ incorparate_yemen = {
 			year = 1846
 		}
 		effect = {
-	prestige = 5
-	set_country_flag = incorparated
-	random_country = {
+			prestige = 5
+			set_country_flag = incorparated
+			random_country = {
 				limit = {
 					tag = YEM
 					exists = yes
@@ -42,7 +42,7 @@ incorparate_yemen = {
 		ai_will_do = { factor = 1 }
 	}
 	
-collapse_modifier_isa = {
+	collapse_modifier_isa = {
 		picture = embrace_minority
 		potential = {
 			tag = MAS
@@ -110,9 +110,9 @@ collapse_modifier_isa = {
 			badboy = 3
 			LOA = {
 				all_core = {
-										add_core = THIS
-										}
-				}				   
+					add_core = THIS
+				}
+			}				   
 			set_country_flag = loango
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
 		}
@@ -135,9 +135,9 @@ collapse_modifier_isa = {
 			badboy = 4
 			LUN = {
 				all_core = {
-										add_core = THIS
-										}
-				}				   
+					add_core = THIS
+				}
+			}				   
 			set_country_flag = lunda
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
 		}
@@ -232,19 +232,19 @@ collapse_modifier_isa = {
 			badboy = 4
 			RWA = {
 				all_core = {
-										add_core = THIS
-										}
-				}  
+					add_core = THIS
+				}
+			}
 			UBH = {
 				all_core = {
-										add_core = THIS
-										}
-				}	
+					add_core = THIS
+				}
+			}
 			KZB = {
 				all_core = {
-										add_core = THIS
-										}
-				}				
+					add_core = THIS
+				}
+			}				
 			ENG_2016 = {
 				add_core = THIS
 			} 
@@ -274,8 +274,7 @@ collapse_modifier_isa = {
 						owner = { vassal_of = THIS }
 					}
 				}
-			}
-			
+			}			
 		}
 
 		effect = {
@@ -319,14 +318,14 @@ collapse_modifier_isa = {
 			badboy = 7
 			COP = {
 				all_core = {
-										add_core = THIS
-										}
-				}	  
+					add_core = THIS
+				}
+			}
 			EGY = {
 				all_core = {
-										add_core = THIS
-										}
+					add_core = THIS
 				}
+			}
 			TRI_1735 = {
 				add_core = THIS
 			} 
@@ -368,9 +367,9 @@ collapse_modifier_isa = {
 			badboy = 10
 			HDJ = {
 				all_core = {
-										add_core = THIS
-										}
-				}	  
+					add_core = THIS
+				}
+			}	  
 			EGY_1827 = {
 				add_core = THIS
 			} 
@@ -419,8 +418,8 @@ collapse_modifier_isa = {
 				is_culture_group = east_asian
 				}
 				OR = {
-				has_country_flag = sunni_country
-				has_country_flag = shiite_country
+					has_country_flag = sunni_country
+					has_country_flag = shiite_country
 				}
 			}
 			country_event = 100119
@@ -430,7 +429,4 @@ collapse_modifier_isa = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-	
-	
-	
-	}
+}
