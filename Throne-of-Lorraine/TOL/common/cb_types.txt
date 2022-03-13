@@ -3362,8 +3362,16 @@ release_puppet = {
 	allowed_countries = {
 		is_our_vassal = FROM
 		FROM = {
-			is_substate = no
-			NOT = { has_country_flag = unreleasable_country }
+			OR = {
+				AND = {			
+					is_substate = no
+					NOT = { has_country_flag = unreleasable_country }
+				}
+				AND = {			
+					is_substate = yes
+					tag = MGL
+				}
+			}
 		}
 	}
 
