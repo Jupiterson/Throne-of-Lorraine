@@ -2,8 +2,13 @@ political_decisions = {
 	annex_fiji = {
 		picture = dreams_of_empire
 		potential = {
-			tag = ENG
-			is_greater_power = yes
+			OR = {
+			    tag = ITA
+			    tag = VEN
+			    tag = GEN
+			    tag = AST
+		    }
+		    is_greater_power = yes
 			FIJ = { owns = 2454 }
 			any_owned_province = { is_core = AST }
 			OR = {
@@ -69,7 +74,12 @@ political_decisions = {
 	papua_colony = {
 		picture = papua_act
 		potential = {
-			tag = ENG
+			OR = {
+			    tag = ITA
+			    tag = VEN
+			    tag = GEN
+			    tag = AST
+		    }
 			is_greater_power = yes
 			is_disarmed = no
 			2530 = { OR = { owned_by = GER owned_by = GCF } }
@@ -114,7 +124,12 @@ political_decisions = {
 	papua_act = {
 		picture = papua_act
 		potential = {
-			tag = ENG
+			OR = {
+			    tag = ITA
+			    tag = VEN
+			    tag = GEN
+			    tag = AST
+		    }
 			OR = {
 				AND = {
 					owns = 2528

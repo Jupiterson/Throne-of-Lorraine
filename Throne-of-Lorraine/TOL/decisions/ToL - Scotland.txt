@@ -154,7 +154,10 @@ centralize_ulster = {
 		}
 
 		allow = {
-			romanticism = 1
+		    OR = {
+				romanticism = 1
+				year = 1845
+			}
 		}
 
 		effect = {
@@ -185,7 +188,10 @@ centralize_ulster = {
 		}
 
 		allow = {
-			positivism = 1
+		    OR = {
+				positivism = 1
+				year = 1848
+			}
 		}
 
 		effect = {
@@ -217,7 +223,10 @@ centralize_ulster = {
 		}
 
 		allow = {
-			positivism = 1
+		    OR = {
+				positivism = 1
+				year = 1848
+			}
 		}
 
 		effect = {

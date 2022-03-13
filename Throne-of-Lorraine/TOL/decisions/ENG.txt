@@ -9,6 +9,7 @@ political_decisions = {
 			OR = {
 				tag = ENG
 				tag = ENL
+				tag = UOW
 			}
 			NOT = { has_country_flag = big_ben_construction }
 			300 = { NOT = { has_province_modifier = the_big_ben } }
@@ -81,6 +82,7 @@ political_decisions = {
 			OR = {
 				tag = ENG
 				tag = ENL
+				tag = UOW
 			}
 			mass_politics = 1
 			NOT = { has_country_flag = we_are_live_from_london }
@@ -101,6 +103,7 @@ political_decisions = {
 			OR = {
 				tag = ENG
 				tag = ENL
+				tag = UOW
 			}
 			NOT = { has_country_flag = elementary_my_dear_watson } # I know, he never says it in the books, yadiyadi.
 		}
@@ -116,7 +119,11 @@ political_decisions = {
 	the_foster_act = {
 		picture = william_foster
 		potential = {
-			tag = ENG
+			OR = {
+				tag = ENG
+				tag = ENL
+				tag = UOW
+			}
 			NOT = { school_reforms = good_schools }
 			NOT = { has_country_flag = foster_act_enacted }
 		}
@@ -151,70 +158,73 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	ionian_islands_question = {
-		picture = ionian_islands_question
-		potential = {
-			OR = {
-				ai = no
-				AND = {
-					NOT = {
-						OR = {
-							AND = {
-								year = 1864
-								month = 4
-							}
-							year = 1865
-						}
-					}
-				}
-			}
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			ION = {
-				vassal_of = THIS
-				ai = yes
-			}
-			GRE = { exists = yes }
-		}
+	#ionian_islands_question = {
+		#picture = ionian_islands_question
+		#potential = {
+			#OR = {
+				#ai = no
+				#AND = {
+					#NOT = {
+						#OR = {
+							#AND = {
+								#year = 1864
+								#month = 4
+							#}
+							#year = 1865
+						#}
+					#}
+				#}
+			#}
+			#OR = {
+				#tag = ENG
+				#tag = ENL
+			#}
+			#ION = {
+				#vassal_of = THIS
+				#ai = yes
+			#}
+			#GRE = { exists = yes }
+		#}
 
-		allow = {
-			nationalism_n_imperialism = 1
-			war = no
-			NOT = { truce_with = GRE }
-		}
+		#allow = {
+			#nationalism_n_imperialism = 1
+			#war = no
+			#NOT = { truce_with = GRE }
+		#}
 
-		effect = {
-			random_country = {
-				limit = {
-					tag = GRE
-					exists = yes
-				}
-				relation = { who = THIS value = 100 }
-				inherit = ION
-				THIS = {
-					diplomatic_influence = { who = GRE value = 100 }
-					any_owned = {
-						limit = { is_core = ION }
-						secede_province = ION
-					}
-				}
-				ION = { all_core = { remove_core = ION } }
-			}
-			prestige = 10
-			badboy = -4
-		}
+		#effect = {
+			#random_country = {
+				#limit = {
+					#tag = GRE
+					#exists = yes
+				#}
+				#relation = { who = THIS value = 100 }
+				#inherit = ION
+				#THIS = {
+					#diplomatic_influence = { who = GRE value = 100 }
+					#any_owned = {
+						#limit = { is_core = ION }
+						#secede_province = ION
+					#}
+				#}
+				#ION = { all_core = { remove_core = ION } }
+			#}
+			#prestige = 10
+			#badboy = -4
+		#}
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
+		#ai_will_do = {
+			#factor = 1
+		#}
+	#}
 
 	british_imperial_airways = {
 		picture = imperial_airways
 		potential = {
-			tag = ENG
+			OR = {
+				tag = ENG
+				tag = ENL
+			}
 			is_greater_power = yes
 			aeronautics = 1
 			NOT = { has_country_flag = imperial_airways }
@@ -237,7 +247,11 @@ political_decisions = {
 		picture = landship
 		potential = {
 			NOT = { has_global_flag = landship_committee }
-			tag = ENG
+			OR = {
+				tag = ENG
+				tag = ENL
+				tag = UOW
+			}
 			owns = 284
 			year = 1900
 			invention = tank_experiments
@@ -277,7 +291,10 @@ political_decisions = {
 		picture = royal_aircraft_factory
 		potential = {
 			NOT = { has_global_flag = royal_aircraft_factory }
-			tag = ENG
+			OR = {
+				tag = ENG
+				tag = ENL
+			}
 			owns = 297
 			aeronautics = 1
 			NOT = { 297 = { state_scope = { has_building = aeroplane_factory } } }
@@ -412,32 +429,13 @@ political_decisions = {
 	#####################################################
 	#Irish Woes#
 	#####################################################
-	repeal_the_corn_laws = {
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			has_country_flag = great_irish_famine
-			NOT = { has_country_flag = corn_laws_repealed_flag }
-		}
-		allow = {
-			average_militancy = 2
-		}
-
-		effect = {
-			add_country_modifier = { name = corn_laws_repealed duration = 3650 }
-			any_pop = {
-				militancy = -1
-				consciousness = 1
-			}
-			set_country_flag = corn_laws_repealed_flag
-		}
-	}
 
 	ric_reorganize = {
 		picture = ric_police
 		potential = {
+		    any_owned_province = {
+				limit = { is_core = IRE }
+			}
 			tag = ENG
 			NOT = { has_country_flag = ric_reorganized }
 		}
@@ -446,7 +444,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = ric_reorganized
-			any_owned = {
+			any_owned_province = {
 				limit = { is_core = IRE }
 				add_province_modifier = { name = royal_irish_constabulary duration = -1 }
 			}
