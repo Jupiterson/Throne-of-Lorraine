@@ -158,6 +158,85 @@ political_decisions = {
 		}
 	}
 
+	join_confederation = {
+		picture = treaty_signing
+		potential = {
+			OR = {
+				tag = MRU
+				tag = NEW
+				tag = QUE
+				tag = COL
+				tag = MTC
+				tag = RPL
+				primary_culture = akino_german
+				AND = {
+					primary_culture = british
+					accepted_culture = akino_german
+					NOT = { tag = ENG }
+					NOT = { tag = ENL }
+				}
+			}
+			CAN = {
+				OR = {
+					government = democracy
+					government = parliamentary_republic
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
+			OR = {
+				government = democracy
+				government = parliamentary_republic
+				government = hms_government
+				government = constitutional_empire
+			}
+			exists = CAN
+			any_owned_province = {
+				any_neighbor_province = { owned_by = CAN }
+			}
+			NOT = {
+				has_country_flag = confederation_we_have_applied
+				tag = CAN
+			}
+		}
+		allow = {
+			war = no
+			CAN = { war = no }
+			OR = {
+				is_vassal = no
+				overlord = { is_our_vassal = CAN }
+				overlord = {
+					ai = yes
+					is_sphere_leader_of = CAN
+				}
+			}
+			OR = {
+				in_sphere = CAN
+				AND = {
+					part_of_sphere = no
+					relation = { who = CAN value = 150 }
+				}
+				sphere_owner = { is_sphere_leader_of = CAN }
+			}
+		}
+		effect = {
+			set_country_flag = confederation_we_have_applied
+			CAN = {
+				country_event = 44325
+				war_exhaustion = -20
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					tag = NEW
+					is_vassal = yes
+				}
+			}
+		}
+	}
 
 	form_the_rcmp = {
 	picture = form_the_rcmp
