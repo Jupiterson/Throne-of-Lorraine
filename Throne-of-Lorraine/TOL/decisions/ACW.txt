@@ -639,64 +639,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	annexation_santo_domingo = {
-	picture = annexation_santo_domingo
-		potential = {
-			OR = {
-				tag = USA
-				tag = CSA
-			}
-			is_greater_power = yes
-			DOM = {
-				exists = yes
-				owns = 2214
-				owns = 2216
-				OR = {
-					is_vassal = no
-					vassal_of = THIS
-				}
-			}
-			OR = {
-				2214 = { is_core = HAI }
-				2216 = { is_core = HAI }
-			}
-			NOT = { has_country_flag = annex_santo_domingo }
-			year = 1850
-			NOT = { year = 1900 }
-				government = democracy
-				 
-		}
-
-		allow = {
-			war = no
-			money = 100000
-			is_vassal = no
-			war_policy = jingoism
-			invention = manifest_destiny
-			ruling_party_ideology = reactionary
-			upper_house = { ideology = reactionary value = 0.15 }
-			all_core = { owned_by = THIS }
-			is_sphere_leader_of = DOM
-			DOM = { war = no }
-			DOM = { government = presidential_dictatorship }
-			OR = {
-				2214 = { is_core = HAI }
-				2216 = { is_core = HAI }
-			}
-		}
-
-		effect = {
-			set_country_flag = annex_santo_domingo
-			relation = { who = HAI value = -400 }
-			diplomatic_influence = { who = HAI value = -400 }
-			DOM = { country_event = 45105 }
-		}
-		ai_will_do = {
-			factor = 100
-			modifier = { factor = 0 badboy = 0.8 }
-		}
-	}
-
 	guano_islands_act = {
 	picture = dreams_of_empire
 		potential = {

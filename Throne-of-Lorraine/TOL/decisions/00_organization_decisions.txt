@@ -692,31 +692,6 @@ political_decisions = {
 						NOT = { is_culture_group = THIS }
 					}
 				}
-				#Lebanon
-				AND = {
-					NOT = { has_global_flag = lebanon_organized }
-					owns = 912
-					owns = 913
-					owns = 914
-					owns = 915
-					LBN = { exists = no }
-					year = 1850
-				}
-
-				AND = {
-					has_global_flag = lebanon_organized
-					OR = {
-						AND = {
-							owns = 912
-							owns = 913
-							owns = 914
-							owns = 915
-						}
-						LBN = { vassal_of = THIS }
-					}
-					NOT = { tag = LBN }
-					NOT = { has_country_flag = lebanon_organizer }
-				}
 				#Guinea-Bissau
 				AND = {
 					NOT = {
