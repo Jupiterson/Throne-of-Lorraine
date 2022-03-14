@@ -411,7 +411,10 @@ political_decisions = {
 			treasury = -25000
 			any_country = {
 				limit = {
-					tag = PEU
+					OR = {
+						tag = PBC
+						tag = PEU
+					}
 				}
 				relation = { who = THIS value = -50 }
 			}
