@@ -33,17 +33,12 @@ political_decisions = {
 			UOW = { vassal_of = THIS }
 		}
 		allow = {
-					   war = no
-					   year = 1850
-
+			war = no
+			year = 1850
 			UOW = { vassal_of = THIS }
-
-				is_greater_power = yes
-
+			is_greater_power = yes
 			nationalism_n_imperialism = 1
-
-			}
-	
+		}
 		effect = {
 			any_country = {
 				limit = {

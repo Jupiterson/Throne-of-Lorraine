@@ -253,7 +253,7 @@ country_event = {
 			has_country_modifier = neutrality
 			has_country_flag = suez_egypt_intervention
 		}
-		EGY = {
+		COP = {
 			war = no
 			exists = yes
 			is_greater_power = no
@@ -280,11 +280,11 @@ country_event = {
 		months = 12
 		modifier = {
 			factor = 0.1
-			EGY = { capital_scope = { controlled_by_rebels = yes } }
+			COP = { capital_scope = { controlled_by_rebels = yes } }
 		}
 		modifier = {
 			factor = 0.5
-			EGY = { revolt_percentage = 0.5 }
+			COP = { revolt_percentage = 0.5 }
 		}
 		modifier = {
 			factor = 0.01
@@ -292,7 +292,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			EGY = {
+			COP = {
 				NOT = { revolt_percentage = 0.25 }
 				NOT = { capital_scope = { controlled_by_rebels = yes } }
 			}
@@ -303,12 +303,12 @@ country_event = {
 		name = "EVT36975OPTA"
 		set_country_flag = suez_egypt_intervention
 		badboy = 3
-		leave_alliance = EGY
-		diplomatic_influence = { who = EGY value = -200 }
-		relation = { who = EGY value = -200 }
+		leave_alliance = COP
+		diplomatic_influence = { who = COP value = -200 }
+		relation = { who = COP value = -200 }
 		random_country = {
 			limit = {
-				tag = EGY
+				tag = COP
 				civilized = no
 				has_global_flag = berlin_conference
 			}
@@ -320,7 +320,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				tag = EGY
+				tag = COP
 				OR = {
 					civilized = yes
 					NOT = { has_global_flag = berlin_conference }
@@ -627,8 +627,8 @@ country_event = {
 			THIS = { money = 200000 }
 		}
 		random_owned = {
-			limit = { owner = { tag = EGY } }
-			EGY = { plurality = -15 }
+			limit = { owner = { tag = COP } }
+			COP = { plurality = -15 }
 			FROM = {
 				diplomatic_influence = {
 					who = THIS
