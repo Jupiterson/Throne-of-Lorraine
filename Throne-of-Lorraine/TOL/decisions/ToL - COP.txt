@@ -1,13 +1,12 @@
 political_decisions = {
 
-		conquest_of_levant = {
+	conquest_of_levant = {
 		picture = map_levant
 		potential = {
-		OR = {
-		
-			tag = COP
-						tag = UCO
-						}
+			OR = {
+				tag = COP
+				tag = UCO
+			}
 			NOT = { has_country_flag = conquest_of_levant }
 		}
 		allow = {
@@ -33,32 +32,32 @@ political_decisions = {
 	}
 
 	embrace_the_syriacs = { 
-	potential = { 
-		 OR = {
-		 tag = COP
-		 tag = GEO
-			 tag = ARM
-		 tag = ASY
-		 }
-		 NOT = {
+		potential = { 
+			OR = {
+				tag = COP
+				tag = GEO
+				tag = ARM
+				tag = ASY
+			}
+			NOT = {
 				OR = {
 					accepted_culture = syriac
 					has_country_flag = embraced_syriac
 				}
 			}
 		}
-	
-	allow = {
+		
+		allow = {
 			year = 1850
 			prestige = 70
-		owns = 917
-		owns = 902
-		owns = 900
-		owns = 913
-		owns = 897
+			owns = 917
+			owns = 902
+			owns = 900
+			owns = 913
+			owns = 897
 		}
 	
-	 effect = {
+		effect = {
 			set_country_flag = embraced_syriac
 			add_accepted_culture = syriac
 			prestige = 25			
@@ -68,7 +67,7 @@ political_decisions = {
 		}
 	}
 	
-		embrace_the_misri = {
+	embrace_the_misri = {
 		picture = embrace_minority
 		potential = {
 			tag = COP
@@ -96,7 +95,7 @@ political_decisions = {
 	}
 
 
-administrate_sand_copt = {
+	administrate_sand_copt = {
 		picture = form_the_rcmp
 		potential = {
 			tag = COP
@@ -226,10 +225,10 @@ administrate_sand_copt = {
 	conquest_of_syria = {
 		picture = form_the_ikhwan
 		potential = {
-		OR = {
-			tag = COP
-						tag = UCO
-						}
+			OR = {
+				tag = COP
+				tag = UCO
+			}
 			NOT = { has_country_flag = conquest_of_syria }
 		}
 		allow = {
