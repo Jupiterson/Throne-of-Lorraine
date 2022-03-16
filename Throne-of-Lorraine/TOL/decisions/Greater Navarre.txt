@@ -7,7 +7,10 @@ political_decisions = {
 		}
 		
 		allow = {
-			nationalism_n_imperialism = 1
+			OR = {
+				OCC = { exists = yes }
+				year = 1840
+			}
 		}
 		
 		effect = { 
@@ -17,10 +20,10 @@ political_decisions = {
 			457 = { add_core = BSQ }
 			459 = { add_core = BSQ }
 			458 = { add_core = BSQ }
+			badboy = 15
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
 }
-		
