@@ -1249,9 +1249,24 @@ categories =  {
         min_build_railroad = 3
     }
 
+	pamplona = {
+        movement_cost = 1.2
+        defence = 3
+        color = { 22 44 66 }
+        farm_rgo_size = -0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        supply_limit = 6
+
+        combat_width = -0.6
+
+        min_build_railroad = 3
+    }
+	
     erivan = {
         movement_cost = 1.2
-        defence = 1
+        defence = 3
         color = { 22 44 66 }
 
         farm_rgo_size = 0.0

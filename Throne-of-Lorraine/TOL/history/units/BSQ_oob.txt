@@ -1,7 +1,35 @@
 FRA = {value = -20}
 
+
+leader = {
+    name = "Alvar Arana"
+    date = 1836.1.1
+    type = land
+    personality = gallant
+    background = generals_aide
+    prestige = 0.3
+}
+
+leader = {
+    name = "Pelaio Zumalacarregui"
+    date = 1836.1.1
+    type = land
+    personality = efficient
+    background = aristocrat
+    prestige = 0.3
+}
+
+leader = {
+    name = "Gontzal de Renteria"
+    date = 1836.1.1
+    type = sea
+    personality = skilled
+    background = nationalist
+    prestige = 0.2
+}
+
 army = {
-    name = "Ejército colonial"
+    name = "Gudaroste den Afrika"
     location = 1894
     regiment = {
         name= "1. Brigada Real de Infantería"
@@ -18,16 +46,16 @@ army = {
 }
 
 army = {
-    name = "Ejército de reserva"
+    name = "Gudaroste den Nafarroa"
     location = 493
     regiment = {
-        name= "Brigada de Artillería"
+        name= "Kanoia Lagundi"
         type = artillery
         home = 493
     }
 
     regiment = {
-        name= "Brigada de húsar"
+        name= "Done Jakue Zaldunak"
         type = hussar
         home = 3472
     }
@@ -35,22 +63,22 @@ army = {
 }
 
 navy = {
-    name = "Escuadra Unida del Ecuador"
+    name = "Babes Flota"
     location = 3472
     ship = {
-        name= "Pamplona"
+        name= "Iruna"
         type = frigate
     }
     ship = {
-        name= "Bayonne"
+        name= "Baiun"
         type = frigate
     }
     ship = {
-        name= "Angel"
+        name= "Aingerua"
         type = clipper_transport
     }
 	ship = {
-        name= "Josu"
+        name= "Deabrua"
         type = clipper_transport
     }
 }
