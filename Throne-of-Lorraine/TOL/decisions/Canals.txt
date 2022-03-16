@@ -90,7 +90,7 @@ political_decisions = {
 				treasury = 75000
 			}
 			1755 = { secede_province = THIS add_core = THIS }
-			random_owned = { limit = { exists = EGY } owner = { diplomatic_influence = { who = EGY value = 25 } } }
+			random_owned = { limit = { exists = COP } owner = { diplomatic_influence = { who = COP value = 25 } } }
 			country_event = 36970
 		}
 
@@ -206,7 +206,7 @@ political_decisions = {
 				1755 = { owner = { in_sphere = THIS } }
 				AND = {
 					tag = ENG
-					EGY = { sphere_owner = { ai = yes } }
+					COP = { sphere_owner = { ai = yes } }
 				}
 			}
 		}
@@ -354,7 +354,7 @@ political_decisions = {
 			set_global_flag = suez_canal_company_founded_backup
 			prestige = 5
 			treasury = -50000
-			diplomatic_influence = { who = EGY value = 100 }
+			diplomatic_influence = { who = COP value = 100 }
 			1755 = { owner = { relation = { who = THIS value = 75 } country_event = 36981 } }
 		}
 

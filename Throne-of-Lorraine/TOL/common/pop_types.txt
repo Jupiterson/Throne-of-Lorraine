@@ -1218,6 +1218,146 @@ assimilation_chance = {
         has_pop_culture = ainu
         country = { primary_culture = japanese }
     }
+	
+		modifier = {
+        factor = 0.5
+        has_pop_culture = north_german
+        country = { primary_culture = south_german }
+    }
+	
+	modifier = {
+        factor = 0.5
+        has_pop_culture = south_german
+        country = { primary_culture = north_german }
+    }
+	
+		modifier = {
+        factor = 1.5
+        has_pop_culture = north_german
+        country = { primary_culture = low_german }
+    }
+	
+			modifier = {
+        factor = 1.5
+        has_pop_culture = dutch
+        country = { primary_culture = low_german }
+    }
+	
+	
+	modifier = {
+        factor = 1.5
+        has_pop_culture = north_german
+        country = { primary_culture = ashkenazi }
+    }
+	
+		modifier = {
+        factor = 1.5
+        has_pop_culture = south_german
+        country = { primary_culture = ashkenazi }
+    }
+	
+	modifier = {
+        factor = 1.5
+        has_pop_culture = rhinelander
+        country = { primary_culture = ashkenazi }
+    }
+	
+	modifier = {
+        factor = 1.5
+        has_pop_culture = spanish
+        country = { primary_culture = sephardic }
+    }
+	
+		
+	modifier = {
+        factor = 0.5
+        has_pop_culture = copt
+        country = { primary_culture = greek }
+    }
+	
+		modifier = {
+        factor = 0.5
+        has_pop_culture = greek
+        country = { primary_culture = copt }
+    }
+	
+			modifier = {
+        factor = 1.5
+        has_pop_culture = maghrebi
+        country = { primary_culture = berber }
+    }
+	
+				modifier = {
+        factor = 1.5
+        has_pop_culture = bedouin
+        country = { primary_culture = berber }
+    }
+	
+					modifier = {
+        factor = 0.5
+        has_pop_culture = ruthenyan
+        country = { primary_culture = lithuanian }
+    }
+	
+						modifier = {
+        factor = 1.5
+        has_pop_culture = occitan
+        country = { primary_culture = provencial }
+    }
+	
+							modifier = {
+        factor = 1.5
+        has_pop_culture = provencial
+        country = { primary_culture = occitan }
+    }
+	
+								modifier = {
+        factor = 0.8
+        has_pop_culture = ruthenyan
+        country = { primary_culture = russian }
+    }
+	
+									modifier = {
+        factor = 0.8
+        has_pop_culture = russian
+        country = { primary_culture = ruthenyan }
+    }
+
+
+
+########
+# LARP #
+########
+
+									modifier = {
+        factor = 2.5
+        has_pop_culture = british
+        country = { primary_culture = danish }
+    }
+	
+										modifier = {
+        factor = 2.5
+        has_pop_culture = british
+        country = { primary_culture = norwegian }
+    }
+	
+											modifier = {
+        factor = 2.5
+        has_pop_culture = british
+        country = { primary_culture = frisian }
+    }
+	
+												modifier = {
+        factor = 2.5
+        country = { primary_culture = romansh }
+    }
+
+
+
+
+
+
+
 
     modifier = {
         factor = -80

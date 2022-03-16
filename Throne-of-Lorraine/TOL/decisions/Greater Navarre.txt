@@ -1,0 +1,26 @@
+political_decisions = {
+	liberate_the_gascons = {
+		picture = fourmusketeers
+		potential = {
+			tag = BSQ
+			NOT = { has_country_flag = brother_gascon }
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+		}
+		
+		effect = { 
+			prestige = 20
+			set_country_flag = brother_gascon
+			455 = { add_core = BSQ }
+			457 = { add_core = BSQ }
+			459 = { add_core = BSQ }
+			458 = { add_core = BSQ }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+		
