@@ -192,31 +192,10 @@ political_decisions = {
 		potential = {
 			exists = yes
 			NOT = { has_global_flag = revolution_n_counter_researched }
-			OR = {
-				AND = {
-					ai = no
-					has_country_flag = country_looking_through_options
-					NOT = { year = 1837 }
-				}
-				AND = {
-					ai = yes
-					year = 1886
-					OR = {
-						revolution_n_counterrevolution = 1
-						any_neighbor_country = { revolution_n_counterrevolution = 1 }
-						any_greater_power = { revolution_n_counterrevolution = 1 }
-					}
-				}
-				AND = {
-					ai = yes
-					year = 1870
-					has_global_flag = unlock_crisis_in_1870
-					OR = {
-						revolution_n_counterrevolution = 1
-						any_neighbor_country = { revolution_n_counterrevolution = 1 }
-						any_greater_power = { revolution_n_counterrevolution = 1 }
-					}
-				}
+			AND = {
+				ai = no
+				has_country_flag = country_looking_through_options
+				NOT = { year = 1837 }
 			}
 		}
 
