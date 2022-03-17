@@ -1322,7 +1322,30 @@ assimilation_chance = {
         has_pop_culture = russian
         country = { primary_culture = ruthenyan }
     }
+	
+	    modifier = {
+        factor = 1.5
+        has_pop_culture = prussian
+        country = { primary_culture = lithuanian }
+    }
+	
+    modifier = {
+        factor = 1.5
+        has_pop_culture = prussian
+        country = { primary_culture = latvian }
+    }
+	
+	    modifier = {
+        factor = 0.5
+        has_pop_culture = latvian
+        country = { primary_culture = volga_german }
+    }
 
+	    modifier = {
+        factor = 0.5
+        has_pop_culture = estonian
+        country = { primary_culture = volga_german }
+    }
 
 
 ########

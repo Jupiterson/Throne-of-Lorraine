@@ -969,7 +969,7 @@ clergymen = {
     }
 
     artisans = {
-        culture = north_german
+        culture = prussian
         religion = protestant
         size = 4500
     }
@@ -988,15 +988,15 @@ clergymen = {
     }
 
     farmers = {
-        culture = volga_german
+        culture = prussian
         religion = protestant
-        size = 1100
+        size = 5100
     }
 
     farmers = {
         culture = western_slavic
         religion = protestant
-        size = 275
+        size = 575
     }
 
     aristocrats = {
@@ -1353,19 +1353,25 @@ clergymen = {
     artisans = {
         culture = volga_german
         religion = protestant
-        size = 1400
+        size = 700
     }
 
     soldiers = {
         culture = volga_german
         religion = protestant
-        size = 1000
+        size = 500
     }
 
     farmers = {
+        culture = prussian
+        religion = protestant
+        size = 10425
+    }
+	
+	    farmers = {
         culture = volga_german
         religion = protestant
-        size = 27425
+        size = 7425
     }
 
     clergymen = {
@@ -1389,7 +1395,7 @@ clergymen = {
     farmers = {
         culture = polish
         religion = catholic
-        size = 7475
+        size = 4475
     }
 }
 3326 = {
@@ -1408,11 +1414,11 @@ clergymen = {
     artisans = {
         culture = north_german
         religion = protestant
-        size = 1400
+        size = 700
     }
 
     soldiers = {
-        culture = volga_german
+        culture = prussian
         religion = protestant
         size = 1000
     }
@@ -1420,7 +1426,13 @@ clergymen = {
     farmers = {
         culture = volga_german
         religion = protestant
-        size = 27425
+        size = 7425
+    }
+	
+    farmers = {
+        culture = prussian
+        religion = protestant
+        size = 10425
     }
 
     clergymen = {
@@ -1560,7 +1572,7 @@ clergymen = {
     aristocrats = {
         culture = volga_german
         religion = protestant
-        size = 2000
+        size = 1000
     }
 
     clergymen = {
@@ -1572,20 +1584,27 @@ clergymen = {
     artisans = {
         culture = volga_german
         religion = protestant
-        size = 2900
+        size = 1900
     }
 
     soldiers = {
         culture = volga_german
         religion = protestant
-        size = 2000
+        size = 1000
     }
 
     farmers = {
+        culture = prussian
+        religion = protestant
+        size = 45550
+    }
+	
+	farmers = {
         culture = volga_german
         religion = protestant
-        size = 50550
+        size = 5550
     }
+
 
     clergymen = {
         culture = polish
@@ -1608,7 +1627,7 @@ clergymen = {
     farmers = {
         culture = polish
         religion = protestant
-        size = 32875
+        size = 2875
     }
 
     clergymen = {
@@ -1637,28 +1656,40 @@ clergymen = {
 }
 3328 = {
     farmers = {
+        culture = prussian
+        religion = protestant
+        size = 6550
+    }
+	
+	    farmers = {
         culture = volga_german
         religion = protestant
-        size = 5550
+        size = 1550
     }
 }
 3329 = {
     farmers = {
+        culture = prussian
+        religion = protestant
+        size = 10550
+    }
+	
+	farmers = {
         culture = volga_german
         religion = protestant
-        size = 25550
+        size = 2550
     }
 	farmers = {
         culture = polish
         religion = protestant
-        size = 15550
+        size = 4550
     }
 }
 3327 = {
     aristocrats = {
         culture = volga_german
         religion = protestant
-        size = 2000
+        size = 500
     }
 
     clergymen = {
@@ -1670,19 +1701,19 @@ clergymen = {
     artisans = {
         culture = volga_german
         religion = protestant
-        size = 2900
+        size = 900
     }
 
     soldiers = {
-        culture = volga_german
+        culture = prussian
         religion = protestant
-        size = 2000
+        size = 1000
     }
 
     farmers = {
         culture = volga_german
         religion = protestant
-        size = 30550
+        size = 5550
     }
 
     clergymen = {
@@ -1700,14 +1731,21 @@ clergymen = {
     soldiers = {
         culture = polish
         religion = protestant
-        size = 1000
+        size = 500
     }
 
     farmers = {
         culture = polish
         religion = protestant
-        size = 52875
+        size = 10875
     }
+	
+	farmers = {
+        culture = prussian
+        religion = protestant
+        size = 20875
+    }
+
 
     clergymen = {
         culture = polish
@@ -1722,15 +1760,9 @@ clergymen = {
     }
 
     soldiers = {
-        culture = polish
+        culture = prussian
         religion = catholic
         size = 100
-    }
-
-    farmers = {
-        culture = polish
-        religion = catholic
-        size = 4625
     }
 }
 #Posen-Wielkopolska Region (1704000)

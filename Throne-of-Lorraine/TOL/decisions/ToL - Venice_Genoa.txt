@@ -364,7 +364,7 @@ expand_east = {
 					exists = yes
 					truce_with = THIS
 			}
-			has_country_flag = won_GEN_VEN_war
+			#has_country_flag = won_GEN_VEN_war
 			NOT = { has_country_flag = GEN_US_peace_agreement }
 		}
 		allow = {

@@ -770,9 +770,9 @@
     }
 
     artisans = {
-        culture = volga_german
+        culture = prussian
         religion = protestant
-        size = 100
+        size = 1100
     }
 
     soldiers = {
@@ -784,12 +784,18 @@
     farmers = {
         culture = volga_german
         religion = protestant
-        size = 8500
+        size = 4500
     }
     farmers = {
         culture = lithuanian
         religion = catholic
-        size = 11825
+        size = 12825
+    }
+	
+	farmers = {
+        culture = prussian
+        religion = catholic
+        size = 2825
     }
 }
 3366 = {
@@ -816,7 +822,7 @@
     }
 
     artisans = {
-        culture = volga_german
+        culture = prussian
         religion = protestant
         size = 2400
     }
@@ -830,13 +836,13 @@
     farmers = {
         culture = lithuanian
         religion = protestant
-        size = 13500
+        size = 7500
     }
 
     farmers = {
         culture = volga_german
         religion = protestant
-        size = 13500
+        size = 3500
     }
 
     ######Jews
@@ -885,13 +891,7 @@
     }
 
     farmers = {
-        culture = volga_german
-        religion = catholic
-        size = 16100
-    }
-
-    farmers = {
-        culture = lithuanian
+        culture = prussian
         religion = protestant
         size = 1000
     }
