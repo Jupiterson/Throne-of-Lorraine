@@ -390,8 +390,12 @@ country_event = {
 	option = {				# Accept inheritance
 		name = "EVTOPTA11103"
 		clr_country_flag = made_the_call_to_union
-		add_accepted_culture = south_italian
 		add_accepted_culture = north_italian
+		add_accepted_culture = south_italian
+		add_accepted_culture = central_italian
+		add_accepted_culture = sicilian
+		add_accepted_culture = provencial
+		add_accepted_culture = venetian
 		random_owned = {
 			limit = { owner = { OR = { is_culture_group = italian is_culture_group = germanic } accepted_culture = french } }
 			owner = { remove_accepted_culture = french }
@@ -417,7 +421,10 @@ country_event = {
 		random_owned = {
 			limit = { owner = { primary_culture = polish accepted_culture = czech } } owner = { remove_accepted_culture = czech }
 		}
-		all_core = { remove_core = THIS }
+		all_core = {
+			limit = { NOT = { is_core = ITA } }
+			remove_core = THIS				
+		}
 		change_tag = culture
 		any_country = {
 			limit = {
@@ -482,6 +489,11 @@ country_event = {
 				}
 			}
 			country_event = { id = 96165 days = 20 }
+		}
+		PRO = {
+			all_core = {
+				add_core = ITA
+			}
 		}
 		prestige = 10
 		ai_chance = {

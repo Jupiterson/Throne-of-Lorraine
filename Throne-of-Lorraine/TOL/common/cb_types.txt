@@ -6054,7 +6054,7 @@ annex_africa = {
 		THIS = {
 			nationalism_n_imperialism = 1
 			capital_scope = { continent = europe }
-			NOT = { tag = RUS }
+			#NOT = { tag = RUS }
 			NOT = { tag = TUR }
 			slavery = no_slavery
 			OR = {
@@ -6597,7 +6597,7 @@ annex_africa_full = {
 		THIS = {
 			nationalism_n_imperialism = 1
 			capital_scope = { continent = europe }
-			NOT = { tag = RUS }
+			#NOT = { tag = RUS }
 			NOT = { tag = TUR }
 			slavery = no_slavery
 			OR = {
@@ -7651,7 +7651,14 @@ establish_protectorate_BC_casus_belli = {
 			value = 0.1
 		}
 	}
-	on_po_accepted = { tech_school = unciv_tech_school }
+	on_po_accepted = {
+		FROM = {
+			limit = {
+				NOT = { tag = COP }
+			}
+			tech_school = unciv_tech_school
+		}
+	}
 }
 
 #Negotiated Transfer
@@ -9718,10 +9725,10 @@ colonial_conquest = {
 			NOT = { war_policy = pacifism }
 			OR = {
 				AND = {
-			capital_scope = { continent = europe }
+					capital_scope = { continent = europe }
 					NOT = {
 						tag = TUR
-						tag = RUS
+						#tag = RUS
 					}
 				}
 				tech_school = naval_tech_school
@@ -10871,9 +10878,9 @@ claim_colonial_region = {
 		THIS = {
 			nationalism_n_imperialism = 1
 			capital_scope = { continent = europe }
-			NOT = { tag = RUS }
+			#NOT = { tag = RUS }
 			NOT = { tag = TUR }
-			  NOT = { has_country_modifier = neutrality_modifier }
+			NOT = { has_country_modifier = neutrality_modifier }
 			NOT = { has_country_flag = congo_award }
 			has_global_flag = berlin_conference
 		}
@@ -11554,8 +11561,8 @@ claim_colonial_region_full = {
 		THIS = {
 			nationalism_n_imperialism = 1
 			capital_scope = { continent = europe }
-			NOT = { tag = RUS }
-			  NOT = { has_country_modifier = neutrality_modifier }
+			#NOT = { tag = RUS }
+			NOT = { has_country_modifier = neutrality_modifier }
 			NOT = { has_country_flag = congo_award }
 			has_global_flag = berlin_conference
 		}
