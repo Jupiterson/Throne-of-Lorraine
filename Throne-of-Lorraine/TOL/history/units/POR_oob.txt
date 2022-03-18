@@ -2,210 +2,210 @@
 FRA = {value = -50}
 
 army = {
-    name = "Exército Português"
-    location = 521
-    regiment = {
-        name= "1. Brigada de Infantaria"
-        type = infantry
-        home = 521
-    }
-
-    regiment = {
-        name= "2. Brigada de Infantaria"
-        type = infantry
-        home = 524
-    }
-
-    regiment = {
-        name= "3. Brigada de Infantaria"
-        type = infantry
-        home = 518
-    }
-
-    regiment = {
-        name= "4. Brigada de Infantaria"
-        type = infantry
-        home = 520
-    }
-
-    regiment = {
-        name= "1. Brigada de Artilharia"
-        type = artillery
-        home = 3400
-    }
+	name = "Exército Português"
+	location = 521
 	regiment = {
-        name= "2. Brigada de Artilharia"
-        type = artillery
-        home = 522
-    }
+		name= "1. Brigada de Infantaria"
+		type = infantry
+		home = 521
+	}
 
-    regiment = {
-        name= "1. Brigada de Cavalaria"
-        type = cuirassier
-        home = 519
-    }
+	regiment = {
+		name= "2. Brigada de Infantaria"
+		type = infantry
+		home = 524
+	}
+
+	regiment = {
+		name= "3. Brigada de Infantaria"
+		type = infantry
+		home = 518
+	}
+
+	regiment = {
+		name= "4. Brigada de Infantaria"
+		type = infantry
+		home = 520
+	}
+
+	regiment = {
+		name= "1. Brigada de Artilharia"
+		type = artillery
+		home = 3400
+	}
+	regiment = {
+		name= "2. Brigada de Artilharia"
+		type = artillery
+		home = 522
+	}
+
+	regiment = {
+		name= "1. Brigada de Cavalaria"
+		type = cuirassier
+		home = 519
+	}
 
 }
 
 army = {
-    name = "Exército de Africa Ocidental"
-    location = 1691
+	name = "Exército de Africa Ocidental"
+	location = 1691
 
-    regiment = {
-        name = "1. Divisão Colonial"
-        type = infantry
-        home = 525
-    }
-	    regiment = {
-        name = "2. Divisão Colonial"
-        type = infantry
-        home = 527
-    }
-	    regiment = {
-        name = "3. Divisão Colonial"
-        type = infantry
-        home = 526
-    }
+	regiment = {
+		name = "1. Divisão Colonial"
+		type = infantry
+		home = 525
+	}
+		regiment = {
+		name = "2. Divisão Colonial"
+		type = infantry
+		home = 527
+	}
+		regiment = {
+		name = "3. Divisão Colonial"
+		type = infantry
+		home = 526
+	}
 }
 
 
 navy = {
-    name = "Portuguese Royal Navy"
-    location = 521
-    ship = {
-        name= "Rainha"
-        type = manowar
-    }
+	name = "Portuguese Royal Navy"
+	location = 521
+	ship = {
+		name= "Rainha"
+		type = manowar
+	}
 
-    ship = {
-        name= "Dom João VI"
-        type = manowar
-    }
+	ship = {
+		name= "Dom João VI"
+		type = manowar
+	}
 
-    ship = {
-        name= "Rainha de Portugal"
-        type = frigate
-    }
+	ship = {
+		name= "Rainha de Portugal"
+		type = frigate
+	}
 
-    ship = {
-        name= "Dona Maria II"
-        type = frigate
-    }
+	ship = {
+		name= "Dona Maria II"
+		type = frigate
+	}
 
-    ship = {
-        name= "Dom Pedro"
-        type = frigate
-    }
+	ship = {
+		name= "Dom Pedro"
+		type = frigate
+	}
 
-    ship = {
-        name= "Princesa Carlota"
-        type = frigate
-    }
+	ship = {
+		name= "Princesa Carlota"
+		type = frigate
+	}
 
-    ship = {
-        name= "Portuense"
-        type = frigate
-    }
+	ship = {
+		name= "Portuense"
+		type = frigate
+	}
 
-    ship = {
-        name= "Príncipe do Brasil"
-        type = frigate
-    }
+	ship = {
+		name= "Príncipe do Brasil"
+		type = frigate
+	}
 
-    ship = {
-        name= "Algarves"
-        type = frigate
-    }
+	ship = {
+		name= "Algarves"
+		type = frigate
+	}
 
-    ship = {
-        name= "Vila Flor"
-        type = frigate
-    }
+	ship = {
+		name= "Vila Flor"
+		type = frigate
+	}
 
-    ship = {
-        name= "1o Navios de Transporte"
-        type = clipper_transport
-    }
+	ship = {
+		name= "1o Navios de Transporte"
+		type = clipper_transport
+	}
 
-    ship = {
-        name= "2o Navios de Transporte"
-        type = clipper_transport
-    }
+	ship = {
+		name= "2o Navios de Transporte"
+		type = clipper_transport
+	}
 
-    ship = {
-        name= "3o Navios de Transporte"
-        type = clipper_transport
-    }
-    ship = {
-        name= "4o Navios de Transporte"
-        type = clipper_transport
-    }
-    ship = {
-        name= "5o Navios de Transporte"
-        type = clipper_transport
-    }
-    ship = {
-        name= "6o Navios de Transporte"
-        type = clipper_transport
-    }
-    ship = {
-        name= "7o Navios de Transporte"
-        type = clipper_transport
-    }
-    ship = {
-        name= "8o Navios de Transporte"
-        type = clipper_transport
-    }
-    ship = {
-        name= "9o Navios de Transporte"
-        type = clipper_transport
-    }
+	ship = {
+		name= "3o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "4o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "5o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "6o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "7o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "8o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "9o Navios de Transporte"
+		type = clipper_transport
+	}
 
 }
 
 leader = {
-    name = "Duke of Saldanha"
-    picture = european_general_55
-    type = land
-    date = 1825.8.20
-    background = aristocrat
-    personality = soldierly
-    prestige = 0.1
-    }
+	name = "Duke of Saldanha"
+	picture = european_general_55
+	type = land
+	date = 1825.8.20
+	background = aristocrat
+	personality = soldierly
+	prestige = 0.1
+	}
 
 leader = {
-    name = "José Joaquim da Rosa Coelho"
-    picture = european_admiral_5
-    type = sea
-    date = 1820.12.14
-    background = generals_aide
-    personality = stout
-    prestige = 0.05
-    }
+	name = "José Joaquim da Rosa Coelho"
+	picture = european_admiral_5
+	type = sea
+	date = 1820.12.14
+	background = generals_aide
+	personality = stout
+	prestige = 0.05
+	}
 
 leader = {
-    name = "Nunes Vidigal"
-    date = 1808.1.1
-    type = land
-    personality = aggressive
-    background = hated
-    prestige = 0.2
+	name = "Nunes Vidigal"
+	date = 1808.1.1
+	type = land
+	personality = aggressive
+	background = hated
+	prestige = 0.2
 }
 
 leader = {
-    name = "Luís Barreto"
-    date = 1824.1.1
-    type = land
-    personality = resolute
-    background = gifted_administrator
-    prestige = 0.2
+	name = "Luís Barreto"
+	date = 1824.1.1
+	type = land
+	personality = resolute
+	background = gifted_administrator
+	prestige = 0.2
 }
 
 leader = {
-    name = "Vicente de Mesquita"
-    date = 1808.1.1
-    type = land
-    personality = dauntless
-    background = madman
-    prestige = 0.0
+	name = "Vicente de Mesquita"
+	date = 1808.1.1
+	type = land
+	personality = dauntless
+	background = madman
+	prestige = 0.0
 }

@@ -1,88 +1,88 @@
 TUR = {
-    value = -100
+	value = -100
 }
 FRA = {value = -70}
 
 army = {
-    name = "Wojsko Polskie"
-    location = 660
-    regiment = {
-        name= "1st Cernauti Infantry"
-        type = infantry
-        home = 627
-    }
+	name = "Wojsko Polskie"
+	location = 660
+	regiment = {
+		name= "1st Cernauti Infantry"
+		type = infantry
+		home = 627
+	}
 
-    regiment = {
-        name= "1st Lwow Infantry"
-        type = infantry
-        home = 702
-    }
-	
-    regiment = {
-        name= "1st Iasi Hussar"
-        type = hussar
-        home = 670
-    }
-
-    regiment = {
-        name= "1st Bydgoszcz Artillery"
-        type = artillery
-        home = 700
-    }
-
-    regiment = {
-        name= "1st Gniezno Artillery"
-        type = artillery
-        home = 701
-    }
-
-    regiment = {
-        name= "1st Warszawa Artillery"
-        type = artillery
-        home = 706
-    }
-	
-    regiment = {
-        name= "1st Plock Artillery"
-        type = artillery
-        home = 708
-    }
-	
-    regiment = {
-        name= "1st Krakow Artillery"
-        type = artillery
-        home = 703
-    }
+	regiment = {
+		name= "1st Lwow Infantry"
+		type = infantry
+		home = 702
+	}
 	
 	regiment = {
-       name= "XII. Linieninfanteriebrigade"
-        type = infantry
-        home = 685
-    }
-	
-	    regiment = {
-        name= "XI. Kavalleriebrigade"
-        type = dragoon
-        home = 701
-    }
+		name= "1st Iasi Hussar"
+		type = hussar
+		home = 670
+	}
 
-    regiment = {
-        name = "V. Artilleriebrigade"
-        type = artillery
-        home = 701
-    }
+	regiment = {
+		name= "1st Bydgoszcz Artillery"
+		type = artillery
+		home = 700
+	}
+
+	regiment = {
+		name= "1st Gniezno Artillery"
+		type = artillery
+		home = 701
+	}
+
+	regiment = {
+		name= "1st Warszawa Artillery"
+		type = artillery
+		home = 706
+	}
+	
+	regiment = {
+		name= "1st Plock Artillery"
+		type = artillery
+		home = 708
+	}
+	
+	regiment = {
+		name= "1st Krakow Artillery"
+		type = artillery
+		home = 703
+	}
+	
+	regiment = {
+	   name= "XII. Linieninfanteriebrigade"
+		type = infantry
+		home = 685
+	}
+	
+		regiment = {
+		name= "XI. Kavalleriebrigade"
+		type = dragoon
+		home = 701
+	}
+
+	regiment = {
+		name = "V. Artilleriebrigade"
+		type = artillery
+		home = 701
+	}
 	
 	   regiment = {
-        name= "III. Kavalleriebrigade"
-        type = dragoon
-        home = 700
-    }
+		name= "III. Kavalleriebrigade"
+		type = dragoon
+		home = 700
+	}
 
-    regiment = {
-        name= "II. Artilleriebrigade"
-        type = artillery
-        home = 685
-    }
+	regiment = {
+		name= "II. Artilleriebrigade"
+		type = artillery
+		home = 685
+	}
 
 
 }
@@ -90,20 +90,20 @@ army = {
 
 
 leader = {
-    name = "Gulia Radetzky"
-    picture = aus_gen_radetzky
-    date = 1835.1.1
-    type = land
-    personality = implacable
-    background = school_of_the_bayonet
-    prestige = 0.8
+	name = "Gulia Radetzky"
+	picture = aus_gen_radetzky
+	date = 1835.1.1
+	type = land
+	personality = implacable
+	background = school_of_the_bayonet
+	prestige = 0.8
 }
 
 leader = {
-    name = "Julius von Krakow"
-    date = 1835.1.1
-    type = land
-    personality = wrathful
-    background = natural_born_leader
-    prestige = 0.5
+	name = "Julius von Krakow"
+	date = 1835.1.1
+	type = land
+	personality = wrathful
+	background = natural_born_leader
+	prestige = 0.5
 }

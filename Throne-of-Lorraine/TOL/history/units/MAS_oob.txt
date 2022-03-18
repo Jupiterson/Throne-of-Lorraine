@@ -1,33 +1,33 @@
 DND = {
-    value = 30
+	value = 30
 }
 
 SOK = {
-    value = 100
+	value = 100
 }
 
 KNG = {
-    value = 30
+	value = 30
 }
 
 DAM = {
-    value = 20
+	value = 20
 }
 
 JAL = {
-    value = 100
+	value = 100
 }
 
 TOO = {
-    value = 100
+	value = 100
 }
 
 DAH = {
-    value = -5
+	value = -5
 }
 
 BEN = {
-    value = -15
+	value = -15
 }
 
 GBU = { value = -200 }
@@ -36,142 +36,142 @@ MOS = { value = -200 }
 ASH = { value = -200 }
 
 leader = {
-    name = "Seku Amadu"
-    type = land
-    date="1836.1.1"
-    personality = charismatic
-    background = innovative_tactician
+	name = "Seku Amadu"
+	type = land
+	date="1836.1.1"
+	personality = charismatic
+	background = innovative_tactician
 }
 
 army = {
-    name = "Army of the Sultan of Sokoto"
-    location = 1948
-    regiment = {
-        name= "1.Fulbe"
-        type = cavalry
-        home = 1948
-    }
+	name = "Army of the Sultan of Sokoto"
+	location = 1948
+	regiment = {
+		name= "1.Fulbe"
+		type = cavalry
+		home = 1948
+	}
 
-    regiment = {
-        name= "2.Fulbe"
-        type = irregular
-        home = 1945
-    }
+	regiment = {
+		name= "2.Fulbe"
+		type = irregular
+		home = 1945
+	}
 
-    regiment = {
-        name= "3.Fulbe"
-        type = irregular
-        home = 1947
-    }
+	regiment = {
+		name= "3.Fulbe"
+		type = irregular
+		home = 1947
+	}
 
-    regiment = {
-        name= "6. Fulbe"
-        type = irregular
-        home = 1939
-    }
+	regiment = {
+		name= "6. Fulbe"
+		type = irregular
+		home = 1939
+	}
 
-    regiment = {
-        name= "7. Fulbe"
-        type = irregular
-        home = 1946
-    }
+	regiment = {
+		name= "7. Fulbe"
+		type = irregular
+		home = 1946
+	}
 
 }
 
 army = {
-    name = "Army of the Mossi"
-    location = 1901
+	name = "Army of the Mossi"
+	location = 1901
 regiment = {
-        name= "Mogho Naba's Cavalry"
-    type = cavalry
-        home = 1901    }
-
-
-regiment = {
-        name= "1st Mossi Warriors"
-        type = irregular
-
-home = 1902    }
-
-regiment = {
-        name= "Askiya's Cavalry"
-    type = cavalry
-        home = 1808    }
-
-
-    regiment = {
-        name= "Songhai Warriors"
-        type = irregular
-        home = 1809
-    }
+		name= "Mogho Naba's Cavalry"
+	type = cavalry
+		home = 1901	}
 
 
 regiment = {
-        name= "2nd Mossi Warriors"
-    type = irregular
-    home = 1903
-    }
-}
+		name= "1st Mossi Warriors"
+		type = irregular
+
+home = 1902	}
+
+regiment = {
+		name= "Askiya's Cavalry"
+	type = cavalry
+		home = 1808	}
 
 
-army = {
-    name = "Army of the Empire of Segu"
-    location = 1800
+	regiment = {
+		name= "Songhai Warriors"
+		type = irregular
+		home = 1809
+	}
 
-    regiment = {
-        name= "Guards of Segu"
-        type = irregular
-        home = 1800
-    }
 
-    regiment = {
-        name= "Guards of Segu"
-        type = irregular
-        home = 1800
-    }
-
-    regiment = {
-        name= "Bambara Warriors"
-        type = irregular
-        home = 1794
-    }
-
-    regiment = {
-        name= "Bambara Warriors"
-        type = irregular
-        home = 1799
-    }
+regiment = {
+		name= "2nd Mossi Warriors"
+	type = irregular
+	home = 1903
+	}
 }
 
 
 army = {
-    name = "Army of the Massina Jihad"
-    location = 1804
+	name = "Army of the Empire of Segu"
+	location = 1800
 
-    regiment = {
-        name= "Massina Cavalry"
-        type = cavalry
-        home = 1804
-    }
+	regiment = {
+		name= "Guards of Segu"
+		type = irregular
+		home = 1800
+	}
+
+	regiment = {
+		name= "Guards of Segu"
+		type = irregular
+		home = 1800
+	}
+
+	regiment = {
+		name= "Bambara Warriors"
+		type = irregular
+		home = 1794
+	}
+
+	regiment = {
+		name= "Bambara Warriors"
+		type = irregular
+		home = 1799
+	}
+}
 
 
-    regiment = {
-        name= "1st Massina Jihadis"
-        type = irregular
-        home = 1804
-    }
+army = {
+	name = "Army of the Massina Jihad"
+	location = 1804
+
+	regiment = {
+		name= "Massina Cavalry"
+		type = cavalry
+		home = 1804
+	}
 
 
-    regiment = {
-        name= "2nd Massina Jihadis"
-        type = irregular
-        home = 1803
-    }
+	regiment = {
+		name= "1st Massina Jihadis"
+		type = irregular
+		home = 1804
+	}
 
 
-    regiment = {
-        name= "3rd Massina Jihadis"
-        type = irregular
-        home = 1803
-    }
+	regiment = {
+		name= "2nd Massina Jihadis"
+		type = irregular
+		home = 1803
+	}
+
+
+	regiment = {
+		name= "3rd Massina Jihadis"
+		type = irregular
+		home = 1803
+	}
 }

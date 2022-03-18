@@ -1,69 +1,69 @@
 FRA = {
-    value = 50
+	value = 50
 }
 PEU = {
-    value = -100
+	value = -100
 }
 BRZ = {
-    value = -100
+	value = -100
 }
 USA = {
-    value = 25
+	value = 25
 }
 TEX = {
-    value = -25
+	value = -25
 }
 GEN = {
-    value = -75
+	value = -75
 }
 PIR = {
-    value = -100
+	value = -100
 }
 PAP = {
-    value = 50
+	value = 50
 }
 
 army = {
-    name = "Gardé Jésuite"
-    location = 2264
-    regiment = {
-        name= "1. Garde"
-        type = guard
-        home = 2247
-    }
+	name = "Gardé Jésuite"
+	location = 2264
+	regiment = {
+		name= "1. Garde"
+		type = guard
+		home = 2247
+	}
 
-    regiment = {
-        name= "2. Garde"
-        type = guard
-        home = 2252
-    }
+	regiment = {
+		name= "2. Garde"
+		type = guard
+		home = 2252
+	}
 
-    regiment = {
-        name= "3. Garde"
-        type = guard
-        home = 2254
-    }
+	regiment = {
+		name= "3. Garde"
+		type = guard
+		home = 2254
+	}
 	
-    regiment = {
-        name= "4. Garde"
-        type = guard
-        home = 2255
-    }
-    regiment = {
-        name= "5. Garde"
-        type = guard
-        home = 2256
-    }
-	    regiment = {
-        name= "6. Garde"
-        type = guard
-        home = 2264
-    }
-	    regiment = {
-        name= "7. Garde"
-        type = guard
-        home = 2267
-    }
+	regiment = {
+		name= "4. Garde"
+		type = guard
+		home = 2255
+	}
+	regiment = {
+		name= "5. Garde"
+		type = guard
+		home = 2256
+	}
+		regiment = {
+		name= "6. Garde"
+		type = guard
+		home = 2264
+	}
+		regiment = {
+		name= "7. Garde"
+		type = guard
+		home = 2267
+	}
 }
 
 leader = {
@@ -75,16 +75,16 @@ leader = {
 }
 
 navy = {
-    name = "Marine des Jèsuites"
-    location = 2276
+	name = "Marine des Jèsuites"
+	location = 2276
 
-    ship = {
-        name= "Saint Antoine"
-        type = frigate
-    }
+	ship = {
+		name= "Saint Antoine"
+		type = frigate
+	}
 
-    ship = {
-        name= "Navire de transport"
-        type = steam_transport
-    }
+	ship = {
+		name= "Navire de transport"
+		type = steam_transport
+	}
 }

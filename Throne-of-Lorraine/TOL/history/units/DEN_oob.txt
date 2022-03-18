@@ -1,362 +1,362 @@
 AUS = {
-    value = 55
+	value = 55
 }
 SWH = {
-    value = 200
+	value = 200
 }
 ENG = {
 
-    value = 125
+	value = 125
 }
 
 
 PRU = {
 
-    value = 0
+	value = 0
 
 }
 SWE = {
 
-    value = 100
+	value = 100
 }
 
 NOR = {
 
-    value = 200
+	value = 200
 
 }
 FRA = {
 
-    value = 85
+	value = 85
 }
 
 RUS = {
 
-    value = 150
+	value = 150
 }
 
 
 
 leader = {
 
-    name = "Olaf Rye"
+	name = "Olaf Rye"
 
-    picture = european_general_24
-    date = 1836.1.1
+	picture = european_general_24
+	date = 1836.1.1
 
-    type = land
+	type = land
 
-    personality = daring
+	personality = daring
 
-    background = adventurer
+	background = adventurer
 
-    prestige = 0.3
-    }
+	prestige = 0.3
+	}
 
 leader = {
-    name = "Thomas Konow"
-    date = 1821.1.1
-    type = sea
-    personality = audacious
-    background = uncommonly_young
-    prestige = 0.5
+	name = "Thomas Konow"
+	date = 1821.1.1
+	type = sea
+	personality = audacious
+	background = uncommonly_young
+	prestige = 0.5
 }
 
 leader = {
-    name = "Peter Caspar Wessel-Brown"
-    date = 1826.1.1
-    type = sea
-    personality = gallant
-    background = elderly
-    prestige = 0.3
+	name = "Peter Caspar Wessel-Brown"
+	date = 1826.1.1
+	type = sea
+	personality = gallant
+	background = elderly
+	prestige = 0.3
 }
 
 leader = {
-    name = "Jens Schow Fabricius"
-    date = 1821.1.1
-    type = sea
-    personality = persistant
-    background = elderly
-    prestige = 0.1
+	name = "Jens Schow Fabricius"
+	date = 1821.1.1
+	type = sea
+	personality = persistant
+	background = elderly
+	prestige = 0.1
 }
 
 leader = {
-    name = "Johan Henrich Spørck"
-    date = 1832.1.1
-    type = land
-    personality = expert
-    background = natural_born_leader
-    prestige = 0.5
+	name = "Johan Henrich Spørck"
+	date = 1832.1.1
+	type = land
+	personality = expert
+	background = natural_born_leader
+	prestige = 0.5
 }
 
 
 army = {
-    name = "Hæren"
-    location = 313
+	name = "Hæren"
+	location = 313
 
-    regiment = {
-        name= "1. Akershusiske brigade"
-        type = infantry
-        home = 313
-    }
+	regiment = {
+		name= "1. Akershusiske brigade"
+		type = infantry
+		home = 313
+	}
 
-    regiment = {
-        name= "2. Akershusiske brigade"
-        type = infantry
-        home = 313
-    }
+	regiment = {
+		name= "2. Akershusiske brigade"
+		type = infantry
+		home = 313
+	}
 
-    regiment = {
-        name= "1. Trondhjemske brigade"
-        type = infantry
-        home = 305
-    }
+	regiment = {
+		name= "1. Trondhjemske brigade"
+		type = infantry
+		home = 305
+	}
 
-    regiment = {
-        name= "1. Bergenhusiske brigade"
-        type = infantry
-        home = 309
-    }
+	regiment = {
+		name= "1. Bergenhusiske brigade"
+		type = infantry
+		home = 309
+	}
 
-    regiment = {
-        name= "1. Kristiansandske brigade"
-        type = infantry
-        home = 310
-    }
-    regiment = {
-        name= "1. Landvern"
-        type = guard
-        home = 3490
-    }
+	regiment = {
+		name= "1. Kristiansandske brigade"
+		type = infantry
+		home = 310
+	}
+	regiment = {
+		name= "1. Landvern"
+		type = guard
+		home = 3490
+	}
 
-    regiment = {
-        name= "1. Landvern"
-        type = guard
-        home = 312
-    }
+	regiment = {
+		name= "1. Landvern"
+		type = guard
+		home = 312
+	}
 
-    regiment = {
-        name= "1. Landvern"
-        type = guard
-        home = 312
-    }
+	regiment = {
+		name= "1. Landvern"
+		type = guard
+		home = 312
+	}
 
 }
 
 navy = {
-    name = "Den Norske Marine"
-    location = 312
+	name = "Den Norske Marine"
+	location = 312
 
 
-    ship = {
-        name= "Freia"
-        type = frigate
-    }
+	ship = {
+		name= "Freia"
+		type = frigate
+	}
 
-    ship = {
-        name= "Fredriksværn"
-        type = frigate
-    }
+	ship = {
+		name= "Fredriksværn"
+		type = frigate
+	}
 
-    ship = {
-        name= "Alsen"
-        type = frigate
-    }
+	ship = {
+		name= "Alsen"
+		type = frigate
+	}
 
-    ship = {
-        name= "SamsÃ¸e"
-        type = frigate
-    }
+	ship = {
+		name= "SamsÃ¸e"
+		type = frigate
+	}
 	
-    ship = {
-        name= "Kiel"
-        type = frigate
-    }
+	ship = {
+		name= "Kiel"
+		type = frigate
+	}
 
-    ship = {
-        name= "Allert"
-        type = frigate
-    }
+	ship = {
+		name= "Allert"
+		type = frigate
+	}
 	
-    ship = {
-        name= "Seagull"
-        type = frigate
-    }
+	ship = {
+		name= "Seagull"
+		type = frigate
+	}
 	
-    ship = {
-        name= "Seagull"
-        type = frigate
-    }
+	ship = {
+		name= "Seagull"
+		type = frigate
+	}
 
 
-    ship = {
-        name= "1st Transport Flotilla"
-        type = clipper_transport
-    }
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
 
-    ship = {
-        name= "2nd Transport Flotilla"
-        type = clipper_transport
-    }
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
 
-    ship = {
-        name= "3rd Transport Flotilla"
-        type = clipper_transport
-    }
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
 
-    ship = {
-        name= "4st Transport Flotilla"
-        type = clipper_transport
-    }
+	ship = {
+		name= "4st Transport Flotilla"
+		type = clipper_transport
+	}
 
-    ship = {
-        name= "5nd Transport Flotilla"
-        type = clipper_transport
-    }
+	ship = {
+		name= "5nd Transport Flotilla"
+		type = clipper_transport
+	}
 }
 
 
 leader = {
 
-    name = "Frederik af Hessen-Kassel"
+	name = "Frederik af Hessen-Kassel"
 
-    picture = european_general_2
-    date = 1805.1.1
+	picture = european_general_2
+	date = 1805.1.1
 
-    type = land
+	type = land
 
-    personality = au_fait
-    background = aristocrat
-    prestige = 0.2
+	personality = au_fait
+	background = aristocrat
+	prestige = 0.2
 }
 
 
 leader = {
-    name = "Christian Julius de Meza"
+	name = "Christian Julius de Meza"
 
-    picture = european_general_17
-    date = 1836.1.1
+	picture = european_general_17
+	date = 1836.1.1
 
-    type = land
+	type = land
 
-    personality = defiant
-    background = eccentric_genius
-    prestige = 0.4
-}
-
-
-leader = {
-
-    name = "Christoph von Krogh"
-
-    picture = european_general_30
-    date = 1836.1.1
-
-    type = land
-
-    personality = chivalrous
-    background = disgraced
-
-    prestige = 0.3
-}
-
-leader = {
-
-    name = "Friderich Adolph Schleppegrell"
-
-    picture = european_general_50
-    date = 1836.1.1
-
-    type = land
-
-    personality = heroic
-
-    background = nationalist
-    prestige = 0.3
+	personality = defiant
+	background = eccentric_genius
+	prestige = 0.4
 }
 
 
 leader = {
 
-    name = "Frederik Rubeck Henrik Bülow"
+	name = "Christoph von Krogh"
 
-    picture = european_general_16
-    date = 1836.1.1
-    type = land
+	picture = european_general_30
+	date = 1836.1.1
 
-    personality = resolute
-    background = school_of_the_bayonet
-    prestige = 0.3
+	type = land
+
+	personality = chivalrous
+	background = disgraced
+
+	prestige = 0.3
 }
 
 leader = {
 
-    name = "Hans Hedemann"
+	name = "Friderich Adolph Schleppegrell"
 
-    picture = european_general_15
-    date = 1836.1.1
-    type = land
+	picture = european_general_50
+	date = 1836.1.1
 
-    personality = calm
-    background = school_of_firepower
-    prestige = 0.3
-}
+	type = land
 
-leader = {
+	personality = heroic
 
-    name = "Anton Frederik Tscherning"
-
-    picture = european_general_12
-    date = 1836.1.1
-    type = land
-
-    personality = unruly
-    background = gifted_administrator
-    prestige = 0.3
-}
-
-leader = {
-
-    name = "Edouard Suenson"
-
-    picture = european_general_51
-    date = 1836.1.1
-
-    type = sea
-
-    personality = merciless
-    background = drillmaster
-    prestige = 0.3
+	background = nationalist
+	prestige = 0.3
 }
 
 
 leader = {
 
-    name = "Carl Edvard van Dockum"
+	name = "Frederik Rubeck Henrik Bülow"
 
-    picture = european_admiral_7
-    date = 1836.1.1
+	picture = european_general_16
+	date = 1836.1.1
+	type = land
 
-    type = sea
+	personality = resolute
+	background = school_of_the_bayonet
+	prestige = 0.3
+}
 
-    personality = imperious
-    background = adventurer
-    prestige = 0.3
+leader = {
+
+	name = "Hans Hedemann"
+
+	picture = european_general_15
+	date = 1836.1.1
+	type = land
+
+	personality = calm
+	background = school_of_firepower
+	prestige = 0.3
+}
+
+leader = {
+
+	name = "Anton Frederik Tscherning"
+
+	picture = european_general_12
+	date = 1836.1.1
+	type = land
+
+	personality = unruly
+	background = gifted_administrator
+	prestige = 0.3
+}
+
+leader = {
+
+	name = "Edouard Suenson"
+
+	picture = european_general_51
+	date = 1836.1.1
+
+	type = sea
+
+	personality = merciless
+	background = drillmaster
+	prestige = 0.3
 }
 
 
 leader = {
 
-    name = "Steen Andersen Bille"
+	name = "Carl Edvard van Dockum"
 
-    picture = european_admiral_0
-    date = 1836.1.1
+	picture = european_admiral_7
+	date = 1836.1.1
 
-    type = sea
+	type = sea
 
-    personality = vicious
-    background = aristocrat
-    prestige = 0.3
+	personality = imperious
+	background = adventurer
+	prestige = 0.3
+}
+
+
+leader = {
+
+	name = "Steen Andersen Bille"
+
+	picture = european_admiral_0
+	date = 1836.1.1
+
+	type = sea
+
+	personality = vicious
+	background = aristocrat
+	prestige = 0.3
 }
 
 
@@ -364,90 +364,90 @@ leader = {
 
 army = {
 
-    name = "Danske Haeren"
+	name = "Danske Haeren"
 
-    location = 372
+	location = 372
 
-    regiment = {
+	regiment = {
 
-        name= "1.1. Infanteridivision"
+		name= "1.1. Infanteridivision"
 
-        type = infantry
+		type = infantry
 
-        home = 372
+		home = 372
 
-    }
-
-
-
-    regiment = {
-
-        name= "2.1. Infanteridivision"
-
-        type = infantry
-
-        home = 372
-
-    }
+	}
 
 
 
-    regiment = {
+	regiment = {
 
-        name= "3.1. Infanteridivision"
+		name= "2.1. Infanteridivision"
 
-        type = infantry
+		type = infantry
 
-        home = 372
+		home = 372
 
-    }
-
-
-
-    regiment = {
-
-        name= "1.2. Infanteridivision"
-
-        type = infantry
-
-        home = 366
-
-    }
+	}
 
 
 
-    regiment = {
+	regiment = {
 
-        name= "2.2. Infanteridivision"
+		name= "3.1. Infanteridivision"
 
-        type = infantry
+		type = infantry
 
-        home = 366
+		home = 372
 
-    }
-
-
-
-    regiment = {
-
-        name= "3.2. Infanteridivision"
-
-        type = infantry
-
-        home = 366
-
-    }
+	}
 
 
 
-    regiment = {
+	regiment = {
 
-        name= "1.1. Kavalleridivision"
+		name= "1.2. Infanteridivision"
 
-        type = dragoon
+		type = infantry
 
-        home = 373
-    }
+		home = 366
+
+	}
+
+
+
+	regiment = {
+
+		name= "2.2. Infanteridivision"
+
+		type = infantry
+
+		home = 366
+
+	}
+
+
+
+	regiment = {
+
+		name= "3.2. Infanteridivision"
+
+		type = infantry
+
+		home = 366
+
+	}
+
+
+
+	regiment = {
+
+		name= "1.1. Kavalleridivision"
+
+		type = dragoon
+
+		home = 373
+	}
 
 
 }
@@ -456,177 +456,177 @@ army = {
 
 navy = {
 
-    name = "Royal Navy"
+	name = "Royal Navy"
 
-    location = 372
+	location = 372
 
-    ship = {
+	ship = {
 
-        name= "Danmark"
+		name= "Danmark"
 
-        type = manowar
+		type = manowar
 
-    }
+	}
 
 
 
-    ship = {
+	ship = {
 
-        name= "Dronning Marie"
+		name= "Dronning Marie"
 
-        type = manowar
+		type = manowar
 
-    }
+	}
 
 
 
 
 
-    ship = {
+	ship = {
 
-        name= "Valdemar"
+		name= "Valdemar"
 
-        type = manowar
+		type = manowar
 
-    }
+	}
 
 
 
-    ship = {
+	ship = {
 
-        name= "Frederik den Siette"
+		name= "Frederik den Siette"
 
-        type = manowar
+		type = manowar
 
-    }
+	}
 
 
 
 
 
-    ship = {
+	ship = {
 
-        name= "Skiold"
+		name= "Skiold"
 
-        type = manowar
+		type = manowar
 
-    }
+	}
 
 
 
 
 
-    ship = {
+	ship = {
 
-        name= "Diana"
+		name= "Diana"
 
-        type = frigate
-    }
+		type = frigate
+	}
 
 
 
 
 
-    ship = {
+	ship = {
 
-        name= "Nymphen"
+		name= "Nymphen"
 
-        type = frigate
-    }
+		type = frigate
+	}
 
 
 
 
 
-    ship = {
+	ship = {
 
-        name= "Freya"
+		name= "Freya"
 
-        type = frigate
-    }
+		type = frigate
+	}
 
 
 
-    ship = {
+	ship = {
 
-        name= "Havfruen"
+		name= "Havfruen"
 
-        type = frigate
-    }
+		type = frigate
+	}
 
 
 
 
 
-    ship = {
+	ship = {
 
-        name= "Bellona"
+		name= "Bellona"
 
-        type = frigate
-    }
+		type = frigate
+	}
 
 
 
 
 
-    ship = {
+	ship = {
 
-        name= "Rota"
+		name= "Rota"
 
-        type = frigate
-    }
+		type = frigate
+	}
 
 
 
-    ship = {
+	ship = {
 
-        name= "Fylla"
+		name= "Fylla"
 
-        type = frigate
-    }
+		type = frigate
+	}
 
 
 
 
 
-    ship = {
+	ship = {
 
-        name= "Kiel"
+		name= "Kiel"
 
-        type = commerce_raider
-    }
+		type = commerce_raider
+	}
 
 
 
 
 
 
-    ship = {
+	ship = {
 
-        name= "1st Transport Flotilla"
+		name= "1st Transport Flotilla"
 
-        type = clipper_transport
+		type = clipper_transport
 
-    }
+	}
 
 
 
-    ship = {
+	ship = {
 
-        name= "2nd Transport Flotilla"
+		name= "2nd Transport Flotilla"
 
-        type = clipper_transport
+		type = clipper_transport
 
-    }
+	}
 
 
 
-    ship = {
-        name= "3rd Transport Flotilla"
+	ship = {
+		name= "3rd Transport Flotilla"
 
-        type = clipper_transport
+		type = clipper_transport
 
-    }
+	}
 
 
 

@@ -1,28 +1,28 @@
 name = "War for Sicily"
 
 1835.10.2 = {
-    add_attacker = GEN
-    add_defender = SYC
+	add_attacker = GEN
+	add_defender = SYC
 
-    # actor
-    # receiver
-    # casus_belli - cb type
-    # country - 3rd party
-    # state_province_id - target state capital
-    war_goal = {
-        casus_belli = conquest
-        actor = GEN
-        receiver = SYC
-    }
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
 	war_goal = {
-        casus_belli = become_independent
-        actor = SYC
-        receiver = GEN
-    }
+		casus_belli = conquest
+		actor = GEN
+		receiver = SYC
+	}
+	war_goal = {
+		casus_belli = become_independent
+		actor = SYC
+		receiver = GEN
+	}
 
 }
 
 1837.4.21 = {
-    rem_attacker = GEN
-    rem_defender = SYC
+	rem_attacker = GEN
+	rem_defender = SYC
 }

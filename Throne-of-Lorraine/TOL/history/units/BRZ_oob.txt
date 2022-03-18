@@ -1,130 +1,130 @@
 PBC = {
-    value = -50
+	value = -50
 }
 
 CLM = {
-    value = 150
+	value = 150
 }
 
 JES = {
-    value = -100
+	value = -100
 }
 
 PIR = {
-    value = -50
+	value = -50
 }
 
 FRA = {value = -50}
 
 army = {
-    name = "Army of the Parliament"
-    location = 2447
-    regiment = {
-        name= "Spring River Guards"
-        type = infantry
-        home = 2447
-    }
+	name = "Army of the Parliament"
+	location = 2447
+	regiment = {
+		name= "Spring River Guards"
+		type = infantry
+		home = 2447
+	}
 
-    regiment = {
-        name= "Gold Mountain Rifles"
-        type = infantry
-        home = 2450
-    }
+	regiment = {
+		name= "Gold Mountain Rifles"
+		type = infantry
+		home = 2450
+	}
 
-    regiment = {
-        name= "Northeast Steppe Sentinels"
-        type = infantry
-        home = 2436
-    }
+	regiment = {
+		name= "Northeast Steppe Sentinels"
+		type = infantry
+		home = 2436
+	}
 
-    regiment = {
-        name= "Saint Andrew's Regiment"
-        type = infantry
-        home = 2447
-    }
+	regiment = {
+		name= "Saint Andrew's Regiment"
+		type = infantry
+		home = 2447
+	}
 
-    regiment = {
-        name= "Rabert Brus' Own"
-        type = infantry
-        home = 2457
-    }
+	regiment = {
+		name= "Rabert Brus' Own"
+		type = infantry
+		home = 2457
+	}
 
-    regiment = {
-        name= "New Scotland Pioneers"
-        type = infantry
-        home = 2441
-    }
+	regiment = {
+		name= "New Scotland Pioneers"
+		type = infantry
+		home = 2441
+	}
 
-    regiment = {
-        name= "Sons of the Forest"
-        type = infantry
-        home = 2441
-    }
+	regiment = {
+		name= "Sons of the Forest"
+		type = infantry
+		home = 2441
+	}
 
 
 }
 
 leader = {
-    name = "Nevin Clark"
-    date = 1830.1.1
-    type = land
-    personality = brash
-    background = butcher
-    prestige = 0.1
+	name = "Nevin Clark"
+	date = 1830.1.1
+	type = land
+	personality = brash
+	background = butcher
+	prestige = 0.1
 }
 
 leader = {
-    name = "Lachlan Morrison"
-    picture = southamerican_general_6
-    date = 1836.1.1
-    type = land
-    personality = gutsy
-    background = war_college
-    prestige = 0.1
+	name = "Lachlan Morrison"
+	picture = southamerican_general_6
+	date = 1836.1.1
+	type = land
+	personality = gutsy
+	background = war_college
+	prestige = 0.1
 }
 
 leader = {
-    name = "Rory Young"
-    picture = european_admiral_0
-    date = 1830.1.1
-    type = sea
-    personality = tactful
-    background = nationalist
+	name = "Rory Young"
+	picture = european_admiral_0
+	date = 1830.1.1
+	type = sea
+	personality = tactful
+	background = nationalist
 }
 
 navy = {
-    name = "Sgiruri Navy"
-    location = 2447
+	name = "Sgiruri Navy"
+	location = 2447
 
-    ship = {
-        name = "Triumphant"
-        type = frigate
-    }
+	ship = {
+		name = "Triumphant"
+		type = frigate
+	}
 
-    ship = {
-        name = "Concordant"
-        type = frigate
-    }
+	ship = {
+		name = "Concordant"
+		type = frigate
+	}
 
-    ship = {
-        name = "Suppliant"
-        type = frigate
-    }
+	ship = {
+		name = "Suppliant"
+		type = frigate
+	}
 
-    ship = {
-        name = "Reliant"
-        type = frigate
-    }
+	ship = {
+		name = "Reliant"
+		type = frigate
+	}
 
-    ship = {
-        name = "Hannibal"
-        type = clipper_transport
-    }
+	ship = {
+		name = "Hannibal"
+		type = clipper_transport
+	}
 
 
-    ship = {
-        name = "Scipio"
-        type = clipper_transport
-    }
+	ship = {
+		name = "Scipio"
+		type = clipper_transport
+	}
 
 }

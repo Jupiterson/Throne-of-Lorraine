@@ -5,55 +5,55 @@ USA = { value = 0 }
 RUS = { value = 75 }
 
 leader = {
-    name = "Kyogoku Nariaki"
-    date = 1836.1.1
-    type = land
-    personality = disciplined
-    background = old_school
-    prestige = 0.1
+	name = "Kyogoku Nariaki"
+	date = 1836.1.1
+	type = land
+	personality = disciplined
+	background = old_school
+	prestige = 0.1
  }
 
 army = {
-    name = "Army of the Shogunate"
-    location = 1640
-    regiment = {
-        name= "1.Samurai"
-        type = cavalry
-        home = 1640
-    }
+	name = "Army of the Shogunate"
+	location = 1640
 	regiment = {
-        name= "2.Samurai"
-        type = cavalry
-        home = 1645
-    }
+		name= "1.Samurai"
+		type = cavalry
+		home = 1640
+	}
 	regiment = {
-        name= "3.Samurai"
-        type = cavalry
-        home = 1659
-    }
-    regiment = {
-        name= "1.Choshu"
-        type = irregular
-        home = 1641
-    }
-    regiment = {
-        name= "2.Choshu"
-        type = irregular
-        home = 1639
-    }
-    regiment = {
-        name= "3.Choshu"
-        type = irregular
-        home = 1638
-    }
+		name= "2.Samurai"
+		type = cavalry
+		home = 1645
+	}
+	regiment = {
+		name= "3.Samurai"
+		type = cavalry
+		home = 1659
+	}
+	regiment = {
+		name= "1.Choshu"
+		type = irregular
+		home = 1641
+	}
+	regiment = {
+		name= "2.Choshu"
+		type = irregular
+		home = 1639
+	}
+	regiment = {
+		name= "3.Choshu"
+		type = irregular
+		home = 1638
+	}
 }
 
 navy = {
-    name = "Imperial Fleet"
-    location = 1657
-    ship = {
-        name= "1 Yusosentai"
-        type = clipper_transport
-    }
+	name = "Imperial Fleet"
+	location = 1657
+	ship = {
+		name= "1 Yusosentai"
+		type = clipper_transport
+	}
 
 }

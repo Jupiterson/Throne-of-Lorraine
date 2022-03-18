@@ -10,143 +10,143 @@ RUS = { value = -50}
 
 #Army
 army = {
-    name = "Ejército del Centro"
-    location = 487
-    regiment = {
-        name= "1. Brigada Real de Infantería"
-        type = infantry
-        home = 487
-    }
+	name = "Ejército del Centro"
+	location = 487
+	regiment = {
+		name= "1. Brigada Real de Infantería"
+		type = infantry
+		home = 487
+	}
 
-    regiment = {
-        name= "2. Brigada Real de Infantería"
-        type = infantry
-        home = 489
-    }
+	regiment = {
+		name= "2. Brigada Real de Infantería"
+		type = infantry
+		home = 489
+	}
 
-    regiment = {
-        name= "3. Brigada Real de Infantería"
-        type = infantry
-        home = 503
-    }
+	regiment = {
+		name= "3. Brigada Real de Infantería"
+		type = infantry
+		home = 503
+	}
 
-    regiment = {
-        name= "4. Brigada Real de Infantería"
-        type = infantry
-        home = 508
-    }
+	regiment = {
+		name= "4. Brigada Real de Infantería"
+		type = infantry
+		home = 508
+	}
 
-    regiment = {
-        name= "5. Brigada Real de Infantería"
-        type = infantry
-        home = 508
-    }
+	regiment = {
+		name= "5. Brigada Real de Infantería"
+		type = infantry
+		home = 508
+	}
 
-    regiment = {
-        name= "1. Brigada de Artillería"
-        type = artillery
-        home = 510
-    }
+	regiment = {
+		name= "1. Brigada de Artillería"
+		type = artillery
+		home = 510
+	}
 
-    regiment = {
-        name= "2. Brigada de Artillería"
-        type = artillery
-        home = 510
-    }
+	regiment = {
+		name= "2. Brigada de Artillería"
+		type = artillery
+		home = 510
+	}
 
-    regiment = {
-        name= "3. Brigada de Artillería"
-        type = artillery
-        home = 511
-    }
+	regiment = {
+		name= "3. Brigada de Artillería"
+		type = artillery
+		home = 511
+	}
 	
 	regiment = {
-        name= "4. Brigada de Artillería"
-        type = artillery
-        home = 488
-    }
+		name= "4. Brigada de Artillería"
+		type = artillery
+		home = 488
+	}
 	
 	regiment = {
-        name= "5. Brigada de Artillería"
-        type = artillery
-        home = 490
-    }
+		name= "5. Brigada de Artillería"
+		type = artillery
+		home = 490
+	}
 	
 	regiment = {
-        name= "1. Brigada de Hussar"
-        type = hussar
-        home = 509
-    }
+		name= "1. Brigada de Hussar"
+		type = hussar
+		home = 509
+	}
 	
 	regiment = {
-        name= "2. Brigada de Hussar"
-        type = hussar
-        home = 512
-    }
+		name= "2. Brigada de Hussar"
+		type = hussar
+		home = 512
+	}
 }
 
 navy = {
-    name = "Marina de Castilla"
-    location = 511
+	name = "Marina de Castilla"
+	location = 511
 
-    ship = {
-        name = "Victoria"
-        type = frigate
-    }
+	ship = {
+		name = "Victoria"
+		type = frigate
+	}
 
-    ship = {
-        name = "Nuestra Señora del Patrocinio"
-        type = frigate
-    }
+	ship = {
+		name = "Nuestra Señora del Patrocinio"
+		type = frigate
+	}
 
-    ship = {
-        name= "1a Flotilla de Transporte"
-        type = clipper_transport
-    }
+	ship = {
+		name= "1a Flotilla de Transporte"
+		type = clipper_transport
+	}
 
-    ship = {
-        name= "2a Flotilla de Transporte"
-        type = clipper_transport
-    }
+	ship = {
+		name= "2a Flotilla de Transporte"
+		type = clipper_transport
+	}
 
-    ship = {
-        name= "3a Flotilla de Transporte"
-        type = clipper_transport
-    }
+	ship = {
+		name= "3a Flotilla de Transporte"
+		type = clipper_transport
+	}
 }
 
 leader = {
-    name = "Francisco Serrano"
-    date = 1833.1.1
-    type = land
-    personality = expert
-    background = war_college
-    prestige = 0.0
+	name = "Francisco Serrano"
+	date = 1833.1.1
+	type = land
+	personality = expert
+	background = war_college
+	prestige = 0.0
 }
 
 leader = {
-    name = "Gerónimo Valdés"
-    date = 1836.1.1
-    type = land
-    personality = competent
-    background = generals_aide
-    prestige = 0.0
+	name = "Gerónimo Valdés"
+	date = 1836.1.1
+	type = land
+	personality = competent
+	background = generals_aide
+	prestige = 0.0
 }
 
 leader = {
-    name = "Van Halen"
-    date = 1823.1.1
-    type = land
-    personality = merciless
-    background = adventurer
-    prestige = 0.1
+	name = "Van Halen"
+	date = 1823.1.1
+	type = land
+	personality = merciless
+	background = adventurer
+	prestige = 0.1
 }
 
 leader = {
-    name = "José Ramón Rodil"
-    date = 1824.1.1
-    type = land
-    personality = merciless
-    background = adventurer
-    prestige = 0.1
+	name = "José Ramón Rodil"
+	date = 1824.1.1
+	type = land
+	personality = merciless
+	background = adventurer
+	prestige = 0.1
 }

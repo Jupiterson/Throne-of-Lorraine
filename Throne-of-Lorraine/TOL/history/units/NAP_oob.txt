@@ -2,97 +2,97 @@
 FRA = {value = -100}
 
 leader = {
-    name = "Leopoldo di Borbone"
-    date = 1809.1.1
-    type = land
-    personality = calm
-    background = aristocrat
-    prestige = 0.3
+	name = "Leopoldo di Borbone"
+	date = 1809.1.1
+	type = land
+	personality = calm
+	background = aristocrat
+	prestige = 0.3
 }
 
 leader = {
-    name = "Paolo Ruffo"
-    date = 1836.1.1
-    type = land
-    personality = diplomatic
-    background = generals_aide
+	name = "Paolo Ruffo"
+	date = 1836.1.1
+	type = land
+	personality = diplomatic
+	background = generals_aide
 }
 
 leader = {
-    name = "Ferdinando II"
-    date = 1820.1.1
-    type = land
-    personality = bigoted
-    background = gifted_administrator
-    prestige = 0.5
+	name = "Ferdinando II"
+	date = 1820.1.1
+	type = land
+	personality = bigoted
+	background = gifted_administrator
+	prestige = 0.5
 }
 
 army = {
-    name = "Esercito genovese"
-    location = 754
-    regiment = {
-        name= "1. Fanteria di Linea"
-        type = infantry
-        home = 754
-    }
+	name = "Esercito genovese"
+	location = 754
+	regiment = {
+		name= "1. Fanteria di Linea"
+		type = infantry
+		home = 754
+	}
 
-    regiment = {
-        name= "2. Fanteria di Linea"
-        type = infantry
-        home = 755
-    }
+	regiment = {
+		name= "2. Fanteria di Linea"
+		type = infantry
+		home = 755
+	}
 
-    regiment = {
-        name= "3. Fanteria di Linea"
-        type = infantry
-        home = 2567
-    }
+	regiment = {
+		name= "3. Fanteria di Linea"
+		type = infantry
+		home = 2567
+	}
 
-    regiment = {
-        name= "4. Fanteria di Linea"
-        type = infantry
-        home = 757
-    }
-	    regiment = {
-        name= "5. Fanteria di Linea"
-        type = infantry
-        home = 758
-    }
+	regiment = {
+		name= "4. Fanteria di Linea"
+		type = infantry
+		home = 757
+	}
 		regiment = {
-        name= "6. Fanteria di Linea"
-        type = infantry
-        home = 3261
-    }
-	    regiment = {
-        name= "1. Artiglieria"
-        type = artillery
-        home = 753
-    }
+		name= "5. Fanteria di Linea"
+		type = infantry
+		home = 758
+	}
+		regiment = {
+		name= "6. Fanteria di Linea"
+		type = infantry
+		home = 3261
+	}
+		regiment = {
+		name= "1. Artiglieria"
+		type = artillery
+		home = 753
+	}
 
 }
 
 navy = {
-    name = "Flotta del napal"
-    location = 754
-    ship = {
-        name= "1. Grande nave"
-        type = manowar
-    }
-	    ship = {
-        name= "2. Grande nave"
-        type = manowar
-    }
-	    ship = {
-        name= "1st Transport Flotilla"
-        type = clipper_transport
-    }
+	name = "Flotta del napal"
+	location = 754
+	ship = {
+		name= "1. Grande nave"
+		type = manowar
+	}
+		ship = {
+		name= "2. Grande nave"
+		type = manowar
+	}
+		ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
 
 		ship = {
-        name= "2nd Transport Flotilla"
-        type = clipper_transport
-    }
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
 		ship = {
-        name= "3rd Transport Flotilla"
-        type = clipper_transport
-    }
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
 }

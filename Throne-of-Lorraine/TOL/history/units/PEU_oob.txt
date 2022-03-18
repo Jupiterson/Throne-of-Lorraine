@@ -1,199 +1,199 @@
 ECU = {
-    value = -100
+	value = -100
 }
 
 PIR = {
-    value = -50
+	value = -50
 }
 
 JES = {
-    value = -100
+	value = -100
 }
 
 FRA = {value = -20}
 
 leader = {
-    name = "Atahualpa Ninancoro"
-    type = land
-    date = 1836.1.1
-    personality = arrogant
-    background = old_school
+	name = "Atahualpa Ninancoro"
+	type = land
+	date = 1836.1.1
+	personality = arrogant
+	background = old_school
 }
 
 army = {
-    name = "Sapa Inca's Guard"
-    location = 2295
-    regiment = {
-        name= "Huk Qusqu"
-        type = infantry
-        home = 2295
-    }
+	name = "Sapa Inca's Guard"
+	location = 2295
+	regiment = {
+		name= "Huk Qusqu"
+		type = infantry
+		home = 2295
+	}
 
-    regiment = {
-        name= "Iskay Qusqu"
-        type = infantry
-        home = 2295
-    }
+	regiment = {
+		name= "Iskay Qusqu"
+		type = infantry
+		home = 2295
+	}
 
-    regiment = {
-        name= "Kimsa Qusqu"
-        type = infantry
-        home = 2302
-    }
-	    regiment = {
-        name= "Tawa Qusqu"
-        type = infantry
-        home = 2302
-    }
-	    regiment = {
-        name= "Pichqa Qusqu"
-        type = infantry
-        home = 2305
-    }
-	    regiment = {
-        name= "Suqta Qusqu"
-        type = infantry
-        home = 2308
-    }
+	regiment = {
+		name= "Kimsa Qusqu"
+		type = infantry
+		home = 2302
+	}
 		regiment = {
-        name= "Qanchis Qusqu"
-        type = infantry
-        home = 2297
-    }
+		name= "Tawa Qusqu"
+		type = infantry
+		home = 2302
+	}
 		regiment = {
-        name= "Pusaq Qusqu"
-        type = infantry
-        home = 2303
-    }
+		name= "Pichqa Qusqu"
+		type = infantry
+		home = 2305
+	}
+		regiment = {
+		name= "Suqta Qusqu"
+		type = infantry
+		home = 2308
+	}
+		regiment = {
+		name= "Qanchis Qusqu"
+		type = infantry
+		home = 2297
+	}
+		regiment = {
+		name= "Pusaq Qusqu"
+		type = infantry
+		home = 2303
+	}
 
 }
 
 army = {
-    name = "Army of Collasuyu"
-    location = 2324
-    regiment = {
-        name= "Huk Collasuyu Hatun"
-        type = artillery
-        home = 2324
-    }
+	name = "Army of Collasuyu"
+	location = 2324
+	regiment = {
+		name= "Huk Collasuyu Hatun"
+		type = artillery
+		home = 2324
+	}
 
-    regiment = {
-        name= "Huk Collasuyu"
-        type = infantry
-        home = 2324
-    }
+	regiment = {
+		name= "Huk Collasuyu"
+		type = infantry
+		home = 2324
+	}
 
-    regiment = {
-        name= "Iskay Collasuyu"
-        type = infantry
-        home = 2325
-    }
+	regiment = {
+		name= "Iskay Collasuyu"
+		type = infantry
+		home = 2325
+	}
 
-    regiment = {
-        name= "Kimsa Collasuyu"
-        type = infantry
-        home = 2328
-    }
+	regiment = {
+		name= "Kimsa Collasuyu"
+		type = infantry
+		home = 2328
+	}
 
-    regiment = {
-        name= "Huk Collasuyu Kawallu"
-        type = cuirassier
-        home = 2324
-    }
+	regiment = {
+		name= "Huk Collasuyu Kawallu"
+		type = cuirassier
+		home = 2324
+	}
 }
 
 navy = {
-    name = "Wamp'u runa Tawantinsuyu"
-    location = 2325
-    ship = {
-        name = "Ancka"
-        type = frigate
-    }
+	name = "Wamp'u runa Tawantinsuyu"
+	location = 2325
+	ship = {
+		name = "Ancka"
+		type = frigate
+	}
 
-    ship = {
-        name = "Irpa"
-        type = frigate
-    }
+	ship = {
+		name = "Irpa"
+		type = frigate
+	}
 
-    ship = {
-        name = "Kuntur"
-        type = frigate
-    }
+	ship = {
+		name = "Kuntur"
+		type = frigate
+	}
 
-    ship = {
-        name = "Hoatzin"
-        type = frigate
-    }
+	ship = {
+		name = "Hoatzin"
+		type = frigate
+	}
 
-    ship = {
-        name = "Palanta Pisqu"
-        type = frigate
-    }
+	ship = {
+		name = "Palanta Pisqu"
+		type = frigate
+	}
 
-    ship = {
-        name = "Huk transporte"
-        type = clipper_transport
-    }
+	ship = {
+		name = "Huk transporte"
+		type = clipper_transport
+	}
 
 
-    ship = {
-        name = "Iskay transporte"
-        type = clipper_transport
-    }
+	ship = {
+		name = "Iskay transporte"
+		type = clipper_transport
+	}
 
-    ship = {
-        name= "Pinsha"
-        type = frigate
-    }
+	ship = {
+		name= "Pinsha"
+		type = frigate
+	}
 
-    ship = {
-        name= "Ch'usiqa"
-        type = frigate
-    }
+	ship = {
+		name= "Ch'usiqa"
+		type = frigate
+	}
 }
 
 army = {
-    name = "Army of Antisuyu"
-    location = 2313 #Chuquisaca (Sucre)
-    regiment = {
-        name= "Huk Antisuyu"
-        type = infantry
-        home = 2313
-    }
+	name = "Army of Antisuyu"
+	location = 2313 #Chuquisaca (Sucre)
+	regiment = {
+		name= "Huk Antisuyu"
+		type = infantry
+		home = 2313
+	}
 
-    regiment = {
-        name= "Iskay Antisuyu"
-        type = infantry
-        home = 2310
-    }
+	regiment = {
+		name= "Iskay Antisuyu"
+		type = infantry
+		home = 2310
+	}
 
-    regiment = {
-        name= "Kimsa Antisuyu"
-        type = infantry
-        home = 2311
-    }
+	regiment = {
+		name= "Kimsa Antisuyu"
+		type = infantry
+		home = 2311
+	}
 }
 
 
 army = {
-    name = "Army of Chinchansuyu"
-    location = 2279
-    regiment = {
-        name= "Huk Chinchansuyu"
-        type = infantry
-        home = 2279
-    }
+	name = "Army of Chinchansuyu"
+	location = 2279
+	regiment = {
+		name= "Huk Chinchansuyu"
+		type = infantry
+		home = 2279
+	}
 
-    regiment = {
-        name= "Iskay Chinchansuyu"
-        type = infantry
-        home = 2279
-    }
+	regiment = {
+		name= "Iskay Chinchansuyu"
+		type = infantry
+		home = 2279
+	}
 
-    regiment = {
-        name= "Kimsa Chinchansuyu"
-        type = infantry
-        home = 2283
-    }
+	regiment = {
+		name= "Kimsa Chinchansuyu"
+		type = infantry
+		home = 2283
+	}
 
 }

@@ -1,128 +1,128 @@
 
 FRA = {value = -20}
 MEX = {
-    value = -100
+	value = -100
 }
 
 leader = {
-    name = "Piarres Texcoyo"
-    type = sea
-    date="1820.1.1"
-    personality = bastard
-    background = no_background
+	name = "Piarres Texcoyo"
+	type = sea
+	date="1820.1.1"
+	personality = bastard
+	background = no_background
 }
 
 leader = {
-    name = "Martin Huicton"
-    type = land
-    date="1836.1.1"
-    personality = heroic
-    background = politician
+	name = "Martin Huicton"
+	type = land
+	date="1836.1.1"
+	personality = heroic
+	background = politician
 }
 
 leader = {
-    name = "Zentulo Cuatemoc"
-    type = land
-    date="1836.1.1"
-    personality = skilled
-    background = war_college
+	name = "Zentulo Cuatemoc"
+	type = land
+	date="1836.1.1"
+	personality = skilled
+	background = war_college
 }
 
 leader = {
-    name = "Obeko Xocoyol"
-    type = land
-    date="1836.1.1"
-    personality = skilled
-    background = elderly
+	name = "Obeko Xocoyol"
+	type = land
+	date="1836.1.1"
+	personality = skilled
+	background = elderly
 }
 
 leader = {
-    name = "Rodrigo Cacamatzin"
-    type = land
-    date="1836.1.1"
-    personality = soldierly
-    background = exranker
+	name = "Rodrigo Cacamatzin"
+	type = land
+	date="1836.1.1"
+	personality = soldierly
+	background = exranker
 }
 
 army = {
-    name = "Oaxacako Bakegileak "
-    location = 2177
+	name = "Oaxacako Bakegileak "
+	location = 2177
 
-    regiment = {
-        name= "Bat Oaxaca eta Tlaxcala"
-        type = infantry
-        home = 2177
-    }
+	regiment = {
+		name= "Bat Oaxaca eta Tlaxcala"
+		type = infantry
+		home = 2177
+	}
 
-    regiment = {
-        name= "Bi Oaxaca eta Tlaxcala"
-        type = infantry
-        home = 2173
-    }
+	regiment = {
+		name= "Bi Oaxaca eta Tlaxcala"
+		type = infantry
+		home = 2173
+	}
 
-    regiment = {
-        name= "Hiru Oaxaca eta Tlaxcala"
-        type = infantry
-        home = 2167
-    }
+	regiment = {
+		name= "Hiru Oaxaca eta Tlaxcala"
+		type = infantry
+		home = 2167
+	}
 
 }
 
 army = {
-    name = "Irunea Berriko Armada"
-    location = 2172
-    regiment = {
-        name= "Bat Dibisioa Moctezuma"
-        type = infantry
-        home = 2176
-    }
+	name = "Irunea Berriko Armada"
+	location = 2172
+	regiment = {
+		name= "Bat Dibisioa Moctezuma"
+		type = infantry
+		home = 2176
+	}
 
-    regiment = {
-        name= "Bi Dibisioa Ilhuicamina"
-        type = infantry
-        home = 2159
-    }
+	regiment = {
+		name= "Bi Dibisioa Ilhuicamina"
+		type = infantry
+		home = 2159
+	}
 
-    regiment = {
-        name= "Hiru Dibisioa Xochiquentzin"
-        type = infantry
-        home = 2174
-    }
+	regiment = {
+		name= "Hiru Dibisioa Xochiquentzin"
+		type = infantry
+		home = 2174
+	}
 	
-	    regiment = {
-        name= "Lau Dibisioa Eyahue"
-        type = infantry
-        home = 2174
-    }
+		regiment = {
+		name= "Lau Dibisioa Eyahue"
+		type = infantry
+		home = 2174
+	}
 
 }
 
 navy = {
-    name = "Itsas Armada de Nafarroa Berria"
-    location = 2184
-    ship = {
-        name= "Irunea Berria"
-        type = frigate
-    }
-    ship = {
-        name= "Miarritze Berria"
-        type = frigate
-    }
-    ship = {
-        name= "Bilbo Berria"
-        type = frigate
-    }
-    ship = {
-        name= "Hondarribia Berria"
-        type = frigate
-    }
-    ship = {
-        name= "Zarautz Berria"
-        type = frigate
-    }
-    ship = {
-        name= "Bermeo Berria"
-        type = frigate
-    }
+	name = "Itsas Armada de Nafarroa Berria"
+	location = 2184
+	ship = {
+		name= "Irunea Berria"
+		type = frigate
+	}
+	ship = {
+		name= "Miarritze Berria"
+		type = frigate
+	}
+	ship = {
+		name= "Bilbo Berria"
+		type = frigate
+	}
+	ship = {
+		name= "Hondarribia Berria"
+		type = frigate
+	}
+	ship = {
+		name= "Zarautz Berria"
+		type = frigate
+	}
+	ship = {
+		name= "Bermeo Berria"
+		type = frigate
+	}
 
 }

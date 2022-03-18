@@ -2,83 +2,83 @@ FRA = {value = -20}
 
 
 leader = {
-    name = "Alvar Arana"
-    date = 1836.1.1
-    type = land
-    personality = gallant
-    background = generals_aide
-    prestige = 0.3
+	name = "Alvar Arana"
+	date = 1836.1.1
+	type = land
+	personality = gallant
+	background = generals_aide
+	prestige = 0.3
 }
 
 leader = {
-    name = "Pelaio Zumalacarregui"
-    date = 1836.1.1
-    type = land
-    personality = efficient
-    background = aristocrat
-    prestige = 0.3
+	name = "Pelaio Zumalacarregui"
+	date = 1836.1.1
+	type = land
+	personality = efficient
+	background = aristocrat
+	prestige = 0.3
 }
 
 leader = {
-    name = "Gontzal de Renteria"
-    date = 1836.1.1
-    type = sea
-    personality = skilled
-    background = nationalist
-    prestige = 0.2
+	name = "Gontzal de Renteria"
+	date = 1836.1.1
+	type = sea
+	personality = skilled
+	background = nationalist
+	prestige = 0.2
 }
 
 army = {
-    name = "Gudaroste den Afrika"
-    location = 1894
-    regiment = {
-        name= "1. Brigada Real de Infantería"
-        type = infantry
-        home = 1892
-    }
+	name = "Gudaroste den Afrika"
+	location = 1894
+	regiment = {
+		name= "1. Brigada Real de Infantería"
+		type = infantry
+		home = 1892
+	}
 
-    regiment = {
-        name= "2. Brigada Real de Infantería"
-        type = infantry
-        home = 1894
-    }
+	regiment = {
+		name= "2. Brigada Real de Infantería"
+		type = infantry
+		home = 1894
+	}
 	
 }
 
 army = {
-    name = "Gudaroste den Nafarroa"
-    location = 493
-    regiment = {
-        name= "Kanoia Lagundi"
-        type = artillery
-        home = 493
-    }
+	name = "Gudaroste den Nafarroa"
+	location = 493
+	regiment = {
+		name= "Kanoia Lagundi"
+		type = artillery
+		home = 493
+	}
 
-    regiment = {
-        name= "Done Jakue Zaldunak"
-        type = hussar
-        home = 3472
-    }
+	regiment = {
+		name= "Done Jakue Zaldunak"
+		type = hussar
+		home = 3472
+	}
 	
 }
 
 navy = {
-    name = "Babes Flota"
-    location = 3472
-    ship = {
-        name= "Iruna"
-        type = frigate
-    }
-    ship = {
-        name= "Baiun"
-        type = frigate
-    }
-    ship = {
-        name= "Aingerua"
-        type = clipper_transport
-    }
+	name = "Babes Flota"
+	location = 3472
 	ship = {
-        name= "Deabrua"
-        type = clipper_transport
-    }
+		name= "Iruna"
+		type = frigate
+	}
+	ship = {
+		name= "Baiun"
+		type = frigate
+	}
+	ship = {
+		name= "Aingerua"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Deabrua"
+		type = clipper_transport
+	}
 }

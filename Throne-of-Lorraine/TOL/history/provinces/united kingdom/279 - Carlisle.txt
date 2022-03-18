@@ -9,39 +9,39 @@ terrain = hills
 naval_base = 2
 railroad = 2
 
-    state_building = {
-        level = 1
-        building = luxury_furniture_factory
-        upgrade = yes
-    }
-    state_building = {
-        level = 2
-        building = machine_parts_factory
-        upgrade = yes
-    }
-    state_building = {
-        level = 2
-        building = steel_factory
-        upgrade = yes
-    }
-    state_building = {
-        level = 1
-        building = paper_mill
-        upgrade = yes
-    }
-    state_building = {
-        level = 1
-        building = regular_clothes_factory
-        upgrade = yes
-    }
+	state_building = {
+		level = 1
+		building = luxury_furniture_factory
+		upgrade = yes
+	}
+	state_building = {
+		level = 2
+		building = machine_parts_factory
+		upgrade = yes
+	}
+	state_building = {
+		level = 2
+		building = steel_factory
+		upgrade = yes
+	}
+	state_building = {
+		level = 1
+		building = paper_mill
+		upgrade = yes
+	}
+	state_building = {
+		level = 1
+		building = regular_clothes_factory
+		upgrade = yes
+	}
 
 party_loyalty = {
-    ideology = liberal
-    loyalty_value = 10
+	ideology = liberal
+	loyalty_value = 10
 }
 party_loyalty = {
-    ideology = conservative
-    loyalty_value = 20
+	ideology = conservative
+	loyalty_value = 20
 }
 1861.1.1 = { railroad = 3 }
 
