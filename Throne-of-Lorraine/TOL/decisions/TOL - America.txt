@@ -1,73 +1,73 @@
 political_decisions = {
-    colonize_kannata_aki = {
-        picture = form_the_rcmp
-        potential = {
-            tag = AKI
-            NOT = { has_country_flag = kanatta }
+	colonize_kannata_aki = {
+		picture = form_the_rcmp
+		potential = {
+			tag = AKI
+			NOT = { has_country_flag = kanatta }
 			is_vassal = no
-        }
+		}
 
-        allow = {
-            war = no			
+		allow = {
+			war = no			
 			empiricism = 1
 			state_n_government = 1
 			prestige = 30
-        }
+		}
 
-        effect = {
-            set_country_flag = kanatta
+		effect = {
+			set_country_flag = kanatta
 			9 = { add_core = AKI }
 			2626 = { add_core = AKI }
 			2593 = { add_core = AKI }
 			37 = { add_core = AKI }
 			2595 = { add_core = AKI }
-            59 = { add_core = AKI }			
+			59 = { add_core = AKI }			
 			AKI = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
-    }
+		}
+	}
 	
 	claim_new_england = {
-        picture = german_tirol
-        potential = {
-            tag = USA
-            NOT = { has_country_flag = border_lands }
-        }
+		picture = german_tirol
+		potential = {
+			tag = USA
+			NOT = { has_country_flag = border_lands }
+		}
 
-        allow = {
-        nationalism_n_imperialism = 1 
-            all_core = {
-                owned_by = THIS
-            }
-     
-        }
+		allow = {
+		nationalism_n_imperialism = 1 
+			all_core = {
+				owned_by = THIS
+			}
+	 
+		}
 
-        effect = {
-         prestige = 5
-       badboy = 10
-       set_country_flag = border_lands 
-       USA_247 = { add_core = THIS }
+		effect = {
+		 prestige = 5
+	   badboy = 10
+	   set_country_flag = border_lands 
+	   USA_247 = { add_core = THIS }
 			
-        }
+		}
    }
 
    
 	colonize_kannata_vel = {
-        picture = form_the_rcmp
-        potential = {
-            tag = VEL
-            NOT = { has_country_flag = kanatta }
+		picture = form_the_rcmp
+		potential = {
+			tag = VEL
+			NOT = { has_country_flag = kanatta }
 			is_vassal = no
-        }
+		}
 
-        allow = {
-            war = no			
+		allow = {
+			war = no			
 			empiricism = 1
 			state_n_government = 1
 			prestige = 30
-        }
+		}
 
-        effect = {
-            set_country_flag = kanatta
+		effect = {
+			set_country_flag = kanatta
 			39 = { add_core = VEL }
 			38 = { add_core = VEL }
 			2596 = { add_core = VEL }
@@ -88,25 +88,25 @@ political_decisions = {
 			26 = { add_core = VEL }
 			27 = { add_core = VEL }			
 			VEL = { all_core = { limit = { empty = yes } secede_province = THIS } }
-        }
-    }
+		}
+	}
 	
 	claim_freiland = {
-        picture = german_tirol
-        potential = {
-            tag = MEX
-            NOT = { has_country_flag = border_lands }
-        }
+		picture = german_tirol
+		potential = {
+			tag = MEX
+			NOT = { has_country_flag = border_lands }
+		}
 
-        allow = {
-        nationalism_n_imperialism = 1 
-            all_core = {
-                owned_by = THIS
-            }
-     
-        }
+		allow = {
+		nationalism_n_imperialism = 1 
+			all_core = {
+				owned_by = THIS
+			}
+	 
+		}
 
-        effect = {
+		effect = {
 			prestige = 5
 			badboy = 10
 			set_country_flag = border_lands 
@@ -115,59 +115,59 @@ political_decisions = {
 			103 = { add_core = THIS }
 			2148 = { add_core = THIS }
 			MEX_100 = { add_core = THIS }
-        }
+		}
    }
 	
-	    #Afro Americans
-    NAF_revolt = {
-        picture = black_belt
-        potential = {
-            tag = TEX
-            ai = no
-            NOT = {
-                exists = NAF
-                has_country_flag = NAF_revolt
-            }
-            has_recently_lost_war = no
-            NOT = { relation = { who = USA value = 0 } }
+		#Afro Americans
+	NAF_revolt = {
+		picture = black_belt
+		potential = {
+			tag = TEX
+			ai = no
+			NOT = {
+				exists = NAF
+				has_country_flag = NAF_revolt
+			}
+			has_recently_lost_war = no
+			NOT = { relation = { who = USA value = 0 } }
 			NOT = { NAF = { all_core = { owned_by = THIS } } }
-        }
-        allow = {
-		    
-            money = 750000
-            USA = { average_militancy = 4 }
-            NOT = { alliance_with = USA }
+		}
+		allow = {
+			
+			money = 750000
+			USA = { average_militancy = 4 }
+			NOT = { alliance_with = USA }
 			is_greater_power = yes
-        }
-        effect = {
-            set_country_flag = NAF_revolt
-            money = -750000
-            USA = {
-                release = NAF
-                war = {
-                    target = NAF
-                    attacker_goal = { casus_belli = civil_war }
-                    defender_goal = { casus_belli = status_quo }
-                }
-            }
-            create_alliance = NAF
-            NAF = {
-                capital_scope = {
-                    sub_unit = { type = infantry value = current }
-                    sub_unit = { type = infantry value = current }
-                    sub_unit = { type = infantry value = current }
-                    sub_unit = { type = infantry value = current }
-                    sub_unit = { type = cavalry value = current }
-                    sub_unit = { type = artillery value = current }
-                    sub_unit = { type = artillery value = current }
-                    sub_unit = { type = artillery value = current }
-                    sub_unit = { type = artillery value = current }
-                    sub_unit = { type = artillery value = current }
-                }
-            }
-            relation = { who = USA value = -200 }
-        }
-    }
+		}
+		effect = {
+			set_country_flag = NAF_revolt
+			money = -750000
+			USA = {
+				release = NAF
+				war = {
+					target = NAF
+					attacker_goal = { casus_belli = civil_war }
+					defender_goal = { casus_belli = status_quo }
+				}
+			}
+			create_alliance = NAF
+			NAF = {
+				capital_scope = {
+					sub_unit = { type = infantry value = current }
+					sub_unit = { type = infantry value = current }
+					sub_unit = { type = infantry value = current }
+					sub_unit = { type = infantry value = current }
+					sub_unit = { type = cavalry value = current }
+					sub_unit = { type = artillery value = current }
+					sub_unit = { type = artillery value = current }
+					sub_unit = { type = artillery value = current }
+					sub_unit = { type = artillery value = current }
+					sub_unit = { type = artillery value = current }
+				}
+			}
+			relation = { who = USA value = -200 }
+		}
+	}
 	
 	#Arizonan Colonization
 	Arizonan_colonization = {
@@ -255,18 +255,18 @@ political_decisions = {
 	}
 	
 	form_gewesten = {
-        potential = {
-            OR = {
-                tag = VEL
-                tag = GKS
-            }
-            NOT = {
-                exists = VEP
-                has_global_flag = gewesten_formed
-            }
-        }
+		potential = {
+			OR = {
+				tag = VEL
+				tag = GKS
+			}
+			NOT = {
+				exists = VEP
+				has_global_flag = gewesten_formed
+			}
+		}
 
-        allow = {
+		allow = {
 			any_neighbor_country = {
 				OR = {
 					tag = VEL
@@ -276,65 +276,65 @@ political_decisions = {
 			}	
 			war = no
 			nationalism_n_imperialism = 1
-            VEL = {
-                OR = {
-                    AND = {
-                        exists = yes
-                        war = no
-                        OR = {
-                            is_vassal = no
-                            vassal_of = THIS
-                        }
-                        OR = {
-                            part_of_sphere = no
-                            in_sphere = THIS
-                            sphere_owner = { is_sphere_leader_of = THIS }
-                            has_country_flag = newly_released_nation
-                        }
-                    }
-                    all_core = {
-                        owner = {
-                            war = no
-                        }
-                        OR = {
-                            owned_by = THIS
-                            owner = { in_sphere = THIS }
-                            owner = { has_country_flag = newly_released_nation }
-                        }
-                    }
-                }
-            }
-            GKS = {
-                OR = {
-                    AND = {
-                        exists = yes
-                        OR = {
-                            is_vassal = no
-                            vassal_of = THIS
-                        }
-                        OR = {
-                            part_of_sphere = no
-                            in_sphere = THIS
-                            sphere_owner = { is_sphere_leader_of = THIS }
-                            has_country_flag = newly_released_nation
-                        }
-                    }
-                    all_core = {
-                        OR = {
-                            owned_by = THIS
-                            owner = { in_sphere = THIS }
-                            owner = { has_country_flag = newly_released_nation }
-                        }
-                    }
-                }
-            }
-        }
+			VEL = {
+				OR = {
+					AND = {
+						exists = yes
+						war = no
+						OR = {
+							is_vassal = no
+							vassal_of = THIS
+						}
+						OR = {
+							part_of_sphere = no
+							in_sphere = THIS
+							sphere_owner = { is_sphere_leader_of = THIS }
+							has_country_flag = newly_released_nation
+						}
+					}
+					all_core = {
+						owner = {
+							war = no
+						}
+						OR = {
+							owned_by = THIS
+							owner = { in_sphere = THIS }
+							owner = { has_country_flag = newly_released_nation }
+						}
+					}
+				}
+			}
+			GKS = {
+				OR = {
+					AND = {
+						exists = yes
+						OR = {
+							is_vassal = no
+							vassal_of = THIS
+						}
+						OR = {
+							part_of_sphere = no
+							in_sphere = THIS
+							sphere_owner = { is_sphere_leader_of = THIS }
+							has_country_flag = newly_released_nation
+						}
+					}
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = { in_sphere = THIS }
+							owner = { has_country_flag = newly_released_nation }
+						}
+					}
+				}
+			}
+		}
 		#The "#" above must be left alone. Do not fix this. Also GEK tag is cursed
 		#ignore above, problem solved
 
-        effect = {
-            set_global_flag = gewesten_formed
-            prestige = 10
+		effect = {
+			set_global_flag = gewesten_formed
+			prestige = 10
 			#any_country = {
 			#	limit = {
 			#		OR = {
@@ -344,17 +344,17 @@ political_decisions = {
 			#		all_core = { add_core = VEP }
 			#	}
 			#}
-            VEL = { all_core = { add_core = VEP } }
-            GKS = { all_core = { add_core = VEP } }
-            add_accepted_culture = gek
-            add_accepted_culture = veldlewer
-            change_tag = VEP
+			VEL = { all_core = { add_core = VEP } }
+			GKS = { all_core = { add_core = VEP } }
+			add_accepted_culture = gek
+			add_accepted_culture = veldlewer
+			change_tag = VEP
 			inherit = VEL
 			inherit = GKS
-        }
+		}
 
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
