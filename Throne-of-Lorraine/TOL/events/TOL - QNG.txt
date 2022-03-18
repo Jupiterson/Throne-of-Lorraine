@@ -1,132 +1,132 @@
 # The Mandate of Heaven
 country_event = {
-    id = 19310
-    title = "EVTNAME19310"
-    desc = "EVTDESC19310"
-    picture = "qing_emperor"
+	id = 19310
+	title = "EVTNAME19310"
+	desc = "EVTDESC19310"
+	picture = "qing_emperor"
 
-    trigger = {
-        tag = QNG
-        NOT = {
-            has_country_flag = mandate
-            has_country_flag = has_lost_mandate
-        }
-    }
+	trigger = {
+		tag = QNG
+		NOT = {
+			has_country_flag = mandate
+			has_country_flag = has_lost_mandate
+		}
+	}
 
-    mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 1 }
 
-    fire_only_once = yes
+	fire_only_once = yes
 
-    option = {
-        name = "EVTOPTA19310"
-        add_country_modifier = {
-            name = global_baby_boom
-            duration = 1065
-        }
-        YNN = { add_country_modifier = { name = global_baby_boom duration = 365 } }
-        GXI = { add_country_modifier = { name = global_baby_boom duration = 365 } }
-        XIN = { add_country_modifier = { name = global_baby_boom duration = 730 } }
-        FJN = { add_country_modifier = { name = global_baby_boom duration = 365 } }
-        TIB = { add_country_modifier = { name = global_baby_boom duration = 730 } }
+	option = {
+		name = "EVTOPTA19310"
+		add_country_modifier = {
+			name = global_baby_boom
+			duration = 1065
+		}
+		YNN = { add_country_modifier = { name = global_baby_boom duration = 365 } }
+		GXI = { add_country_modifier = { name = global_baby_boom duration = 365 } }
+		XIN = { add_country_modifier = { name = global_baby_boom duration = 730 } }
+		FJN = { add_country_modifier = { name = global_baby_boom duration = 365 } }
+		TIB = { add_country_modifier = { name = global_baby_boom duration = 730 } }
 		MGL = { add_country_modifier = { name = global_baby_boom duration = 730 } }
-        remove_country_modifier = western_influences
-        add_country_modifier = {
-            name = uncivilized_isolationism
-            duration = -1
-        }
-        set_country_flag = mandate
-    }
+		remove_country_modifier = western_influences
+		add_country_modifier = {
+			name = uncivilized_isolationism
+			duration = -1
+		}
+		set_country_flag = mandate
+	}
 }
 
 #flooding in the Pearl River
 country_event = {
-    id = 410000
-    title = "Pearlflood0.t"
-    desc = "Pearlflood0.d"
-    picture = "DIM_flood_1926"
+	id = 410000
+	title = "Pearlflood0.t"
+	desc = "Pearlflood0.d"
+	picture = "DIM_flood_1926"
 
-    trigger = {
-        AND = {
+	trigger = {
+		AND = {
 			owns = 1500
 			owns = 1501
 			owns = 1493
 		}
-        year = 1851
+		year = 1851
 		war = no
-        NOT = { has_country_flag = Pearlflooding }
-    }
+		NOT = { has_country_flag = Pearlflooding }
+	}
 
-    mean_time_to_happen = { months = 12 }
+	mean_time_to_happen = { months = 12 }
 
-    option = {
-        name = "Send troops and aid to the South!"
-        set_country_flag = Pearlflooding
-        1493 = {
-            any_pop = { reduce_pop = 0.90 }
-            add_province_modifier = { name = chinese_floods duration = 1800 }
+	option = {
+		name = "Send troops and aid to the South!"
+		set_country_flag = Pearlflooding
+		1493 = {
+			any_pop = { reduce_pop = 0.90 }
+			add_province_modifier = { name = chinese_floods duration = 1800 }
 			add_province_modifier = { name = local_opium_habit duration = -1 }
 			remove_province_modifier = foreign_smugglers 
-        }
+		}
 		QNG = {
 			country_event = { id = 410001 days = 120 }
 		}
-    }
+	}
 }
 
 
 country_event = {
-    id = 410001
-    title = "Pearlflood1.t"
-    desc = "Pearlflood1.d"
-    picture = "DIM_flood_1916"
+	id = 410001
+	title = "Pearlflood1.t"
+	desc = "Pearlflood1.d"
+	picture = "DIM_flood_1916"
 
-    is_triggered_only = yes	
+	is_triggered_only = yes	
 
-    option = {
-        name = "This does not bode well for our rule in the south..."
-        1493 = {
-            any_pop = { reduce_pop = 0.80 }
-            add_province_modifier = { name = chinese_floods duration = 1800 }
-        }
-        1500 = {
-            any_pop = { reduce_pop = 0.80 }
-            add_province_modifier = { name = chinese_floods duration = 1800 }
-        }
+	option = {
+		name = "This does not bode well for our rule in the south..."
+		1493 = {
+			any_pop = { reduce_pop = 0.80 }
+			add_province_modifier = { name = chinese_floods duration = 1800 }
+		}
+		1500 = {
+			any_pop = { reduce_pop = 0.80 }
+			add_province_modifier = { name = chinese_floods duration = 1800 }
+		}
 		1501 = {
-            any_pop = { reduce_pop = 0.80 }
-            add_province_modifier = { name = chinese_floods duration = 1800 }
-        }
+			any_pop = { reduce_pop = 0.80 }
+			add_province_modifier = { name = chinese_floods duration = 1800 }
+		}
 		QNG = {
 			country_event = { id = 410002 days = 120 }
 		}
-    }
+	}
 }
 
 
 country_event = {
-    id = 410002
-    title = "Pearlflood2.t"
-    desc = "Pearlflood2.d"
-    picture = "DIM_flood_1861_2"
+	id = 410002
+	title = "Pearlflood2.t"
+	desc = "Pearlflood2.d"
+	picture = "DIM_flood_1861_2"
 
-    is_triggered_only = yes	
+	is_triggered_only = yes	
 
-    option = {
-        name = "At least the disaster is over..."
-        set_global_flag = failure_in_pearl
-        1493 = {
-            any_pop = { reduce_pop = 0.95 }
-            remove_province_modifier = chinese_floods 
-        }
-        1500 = {
-            any_pop = { reduce_pop = 0.95 }
-            remove_province_modifier = chinese_floods 
-        }
-        1501 = {
-            any_pop = { reduce_pop = 0.95 }
-            remove_province_modifier = chinese_floods 
-        }
-    }
+	option = {
+		name = "At least the disaster is over..."
+		set_global_flag = failure_in_pearl
+		1493 = {
+			any_pop = { reduce_pop = 0.95 }
+			remove_province_modifier = chinese_floods 
+		}
+		1500 = {
+			any_pop = { reduce_pop = 0.95 }
+			remove_province_modifier = chinese_floods 
+		}
+		1501 = {
+			any_pop = { reduce_pop = 0.95 }
+			remove_province_modifier = chinese_floods 
+		}
+	}
 }
 
 #Guangxu Emperor
