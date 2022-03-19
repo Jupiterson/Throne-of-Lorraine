@@ -1341,7 +1341,7 @@ categories =  {
 	
 	trebizond = {
         movement_cost = 1.2
-        defence = 3
+        defence = 2
         color = { 22 44 66 }
 
         farm_rgo_size = 0.0
@@ -1349,9 +1349,9 @@ categories =  {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
 
-        supply_limit = 6
+        supply_limit = 3
         min_build_railroad = 1
-        combat_width = -0.33
+        combat_width = -0.25
     }
 	
 	tabriz = {
@@ -3826,6 +3826,16 @@ categories =  {
 	fredrikstad = {
         movement_cost = 1.0
         color = { 137 104 165 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+    }
+	
+	cebu = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
         farm_rgo_size = 0.2
         farm_rgo_eff = 0.00
         mine_rgo_size = 0.0
