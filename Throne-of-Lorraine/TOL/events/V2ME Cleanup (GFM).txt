@@ -488,17 +488,6 @@ country_event = {
 				remove_core = TOU
 				remove_core = MAS
 			}
-			any_owned = {
-				limit = {
-					NOT = { exists = FRO }
-					is_core = FRO
-					OR = {
-						is_colonial = no
-						year = 1880
-					}
-				}
-				remove_core = FRO
-			}
 		}
 		
 		#fix for bad modifier
@@ -837,7 +826,7 @@ country_event = {
 				exists = yes
 				civilized = yes
 				war = no
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					AND = {
 						owns = 1923
@@ -1034,7 +1023,7 @@ country_event = {
 				exists = yes
 				civilized = yes
 				war = no
-				market_regulations = 1
+				market_regtions = 1
 				owns = 1914
 			}
 			random_owned = {
@@ -1114,7 +1103,7 @@ country_event = {
 			limit = {
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				war = no
 				OR = {
 					owns = 1899
@@ -1212,7 +1201,7 @@ country_event = {
 			limit = {
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				war = no
 				owns = 1884
 				owns = 1886
@@ -1297,7 +1286,7 @@ country_event = {
 			limit = {
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				war = no
 				OR = {
 					owns = 1879
@@ -1391,7 +1380,7 @@ country_event = {
 		random_country = {
 			limit = {
 				exists = yes
-				market_regulations = 1
+				market_regtions = 1
 				civilized = yes
 				war = no
 				OR = {
@@ -1496,7 +1485,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				owns = 1812
 				OR = {
 					owns = 1808
@@ -1586,7 +1575,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				owns = 1818
 				owns = 1821
 			}
@@ -1668,7 +1657,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					owns = 1959
 					owns = 1961
@@ -1759,7 +1748,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					owns = 1972
 					owns = 1975
@@ -1865,7 +1854,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				owns = 1977
 			}
 			random_owned = {
@@ -1963,7 +1952,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					owns = 1985
 					AND = {
@@ -2116,7 +2105,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					AND = {
 						owns = 790
@@ -2231,7 +2220,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					AND = {
 						owns = 2026
@@ -2347,7 +2336,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					AND = {
 						owns = 2036
@@ -2483,7 +2472,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					AND = {
 						owns = 1803
@@ -2634,7 +2623,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				machine_guns = 1
 				NOT = {
 					has_global_flag = libya_organized
@@ -2671,7 +2660,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				owns = 1965
 			}
 			random_owned = {
@@ -2751,7 +2740,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				owns = 2067
 			}
 			random_owned = {
@@ -2843,7 +2832,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				machine_guns = 1
 				owns = 1785
 			}
@@ -2902,7 +2891,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					AND = {
 						owns = 2003
@@ -3036,7 +3025,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					AND = {
 						owns = 2060
@@ -3181,7 +3170,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				machine_guns = 1
 				NOT = {
 					exists = ALD
@@ -3214,7 +3203,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				owns = 2019
 			}
 			random_owned = {
@@ -3299,7 +3288,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				owns = 2074
 				NOT = { exists = TSW }
 			}
@@ -3383,7 +3372,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				machine_guns = 1
 				NOT = {
 					owns = 2044
@@ -3412,7 +3401,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				OR = {
 					AND = {
 						owns = 1844
@@ -3689,7 +3678,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				NOT = { exists = ASH }
 				OR = {
 					AND = {
@@ -3807,7 +3796,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				NOT = { exists = BKF }
 				owns = 1901
 				owns = 1902
@@ -3903,7 +3892,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				machine_guns = 1
 				NOT = {
 					exists = TRZ
@@ -3935,7 +3924,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				NOT = { exists = DAH }
 				owns = 1920
 			}
@@ -4027,7 +4016,7 @@ country_event = {
 				exists = yes
 				war = no
 				machine_guns = 1
-				market_regulations = 1
+				market_regtions = 1
 				owns = 1413
 				civilized = yes
 				NOT = {
@@ -4158,7 +4147,7 @@ country_event = {
 				exists = yes
 				civilized = yes
 				war = no
-				market_regulations = 1
+				market_regtions = 1
 				machine_guns = 1
 				NOT = { exists = SOM }
 				NOT = {
@@ -4174,7 +4163,6 @@ country_event = {
 				NOT = { exists = GEL }
 				NOT = { exists = MAJ }
 				NOT = { exists = WRL }
-				NOT = { exists = HBY }
 			}
 			set_global_flag = somalia_united
 			random_owned = {
@@ -4191,7 +4179,6 @@ country_event = {
 
 			SOM_1868 = { add_core = SOM }
 			SOM_1872 = { add_core = SOM }
-			HBY = { all_core = { remove_core = HBY } }
 			GEL = { all_core = { remove_core = GEL } }
 			MAJ = { all_core = { remove_core = MAJ } }
 			WRL = { all_core = { remove_core = WRL } }
@@ -4213,7 +4200,7 @@ country_event = {
 				civilized = yes
 				war = no
 				machine_guns = 1
-				market_regulations = 1
+				market_regtions = 1
 				owns = 1446
 				NOT = { exists = TMR }
 			}
@@ -4262,7 +4249,7 @@ country_event = {
 				civilized = yes
 				war = no
 				machine_guns = 1
-				market_regulations = 1
+				market_regtions = 1
 				NOT = { exists = NMB }
 				owns = 2078
 			}
@@ -4488,7 +4475,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				NOT = { exists = GBU }
 				owns = 1877
 			}
@@ -4576,7 +4563,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				NOT = { exists = MAD }
 				owns = 2115
 				owns = 2116
@@ -4659,7 +4646,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				NOT = { exists = ZBW }
 				owns = 2068
 			}
@@ -4741,7 +4728,7 @@ country_event = {
 				war = no
 				exists = yes
 				civilized = yes
-				market_regulations = 1
+				market_regtions = 1
 				NOT = {
 					exists = BRD
 					exists = RWA

@@ -243,12 +243,7 @@ political_decisions = {
 							BOR = { NOT = { government = absolute_monarchy } }
 						}
 					}
-				}
-				AND = {
-					OR = {
-						tag = ULA
-						tag = QUE
-					}
+					tag = QUE
 					vassal_of = BOR
 				}
 				###Portuguese Puppets###
@@ -297,10 +292,7 @@ political_decisions = {
 				}
 				###Dutch Puppets###
 				AND = {
-					OR = {
-						tag = INO
-						tag = VLK
-					}
+					tag = INO 
 					vassal_of = NET
 				}
 				###Japanese Puppets###

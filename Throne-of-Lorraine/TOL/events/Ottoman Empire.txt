@@ -1935,21 +1935,21 @@ country_event = {
 	}
 }
 
-#Population exchanges
+#Poption exchanges
 #Thessalia
 country_event = {
 	id = 986508
 	title = "EVTNAME986508"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
 	option = {
 		name = "EVT986508OPTA"
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 
 		FROM = { set_country_flag = thessalia_exchange }
@@ -2074,15 +2074,15 @@ country_event = {
 	id = 986509
 	title = "EVTNAME986509"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
 	option = {
 		name = "EVT986508OPTA"
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 		FROM = { set_country_flag = southern_macedonia_exchange }
 		relation = { who = FROM value = 15 }
@@ -2221,12 +2221,12 @@ country_event = {
 	}
 }
 
-#The Eastern Macedonia and Aegean Islands Population Exchange
+#The Eastern Macedonia and Aegean Islands Poption Exchange
 country_event = {
 	id = 986510
 	title = "EVTNAME986510"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
@@ -2234,8 +2234,8 @@ country_event = {
 		name = "EVT986508OPTA"
 		relation = { who = FROM value = 15 }
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 		FROM = { clr_country_flag = southern_macedonia_exchange clr_country_flag = thessalia_exchange }
 		FROM = {
@@ -2459,12 +2459,12 @@ country_event = {
 	}
 }
 
-#The Eastern Rumelia Population Exchange
+#The Eastern Rumelia Poption Exchange
 country_event = {
 	id = 986511
 	title = "EVTNAME986511"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
@@ -2472,8 +2472,8 @@ country_event = {
 		name = "EVT986508OPTA"
 		relation = { who = FROM value = 15 }
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 		FROM = {
 			random_owned = {
@@ -2589,12 +2589,12 @@ country_event = {
 	}
 }
 
-#The Bulgaria Population Exchange
+#The Bulgaria Poption Exchange
 country_event = {
 	id = 986512
 	title = "EVTNAME986512"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
@@ -2602,8 +2602,8 @@ country_event = {
 		name = "EVT986508OPTA"
 		relation = { who = FROM value = 15 }
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 
 		FROM = {
@@ -2712,12 +2712,12 @@ country_event = {
 	}
 }
 
-#The Dobrudja Population Exchange
+#The Dobrudja Poption Exchange
 country_event = {
 	id = 986513
 	title = "EVTNAME986513"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
@@ -2725,8 +2725,8 @@ country_event = {
 		name = "EVT986508OPTA"
 		relation = { who = FROM value = 15 }
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 
 		FROM = {
@@ -2827,12 +2827,12 @@ country_event = {
 	}
 }
 
-#The Macedonia Population Exchange
+#The Macedonia Poption Exchange
 country_event = {
 	id = 986514
 	title = "EVTNAME986514"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
@@ -2840,8 +2840,8 @@ country_event = {
 		name = "EVT986508OPTA"
 		relation = { who = FROM value = 15 }
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 
 		FROM = {
@@ -2918,12 +2918,12 @@ country_event = {
 	}
 }
 
-#The Southern Serbian Population Exchange
+#The Southern Serbian Poption Exchange
 country_event = {
 	id = 986515
 	title = "EVTNAME986515"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
@@ -2931,8 +2931,8 @@ country_event = {
 		name = "EVT986508OPTA"
 		relation = { who = FROM value = 15 }
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 
 		FROM = {
@@ -3032,12 +3032,12 @@ country_event = {
 	}
 }
 
-#The Montenegro Population Exchange
+#The Montenegro Poption Exchange
 country_event = {
 	id = 986516
 	title = "EVTNAME986516"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
@@ -3045,8 +3045,8 @@ country_event = {
 		name = "EVT986508OPTA"
 		relation = { who = FROM value = 15 }
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 
 		FROM = {
@@ -3126,12 +3126,12 @@ country_event = {
 	}
 }
 
-#The Bosnia Population Exchange
+#The Bosnia Poption Exchange
 country_event = {
 	id = 986517
 	title = "EVTNAME986517"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
@@ -3139,8 +3139,8 @@ country_event = {
 		name = "EVT986508OPTA"
 		relation = { who = FROM value = 15 }
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 
 		FROM = {
@@ -3233,12 +3233,12 @@ country_event = {
 	}
 }
 
-#The Albania Population Exchange
+#The Albania Poption Exchange
 country_event = {
 	id = 986518
 	title = "EVTNAME986518"
 	desc = "EVTDESC986508"
-	picture = "population_exchange"
+	picture = "poption_exchange"
 
 	is_triggered_only = yes
 
@@ -3246,8 +3246,8 @@ country_event = {
 		name = "EVT986508OPTA"
 		relation = { who = FROM value = 15 }
 		random_country = {
-			limit = { tag = FROM NOT = { has_country_flag = population_exchange_with_turkey } }
-			set_country_flag = population_exchange_with_turkey
+			limit = { tag = FROM NOT = { has_country_flag = poption_exchange_with_turkey } }
+			set_country_flag = poption_exchange_with_turkey
 		}
 
 		FROM = {

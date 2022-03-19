@@ -1942,7 +1942,7 @@ country_event = {
 		year = 1872
 	}
 	option = {
-		name = "We congratulate the Mormons on their victory."
+		name = "We congratte the Mormons on their victory."
 		99 = { remove_province_modifier = indian_lands }
 			any_pop = {
 				limit = {
@@ -3462,7 +3462,7 @@ country_event = {
 country_event = {
 	id = 123551
 	title = "The eruption of Mount Pelee"
-	desc = "The long-dormant volcano on the caribbean island of Martinique, Mont Pelee has erupted, killing almost the entire population of the island."
+	desc = "The long-dormant volcano on the caribbean island of Martinique, Mont Pelee has erupted, killing almost the entire poption of the island."
 	fire_only_once = yes
 	picture = "pelee_eruption"
 	mean_time_to_happen = { months = 10 }
@@ -3906,7 +3906,6 @@ country_event = {
 			tag = PNT
 			tag = BOR
 			tag = CAM
-			tag = LTN
 			tag = SPC
 			tag = HAI
 		}
@@ -3997,7 +3996,6 @@ country_event = {
 			tag = PNT
 			tag = BOR
 			tag = CAM
-			tag = LTN
 			tag = SPC
 			tag = HAI
 		}
@@ -4088,7 +4086,6 @@ country_event = {
 			tag = PNT
 			tag = BOR
 			tag = CAM
-			tag = LTN
 			tag = SPC
 			tag = HAI
 			AND = {
@@ -5594,7 +5591,7 @@ country_event = {
 country_event = {
 	id = 123616
 	title = "The Chimayo Rebellion"
-	desc = "The rebellion of 1837 in New Mexico is a popular insurrection against Albino Perez, the former governor who has perished in the conflict."
+	desc = "The rebellion of 1837 in New Mexico is a popr insurrection against Albino Perez, the former governor who has perished in the conflict."
 	fire_only_once = yes
 	picture = "chimayo_revolt"
 	trigger = {

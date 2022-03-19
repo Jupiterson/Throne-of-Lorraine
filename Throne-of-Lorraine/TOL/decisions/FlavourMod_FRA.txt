@@ -175,36 +175,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	integrate_guyana = {
-		picture = french_guyane
-		potential = {
-			primary_culture = french
-			is_greater_power = yes
-			capital = 425
-			owns = 2241
-			owns = 2246
-			year = 1880
-			NOT = { has_country_flag = french_guiana }
-		}
-		allow = {
-			invention = the_dark_continent
-			war = no
-		}
-		effect = {
-			any_owned = {
-				limit = { is_core = GUY }
-				add_province_modifier = {
-					name = core_integration
-					duration = -1
-				}
-			}
-			FRA = { set_country_flag = french_guiana }
-			BOR = { set_country_flag = french_guiana }
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
 	haitian_integration = {
 		picture = map_caribbean
 		potential = {

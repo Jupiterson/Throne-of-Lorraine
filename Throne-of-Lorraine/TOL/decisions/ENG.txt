@@ -446,7 +446,7 @@ political_decisions = {
 			set_country_flag = ric_reorganized
 			any_owned_province = {
 				limit = { is_core = IRE }
-				add_province_modifier = { name = royal_irish_constabulary duration = -1 }
+				add_province_modifier = { name = royal_irish_constabry duration = -1 }
 			}
 		}
 
@@ -494,7 +494,7 @@ political_decisions = {
 			any_owned = {
 				remove_province_modifier = irish_oppression
 				remove_province_modifier = enclosures
-				remove_province_modifier = royal_irish_constabulary
+				remove_province_modifier = royal_irish_constabry
 			}
 			any_pop = {
 				limit = {

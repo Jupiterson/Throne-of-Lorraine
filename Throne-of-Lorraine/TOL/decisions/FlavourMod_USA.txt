@@ -108,14 +108,11 @@ political_decisions = {
 					primary_culture = french
 					capital = 425
 				}
-				release = ULA
 				release = ACA
 				remove_accepted_culture = yankee
 				remove_accepted_culture = louisianan
 			}
-			inherit = ULA
 			inherit = ACA
-			ULA = { all_core = { remove_core = ULA } }
 			ACA = { all_core = { add_core = USA remove_core = ACA } }
 		}
 

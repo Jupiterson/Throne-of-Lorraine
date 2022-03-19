@@ -506,11 +506,11 @@ country_event = {
 		}
 		any_owned = {
 			limit = { OR = { is_core = DAG is_core = CHY } }
-			add_province_modifier = { name = population_resettlement duration = 1825 }
+			add_province_modifier = { name = poption_resettlement duration = 1825 }
 		}
 		any_owned = {
 			limit = { is_core = CIR }
-			add_province_modifier = { name = population_resettlement duration = 720 }
+			add_province_modifier = { name = poption_resettlement duration = 720 }
 		}
 	}
 }

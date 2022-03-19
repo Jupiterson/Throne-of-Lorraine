@@ -562,12 +562,6 @@ political_decisions = {
 							is_vassal = no
 						}
 					}
-					AND = {
-						neighbour = PBC
-						PBC = { war = no }
-						PEU = { exists = no }
-						vassal_of = PBC
-					}
 				}
 			exists = yes
 			ai = yes
@@ -584,10 +578,7 @@ political_decisions = {
 				limit = {
 					neighbour = THIS
 					war = no
-					OR = {
-						tag = PEU
-						tag = PBC
-					}
+					tag = PEU
 				}
 			   inherit = THIS
 			}
@@ -603,7 +594,6 @@ political_decisions = {
 			OR = {
 				tag = CHL
 				tag = SPU
-				tag = PBC
 				tag = BOL
 			}
 			owns = 2308
@@ -618,7 +608,6 @@ political_decisions = {
 						OR = {
 							tag = BOL
 							tag = PEU
-							tag = PBC
 						}
 					}
 				}
@@ -628,7 +617,6 @@ political_decisions = {
 						OR = {
 							tag = BOL
 							tag = CHL
-							tag = PBC
 						}
 					}
 				}
@@ -638,7 +626,6 @@ political_decisions = {
 						OR = {
 							tag = CHL
 							tag = PEU
-							tag = PBC
 						}
 					}
 				}
@@ -681,7 +668,6 @@ political_decisions = {
 					NOT = { tag = THIS }
 					OR = {
 						tag = BOL
-						tag = PBC
 						tag = CHL
 					}
 					OR = {
@@ -700,7 +686,6 @@ political_decisions = {
 					OR = {
 						tag = CHL
 						tag = PEU
-						tag = PBC
 					}
 					OR = {
 						2308 = { is_core = THIS }

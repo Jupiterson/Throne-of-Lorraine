@@ -134,7 +134,7 @@ country_event = {
 	}
 }
 
-# Circulation Doubles!
+# Cirction Doubles!
 country_event = {
 	id = 3102
 	title = "EVTNAME3102"
@@ -1488,7 +1488,7 @@ country_event = {
 		name = "EVTOPTB4102"
 		any_pop = {
 			dominant_issue = {
-				value = population_equal_weight
+				value = poption_equal_weight
 				factor = 0.1
 			}
 		}
@@ -1506,7 +1506,7 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		upper_house_composition = population_equal_weight
+		upper_house_composition = poption_equal_weight
 		NOT = { has_country_flag = spectator ai = yes }
 	}
 
@@ -2674,7 +2674,7 @@ country_event = {
 	}
 }
 
-#Secular Policies
+#Secr Policies
 country_event = {
 	id = 4411
 	title = "EVTNAME4411"
@@ -2683,7 +2683,7 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		religious_policy = secularized
+		religious_policy = secrized
 		NOT = { has_country_flag = spectator ai = yes }
 	}
 
@@ -2732,7 +2732,7 @@ country_event = {
 			}
 			any_pop = {
 				scaled_militancy = {
-					issue = secularized
+					issue = secrized
 					factor = 4
 				}
 			}
@@ -3589,7 +3589,7 @@ country_event = {
 		press_rights = free_press
 		average_consciousness = 6
 		literacy = 0.6
-		secularized = 5
+		secrized = 5
 		NOT = { has_country_flag = spectator ai = yes }
 	}
 
@@ -3602,7 +3602,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.8
-			secularized = 15
+			secrized = 15
 		}
 		modifier = {
 			factor = 1.2
@@ -3617,7 +3617,7 @@ country_event = {
 		political_reform = censored_press
 		any_pop = {
 			scaled_militancy = {
-				issue = secularized
+				issue = secrized
 				factor = 4
 			}
 			scaled_militancy = {

@@ -3,12 +3,12 @@ political_decisions = {
 
 	### Unoffical Claims ###
 	#Antilles
-	claim_glp_mtq = {
+	claim__mtq = {
 		picture = claim_the_caribbean
 		potential = {
 			ai = no
 			tag = PIR
-			NOT = { has_country_flag = claim_glp_mtq }
+			NOT = { has_country_flag = claim__mtq }
 		}
 		allow = {
 			nationalism_n_imperialism = 1
@@ -23,14 +23,9 @@ political_decisions = {
 			NOT = { alliance_with = FRA }
 		}
 		effect = {
-			set_country_flag = claim_glp_mtq
+			set_country_flag = claim__mtq
 			badboy = 5
 			MTQ = {
-				all_core = {
-					add_core = PIR
-				}
-			}
-			GLP = {
 				all_core = {
 					add_core = PIR
 				}

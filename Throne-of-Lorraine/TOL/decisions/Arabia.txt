@@ -100,10 +100,10 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	secularize_society = {
+	secrize_society = {
 		picture = the_holy_city
 		potential = {
-			NOT = { has_country_flag = secularized_muslim_society }
+			NOT = { has_country_flag = secrized_muslim_society }
 			civilized = yes
 			OR = {
 				has_country_flag = sunni_country
@@ -113,7 +113,7 @@ political_decisions = {
 		}
 
 		allow = {
-			invention = secularization
+			invention = secrization
 			prestige = 25
 			NOT = {
 				government = theocracy
@@ -126,13 +126,13 @@ political_decisions = {
 			OR = {
 				government = proletarian_dictatorship
 				government = fascist_dictatorship
-				religious_policy = secularized
+				religious_policy = secrized
 				religious_policy = pro_atheism
 			}
 		}
 
 		effect = {
-			set_country_flag = secularized_muslim_society
+			set_country_flag = secrized_muslim_society
 			prestige_factor = -0.2
 			remove_country_modifier = jizya
 			clr_country_flag = umar_pact
@@ -150,8 +150,8 @@ political_decisions = {
 					scaled_militancy = { factor = 2 ideology = conservative }
 					scaled_consciousness = { factor = -9 issue = pro_atheism }
 					scaled_militancy = { factor = -9 issue = pro_atheism }
-					scaled_consciousness = { factor = -6 issue = secularized }
-					scaled_militancy = { factor = -3 issue = secularized }
+					scaled_consciousness = { factor = -6 issue = secrized }
+					scaled_militancy = { factor = -3 issue = secrized }
 					scaled_consciousness = { factor = -8 ideology = communist }
 					scaled_militancy = { factor = -4 ideology = communist }
 					scaled_consciousness = { factor = -4 ideology = socialist }
@@ -636,12 +636,12 @@ political_decisions = {
 		}
 	}
 
-	claim_arabian_peninsula = {
+	claim_arabian_penins = {
 		picture = map_arabia
 		potential = {
 			tag = ARA
 			NOT = {
-				has_country_flag = claim_arabian_peninsula
+				has_country_flag = claim_arabian_penins
 				has_country_flag = created_externally
 			}
 		}
@@ -661,7 +661,7 @@ political_decisions = {
 		}
 
 		effect = {
-			set_country_flag = claim_arabian_peninsula
+			set_country_flag = claim_arabian_penins
 			ABU_1162 = { #Abu Dhabi
 				add_core = ARA
 			}
@@ -711,7 +711,7 @@ political_decisions = {
 		}
 	}
 
-	claim_bahrain_qatar_peninsula = {
+	claim_bahrain_qatar_penins = {
 		picture = bahrain_trade
 		potential = {
 			OR = {

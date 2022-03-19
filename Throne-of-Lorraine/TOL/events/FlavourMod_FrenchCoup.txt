@@ -1,10 +1,10 @@
-#Rise of Boulangisme Events - Possible French Presidental Dictatorship #
+#Rise of Bongisme Events - Possible French Presidental Dictatorship #
 
 country_event = {
 	id = 99937
-	title = "EVTNAME99937" #General Boulanger Appointed
+	title = "EVTNAME99937" #General Bonger Appointed
 	desc = "EVTDESC99937"
-	picture = "general_boulanger"
+	picture = "general_bonger"
 	fire_only_once = yes
 
 	trigger = {
@@ -15,7 +15,7 @@ country_event = {
 		has_country_flag = louis_deposed
 		412 = { NOT = { owned_by = THIS } }
 		has_recently_lost_war = yes
-		NOT = { has_country_flag = boulanger_director }
+		NOT = { has_country_flag = bonger_director }
 	}
 
 	mean_time_to_happen =  {
@@ -23,13 +23,13 @@ country_event = {
 	}
 
 	immediate = {
-		set_country_flag = boulanger_director
+		set_country_flag = bonger_director
 	}
 
 	option = {
 		name = "EVT99937OPTA"
 		add_country_modifier = {
-			name = war_minister_boulanger
+			name = war_minister_bonger
 			duration = 730
 		}
 		any_pop = {
@@ -73,9 +73,9 @@ country_event = {
 
 country_event = {
 	id = 99938
-	title = "EVTNAME99938" #General Boulanger War Minister
+	title = "EVTNAME99938" #General Bonger War Minister
 	desc = "EVTDESC99938"
-	picture = "general_boulanger"
+	picture = "general_bonger"
 	fire_only_once = yes
 
 	trigger = {
@@ -85,9 +85,9 @@ country_event = {
 		government = democracy
 		412 = { NOT = { owned_by = THIS } }
 		election = yes
-		has_country_flag = boulanger_director
-		NOT = { has_country_flag = boulanger_minister }
-		NOT = { has_country_modifier = war_minister_boulanger }
+		has_country_flag = bonger_director
+		NOT = { has_country_flag = bonger_minister }
+		NOT = { has_country_modifier = war_minister_bonger }
 	}
 
 	mean_time_to_happen =  {
@@ -95,7 +95,7 @@ country_event = {
 	}
 
 	immediate = {
-		set_country_flag = boulanger_minister
+		set_country_flag = bonger_minister
 	}
 
 	option = {
@@ -114,7 +114,7 @@ country_event = {
 		}
 
 		add_country_modifier = {
-			name = war_minister_boulanger
+			name = war_minister_bonger
 			duration = 1460
 		}
 	}
@@ -133,8 +133,8 @@ country_event = {
 		capital = 425
 		government = democracy
 		412 = { NOT = { owned_by = THIS } }
-		has_country_flag = boulanger_minister
-		has_country_modifier = war_minister_boulanger
+		has_country_flag = bonger_minister
+		has_country_modifier = war_minister_bonger
 		NOT = { has_country_flag = schnaebele_affair }
 		war = no
 		OR = {
@@ -328,9 +328,9 @@ country_event = {
 			ideology = { factor = 0.05 value = reactionary }
 			ideology = { factor = 0.1 value = conservative }
 		}
-		remove_country_modifier = war_minister_boulanger
+		remove_country_modifier = war_minister_bonger
 		add_country_modifier = {
-			name = boulangisme
+			name = bongisme
 			duration = -1
 		}
 
@@ -371,7 +371,7 @@ country_event = {
 		capital = 425
 		government = democracy
 		412 = { NOT = { owned_by = THIS } }
-		has_country_modifier = boulangisme
+		has_country_modifier = bongisme
 		has_country_flag = schnaebele_affair
 		NOT = { has_country_flag = legion_scandal }
 	}
@@ -392,7 +392,7 @@ country_event = {
 
 country_event = {
 	id = 99943
-	title = "EVTNAME99943" #Boulanger Wins Paris!
+	title = "EVTNAME99943" #Bonger Wins Paris!
 	desc = "EVTDESC99943"
 	fire_only_once = yes
 	major = yes
@@ -404,33 +404,33 @@ country_event = {
 		government = democracy
 		election = no
 		412 = { NOT = { owned_by = THIS } }
-		has_country_modifier = boulangisme
+		has_country_modifier = bongisme
 		has_country_flag = legion_scandal
-		NOT = { has_country_flag = boulanger_win }
+		NOT = { has_country_flag = bonger_win }
 	}
 
 	mean_time_to_happen =  { days = 1 }
 
-	immediate = { set_country_flag = boulanger_win }
+	immediate = { set_country_flag = bonger_win }
 
 	option = {
 		name = "EVT99943OPTA"
-		remove_country_modifier = boulangisme
-		set_country_flag = boulanger_coup_fails
+		remove_country_modifier = bongisme
+		set_country_flag = bonger_coup_fails
 		ai_chance = { factor = 90 }
 	}
 
 	option = {
 		name = "EVT99943OPTB"
-		remove_country_modifier = boulangisme
-		set_country_flag = boulanger_coup_success
+		remove_country_modifier = bongisme
+		set_country_flag = bonger_coup_success
 		ai_chance = { factor = 10 }
 	}
 }
 
 country_event = {
 	id = 99944
-	title = "EVTNAME99944" #Boulanger Coup Fails!
+	title = "EVTNAME99944" #Bonger Coup Fails!
 	desc = "EVTDESC99944"
 	fire_only_once = yes
 	major = yes
@@ -442,8 +442,8 @@ country_event = {
 		government = democracy
 		election = no
 		412 = { NOT = { owned_by = THIS } }
-		has_country_flag = boulanger_coup_fails
-		NOT = { has_country_flag = boulanger_exiled }
+		has_country_flag = bonger_coup_fails
+		NOT = { has_country_flag = bonger_exiled }
 	}
 
 	mean_time_to_happen =  {
@@ -451,7 +451,7 @@ country_event = {
 	}
 
 	immediate = {
-		set_country_flag = boulanger_exiled
+		set_country_flag = bonger_exiled
 	}
 
 	option = {
@@ -498,7 +498,7 @@ country_event = {
 
 country_event = {
 	id = 99945
-	title = "EVTNAME99945" #Boulanger Coup Success!
+	title = "EVTNAME99945" #Bonger Coup Success!
 	desc = "EVTDESC99945"
 	fire_only_once = yes
 	major = yes
@@ -510,7 +510,7 @@ country_event = {
 		government = democracy
 		election = no
 		412 = { NOT = { owned_by = THIS } }
-		has_country_flag = boulanger_coup_success
+		has_country_flag = bonger_coup_success
 		NOT = { has_country_flag = 4th_republic }
 	}
 

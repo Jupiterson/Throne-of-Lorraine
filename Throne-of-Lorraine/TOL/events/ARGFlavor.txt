@@ -151,11 +151,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
-				OR = {
-					tag = SBA
-					tag = ENT
-					tag = CRT
-				}
+				tag = SBA
 			}
 			any_pop = {
 				limit = { is_primary_culture = yes }
@@ -181,11 +177,7 @@ country_event = {
 				any_country = {
 					limit = {
 						exists = yes
-						OR = {
-							tag = SBA
-							tag = ENT
-							tag = CRT
-						}
+						tag = SBA
 					}
 					any_pop = {
 						limit = { is_primary_culture = yes }
@@ -610,8 +602,6 @@ country_event = {
 				limit = {
 					NOT = { province_id = 2131 }
 					OR = {
-						is_core = CRT
-						is_core = ENT
 						is_core = SBA
 						is_core = ARC
 						is_core = ARG
@@ -621,8 +611,6 @@ country_event = {
 			}
 		}
 		any_owned = {
-			remove_core = CRT
-			remove_core = ENT
 			remove_core = SBA
 		}
 	}

@@ -101,11 +101,11 @@ country_event  = {
 		}
 		modifier = {
 			factor = 0.8
-			NOT = { business_regulations = 1 }
+			NOT = { business_regtions = 1 }
 		}
 		modifier = {
 			factor = 1.5
-			market_regulations = 1
+			market_regtions = 1
 		}
 		modifier = {
 			factor = 1.5
@@ -1541,7 +1541,7 @@ country_event = {
 	trigger = {
 		colonial_nation = yes
 		civilized = yes
-		market_regulations = 1
+		market_regtions = 1
 		any_owned_province = { port = yes }
 		OR = {
 			capital_scope = { continent = north_america }

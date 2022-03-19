@@ -327,67 +327,6 @@ country_event = {
 }
 
 country_event = {
-	id = 1793144
-	title = "Treaty of St. Louis"
-	desc = EVTDESC1793144
-	is_triggered_only = yes
-	picture = "treaty"
-
-	option = {
-		name = "Southern Solidarity!"
-		set_country_flag = CSA_ULA_friendship
-		badboy = -10
-		ULA = {
-			country_event = 9149119
-		}
-		create_alliance = ULA
-		relation = {
-			who = ULA
-			value = 100
-		}
-		ULA = { all_core = { remove_core = CSA } }
-		ai_chance = {
-			factor = 100
-		}
-	}
-	option = {
-		name = "Reject the treaty."
-		set_country_flag = CSA_ULA_reject
-		relation = {
-			who = ULA
-			value = -50
-		}
-		ULA = {
-			country_event = 8224916
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-country_event = {
-	id = 9149119
-	title = "Success in St. Louis"
-	desc = EVTDESC9149119
-	is_triggered_only = yes
-	picture = "treaty"
-
-	option = {
-		name = "Southern Solidarity!"
-		create_alliance = CSA
-		relation = {
-			who = CSA
-			value = 100
-		}
-		ULA = { all_core = { remove_core = CSA } }
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = {
 	id = 8224916
 	title = "Failure in St. Louis"
 	desc = EVTDESC8224916

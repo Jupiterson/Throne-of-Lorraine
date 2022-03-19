@@ -10,7 +10,6 @@ country_event = {
 		war = no
 		has_country_flag = crown_from_the_gutter
 		NOT = { tag = LIE }
-		NOT = { tag = VLG }
 		NOT = { tag = SIE }
 		NOT = { tag = BAN }
 		NOT = { tag = SIE }
@@ -107,7 +106,7 @@ country_event = {
 			country_event = 11101
 		}
 		political_reform = wealth_voting
-		political_reform = population_equal_weight
+		political_reform = poption_equal_weight
 		political_reform = yes_meeting
 		political_reform = free_press
 		political_reform = non_socialist
@@ -206,7 +205,6 @@ country_event = {
 					NOT = { tag = SIE }
 					NOT = { tag = BAN }
 					NOT = { tag = SIE }
-					NOT = { tag = VLG }
 					NOT = { tag = SMR }
 					NOT = { is_culture_group = south_asian }
 					NOT = { is_culture_group = scandinavian }
@@ -677,7 +675,6 @@ country_event = {
 
 	trigger = {
 		war = no
-		NOT = { tag = VLG }
 		NOT = { tag = GCF }
 		NOT = { tag = SIE }
 		NOT = {
@@ -890,7 +887,7 @@ country_event = {
 		}
 		remove_country_modifier = hre_member
 		political_reform = wealth_voting
-		political_reform = population_equal_weight
+		political_reform = poption_equal_weight
 		political_reform = yes_meeting
 		political_reform = free_press
 		political_reform = non_socialist
