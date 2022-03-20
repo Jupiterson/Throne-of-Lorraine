@@ -3182,14 +3182,9 @@ political_decisions = {
 
 		effect = {
 			treasury = 50000
-			add_country_modifier = { name = the_eight_banners duration = -1 }
+			add_country_modifier = { name = the_half_half_system duration = -1 }
 			add_country_modifier = { name = unciv_balance_qng duration = 3650 }
 			add_country_modifier = { name = canton_system_country duration = -1 }
-			MCK = {
-				treasury = 50000
-				add_country_modifier = { name = the_eight_banners duration = -1 }
-				add_country_modifier = { name = uncivilized_isolationism duration = -1 }
-			}
 			YNN = {
 				treasury = 10000
 				add_country_modifier = { name = corrupt_army duration = 10950 }

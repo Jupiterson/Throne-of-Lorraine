@@ -433,9 +433,7 @@ political_decisions = {
 	ric_reorganize = {
 		picture = ric_police
 		potential = {
-			any_owned_province = {
-				limit = { is_core = IRE }
-			}
+			any_owned_province = { is_core = IRE }
 			tag = ENG
 			NOT = { has_country_flag = ric_reorganized }
 		}

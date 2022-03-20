@@ -1,11 +1,11 @@
 political_decisions = {
 
-	abandon_the_finnish = {
-		picture = old_finnish_map
+	abandon_the_icelanders = {
+		picture = iceland_map
 		potential = {
 			NOT = { tag = SCA }
-			accepted_culture = finnish
 			has_country_modifier = leader_of_kalmar
+			252 = { is_core = SCA }
 		}
 
 		allow = {
@@ -13,23 +13,68 @@ political_decisions = {
 		}
 
 		effect = {
-			remove_accepted_culture = finnish
-			any_pop = {
-				limit = { has_pop_culture = finnish }
-				militancy = 3
-				consciousness = 6
+			prestige = -5
+			251 = { remove_core = SCA }
+			252 = { remove_core = SCA }
+			253 = { remove_core = SCA }
+			2636 = { remove_core = SCA }
+			SCO = {
+				relation = { who = THIS value = 200 }
 			}
 		}
 
-		ai_will_do = { factor = 1	 }
+		ai_will_do = { factor = 1 }
+	}
+	
+	bergen_purchase = {
+		picture = fiume_port
+		potential = {
+			has_country_modifier = leader_of_kalmar
+			OR = {
+				DNN = {
+					owns = 308
+					in_sphere = THIS
+				}
+				DEN = {
+					owns = 308
+					in_sphere = THIS
+				}
+				NOR = {
+					owns = 308
+					in_sphere = THIS
+				}
+			}
+			NOT = { has_country_flag = bergen_buying }
+		}
+
+		allow = {
+			war = no
+			money = 50000
+			309 = {
+				owner = {
+					war = no
+					relation = { who = THIS value = 100 }
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = bergen_buying
+			309 = {
+				owner = { country_event = 44140 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
 	}
 
-	claim_finland = {
-		picture = old_finnish_map
+	claim_iceland = {
+		picture = iceland_map
 		potential = {
 			tag = SCA
-			NOT = { primary_culture = finnish }
-			343 = { NOT = { is_core = THIS } }
+			252 = { NOT = { is_core = THIS } }
 		}
 
 		allow = {
@@ -41,50 +86,10 @@ political_decisions = {
 
 		effect = {
 			badboy = 4
-			FIN = { all_core = { add_core = SCA } }
-		}
-
-		ai_will_do = { factor = 1	 }
-	}
-
-	embrace_the_finns = {
-		picture = form_scandinavia
-		potential = {
-			tag = SCA
-			NOT = { accepted_culture = finnish }
-			NOT = { primary_culture = finnish }
-		}
-
-		allow = {
-			citizens_rights = all_voting_pops
-			citizenship_policy = full_citizenship
-		}
-
-		effect = {
-			add_accepted_culture = finnish
-			any_pop = {
-				limit = { has_pop_culture = finnish }
-				militancy = -1
-				consciousness = -3
-			}
-
-			any_pop = {
-				limit = {
-					OR = {
-						is_primary_culture = yes
-						is_accepted_culture = yes
-					}
-				}
-				consciousness = 1
-			}
-
-			any_pop = {
-				limit = {
-					is_primary_culture = no
-					is_accepted_culture = no
-				}
-			consciousness = 3
-			}
+			251 = { add_core = SCA }
+			252 = { add_core = SCA }
+			253 = { add_core = SCA }
+			2636 = { add_core = SCA }
 		}
 
 		ai_will_do = { factor = 1	 }
@@ -139,6 +144,10 @@ political_decisions = {
 					DEN = { has_country_modifier = kalmar_union }
 				}
 				AND = {
+					NOT = { tag = DNN }
+					DNN = { has_country_modifier = kalmar_union }
+				}
+				AND = {
 					NOT = { tag = ICL }
 					ICL = { has_country_modifier = kalmar_union }
 				}
@@ -150,7 +159,7 @@ political_decisions = {
 		}
 
 		allow = {
-			NOT = { accepted_culture = finnish }
+			252 = { NOT = { is_core = SCA } }
 			prestige = 200
 			is_greater_power = yes
 			war = no
@@ -204,7 +213,6 @@ political_decisions = {
 			any_country = {
 				limit = {
 					is_culture_group = scandinavian
-					NOT = { primary_culture = finnish }
 					NOT = { has_country_flag = post_colonial_country }
 				}
 				all_core = { add_core = SCA }
@@ -339,6 +347,10 @@ political_decisions = {
 				AND = {
 					NOT = { tag = DEN }
 					DEN = { has_country_modifier = kalmar_union }
+				}
+				AND = {
+					NOT = { tag = DNN }
+					DNN = { has_country_modifier = kalmar_union }
 				}
 				AND = {
 					NOT = { tag = ICL }
