@@ -298,36 +298,6 @@ political_decisions = {
 		}
 	}
 
-	simla_convention = {
-		picture = treaty_signing
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			TIB = {
-				neighbour = THIS
-				is_vassal = no
-			}
-			NOT = {	has_country_flag = simla_convention }
-		}
-
-		allow = {
-			war = no
-			TIB = {
-				is_vassal = no
-				war = no
-			}
-		}
-
-		effect = {
-			set_country_flag = simla_convention
-			TIB = { country_event = 131711 }
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
 	#####################################################
 	#Taiping Rebellion#
 	#####################################################
@@ -463,18 +433,18 @@ political_decisions = {
 	#The Self-Strengthening Movement#
 	#####################################################
 
-	abolish_the_eight_banners  = {
+	abolish_the_half_half_system  = {
 		picture = the_eight_banners
 		potential = {
 			tag = QNG
 			has_country_flag = self_strengthening_movement
-			NOT = { has_country_flag = abolish_the_eight_banners }
+			NOT = { has_country_flag = abolish_the_half_half_system }
 		}
 
 		allow = {
-			has_country_flag = the_new_army_established
+			has_country_flag = abolish_the_half_half_system
 			war = no
-			has_country_modifier = the_eight_banners
+			has_country_modifier = the_half_half_system
 			OR = {
 				foreign_training = yes_foreign_training
 				foreign_weapons = yes_foreign_weapons
@@ -484,8 +454,8 @@ political_decisions = {
 		}
 
 		effect = {
-			set_country_flag = abolish_the_eight_banners
-			remove_country_modifier = the_eight_banners
+			set_country_flag = abolish_the_half_half_system
+			remove_country_modifier = the_half_half_system
 			any_pop = {
 				limit = {
 					OR = {
