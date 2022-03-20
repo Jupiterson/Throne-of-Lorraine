@@ -69,11 +69,11 @@ political_decisions = {
 	#
 	# National value | Weight | Probability | Cumulative Rescale Divisor (CRD) | Practical Factor (Probability over CRD)
 	# ---------------+--------+-------------+----------------------------------+----------------------------------------
-	# Order		  |	  1 |		 20% |								1 |								  0.200
-	# Productivity   |	  1 |		 20% |							  0.8 |								  0.250
-	# Autocracy	  |	  1 |		 20% |							  0.6 |								  0.333
-	# Liberty		|	  1 |		 20% |							  0.4 |								  0.500
-	# Equality	   |	  1 |		 20% |							  0.2 |								  1.000
+	# Order			 |		1 |			20% |								 1 |								  0.200
+	# Productivity	 |		1 |			20% |							   0.8 |								  0.250
+	# Autocracy		 |		1 |			20% |							   0.6 |								  0.333
+	# Liberty		 |		1 |			20% |							   0.4 |								  0.500
+	# Equality		 |		1 |			20% |							   0.2 |								  1.000
 	#
 	# (Note that in testing the engine did not seem to handle decimals well beyond the thousandth place.)
 

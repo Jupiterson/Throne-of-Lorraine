@@ -6,7 +6,6 @@ political_decisions = {
 			OR = {
 				tag = TRN
 				tag = SAF
-				tag = VLK
 			}
 			NOT = { has_country_flag = kruger_wildlife_preserve_formed }
 		}
@@ -77,10 +76,7 @@ political_decisions = {
 	adopt_die_stem = {
 		picture = adopt_die_stem
 		potential = {
-			OR = {
-				tag = SAF
-				tag = VLK
-			}
+			tag = SAF
 			NOT = {
 				has_country_flag = has_die_stem
 			}
@@ -232,10 +228,7 @@ political_decisions = {
 	move_capital = {
 		picture = map_africa
 		potential = {
-			OR = {
-				tag = SAF
-				tag = VLK
-			}
+			tag = SAF
 			NOT = { has_country_flag = moved_capital_saf }
 		}
 
@@ -263,10 +256,7 @@ political_decisions = {
 	claim_namibia = {
 		picture = map_africa
 		potential = {
-			OR = {
-				tag = SAF
-				tag = VLK
-			}
+			tag = SAF
 			2084 = { empty = yes }
 			2085 = { empty = yes }
 			2086 = { empty = yes }
@@ -297,11 +287,8 @@ political_decisions = {
 
 	open_the_frontiers = {
 		picture = die_groot_trek
-		potential = {
-			OR = {
-				tag = VLK
-				tag = SAF
-			}
+		potential = { 
+			tag = SAF
 			2106 = { owned_by = THIS }
 			2111 = { owned_by = THIS }
 			2105 = { owned_by = THIS }
@@ -341,10 +328,7 @@ political_decisions = {
 	annex_SAF_minors = {
 		picture = cape_map
 		potential = {
-			OR = {
-				tag = VLK
-				tag = SAF
-			}
+			tag = SAF
 			OR = {
 				BSH = { vassal_of = THIS }
 				SUA = { vassal_of = THIS }

@@ -214,40 +214,6 @@ political_decisions = {
 
 			random_country = {
 				limit = {
-					tag = ENT
-					exists = yes
-					ai = yes
-				}
-				THIS = { inherit = ENT }
-			}
-			random_country = {
-				limit = {
-					tag = ENT
-					exists = yes
-					ai = no
-				}
-				country_event = 98650
-			}
-
-			random_country = {
-				limit = {
-					tag = CRT
-					exists = yes
-					ai = yes
-				}
-				THIS = { inherit = CRT }
-			}
-			random_country = {
-				limit = {
-					tag = CRT
-					exists = yes
-					ai = no
-				}
-				country_event = 98650
-			}
-
-			random_country = {
-				limit = {
 					tag = SBA
 					exists = yes
 					ai = yes

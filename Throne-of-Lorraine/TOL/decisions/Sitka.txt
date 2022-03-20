@@ -503,108 +503,6 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	Claim_Forte = {
-		potential = {
-			OR = {
-				tag = VNZ
-				tag = GCO
-			}
-			NOT = { has_country_flag = Forte_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 30
-			is_vassal = no
-			owns = 2242
-			owns = 2278
-		}
-		effect = {
-			badboy = 1
-			prestige = 15
-			set_country_flag = Forte_claimed
-			2532 = {
-			add_core = VNZ
-			}
-			2532 = {
-			add_core = THIS
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	Claim_ABC = {
-		potential = {
-			OR = {
-				tag = VNZ
-				tag = GCO
-			}
-			NOT = { has_country_flag = ABC_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 50
-			is_vassal = no
-		}
-		effect = {
-			badboy = 1
-			prestige = 15
-			set_country_flag = ABC_claimed
-			2235 = {
-			add_core = VNZ
-			}
-			2235 = {
-			add_core = THIS
-			}
-			2234 = {
-			add_core = VNZ
-			}
-			2234 = {
-			add_core = THIS
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	Claim_TRT = {
-		potential = {
-			OR = {
-				tag = VNZ
-				tag = GCO
-			}
-			NOT = { has_country_flag = TRT_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 80
-			is_vassal = no
-		}
-		effect = {
-			badboy = 1
-			prestige = 15
-			set_country_flag = TRT_claimed
-			2237 = {
-			add_core = THIS
-			}
-			2237 = {
-			add_core = VNZ
-			}
-			2238 = {
-			add_core = THIS
-			}
-			2238 = {
-			add_core = VNZ
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	Claim_LIE = {
 		potential = {
@@ -1027,32 +925,7 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	Claim_MSQ = {
-		potential = {
-			tag = GCO
-			NOT = { has_country_flag = MSQ_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 110
-			is_vassal = no
-		}
-		effect = {
-			badboy = 2
-			prestige = 15
-			set_country_flag = MSQ_claimed
-			2200 = {
-			add_core = GCO
-			}
-			2196 = {
-			add_core = GCO
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+	
 	Claim_ARM = {
 		potential = {
 			tag = ARM
@@ -2024,30 +1897,6 @@ political_decisions = {
 		effect = {
 			set_country_flag = Kuldscha_reclaimed
 			RUS = { country_event = 123458 }
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	Claim_VLG = {
-		potential = {
-			tag = VLG
-			NOT = { has_country_flag = VLG_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 20
-			is_vassal = no
-		}
-		effect = {
-			badboy = 1
-			prestige = 5
-			set_country_flag = VLG_claimed
-			1038 = {
-			add_core = VLG
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -4806,8 +4655,7 @@ political_decisions = {
 				2233 = { owned_by = THIS NOT = { has_province_modifier = plantation } }
 				2235 = { owned_by = THIS NOT = { has_province_modifier = plantation } }
 				2234 = { owned_by = THIS NOT = { has_province_modifier = plantation } }
-				any_owned_province = {
-					is_core = GLP
+				any_owned_province = { 
 					NOT = { terrain = small_island }
 					NOT = { terrain = desert }
 					NOT = { terrain = semidesert }
@@ -4906,8 +4754,7 @@ political_decisions = {
 			}
 			any_owned = {
 				limit = {
-					NOT = { has_province_modifier = plantation }
-					is_core = GLP
+					NOT = { has_province_modifier = plantation } 
 					NOT = { terrain = small_island }
 					NOT = { terrain = desert }
 					NOT = { terrain = semidesert }

@@ -531,7 +531,6 @@ political_decisions = {
 			}
 
 			diplomatic_influence = { who = ARC value = -100 }
-			diplomatic_influence = { who = PBC value = -100 }
 			diplomatic_influence = { who = CHL value = -100 }
 			diplomatic_influence = { who = PRG value = -100 }
 			diplomatic_influence = { who = SPU value = -100 }
@@ -2251,11 +2250,7 @@ political_decisions = {
 
 	BOL_1836_setup = {
 		potential = {
-			OR = {
-				tag = PBC
-				tag = BOL
-			}
-			always = no
+			tag = BOL
 		}
 
 		allow = {
@@ -2389,12 +2384,6 @@ political_decisions = {
 			add_country_modifier = {
 				name = america_new_world
 				duration = 3650
-			}
-			PBC = {
-				add_country_modifier = {
-					name = america_new_world
-					duration = 1095
-				}
 			}
 			MEX = {
 				add_country_modifier = {
@@ -3147,14 +3136,7 @@ political_decisions = {
 			#################Government Flags Setup######################
 
 			QNG = { add_country_modifier = { name = corrupt_army duration = 10950 } }
-			ENT = { add_country_modifier = { name = caudillo_leaders duration = 7300 } }
-			CRT = { add_country_modifier = { name = caudillo_leaders duration = 1825 } }
 			HAI = { add_country_modifier = { name = divided_society duration = 10950 } }
-
-			any_greater_power = {
-				limit = { NOT = { tag = PRU } }
-				diplomatic_influence = { who = NCT value = -400 }
-			}
 		}
 	}
 

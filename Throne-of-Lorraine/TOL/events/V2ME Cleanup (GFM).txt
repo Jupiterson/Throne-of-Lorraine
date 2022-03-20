@@ -488,17 +488,6 @@ country_event = {
 				remove_core = TOU
 				remove_core = MAS
 			}
-			any_owned = {
-				limit = {
-					NOT = { exists = FRO }
-					is_core = FRO
-					OR = {
-						is_colonial = no
-						year = 1880
-					}
-				}
-				remove_core = FRO
-			}
 		}
 		
 		#fix for bad modifier
@@ -4174,7 +4163,6 @@ country_event = {
 				NOT = { exists = GEL }
 				NOT = { exists = MAJ }
 				NOT = { exists = WRL }
-				NOT = { exists = HBY }
 			}
 			set_global_flag = somalia_united
 			random_owned = {
@@ -4191,7 +4179,6 @@ country_event = {
 
 			SOM_1868 = { add_core = SOM }
 			SOM_1872 = { add_core = SOM }
-			HBY = { all_core = { remove_core = HBY } }
 			GEL = { all_core = { remove_core = GEL } }
 			MAJ = { all_core = { remove_core = MAJ } }
 			WRL = { all_core = { remove_core = WRL } }

@@ -1870,23 +1870,12 @@ political_decisions = {
 
 							#Dahomey/Benin
 							AND = {
-								is_core = DAH
-								OR = {
-									is_core = TOU
-									is_core = MAS
-								}
+							is_core = DAH
+							OR = {
+								is_core = TOU
+								is_core = MAS
 							}
-
-							#Faroe Islands
-							AND = {
-								NOT = { exists = FRO }
-								is_core = FRO
-								OR = {
-									is_colonial = no
-									year = 1880
-								}
-							}
-
+						}
 					}
 				}
 			}
@@ -2304,17 +2293,6 @@ political_decisions = {
 						capital_scope = { continent = east_africa }
 						capital_scope = { continent = south_west_africa }
 					}
-				}
-				any_owned = {
-					limit = {
-						NOT = { exists = FRO }
-						is_core = FRO
-						OR = {
-							is_colonial = no
-							year = 1880
-						}
-					}
-					remove_core = FRO
 				}
 			}
 

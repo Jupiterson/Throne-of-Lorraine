@@ -330,7 +330,7 @@ country_event = {
 		}
 		remove_country_modifier = war_minister_boulanger
 		add_country_modifier = {
-			name = boulangisme
+			name = bongisme
 			duration = -1
 		}
 
@@ -371,7 +371,7 @@ country_event = {
 		capital = 425
 		government = democracy
 		412 = { NOT = { owned_by = THIS } }
-		has_country_modifier = boulangisme
+		has_country_modifier = bongisme
 		has_country_flag = schnaebele_affair
 		NOT = { has_country_flag = legion_scandal }
 	}
@@ -404,7 +404,7 @@ country_event = {
 		government = democracy
 		election = no
 		412 = { NOT = { owned_by = THIS } }
-		has_country_modifier = boulangisme
+		has_country_modifier = bongisme
 		has_country_flag = legion_scandal
 		NOT = { has_country_flag = boulanger_win }
 	}
@@ -415,14 +415,14 @@ country_event = {
 
 	option = {
 		name = "EVT99943OPTA"
-		remove_country_modifier = boulangisme
+		remove_country_modifier = bongisme
 		set_country_flag = boulanger_coup_fails
 		ai_chance = { factor = 90 }
 	}
 
 	option = {
 		name = "EVT99943OPTB"
-		remove_country_modifier = boulangisme
+		remove_country_modifier = bongisme
 		set_country_flag = boulanger_coup_success
 		ai_chance = { factor = 10 }
 	}

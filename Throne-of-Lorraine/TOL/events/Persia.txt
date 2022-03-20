@@ -249,7 +249,7 @@ country_event = {
 
 	option = {
 		name = "EVT110020OPTA" # "Let's build the Persia of tomorrow together."
-		set_country_flag = ulama_yes
+		set_country_flag = ulaulama_yes
 		any_pop = {
 			limit = { is_primary_culture = yes is_state_religion = yes type = clergymen }
 			consciousness = 5
@@ -277,7 +277,7 @@ country_event = {
 # The role of the clergy / Tobacco Protest 2A
 country_event = {
 	id = 110021
-	title = "EVTNAME110021" # "The ulama agree!"
+	title = "EVTNAME110021" # ""The ulama agree!"
 	desc = "EVTDESC110021"
 	picture = "ulama"
 
@@ -316,7 +316,7 @@ country_event = {
 	}
 	option = {
 		name = "EVT110021OPTB" # "We do not abide to their pressure!"
-		set_country_flag = refused_deal_with_ulama
+		set_country_flag = refused_deal_with_ma
 		clr_country_flag = ulama_yes
 		country_event = { id = 110028 days = 30 }
 		any_pop = {
@@ -370,7 +370,7 @@ country_event = {
 
 	option = {
 		name = "EVT110022OPTB" # "We cannot be bought!"
-		set_country_flag = refused_deal_with_ulama
+		set_country_flag = refused_deal_with_ma
 		clr_country_flag = ulama_no
 		country_event = { id = 110028 days = 30 }
 		any_pop = {
@@ -381,7 +381,7 @@ country_event = {
 
 	option = {
 		name = "EVT110022OPTC" # "They shall submit or pay the price."
-		set_country_flag = refused_deal_with_ulama
+		set_country_flag = refused_deal_with_ma
 		country_event = { id = 110028 days = 30 }
 		clr_country_flag = ulama_no
 		any_pop = {
@@ -420,7 +420,7 @@ country_event = {
 
 	option = {
 		name = "EVT110028OPTA" # "We cannot take it..."
-		clr_country_flag = refused_deal_with_ulama
+		clr_country_flag = refused_deal_with_ma
 		years_of_research = -1
 		remove_country_modifier = western_influences
 		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
@@ -439,7 +439,7 @@ country_event = {
 
 	option = {
 		name = "EVT110028OPTB" # "We can take it!"
-		clr_country_flag = refused_deal_with_ulama
+		clr_country_flag = refused_deal_with_ma
 		treasury = 50000
 		any_pop = {
 			limit = { is_primary_culture = yes is_state_religion = yes }
@@ -450,7 +450,7 @@ country_event = {
 
 	option = {
 		name = "EVT110028OPTC" # "Put. This. Down."
-		clr_country_flag = refused_deal_with_ulama
+		clr_country_flag = refused_deal_with_ma
 		treasury = 50000
 		any_pop = {
 			limit = {

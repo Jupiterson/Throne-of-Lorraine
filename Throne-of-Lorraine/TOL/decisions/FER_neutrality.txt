@@ -149,14 +149,6 @@ political_decisions = {
 					any_greater_power = { military_access = SWI }
 					any_neighbor_country = { NOT = { vassal_of = SWI } military_access = SWI }
 					sphere_owner = { military_access = SWI }
-					AND = {
-						num_of_allies = 1
-						NOT = { NCT = { alliance_with = SWI } }
-					}
-					AND = {
-						num_of_allies = 2
-						NCT = { exists = yes alliance_with = SWI }
-					}
 					war = yes
 				}
 			}
