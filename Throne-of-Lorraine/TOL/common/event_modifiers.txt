@@ -4864,12 +4864,12 @@ the_soldier_king = {
 french_terror = {
 	immigrant_attract = -1.5
 #	war_exhaustion = 0.05
-	immigrant_push = 0.025
+	immigrant_push = 0.05
 	local_RGO_output = -0.5
-	pop_consciousness_modifier = 0.10
-	pop_militancy_modifier = 0.10
-	non_accepted_pop_consciousness_modifier = 0.1
-	non_accepted_pop_militancy_modifier = 0.1
+	pop_consciousness_modifier = 0.5
+	pop_militancy_modifier = 0.5
+	non_accepted_pop_consciousness_modifier = 0.05
+	non_accepted_pop_militancy_modifier = 0.05
 	local_ruling_party_support = -0.80
 	goods_demand = -0.05
 	icon = 1
@@ -4966,17 +4966,17 @@ ottoman_asimilation = {
 #Next two ripped from TGC
 outraged-europe = {
 		badboy = 0.07
-		import_cost = 0.1
-		diplomatic_points_modifier = -0.2
-		influence_modifier = -0.2
+		import_cost = 0.3
+		diplomatic_points_modifier = -0.25
+		influence_modifier = -0.3
 		icon = 8
 	}
 
 german-menace = {
-		badboy = -0.01
-		influence_modifier = 0.2
-		diplomatic_points_modifier = 0.2
-		mobilisation_size = 0.06
+		badboy = -0.02
+		influence_modifier = 0.4
+		diplomatic_points_modifier = 0.3
+		mobilisation_size = 0.15
 		icon = 15
 	}
 	
