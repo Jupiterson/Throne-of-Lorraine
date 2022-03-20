@@ -1323,8 +1323,8 @@ country_event = {
 		remove_country_modifier = dom_pedro_ii
 		remove_country_modifier = regency_modifier
 		random_owned = {
-			limit = { NOT = { owner = { upper_house_composition = poption_equal_weight } } }
-			owner = { political_reform = poption_equal_weight }
+			limit = { NOT = { owner = { upper_house_composition = population_equal_weight } } }
+			owner = { political_reform = population_equal_weight }
 		}
 		random_owned = {
 			limit = { NOT = { owner = { press_rights = free_press } } }

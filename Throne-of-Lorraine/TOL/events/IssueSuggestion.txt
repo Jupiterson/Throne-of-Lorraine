@@ -1252,7 +1252,7 @@ country_event = {
 	}
 }
 
-##### SAFETY REGTIONS #####
+##### SAFETY REGULATIONS #####
 #Life and Limb
 country_event = {
 	id = 3600
@@ -1262,7 +1262,7 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		safety_regtions = no_safety
+		safety_regulations = no_safety
 		industrial_score = 1
 		is_ideology_enabled = socialist
 	}
@@ -1316,7 +1316,7 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		safety_regtions = trinket_safety
+		safety_regulations = trinket_safety
 		industrial_score = 1
 		is_ideology_enabled = socialist
 	}
@@ -1369,7 +1369,7 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		safety_regtions = low_safety
+		safety_regulations = low_safety
 		social_reform_want = 0.2
 		industrial_score = 1
 		is_ideology_enabled = socialist
@@ -1441,7 +1441,7 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		safety_regtions = acceptable_safety
+		safety_regulations = acceptable_safety
 		industrial_score = 1
 		is_ideology_enabled = socialist
 	}
@@ -1502,7 +1502,7 @@ country_event = {
 	trigger = {
 		civilized = yes
 		NOT = { trade_unions = all_trade_unions }
-		NOT = { safety_regtions = good_safety }
+		NOT = { safety_regulations = good_safety }
 	}
 
 	mean_time_to_happen = {
@@ -1549,7 +1549,7 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		safety_regtions = low_safety
+		safety_regulations = low_safety
 		health_care = low_health_care
 		is_ideology_enabled = socialist
 	}
@@ -1608,7 +1608,7 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		safety_regtions = acceptable_safety
+		safety_regulations = acceptable_safety
 		health_care = acceptable_health_care
 		basic_chemistry = 1
 		is_ideology_enabled = socialist
@@ -1659,7 +1659,7 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		safety_regtions = good_safety
+		safety_regulations = good_safety
 		health_care = good_health_care
 	}
 

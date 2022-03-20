@@ -37,7 +37,7 @@ political_decisions = {
 			prestige = 5
 			treasury = 5000
 			small_arms = 20
-			regr_clothes = 50
+			regular_clothes = 50
 			military_reform = yes_foreign_navies
 			military_reform = yes_foreign_training
 			add_country_modifier = { name = muhammad_alis_reforms duration = -1 }
@@ -55,8 +55,8 @@ political_decisions = {
 		}
 	}
 
-	annals_of_the_fni_jihad = {
-		picture = annals_of_the_fni_jihad
+	annals_of_the_fulani_jihad = {
+		picture = annals_of_the_fulani_jihad
 		potential = {
 			tag = SOK
 			NOT = {
@@ -623,7 +623,7 @@ political_decisions = {
 					OR = {
 						ai = no
 						upper_house = { ideology = liberal value = 0.35 }
-						secrized = 20
+						secularized = 20
 						AND = {
 							religious_policy = pluralism
 							pluralism = 30
@@ -641,7 +641,7 @@ political_decisions = {
 			OR = {
 				ai = no
 				upper_house = { ideology = liberal value = 0.35 }
-				secrized = 20
+				secularized = 20
 				AND = {
 					religious_policy = pluralism
 					pluralism = 30

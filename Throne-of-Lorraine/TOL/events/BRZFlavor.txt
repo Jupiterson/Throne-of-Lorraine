@@ -202,7 +202,7 @@ country_event = {
 		clr_country_flag = presidential_dictatorship_gov
 		clr_country_flag = fascist_gov
 		clr_country_flag = radical_gov
-		political_reform = poption_equal_weight
+		political_reform = population_equal_weight
 		political_reform = wealth_weighted_voting
 		political_reform = yes_meeting
 		political_reform = free_press
@@ -228,7 +228,7 @@ country_event = {
 		NOT = { war_with = PAA }
 		PAA = { exists = no }
 		NOT = { upper_house_composition = state_equal_weight }
-		NOT = { upper_house_composition = poption_equal_weight }
+		NOT = { upper_house_composition = population_equal_weight }
 		year = 1836
 		NOT = { year = 1842 }
 	}

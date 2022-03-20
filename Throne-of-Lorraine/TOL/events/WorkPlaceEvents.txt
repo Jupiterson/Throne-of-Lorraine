@@ -21,19 +21,19 @@ country_event = {
 
 		modifier = {
 			factor = 0.9
-			safety_regtions = trinket_safety
+			safety_regulations = trinket_safety
 		}
 		modifier = {
 			factor = 2
-			safety_regtions = low_safety
+			safety_regulations = low_safety
 		}
 		modifier = {
 			factor = 6
-			safety_regtions = acceptable_safety
+			safety_regulations = acceptable_safety
 		}
 		modifier = {
 			factor = 8
-			safety_regtions = good_safety
+			safety_regulations = good_safety
 		}
 	}
 
@@ -82,8 +82,8 @@ country_event = {
 		}
 		child_labor = child_labor_legal
 		OR = {
-			safety_regtions = trinket_safety
-			safety_regtions = no_safety
+			safety_regulations = trinket_safety
+			safety_regulations = no_safety
 		}
 	}
 
@@ -663,7 +663,7 @@ province_event = {
 
 	option = {
 		name = "EVTOPTA12130"
-		owner = { regr_clothes = 15 }
+		owner = { regular_clothes = 15 }
 		any_pop = { militancy = -0.5 }
 	}
 
@@ -734,13 +734,13 @@ province_event = {
 		modifier = {
 			factor = 1.3
 			owner = {
-				safety_regtions = acceptable_safety
+				safety_regulations = acceptable_safety
 			}
 		}
 		modifier = {
 			factor = 1.5
 			owner = {
-				safety_regtions = good_safety
+				safety_regulations = good_safety
 			}
 		}
 		modifier = {
@@ -815,8 +815,8 @@ province_event = {
 	trigger = {
 		state_scope = { has_building = dye_factory }
 		owner = { dye = 15 }
-		NOT = { owner = { safety_regtions = acceptable_safety } }
-		NOT = { owner = { safety_regtions = good_safety } }
+		NOT = { owner = { safety_regulations = acceptable_safety } }
+		NOT = { owner = { safety_regulations = good_safety } }
 	}
 
 	mean_time_to_happen = {
@@ -826,8 +826,8 @@ province_event = {
 			NOT = {
 				owner = {
 					OR = {
-						safety_regtions = no_safety
-						safety_regtions = trinket_safety
+						safety_regulations = no_safety
+						safety_regulations = trinket_safety
 					}
 				}
 			}
@@ -872,19 +872,19 @@ province_event = {
 		modifier = {
 			factor = 1.5
 			owner = {
-				safety_regtions = good_safety
+				safety_regulations = good_safety
 			}
 		}
 		modifier = {
 			factor = 1.3
 			owner = {
-				safety_regtions = acceptable_safety
+				safety_regulations = acceptable_safety
 			}
 		}
 		modifier = {
 			factor = 0.9
 			owner = {
-				safety_regtions = no_safety
+				safety_regulations = no_safety
 			}
 		}
 	}
@@ -912,8 +912,8 @@ province_event = {
 		NOT = { unemployment_by_type = { type = labourers value = 0.1 } }
 		owner = {
 			OR = {
-				safety_regtions = no_safety
-				safety_regtions = trinket_safety
+				safety_regulations = no_safety
+				safety_regulations = trinket_safety
 			}
 		}
 	}
@@ -955,8 +955,8 @@ province_event = {
 		produces = iron
 		state_scope = { has_pop_type = capitalists }
 		owner = { iron = 15 }
-		NOT = { owner = { safety_regtions = acceptable_safety } }
-		NOT = { owner = { safety_regtions = good_safety } }
+		NOT = { owner = { safety_regulations = acceptable_safety } }
+		NOT = { owner = { safety_regulations = good_safety } }
 	}
 
 	mean_time_to_happen = {
@@ -964,7 +964,7 @@ province_event = {
 		modifier = {
 			factor = 0.9
 			owner = {
-				safety_regtions = no_safety
+				safety_regulations = no_safety
 			}
 		}
 		modifier = {
@@ -1199,8 +1199,8 @@ province_event = {
 	trigger = {
 		state_scope = { has_building = explosives_factory }
 		is_capital = no
-		NOT = { owner = { safety_regtions = acceptable_safety } }
-		NOT = { owner = { safety_regtions = good_safety } }
+		NOT = { owner = { safety_regulations = acceptable_safety } }
+		NOT = { owner = { safety_regulations = good_safety } }
 	}
 
 	mean_time_to_happen = {
@@ -1215,7 +1215,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.3
-			safety_regtions = trinket_safety
+			safety_regulations = trinket_safety
 		}
 	}
 
@@ -1305,7 +1305,7 @@ province_event = {
 		name = "EVTOPTA12270"
 		owner = {
 			luxury_clothes = -30
-			regr_clothes = 30
+			regular_clothes = 30
 		}
 	}
 
@@ -1328,8 +1328,8 @@ province_event = {
 	desc = "EVTDESC12280"
 
 	trigger = {
-		state_scope = { has_building = regr_clothes_factory }
-		owner = { regr_clothes = 30 }
+		state_scope = { has_building = regular_clothes_factory }
+		owner = { regular_clothes = 30 }
 		NOT = { has_global_flag = workplace_events_disabled }
 	}
 
@@ -1353,7 +1353,7 @@ province_event = {
 
 	option = {
 		name = "EVTOPTA12280"
-		owner = { regr_clothes = -30 }
+		owner = { regular_clothes = -30 }
 	}
 
 	option = {

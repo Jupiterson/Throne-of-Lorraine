@@ -407,7 +407,7 @@ political_decisions = {
 					NOT = { total_pops = 55000 }
 				}
 				1087 = {
-					add_province_modifier = { name = poption_resettlement duration = 720 }
+					add_province_modifier = { name = population_resettlement duration = 720 }
 					add_province_modifier = { name = baby_boom duration = 720 }
 				}
 			}
@@ -429,7 +429,7 @@ political_decisions = {
 					owner = { ai = yes }
 				}
 				1086 = {
-					add_province_modifier = { name = poption_resettlement duration = 1825 }
+					add_province_modifier = { name = population_resettlement duration = 1825 }
 					add_province_modifier = { name = baby_boom duration = 1825 }
 					state_scope = {
 						any_pop = {
@@ -445,7 +445,7 @@ political_decisions = {
 					province_id = 1086
 					owner = { ai = no }
 				}
-				1086 = { add_province_modifier = { name = poption_resettlement duration = 1095 } }
+				1086 = { add_province_modifier = { name = population_resettlement duration = 1095 } }
 			}
 		}
 

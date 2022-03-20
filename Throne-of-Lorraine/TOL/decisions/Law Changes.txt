@@ -248,10 +248,10 @@ political_decisions = {
 			}
 
 			random_owned = {
-				limit = { owner = { upper_house_composition = poption_equal_weight } }
+				limit = { owner = { upper_house_composition = population_equal_weight } }
 				any_country = {
 					limit = { exists = no capital_scope = { owned_by = THIS } }
-					political_reform = poption_equal_weight
+					political_reform = population_equal_weight
 				}
 			}
 		}

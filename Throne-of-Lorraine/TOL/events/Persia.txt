@@ -229,7 +229,7 @@ country_event = {
 	id = 110020
 	title = "EVTNAME110020" # "The role of the clergy"
 	desc = "EVTDESC110020"
-	picture = "ma"
+	picture = "ulama"
 
 	trigger = {
 		tag = PER
@@ -249,7 +249,7 @@ country_event = {
 
 	option = {
 		name = "EVT110020OPTA" # "Let's build the Persia of tomorrow together."
-		set_country_flag = ma_yes
+		set_country_flag = ulaulama_yes
 		any_pop = {
 			limit = { is_primary_culture = yes is_state_religion = yes type = clergymen }
 			consciousness = 5
@@ -263,7 +263,7 @@ country_event = {
 	}
 	option = {
 		name = "EVT110020OPTB" # "The state must be independent."
-		set_country_flag = ma_no
+		set_country_flag = ulama_no
 		any_pop = {
 			limit = { is_primary_culture = yes is_state_religion = yes }
 			scaled_militancy = { factor = 6 ideology = reactionary }
@@ -277,16 +277,16 @@ country_event = {
 # The role of the clergy / Tobacco Protest 2A
 country_event = {
 	id = 110021
-	title = "EVTNAME110021" # "The ma agree!"
+	title = "EVTNAME110021" # ""The ulama agree!"
 	desc = "EVTDESC110021"
-	picture = "ma"
+	picture = "ulama"
 
 	is_triggered_only = yes
 
 	option = {
 		name = "EVT110021OPTA" # "In the name of the Prophet, we agree."
-		set_country_flag = made_deal_with_ma
-		clr_country_flag = ma_yes
+		set_country_flag = made_deal_with_ulama
+		clr_country_flag = ulama_yes
 		remove_country_modifier = western_influences
 		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
 		treasury = -50000
@@ -317,7 +317,7 @@ country_event = {
 	option = {
 		name = "EVT110021OPTB" # "We do not abide to their pressure!"
 		set_country_flag = refused_deal_with_ma
-		clr_country_flag = ma_yes
+		clr_country_flag = ulama_yes
 		country_event = { id = 110028 days = 30 }
 		any_pop = {
 			limit = { is_primary_culture = yes is_state_religion = yes }
@@ -330,16 +330,16 @@ country_event = {
 # The role of the clergy / Tobacco Protest 2B
 country_event = {
 	id = 110022
-	title = "EVTNAME110022" # "The ma propose compromise!"
+	title = "EVTNAME110022" # "The ulama propose compromise!"
 	desc = "EVTDESC110022"
-	picture = "ma"
+	picture = "ulama"
 
 	is_triggered_only = yes
 
 	option = {
 		name = "EVT110022OPTA" # "This is for the greater good. "
-		set_country_flag = made_deal_with_ma
-		clr_country_flag = ma_no
+		set_country_flag = made_deal_with_ulama
+		clr_country_flag = ulama_no
 		remove_country_modifier = western_influences
 		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
 		treasury = -50000
@@ -371,7 +371,7 @@ country_event = {
 	option = {
 		name = "EVT110022OPTB" # "We cannot be bought!"
 		set_country_flag = refused_deal_with_ma
-		clr_country_flag = ma_no
+		clr_country_flag = ulama_no
 		country_event = { id = 110028 days = 30 }
 		any_pop = {
 			limit = { is_primary_culture = yes is_state_religion = yes }
@@ -383,7 +383,7 @@ country_event = {
 		name = "EVT110022OPTC" # "They shall submit or pay the price."
 		set_country_flag = refused_deal_with_ma
 		country_event = { id = 110028 days = 30 }
-		clr_country_flag = ma_no
+		clr_country_flag = ulama_no
 		any_pop = {
 			limit = {
 				is_state_religion = yes
@@ -409,10 +409,10 @@ country_event = {
 	}
 }
 
-# The bazaari support the ma!
+# The bazaari support the ulama!
 country_event = {
 	id = 110028
-	title = "EVTNAME110028" # "The bazaari support the ma!"
+	title = "EVTNAME110028" # "The bazaari support the ulama!"
 	desc = "EVTDESC110028"
 	picture = "PER_bazaari"
 
@@ -726,7 +726,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVT110043OPTD" #Isfahan, our poption center.
+		name = "EVT110043OPTD" #Isfahan, our population center.
 		prestige = 5
 		capital = 1127
 		1127 = {

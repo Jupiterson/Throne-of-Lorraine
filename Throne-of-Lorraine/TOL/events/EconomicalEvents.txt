@@ -388,7 +388,7 @@ country_event = {
 	picture = "Bankruptcy"
 
 	trigger = {
-		business_regtions = 1
+		business_regulations = 1
 		unemployment = 0.1
 		average_consciousness = 3
 		has_pop_type = capitalists
@@ -430,7 +430,7 @@ country_event = {
 
 	trigger = {
 		NOT = { economic_policy = planned_economy }
-		market_regtions = 1
+		market_regulations = 1
 		any_owned_province = { is_colonial = no has_building = railroad }
 	}
 

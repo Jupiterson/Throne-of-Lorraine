@@ -278,7 +278,7 @@ political_decisions = {
 			2159 = { add_core = CSA } #San Luis de Potosi
 			2167 = { add_core = CSA } #Guanajuato
 			2173 = { add_core = CSA } #Queretaro
-			2175 = { add_core = CSA } #Tncingo
+			2175 = { add_core = CSA } #Tulancingo
 			2176 = { add_core = CSA } #Puebla
 			2177 = { add_core = CSA } #Oaxaca
 			UCA_2193 = { add_core = CSA } #Honduras
@@ -833,14 +833,14 @@ political_decisions = {
 			}
 		}
 	}
-	#Mtto-African tension
-	mtto_african_tension = {
+	#Mulatto-African tension
+	mulatto_african_tension = {
 		picture = coloured_troops
 		potential = {
 			tag = BRZ
 			slavery = yes_slavery
 			NOT = {
-				has_country_flag = mtto_tensions_flag
+				has_country_flag = mulatto_tensions_flag
 			}
 		}
 		allow = {
@@ -849,10 +849,10 @@ political_decisions = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = mtto_modifier
+				name = mulatto_modifier
 				duration = 18000
 			}
-			set_country_flag = mtto_tensions_flag
+			set_country_flag = mulatto_tensions_flag
 			any_state = {
 				limit = {
 					is_slave = yes

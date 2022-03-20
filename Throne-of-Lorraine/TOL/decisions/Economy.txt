@@ -53,7 +53,7 @@ political_decisions = {
 					owner = {
 						OR = {
 							tech_school = commerce_tech_school
-							market_regtions = 1
+							market_regulations = 1
 						}
 						trade_policy = protectionism
 					}
@@ -64,7 +64,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						NOT = { tech_school = commerce_tech_school market_regtions = 1 }
+						NOT = { tech_school = commerce_tech_school market_regulations = 1 }
 						trade_policy = protectionism
 					}
 				}
@@ -76,7 +76,7 @@ political_decisions = {
 					owner = {
 						OR = {
 							tech_school = commerce_tech_school
-							market_regtions = 1
+							market_regulations = 1
 						}
 						trade_policy = free_trade
 					}
@@ -87,7 +87,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						NOT = { tech_school = commerce_tech_school market_regtions = 1 }
+						NOT = { tech_school = commerce_tech_school market_regulations = 1 }
 						trade_policy = free_trade
 					}
 				}
