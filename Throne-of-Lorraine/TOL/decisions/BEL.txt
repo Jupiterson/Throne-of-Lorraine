@@ -1,36 +1,5 @@
 political_decisions = {
-	
- 
 
-	become_flanders = {
-		picture = become_belgium
-		potential = {
-			tag = BEL
-			NOT = {
-				exists = PIC
-				any_owned_province = { is_core = WLL }
-			}
-		}
-
-		allow = {
-			war = no
-			owns = 387
-		}
-
-		effect = {
-			BEL = {
-				all_core = {
-					add_core = PIC
-					remove_core = BEL
-				}
-			}
-			change_tag = PIC
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	form_belgium = {
 		picture = become_belgium

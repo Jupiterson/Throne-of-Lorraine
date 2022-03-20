@@ -1,46 +1,4 @@
 political_decisions = {
-	Greater_Alaska = {
-		potential = {
-			ai = no
-			tag = LSK
-			civilized = yes
-			NOT = { has_country_flag = Greater_Alaska_claimed }
-		}
-		allow = {
-			war = no
-			prestige = 20
-			state_n_government = 1
-		}
-		effect = {
-			badboy = 4
-			prestige = 10
-			set_country_flag = Greater_Alaska_claimed
-			6 = {
-			add_core = LSK
-			}
-			16 = {
-			add_core = LSK
-			}
-			17 = {
-			add_core = LSK
-			}
-			15 = {
-			add_core = LSK
-			}
-			14 = {
-			add_core = LSK
-			}
-			78 = {
-			add_core = LSK
-			}
-			13 = {
-			add_core = LSK
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	claim_lorraine_als = {
 		potential = {
 			tag = ALS
@@ -388,144 +346,6 @@ political_decisions = {
 			}
 			1481 = {
 			add_core = KOR
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	Western_Banatia = {
-		potential = {
-			tag = BAN
-			NOT = { has_country_flag = Western_Banatia_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 50
-			is_vassal = no
-			owns = 3330
-			owns = 2538
-			owns = 791
-		}
-		effect = {
-			badboy = 6
-			prestige = 15
-			set_country_flag = Western_Banatia_claimed
-			3283 = {
-			add_core = BAN
-			}
-			779 = {
-			add_core = BAN
-			}
-			793 = {
-			add_core = BAN
-			}
-			3331 = {
-			add_core = BAN
-			}
-			792 = {
-			add_core = BAN
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	Eastern_Banatia = {
-		potential = {
-			tag = BAN
-			NOT = { has_country_flag = Eastern_Banatia_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 90
-			is_vassal = no
-			owns = 3330
-			owns = 2538
-			owns = 791
-		}
-		effect = {
-			badboy = 15
-			prestige = 15
-			set_country_flag = Eastern_Banatia_claimed
-			656 = {
-			add_core = BAN
-			}
-			665 = {
-			add_core = BAN
-			}
-			647 = {
-			add_core = BAN
-			}
-			657 = {
-			add_core = BAN
-			}
-			659 = {
-			add_core = BAN
-			}
-			667 = {
-			add_core = BAN
-			}
-			655 = {
-			add_core = BAN
-			}
-			add_accepted_culture = north_german
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	Claim_Belgrade = {
-		potential = {
-			tag = BAN
-			NOT = { has_country_flag = Belgrade_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 70
-			is_vassal = no
-			owns = 3330
-			owns = 2538
-			owns = 791
-		}
-		effect = {
-			badboy = 6
-			prestige = 15
-			set_country_flag = Belgrade_claimed
-			794 = {
-			add_core = BAN
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	Claim_LIE = {
-		potential = {
-			tag = LIE
-			NOT = { has_country_flag = LIE_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 20
-			is_vassal = no
-			NOT = {
-			in_sphere = AUS
-			}
-			is_disarmed = no
-			war_policy = pro_military
-		}
-		effect = {
-			badboy = 1
-			prestige = 3
-			set_country_flag = LIE_claimed
-			614 = {
-			add_core = LIE
 			}
 		}
 		ai_will_do = {
@@ -1137,74 +957,6 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	Claim_URU = {
-		potential = {
-			tag = URU
-			NOT = { has_country_flag = URU_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 70
-			is_vassal = no
-			owns = 2344
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-			war_policy = jingoism
-		}
-		effect = {
-			badboy = 10
-			prestige = 30
-			set_country_flag = URU_claimed
-			2359 = {
-			add_core = URU
-			}
-			2360 = {
-			add_core = URU
-			}
-			2356 = {
-			add_core = URU
-			}
-			2357 = {
-			add_core = URU
-			}
-			2358 = {
-			add_core = URU
-			}
-			2554 = {
-			add_core = URU
-			}
-			2462 = {
-			add_core = URU
-			}
-			2459 = {
-			add_core = URU
-			}
-			2461 = {
-			add_core = URU
-			}
-			2463 = {
-			add_core = URU
-			}
-			2464 = {
-			add_core = URU
-			}
-			2465 = {
-			add_core = URU
-			}
-			2466 = {
-			add_core = URU
-			}
-			2467 = {
-			add_core = URU
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	Claim_YEM = {
 		potential = {
 			tag = YEM
@@ -1227,32 +979,6 @@ political_decisions = {
 			}
 			1174 = {
 			add_core = YEM
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	Claim_OMA = {
-		potential = {
-			tag = OMA
-			NOT = { has_country_flag = OMA_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 10
-			is_vassal = no
-			owns = 1166
-			war_policy = jingoism
-		}
-		effect = {
-			badboy = 1
-			prestige = 5
-			set_country_flag = OMA_claimed
-			1168 = {
-			add_core = OMA
 			}
 		}
 		ai_will_do = {
@@ -4340,27 +4066,6 @@ political_decisions = {
 		}
 	}
    
-	burn_white_house = {
-		picture = whburn
-		potential = {
-			2146 = { owner = { war_with = THIS } }
-			2146 = { controlled_by = THIS }
-			NOT = { has_global_flag = whburnt }
-		}
-		allow = {
-		}
-		effect = {
-			set_global_flag = whburnt
-			badboy = 2
-			2146 = { owner = { war_exhaustion = 0.30 } }
-			2146 = { owner = { prestige = -40 } }
-			prestige = 40
-			2146 = { add_province_modifier = { name = whdestroyed duration = 730 } }
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	send_liman = {
 		picture = liman_sent
 		potential = {
@@ -4596,39 +4301,6 @@ political_decisions = {
 		effect = {
 			3275 = { secede_province = THIS }
 			prestige = 1
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	become_SRD = {
-		picture = become_savoy
-		potential = {
-			owns = 766
-			owns = 765
-			tag = SAR
-			NOT = {
-				owns = 472
-				owns = 3434
-				owns = 465
-				owns = 466
-				owns = 721
-				owns = 3435
-				owns = 720
-				owns = 725
-				owns = 723
-				owns = 724
-				owns = 722
-			}
-		}
-		allow = {
-		}
-		effect = {
-			any_owned = { remove_core = SAR }
-			change_tag = SRD
-			prestige = 5
-			766 = { add_core = THIS }
-			765 = { add_core = THIS }
 		}
 		ai_will_do = {
 			factor = 1
@@ -4999,8 +4671,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				tag = ITA
-				tag = ITS
-				tag = SAR
+				tag = ITS                                                                                                                    
 			}
 			year = 1848
 			OR = {

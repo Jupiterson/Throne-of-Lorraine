@@ -245,131 +245,6 @@ political_decisions = {
 		}
 	}
 
-	greater_afghanistan = {
-		picture = form_durrani_empire
-		potential = {
-			tag = AFG
-			owns = 1209
-			prestige = 5
-			is_vassal = no
-			NOT = { has_country_flag = greater_afghanistan }
-		}
-		allow = {
-			war = no
-			state_n_government = 1
-			OR = {
-				prestige = 45
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-			military_score = 40
-		}
-		effect = {
-			1218 = {
-				add_core = AFG
-			}
-			1219 = {
-				add_core = AFG
-			}
-			1223 = {
-				add_core = AFG
-			}
-			set_country_flag = greater_afghanistan
-			badboy = 2
-			any_country = {
-				limit = {
-					OR = {
-						owns = 1218
-						owns = 1219
-						owns = 1223
-					}
-				}
-				relation = {
-					who = AFG
-					value = -100
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				1218 = {
-					owner = {
-						is_greater_power = yes
-						military_score = 60
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				1219 = {
-					owner = {
-						is_greater_power = yes
-						military_score = 60
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				1223 = {
-					owner = {
-						is_greater_power = yes
-						military_score = 60
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				badboy = 0.8
-			}
-		}
-	}
-
-	greater_nepal = {
-		picture = greater_nepal
-		potential = {
-			tag = NEP
-			NOT = { has_country_flag = claimed_greater_nepal }
-		}
-
-		allow = {
-			war = no
-			OR = {
-				NOT = { neighbour = ENG }
-				AND = {
-					war_policy = jingoism
-					civilized = yes
-				}
-			}
-			military_score = 30
-			government = fascist_dictatorship
-		}
-
-		effect = {
-			set_country_flag = claimed_greater_nepal
-			1235 = { add_core = NEP }
-			1328 = { add_core = NEP }
-			1252 = { add_core = NEP }
-			1255 = { add_core = NEP }
-			any_country = {
-				limit = {
-					OR = {
-						owns = 1235
-						owns = 1328
-						owns = 1252
-						owns = 1255
-					}
-				}
-				relation = { who = THIS value = -100 }
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	greater_serbia = {
 	picture = greater_serbia
 		potential = {
@@ -521,76 +396,7 @@ political_decisions = {
 		}
 	}
 
-	unite_with_ukraine = {
-		picture = greater_ukraine
-		potential = {
-			tag = RUT
-			exists = UKR
-			NOT = { has_country_flag = unite_with_ukraine }
-		}
-
-		allow = {
-			war = no
-			is_vassal = no
-			OR = {
-				part_of_sphere = no
-				sphere_owner = { is_sphere_leader_of = UKR }
-			}
-			UKR = {
-				war = no
-				neighbour = THIS
-				is_vassal = no
-			}
-			NOT = { has_global_flag = sw_set }
-		}
-
-		effect = {
-			set_country_flag = unite_with_ukraine
-			all_core = {
-				remove_core = RUT
-				add_core = UKR
-			}
-			675 = { add_core = UKR }
-			663 = { add_core = UKR }
-			704 = { add_core = UKR }
-			705 = { add_core = UKR }
-			random_country = {
-				limit = {
-					tag = UKR
-					ai = yes
-					THIS = { ai = yes }
-				}
-				inherit = THIS
-			}
-			random_country = {
-				limit = {
-					tag = UKR
-					ai = yes
-					THIS = { ai = no }
-				}
-				any_owned = { secede_province = THIS }
-				THIS = {
-					random_owned = {
-						limit = { province_id = 958 }
-						owner = { capital = 958 }
-					}
-					change_tag = UKR
-				}
-			}
-			random_country = {
-				limit = {
-					tag = UKR
-					ai = no
-				}
-				country_event = 60130
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
+	
 	greater_assyria = {
 	picture = greater_assyria
 		potential = {
@@ -738,80 +544,6 @@ political_decisions = {
 		}
 	}
 
-	rename_uruguay = {
-		picture = banda_oriental
-		potential = {
-			OR = {
-				tag = BRZ
-				tag = UPB
-			}
-			owns = 2344
-			owns = 2345
-			owns = 2346
-			owns = 2347
-			has_country_flag = cisplatina_is_ours
-			NOT = {
-				has_global_flag = brazil_has_renamed_cisplatina
-			}
-		}
-
-		allow = {
-			owns = 2344
-		}
-
-		effect = {
-			2344 = {
-				change_province_name = "Montevideu"
-				state_scope = {
-					change_region_name = "Cisplatina"
-				}
-			}
-			prestige = 5
-			set_global_flag = brazil_has_renamed_cisplatina
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	restore_uruguay = {
-		picture = banda_oriental
-		potential = {
-			OR = {
-				tag = URU
-				tag = ARG
-				tag = PRG
-				tag = LPL
-			}
-			has_global_flag = brazil_has_renamed_cisplatina
-			owns = 2344
-			owns = 2345
-			owns = 2346
-			owns = 2347
-		}
-
-		allow = {
-			owns = 2344
-		}
-
-		effect = {
-			2344 = {
-				change_province_name = "Montevideo"
-				state_scope = {
-					change_region_name = "Uruguay"
-				}
-			}
-			prestige = 5
-			BRZ = { prestige = -10 }
-			clr_global_flag = brazil_has_renamed_cisplatina
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	total_war_in_yucatan = {
 		alert = yes
 		picture = begin_line_of_advantage
@@ -840,45 +572,6 @@ political_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}
-
-	deseret_complete_cores = {
-		alert = yes
-		picture = deseret_complete_cores
-		potential = {
-			NOT = { has_country_flag = deseret_claims }
-			tag = DES
-			owns = 97
-			NOT = { is_core = 88 }
-			NOT = { is_core = 87 }
-			NOT = { is_core = 89 }
-			NOT = { is_core = 90 }
-			NOT = { is_core = 102 }
-			exists = yes
-		}
-
-		allow = {
-			has_unclaimed_cores = no
-			is_vassal = no
-			invention = manifest_destiny
-			nationalism_n_imperialism = 1
-		}
-
-		effect = {
-			badboy = 10
-			94 = { add_core = DES }
-			95 = { add_core = DES }
-			96 = { add_core = DES }
-			101 = { add_core = DES }
-			100 = { add_core = DES }
-			102 = { add_core = DES }
-			3457 = { add_core = DES }
-			3458 = { add_core = DES }
-			3460 = { add_core = DES }
-			MEX_85_2 = { add_core = DES }
-			set_country_flag = deseret_claims
-		}
-		ai_will_do = { factor = 1 }
 	}
 
 	greater_syria = {
@@ -980,33 +673,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	establish_banatia = {
-		picture = banatia_map
-		potential = {
-			tag = BAN
-			2538 = { NOT = { is_core = BAN } }
-			exists = yes
-		}
-
-		allow = {
-			war = no
-			is_vassal = no
-			prestige = 30
-			OR = {
-				war_policy = jingoism
-				war_policy = pro_military
-			}
-		}
-
-		effect = {
-			badboy = 3
-			2538 = { add_core = BAN }
-			791 = { add_core = BAN }
-			3330 = { add_core = BAN }
-		}
-		ai_will_do = { factor = 1 }
-	}
-
 	claim_transnitria = {
 		picture = transnistria_stamp
 		potential = {
@@ -1034,37 +700,6 @@ political_decisions = {
 			RUS_968 = {
 				add_core = ROM
 			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	claim_aragon = {
-		picture = fueros
-		potential = {
-			tag = CAT
-			NOT = { has_country_flag = claimed_aragon }
-		}
-
-		allow = {
-			war = no
-			is_vassal = no
-			nationalism_n_imperialism = 1
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-
-		effect = {
-			set_country_flag = claimed_aragon
-			random_list = {
-				34 = { badboy = 1 }
-				33 = { badboy = 2 }
-				33 = { badboy = 3 }
-			}
-			497 = { add_core = CAT }
-			495 = { add_core = CAT }
-			496 = { add_core = CAT }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -1552,74 +1187,6 @@ political_decisions = {
 			modifier = {
 				factor = 0
 				badboy = 0.8
-			}
-		}
-	}
-	
-	nor_provoke_swe = {
-		picture = karl_johan
-		potential = {
-			NOT = { year = 1844 }
-			tag = NOR
-			vassal_of = SWE
-			NOT = { has_global_flag = nor_provoke_swe }
-		}
-		allow = {
-			money = 5000
-			year = 1839
-			NOT = { year = 1844 }
-			war = no
-			has_recently_lost_war = no
-			is_disarmed = no
-			OR = {
-				has_global_flag = den_provoke_swe
-				ai = no
-			}
-		}
-
-		effect = {
-			treasury = -5000
-			consciousness = 3
-			set_global_flag = nor_provoke_swe
-			add_country_modifier = {
-				name = nor_more_military
-				duration = 5478
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	den_provoke_swe = {
-		picture = christian_VIII
-		potential = {
-			NOT = { year = 1844 }
-			tag = DEN
-			is_vassal = no
-			NOT = { has_global_flag = den_provoke_swe }
-			NOT = { has_global_flag = nor_provoke_swe }
-		}
-
-		allow = {
-			year = 1839
-			NOT = { year = 1844 }
-			war = no
-			has_recently_lost_war = no
-			is_disarmed = no
-		}
-
-		effect = {
-			set_global_flag = den_provoke_swe
-		}
-		ai_will_do = {
-			factor = 0.01
-			modifier = {
-				factor = 0
-				NOR = { ai = yes }
-			}
-			modifier = {
-				factor = 20
-				NOR = { ai = no }
-				relation = { who = NOR value = 100 }
 			}
 		}
 	}

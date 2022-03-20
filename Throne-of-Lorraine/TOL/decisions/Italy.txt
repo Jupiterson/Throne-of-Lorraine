@@ -345,7 +345,7 @@ political_decisions = {
 	award_order_of_st_francis = {
 		picture = award_order_of_st_francis
 		potential = {
-			tag = SIC
+			tag = SYC
 			government = absolute_monarchy
 			NOT = { has_country_flag = order_awarded }
 		}
@@ -361,68 +361,7 @@ political_decisions = {
 		}
 	}
 
-	statuto_albertino = {
-		potential = {
-			OR = {
-				tag = SAR
-				tag = SVY
-			}
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-			}
-			OR = {
-				has_country_flag = liberal_revolution_in_progress
-				has_country_flag = liberal_revolution_fired
-			}
-			NOT = { has_country_flag = get_your_statuto_albertino_here }
-		}
-
-		allow = {
-			OR = {
-				average_militancy = 2
-				average_consciousness = 5
-				num_of_revolts = 1
-			}
-		}
-
-		effect = {
-			any_owned = {
-				limit = { is_colonial = no }
-				remove_province_modifier = liberal_agitation
-				any_pop = {
-					scaled_consciousness = {
-						ideology = liberal
-						factor = -8
-					}
-					scaled_militancy = {
-						ideology = liberal
-						factor = -8
-					}
-					scaled_militancy = {
-						ideology = conservative
-						factor = -6
-					}
-					scaled_militancy = {
-						ideology = reactionary
-						factor = 3
-					}
-				}
-			}
-			political_reform = universal_weighted_voting
-			political_reform = proportional_representation
-			political_reform = harassment
-			political_reform = censored_press
-			political_reform = yes_meeting
-			social_reform = incarceration
-			prestige = 5
-			set_country_flag = get_your_statuto_albertino_here
-			remove_country_modifier = global_liberal_agitation
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
+	
 	the_case_of_edgardo_mortara = {
 		potential = {
 			tag = PAP
@@ -1083,74 +1022,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	unite_with_tuscany = {
-		picture = gtfo
-		potential = {
-			tag = LUC
-			exists = TUS
-			NOT = { has_country_flag = unite_with_tuscany }
-		}
-
-		allow = {
-			war = no
-			is_vassal = no
-			OR = {
-				part_of_sphere = no
-				AND = {
-					sphere_owner = { is_sphere_leader_of = TUS }
-					year = 1847
-				}
-			}
-			TUS = {
-				war = no
-				neighbour = LUC
-				is_vassal = no
-			}
-		}
-
-		effect = {
-			set_country_flag = unite_with_tuscany
-			all_core = {
-				remove_core = LUC
-				add_core = TUS
-			}
-			random_country = {
-				limit = {
-					tag = TUS
-					ai = yes
-					LUC = { ai = yes }
-				}
-				inherit = LUC
-			}
-			random_country = {
-				limit = {
-					tag = TUS
-					ai = yes
-					LUC = { ai = no }
-				}
-				any_owned = { secede_province = LUC }
-				LUC = {
-					random_owned = {
-						limit = { province_id = 744 }
-						owner = { capital = 744 }
-					}
-					change_tag = TUS
-				}
-			}
-			random_country = {
-				limit = {
-					tag = TUS
-					ai = no
-				}
-				country_event = 60130
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	treaty_of_ouchy = {
 		picture = treaty_signing
 		potential = {
@@ -1208,48 +1079,6 @@ political_decisions = {
 		}
 	}
 
-	perfect_fusion = {
-		picture = perfect_fusion
-		potential = {
-			tag = SAR
-			NOT = { has_country_flag = perfect_fusion }
-		}
-
-		allow = {
-			OR = {
-				state_n_government = 1
-				year = 1847
-			}
-			OR = {
-				government = hms_government
-				government = prussian_constitutionalism
-				government = semi_constitutional_empire
-				government = constitutional_empire
-			}
-			OR = {
-				average_militancy = 2
-				has_country_flag = liberal_revolution_in_progress
-				has_country_flag = liberal_revolution_fired
-				has_country_flag = had_liberal_revolution
-			}
-			SRD = { all_core = { owned_by = THIS } }
-		}
-
-		effect = {
-			add_accepted_culture = south_italian
-			plurality = 5
-			SRD = {
-				all_core = {
-					any_pop = { consciousness = 3 militancy = -9 }
-				}
-			}
-			any_pop = { scaled_militancy = { factor = 3 ideology = reactionary  } }
-			set_country_flag = perfect_fusion
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
 	conquest_of_the_adriatic = {
 	picture = conquest_adriatic
 		potential = {
@@ -1281,39 +1110,6 @@ political_decisions = {
 			AUS_780 = { add_core = THIS }
 			774 = { add_core = THIS }
 			2582 = { add_core = THIS }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	reclaim_italian_lands = {
-	picture = reclaim_italian_lands
-		potential = {
-			OR = {
-				tag = ITA
-				tag = ITS
-			}
-			NOT = { has_country_flag = reclaim_italian_lands }
-			has_country_flag = conquest_adriatic_happened
-		}
-
-		allow = {
-			is_greater_power = yes
-			war_policy = jingoism
-		}
-
-		effect = {
-			badboy = 10
-			set_country_flag = reclaim_italian_lands
-			add_accepted_culture = maltese
-			SAR_466 = { add_core = THIS }
-			826	= { add_core = THIS }
-			852 = { add_core = THIS }
-			853 = { add_core = THIS }
-			854 = { add_core = THIS }
-			473 = { add_core = THIS }
 		}
 
 		ai_will_do = {

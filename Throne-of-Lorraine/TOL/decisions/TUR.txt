@@ -613,46 +613,6 @@ political_decisions = {
 		}
 	}
 
-	conquer_montenegro = {
-		picture = montenegro_map
-		potential = {
-			NOT = { has_country_flag = montenegro_claims }
-			tag = TUR
-			exists = MON
-			NOT = { year = 1860 }
-		}
-
-		allow = {
-			state_n_government = 1
-			war_policy = jingoism
-			NOT = { year = 1860 }
-		}
-
-		effect = {
-			set_country_flag = montenegro_claims
-			badboy = 3
-			relation = { who = RUS value = -200 }
-			random_owned = { limit = { TUR = { alliance_with = RUS } } TUR = { leave_alliance = RUS } }
-			relation = { who = MON value = -400 }
-			any_greater_power = { limit = { NOT = { tag = RUS } capital_scope = { continent = europe } }
-				relation = { who = THIS value = -50 }
-				leave_alliance = THIS
-			}
-			diplomatic_influence = { who = MON value = -400 }
-			casus_belli = { target = MON type = conquest months = 120 }
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					has_country_flag = wallachia_annexed
-					has_country_flag = moldavia_annexed
-				}
-			}
-		}
-	}
-
 	revoke_samos_autonomy = {
 		picture = gtfo
 		potential = {

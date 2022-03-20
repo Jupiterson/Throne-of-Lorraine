@@ -54,101 +54,7 @@ political_decisions = {
 			}
 		}
 	}
-
-	annals_of_the_fulani_jihad = {
-		picture = annals_of_the_fulani_jihad
-		potential = {
-			tag = SOK
-			NOT = {
-				has_country_flag = that_book_written
-			}
-		}
-		allow = {
-			literacy = 0.04
-		}
-		effect = {
-			set_country_flag = that_book_written
-			prestige = 2
-			years_of_research = 0.5
-		}
-	}
-
-	claim_negusa_nagast = {
-		picture = claim_negusa_nagast
-		potential = {
-			civilized = no
-			OR = {
-				primary_culture = ethiopian
-				#primary_culture = ethiopian
-			}
-			NOT = { tag = ETH }
-			NOT = { exists = ETH }
-			NOT = { has_global_flag = is_negusa_nagast }
-			NOT = { has_country_flag = claimed_negusa_nagast }
-			NOT = { has_country_flag = tewodros_rules }
-			year = 1852
-		}
-
-		allow = {
-			OR = {
-				year = 1860
-				civilization_progress = 0.5
-				1852 = { owned_by = THIS province_control_days = 1825 }
-			}
-		}
-
-		effect = {
-			set_country_flag = claimed_negusa_nagast
-			GON = { all_core = { add_core = THIS } }
-			TIG = { all_core = { add_core = THIS } }
-			SHW = { all_core = { add_core = THIS } }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	conquest_of_the_south = {
-		picture = conquest_of_the_south
-		potential = {
-			tag = ETH
-			exists = yes
-			NOT = { has_country_flag = conquest_of_the_south }
-			#1864 = { empty = yes }
-			#1866 = { empty = yes }
-			#1867 = { empty = yes }
-		}
-		
-		allow = {
-			war = no
-			owns = 1860
-			owns = 1861
-			owns = 1865
-			OR = {
-				land_reform = yes_land_reform
-				admin_reform = yes_admin_reform
-				AND = {
-					foreign_weapons = yes_foreign_weapons
-					foreign_officers = yes_foreign_officers
-				}
-				civilization_progress = 0.4
-				civilized = yes
-				year = 1885
-			}
-		}
-		
-		effect = {
-			set_country_flag = conquest_of_the_south
-			years_of_research = 1
-			#1864 = { add_core = ETH secede_province = ETH any_pop = { literacy = -0.99 } life_rating = 21 }
-			#1866 = { add_core = ETH secede_province = ETH any_pop = { literacy = -0.99 } life_rating = 21 }
-			#1867 = { add_core = ETH secede_province = ETH any_pop = { literacy = -0.99 } life_rating = 21 }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-
+	
 	build_addis_ababa = {
 		picture = addis_ababa_building
 		potential = {
@@ -190,7 +96,7 @@ political_decisions = {
 		potential = {
 			tag = ETH
 			ai = yes
-			EGY = {
+			COP = {
 				ai = yes
 				exists = yes
 				neighbour = ETH
@@ -201,20 +107,20 @@ political_decisions = {
 			}
 			NOT = {
 				has_country_flag = mission_to_cairo
-				any_owned_province = { is_core = EGY }
+				any_owned_province = { is_core = COP }
 				any_owned_province = { is_core = SUD }
-				casus_belli = EGY
-				truce_with = EGY
+				casus_belli = COP
+				truce_with = COP
 			}
 		}
 
 		allow = {
-			NOT = { war_with = EGY }
+			NOT = { war_with = COP }
 		}
 
 		effect = {
 			set_country_flag = mission_to_cairo
-			relation = { who = EGY value = 200 }
+			relation = { who = COP value = 200 }
 		}
 
 		ai_will_do = {
@@ -262,31 +168,7 @@ political_decisions = {
 			factor = 1
 		}
 	}
-
-	become_hausaland = {
-	picture = become_hausaland
-		potential = {
-			tag = SOK
-			NOT = { has_country_flag = became_hausaland }
-		}
-
-		allow = {
-			enlightenment_thought = 1
-			year = 1860
-		}
-
-		effect = {
-			set_country_flag = became_hausaland
-			prestige = 5
-			primary_culture = hausa
-			add_accepted_culture = fulbe
-			years_of_research = 0.5
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
+	
 	become_toucouleur = {
 		picture = become_toucouleur
 		potential = {
@@ -350,78 +232,78 @@ political_decisions = {
 		}
 	}
 
-	tonghak_reforms = {
-	picture = tonghak_reforms
-		potential = {
-			tag = KOR
-			has_country_flag = tonghak_rebellion_happened
-			NOT = { has_country_flag = tonghak }
-			civilized = no
-		}
-		allow = {
-			war = no
-			NOT = {
-				num_of_revolts = 1
-				any_owned_province = { has_province_modifier = peasant_revolt }
-			}
-		}
-		effect = {
-			set_country_flag = tonghak
-			prestige = 20
-			years_of_research = 5
-			political_reform = no_slavery
-			political_reform = debtors_prisons
-			government = absolute_empire
-			add_country_modifier = {
-				name = self_strengthening_movement
-				duration = 1095
-			}
-			poor_strata = {
-				militancy = -2
-				consciousness = -2
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-
-	second_tonghak_reforms = {
-	picture = tonghak_reforms
-		potential = {
-			tag = KOR
-			has_country_flag = tonghak_rebellion_happened
-			has_country_flag = tonghak
-			NOT = { has_country_flag = tonghak_2 }
-			civilized = no
-		}
-
-		allow = {
-			war = no
-			NOT = {
-				num_of_revolts = 1
-				any_owned_province = { has_province_modifier = peasant_revolt }
-			}
-		}
-
-		effect = {
-			set_country_flag = tonghak_2
-			random_country = {
-				limit = { primary_culture = korean is_vassal = yes }
-				overlord = {
-					release_vassal = KOR
-					casus_belli ={ target = KOR type = make_puppet months = 30 }
-					relation = { who = KOR value = -200 }
-					diplomatic_influence = { who = KOR value = -200 }
-				}
-			}
-			years_of_research = 2
-			poor_strata = {
-				militancy = -1
-				consciousness = -1
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
+#	tonghak_reforms = {
+#	picture = tonghak_reforms
+#		potential = {
+#			tag = KOR
+#			has_country_flag = tonghak_rebellion_happened
+#			NOT = { has_country_flag = tonghak }
+#			civilized = no
+#		}
+#		allow = {
+#			war = no
+#			NOT = {
+#				num_of_revolts = 1
+#				any_owned_province = { has_province_modifier = peasant_revolt }
+#			}
+#		}
+#		effect = {
+#			set_country_flag = tonghak
+#			prestige = 20
+#			years_of_research = 5
+#			political_reform = no_slavery
+#			political_reform = debtors_prisons
+#			government = absolute_empire
+#			add_country_modifier = {
+#				name = self_strengthening_movement
+#				duration = 1095
+#			}
+#			poor_strata = {
+#				militancy = -2
+#				consciousness = -2
+#			}
+#		}
+#		ai_will_do = { factor = 1 }
+#	}
+#
+#
+#	second_tonghak_reforms = {
+#	picture = tonghak_reforms
+#		potential = {
+#			tag = KOR
+#			has_country_flag = tonghak_rebellion_happened
+#			has_country_flag = tonghak
+#			NOT = { has_country_flag = tonghak_2 }
+#			civilized = no
+#		}
+#
+#		allow = {
+#			war = no
+#			NOT = {
+#				num_of_revolts = 1
+#				any_owned_province = { has_province_modifier = peasant_revolt }
+#			}
+#		}
+#
+#		effect = {
+#			set_country_flag = tonghak_2
+#			random_country = {
+#				limit = { primary_culture = korean is_vassal = yes }
+#				overlord = {
+#					release_vassal = KOR
+#					casus_belli ={ target = KOR type = make_puppet months = 30 }
+#					relation = { who = KOR value = -200 }
+#					diplomatic_influence = { who = KOR value = -200 }
+#				}
+#			}
+#			years_of_research = 2
+#			poor_strata = {
+#				militancy = -1
+#				consciousness = -1
+#			}
+#		}
+#		ai_will_do = { factor = 1 }
+#	}
 
 	establish_writing_system = {
 		picture = become_hausaland
@@ -480,67 +362,6 @@ political_decisions = {
 			clr_country_flag = lacking_writing_system
 			remove_country_modifier = lacks_writing_system
 		}
-		ai_will_do = { factor = 1 }
-	}
-
-	buying_djibuti = {
-		picture = bahrain_trade
-		potential = {
-			1875 = { empty = yes }
-			civilized = yes
-			has_global_flag = berlin_conference
-			total_amount_of_ships = 50
-			OR = {
-				AND = {
-					OR = {
-						capital_scope = { continent = africa }
-						capital_scope = { continent = oceania }
-					}
-					OR = {
-						owns = 1874
-						owns = 1865
-						owns = 1858
-						owns = 1851
-					}
-				}
-				AND = {
-					is_canal_enabled = 2
-					capital_scope = { continent = europe }
-					NOT = { tag = TUR }
-					any_owned_province = {
-						OR = {
-							AND = {
-								has_building = naval_base
-								is_overseas = no
-								is_colonial = no
-							}
-							province_id = 1874
-							province_id = 1865
-							province_id = 1858
-							province_id = 1851
-						}
-					}
-					is_greater_power = yes
-				}
-			}
-		}
-
-		allow = {
-			war = no
-			money = 50000
-			nationalism_n_imperialism = 1
-			OR = {
-				invention = the_dark_continent
-				steel_steamers = 1
-			}
-		}
-
-		effect = {
-			treasury = -50000
-			prestige = 2
-			1875 = { secede_province = THIS life_rating = 25 }
-		}
-
 		ai_will_do = { factor = 1 }
 	}
 
@@ -692,61 +513,6 @@ political_decisions = {
 			factor = 1
 			modifier = { factor = 0 average_militancy = 4 }
 		}
-	}
-
-	basotho_asks_for_protection = {
-		picture = embrace_the_scottish
-		potential = {
-			OR = {
-				AND = {
-					tag = BSH
-					year = 1860
-				}
-				AND = {
-					tag = SUA
-					has_global_flag = berlin_conference
-				}
-			}
-			NOT = { has_country_flag = asked_for_protection }
-		}
-
-		allow = {
-			war = no
-			is_vassal = no
-			OR = {
-				NOT = { part_of_sphere = yes }
-				in_sphere = THIS
-			}
-			any_neighbor_country = {
-				owns = 2087
-				NOT = { capital_scope = { continent = africa } }
-				is_greater_power = yes
-				#relation = { who = THIS value = 0 }
-			}
-			OR = {
-				any_neighbor_country = {
-					civilized = yes
-					#NOT = { relation = { who = THIS value = 0 } }
-				}
-				has_global_flag = berlin_conference
-			}
-		}
-
-		effect = {
-			set_country_flag = asked_for_protection
-			prestige = -50
-			any_neighbor_country = {
-				limit = {
-					owns = 2087
-					NOT = { capital_scope = { continent = africa } }
-					is_greater_power = yes
-					#relation = { who = THIS value = 50 }
-				}
-				country_event = 110080
-			}
-		}
-
-		ai_will_do = { factor = 1 }
 	}
 
 	##Sokoto

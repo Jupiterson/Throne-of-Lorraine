@@ -223,65 +223,6 @@ political_decisions = {
 			set_country_flag = court_yard_speech_held
 		}
 	}
-	
-	swe_annex_fin = {
-		picture = map_finland
-		potential = {
-			tag = SWE
-			NOT = { has_global_flag = swe_annex_fin }
-		}
-
-		allow = {
-			OR = {
-				FIN = { vassal_of = SWE }
-				SUS = { vassal_of = SWE }
-				AND = {
-					336 = { owned_by = SWE }
-					337 = { owned_by = SWE }
-					338 = { owned_by = SWE }
-					339 = { owned_by = SWE }
-					340 = { owned_by = SWE }
-					341 = { owned_by = SWE }
-					342 = { owned_by = SWE }
-					343 = { owned_by = SWE }
-					344 = { owned_by = SWE }
-					346 = { owned_by = SWE }
-					347 = { owned_by = SWE }
-					3339 = { owned_by = SWE }
-					3340 = { owned_by = SWE }
-				}
-			}
-		}
-
-		effect = {
-			set_global_flag = swe_annex_fin
-			set_country_flag = Conceded_Finland
-			inherit = FIN
-			inherit = SUS
-			badboy = 4
-			prestige = 15
-			348 = { remove_core = RUS }
-			339 = { remove_core = RUS }
-			any_pop = {
-				limit = {
-					has_pop_culture = finnish 
-				}
-				militancy = 5
-			}
-			994 = { add_core = SWE }
-			996 = { add_core = SWE }
-			3368 = { add_core = SWE }
-			349 = { add_core = SWE }
-			350 = { add_core = SWE }
-			351 = { add_core = SWE }
-			352 = { add_core = SWE }
-			353 = { add_core = SWE }
-			354 = { add_core = SWE }
-			355 = { add_core = SWE }
-			3424 = { add_core = SWE }
-		}
-		ai_will_do = { factor = 1 }
-	}
 
 	swe_annex_bal = {
 		picture = map_livonia
