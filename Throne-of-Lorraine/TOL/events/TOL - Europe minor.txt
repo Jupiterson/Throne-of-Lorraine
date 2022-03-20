@@ -22,7 +22,6 @@ country_event = {
 				}
 			}
 			}
-			}
 			modifier = {
 				factor = 0.8
 				502 = { owner = { war = yes } }
@@ -44,7 +43,7 @@ country_event = {
 				alliance_with = FROM
 			}
 		}
-	
+	}
 
 	option = {
 		name = "EVTOPTB37704" #Yes
@@ -93,6 +92,40 @@ country_event = {
 #		FROM = { inherit = THIS }
 #	}
 #}
+
+country_event = {
+	id = 97228
+	title = "Bergenpurchase.t" #Bergen Purchase
+	desc = "Bergenpurchase.d"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Bergen is worth a Scandinavian friend!"
+		prestige = 5
+		money = 50000
+		309 = {
+			secede_province = DNN
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = leader_of_kalmar
+			}
+			money = -50000
+		}
+		ai_chance = {
+			factor = 99
+		}
+	}
+
+	option = {
+		name = "Bergen is too strategic for us, no!"
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
 
 country_event = {
 
