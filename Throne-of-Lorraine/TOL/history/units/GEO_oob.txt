@@ -1,0 +1,31 @@
+
+RUS = {value = 100}
+
+army = {
+	name = "Georgian National Army"
+	location = 1090
+	regiment = {
+		name= "Tiflis artillery"
+		type = artillery
+		home = 1090
+	}
+	
+	regiment = {
+		name= "Ardalan brigade"
+		type = infantry
+		home = 886
+	}
+
+	regiment = {
+		name= "Kars brigade"
+		type = infantry
+		home = 885
+	}
+
+	regiment = {
+		name= "Abkhaz Hussar"
+		type = hussar
+		home = 1095
+	}
+
+}
