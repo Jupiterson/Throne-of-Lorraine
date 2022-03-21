@@ -1480,10 +1480,10 @@ overstretch_1 = {
 	}
 	icon = 9
 	tax_efficiency = -0.05
-	administrative_efficiency_modifier = -0.1
-	tariff_efficiency_modifier = -0.1
+	administrative_efficiency_modifier = -0.05
+	tariff_efficiency_modifier = -0.05
 	education_efficiency_modifier = -0.05
-	supply_consumption = 0.1
+	supply_consumption = 0.05
 }
 
 overstretch_2 = {
@@ -1493,10 +1493,10 @@ overstretch_2 = {
 	}
 	icon = 9
 	tax_efficiency = -0.05
-	administrative_efficiency_modifier = -0.1
-	tariff_efficiency_modifier = -0.1
+	administrative_efficiency_modifier = -0.05
+	tariff_efficiency_modifier = -0.05
 	education_efficiency_modifier = -0.05
-	supply_consumption = 0.1
+	supply_consumption = 0.05
 }
 
 overstretch_3 = {
@@ -1505,8 +1505,32 @@ overstretch_3 = {
 		num_of_cities = 150
 	}
 	tax_efficiency = -0.05
-	administrative_efficiency_modifier = -0.1
-	tariff_efficiency_modifier = -0.1
+	administrative_efficiency_modifier = -0.05
+	tariff_efficiency_modifier = -0.05
 	education_efficiency_modifier = -0.05
-	supply_consumption = 0.1
+	supply_consumption = 0.05
+}
+
+overstretch_4 = {
+	trigger = {
+		ai = no
+		num_of_cities = 160
+	}
+	tax_efficiency = -0.05
+	administrative_efficiency_modifier = -0.05
+	tariff_efficiency_modifier = -0.05
+	education_efficiency_modifier = -0.05
+	supply_consumption = 0.05
+}
+
+overstretch_5 = {
+	trigger = {
+		ai = no
+		num_of_cities = 170
+	}
+	tax_efficiency = -0.05
+	administrative_efficiency_modifier = -0.05
+	tariff_efficiency_modifier = -0.05
+	education_efficiency_modifier = -0.05
+	supply_consumption = 0.05
 }
