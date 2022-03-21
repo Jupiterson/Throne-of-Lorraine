@@ -1472,3 +1472,75 @@ DVG_badboy_2 = {
 	icon = 1
 
 }
+
+overstretch_1 = {
+	trigger = {
+		AND = {
+			OR = {
+				tag = RUS
+				tag = QNG
+				tag = GER
+				tag = ENG
+				tag = CLT
+				tag = CHI
+				tag = MIN
+			}
+			ai = no
+		}
+		num_of_cities = 130
+	}
+	icon = 9
+	tax_efficiency = -0.05
+	administrative_efficiency_modifier = -0.1
+	tariff_efficiency_modifier = -0.1
+	education_efficiency_modifier = -0.05
+	supply_consumption = 0.2
+}
+
+overstretch_2 = {
+	trigger = {
+		AND = {
+			OR = {
+				tag = RUS
+				tag = QNG
+				tag = GER
+				tag = ENG
+				tag = CLT
+				tag = CHI
+				tag = MIN
+			}
+			ai = no
+		}
+		num_of_cities = 140
+	}
+	icon = 9
+	tax_efficiency = -0.1
+	administrative_efficiency_modifier = -0.15
+	tariff_efficiency_modifier = -0.15
+	education_efficiency_modifier = -0.1
+	supply_consumption = 0.3
+}
+
+overstretch_3 = {
+	trigger = {
+		AND = {
+			OR = {
+				tag = RUS
+				tag = QNG
+				tag = GER
+				tag = ENG
+				tag = CLT
+				tag = CHI
+				tag = MIN
+			}
+			ai = no
+		}
+		num_of_cities = 150
+	}
+	icon = 9
+	tax_efficiency = -0.15
+	administrative_efficiency_modifier = -0.2
+	tariff_efficiency_modifier = -0.2
+	education_efficiency_modifier = -0.15
+	supply_consumption = 0.4
+}
