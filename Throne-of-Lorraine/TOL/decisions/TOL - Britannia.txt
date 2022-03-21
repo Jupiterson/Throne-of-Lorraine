@@ -177,6 +177,7 @@ political_decisions = {
 			set_country_flag = williams_back
 			FRA_418 = { add_core = THIS }
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	claim_brittany = {
@@ -204,6 +205,7 @@ political_decisions = {
 			add_accepted_culture = breton
 			FRA_420 = { add_core = THIS }	
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	reclaim_angevin_lands = {
@@ -237,6 +239,7 @@ political_decisions = {
 			FRA_442 = { add_core = THIS }
 			FRA_458 = { add_core = THIS }			
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	french_kingdom_status = {
@@ -268,6 +271,86 @@ political_decisions = {
 			}
 			set_country_flag = dual_monarchy			
 		}
+		ai_will_do = { factor = 1 }
 	}
+	
+	rebuild_london = {
+		picture = london
+		potential = {
+			OR = {
+				tag = ENG
+				tag = ENL
+				tag = UOW
+			}
+			owns = 300
+			NOT = { has_global_flag = london_rebuilt }
+		}
 
+		allow = {
+			war = no
+			money = 200001
+			state_n_government = 1
+			OR = {
+				central_bank_money_bill_printing = 1
+				iron_railroad = 1
+				invention = bessemer_steel
+			}
+		}
+
+		effect = {
+		    prestige = 15
+			treasury = -200000
+			set_global_flag = london_rebuilt
+			300 = {
+				life_rating = 5
+				add_province_modifier = { name = recently_built_city duration = 1825 }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	england_rebuild_program = {
+		picture = englandbank
+		potential = {
+			OR = {
+				tag = ENG
+				tag = ENL
+				tag = UOW
+			}
+			any_owned_province = {  
+				OR = {
+				    is_core = ENL
+				    is_core = UOW
+			    }
+			}
+			has_global_flag = london_rebuilt
+			NOT = { has_global_flag = england_rebuild_program }
+		}
+
+		allow = {
+			war = no
+			money = 1000001
+			state_n_government = 1
+			AND = {
+				investment_banks = 1
+				steel_railroad = 1
+			}
+		}
+
+		effect = {
+		    prestige = 25
+			treasury = -1000000
+			set_global_flag = england_rebuild_program
+			any_owned = { 
+			    limit = { 
+				    OR = {
+				        is_core = ENL
+				        is_core = UOW
+			        }
+			    }	
+				life_rating = 3
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 }

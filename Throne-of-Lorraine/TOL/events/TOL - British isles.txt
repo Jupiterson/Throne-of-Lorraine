@@ -140,7 +140,7 @@ country_event = {
 	option = {
 		name = "Well then..."
 		set_country_flag = irish_revolt
-		any_owned_province = {
+		any_owned = {
 			limit = { is_core = IRE }
 			secede_province = IRR
 		}
@@ -183,7 +183,7 @@ country_event = {
 	
 	option = {
 		name = "sium"
-		any_owned_province = {
+		any_owned = {
 			secede_province = IRE
 		}
 		ai_chance = {

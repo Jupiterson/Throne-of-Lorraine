@@ -442,7 +442,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = ric_reorganized
-			any_owned_province = {
+			any_owned = {
 				limit = { is_core = IRE }
 				add_province_modifier = { name = royal_irish_constabulary duration = -1 }
 			}
