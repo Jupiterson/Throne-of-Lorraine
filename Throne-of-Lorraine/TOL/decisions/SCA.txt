@@ -164,7 +164,10 @@ political_decisions = {
 		}
 
 		allow = {
-			252 = { NOT = { is_core = SCA } }
+			OR = {
+				252 = { NOT = { is_core = SCA } }
+				owns = 252
+			}
 			prestige = 200
 			is_greater_power = yes
 			war = no
