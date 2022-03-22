@@ -1,0 +1,88 @@
+country_event = {
+	id = 510000
+	title = "EVTNAME510000"
+	desc = "EVTDESC510000"
+	picture = "scottish_war"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ZAC
+		year = 1855
+		OAX = { vassal_of = ZAC }
+	}
+
+	option = {
+		name = "Our move is done. How will the Nahua react?"
+		badboy = 2
+		inherit = OAX
+		any_pop = {
+			limit = { 
+				is_culture = nahua 
+			}
+			consciousness = 3
+		}
+	}
+}
+
+country_event = {
+	id = 510001
+	title = "EVTNAME510001"
+	desc = "EVTDESC510001"
+	picture = "scottish_war"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		year = 1855
+		OAX = { NOT = { exists = yes } }
+		ZAC = { owns = 2167 }
+		ZAC = { owns = 2173 }
+		NOT = { has_global_flag = bloodbath_1 }
+	}
+
+	option = {
+		set_global_flag = bloodbath_1
+		name = "Onwards to Zakatekalas! No mercy to half-whites! Tenotxia for the Tenotxians!"
+		badboy = 10
+		ZAC = { all_core = { add_core = THIS } }
+		any_pop = {
+			limit = { 
+				is_culture = nahua
+				is_culture = mayan
+			}
+			militancy = -2
+		}
+	}
+}
+
+country_event = {
+	id = 510002
+	title = "EVTNAME510002"
+	desc = "EVTDESC510002"
+	picture = "scottish_war"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ZAC
+		year = 1855
+		has_global_flag = { bloodbath_1 } 
+		NOT = { has_global_flag = { bloodbath_2 } }
+	}
+
+	option = {
+		name = "For the glory of Enekoatlan! Tenotxia for us mestizos!"
+		badboy = 10
+		set_global_flag = bloodbath_2
+		MEX = { all_core = { add_core = THIS } }
+		any_pop = {
+			limit = { 
+				is_culture = mexican
+				is_culture = basque
+			}
+			militancy = -2
+		}
+	}
+}
