@@ -31,6 +31,7 @@ political_decisions = {
 		potential = {
 			has_country_modifier = leader_of_kalmar
 			OR = {
+				tag = DNN
 				DNN = {
 					owns = 308
 					in_sphere = THIS
