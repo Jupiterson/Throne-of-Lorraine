@@ -4,12 +4,16 @@ political_decisions = {
 		picture = iceland_map
 		potential = {
 			NOT = { tag = SCA }
+			NOT = { owns = 252 }
 			has_country_modifier = leader_of_kalmar
 			252 = { is_core = SCA }
 		}
 
 		allow = {
-			citizenship_policy = residency
+			OR = {
+				citizenship_policy = residency
+				citizenship_policy = limited_citizenship
+			}
 		}
 
 		effect = {
@@ -31,6 +35,7 @@ political_decisions = {
 		potential = {
 			has_country_modifier = leader_of_kalmar
 			OR = {
+				tag = DNN
 				DNN = {
 					owns = 308
 					in_sphere = THIS
@@ -159,7 +164,10 @@ political_decisions = {
 		}
 
 		allow = {
-			252 = { NOT = { is_core = SCA } }
+			OR = {
+				252 = { NOT = { is_core = SCA } }
+				owns = 252
+			}
 			prestige = 200
 			is_greater_power = yes
 			war = no
