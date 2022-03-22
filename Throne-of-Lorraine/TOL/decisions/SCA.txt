@@ -4,6 +4,7 @@ political_decisions = {
 		picture = iceland_map
 		potential = {
 			NOT = { tag = SCA }
+			NOT = { owns = 252 }
 			has_country_modifier = leader_of_kalmar
 			252 = { is_core = SCA }
 		}
