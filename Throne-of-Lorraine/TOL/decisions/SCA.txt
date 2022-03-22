@@ -9,7 +9,10 @@ political_decisions = {
 		}
 
 		allow = {
-			citizenship_policy = residency
+			OR = {
+				citizenship_policy = residency
+				citizenship_policy = limited_citizenship
+			}
 		}
 
 		effect = {
