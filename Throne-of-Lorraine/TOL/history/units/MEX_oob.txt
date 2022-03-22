@@ -4,8 +4,14 @@ MEX = {
 	value = -100
 }
 
+ZAC = {
+	value = -50		
+	level = 1	
+	truce_until = 1840.1.1
+}
+
 leader = {
-	name = "Piarres Texcoyo"
+	name = "Moctezuma Otli"
 	type = sea
 	date="1820.1.1"
 	personality = bastard
@@ -13,7 +19,7 @@ leader = {
 }
 
 leader = {
-	name = "Martin Huicton"
+	name = "Texcoyo Pochecatl"
 	type = land
 	date="1836.1.1"
 	personality = heroic
@@ -21,7 +27,7 @@ leader = {
 }
 
 leader = {
-	name = "Zentulo Cuatemoc"
+	name = "Xocoyol Nezahual"
 	type = land
 	date="1836.1.1"
 	personality = skilled
@@ -29,7 +35,7 @@ leader = {
 }
 
 leader = {
-	name = "Obeko Xocoyol"
+	name = "Ehayue Icpalli"
 	type = land
 	date="1836.1.1"
 	personality = skilled
@@ -37,7 +43,7 @@ leader = {
 }
 
 leader = {
-	name = "Rodrigo Cacamatzin"
+	name = "Ahcambal Cuetzpalin"
 	type = land
 	date="1836.1.1"
 	personality = soldierly
@@ -45,7 +51,7 @@ leader = {
 }
 
 army = {
-	name = "Oaxacako Bakegileak "
+	name = "Oaxacako Bakegileak"
 	location = 2177
 
 	regiment = {
@@ -69,7 +75,7 @@ army = {
 }
 
 army = {
-	name = "Irunea Berriko Armada"
+	name = "Mexihco-Tenotxtitlan Armada"
 	location = 2172
 	regiment = {
 		name= "Bat Dibisioa Moctezuma"
@@ -98,7 +104,7 @@ army = {
 }
 
 navy = {
-	name = "Itsas Armada de Nafarroa Berria"
+	name = "Itsas Armada de Tenotxia"
 	location = 2184
 	ship = {
 		name= "Irunea Berria"
