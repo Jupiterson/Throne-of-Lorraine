@@ -686,6 +686,7 @@ fabric_factory = {
 	template = factory_template
 	input_goods = {
 		cotton = 18		# 36
+		wool = 18
 		dye = 2				# 24 total input+maint = 69.875
 	}
 	output_goods = fabric
@@ -1465,7 +1466,8 @@ artisan_lumber = {
 
 artisan_fabric = {
 	input_goods = {
-		cotton = 18		# 36
+		cotton = 18
+		wool = 18
 		dye = 2				# 24 total input+maint = 60
 	}
 	output_goods = fabric
