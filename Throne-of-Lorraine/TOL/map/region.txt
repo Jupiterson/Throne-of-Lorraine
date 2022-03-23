@@ -44,13 +44,13 @@ MEX_94 = { 94 96 95 3457 3458 } #Nevada
 
 MEX_97 = { 97 98 99 3459 } #Utah
 
-MEX_100 = { 100 101 102 3460 3456 } #Arizona
+MEX_100 = { 100 101 102 3460 2148 3456 } #Arizona
 
-MEX_103 = { 105 2148 103 2662 } #New Mexico
+MEX_103 = { 105 103 2662 134 135 136 43 } #New Mexico
 
-USA_106 = { 106 108 109 } #Colorado
+USA_106 = { 106 112 } #Colorado
 
-USA_111 = { 112 107 110 111 3468 } #Wyoming
+USA_111 = { 108 109 107 110 111 3468 } #Wyoming
 
 USA_116 = { 116 115 24 30 } #Montana
 
@@ -64,11 +64,11 @@ USA_126 = { 126 127 128 } #Kansas
 
 USA_129 = { 131 129 130 } #Oklahoma
 
-TEX_132 = { 133 43 132 134 135 136 137 138 } #Texas
+TEX_132 = { 133 132 137 138 } #Texas
 
-USA_139 = { 139 141 142 } #Louisiana
+USA_139 = { 139 141 } #Louisiana
 
-USA_144 = { 143 144 145 } #Arkansas
+USA_144 = { 142 143 144 145 } #Arkansas
 
 USA_148 = { 146 148 147 149 150 } #Missouri
 
@@ -86,15 +86,17 @@ USA_176 = { 173 174 175 176 } #Michigan
 
 USA_178 = { 178 179 180 183 182 181 228 } #Ohio
 
-USA_185 = { } #Kentucky
+#USA_185 = { } #Kentucky
 
 USA_188 = { 184 185 186 187 188 } #Tennessee
 
-USA_194 = { 192 193 189 194 140 } #Mississippi
+USA_194 = { 192 193 189 } #Mississippi
 
-USA_196 = { 195 196 191 198 197 } #Alabama
+USA_197 = { 194 140 197 }
 
-USA_200 = { 200 199 3284 } #Florida
+USA_196 = { 195 196 191 } #Alabama
+
+USA_200 = { 199 3284 198 } #Florida
 
 USA_201 = { } #Georgia
 
@@ -232,9 +234,11 @@ FRA_445 = { 445 446 447 448 } #Limousin
 
 FRA_451 = { 451 452 453 454 3313 } #Rhone
 
-FRA_455 = { 455 457 456 450 462 } #Le Midi
+FRA_455 = { 456 450 462 } #Le Midi
 
-FRA_458 = { 458 459 460 } #Aquitaine
+FRA_458 = { 458 459 } #Aquitaine
+
+BSQ_460 = { 460 455 457 }
 
 FRA_461 = { 461 463 449 } #Languedoc
 
@@ -400,9 +404,13 @@ PAP_741 = { 741 742 743 739 738 740 } #Emilia-Romagna
 
 PAP_752 = { 749 752 750 751 3266 } #Lazio
 
-SIC_753 = { 756 758 3261 753 757  } #Puglia
+SIC_753 = { 3261 753 757  } #Puglia
 
-SIC_754 = { 754 755 759 760 761 2567 3397 } #Campania
+SIC_754 = { 754 755 2567 3397 } #Campania
+
+SYC_759 = { 759 760 761 } #Western Magna Graecia
+
+SYC_758 = { 756 758 } #Eastern Magna Graecia
 
 SIC_763 = { 763 762 764 854 } #Sicily
 
@@ -1191,7 +1199,7 @@ SPA_2209 = { 2209 2210 2211 44 2212 } #Cuba
 
 HAI_2213 = { 2213 2214 2215 2216 3309 3319 3320 3403 } #Hispanola
 
-ENG_203 = { 2217 203 2219 2218 2220 } #Caribbean Islands
+ENG_203 = { 200 2217 203 2219 2218 2220 } #Caribbean Islands
 
 ENG_2224 = { 2224 2225 2226 2227 2230 2223 2222 45 3246 2228 2232 } #West Indies
 
