@@ -764,12 +764,6 @@ country_event = {
 			NOT = { tag = SWI }
 			sphere_owner = { neighbour = THIS }
 		}
-		OR = {
-			NOT = { tag = NEN }
-			has_country_flag = usstatehood_we_have_applied
-			OR = { AND = { USA = { ai = yes } exists = USA } AND = { US2 = { ai = yes } exists = US2 } }
-		}
-		139 = { OR = { owned_by = USA owned_by = US2 } }
 		NOT = {
 			tag = KUK
 			tag = AUS
