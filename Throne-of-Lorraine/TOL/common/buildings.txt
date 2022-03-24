@@ -743,3 +743,112 @@ charcoal_factory = {
 	production_type = charcoal_factory
 	pop_build_factory = yes
 }
+
+wool_mill = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = 
+	{
+		machine_parts = 20
+		iron = 200
+	    cement = 200
+	}
+	time = 182
+	visibility = yes
+	onmap = no
+
+	production_type = wool_mill
+	pop_build_factory = yes
+}
+
+synthetic_rubber_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	cost = 0 # 1000
+	max_level = 99
+	goods_cost = 
+	{
+		machine_parts = 200
+		steel = 200
+		cement = 200
+	}
+	time = 182
+	visibility = yes
+	onmap = no
+
+	production_type = synthetic_rubber_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+
+synthetic_tropical_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	cost = 0 # 5000
+	max_level = 99
+	goods_cost = 
+	{
+		machine_parts = 200
+		steel = 200
+		cement = 200
+	}
+	time = 182
+	visibility = yes
+	onmap = no
+
+	production_type = synthetic_tropical_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+
+synthetic_fabric_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	cost = 0 # 1000
+	max_level = 99
+	goods_cost = 
+	{
+		machine_parts = 300
+		steel = 400
+		cement = 400
+	}
+	time = 182
+	visibility = yes
+	onmap = no
+
+	production_type = synthetic_fabric_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+	#strategic_factory = yes
+}
+
+synthetic_silk_factory  = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	cost = 0 # 1000
+	max_level = 99
+	goods_cost = 
+	{
+		machine_parts = 300
+		steel = 400
+		cement = 400
+	}
+	time = 182
+	visibility = yes
+	onmap = no
+
+	production_type = synthetic_silk_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+	#strategic_factory = yes
+}
