@@ -1324,6 +1324,21 @@ categories =  {
         combat_width = -0.33
     }
 	
+	kabul = {
+        movement_cost = 1.2
+        defence = 3
+        color = { 22 44 66 }
+
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+
+        supply_limit = 6
+        min_build_railroad = 1
+        combat_width = -0.33
+    }
+	
 	shiraz = {
         movement_cost = 1.2
         defence = 3
@@ -3834,6 +3849,16 @@ categories =  {
     }
 	
 	cebu = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+    }
+	
+	malaka = {
         movement_cost = 1.0
         color = { 22 44 66 }
         farm_rgo_size = 0.2
