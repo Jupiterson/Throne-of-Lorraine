@@ -508,45 +508,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	unite_aragon = {
-		picture = enact_dual_monarchy
-		potential = {
-			tag = CAT
-			exists = ARN
-		}
-
-		allow = {
-			war = no
-			OR = {
-				AND = {
-					exists = ARN
-					ARN = {
-						NOT = { vassal_of = SPA }
-					}
-				}
- 
-			}
-		}
-
-		effect = {
-#			CAT = {
-#				all_core = { remove_core = FRA }
-#			}
-			all_core = {
-				add_core = ARN
-			}
-			any_pop = {
-				limit = { has_pop_culture = french }
-				militancy = 4
-			}
-			change_tag = ARN
-			ARN = {
-				inherit = CAT
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
 	unite_occitania = {
 		picture = enact_dual_monarchy
 		potential = {

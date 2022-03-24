@@ -75,22 +75,9 @@ political_decisions = {
 
 		allow = {
 			war = no
-			HUN = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							ai = yes
-							in_sphere = THIS
-							OR = {
-								is_vassal = no
-								vassal_of = THIS
-							}
-							war = no
-							is_greater_power = no
-						}
-					}
-				}
+			AND = {
+			HUN = { exists = yes is_vassal = yes }
+			NOT = { year = 1850 }
 			}
 	OR = {
 		state_n_government = 1

@@ -620,40 +620,6 @@ landlocked_nation = {
 	global_immigrant_attract = -1.5
 	icon = 8
 }
-
-ils_ne_passeront_pas = {
-	trigger = {
-		OR = {
-			tag = FRA
-			tag = BOR
-		}
-		NOT = {owns = 409 }
-		ai = yes
-	}
-	mobilisation_size = 0.76
-	mobilisation_economy_impact = -0.7
-	core_pop_militancy_modifier = -0.1
-	land_defense_modifier = 0.5
-	land_attack_modifier = 0.1
-	land_organisation = 0.3
-	war_exhaustion = -0.03
-}
-glory_prussia = {
-	trigger = {
-		OR = {
-			tag = PRU
-			tag = NGF
-		}
-		NOT = { year = 1880 }
-		ai = yes
-	}
-	mobilisation_size = 0.5
-	mobilisation_economy_impact = -0.5
-	core_pop_militancy_modifier = -0.01
-	land_attack_modifier = 0.1
-	land_organisation = 0.3
-	war_exhaustion = -0.03
-}
 democratic_nation = {
 	trigger = {
 		exists = yes
@@ -809,19 +775,6 @@ help_ai_russia = {
 	min_military_spending = 0.3
 }
 
-help_ai_usa = {
-	trigger = {
-		tag = USA
-		centralization = regionalism
-		ai = yes
-	}
-	icon = 10
-	tax_efficiency = 0.05
-	supply_consumption = -0.05
-	influence_modifier = -0.05
-	mobilisation_size = 0.01
-}
-
 yellow_river = {
 	trigger = {
 		owns = 1508 #Kaifeng
@@ -834,18 +787,6 @@ yellow_river = {
 	tax_efficiency = 0.035
 	war_exhaustion = -0.5
 	supply_consumption = -0.01
-}
-
-poland_not_yet_lost = {
-	trigger = {
-		primary_culture = polish
-		is_vassal = no
-		is_substate = no
-	}
-	icon = 10
-	prestige = 0.01
-	global_immigrant_attract = 0.5
-	core_pop_militancy_modifier = -0.01
 }
 
 bread_basket = {
@@ -889,12 +830,12 @@ colonial_administration = {
 			capital_scope = { continent = north_america }
 			capital_scope = { continent = south_america }
 		}
-		NOT = {
-			primary_culture = british
-			primary_culture = french
-			primary_culture = portuguese
-			total_amount_of_ships = 35
-		}
+		#NOT = {
+		#	primary_culture = british
+		#	primary_culture = french
+		#	primary_culture = portuguese
+		#	total_amount_of_ships = 35
+		#}
 		OR = {
 			#Warri
 			1931= { is_colonial = yes owned_by = THIS }
@@ -1473,6 +1414,28 @@ DVG_badboy_2 = {
 
 }
 
+##TOL##
+
+starting_badboy = {
+	trigger = {
+		#year = 1830
+		NOT = { year = 1840 }
+	}
+	badboy = -0.1
+	icon = 1
+
+}
+
+middle_badboy = {
+	trigger = {
+		year = 1840
+		NOT = { year = 1860 }
+	}
+	badboy = -0.05
+	icon = 1
+
+}
+
 overstretch_1 = {
 	trigger = {
 		ai = no
@@ -1533,4 +1496,23 @@ overstretch_5 = {
 	tariff_efficiency_modifier = -0.05
 	education_efficiency_modifier = -0.05
 	supply_consumption = 0.05
+}
+
+french_renaissance = {
+	trigger = {
+		exists = yes
+		is_culture_group = french
+		NOT = { 
+			government = absolute_monarchy
+			government = hms_government
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+		}
+		administration_spending = 0.5
+	}
+	global_population_growth = 0.005
+	core_pop_militancy_modifier = -0.2
+	core_pop_consciousness_modifier = -0.2
+	icon = 19
 }
