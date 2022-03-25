@@ -141,7 +141,7 @@ country_event = {
 		name = "Well then..."
 		set_country_flag = irish_revolt
 		any_owned = {
-			limit = { is_core = IRE }
+			limit = { is_core = IRR }
 			secede_province = IRR
 		}
 		diplomatic_influence = {
@@ -260,7 +260,7 @@ country_event = {
 	option = {
 		name = "We have to defend our brothers at all costs."
 		war = {
-			target = SCO
+			target = ENG
 			attacker_goal = { casus_belli = liberate_country country = IRR }
 			defender_goal = { casus_belli = humiliate_no_infamy }
 			call_ally = no
@@ -268,7 +268,7 @@ country_event = {
 		random = {
 			chance = 0.25
 			relation = {
-				who = SCO
+				who = ENG
 				value = -75
 			}
 		}
@@ -290,7 +290,7 @@ country_event = {
 	option = {
 		name = "We can't do nothing."
 		relation = {
-			who = SCO
+			who = ENG
 			value = 25
 		}
 		ai_chance = {

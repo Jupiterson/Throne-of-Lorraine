@@ -230,37 +230,7 @@ political_decisions = {
 			prestige = 50
 			is_greater_power = yes
 			nationalism_n_imperialism = 1
-			SWE = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-							war = no
-						}
-						owner = {
-							vassal_of = THIS
-							war = no
-						}
-					}
-				}
-			}
-			NOR = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-							war = no
-						}
-						owner = {
-							vassal_of = THIS
-							war = no
-						}
-					}
-				}
-			}
-			DEN = {
+			SCA = {
 				all_core = {
 					OR = {
 						owned_by = THIS
@@ -363,52 +333,7 @@ political_decisions = {
 			prestige = 50
 			is_greater_power = yes
 			nationalism_n_imperialism = 1
-			SWE = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-							war = no
-						}
-						owner = {
-							vassal_of = THIS
-							war = no
-						}
-					}
-				}
-			}
-			NOR = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-							war = no
-						}
-						owner = {
-							vassal_of = THIS
-							war = no
-						}
-					}
-				}
-			}
-			DEN = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-							war = no
-						}
-						owner = {
-							vassal_of = THIS
-							war = no
-						}
-					}
-				}
-			}
-			FIN = {
+			SCA = {
 				all_core = {
 					OR = {
 						owned_by = THIS

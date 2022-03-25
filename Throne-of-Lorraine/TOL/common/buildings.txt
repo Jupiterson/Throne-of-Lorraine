@@ -656,74 +656,6 @@ fertilizer_factory = {
 	pop_build_factory = yes
 }
 
-############# Military Buildings and Infrastructure
-
-fort = {
-	type = fort
-	goods_cost =
-	{
-		steel = 100
-		lumber = 100
-		cement = 100
-		explosives = 50
-		small_arms = 50
-		artillery = 40
-		ammunition = 10
-	}
-	time = 1080
-	visibility = yes
-	onmap = yes
-	max_level = 6
-	province = yes
-	fort_level = 1
-}
-
-naval_base = {
-	type = naval_base
-	cost = 15000
-	goods_cost =
-	{
-		lumber = 100
-		cement = 100
-		steel = 100
-		machine_parts = 1
-	}
-	time = 1080
-	naval_capacity = 1
-	capital = yes
-	onmap = yes
-	port = yes
-	visibility = yes
-	max_level = 6
-	# Audax Validator "." Ignore_NEXT
-	colonial_points = { 30 60 90 140 150 160 } #points at levels 1-6 - previous 30 50 70 90 110 130
-	province = yes
-	one_per_state = yes
-	colonial_range = 25
-	local_ship_build = -0.10
-}
-
-railroad = {
-	type = infrastructure
-	goods_cost =
-	{
-		lumber = 150
-		cement = 150
-		steel = 150
-	}
-	time = 365 #Original
-	visibility = yes
-	onmap = yes
-	max_level = 6
-	province = yes
-
-	infrastructure = 0.16
-	movement_cost = -0.05
-
-	pop_build_factory = yes
-	spawn_railway_track = yes
-}
-
 charcoal_factory = {
 	type = factory
 	on_completion = factory
@@ -851,4 +783,72 @@ synthetic_silk_factory  = {
 	pop_build_factory = yes
 	advanced_factory = yes
 	#strategic_factory = yes
+}
+
+############# Military Buildings and Infrastructure
+
+fort = {
+	type = fort
+	goods_cost =
+	{
+		steel = 100
+		lumber = 100
+		cement = 100
+		explosives = 50
+		small_arms = 50
+		artillery = 40
+		ammunition = 10
+	}
+	time = 1080
+	visibility = yes
+	onmap = yes
+	max_level = 6
+	province = yes
+	fort_level = 1
+}
+
+naval_base = {
+	type = naval_base
+	#cost = 15000
+	goods_cost =
+	{
+		lumber = 100
+		cement = 100
+		steel = 100
+		machine_parts = 1
+	}
+	time = 1080
+	naval_capacity = 1
+	capital = yes
+	onmap = yes
+	port = yes
+	visibility = yes
+	max_level = 6
+	# Audax Validator "." Ignore_NEXT
+	colonial_points = { 30 60 90 140 150 160 } #points at levels 1-6 - previous 30 50 70 90 110 130
+	province = yes
+	one_per_state = yes
+	colonial_range = 25
+	local_ship_build = -0.10
+}
+
+railroad = {
+	type = infrastructure
+	goods_cost =
+	{
+		lumber = 150
+		cement = 150
+		steel = 150
+	}
+	time = 365 #Original
+	visibility = yes
+	onmap = yes
+	max_level = 6
+	province = yes
+
+	infrastructure = 0.16
+	movement_cost = -0.05
+
+	pop_build_factory = yes
+	spawn_railway_track = yes
 }

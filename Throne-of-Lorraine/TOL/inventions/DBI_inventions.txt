@@ -1,18 +1,4 @@
-nylon = {
-    limit = { synthetic_polymers = 1 }
-    chance = {
-        base = 1
-        modifier = {
-            factor = 2
-            invention = rayon
-        }
-    }
-    effect = {
-        factory_goods_output = {
-            fabric = 0.05
-        }
-    }
-}
+
 
 combine_harvesters = {
     limit = { high_pressure_steam_engine = 1 }
