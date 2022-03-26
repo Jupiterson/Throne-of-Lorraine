@@ -111,13 +111,6 @@ country_event = {
 	desc = "The Austrians have apologized for the stupidity of the Sardinians and have corrected the borders on the map."
 	picture = map_trentin
 	is_triggered_only = yes
-	FROM = {
-		OR = {
-			tag = AUS
-			tag = AUB
-			tag = KUK
-		}
-	}
 	option = {
 		name = "Sanity has been restored in the Mediterranean."
 		relation = {
@@ -136,13 +129,6 @@ country_event = {
 	desc = "The Austrians stand by Sardinia! They proclaim Corisca belongs to Sardinia."
 	picture = map_trentin
 	is_triggered_only = yes
-	FROM = {
-		OR = {
-			tag = AUS
-			tag = AUB
-			tag = KUK
-		}
-	}
 	option = {
 		name = "Let us teach these Austrians cartography!"
 		relation = {
