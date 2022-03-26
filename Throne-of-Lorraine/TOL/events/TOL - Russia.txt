@@ -603,13 +603,13 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = {
-		name = "Contact the Fareynikte. We have a deal to make."
-		FER = { country_event = 340002 }
-		ai_chance = {
-			factor = 5
-		}
-	}
+	#option = {
+	#	name = "Contact the Fareynikte. We have a deal to make."
+	#	FER = { country_event = 340002 }
+	#	ai_chance = {
+	#		factor = 5
+	#	}
+	#}
 	option = {
 		name = "We only talk with worthy nations. Contact the Venetians. We have a backroom deal to make."
 		VEN = { country_event = 340003 }
@@ -647,8 +647,8 @@ country_event = {
 		name = "Delightfully devilish, Russians. Gold is Gold."
 		money = 50000
 		RUS = { 
-		money = -50000
-		badboy = 2
+			money = -50000
+			#badboy = 2
 		}
 		RUS = { country_event = 340004 }
 	}
@@ -664,7 +664,7 @@ country_event = {
 	
 	option = {
 		name = "This is a glorious day! "
-		FER = {
+		VEN = {
 			any_owned = {
 				limit = {
 					region = RUS_979 
@@ -851,7 +851,7 @@ country_event = {
 		clr_country_flag = the_crimean_war
 		prestige = 25
 		CRI = { any_owned = { add_core = RUS } }
-		FER = { any_owned = { add_core = RUS } }
+		#FER = { any_owned = { add_core = RUS } }
 		inherit = CRI
 		any_pop = {
 			consciousness = -1
@@ -901,7 +901,7 @@ country_event = {
 		}
 		prestige = 25
 		CRI = { any_owned = { add_core = RUS } }
-		FER = { any_owned = { add_core = RUS } }
+		#FER = { any_owned = { add_core = RUS } }
 		inherit = CRI
 		any_pop = {
 			consciousness = -1
