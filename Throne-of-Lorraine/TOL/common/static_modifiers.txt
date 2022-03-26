@@ -113,6 +113,7 @@ blockaded = {
 	war_exhaustion = 0.05
 	farm_rgo_eff = -0.25
 	mine_rgo_eff = -0.25
+	population_growth = -0.001
 }
 
 no_adjacent_controlled = {
@@ -127,7 +128,7 @@ core = {
 
 
 has_siege = {
-	population_growth = -0.01
+	population_growth = -0.03
 	farm_rgo_eff = -0.5
 	mine_rgo_eff = -0.5
 }
@@ -210,7 +211,7 @@ great_power = {
 	diplomatic_points_modifier = 1.0
 	leadership = 2.0
 	global_immigrant_attract = 0.15
-	badboy = -0.1
+	badboy = -0.05
 	cb_generation_speed_modifier = 0.10
 }
 
@@ -221,7 +222,7 @@ second_power = {
 	leadership = 1.0
 	global_immigrant_attract = 0.10
 	cb_generation_speed_modifier = 0.05
-	badboy = -0.05
+	badboy = -0.025
 }
 
 civ_nation = {
