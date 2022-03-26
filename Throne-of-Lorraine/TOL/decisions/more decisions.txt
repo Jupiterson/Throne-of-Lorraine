@@ -219,10 +219,13 @@ political_decisions = {
 				any_owned_province = { is_core = SWE }
 				any_owned_province = { is_core = NOR }
 				any_owned_province = { is_core = DEN }
+				any_owned_province = { is_core = DNN }
+				any_owned_province = { is_core = GRN }
 				is_sphere_leader_of = SWE
 				is_sphere_leader_of = NOR
 				is_sphere_leader_of = DEN
 				is_sphere_leader_of = DNN
+				is_sphere_leader_of = GRN
 			}
 		}
 		allow = {
@@ -253,6 +256,8 @@ political_decisions = {
 			SWE = { all_core = { add_core = SCA } }
 			NOR = { all_core = { add_core = SCA } }
 			DEN = { all_core = { add_core = SCA } }
+			DNN = { all_core = { add_core = SCA } }
+			GRN = { all_core = { add_core = SCA } }
 			SCA = {
 				primary_culture = danish
 				add_accepted_culture = swedish
@@ -265,6 +270,7 @@ political_decisions = {
 						tag = SWE
 						tag = NOR
 						tag = DEN
+						tag = DNN
 					}
 					ai = yes
 					in_sphere = THIS
@@ -322,10 +328,14 @@ political_decisions = {
 				any_owned_province = { is_core = NOR }
 				any_owned_province = { is_core = DEN }
 				any_owned_province = { is_core = FIN }
+				any_owned_province = { is_core = DNN }
+				any_owned_province = { is_core = GRN }
 				is_sphere_leader_of = SWE
 				is_sphere_leader_of = NOR
 				is_sphere_leader_of = DEN
 				is_sphere_leader_of = FIN
+				is_sphere_leader_of = DNN
+				is_sphere_leader_of = GRN
 			}
 		}
 		allow = {
@@ -357,6 +367,7 @@ political_decisions = {
 			NOR = { all_core = { add_core = SCA } }
 			DEN = { all_core = { add_core = SCA } }
 			FIN = { all_core = { add_core = SCA } }
+			DNN = { all_core = { add_core = SCA } }
 			GRN = { all_core = { add_core = SCA } }
 			SCA = {
 				primary_culture = finnish
@@ -373,6 +384,7 @@ political_decisions = {
 						tag = NOR
 						tag = DEN
 						tag = FIN
+						tag = DNN
 						tag = GRN
 					}
 					ai = yes

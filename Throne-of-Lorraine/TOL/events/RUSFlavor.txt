@@ -801,6 +801,7 @@ country_event = {
 				secede_province = THIS
 				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+				add_province_modifier = { name = population_resettlement duration = 1460 }
 			}
 		}
 		random_owned = {
@@ -813,7 +814,7 @@ country_event = {
 				secede_province = THIS
 				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
-				add_province_modifier = { name = population_resettlement duration = 365 }
+				add_province_modifier = { name = population_resettlement duration = 1460 }
 			}
 		}
 		random_owned = {
@@ -827,6 +828,7 @@ country_event = {
 				secede_province = THIS
 				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+				add_province_modifier = { name = population_resettlement duration = 1460 }
 			}
 		}
 		random_owned = {
@@ -840,6 +842,7 @@ country_event = {
 				secede_province = THIS
 				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+				add_province_modifier = { name = population_resettlement duration = 1460 }
 			}
 		}
 	}
