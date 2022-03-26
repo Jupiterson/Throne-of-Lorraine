@@ -797,7 +797,9 @@ country_event = {
 				1074 = { owned_by = THIS }
 			}
 			1088 = {
+				life_rating = 20
 				secede_province = THIS
+				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
 			}
 		}
@@ -807,11 +809,11 @@ country_event = {
 				1072 = { owned_by = THIS }
 			}
 			1086 = {
-				life_rating = 10
+				life_rating = 20
 				secede_province = THIS
 				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
-				add_province_modifier = { name = poption_resettlement duration = 365 }
+				add_province_modifier = { name = population_resettlement duration = 365 }
 			}
 		}
 		random_owned = {
@@ -821,7 +823,9 @@ country_event = {
 				1088 = { owned_by = THIS }
 			}
 			1089 = {
+				life_rating = 20
 				secede_province = THIS
+				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
 			}
 		}
@@ -832,7 +836,9 @@ country_event = {
 				1086 = { owned_by = THIS }
 			}
 			1087 = {
+				life_rating = 20
 				secede_province = THIS
+				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
 			}
 		}
@@ -1585,7 +1591,7 @@ country_event = {
 			}
 			pop_type = labourers
 		}
-		add_province_modifier = { name = poption_resettlement duration = 2190 }
+		add_province_modifier = { name = population_resettlement duration = 2190 }
 		remove_province_modifier = nationalist_agitation
 		}
 
@@ -1628,7 +1634,7 @@ country_event = {
 				}
 				pop_type = labourers
 			}
-			add_province_modifier = { name = poption_resettlement duration = 1460 }
+			add_province_modifier = { name = population_resettlement duration = 1460 }
 			remove_province_modifier = nationalist_agitation
 		}
 
@@ -1670,7 +1676,7 @@ country_event = {
 			}
 			pop_type = labourers
 			}
-		add_province_modifier = { name = poption_resettlement duration = 1460 }
+		add_province_modifier = { name = population_resettlement duration = 1460 }
 		remove_province_modifier = nationalist_agitation
 		}
 
@@ -1712,7 +1718,7 @@ country_event = {
 				}
 			pop_type = farmers
 			}
-		add_province_modifier = { name = poption_resettlement duration = 1460 }
+		add_province_modifier = { name = population_resettlement duration = 1460 }
 		remove_province_modifier = nationalist_agitation
 		}
 
@@ -1773,7 +1779,7 @@ country_event = {
 				}
 			pop_type = labourers
 			}
-		add_province_modifier = { name = poption_resettlement duration = 1460 }
+		add_province_modifier = { name = population_resettlement duration = 1460 }
 		remove_province_modifier = nationalist_agitation
 		}
 	}
