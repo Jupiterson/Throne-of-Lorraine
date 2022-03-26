@@ -19,7 +19,8 @@ country_event = {
 		name = "Equal Rights for Everyone!"
 		prestige = 5
 		plurality = 5
-		primary_culture = ashkenazi
+		add_accepted_culture = ashkenazi
+		#primary_culture = ashkenazi
 		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
 		any_country = {
 			limit = {
