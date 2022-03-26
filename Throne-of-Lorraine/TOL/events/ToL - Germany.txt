@@ -1,0 +1,97 @@
+country_event = {
+
+	id = 100133
+	title = "EVTN100133"
+	desc = "EVTDESC100133"
+	picture = "db_frage"
+	trigger = {
+	OR = {
+		AND = {
+		tag = GER
+		exists = GER
+		}
+		AND = {
+		tag = GCF
+		exists = GCF
+		}
+		}
+		}
+   fire_only_once = yes
+	mean_time_to_happen = { days = 14 }
+
+#Megalovania starts playing
+	option = {
+		name = "This will be awful"
+		set_global_flag = a_bad_time  
+		any_country = {
+			limit = {
+				is_culture_group = britannian
+				NOT = { tag = ENG }
+				exists = yes
+				ai = yes
+			}
+			annex_to = ENG
+		}
+		
+		any_country = {
+			limit = {
+				is_culture_group = italian
+				NOT = { tag = ITA }
+				exists = yes
+				ai = yes
+			}
+			annex_to = ITA
+		}
+		
+		any_country = {
+			limit = {
+				is_culture_group = iberian
+				NOT = { tag = IBR }
+				exists = yes
+				ai = yes
+			}
+			annex_to = IBR
+		}
+		
+		any_country = {
+			limit = {
+				is_culture_group = french
+				NOT = { tag = BOR }
+				exists = yes
+				ai = yes
+			}
+			annex_to = BOR
+		}
+		
+		any_country = {
+			limit = {
+				is_culture_group = south_slavic
+				NOT = { tag = YUG }
+				exists = yes
+				ai = yes
+			}
+			annex_to = YUG
+		}
+		
+		any_country = {
+			limit = {
+				is_culture_group = ruthenian
+				NOT = { tag = RUT }
+				exists = yes
+				ai = yes
+			}
+			annex_to = RUT
+		}
+		
+		any_country = {
+			limit = {
+				is_culture_group = scandinavian
+				NOT = { tag = SCA }
+				exists = yes
+				ai = yes
+			}
+			annex_to = SCA
+		}
+	}
+
+}

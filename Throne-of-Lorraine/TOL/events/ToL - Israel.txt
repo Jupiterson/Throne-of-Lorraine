@@ -16,7 +16,26 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "Equal Rights for Everyone!"
+		name = "Switch the Elites!"
+		prestige = 5
+		plurality = 5
+		#add_accepted_culture = ashkenazi
+		primary_culture = ashkenazi
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
+		any_country = {
+			limit = {
+				is_culture_group = germanic
+				NOT = { tag = THIS }
+			}
+			country_event = 100128
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+		option = {
+		name = "Give them Rights"
 		prestige = 5
 		plurality = 5
 		add_accepted_culture = ashkenazi
@@ -28,6 +47,9 @@ country_event = {
 				NOT = { tag = THIS }
 			}
 			country_event = 100128
+		}
+		ai_chance = {
+			factor = 0
 		}
 	}
 }
