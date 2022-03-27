@@ -157,10 +157,8 @@ political_decisions = {
 		effect = {
 			prestige = 10
 			badboy = 4
+			BKY = { any_owned = { add_core = RUS } }
 			inherit = BKY
-			RUS_1041 = { add_core = RUS }
-			RUS_1048 = { add_core = RUS }
-			RUS_1052 = { add_core = RUS }
 		}
 
 		ai_will_do = { factor = 1 }
