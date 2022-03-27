@@ -850,7 +850,7 @@ country_event = {
 		set_country_flag = the_crimean_war_resolved
 		clr_country_flag = the_crimean_war
 		prestige = 25
-		CRI = { any_owned = { add_core = RUS } }
+		CRI = { all_core = { add_core = RUS } }
 		#FER = { any_owned = { add_core = RUS } }
 		inherit = CRI
 		any_pop = {

@@ -23,7 +23,7 @@ political_decisions = {
 			treasury = -100000
 			#random_owned = {
 			#	limit = { owner = { ai = yes } }
-				owner = {
+			#	owner = {
 					activate_technology = muzzle_loaded_rifles
 					activate_technology = breech_loaded_rifles
 					activate_technology = early_railroad
@@ -31,7 +31,7 @@ political_decisions = {
 					activate_technology = army_professionalism
 					political_reform = mandatory_service
 					social_reform = low_schools
-				}
+			#	}
 			#}
 			set_country_flag = dmitry_reforms
 			add_country_modifier = {
