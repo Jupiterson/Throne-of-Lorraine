@@ -394,6 +394,11 @@ country_event = {
 		add_accepted_culture = sicilian
 		add_accepted_culture = provencial
 		add_accepted_culture = venetian
+		PRO = {
+			all_core = {
+				add_core = THIS
+			}
+		}
 		random_owned = {
 			limit = { owner = { OR = { is_culture_group = italian is_culture_group = germanic } accepted_culture = french } }
 			owner = { remove_accepted_culture = french }

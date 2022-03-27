@@ -57,7 +57,7 @@ political_decisions = {
 					add_core = IBR
 				}
 			}
-						BSQ = {
+			BSQ = {
 				all_core = {
 					add_core = IBR
 				}
@@ -113,7 +113,7 @@ political_decisions = {
         allow = {
             war = no
             is_greater_power = yes
-           IBR = {
+			IBR = {
                 all_core = {
                     OR = {
                         owned_by = THIS
@@ -138,6 +138,36 @@ political_decisions = {
                 }
                 annex_to = THIS
             }
+			SPA = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			LEO = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			ARN = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			BSQ = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			POR = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			GNA = {
+				all_core = {
+					add_core = IBR
+				}
+			}
             any_country = {
                 limit = {
                     in_sphere = THIS
@@ -145,7 +175,7 @@ political_decisions = {
                 }
                 any_owned = {
                     limit = {
-                            is_core = IBR
+                        is_core = IBR
                     }
                     secede_province = THIS
                 }

@@ -161,23 +161,26 @@ political_decisions = {
 				war_with = FRA
 				war_with = BOR
 			}
-				GER = {
-					all_core = {
-						OR = {
-							owned_by = THIS
-							owner = {
-								in_sphere = THIS
-								OR = {
-									is_vassal = no
-									vassal_of = THIS
-								}
-								war = no
-								is_greater_power = no
+			GER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+								#OR = {
+								#	vassal_of = HNS
+								#	HNS = { in_sphere = THIS }
+								#}
 							}
+							war = no
+							is_greater_power = no
 						}
 					}
 				}
-			
+			}			
 		}
 
 		effect = {
