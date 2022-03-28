@@ -18,8 +18,7 @@ political_decisions = {
 
 		effect = {
 			treasury = -50000
-			set_country_flag = venice_expanded
-   
+			set_global_flag = venice_expanded
 			729 = {
 				life_rating = 5
 				add_province_modifier = { name = recently_built_city duration = 1825 }
@@ -55,10 +54,10 @@ political_decisions = {
 	}
 
 #stolen from AOE
-   demand_milan = {
+	demand_milan = {
 		picture = italian_trentino
 		potential = {
-						tag = VEN
+			tag = VEN
 			NOT = { has_country_flag = demand_milan_done }
 		}
 		
@@ -74,7 +73,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = demand_milan_done
 			 
-			 LOM = {
+			LOM = {
 				all_core = {
 					add_core = THIS
 				}
@@ -84,28 +83,23 @@ political_decisions = {
 	}
 	
 
-expand_west = {
+	expand_west = {
 		picture = italian_islands
 		potential = {
-						tag = VEN
+			tag = VEN
 			NOT = {
 				has_country_flag = expanded_west
 			}
-			exists = yes
-		
+			exists = yes		
 			is_greater_power = yes			
 			military_score = 25
 			war = no
-						
-			
-
 		}
 		
 		allow = {
 			nationalism_n_imperialism = 1
 			war = no
 		}
-		
 		
 		effect = {
 			759 = {
