@@ -92,52 +92,52 @@ political_decisions = {
 	}
 	
 	create_hispania = {
-		picture = create_iberia
-		potential = {
-			NOT = {
-				is_culture_group = iberian
+        picture = create_iberia
+        potential = {
+            NOT = {
+                is_culture_group = iberian
 				tag = GNA
-			}
-			NOT = { exists = IBR }
-			NOT = { has_global_flag = iberia_united }
-			OR = {
-				any_owned_province = { is_core = IBR }
+            }
+            NOT = { exists = IBR }
+            NOT = { has_global_flag = iberia_united }
+            OR = {
+                any_owned_province = { is_core = IBR }
+                is_sphere_leader_of = SPA
 				is_sphere_leader_of = SPA
-				is_sphere_leader_of = SPA
-				is_sphere_leader_of = LEO
-				is_sphere_leader_of = POR
+                is_sphere_leader_of = LEO
+                is_sphere_leader_of = POR
 				is_sphere_leader_of = ARN
-			}
-		}
+            }
+        }
 
-		allow = {
-			war = no
-			is_greater_power = yes
+        allow = {
+            war = no
+            is_greater_power = yes
 			IBR = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-							war = no
-						}
-					}
-				}
-			}
-		}
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                            war = no
+                        }
+                    }
+                }
+            }
+        }
 
-		effect = {
-			set_global_flag = iberia_united
-			prestige = 10
-			badboy = 10
-			any_country = {
-				limit = {
-					is_culture_group = iberian
-					ai = yes
-					in_sphere = THIS
-				}
-				annex_to = THIS
-			}
+        effect = {
+            set_global_flag = iberia_united
+            prestige = 10
+            badboy = 10
+            any_country = {
+                limit = {
+                    is_culture_group = iberian
+                    ai = yes
+                    in_sphere = THIS
+                }
+                annex_to = THIS
+            }
 			SPA = {
 				all_core = {
 					add_core = IBR
@@ -168,43 +168,43 @@ political_decisions = {
 					add_core = IBR
 				}
 			}
-			any_country = {
-				limit = {
-					in_sphere = THIS
-					war = no
-				}
-				any_owned = {
-					limit = {
-						is_core = IBR
-					}
-					secede_province = THIS
-				}
-			}
-			any_owned = {
-				limit = {
-					is_core = THIS
-					is_core = IBR
-				}
-				remove_core = IBR
-			}
-			release_vassal = IBR
-			create_alliance = IBR
-			diplomatic_influence = {
-				who = IBR
-				value = 300
-			}
-			any_country = {
-				limit = {
-					any_owned_province = { is_core = IBR }
-					NOT = { tag = THIS }
-				}
-				relation = {
-					who = THIS
-					value = -50
-				}
-			}
-		}
-	}
+            any_country = {
+                limit = {
+                    in_sphere = THIS
+                    war = no
+                }
+                any_owned = {
+                    limit = {
+                        is_core = IBR
+                    }
+                    secede_province = THIS
+                }
+            }
+            any_owned = {
+                limit = {
+                    is_core = THIS
+                    is_core = IBR
+                }
+                remove_core = IBR
+            }
+            release_vassal = IBR
+            create_alliance = IBR
+            diplomatic_influence = {
+                who = IBR
+                value = 300
+            }
+            any_country = {
+                limit = {
+                    any_owned_province = { is_core = IBR }
+                    NOT = { tag = THIS }
+                }
+                relation = {
+                    who = THIS
+                    value = -50
+                }
+            }
+        }
+    }
 	
 	liberate_the_gascons = {
 		picture = fourmusketeers
