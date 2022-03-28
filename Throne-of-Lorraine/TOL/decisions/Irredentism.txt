@@ -675,9 +675,7 @@ political_decisions = {
 	claim_transnitria = {
 		picture = transnistria_stamp
 		potential = {
-
-				tag = ROM
-			
+			tag = ROM			
 			NOT = { has_country_flag = claimed_transnitria }
 		}
 

@@ -22,20 +22,19 @@ political_decisions = {
 			GER = {
 				all_core = {
 					OR = {
-							owned_by = THIS
-							owner = {
-								in_sphere = THIS   
-								OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS   
+							OR = {
 								vassal_of = THIS 
 								is_vassal = no 
 								overlord = {
-								is_culture_group = germanic
-								 
+									is_culture_group = germanic							 
 								}	
 							} 								
-								war = no
-								is_greater_power = no
-							}					   
+							war = no
+							is_greater_power = no
+						}					   
 						NOT = { culture = south_german }
 					}
 				}
@@ -60,9 +59,17 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = { owner = { tag = AUB } }
-				BOH = { all_core = { remove_core = AUB } }
+				#BOH = { all_core = { remove_core = AUB } }
 				CRO = { all_core = { remove_core = AUB } }
-				owner = { remove_accepted_culture = czech }
+				SLO = { all_core = { remove_core = AUB } }
+				SLV = { all_core = { remove_core = AUB } }
+				owner = {
+					add_accepted_culture = bohemian
+					remove_accepted_culture = czech
+					remove_accepted_culture = illyrian
+					remove_accepted_culture = slovene
+					remove_accepted_culture = slovak
+				}
 			}
 			all_core = { add_core = SGF }
 			any_owned = {
@@ -78,10 +85,10 @@ political_decisions = {
 				add_core = SGF
 			}
 			SWI = {
-					all_core = {
-						add_core = SGF
-					}
+				all_core = {
+					add_core = SGF
 				}
+			}
 			random_owned = {
 				limit = { owner = { tag = KUK } }
 				owner = {
@@ -154,23 +161,26 @@ political_decisions = {
 				war_with = FRA
 				war_with = BOR
 			}
-				GER = {
-					all_core = {
-						OR = {
-							owned_by = THIS
-							owner = {
-								in_sphere = THIS
-								OR = {
-									is_vassal = no
-									vassal_of = THIS
-								}
-								war = no
-								is_greater_power = no
+			GER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+								#OR = {
+								#	vassal_of = HNS
+								#	HNS = { in_sphere = THIS }
+								#}
 							}
+							war = no
+							is_greater_power = no
 						}
 					}
 				}
-			
+			}			
 		}
 
 		effect = {
