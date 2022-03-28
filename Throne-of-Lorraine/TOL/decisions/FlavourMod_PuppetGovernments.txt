@@ -78,7 +78,6 @@ political_decisions = {
 			exists = yes
 			OR = {
 				government = democracy
-			   	government = parliamentary_republic
 				government = prussian_constitutionalism
 				government = hms_government
 				government = absolute_monarchy
@@ -479,11 +478,8 @@ political_decisions = {
 			clr_country_flag = clean_up_colonial_government
 			random_owned = {
 				limit = { owner = { civilized = yes } }
-				owner = { 	
-					OR = {
-						government = democracy
-				  		government = parliamentary_republic
-					}
+				owner = {
+					government = democracy
 				}
 			}
 			random_owned = {

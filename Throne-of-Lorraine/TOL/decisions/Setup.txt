@@ -59,10 +59,6 @@ political_decisions = {
 			any_country = {
 				annex_to = THIS
 			}
-			any_neighbor_province = {
-				secede_province = THIS
-			}
-			any_province = { secede_province = THIS }
 			USA_81 = {
 				secede_province = THIS
 			}
@@ -1044,12 +1040,12 @@ political_decisions = {
 					duration = -1
 				}
 			}
-			USA = {
-				add_country_modifier = {
-					name = you_are_going_to_the_usa
-					duration = -1
-				}
-			}
+			#USA = {
+			#	add_country_modifier = {
+			#		name = you_are_going_to_the_usa
+			#		duration = -1
+			#	}
+			#}
 			3446 = {
 				state_scope = {
 					change_region_name = "Tuath Ghalldachd"
@@ -2859,7 +2855,7 @@ political_decisions = {
 			HAI = { add_country_modifier = { name = credit_risk duration = 5475 } }
 			SPU = { add_country_modifier = { name = credit_risk duration = 5475 } }
 			PRG = { add_country_modifier = { name = unrecognized_country duration = 3650 } }
-			RGS = { add_country_modifier = { name = unrecognized_country duration = 3650 } }
+			#RGS = { add_country_modifier = { name = unrecognized_country duration = 3650 } }
 
 			#################Setup Texas######################
 			TEX = {
@@ -3264,6 +3260,18 @@ political_decisions = {
 				diplomatic_influence = { who = MCK value = -400 }
 				diplomatic_influence = { who = KOR value = -400 }
 			}
+		}
+	}
+	
+	cleanup_setup = {
+		potential = {
+			ai = yes
+			NOT = { has_global_flag = cleanup_setup_done }
+		}
+		allow = {}
+		effect = {
+			set_global_flag = cleanup_setup_done
+			country_event = 477877789
 		}
 	}
 
