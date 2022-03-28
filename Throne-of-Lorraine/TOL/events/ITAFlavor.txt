@@ -1280,11 +1280,17 @@ country_event = {
 			limit = { is_sphere_leader_of = THIS }
 			set_country_flag = objects_to_italy
 		}
-		add_accepted_culture = south_italian
 		add_accepted_culture = north_italian
+		add_accepted_culture = south_italian
 		add_accepted_culture = central_italian
 		add_accepted_culture = sicilian
+		add_accepted_culture = provencial
 		add_accepted_culture = venetian
+		PRO = {
+			all_core = {
+				add_core = THIS
+			}
+		}
 		random_owned = {
 			limit = { owner = { is_culture_group = italian accepted_culture = french } }
 			owner = { remove_accepted_culture = french }
