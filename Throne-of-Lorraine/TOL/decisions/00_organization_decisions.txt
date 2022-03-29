@@ -65,16 +65,16 @@ political_decisions = {
 	}
 	
 	vassal_interactions = {
-        picture = gtfo
-        alert = no
-        potential = {
+		picture = gtfo
+		alert = no
+		potential = {
 			ai = no
-            has_country_flag = government_decisions_on
-            num_of_vassals_no_substates = 1
-            is_vassal = no
-        }
-        allow = { civilized = yes }
-        effect = {
+			has_country_flag = government_decisions_on
+			num_of_vassals_no_substates = 1
+			is_vassal = no
+		}
+		allow = { civilized = yes }
+		effect = {
 			random_country = {
 				limit = {
 					exists = yes
@@ -83,7 +83,7 @@ political_decisions = {
 				country_event = 477877793
 			}
 		}
-    }
+	}
 
 
 }
