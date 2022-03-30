@@ -204,6 +204,14 @@ political_decisions = {
 			1111 = { add_core = THIS }
 			1117 = { add_core = THIS }
 			1150 = { add_core = THIS }
+			URM = { all_core = { remove_core = URM } }
+			SRN = { all_core = { remove_core = SRN } }
+			RDL = { all_core = { remove_core = RDL } }
+			MKN = { all_core = { remove_core = MKN } }
+			BTL = { all_core = { remove_core = BTL } }
+			BNB = { all_core = { remove_core = BNB } }
+			BHT = { all_core = { remove_core = BHT } }
+			BDN = { all_core = { remove_core = BDN } }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -477,188 +485,52 @@ political_decisions = {
 		picture = gwadar_pakistan
 		potential = {
 			tag = PER
-			OR = {
-				AND = { owns = 2643 1142 = { owner = { civilized = no } NOT = { owned_by = PER } }  NOT = { has_country_flag  = bandar_abbas_regained } } #Bandar Abbas
-				AND = { owns = 1144 1146 = { owner = { civilized = no } NOT = { owned_by = PER } }  NOT = { has_country_flag  = chabahar_regained } } #Chabahar
-				AND = { owns = 2643 1145 = { owner = { civilized = no } NOT = { owned_by = PER } }  NOT = { has_country_flag  = lengeh_regained } } #Lengeh & Jask
+			1142 = { 
+				NOT = { owned_by = PER }   
 			}
+			NOT = { has_country_flag  = bandar_abbas_regained } 
 		}
 
 		allow = {
-			OR = {
-				AND = {
-					1142 = { owner = { civilized = no } NOT = { owned_by = PER } } #Bandar Abbas
-					OR = {
-						civilized = yes
-						AND = {
-							civilization_progress = 0.65
-							1142 = { 
-								owner = {
-									OR = { 
-										in_sphere = VEN 
-										in_sphere = ITA 
-									}
-								}
-							}
-							THIS = { 
-								OR = { 
-									in_sphere = VEN
-									in_sphere = ITA
-								}
-							}
-							OR = { 
-								relation = { who = VEN value = 100 }
-								relation = { who = ITA value = 100 }
-							}
+			AND = {
+				civilized = yes
+				1142 = { owner = { civilized = no } }
+			}
+			AND = {
+				OR = {
+					civilization_progress = 0.65
+					civilized = yes 
+				}
+				money = 20000
+				1142 = { 
+					owner = {
+						OR = { 
+							in_sphere = VEN 
+							in_sphere = GEN 
+							in_sphere = ITA 
 						}
-						1142 = { owner = { vassal_of = THIS } }
 					}
 				}
-				AND = {
-					1146 = { owner = { civilized = no } NOT = { owned_by = PER } } #Chabahar
-					OR = {
-						civilized = yes
-						AND = {
-							civilization_progress = 0.7
-							1142 = {
-								owner = {
-									part_of_sphere = no
-								}
-							}
-						}
-						AND = {
-							civilization_progress = 0.75
-							1142 = { owner = { in_sphere = ENG } }
-							THIS = { in_sphere = ENG }
-							relation = { who = ENG value = 100 }
-						}
-						1142 = { owner = { vassal_of = THIS } }
+				THIS = { 
+					OR = { 
+						in_sphere = VEN
+						in_sphere = GEN 
+						in_sphere = ITA
 					}
-				}
-				AND = {
-					1145 = { owner = { civilized = no } NOT = { owned_by = PER } } #Chabahar
-					OR = {
-						civilized = yes
-						AND = {
-							civilization_progress = 0.9
-							1142 = {
-								owner = {
-									part_of_sphere = no
-								}
-							}
-						}
-						AND = {
-							civilization_progress = 0.9
-							1142 = { owner = { in_sphere = ENG } }
-							THIS = { in_sphere = ENG }
-							relation = { who = ENG value = 100 }
-						}
-						1142 = { owner = { vassal_of = THIS } }
+					OR = { 
+						relation = { who = VEN value = 100 }
+						relation = { who = GEN value = 100 }
+						relation = { who = ITA value = 100 }
 					}
 				}
 			}
 		}
 
 		effect = {
-			#Bandar Abbas
-			random_owned = {
-				limit = {
-					PER = {
-						OR = {
-							civilized = yes
-							AND = {
-								civilization_progress = 0.65
-								1142 = {
-									owner = {
-										part_of_sphere = no
-									}
-								}
-							}
-							AND = {
-								civilization_progress = 0.65
-								1142 = { owner = { in_sphere = ENG } }
-								THIS = { in_sphere = ENG }
-								relation = { who = ENG value = 100 }
-							}
-							1142 = { owner = { vassal_of = THIS } }
-						}
-						NOT = { has_country_flag  = bandar_abbas_regained }
-						NOT = { owns = 1142 }
-					}
-				}
+				money = -20000
 				1142 = { secede_province = THIS }
 				THIS = { set_country_flag = bandar_abbas_regained }
-			}
-
-			#Chabahar
-			random_owned = {
-				limit = {
-					PER = {
-						owns = 1142 #Bandar Abbas
-						owns = 1144 #Zahedan
-						1146 = { owner = { civilized = no } NOT = { owned_by = PER } } #Chabahar
-						OR = {
-							civilized = yes
-							AND = {
-								civilization_progress = 0.75
-								1146 = {
-									owner = {
-										part_of_sphere = no
-									}
-								}
-							}
-							AND = {
-								civilization_progress = 0.75
-								1146 = { owner = { in_sphere = ENG } }
-								THIS = { in_sphere = ENG }
-								relation = { who = ENG value = 100 }
-							}
-							1146 = { owner = { vassal_of = THIS } }
-						}
-						NOT = { has_country_flag  = chabahar_regained }
-						NOT = { owns = 1146 }
-					}
-				}
-				1146 = { secede_province = THIS }
-				THIS = { set_country_flag = chabahar_regained }
-			}
-
-			#Lengeh & Jask
-			random_owned = {
-				limit = {
-					PER = {
-						owns = 1142 #Bandar Abbas
-						owns = 1146 #Chabahar
-						owns = 1144 #Zahedan
-						1141 = { owner = { civilized = no } NOT = { owned_by = PER } } #Lengeh & Jask
-						OR = {
-							civilized = yes
-							AND = {
-								civilization_progress = 0.9
-								1141 = {
-									owner = {
-										part_of_sphere = no
-									}
-								}
-							}
-							AND = {
-								civilization_progress = 0.9
-								1141 = { owner = { in_sphere = ENG } }
-								THIS = { in_sphere = ENG }
-								relation = { who = ENG value = 100 }
-							}
-							1141 = { owner = { vassal_of = THIS } }
-						}
-						NOT = { has_country_flag  = lengeh_regained }
-						NOT = { owns = 1141 }
-					}
-				}
-				1141 = { secede_province = THIS }
-				1145 = { secede_province = THIS }
-				THIS = { set_country_flag = lengeh_regained }
-			}
 		}
-
 		ai_will_do = { factor = 1 }
 	}
 }
