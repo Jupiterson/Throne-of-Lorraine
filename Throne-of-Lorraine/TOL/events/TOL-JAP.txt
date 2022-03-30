@@ -84,6 +84,9 @@ country_event = {
 			remove_country_modifier = isolationist_foreign_officers
 			remove_country_modifier = isolationist_foreign_training
 		}
+		SAI = {
+			country_event = 97608
+		}
 		any_country = {
 			limit = {
 				primary_culture = japanese
@@ -127,7 +130,37 @@ country_event = {
 		relation = { who = SAI value = -100 }
 	}
 }
+country_event = {
+	id = 97608
+	title = "JAPsupplies4.t" #satsuma_shock_JAP
+	desc = "JAPsupplies4.d"
+	picture = "satsuma_rebellion"
 
+	is_triggered_only = yes
+
+	option = {
+		name = "Fine...if it will shut them up"
+		prestige = -10
+		add_accepted_culture = rusoni
+		any_pop = {
+			limit = { 
+				culture = rusoni 
+			}
+			consciousness = 2
+		}
+	}
+	
+	option = { 
+		name = "Hahahahaha...No"
+		prestige = 20
+		any_pop = {
+			limit = { 
+				culture = rusoni 
+			}
+			militancy = 6
+		}
+	}
+}
 
 #####################################################################################
 #																					#
