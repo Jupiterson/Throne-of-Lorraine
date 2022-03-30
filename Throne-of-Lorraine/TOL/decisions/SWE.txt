@@ -235,11 +235,25 @@ political_decisions = {
 			OR = {
 				UBD = { vassal_of = SWE }
 				AND = {
-					343 = { owned_by = SWE }
-					994 = { owned_by = SWE }
-					996 = { owned_by = SWE }
-					RUS_349 = { owned_by = SWE }
-					RUS_354 = { owned_by = SWE }
+					343 = { owned_by = SWE } #Helsinki
+					994 = { owned_by = SWE } #St. Petersburg					
+					996 = { owned_by = SWE } #Luga
+					349 = { owned_by = SWE } #Estonia
+					350 = { owned_by = SWE } #Estonia
+					351 = { owned_by = SWE } #Estonia
+					352 = { owned_by = SWE } #Estonia
+					353 = { owned_by = SWE } #Estonia
+					3367 = { owned_by = SWE } #Estonia
+					3368 = { owned_by = SWE } #Estonia
+					354 = { owned_by = SWE } #Latvia
+					355 = { owned_by = SWE } #Latvia
+					356 = { owned_by = SWE } #Latvia
+					357 = { owned_by = SWE } #Latvia
+					358 = { owned_by = SWE } #Latvia
+					359 = { owned_by = SWE } #Latvia
+					3365 = { owned_by = SWE } #Latvia
+					3423 = { owned_by = SWE } #Latvia
+					3424 = { owned_by = SWE } #Latvia
 				}
 			}
 		}
@@ -280,10 +294,24 @@ political_decisions = {
 		}
 
 		allow = {
-			994 = { owned_by = RUS }
-			996 = { owned_by = RUS }
-			RUS_349 = { owned_by = RUS }
-			RUS_354 = { owned_by = RUS }
+			994 = { owned_by = RUS } #St. Petersburg					
+			996 = { owned_by = RUS } #Luga
+			349 = { owned_by = RUS } #Estonia
+			350 = { owned_by = RUS } #Estonia
+			351 = { owned_by = RUS } #Estonia
+			352 = { owned_by = RUS } #Estonia
+			353 = { owned_by = RUS } #Estonia
+			3367 = { owned_by = RUS } #Estonia
+			3368 = { owned_by = RUS } #Estonia
+			354 = { owned_by = RUS } #Latvia
+			355 = { owned_by = RUS } #Latvia
+			356 = { owned_by = RUS } #Latvia
+			357 = { owned_by = RUS } #Latvia
+			358 = { owned_by = RUS } #Latvia
+			359 = { owned_by = RUS } #Latvia
+			3365 = { owned_by = RUS } #Latvia
+			3423 = { owned_by = RUS } #Latvia
+			3424 = { owned_by = RUS } #Latvia
 		}
 		effect = {
 			set_global_flag = rus_annex_bal
