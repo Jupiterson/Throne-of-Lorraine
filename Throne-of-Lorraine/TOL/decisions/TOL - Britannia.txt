@@ -341,6 +341,10 @@ political_decisions = {
 			prestige = 25
 			treasury = -1000000
 			set_global_flag = england_rebuild_program
+			add_country_modifier = { 
+			    name = global_baby_boom
+			    duration = 1825
+			}
 			any_owned = { 
 				limit = { 
 					OR = {

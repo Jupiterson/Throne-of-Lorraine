@@ -317,6 +317,38 @@ country_event = {
 	}
 }
 
+#Post civil war England
+country_event = {
+	id = 28019
+	title = "EVTNAME28019"
+	desc = "EVTDESC28019"
+	picture = "Celebration"
+	fire_only_once = yes
+	
+	trigger = {
+	    OR = {
+			tag = ENL
+			tag = UOW
+		}
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "We will rebuild and comeback stronger for the Motherland!"
+		add_country_modifier = { 
+			name = global_baby_boom
+			duration = 3650
+	    }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
 country_event = {
 	id = 999900
 	title = "Hurrah for the Celts!"
