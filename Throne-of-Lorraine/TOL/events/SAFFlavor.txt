@@ -1152,6 +1152,7 @@ country_event = {
 
 	trigger = {
 		primary_culture = scottish
+		NOT = { tag = SCO }
 		NOT = { year = 1890 }
 		NOT = {
 			has_country_flag = boer_commandos

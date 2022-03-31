@@ -58,7 +58,6 @@ political_decisions = {
 
 	unite_poland_hungary = {
 		picture = become_poland_lithuania
-
 		potential = {
 			OR = {
 				primary_culture = polish
@@ -76,30 +75,29 @@ political_decisions = {
 		allow = {
 			war = no
 			AND = {
-			HUN = { exists = yes is_vassal = yes }
-			NOT = { year = 1850 }
+				HUN = { exists = yes is_vassal = yes }
+				NOT = { year = 1850 }
 			}
-	OR = {
-		state_n_government = 1
-		POL = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							ai = yes
-							in_sphere = THIS
-							OR = {
-								is_vassal = no
-								vassal_of = THIS
+			OR = {
+				state_n_government = 1
+				POL = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								ai = yes
+								in_sphere = THIS
+								OR = {
+									is_vassal = no
+									vassal_of = THIS
+								}
+								war = no
+								is_greater_power = no
 							}
-							war = no
-							is_greater_power = no
 						}
 					}
-				}
+				}			
 			}
-			
-		}
 		}
 		effect = {
 			prestige = 30
