@@ -144,7 +144,10 @@ political_decisions = {
 		news_desc_short = "form_germany_NEWS_SHORT"
 		potential = {
 			capital_scope = { continent = europe }
-			NOT = { has_country_flag = post_colonial_country }
+			NOT = { 
+			has_country_flag = post_colonial_country
+            has_country_flag = no_germany
+			}
 			OR = {
 				tag = NGF
 				tag = SGF

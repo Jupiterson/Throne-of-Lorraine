@@ -1028,96 +1028,96 @@ political_decisions = {
 			}
 		}
 	}
-	claim_lorraine = {
-		picture = duchy_of_lorraine
-		potential = {
-			OR = {
-				tag = GER
-				tag = GCF
-			}
-			is_greater_power = yes
-			is_vassal = no
-			owns = 410
-			owns = 409
-			owns = 412
-			owns = 3409
-			FRA = {
-				owns = 405
-				owns = 414
-				owns = 411
-				owns = 413
-				owns = 433
-			}
-			OR = {
-				government = hms_government
-				government = prussian_constitutionalism
-				government = absolute_monarchy
-				government = absolute_empire
-				government = semi_constitutional_empire
-				government = constitutional_empire
-				government = fascist_dictatorship
-			}
-			NOT = { has_global_flag = lorraine_war }
-		}
-		allow = {
-			war = no
-			mass_politics = 1
-			OR = {
-				war_policy = jingoism
-				government = fascist_dictatorship
-			}
-			is_greater_power = yes
-			has_unclaimed_cores = no
-		}
-		effect = {
-			set_global_flag = lorraine_war
-			badboy = 7
-			397 = { add_core = THIS }
-			any_country = {
-				limit = {
-					OR = {
-						owns = 381
-						owns = 395
-						owns = 398
-						owns = 3377
-						owns = 397
-					}
-					NOT = {
-							tag = GER
-					}
-					NOT = {
-							tag = GCF
-					}
-				}
-				create_alliance = FRA
-				relation = {
-					who = FRA
-					value = 400
-				}
-				relation = {
-					who = THIS
-					value = -400
-				}
-				diplomatic_influence = {
-					who = FRA
-					value = 800
-				}
-				diplomatic_influence = {
-					who = THIS
-					value = -800
-				}
-			}
-			war = {
-				target = FRA
-				attacker_goal = { casus_belli = cut_down_to_size }
-				defender_goal = { casus_belli = cut_down_to_size }
-				call_ally = yes
-			}
-			FRA = { badboy = -13 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
+#	claim_lorraine = {
+#		picture = duchy_of_lorraine
+#		potential = {
+#			OR = {
+#				tag = GER
+#				tag = GCF
+#			}
+#			is_greater_power = yes
+#			is_vassal = no
+#			owns = 410
+#			owns = 409
+#			owns = 412
+#			owns = 3409
+#			FRA = {
+#				owns = 405
+#				owns = 414
+#				owns = 411
+#				owns = 413
+#				owns = 433
+#			}
+#			OR = {
+#				government = hms_government
+#				government = prussian_constitutionalism
+#				government = absolute_monarchy
+#				government = absolute_empire
+#				government = semi_constitutional_empire
+#				government = constitutional_empire
+#				government = fascist_dictatorship
+#			}
+#			NOT = { has_global_flag = lorraine_war }
+#		}
+#		allow = {
+#			war = no
+#			mass_politics = 1
+#			OR = {
+#				war_policy = jingoism
+#				government = fascist_dictatorship
+#			}
+#			is_greater_power = yes
+#			has_unclaimed_cores = no
+#		}
+#		effect = {
+#			set_global_flag = lorraine_war
+#			badboy = 7
+#			397 = { add_core = THIS }
+#			any_country = {
+#				limit = {
+#					OR = {
+#						owns = 381
+#						owns = 395
+#						owns = 398
+#						owns = 3377
+#						owns = 397
+#					}
+#					NOT = {
+#							tag = GER
+#					}
+#					NOT = {
+#							tag = GCF
+#					}
+#				}
+#				create_alliance = FRA
+#				relation = {
+#					who = FRA
+#					value = 400
+#				}
+#				relation = {
+#					who = THIS
+#					value = -400
+#				}
+#				diplomatic_influence = {
+#					who = FRA
+#					value = 800
+#				}
+#				diplomatic_influence = {
+#					who = THIS
+#					value = -800
+#				}
+#			}
+#			war = {
+#				target = FRA
+#				attacker_goal = { casus_belli = cut_down_to_size }
+#				defender_goal = { casus_belli = cut_down_to_size }
+#				call_ally = yes
+#			}
+#			FRA = { badboy = -13 }
+#		}
+#
+#		ai_will_do = {
+#			factor = 0
+#		}
+#	}
 }

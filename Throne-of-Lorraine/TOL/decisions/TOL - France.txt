@@ -21,6 +21,26 @@ political_decisions = {
 			add_accepted_culture = provencial
 			add_accepted_culture = romansh
 			add_accepted_culture = catalan
+			WLL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			ARP = {
+				all_core = {
+					add_core = THIS
+				}
+			}		
+			BRG	= {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			PRO	= {
+				all_core = {
+					add_core = THIS
+				}
+			}
 			badboy = 10
 			prestige = 25
 			set_country_flag = proclaim_gauls
@@ -31,21 +51,34 @@ political_decisions = {
 		
 	}
 	
-	unite_the_gauls = {
+	france_natural_borders = {
 		picture = diplomats
 		potential = {
 			OR = {
-				   tag = BOR
-				   tag = FRZ
-				   tag = FRR
+			AND = { 
+				   tag = FRA
+				   OR = {
+				   government = fascist_dictatorship
+				   government = absolute_monarchy
+				   government = hms_government
+				   government = proletarian_dictatorship
+				   government = absolute_empire
 				   }
-				   has_country_flag = proclaim_gauls
+				   }
+				   tag = VIC
+				   }
+			
 			NOT = {
 				has_country_flag = united_gauls
 			}
 		}
 		allow = {
-			prestige = 350
+		OR = {
+			expressionism = 1
+			government = fascist_dictatorship
+			government = proletarian_dictatorship
+			}
+			prestige = 300
 		}
 		effect = {
 			WLL = {
@@ -64,14 +97,45 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
+			SVY	= {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BRG	= {
+				all_core = {
+					add_core = THIS
+				}
+			}
 			PRO	= {
 				all_core = {
 					add_core = THIS
 				}
 			}
-			414 = { add_core = THIS }
-			413 = { add_core = THIS }
-			badboy = 25
+			570 = { add_core = THIS }
+			378 = { add_core = THIS }
+			380 = { add_core = THIS }
+			379 = { add_core = THIS }
+			381 = { add_core = THIS }
+			577 = { add_core = THIS }
+			
+			FRA_411 = {
+				add_core = THIS
+			}
+			FRA_412 = {
+				add_core = THIS
+			}
+			PRU_570 = {
+				add_core = THIS
+			}
+			PRU_575 = {
+				add_core = THIS
+			}
+			SPA_498 = {
+				add_core = THIS
+			}
+			
+			badboy = 20
 			prestige = 25
 			set_country_flag = united_gauls
 		}

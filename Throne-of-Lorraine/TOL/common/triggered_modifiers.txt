@@ -1516,3 +1516,24 @@ french_renaissance = {
 	core_pop_consciousness_modifier = -0.2
 	icon = 19
 }
+
+famine = {
+	trigger = {
+		exists = yes
+		NOT = { year = 1839 }
+		tag = FRA
+		NOT = { 
+			government = absolute_monarchy
+			government = hms_government
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+		}
+	}
+	global_population_growth = -0.005
+	immigrant_push = 0.05
+	core_pop_militancy_modifier = 0.05
+	core_pop_consciousness_modifier = 0.05
+	goods_demand = -0.03
+	icon = 19
+}

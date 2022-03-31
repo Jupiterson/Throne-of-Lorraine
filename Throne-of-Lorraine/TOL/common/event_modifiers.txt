@@ -4870,7 +4870,7 @@ french_terror = {
 	non_accepted_pop_consciousness_modifier = 0.05
 	non_accepted_pop_militancy_modifier = 0.05
 	local_ruling_party_support = -0.80
-	goods_demand = -0.05
+	#goods_demand = -0.03
 	icon = 1
 }
 
@@ -4911,7 +4911,7 @@ merchant_heaven = {
 	diplomatic_points_modifier = 0.2
 	research_points_modifier = 0.1
 	war_exhaustion = -0.25
-	goods_demand = 0.05
+	goods_demand = 0.01
 	icon = 11
 }
 
@@ -4920,7 +4920,7 @@ hre_member = {
 	diplomatic_points_modifier = -0.1
 	research_points_modifier = 0.05
 	war_exhaustion = -0.05
-	cb_generation_speed_modifier = 0.35
+	cb_generation_speed_modifier = -0.35
 	icon = 17
 }
 
