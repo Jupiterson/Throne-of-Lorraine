@@ -448,10 +448,13 @@ migration_target = {
 	}
 
 	modifier = {
-		factor = 5.0
-		continent = asia
-		country = { primary_culture = russian }
-	}
+        factor = 5.0
+		OR = {
+			continent = asia
+			is_core = CRI
+		}
+        country = { primary_culture = russian }
+    }
 
 	modifier = {
 		factor = 2.5
