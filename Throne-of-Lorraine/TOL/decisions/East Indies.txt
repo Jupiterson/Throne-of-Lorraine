@@ -32,7 +32,10 @@ political_decisions = {
 	brunei_protectorate = {
 		picture = brunei_protectorate
 		potential = {
-			tag = SCO
+			OR = {
+				tag = ENG
+				tag = SCO
+			}
 			OR = {
 				SWK = {
 					all_core = {
@@ -1200,7 +1203,10 @@ political_decisions = {
 	form_french_indochina = {
 		picture = map_east_indies
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			1380 = {
 				owned_by = THIS
 				is_colonial = yes

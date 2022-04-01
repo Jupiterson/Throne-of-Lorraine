@@ -37,8 +37,10 @@ political_decisions = {
 				is_sphere_leader_of = THIS
 			}
 			OR = {
-				FRA = { exists = yes ai = yes }
+				FRR = { exists = yes ai = yes }
+				FRZ = { exists = yes ai = yes }
 				BOR = { exists = yes ai = yes }
+				VIC = { exists = yes ai = yes }
 			}
 		}
 
@@ -183,6 +185,7 @@ political_decisions = {
 			is_greater_power = yes
 			has_global_flag = tangier_protocol_succeeded
 			NOT = { primary_culture = french }
+			NOT = { primary_culture = occitan }
 			NOT = { tag = SPA }
 			NOT = { tag = IBR }
 			NOT = { tag = SPC }
@@ -202,7 +205,6 @@ political_decisions = {
 						owns = 1690 #Marrakesh
 						owns = 1694 #Agadir
 					}
-					#money = 75000
 				}
 				SPC = {
 					OR = {
@@ -211,9 +213,8 @@ political_decisions = {
 						owns = 1690 #Marrakesh
 						owns = 1694 #Agadir
 					}
-					#money = 75000
 				}
-				FRA = {
+				FRR = {
 					exists = yes
 					OR = {
 						owns = 1683 #Taza
@@ -221,9 +222,34 @@ political_decisions = {
 						owns = 1690 #Marrakesh
 						owns = 1694 #Agadir
 					}
-					#money = 75000
 				}
-			   
+				FRZ = {
+					exists = yes
+					OR = {
+						owns = 1683 #Taza
+						owns = 1680 #Fez
+						owns = 1690 #Marrakesh
+						owns = 1694 #Agadir
+					}
+				}
+				BOR = {
+					exists = yes
+					OR = {
+						owns = 1683 #Taza
+						owns = 1680 #Fez
+						owns = 1690 #Marrakesh
+						owns = 1694 #Agadir
+					}
+				}
+				VIC = {
+					exists = yes
+					OR = {
+						owns = 1683 #Taza
+						owns = 1680 #Fez
+						owns = 1690 #Marrakesh
+						owns = 1694 #Agadir
+					}
+				}
 			}
 		}
 
@@ -239,8 +265,10 @@ political_decisions = {
 			random_country = {
 				limit = {
 					OR = {
-						AND = {  tag = FRA exists = yes }
-						AND = {  tag = BOR exists = yes }
+						AND = { tag = FRR exists = yes }
+						AND = { tag = FRZ exists = yes }
+						AND = { tag = BOR exists = yes }
+						AND = { tag = VIC exists = yes }
 						tag = SPA
 						tag = SPC
 					}
@@ -269,8 +297,10 @@ political_decisions = {
 			OR = {
 				tag = ENG
 				tag = EIC
-				tag = FRA
+				tag = FRR
+				tag = FRZ
 				tag = BOR
+				tag = VIC
 				tag = ITA
 				tag = ITS
 				AND = {
@@ -321,8 +351,10 @@ political_decisions = {
 						tag = EIC
 						tag = ENG
 						tag = GER
-						tag = FRA
+						tag = FRR
+						tag = FRZ
 						tag = BOR
+						tag = VIC
 					}
 				}
 				AND = {
@@ -337,8 +369,8 @@ political_decisions = {
 					NOT = { total_amount_of_ships = 80 }
 					OR = {
 						tag = GER
-						tag = FRA
-						tag = BOR
+						tag = FRR
+						tag = FRZ
 						tag = JAP
 					}
 				}

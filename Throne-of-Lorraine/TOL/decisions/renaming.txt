@@ -2501,7 +2501,10 @@ political_decisions = {
 	french_renamed_savoy_aosta = {
 		picture = claim_aosta
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			OR = {
 				AND = { owns = 466 NOT = { has_global_flag = french_renamed_savoy } }
 				AND = { owns = 721 NOT = { has_global_flag = french_renamed_aosta } }
@@ -3042,7 +3045,10 @@ political_decisions = {
 	rename_artois_FRA = {
 		picture = FRA_rename_artois
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			owns = 399 #Lille
 			owns = 400 #Dunkirk
 			owns = 401 #Arras
@@ -4702,6 +4708,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				primary_culture = french
+				primary_culture = occitan
 				primary_culture = belgican
 			}
 			OR = {
@@ -6392,7 +6399,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				primary_culture = french	 
-				primary_culture = occitan  
+				primary_culture = occitan
 				primary_culture = burgundian	
 			}
 			owns = 608

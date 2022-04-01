@@ -4990,7 +4990,10 @@ country_event = {
 						has_country_flag = catholic_country
 					}
 					AND = {
-						primary_culture = french
+						OR = {
+							primary_culture = french
+							primary_culture = occitan
+						}
 						is_greater_power = yes
 						capital = 425
 					}

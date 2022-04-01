@@ -915,6 +915,7 @@ country_event = {
 	trigger = {
 		has_country_modifier = maya_excavations
 		NOT = { primary_culture = french }
+		NOT = { primary_culture = occitan }
 		NOT = { has_country_flag = belloq_wins }
 		NOT = { has_country_flag = belloq_loses }
 		NOT = { has_country_flag = pyramid_found }
@@ -947,7 +948,7 @@ country_event = {
 	}
 }
 
-#Pyramid Found FRA
+#Pyramid Found France
 country_event = {
 	id = 201023
 	title = "EVTNAME201022"
@@ -956,7 +957,12 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = maya_excavations
-		primary_culture = french
+		OR = {
+			tag = FRR
+			tag = FRZ
+			tag = BOR
+			tag = VIC
+		}
 	}
 
 	mean_time_to_happen = {
@@ -996,6 +1002,7 @@ country_event = {
 	trigger = {
 		has_country_modifier = maya_excavations
 		NOT = { primary_culture = french }
+		NOT = { primary_culture = occitan }
 		OR = {
 			has_country_flag = belloq_wins
 			has_country_flag = belloq_loses
@@ -1243,7 +1250,13 @@ country_event = {
 		prestige = -10
 		remove_country_modifier = maya_excavations
 		random_country = {
-			limit = { primary_culture = french capital = 425 }
+			limit = {
+				OR = {
+					primary_culture = french
+					primary_culture = occitan
+				}
+				capital = 425
+			}
 			country_event = 201023
 		}
 	}

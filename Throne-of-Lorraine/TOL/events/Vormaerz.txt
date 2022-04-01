@@ -848,7 +848,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				primary_culture = french
+				OR = {
+					primary_culture = french
+					primary_culture = occitan
+				}
 			}
 		}
 	}
@@ -881,8 +884,10 @@ country_event = {
 		has_country_flag = beethovenfest
 		ENG = { has_country_flag = beethovenfest }
 		OR = {
-			FRA = { has_country_flag = beethovenfest }
+			FRR = { has_country_flag = beethovenfest }
+			FRZ = { has_country_flag = beethovenfest }
 			BOR = { has_country_flag = beethovenfest }
+			VIC = { has_country_flag = beethovenfest }
 		}
 		BAV = { has_country_flag = beethovenfest }
 	}
@@ -893,17 +898,28 @@ country_event = {
 		name = "EVTOPTA200025"
 		prestige = 2
 		random_owned = {
-			limit = { exists = FRA }
-			owner = { relation = { who = FRA value = -25 } }
+			limit = { exists = FRR }
+			owner = { relation = { who = FRR value = -25 } }
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			owner = { relation = { who = FRZ value = -25 } }
 		}
 		random_owned = {
 			limit = { exists = BOR }
 			owner = { relation = { who = BOR value = -25 } }
 		}
+		random_owned = {
+			limit = { exists = VIC }
+			owner = { relation = { who = VIC value = -25 } }
+		}
 		relation = { who = ENG value = 5 }
 		random_country = {
 			limit = {
-				primary_culture = french
+				OR = {
+					primary_culture = french
+					primary_culture = occitan
+				}
 				capital = 425
 			}
 			country_event = 200026

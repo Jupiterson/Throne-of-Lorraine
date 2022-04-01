@@ -1933,7 +1933,7 @@ political_decisions = {
 			}
 			any_pop = { limit = { OR = { has_pop_culture = maghrebi has_pop_culture = berber } } literacy = -0.99 }
 			any_owned = { 
-			add_province_modifier = { name = french_terror duration = -1 } 
+				add_province_modifier = { name = french_terror duration = -1 } 
 		 	}
 			FRA = {
 			add_country_modifier = {

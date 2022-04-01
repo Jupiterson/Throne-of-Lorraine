@@ -2,7 +2,10 @@ political_decisions = {
 
 	support_french_foreign_legion = {
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			is_greater_power = yes
 			capital = 425
 			owns = 1700
@@ -25,7 +28,10 @@ political_decisions = {
 	french_military_mission_to_japan = {
 		picture = french_military_exp_japan
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			is_greater_power = yes
 			capital = 425
 			OR = {
@@ -77,7 +83,10 @@ political_decisions = {
 	palais_garnier = {
 		potential = {
 			NOT = { has_country_flag = palais_garnier_built }
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			is_greater_power = yes
 			capital = 425
 		}
@@ -88,8 +97,10 @@ political_decisions = {
 
 		effect = {
 			prestige = 10
-			FRA = { set_country_flag = palais_garnier_built }
+			FRR = { set_country_flag = palais_garnier_built }
+			FRZ = { set_country_flag = palais_garnier_built }
 			BOR = { set_country_flag = palais_garnier_built }
+			VIC = { set_country_flag = palais_garnier_built }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -157,7 +168,10 @@ political_decisions = {
 	build_the_eiffel_tower = {
 		picture = build_the_eiffel_tower
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			is_greater_power = yes
 			capital = 425
 			NOT = {
@@ -181,8 +195,10 @@ political_decisions = {
 
 		effect = {
 			country_event = 37236
-			FRA = { set_country_flag = the_eiffel_tower_was_built }
+			FRR = { set_country_flag = the_eiffel_tower_was_built }
+			FRZ = { set_country_flag = the_eiffel_tower_was_built }
 			BOR = { set_country_flag = the_eiffel_tower_was_built }
+			VIC = { set_country_flag = the_eiffel_tower_was_built }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -191,7 +207,10 @@ political_decisions = {
 	haussmanns_renovations = {
 		picture = haussmanns_renovations
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			is_greater_power = yes
 			capital = 425
 			NOT = { has_country_flag = extreme_home_makeover }
@@ -224,9 +243,10 @@ political_decisions = {
 			425 = { life_rating = 5 add_province_modifier = { name = haussmanns_renovations duration = -1 } }
 			prestige = 10
 			set_country_flag = extreme_home_makeover
-			FRA = { set_country_flag = extreme_home_makeover }
-			BOR = { set_country_flag = extreme_home_makeover }
 			FRR = { set_country_flag = extreme_home_makeover }
+			FRZ = { set_country_flag = extreme_home_makeover }
+			BOR = { set_country_flag = extreme_home_makeover }
+			VIC = { set_country_flag = extreme_home_makeover }
 			IDF = { set_country_flag = extreme_home_makeover }
 		}
 
@@ -236,7 +256,10 @@ political_decisions = {
 	annex_mayotte = {
 		picture = dreams_of_empire
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			is_greater_power = yes
 			capital = 425
 			2124 = { empty = yes }
@@ -265,7 +288,10 @@ political_decisions = {
 	st_barths_question = {
 		picture = map_caribbean
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			is_greater_power = yes
 			capital = 425
 			NOT = { owns = 3246 }
@@ -286,8 +312,10 @@ political_decisions = {
 		}
 
 		effect = {
-			FRA = { set_country_flag = st_barths_referendum }
+			FRR = { set_country_flag = st_barths_referendum }
+			FRZ = { set_country_flag = st_barths_referendum }
 			BOR = { set_country_flag = st_barths_referendum }
+			VIC = { set_country_flag = st_barths_referendum }
 			3246 = { owner = { country_event = 36623 } }
 		}
 		ai_will_do = { factor = 1 }
@@ -331,8 +359,10 @@ political_decisions = {
 		}
 
 		effect = {
-			FRA = { set_country_flag = french_mines_placed }
+			FRR = { set_country_flag = french_mines_placed }
+			FRZ = { set_country_flag = french_mines_placed }
 			BOR = { set_country_flag = french_mines_placed }
+			VIC = { set_country_flag = french_mines_placed }
 			THIS = { set_country_flag = french_mines_placed }
 			money = -30000
 			434 = { trade_goods = iron }
@@ -348,7 +378,10 @@ political_decisions = {
 devil_island = {
 	picture = FRA_devils_island
 	potential = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		owns = 2241 #Cayenne
@@ -362,8 +395,10 @@ devil_island = {
 	}
 
 	effect = {
-		FRA = { set_country_flag = devil_island }
+		FRR = { set_country_flag = devil_island }
+		FRZ = { set_country_flag = devil_island }
 		BOR = { set_country_flag = devil_island }
+		VIC = { set_country_flag = devil_island }
 		treasury = -5000
 		prestige = 5
 		2241 = { life_rating = 1 }

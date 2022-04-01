@@ -1368,6 +1368,10 @@ political_decisions = {
 			is_vassal = no
 			NOT = {
 				in_sphere = FRA
+				in_sphere = FRR
+				in_sphere = FRZ
+				in_sphere = BOR
+				in_sphere = VIC
 			}
 		}
 		effect = {
@@ -3473,7 +3477,7 @@ political_decisions = {
 #	any_owned = { 
 #	add_province_modifier = { name = french_terror duration = -1 } #
 #	}
-# #	   }
+#		}
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -3725,7 +3729,12 @@ political_decisions = {
 					}
 					ALD = {
 						all_core = {
-							owned_by = FRA
+							OR = {
+								owned_by = FRR
+								owned_by = FRZ
+								owned_by = BOR
+								owned_by = VIC
+							}
 						}
 					}
 				}
@@ -3757,7 +3766,12 @@ political_decisions = {
 			}
 			ALD = {
 				all_core = {
-					owned_by = FRA
+					OR = {
+						owned_by = FRR
+						owned_by = FRZ
+						owned_by = BOR
+						owned_by = VIC
+					}
 				}
 			}
 		}

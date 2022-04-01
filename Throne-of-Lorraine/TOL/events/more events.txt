@@ -64,9 +64,36 @@ country_event = {
 	option = {
 		name = "Apologize Immediately!"
 		prestige = -10
-		FRA = {
-			country_event = {
-				id = 72756
+		random_owned = {
+			limit = { exists = FRR }
+			FRR = {
+				country_event = {
+					id = 72756
+				}
+			}
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			FRR = {
+				country_event = {
+					id = 72756
+				}
+			}
+		}
+		random_owned = {
+			limit = { exists = BOR }
+			FRR = {
+				country_event = {
+					id = 72756
+				}
+			}
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			FRR = {
+				country_event = {
+					id = 72756
+				}
 			}
 		}
 		ai_chance = {
@@ -81,23 +108,100 @@ country_event = {
 			add_accepted_culture = north_italian
 		}
 		relation = {
-			who = FRA
+			who = FRR
 			value = -80
 		}
-		FRA = {
-			add_casus_belli = {
-				target = THIS
-				type = free_allied_cores
-				months = 12
+		relation = {
+			who = FRZ
+			value = -80
+		}
+		relation = {
+			who = BOR
+			value = -80
+		}
+		relation = {
+			who = VIC
+			value = -80
+		}
+		random_owned = {
+			limit = { exists = FRR }
+			FRR = {
+				add_casus_belli = {
+					target = THIS
+					type = free_allied_cores
+					months = 12
+				}
+				country_event = {
+					id = 72755
+				}
 			}
-			country_event = {
-				id = 72755
+			THIS = {
+				add_casus_belli = {
+					target = FRR
+					type = humiliate
+					months = 12
+				}
 			}
 		}
-		add_casus_belli = {
-			target = FRA
-			type = humiliate
-			months = 12
+		random_owned = {
+			limit = { exists = FRZ }
+			FRZ = {
+				add_casus_belli = {
+					target = THIS
+					type = free_allied_cores
+					months = 12
+				}
+				country_event = {
+					id = 72755
+				}
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FRZ
+					type = humiliate
+					months = 12
+				}
+			}
+		}
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = {
+				add_casus_belli = {
+					target = THIS
+					type = free_allied_cores
+					months = 12
+				}
+				country_event = {
+					id = 72755
+				}
+			}
+			THIS = {
+				add_casus_belli = {
+					target = BOR
+					type = humiliate
+					months = 12
+				}
+			}
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			VIC = {
+				add_casus_belli = {
+					target = THIS
+					type = free_allied_cores
+					months = 12
+				}
+				country_event = {
+					id = 72755
+				}
+			}
+			THIS = {
+				add_casus_belli = {
+					target = VIC
+					type = humiliate
+					months = 12
+				}
+			}
 		}
 		ai_chance = {
 			factor = 25
@@ -135,10 +239,45 @@ country_event = {
 			who = FROM
 			value = -50
 		}
-		add_casus_belli = {
-			target = FRA
-			type = humiliate
-			months = 12
+		random_owned = {
+			limit = { exists = FRR }
+			THIS = {
+				add_casus_belli = {
+					target = FRR
+					type = humiliate
+					months = 12
+				}
+			}
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			THIS = {
+				add_casus_belli = {
+					target = FRZ
+					type = humiliate
+					months = 12
+				}
+			}
+		}
+		random_owned = {
+			limit = { exists = BOR }
+			THIS = {
+				add_casus_belli = {
+					target = BOR
+					type = humiliate
+					months = 12
+				}
+			}
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			THIS = {
+				add_casus_belli = {
+					target = VIC
+					type = humiliate
+					months = 12
+				}
+			}
 		}
 		ai_chance = {
 			factor = 100
@@ -824,7 +963,19 @@ country_event = {
 		name = "Let no one say Germany does not favor peace."
 		prestige = -10
 		relation = {
-			who = FRA
+			who = FRR
+			value = -100
+		}
+		relation = {
+			who = FRZ
+			value = -100
+		}
+		relation = {
+			who = BOR
+			value = -100
+		}
+		relation = {
+			who = VIC
 			value = -100
 		}
 		move_issue_percentage = {
@@ -856,17 +1007,50 @@ country_event = {
 		set_global_flag = treaty_of_elass_lorraine
 		clr_global_flag = germany_has_renamed_elsass
 		relation = {
-			who = FRA
+			who = FRR
+			value = 100
+		}
+		relation = {
+			who = FRZ
+			value = 100
+		}
+		relation = {
+			who = BOR
+			value = 100
+		}
+		relation = {
+			who = VIC
 			value = 100
 		}
 		409 = {
-			remove_core = FRA
+			remove_core = FRR
+			remove_core = FRZ
+			remove_core = BOR
+			remove_core = VIC
 		}
 		410 = {
-			remove_core = FRA
+			remove_core = FRR
+			remove_core = FRZ
+			remove_core = BOR
+			remove_core = VIC
+		}
+		random_owned = {
+			limit = { exists = FRR }
+			412 = { secede_province = FRR }
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			412 = { secede_province = FRZ }
+		}
+		random_owned = {
+			limit = { exists = BOR }
+			412 = { secede_province = BOR }
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			412 = { secede_province = VIC }
 		}
 		412 = {
-			secede_province = FRA
 			remove_core = GER
 			remove_core = GCF
 			state_scope = {

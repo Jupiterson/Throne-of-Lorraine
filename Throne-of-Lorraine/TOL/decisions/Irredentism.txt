@@ -1197,15 +1197,15 @@ political_decisions = {
 
 		allow = {
 			war = no
-			relation = { who = SCO value = 150 }
-			NOT = { SCO = { relation = { who = RUS value = 50 } } }
-			SCO = { ai = yes }
+			relation = { who = ENG value = 150 }
+			NOT = { ENG = { relation = { who = RUS value = 50 } } }
+			ENG = { ai = yes }
 		}
 
 		effect = {
 			prestige = 5
 			political_reform = mandatory_service
-			SCO = { treasury = -30000 }
+			ENG = { treasury = -30000 }
 			FIN = { treasury = 30000 }
 			343 = { fort = 2 }
 			339 = { fort = 2 }
@@ -1214,7 +1214,7 @@ political_decisions = {
 				militancy = -5
 			}
 			set_country_flag = fin_prepare_war
-			SCO = {
+			ENG = {
 				diplomatic_influence = {
 					who = FIN
 					value = 400

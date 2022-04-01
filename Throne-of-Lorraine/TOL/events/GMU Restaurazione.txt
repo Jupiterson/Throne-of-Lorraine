@@ -738,8 +738,10 @@ country_event = {
 		war = no
 		tag = PAP
 		OR = {
-			FRA = { is_sphere_leader_of = PAP }
+			FRR = { is_sphere_leader_of = PAP }
+			FRZ = { is_sphere_leader_of = PAP }
 			BOR = { is_sphere_leader_of = PAP }
+			VIC = { is_sphere_leader_of = PAP }
 		}
 		has_global_flag = pius_IX_reforms
 		SAR = { has_country_flag = first_war_of_italian_independence_intervention }
@@ -760,7 +762,10 @@ country_event = {
 		name = "Long live the Roman Republic!"
 		random_country = {
 			limit = {
-				primary_culture = french
+				OR = {
+					primary_culture = french
+					primary_culture = occitan
+				}
 				capital = 425
 			}
 			country_event = 202016
@@ -883,8 +888,10 @@ country_event = {
 		tag = PAP
 		has_global_flag = roman_republic_occured
 		OR = {
-			FRA = { is_sphere_leader_of = PAP }
+			FRR = { is_sphere_leader_of = PAP }
+			FRZ = { is_sphere_leader_of = PAP }
 			BOR = { is_sphere_leader_of = PAP }
+			VIC = { is_sphere_leader_of = PAP }
 		}
 		PAP = { government = democracy }
 	}
@@ -897,7 +904,10 @@ country_event = {
 		name = "France is the protector of Rome."
 		random_country = {
 			limit = {
-				primary_culture = french
+				OR = {
+					primary_culture = french
+					primary_culture = occitan
+				}
 				capital = 425
 			}
 			country_event = 202018
@@ -916,8 +926,10 @@ country_event = {
 				tag = RMG
 				ai = yes
 				OR = {
-					in_sphere = FRA
+					in_sphere = FRR
+					in_sphere = FRZ
 					in_sphere = BOR
+					in_sphere = VIC
 				}
 			}
 			annex_to = PAP

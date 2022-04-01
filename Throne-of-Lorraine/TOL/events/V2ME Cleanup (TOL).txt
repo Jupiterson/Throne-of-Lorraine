@@ -3112,6 +3112,7 @@ country_event = {
 					capital_scope = { continent = central_africa }
 					capital_scope = { continent = south_west_africa }
 					primary_culture = french
+					primary_culture = occitan
 				}
 				owns = 1700
 			}
@@ -4397,18 +4398,21 @@ country_event = {
 				LBN = { exists = no }
 				year = 1870
 			}
-					random_owned = {
-						limit = { 
+			random_owned = {
+				limit = { 
+					owner = { 
+						913 = { 
 							owner = { 
-								913 = { 
-									owner = { 
-										primary_culture = french
-									} 
-								} 
+								OR = {
+									primary_culture = french
+									primary_culture = occitan
+								}
 							} 
-						}
-						LBN = { government = colonial_company }
-					}
+						} 
+					} 
+				}
+				LBN = { government = colonial_company }
+			}
 			random_owned = {
 				limit = {
 					owner = {

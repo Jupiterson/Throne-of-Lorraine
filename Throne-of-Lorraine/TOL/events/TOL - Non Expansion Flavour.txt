@@ -708,12 +708,17 @@ country_event = {
 	desc = "LOUISMAN"
 	picture = "louis_xiv"
 	trigger = {
-	tag = FRA
+		OR = {
+			tag = FRR
+			tag = FRZ
+			tag = BOR
+			tag = VIC
+		}
 		NOT = {
 			has_country_flag = louis_image
-			}
-	 average_militancy = 4
 		}
+		average_militancy = 4
+	}
 
 	mean_time_to_happen =  {
 		months = 10
@@ -758,12 +763,17 @@ country_event = {
 	desc = "LOUISMAN2"
 	picture = "louis_xiv"
 	trigger = {
-	has_country_flag = louis_image_nice
-	tag = FRA
+		has_country_flag = louis_image_nice
+		OR = {
+			tag = FRR
+			tag = FRZ
+			tag = BOR
+			tag = VIC
+		}
 		NOT = {
 			has_country_flag = rejoice
-			}
 		}
+	}
 
 	mean_time_to_happen =  {
 		months = 1

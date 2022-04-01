@@ -266,7 +266,19 @@ political_decisions = {
 			badboy = 8
 			add_accepted_culture = french
 			relation = {
-				who = FRA
+				who = FRR
+				value = -150
+			}
+			relation = {
+				who = FRZ
+				value = -150
+			}
+			relation = {
+				who = BOR
+				value = -150
+			}
+			relation = {
+				who = VIC
 				value = -150
 			}
 			set_country_flag = dual_monarchy			

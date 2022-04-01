@@ -64,17 +64,17 @@ country_event = {
 #Burgundian Revolt
 country_event = {
 	id = 998501
-	title = "Burgundy in Revolt"
+	title = "Burgundy is revolting!"
 	desc = "EVTDESC998501"
 	picture = "crete_revolt"
 #	fire_only_once = yes
 
 	trigger = {
-	NOT = { has_country_modifier = revolt_cooldown }
+		NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
-		has_pop_culture = burgundian 
-		average_militancy = 6 
-#		location = { is_core = BRG }
+			has_pop_culture = burgundian 
+			average_militancy = 6 
+#			location = { is_core = BRG }
 		}
 		OR = {
 			tag = LOR
@@ -752,7 +752,7 @@ country_event = {
 		any_owned = {
 			limit = { is_core = ILL }
 			secede_province = ILL 
-		}	
+		}
 		relation = { who = ILL value = -100 }
 		ILL = {
 			capital = 783
@@ -776,7 +776,7 @@ country_event = {
 		any_owned = {
 			limit = { is_core = ILL }
 			secede_province = ILL 
-		}	
+		}
 		relation = { who = ILL value = -100 }
 		ILL = {
 			capital = 783
@@ -828,7 +828,7 @@ country_event = {
 		any_owned = {
 			limit = { is_core = MOL }
 			secede_province = MOL 
-		}	
+		}
 		war = {
 			target = MOL
 			attacker_goal = { casus_belli = conquest_any }
@@ -848,7 +848,7 @@ country_event = {
 		 any_owned = {
 			limit = { is_core = MOL }
 			secede_province = MOL 
-		}	
+		}
 		war = {
 			target = MOL
 			attacker_goal = { casus_belli = conquest_any }
@@ -1055,21 +1055,21 @@ country_event = {
 #Arpitan Revolt
 country_event = {
 	id = 998506
-	title = "Arpitania in Revolt"
-	desc = "the Arpitans are revolting"
+	title = "Arpitania is revolting!"
+	desc = "The Arpitans are revolting"
 	picture = "crete_revolt"
 #	fire_only_once = yes
 
 	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
-		has_pop_culture = arpitan 
-		average_militancy = 5 
-		location = { is_core = ARP }
+			has_pop_culture = arpitan 
+			average_militancy = 5 
+			location = { is_core = ARP }
 		}
 		OR = {
-		tag = LOR
-		tag = FRA
+			tag = LOR
+			tag = FRA
 		}
 		#war = no
 		NOT = { exists = ARP }
@@ -1151,20 +1151,22 @@ country_event = {
 #Breton Revolt
 country_event = {
 	id = 998507
-	title = "Brittany in Revolt"
-	desc = "The Bretons are revolting"
+	title = "Brittany is revolting!"
+	desc = "The Bretons are revolting!"
 	picture = "crete_revolt"
 #	fire_only_once = yes
 
 	trigger = {
-	NOT = { has_country_modifier = revolt_cooldown }
+		NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
-		has_pop_culture = breton 
-		average_militancy = 5 
-		location = { is_core = BRT }
+			has_pop_culture = breton 
+			average_militancy = 5 
+			location = { is_core = BRT }
 		}
 		owns = 420
-		tag = FRA
+		OR = {
+			tag = FRA
+		}
 		#war = no
 		NOT = { exists = BRT }
 	}
@@ -1253,21 +1255,22 @@ country_event = {
 	trigger = {
 	NOT = { has_country_modifier = revolt_cooldown }
 		any_pop = {
-		has_pop_culture = belgican 
-		average_militancy = 5 
-		location = { 
-		OR = { is_core = WLL
-			   is_core = PIC	
-			   }
-		}
+			has_pop_culture = belgican 
+			average_militancy = 5 
+			location = { 
+				OR = {
+					is_core = WLL
+					is_core = PIC	
+				}
+			}
 		}
 		tag = BEL
 		#war = no
 		NOT = { 
-				exists = BEL
-				exists = WLL
-				exists = PIC
-			   }
+			exists = BEL
+			exists = WLL
+			exists = PIC
+		}
 	}
 
 	mean_time_to_happen = {
@@ -1289,11 +1292,11 @@ country_event = {
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
 		any_owned = {
 			limit = {
-			OR = {
-			is_core = PIC
-			is_core = WLL 
+				OR = {
+					is_core = PIC
+					is_core = WLL 
+				}
 			}
-					  }
 			secede_province = BEL 
 			add_core = BEL
 		}
@@ -1525,7 +1528,7 @@ country_event = {
 #Burgundian Revolt
 country_event = {
 	id = 999501
-	title = "Burgundy in Revolt"
+	title = "Burgundy is revolting!"
 	desc = "EVTDESC998501"
 	picture = "crete_revolt"
 	fire_only_once = yes
@@ -1949,7 +1952,7 @@ country_event = {
 		any_owned = {
 			limit = { is_core = ILL }
 			secede_province = ILL 
-		}	
+		}
 		relation = { who = ILL value = -100 }
 		ILL = {
 			capital = 783
@@ -1971,7 +1974,7 @@ country_event = {
 		any_owned = {
 			limit = { is_core = ILL }
 			secede_province = ILL 
-		}	
+		}
 		relation = { who = ILL value = -100 }
 		ILL = {
 			capital = 783
@@ -2019,7 +2022,7 @@ country_event = {
 		any_owned = {
 			limit = { is_core = MOL }
 			secede_province = MOL 
-		}	
+		}
 		war = {
 			target = MOL
 			attacker_goal = { casus_belli = conquest_any }
@@ -2039,7 +2042,7 @@ country_event = {
 		 any_owned = {
 			limit = { is_core = MOL }
 			secede_province = MOL 
-		}	
+		}
 		war = {
 			target = MOL
 			attacker_goal = { casus_belli = conquest_any }
@@ -2058,21 +2061,20 @@ country_event = {
 country_event = {
 	id = 993466
 	title = "The great French Collapse"
-	desc = "With our attempt of unity, the minorities in our nation started revolting"
+	desc = "With our attempt of unite the country, the minorities in our nation started to revolt!"
 	picture = "crete_revolt"
 	fire_only_once = yes
 	
 	trigger = {
 		tag = FRA
-		tag = VIC
 		any_pop = {
-		average_militancy = 4 
-		location = { is_core = THIS }
+			average_militancy = 4 
+			location = { is_core = THIS }
 		}
 		has_country_flag = enacted_french_schooling
 	}
 	
-	 mean_time_to_happen = { months = 1 }
+	mean_time_to_happen = { months = 1 }
 	
 	option = {
 		name = "The French will thrive united!"
@@ -2135,7 +2137,7 @@ country_event = {
 		diplomatic_influence = {
 			who = BRG 
 			value = -400
-		}		
+		}
 		diplomatic_influence = {
 			who = BRT 
 			value = -400
@@ -2159,7 +2161,7 @@ country_event = {
 		diplomatic_influence = {
 			who = NRM 
 			value = -400
-		}		
+		}
 		diplomatic_influence = {
 			who = PIC 
 			value = -400
@@ -2239,27 +2241,27 @@ country_event = {
 			target = ARP 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	 
+		} 
 		war = {
 			target = BRT 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	  
+		}  
 		war = {
 			target = BRG 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	 
+		} 
 		war = {
 			target = BSQ 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	  
+		}  
 		war = {
 			target = CAT 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	  
+		}  
 		
 		ai_chance = {
 			factor = 100
@@ -2327,7 +2329,7 @@ country_event = {
 		diplomatic_influence = {
 			who = BRG 
 			value = -400
-		}		
+		}
 		diplomatic_influence = {
 			who = BRT 
 			value = -400
@@ -2351,7 +2353,7 @@ country_event = {
 		diplomatic_influence = {
 			who = NRM 
 			value = -400
-		}		
+		}
 		diplomatic_influence = {
 			who = PIC 
 			value = -400
@@ -2431,27 +2433,27 @@ country_event = {
 			target = ARP 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	 
+		} 
 		war = {
 			target = BRT 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	  
+		}  
 		war = {
 			target = BRG 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	 
+		} 
 		war = {
 			target = BSQ 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	  
+		}  
 		war = {
 			target = CAT 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	 
+		} 
 		change_tag_no_core_switch = OCC		
 		
 		ai_chance = {
@@ -2520,7 +2522,7 @@ country_event = {
 		diplomatic_influence = {
 			who = BRG 
 			value = -400
-		}		
+		}
 		diplomatic_influence = {
 			who = BRT 
 			value = -400
@@ -2544,7 +2546,7 @@ country_event = {
 		diplomatic_influence = {
 			who = NRM 
 			value = -400
-		}		
+		}
 		diplomatic_influence = {
 			who = PIC 
 			value = -400
@@ -2624,27 +2626,27 @@ country_event = {
 			target = ARP 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	 
+		} 
 		war = {
 			target = BRT 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	  
+		}  
 		war = {
 			target = BRG 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	 
+		} 
 		war = {
 			target = BSQ 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	  
+		}  
 		war = {
 			target = CAT 
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
-		}	 
+		} 
 		change_tag_no_core_switch = WLL		
 		
 		ai_chance = {
@@ -2657,7 +2659,7 @@ country_event = {
 country_event = {
 	id = 123443
 	title = "The French Revolution"
-	desc = "The French are staging a Revolution in our Capital"
+	desc = "The French are staging a revolution in our capital!"
 	fire_only_once = yes
 	picture = "BOS_revolt"
 	mean_time_to_happen = { months = 5 }
@@ -2666,8 +2668,8 @@ country_event = {
 		tag = FRA
 		tag = BOS
 		any_pop = {
-		average_militancy = 4 
-		location = { is_core = THIS }
+			average_militancy = 4 
+			location = { is_core = THIS }
 		}
 		NOT = { exists = IDF }
 		has_country_flag = order_embraced
@@ -2678,7 +2680,7 @@ country_event = {
 		any_owned = {
 			limit = { is_core = IDF }
 			secede_province = IDF 
-		}	
+		}
 		war = {
 			target = IDF
 			attacker_goal = { casus_belli = conquest_any }
@@ -2690,7 +2692,7 @@ country_event = {
 		 any_owned = {
 			limit = { is_core = IDF }
 			secede_province = IDF 
-		}	
+		}
 		war = {
 			target = IDF
 			attacker_goal = { casus_belli = conquest_any }
@@ -2779,94 +2781,92 @@ country_event = {
 }
 
 #End of Germany
-country_event = {
-
-	id = 100116
-
-	title = "The Collapse of the Germany" 
-	desc = "EVTDESC100114"
-	picture = "chicagofire"
-	fire_only_once = yes
-	trigger = {
-	tag = HNS
-	is_disarmed = yes
-	exists = POM
-	exists = BRN
-	NOT = { year = 1860 }
-	}
-
-	mean_time_to_happen = {
-		days = 12	  
-	}
-
-	option = {
-		name = "Sad times for Germany"
-		prestige = -20
-		any_owned = {
-			limit = {
-				is_core = SAX
-				}
-				secede_province = SAX
-			}	
-		any_owned = {
-			limit = {
-				is_core = BOE
-				}
-				secede_province = BOE
-			}
-		any_owned = {
-			limit = {
-				is_core = LOR
-				}
-				secede_province = LOR
-			}
-		any_owned = {
-			limit = {
-				is_core = WUR
-				}
-				secede_province = WUR
-			}
-		any_owned = {
-			limit = {
-				is_core = WES
-				}
-				secede_province = WES
-			}
-		any_owned = {
-			limit = {
-				is_core = HNS
-				}
-				secede_province = HNS
-			}		
-		any_owned = {
-			limit = {
-				is_core = NET
-				}
-				secede_province = NET
-			}
-					any_owned = {
-		limit = {
-				is_core = SWI
-				}
-				secede_province = SWI
-			}
-			any_owned = {
-		limit = {
-				is_core = UBD
-				}
-				secede_province = UBD
-			}
-			any_owned = {
-		limit = {
-				is_core = RHI
-				}
-				secede_province = RHI
-			}
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
+#country_event = {
+#	id = 100116
+#	title = "The Collapse of the Germany" 
+#	desc = "EVTDESC100114"
+#	picture = "chicagofire"
+#	fire_only_once = yes
+#	trigger = {
+#		tag = HNS
+#		is_disarmed = yes
+#		exists = POM
+#		exists = BRN
+#		NOT = { year = 1860 }
+#	}
+#
+#	mean_time_to_happen = {
+#		days = 12	  
+#	}
+#
+#	option = {
+#		name = "Sad times for Germany"
+#		prestige = -20
+#		any_owned = {
+#			limit = {
+#				is_core = SAX
+#			}
+#			secede_province = SAX
+#		}
+#		any_owned = {
+#			limit = {
+#				is_core = BOE
+#			}
+#			secede_province = BOE
+#		}
+#		any_owned = {
+#			limit = {
+#				is_core = LOR
+#			}
+#			secede_province = LOR
+#		}
+#		any_owned = {
+#			limit = {
+#				is_core = WUR
+#			}
+#			secede_province = WUR
+#		}
+#		any_owned = {
+#			limit = {
+#				is_core = WES
+#			}
+#			secede_province = WES
+#		}
+#		any_owned = {
+#			limit = {
+#				is_core = HNS
+#			}
+#			secede_province = HNS
+#		}
+#		any_owned = {
+#			limit = {
+#				is_core = NET
+#			}
+#			secede_province = NET
+#		}
+#		any_owned = {
+#			limit = {
+#				is_core = SWI
+#			}
+#			secede_province = SWI
+#		}
+#		any_owned = {
+#			limit = {
+#				is_core = UBD
+#			}
+#			secede_province = UBD
+#		}
+#		any_owned = {
+#			limit = {
+#				is_core = RHI
+#			}
+#			secede_province = RHI
+#		}
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}
+#}
 
 
 
@@ -2874,17 +2874,16 @@ country_event = {
 country_event = {
 
 	id = 100115
-
 	title = "The Collapse of the Hansa" 
 	desc = "EVTDESC100114"
 	picture = "chicagofire"
 	fire_only_once = yes
 	trigger = {
-	tag = HNS
-	is_disarmed = yes
-	exists = POM
-	exists = BRN
-	NOT = { year = 1860 }
+		tag = HNS
+		is_disarmed = yes
+		exists = POM
+		exists = BRN
+		NOT = { year = 1860 }
 	}
 
 	mean_time_to_happen = {
@@ -2907,39 +2906,39 @@ country_event = {
 		any_owned = {
 			limit = {
 				is_core = MEC
-				}
-				secede_province = MEC
-			}	
+			}
+			secede_province = MEC
+		}
 		any_owned = {
 			limit = {
 				is_core = SCL
-				}
-				secede_province = SCL
 			}
+			secede_province = SCL
+		}
 		any_owned = {
 			limit = {
 				is_core = HAN
-				}
-				secede_province = HAN
 			}
+			secede_province = HAN
+		}
 		any_owned = {
 			limit = {
 				is_core = HAM
-				}
-				secede_province = HAM
 			}
+			secede_province = HAM
+		}
 		any_owned = {
 			limit = {
 				is_core = BRE
-				}
-				secede_province = BRE
 			}
+			secede_province = BRE
+		}
 		any_owned = {
 			limit = {
 				is_core = SWE
-				}
-				secede_province = SWE
 			}
+			secede_province = SWE
+		}
 		change_tag = LUB
 		ai_chance = {
 			factor = 100
@@ -2957,12 +2956,11 @@ country_event = {
 	picture = "chicagofire"
 	fire_only_once = yes
 	trigger = {
-	tag = RME
-	
-	   OR = {
-				is_disarmed = yes
-				is_greater_power = no
-	  }
+	tag = RME	
+		OR = {
+			is_disarmed = yes
+			is_greater_power = no
+		}
 	}
 
 	mean_time_to_happen = {
@@ -2975,54 +2973,75 @@ country_event = {
 		any_owned = {
 			limit = {
 				is_core = OCC
-				}
-				secede_province = OCC
-			}	
+			}
+			secede_province = OCC
+		}
 		any_owned = {
 			limit = {
 				is_core = GER
-				}
-				secede_province = SGF
-			}				
+			}
+			secede_province = SGF
+		}
 		any_owned = {
 			limit = {
 				is_core = ILL
-				}
-				secede_province = ILL
-			}		
+			}
+			secede_province = ILL
+		}
 		any_owned = {
 			limit = {
 				is_core = FRA
-				}
-				secede_province = FRA
-			}		
+			}
+			secede_province = FRA
+		}
+		any_owned = {
+			limit = {
+				is_core = FRR
+			}
+			secede_province = FRR
+		}
+		any_owned = {
+			limit = {
+				is_core = FRZ
+			}
+			secede_province = FRZ
+		}
+		any_owned = {
+			limit = {
+				is_core = BOR
+			}
+			secede_province = BOR
+		}
+		any_owned = {
+			limit = {
+				is_core = VIC
+			}
+			secede_province = VIC
+		}
 		any_owned = {
 			limit = {
 				is_core = IBR
-				}
-				secede_province = IBR
 			}
-			
+			secede_province = IBR
+		}
 		any_owned = {
 			limit = {
 				is_core = MGH
-				}
-				secede_province = MGH
 			}
-			
+			secede_province = MGH
+		}
 		any_owned = {
 			limit = {
 				is_core = COP
-				}
-				secede_province = COP
 			}
-			
+			secede_province = COP
+		}
 		any_owned = {
 			limit = {
 				is_core = GRE
-				}
-				secede_province = GRE
 			}
+			secede_province = GRE
+		}
 		ai_chance = {
 			factor = 100
 		}

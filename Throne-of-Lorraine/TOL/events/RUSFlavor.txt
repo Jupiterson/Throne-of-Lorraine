@@ -2406,12 +2406,20 @@ country_event = {
 		name = "EVTOPTB24600" #Truly, we have far surpassed the French.
 		prestige = 15
 		random_owned = {
-			limit = { exists = FRA }
-			FRA = { prestige = -10 }
+			limit = { exists = FRR }
+			FRR = { prestige = -10 }
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			FRZ = { prestige = -10 }
 		}
 		random_owned = {
 			limit = { exists = BOR }
 			BOR = { prestige = -10 }
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			VIC = { prestige = -10 }
 		}
 	}
 }

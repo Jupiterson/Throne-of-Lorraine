@@ -537,8 +537,21 @@ country_event = {
 		any_pop = { militancy = -6 }
 		2172 = { change_controller = MEX }
 		random_owned = {
-			limit = { exists = FRA }
-			FRA = {
+			limit = { exists = FRR }
+			FRR = {
+				relation = {
+					who = THIS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			FRZ = {
 				relation = {
 					who = THIS
 					value = -50
@@ -552,6 +565,19 @@ country_event = {
 		random_owned = {
 			limit = { exists = BOR }
 			BOR = {
+				relation = {
+					who = THIS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			VIC = {
 				relation = {
 					who = THIS
 					value = -50
