@@ -9183,27 +9183,17 @@ treaty_port_casus_belli = {
 		NOT = { is_our_vassal = THIS }
 		THIS = {
 			civilized = yes
-			is_disarmed = no
-			any_owned_province = { has_building = naval_base }
-			NOT = { has_country_modifier = neutrality_modifier }
-			OR = {
-				naval_plans = 1
-				ai = yes
-			}
-			OR = {
-				AND = {
-					military_score = 25
-					total_amount_of_ships = 25
-					total_pops = 250000
-					rank = 16
-				}
-				war_with = THIS
-			}
-			OR = {
-				NOT = { war_policy = pacifism }
-				ai = no
-				war_with = THIS
-			}
+            is_disarmed = no
+            any_owned_province = { has_building = naval_base }
+            NOT = { has_country_modifier = neutrality_modifier }
+            OR = {
+                naval_plans = 1
+                ai = yes
+            }
+			total_amount_of_divisions = 15
+            total_amount_of_ships = 15
+            rank = 16
+            NOT = { war_policy = pacifism }
 		}
 		NOT = { has_country_modifier = neutrality_modifier }
 		civilized = no
