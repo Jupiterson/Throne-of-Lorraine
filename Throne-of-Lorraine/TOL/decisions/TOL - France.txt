@@ -4,11 +4,11 @@ political_decisions = {
 		picture = diplomats
 		potential = {
 			OR = { 
-				   tag = BOR
-				   tag = FRR
-				   has_country_flag = federation_complete
-				   tag = FRZ
-				   }
+				tag = BOR
+				tag = FRR
+				has_country_flag = federation_complete
+				tag = FRZ
+			}
 			NOT = {
 				has_country_flag = proclaim_gauls
 			}
@@ -55,28 +55,27 @@ political_decisions = {
 		picture = diplomats
 		potential = {
 			OR = {
-			AND = { 
-				   tag = FRA
-				   OR = {
-				   government = fascist_dictatorship
-				   government = absolute_monarchy
-				   government = hms_government
-				   government = proletarian_dictatorship
-				   government = absolute_empire
-				   }
-				   }
-				   tag = VIC
-				   }
-			
+				AND = { 
+					tag = FRA
+					OR = {
+						government = fascist_dictatorship
+						government = absolute_monarchy
+						government = hms_government
+						government = proletarian_dictatorship
+						government = absolute_empire
+					}
+				}
+				tag = VIC
+			}			
 			NOT = {
 				has_country_flag = united_gauls
 			}
 		}
 		allow = {
-		OR = {
-			expressionism = 1
-			government = fascist_dictatorship
-			government = proletarian_dictatorship
+			OR = {
+				expressionism = 1
+				government = fascist_dictatorship
+				government = proletarian_dictatorship
 			}
 			prestige = 300
 		}
@@ -90,8 +89,7 @@ political_decisions = {
 				all_core = {
 					add_core = THIS
 				}
-			}
-			
+			}			
 			BRG	= {
 				all_core = {
 					add_core = THIS
@@ -117,8 +115,7 @@ political_decisions = {
 			380 = { add_core = THIS }
 			379 = { add_core = THIS }
 			381 = { add_core = THIS }
-			577 = { add_core = THIS }
-			
+			577 = { add_core = THIS }			
 			FRA_411 = {
 				add_core = THIS
 			}
@@ -133,8 +130,7 @@ political_decisions = {
 			}
 			SPA_498 = {
 				add_core = THIS
-			}
-			
+			}			
 			badboy = 20
 			prestige = 25
 			set_country_flag = united_gauls
@@ -149,9 +145,9 @@ political_decisions = {
 	 declare_federation = {
 		picture = switch_to_liberty
 		potential = {
-		   tag = FRA
-		   NOT = { government = democracy }
-		   NOT = { has_country_flag = chosen_path }
+		tag = FRA
+		NOT = { government = democracy }
+		NOT = { has_country_flag = chosen_path }
 		}
 
 		allow = {
@@ -164,7 +160,7 @@ political_decisions = {
 			set_country_flag = chosen_path
 			set_country_flag = federation_path
 #			political_reform = federalism
-		   any_pop = {
+		any_pop = {
 				limit = { has_pop_culture = occitan }
 				consciousness = -3
 				militancy = -3
@@ -207,9 +203,9 @@ political_decisions = {
 	human_rights_fra = {
 		picture = meeting
 		potential = {
-		   tag = FRA
-		   NOT = { has_country_flag = dois_de_lhomme }
-		   has_country_flag = federation_path
+			tag = FRA
+			NOT = { has_country_flag = dois_de_lhomme }
+			has_country_flag = federation_path
 		}
 
 		allow = {
@@ -221,7 +217,7 @@ political_decisions = {
 			prestige = 10
 			set_country_flag = dois_de_lhomme
 			THIS = { government = hms_government }
-		   any_pop = {
+			any_pop = {
 				limit = { has_pop_culture = occitan }
 				consciousness = -3
 				militancy = -3
@@ -255,8 +251,7 @@ political_decisions = {
 				limit = { has_pop_culture = french }
 				consciousness = 9
 				militancy = 9
-			}
-			
+			}			
 			any_owned = {
 				limit = {
 					has_province_modifier = french_terror
@@ -272,9 +267,9 @@ political_decisions = {
 	embrace_liberalism = {
 		picture = meeting
 		potential = {
-		   tag = FRA
-		   NOT = { has_country_flag = liberalism_embraced }
-		   has_country_flag = dois_de_lhomme
+			tag = FRA
+			NOT = { has_country_flag = liberalism_embraced }
+			has_country_flag = dois_de_lhomme
 		}
 
 		allow = {
@@ -329,34 +324,33 @@ political_decisions = {
 			}
 			any_owned = { 
 				limit = {
-				is_core = FRA  
-				   NOT = {
-				   is_core = OCC
-				   is_core = BRT
-				   is_core = BRG
-				   is_core = CAT
-				   is_core = PRO
-				   is_core = WLL
-				   is_core = PIC
-				   is_core = NRM
-				   is_core = GER
-				   is_core = ARP
-				   } 
+					is_core = FRA  
+					NOT = {
+						is_core = OCC
+						is_core = BRT
+						is_core = BRG
+						is_core = CAT
+						is_core = PRO
+						is_core = WLL
+						is_core = PIC
+						is_core = NRM
+						is_core = GER
+						is_core = ARP
+					} 
 				}
 				add_core = IDF 
 			}
 		}
-
 		ai_will_do = { factor = 0.5 }
 	}
 
 
-french_federation = {
-picture = departements
+	french_federation = {
+		picture = departements
 		potential = {
-		NOT = { has_country_flag = federation_complete }
-		   has_country_flag = liberalism_embraced
-		tag = FRA
+			NOT = { has_country_flag = federation_complete }
+			has_country_flag = liberalism_embraced
+			tag = FRA
 		}
 		allow = { 
 			empiricism = 1
@@ -374,17 +368,17 @@ picture = departements
 			add_accepted_culture = burgundian
 			any_pop = { limit = { is_primary_culture = no is_accepted_culture = no } militancy = -5 }
 			any_pop = {
-					limit = { has_pop_culture = french }
-					consciousness = 9
-					militancy = 9
-				}
+				limit = { has_pop_culture = french }
+				consciousness = 9
+				militancy = 9
+			}
 			political_reform = federalism
 			set_country_flag = federation_complete
 			FRA = { 
 				all_core = { 
 					add_core = BOR
-				remove_core = FRA 
-			   } 
+					remove_core = FRA 
+				} 
 			change_tag = BOR 
 			}
 		}
@@ -396,9 +390,9 @@ picture = departements
 	centralize_power = {
 		picture = switch_to_order
 		potential = {
-		   tag = FRA
-		   NOT = { government = democracy }
-		   NOT = { has_country_flag = chosen_path }
+			tag = FRA
+			NOT = { government = democracy }
+			NOT = { has_country_flag = chosen_path }
 		}
 
 		allow = {
@@ -454,9 +448,9 @@ picture = departements
 	suppress_minorities = {
 		picture = meeting
 		potential = {
-		   tag = FRA
-		   NOT = { has_country_flag = who_needs_rights_anyways }
-		   has_country_flag = centralization_path
+		tag = FRA
+		NOT = { has_country_flag = who_needs_rights_anyways }
+		has_country_flag = centralization_path
 		}
 
 		allow = {
@@ -591,9 +585,9 @@ picture = departements
 	embrace_order = {
 		picture = meeting
 		potential = {
-		   tag = FRA
-		   NOT = { has_country_flag = order_embraced }
-		   has_country_flag = who_needs_rights_anyways
+			tag = FRA
+			NOT = { has_country_flag = order_embraced }
+			has_country_flag = who_needs_rights_anyways
 		}
 
 		allow = {
@@ -669,9 +663,9 @@ picture = departements
 	the_ideal_order = {
 		picture = swastika
 		potential = {
-		   tag = FRA
-		   NOT = { has_country_flag = fascism }
-		   has_country_flag = order_embraced
+			tag = FRA
+			NOT = { has_country_flag = fascism }
+			has_country_flag = order_embraced
 		}
 
 		allow = {
@@ -681,7 +675,7 @@ picture = departements
 		effect = {
 			prestige = 10
 			set_country_flag = fascism
-		   any_pop = {
+			any_pop = {
 				limit = { has_pop_culture = occitan }
 				consciousness = 9
 				militancy = 9
@@ -717,14 +711,14 @@ picture = departements
 				militancy = 1
 			}
 			any_owned = { 
-								limit = {
-								is_core = FRA 
-								}
-								add_core = VIC 
-								remove_core = FRA
-							}
-						change_tag = VIC 
-						THIS = { government = fascist_dictatorship }
+				limit = {
+					is_core = FRA 
+				}
+				add_core = VIC 
+				remove_core = FRA
+			}
+			change_tag = VIC 
+			THIS = { government = fascist_dictatorship }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -734,14 +728,14 @@ picture = departements
 	french_renaissance = {
 		picture = british_propaganda
 		potential = {
-		OR = {
-			tag = FRZ
-			tag = BOR
-			tag = OCC
-			tag = FRR
-			tag = BEL
-			tag = ARP
-			tag = VIC
+			OR = {
+				tag = FRZ
+				tag = BOR
+				tag = OCC
+				tag = FRR
+				tag = BEL
+				tag = ARP
+				tag = VIC
 			}
 			war = no
 			NOT = { exists = FRA }
@@ -755,11 +749,10 @@ picture = departements
 		effect = {
 			set_global_flag = french_ren
 			add_country_modifier = {
-					name = french_renaissance
-					duration = 10657
-				}
+				name = french_renaissance
+				duration = 10657
+			}
 		}
 	}
-   
 
 }

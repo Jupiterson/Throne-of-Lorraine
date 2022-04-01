@@ -177,7 +177,7 @@ political_decisions = {
 			OR = {
 				AND = {
 					tag = FRZ
-				NOT = { exists = FRA }
+					NOT = { exists = FRA }
 			 	}
 				AND = { 
 					tag = OCC
@@ -203,8 +203,8 @@ political_decisions = {
 				remove_province_modifier = french_terror
 			}
 			remove_country_modifier = nobility_fra
-			FRA = {
-				all_core = { add_core = FRZ }
+			FRA = {				
+				all_core = { add_core = FRZ remove_core = FRA }
 			}
 			change_tag = FRZ
 			any_pop = {
@@ -245,7 +245,7 @@ political_decisions = {
 			}
 			remove_country_modifier = nobility_fra
 			FRA = {
-				all_core = { add_core = FRR }
+				all_core = { add_core = FRR remove_core = FRA }
 			}
 			change_tag = FRR
 			any_pop = {

@@ -41,10 +41,10 @@ country_event = {
 	picture = "popularrevolt"
 
 	trigger = {
-	war = no
-	ai = yes
-	tag = FRA
-	NOT = { is_greater_power = yes }
+		war = no
+		ai = yes
+		tag = FRA
+		NOT = { is_greater_power = yes }
 		OR = {
 			AND = {
 				exists = FRA
@@ -58,8 +58,7 @@ country_event = {
 				exists = WLL
 				exists = BEL
 				}
-			}
-	   
+			}	   
 		}
 		NOT = { tag = IDF }
 		IDF = { exists = no }
@@ -90,8 +89,7 @@ country_event = {
 #############################################################
 
 country_event = {
-	   id = 45254
-
+	id = 45254
 	title = "EVTNAME45254"
 	desc = "EVTDESC45254"
 	picture = "french_revolution_1848"
@@ -191,22 +189,24 @@ country_event = {
 		remove_accepted_culture = occitan
 		remove_accepted_culture = catalan
 		any_owned = {
-			limit = { OR = {
-			
-			is_core = OCC 
-			is_core = CAT 
-			is_core = ARP }	}
+			limit = {
+				OR = {			
+					is_core = OCC 
+					is_core = CAT 
+					is_core = ARP
+				}
+			}
 			any_pop = { militancy = -9 consciousness = -9 }
 			remove_province_modifier = nationalist_agitation
 			secede_province = FRZ 
 		}
-#	   3309 = { secede_province = FRZ }
+#		3309 = { secede_province = FRZ }
 		FRZ = {
 			define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
+			add_accepted_culture = catalan
 			add_country_modifier = { name = unrecognized_country duration = 3650 }
 		}
 		relation = { who = FRZ value = -400 }
-		
 		FRZ = {
 			capital_scope = {
 				sub_unit = { type = infantry value = current }
@@ -232,18 +232,35 @@ country_event = {
 	option = {
 		name = "Viva la França"
 		any_owned = {
-			limit = { OR = {
-			
-			is_core = OCC 
-			is_core = CAT 
-			is_core = ARP } }
+			limit = {
+				OR = {			
+					is_core = OCC 
+					is_core = CAT 
+					is_core = ARP
+				}
+			}
 			any_pop = { militancy = -9 consciousness = -9 }
 			remove_province_modifier = nationalist_agitation
-		   secede_province = FRZ 
+			secede_province = FRZ 
 		}
 		FRZ = {
 			define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
 			add_accepted_culture = catalan
+			add_country_modifier = { name = unrecognized_country duration = 3650 }
+		}
+		FRZ = {
+			capital_scope = {
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = cavalry value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+			}
 		}
 		relation = { who = FRZ value = -400 }
 		war = {
@@ -260,8 +277,7 @@ country_event = {
 ##### OCCITAN VERSION #####
 
 country_event = {
-	   id = 45257
-
+	id = 45257
 	title = "EVTNAME45254"
 	desc = "EVTDESC45254"
 	picture = "french_revolution_1848"
@@ -269,8 +285,7 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 
-	trigger = {
-		
+	trigger = {		
 		exists = OCC
 		tag = FRA
 		NOT = { government = democracy }
@@ -361,18 +376,17 @@ country_event = {
 		set_country_flag = french_revolution
 		remove_accepted_culture = occitan
 		remove_accepted_culture = catalan
-#	   3309 = { secede_province = OCC }
+#		3309 = { secede_province = OCC }
 		relation = { who = OCC value = -400 }
 		OCC = { country_event = 45357 }
 		ai_chance = { factor = 100 }
 	
 	}
 	option = {
-		name = "Down with the Tyrans!"
+		name = "Down with the Tyrants!"
 		relation = { who = OCC value = -400 }
-
 		change_tag_no_core_switch = OCC 
-		 war = {
+		war = {
 			target = FRA 
 			attacker_goal = { casus_belli = conquest_any }
 			defender_goal = { casus_belli = install_democracy }
@@ -383,34 +397,34 @@ country_event = {
 	
 	
 	#France declared war!
-country_event = {
-	id = 45357
-	title = "France Attackd!"
-	desc = "France attacked to unite their realm and ours"
-	picture = "meeting3"
-	is_triggered_only = yes
-	option = {
-		name = "Unite France?"
-		prestige = 15	
-		set_global_flag = occ_chose_violence		
-		war = {
-			target = FRA 
-			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = civil_war }
+	country_event = {
+		id = 45357
+		title = "France Attackd!"
+		desc = "France attacked to unite their realm and ours"
+		picture = "meeting3"
+		is_triggered_only = yes
+		option = {
+			name = "Unite France?"
+			prestige = 15	
+			set_global_flag = occ_chose_violence		
+			war = {
+				target = FRA 
+				attacker_goal = { casus_belli = civil_war }
+				defender_goal = { casus_belli = civil_war }
+			}
+		}
+		
+		option = {
+			name = "We are seperate"
+			prestige = 15		
+			set_global_flag = occ_chose_peace
+			war = {
+				target = FRA 
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = install_democracy }
+			}
 		}
 	}
-	
-	option = {
-		name = "We are seperate"
-		prestige = 15		
-		 set_global_flag = occ_chose_peace
-		 war = {
-			target = FRA 
-			attacker_goal = { casus_belli = conquest_any }
-			defender_goal = { casus_belli = install_democracy }
-		}
-	}
-}
 
 ########################################
 
