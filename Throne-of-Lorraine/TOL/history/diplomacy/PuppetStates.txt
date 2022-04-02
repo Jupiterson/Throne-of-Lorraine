@@ -52,11 +52,10 @@ vassal = {
 	end_date = 1936.1.1
 }
 
-
-#KHR
+#Mittelafrika
 substate = {
-	first = KHI
-	second = KHR
+	first = GER
+	second = MIT
 	start_date = 1815.1.1
 	end_date = 1936.1.1
 }
@@ -87,9 +86,8 @@ vassal = {
 }
 
 
-##Persia-rework##
+##Iran##
 #Afghanistan
-
 vassal = {
 	first = AFG
 	second = QUA
@@ -179,6 +177,12 @@ vassal = {
 }
 vassal = {
 	first = PER
+	second = BNB
+	start_date = 1830.1.1
+	end_date = 1936.1.1
+}
+vassal = {
+	first = PER
 	second = KGH
 	start_date = 1830.1.1
 	end_date = 1936.1.1
@@ -197,31 +201,7 @@ vassal = {
 }
 vassal = {
 	first = PER
-	second = BNB
-	start_date = 1830.1.1
-	end_date = 1936.1.1
-}
-vassal = {
-	first = PER
-	second = SRN
-	start_date = 1830.1.1
-	end_date = 1936.1.1
-}
-vassal = {
-	first = PER
 	second = BHR
-	start_date = 1830.1.1
-	end_date = 1936.1.1
-}
-vassal = {
-	first = PER
-	second = QAT
-	start_date = 1830.1.1
-	end_date = 1936.1.1
-}
-vassal = {
-	first = PER
-	second = OMA
 	start_date = 1830.1.1
 	end_date = 1936.1.1
 }
@@ -234,7 +214,12 @@ vassal = {
 
 
 ## Ottomanikans 
-
+vassal = {
+	first = TUR
+	second = SRN
+	start_date = 1830.1.1
+	end_date = 1936.1.1
+}
 vassal = {
 	first = TUR
 	second = HAL
@@ -349,7 +334,7 @@ vassal = {
 
 #Ottoman - Bitlis
 vassal = {
-	first = PER
+	first = TUR
 	second = BTL
 	start_date = 1836.1.1
 	end_date = 1944.1.1
@@ -357,7 +342,7 @@ vassal = {
 
 #PERs - Bahdinan
 vassal = {
-	first = PER
+	first = TUR
 	second = BDN
 	start_date = 1836.1.1
 	end_date = 1944.1.1
@@ -365,7 +350,7 @@ vassal = {
 
 #PERs - Bhotan
 vassal = {
-	first = PER
+	first = TUR
 	second = BHT
 	start_date = 1836.1.1
 	end_date = 1944.1.1

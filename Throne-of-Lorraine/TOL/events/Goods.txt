@@ -116,6 +116,7 @@ province_event = {
 		owner = { random_owned = { limit = { province_id = 87 NOT = { life_rating = 39 } } life_rating = 5 } }
 		add_province_modifier = { name = gold_rush duration = 730 }
 		owner = { random_owned = { limit = { province_id = 695 } remove_province_modifier = gold_rush } }
+		owner = { random_owned = { limit = { province_id = 1118 } remove_province_modifier = gold_rush } }
 		owner = {
 			random_owned = {
 				limit = {

@@ -667,9 +667,6 @@ political_decisions = {
 			badboy = 2
 			prestige = 5
 			any_country = { limit = { primary_culture = kurdish } relation = { who = THIS value = -400 } }
-			2414 = { change_province_name = "Cizre" }
-			892 = { change_province_name = "Hakkari" }
-			925 = { change_province_name = "Kirkuk" }
 			random_country = {
 				limit = { exists = yes tag = SRN vassal_of = TUR }
 				TUR = { release_vassal = SRN diplomatic_influence = { who = SRN value = -400 } }
@@ -683,17 +680,13 @@ political_decisions = {
 				TUR = { release_vassal = BHT diplomatic_influence = { who = BHT value = -400 } }
 			}
 			random_country = {
-				limit = { exists = yes tag = BNB vassal_of = TUR }
-				TUR = { release_vassal = BNB diplomatic_influence = { who = BNB value = -400 } }
-			}
-			random_country = {
 				limit = { exists = yes tag = BDN vassal_of = TUR }
 				TUR = { release_vassal = BDN diplomatic_influence = { who = BDN value = -400 } }
 			}
 			any_country = {
 				limit = {
 					exists = yes
-					OR = { tag = BDN tag = BNB tag = BTL tag = SRN tag = BHT }
+					OR = { tag = BDN tag = BTL tag = SRN tag = BHT }
 				}
 				country_event = 986500
 			}
