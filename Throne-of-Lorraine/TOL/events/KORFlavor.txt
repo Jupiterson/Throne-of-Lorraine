@@ -1,6 +1,6 @@
 #####################################################################
 #																	#
-#							Korean Events							#
+#							 Korean Events							#
 #																	#
 #####################################################################
 
@@ -18,10 +18,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			primary_culture = french
-			primary_culture = occitan
-		}
+		primary_culture = french
 		is_greater_power = yes
 		capital = 425
 		war = no
@@ -193,20 +190,12 @@ country_event = {
 		name = "EVT85004OPTA"
 		relation = { who = FROM value = 50 }
 		random_owned = {
-			limit = { exists = FRR }
-			owner = { relation = { who = FRR value = -100 } }
-		}
-		random_owned = {
-			limit = { exists = FRZ }
-			owner = { relation = { who = FRZ value = -100 } }
-		}
+				limit = { exists = FRA }
+				owner = { relation = { who = FRA value = -100 } }
+			}
 		random_owned = {
 			limit = { exists = BOR }
 			owner = { relation = { who = BOR value = -100 } }
-		}
-		random_owned = {
-			limit = { exists = VIC }
-			owner = { relation = { who = VIC value = -100 } }
 		}
 		random_country = {
 			limit = {

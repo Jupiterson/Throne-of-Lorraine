@@ -198,7 +198,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		day = 1
 	}
 	option = {
 		name = "This war is getting out of hand..."
@@ -281,7 +281,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		day = 1
 	}
 	
 	option = {
@@ -329,8 +329,8 @@ country_event = {
 	option = {
 		name = "Contact the Poles. We have a deal to make."
 		prestige = -25
-		any_owned = { limit = { is_core = TNR } secede_province = TNR }
 		any_owned = { limit = { is_core = KIE } secede_province = RUS }
+		any_owned = { limit = { is_core = TNR } secede_province = TNR }
 		POL = { country_event = 330004 }
 		any_pop = {
 			militancy = 1
@@ -404,7 +404,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		day = 1
 	}
 	
 	option = {
@@ -603,13 +603,13 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	#option = {
-	#	name = "Contact the Fareynikte. We have a deal to make."
-	#	FER = { country_event = 340002 }
-	#	ai_chance = {
-	#		factor = 5
-	#	}
-	#}
+	option = {
+		name = "Contact the Fareynikte. We have a deal to make."
+		FER = { country_event = 340002 }
+		ai_chance = {
+			factor = 5
+		}
+	}
 	option = {
 		name = "We only talk with worthy nations. Contact the Venetians. We have a backroom deal to make."
 		VEN = { country_event = 340003 }
@@ -647,8 +647,8 @@ country_event = {
 		name = "Delightfully devilish, Russians. Gold is Gold."
 		money = 50000
 		RUS = { 
-			money = -50000
-			#badboy = 2
+		money = -50000
+		badboy = 2
 		}
 		RUS = { country_event = 340004 }
 	}
@@ -663,8 +663,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "This is a glorious days! "
-		VEN = {
+		name = "This is a glorious day! "
+		FER = {
 			any_owned = {
 				limit = {
 					region = RUS_979 
@@ -842,7 +842,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		month = 1
 	}
 	
 	option = {
@@ -850,8 +850,8 @@ country_event = {
 		set_country_flag = the_crimean_war_resolved
 		clr_country_flag = the_crimean_war
 		prestige = 25
-		CRI = { all_core = { add_core = RUS } }
-		#FER = { any_owned = { add_core = RUS } }
+		CRI = { any_owned = { add_core = RUS } }
+		FER = { any_owned = { add_core = RUS } }
 		inherit = CRI
 		any_pop = {
 			consciousness = -1
@@ -878,7 +878,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		month = 1
 	}
 	
 	option = {
@@ -901,7 +901,7 @@ country_event = {
 		}
 		prestige = 25
 		CRI = { any_owned = { add_core = RUS } }
-		#FER = { any_owned = { add_core = RUS } }
+		FER = { any_owned = { add_core = RUS } }
 		inherit = CRI
 		any_pop = {
 			consciousness = -1
@@ -930,7 +930,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		month = 1
 	}
 	
 	option = {
@@ -1035,7 +1035,7 @@ country_event = {
 			who = GEO
 			value = 200
 		}
-		create_alliance = GEO
+		alliance_with = GEO
 		leave_alliance = RUS
 		ai_chance = {
 			factor = 1
@@ -1070,7 +1070,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		month = 1
 	}
 	
 	option = {
@@ -1101,7 +1101,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		month = 1
 	}
 	
 	option = {
@@ -1134,7 +1134,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 10
+		month = 10
 	}
 	
 	option = {
@@ -1271,13 +1271,13 @@ country_event = {
 		NOT = { has_country_flag = altai_provocation_resolved }
 		MGL = {
 			OR = {
-				vassal_of = RUS
+				is_our_vassal = yes
 				is_vassal = no
 			}
 		}
 	}
 	mean_time_to_happen = {
-		days = 1
+		day = 1
 	}	
 	
 	option = {
@@ -1293,7 +1293,7 @@ country_event = {
 		QNG = { create_vassal = MGL }
 		set_country_flag = altai_provocation_resolved
 		clr_country_flag = altai_provocation
-		QNG = { country_event = { id = 370024 days = 7 } }
+		QNG = { country_event = 370024 day = 7 }
 	}
 	
 }
@@ -1328,12 +1328,14 @@ country_event = {
 		war = no
 		has_country_flag = altai_provocation
 		NOT = { has_country_flag = altai_provocation_resolved }
-		MGL = {
-			vassal_of = QNG
+		QNG = {
+			MGL = {
+				is_our_vassal = yes
+			}
 		}
 	}
 	mean_time_to_happen = {
-		months = 1
+		month = 1
 	}	
 	
 	option = {
@@ -1341,7 +1343,7 @@ country_event = {
 		2671 = { secede_province = MGL add_core = MGL }
 		set_country_flag = altai_provocation_resolved
 		clr_country_flag = altai_provocation
-		QNG = { country_event = { id = 370026 days = 1 } }
+		QNG = { country_event = 370026 day = 1 }
 		prestige = -15
 		any_pop = {
 			militancy = 2
@@ -1387,7 +1389,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 10
+		month = 10
 	}
 	
 	option = {
@@ -1442,7 +1444,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "To Urumqi!(Achieving the wargoal will trigger victory events}"
+		name = "To Urumqi!(Achieving the wargoal will trigger victory events)"
 		casus_belli = {
 			target = QNG
 			type = release_puppet
@@ -1529,7 +1531,7 @@ country_event = {
 		}	
 	}
 	mean_time_to_happen = {
-		days = 1
+		day = 1
 	}	
 	
 	option = {
@@ -1554,7 +1556,7 @@ country_event = {
 		RUS = { 3322 = { secede_province = XIN } }
 		set_country_flag = uighur_provocation_resolved
 		clr_country_flag = uighur_provocation
-		QNG = { country_event = { id = 370011 days = 7 } }
+		QNG = { country_event = 370011 day = 7 }
 	}
 }
 
@@ -1595,7 +1597,7 @@ country_event = {
 		XIN = { vassal_of = QNG }
 	}
 	mean_time_to_happen = {
-		days = 1
+		day = 1
 	}	
 	
 	option = {
@@ -1609,7 +1611,7 @@ country_event = {
 		}
 		set_country_flag = uighur_provocation_resolved
 		clr_country_flag = uighur_provocation
-		QNG = { country_event = { id = 370013 days = 1 } }
+		QNG = { country_event = 370013 day = 1 }
 		prestige = -15
 		any_pop = {
 			militancy = 2
@@ -1656,7 +1658,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 10
+		month = 10
 	}
 	
 	option = {
@@ -1711,7 +1713,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Mongolia must be secured!(Achieving the wargoal will trigger victory events}"
+		name = "Mongolia must be secured!(Achieving the wargoal will trigger victory events)"
 		casus_belli = {
 			target = QNG
 			type = release_puppet
@@ -1788,13 +1790,13 @@ country_event = {
 		NOT = { has_country_flag = pushed_to_vladivostok }
 		MGL = {
 			OR = {
-				is_our_vassal = THIS
+				is_our_vassal = yes
 				is_vassal = no
 			}
 		}
 	}
 	mean_time_to_happen = {
-		days = 1
+		day = 1
 	}	
 	
 	option = {
@@ -1814,7 +1816,7 @@ country_event = {
 		MGL = { country_event = { id = 370027 days = 2 } }
 		set_country_flag = pushed_to_vladivostok
 		clr_country_flag = push_to_vladivostok
-		QNG = { country_event = { id = 370020 days = 7 } }
+		QNG = { country_event = 370020 day = 7 }
 		ai_chance = {
 			factor = 9
 		}
@@ -1827,7 +1829,7 @@ country_event = {
 		MGL = { country_event = { id = 370027 days = 2 } }
 		set_country_flag = pushed_to_vladivostok
 		clr_country_flag = push_to_vladivostok
-		QNG = { country_event = { id = 370020 days = 7 } }
+		QNG = { country_event = 370020 day = 7 }
 		ai_chance = {
 			factor = 1
 		}
@@ -1869,7 +1871,7 @@ country_event = {
 		MGL = { vassal_of = QNG }
 	}
 	mean_time_to_happen = {
-		months = 1
+		month = 1
 	}	
 	
 	option = {
@@ -1884,7 +1886,7 @@ country_event = {
 		}
 		set_country_flag = pushed_to_vladivostok
 		clr_country_flag = push_to_vladivostok
-		QNG = { country_event = { id = 370022 days = 1 } }
+		QNG = { country_event = 370022 day = 1 }
 		prestige = -15
 		any_pop = {
 			militancy = 2

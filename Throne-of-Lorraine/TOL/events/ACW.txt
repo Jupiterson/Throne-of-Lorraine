@@ -4180,7 +4180,7 @@ country_event = {
 	desc = "EVTDESC17455"
 	major = yes
 
-	trigger = {
+	 trigger = {
 		tag = USA
 		NOT = { NAF = { all_core = { has_province_modifier = reconstruction } } }
 		has_country_flag = has_used_radical_reconstruction

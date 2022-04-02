@@ -50,7 +50,7 @@ country_event = {
 		name = "Britannia"
 		set_country_flag = britannia_ai
 		ai_chance = {
-			factor = 0.5
+			factor = 1
 		}
 	}
 
@@ -58,15 +58,15 @@ country_event = {
 		name = "Celtic Union"
 		set_country_flag = celtic_ai
 		ai_chance = {
-			factor = 0.3
+			factor = 1
 		}
 	}
-			
+			  
 	option = {
 		name = "Scotland-Brazil"
 		set_country_flag = scotlandbrazil_ai
 		ai_chance = {
-			factor = 0.2
+			factor = 1
 		}
 	}
 }
@@ -93,7 +93,7 @@ country_event = {
 		name = "Britannia"
 		set_country_flag = britannia_ai
 		ai_chance = {
-			factor = 0.5
+			factor = 1
 		}
 	}
 
@@ -101,7 +101,7 @@ country_event = {
 		name = "Celtic Union"
 		set_country_flag = celtic_ai
 		ai_chance = {
-			factor = 0.5
+			factor = 1
 		}
 	}
 }
@@ -141,7 +141,7 @@ country_event = {
 		name = "Well then..."
 		set_country_flag = irish_revolt
 		any_owned = {
-			limit = { is_core = IRR }
+			limit = { is_core = IRE }
 			secede_province = IRR
 		}
 		diplomatic_influence = {
@@ -153,31 +153,13 @@ country_event = {
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
 		}
-		THIS = { 
-		badboy = -22
-		}
 		IRE = { country_event = 28018 }
 		random = {
-			chance = 20
+			chance = 0.2
 			set_country_flag = irish_integration
 		}
 		ai_chance = {
-			factor = 1
-		}
-	}
-	
-	option = {
-		name = "Let them go"
-		set_country_flag = irish_revolt
-		any_owned = {
-			limit = { is_core = IRR }
-			secede_province = IRR
-		}
-		ENG = { 
-		badboy = -5
-		}
-		ai_chance = {
-			factor = 0
+			factor = 100
 		}
 	}
 }
@@ -205,7 +187,7 @@ country_event = {
 			secede_province = IRE
 		}
 		ai_chance = {
-			factor = 1
+			factor = 100
 		}
 	}
 }
@@ -235,16 +217,16 @@ country_event = {
 			limit = { 
 				NOT = { has_pop_culture = irish }
 			}
-			militancy = 4
+			average_militancy = 4
 		}
 		any_pop = {
 			limit = { 
 				has_pop_culture = irish
 			}
-			militancy = -2
+			average_militancy = -2
 		}
 		ai_chance = {
-			factor = 0.8
+			factor = 70
 		}
 	}
 	option = {
@@ -253,16 +235,16 @@ country_event = {
 			limit = { 
 				NOT = { has_pop_culture = irish }
 			}
-			militancy = -2
+			average_militancy = -2
 		}
 		any_pop = {
 			limit = { 
 				has_pop_culture = irish
 			}
-			militancy = 4
+			average_militancy = 4
 		}
 		ai_chance = {
-			factor = 0.2
+			factor = 70
 		}
 	}
 }
@@ -278,20 +260,20 @@ country_event = {
 	option = {
 		name = "We have to defend our brothers at all costs."
 		war = {
-			target = ENG
+			target = SCO
 			attacker_goal = { casus_belli = liberate_country country = IRR }
 			defender_goal = { casus_belli = humiliate_no_infamy }
 			call_ally = no
 		}
 		random = {
-			chance = 25
+			chance = 0.25
 			relation = {
-				who = ENG
+				who = SCO
 				value = -75
 			}
 		}
 		ai_chance = {
-			factor = 0.25
+			factor = 25
 		}
 	}
 	option = {
@@ -302,105 +284,17 @@ country_event = {
 			ammunition = 300
 		}
 		ai_chance = {
-			factor = 0.5
+			factor = 50
 		}
 	}
 	option = {
 		name = "We can't do nothing."
 		relation = {
-			who = ENG
+			who = SCO
 			value = 25
 		}
 		ai_chance = {
-			factor = 0.25
-		}
-	}
-}
-
-#Post civil war England
-country_event = {
-	id = 28019
-	title = "EVTNAME28019"
-	desc = "EVTDESC28019"
-	picture = "Celebration"
-	fire_only_once = yes
-	
-	trigger = {
-	OR = {
-			tag = ENL
-			tag = UOW
-		}
-		war = no
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	option = {
-		name = "We will rebuild and comeback stronger for the Motherland!"
-		add_country_modifier = { 
-			name = global_baby_boom
-			duration = 3650
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-country_event = {
-	id = 999900
-	title = "Hurrah for the Celts!"
-	desc = "With our position of ascendancy among the Celts and our strength in the world at large, we can unify all the Celtic peoples underneath our banner. Let the Celtic Federation rise!"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Now is our time!"
-		prestige = 35
-		change_tag = CLT
-
-		add_accepted_culture = british
-		add_accepted_culture = breton
-		add_accepted_culture = irish
-
-		IRE = { all_core = { add_core = THIS } }
-		ENG_266 = { add_core = THIS }
-		ENG_272 = { add_core = THIS }
-		ENG_273 = { add_core = THIS }
-		299 = { add_core = THIS }
-		304 = { add_core = THIS }
-		FRA_420 = { add_core = THIS }
-
-		country_event = 999901
-	}
-}
-
-country_event = {
-	id = 999901
-	title = "Our Brothers Join Us!"
-	desc = "With the raising of the Celtic banner, the scattered Celtic peoples are flocking to us!"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Great news!"
-		any_country = {
-			limit = {
-				OR = {
-					vassal_of = THIS
-					in_sphere = THIS
-				}
-				OR = {
-					tag = SCO
-					tag = WHA
-					tag = BRT
-					tag = IRE
-				}
-				NOT = { tag = THIS }
-			}
-			country_event = 11101
+			factor = 25
 		}
 	}
 }

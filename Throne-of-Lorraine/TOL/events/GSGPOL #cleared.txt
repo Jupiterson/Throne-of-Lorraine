@@ -151,12 +151,7 @@ country_event = {
 	picture = "chopin"
 
 	trigger = {
-		OR = {
-			tag = FRR
-			tag = FRZ
-			tag = BOR
-			tag = VIC
-		}
+		tag = FRA
 		year = 1849
 		NOT = {
 			has_country_flag = chopin

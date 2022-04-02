@@ -96,10 +96,7 @@ country_event = {
 		name = "EVT167010OPTA"
 		random_country = {
 			limit = {
-				OR = {
-					primary_culture = french
-					primary_culture = occitan
-				}
+				primary_culture = french
 				capital = 425
 			}
 			country_event = { id = 167020 days = 10 }

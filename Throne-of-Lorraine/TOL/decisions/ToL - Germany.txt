@@ -1,5 +1,6 @@
 political_decisions = {
 
+
 	greater_saarland = {
 		picture = normandy_mines
 		potential = {
@@ -11,23 +12,23 @@ political_decisions = {
 			all_core = {
 				owned_by = THIS
 			}
-			prestige = 50
+		prestige = 50
 		}
 
 		effect = {
 			prestige = 45
 			set_country_flag = saar_stzronk
-			badboy = 5	
+			badboy = 5	   
 			572 = { add_core = THIS }
 			412 = { add_core = THIS }
 			397 = { add_core = THIS }		
 		}
-	}
-
-	saarempire = {
+   }
+   
+   saarempire = {
 		picture = normandy_mines
 		potential = {
-			tag = SAA
+		tag = SAA
 			NOT = { has_country_flag = saar_stzronk }
 		}
 
@@ -35,22 +36,23 @@ political_decisions = {
 			all_core = {
 				owned_by = THIS
 			}
-			prestige = 50	
+		prestige = 50
+	 
 		}
 
 		effect = {
-			prestige = 45
-			set_country_flag = saar_stzronk
-			badboy = 5	
-			571 = { add_core = THIS }
-			3377 = { add_core = THIS }
-			575 = { add_core = THIS }
-			570 = { add_core = THIS }
-			574 = { add_core = THIS }
-			576 = { add_core = THIS }	
-			409 = { add_core = THIS }		
+		prestige = 45
+		set_country_flag = saar_stzronk
+		badboy = 5	   
+		571 = { add_core = THIS }
+		3377 = { add_core = THIS }
+		575 = { add_core = THIS }
+		570 = { add_core = THIS }
+		574 = { add_core = THIS }
+		576 = { add_core = THIS }	
+		409 = { add_core = THIS }		
 		}
-}
+   }
 
 
 	force_boehmen = {
@@ -96,16 +98,16 @@ political_decisions = {
 				tag = DEN
 				tag = PZN
 				tag = UBD	
-			} 				
+			} 				 
 			NOT = {
 				exists = GER 
-				has_country_flag = joined_hre
+				has_country_flag = joined_hre  
 			}
 		}
 
 		allow = {
 			prestige = 125
-			nationalism_n_imperialism = 1					
+			nationalism_n_imperialism = 1					   
 			THIS = {
 				all_core = {
 					OR = {
@@ -129,15 +131,15 @@ political_decisions = {
 			prestige = 20
 			THIS = {
 				all_core = {
-				add_core = GER
+				  add_core = GER
 				}
 			}
 			add_accepted_culture = north_german 
-			add_accepted_culture = south_german
+			add_accepted_culture = south_german  
 			add_country_modifier = {
 				name = hre_member
 				duration = -1
-			}			
+			}   			
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -159,7 +161,7 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = reclaimed_east_frisia
-			add_accepted_culture = low_german
+						add_accepted_culture = low_german
 			NET_385 = {
 				add_core = THIS
 			}
@@ -229,7 +231,7 @@ political_decisions = {
 		effect = {
 			prestige = 45
 			set_country_flag = theocracy_stronk
-			badboy = 5	
+			badboy = 5	   
 			572 = { add_core = THIS }
 			3379 = { add_core = THIS }
 			KOL = {
@@ -275,8 +277,8 @@ political_decisions = {
 			set_country_flag = ingija 
 			RUS_994 = { add_core = THIS }
 		}
-	}
-
+   }
+   
 	coastal_crusade = {
 		picture = annex_united_baltic_duchy
 		potential = {
@@ -289,7 +291,7 @@ political_decisions = {
 		nationalism_n_imperialism = 1 
 			all_core = {
 				owned_by = THIS
-			}	
+			}	 
 		}
 
 		effect = {
@@ -305,7 +307,7 @@ political_decisions = {
 			995 = { add_core = THIS }			
 		}
 	}
-
+   
 	incorparate_vassals = {
 		picture = thuringia
 		potential = {
@@ -345,7 +347,8 @@ political_decisions = {
 		potential = {
 			capital_scope = { continent = europe }
 			NOT = { has_country_flag = post_colonial_country }
-			has_country_flag = allemia			
+			has_country_flag = allemia
+			
 			NOT = { exists = ALE }
 		}
 
@@ -354,13 +357,10 @@ political_decisions = {
 			nationalism_n_imperialism = 1
 			is_greater_power = yes
 			NOT = {
-				war_with = FRR
-				war_with = FRZ
-				war_with = BOR
-				war_with = VIC
+				war_with = FRA
 				war_with = NET
 			}
-			OR = {			
+			OR = {			   
 				ALE = {
 					all_core = {
 						OR = {
@@ -379,6 +379,7 @@ political_decisions = {
 				}
 			}
 		}
+
 		effect = {
 			prestige = 20
 			all_core = {
@@ -402,8 +403,8 @@ political_decisions = {
 		allow = {
 			war = no
 			OR = {
-				627 = { NOT = { owned_by = THIS } }
-				683 = { NOT = { owned_by = THIS } }
+			627 = { NOT = { owned_by = THIS } }
+			683 = { NOT = { owned_by = THIS } }
 			}
 			crisis_exist = no
 		}
@@ -426,7 +427,8 @@ political_decisions = {
 			any_pop = {
 				limit = { is_primary_culture = yes }
 				militancy = -6
-			}		
+			}
+		   
 		}
 
 		ai_will_do = {
@@ -450,7 +452,8 @@ political_decisions = {
 		nationalism_n_imperialism = 1 
 			all_core = {
 				owned_by = THIS
-			}	
+			}
+	 
 		}
 
 		effect = {
@@ -460,42 +463,47 @@ political_decisions = {
 				all_core = {
 					add_core = THIS
 				}
-			}			
+			}
+			
 		}
 	}
 	
 	proclaim_allemania = {
 		picture = swabia
-		potential = {		
-			OR = {
-				tag = SWI
-				tag = BAD
-				tag = ALS
-			}		
+		potential = {
+		
+		OR = {
+			tag = SWI
+			tag = BAD
+			tag = ALS
+			}
+		
 			NOT = { has_country_flag = allemia }
 		}
 
 		allow = {
-			nationalism_n_imperialism = 1 
+		nationalism_n_imperialism = 1 
 			all_core = {
 				owned_by = THIS
-			}	
+			}
+	 
 		}
 
 		effect = {
-			prestige = 45
-			set_country_flag = allemia
-			badboy = 5	
-			411 = { add_core = ALE }
-			BAD_586 = { add_core = ALE }
-			FRA_412 = { add_core = ALE }
-			SWI = {
+		prestige = 45
+		set_country_flag = allemia
+	   badboy = 5	   
+	   411 = { add_core = ALE }
+	   BAD_586 = { add_core = ALE }
+	   FRA_412 = { add_core = ALE }
+	   SWI = {
 				all_core = {
 					add_core = ALE
 				}
-			}			
+			}
+			
 		}
-	}
+   }
 	
 	claim_allemania_bav = {
 		picture = swabia
@@ -510,7 +518,7 @@ political_decisions = {
 			all_core = {
 				owned_by = THIS
 			}
-	
+	 
 		}
 
 		effect = {
@@ -521,10 +529,10 @@ political_decisions = {
 			BAD_586 = { add_core = THIS }
 			FRA_412 = { add_core = THIS }
 			SWI = {
-				all_core = {
-					add_core = THIS
+					all_core = {
+						add_core = THIS
+					}
 				}
-			}
 			411 = { add_core = ALE }
 			BAD_586 = { add_core = ALE }
 			FRA_412 = { add_core = ALE }
@@ -550,31 +558,32 @@ political_decisions = {
 			all_core = {
 				owned_by = THIS
 			}
-	
+	 
 		}
 
 		effect = {
-			prestige = 45
-			badboy = 10
-			set_country_flag = claimed_allemania 
-			411 = { add_core = THIS }
-			BAD_586 = { add_core = THIS }
-			FRA_412 = { add_core = THIS }
-			SWI = {
-					all_core = {
-						add_core = THIS
-					}
+		 prestige = 45
+		badboy = 10
+		set_country_flag = claimed_allemania 
+		411 = { add_core = THIS }
+		BAD_586 = { add_core = THIS }
+		FRA_412 = { add_core = THIS }
+		SWI = {
+				all_core = {
+					add_core = THIS
 				}
-			411 = { add_core = ALE }
-			BAD_586 = { add_core = ALE }
-			FRA_412 = { add_core = ALE }
-			SWI = {
+			}
+		411 = { add_core = ALE }
+		BAD_586 = { add_core = ALE }
+		FRA_412 = { add_core = ALE }
+		SWI = {
 				all_core = {
 					add_core = ALE
 				}
-			}			
+			}
+			
 		}
-	}
+   }
 	
 	claim_border = {
 		picture = german_confederation
@@ -587,7 +596,8 @@ political_decisions = {
 		nationalism_n_imperialism = 1 
 			all_core = {
 				owned_by = THIS
-			}	
+			}
+	 
 		}
 
 		effect = {
@@ -596,7 +606,7 @@ political_decisions = {
 			set_country_flag = border_lands 
 			AUS_624 = { add_core = THIS }	
 		}
-	}
+   }
 	
 	#########
 	#Bavaria#
@@ -625,7 +635,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = hesse_stronk
-			prestige = 25
+			 prestige = 25
 			HES_2560 = { add_core = THIS }
 			HNS = {
 				diplomatic_influence = { who = WLD value = -200 }
@@ -661,19 +671,20 @@ political_decisions = {
 		}
 
 		allow = {
-		prestige = 10
-		all_core = {
+		  prestige = 10
+		  all_core = {
 				owned_by = THIS
 			}
 		}
 
 		effect = {
-			prestige = 15
-			badboy = 5
-			set_country_flag = anhalt_claimed 
-			PRU_553 = { add_core = THIS }
-		}
-	}
+		  prestige = 15
+		  badboy = 5
+		 set_country_flag = anhalt_claimed 
+		 PRU_553 = { add_core = THIS } 
+			   
+			}
+	  }
 	
 	claim_brandenburg = {
 		picture = map_brandenburg
@@ -684,17 +695,18 @@ political_decisions = {
 		}
 
 		allow = {
-			empiricism = 1
-			all_core = {
+		   empiricism = 1
+		   all_core = {
 				owned_by = THIS
 			}
 		}
 
 		effect = {
-			prestige = 15
-			badboy = 15
-			set_country_flag = brandensachs
-			PRU_549 = { add_core = THIS }			
+		  prestige = 15
+		  badboy = 15
+		 set_country_flag = brandensachs
+		 PRU_549 = { add_core = THIS } 
+			   
 			}
 		}
 		
@@ -707,20 +719,21 @@ political_decisions = {
 		}
 
 		allow = {
-			nationalism_n_imperialism = 1
+		   nationalism_n_imperialism = 1
 			all_core = {
 				owned_by = THIS
 			}
 		}
 
 		effect = {
-			prestige = 15
-			badboy = 15
-			set_country_flag = lower_saxony
-			HAN_534 = { add_core = THIS }
-			HAN_528 = { add_core = THIS }
+		  prestige = 15
+		  badboy = 15
+		 set_country_flag = lower_saxony
+		 HAN_534 = { add_core = THIS } 
+		 HAN_528 = { add_core = THIS } 
+			   
+			}
 		}
-	}
 	
 
 
@@ -732,17 +745,19 @@ political_decisions = {
 		}
 
 		allow = {
-		nationalism_n_imperialism = 1
-		year = 1855
+		   nationalism_n_imperialism = 1
+		   year = 1855
 		}
 
 		effect = {
-			prestige = 15
-			badboy = 5
-			set_country_flag = swisch_stronk
-			AUS_612 = { add_core = THIS }		
+		  prestige = 15
+		  badboy = 5
+		 set_country_flag = swisch_stronk
+		 AUS_612 = { add_core = THIS } 
+			   
+			}
 		}
-	}
+	
 
 	along_the_rhine = {
 		picture = german_confederation
@@ -752,26 +767,26 @@ political_decisions = {
 		}
 
 		allow = {
-		nationalism_n_imperialism = 1
-		year = 1855
+		   nationalism_n_imperialism = 1
+		   year = 1855
 		}
 
 		effect = {
-			prestige = 25
-			badboy = 15
-			set_country_flag = koelsch_stronk
-			BAD_586 = { add_core = THIS } 
-			FRA_412 = { add_core = THIS } 
-			578 = { add_core = KOL }
-			577 = { add_core = KOL }
-			565 = { add_core = KOL } 
-			570 = { add_core = KOL }
-			2560 = { add_core = KOL }
+		prestige = 25
+		badboy = 15
+		set_country_flag = koelsch_stronk
+		BAD_586 = { add_core = THIS } 
+		FRA_412 = { add_core = THIS } 
+		578 = { add_core = KOL }
+		577 = { add_core = KOL }
+		565 = { add_core = KOL } 
+		570 = { add_core = KOL }
+		2560 = { add_core = KOL }
 		}
 	}
 	
 
-	alles_ausser_deutsch = {
+   alles_ausser_deutsch = {
 		picture = swabia
 
 		potential = {
@@ -779,8 +794,8 @@ political_decisions = {
 			NOT = { has_country_flag = swabians_stronk }
 		}
 
-		allow = {
-			nationalism_n_imperialism = 1		
+		 allow = {
+		   nationalism_n_imperialism = 1		 
 		}
 
 
@@ -790,7 +805,7 @@ political_decisions = {
 		592 = { add_core = WUR }
 		}
 	}
-	
+	 
 	annex_swabia = {
 		picture = swabia
 		potential = {
@@ -802,7 +817,8 @@ political_decisions = {
 		nationalism_n_imperialism = 1 
 			all_core = {
 				owned_by = THIS
-			}	
+			}
+	 
 		}
 
 		effect = {
@@ -827,18 +843,19 @@ political_decisions = {
 		}
 
 		allow = {
-			medicine = 1
-			NOT = { school_reforms = no_schools }
-			invention = biased_multiculturalism
-			invention = social_darwinism
-			war = no
-			owns = 3483
+		medicine = 1
+		NOT = { school_reforms = no_schools }
+		invention = biased_multiculturalism
+		invention = social_darwinism
+		war = no
+		owns = 3483
 		}
 
 		effect = {
-			badboy = 6
-			set_country_flag = schooling
-			any_owned = { limit = { is_core = BOH } add_province_modifier = { name = bohemian_reform duration = -1 } }		
+		   badboy = 6
+		   set_country_flag = schooling
+		   any_owned = { limit = { is_core = BOH } add_province_modifier = { name = bohemian_reform duration = -1 } }
+		  
 		}
 		ai_will_do = { factor = 1 }
 	}

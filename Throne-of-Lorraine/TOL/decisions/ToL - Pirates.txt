@@ -19,24 +19,8 @@ political_decisions = {
 			}
 			has_recently_lost_war = no
 			total_amount_of_ships = 10
-			OR = {
-				NOT = {
-					relation = { who = FRR value = 0 }
-					alliance_with = FRR
-				}
-				NOT = {
-					relation = { who = FRZ value = 0 }
-					alliance_with = FRZ
-				}
-				NOT = {
-					relation = { who = BOR value = 0 }
-					alliance_with = BOR
-				}
-				NOT = {
-					relation = { who = VIC value = 0 }
-					alliance_with = VIC
-				}
-			}
+			NOT = { relation = { who = FRA value = 0 } }
+			NOT = { alliance_with = FRA }
 		}
 		effect = {
 			set_country_flag = claim_glp_mtq
@@ -46,10 +30,7 @@ political_decisions = {
 					add_core = PIR
 				}
 			}
-			relation = { who = FRR value = -200 }
-			relation = { who = FRZ value = -200 }
-			relation = { who = BOR value = -200 }
-			relation = { who = VIC value = -200 }
+			relation = { who = FRA value = -200 }
 		}
 	}
 	

@@ -14,39 +14,27 @@ country_event = {
 		}
 		OR = {
 			national_provinces_occupied = 0.75
-			truce_with = FRR
-			truce_with = FRZ
+			truce_with = FRA
 			truce_with = BOR
-			truce_with = VIC
 		}
 		OR = {
-			FRR = { war_with = THIS has_country_flag = siezing_catalonia }
-			FRZ = { war_with = THIS has_country_flag = siezing_catalonia }
+			FRA = { war_with = THIS has_country_flag = siezing_catalonia }
 			BOR = { war_with = THIS has_country_flag = siezing_catalonia }
-			VIC = { war_with = THIS has_country_flag = siezing_catalonia }
-			FRR = { truce_with = THIS owns = 495 }
-			FRZ = { truce_with = THIS owns = 495 }
+			FRA = { truce_with = THIS owns = 495 }
 			BOR = { truce_with = THIS owns = 495 }
-			VIC = { truce_with = THIS owns = 495 }
 		}
 		OR = {
 			487 = {
 				OR = {
-					controlled_by = FRR
-					controller = { alliance_with = FRR }
-					controlled_by = FRZ
-					controller = { alliance_with = FRZ }
+					controlled_by = FRA
+					controller = { alliance_with = FRA }
 					controlled_by = BOR
 					controller = { alliance_with = BOR }
-					controlled_by = VIC
-					controller = { alliance_with = VIC }
 				}
 				province_control_days = 90
 			}
-			truce_with = FRR
-			truce_with = FRZ
+			truce_with = FRA
 			truce_with = BOR
-			truce_with = VIC
 		}
 		NOT = {
 			has_country_flag = signed_treay_of_madrid
@@ -68,10 +56,7 @@ country_event = {
 		prestige = -25
 		random_country = {
 			limit = {
-				OR = {
-					primary_culture = french
-					primary_culture = occitan
-				}
+				primary_culture = french
 				capital = 425
 			}
 			country_event = 7790007
@@ -97,10 +82,8 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		FRR = { set_country_flag = signed_treay_of_madrid }
-		FRZ = { set_country_flag = signed_treay_of_madrid }
+		FRA = { set_country_flag = signed_treay_of_madrid }
 		BOR = { set_country_flag = signed_treay_of_madrid }
-		VIC = { set_country_flag = signed_treay_of_madrid }
 		SPC = { set_country_flag = signed_treay_of_madrid }
 		SPA = { set_country_flag = signed_treay_of_madrid }
 	}
@@ -338,10 +321,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		OR = {
-			primary_culture = french
-			primary_culture = occitan
-		}
+		primary_culture = french
 		is_greater_power = yes
 		capital = 425
 		war = no
@@ -381,58 +361,11 @@ country_event = {
 					province_id = 381
 				}
 			}
+			add_core = FRA
 			add_province_modifier = {
 				name = core_integration
 				duration = -1
 			}
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					region = PRU_575
-					region = PRU_570
-					region = BEL_387
-					province_id = 381
-					exists = FRR
-				}
-			}
-			add_core = FRR
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					region = PRU_575
-					region = PRU_570
-					region = BEL_387
-					province_id = 381
-					exists = FRZ
-				}
-			}
-			add_core = FRZ
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					region = PRU_575
-					region = PRU_570
-					region = BEL_387
-					province_id = 381
-					exists = BOR
-				}
-			}
-			add_core = BOR
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					region = PRU_575
-					region = PRU_570
-					region = BEL_387
-					province_id = 381
-					exists = VIC
-				}
-			}
-			add_core = VIC
 		}
 		LUX = { all_core = { add_core = GER } }
 		398 = { remove_core = LUX }
@@ -477,10 +410,7 @@ country_event = {
 
 
 	trigger = {
-		OR = {
-			primary_culture = french
-			primary_culture = occitan
-		}
+		primary_culture = french
 		is_greater_power = yes
 		capital = 425
 		has_global_flag = french_natural_borders
@@ -496,19 +426,11 @@ country_event = {
 
 	option = {
 		name = "One Culture, One Language, One Country!"
-		FRR = {
-			set_country_flag = french_cultural_assimilation
-			set_country_flag = chose_door_one
-		}
-		FRZ = {
+		FRA = {
 			set_country_flag = french_cultural_assimilation
 			set_country_flag = chose_door_one
 		}
 		BOR = {
-			set_country_flag = french_cultural_assimilation
-			set_country_flag = chose_door_one
-		}
-		VIC = {
 			set_country_flag = french_cultural_assimilation
 			set_country_flag = chose_door_one
 		}

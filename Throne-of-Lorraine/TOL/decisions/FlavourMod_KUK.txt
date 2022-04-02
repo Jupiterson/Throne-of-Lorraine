@@ -285,10 +285,8 @@ political_decisions = {
 				exists = RHI
 			}
 			OR = {
-				FRR = { has_country_flag = annexed_rhineland }
-				FRZ = { has_country_flag = annexed_rhineland }
+				FRA = { has_country_flag = annexed_rhineland }
 				BOR = { has_country_flag = annexed_rhineland }
-				VIC = { has_country_flag = annexed_rhineland }
 			}
 			NOT = { has_global_flag = leipzig_congress }
 		}
@@ -379,10 +377,8 @@ political_decisions = {
 						capital_scope = { continent = asia }
 					}
 					NOT = {
-						vassal_of = FRR
-						vassal_of = FRZ
+						vassal_of = FRA
 						vassal_of = BOR
-						vassal_of = VIC
 					}
 					OR = {
 						is_vassal = no
@@ -395,10 +391,7 @@ political_decisions = {
 			}
 			random_country = {
 				limit = {
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
+					primary_culture = french
 					is_greater_power = yes
 					capital = 425
 				}

@@ -1,7 +1,7 @@
 political_decisions = {
 	accademia_della_crusca = {
 		potential = {
-			tag = TUS
+			   tag = TUS
 			NOT = { has_country_flag = accademia_della_crusca }
 		}
 
@@ -12,7 +12,7 @@ political_decisions = {
 		}
 
 		effect = {
-			treasury = -80000
+			   treasury = -80000
 			prestige = 15
 			political_reform = free_press
 			set_country_flag = accademia_della_crusca
@@ -74,31 +74,11 @@ political_decisions = {
 					}
 				}
 			}
-			OR = {
-				FRR = {
-					NOT = { war_exhaustion = 1 }
-					neighbour = THIS
-					is_greater_power = yes
-					has_country_modifier = louis_napoleon_iii
-				}
-				FRZ = {
-					NOT = { war_exhaustion = 1 }
-					neighbour = THIS
-					is_greater_power = yes
-					has_country_modifier = louis_napoleon_iii
-				}
-				BOR = {
-					NOT = { war_exhaustion = 1 }
-					neighbour = THIS
-					is_greater_power = yes
-					has_country_modifier = louis_napoleon_iii
-				}
-				VIC = {
-					NOT = { war_exhaustion = 1 }
-					neighbour = THIS
-					is_greater_power = yes
-					has_country_modifier = louis_napoleon_iii
-				}
+			FRA = {
+				NOT = { war_exhaustion = 1 }
+				neighbour = THIS
+				is_greater_power = yes
+				has_country_modifier = louis_napoleon_iii
 			}
 		}
 
@@ -111,74 +91,19 @@ political_decisions = {
 				year = 1855
 			}
 			OR = {
+				in_sphere = FRA
 				AND = {
-					OR = {
-						in_sphere = FRR
-						AND = {
-							alliance_with = FRR
-							relation = { who = FRR value = 150 }
-						}
-						ai = yes
-					}
-					FRR = {
-						war = no
-						is_disarmed = no
-						NOT = { num_of_revolts = 1 }
-						NOT = { truce_with = AUS }
-						NOT = { truce_with = KUK }
-					}
+					alliance_with = FRA
+					relation = { who = FRA value = 150 }
 				}
-				AND = {
-					OR = {
-						in_sphere = FRZ
-						AND = {
-							alliance_with = FRZ
-							relation = { who = FRZ value = 150 }
-						}
-						ai = yes
-					}
-					FRZ = {
-						war = no
-						is_disarmed = no
-						NOT = { num_of_revolts = 1 }
-						NOT = { truce_with = AUS }
-						NOT = { truce_with = KUK }
-					}
-				}
-				AND = {
-					OR = {
-						in_sphere = BOR
-						AND = {
-							alliance_with = BOR
-							relation = { who = BOR value = 150 }
-						}
-						ai = yes
-					}
-					BOR = {
-						war = no
-						is_disarmed = no
-						NOT = { num_of_revolts = 1 }
-						NOT = { truce_with = AUS }
-						NOT = { truce_with = KUK }
-					}
-				}
-				AND = {
-					OR = {
-						in_sphere = VIC
-						AND = {
-							alliance_with = VIC
-							relation = { who = VIC value = 150 }
-						}
-						ai = yes
-					}
-					VIC = {
-						war = no
-						is_disarmed = no
-						NOT = { num_of_revolts = 1 }
-						NOT = { truce_with = AUS }
-						NOT = { truce_with = KUK }
-					}
-				}
+				ai = yes
+			}
+			FRA = {
+				war = no
+				is_disarmed = no
+				NOT = { num_of_revolts = 1 }
+				NOT = { truce_with = AUS }
+				NOT = { truce_with = KUK }
 			}
 		}
 
@@ -211,34 +136,7 @@ political_decisions = {
 					value = -100
 				}
 			}
-			random_country = {
-				limit = {
-					tag = FRR
-					exists = yes
-				}
-				FRR = { country_event = 90038 }
-			}
-			random_country = {
-				limit = {
-					tag = FRZ
-					exists = yes
-				}
-				FRZ = { country_event = 90038 }
-			}
-			random_country = {
-				limit = {
-					tag = BOR
-					exists = yes
-				}
-				BOR = { country_event = 90038 }
-			}
-			random_country = {
-				limit = {
-					tag = VIC
-					exists = yes
-				}
-				VIC = { country_event = 90038 }
-			}
+			FRA = { country_event = 90038 }
 		}
 
 		ai_will_do = {
@@ -282,44 +180,13 @@ political_decisions = {
 			owns = 465
 			owns = 466
 			owns = 472
-			OR = {
-				exists = FRR
-				exists = FRZ
-				exists = BOR
-				exists = VIC
-			}
+			exists = FRA
 		}
 
 		allow = {
-			OR = {
-				AND = {
-					relation = {
-						who = FRR
-						value = 1
-					}
-					exists = FRR
-				}
-				AND = {
-					relation = {
-						who = FRZ
-						value = 1
-					}
-					exists = FRZ
-				}
-				AND = {
-					relation = {
-						who = BOR
-						value = 1
-					}
-					exists = BOR
-				}	
-				AND = {
-					relation = {
-						who = VIC
-						value = 1
-					}
-					exists = VIC
-				}	
+			relation = {
+				who = FRA
+				value = 1
 			}
 			owns = 726
 			owns = 727
@@ -328,119 +195,29 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = cavour_has_done_his
-			leave_alliance = FRR
-			leave_alliance = FRZ
-			leave_alliance = BOR
-			leave_alliance = VIC
+			leave_alliance = FRA
 			prestige = 50
 			badboy = -10
-			random_country = {
-				limit = {
-					tag = FRR
-					exists = yes
-				}
-				465 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = FRR
-					secede_province = FRR
-				}
-				466 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = FRR
-					secede_province = FRR
-				}
-				472 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = FRR
-					secede_province = FRR
-				}
+			465 = {
+				remove_core = ITA
+				remove_core = ITS
+				remove_core = THIS
+				add_core = FRA
+				secede_province = FRA
 			}
-			random_country = {
-				limit = {
-					tag = FRZ
-					exists = yes
-				}
-				465 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = FRZ
-					secede_province = FRZ
-				}
-				466 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = FRZ
-					secede_province = FRZ
-				}
-				472 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = FRZ
-					secede_province = FRZ
-				}
+			466 = {
+				remove_core = ITA
+				remove_core = ITS
+				remove_core = THIS
+				add_core = FRA
+				secede_province = FRA
 			}
-			random_country = {
-				limit = {
-					tag = BOR
-					exists = yes
-				}
-				465 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = BOR
-					secede_province = BOR
-				}
-				466 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = BOR
-					secede_province = BOR
-				}
-				472 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = BOR
-					secede_province = BOR
-				}
-			}
-			random_country = {
-				limit = {
-					tag = VIC
-					exists = yes
-				}
-				465 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = VIC
-					secede_province = VIC
-				}
-				466 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = VIC
-					secede_province = VIC
-				}
-				472 = {
-					remove_core = ITA
-					remove_core = ITS
-					remove_core = THIS
-					add_core = VIC
-					secede_province = VIC
-				}
+			472 = {
+				remove_core = ITA
+				remove_core = ITS
+				remove_core = THIS
+				add_core = FRA
+				secede_province = FRA
 			}
 			726 = { remove_core = AUS }
 			727 = { remove_core = AUS }
@@ -460,10 +237,7 @@ political_decisions = {
 						is_sphere_leader_of = LUC
 						is_sphere_leader_of = PAR
 					}
-					NOT = { tag = FRR }
-					NOT = { tag = FRZ }
-					NOT = { tag = BOR }
-					NOT = { tag = VIC }
+					NOT = { tag = FRA }
 				}
 				relation = { who = THIS value = -100 }
 				casus_belli = {
@@ -554,45 +328,9 @@ political_decisions = {
 				}
 				country_event = 60130
 			}
-			random_country = {
-				limit = {
-					tag = FRR
-					exists = yes
-				}				
-				FRR = {
-					diplomatic_influence = { who = PAP value = -200 }
-					diplomatic_influence = { who = SIC value = -200 }
-				}
-			}
-			random_country = {
-				limit = {
-					tag = FRZ
-					exists = yes
-				}				
-				FRZ = {
-					diplomatic_influence = { who = PAP value = -200 }
-					diplomatic_influence = { who = SIC value = -200 }
-				}
-			}
-			random_country = {
-				limit = {
-					tag = BOR
-					exists = yes
-				}				
-				BOR = {
-					diplomatic_influence = { who = PAP value = -200 }
-					diplomatic_influence = { who = SIC value = -200 }
-				}
-			}
-			random_country = {
-				limit = {
-					tag = VIC
-					exists = yes
-				}				
-				VIC = {
-					diplomatic_influence = { who = PAP value = -200 }
-					diplomatic_influence = { who = SIC value = -200 }
-				}
+			FRA = {
+				diplomatic_influence = { who = PAP value = -200 }
+				diplomatic_influence = { who = SIC value = -200 }
 			}
 			random_country = {
 				limit = {
@@ -870,8 +608,8 @@ political_decisions = {
 #							owner = {
 #								NOT = { is_culture_group = italian }
 #								OR = {
-#								   is_greater_power = no
-#								   is_disarmed = yes
+ #								   is_greater_power = no
+ #								   is_disarmed = yes
 #								}
 #								NOT = { truce_with = THIS }
 #							}
@@ -881,7 +619,7 @@ political_decisions = {
 #				}
 #
 				#Savoie
-#			   AND = {
+ #			   AND = {
 #					465 = { NOT = { is_core = THIS } } #Savoia
 #					OR = {
 #						NOT = { has_global_flag = plombieres }
@@ -916,17 +654,17 @@ political_decisions = {
 #				721 = { NOT = { is_core = THIS } } #Aosta
 #				465 = { NOT = { is_core = THIS } } #Savoia
 #			}
-#		}
+#		}#
 #
-#	   effect = {
-#		   #Claim Venetia
-#		   random_owned = {
-#			   limit = {
-#				   province_id = 727 #Lombardy
-#			   }
-#			   AUS_729 = { add_core = THIS }
-#			   owner = { set_global_flag = italian_claimed_venetia }
-#		   }
+ #	   effect = {
+ #		   #Claim Venetia
+ #		   random_owned = {
+ #			   limit = {
+ #				   province_id = 727 #Lombardy
+ #			   }
+ #			   AUS_729 = { add_core = THIS }
+ #			   owner = { set_global_flag = italian_claimed_venetia }
+ #		   }
 #
 #			#Claim Trieste & South Tirol
 #			random_owned = {
@@ -974,7 +712,7 @@ political_decisions = {
 #						}
 #						NOT = {
 #							truce_with = FRA
-#							truce_with = BOR
+ #						   truce_with = BOR
 #						}
 #					}
 #				}
@@ -989,7 +727,7 @@ political_decisions = {
 #					owner = {
 #						is_culture_group = italian
 #						has_global_flag = the_treaty_of_milan
-#					   NOT = {
+ #					   NOT = {
 #							truce_with = FRA
 #							truce_with = BOR
 #						}
@@ -1086,34 +824,7 @@ political_decisions = {
 			}
 			any_country = {
 				limit = {
-					tag = FRR
-					alliance_with = THIS
-					THIS = { is_greater_power = no }
-				}
-				set_country_flag = restore_alliance
-				leave_alliance = THIS
-			}
-			any_country = {
-				limit = {
-					tag = FRZ
-					alliance_with = THIS
-					THIS = { is_greater_power = no }
-				}
-				set_country_flag = restore_alliance
-				leave_alliance = THIS
-			}
-			any_country = {
-				limit = {
-					tag = BOR
-					alliance_with = THIS
-					THIS = { is_greater_power = no }
-				}
-				set_country_flag = restore_alliance
-				leave_alliance = THIS
-			}
-			any_country = {
-				limit = {
-					tag = VIC
+					tag = FRA
 					alliance_with = THIS
 					THIS = { is_greater_power = no }
 				}
@@ -1160,31 +871,7 @@ political_decisions = {
 			}
 			any_country = {
 				limit = {
-					tag = FRR
-					has_country_flag = restore_alliance
-				}
-				clr_country_flag = restore_alliance
-				create_alliance = THIS
-			}
-			any_country = {
-				limit = {
-					tag = FRZ
-					has_country_flag = restore_alliance
-				}
-				clr_country_flag = restore_alliance
-				create_alliance = THIS
-			}
-			any_country = {
-				limit = {
-					tag = BOR
-					has_country_flag = restore_alliance
-				}
-				clr_country_flag = restore_alliance
-				create_alliance = THIS
-			}
-			any_country = {
-				limit = {
-					tag = VIC
+					tag = FRA
 					has_country_flag = restore_alliance
 				}
 				clr_country_flag = restore_alliance

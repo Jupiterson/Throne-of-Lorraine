@@ -266,19 +266,7 @@ political_decisions = {
 			badboy = 8
 			add_accepted_culture = french
 			relation = {
-				who = FRR
-				value = -150
-			}
-			relation = {
-				who = FRZ
-				value = -150
-			}
-			relation = {
-				who = BOR
-				value = -150
-			}
-			relation = {
-				who = VIC
+				who = FRA
 				value = -150
 			}
 			set_country_flag = dual_monarchy			
@@ -310,7 +298,7 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 15
+		    prestige = 15
 			treasury = -200000
 			set_global_flag = london_rebuilt
 			300 = {
@@ -331,9 +319,9 @@ political_decisions = {
 			}
 			any_owned_province = {  
 				OR = {
-					is_core = ENL
-					is_core = UOW
-				}
+				    is_core = ENL
+				    is_core = UOW
+			    }
 			}
 			has_global_flag = london_rebuilt
 			NOT = { has_global_flag = england_rebuild_program }
@@ -350,20 +338,16 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 25
+		    prestige = 25
 			treasury = -1000000
 			set_global_flag = england_rebuild_program
-			add_country_modifier = { 
-			    name = global_baby_boom
-			    duration = 1825
-			}
 			any_owned = { 
-				limit = { 
-					OR = {
-						is_core = ENL
-						is_core = UOW
-					}
-				}	
+			    limit = { 
+				    OR = {
+				        is_core = ENL
+				        is_core = UOW
+			        }
+			    }	
 				life_rating = 3
 			}
 		}

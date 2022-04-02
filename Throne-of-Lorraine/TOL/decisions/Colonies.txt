@@ -817,28 +817,28 @@ political_decisions = {
 		picture = coffee_in_colombia
 		potential = {
 			any_owned_province = {
-				OR = {
-					continent = africa
-					continent = south_west_africa
-					continent = east_africa
-					continent = west_africa
-					continent = central_africa
-				}
-				NOT = { terrain = small_island }
-				NOT = { terrain = desert }
-				NOT = { terrain = semidesert }
-				NOT = { terrain = dryhills }
-				NOT = { has_province_modifier = plantation }
-				NOT = { province_id = 2590 }
-				NOT = { province_id = 1689 }
-				NOT = { province_id = 1954 }
-				NOT = { province_id = 1955 }
-				NOT = { province_id = 2123 }
-				NOT = { province_id = 2124 }
-				NOT = { province_id = 1177 }
-				NOT = { region = ENG_2125 }
-				NOT = { region = POR_2134 }
-				NOT = { region = ENG_2132 }
+					OR = {
+						continent = africa
+						continent = south_west_africa
+						continent = east_africa
+						continent = west_africa
+						continent = central_africa
+					}
+					NOT = { terrain = small_island }
+					NOT = { terrain = desert }
+					NOT = { terrain = semidesert }
+					NOT = { terrain = dryhills }
+					NOT = { has_province_modifier = plantation }
+					NOT = { province_id = 2590 }
+					NOT = { province_id = 1689 }
+					NOT = { province_id = 1954 }
+					NOT = { province_id = 1955 }
+					NOT = { province_id = 2123 }
+					NOT = { province_id = 2124 }
+					NOT = { province_id = 1177 }
+					NOT = { region = ENG_2125 }
+					NOT = { region = POR_2134 }
+					NOT = { region = ENG_2132 }
 			}
 			year = 1870
 		}

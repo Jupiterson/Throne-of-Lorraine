@@ -1,23 +1,20 @@
 capital = 1102
 primary_culture = azerbaijani
-culture = turkish
-religion = sunni
-government = democracy
-plurality = 25.0
-nationalvalue = nv_order
-literacy = 0.28
-civilized = no
-prestige = 10
+religion = shiite
+government = colonial_company
+plurality = 0.0
+nationalvalue = nv_tradition
+literacy = 0.1
 
 # Political reforms
-slavery = no_slavery
-upper_house_composition = state_equal_weight
-vote_franschise = wealth_voting
+slavery = yes_slavery
+upper_house_composition = appointed
+vote_franschise = none_voting
 public_meetings = yes_meeting
-press_rights = free_press
+press_rights = state_press
 trade_unions = no_trade_unions
-voting_system = jefferson_method
-political_parties = non_secret_ballots
+voting_system = first_past_the_post
+political_parties = underground_parties
 
 # Social Reforms
 wage_reform = no_minimum_wage
@@ -33,7 +30,7 @@ conscription = four_year_draft
 debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
-citizens_rights = culture_voting_only
+citizens_rights = primary_culture_only
 border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
@@ -58,12 +55,15 @@ govt_flag = {
 	flag = theocracy
 }
 
+foreign_training = yes_foreign_training
 foreign_weapons = yes_foreign_weapons
-foreign_artillery = yes_foreign_artillery
 foreign_officers = yes_foreign_officers
-foreign_naval_officers = yes_foreign_naval_officers
-land_reform = yes_land_reform
+foreign_artillery = yes_foreign_artillery
 monetary_reform = yes_monetary_reform
+education_reform = yes_education_reform
+
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
 
 #Inventions
 

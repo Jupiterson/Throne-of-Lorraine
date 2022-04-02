@@ -160,12 +160,7 @@ country_event = {
 		NOT = { war_with = QNG }
 		NOT = { tag = DAI }
 		is_greater_power = yes
-		OR = {
-			tag = FRR
-			tag = FRZ
-			tag = BOR
-			tag = VIC
-		}
+		tag = FRA
 		OR = {
 			capital_scope = { continent = europe }
 			primary_culture = japanese

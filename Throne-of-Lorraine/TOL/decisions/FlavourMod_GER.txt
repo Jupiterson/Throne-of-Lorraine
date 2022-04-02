@@ -28,20 +28,12 @@ political_decisions = {
 			war = no
 			OR = {
 				AND = {
-					truce_with = FRR
-					FRR = { has_recently_lost_war = yes }
-				}
-				AND = {
-					truce_with = FRZ
-					FRZ = { has_recently_lost_war = yes }
+					truce_with = FRA
+					FRA = { has_recently_lost_war = yes }
 				}
 				AND = {
 					truce_with = BOR
 					BOR = { has_recently_lost_war = yes }
-				}
-				AND = {
-					truce_with = VIC
-					VIC = { has_recently_lost_war = yes }
 				}
 			}
 		}
@@ -53,10 +45,7 @@ political_decisions = {
 			}
 			random_country = {
 				limit = {
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
+					primary_culture = french
 					is_greater_power = yes
 					capital = 425
 				}
@@ -85,20 +74,16 @@ political_decisions = {
 						vassal_of = THIS
 					}
 					NOT = {
-						vassal_of = FRR
-						vassal_of = FRZ
+						vassal_of = FRA
 						vassal_of = BOR
-						vassal_of = VIC
 					}
 					war = no
 					is_greater_power = no
 				}
 			}
 			OR = {
-				FRR = { exists = yes truce_with = THIS }
-				FRZ = { exists = yes truce_with = THIS }
+				FRA = { exists = yes truce_with = THIS }
 				BOR = { exists = yes truce_with = THIS }
-				VIC = { exists = yes truce_with = THIS }
 			}
 		}
 
@@ -110,10 +95,7 @@ political_decisions = {
 			}
 			random_country = {
 				limit = {
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
+					primary_culture = french
 					is_greater_power = yes
 					capital = 425
 				}
@@ -812,10 +794,8 @@ political_decisions = {
 				}
 				NOT = {
 					alliance_with = ENG
-					alliance_with = FRR
-					alliance_with = FRZ
+					alliance_with = FRA
 					alliance_with = BOR
-					alliance_with = VIC
 					alliance_with = RUS
 				}
 			}
@@ -1046,6 +1026,98 @@ political_decisions = {
 				factor = 0
 				NOT = { year = 1880 }
 			}
+		}
+	}
+	claim_lorraine = {
+		picture = duchy_of_lorraine
+		potential = {
+			OR = {
+				tag = GER
+				tag = GCF
+			}
+			is_greater_power = yes
+			is_vassal = no
+			owns = 410
+			owns = 409
+			owns = 412
+			owns = 3409
+			FRA = {
+				owns = 405
+				owns = 414
+				owns = 411
+				owns = 413
+				owns = 433
+			}
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
+				government = fascist_dictatorship
+			}
+			NOT = { has_global_flag = lorraine_war }
+		}
+		allow = {
+			war = no
+			mass_politics = 1
+			OR = {
+				war_policy = jingoism
+				government = fascist_dictatorship
+			}
+			is_greater_power = yes
+			has_unclaimed_cores = no
+		}
+		effect = {
+			set_global_flag = lorraine_war
+			badboy = 7
+			397 = { add_core = THIS }
+			any_country = {
+				limit = {
+					OR = {
+						owns = 381
+						owns = 395
+						owns = 398
+						owns = 3377
+						owns = 397
+					}
+					NOT = {
+							tag = GER
+					}
+					NOT = {
+							tag = GCF
+					}
+				}
+				create_alliance = FRA
+				relation = {
+					who = FRA
+					value = 400
+				}
+				relation = {
+					who = THIS
+					value = -400
+				}
+				diplomatic_influence = {
+					who = FRA
+					value = 800
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -800
+				}
+			}
+			war = {
+				target = FRA
+				attacker_goal = { casus_belli = cut_down_to_size }
+				defender_goal = { casus_belli = cut_down_to_size }
+				call_ally = yes
+			}
+			FRA = { badboy = -13 }
+		}
+
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }

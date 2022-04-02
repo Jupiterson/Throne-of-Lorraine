@@ -1,0 +1,189 @@
+political_decisions = {
+    #Revoke the Autonomy of the Kurdish Amirs
+	revoke_kurdish_autonomy = {
+	picture = kurdish_amirs
+		potential = {
+			tag = PER
+			NOT = { has_country_flag = revoked_kurdish_autonomy }
+			OR = {
+				is_our_vassal = RDL
+				is_our_vassal = MKN
+				is_our_vassal = URM
+				is_our_vassal = ZFN
+			}
+		}
+
+		allow = {		 
+			war = no
+			OR = {
+			    civilization_progress = 0.6
+				civilized = yes
+			}
+		}
+
+		effect = {
+			set_country_flag = revoked_kurdish_autonomy
+			prestige = 5
+			any_country = {
+				limit = {
+					vassal_of = THIS
+					OR = {
+						primary_culture = kurdish
+						tag = URM
+					}
+					ai = yes
+				}
+				annex_to = THIS
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					primary_culture = kurdish
+					ai = no
+				}
+				PER = { release_vassal = THIS }
+			}
+			remove_core = RDL
+			remove_core = MKN
+			remove_core = URM
+			remove_core = ZFN
+			add_accepted_culture = kurdish
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	#Rise of Shiraz
+	rise_of_shiraz = {
+	picture = persia_map
+		potential = {
+			tag = PER
+			NOT = { has_country_flag = new_shiraz }
+		}
+
+		allow = {		 
+			civilized = yes
+			collectivist_theory = 1
+		}
+
+		effect = {
+			badboy = 10
+			1135 = {
+			    add_province_modifier = {
+	                name = rebuilding_city
+	                duration = 365
+				}
+            }
+			1135 = {
+			    add_province_modifier = {
+	                name = growth_of_shiraz
+	                duration = 36500
+				}
+            }
+			set_country_flag = new_shiraz
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	#The State of the Christians
+	state_of_christians = {
+	picture = amir_kabir
+		potential = {
+			tag = PER
+			NOT = { has_country_flag = rights_of_christians }
+		    has_country_flag = claimed_georgia
+		}
+
+		allow = {		 
+			war = no
+			revolution_n_counterrevolution = 1
+		}
+
+		effect = {
+			add_accepted_culture = armenian
+			add_accepted_culture = assyrian
+			add_accepted_culture = georgian
+			add_accepted_culture = ossetic
+			set_country_flag = rights_of_christians
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	#The Safavid Legacy: Khorasan
+	safavid_legacy_khorasan = {
+	picture = persia_map
+		potential = {
+			tag = PER
+			NOT = { has_country_flag = claimed_khorasan }
+		}
+
+		allow = {		 
+			war = no
+			year  = 1840
+		}
+
+		effect = {
+			badboy = 10
+			add_accepted_culture = tajik
+			KHR = { all_core = { add_core = THIS } }
+			PER_1144 = { add_core = THIS }
+			KAL_1221 = { add_core = THIS }
+			set_country_flag = claimed_khorasan
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	#The Safavid Legacy: Georgia
+	safavid_legacy_georgia = {
+	picture = persia_map
+		potential = {
+			tag = PER
+			NOT = { has_country_flag = claimed_georgia }
+		}
+
+		allow = {		 
+			war = no
+			civilized = yes
+			OR = {
+			    is_secondary_power = yes
+				is_greater_power = yes
+			}
+			PER = { all_core = { owned_by = THIS } } 
+		}
+
+		effect = {
+			badboy = 10
+			GEO = { all_core = { add_core = THIS } }
+			set_country_flag = claimed_georgia
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	#The Safavid Legacy: Reclaiming the West
+	safavid_legacy_arm_highlands = {
+	picture = persia_map
+		potential = {
+			tag = PER
+			NOT = { has_country_flag = claimed_western_highlands }
+		}
+
+		allow = {		 
+			war = no
+			civilized = yes
+			OR = {
+			    is_secondary_power = yes
+				is_greater_power = yes
+			}
+			PER = { all_core = { owned_by = THIS } } 
+		}
+
+		effect = {
+			badboy = 10
+			HTY = { all_core = { add_core = THIS } } 
+			3405 = { add_core = THIS }
+			904 = { add_core = THIS }
+			add_accepted_culture = turkoman
+			set_country_flag = claimed_western_highlands
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

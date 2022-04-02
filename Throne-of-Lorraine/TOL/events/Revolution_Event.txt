@@ -2,7 +2,7 @@
 
 #################################################################################
 #																				#
-#		These events deal with new governments after a revolution			#
+#		  These events deal with new governments after a revolution			#
 #																				#
 #################################################################################
 
@@ -914,10 +914,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
+					primary_culture = french
 					NOT = { has_country_flag = 2nd_republic }
 					OR = {
 						has_country_modifier = springtime_of_nations
@@ -925,27 +922,20 @@ country_event = {
 					}
 				}
 			}
-			FRR = { set_country_flag = 2nd_republic }
-			FRZ = { set_country_flag = 2nd_republic }
-			BOR = { set_country_flag = 2rd_republic }
-			VIC = { set_country_flag = 2rd_republic }
+			FRA = { set_country_flag = 2nd_republic }
+			BOR = { set_country_flag = 2nd_republic }
 		}
 		random_owned = {
 			limit = {
 				owner = {
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
+					primary_culture = french
 					has_country_flag = 2nd_republic
 					NOT = { has_country_flag = french_rev_sanity_check }
 					NOT = { has_country_flag = 3rd_republic }
 				}
 			}
-			FRR = { set_country_flag = 3rd_republic }
-			FRZ = { set_country_flag = 3rd_republic }
+			FRA = { set_country_flag = 3rd_republic }
 			BOR = { set_country_flag = 3rd_republic }
-			VIC = { set_country_flag = 3rd_republic }
 		}
 		random_owned = {
 			limit = {
@@ -2633,7 +2623,6 @@ country_event = {
 				OR = {
 					tag = AUS
 					primary_culture = french
-					primary_culture = occitan
 				}
 				FROM = { is_culture_group = italian }
 			}

@@ -284,10 +284,8 @@ country_event = {
 			}
 			NOT = {
 				alliance_with = ENG
-				alliance_with = FRR
-				alliance_with = FRZ
+				alliance_with = FRA
 				alliance_with = BOR
-				alliance_with = VIC
 				alliance_with = RUS
 			}
 		}
@@ -526,10 +524,8 @@ country_event = {
 		is_disarmed = no
 		year = 1870
 		NOT = {
-			truce_with = FRR
-			truce_with = FRZ
+			truce_with = FRA
 			truce_with = BOR
-			truce_with = VIC
 			num_of_revolts = 1
 			has_country_flag = glory_of_germany_al
 		}
@@ -537,22 +533,12 @@ country_event = {
 			any_neighbor_province = { region = FRA_412 }
 		}
 		OR = {
-			FRR = {
-				NOT = { brigades_compare = 2 }
-				exists = yes
-				owns = 410
-			}
-			FRZ = {
+			FRA = {
 				NOT = { brigades_compare = 2 }
 				exists = yes
 				owns = 410
 			}
 			BOR = {
-				NOT = { brigades_compare = 2 }
-				exists = yes
-				owns = 410
-			}
-			VIC = {
 				NOT = { brigades_compare = 2 }
 				exists = yes
 				owns = 410
@@ -569,30 +555,27 @@ country_event = {
 		months = 100
 		modifier = {
 			factor = 0.1
-			OR = {
-				any_greater_power = { war_with = FRR }
-				any_greater_power = { war_with = FRZ }
-				any_greater_power = { war_with = BOR }
-				any_greater_power = { war_with = VIC }
-			}
+			any_greater_power = { war_with = FRA }
+		}
+		modifier = {
+			factor = 0.1
+			any_greater_power = { war_with = BOR }
 		}
 		modifier = {
 			factor = 0.5
-			OR = {
-				FRR = { num_of_revolts = 5 }
-				FRZ = { num_of_revolts = 5 }
-				BOR = { num_of_revolts = 5 }
-				VIC = { num_of_revolts = 5 }
-			}
+			FRA = { num_of_revolts = 5 }
 		}
 		modifier = {
 			factor = 2
-			OR = {
-				FRR = { alliance_with = RUS }
-				FRZ = { alliance_with = RUS }
-				BOR = { alliance_with = RUS }
-				VIC = { alliance_with = RUS }
-			}
+			FRA = { alliance_with = RUS }
+		}
+		modifier = {
+			factor = 0.5
+			BOR = { num_of_revolts = 5 }
+		}
+		modifier = {
+			factor = 2
+			BOR = { alliance_with = RUS }
 		}
 		modifier = {
 			factor = 0.5
@@ -612,23 +595,10 @@ country_event = {
 			militancy = -6
 		}
 		random_owned = {
-			limit = { exists = FRR }
+			limit = { exists = FRA }
 			owner = {
 				war = {
-					target = FRR
-					attacker_goal = {
-						casus_belli = unification_casus_belli
-						state_province_id = 410
-					}
-					call_ally = yes
-				}
-			}
-		}
-		random_owned = {
-			limit = { exists = FRZ }
-			owner = {
-				war = {
-					target = FRZ
+					target = FRA
 					attacker_goal = {
 						casus_belli = unification_casus_belli
 						state_province_id = 410
@@ -642,19 +612,6 @@ country_event = {
 			owner = {
 				war = {
 					target = BOR
-					attacker_goal = {
-						casus_belli = unification_casus_belli
-						state_province_id = 410
-					}
-					call_ally = yes
-				}
-			}
-		}
-		random_owned = {
-			limit = { exists = VIC }
-			owner = {
-				war = {
-					target = VIC
 					attacker_goal = {
 						casus_belli = unification_casus_belli
 						state_province_id = 410
@@ -742,10 +699,8 @@ country_event = {
 			tag = SGF
 		}
 		OR = {
-			war_with = FRR
-			war_with = FRZ
+			war_with = FRA
 			war_with = BOR
-			war_with = VIC
 			war_with = PRU
 			war_with = HNS
 			war_with = SGF
@@ -1147,10 +1102,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			primary_culture = french
-			primary_culture = occitan
-		}
+		primary_culture = french
 		is_greater_power = yes
 		capital = 425
 		has_country_flag = crisis_on_the_rhine
@@ -1298,10 +1250,8 @@ country_event = {
 					vassal_of = BAV
 					in_sphere = HAN
 					vassal_of = HAN
-					vassal_of = FRR
-					vassal_of = FRZ
+					vassal_of = FRA
 					vassal_of = BOR
-					vassal_of = VIC
 				}
 			}
 		}
@@ -1326,10 +1276,8 @@ country_event = {
 					vassal_of = BAV
 					in_sphere = HAN
 					vassal_of = HAN
-					vassal_of = FRR
-					vassal_of = FRZ
+					vassal_of = FRA
 					vassal_of = BOR
-					vassal_of = VIC
 				}
 			}
 		}
@@ -1380,10 +1328,8 @@ country_event = {
 				RHI = {
 					exists = yes
 					OR = {
-						vassal_of = FRR
-						vassal_of = FRZ
+						vassal_of = FRA
 						vassal_of = BOR
-						vassal_of = VIC
 					}
 				}
 				has_global_flag = left_bank_french_victory
@@ -1925,22 +1871,10 @@ country_event = {
 		prestige = 10
 		create_alliance = FROM
 		random_owned = {
-			limit = { exists = FRR }
+			limit = { exists = FRA }
 			owner = {
 				war = {
-					target = FRR
-					attacker_goal = { casus_belli = humiliate }
-					attacker_goal = { casus_belli = war_reparations }
-					defender_goal = { casus_belli = war_reparations }
-					call_ally = yes
-				}
-			}
-		}
-		random_owned = {
-			limit = { exists = FRZ }
-			owner = {
-				war = {
-					target = FRZ
+					target = FRA
 					attacker_goal = { casus_belli = humiliate }
 					attacker_goal = { casus_belli = war_reparations }
 					defender_goal = { casus_belli = war_reparations }
@@ -1953,18 +1887,6 @@ country_event = {
 			owner = {
 				war = {
 					target = BOR
-					attacker_goal = { casus_belli = humiliate }
-					attacker_goal = { casus_belli = war_reparations }
-					defender_goal = { casus_belli = war_reparations }
-					call_ally = yes
-				}
-			}
-		}
-		random_owned = {
-			limit = { exists = VIC }
-			owner = {
-				war = {
-					target = VIC
 					attacker_goal = { casus_belli = humiliate }
 					attacker_goal = { casus_belli = war_reparations }
 					defender_goal = { casus_belli = war_reparations }
@@ -2018,12 +1940,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					FRR = { ai = no }
-					FRZ = { ai = no }
-					BOR = { ai = no }
-					VIC = { ai = no }
-				}
+				FRA = { ai = no }
+			}
+			modifier = {
+				factor = 0
+				BOR = { ai = no }
 			}
 		}
 	}
@@ -2095,7 +2016,7 @@ country_event = {
 							province_id = 410
 							province_id = 409
 						}
-					}
+					 }
 					culture = french
 					OR = {
 						strata = middle
@@ -2183,7 +2104,7 @@ country_event = {
 							province_id = 410
 							province_id = 409
 						}
-					}
+					 }
 					culture = french
 					OR = {
 						strata = middle

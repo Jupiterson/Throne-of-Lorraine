@@ -171,7 +171,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				tag = BAV
-			}
+		   }
 		}
 	}
 
@@ -179,11 +179,11 @@ country_event = {
 		name = "EVTOPTB200009"
 		set_country_flag = goettinger_sieben_bad
 		prestige = 5
-		relation = { who = FROM value = 25 }
+		 relation = { who = FROM value = 25 }
 		any_pop = {
 			limit = { is_culture_group = germanic }
 			ideology = { value = liberal factor = 0.01 }
-		}
+		 }
 		middle_strata = { ideology = { value = liberal factor = 0.01 } }
 		any_pop = { scaled_consciousness = { ideology = liberal factor = 2 } }
 
@@ -316,24 +316,24 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-	NOT = { has_country_flag = die_goettinger_sieben_honoured }
-	has_global_flag = die_goettinger_sieben
-	OR = {
+	   NOT = { has_country_flag = die_goettinger_sieben_honoured }
+	   has_global_flag = die_goettinger_sieben
+	   OR = {
 			tag = GER
 			tag = GCF
 		}
-	press_rights = free_press
-	public_meetings = yes_meeting
-	OR = {
+	   press_rights = free_press
+	   public_meetings = yes_meeting
+	   OR = {
 			government = democracy
 			government = hms_government
 			government = constitutional_empire
-		}
-	OR = {
+	   }
+	   OR = {
 			ruling_party_ideology = conservative
 			ruling_party_ideology = liberal
 			ruling_party_ideology = socialist
-		}
+	   }
 
 	}
 
@@ -348,7 +348,7 @@ country_event = {
 			limit = { is_culture_group = germanic }
 			militancy = -0.5
 			consciousness = -0.5
-		}
+		 }
 	}
 }
 
@@ -798,7 +798,7 @@ country_event = {
 		has_global_flag = heines_wintermaerchen
 		has_country_flag = dombau_beginn
 		NOT = { has_country_flag = heines_mocking }
-		NOT = { has_global_flag = cologne_cathedral_build }
+		 NOT = { has_global_flag = cologne_cathedral_build }
 	}
 
 	mean_time_to_happen = { months = 2 }
@@ -848,10 +848,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				OR = {
-					primary_culture = french
-					primary_culture = occitan
-				}
+				primary_culture = french
 			}
 		}
 	}
@@ -884,10 +881,8 @@ country_event = {
 		has_country_flag = beethovenfest
 		ENG = { has_country_flag = beethovenfest }
 		OR = {
-			FRR = { has_country_flag = beethovenfest }
-			FRZ = { has_country_flag = beethovenfest }
+			FRA = { has_country_flag = beethovenfest }
 			BOR = { has_country_flag = beethovenfest }
-			VIC = { has_country_flag = beethovenfest }
 		}
 		BAV = { has_country_flag = beethovenfest }
 	}
@@ -898,28 +893,17 @@ country_event = {
 		name = "EVTOPTA200025"
 		prestige = 2
 		random_owned = {
-			limit = { exists = FRR }
-			owner = { relation = { who = FRR value = -25 } }
-		}
-		random_owned = {
-			limit = { exists = FRZ }
-			owner = { relation = { who = FRZ value = -25 } }
+			limit = { exists = FRA }
+			owner = { relation = { who = FRA value = -25 } }
 		}
 		random_owned = {
 			limit = { exists = BOR }
 			owner = { relation = { who = BOR value = -25 } }
 		}
-		random_owned = {
-			limit = { exists = VIC }
-			owner = { relation = { who = VIC value = -25 } }
-		}
 		relation = { who = ENG value = 5 }
 		random_country = {
 			limit = {
-				OR = {
-					primary_culture = french
-					primary_culture = occitan
-				}
+				primary_culture = french
 				capital = 425
 			}
 			country_event = 200026
@@ -1683,10 +1667,10 @@ country_event = {
 		public_meetings = yes_meeting
 		realism = 1
 		NOT = {
-		government = absolute_monarchy
-		government = presidential_dictatorship
-		government = parliamentary_republic
-		government = fascist_dictatorship
+		   government = absolute_monarchy
+		   government = presidential_dictatorship
+		   government = parliamentary_republic
+		   government = fascist_dictatorship
 		}
 		year = 1894
 	}

@@ -16,10 +16,9 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "Switch the Elites!"
+		name = "Equal Rights for Everyone!"
 		prestige = 5
 		plurality = 5
-		#add_accepted_culture = ashkenazi
 		primary_culture = ashkenazi
 		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
 		any_country = {
@@ -28,28 +27,6 @@ country_event = {
 				NOT = { tag = THIS }
 			}
 			country_event = 100128
-		}
-		ai_chance = {
-			factor = 100
-		}
-	}
-	
-		option = {
-		name = "Give them Rights"
-		prestige = 5
-		plurality = 5
-		add_accepted_culture = ashkenazi
-		#primary_culture = ashkenazi
-		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
-		any_country = {
-			limit = {
-				is_culture_group = germanic
-				NOT = { tag = THIS }
-			}
-			country_event = 100128
-		}
-		ai_chance = {
-			factor = 0
 		}
 	}
 }
@@ -129,7 +106,7 @@ country_event = {
 
 # Revolution for Iberia
 country_event = {
-	id = 100130
+	id = 100129
 	is_triggered_only = yes
 	title = "Jewish Revolution"
 	desc = "revolution_israel"
@@ -138,10 +115,10 @@ country_event = {
 	trigger = {
 		is_culture_group = iberian
 		NOT = {
-			has_country_flag = accepted_jews
-			has_country_flag = ignored_jews
-			accepted_culture = ashkenazi
-			accepted_culture = sephardic
+		has_country_flag = accepted_jews
+		has_country_flag = ignored_jews
+		accepted_culture = ashkenazi
+		accepted_culture = sephardic
 		}
 	}
 	
@@ -175,6 +152,7 @@ country_event = {
 # Finding Israel
 country_event = {
 	id = 100131
+	is_triggered_only = yes
 	title = "The Jewish homeland shall be in..."
 	desc = "form_israel_event"
 	#picture = "Frankfurt"
@@ -183,148 +161,149 @@ country_event = {
 	
 	option = {
 		name = "...Madagascar"
-		MAD_2117 = { add_core = ISR }
-		MAD_2121 = { add_core = ISR }
-		prestige = 10
-		set_global_flag = israel_has_her_cores
-		set_global_flag = israel_madagascar
-		ISR = { capital = 2115 }
-		random_owned  = {				
+					MAD_2117 = { add_core = ISR }
+			MAD_2121 = { add_core = ISR }
+			prestige = 10
+			set_global_flag = israel_has_her_cores
+			set_global_flag = israel_madagascar
+			ISR = { capital = 2115 }
+						random_owned  = {				   
 			limit = {
 				is_core = ISR
-			}
-			owner = { country_event = 100132 }
-		}
+				}
+				country_event = 100132												   
+				}
 	}
 	
 	option = {
 		name = "...Patagonia"
 		ARG_2391 = { add_core = ISR }
-		2398 = { add_core = ISR }
-		2399  = { add_core = ISR }
-		2400  = { add_core = ISR }
-		prestige = 10
-		set_global_flag = israel_has_her_cores
-		set_global_flag = israel_andinia
-		ISR = {
-			capital = 2396
-			set_country_flag = new_world_nation
-		}
-		random_owned  = {				
+			2398 = { add_core = ISR }
+			2399  = { add_core = ISR }
+			2400  = { add_core = ISR }
+			prestige = 10
+			set_global_flag = israel_has_her_cores
+			set_global_flag = israel_andinia
+			ISR = {
+				capital = 2396
+				set_country_flag = new_world_nation
+			}
+						random_owned  = {				   
 			limit = {
 				is_core = ISR
-			}
-			owner = { country_event = 100132 }
-		}
+				}
+				country_event = 100132												   
+				}
 	}
 	
 	option = {
 		name = "...Crimea"
 		RUS_964 = { add_core = ISR }
-		prestige = 10
-		set_global_flag = israel_has_her_cores
-		set_global_flag = israel_guiana
-		ISR = {
-			capital = 964
-		}
-		random_owned  = {				
+			prestige = 10
+			set_global_flag = israel_has_her_cores
+			set_global_flag = israel_guiana
+			ISR = {
+				capital = 964
+			}
+						random_owned  = {				   
 			limit = {
 				is_core = ISR
-			}
-			owner = { country_event = 100132 }
-		}
+				}
+				country_event = 100132												   
+				}
 	}
 	
 	option = {
 		name = "...Cascadia"
 		USA_1 = { add_core = ISR }
-		prestige = 10
-		set_global_flag = israel_has_her_cores
-		set_global_flag = israel_alaska
-		ISR = {
-			capital = 2
-			set_country_flag = new_world_nation
-		}
-		random_owned  = {				
+			prestige = 10
+			set_global_flag = israel_has_her_cores
+			set_global_flag = israel_alaska
+			ISR = {
+				capital = 2
+				set_country_flag = new_world_nation
+			}
+						random_owned  = {				   
 			limit = {
 				is_core = ISR
-			}
-			owner = { country_event = 100132 }
-		}
+				}
+				country_event = 100132												   
+				}
 	}
 	
 		option = {
 		name = "...Uganda"
 		2028 = { add_core = ISR }
-		ENG_2019 = { add_core = ISR }
-		prestige = 10
-		set_global_flag = israel_has_her_cores
-		set_global_flag = israel_uganda
-		ISR = {
-			capital = 2028
-			set_country_flag = post_colonial_country
-		}
-		random_owned  = {				
+			ENG_2019 = { add_core = ISR }
+			prestige = 10
+			set_global_flag = israel_has_her_cores
+			set_global_flag = israel_uganda
+			ISR = {
+				capital = 2028
+				set_country_flag = post_colonial_country
+			}
+						random_owned  = {				   
 			limit = {
 				is_core = ISR
-			}
-			owner = { country_event = 100132 }
-		}
+				}
+				country_event = 100132												   
+				}
 	}
 	
 	option = {
 		name = "...Hokkaido"
 		JAP_1088 = { add_core = ISR }
-		1087 = { add_core = ISR }
-		1089 = { add_core = ISR }
-		prestige = 10
-		set_global_flag = israel_has_her_cores
-		set_global_flag = israel_japan
-		ISR = { capital = 1642 }
-		random_owned  = {				
+			1087 = { add_core = ISR }
+			1089 = { add_core = ISR }
+			prestige = 10
+			set_global_flag = israel_has_her_cores
+			set_global_flag = israel_japan
+			ISR = { capital = 1642 }
+						random_owned  = {				   
 			limit = {
 				is_core = ISR
-			}
-			owner = { country_event = 100132 }
-		}
+				}
+				country_event = 100132												   
+				}
 	}
 	
-	option = {
+		option = {
 		name = "...Cyrenaica"
 		TRI_1735 = { add_core = ISR }
-		prestige = 10
-		set_global_flag = israel_has_her_cores
-		set_global_flag = israel_cyrenaica
-		ISR = { capital = 1735 }
-		random_owned  = {				
+			prestige = 10
+			set_global_flag = israel_has_her_cores
+			set_global_flag = israel_cyrenaica
+			ISR = { capital = 1735 }
+						random_owned  = {				   
 			limit = {
 				is_core = ISR
-			}
-			owner = { country_event = 100132 }
-		}
+				}
+				country_event = 100132												   
+				}
 	}
 	
-	option = {							
+			option = {							  
 		name = "...Iceland"
 		DEN_251 = { add_core = ISR }
-		prestige = 10
-		set_global_flag = israel_has_her_cores
-		set_global_flag = israel_angola
-		ISR = {
-			capital = 252
-		}
-		random_owned  = {				
+			prestige = 10
+			set_global_flag = israel_has_her_cores
+			set_global_flag = israel_angola
+			ISR = {
+				capital = 252
+			}
+			random_owned  = {				   
 			limit = {
 				is_core = ISR
-			}
-			owner = { country_event = 100132 }
-		}
+				}
+				country_event = 100132												   
+				}
 	}
+	
 }
 
 country_event = {
 	id = 100132
-	title = "Israel in our land?"
+	title = "Israel in our Land"
 	desc = "form_israel_event"
 	picture = "Frankfurt"
 	major = yes
@@ -340,7 +319,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = "It shall stay in our domain."
+		name = "It shall stay in our domain"
 		prestige = -5
 		badboy = 1	
 		ai_chance = {
@@ -349,12 +328,12 @@ country_event = {
 	}
 	
 	option = {
-		name = "It shall enjoy some autonomy."
+		name = "It shall enjoy autonomy"
 		any_owned = {
 			limit = { is_core = ISR }
 			secede_province = ISR 
 		}
-		THIS = {
+		FROM = {
 			create_vassal = ISR
 			diplomatic_influence = {
 				who = ISR
@@ -370,14 +349,14 @@ country_event = {
 	}
 	
 	option = {
-		name = "It shall be independent."
+		name = "It shall be Independant"
 		badboy = -2
 		prestige = 5
 				any_owned = {
 			limit = { is_core = ISR }
 			secede_province = ISR 
 		}
-		THIS = {
+		FROM = {
 			diplomatic_influence = {
 				who = ISR
 				value = 400

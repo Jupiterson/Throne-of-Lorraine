@@ -2,10 +2,7 @@ political_decisions = {
 	claim_luxembourg = {
 	picture = luxembourg_crisis
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			has_country_flag = 2nd_empire
@@ -43,11 +40,9 @@ political_decisions = {
 		}
 
 		effect = {
-			FRR = { set_country_flag = claim_luxmebourg }
-			FRZ = { set_country_flag = claim_luxmebourg }
+			FRA = { set_country_flag = claim_luxmebourg }
 			BOR = { set_country_flag = claim_luxmebourg }
-			VIC = { set_country_flag = claim_luxmebourg }
-			badboy  = 2
+			badboy = 2
 			any_country = {
 				limit = {
 					exists = yes
@@ -82,10 +77,7 @@ political_decisions = {
 	claim_wallonia = {
 	picture = become_wallonia
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			has_country_flag = 2nd_empire
@@ -133,10 +125,8 @@ political_decisions = {
 		}
 
 		effect = {
-			FRR = { set_country_flag = claim_wallonia }
-			FRZ = { set_country_flag = claim_wallonia }
+			FRA = { set_country_flag = claim_wallonia }
 			BOR = { set_country_flag = claim_wallonia }
-			VIC = { set_country_flag = claim_wallonia }
 			badboy = 6
 			WLL = { all_core = { add_core = THIS } }
 			any_country = {
@@ -162,10 +152,7 @@ political_decisions = {
 	establish_panfrenchism = {
 	picture = establish_panfrenchism
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			has_country_modifier = louis_napoleon_iii
@@ -191,10 +178,7 @@ political_decisions = {
 	haitian_integration = {
 		picture = map_caribbean
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			OR = {
@@ -231,10 +215,8 @@ political_decisions = {
 				secede_province = DOM
 			}
 			add_accepted_culture = afro_french
-			FRR = { set_country_flag = integrated_haiti }
-			FRZ = { set_country_flag = integrated_haiti }
+			FRA = { set_country_flag = integrated_haiti }
 			BOR = { set_country_flag = integrated_haiti }
-			VIC = { set_country_flag = integrated_haiti }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -245,10 +227,7 @@ political_decisions = {
 		potential = {
 			is_greater_power = yes
 			WLL = { all_core = { owned_by = THIS } }
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			capital = 425
 			NOT = { has_country_flag = walloon_autonomy }
 		}
@@ -260,10 +239,8 @@ political_decisions = {
 		}
 
 		effect = {
-			FRR = { set_country_flag = walloon_autonomy }
-			FRZ = { set_country_flag = walloon_autonomy }
+			FRA = { set_country_flag = walloon_autonomy }
 			BOR = { set_country_flag = walloon_autonomy }
-			VIC = { set_country_flag = walloon_autonomy }
 			prestige = -25
 			add_accepted_culture = belgican
 			random_country = {
@@ -295,10 +272,7 @@ political_decisions = {
 	claim_catalonia = {
 		picture = french_catalonia
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			has_country_flag = 2nd_empire
@@ -334,10 +308,8 @@ political_decisions = {
 		}
 
 		effect = {
-			FRR = { set_country_flag = siezing_catalonia }
-			FRZ = { set_country_flag = siezing_catalonia }
+			FRA = { set_country_flag = siezing_catalonia }
 			BOR = { set_country_flag = siezing_catalonia }
-			VIC = { set_country_flag = siezing_catalonia }
 			badboy = 10
 			498 = { add_core = THIS }
 			499 = { add_core = THIS }
@@ -359,10 +331,7 @@ political_decisions = {
 	claim_andorra = {
 	picture = establish_panfrenchism
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			OR = {
@@ -399,10 +368,8 @@ political_decisions = {
 		}
 
 		effect = {
-			FRR = { set_country_flag = claim_andorra }
-			FRZ = { set_country_flag = claim_andorra }
+			FRA = { set_country_flag = claim_andorra }
 			BOR = { set_country_flag = claim_andorra }
-			VIC = { set_country_flag = claim_andorra }
 			3252 = { add_core = THIS }
 			badboy = 0.1
 			inherit = ADO
@@ -418,18 +385,8 @@ political_decisions = {
 			RHI = {
 				exists = yes
 				ai = yes
-				OR = {
-					in_sphere = FRR
-					in_sphere = FRZ
-					in_sphere = BOR
-					in_sphere = VIC
-				}
-				NOT = {
-					vassal_of = FRR
-					vassal_of = FRZ
-					vassal_of = BOR
-					vassal_of = VIC
-				}
+				OR = { in_sphere = FRA in_sphere = BOR }
+				NOT = { vassal_of = FRA vassal_of = BOR }
 			}
 			NOT = { has_country_flag = rhine_vassal }
 		}
@@ -437,10 +394,8 @@ political_decisions = {
 		allow = {
 			war = no
 			OR = {
-				FRR = { truce_with = PRU has_country_modifier = rhine_crisis }
-				FRZ = { truce_with = PRU has_country_modifier = rhine_crisis }
+				FRA = { truce_with = PRU has_country_modifier = rhine_crisis }
 				BOR = { truce_with = PRU has_country_modifier = rhine_crisis }
-				VIC = { truce_with = PRU has_country_modifier = rhine_crisis }
 			}
 			PRU = { has_recently_lost_war = yes }
 		}
@@ -453,10 +408,7 @@ political_decisions = {
 			570 = { add_core = RHI }
 			random_country = {
 				limit = {
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
+					primary_culture = french
 					is_greater_power = yes
 					exists = yes
 				}
@@ -472,10 +424,8 @@ political_decisions = {
 			ai = yes
 			NOT = { has_global_flag = clean_up_france_lost_rhine_crisis }
 			OR = {
-				FRR = { truce_with = PRU has_country_modifier = rhine_crisis }
-				FRZ = { truce_with = PRU has_country_modifier = rhine_crisis }
+				FRA = { truce_with = PRU has_country_modifier = rhine_crisis }
 				BOR = { truce_with = PRU has_country_modifier = rhine_crisis }
-				VIC = { truce_with = PRU has_country_modifier = rhine_crisis }
 			}
 			575 = { OR = {owned_by = PRU owned_by = NGF owned_by = GER owned_by = GCF owned_by = AUS owned_by = SGF } }
 			PRU = { is_disarmed = no }
@@ -489,10 +439,7 @@ political_decisions = {
 			set_global_flag = clean_up_france_lost_rhine_crisis
 			random_country = {
 				limit = {
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
+					primary_culture = french
 					is_greater_power = yes
 					exists = yes
 				}
@@ -511,10 +458,7 @@ political_decisions = {
 				419 = { owner = { truce_with = THIS } }
 			}
 			NOT = { owns = 419 }
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			419 = { NOT = { is_core = THIS } }
@@ -546,10 +490,7 @@ political_decisions = {
 	annex_rhineland = {
 	picture = rhineland
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			RHI = { exists = yes vassal_of = THIS }
@@ -572,10 +513,8 @@ political_decisions = {
 		}
 
 		effect = {
-			FRR = { set_country_flag = annexed_rhineland }
-			FRZ = { set_country_flag = annexed_rhineland }
+			FRA = { set_country_flag = annexed_rhineland }
 			BOR = { set_country_flag = annexed_rhineland }
-			VIC = { set_country_flag = annexed_rhineland }
 			prestige = 25
 			badboy = 8
 			inherit = RHI
@@ -590,10 +529,7 @@ political_decisions = {
 	the_treaty_of_milan = {
 	picture = establish_panfrenchism
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			OR = {
@@ -664,10 +600,7 @@ political_decisions = {
 	the_roman_question = {
 	picture = the_roman_question
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			has_country_flag = 2nd_empire
@@ -706,10 +639,8 @@ political_decisions = {
 		}
 
 		effect = {
-			FRR = { set_country_flag = the_roman_question }
-			FRZ = { set_country_flag = the_roman_question }
+			FRA = { set_country_flag = the_roman_question }
 			BOR = { set_country_flag = the_roman_question }
-			VIC = { set_country_flag = the_roman_question }
 			prestige = 5
 			badboy = 1
 			create_vassal = PAP
@@ -738,116 +669,29 @@ political_decisions = {
 		potential = {
 			ai = yes
 			OR = {
-				any_owned_province = { is_core = FRZ }
-				any_owned_province = { is_core = FRR }
 				any_owned_province = { is_core = BOR }
-				any_owned_province = { is_core = VIC }
-				OR = {
-					primary_culture = french
-					primary_culture = occitan
-				}
-				neighbour = FRR
-				neighbour = FRZ
+				any_owned_province = { is_core = FRA }
+				primary_culture = french
+				neighbour = FRA
 				neighbour = BOR
-				neighbour = VIC
 			}
 		}
 		allow = {
 			OR = {
 				AND = {
-					FRR = { exists = yes }
-					FRZ = { exists = no }
+					FRA = { exists = yes }
 					BOR = { exists = no }
-					VIC = { exists = no }
 					OR = {
-						any_owned_province = {
-							OR = {
-								is_core = FRZ
-								is_core = BOR
-								is_core = VIC
-							}
-						}
-						FRR = {
-							any_owned_province = {
-								OR = {
-									is_core = FRZ
-									is_core = BOR
-									is_core = VIC
-								}
-							} 
-						}
-					}
-				}
-				AND = {
-					FRZ = { exists = yes }
-					FRR = { exists = no }
-					BOR = { exists = no }
-					VIC = { exists = no }
-					OR = {
-						any_owned_province = {
-							OR = {
-								is_core = FRR
-								is_core = BOR
-								is_core = VIC
-							}
-						}
-						FRZ = {
-							any_owned_province = {
-								OR = {
-									is_core = FRR
-									is_core = BOR
-									is_core = VIC
-								}
-							} 
-						}
+						any_owned_province = { is_core = BOR }
+						FRA = { any_owned_province = { is_core = BOR } }
 					}
 				}
 				AND = {
 					BOR = { exists = yes }
-					FRR = { exists = no }
-					FRZ = { exists = no }
-					VIC = { exists = no }
+					FRA = { exists = no }
 					OR = {
-						any_owned_province = {
-							OR = {
-								is_core = FRR
-								is_core = FRZ
-								is_core = VIC
-							}
-						}
-						BOR = {
-							any_owned_province = {
-								OR = {
-									is_core = FRR
-									is_core = FRZ
-									is_core = VIC
-								}
-							}
-						}
-					}
-				}
-				AND = {
-					VIC = { exists = yes }
-					FRR = { exists = no }
-					FRZ = { exists = no }
-					BOR = { exists = no }
-					OR = {
-						any_owned_province = {
-							OR = {
-								is_core = FRR
-								is_core = FRZ
-								is_core = BOR
-							}
-						}
-						VIC = {
-							any_owned_province = {
-								OR = {
-									is_core = FRR
-									is_core = FRZ
-									is_core = BOR
-								}
-							}
-						}
+						any_owned_province = { is_core = FRA }
+						BOR = { any_owned_province = { is_core = FRA } }
 					}
 				}
 			}
@@ -855,28 +699,12 @@ political_decisions = {
 
 		effect = {
 			random_owned = {
-				limit = { exists = FRR }
-				FRZ = { all_core = { remove_core = FRZ add_core = FRR } }
-				BOR = { all_core = { remove_core = BOR add_core = FRR } }
-				VIC = { all_core = { remove_core = VIC add_core = FRR } }
-			}
-			random_owned = {
-				limit = { exists = FRZ }
-				FRR = { all_core = { remove_core = FRR add_core = FRZ } }
-				BOR = { all_core = { remove_core = BOR add_core = FRZ } }
-				VIC = { all_core = { remove_core = VIC add_core = FRZ } }
+				limit = { exists = FRA }
+				BOR = { all_core = { remove_core = BOR add_core = FRA } }
 			}
 			random_owned = {
 				limit = { exists = BOR }
-				FRR = { all_core = { remove_core = FRR add_core = BOR } }
-				FRZ = { all_core = { remove_core = FRZ add_core = BOR } }
-				VIC = { all_core = { remove_core = VIC add_core = BOR } }
-			}
-			random_owned = {
-				limit = { exists = VIC }
-				FRR = { all_core = { remove_core = FRR add_core = VIC } }
-				FRZ = { all_core = { remove_core = FRZ add_core = VIC } }
-				BOR = { all_core = { remove_core = BOR add_core = VIC } }
+				FRA = { all_core = { remove_core = FRA add_core = BOR } }
 			}
 		}
 
@@ -886,10 +714,7 @@ political_decisions = {
 	jules_ferry_laws = {
 		picture = jules_ferry
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			year = 1870
@@ -906,10 +731,8 @@ political_decisions = {
 		}
 
 		effect = {
-			FRR = { set_country_flag = jules_ferry_enacted }
-			FRZ = { set_country_flag = jules_ferry_enacted }
+			FRA = { set_country_flag = jules_ferry_enacted }
 			BOR = { set_country_flag = jules_ferry_enacted }
-			VIC = { set_country_flag = jules_ferry_enacted }
 			random_owned = {
 				limit = { owner = { school_reforms = acceptable_schools } }
 				owner = { social_reform = good_schools }
@@ -982,10 +805,7 @@ political_decisions = {
 	support_troupes_de_marine = {
 		picture = troupes_de_marine
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			is_greater_power = yes
 			capital = 425
 			colonial_nation = yes
@@ -1004,5 +824,88 @@ political_decisions = {
 		}
 
 		ai_will_do = { factor = 1 }
+	}
+	create_PLC_FRA = {
+		picture = become_poland_lithuania
+		potential = {
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
+			NOT = {
+				exists = PLC
+				has_country_flag = create_PLC_FRA
+			}
+		}
+		allow = {
+			war = no
+			706 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						ai = yes
+						in_sphere = THIS
+						OR = {
+							is_vassal = no
+							vassal_of = THIS
+						}
+						war = no
+					}
+				}
+			}
+			360 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						ai = yes
+						in_sphere = THIS
+						OR = {
+							is_vassal = no
+							vassal_of = THIS
+						}
+						war = no
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = create_PLC_FRA
+			POL = {
+				all_core = { add_core = PLC }
+			}
+			LAT = {
+				all_core = { add_core = PLC }
+			}
+			BYE = {
+				all_core = { add_core = PLC }
+			}
+			LIT = {
+					all_core = { add_core = PLC }
+				}
+			RUS_958 = { add_core = PLC }
+			PRU_695 = { add_core = PLC }
+			RUS_959 = { add_core = PLC }
+			any_country = {
+				limit = {
+					OR = {
+						tag = CPL
+						tag = POL
+						tag = LIT
+					}
+					ai = yes
+					in_sphere = THIS
+				}
+				annex_to = PLC
+			}
+			create_vassal = PLC
+			create_alliance = PLC # Doesn't work yet
+			diplomatic_influence = {
+				who = PLC
+				value = 400
+			}
+			PLC = {
+				add_accepted_culture = french
+				set_country_flag = settle_french
+			}
+		}
 	}
 }

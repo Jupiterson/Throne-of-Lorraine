@@ -2464,7 +2464,7 @@ political_decisions = {
 		}
 
 		allow = {
-			#war = no
+			war = no
 		}
 
 		effect = {
@@ -2501,10 +2501,7 @@ political_decisions = {
 	french_renamed_savoy_aosta = {
 		picture = claim_aosta
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			OR = {
 				AND = { owns = 466 NOT = { has_global_flag = french_renamed_savoy } }
 				AND = { owns = 721 NOT = { has_global_flag = french_renamed_aosta } }
@@ -2512,7 +2509,7 @@ political_decisions = {
 		}
 
 		allow = {
-			#war = no
+			war = no
 		}
 
 		effect = {
@@ -3045,10 +3042,7 @@ political_decisions = {
 	rename_artois_FRA = {
 		picture = FRA_rename_artois
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
+			primary_culture = french
 			owns = 399 #Lille
 			owns = 400 #Dunkirk
 			owns = 401 #Arras
@@ -4708,7 +4702,6 @@ political_decisions = {
 		potential = {
 			OR = {
 				primary_culture = french
-				primary_culture = occitan
 				primary_culture = belgican
 			}
 			OR = {
@@ -5517,7 +5510,7 @@ political_decisions = {
 				primary_culture = norwegian
 				tag = SCA
 				tag = DNN
-			}
+				}
 			owns = 263
 			owns = 265
 			owns = 3378
@@ -5546,7 +5539,7 @@ political_decisions = {
 				primary_culture = british
 				primary_culture = irish
 				primary_culture = scottish
-			}
+				}
 			owns = 263
 			owns = 265
 			owns = 3378
@@ -5575,7 +5568,7 @@ political_decisions = {
 				primary_culture = norwegian
 				tag = SCA
 				tag = DNN
-			}
+				}
 			owns = 262
 			owns = 260
 			owns = 261
@@ -5602,7 +5595,7 @@ political_decisions = {
 				primary_culture = british
 				primary_culture = irish
 				primary_culture = scottish
-			}
+				}
 			owns = 262
 			owns = 260
 			owns = 261
@@ -6399,7 +6392,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				primary_culture = french	 
-				primary_culture = occitan
+				primary_culture = occitan  
 				primary_culture = burgundian	
 			}
 			owns = 608

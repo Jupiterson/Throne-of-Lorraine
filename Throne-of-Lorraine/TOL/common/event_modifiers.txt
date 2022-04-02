@@ -386,7 +386,7 @@ open_homesteading = {
 	icon = 11
 }
 
-boer_commandos_modifier = {
+scottish_commandos_modifier = {
 	org_regain = 0.1
 	land_organisation = 0.1
 	mobilisation_economy_impact = -0.25
@@ -455,13 +455,13 @@ access_to_the_sea = { #If Portugal allows port access via event 6033
 	icon = 7
 }
 
-diamonds_are_boer = {
+diamonds_are_scottish = {
 	immigrant_attract = 0.5
 	pop_consciousness_modifier = 0.1
 	icon = 11
 }
 
-boer_gold = {
+scottish_gold = {
 	immigrant_attract = 0.4
 	pop_consciousness_modifier = 0.2
 	icon = 11
@@ -1888,7 +1888,7 @@ prussian_general_staff = {
 }
 
 ##### Boer War #####
-trek_boers = {
+trek_scottishs = {
 	global_immigrant_attract = 4	   #410%
 	global_assimilation_rate = 0.01
 	mobilisation_size = 2
@@ -1896,7 +1896,7 @@ trek_boers = {
 	icon = 17
 }
 
-boer_republic = {
+scottish_republic = {
 	global_immigrant_attract = 0.1
 	core_pop_militancy_modifier = -0.1
 	supply_consumption = -0.2
@@ -1904,7 +1904,7 @@ boer_republic = {
 	icon = 17
 }
 
-boer_exodus = {
+scottish_exodus = {
 	icon = 20
 }
 
@@ -4870,7 +4870,7 @@ french_terror = {
 	non_accepted_pop_consciousness_modifier = 0.05
 	non_accepted_pop_militancy_modifier = 0.05
 	local_ruling_party_support = -0.80
-	#goods_demand = -0.03
+	goods_demand = -0.05
 	icon = 1
 }
 
@@ -4911,7 +4911,7 @@ merchant_heaven = {
 	diplomatic_points_modifier = 0.2
 	research_points_modifier = 0.1
 	war_exhaustion = -0.25
-	goods_demand = 0.01
+	goods_demand = 0.05
 	icon = 11
 }
 
@@ -4919,7 +4919,7 @@ hre_member = {
 	global_population_growth = 0.001
 	diplomatic_points_modifier = -0.1
 	research_points_modifier = 0.05
-	war_exhaustion = -0.01
+	war_exhaustion = -0.05
 	cb_generation_speed_modifier = 0.35
 	icon = 17
 }
@@ -4964,41 +4964,39 @@ ottoman_asimilation = {
 
 #Next two ripped from TGC
 outraged-europe = {
-	badboy = 0.07
-	import_cost = 0.3
-	diplomatic_points_modifier = -0.25
-	influence_modifier = -0.3
-	icon = 8
-}
+		badboy = 0.07
+		import_cost = 0.3
+		diplomatic_points_modifier = -0.25
+		influence_modifier = -0.3
+		icon = 8
+	}
 
 german-menace = {
-	badboy = -0.02
-	influence_modifier = 0.4
-	diplomatic_points_modifier = 0.3
-	mobilisation_size = 0.15
-	icon = 15
-}
-
-tiniri_menace = {
-	badboy = -0.01
-	influence_modifier = 0.2
-	diplomatic_points_modifier = 0.2
-	mobilisation_size = 0.06
-	icon = 15
-}
+		badboy = -0.02
+		influence_modifier = 0.4
+		diplomatic_points_modifier = 0.3
+		mobilisation_size = 0.15
+		icon = 15
+	}
+	
+	
+	
+	tiniri_menace = {
+		badboy = -0.01
+		influence_modifier = 0.2
+		diplomatic_points_modifier = 0.2
+		mobilisation_size = 0.06
+		icon = 15
+	}
 
 slavepopupdated = {
 	icon = 17
 }
 
-population_resettlement_2 = {
-	assimilation_rate = 20
-	immigrant_attract = 20
-	#immigrant_push = 1
-	icon = 19
-}
-
-russia_debuff = {
-	mobilisation_size = -1
-	icon = 17
+#Iran
+growth_of_shiraz = {
+	immigrant_attract = 0.50
+	farm_rgo_size = 0.4
+	mine_rgo_size = 0.4
+	icon = 11
 }

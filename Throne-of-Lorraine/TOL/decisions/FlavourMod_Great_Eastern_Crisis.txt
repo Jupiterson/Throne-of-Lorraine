@@ -269,11 +269,7 @@ political_decisions = {
 				}
 				AND = {
 					ENG = { is_disarmed = yes }
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-						is_culture_group = germanic
-					}
+					OR = { primary_culture = french is_culture_group = germanic }
 				}
 			}
 			is_greater_power = yes

@@ -394,11 +394,6 @@ country_event = {
 		add_accepted_culture = sicilian
 		add_accepted_culture = provencial
 		add_accepted_culture = venetian
-		PRO = {
-			all_core = {
-				add_core = THIS
-			}
-		}
 		random_owned = {
 			limit = { owner = { OR = { is_culture_group = italian is_culture_group = germanic } accepted_culture = french } }
 			owner = { remove_accepted_culture = french }
@@ -478,10 +473,7 @@ country_event = {
 				exists = yes
 				OR = {
 					has_country_flag = objects_to_italy
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
+					primary_culture = french
 					tag = AUS
 					tag = AUB
 					tag = KUK
@@ -612,7 +604,7 @@ country_event = {
 				}
 			}
 			THIS = { all_core = { add_core = NIF } }
-   #		NIF = { country_event = 34627 }
+   #		 NIF = { country_event = 34627 }
 		}
 		
 		any_country = {
@@ -994,29 +986,29 @@ country_event = {
 #
 #	mean_time_to_happen = {
 #		months = 100
-#		modifier = {
-#			factor = 0.5
-#			GER = {
-#				any_core = {
-#					NOT = { province_id = 370 }
-#					NOT = { province_id = 371 }
-#					culture = north_german
+ #	   modifier = {
+  #		  factor = 0.5
+   # #		GER = {
+	#			any_core = {
+   #				 NOT = { province_id = 370 }
+  #				  NOT = { province_id = 371 }
+ #				   culture = north_german
 #					OR = {
-#						owned_by = FRR
-#						owned_by = FRZ
-#					}
-#				}
+	#					owned_by = FRA
+   #					 owned_by = BOR
+  #				  }
+ #			   }
 #			}
-#		}
-#		modifier = {
-#			factor = 0.8
-#			exists = SGF
-#		}
+	 #   }
+	#	modifier = {
+   #		 factor = 0.8
+  #		  exists = SGF
+ #	   }
 #		modifier = {
 #			factor = 0.8
 #			year = 1880
 #		}
-#		modifier = {
+ #	   modifier = {
 #			factor = 0.6
 #			year = 1890
 #		}
@@ -1036,12 +1028,12 @@ country_event = {
 #				government = democracy
 #			}
 #		}
-#	}
-#
+#	}#
+
 #	option = {
-#		name = "EVT11110OPTA"
-#		prestige = -15
-#		badboy = 10
+ ##	   name = "EVT11110OPTA"
+ #	   prestige = -15
+ #	   badboy = 10
 #		clr_country_flag = crown_from_the_gutter
 #		all_core = { add_core = HNS }  #former NGF
 #		change_tag = HNS
@@ -1092,8 +1084,8 @@ country_event = {
 #				badboy = 0.6
 #			}
 #		}
-#	}
-#
+#	}#
+
 #	option = {
 #		name = "EVT11110OPTB"
 #		clr_country_flag = crown_from_the_gutter
@@ -1103,7 +1095,7 @@ country_event = {
 #			limit = { is_primary_culture = yes }
 #			scaled_militancy = {
 #				ideology = liberal
-#				factor = 3
+ #			   factor = 3
 #			}
 #			scaled_militancy = {
 #				ideology = radical
