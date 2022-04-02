@@ -52,10 +52,12 @@ country_event = {
 			owner = { SPA = { country_event = 90133 } }
 		}
 		money = 1000000
-		limit = {
-					province_id = 502
-				}
-				secede_province = SPA
+		random_owned = {
+			limit = {
+				province_id = 502
+			}
+			secede_province = SPA
+		}
 		ai_chance = {
 			factor = 25
 			modifier = {

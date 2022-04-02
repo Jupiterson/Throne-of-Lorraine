@@ -345,8 +345,8 @@ country_event = {
 				casus_belli = acquire_all_cores
 				country = COP
 			}
-			defender_goal = { casus_belli = status_quo	}
-			state_province_id = HDJ_1151
+			defender_goal = { casus_belli = status_quo}
+			#state_province_id = HDJ_1151
 		}
 		ai_chance = {
 			factor = 80
@@ -380,8 +380,8 @@ country_event = {
 				casus_belli = acquire_all_cores
 				country = KNI
 			}
-			defender_goal = { casus_belli = status_quo	}
-			state_province_id = EGY_921
+			defender_goal = { casus_belli = status_quo }
+			#state_province_id = EGY_921
 		}
 		relation = { who = PAP value = 200 }
 		create_alliance = PAP 
@@ -471,7 +471,6 @@ country_event = {
 		any_pop = {
 			militancy = 4
 		}
-		clr_global_flag = last_crusade
 		any_owned = {
 			limit = {
 				OR = {

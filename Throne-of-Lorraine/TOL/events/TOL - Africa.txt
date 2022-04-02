@@ -103,7 +103,7 @@ country_event = {
 
 #Morrocan civil war
 country_event = {
-	id = 201000 #Goods for armies
+	id = 2010000 #Goods for armies
 	title = "Moroc0.t"
 	desc = "Moroc0.d"
 	fire_only_once = yes
@@ -115,7 +115,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		day = 7
+		days = 7
 	}
 
 	option = {
@@ -212,7 +212,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		day = 1
+		days = 1
 	}
 
 	option = {
@@ -286,7 +286,7 @@ country_event = {
 	} 
 
 	mean_time_to_happen = {
-		day = 60
+		days = 60
 	}
 	option = {
 		name = "They shall rise"
@@ -301,7 +301,7 @@ country_event = {
 				1718 = { secede_province = TIN add_core = TIN }
 				1716 = { secede_province = TIN add_core = TIN }				
 				TIN = { all_core = { secede_province = TIN } }
-				set_gloabl_flag = Territory_1
+				set_global_flag = Territory_1
 				1715 = { add_core = TIN }
 				1713 = { add_core = TIN }
 				1711 = { add_core = TIN }
@@ -348,7 +348,7 @@ country_event = {
 				1702 = { add_core = TIN }
 				1717 = { add_core = TIN }
 				TIN = { all_core = { secede_province = TIN } }
-				set_gloabl_flag = Territory_2
+				set_global_flag = Territory_2
 				1694 = { add_core = TIN }
 				1693 = { add_core = TIN }
 				1690 = { add_core = TIN }
@@ -436,7 +436,7 @@ country_event = {
 				1702 = { secede_province = TIN add_core = TIN }
 				1717 = { secede_province = TIN add_core = TIN }
 				TIN = { all_core = { secede_province = TIN } }
-				set_gloabl_flag = Territory_3
+				set_global_flag = Territory_3
 				1791 = { add_core = TIN }
 				1793 = { add_core = TIN }
 				1792 = { add_core = TIN }
@@ -469,7 +469,7 @@ country_event = {
 				1718 = { secede_province = TIN add_core = TIN }
 				1716 = { secede_province = TIN add_core = TIN }				
 				TIN = { all_core = { secede_province = TIN } }
-				set_gloabl_flag = Territory_1
+				set_global_flag = Territory_1
 				1715 = { add_core = TIN }
 				1713 = { add_core = TIN }
 				1711 = { add_core = TIN }
@@ -516,7 +516,7 @@ country_event = {
 				1702 = { secede_province = TIN add_core = TIN }
 				1717 = { secede_province = TIN add_core = TIN }
 				TIN = { all_core = { secede_province = TIN } }
-				set_gloabl_flag = Territory_2
+				set_global_flag = Territory_2
 				1694 = { add_core = TIN }
 				1693 = { add_core = TIN }
 				1690 = { add_core = TIN }
@@ -604,7 +604,7 @@ country_event = {
 				1702 = { add_core = TIN }
 				1717 = { add_core = TIN }
 				TIN = { all_core = { secede_province = TIN } }
-				set_gloabl_flag = Territory_3
+				set_global_flag = Territory_3
 				1791 = { add_core = TIN }
 				1793 = { add_core = TIN }
 				1792 = { add_core = TIN }
@@ -635,7 +635,7 @@ country_event = {
 	is_triggered_only = yes
 
 	mean_time_to_happen = {
-		day = 1
+		days = 1
 	}
 	
 	option = {
@@ -701,7 +701,7 @@ country_event = {
 	is_triggered_only = yes
 
 	mean_time_to_happen = {
-		day = 1
+		days = 1
 	}
 	option = {
 		name = "Join the Caliphate!"	

@@ -1432,7 +1432,7 @@ country_event = { ####Romania hears support for Hungary####
 		badboy = -4
 		any_pop = {
 			limit = {
-				issue = jingoism
+				pop_majority_issue  = jingoism
 			}
 			militancy = 6
 			consciousness = 6
@@ -1627,7 +1627,7 @@ country_event = { ####Romania hears request for money approved####
 		money = 100000
 		any_pop = {
 			limit = {
-				issue = jingoism
+				pop_majority_issue  = jingoism
 			}
 			militancy = 6
 			consciousness = 6
@@ -1688,7 +1688,7 @@ country_event = { ####Hungary favored treaty of Transvana signed###
 		prestige = 5
 		any_pop = {
 			limit = {
-				issue = jingoism
+				pop_majority_issue = jingoism
 			}
 			militancy = -5
 			consciousness = -5
@@ -1774,7 +1774,7 @@ country_event = { #Hungary hears support for Romania
 		badboy = -4
 		any_pop = {
 			limit = {
-				issue = jingoism
+				pop_majority_issue  = jingoism
 			}
 			militancy = 6
 			consciousness = 6
@@ -1986,7 +1986,7 @@ country_event = { ####Hungary hears request for money approved####
 		money = 100000
 		any_pop = {
 			limit = {
-				issue = jingoism
+				pop_majority_issue  = jingoism
 			}
 			militancy = 6
 			consciousness = 6
@@ -2048,7 +2048,7 @@ country_event = { ####Romania favored treaty of Transvana signed###
 		prestige = 5
 		any_pop = {
 			limit = {
-				issue = jingoism
+				pop_majority_issue  = jingoism
 			}
 			militancy = -5
 			consciousness = -5
@@ -2070,7 +2070,7 @@ country_event = { ####countries hear of Partition####
 		prestige = -5
 		any_pop = {
 			limit = {
-				issue = jingoism
+				pop_majority_issue  = jingoism
 			}
 			militancy = 3
 			consciousness = 3
@@ -2205,7 +2205,7 @@ country_event = { ####result of HUN no/Rom yes
 }
 
 country_event = { ####result of ROM no/Hun yes
-	id = 7142973971
+	id = 714297398
 	title = "Treaty Fails Due to Romanian Dissent"
 	desc = EVTDESC7142973971
 	fire_only_once = yes

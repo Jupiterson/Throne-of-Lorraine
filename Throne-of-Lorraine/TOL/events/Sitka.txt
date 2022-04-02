@@ -5,10 +5,10 @@ country_event = {
 	picture = "lynn_strike"
 	fire_only_once = yes
 	trigger = {
-	   tag = USA
-	   year = 1860
-	   NOT = { year = 1863 }
-	   owns = 243
+		tag = USA
+		year = 1860
+		NOT = { year = 1863 }
+		owns = 243
 	}
 	mean_time_to_happen = {
 		months = 10
@@ -42,10 +42,10 @@ country_event = {
 	picture = "franklin_pierce_old_lady"
 	fire_only_once = yes
 	trigger = {
-	   tag = USA
-	   year = 1853
-	   ruling_party_ideology = conservative
-	   NOT = { year = 1857 }
+	tag = USA
+	year = 1853
+	ruling_party_ideology = conservative
+	NOT = { year = 1857 }
 	}
 	mean_time_to_happen = {
 		months = 10
@@ -55,7 +55,6 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					has_pop_culture = yankee
 					has_pop_culture = yankee
 				}
 			}
@@ -1225,7 +1224,6 @@ country_event = {
 		2209 = {
 			remove_core = SPA
 		}
-		year = 1868
 		war = {
 			target = CUB
 			attacker_goal = { casus_belli = conquest_any }
@@ -3624,7 +3622,7 @@ country_event = {
 	option = {
 		name = "A successful deal."
 		relation = {
-			who = { ENG }
+			who = ENG
 			value = 100
 		}
 		ENG = { country_event = 123569 }
@@ -3713,7 +3711,7 @@ country_event = {
 			who = ENG
 			value = -150
 		}
-		ENG = { event = 123579 }
+		ENG = { country_event = 123579 }
 		ai_chance = {
 			factor = 95
 		}
@@ -5977,7 +5975,7 @@ country_event = {
 	picture = "independent_guyana"
 	fire_only_once = yes
 	is_triggered_only = yes
-	   option = {
+	option = {
 		name = "We shall maintain the status quo."
 		prestige = -5
 		relation = {

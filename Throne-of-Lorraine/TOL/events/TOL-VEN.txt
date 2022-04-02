@@ -31,7 +31,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "How dare they"
+		name = "How dare the!y"
 		random_owned = {
 			limit = { owner = { VEN = { exists = yes } } }
 			owner = {
@@ -45,22 +45,23 @@ country_event = {
 	}
 
 	option = {
-		name = "We have to submit"
+		name = "We have to submit."
 		set_country_flag = no_submission
 		any_owned = {
-			limit = { 
-				continent = oceania
-				continent = north_america
-				continent = africa
-				continent = west_africa
-				continent = east_africa
-				continent = asia
-				continent = central_africa
-				continent = australia_new_zealand
-				continent = south_america
+			limit = {
+				OR = {
+					continent = oceania
+					continent = north_america
+					continent = africa
+					continent = west_africa
+					continent = east_africa
+					continent = asia
+					continent = central_africa
+					continent = australia_new_zealand
+					continent = south_america
 				}
-			secede_province = VEN
 			}
+			secede_province = VEN
 		}
 		ai_chance = {
 			factor = 10
@@ -89,7 +90,7 @@ country_event = {
 			}
 		}
 	}
-
+}
 country_event = {
 	id = 100110
 	title = "Genoa refuses" #Mexico Has Refused!
