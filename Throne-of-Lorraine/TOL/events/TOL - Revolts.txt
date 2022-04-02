@@ -289,8 +289,9 @@ country_event = {
 	option = {
 		name = "Crush them!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-		473 = {
-			secede_province = CRS
+		any_owned = {
+			limit = { is_core = CRS }
+			secede_province = CRS 
 		}
 		war = {
 			target = CRS
@@ -301,8 +302,9 @@ country_event = {
 	option = {
 		name = "Corsica shall be free!"
 		add_country_modifier = { name = revolt_cooldown duration = 1825 }
-		473 = {
-			secede_province = CRS
+		any_owned = {
+			limit = { is_core = CRS }
+			secede_province = CRS 
 		}
 		war = {
 			target = CRS
