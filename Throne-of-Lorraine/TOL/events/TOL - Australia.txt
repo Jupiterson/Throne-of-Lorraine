@@ -152,8 +152,8 @@ country_event = {
 							province_id = 2482
 						}
 						}
-					 add_province_modifier = { name = australia_migrations
-											   duration = 547 }
+					add_province_modifier = { name = australia_migrations
+											duration = 547 }
 				}
 			}
 			any_pop = { limit = { location = { is_core = AST } has_pop_culture = australian type = bureaucrats} reduce_pop = 0.1 }
@@ -166,7 +166,7 @@ country_event = {
 						}
 						add_province_modifier = {
 							name = australia_migrations_vic
-						   duration = 547
+						duration = 547
 						}
 					}
 				}
@@ -201,8 +201,8 @@ country_event = {
 							province_id = 2482
 						}
 						}
-					 add_province_modifier = { name = australia_migrations
-											   duration = 547 }
+					add_province_modifier = { name = australia_migrations
+											duration = 547 }
 				}
 			}
 			any_pop = { limit = { location = { is_core = FAS } culture = australian type = bureaucrats} reduce_pop = 0.1 }
@@ -214,7 +214,7 @@ country_event = {
 						}
 						add_province_modifier = {
 							name = australia_migrations_vic
-						   duration = 547
+						duration = 547
 						}
 					}
 				}

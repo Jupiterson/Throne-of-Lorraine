@@ -22,10 +22,10 @@ country_event = {
 	}
 	
 	option = {
-		name = "Onto the new world"	 
+		name = "Onto the new world"	
 		change_tag_no_core_switch = KRI 
 		
-	  }
+	}
 	}
 	
 #
@@ -254,7 +254,7 @@ country_event = {
 
 #########################################################################
 
-##				Rise of the Tiniri Sultanate						 ##
+##				Rise of the Tiniri Sultanate						##
 
 #########################################################################
 
@@ -299,7 +299,7 @@ country_event = {
 				1697 = { secede_province = TIN add_core = TIN }
 				1720 = { secede_province = TIN add_core = TIN }
 				1718 = { secede_province = TIN add_core = TIN }
-				1716 = { secede_province = TIN add_core = TIN }				 
+				1716 = { secede_province = TIN add_core = TIN }				
 				TIN = { all_core = { secede_province = TIN } }
 				set_gloabl_flag = Territory_1
 				1715 = { add_core = TIN }
@@ -467,7 +467,7 @@ country_event = {
 				1697 = { secede_province = TIN add_core = TIN }
 				1720 = { secede_province = TIN add_core = TIN }
 				1718 = { secede_province = TIN add_core = TIN }
-				1716 = { secede_province = TIN add_core = TIN }				 
+				1716 = { secede_province = TIN add_core = TIN }				
 				TIN = { all_core = { secede_province = TIN } }
 				set_gloabl_flag = Territory_1
 				1715 = { add_core = TIN }
@@ -652,7 +652,7 @@ country_event = {
 		TIN = { all_core = { limit = { empty = yes } secede_province = THIS } }  			
 		any_country = {
 			limit = {
-			   OR = {
+			OR = {
 				neighbour = THIS
 				is_culture_group = THIS
 				}
@@ -693,7 +693,7 @@ country_event = {
 	}
 }
 	
-	country_event = {
+country_event = {
 	id = 100119
 	title = "Rise of the Caliphate"
 	desc = "The Caliphate has long been close to us, and they now asked every Muslim Nation to join them"
@@ -704,7 +704,7 @@ country_event = {
 		day = 1
 	}
 	option = {
-		name = "Join the Caliphate!"	 
+		name = "Join the Caliphate!"	
 		all_core = { add_core = TIN }		
 		any_owned = {
 			secede_province = TIN
@@ -728,7 +728,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "No, We need to stay Independant"	 
+		name = "No, We need to stay Independant"	
 		all_core = { add_core = TIN }		
 		TIN = { all_core = { limit = { empty = yes } secede_province = TIN } }  
 		prestige = 50

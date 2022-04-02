@@ -128,12 +128,12 @@ country_event = {
 					average_militancy = 5
 			}
 			any_state = {
-				  any_owned_province = {
-			  is_core = VEN
-			  culture = north_italian
-			  is_primary_culture = no
-				  }
-				  average_militancy = 5
+				any_owned_province = {
+			is_core = VEN
+			culture = north_italian
+			is_primary_culture = no
+				}
+				average_militancy = 5
 			}
 			year = 1845
 		}
@@ -1438,8 +1438,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = {
-				   OR = {
-					   relation = {
+				OR = {
+					relation = {
 								who = ITA
 								value = 1
 						}
@@ -1624,7 +1624,7 @@ country_event = {
 	picture = "Turin"
 
 	trigger = {
-			   OR = {
+			OR = {
 					tag = ITA
 					tag = ITS
 				}
@@ -1702,12 +1702,12 @@ country_event = {
 
 	trigger = {
 				OR = { tag = AUS
-					   tag = KUK
-					   tag = AUB
-					 }
+					tag = KUK
+					tag = AUB
+					}
 				OR = { government = absolute_monarchy
-					   government = prussian_constitutionalism
-					 }
+					government = prussian_constitutionalism
+					}
 				owns = 729
 				year = 1856
 	}
@@ -2194,7 +2194,7 @@ country_event = {
 
 	trigger = {
 				year = 1926
-			   OR = {
+			OR = {
 					tag = ITA
 					tag = ITS
 				}

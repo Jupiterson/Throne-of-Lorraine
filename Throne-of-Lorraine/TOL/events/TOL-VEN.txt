@@ -48,7 +48,7 @@ country_event = {
 		name = "We have to submit"
 		set_country_flag = no_submission
 		any_owned = {
-			 limit = { 
+			limit = { 
 				continent = oceania
 				continent = north_america
 				continent = africa
@@ -58,10 +58,10 @@ country_event = {
 				continent = central_africa
 				continent = australia_new_zealand
 				continent = south_america
-				 }
-			 secede_province = VEN
-			 }
-		 }
+				}
+			secede_province = VEN
+			}
+		}
 		ai_chance = {
 			factor = 10
 			modifier = {
@@ -223,17 +223,17 @@ country_event = {
 		name = "What a humiliation."
 		any_owned = {
 			limit = { 
-				 NOT = { 
-				 continent = europe 
-				 continent = south_america
-				 continent = central_africa
-				 continent = asia
-				 continent = east_africa
-				 continent = west_africa
-				 continent = north_america
-				 }
-				 }
-			 secede_province = GEN
+				NOT = { 
+				continent = europe 
+				continent = south_america
+				continent = central_africa
+				continent = asia
+				continent = east_africa
+				continent = west_africa
+				continent = north_america
+				}
+				}
+			secede_province = GEN
 		}
 		prestige = -30
 	}
@@ -266,7 +266,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = "What a humiliation."
-	   any_owned = {
+	any_owned = {
 				limit = {				
 				NOT = { continent = europe }
 			}
@@ -353,12 +353,12 @@ country_event = {
 		any_owned = {
 			limit = {
 				NOT = {
-				 continent = europe 
-				 continent = oceania
-				 continent = south_america
-				 continent = asia
-				 continent = east_africa
-				 continent = west_africa
+				continent = europe 
+				continent = oceania
+				continent = south_america
+				continent = asia
+				continent = east_africa
+				continent = west_africa
 				}
 				}
 				secede_province = VEN
@@ -378,16 +378,16 @@ country_event = {
 		name = "Oh well."
 		any_owned = {
 			limit = {
-				 NOT = {
-				 continent = europe 
-				 continent = oceania
-				 continent = south_america
-#				 continent = north_america
-				 continent = australia_new_zealand
-				 continent = africa
-				 continent = asia
-				 continent = east_africa
-				 continent = west_africa
+				NOT = {
+				continent = europe 
+				continent = oceania
+				continent = south_america
+#				continent = north_america
+				continent = australia_new_zealand
+				continent = africa
+				continent = asia
+				continent = east_africa
+				continent = west_africa
 				}
 			}
 			secede_province = PIR
@@ -395,32 +395,32 @@ country_event = {
 	
 		any_owned = {
 			limit = {
-				 NOT = {
-				 continent = europe 
-				 continent = oceania
-#				 continent = south_america
-				 continent = australia_new_zealand
-				 continent = north_america
-				 continent = africa
-				 continent = asia
-				 continent = east_africa
-				 continent = west_africa
+				NOT = {
+				continent = europe 
+				continent = oceania
+#				continent = south_america
+				continent = australia_new_zealand
+				continent = north_america
+				continent = africa
+				continent = asia
+				continent = east_africa
+				continent = west_africa
 				}
 			}
 			secede_province = JES
 			}
 		any_owned = {
 			limit = {
-				 NOT = {
-				 continent = europe 
-				 continent = oceania
-				 continent = south_america
-				 continent = australia_new_zealand
-				 continent = north_america
-				 continent = africa
-				 continent = asia
-				 continent = east_africa
-				 continent = west_africa
+				NOT = {
+				continent = europe 
+				continent = oceania
+				continent = south_america
+				continent = australia_new_zealand
+				continent = north_america
+				continent = africa
+				continent = asia
+				continent = east_africa
+				continent = west_africa
 				}
 			}
 			secede_province = VEN
@@ -440,8 +440,8 @@ country_event = {
 		name = "Oh well."
 		any_owned = {
 			limit = {
-				 NOT = {
-				 continent = europe 
+				NOT = {
+				continent = europe 
 				}
 			}
 			secede_province = VEN
@@ -460,57 +460,57 @@ country_event = {
 		name = "Oh well."
 		any_owned = {
 			limit = {
-				 NOT = {
-				 continent = europe 
-				 continent = oceania
-				 continent = south_america
-#				 continent = north_america
-				 continent = australia_new_zealand
-				 continent = africa
-				 continent = asia
-				 continent = east_africa
-				 continent = west_africa
+				NOT = {
+				continent = europe 
+				continent = oceania
+				continent = south_america
+#				continent = north_america
+				continent = australia_new_zealand
+				continent = africa
+				continent = asia
+				continent = east_africa
+				continent = west_africa
 				}
 			}
 			secede_province = PIR
 		}
 		any_owned = {
 			limit = {
-				 NOT = {
-				 continent = europe 
-				 continent = oceania
-#				 continent = south_america
-				 continent = australia_new_zealand
-				 continent = north_america
-				 continent = africa
-				 continent = asia
-				 continent = east_africa
-				 continent = west_africa
+				NOT = {
+				continent = europe 
+				continent = oceania
+#				continent = south_america
+				continent = australia_new_zealand
+				continent = north_america
+				continent = africa
+				continent = asia
+				continent = east_africa
+				continent = west_africa
 				}
 			}
 			secede_province = JES
 			}
 		any_owned = {
 			limit = {
-				 is_core = SYC
+				is_core = SYC
 			}
 			secede_province = SYC
 		}
-	   any_owned = {
+	any_owned = {
 			limit = {
-				 is_core = TUN
+				is_core = TUN
 			}
 			secede_province = TUN
 		}
 		any_owned = {
 			limit = {
-				 is_core = SRD
+				is_core = SRD
 			}
 			secede_province = SRD
 		}
 		any_owned = {
 			limit = {
-				 is_core = CRS
+				is_core = CRS
 			}
 			secede_province = CRS
 		}
@@ -535,59 +535,59 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = "Oh well."
-	 any_owned = {
+	any_owned = {
 			limit = {
-				 NOT = {
-				 continent = europe 
-				 continent = oceania
-				 continent = south_america
-#				 continent = north_america
-				 continent = australia_new_zealand
-				 continent = africa
-				 continent = asia
-				 continent = east_africa
-				 continent = west_africa
+				NOT = {
+				continent = europe 
+				continent = oceania
+				continent = south_america
+#				continent = north_america
+				continent = australia_new_zealand
+				continent = africa
+				continent = asia
+				continent = east_africa
+				continent = west_africa
 				}
 			}
 			secede_province = VEN
 		}
 		any_owned = {
 			limit = {
-				 NOT = {
-				 continent = europe 
-				 continent = oceania
-#				 continent = south_america
-				 continent = australia_new_zealand
-				 continent = north_america
-				 continent = africa
-				 continent = asia
-				 continent = east_africa
-				 continent = west_africa
+				NOT = {
+				continent = europe 
+				continent = oceania
+#				continent = south_america
+				continent = australia_new_zealand
+				continent = north_america
+				continent = africa
+				continent = asia
+				continent = east_africa
+				continent = west_africa
 				}
 			}
 			secede_province = VEN
 			}
 		any_owned = {
 			limit = {
-				 is_core = SYC
+				is_core = SYC
 			}
 			secede_province = VEN
 		}
-	   any_owned = {
+	any_owned = {
 			limit = {
-				 is_core = TUN
-			}
-			secede_province = VEN
-		}
-		any_owned = {
-			limit = {
-				 is_core = SRD
+				is_core = TUN
 			}
 			secede_province = VEN
 		}
 		any_owned = {
 			limit = {
-				 is_core = CRS
+				is_core = SRD
+			}
+			secede_province = VEN
+		}
+		any_owned = {
+			limit = {
+				is_core = CRS
 			}
 			secede_province = VEN
 		}

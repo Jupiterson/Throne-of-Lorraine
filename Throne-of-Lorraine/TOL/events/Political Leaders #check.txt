@@ -32,22 +32,22 @@ country_event = {
             has_country_modifier = dour_economist
             has_country_modifier = power_vacuum
             has_country_flag = minister_found
-        }
+     	}
         OR = {
 			government = absolute_empire
 			government = semi_constitutional_empire
             government = absolute_monarchy
             government = prussian_constitutionalism
-        }
-    }
+     	}
+ 	}
 
     mean_time_to_happen = {
         days = 14
-    }
+ 	}
 
     immediate = {
         set_country_flag = minister_found
-    }
+ 	}
 
     option = {
         name = "I hope they're a good one..."
@@ -691,7 +691,7 @@ country_event = {
 				clr_country_flag = minister_found
 			}
 		}
-    }
+ 	}
 }
 
 country_event = {
@@ -725,19 +725,19 @@ country_event = {
             has_country_modifier = ambitious_union_boss
             has_country_modifier = dour_economist
             has_country_modifier = power_vacuum
-        }
+     	}
         average_militancy = 5
         OR = {
 			government = absolute_empire
 			government = semi_constitutional_empire
             government = absolute_monarchy
             government = prussian_constitutionalism
-        }
-    }
+     	}
+ 	}
 
     mean_time_to_happen = {
         months = 48
-    }
+ 	}
 
     option = {
         name = "A tragedy!"
@@ -766,9 +766,9 @@ country_event = {
         add_country_modifier = {
             name = national_confusion
             duration = 365
-        }
+     	}
 
-    }
+ 	}
 }
 
 
@@ -807,21 +807,21 @@ country_event = {
             has_country_modifier = dour_economist
             has_country_modifier = power_vacuum
             has_country_flag = minister_found
-        }
+     	}
         OR = {
 			government = proletarian_dictatorship
             government = presidential_dictatorship
             government = fascist_dictatorship
-        }
-    }
+     	}
+ 	}
 
     mean_time_to_happen = {
         days = 14
-    }
+ 	}
 
     immediate = {
         set_country_flag = minister_found
-    }
+ 	}
 
     option = {
         name = "I hope they're a good one..."
@@ -1465,7 +1465,7 @@ country_event = {
 				clr_country_flag = minister_found
 			}
 		}
-    }
+ 	}
 }
 
 country_event = {
@@ -1503,18 +1503,18 @@ country_event = {
             has_country_modifier = pig_headed_isolationist
             has_country_modifier = ambitious_union_boss
             has_country_modifier = dour_economist
-        }
+     	}
         average_militancy = 5
         OR = {
             government = proletarian_dictatorship
             government = presidential_dictatorship
             government = fascist_dictatorship
-        }
-    }
+     	}
+ 	}
 
     mean_time_to_happen = {
         months = 48
-    }
+ 	}
 
     option = {
         name = "A tragedy!"
@@ -1543,12 +1543,12 @@ country_event = {
         add_country_modifier = {
             name = national_confusion
             duration = 365
-        }
+     	}
         add_country_modifier = {
             name = power_vacuum
             duration = 365
-        }
-    }
+     	}
+ 	}
 }
 
 
@@ -1591,27 +1591,27 @@ country_event = {
             has_country_modifier = power_vacuum
             has_country_flag = minister_found
 
-        }
+     	}
         OR = {
             has_country_flag = liberal_election_win
             has_country_flag = anarcho_liberal_win
-        }
+     	}
         OR = {
 			government = parliamentary_republic
 			government = constitutional_empire
             government = hms_government
             government = democracy
 			has_country_flag = Government_Democracy
-        }
-    }
+     	}
+ 	}
 
     mean_time_to_happen = {
         days = 14
-    }
+ 	}
 
     immediate = {
         set_country_flag = minister_found
-    }
+ 	}
 
     option = {
         name = "I hope they're a good one..."
@@ -2255,7 +2255,7 @@ country_event = {
 				clr_country_flag = minister_found
 			}
 		}
-    }
+ 	}
 }
 
 
@@ -2298,27 +2298,27 @@ country_event = {
             has_country_modifier = dom_pedro_ii
             has_country_modifier = power_vacuum
             has_country_flag = minister_found
-        }
+     	}
         OR = {
             has_country_flag = tory_election_win
             has_country_flag = fascist_election_win
             has_country_flag = reactionary_election_win
-        }
+     	}
         OR = {
 			government = constitutional_empire
 			government = parliamentary_republic
             government = hms_government
             government = democracy
-        }
-    }
+     	}
+ 	}
 
     mean_time_to_happen = {
         days = 14
-    }
+ 	}
 
     immediate = {
         set_country_flag = minister_found
-    }
+ 	}
 
     option = {
         name = "I hope they're a good one..."
@@ -2962,7 +2962,7 @@ country_event = {
 				clr_country_flag = minister_found
 			}
 		}
-    }
+ 	}
 }
 
 
@@ -3004,27 +3004,27 @@ country_event = {
             has_country_modifier = dom_pedro_ii
             has_country_modifier = power_vacuum
             has_country_flag = minister_found
-        }
+     	}
         OR = {
             has_country_flag = socialist_election_win
             has_country_flag = communist_election_win
-        }
+     	}
         OR = {
 			government = parliamentary_republic
 			government = constitutional_empire
             government = hms_government
             government = democracy
 			has_country_flag = Government_Democracy
-        }
-    }
+     	}
+ 	}
 
     mean_time_to_happen = {
         days = 14
-    }
+ 	}
 
     immediate = {
         set_country_flag = minister_found
-    }
+ 	}
 
     option = {
         name = "I hope they're a good one..."
@@ -3668,7 +3668,7 @@ country_event = {
 				clr_country_flag = minister_found
 			}
 		}
-    }
+ 	}
 }
 
 country_event = {
@@ -3682,7 +3682,7 @@ country_event = {
             government = proletarian_dictatorship
             government = presidential_dictatorship
             government = fascist_dictatorship
-        }
+     	}
         OR = {
             has_country_modifier = expert_diplomat
             has_country_modifier = successful_industrialist
@@ -3706,13 +3706,13 @@ country_event = {
             has_country_modifier = pig_headed_isolationist
             has_country_modifier = ambitious_union_boss
             has_country_modifier = dour_economist
-         }
+      	}
 
-    }
+ 	}
 
     mean_time_to_happen = {
         months = 1200
-    }
+ 	}
 
     option = {
         name = "He will be sorely missed."
@@ -3738,7 +3738,7 @@ country_event = {
         remove_country_modifier = pig_headed_isolationist
         remove_country_modifier = ambitious_union_boss
         remove_country_modifier = dour_economist
-    }
+ 	}
 }
 
 country_event = {
@@ -3752,19 +3752,19 @@ country_event = {
             government = proletarian_dictatorship
             government = presidential_dictatorship
             government = fascist_dictatorship
-        }
+     	}
         has_country_modifier = raving_loon
-    }
+ 	}
 
     mean_time_to_happen = {
         months = 120
-    }
+ 	}
 
     option = {
         name = "He will be sorely missed."
         prestige = -10
         remove_country_modifier = raving_loon
-    }
+ 	}
 }
 
 country_event = {
@@ -3778,7 +3778,7 @@ country_event = {
             government = proletarian_dictatorship
             government = presidential_dictatorship
             government = fascist_dictatorship
-        }
+     	}
         OR = {
             has_country_modifier = expert_diplomat
             has_country_modifier = successful_industrialist
@@ -3802,13 +3802,13 @@ country_event = {
             has_country_modifier = pig_headed_isolationist
             has_country_modifier = ambitious_union_boss
             has_country_modifier = dour_economist
-        }
+     	}
 
-    }
+ 	}
 
     mean_time_to_happen = {
         months = 1200
-    }
+ 	}
 
     option = {
         name = "Truly, he loved his people too much. Literally, in this case."
@@ -3837,6 +3837,6 @@ country_event = {
         add_country_modifier = {
             name = power_vacuum
             duration = 365
-        }
-    }
+     	}
+ 	}
 }

@@ -1,7 +1,7 @@
 #HFM
 #################################################################
 #																#
-#				  Establishment of Natal						#
+#				Establishment of Natal						#
 #																#
 #################################################################
 
@@ -1649,8 +1649,8 @@ country_event = {
 country_event = {
 	id = 98240
 	title = "EVTNAME98240" #The South African Union
-	 desc = "EVTDESC98240"
-	 picture = "greatpowers"
+	desc = "EVTDESC98240"
+	picture = "greatpowers"
 
 	trigger = {
 		OR = {
@@ -2054,7 +2054,7 @@ country_event = { #Oranje & Natalia can rally to Transvaal's side in Second Boer
 
 #################################################################
 #																#
-#			  Friendly Great Powers Come to Boer Aid				#
+#			Friendly Great Powers Come to Boer Aid				#
 #																#
 #################################################################
 country_event = { #Rally to the Boer Cause?
@@ -2077,14 +2077,14 @@ country_event = { #Rally to the Boer Cause?
 		}
 		create_alliance = TRN
 		TRN = {
-		   war = {			   #No target initiates a one-day war that automatically resolves in a WP, but call_ally causes the new ally
-			   attacker_goal = {
-				   casus_belli = humiliate
-			   }
-			   call_ally = yes
-		   }
-		   badboy = -6	   #Add this in so that you don't have to eat the infamy from declaring a war with no CB fabricated already.
-	   }
+		war = {			#No target initiates a one-day war that automatically resolves in a WP, but call_ally causes the new ally
+			attacker_goal = {
+				casus_belli = humiliate
+				}
+			call_ally = yes
+			}
+		badboy = -6	#Add this in so that you don't have to eat the infamy from declaring a war with no CB fabricated already.
+		}
 		ai_chance = { factor = 10}
 	}
 
@@ -2097,7 +2097,7 @@ country_event = { #Rally to the Boer Cause?
 
 #################################################################
 #																#
-#			 Second Boer War Ends in Boer Victory Events			#
+#			Second Boer War Ends in Boer Victory Events			#
 #																#
 #################################################################
 #South Africa surrender event
@@ -2268,8 +2268,8 @@ country_event = { #Called from 98247 second option.
 country_event = {
 	id = 98250
 	title = "EVTNAME98250"
-	 desc = "EVTDESC98250"
-	 picture = "zulu"
+	desc = "EVTDESC98250"
+	picture = "zulu"
 
 	trigger = {
 		war = no
