@@ -23,8 +23,22 @@ political_decisions = {
 				owns = 897
 			}
 			OR = {
-				relation = { who = FRA value = 100 }
-				relation = { who = BOR value = 100 }
+				AND = {
+					exists = FRR
+					relation = { who = FRR value = 100 }
+				}
+				AND = {
+					exists = FRZ
+					relation = { who = FRZ value = 100 }
+				}
+				AND = {
+					exists = BOR
+					relation = { who = BOR value = 100 }
+				}
+				AND = {
+					exists = VIC
+					relation = { who = VIC value = 100 }
+				}
 			}
 			NOT = { has_global_flag = sykes_picot }
 			NOT = { year = 1900 }
@@ -35,20 +49,39 @@ political_decisions = {
 				part_of_sphere = no
 			}
 			NOT = {
-				FRA = { alliance_with = TUR }
+				FRR = { alliance_with = TUR }
+				FRZ = { alliance_with = TUR }
 				BOR = { alliance_with = TUR }
+				VIC = { alliance_with = TUR }
 			}
 			war = no
 			is_greater_power = yes
 			revolution_n_counterrevolution = 1
 			OR = {
-				FRA = {
+				FRR = {
 					exists = yes
 					alliance_with = THIS
 					war = no
 					NOT = { truce_with = THIS }
 				}
-			   
+				FRZ = {
+					exists = yes
+					alliance_with = THIS
+					war = no
+					NOT = { truce_with = THIS }
+				}
+				BOR = {
+					exists = yes
+					alliance_with = THIS
+					war = no
+					NOT = { truce_with = THIS }
+				}
+				VIC = {
+					exists = yes
+					alliance_with = THIS
+					war = no
+					NOT = { truce_with = THIS }
+				}
 			}
 		}
 
@@ -69,7 +102,10 @@ political_decisions = {
 			}
 			random_country = {
 				limit = {
-					primary_culture = french
+					OR = {
+						primary_culture = french
+						primary_culture = occitan
+					}
 					capital = 425
 				}
 				country_event = 99972
@@ -88,7 +124,26 @@ political_decisions = {
 	the_asia_minor_agreement = { #Carve up the Ottoman Empire without a Great War - Without France as Ally
 		picture = sykes_picot
 		potential = {
-			tag = SCO
+			OR = {
+				AND = {				
+					tag = SCO
+					OR = {
+						FRR = { exists = yes NOT = { alliance_with = SCO } }
+						FRZ = { exists = yes NOT = { alliance_with = SCO } }
+						BOR = { exists = yes NOT = { alliance_with = SCO } }
+						VIC = { exists = yes NOT = { alliance_with = SCO } }
+					}
+				}
+				AND = {				
+					tag = ENG
+					OR = {
+						FRR = { exists = yes NOT = { alliance_with = ENG } }
+						FRZ = { exists = yes NOT = { alliance_with = ENG } }
+						BOR = { exists = yes NOT = { alliance_with = ENG } }
+						VIC = { exists = yes NOT = { alliance_with = ENG } }
+					}
+				}
+			}
 			is_disarmed = no
 			OR = {
 				TUR = { has_country_flag = ottomans_to_turks }
@@ -105,10 +160,6 @@ political_decisions = {
 				owns = 902
 				owns = 897
 			}
-			OR = {
-				FRA = { exists = yes NOT = { alliance_with = SCO } }
-				BOR = { exists = yes NOT = { alliance_with = SCO } }
-			}
 			NOT = { RUS = { is_greater_power = yes alliance_with = THIS } }
 			NOT = { has_global_flag = sykes_picot }
 			NOT = { year = 1900 }
@@ -118,7 +169,7 @@ political_decisions = {
 			any_greater_power = {
 				NOT = { tag = JAP }
 				NOT = { tag = USA }
-				alliance_with = SCO
+				alliance_with = THIS
 			}
 			TUR = { part_of_sphere = no }
 			war = no
@@ -142,7 +193,7 @@ political_decisions = {
 				militancy = 8
 			}
 			any_greater_power = {
-				limit = { alliance_with = SCO }
+				limit = { alliance_with = THIS }
 				country_event = 99972
 			}
 		}

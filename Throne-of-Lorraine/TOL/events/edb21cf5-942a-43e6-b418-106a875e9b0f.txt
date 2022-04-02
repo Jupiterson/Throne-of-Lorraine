@@ -2,7 +2,7 @@
 # UUID mod 2^21-1 is used as the event ID pattern: 634736xxx
 
 country_event = {
-	id	  = 634736000
+	id	= 634736000
 	title   = edb21cf5-942a-43e6-b418-106a875e9b0f.shatter_event_title
 	desc	= edb21cf5-942a-43e6-b418-106a875e9b0f.shatter_event_desc
 	picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
@@ -77,7 +77,7 @@ country_event = {
 }
 
 country_event = {
-	id	  = 634736001
+	id	= 634736001
 	title   = edb21cf5-942a-43e6-b418-106a875e9b0f.shatter_break_event_title
 	desc	= edb21cf5-942a-43e6-b418-106a875e9b0f.shatter_break_event_desc
 	picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
@@ -189,7 +189,7 @@ country_event = {
 }
 
 country_event = {
-	id	  = 634736002
+	id	= 634736002
 	title   = edb21cf5-942a-43e6-b418-106a875e9b0f.shatter_petition_event_title
 	desc	= edb21cf5-942a-43e6-b418-106a875e9b0f.shatter_petition_event_desc
 	picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
@@ -258,7 +258,7 @@ country_event = {
 }
 
 country_event = {
-	id	  = 634736003
+	id	= 634736003
 	title   = edb21cf5-942a-43e6-b418-106a875e9b0f.shatter_release_event_title
 	desc	= edb21cf5-942a-43e6-b418-106a875e9b0f.shatter_release_event_desc
 	picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
@@ -300,151 +300,151 @@ country_event = {
 ## The following is for development purposes only ##
 
 # country_event = {
-#	 id	  = 634736100
-#	 title   = "DEBUG Shatter: diagnostic"
-#	 desc	= ""
-#	 picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
+#	id	= 634736100
+#	title   = "DEBUG Shatter: diagnostic"
+#	desc	= ""
+#	picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
 
-#	 is_triggered_only = yes
+#	is_triggered_only = yes
 
-#	 option = {
-#		 name = "Launch diagnostic."
+#	option = {
+#		name = "Launch diagnostic."
 
-#		 # N.b. mind event-from-decision restrictions
+#		# N.b. mind event-from-decision restrictions
 
-#		 ## outstanding vassals on the map
+#		## outstanding vassals on the map
 
-#		 random_owned = {
-#			 limit = {
-#				 owner = {
-#					 is_vassal = yes
-#				 }
-#			 }
+#		random_owned = {
+#			limit = {
+#				owner = {
+#					is_vassal = yes
+#				}
+#			}
 
-#			 owner = {
-#				 country_event = 634736101
-#			 }
-#		 }
+#			owner = {
+#				country_event = 634736101
+#			}
+#		}
 
-#		 any_country = {
-#			 limit = {
-#				 exists = yes
-#				 is_vassal = yes
-#			 }
+#		any_country = {
+#			limit = {
+#				exists = yes
+#				is_vassal = yes
+#			}
 
-#			 country_event = 634736101
-#		 }
+#			country_event = 634736101
+#		}
 
-#		 ## outstanding non-existing
+#		## outstanding non-existing
 
-#		 any_country = {
-#			 limit = {
-#				 exists = no
-#				 any_core = {
-#					 is_empty = no
-#				 }
-#				 NOT = {
-#					 tag = REB
-#					 tag = UTI
-#					 ruling_party = dominion_conservative
-#					 capital_scope = {
-#						 is_capital = yes
-#						 is_empty = yes
-#					 }
-#				 }
+#		any_country = {
+#			limit = {
+#				exists = no
+#				any_core = {
+#					is_empty = no
+#				}
+#				NOT = {
+#					tag = REB
+#					tag = UTI
+#					ruling_party = dominion_conservative
+#					capital_scope = {
+#						is_capital = yes
+#						is_empty = yes
+#					}
+#				}
 
-#				 is_releasable_vassal = yes
-#			 }
+#				is_releasable_vassal = yes
+#			}
 
-#			 country_event = 634736102
-#		 }
+#			country_event = 634736102
+#		}
 
-#		 any_country = {
-#			 limit = {
-#				 exists = no
-#				 any_core = {
-#					 is_empty = no
-#				 }
-#				 NOT = {
-#					 tag = REB
-#					 tag = UTI
-#					 ruling_party = dominion_conservative
-#					 capital_scope = {
-#						 is_capital = yes
-#						 is_empty = yes
-#					 }
-#				 }
+#		any_country = {
+#			limit = {
+#				exists = no
+#				any_core = {
+#					is_empty = no
+#				}
+#				NOT = {
+#					tag = REB
+#					tag = UTI
+#					ruling_party = dominion_conservative
+#					capital_scope = {
+#						is_capital = yes
+#						is_empty = yes
+#					}
+#				}
 
-#				 is_releasable_vassal = no
-#			 }
+#				is_releasable_vassal = no
+#			}
 
-#			 country_event = 634736103
-#		 }
-#	 }
+#			country_event = 634736103
+#		}
+#	}
 # }
 
 # country_event = {
-#	 id	  = 634736101
-#	 title   = "DEBUG Shatter: $COUNTRY$ is a vassal"
-#	 desc	= ""
-#	 picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
+#	id	= 634736101
+#	title   = "DEBUG Shatter: $COUNTRY$ is a vassal"
+#	desc	= ""
+#	picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
 
-#	 is_triggered_only = yes
-#	 allow_multiple_instances = yes
+#	is_triggered_only = yes
+#	allow_multiple_instances = yes
 
-#	 option = {
-#		 name = "Respond to diagnostic request."
-#	 }
+#	option = {
+#		name = "Respond to diagnostic request."
+#	}
 # }
 
 # country_event = {
-#	 id	  = 634736102
-#	 title   = "DEBUG Shatter: $COUNTRY$ ($CAPITAL$) does not exist, but maybe should"
-#	 desc	= ""
-#	 picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
+#	id	= 634736102
+#	title   = "DEBUG Shatter: $COUNTRY$ ($CAPITAL$) does not exist, but maybe should"
+#	desc	= ""
+#	picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
 
-#	 is_triggered_only = yes
+#	is_triggered_only = yes
 
-#	 option = {
-#		 name = "Respond to diagnostic request."
+#	option = {
+#		name = "Respond to diagnostic request."
 
-#		 capital_scope = {
-#			 owner = {
-#				 country_event = 634736104
-#			 }
-#		 }
-#	 }
+#		capital_scope = {
+#			owner = {
+#				country_event = 634736104
+#			}
+#		}
+#	}
 # }
 
 # country_event = {
-#	 id	  = 634736103
-#	 title   = "DEBUG Shatter: $COUNTRY$ ($CAPITAL$) does not exist, maybe that's fine"
-#	 desc	= ""
-#	 picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
+#	id	= 634736103
+#	title   = "DEBUG Shatter: $COUNTRY$ ($CAPITAL$) does not exist, maybe that's fine"
+#	desc	= ""
+#	picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
 
-#	 is_triggered_only = yes
+#	is_triggered_only = yes
 
-#	 option = {
-#		 name = "Respond to diagnostic request."
+#	option = {
+#		name = "Respond to diagnostic request."
 
-#		 capital_scope = {
-#			 owner = {
-#				 country_event = 634736104
-#			 }
-#		 }
-#	 }
+#		capital_scope = {
+#			owner = {
+#				country_event = 634736104
+#			}
+#		}
+#	}
 # }
 
 # country_event = {
-#	 id	  = 634736104
-#	 title   = "DEBUG Shatter: $COUNTRY$ holds the capital of $FROMCOUNTRY$"
-#	 desc	= ""
-#	 picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
+#	id	= 634736104
+#	title   = "DEBUG Shatter: $COUNTRY$ holds the capital of $FROMCOUNTRY$"
+#	desc	= ""
+#	picture = edb21cf5-942a-43e6-b418-106a875e9b0f_shatter_event
 
-#	 is_triggered_only = yes
-#	 allow_multiple_instances = yes
+#	is_triggered_only = yes
+#	allow_multiple_instances = yes
 
-#	 option = {
-#		 name = "Respond to diagnostic request"
-#	 }
+#	option = {
+#		name = "Respond to diagnostic request"
+#	}
 # }

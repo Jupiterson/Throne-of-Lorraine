@@ -3503,68 +3503,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = 10226
-	title = "EVTNAME10226" #Freedom At Last!
-	desc = "EVTDESC10226"
-	picture = "unite"
-
-	fire_only_once = yes
-	trigger = {
-		tag = SAA
-		war = no
-		AUS = {
-			exists = yes
-			truce_with = THIS
-			NOT = { has_country_flag = austria_let_hungary_go }
-		}
-		has_global_flag = hungarian_revolution_occurred
-	}
-
-	mean_time_to_happen = {
-		days = 7
-	}
-		immediate = {
-		SAA = { government = democracy }
-	}
-
-	option = {
-		name = "EVT10226OPTA"
-		AUS_771 = { add_core = HUN }
-		prestige = 10
-		AUS = { country_event = 10227 }
-		clr_global_flag = hungarian_revolution_occurred
-		any_pop = {
-			limit = { is_primary_culture = yes }
-			militancy = -8
-			consciousness = -3
-		}
-		any_pop = {
-			limit = {
-				is_primary_culture = no
-				NOT = { is_culture_group = germanic }
-			}
-			militancy = 4
-			consciousness = 3
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					is_core = SLV
-					is_core = ROM
-					is_core = SER
-					is_core = CRO
-				}
-			}
-			remove_province_modifier = nationalist_agitation
-			add_province_modifier = {
-				name = nationalist_agitation
-				duration = 1095
-			}
-		}
-	}
-}
-
 
 # Saarbrücker Revolution event
 country_event = {
@@ -3612,10 +3550,10 @@ country_event = {
 			}
 			secede_province = SAA
 		}
-	 #   779 = { add_core = CRO }
-	 #   793 = { add_core = CRO }
-	 #   3283 = { add_core = CRO }
-	 #   3289 = { add_core = CRO }
+	#	779 = { add_core = CRO }
+	#	793 = { add_core = CRO }
+	#	3283 = { add_core = CRO }
+	#	3289 = { add_core = CRO }
 		relation = { who = SAA value = -100 }
 		any_owned = {
 			limit = { is_core = LOR }
@@ -3651,7 +3589,19 @@ country_event = {
 				duration = 7
 			}
 			relation = {
-				who = FRA
+				who = FRR
+				value = 200
+			}
+			relation = {
+				who = FRZ
+				value = 200
+			}
+			relation = {
+				who = BOR
+				value = 200
+			}
+			relation = {
+				who = VIC
 				value = 200
 			}
 		}

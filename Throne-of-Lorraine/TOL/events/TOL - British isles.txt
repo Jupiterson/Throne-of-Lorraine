@@ -61,7 +61,7 @@ country_event = {
 			factor = 0.3
 		}
 	}
-			  
+			
 	option = {
 		name = "Scotland-Brazil"
 		set_country_flag = scotlandbrazil_ai
@@ -154,11 +154,11 @@ country_event = {
 			defender_goal = { casus_belli = status_quo }
 		}
 		THIS = { 
-		    badboy = -22
+		badboy = -22
 		}
 		IRE = { country_event = 28018 }
 		random = {
-			chance = 0.2
+			chance = 20
 			set_country_flag = irish_integration
 		}
 		ai_chance = {
@@ -174,7 +174,7 @@ country_event = {
 			secede_province = IRR
 		}
 		ENG = { 
-		    badboy = -5
+		badboy = -5
 		}
 		ai_chance = {
 			factor = 0
@@ -235,13 +235,13 @@ country_event = {
 			limit = { 
 				NOT = { has_pop_culture = irish }
 			}
-			average_militancy = 4
+			militancy = 4
 		}
 		any_pop = {
 			limit = { 
 				has_pop_culture = irish
 			}
-			average_militancy = -2
+			militancy = -2
 		}
 		ai_chance = {
 			factor = 0.8
@@ -253,13 +253,13 @@ country_event = {
 			limit = { 
 				NOT = { has_pop_culture = irish }
 			}
-			average_militancy = -2
+			militancy = -2
 		}
 		any_pop = {
 			limit = { 
 				has_pop_culture = irish
 			}
-			average_militancy = 4
+			militancy = 4
 		}
 		ai_chance = {
 			factor = 0.2
@@ -284,7 +284,7 @@ country_event = {
 			call_ally = no
 		}
 		random = {
-			chance = 0.25
+			chance = 25
 			relation = {
 				who = ENG
 				value = -75
@@ -326,7 +326,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-	    OR = {
+	OR = {
 			tag = ENL
 			tag = UOW
 		}
@@ -342,7 +342,7 @@ country_event = {
 		add_country_modifier = { 
 			name = global_baby_boom
 			duration = 3650
-	    }
+		}
 		ai_chance = {
 			factor = 1
 		}

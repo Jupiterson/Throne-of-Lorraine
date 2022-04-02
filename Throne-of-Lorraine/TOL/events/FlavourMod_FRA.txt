@@ -50,7 +50,18 @@ country_event = {
 			relation = { who = THIS value = -400 }
 			diplomatic_influence = { who = THIS value = -400 }
 		}
-		any_country = {	limit = { is_greater_power = yes NOT = { alliance_with = FROM } capital_scope = { continent = europe } NOT = { tag = FRA tag = BOR } }
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				NOT = { alliance_with = FROM }
+				capital_scope = { continent = europe }
+				NOT = {
+					tag = FRR
+					tag = FRZ
+					tag = BOR
+					tag = VIC
+				}
+			}
 			country_event = 99985
 		}
 		ai_chance = { factor = 1 }
@@ -90,10 +101,17 @@ country_event = {
 		name = "EVT99985OPTA"
 		set_country_flag = support_walloon_owner
 		random_owned = {
-			limit = { exists = FRA }
+			limit = { exists = FRR }
 			owner = {
-				leave_alliance = FRA
-				relation = { who = FRA value = -250 }
+				leave_alliance = FRR
+				relation = { who = FRR value = -250 }
+			}
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			owner = {
+				leave_alliance = FRZ
+				relation = { who = FRZ value = -250 }
 			}
 		}
 		random_owned = {
@@ -103,6 +121,13 @@ country_event = {
 				relation = { who = BOR value = -250 }
 			}
 		}
+		random_owned = {
+			limit = { exists = VIC }
+			owner = {
+				leave_alliance = VIC
+				relation = { who = VIC value = -250 }
+			}
+		}
 		create_alliance = FROM
 		relation = { who = FROM value = 400 }
 		ai_chance = {
@@ -110,15 +135,19 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					alliance_with = FRA
+					alliance_with = FRR
+					alliance_with = FRZ
 					alliance_with = BOR
+					alliance_with = VIC
 				}
 			}
 			modifier = {
 				factor = 75
 				OR = {
-					relation = { who = FRA value = 175 }
+					relation = { who = FRR value = 175 }
+					relation = { who = FRZ value = 175 }
 					relation = { who = BOR value = 175 }
+					relation = { who = VIC value = 175 }
 				}
 			}
 			modifier = {
@@ -135,15 +164,19 @@ country_event = {
 			modifier = {
 				factor = 100
 				OR = {
-					alliance_with = FRA
+					alliance_with = FRR
+					alliance_with = FRZ
 					alliance_with = BOR
+					alliance_with = VIC
 				}
 			}
 			modifier = {
 				factor = 10
 				OR = {
-					relation = { who = FRA value = 175 }
+					relation = { who = FRR value = 175 }
+					relation = { who = FRZ value = 175 }
 					relation = { who = BOR value = 175 }
+					relation = { who = VIC value = 175 }
 				}
 			}
 		}

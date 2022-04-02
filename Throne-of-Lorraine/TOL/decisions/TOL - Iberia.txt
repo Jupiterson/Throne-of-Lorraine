@@ -14,7 +14,10 @@ political_decisions = {
 			nationalism_n_imperialism = 1
 			is_greater_power = yes
 			NOT = {
-				war_with = FRA
+				war_with = FRR
+				war_with = FRZ
+				war_with = BOR
+				war_with = VIC
 			}
 			OR = {
 				IBR = {
@@ -103,17 +106,17 @@ political_decisions = {
 			OR = {
 				any_owned_province = { is_core = IBR }
 				is_sphere_leader_of = SPA
-				is_sphere_leader_of = SPA
 				is_sphere_leader_of = LEO
 				is_sphere_leader_of = POR
 				is_sphere_leader_of = ARN
+				is_sphere_leader_of = BSQ
 			}
 		}
 
 		allow = {
 			war = no
 			is_greater_power = yes
-		   IBR = {
+			IBR = {
 				all_core = {
 					OR = {
 						owned_by = THIS

@@ -649,7 +649,10 @@ political_decisions = {
 	kwangchowan_treaty_port = {
 		picture = kwangchowan_china
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			is_greater_power = yes
 			capital = 425
 			has_country_modifier = negotiating_treaty

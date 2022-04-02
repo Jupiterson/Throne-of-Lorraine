@@ -368,7 +368,7 @@ country_event = {
 			}
 			secede_province = DAI
 		}
-		 war = {
+		war = {
 			target = DAI
 			attacker_goal = {
 				casus_belli = unification_annex_casus_belli
@@ -396,7 +396,7 @@ country_event = {
 			secede_province = TAI 
 		CHI_1485 = { add_core = TAI }
 		}
-		 war = {
+		war = {
 			target = TAI
 			attacker_goal = {
 				casus_belli = unification_annex_casus_belli
@@ -459,6 +459,7 @@ country_event = {
 	}
 	
 	option = {
+		name = "FEU13A"
 		random_owned = {
 			any_country = {
 				limit = {

@@ -7,7 +7,12 @@ country_event = {
 	picture = diplomats_examining
 	mean_time_to_happen = { months = 5 }
 	trigger = {
-		tag = FRA
+		OR = {
+			tag = FRR
+			tag = FRZ
+			tag = BOR
+			tag = VIC
+		}
 		exists = ADO
 		owns = 457
 		owns = 463
@@ -37,7 +42,7 @@ country_event = {
 country_event = {
 	id = 100113
 	title = "End of France"
-	desc = "Wih the Fall of our Empire, we no longer deserve to call ourselfs France, merely Ile de France"
+	desc = "With the fall of our empire, we no longer deserve to call ourselfs France, merely Ile de France"
 	picture = "popularrevolt"
 
 	trigger = {
@@ -49,16 +54,16 @@ country_event = {
 			AND = {
 				exists = FRA
 				OR = {
-				   exists = FRZ
-				   exists = OCC
+					exists = FRZ
+					exists = OCC
 				}
 				exists = BRG
 				OR = {
-				exists = PIC
-				exists = WLL
-				exists = BEL
+					exists = PIC
+					exists = WLL
+					exists = BEL
 				}
-			}	   
+			}	
 		}
 		NOT = { tag = IDF }
 		IDF = { exists = no }
@@ -70,12 +75,12 @@ country_event = {
 
 	option = {
 		name = "We have fallen"
-		 any_owned = {
-			 limit = { 
-				 is_core = FRA			 			 
-			 }
-		 add_core = IDF
-		 }
+		any_owned = {
+			limit = { 
+				is_core = FRA						
+			}
+		add_core = IDF
+		}
 		change_tag_no_core_switch = IDF
 		add_country_modifier = { name = global_baby_boom duration = 5475 }
 		any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } militancy = -4 }
@@ -271,7 +276,7 @@ country_event = {
 		change_tag_no_core_switch = FRZ 
 		
 		ai_chance = { factor = 0 }
-	  }
+	}
  }
 	
 ##### OCCITAN VERSION #####
@@ -392,7 +397,7 @@ country_event = {
 			defender_goal = { casus_belli = install_democracy }
 		}		
 		ai_chance = { factor = 0 }
-	  }
+	}
  }
 	
 	

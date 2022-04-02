@@ -48,9 +48,11 @@ country_event = {
 		set_global_flag = bloodbath_1
 		ZAC = { all_core = { add_core = THIS } }
 		any_pop = {
-			limit = { 
-				culture = nahua
-				culture = mayan
+			limit = {
+				OR = {
+					culture = nahua
+					culture = mayan
+				}
 			}
 			militancy = -2
 		}
@@ -78,9 +80,11 @@ country_event = {
 		set_global_flag = bloodbath_2
 		MEX = { all_core = { add_core = THIS } }
 		any_pop = {
-			limit = { 
-				culture = mexican
-				culture = basque
+			limit = {
+				OR = {
+					culture = mexican
+					culture = basque
+				}
 			}
 			militancy = -2
 		}

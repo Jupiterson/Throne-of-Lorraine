@@ -7,50 +7,50 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			  name = "Tell the pirates we accept their requests"
-			  set_country_flag = marque_letter_reply
-			  diplomatic_influence = {
-				who = PIR
-				value = 300
-			  }
-			  badboy = 5
-			   relation = {
-				who = PIR
-				value = 150
-			  }
-			   relation = {
-				who = GEN
-				value = -150
-			  }
-			  PIR = { country_event = 28001 }
-			  ai_chance = {
-				factor = 70
-				modifier = { factor = 0 badboy = 0.8  }
-			  }
-			  }
+		name = "Tell the pirates we accept their requests"
+		set_country_flag = marque_letter_reply
+		diplomatic_influence = {
+			who = PIR
+			value = 300
+		}
+		badboy = 5
+		relation = {
+			who = PIR
+			value = 150
+		}
+		relation = {
+			who = GEN
+			value = -150
+		}
+		PIR = { country_event = 28001 }
+		ai_chance = {
+			factor = 70
+			modifier = { factor = 0 badboy = 0.8  }
+		}
+	}
 
-	option = {		  
-			  name = "We will never help the pirate scum"
-			  set_country_flag = marque_letter_reply
-			  diplomatic_influence = {
-				who = PIR
-				value = -300
-			  }
-			  relation = {
-				who = GEN
-				value = 50
-			  }
-			  relation = {
-				who = PIR
-				value = -100
-			  }
-			  PIR = { country_event = 28002 }
-			  ai_chance = {
-				factor = 30
-			  }
-			  }		
-			  }
-			  
+	option = {		
+		name = "We will never help the pirate scum"
+		set_country_flag = marque_letter_reply
+		diplomatic_influence = {
+			who = PIR
+			value = -300
+		}
+		relation = {
+			who = GEN
+			value = 50
+		}
+		relation = {
+			who = PIR
+			value = -100
+		}
+		PIR = { country_event = 28002 }
+		ai_chance = {
+			factor = 30
+		}
+	}		
+}
+			
 # The Amauldi Kingdom has accepted to give us marque letters
 country_event = {
 	id = 28001
@@ -59,12 +59,12 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			  name = "For the king!"
-			  remove_country_modifier = country_of_buccaneers
-			  set_country_flag = marque_letter_request_positive
-			  }
-			  }
-			  
+		name = "For the king!"
+		remove_country_modifier = country_of_buccaneers
+		set_country_flag = marque_letter_request_positive
+	}
+}
+			
 # The Amauldi Kingdom refuses to give us marque letters
 country_event = {
 	id = 28002
@@ -73,11 +73,11 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			  name = "Yarr that's the right way"
-			  set_country_flag = marque_letter_request_negative
-			  }		  
-			  }
-			  
+		name = "Yarr that's the right way"
+		set_country_flag = marque_letter_request_negative
+	}		
+}
+			
 # The Pirate Federation makes an offer to purchase floride
 country_event = {
 	id = 28003
@@ -87,29 +87,29 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			  name = "Accept; we don't need that land anyway"
-			  set_country_flag = floride_purchase_reply
-			  treasury = 100000
-			  USA_200 = {
-				secede_province = PIR
-				remove_core = USA
-				}
-			  PIR = { country_event = 28004 }
-			  ai_chance = {
-				factor = 100
-			  }
-			  }
-			  
-	option = {		  
-			  name = "We will never cede one of our gems"
-			  set_country_flag = floride_purchase_reply
-			  PIR = { country_event = 28005 }
-			  ai_chance = {
-				factor = 0
-			  }
-			  }		
-			  } 
-			  
+		name = "Accept; we don't need that land anyway"
+		set_country_flag = floride_purchase_reply
+		treasury = 100000
+		USA_200 = {
+			secede_province = PIR
+			remove_core = USA
+			}
+		PIR = { country_event = 28004 }
+		ai_chance = {
+			factor = 100
+		}
+	}
+			
+	option = {		
+		name = "We will never cede one of our gems"
+		set_country_flag = floride_purchase_reply
+		PIR = { country_event = 28005 }
+		ai_chance = {
+			factor = 0
+		}
+	}		
+} 
+			
 # The Amauldi Kingdom has accepted our offer
 country_event = {
 	id = 28004
@@ -118,14 +118,14 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			  name = "New land for us"
-			  USA_200 = {
-				add_core = THIS
-			  } 
-			  set_country_flag = floride_purchase_reply_positive
-			  }		  
-			  } 
-			  
+		name = "New land for us"
+		USA_200 = {
+			add_core = THIS
+		} 
+		set_country_flag = floride_purchase_reply_positive
+	}		
+} 
+			
 # The Amauldi Kingdom refuses to sell us Floride
 country_event = {
 	id = 28005
@@ -134,12 +134,12 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			  name = "At least we got our money back"
-			  treasury = 100000
-			  set_country_flag = floride_purchase_reply_negative
-			  }		  
-			  }
-			  
+		name = "At least we got our money back"
+		treasury = 100000
+		set_country_flag = floride_purchase_reply_negative
+	}		
+}
+			
 # Genoa losing the war
 country_event = {
 	id = 28006
@@ -169,26 +169,26 @@ country_event = {
 	}	
 	
 	option = {
-			  name = "We must surrender for the stability of our great country"
-			  set_country_flag = losing_war
-			  PIR = { country_event = 28007 }
-			  ai_chance = {
-				factor = 100
-			  }
-			  }
+		name = "We must surrender for the stability of our great country"
+		set_country_flag = losing_war
+		PIR = { country_event = 28007 }
+		ai_chance = {
+			factor = 100
+		}
+	}
 
-	option = {		  
-			  name = "We are close to victory. We can't surrender now"
-			  set_country_flag = losing_war
-			  badboy = 3
-			  war_exhaustion = 5
-			  PIR = { country_event = 28008 }
-			  ai_chance = {
-				factor = 0
-			  }
-			  }
-			  }			  
-			  
+	option = {		
+		name = "We are close to victory. We can't surrender now"
+		set_country_flag = losing_war
+		badboy = 3
+		war_exhaustion = 5
+		PIR = { country_event = 28008 }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}			
+			
 # Genoa surrenders
 country_event = {
 	id = 28007
@@ -197,53 +197,53 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			  name = "We accept the $FROMCOUNTRY_ADJ$ proposal"
-			  end_war = GEN
-			  set_country_flag = pirates_accepted_surrender
-			  ai_chance = {
-				factor = 70
-			  }
-			  }
+		name = "We accept the $FROMCOUNTRY_ADJ$ proposal"
+		end_war = GEN
+		set_country_flag = pirates_accepted_surrender
+		ai_chance = {
+			factor = 70
+	}
+}
 
-	option = {		  
-			  name = "We must take advantage of the $FROMCOUNTRY_ADJ$ weakness and kick them out of the continent"
-			  badboy = 10
-			  2190 = {
-				add_core = THIS
-			  }
-			  2196 = {
-				add_core = THIS
-			  } 
-			  2200 = {
-				add_core = THIS
-			  }
-			  2231 = {
-				add_core = THIS
-			  }
-			  2232 = {
-				add_core = THIS
-			  }
-			  2233 = {
-				add_core = THIS
-			  }
-			  3410 = {
-				add_core = THIS
-			  }
-			  add_casus_belli = {
-				target = PIR
-				type = acquire_all_cores
-				months = 12
-			  }
-			  GEN = { country_event = 28009 }
-			  set_country_flag = pirates_claiming_more
-			  ai_chance = {
-				factor = 30
-				modifier = { factor = 20 war_exhaustion = 5  }
-				modifier = { factor = 10 war_exhaustion = 10  }
-			  }
-			  }	   
-			  }
-			  
+	option = {		
+		name = "We must take advantage of the $FROMCOUNTRY_ADJ$ weakness and kick them out of the continent"
+		badboy = 10
+		2190 = {
+			add_core = THIS
+		}
+		2196 = {
+			add_core = THIS
+		} 
+		2200 = {
+			add_core = THIS
+		}
+		2231 = {
+			add_core = THIS
+		}
+		2232 = {
+			add_core = THIS
+		}
+		2233 = {
+			add_core = THIS
+		}
+		3410 = {
+			add_core = THIS
+		}
+		add_casus_belli = {
+			target = PIR
+			type = acquire_all_cores
+			months = 12
+		}
+		GEN = { country_event = 28009 }
+		set_country_flag = pirates_claiming_more
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 20 war_exhaustion = 5  }
+			modifier = { factor = 10 war_exhaustion = 10  }
+		}
+	}	
+}
+			
 # Genoa doesn't surrender
 country_event = {
 	id = 28008
@@ -252,60 +252,60 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			  name = "We can't waste more lives"
-			  set_country_flag = pirates_not_asking_more
-			  ai_chance = {
-				factor = 70
-			  }
-			  }
+		name = "We can't waste more lives"
+		set_country_flag = pirates_not_asking_more
+		ai_chance = {
+			factor = 70
+		}
+	}
 
-	option = {		  
-			  name = "We must take advantage of the $FROMCOUNTRY_ADJ$ weakness and kick them out of the continent"
-			  badboy = 10
-			  2190 = {
-				add_core = THIS
-			  }
-			  2196 = {
-				add_core = THIS
-			  } 
-			  2200 = {
-				add_core = THIS
-			  }
-			  3410 = {
-				add_core = THIS
-			  }
-			  2227 = {
-				add_core = THIS
-			  }
-			  2231 = {
-				add_core = THIS
-			  }
-			  2232 = {
-				add_core = THIS
-			  }
-			  2233 = {
-				add_core = THIS
-			  }
-			  2237 = {
-				add_core = THIS
-			  }
-			  2238 = {
-				add_core = THIS
-			  }
-			  add_casus_belli = {
-				target = PIR
-				type = acquire_all_cores
-				months = 12
-			  }
-			  GEN = { country_event = 28009 }
-			  set_country_flag = pirates_claiming_more
-			  ai_chance = {
-				factor = 30
-				modifier = { factor = 20 war_exhaustion = 5  }
-				modifier = { factor = 10 war_exhaustion = 10  }
-			  }
-			  }
-			  }
+	option = {		
+		name = "We must take advantage of the $FROMCOUNTRY_ADJ$ weakness and kick them out of the continent"
+		badboy = 10
+		2190 = {
+			add_core = THIS
+		}
+		2196 = {
+			add_core = THIS
+		} 
+		2200 = {
+			add_core = THIS
+		}
+		3410 = {
+			add_core = THIS
+		}
+		2227 = {
+			add_core = THIS
+		}
+		2231 = {
+			add_core = THIS
+		}
+		2232 = {
+			add_core = THIS
+		}
+		2233 = {
+			add_core = THIS
+		}
+		2237 = {
+			add_core = THIS
+		}
+		2238 = {
+			add_core = THIS
+		}
+		add_casus_belli = {
+			target = PIR
+			type = acquire_all_cores
+			months = 12
+		}
+		GEN = { country_event = 28009 }
+		set_country_flag = pirates_claiming_more
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 20 war_exhaustion = 5  }
+			modifier = { factor = 10 war_exhaustion = 10  }
+		}
+	}
+}
 
 # Pirates claiming other Genoese colonies
 country_event = {
@@ -315,15 +315,15 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			  name = "We shall defeat them"
-			  }
-			  }
+		name = "We shall defeat them"
+		}
+	}
 
-# Pirates choicing capital
+# Pirates choosing capital
 country_event = {
 	id = 28010
-	title = "Choicing a capital"
-	desc = "Now that we have finally gained our independence it's time to choice where to place our capital."
+	title = "Choosing a capital"
+	desc = "Now that we have finally gained our independence it's time to choose where to place our capital."
 	picture = pirates_independence
 	
 	trigger = {
@@ -337,67 +337,67 @@ country_event = {
 	}	
 	
 	option = {
-			  name = "Why chainging? Capo Dominica is already the right place"
-			  set_global_flag = achieved_independence
-			  capital = 2215
-			  2215 = {
-				fort = 2
-				naval_base = 2
-				trade_goods = precious_metal
-				RGO_size = 4
-			  }
-			  ai_chance = {
-				factor = 50
-			  }
-			  }
+		name = "Why change it? Capo Dominica is already the best place."
+		set_global_flag = achieved_independence
+		capital = 2215
+		2215 = {
+			fort = 2
+			naval_base = 2
+			trade_goods = precious_metal
+			RGO_size = 4
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
 
 	option = {
-			  name = "Forte Azzurro shall be our new base"
-			  set_global_flag = achieved_independence
-			  capital = 200
-			  200 = {
-				fort = 2
-				naval_base = 2
-				trade_goods = precious_metal
-				RGO_size = 4
-			  }
-			  ai_chance = {
-				factor = 20
-			  }
-			  }
-			  
+		name = "Forte Azzurro shall be our new base."
+		set_global_flag = achieved_independence
+		capital = 200
+		200 = {
+			fort = 2
+			naval_base = 2
+			trade_goods = precious_metal
+			RGO_size = 4
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+			
 	option = {
-			  name = "Giamaica is ideal because of it's position"
-			  set_global_flag = achieved_independence
-			  capital = 2217
-			  2217 = {
-				fort = 2
-				naval_base = 2
-				trade_goods = precious_metal
-				RGO_size = 4
-			  }
-			  ai_chance = {
-				factor = 20
-			  }
-			  }
-			  
+		name = "Giamaica is ideal because of it's position."
+		set_global_flag = achieved_independence
+		capital = 2217
+		2217 = {
+			fort = 2
+			naval_base = 2
+			trade_goods = precious_metal
+			RGO_size = 4
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+			
 	option = {
-			  name = "Why nobody thought about Porto Rico?"
-			  set_global_flag = achieved_independence
-			  capital = 2222
-			  2222 = {
-				fort = 2
-				naval_base = 2
-				trade_goods = precious_metal
-				RGO_size = 4
-			  }
-			  ai_chance = {
-				factor = 10
-			  }
-			  }
-			  }
+		name = "Why nobody thought about Porto Rico?"
+		set_global_flag = achieved_independence
+		capital = 2222
+		2222 = {
+			fort = 2
+			naval_base = 2
+			trade_goods = precious_metal
+			RGO_size = 4
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
 #Pirate-Aztecs-Relations	
-	country_event = {
+country_event = {
 	id = 23908
 	title = "EVTNAME23908"
 	desc = "EVTDESC23908"
@@ -405,29 +405,29 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			  name = "EVT23908OPTA"
-			  set_country_flag = pirate_accept_aztec
-			   relation = {
-				who = MEX
-				value = 200
-			  }
-			  create_alliance = MEX
-			  
+		name = "EVT23908OPTA"
+		set_country_flag = pirate_accept_aztec
+		relation = {
+			who = MEX
+			value = 200
+		}
+		create_alliance = MEX
+			
 		ai_chance = {
 			factor = 80
 		}
 	}
 
-	option = {		  
-			  name = "EVT23908OPTB"
-			  set_country_flag = pirate_reject_aztec
-			   relation = {
-				who = MEX
-				value = -100
-			  }
-			  
+	option = {		
+		name = "EVT23908OPTB"
+		set_country_flag = pirate_reject_aztec
+		relation = {
+			who = MEX
+			value = -100
+		}
+		
 		ai_chance = {
 			factor = 20
 		}		
-}	
+	}	
 }

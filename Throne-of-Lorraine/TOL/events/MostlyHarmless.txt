@@ -46,7 +46,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 		}
 	}
 

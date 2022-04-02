@@ -1,6 +1,6 @@
 #############################################################
 #															#
-#					  Greater Germany Events					#
+#					Greater Germany Events					#
 #															#
 #############################################################
 
@@ -507,8 +507,10 @@ country_event = {
 				OR = {
 					neighbour = THIS
 					is_culture_group = THIS
-					tag = FRA
+					tag = FRR
+					tag = FRZ
 					tag = BOR
+					tag = VIC
 					tag = RUS
 					tag = ENG
 					tag = IMF
@@ -564,8 +566,10 @@ country_event = {
 				OR = {
 					neighbour = THIS
 					is_culture_group = THIS
-					tag = FRA
+					tag = FRR
+					tag = FRZ
 					tag = BOR
+					tag = VIC
 					tag = RUS
 					tag = ENG
 					tag = IMF
@@ -1147,8 +1151,10 @@ country_event = {
 				OR = {
 					neighbour = THIS
 					is_culture_group = THIS
-					tag = FRA
+					tag = FRR
+					tag = FRZ
 					tag = BOR
+					tag = VIC
 					tag = RUS
 					tag = ENG
 					tag = IMF
@@ -1625,8 +1631,10 @@ country_event = {
 				OR = {
 					neighbour = THIS
 					is_culture_group = THIS
-					tag = FRA
+					tag = FRR
+					tag = FRZ
 					tag = BOR
+					tag = VIC
 					tag = RUS
 					tag = ENG
 					tag = IMF
@@ -1822,8 +1830,10 @@ country_event = {
 				is_greater_power = yes
 				capital_scope = { continent = europe }
 				OR = {
-					tag = FRA
+					tag = FRR
+					tag = FRZ
 					tag = BOR
+					tag = VIC
 					tag = RUS
 					NOT = { relation = { who = THIS value = 0 } }
 				}

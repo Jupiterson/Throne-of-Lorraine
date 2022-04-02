@@ -4,10 +4,11 @@ political_decisions = {
 		picture = diplomats
 		potential = {
 			OR = { 
-				tag = BOR
 				tag = FRR
-				has_country_flag = federation_complete
 				tag = FRZ
+				tag = BOR
+				tag = VIC
+				has_country_flag = federation_complete
 			}
 			NOT = {
 				has_country_flag = proclaim_gauls
@@ -55,8 +56,12 @@ political_decisions = {
 		picture = diplomats
 		potential = {
 			OR = {
-				AND = { 
-					tag = FRA
+				AND = {
+					OR = {
+						tag = FRR
+						tag = FRZ
+						tag = BOR
+					}
 					OR = {
 						government = fascist_dictatorship
 						government = absolute_monarchy
@@ -144,9 +149,9 @@ political_decisions = {
 	declare_federation = {
 		picture = switch_to_liberty
 		potential = {
-		tag = FRA
-		NOT = { government = democracy }
-		NOT = { has_country_flag = chosen_path }
+			tag = FRA
+			NOT = { government = democracy }
+			NOT = { has_country_flag = chosen_path }
 		}
 
 		allow = {
@@ -158,8 +163,8 @@ political_decisions = {
 			prestige = -20
 			set_country_flag = chosen_path
 			set_country_flag = federation_path
-#			political_reform = federalism
-		any_pop = {
+			political_reform = federalism
+			any_pop = {
 				limit = { has_pop_culture = occitan }
 				consciousness = -3
 				militancy = -3
@@ -378,7 +383,7 @@ political_decisions = {
 					add_core = BOR
 					remove_core = FRA 
 				} 
-			change_tag = BOR 
+				change_tag = BOR 
 			}
 		}
 
@@ -447,9 +452,9 @@ political_decisions = {
 	suppress_minorities = {
 		picture = meeting
 		potential = {
-		tag = FRA
-		NOT = { has_country_flag = who_needs_rights_anyways }
-		has_country_flag = centralization_path
+			tag = FRA
+			NOT = { has_country_flag = who_needs_rights_anyways }
+			has_country_flag = centralization_path
 		}
 
 		allow = {
@@ -636,14 +641,14 @@ political_decisions = {
 			}
 			any_owned = { 
 				limit = {
-				is_core = OCC
-				is_core = BRT
-				is_core = BRG
-				is_core = CAT
-				is_core = PRO
-				is_core = WLL
-				is_core = PIC
-				is_core = NRM
+					is_core = OCC
+					is_core = BRT
+					is_core = BRG
+					is_core = CAT
+					is_core = PRO
+					is_core = WLL
+					is_core = PIC
+					is_core = NRM
 				}
 				add_core = FRZ 
 			}							
@@ -728,13 +733,13 @@ political_decisions = {
 		picture = british_propaganda
 		potential = {
 			OR = {
+				tag = FRR
 				tag = FRZ
 				tag = BOR
+				tag = VIC
 				tag = OCC
-				tag = FRR
 				tag = BEL
 				tag = ARP
-				tag = VIC
 			}
 			war = no
 			NOT = { exists = FRA }

@@ -127,8 +127,10 @@ political_decisions = {
 			NOT = { has_global_flag = watching_the_rhine }
 			OR = {
 				has_country_flag = french_claimed_the_rhine
-				FRA = { exists = yes NOT = { relation = { who = FRA value = 0 } } }
-				BOR = { exists = yes NOT = { relation = { who = BOR value = 0 } } }
+				FRR = { exists = yes NOT = { relation = { who = FRR value = 0 } } }
+				FRZ = { exists = yes NOT = { relation = { who = FRZ value = 0 } } }
+				BOR = { exists = yes NOT = { relation = { who = FRR value = 0 } } }
+				VIC = { exists = yes NOT = { relation = { who = FRZ value = 0 } } }
 				575 = { owner = { NOT = { is_culture_group = germanic } } }
 				576 = { owner = { NOT = { is_culture_group = germanic } } }
 				577 = { owner = { NOT = { is_culture_group = germanic } } }

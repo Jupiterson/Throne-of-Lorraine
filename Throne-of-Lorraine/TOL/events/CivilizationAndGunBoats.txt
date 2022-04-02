@@ -1,6 +1,6 @@
 #####################################################################
 #																	#
-#					 Uncivilized Country Events						#
+#					Uncivilized Country Events						#
 #																	#
 #####################################################################
 # Audax Validator "." Ignore_NEXT
@@ -93,9 +93,9 @@ country_event = {
 				is_vassal = yes
 			}
 			modifier = {
-				 factor = 1.5
-				 nationalvalue = nv_tradition
-			 }
+				factor = 1.5
+				nationalvalue = nv_tradition
+			}
 		}
 	}
 }
@@ -1905,7 +1905,7 @@ country_event = {
 
 #####################################################################
 #																	#
-#						 Generic Unciv Events						#
+#						Generic Unciv Events						#
 #																	#
 #####################################################################
 
@@ -4990,7 +4990,10 @@ country_event = {
 						has_country_flag = catholic_country
 					}
 					AND = {
-						primary_culture = french
+						OR = {
+							primary_culture = french
+							primary_culture = occitan
+						}
 						is_greater_power = yes
 						capital = 425
 					}

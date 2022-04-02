@@ -4,8 +4,10 @@ political_decisions = {
 		picture = build_the_eiffel_tower
 			potential = {
 			OR = {
-				FRA = { has_country_flag = eiffel_tower_built }
+				FRR = { has_country_flag = eiffel_tower_built }
+				FRZ = { has_country_flag = eiffel_tower_built }
 				BOR = { has_country_flag = eiffel_tower_built }
+				VIC = { has_country_flag = eiffel_tower_built }
 			}
 			is_greater_power = yes
 			425 = {

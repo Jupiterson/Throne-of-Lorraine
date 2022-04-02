@@ -41,7 +41,7 @@ country_event = {
 		}
 		624 = { add_core = AUS }
 		ai_chance = {
-			   factor = 35
+			factor = 35
 		}
 	}
 
@@ -54,7 +54,7 @@ country_event = {
 		}
 		624 = { add_core = AUS }
 		ai_chance = {
-			   factor = 55
+			factor = 55
 		}
 	}
 
@@ -62,7 +62,7 @@ country_event = {
 		name = "Let them have the province."
 		prestige = 2
 		ai_chance = {
-			   factor = 10
+			factor = 10
 		}
 	}
 
@@ -85,7 +85,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			   factor = 95
+			factor = 95
 		}
 	}
 
@@ -97,7 +97,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			   factor = 5
+			factor = 5
 		}
 	}
 
@@ -141,7 +141,7 @@ country_event = {
 		name = "Blast"
 		prestige = -5
 		ai_chance = {
-			   factor = 55
+			factor = 55
 		}
 	}
 
@@ -162,7 +162,7 @@ country_event = {
 		}
 		set_country_flag = magyarwarnumber1
 		ai_chance = {
-			   factor = 45
+			factor = 45
 		}
 	}
 
@@ -188,7 +188,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			   factor = 75
+			factor = 75
 		}
 	}
 
@@ -200,7 +200,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			   factor = 25
+			factor = 25
 		}
 	}
 
@@ -232,7 +232,7 @@ country_event = {
 		}
 		set_country_flag = magyarwarnumber1
 		ai_chance = {
-			   factor = 80
+			factor = 80
 		}
 	}
 
@@ -240,7 +240,7 @@ country_event = {
 		name = "So be it."
 		prestige = -15
 		ai_chance = {
-			   factor = 20
+			factor = 20
 		}
 	}
 
@@ -383,7 +383,7 @@ country_event = {
 		relation = { who = HUN value = 200 }
 		set_global_flag = huncivilwarloss
 		ai_chance = {
-			   factor = 65
+			factor = 65
 		}
 	}
 
@@ -405,7 +405,7 @@ country_event = {
 		diplomatic_influence = { who = HUN value = 200 }
 		relation = { who = HUN value = 200 }
 		ai_chance = {
-			   factor = 20
+			factor = 20
 		}
 	}
 
@@ -423,7 +423,7 @@ country_event = {
 			remove_core = HUN
 		}
 		ai_chance = {
-			   factor = 15
+			factor = 15
 		}
 	}
 
@@ -532,7 +532,7 @@ country_event = {
 			consciousness = -5
 		}
 		ai_chance = {
-				   factor = 65
+				factor = 65
 			}
 	}
 
@@ -546,7 +546,7 @@ country_event = {
 			consciousness = 9
 		}
 		ai_chance = {
-				   factor = 35
+				factor = 35
 			}
 	}
 }
@@ -609,7 +609,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			   factor = 0
+			factor = 0
 		}
 	}
 
@@ -617,7 +617,7 @@ country_event = {
 		name = "We will make no concessions."
 		prestige = 2
 		ai_chance = {
-			   factor = 100
+			factor = 100
 		}
 	}
 
@@ -661,7 +661,7 @@ country_event = {
 			relation = { who = THIS value = -100 }
 		}
 		ai_chance = {
-			   factor = 60
+			factor = 60
 		}
 	}
 
@@ -673,7 +673,7 @@ country_event = {
 			prestige = 10
 		}
 		ai_chance = {
-			   factor = 40
+			factor = 40
 		}
 	}
 
@@ -922,14 +922,14 @@ country_event = {
 		name = "EVTOPTA188138"
 		AUS = { country_event = 188139 }
 		ai_chance = {
-			   factor = 95
+			factor = 95
 		}
 	}
 	option = {
 		name = "EVTOPTB188138"
 		AUS = { country_event = 188140 }
 		ai_chance = {
-			   factor = 5
+			factor = 5
 		}
 	}
 }
@@ -998,7 +998,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			   factor = 95
+			factor = 95
 		}
 	}
 	option = {
@@ -1043,7 +1043,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			   factor = 5
+			factor = 5
 			modifier = {
 				factor = 2
 				any_greater_power = { war_with = THIS }
@@ -1146,7 +1146,7 @@ country_event = {
 		prestige = -10
 		RUS = { country_event = 32512 }
 		ai_chance = {
-			   factor = 95
+			factor = 95
 		}
 	}
 	option = {
@@ -1154,7 +1154,7 @@ country_event = {
 		prestige = 10
 		war_exhaustion = -10
 		ai_chance = {
-			   factor = 5
+			factor = 5
 		}
 	}
 }
@@ -1353,7 +1353,7 @@ country_event = {
 		}
 		set_country_flag = second_balkan_war_help
 		ai_chance = {
-			   factor = 85
+			factor = 85
 		}
 	}
 	option = {
@@ -1367,7 +1367,7 @@ country_event = {
 			value = 50
 		}
 		ai_chance = {
-			   factor = 15
+			factor = 15
 			modifier = {
 				factor = 10
 				relation = {
@@ -1989,7 +1989,7 @@ country_event = {
 		}
 		set_country_flag = balkan_league_member
 		ai_chance = {
-			   factor = 85
+			factor = 85
 		}
 	}
 	option = {
@@ -2003,7 +2003,7 @@ country_event = {
 			value = 50
 		}
 		ai_chance = {
-			   factor = 15
+			factor = 15
 			modifier = {
 				factor = 10
 				relation = {
