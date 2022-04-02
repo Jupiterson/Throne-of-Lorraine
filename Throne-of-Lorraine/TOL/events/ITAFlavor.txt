@@ -987,8 +987,10 @@ country_event = {
 			owns = 728
 		}
 		OR = {
-			FRA = { exists = yes war = no }
+			FRR = { exists = yes war = no }
+			FRZ = { exists = yes war = no }
 			BOR = { exists = yes war = no }
+			VIC = { exists = yes war = no }
 		}
 	}
 
@@ -1000,11 +1002,19 @@ country_event = {
 		name = "EVT96161OPTA"
 		set_global_flag = plombieres_refused
 		random_owned = {
-			limit = { exists = FRA }
+			limit = { exists = FRR }
 			owner = {
-				465 = { add_core = FRA }
-				466 = { add_core = FRA }
-				472 = { add_core = FRA }
+				465 = { add_core = FRR }
+				466 = { add_core = FRR }
+				472 = { add_core = FRR }
+			}
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			owner = {
+				465 = { add_core = FRZ }
+				466 = { add_core = FRZ }
+				472 = { add_core = FRZ }
 			}
 		}
 		random_owned = {
@@ -1013,6 +1023,14 @@ country_event = {
 				465 = { add_core = BOR }
 				466 = { add_core = BOR }
 				472 = { add_core = BOR }
+			}
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			owner = {
+				465 = { add_core = VIC }
+				466 = { add_core = VIC }
+				472 = { add_core = VIC }
 			}
 		}
 
@@ -1068,7 +1086,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.3
-				primary_culture = french
+				OR = {
+					primary_culture = french
+					primary_culture = occitan
+				}
 				NOT = {
 					465 = { owned_by = ITA }
 					466 = { owned_by = ITA }
@@ -1127,7 +1148,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 2.5
-				primary_culture = french
+				OR = {
+					primary_culture = french
+					primary_culture = occitan
+				}
 				NOT = {
 					465 = { owned_by = ITA }
 					466 = { owned_by = ITA }
@@ -1136,7 +1160,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				primary_culture = french
+				OR = {
+					primary_culture = french
+					primary_culture = occitan
+				}
 				OR = {
 					465 = { owned_by = ITA }
 					466 = { owned_by = ITA }
@@ -1280,11 +1307,17 @@ country_event = {
 			limit = { is_sphere_leader_of = THIS }
 			set_country_flag = objects_to_italy
 		}
-		add_accepted_culture = south_italian
 		add_accepted_culture = north_italian
+		add_accepted_culture = south_italian
 		add_accepted_culture = central_italian
 		add_accepted_culture = sicilian
+		add_accepted_culture = provencial
 		add_accepted_culture = venetian
+		PRO = {
+			all_core = {
+				add_core = THIS
+			}
+		}
 		random_owned = {
 			limit = { owner = { is_culture_group = italian accepted_culture = french } }
 			owner = { remove_accepted_culture = french }

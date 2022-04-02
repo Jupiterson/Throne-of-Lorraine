@@ -11,8 +11,7 @@ country_event = {
 		year = 1838
 		NOT = {
 			year = 1841
-			}
-
+		}
 	}
 
 	fire_only_once = yes
@@ -235,8 +234,8 @@ country_event = {
 		name = "EVTOPTA36602"
 		any_pop = {
 			scaled_consciousness = {
-				   factor = 1
-				   ideology = liberal
+				factor = 1
+				ideology = liberal
 			}
 		}
 	}
@@ -480,7 +479,7 @@ country_event = {
 		year = 1900
 	}
 
-	 fire_only_once = yes
+	fire_only_once = yes
 
 	mean_time_to_happen =  {
 		months = 5
@@ -768,7 +767,7 @@ country_event = {
 
 	}
 
-	 fire_only_once = yes
+	fire_only_once = yes
 
 	mean_time_to_happen =  {
 		months = 5
@@ -1057,14 +1056,24 @@ country_event = {
 		name = "EVTOPTA36624"
 		3246 = { secede_province = THIS }
 		random_owned = {
-			limit = { exists = FRA }
-			FRA = { country_event = 36627 }
-			owner = { relation = { who = FRA value = -200 } }
+			limit = { exists = FRR }
+			FRR = { country_event = 36627 }
+			owner = { relation = { who = FRR value = -200 } }
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			FRZ = { country_event = 36627 }
+			owner = { relation = { who = FRZ value = -200 } }
 		}
 		random_owned = {
 			limit = { exists = BOR }
 			BOR = { country_event = 36627 }
 			owner = { relation = { who = BOR value = -200 } }
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			VIC = { country_event = 36627 }
+			owner = { relation = { who = VIC value = -200 } }
 		}
 		relation = { who = FROM value = 100 }
 		treasury = -50000
@@ -1109,10 +1118,18 @@ country_event = {
 		name = "EVTOPTA36625"
 		3246 = { remove_core = THIS }
 		random_owned = {
-			limit = { exists = FRA }
-			3246 = { secede_province = FRA }
-			owner = { relation = { who = FRA value = 50 } }
-			FRA = { treasury = -50000 }
+			limit = { exists = FRR }
+			FRZ = { country_event = 36627 }
+			3246 = { secede_province = FRR }
+			owner = { relation = { who = FRR value = 50 } }
+			FRR = { treasury = -50000 }
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			FRZ = { country_event = 36627 }
+			3246 = { secede_province = FRZ }
+			owner = { relation = { who = FRZ value = 50 } }
+			FRZ = { treasury = -50000 }
 		}
 		random_owned = {
 			limit = { exists = BOR }
@@ -1120,6 +1137,13 @@ country_event = {
 			3246 = { secede_province = BOR }
 			owner = { relation = { who = BOR value = 50 } }
 			BOR = { treasury = -50000 }
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			VIC = { country_event = 36627 }
+			3246 = { secede_province = VIC }
+			owner = { relation = { who = VIC value = 50 } }
+			VIC = { treasury = -50000 }
 		}
 		treasury = 50000
 
@@ -1130,12 +1154,20 @@ country_event = {
 		name = "EVTOPTB36625"
 		badboy = 2
 		random_owned = {
-			limit = { exists = FRA }
-			FRA = { country_event = 36627 relation = { who = THIS value = -150 } }
+			limit = { exists = FRR }
+			FRR = { country_event = 36627 relation = { who = THIS value = -150 } }
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			FRZ = { country_event = 36627 relation = { who = THIS value = -150 } }
 		}
 		random_owned = {
 			limit = { exists = BOR }
 			BOR = { country_event = 36627 relation = { who = THIS value = -150 } }
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			VIC = { country_event = 36627 relation = { who = THIS value = -150 } }
 		}
 		ai_chance = { factor = 0 }
 	}
@@ -1153,10 +1185,18 @@ country_event = {
 	option = {
 		name = "EVTOPTB36626"
 		random_owned = {
-			limit = { exists = FRA }
-			3246 = { secede_province = FRA any_pop = { militancy = 4 } }
-			owner = { relation = { who = FRA value = 150 } }
-			FRA = { treasury = -50000 }
+			limit = { exists = FRR }
+			FRZ = { country_event = 36627 }
+			3246 = { secede_province = FRR any_pop = { militancy = 4 } }
+			owner = { relation = { who = FRR value = 150 } }
+			FRR = { treasury = -50000 }
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			FRZ = { country_event = 36627 }
+			3246 = { secede_province = FRZ }
+			owner = { relation = { who = FRZ value = 50 } }
+			FRZ = { treasury = -50000 }
 		}
 		random_owned = {
 			limit = { exists = BOR }
@@ -1164,6 +1204,13 @@ country_event = {
 			3246 = { secede_province = BOR }
 			owner = { relation = { who = BOR value = 50 } }
 			BOR = { treasury = -50000 }
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			VIC = { country_event = 36627 }
+			3246 = { secede_province = VIC }
+			owner = { relation = { who = VIC value = 50 } }
+			VIC = { treasury = -50000 }
 		}
 		3246 = { remove_core = THIS }
 		treasury = 50000
@@ -1173,12 +1220,20 @@ country_event = {
 	option = {
 		name = "EVTOPTA36625"
 		random_owned = {
-			limit = { exists = FRA }
-			FRA = { country_event = 36627 }
+			limit = { exists = FRR }
+			FRR = { country_event = 36627 }
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			FRZ = { country_event = 36627 }
 		}
 		random_owned = {
 			limit = { exists = BOR }
 			BOR = { country_event = 36627 }
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			VIC = { country_event = 36627 }
 		}
 		ai_chance = { factor = 0.8 }
 	}

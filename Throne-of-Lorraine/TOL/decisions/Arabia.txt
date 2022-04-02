@@ -70,10 +70,6 @@ political_decisions = {
 				tag = CYR
 				tag = ALD
 				primary_culture = kurdish
-				AND = {
-				    tag = PER
-					civilized = no
-				}
 			}
 			NOT = { has_country_modifier = rally_tribesmen }
 			civilized = no
@@ -81,7 +77,7 @@ political_decisions = {
 
 		allow = {
 			war = yes
-			#NOT = { total_pops = 400000 }
+			NOT = { total_pops = 400000 }
 		}
 
 		effect = {

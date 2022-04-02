@@ -1590,7 +1590,11 @@ country_event = {
 	option = {
 		name = "EVT986503OPTA"
 		set_country_flag = return_persian_lands_on_finish
-		TUR = { release_vassal = BHT }
+		2414 = { change_province_name = "Cizre" }
+		892 = { change_province_name = "Hakkari" }
+		924 = { change_province_name = "Zaxho" }
+		925 = { change_province_name = "Kirkuk" }
+		PER = { release_vassal = BHT }
 		diplomatic_influence = { who = BHT value = -400 }
 		relation = { who = BHT value = -400 }
 		leave_alliance = BHT
@@ -1601,8 +1605,13 @@ country_event = {
 				exists = yes
 				OR = {
 					tag = SRN
+					tag = BNB
 					tag = BDN
 					tag = BTL
+					tag = RDL
+					tag = MKN
+					tag = URM
+					tag = ASY
 				}
 			}
 			annex_to = BHT
@@ -1623,15 +1632,15 @@ country_event = {
 			target = BHT
 			attacker_goal = {
 				casus_belli = annex_core_country
-				state_province_id  = 2414
+				state_province_id  = 892
 			}
 			attacker_goal = {
 				casus_belli = acquire_core_state
-				state_province_id  = 901
+				state_province_id  = 890
 			}
 			attacker_goal = {
 				casus_belli = acquire_core_state
-				state_province_id  = 923
+				state_province_id  = 892
 			}
 			defender_goal = { casus_belli = humiliate }
 		}

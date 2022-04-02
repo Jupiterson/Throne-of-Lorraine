@@ -13,7 +13,21 @@ country_event = {
 		civilized = no
 		is_vassal = no
 		OR = {
-			FRA = {
+			FRR = {
+				exists = yes
+				war = no
+				is_disarmed = no
+				nationalism_n_imperialism = 1
+				is_greater_power = yes
+				NOT = {
+					alliance_with = THIS
+					truce_with = THIS
+					war_exhaustion = 20
+					war_policy = pacifism
+					has_country_flag = cochinchina_campaign
+				}
+			}
+			FRZ = {
 				exists = yes
 				war = no
 				is_disarmed = no
@@ -41,6 +55,20 @@ country_event = {
 					has_country_flag = cochinchina_campaign
 				}
 			}
+			VIC = {
+				exists = yes
+				war = no
+				is_disarmed = no
+				nationalism_n_imperialism = 1
+				is_greater_power = yes
+				NOT = {
+					alliance_with = THIS
+					truce_with = THIS
+					war_exhaustion = 20
+					war_policy = pacifism
+					has_country_flag = cochinchina_campaign
+				}
+			}
 		}
 	}
 
@@ -52,11 +80,15 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			neighbour = FRA
+			OR = {
+				neighbour = FRR
+				neighbour = FRZ
+				neighbour = BOR
+				neighbour = VIC
+			}
 		}
 		modifier = {
 			factor = 0.5
-			neighbour = BOR
 		}
 	}
 
@@ -64,7 +96,10 @@ country_event = {
 		name = "EVT95639OPTA"
 		random_country = {
 			limit = {
-				primary_culture = french
+				OR = {
+					primary_culture = french
+					primary_culture = occitan
+				}
 				is_greater_power = yes
 				exists = yes
 			}

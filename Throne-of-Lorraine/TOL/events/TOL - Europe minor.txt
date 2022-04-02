@@ -14,7 +14,7 @@ country_event = {
 			factor = 90
 			modifier = {
 				factor = 0.25
-				 502 = { owner = { 
+				502 = { owner = { 
 					OR = {
 						has_country_modifier = in_bankrupcy
 						has_country_modifier = generalised_debt_default
@@ -52,10 +52,12 @@ country_event = {
 			owner = { SPA = { country_event = 90133 } }
 		}
 		money = 1000000
-		limit = {
-					province_id = 502
-				}
-				secede_province = SPA
+		random_owned = {
+			limit = {
+				province_id = 502
+			}
+			secede_province = SPA
+		}
 		ai_chance = {
 			factor = 25
 			modifier = {
@@ -175,9 +177,15 @@ country_event = {
 
 	trigger = {
 		war = no
-		FRA = { war = no }
-		NOT = { exists = MOL 
-		has_country_flag = MOL_puppet
+		OR = {
+			FRR = { war = no }
+			FRZ = { war = no }
+			BOR = { war = no }
+			VIC = { war = no }
+		}
+		NOT = {
+			exists = MOL 
+			has_country_flag = MOL_puppet
 		}
 		year = 1870
 		any_owned_province = {
@@ -191,7 +199,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Sure, why not"
+		name = "Sure, why not."
 		set_country_flag = MOL_puppet
 		badboy = -3
 		any_owned = {
@@ -203,9 +211,9 @@ country_event = {
 		ai_chance = { factor = 75 }
 	}
 	
-	 option = {
-		name = "On To Moldavaia"
-			set_country_flag = MOL_puppet
+	option = {
+		name = "On to Moldavia!"
+		set_country_flag = MOL_puppet
 		prestige = -10
 		badboy = -3
 		any_pop = {
@@ -221,8 +229,8 @@ country_event = {
 	}
 
 	option = {
-		name = "Well, Home rule is enough"
-			set_country_flag = MOL_puppet
+		name = "Well, home rule is enough."
+		set_country_flag = MOL_puppet
 		prestige = -10
 		badboy = 3
 		any_pop = {
@@ -243,7 +251,7 @@ country_event = {
 
 	option = {
 		name = "No?"
-			set_country_flag = MOL_puppet
+		set_country_flag = MOL_puppet
 		any_owned = {
 			limit = { is_core = MOL }
 			any_pop = {

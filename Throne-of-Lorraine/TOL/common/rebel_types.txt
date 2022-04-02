@@ -2055,12 +2055,12 @@ pan_nationalist_rebels = {
 			}
 			owner = { country_event = 96205 }
 		}
-		random_owned = {
-			limit = {
-				owner = { is_culture_group = germanic }
-			}
-			owner = { country_event = 96210 }
-		}
+		#random_owned = {
+		#	limit = {
+		#		owner = { is_culture_group = germanic }
+		#	}
+		#	owner = { country_event = 96210 }
+		#}
 		random_owned = {
 			limit = {
 				owner = { is_culture_group = scandinavian }

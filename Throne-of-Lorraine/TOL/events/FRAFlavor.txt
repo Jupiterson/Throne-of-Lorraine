@@ -3,7 +3,10 @@ country_event = {
 	id = 37200
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1837
@@ -59,7 +62,10 @@ country_event = {
 	news_desc_short = "EVTDESC37201_NEWS_SHORT"
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1836
@@ -108,7 +114,10 @@ country_event = {
 	id = 37202
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1840
@@ -154,7 +163,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1840
@@ -210,15 +222,17 @@ country_event = {
 	news_desc_short = "EVTDESC37204_NEWS_SHORT"
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1840
 		war = no
 		NOT = {
 			year = 1843
-			}
-
+		}
 	}
 
 	fire_only_once = yes
@@ -254,7 +268,10 @@ country_event = {
 	id = 37205
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1842
@@ -295,7 +312,10 @@ country_event = {
 	id = 37206
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1846
@@ -336,7 +356,10 @@ country_event = {
 	id = 37207
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1846
@@ -398,7 +421,10 @@ country_event = {
 	id = 37209
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1845
@@ -439,7 +465,10 @@ country_event = {
 	id = 37210
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1851
@@ -478,7 +507,10 @@ country_event = {
 	id = 37211
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1852
@@ -524,7 +556,10 @@ country_event = {
 	news_desc_short = "EVTDESC37213_NEWS_SHORT"
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1836
@@ -571,7 +606,10 @@ country_event = {
 	id = 37215
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1857
@@ -616,7 +654,10 @@ country_event = {
 	news_desc_short = "EVTDESC37216_NEWS_SHORT"
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		OR = {
@@ -694,7 +735,10 @@ country_event = {
 	news_desc_short = "EVTDESC37217_NEWS_SHORT"
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		OR = {
@@ -747,12 +791,12 @@ country_event = {
 		set_country_flag = DreyfusGuilty
 		any_pop = {
 			scaled_consciousness = {
-							   factor = 3
-				   ideology = liberal
+							factor = 3
+				ideology = liberal
 			}
 			scaled_consciousness = {
-							   factor = 3
-				   ideology = socialist
+							factor = 3
+				ideology = socialist
 			}
 			scaled_militancy = {
 				factor = 1
@@ -774,7 +818,10 @@ country_event = {
 	news_desc_short = "EVTDESC37218_NEWS_SHORT"
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		OR = {
@@ -842,7 +889,10 @@ country_event = {
 	news_desc_short = "EVTDESC37220_NEWS_SHORT"
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1858
@@ -882,7 +932,10 @@ country_event = {
 	id = 37221
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1892
@@ -923,7 +976,10 @@ country_event = {
 	id = 37222
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1908
@@ -964,7 +1020,10 @@ country_event = {
 	id = 37223
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		year = 1898
@@ -1005,7 +1064,10 @@ country_event = {
 	id = 37224
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		invention = expressionist_art
@@ -1046,7 +1108,10 @@ country_event = {
 	id = 37225
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		invention = impressionist_art
@@ -1227,7 +1292,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		war = no
@@ -1432,7 +1500,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		NOT = { has_country_modifier = eiffel_tower_construction }
@@ -1466,7 +1537,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		OR = {
@@ -1538,11 +1612,23 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		has_country_flag = faidherbe_ambitions
-		1788 = { owner = { OR = { civilized = no ai = yes primary_culture = french }} }
+		1788 = {
+			owner = {
+				OR = {
+					civilized = no
+					ai = yes
+					primary_culture = french
+					primary_culture = occitan
+				}
+			}
+		}
 		owns = 2573
 		owns = 1783
 		owns = 1784

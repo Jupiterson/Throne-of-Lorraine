@@ -797,8 +797,11 @@ country_event = {
 				1074 = { owned_by = THIS }
 			}
 			1088 = {
+				life_rating = 20
 				secede_province = THIS
+				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+				add_province_modifier = { name = population_resettlement duration = 1460 }
 			}
 		}
 		random_owned = {
@@ -807,11 +810,11 @@ country_event = {
 				1072 = { owned_by = THIS }
 			}
 			1086 = {
-				life_rating = 10
+				life_rating = 20
 				secede_province = THIS
 				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
-				add_province_modifier = { name = poption_resettlement duration = 365 }
+				add_province_modifier = { name = population_resettlement duration = 1460 }
 			}
 		}
 		random_owned = {
@@ -821,8 +824,11 @@ country_event = {
 				1088 = { owned_by = THIS }
 			}
 			1089 = {
+				life_rating = 20
 				secede_province = THIS
+				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+				add_province_modifier = { name = population_resettlement duration = 1460 }
 			}
 		}
 		random_owned = {
@@ -832,8 +838,11 @@ country_event = {
 				1086 = { owned_by = THIS }
 			}
 			1087 = {
+				life_rating = 20
 				secede_province = THIS
+				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+				add_province_modifier = { name = population_resettlement duration = 1460 }
 			}
 		}
 	}
@@ -1544,56 +1553,11 @@ country_event = {
 		clr_country_flag = country_trying_to_expel_the_manchus
 		prestige = 5
 		1082 = {
-
-		poor_strata = {
-			limit = {
-				OR = {
-					has_pop_culture = buyeo
-					has_pop_culture = han_chinese
-				}
-			}
-			random_list = {
-				34 = { reduce_pop = 0.9 }
-				33 = { reduce_pop = 0.8 }
-				33 = { reduce_pop = 0.7 }
-			}
-			move_pop = 1554
-		}
-
-		any_pop = {
-			limit = {
-				OR = {
-					has_pop_culture = buyeo
-					has_pop_culture = han_chinese
-				}
-			}
-			militancy = 7
-			consciousness = 9
-		}
-
-		any_pop = {
-			limit = {
-				OR = {
-					has_pop_culture = buyeo
-					has_pop_culture = han_chinese
-				}
-				OR = {
-					pop_type = artisans
-					pop_type = clergymen
-					pop_type = bureaucrats
-				}
-			}
-			pop_type = labourers
-		}
-		add_province_modifier = { name = poption_resettlement duration = 2190 }
-		remove_province_modifier = nationalist_agitation
-		}
-
-		1083 = {
 			poor_strata = {
 				limit = {
 					OR = {
 						has_pop_culture = buyeo
+						has_pop_culture = manchu
 						has_pop_culture = han_chinese
 					}
 				}
@@ -1608,6 +1572,7 @@ country_event = {
 				limit = {
 					OR = {
 						has_pop_culture = buyeo
+						has_pop_culture = manchu
 						has_pop_culture = han_chinese
 					}
 				}
@@ -1618,6 +1583,7 @@ country_event = {
 				limit = {
 					OR = {
 						has_pop_culture = buyeo
+						has_pop_culture = manchu
 						has_pop_culture = han_chinese
 					}
 					OR = {
@@ -1628,94 +1594,144 @@ country_event = {
 				}
 				pop_type = labourers
 			}
-			add_province_modifier = { name = poption_resettlement duration = 1460 }
+			add_province_modifier = { name = population_resettlement duration = 2190 }
 			remove_province_modifier = nationalist_agitation
 		}
-
-		1084 = { poor_strata = {
-		limit = {
-			OR = {
-				has_pop_culture = buyeo
-				has_pop_culture = han_chinese
-				}
-			}
-			random_list = {
-				34 = { reduce_pop = 0.9 }
-				33 = { reduce_pop = 0.8 }
-				33 = { reduce_pop = 0.7 }
-				}
-				move_pop = 1553
-			}
-			any_pop = {
-			limit = {
-			OR = {
-				has_pop_culture = buyeo
-				has_pop_culture = han_chinese
-				}
-			}
-				militancy = 7
-				consciousness = 9
-			}
-			any_pop = {
-			limit = {
-			OR = {
-				has_pop_culture = buyeo
-				has_pop_culture = han_chinese
-				}
-			OR = {
-				pop_type = artisans
-				pop_type = clergymen
-				pop_type = bureaucrats
-				}
-			}
-			pop_type = labourers
-			}
-		add_province_modifier = { name = poption_resettlement duration = 1460 }
-		remove_province_modifier = nationalist_agitation
-		}
-
-		1085 = { poor_strata = {
-		limit = {
-			OR = {
-				has_pop_culture = buyeo
-				has_pop_culture = han_chinese
-				}
-			}
-			random_list = {
-				34 = { reduce_pop = 0.9 }
-				33 = { reduce_pop = 0.8 }
-				33 = { reduce_pop = 0.7 }
-				}
-				move_pop = 1553
-			}
-			any_pop = {
-			limit = {
-			OR = {
-				has_pop_culture = buyeo
-				has_pop_culture = han_chinese
-				}
-			}
-				militancy = 7
-				consciousness = 9
-			}
-			any_pop = {
-			limit = {
-			OR = {
-				has_pop_culture = buyeo
-				has_pop_culture = han_chinese
-				}
-			OR = {
-				pop_type = artisans
-				pop_type = clergymen
-				pop_type = bureaucrats
+		1083 = {
+			poor_strata = {
+				limit = {
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
 					}
 				}
-			pop_type = farmers
+				random_list = {
+					34 = { reduce_pop = 0.9 }
+					33 = { reduce_pop = 0.8 }
+					33 = { reduce_pop = 0.7 }
+				}
+				move_pop = 1554
 			}
-		add_province_modifier = { name = poption_resettlement duration = 1460 }
-		remove_province_modifier = nationalist_agitation
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
+					}
+				}
+				militancy = 7
+				consciousness = 9
+			}
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
+					}
+					OR = {
+						pop_type = artisans
+						pop_type = clergymen
+						pop_type = bureaucrats
+					}
+				}
+				pop_type = labourers
+			}
+			add_province_modifier = { name = population_resettlement duration = 1460 }
+			remove_province_modifier = nationalist_agitation
 		}
-
+		1084 = {
+			poor_strata = {
+				limit = {
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
+					}
+				}
+				random_list = {
+					34 = { reduce_pop = 0.9 }
+					33 = { reduce_pop = 0.8 }
+					33 = { reduce_pop = 0.7 }
+				}
+				move_pop = 1553
+			}
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
+					}
+				}
+				militancy = 7
+				consciousness = 9
+			}
+			any_pop = {
+				limit = {
+				OR = {
+					has_pop_culture = buyeo
+					has_pop_culture = manchu
+					has_pop_culture = han_chinese
+				}
+				OR = {
+					pop_type = artisans
+					pop_type = clergymen
+					pop_type = bureaucrats
+				}
+				}
+				pop_type = labourers
+			}
+			add_province_modifier = { name = population_resettlement duration = 1460 }
+			remove_province_modifier = nationalist_agitation
+		}
+		1085 = {
+			poor_strata = {
+				limit = {
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
+					}
+				}
+				random_list = {
+					34 = { reduce_pop = 0.9 }
+					33 = { reduce_pop = 0.8 }
+					33 = { reduce_pop = 0.7 }
+				}
+				move_pop = 1553
+			}
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
+					}
+				}
+				militancy = 7
+				consciousness = 9
+			}
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
+					}
+					OR = {
+						pop_type = artisans
+						pop_type = clergymen
+						pop_type = bureaucrats
+					}
+				}
+				pop_type = farmers
+			}
+			add_province_modifier = { name = population_resettlement duration = 1460 }
+			remove_province_modifier = nationalist_agitation
+		}
 		1082 = {
 			poor_strata = {
 				limit = {
@@ -1724,7 +1740,6 @@ country_event = {
 				reduce_pop = 3
 			}
 		}
-
 		1083 = {
 			poor_strata = {
 				limit = {
@@ -1733,48 +1748,50 @@ country_event = {
 				reduce_pop = 2
 			}
 		}
-
-
-		2617 = { poor_strata = {
-		limit = {
-			OR = {
-				has_pop_culture = buyeo
-				has_pop_culture = han_chinese
+		2617 = {
+			poor_strata = {
+				limit = {
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
+					}
 				}
-			}
-			random_list = {
-				34 = { reduce_pop = 0.9 }
-				33 = { reduce_pop = 0.8 }
-				33 = { reduce_pop = 0.7 }
+				random_list = {
+					34 = { reduce_pop = 0.9 }
+					33 = { reduce_pop = 0.8 }
+					33 = { reduce_pop = 0.7 }
 				}
 				move_pop = 1553
 			}
 			any_pop = {
-			limit = {
-			OR = {
-				has_pop_culture = buyeo
-				has_pop_culture = han_chinese
+				limit = {
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
+					}
 				}
-			}
 				militancy = 7
 				consciousness = 9
 			}
 			any_pop = {
 				limit = {
-			OR = {
-				has_pop_culture = buyeo
-				has_pop_culture = han_chinese
-				}
-			OR = {
-				pop_type = artisans
-				pop_type = clergymen
-				pop_type = bureaucrats
+					OR = {
+						has_pop_culture = buyeo
+						has_pop_culture = manchu
+						has_pop_culture = han_chinese
+					}
+					OR = {
+						pop_type = artisans
+						pop_type = clergymen
+						pop_type = bureaucrats
 					}
 				}
-			pop_type = labourers
+				pop_type = labourers
 			}
-		add_province_modifier = { name = poption_resettlement duration = 1460 }
-		remove_province_modifier = nationalist_agitation
+			add_province_modifier = { name = population_resettlement duration = 1460 }
+			remove_province_modifier = nationalist_agitation
 		}
 	}
 }
@@ -2389,12 +2406,20 @@ country_event = {
 		name = "EVTOPTB24600" #Truly, we have far surpassed the French.
 		prestige = 15
 		random_owned = {
-			limit = { exists = FRA }
-			FRA = { prestige = -10 }
+			limit = { exists = FRR }
+			FRR = { prestige = -10 }
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			FRZ = { prestige = -10 }
 		}
 		random_owned = {
 			limit = { exists = BOR }
 			BOR = { prestige = -10 }
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			VIC = { prestige = -10 }
 		}
 	}
 }

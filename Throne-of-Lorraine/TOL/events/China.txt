@@ -194,7 +194,7 @@ country_event = {
 		FROM = { inherit = THIS }
 		ai_chance = {
 			factor = 10
-			 modifier = {
+			modifier = {
 				factor = 10
 				relation = { who = FROM value = 100 }
 			}

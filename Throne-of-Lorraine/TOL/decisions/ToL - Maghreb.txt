@@ -456,7 +456,10 @@ political_decisions = {
 	notre_dame_afrique = {
 		picture = notre_dame_afrique
 		potential = {
-			primary_culture = french
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			is_greater_power = yes
 			capital = 425
 			year = 1865
@@ -472,8 +475,10 @@ political_decisions = {
 			badboy = -1
 			prestige = 5
 			1700 = { add_province_modifier = { name = notre_dame_afrique duration = -1 } }
-			FRA = { set_country_flag = bulit_notre_dame_afrique }
+			FRR = { set_country_flag = bulit_notre_dame_afrique }
+			FRZ = { set_country_flag = bulit_notre_dame_afrique }
 			BOR = { set_country_flag = bulit_notre_dame_afrique }
+			VIC = { set_country_flag = bulit_notre_dame_afrique }
 		}
 		ai_will_do = { factor = 1 }
 	}

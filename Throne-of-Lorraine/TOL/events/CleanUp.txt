@@ -1052,12 +1052,20 @@ country_event = {
 	option = {
 		name = "EVT6016807PTA"
 		random_owned = {
-			limit = { exists = FRA }
-			owner = { annex_to = FRA }
+			limit = { exists = FRR }
+			owner = { annex_to = FRR }
+		}
+		random_owned = {
+			limit = { exists = FRZ }
+			owner = { annex_to = FRZ }
 		}
 		random_owned = {
 			limit = { exists = BOR }
 			owner = { annex_to = BOR }
+		}
+		random_owned = {
+			limit = { exists = VIC }
+			owner = { annex_to = VIC }
 		}
 	}
 

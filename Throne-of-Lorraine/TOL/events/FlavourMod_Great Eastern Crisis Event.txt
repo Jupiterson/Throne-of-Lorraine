@@ -1128,14 +1128,6 @@ country_event = {
 				}
 			}
 		}
-		random_country = {
-			limit = {
-				tag = SAM
-				vassal_of = TUR
-			}
-			TUR = { release_vassal = SAM }
-			GRE = { inherit = SAM }
-		}
 
 		#Give Crete to Greece
 		random_owned = {

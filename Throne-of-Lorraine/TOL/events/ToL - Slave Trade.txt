@@ -8,22 +8,22 @@ country_event = {
 
 	trigger = {
 	
-	 slavery = yes_slavery
-		 
-	 NOT = { 
-	  has_country_modifier = slavepopupdated
-	  has_country_flag = slave_abolished
-	  }
-	  
-	  any_owned_province = {
-	  OR = {
-		   continent = central_africa
-		   continent = africa
-		   continent = west_africa
-		   continent = east_africa
+	slavery = yes_slavery
+		
+	NOT = { 
+	has_country_modifier = slavepopupdated
+	has_country_flag = slave_abolished
+	}
+	
+	any_owned_province = {
+	OR = {
+		continent = central_africa
+		continent = africa
+		continent = west_africa
+		continent = east_africa
 		}
-	 }
-	 }
+	}
+	}
 
 	mean_time_to_happen = {
 		months = 1
@@ -39,7 +39,7 @@ country_event = {
 	option = {
 		name = "The Slave trade is great" 
 		
-		 random_country = {
+		random_country = {
 			limit = {
 			capital_scope = {
 			OR = {

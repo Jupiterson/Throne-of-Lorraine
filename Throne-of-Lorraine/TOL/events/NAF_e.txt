@@ -255,7 +255,6 @@ country_event = {
 	option = {
 		name = "Full Integration"
 		add_accepted_culture = yankee
-		add_accepted_culture = yankee
 		any_pop = {
 			limit = {
 				has_pop_culture = afro_french
@@ -477,7 +476,7 @@ country_event = {
 	trigger = {
 		tag = NAF
 		accepted_culture = native_american_minor
-		NOT = { Year = 1880 }
+		NOT = { year = 1880 }
 	}
 
 	option = {

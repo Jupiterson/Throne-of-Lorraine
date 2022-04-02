@@ -18,8 +18,7 @@ political_decisions = {
 
 		effect = {
 			treasury = -50000
-			set_country_flag = venice_expanded
-   
+			set_global_flag = venice_expanded
 			729 = {
 				life_rating = 5
 				add_province_modifier = { name = recently_built_city duration = 1825 }
@@ -37,11 +36,11 @@ political_decisions = {
 		}
 
 		allow = {
-		medicine = 1
-		NOT = { school_reforms = no_schools }
-		invention = biased_multiculturalism
-		invention = social_darwinism
-		war = no
+			medicine = 1
+			NOT = { school_reforms = no_schools }
+			invention = biased_multiculturalism
+			invention = social_darwinism
+			war = no
 		}
 
 		effect = {
@@ -55,28 +54,29 @@ political_decisions = {
 	}
 
 #stolen from AOE
-   demand_milan = {
+	demand_milan = {
 		picture = italian_trentino
 		potential = {
-						tag = VEN
+			tag = VEN
 			NOT = { has_country_flag = demand_milan_done }
 		}
 		
 		allow = {
-			all_core = {
-				owned_by = THIS
+			VEN = {
+				all_core = {
+					owned_by = VEN
+				}
 			}
 			state_n_government = 1
-			is_greater_power = yes
+			#is_greater_power = yes
 			war = no
 		}
 		
 		effect = {
 			set_country_flag = demand_milan_done
-			 
-			 LOM = {
+			LOM = {
 				all_core = {
-					add_core = THIS
+					add_core = VEN
 				}
 			}
 		}
@@ -84,28 +84,23 @@ political_decisions = {
 	}
 	
 
-expand_west = {
+	expand_west = {
 		picture = italian_islands
 		potential = {
-						tag = VEN
+			tag = VEN
 			NOT = {
 				has_country_flag = expanded_west
 			}
-			exists = yes
-		
+			exists = yes		
 			is_greater_power = yes			
 			military_score = 25
 			war = no
-						
-			
-
 		}
 		
 		allow = {
 			nationalism_n_imperialism = 1
 			war = no
 		}
-		
 		
 		effect = {
 			759 = {
@@ -146,14 +141,14 @@ expand_west = {
    recoqnuer_genoa = {
 		picture = italian_trentino
 		potential = {
-		AND = {
-			tag = GEN
-			government = presidential_dictatorship
+			AND = {
+				tag = GEN
+				government = presidential_dictatorship
 			}
 			NOT = { has_country_flag = recoqnuer_genoa }
 			OR = {
-			exists = SYC
-			exists = CRS
+				exists = SYC
+				exists = CRS
 			}
 		}
 		
@@ -164,20 +159,18 @@ expand_west = {
 		}
 		
 		effect = {
-			set_country_flag = recoqnuer_genoa
-			 
-			 SYC = {
+			set_country_flag = recoqnuer_genoa			 
+			SYC = {
 				all_core = {
 					add_core = THIS
 				}
-				}
-						 SRD = {
+			}
+			SRD = {
 				all_core = {
 					add_core = THIS
 				}
-				}
-				
-							 CRS = {
+			}
+			CRS = {
 				all_core = {
 					add_core = THIS
 				}
@@ -189,31 +182,27 @@ expand_west = {
 	greater_genoa = {
 		picture = italian_islands
 		potential = {
-						tag = GEN
+			tag = GEN
 			NOT = {
 				has_country_flag = greater_genoa
 			}
-			exists = yes
-		
+			exists = yes		
 			is_greater_power = yes
 			military_score = 15
 			war = no
-						
-			
-
 		}
 		
-	  allow = {
-		nationalism_n_imperialism = 1 
-		 prestige = 50
-	  }
+		allow = {
+			nationalism_n_imperialism = 1 
+			prestige = 50
+		}
 		effect = {
 			740 = {
 				add_core = THIS 
 			}
 			746 = {
 				add_core = THIS 
-			}		
+			}	
 			
 			badboy = 5
 			any_pop = { consciousness = 3 }
@@ -221,31 +210,26 @@ expand_west = {
 		}
 	}
 
-expand_east = {
+	expand_east = {
 		picture = reclaim_italian_lands
 		potential = {
-						tag = GEN
+			tag = GEN
 			NOT = {
 				has_country_flag = expanded_east
 			}
 			exists = yes
-						has_country_flag = greater_genoa
-		
+			has_country_flag = greater_genoa		
 			is_greater_power = yes
 			military_score = 45
 			war = no
-						
-			
-
 		}
 		
 		allow = {
-		nationalism_n_imperialism = 1 
+			nationalism_n_imperialism = 1 
 			all_core = {
 				owned_by = THIS
 			}
-	 }
-		
+		}		
 		
 		effect = {
 			745 = {
@@ -271,8 +255,7 @@ expand_east = {
 			}
 			760 = {
 				add_core = THIS 
-			}
-			
+			}			
 			badboy = 10
 			any_pop = { consciousness = 3 }
 			set_country_flag = expanded_east
@@ -401,10 +384,5 @@ expand_east = {
 			factor = 1
 		}
 	}
-			
-
-
-
-
 }
 	

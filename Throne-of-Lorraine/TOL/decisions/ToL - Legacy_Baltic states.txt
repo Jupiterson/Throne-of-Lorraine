@@ -98,7 +98,7 @@ political_decisions = {
 				EST = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS war = no } } } }
 			}
 			NOT = { has_global_flag = annex_baltic_duchy }
-			NOT = { has_country_flag = baltic_duchy_fix_flag }
+			NOT = { has_global_flag = baltic_duchy_fix_flag }
 		}
 		allow = {
 			war = no
@@ -118,7 +118,6 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 20
-
 			random_owned = {
 				limit = { owner = { NOT = { is_culture_group = germanic } } }
 				UBD = {
@@ -129,7 +128,6 @@ political_decisions = {
 					remove_accepted_culture = south_german
 				}
 			}
-
 			random_owned = {
 				limit = { owner = { is_culture_group = germanic } }
 				owner = { badboy = 2 }
@@ -144,9 +142,7 @@ political_decisions = {
 					any_pop = { limit = { NOT = { has_pop_culture = north_german } } militancy = 4 }
 				}
 			}
-
 			RUS = { relation = { who = THIS value = -50 } }
-
 			any_country = {
 				limit = {
 					OR = {
@@ -160,7 +156,7 @@ political_decisions = {
 			}
 			any_country = {
 				limit = {
-					NOT = { is_culture_group = south_slavic }
+					#NOT = { is_culture_group = south_slavic }
 					in_sphere = THIS
 					war = no
 				}

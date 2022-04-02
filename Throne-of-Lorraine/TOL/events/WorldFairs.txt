@@ -26,8 +26,11 @@ country_event = {
 		}
 
 		modifier = {
-			factor = 0.01
-			primary_culture = french
+			factor = 0.01			
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
 			invention = bessemer_steel
 			NOT = { has_country_flag = the_eiffel_tower_was_built }
 		}

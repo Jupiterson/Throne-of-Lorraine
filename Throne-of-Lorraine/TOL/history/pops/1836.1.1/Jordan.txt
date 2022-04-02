@@ -1,53 +1,107 @@
 #Suriye Region (36000)  #see Syria.txt & Lebanon.txt for balance of region
 #under the rule of Egypt in 1836
-#Amman (20000/5000 POPS) #now Rudbar
+#Amman (20000/5000 POPS) #now part of Jordan
 908 = {
 	aristocrats = {
-		culture = mazanderani
-		religion = shiite
+		culture = mashriqi
+		religion = sunni
 		size = 25
 	}
 
 	clergymen = {
-		culture = mazanderani
-		religion = shiite
+		culture = mashriqi
+		religion = sunni
 		size = 100
 	}
 
 	artisans = {
-		culture = mazanderani
-		religion = shiite
+		culture = mashriqi
+		religion = sunni
 		size = 100
+	}
+
+	bureaucrats = {
+		culture = mashriqi
+		religion = sunni
+		size = 20
 	}
 
 	soldiers = {
-		culture = mazanderani
-		religion = shiite
+		culture = mashriqi
+		religion = sunni
 		size = 100
 	}
 
 	farmers = {
-		culture = mazanderani
-		religion = shiite
-		size = 10775
+		culture = mashriqi
+		religion = sunni
+		size = 775
+	}
+
+	farmers = {
+		culture = circassian
+		religion = sunni
+		size = 100
+	}
+
+	aristocrats = {
+		culture = bedouin
+		religion = sunni
+		size = 50
 	}
 
 	clergymen = {
-		culture = kurdish
-		religion = shiite
+		culture = bedouin
+		religion = sunni
 		size = 100
 	}
 
 	artisans = {
-		culture = kurdish
-		religion = shiite
+		culture = bedouin
+		religion = sunni
+		size = 125
+	}
+
+	soldiers = {
+		culture = bedouin
+		religion = sunni
+		size = 25
+	}
+
+	farmers = {
+		culture = bedouin
+		religion = sunni
+		size = 2875
+	}
+
+	clergymen = {
+		culture = syriac
+		religion = syriac
+		size = 100
+	}
+
+	artisans = {
+		culture = syriac
+		religion = syriac
 		size = 100
 	}
 
 	farmers = {
-		culture = kurdish
-		religion = shiite
-		size = 3500
+		culture = syriac
+		religion = syriac
+		size = 500
+	}
+
+	clergymen = {
+		culture = mashriqi
+		religion = druze
+		size = 100
+	}
+
+	farmers = {
+		culture = mashriqi
+		religion = druze
+		size = 390
 	}
 }
 #Jerash (16000/4000 POPS) #now part of Jordan
@@ -166,6 +220,36 @@
 }
 #Maan (28000/7000 POPS) #now part of Jordan
 911 = {
+	aristocrats = {
+		culture = mashriqi
+		religion = sunni
+		size = 25
+	}
+
+	clergymen = {
+		culture = mashriqi
+		religion = sunni
+		size = 50
+	}
+
+	artisans = {
+		culture = mashriqi
+		religion = sunni
+		size = 150
+	}
+
+	soldiers = {
+		culture = mashriqi
+		religion = sunni
+		size = 25
+	}
+
+	farmers = {
+		culture = mashriqi
+		religion = sunni
+		size = 2050
+	}
+
 	aristocrats = {
 		culture = bedouin
 		religion = sunni

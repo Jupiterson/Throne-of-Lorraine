@@ -29,7 +29,6 @@ political_decisions = {
 			982 = { add_core = THIS }
 			983 = { add_core = THIS }
 			2587 = { add_core = THIS }
-			338 = { add_core = THIS }
 			319 = { add_core = THIS }
 			1724 = { add_core = THIS }
 			3479 = { add_core = THIS }
@@ -676,9 +675,7 @@ political_decisions = {
 	claim_transnitria = {
 		picture = transnistria_stamp
 		potential = {
-
-				tag = ROM
-			
+			tag = ROM			
 			NOT = { has_country_flag = claimed_transnitria }
 		}
 
@@ -1308,43 +1305,5 @@ political_decisions = {
 			ENG = { country_event = 131000 }
 		}
 		ai_will_do = { factor = 0.1 }
-	}
-	conquer_ireland_nor = {
-		picture = ireland_map
-		potential = {
-			has_global_flag = hebrides_renamed
-			OR = { 
-				primary_culture = norwegian
-				tag = SCA
-				tag = DNN
-	
-			}
-		}
-
-		allow = {
-			has_recently_lost_war = no
-			war = no
-			is_vassal = no
-			OR = {
-				war_policy = jingoism
-				ideology = fascist
-			}
-		}
-
-		effect = {
-			war = {
-				target = ENG
-				attacker_goal = { casus_belli = acquire_core_state state_province_id = 263 }
-				defender_goal = { casus_belli = humiliate_no_infamy }
-			}
-			treasury = -20000
-			political_reform = mandatory_service
-			1724 = { fort = 1 }
-			3477 = { fort = 1 }
-			3479 = { fort = 1 }
-			304 = { fort = 1 }
-			badboy = 5
-		}
-		ai_will_do = { factor = 0.5 }
 	}
 }

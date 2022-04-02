@@ -1,0 +1,26 @@
+political_decisions = {
+	MP_leadership = {
+		alert = yes
+		picture = starting_options
+		potential = {
+			NOT = { year = 1837 }
+			NOT = { has_country_flag = MP_leadership }
+			ai = no
+		}
+
+		allow = {
+		}
+
+		effect = {
+			iron = 10
+			wool = 10
+			timber = 25
+			small_arms = 10
+			leadership = 80
+			set_country_flag = MP_leadership
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

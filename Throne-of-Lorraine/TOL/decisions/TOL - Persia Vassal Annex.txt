@@ -1,0 +1,62 @@
+political_decisions = {
+	revoke_caucasus_autonomy = {
+		potential = {
+			tag = PER
+			NOT = { 
+				owns = 1098
+				owns = 1102
+			}
+			ERI = { exists = yes }
+			BAK = { exists = yes }
+			NOT = { has_country_flag = ne_caucus_ours }
+		}
+		
+		allow = { 
+			NOT = { war = yes } 
+			OR = {
+				civilization_progress = 0.5
+				civilized = yes
+			}
+			URM = { NOT = { exists = yes } }
+			SRN = { NOT = { exists = yes } }
+			RDL = { NOT = { exists = yes } }
+			MKN = { NOT = { exists = yes } }
+			BTL = { NOT = { exists = yes } }
+			BNB = { NOT = { exists = yes } }
+			BHT = { NOT = { exists = yes } }
+			BDN = { NOT = { exists = yes } }
+		}
+		
+		effect = {
+			set_country_flag = ne_caucus_ours
+			prestige = 5 
+			any_country = {
+				limit = {
+					vassal_of = THIS
+					OR = {
+						primary_culture = armenian
+						primary_culture = azerbaijani
+					}
+					ai = yes
+				}
+				annex_to = THIS
+			}
+			GAN = { all_core = { add_core = THIS } }
+			BAK = { all_core = { add_core = THIS } }
+			ERI = { all_core = { add_core = THIS } } 
+			KGH = { all_core = { add_core = THIS } }
+			UNB = { all_core = { add_core = THIS } }
+			TAL = { all_core = { add_core = THIS } }
+			GAN = { all_core = { remove_core = GAN } }
+			BAK = { all_core = { remove_core = BAK } }
+			ERI = { all_core = { remove_core = ERI } } 
+			KGH = { all_core = { remove_core = KGH } }
+			UNB = { all_core = { remove_core = UNB } }
+			TAL = { all_core = { remove_core = TAL } }
+			2548 =  { add_core = THIS }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}	

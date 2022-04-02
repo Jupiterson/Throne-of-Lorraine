@@ -7,7 +7,10 @@ country_event = {
 	major = yes
 
 	trigger = {
-		primary_culture = french
+		OR = {
+			primary_culture = french
+			primary_culture = occitan
+		}
 		is_greater_power = yes
 		capital = 425
 		has_country_modifier = power_vacuum
@@ -29,8 +32,10 @@ country_event = {
 
 	option = {
 		name = "EVT10401OPTA"
-		FRA = { set_country_flag = french_presidential_election }
+		FRR = { set_country_flag = french_presidential_election }
+		FRZ = { set_country_flag = french_presidential_election }
 		BOR = { set_country_flag = french_presidential_election }
+		VIC = { set_country_flag = french_presidential_election }
 		prestige = 20
 		add_country_modifier = {
 			name = louis_napoleon_iii
@@ -53,8 +58,10 @@ country_event = {
 
 	option = {
 		name = "EVT10401OPTB"
-		FRA = { set_country_flag = french_presidential_election }
+		FRR = { set_country_flag = french_presidential_election }
+		FRZ = { set_country_flag = french_presidential_election }
 		BOR = { set_country_flag = french_presidential_election }
+		VIC = { set_country_flag = french_presidential_election }
 		remove_country_modifier = power_vacuum
 		ruling_party_ideology = liberal
 		political_reform = wealth_voting
