@@ -740,75 +740,39 @@ political_decisions = {
 	emancipate_ruthenyans = {
 		picture = embrace_the_jews
 		potential = {
-		OR = {
-			tag = LIT
-			tag = RUS
+			OR = {
+				tag = LIT
+				tag = RUS
 			}
 			owns = 718
-			onws = 958
+			owns = 958
 			NOT = {
-			OR = { 
 				has_country_flag = ruthenyans_accepted_culture
 				accepted_culture = ruthenyan
-				}
 			}
 		}
 		allow = {
 			958 = {
-				owned_by = LIT
+				owned_by = THIS
 			}
 			nationalism_n_imperialism  = 1
 			citizens_rights = all_voting_pops
 			citizenship_policy = full_citizenship
 		}
 		effect = {
-			RUS_977 = {
-				add_core = LIT
-			}
-			RUS_978 = {
-				add_core = LIT
-			}
-			1007 = {
-				add_core = LIT
-			}
-			943 = {
-				add_core = LIT
-			}
 			add_accepted_culture = ruthenyan
 			prestige = 10
-			RUS = {
-				any_owned = {
-					limit = { region = RUS_973 }
-					add_core = LIT
-				}
-			}
-			RUS = {
-				any_owned = {
-					limit = { region = CRI_970 }
-					add_core = LIT
-				}
-			}
-			RUS = {
-				any_owned = {
-					limit = { region = RUS_964 }
-					add_core = LIT
-				}
-			}
-			any_greater_power = {
-				limit = {
-					OR = {
-						primary_culture = russian
-						is_culture_group = germanic
-					}
-					neighbour = THIS
-				}
-				relation = { who = THIS value = -200 }
-				leave_alliance = THIS
-			}
+			RUS_977 = { add_core = THIS }
+			RUS_978 = { add_core = THIS }
+			1007 = { add_core = THIS }
+			943 = { add_core = THIS }
+			RUS_973 = { add_core = THIS }
+			CRI_970 = { add_core = THIS }
+			RUS_964 = { add_core = THIS }
 			set_country_flag = ruthenyans_accepted_culture
 			any_pop = {
 				limit = {
-						has_pop_culture = ruthenyan
+					has_pop_culture = ruthenyan
 
 				}
 				militancy = -4
