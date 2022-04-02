@@ -145,21 +145,8 @@ aeroplane_factory = {
 		value = 0.25
 	}
 	bonus = {
-		trigger = { has_building = lumber_mill }
-		value = 0.25
-	}
-	bonus = {
 		trigger = { has_building = electric_gear_factory }
 		value = 0.25
-	}
-	bonus = {
-		trigger = {
-			OR = {
-				has_building = synthetic_rubber_factory 
-				trade_goods_in_state = rubber
-			}
-		}
-		value = 0.20
 	}
 }
 
@@ -176,10 +163,6 @@ barrel_factory = {
 	bonus = {
 		trigger = { has_building = automobile_factory }
 		value = 0.1
-	}
-	bonus = {
-		trigger = { has_building = electric_gear_factory }
-		value = 0.05
 	}
 	bonus = {
 		trigger = { has_building = machine_parts_factory }
@@ -212,15 +195,6 @@ automobile_factory = {
 	}
 	bonus = {
 		trigger = { has_building = electric_gear_factory }
-		value = 0.05
-	}
-	bonus = {
-		trigger = {
-			OR = {
-				has_building = synthetic_rubber_factory 
-				trade_goods_in_state = rubber
-			}
-		}
 		value = 0.05
 	}
 }
@@ -273,13 +247,8 @@ electric_gear_factory = {
 	output_goods = electric_gear
 	value = 5.6			#89.6 - profit = 16.6
 	bonus = {
-		trigger = {
-			OR = {
-				has_building = synthetic_rubber_factory 
-				trade_goods_in_state = rubber
-			}
-		}
-		value = 0.1
+		trigger = { trade_goods_in_state = rubber }
+		value = 0.05
 	}
 	bonus = {
 		trigger = { 
@@ -420,12 +389,7 @@ luxury_clothes_factory = {
 		value = 0.2
 	}
 	bonus = {
-		trigger = {
-			OR = {
-				has_building = synthetic_silk_factory 
-				trade_goods_in_state = silk
-			}
-		}
+		trigger = { trade_goods_in_state = silk }
 		value = 0.05
 	}
 }
@@ -443,12 +407,7 @@ luxury_furniture_factory = {
 		value = 0.2
 	}
 	bonus = {
-		trigger = {
-			OR = {
-				has_building = synthetic_tropical_factory 
-				trade_goods_in_state = tropical_wood
-			}
-		}
+		trigger = { trade_goods_in_state = tropical_wood }
 		value = 0.05
 	}
 }
@@ -508,13 +467,7 @@ clipper_shipyard = {
 	is_coastal = yes
 	value = 12			#504, up from 10 with a profit of 420. 14.518% profit margin, similar to steamers. Profit = 73
 	bonus = {
-		trigger = { 
-			OR = {
-				has_building = fabric_factory 
-				has_building = synthetic_fabric_factory 
-				has_building = wool_mill 
-			}
-		}
+		trigger = { has_building = fabric_factory }
 		value = 0.05
 	}
 	bonus = {
@@ -582,13 +535,7 @@ regular_clothes_factory = {
 	output_goods = regular_clothes
 	value = 16			#92.8, from 87/15. Profit margin is 11.63% - total profit is 10.8
 	bonus = {
-		trigger = { 
-			OR = {
-				has_building = fabric_factory 
-				has_building = synthetic_fabric_factory 
-				has_building = wool_mill 
-			}
-		}
+		trigger = { has_building = fabric_factory }
 		value = 0.25
 	}
 }
@@ -739,6 +686,7 @@ fabric_factory = {
 	template = factory_template
 	input_goods = {
 		cotton = 18		# 36
+		wool = 18
 		dye = 2				# 24 total input+maint = 69.875
 	}
 	output_goods = fabric
@@ -1519,6 +1467,7 @@ artisan_lumber = {
 artisan_fabric = {
 	input_goods = {
 		cotton = 18
+		wool = 18
 		dye = 2				# 24 total input+maint = 60
 	}
 	output_goods = fabric
@@ -1614,97 +1563,3 @@ charcoal_factory = {
 	#	value = 0.25
 	#}
 }
-wool_mill = {			
-	template = factory_template #10
-	input_goods = {	 
-		wool = 54		# 37.8
-		dye = 2			# 24
-	}
-	output_goods = fabric
-	value = 43.7		#78.66 - 7ish P
-	bonus = {
-		trigger = { trade_goods_in_state = wool }
-		value = 0.125
-	}
-	bonus = {
-		trigger = {
-			OR = {
-				has_building = dye_factory 
-				trade_goods_in_state = dye
-				}
-			}
-		value = 0.125
-	}
-}
-synthetic_rubber_factory = {	   
-	template = factory_template	#10
-	input_goods = {	
-		oil = 4.8	#57.6
-	}
-	output_goods = rubber 
-	value = 10 #70 P2.4
-	bonus = {
-		trigger = {
-			OR = {
-				has_building = synthetic_oil_factory 
-				trade_goods_in_state = oil
-			}
-		}
-		value = 0.25
-	}
-}
-synthetic_tropical_factory = {	   
-	template = factory_template #10
-	input_goods = { 	
-		oil = 12		#144
-	}
-	output_goods = tropical_wood 
-	value = 25			#135 (-20 P)
-	bonus = {
-		trigger = {
-			OR = {
-				has_building = synthetic_oil_factory 
-				trade_goods_in_state = oil
-			}
-		}
-		value = 0.25
-	}
-}
-
-
-synthetic_fabric_factory = {	   
-	template = factory_template	#10
-	input_goods = {	 
-		oil = 3 #36
-	}
-	output_goods = fabric 
-	value = 20 #36 P-10
-	bonus = {
-		trigger = {
-			OR = {
-				has_building = synthetic_oil_factory 
-				trade_goods_in_state = oil
-			}
-		}
-		value = 0.25
-	}
-}
-
-synthetic_silk_factory = {	   
-	template = modern_factory_template #9.125
-	input_goods = {	 
-		oil = 8.3 #99.6 108.725
-	}
-	output_goods = silk
-	value = 9.8 #98 P-10.725
-	bonus = { 
-		trigger = {
-			OR = {
-				has_building = synthetic_oil_factory 
-				trade_goods_in_state = oil
-			}
-		}
-		value = 0.2
-	}
-}
-

@@ -23,10 +23,7 @@ political_decisions = {
 						has_global_flag = british_flee_to_canada
 					}
 					has_global_flag = france_dismantled
-					FRR = { government = proletarian_dictatorship }
-					FRZ = { government = proletarian_dictatorship }
-					BOR = { government = proletarian_dictatorship }
-					VIC = { government = proletarian_dictatorship }
+					FRA = { government = proletarian_dictatorship }
 					ENG = { government = proletarian_dictatorship }
 				}
 				AND = {
@@ -40,10 +37,8 @@ political_decisions = {
 					NOT = { has_global_flag = british_dismantled }
 					has_global_flag = france_dismantled
 					OR = {
-						FRR = { government = proletarian_dictatorship }
-						FRZ = { government = proletarian_dictatorship }
+						FRA = { government = proletarian_dictatorship }
 						BOR = { government = proletarian_dictatorship }
-						VIC = { government = proletarian_dictatorship }
 					}
 					ENG = { government = proletarian_dictatorship }
 				}
@@ -74,46 +69,22 @@ political_decisions = {
 					}
 					add_core = CRB
 					remove_core = ENG
-					remove_core = FRR
-					remove_core = FRZ
+					remove_core = FRA
 					remove_core = BOR
-					remove_core = VIC
 				}
 				release = CRB
 			}
 			random_country = {
 				limit = {
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
+					primary_culture = french
 					capital = 425
 				}
 				country_event = 99992
 			}
 			CRB = {
 				primary_culture = british
+				add_accepted_culture = french
 				add_accepted_culture = afro_caribbean
-			}
-			random_country = {
-				limit = {
-					exists = yes
-					capital = 425
-					primary_culture = french
-				}
-				CRB = {
-					add_accepted_culture = french					
-				}
-			}
-			random_country = {
-				limit = {
-					exists = yes
-					capital = 425
-					primary_culture = occitan
-				}
-				CRB = {
-					add_accepted_culture = occitan					
-				}
 			}
 			inherit = CRB
 			release_vassal = CRB
@@ -123,9 +94,9 @@ political_decisions = {
 	mosquito_protectorate = {
 		picture = moskito_coast_reserve
 		potential = {
-			OR = {
-				tag = GEN
-				tag = ITA
+		OR = {
+			tag = GEN
+			tag = ITA
 			}
 			is_greater_power = yes
 			MSK = { exists = yes in_sphere = THIS }

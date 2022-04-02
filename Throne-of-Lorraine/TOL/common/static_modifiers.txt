@@ -113,7 +113,6 @@ blockaded = {
 	war_exhaustion = 0.05
 	farm_rgo_eff = -0.25
 	mine_rgo_eff = -0.25
-	population_growth = -0.001
 }
 
 no_adjacent_controlled = {
@@ -172,7 +171,7 @@ peace = {
 	max_war_exhaustion = 50			#base max at peace.
 	supply_consumption = -0.5
 	war_exhaustion = -1
-	badboy = -0.10
+	badboy = -0.15
 }
 
 disarming = {
@@ -210,8 +209,8 @@ great_power = {
 	research_points = 1.5
 	diplomatic_points_modifier = 1.0
 	leadership = 2.0
-	global_immigrant_attract = 0.15
-	badboy = -0.05
+	global_immigrant_attract = 0.20
+	badboy = -0.1
 	cb_generation_speed_modifier = 0.10
 }
 
@@ -222,7 +221,7 @@ second_power = {
 	leadership = 1.0
 	global_immigrant_attract = 0.10
 	cb_generation_speed_modifier = 0.05
-	badboy = -0.025
+	badboy = -0.05
 }
 
 civ_nation = {

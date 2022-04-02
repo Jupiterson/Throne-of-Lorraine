@@ -3,11 +3,11 @@ BUK = {
 }
 
 leader = {
-	name = "Muhammad Shah"
+	name = "Babak Shah Sanjabi"
 	date = 1834.1.1
 	type = land
-	personality = charismatic
-	background = pawn
+	personality = relentless
+	background = cursed_luck
 }
 
 leader = {
@@ -27,30 +27,30 @@ leader = {
 }
 
 army = {
-	name = "The Shah's Army"
+	name = "Army of Ajam"
 	location = 1121 #Tehran
 	regiment = {
 		name= "1. Royal Guard"
-		type = guard
+		type = infantry
 		home = 1121
 	}
 
 	regiment = {
 		name= "2. Royal Guard"
-		type = guard
+		type = infantry
 		home = 1121
 	}
 
 	regiment = {
 		name= "2. Nezam"
 		type = infantry
-		home = 1116
+		home = 1115
 	}
 
 	regiment = {
 		name= "1. Zamburak"
 		type = artillery
-		home = 1147
+		home = 1124
 	}
 
 	regiment = {
@@ -58,10 +58,22 @@ army = {
 		type = cavalry
 		home = 1125
 	}
+	
+	regiment = {
+		name= "1. Nezam-Atlin"
+		type = cavalry
+		home = 1129
+	}
+	
+	regiment = {
+		name= "1. Nezam-Atlin"
+		type = cavalry
+		home = 3519
+	}
 }
 
 army = {
-	location = 1135 #Bushire
+	location = 1135 #Shiraz
 	name = "Southern Army"
 	regiment = {
 		name= "2. Nezam-Atlin"
@@ -80,11 +92,81 @@ army = {
 		type = infantry
 		home = 1122
 	}
+	
+	regiment = {
+		name= "5. Nezam"
+		type = infantry
+		home = 3404
+	}
+
+	regiment = {
+		name= "6. Nezam"
+		type = infantry
+		home = 3502
+	}
 
 	regiment = {
 		name= "2. Zamburak"
 		type = artillery
 		home = 1135
+	}
+	
+	regiment = {
+		name= "2. Zamburak"
+		type = artillery
+		home = 3504
+	}
+	
+	regiment = {
+		name= "2. Zamburak"
+		type = artillery
+		home = 3503
+	}
+}
+
+army = {
+	name = "Iraqi Tribes"
+	location = 926 #Baghdad
+	regiment = {
+		name= "1. Nezam"
+		type = infantry
+		home = 926
+	}
+	
+	regiment = {
+		name= "1. Nezam"
+		type = infantry
+		home = 930
+	}
+	
+	regiment = {
+		name= "1. Nezam"
+		type = infantry
+		home = 3348
+	}
+	
+	regiment = {
+		name= "3. Nezam"
+		type = cavalry
+		home = 926
+	}
+
+	regiment = {
+		name= "4. Nezam"
+		type = cavalry
+		home = 927
+	}
+
+	regiment = {
+		name= "3. Zamburak"
+		type = artillery
+		home = 934
+	}
+	
+	regiment = {
+		name= "3. Zamburak"
+		type = artillery
+		home = 1132
 	}
 }
 
@@ -97,7 +179,6 @@ army = {
 		home = 1113
 	}
 
-
 	regiment = {
 		name= "3. Nezam"
 		type = infantry
@@ -107,7 +188,25 @@ army = {
 	regiment = {
 		name= "4. Nezam"
 		type = infantry
-		home = 1129
+		home = 1108
+	}
+
+	regiment = {
+		name= "1. Nezam"
+		type = infantry
+		home = 964
+	}
+
+	regiment = {
+		name= "3. Nezam"
+		type = infantry
+		home = 2548
+	}
+
+	regiment = {
+		name= "4. Nezam"
+		type = infantry
+		home = 1112
 	}
 
 	regiment = {
@@ -115,4 +214,11 @@ army = {
 		type = artillery
 		home = 1108
 	}
+	
+	regiment = {
+		name= "3. Zamburak"
+		type = artillery
+		home = 1108
+	}
+	
 }

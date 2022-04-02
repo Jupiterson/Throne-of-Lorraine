@@ -133,8 +133,8 @@ political_decisions = {
 	aachen_reforms_francia = {
 		#picture = francia_map
 		potential = {
-			tag = AAC
-		}
+				tag = AAC
+			}
 
 			allow = {
 				owns = 564
@@ -142,8 +142,6 @@ political_decisions = {
 
 			effect = {
 				FRA = { all_core = { add_core = FRC } }
-				FRR = { all_core = { add_core = FRC } }
-				FRZ = { all_core = { add_core = FRC } }
 				GER = { all_core = { add_core = FRC } }
 				AUS = { all_core = { add_core = FRC } }
 				SAR = { all_core = { add_core = FRC } }
@@ -168,7 +166,7 @@ political_decisions = {
 	louis_hungarian = {
 		potential = {
 			tag = HUN
-  #		 	has_global_flag = fantasy_countries_enabled
+  #		  has_global_flag = fantasy_countries_enabled
 			NOT = {
 				tag = PHC
 			}

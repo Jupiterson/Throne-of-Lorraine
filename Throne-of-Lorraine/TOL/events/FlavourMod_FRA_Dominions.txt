@@ -9,10 +9,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		OR = {
-			primary_culture = french
-			primary_culture = occitan
-		}
+		primary_culture = french
 		is_greater_power = yes
 		war = no
 		year = 1867
@@ -210,10 +207,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		OR = {
-			primary_culture = french
-			primary_culture = occitan
-		}
+		primary_culture = french
 		is_greater_power = yes
 		war = no
 		year = 1890

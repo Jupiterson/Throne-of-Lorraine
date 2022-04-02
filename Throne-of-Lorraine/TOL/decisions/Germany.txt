@@ -29,7 +29,7 @@ political_decisions = {
 					}
 				}
 				owner = {
-					#capital = 369
+					capital = 369
 					build_factory_in_capital_state = steamer_shipyard
 				}
 				369 = {
@@ -127,10 +127,8 @@ political_decisions = {
 			NOT = { has_global_flag = watching_the_rhine }
 			OR = {
 				has_country_flag = french_claimed_the_rhine
-				FRR = { exists = yes NOT = { relation = { who = FRR value = 0 } } }
-				FRZ = { exists = yes NOT = { relation = { who = FRZ value = 0 } } }
-				BOR = { exists = yes NOT = { relation = { who = FRR value = 0 } } }
-				VIC = { exists = yes NOT = { relation = { who = FRZ value = 0 } } }
+				FRA = { exists = yes NOT = { relation = { who = FRA value = 0 } } }
+				BOR = { exists = yes NOT = { relation = { who = BOR value = 0 } } }
 				575 = { owner = { NOT = { is_culture_group = germanic } } }
 				576 = { owner = { NOT = { is_culture_group = germanic } } }
 				577 = { owner = { NOT = { is_culture_group = germanic } } }

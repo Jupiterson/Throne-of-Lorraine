@@ -12,27 +12,27 @@
 #		days = 1
 #	}
 #	option = {
-#			name = "It will be the pearl in our crown!"
- #						3290 = { secede = BAV } 
-#			MGH = { all_core = { add_core = NAK } }
-#			FROM = { release = NAK }
-#			FROM = { create_vassal = NAK }
-#			NAK = { government = colonial_company }
-#			THIS = { money = 100000 } 
-#			THIS = { 
-#						diplomatic_influence = {
-#												who = FROM 
-#												value = 800
-#						} 
-#			} 
-#			
+#			  name = "It will be the pearl in our crown!"
+ #						 3290 = { secede = BAV } 
+#			  MGH = { all_core = { add_core = NAK } }
+#			  FROM = { release = NAK }
+#			  FROM = { create_vassal = NAK }
+#			  NAK = { government = colonial_company }
+#			  THIS = { money = 100000 } 
+#			  THIS = { 
+#						  diplomatic_influence = {
+#												   who = FROM 
+#												   value = 800
+#						  } 
+#			  } 
+#			  
 #	}
 #}#
 
 	
-#Buy Barth - offer received
+	#Buy Barth - offer received
 country_event = {
-	id = 9500200
+	id = 950020
 	title = "Buy Neumark?"
 	desc = "Neu Mark has long been part of the Teutons for long, Its now up for sale!"
 	picture = "meeting3"
@@ -47,7 +47,7 @@ country_event = {
 		any_country = {
 			limit = { tag = HNS }
 			country_event = {
-				id = 9500210
+				id = 950021
 				days = 0
 			}
 		}
@@ -61,7 +61,7 @@ country_event = {
 		any_country = {
 			limit = { tag = HNS }
 			country_event = {
-				id = 9500220
+				id = 950022
 				days = 0
 			}
 		}
@@ -69,7 +69,7 @@ country_event = {
 }
 #Buy Barth - offer accepted
 country_event = {
-	id = 9500210
+	id = 950021
 	title = "Neumark is Ours!"
 	desc = "Neu Mark has now been integrated into our Nation"
 	picture = "meeting3"
@@ -86,7 +86,7 @@ country_event = {
 }
 #Buy Barth - offer rejected
 country_event = {
-	id = 9500220
+	id = 950022
 	title = "Neumark won't be ours..."
 	desc = "The Teutons declined our great offer, their mistake!"
 	picture = "meeting3"
@@ -110,9 +110,11 @@ country_event = {
 		name = "Well give them their port"
 		set_country_flag = sold_jade
 		treasury = 200000
-		717 = { change_province_name = "Murano Hafen" }
+		717 = {
+			change_province_name = "Murano Hafen"
 		717 = { secede_province = BAV remove_core = VEN add_core = BAV }
 		BAV = { country_event = 40002 }
+
 		ai_chance = { factor = 100 }
 	}
 
@@ -124,6 +126,8 @@ country_event = {
 			factor = 0
 		}
 	}
+}
+
 }
 
 
@@ -176,7 +180,7 @@ country_event = {
 		war = {
 			target = BOH
 			attacker_goal = {
-			casus_belli = unification_casus_belli
+			   casus_belli = unification_casus_belli
 				state_province_id = 683
 			}
 			attacker_goal = {

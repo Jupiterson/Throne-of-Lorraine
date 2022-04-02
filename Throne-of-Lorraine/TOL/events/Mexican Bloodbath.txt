@@ -18,7 +18,7 @@ country_event = {
 		inherit = OAX
 		any_pop = {
 			limit = { 
-				culture = otomi
+				is_culture = otomi
 			}
 			consciousness = 3
 		}
@@ -48,11 +48,9 @@ country_event = {
 		set_global_flag = bloodbath_1
 		ZAC = { all_core = { add_core = THIS } }
 		any_pop = {
-			limit = {
-				OR = {
-					culture = nahua
-					culture = mayan
-				}
+			limit = { 
+				is_culture = nahua
+				is_culture = mayan
 			}
 			militancy = -2
 		}
@@ -70,8 +68,8 @@ country_event = {
 	trigger = {
 		tag = ZAC
 		year = 1855
-		has_global_flag = bloodbath_1 
-		NOT = { has_global_flag = bloodbath_2 }
+		has_global_flag = { bloodbath_1 } 
+		NOT = { has_global_flag = { bloodbath_2 } }
 	}
 
 	option = {
@@ -80,11 +78,9 @@ country_event = {
 		set_global_flag = bloodbath_2
 		MEX = { all_core = { add_core = THIS } }
 		any_pop = {
-			limit = {
-				OR = {
-					culture = mexican
-					culture = basque
-				}
+			limit = { 
+				is_culture = mexican
+				is_culture = basque
 			}
 			militancy = -2
 		}

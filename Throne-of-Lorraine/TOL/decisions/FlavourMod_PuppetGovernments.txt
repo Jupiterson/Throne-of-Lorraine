@@ -78,6 +78,7 @@ political_decisions = {
 			exists = yes
 			OR = {
 				government = democracy
+			   	government = parliamentary_republic
 				government = prussian_constitutionalism
 				government = hms_government
 				government = absolute_monarchy
@@ -236,11 +237,14 @@ political_decisions = {
 						}
 					}
 					OR = {
-						vassal_of = FRR
-						vassal_of = FRZ
-						vassal_of = BOR
-						vassal_of = VIC
+						vassal_of = FRA
+						AND = {
+							vassal_of = BOR
+							BOR = { NOT = { government = absolute_monarchy } }
+						}
 					}
+					tag = QUE
+					vassal_of = BOR
 				}
 				###Portuguese Puppets###
 				AND = {
@@ -326,6 +330,7 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
+						tag = SAM
 						tag = RUM
 						tag = WAL
 						tag = MOL
@@ -474,8 +479,11 @@ political_decisions = {
 			clr_country_flag = clean_up_colonial_government
 			random_owned = {
 				limit = { owner = { civilized = yes } }
-				owner = {
-					government = democracy
+				owner = { 	
+					OR = {
+						government = democracy
+				  		government = parliamentary_republic
+					}
 				}
 			}
 			random_owned = {
@@ -485,19 +493,8 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					is_core = ALD
-					owner = { 
-						OR = {
-							primary_culture = french
-							primary_culture = occitan
-						}
-					}
-					owner = {
-						NOT = { tag = FRR }
-						NOT = { tag = FRZ }
-						NOT = { tag = FRA }
-						NOT = { tag = BOR }
-						NOT = { tag = VIC }
-					}
+					owner = { primary_culture = french }
+					owner = { NOT = { tag = FRA } }
 				}
 				owner = {
 					primary_culture = maghrebi

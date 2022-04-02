@@ -1,26 +1,28 @@
 political_decisions = {
 
-	swedish_pomerania = {
+ swedish_pommerania = {
 		picture = map_brandeburg
 		potential = {
-			OR = {
-				tag = SWE
-				tag = SCA
+		OR = {
+			tag = SWE
+			tag = SCA
 			}
 			NOT = {
-				has_global_flag = scandi_pomerania
+				has_country_flag = pommerania
 			}
 		}
 		allow = {
 			state_n_government = 1
 		}
-		effect = {			
+		effect = {
+			
 			PRU_546 = {
 				add_core = SWE
-			}			
+			}
+			
 			badboy = 5
 			prestige = 15
-			set_global_flag = scandi_pomerania
+			set_country_flag = pommerania
 		}
 		ai_will_do = {					
 			factor = 1
@@ -33,7 +35,7 @@ political_decisions = {
 		potential = {
 			tag = SWE
 			NOT = {
-				has_global_flag = karelia
+				has_country_flag = karelia
 			}
 		}
 		allow = {
@@ -50,24 +52,26 @@ political_decisions = {
 			
 			badboy = 5
 			prestige = 15
-			set_global_flag = karelia
+			set_country_flag = karelia
 		}
 		ai_will_do = {					
 			factor = 1
 		}
 		
 	}
-
+	
+	
+	
 	danish_holstein = {
 		picture = map_brandeburg
 		potential = {
-			OR = {
-				tag = DEN
-				tag = DNN
-				tag = SCA
-			}
+		OR = {
+			tag = DEN
+			 tag = DNN
+			 tag = SCA
+			 }
 			NOT = {
-				has_global_flag = danish_holstein
+				has_country_flag = holsten
 			}
 		}
 		allow = {
@@ -82,24 +86,25 @@ political_decisions = {
 			
 			badboy = 5
 			prestige = 15
-			set_global_flag = danish_holstein
+			set_country_flag = holsten
 		}
 		ai_will_do = {					
 			factor = 1
 		}
 	}
-
-	danish_north_germany = {
+	
+	
+danish_north_germany = {
 		picture = map_brandeburg
 		potential = {
-			OR = {
-				tag = DEN
-				tag = DNN
-				tag = SCA
-			}
-			has_global_flag = danish_holstein
+		OR = {
+			tag = DEN
+			 tag = DNN
+			 tag = SCA
+			 }
+			has_country_flag = holsten
 			NOT = {
-				has_global_flag = danish_north_germany
+				has_country_flag = north_germany
 			}
 		}
 		allow = {
@@ -116,24 +121,24 @@ political_decisions = {
 			}
 			badboy = 10
 			prestige = 15
-			set_global_flag = danish_north_germany
+			set_country_flag = north_germany
 		}
 		ai_will_do = {					
 			factor = 1
 		}
 	}
 
-	danish_pomerania = {
+	 danish_pommerania = {
 		picture = map_brandeburg
 		potential = {
-			OR = {
-				tag = DEN
-				tag = DNN
-				tag = SCA
-			}
-			has_global_flag = north_germany
+		OR = {
+			tag = DEN
+			 tag = DNN
+			 tag = SCA
+			 }
+			 has_country_flag = north_germany
 			NOT = {
-				has_global_flag = scandi_pomerania
+				has_country_flag = pommerania
 			}
 		}
 		allow = {
@@ -144,10 +149,11 @@ political_decisions = {
 		effect = {
 			PRU_546 = {
 				add_core = THIS
-			}			
+			}
+			
 			badboy = 5
 			prestige = 15
-			set_global_flag = scandi_pomerania
+			set_country_flag = pommerania
 		}
 		ai_will_do = {					
 			factor = 1

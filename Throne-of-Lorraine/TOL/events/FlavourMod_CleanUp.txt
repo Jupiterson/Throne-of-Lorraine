@@ -1,3 +1,59 @@
+country_event = {				#stolen from Victoria Universalis (this entire thing)
+	id = 91306
+	title = "EVTNAME91306"
+	desc = "EVTDESC91306"
+	picture = upper_house
+
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA91306"
+		any_country = {
+			limit = { 	
+				vassal_of = THIS 
+				NOT = { substate_of = THIS } 
+			}
+		country_event = { id = 91307 days = 0 }
+		}
+	}
+	option = {
+		name = "EVTOPTB91306"
+	}
+}
+country_event = {
+	id = 91307
+	title = "EVTNAME91307"
+	desc = "EVTDESC91307"
+	picture = upper_house
+
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA91307"
+		overlord = { country_event = { id = 91308 days = 0} }
+	}
+}
+country_event = {
+	id = 91308
+	title = "EVTNAME91308"
+	desc = "EVTDESC91308"
+	picture = upper_house
+
+	allow_multiple_instances = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA91308"
+		release_vassal = FROM
+	}
+	option = {
+		name = "EVTOPTB91308"
+	}
+}
+
 country_event = {
 	id = 600401
 	title = "EVTNAME600401"

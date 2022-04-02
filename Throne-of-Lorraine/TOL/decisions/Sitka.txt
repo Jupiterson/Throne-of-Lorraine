@@ -79,31 +79,31 @@ political_decisions = {
 			prestige = 10
 			set_country_flag = Borderlands_claimed
 			395 = {
-				add_core = ALS
+			add_core = ALS
 			}
 			405 = {
-				add_core = ALS
+			add_core = ALS
 			}
 			396 = {
-				add_core = ALS
+			add_core = ALS
 			}
 			381 = {
-				add_core = ALS
+			add_core = ALS
 			}
 			576 = {
-				add_core = ALS
+			add_core = ALS
 			}
 			577 = {
-				add_core = ALS
+			add_core = ALS
 			}
 			572 = {
-				add_core = ALS
+			add_core = ALS
 			}
 			573 = {
-				add_core = ALS
+			add_core = ALS
 			}
 			3379 = {
-				add_core = ALS
+			add_core = ALS
 			}
 		}
 		ai_will_do = {
@@ -1368,10 +1368,6 @@ political_decisions = {
 			is_vassal = no
 			NOT = {
 				in_sphere = FRA
-				in_sphere = FRR
-				in_sphere = FRZ
-				in_sphere = BOR
-				in_sphere = VIC
 			}
 		}
 		effect = {
@@ -1805,11 +1801,11 @@ political_decisions = {
 	Become_RHI = {
 		potential = {
 			OR = {
-				tag = AAC
-				tag = DMK
-				tag = TER
-				tag = KOL
-				tag = PAL
+			tag = AAC
+			tag = DMK
+			tag = TER
+			tag = KOL
+			tag = PAL
 			}
 			OR = {
 				AND = {
@@ -3477,7 +3473,7 @@ political_decisions = {
 #	any_owned = { 
 #	add_province_modifier = { name = french_terror duration = -1 } #
 #	}
-#		}
+# #	   }
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -3729,12 +3725,7 @@ political_decisions = {
 					}
 					ALD = {
 						all_core = {
-							OR = {
-								owned_by = FRR
-								owned_by = FRZ
-								owned_by = BOR
-								owned_by = VIC
-							}
+							owned_by = FRA
 						}
 					}
 				}
@@ -3766,12 +3757,7 @@ political_decisions = {
 			}
 			ALD = {
 				all_core = {
-					OR = {
-						owned_by = FRR
-						owned_by = FRZ
-						owned_by = BOR
-						owned_by = VIC
-					}
+					owned_by = FRA
 				}
 			}
 		}
@@ -4341,6 +4327,13 @@ political_decisions = {
 				2233 = { owned_by = THIS NOT = { has_province_modifier = plantation } }
 				2235 = { owned_by = THIS NOT = { has_province_modifier = plantation } }
 				2234 = { owned_by = THIS NOT = { has_province_modifier = plantation } }
+				any_owned_province = { 
+					NOT = { terrain = small_island }
+					NOT = { terrain = desert }
+					NOT = { terrain = semidesert }
+					NOT = { terrain = dryhills }
+					NOT = { has_province_modifier = plantation }
+				}
 				any_owned_province = {
 					is_core = MTQ
 					NOT = { terrain = small_island }
@@ -4428,6 +4421,16 @@ political_decisions = {
 						province_id = 2234
 						province_id = 2235
 					}
+				}
+				add_province_modifier = { name = plantation duration = -1 }
+			}
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = plantation } 
+					NOT = { terrain = small_island }
+					NOT = { terrain = desert }
+					NOT = { terrain = semidesert }
+					NOT = { terrain = dryhills }
 				}
 				add_province_modifier = { name = plantation duration = -1 }
 			}
@@ -4668,7 +4671,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				tag = ITA
-				tag = ITS																													
+				tag = ITS                                                                                                                    
 			}
 			year = 1848
 			OR = {

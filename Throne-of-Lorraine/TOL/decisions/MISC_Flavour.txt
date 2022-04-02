@@ -126,10 +126,7 @@ political_decisions = {
 			FRA_404 = { add_core = NET }
 			random_country = {
 				limit = {
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
+					primary_culture = french
 					capital = 425
 				}
 				relation = { who = THIS value = -400 }

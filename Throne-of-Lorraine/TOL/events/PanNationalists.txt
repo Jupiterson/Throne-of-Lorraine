@@ -1,6 +1,6 @@
 #################################################################################
 #																				#
-#			These events deal with pan-nationalist rebel success				#
+#			 These events deal with pan-nationalist rebel success				#
 #																				#
 #################################################################################
 
@@ -1298,7 +1298,7 @@ country_event = {
 			any_country = {
 				limit = {
 					exists = yes
-					NOT = { is_greater_power = yes	}
+					NOT = { is_greater_power = yes	 }
 					has_country_modifier = kalmar_union
 				}
 				all_core = { add_core = SCA }

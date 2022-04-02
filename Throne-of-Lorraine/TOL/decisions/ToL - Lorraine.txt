@@ -62,11 +62,14 @@ political_decisions = {
 				all_core = {
 					add_core = LOR
 				}
-			}			
+			}
+			
 		}
-	}
-
-	who_wants_champagne = {
+	 }
+	 
+	
+	 
+who_wants_champagne = {
 		picture = normandie_mine
 		potential = {
 			tag = LOR
@@ -85,19 +88,20 @@ political_decisions = {
 		}
 
 		effect = { 
-			badboy = 7
-			prestige = 10
-			set_country_flag = champania
-			451 = { add_core = THIS }
-			454 = { add_core = THIS }
+		 badboy = 7
+		 prestige = 10
+		 set_country_flag = champania
+		  451 = { add_core = THIS }
+		  454 = { add_core = THIS }
 			FRA_406 = {
-				add_core = LOR
-			}		
+					add_core = LOR
+				}
+			
 		}
-	}
+		}
 
 #Luxembourg		
-	northern_manace = {
+northern_manace = {
 		picture = luxembourg_crisis
 		potential = {
 			tag = LOR
@@ -114,18 +118,18 @@ political_decisions = {
 		}
 
 		effect = { 
-			badboy = 10
-			set_country_flag = luxembourg_gone
+		 badboy = 10
+	   set_country_flag = luxembourg_gone
 			LUX = {
 				all_core = {
 					add_core = LOR
 				}
 			}
 		}
-	}
+	 }
 		
 		
-	rhineland_lorrainian = {
+rhineland_lorrainian = {
 		picture = rhineland
 		potential = {
 			tag = LOR
@@ -147,8 +151,8 @@ political_decisions = {
 		 badboy = 5
 		 set_country_flag = rhineland_manace
 			PRU_575 = {
-				add_core = LOR
-			}
+					add_core = LOR
+				}
 			577 = { add_core = THIS }
 			381 = { add_core = THIS }
 			570 = { add_core = THIS }

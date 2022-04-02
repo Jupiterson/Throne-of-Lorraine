@@ -19,18 +19,18 @@ country_event = {
 					tag = HNS
 				}
 			}
-			THIS = { all_core = { limit = { is_core = GER } add_core = HNS } } #former NGF
+			THIS = { all_core = { add_core = HNS } } #former NGF
 		}
 		random_country = {
 			limit = {
 				primary_culture = south_german
 				OR = {
-					tag = FROM
-					tag = SGF
+				tag = FROM
+				tag = SGF
 				}
 			}
 			THIS = {
-				all_core = { limit = { is_core = GER } add_core = SGF }
+				all_core = { add_core = SGF }
 			}
 		}
 		any_country = {

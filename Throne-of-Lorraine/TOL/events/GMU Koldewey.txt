@@ -251,7 +251,7 @@ country_event = {
 }
 
 ###################################
-# PERU QUESTIONS AND ANSWERS	#
+# PERU QUESTIONS AND ANSWERS	  #
 ###################################
 
 ### Peru questioned
@@ -733,7 +733,7 @@ country_event = {
 
 	option = {
 		name = "EVT201038OPTA"
-		any_country = {
+		   any_country = {
 			limit = {
 				is_greater_power = yes
 				NOT = { tag = THIS }
@@ -766,7 +766,7 @@ country_event = {
 
 	option = {
 		name = "EVT201038OPTA"
-		any_country = {
+		   any_country = {
 			limit = {
 				is_greater_power = yes
 				NOT = { tag = THIS }
@@ -799,7 +799,7 @@ country_event = {
 
 	option = {
 		name = "EVT201038OPTA"
-		any_country = {
+		   any_country = {
 			limit = {
 				is_greater_power = yes
 				NOT = { tag = THIS }
@@ -832,7 +832,7 @@ country_event = {
 
 	option = {
 		name = "EVT201038OPTA"
-		any_country = {
+		   any_country = {
 			limit = {
 				is_greater_power = yes
 				NOT = { tag = THIS }
@@ -915,7 +915,6 @@ country_event = {
 	trigger = {
 		has_country_modifier = maya_excavations
 		NOT = { primary_culture = french }
-		NOT = { primary_culture = occitan }
 		NOT = { has_country_flag = belloq_wins }
 		NOT = { has_country_flag = belloq_loses }
 		NOT = { has_country_flag = pyramid_found }
@@ -948,7 +947,7 @@ country_event = {
 	}
 }
 
-#Pyramid Found France
+#Pyramid Found FRA
 country_event = {
 	id = 201023
 	title = "EVTNAME201022"
@@ -957,12 +956,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = maya_excavations
-		OR = {
-			tag = FRR
-			tag = FRZ
-			tag = BOR
-			tag = VIC
-		}
+		primary_culture = french
 	}
 
 	mean_time_to_happen = {
@@ -1002,7 +996,6 @@ country_event = {
 	trigger = {
 		has_country_modifier = maya_excavations
 		NOT = { primary_culture = french }
-		NOT = { primary_culture = occitan }
 		OR = {
 			has_country_flag = belloq_wins
 			has_country_flag = belloq_loses
@@ -1137,7 +1130,7 @@ country_event = {
 }
 
 ##########################
-# Pyramid Chain		#
+# Pyramid Chain		  #
 ##########################
 
 #Pyramid Riddle
@@ -1250,13 +1243,7 @@ country_event = {
 		prestige = -10
 		remove_country_modifier = maya_excavations
 		random_country = {
-			limit = {
-				OR = {
-					primary_culture = french
-					primary_culture = occitan
-				}
-				capital = 425
-			}
+			limit = { primary_culture = french capital = 425 }
 			country_event = 201023
 		}
 	}

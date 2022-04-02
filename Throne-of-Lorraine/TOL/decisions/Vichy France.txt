@@ -14,10 +14,8 @@ political_decisions = {
 			NOT = { has_country_flag = vf_released }
 			NOT = { has_country_modifier = no_more_war }
 			government = fascist_dictatorship
-			FRR = { exists = no }
-			FRZ = { exists = no }
+			FRA = { exists = no }
 			BOR = { exists = no }
-			VIC = { exists = no }
 			425 = { owned_by = THIS }
 		}
 
@@ -28,9 +26,9 @@ political_decisions = {
 		effect = {
 			set_country_flag = vf_released
 			badboy = -10
-			409 = { remove_core = FRR remove_core = FRZ remove_core = BOR remove_core = VIC }
-			410 = { remove_core = FRR remove_core = FRZ remove_core = BOR remove_core = VIC }
-			412 = { remove_core = FRR remove_core = FRZ remove_core = BOR remove_core = VIC }
+			409 = { remove_core = FRA remove_core = BOR }
+			410 = { remove_core = FRA remove_core = BOR }
+			412 = { remove_core = FRA remove_core = BOR }
 			448 = { add_core = VIC }
 			449 = { add_core = VIC }
 			450 = { add_core = VIC }

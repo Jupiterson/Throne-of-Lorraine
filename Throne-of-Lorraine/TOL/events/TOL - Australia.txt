@@ -27,23 +27,23 @@ country_event = {
 
 	option = {
 		name = "EVTOPT99904"
-		2478 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2469 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2472 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2473 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2474 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2475 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2476 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2483 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2487 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2488 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2491 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2492 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2494 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2497 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2498 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2505 = { add_province_modifier = { name = australia_goldrush duration = 365} }
-		2508 = { add_province_modifier = { name = australia_goldrush duration = 365} }
+		2478 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2469 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2472 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2473 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2474 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2475 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2476 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2483 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2487 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2488 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2491 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2492 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2494 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2497 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2498 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2505 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
+		2508 = { add_province_modifier = {name = australia_goldrush  duration = 365} }
 		set_country_flag = australian_gold_migration
 	}
 }
@@ -76,25 +76,25 @@ country_event = {
 		name = "EVTOPT99928"
 
 		any_pop = {
-			limit = {
-				has_pop_culture = aborigine
-				location = {
-					is_core = AST
-					NOT = {
-						province_id = 2501
-						province_id = 2496
-						province_id = 2506
-						province_id = 2604
+				limit = {
+					has_pop_culture = aborigine
+					location = {
+						is_core = AST
+						NOT = {
+							province_id = 2501
+							province_id = 2496
+							province_id = 2506
+							province_id = 2604
+						}
 					}
 				}
+				reduce_pop = 0.1
 			}
-			reduce_pop = 0.1
-		}
 
 		any_pop = {
 			limit = {
 				culture = melanesian
-				location = { is_core = AST }
+				location = { is_core = AST}
 			}
 			reduce_pop = 0.10
 		}
@@ -118,7 +118,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				culture = melanesian
-				location = { is_core = FAS }
+				location = { is_core = FAS}
 			}
 			reduce_pop = 0.10
 		}
@@ -127,7 +127,7 @@ country_event = {
 			limit = {
 				owner = {
 					OR = {
-						is_culture_group = britannian
+						is_culture_group = british
 						primary_culture = australian
 						primary_culture = akino_german
 					}
@@ -152,8 +152,8 @@ country_event = {
 							province_id = 2482
 						}
 						}
-					add_province_modifier = { name = australia_migrations
-											duration = 547 }
+					 add_province_modifier = { name = australia_migrations
+											   duration = 547 }
 				}
 			}
 			any_pop = { limit = { location = { is_core = AST } has_pop_culture = australian type = bureaucrats} reduce_pop = 0.1 }
@@ -166,7 +166,7 @@ country_event = {
 						}
 						add_province_modifier = {
 							name = australia_migrations_vic
-						duration = 547
+						   duration = 547
 						}
 					}
 				}
@@ -200,11 +200,9 @@ country_event = {
 							province_id = 2481
 							province_id = 2482
 						}
-					}
-					add_province_modifier = {
-						name = australia_migrations
-						duration = 547
-					}
+						}
+					 add_province_modifier = { name = australia_migrations
+											   duration = 547 }
 				}
 			}
 			any_pop = { limit = { location = { is_core = FAS } culture = australian type = bureaucrats} reduce_pop = 0.1 }
@@ -216,7 +214,7 @@ country_event = {
 						}
 						add_province_modifier = {
 							name = australia_migrations_vic
-						duration = 547
+						   duration = 547
 						}
 					}
 				}

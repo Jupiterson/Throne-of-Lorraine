@@ -128,12 +128,12 @@ country_event = {
 					average_militancy = 5
 			}
 			any_state = {
-				any_owned_province = {
-			is_core = VEN
-			culture = north_italian
-			is_primary_culture = no
-				}
-				average_militancy = 5
+				  any_owned_province = {
+			  is_core = VEN
+			  culture = north_italian
+			  is_primary_culture = no
+				  }
+				  average_militancy = 5
 			}
 			year = 1845
 		}
@@ -738,10 +738,8 @@ country_event = {
 		war = no
 		tag = PAP
 		OR = {
-			FRR = { is_sphere_leader_of = PAP }
-			FRZ = { is_sphere_leader_of = PAP }
+			FRA = { is_sphere_leader_of = PAP }
 			BOR = { is_sphere_leader_of = PAP }
-			VIC = { is_sphere_leader_of = PAP }
 		}
 		has_global_flag = pius_IX_reforms
 		SAR = { has_country_flag = first_war_of_italian_independence_intervention }
@@ -762,10 +760,7 @@ country_event = {
 		name = "Long live the Roman Republic!"
 		random_country = {
 			limit = {
-				OR = {
-					primary_culture = french
-					primary_culture = occitan
-				}
+				primary_culture = french
 				capital = 425
 			}
 			country_event = 202016
@@ -888,10 +883,8 @@ country_event = {
 		tag = PAP
 		has_global_flag = roman_republic_occured
 		OR = {
-			FRR = { is_sphere_leader_of = PAP }
-			FRZ = { is_sphere_leader_of = PAP }
+			FRA = { is_sphere_leader_of = PAP }
 			BOR = { is_sphere_leader_of = PAP }
-			VIC = { is_sphere_leader_of = PAP }
 		}
 		PAP = { government = democracy }
 	}
@@ -904,10 +897,7 @@ country_event = {
 		name = "France is the protector of Rome."
 		random_country = {
 			limit = {
-				OR = {
-					primary_culture = french
-					primary_culture = occitan
-				}
+				primary_culture = french
 				capital = 425
 			}
 			country_event = 202018
@@ -926,10 +916,8 @@ country_event = {
 				tag = RMG
 				ai = yes
 				OR = {
-					in_sphere = FRR
-					in_sphere = FRZ
+					in_sphere = FRA
 					in_sphere = BOR
-					in_sphere = VIC
 				}
 			}
 			annex_to = PAP
@@ -1438,8 +1426,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = {
-				OR = {
-					relation = {
+				   OR = {
+					   relation = {
 								who = ITA
 								value = 1
 						}
@@ -1624,7 +1612,7 @@ country_event = {
 	picture = "Turin"
 
 	trigger = {
-			OR = {
+			   OR = {
 					tag = ITA
 					tag = ITS
 				}
@@ -1702,12 +1690,12 @@ country_event = {
 
 	trigger = {
 				OR = { tag = AUS
-					tag = KUK
-					tag = AUB
-					}
+					   tag = KUK
+					   tag = AUB
+					 }
 				OR = { government = absolute_monarchy
-					government = prussian_constitutionalism
-					}
+					   government = prussian_constitutionalism
+					 }
 				owns = 729
 				year = 1856
 	}
@@ -2194,7 +2182,7 @@ country_event = {
 
 	trigger = {
 				year = 1926
-			OR = {
+			   OR = {
 					tag = ITA
 					tag = ITS
 				}

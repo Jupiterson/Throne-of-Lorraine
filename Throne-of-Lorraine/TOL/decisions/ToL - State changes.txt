@@ -177,7 +177,7 @@ political_decisions = {
 			OR = {
 				AND = {
 					tag = FRZ
-					NOT = { exists = FRA }
+				NOT = { exists = FRA }
 			 	}
 				AND = { 
 					tag = OCC
@@ -196,7 +196,6 @@ political_decisions = {
 		random_owned = { limit = { owner = { debt_law = serfdom } } owner = { political_reform = peonage  } }
 			set_global_flag = FRZ_cores_set
 			prestige = -20
-			capital = 425
 			any_owned = {
 				limit = {
 					has_province_modifier = french_terror
@@ -204,8 +203,8 @@ political_decisions = {
 				remove_province_modifier = french_terror
 			}
 			remove_country_modifier = nobility_fra
-			FRA = {				
-				all_core = { add_core = FRZ remove_core = FRA }
+			FRA = {
+				all_core = { add_core = FRZ }
 			}
 			change_tag = FRZ
 			any_pop = {
@@ -238,7 +237,6 @@ political_decisions = {
 		random_owned = { limit = { owner = { debt_law = serfdom } } owner = { political_reform = peonage  } }
 			set_global_flag = FRZ_cores_set
 			prestige = -20
-			capital = 425
 			any_owned = {
 				limit = {
 					has_province_modifier = french_terror
@@ -247,7 +245,7 @@ political_decisions = {
 			}
 			remove_country_modifier = nobility_fra
 			FRA = {
-				all_core = { add_core = FRR remove_core = FRA }
+				all_core = { add_core = FRR }
 			}
 			change_tag = FRR
 			any_pop = {
@@ -510,14 +508,53 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	unite_aragon = {
+		picture = enact_dual_monarchy
+		potential = {
+			tag = CAT
+			exists = ARN
+		}
+
+		allow = {
+			war = no
+			OR = {
+				AND = {
+					exists = ARN
+					ARN = {
+						NOT = { vassal_of = SPA }
+					}
+				}
+ 
+			}
+		}
+
+		effect = {
+#			CAT = {
+#				all_core = { remove_core = FRA }
+#			}
+			all_core = {
+				add_core = ARN
+			}
+			any_pop = {
+				limit = { has_pop_culture = french }
+				militancy = 4
+			}
+			change_tag = ARN
+			ARN = {
+				inherit = CAT
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
 	unite_occitania = {
 		picture = enact_dual_monarchy
 		potential = {
 			tag = PRO
 			exists = OCC
 			NOT = { 
-				is_greater_power = yes
-				is_secondary_power = yes
+			is_greater_power = yes
+			is_secondary_power = yes
 			}
 			
 			NOT = { has_global_flag = Occ_annex_pro }
@@ -532,17 +569,17 @@ political_decisions = {
 					exists = OCC
 					OCC = {
 						NOT = { vassal_of = FRA }
-						NOT = { vassal_of = FRR }
-						NOT = { vassal_of = FRZ }
-						NOT = { vassal_of = BOR }
-						NOT = { vassal_of = VIC }
 					}
-				} 
+				}
+ 
 			}
 		}
 
 		effect = {
 			set_global_flag = Occ_annex_pro
+#			PRO = {
+#				all_core = { remove_core = FRA }
+#			}
 			all_core = {
 				add_core = OCC
 			}
@@ -584,6 +621,9 @@ political_decisions = {
 		}
 
 		effect = {
+#			PRO = {
+#				all_core = { remove_core = FRA }
+#			}
 			all_core = {
 				add_core = ILL
 			}
@@ -609,6 +649,9 @@ political_decisions = {
 		}
 
 		effect = {
+#			PRO = {
+#				all_core = { remove_core = FRA }
+#			}
 			any_pop = {
 				limit = { has_pop_culture = lithuanian }
 				militancy = 4
