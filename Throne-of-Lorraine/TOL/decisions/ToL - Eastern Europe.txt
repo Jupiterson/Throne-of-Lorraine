@@ -740,9 +740,17 @@ political_decisions = {
 	emancipate_ruthenyans = {
 		picture = embrace_the_jews
 		potential = {
+		OR = {
 			tag = LIT
+			tag = RUS
+			}
+			owns = 718
+			onws = 958
 			NOT = {
+			OR = { 
 				has_country_flag = ruthenyans_accepted_culture
+				accepted_culture = ruthenyan
+				}
 			}
 		}
 		allow = {
