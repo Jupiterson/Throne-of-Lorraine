@@ -838,13 +838,13 @@ country_event = {
 		random_country = {
 			limit = {
 				ai = yes
-		OR = {
-			capital_scope = { continent = africa }
-			capital_scope = { continent = west_africa }
-			capital_scope = { continent = east_africa }
-			capital_scope = { continent = central_africa }
-			capital_scope = { continent = south_west_africa }
-		}
+				OR = {
+					capital_scope = { continent = africa }
+					capital_scope = { continent = west_africa }
+					capital_scope = { continent = east_africa }
+					capital_scope = { continent = central_africa }
+					capital_scope = { continent = south_west_africa }
+				}
 				civilized = no
 				war = no
 				is_vassal = no
