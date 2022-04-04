@@ -1369,6 +1369,21 @@ categories =  {
         combat_width = -0.33
     }
 	
+	dali = {
+        movement_cost = 1.2
+        defence = 3
+        color = { 22 44 66 }
+
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+
+        supply_limit = 6
+        min_build_railroad = 1
+        combat_width = -0.33
+    }
+	
 	perm = {
         movement_cost = 1.2
         defence = 3
@@ -3914,6 +3929,16 @@ categories =  {
     }
 	
 	fuzhou = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+    }
+	
+	guilin = {
         movement_cost = 1.0
         color = { 22 44 66 }
         farm_rgo_size = 0.2
