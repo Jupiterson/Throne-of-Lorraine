@@ -1,0 +1,265 @@
+#Iberian Pan-Nationalists Victorious
+country_event = {
+
+	id = 100134
+	title = "EVTNAME800150"
+	desc = "EVTDESC800150"
+	picture = "unite"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT96200OPTA"
+		set_country_flag = wants_to_unify
+		clr_country_flag = does_not_want_to_unify
+		capital_scope = {
+			any_pop = {
+				ideology = { factor = 0.05 value = liberal }
+			}
+		}
+		any_pop = {
+			limit = { is_culture_group = iberian }
+			militancy = -6
+		}
+		random_country = {
+			limit = {
+				tag = IBR
+				exists = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+			country_event = 60130
+		}
+		random_country = {
+			limit = {
+				is_culture_group = iberian
+				NOT = { exists = IBR }
+				OR = {
+					has_country_flag = made_the_call_to_union
+					is_greater_power = yes
+				}
+				exists = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+			country_event = 11103
+		}
+		set_country_flag = made_the_call_to_union
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = {
+					is_our_vassal = THIS
+					is_culture_group = iberian
+				}
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+			set_country_flag = former_sphere_leader
+			leave_alliance = THIS
+			country_event = 800056
+		}
+		random_country = {
+			limit = {
+				is_our_vassal = THIS
+				NOT = { is_culture_group = iberian }
+			}
+			release_vassal = THIS
+			leave_alliance = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+			set_country_flag = former_overlord
+			country_event = 800055
+		}
+		any_country = {
+			limit = {
+				NOT = {
+					is_culture_group = iberian
+					has_country_flag = former_sphere_leader
+					has_country_flag = former_overlord
+				}
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -25
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		any_country = {
+			limit = {
+				neighbour = THIS
+				culture_has_union_tag = yes
+				is_cultural_union = no
+				is_greater_power = no
+				is_culture_group = iberian
+			}
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				scaled_militancy = {
+					ideology = liberal
+					factor = 5
+				}
+			}
+		}
+	}
+}
+
+#Brits 
+country_event = {
+
+	id = 100135
+	title = "EVTNAME800150"
+	desc = "EVTDESC800150"
+	picture = "unite"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT96200OPTA"
+		set_country_flag = wants_to_unify
+		clr_country_flag = does_not_want_to_unify
+		capital_scope = {
+			any_pop = {
+				ideology = { factor = 0.05 value = liberal }
+			}
+		}
+		any_pop = {
+			limit = { is_culture_group = britannian }
+			militancy = -6
+		}
+		random_country = {
+			limit = {
+				tag = ENG
+				exists = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+			country_event = 60130
+		}
+		random_country = {
+			limit = {
+				is_culture_group = britannian
+				NOT = { exists = ENG }
+				OR = {
+					has_country_flag = made_the_call_to_union
+					is_greater_power = yes
+				}
+				exists = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+			country_event = 11103
+		}
+		set_country_flag = made_the_call_to_union
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = {
+					is_our_vassal = THIS
+					is_culture_group = britannian
+				}
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+			set_country_flag = former_sphere_leader
+			leave_alliance = THIS
+			country_event = 800056
+		}
+		random_country = {
+			limit = {
+				is_our_vassal = THIS
+				NOT = { is_culture_group = britannian }
+			}
+			release_vassal = THIS
+			leave_alliance = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+			set_country_flag = former_overlord
+			country_event = 800055
+		}
+		any_country = {
+			limit = {
+				NOT = {
+					is_culture_group = britannian
+					has_country_flag = former_sphere_leader
+					has_country_flag = former_overlord
+				}
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -25
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		any_country = {
+			limit = {
+				neighbour = THIS
+				culture_has_union_tag = yes
+				is_cultural_union = no
+				is_greater_power = no
+				is_culture_group = britannian
+			}
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				scaled_militancy = {
+					ideology = liberal
+					factor = 5
+				}
+			}
+		}
+	}
+}

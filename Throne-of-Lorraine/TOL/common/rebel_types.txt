@@ -34,6 +34,7 @@ reactionary_rebels = {
 		democracy = presidential_dictatorship
 		federal_democracy = presidential_dictatorship
 		theocracy = theocracy
+		constitutional_theocracy = theocracy
 		colonial_company = absolute_monarchy
 		hanseatic = presidential_dictatorship
 		merchant_republic = presidential_dictatorship
@@ -359,6 +360,7 @@ fascist_rebels = {
 		hanseatic = fascist_dictatorship
 		merchant_republic = fascist_dictatorship
 		daimyo = fascist_dictatorship
+		constitutional_theocracy = fascist_dictatorship
 		peasant_republic = fascist_dictatorship
 		pirate_republic = fascist_dictatorship
 	}
@@ -661,6 +663,7 @@ communist_rebels = {
 		hanseatic = proletarian_dictatorship
 		merchant_republic = proletarian_dictatorship
 		daimyo = proletarian_dictatorship
+		constitutional_theocracy = proletarian_dictatorship
 		peasant_republic = proletarian_dictatorship
 		pirate_republic = proletarian_dictatorship
 	}
@@ -2055,12 +2058,18 @@ pan_nationalist_rebels = {
 			}
 			owner = { country_event = 96205 }
 		}
-		#random_owned = {
-		#	limit = {
-		#		owner = { is_culture_group = germanic }
-		#	}
-		#	owner = { country_event = 96210 }
-		#}
+		random_owned = {
+			limit = {
+				owner = { is_culture_group = iberian }
+			}
+			owner = { country_event = 100134 }
+		}
+		random_owned = {
+			limit = {
+				owner = { is_culture_group = britannian }
+			}
+			owner = { country_event = 100135 }
+		}
 		random_owned = {
 			limit = {
 				owner = { is_culture_group = scandinavian }
@@ -2080,6 +2089,8 @@ pan_nationalist_rebels = {
 					NOT = { is_culture_group = germanic }
 					NOT = { is_culture_group = pan_romanian }
 					NOT = { is_culture_group = scandinavian }
+					NOT = { is_culture_group = iberian }
+					NOT = { is_culture_group = britannian }
 				}
 			}
 			owner = { country_event = 96200 }
@@ -3670,10 +3681,551 @@ indian_nationalists = {
 }
 
 ###################################
-# Liberal ("Jacobins")
+# Liberal ("Jacobins")  #Now Revolutionary
 ###################################
 liberal_rebels = {
-	icon = 7
+	icon = 20
+
+	area = all					 # Stays within the nation
+	break_alliance_on_win = no
+
+	# <this is the government in the country> = <this is what the rebels want>
+	government = {
+		proletarian_dictatorship = democracy
+		presidential_dictatorship = democracy
+		parliamentary_republic = democracy
+		fascist_dictatorship = democracy
+		absolute_monarchy = democracy
+		prussian_constitutionalism = democracy
+		hms_government = democracy
+		absolute_empire = democracy
+		semi_constitutional_empire = democracy
+		constitutional_empire = democracy
+		dominion = dominion
+		democracy = democracy
+		federal_democracy = federal_democracy
+		theocracy = democracy
+		constitutional_theocracy = democracy
+		colonial_company = colonial_company
+		hanseatic = democracy
+		merchant_republic = democracy
+		daimyo = democracy
+		peasant_republic = peasant_republic
+		pirate_republic = pirate_republic
+	}
+
+
+	defection = none					# Will defect to the "best" alternative.
+	independence = none				# Does not strive for independence
+	defect_delay = 18
+
+	ideology = liberal
+
+	allow_all_cultures = yes
+	allow_all_religions = yes
+	allow_all_ideologies = yes
+
+	resilient = yes					# Disbands on retreat
+	reinforcing = yes				# Does not receive reinforcements
+	general = yes					# Does not use generals
+	smart = yes						# Does not assault forts, tactically withdraw from battle, etc.
+	unit_transfer = no				# Units do not remain after enforcing demands.
+
+	occupation_mult = 1.0			# The amount of strength this rebel gains from taking provinces
+
+	# triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
+	will_rise = {
+		factor = 0.5
+		modifier = {
+			war = yes
+			factor = 0.8
+		}
+		modifier = {
+			war_exhaustion = 40
+			factor = 0.95
+		}
+		modifier = {
+			war_exhaustion = 60
+			factor = 0.95
+		}
+		modifier = {
+			war_exhaustion = 80
+			factor = 0.95
+		}
+		modifier = {
+			factor = 0.1
+			has_country_modifier = springtime_of_nations
+		}
+		modifier = {
+			factor = 0.5
+			has_country_modifier = global_liberal_agitation
+		}
+	}
+
+	# The rebel type with the highest modifier for this pop gets picked
+	spawn_chance = {
+		factor = 1.02
+
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+
+		modifier = {
+			factor = 2
+			location = {
+				has_province_modifier = colorado_sympathies
+			}
+		}
+
+		modifier = {
+			factor = 0
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 0
+			social_movement = yes
+		}
+		modifier = {
+			factor = 0.01
+			NOT = {
+				OR = {
+					pop_majority_ideology = radical
+					pop_majority_ideology = liberal
+					pop_majority_ideology = conservative
+				}
+			}
+		}
+		modifier = {
+			factor = 1.05
+			pop_majority_ideology = conservative
+			consciousness = 6.0
+		}
+		modifier = {
+			factor = 1.03
+			pop_majority_ideology = conservative
+			literacy = 0.50
+		}
+		modifier = {
+			factor = 0.01
+			country = {
+				primary_culture = british
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			OR = {
+				pop_majority_ideology = conservative
+				pop_majority_ideology = liberal
+			}
+			OR = {
+				NOT = { consciousness = 3.0 }
+				NOT = { literacy = 0.30 }
+			}
+			country = {
+				is_ideology_enabled = socialist
+				NOT = {
+					OR = {
+						has_country_modifier = global_liberal_agitation
+						has_country_modifier = springtime_of_nations
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				pop_majority_ideology = conservative
+				pop_majority_ideology = liberal
+			}
+			country = {
+				OR = {
+					has_country_modifier = global_liberal_agitation
+					has_country_modifier = springtime_of_nations
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			country = {
+				OR = {
+					AND = {
+						OR = {
+							government = democracy
+							government = federal_democracy
+							government = parliamentary_republic
+							government = dominion
+							government = hanseatic
+							government = merchant_republic
+							government = peasant_republic
+							government = pirate_republic
+						}
+						OR = {
+							upper_house_composition = state_equal_weight
+							upper_house_composition = population_equal_weight
+						}
+					}
+					AND = {
+						OR = {
+							government = hms_government
+							government = constitutional_empire
+						}
+						NOT = { upper_house_composition = party_appointed }
+					}
+				}
+				OR = {
+					vote_franschise = universal_weighted_voting
+					vote_franschise = universal_voting
+				}
+				NOT = { debt_law = serfdom }
+				NOT = { border_policy = closed_borders }
+				public_meetings = yes_meeting
+				press_rights = free_press
+				slavery = no_slavery
+				ruling_party_ideology = liberal
+			}
+		}
+		modifier = {
+			factor = 0.9
+			country = {
+				OR = {
+					AND = {
+						OR = {
+							government = democracy
+							government = federal_democracy
+							government = parliamentary_republic
+							government = dominion
+							government = hanseatic
+							government = merchant_republic
+							government = peasant_republic
+							government = pirate_republic
+						}
+						OR = {
+							upper_house_composition = state_equal_weight
+							upper_house_composition = population_equal_weight
+						}
+					}
+					AND = {
+						OR = {
+							government = hms_government
+							government = constitutional_empire
+						}
+						NOT = { upper_house_composition = party_appointed }
+					}
+				}
+				OR = {
+					vote_franschise = universal_weighted_voting
+					vote_franschise = universal_voting
+				}
+				NOT = { debt_law = serfdom }
+				NOT = { border_policy = closed_borders }
+				public_meetings = yes_meeting
+				press_rights = free_press
+				slavery = no_slavery
+				NOT = { ruling_party_ideology = liberal }
+			}
+		}
+		modifier = {
+			factor = 1.15
+			pop_majority_ideology = liberal
+		}
+		modifier = {
+			factor = 1.05
+			pop_majority_ideology = radical
+		}
+		modifier = {
+			factor = 1.015
+			political_reform_want = 0.05
+		}
+		modifier = {
+			factor = 1.015
+			political_reform_want = 0.1
+		}
+		modifier = {
+			factor = 1.015
+			political_reform_want = 0.15
+		}
+		modifier = {
+			factor = 0
+			is_primary_culture = no
+			is_accepted_culture = no
+			location = {
+				any_core = {
+					is_cultural_union = no
+					OR = {
+						is_primary_culture = THIS
+						is_accepted_culture = THIS
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01
+			is_primary_culture = yes
+			location = {
+				NOT = { is_core = THIS }
+				any_core = {
+					is_primary_culture = THIS
+					is_cultural_union = no
+					exists = no
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_primary_culture = no
+			is_accepted_culture = no
+			NOT = {
+				location = {
+					any_core = {
+						OR = {
+							is_primary_culture = THIS
+							is_accepted_culture = THIS
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			country = {
+				tag = FRA
+				OR = {
+					#government = hms_government
+					#government = prussian_constitutionalism
+					government = absolute_monarchy
+					government = absolute_empire
+					#government = semi_constitutional_empire
+					#government = constitutional_empire
+				}
+			}
+			#pop_majority_ideology = liberal
+		}
+		modifier = {
+			factor = 0.25
+			is_culture_group = germanic
+			country = {
+				is_greater_power = no
+				is_culture_group = germanic
+				NOT = { tag = GER }
+				NOT = { tag = AUS }
+				NOT = { tag = KUK }
+				NOT = { has_country_flag = wants_to_unify }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			is_culture_group = italian
+			country = {
+				is_greater_power = no
+				is_culture_group = italian
+				OR = {
+					has_global_flag = italian_call_to_union
+					has_global_flag = garibaldi_redshirts
+				}
+				NOT = { has_country_flag = wants_to_unify }
+			}
+		}
+	}
+
+	 #This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+			NOT = { is_capital = yes }
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+			NOT = { is_capital = yes }
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 8
+		}
+		modifier = {
+			factor = 5.0
+			is_capital = yes
+		}
+	}
+
+	 # Province Scope
+	 siege_won_trigger = {
+		NOT = { has_province_modifier = war_torn }
+	 }
+
+	siege_won_effect = {
+		add_province_modifier = {
+			name = war_torn
+			duration = 365
+		}
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.05
+			}
+		}
+		owner = { war_exhaustion = 2.5 }
+	}
+
+
+	# Country scope
+	demands_enforced_trigger = {
+		OR = {
+			capital_scope = {
+				controlled_by = REB
+				province_control_days = 90
+			}
+			NOT = {
+				any_owned_province = {
+					is_colonial = no
+					controlled_by = THIS
+				}
+			}
+		}
+	}
+	demands_enforced_effect = {
+		clr_country_flag = theocratic_government
+		clr_country_flag = communist_gov
+		clr_country_flag = absolute_monarchy_gov
+		clr_country_flag = semi_constitutional_monarchy_gov
+		clr_country_flag = constitutional_monarchy_gov
+		clr_country_flag = democracy_gov
+		clr_country_flag = presidential_dictatorship_gov
+		clr_country_flag = fascist_gov
+		clr_country_flag = radical_gov
+
+		ruling_party_ideology = liberal
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = open_borders
+
+		random_owned = { limit = { owner = { NOT = { trade_unions = all_trade_unions } } } owner = { political_reform = non_socialist } }
+		random_owned = {
+			limit = { owner = { NOT = { vote_franschise = universal_voting } } }
+			owner = { political_reform = universal_weighted_voting }
+		}
+		random_owned = {
+			limit = { owner = { debt_law = peonage } }
+			owner = { political_reform = debtors_prisons }
+		}
+		random_owned = {
+			limit = { owner = { debt_law = serfdom } }
+			owner = { political_reform = peonage }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { slavery = no_slavery } } }
+			owner = { political_reform = no_slavery }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						government = democracy
+						government = federal_democracy
+						government = hms_government
+						government = parliamentary_republic
+						government = constitutional_empire
+						government = dominion
+						government = hanseatic
+						government = merchant_republic
+						government = peasant_republic
+						government = pirate_republic
+					}
+					NOT = {
+						voting_system = proportional_representation
+						tag = USA
+						tag = ENG
+					}
+				}
+			}
+			owner = { political_reform = proportional_representation }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						government = democracy
+						government = federal_democracy
+						government = hms_government
+						government = parliamentary_republic
+						government = constitutional_empire
+						government = dominion
+						government = hanseatic
+						government = merchant_republic
+						government = peasant_republic
+						government = pirate_republic
+					}
+					NOT = {
+						upper_house_composition = population_equal_weight
+						tag = USA
+						tag = ENG
+					}
+				}
+			}
+			owner = { political_reform = population_equal_weight }
+		}
+		random_owned = {
+			limit = { owner = { political_parties = non_secret_ballots } }
+			owner = { political_reform = secret_ballots }
+		}
+		random_owned = {
+			limit = { owner = { political_parties = gerrymandering } }
+			owner = { political_reform = non_secret_ballots }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						political_parties = underground_parties
+						political_parties = harassment
+					}
+				}
+			}
+			owner = { political_reform = gerrymandering }
+		}
+		add_country_modifier = {
+			name = national_confusion
+			duration = 365
+		}
+		prestige_factor = -0.25
+
+		random_owned = {
+			limit = { owner = { NOT = { tag = URU } } }
+			owner = { country_event = 800054 plurality = -10 }
+		}
+
+		random_owned = {
+			limit = { owner = { tag = URU NOT = { has_country_flag = colorado_victory } } }
+			owner = { country_event = 600057 }
+		}
+		random_owned = {
+			limit = { owner = { tag = URU } }
+			owner = { set_country_flag = colorado_rule clr_country_flag = blanco_rule }
+		}
+	}
+}
+
+###################################
+# Liberal ("Reformists")
+###################################
+reformist_rebels = {
+	icon = 19
 
 	area = nation					 # Stays within the nation
 	break_alliance_on_win = no
@@ -3691,12 +4243,12 @@ liberal_rebels = {
 		semi_constitutional_empire = constitutional_empire
 		constitutional_empire = democracy
 		dominion = dominion
-		democracy = democracy
+		democracy = peasant_republic
 		federal_democracy = federal_democracy
-		theocracy = democracy
+		theocracy = constitutional_theocracy
 		colonial_company = colonial_company
-		hanseatic = hanseatic
-		merchant_republic = merchant_republic
+		hanseatic = democracy
+		merchant_republic = democracy
 		daimyo = daimyo
 		peasant_republic = peasant_republic
 		pirate_republic = pirate_republic
@@ -3979,9 +4531,9 @@ liberal_rebels = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 1.8
 			country = {
-				tag = SPC
+				is_culture_group = french
 				OR = {
 					government = hms_government
 					government = prussian_constitutionalism
@@ -3991,7 +4543,6 @@ liberal_rebels = {
 					government = constitutional_empire
 				}
 			}
-			pop_majority_ideology = liberal
 		}
 		modifier = {
 			factor = 0.25
