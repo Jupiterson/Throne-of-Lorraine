@@ -183,5 +183,78 @@ political_decisions = {
 		}
 	 }
 	 
+	 reform_lotharingia = {
+		picture = german_confederation
+		potential = {
+			tag = LOR
+			has_country_flag = rhineland_manace
+			NOT = { has_country_flag = lotharingia }
+		}
+
+		allow = {
+		is_greater_power = yes
+		war = no
+		social_science = 1 
+			all_core = {
+				owned_by = THIS
+			}
+	     owns = 375
+		 owns = 451
+         owns = 387
+		 }
+
+		effect = { 
+		 badboy = 5
+		 set_country_flag = lotharingia
+			LOR = { all_core = { add_core = LOT  } }
+				PRO = { all_core = { add_core = LOT } }
+				ARP = { all_core = { add_core = LOT } }
+				LUX = { all_core = { add_core = LOT } }
+				KOL = { all_core = { add_core = LOT } }
+				WLL = { all_core = { add_core = LOT } }
+				NET = { all_core = { add_core = LOT } }
+				change_tag = LOT
+		}
+		
+		}
+		
+	reforms_francia = {
+		#picture = francia_map
+		potential = {
+		 OR = {
+			tag = AAC
+			tag = LOT
+			}
+		}
+
+			allow = {
+				owns = 564
+				owns = 425
+				owns = 530
+				owns = 461
+				owns = 749
+			}
+
+			effect = {
+				FRA = { all_core = { add_core = FRC } }
+				FRR = { all_core = { add_core = FRC } }
+				FRZ = { all_core = { add_core = FRC } }
+				GER = { all_core = { add_core = FRC } }
+				VEN = { all_core = { add_core = FRC } }
+				SLO = { all_core = { add_core = FRC } }
+				BEL = { all_core = { add_core = FRC } }
+				LUX = { all_core = { add_core = FRC } }
+				PAR = { all_core = { add_core = FRC } }
+				MOD = { all_core = { add_core = FRC } }
+				LUC = { all_core = { add_core = FRC } }
+				TUS = { all_core = { add_core = FRC } }
+				PAP = { all_core = { add_core = FRC } }
+				SMR = { all_core = { add_core = FRC } }
+				prestige = 50
+				change_tag = FRC
+			}
+
+		ai_will_do = { factor = 1 }
+	}
 	 
   }

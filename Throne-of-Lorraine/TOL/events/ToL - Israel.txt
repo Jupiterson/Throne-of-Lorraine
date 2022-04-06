@@ -91,6 +91,7 @@ country_event = {
 
 	trigger = {
 		capital_scope = { continent = europe }
+		NOT = { tag = JAN }
 		NOT = {
 		has_country_flag = accepted_jews
 		has_country_flag = ignored_jews
@@ -136,6 +137,7 @@ country_event = {
 	picture = "Frankfurt"
 
 	trigger = {
+	NOT = { tag = JAN }
 		is_culture_group = iberian
 		NOT = {
 			has_country_flag = accepted_jews
