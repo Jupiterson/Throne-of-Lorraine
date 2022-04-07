@@ -982,6 +982,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = greece_has_got_a_brand_new_bag }
 			NOT = { has_country_flag = greater_bulgaria_claimed }
+			NOT = { has_country_flag = pop_ex }
 			NOT = { tag = TUR }
 			TUR = {
 				exists = yes
@@ -1232,6 +1233,7 @@ political_decisions = {
 			}
 		}
 		effect = {
+		set_country_flag = pop_ex
 			random_owned = {
 				limit = {
 					owner = {
