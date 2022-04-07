@@ -1,3 +1,5 @@
+#Added from GFM portugal content
+
 political_decisions = {
 	form_hispania = {
 		picture = create_iberia
@@ -766,5 +768,87 @@ political_decisions = {
 			}
 		}
 		ai_will_do = { factor = 1 }
+	}
+	
+	claim_olivenza = {
+		picture = olivenza_coa
+		potential = {
+			primary_culture = portuguese
+			NOT = { owns = 3287 } #Olivenza
+			NOT = { has_global_flag = claim_olivenza }
+		}
+
+		allow = {
+			war = no
+			is_disarmed = no
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			3287 = { owner = { NOT = { truce_with = THIS } is_greater_power = no } }
+		}
+
+		effect = {
+			prestige = 5
+			random_country = {
+				limit = { owns = 3287 }
+				country_event = 98500
+			}
+			3287 = { add_core = THIS }
+			set_global_flag = claim_olivenza
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				3287 = { owner = { is_disarmed = no } }
+			}
+		}
+	}
+
+	claim_galicia = {
+		picture = claim_the_galician_region
+		potential = {
+			primary_culture = portuguese
+			NOT = {
+				owns = 474
+				owns = 476
+			} #Galician Region
+			NOT = { has_global_flag = claim_galicia }
+		}
+
+		allow = {
+			war = no
+			is_disarmed = no
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				government = proletarian_dictatorship
+				  government = fascist_dictatorship
+			}
+		}
+
+		effect = {
+			prestige = 5
+			badboy = 5
+			SPA_474 = { add_core = THIS }
+			add_accepted_culture = galician
+			set_global_flag = claim_galicia
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
 	}
 }
