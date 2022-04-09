@@ -425,11 +425,7 @@ outside_form_WSF = {
 			has_country_flag = post_colonial_country
             has_country_flag = no_germany
 			}
-			OR = {
-				tag = NGF
-				tag = SGF
-				tag = HNS
-			}
+			is_culture_group = germanic
 			NOT = { exists = GER exists = GCF }
 		}
 
