@@ -1914,37 +1914,6 @@ country_event = {
 	}
 }
 
-#The Danish Gold Coast
-country_event = {
-	id = 36950
-	title = "EVTNAME36950"
-	desc = "EVTDESC36950"
-	picture = "administration"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT36950OPTA"
-		treasury = -55000
-		DEN = {
-			prestige = 5
-			treasury = 55000
-		}
-		diplomatic_influence = { who = ASH value = -200 }
-		relation = { who = ASH value = -200 }
-		1907 = { secede_province = THIS remove_core = DEN }
-		ai_chance = {
-			factor = 100
-		}
-	}
-	option = {
-		name = "EVT36950OPTB"
-		prestige = -5
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
 
 country_event = {
 	id = 36955
@@ -4192,38 +4161,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = 21371001
-	title = "The polish want to buy The Gambia from us"
-	desc = "Polish goverment sent us an offer to buy The Gambia colony for a good price, the colony once was their's and they would like to buy it."
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Sure, we will sell the colony to the polish"
-		money = 50000
-		1785 = { remove_core = THIS }
-		FROM = { country_event = 21371002 }
-		relation = { who = FROM value = 50 }
-		ai_chance = {
-			factor = 75
-			modifier = {
-				factor = 1.5
-				relation = { who = FROM value = 110 }
-			}
-			modifier = {
-				factor = 1.5
-				relation = { who = FROM value = 150 }
-			}
-		}
-	}
-
-	option = {
-		name = "We dont want to sell the the colony to the polish"
-		FROM = { country_event = 21371003 }
-		relation = {who = FROM value = -50 }
-	}
-}
 
 country_event = {
 	id = 21371002

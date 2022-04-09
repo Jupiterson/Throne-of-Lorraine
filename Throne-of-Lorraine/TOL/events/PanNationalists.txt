@@ -1063,8 +1063,8 @@ country_event = {
 						primary_culture = assamese
 						primary_culture = bengali
 						primary_culture = panjabi
-						primary_culture = avadhi
-						primary_culture = kanauji
+						
+					
 						primary_culture = bihari
 						primary_culture = oriya
 					}
@@ -1123,16 +1123,16 @@ country_event = {
 				THIS = { NOT = { has_country_flag = crown_from_the_gutter } }
 				OR = {
 					primary_culture = tamil
-					primary_culture = kannada
+					
 					primary_culture = telegu
-					primary_culture = malayalam
+					
 				}
 				THIS = {
 					OR = {
 						primary_culture = tamil
-						primary_culture = kannada
+						
 						primary_culture = telegu
-						primary_culture = malayalam
+						
 					}
 				}
 				neighbour = THIS

@@ -1,49 +1,5 @@
 
 country_event = {
-	id = 994180
-	title = "Release New France"
-	desc = "New France would serve as a valuable ally in the New World."
-	picture = "scottish_war"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = USA
-		war = no
-		owns = 246
-	}
-
-
-	option = {
-		name = "Ok."
-		release_vassal = NEN
-		badboy = -5
-		NEN = {
-			primary_culture = yankee
-			add_accepted_culture = akino_german
-			government = democracy
-		}
-		create_alliance = NEN
-		diplomatic_influence = {
-			who = NEN
-			value = 400
-		}
-				ai_chance = {
-			factor = 15
-		}
-	}
-	
-	
-	option = {
-		name = "Rather not"
-		badboy = 2
-		ai_chance = {
-			factor = 85
-		}
-	}
-}
-
-country_event = {
 	id = 8016634
 	title = "Caribbean Federation"
 	desc = EVTDESC8016634
