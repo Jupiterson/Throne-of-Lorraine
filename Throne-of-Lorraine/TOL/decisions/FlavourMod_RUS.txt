@@ -535,67 +535,6 @@ political_decisions = {
 		}
 	}
 
-	#claim_galicia_lodomeria = {
-	#	picture = claim_galicia
-	#	potential = {
-	#		tag = RUS
-	#		is_greater_power = yes
-	#		is_disarmed = no
-	#		OR = {
-	#			owns = 702
-	#			owns = 705
-	#		}
-	#		OR = {
-	#			706 = { is_core = RUS }
-	#			705 = { is_core = RUS }
-	#		}
-	#		NOT = { has_country_flag = claim_galicia }
-	#	}
-	#	allow = {
-	#		OR = {
-	#			 AND = {
-	#				702 = { is_core = RUS }
-	#				952 = { is_core = RUS }
-	#				953 = { is_core = RUS }
-	#				951 = { is_core = RUS }
-	#			}
-	#			AND = {
-	#				705 = { is_core = RUS }
-	#				704 = { is_core = RUS }
-	#				714 = { is_core = RUS }
-	#			}
-	#		}
-	#		war = no
-	#		war_policy = jingoism
-	#	}
-	#	effect = {
-	#		set_country_flag = claim_galicia
-	#		random_country = {
-	#			limit = {
-	#				OR = {
-	#					owns = 705
-	#					owns = 704
-	#				}
-	#			}
-	#			any_owned = {
-	#				limit = {
-	#					is_core = UKR
-	#				}
-	#				add_core = RUS
-	#			}
-	#		}
-	#		badboy = 5
-	#	}
-	#
-	#	ai_will_do = {
-	#		factor = 1
-	#		modifier = {
-	#			factor = 0
-	#			badboy = 0.5
-	#		}
-	#	}
-	#}
-
 	integrate_svaneti = {
 		picture = integrate_abkhazia
 		potential = {
@@ -715,55 +654,5 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-	
-	rus_claim_galicia_lodomeria = {
-		potential = {
-			#has_country_flag = poland_is_russian
-			tag = RUS
-			NOT = {
-				has_country_flag = rus_claim_galicia_lodomeria
-				exists = UKR
-				exists = RUT
-				government = democracy
-				government = hms_government
-				government = constitutional_empire
-				has_country_flag = Government_Democracy
-				702 = { is_core = RUS }
-			}
-			mass_politics = 1
-			#owns = 715
-			owns = 955
-		}
 
-		allow = {
-			invention = national_fraternity
-			invention = the_doctrine_of_fascism
-			is_greater_power = yes
-			prestige = 500
-			war = no
-			is_disarmed = no
-			has_recently_lost_war = no
-		}
-
-		effect = {
-			set_country_flag = rus_claim_galicia_lodomeria
-			prestige = 15
-			badboy = 10
-			662 = { add_core = RUS }
-			663 = { add_core = RUS }
-			702 = { add_core = RUS }
-			705 = { add_core = RUS }
-			951 = { add_core = RUS }
-			952 = { add_core = RUS }
-			953 = { add_core = RUS }
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.6
-			}
-		}
-	}
 }

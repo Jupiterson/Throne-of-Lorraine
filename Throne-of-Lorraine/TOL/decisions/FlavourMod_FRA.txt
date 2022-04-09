@@ -188,57 +188,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	haitian_integration = {
-		picture = map_caribbean
-		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
-			is_greater_power = yes
-			capital = 425
-			OR = {
-				government = hms_government
-				government = democracy
-				government = parliamentary_republic
-				government = constitutional_empire
-			}
-			slavery = no_slavery
-			HAI = { all_core = { owned_by = THIS } }
-			NOT = { has_country_flag = integrated_haiti }
-		}
-		allow = {
-			biologism = 1
-			NOT = { average_militancy = 3 }
-		}
-		effect = {
-			any_pop = {
-				limit = { culture = afro_french }
-				consciousness = -4
-				militancy = -4
-			}
-			DOM = { all_core = { remove_core = HAI } }
-			HAI = {
-				all_core = {
-					add_province_modifier = {
-						name = core_integration
-						duration = -1
-					}
-				}
-			}
-			any_owned = {
-				limit = { is_core = DOM }
-				secede_province = DOM
-			}
-			add_accepted_culture = afro_french
-			FRR = { set_country_flag = integrated_haiti }
-			FRZ = { set_country_flag = integrated_haiti }
-			BOR = { set_country_flag = integrated_haiti }
-			VIC = { set_country_flag = integrated_haiti }
-		}
-		ai_will_do = { factor = 1 }
-	}
-
 
 	walloon_autonomy = {
 		picture = become_wallonia

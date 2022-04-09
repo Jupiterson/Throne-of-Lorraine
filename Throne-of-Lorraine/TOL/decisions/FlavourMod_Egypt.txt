@@ -1,117 +1,4 @@
 political_decisions = {
-	eng_ai_annex_egypt = {
-		picture = suezcanal
-		potential = {
-			capital_scope = { continent = europe }
-			is_greater_power = yes
-			owns = 1755
-			exists = COP
-			has_global_flag = berlin_conference
-			NOT = { has_country_flag = ai_annex_egypt }
-		}
-
-		allow = {
-			is_greater_power = yes
-			COP = {
-				civilized = no
-				ai = yes
-				OR = {
-					part_of_sphere = no
-					in_sphere = THIS
-				}
-			}
-			OR = {
-				COP = {
-					NOT = { vassal_of = TUR }
-				}
-				AND = {
-					COP = { vassal_of = TUR }
-					TUR = {
-						is_greater_power = no
-						ai = yes
-					}
-				}
-			}
-		}
-
-		effect = {
-			leave_alliance = COP
-			diplomatic_influence = {
-				who = COP
-				value = -400
-			}
-			casus_belli = {
-				target = COP
-				type = annex_africa_full
-				months = 60
-			}
-			war = {
-				target = COP
-				attacker_goal = { casus_belli = annex_africa_full }
-				defender_goal = { casus_belli = status_quo }
-			}
-			set_country_flag = ai_annex_egypt
-		}
-	}
-
-	annex_egypt_cop = {
-		picture = suezcanal
-		potential = {
-			tag = COP
-			exists = EGY
-			NOT = { has_country_flag = annex_egypt }
-		}
-
-		allow = {
-		 THIS = {
-				civilized = yes
-				OR = {
-					part_of_sphere = no
-				}
-			}
-		  military_score = 10
-			EGY = {
-				civilized = no
-				ai = yes
-			  
-					part_of_sphere = no
-				
-			}
-			OR = {
-				EGY = {
-					NOT = { vassal_of = TUR }
-				}
-				AND = {
-					EGY = { vassal_of = TUR }
-					TUR = {
-						is_greater_power = no
-						ai = yes
-					}
-				}
-			}
-		}
-
-		effect = {
-			leave_alliance = EGY 
-			diplomatic_influence = {
-				who = EGY 
-				value = -400
-			}
-			casus_belli = {
-				target = EGY 
-				type = annex_africa_full
-				months = 60
-			}
-			war = {
-				target = EGY 
-				attacker_goal = { casus_belli = annex_africa_full }
-				defender_goal = { casus_belli = status_quo }
-			}
-			set_country_flag = ai_annex_egypt
-		}
-	}
-
-
 	form_kingdom_of_egypt = {
 		picture = egyptian_constitution
 		potential = {
@@ -248,7 +135,7 @@ political_decisions = {
 	establish_the_egyptian_railways = {
 		picture = robert_stephenson
 		potential = {
-			tag = EGY
+			tag = COP
 			civilized = no
 			NOT = { has_country_flag = establish_the_egyptian_railways }
 		}

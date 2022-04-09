@@ -612,6 +612,63 @@ political_decisions = {
 			}
 		}
 	}
+	
+	end_crimean_independence = {
+		picture = map_moldavia
+		potential = {
+			tag = TUR
+			OR = {
+				government = absolute_monarchy
+				government = absolute_empire
+				government = prussian_constitutionalism
+				government = semi_constitutional_empire
+			}
+			NOT = { has_country_flag = crimea_annexed }
+			CRI = {
+				vassal_of = THIS
+				exists = yes
+			}
+		}
+
+		allow = {
+			OR = {
+				government = absolute_monarchy
+				government = absolute_empire
+				government = prussian_constitutionalism
+				government = semi_constitutional_empire
+			}
+			war = no
+			has_recently_lost_war = no
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+			war_policy = jingoism
+			CRI = {
+				in_sphere = THIS
+				vassal_of = THIS
+				neighbour = THIS
+			}
+		}
+
+		effect = {
+			set_country_flag = crimea_annexed
+			badboy = 5
+			relation = { who = RUS value = -200 }
+			random_owned = { limit = { TUR = { alliance_with = RUS } } TUR = { leave_alliance = RUS } }
+			any_greater_power = { limit = { NOT = { tag = RUS } capital_scope = { continent = europe } }
+				relation = { who = THIS value = -50 }
+				leave_alliance = THIS
+			}
+			CRI = { country_event = 986500 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.5
+			}
+		}
+	}
 
 	claim_arab_coast = {
 		picture = nejd_sanjak
@@ -914,203 +971,6 @@ political_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}
-	}
-	
-	retake_greece = {
-		picture = map_balkans
-		potential = {
-			tag = TUR
-			year = 1850
-			NOT = {
-				has_country_flag = TUR_GRE_cores
-				has_global_flag = oriental_crisis_sick_man
-			}
-			is_greater_power = yes
-			owns = 670
-			owns = 664
-			owns = 1745
-			owns = 860
-			has_recently_lost_war = no
-			war = no
-		}
-		allow = {
-			prestige = 100
-			nationalism_n_imperialism = 1
-			GRE = {
-				OR = {
-					NOT = { part_of_sphere = yes }
-					in_sphere = THIS
-				}
-			}
-			war = no
-			TUR = {
-				all_core = {
-					owned_by = THIS
-				}
-			}
-			total_amount_of_ships = 40
-			NOT = { average_militancy = 2 }
-		}
-		effect = {
-			relation = {
-				who = GRE
-				value = -400
-			}
-			diplomatic_influence = {
-				who = GRE
-				value = -400
-			}
-			casus_belli = {
-				target = GRE
-				type = conquest_any
-				months = 6
-			}
-			badboy = 10
-			set_country_flag = TUR_GRE_cores
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.4
-			}
-		}
-	}
-
-	retake_crimea = {
-		picture = retake_crimea
-		potential = {
-			tag = TUR
-			has_country_flag = claim_caucasus_tur
-			NOT = {
-				has_country_flag = TUR_RUS_cores
-			}
-			is_greater_power = yes
-			year = 1870
-			NOT = { has_global_flag = oriental_crisis_sick_man }
-			owns = 670
-			owns = 664
-			owns = 1745
-			owns = 860
-		}
-		allow = {
-			prestige = 300
-			war = no
-			revolution_n_counterrevolution = 1
-			TUR = {
-				all_core = {
-					owned_by = THIS
-				}
-			}
-			has_recently_lost_war = no
-		}
-		effect = {
-			relation = {
-				who = RUS
-				value = -400
-			}
-			RUS = {
-				casus_belli = {
-					target = THIS
-					type = cut_down_to_size
-					months = 36
-				}
-				casus_belli = {
-					target = THIS
-					type = humiliate
-					months = 36
-				}
-			}
-			TUR = {
-				casus_belli = {
-					target = RUS
-					type = acquire_any_state
-					months = 36
-				}
-			}
-			war = {
-				target = RUS
-				attacker_goal = {
-					casus_belli = acquire_any_state
-					state_province_id = 964
-				}
-				defender_goal = {
-					casus_belli = humiliate
-				}
-				call_ally = no
-			}
-			prestige = 25
-			badboy = 5
-			set_country_flag = TUR_RUS_cores
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.2
-			}
-		}
-	}
-
-	end_serbia_independence = {
-		picture = map_balkans
-		potential = {
-			tag = TUR
-			year = 1850
-			NOT = {
-				has_global_flag = oriental_crisis_sick_man
-				has_country_flag = serbia_annexed
-			}
-			exists = SER
-			is_greater_power = yes
-			owns = 670
-			owns = 664
-			owns = 1745
-			owns = 860
-			has_recently_lost_war = no
-			war = no
-		}
-		allow = {
-			prestige = 50
-			is_greater_power = yes
-			nationalism_n_imperialism = 1
-			war = no
-			SER = {
-				OR = {
-					NOT = { part_of_sphere = yes }
-					in_sphere = THIS
-				}
-				neighbour = THIS
-			}
-			NOT = {
-				truce_with = SER
-			}
-			NOT = { average_militancy = 2 }
-		}
-		effect = {
-			set_country_flag = serbia_annexed
-			badboy = 5
-			relation = {
-				who = RUS
-				value = -100
-			}
-			any_greater_power = { limit = { NOT = { tag = RUS } capital_scope = { continent = europe } }
-				relation = {
-				who = THIS
-				value = -25
-				}
-			}
-			SER = {
-				country_event = 986500
-			}
-		}
-		ai_will_do = {
-		factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.8
-			}
 		}
 	}
 	

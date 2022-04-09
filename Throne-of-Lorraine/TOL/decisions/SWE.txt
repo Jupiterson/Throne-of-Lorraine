@@ -229,6 +229,7 @@ political_decisions = {
 		potential = {
 			tag = SWE
 			NOT = { has_global_flag = swe_annex_bal }
+			UBD = { vassal_of = SWE }
 		}
 
 		allow = {
@@ -291,6 +292,7 @@ political_decisions = {
 		potential = {
 			tag = RUS
 			NOT = { has_global_flag = rus_annex_bal }
+			UBD = { vassal_of = RUS }
 		}
 
 		allow = {

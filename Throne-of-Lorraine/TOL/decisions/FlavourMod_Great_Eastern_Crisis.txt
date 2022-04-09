@@ -156,57 +156,6 @@ political_decisions = {
 			}
 		}
 	}
-
-	the_reichstadt_agreement = {
-		picture = congress_of_berlin
-		potential = {
-			OR = {
-				tag = GER
-				tag = GCF
-				tag = AUS
-				tag = KUK
-				tag = DNB
-			}
-			is_greater_power = yes
-			is_disarmed = no
-			OR = {
-				owns = 771
-				771 = { owner = { vassal_of = THIS } }
-			}
-			OR = {
-				TUR = { owns = 783 }
-				BOS = { vassal_of = TUR }
-			}
-			OR = {
-				AND = {
-					has_global_flag = constantinople_conference
-					RUS = { NOT = { war_with = TUR } }
-				}
-				has_global_flag = russia_liberate_balkans
-			}
-			NOT = {
-				has_global_flag = the_reichstadt_agreement
-				has_global_flag = great_eastern_crisis_refused
-				has_global_flag = great_eastern_crisis_war_demanded_turks
-			}
-		}
-
-		allow = {
-			NOT = {
-				war_with = RUS
-				truce_with = RUS
-			}
-			military_score = 100
-		}
-
-		effect = {
-			set_global_flag = the_reichstadt_agreement
-			RUS = { country_event = 99822 }
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
 	the_treaty_of_san_stefano_const = {
 		picture = congress_of_berlin
 		potential = {

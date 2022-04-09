@@ -310,48 +310,6 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	Greater_Korea = {
-		potential = {
-			tag = KOR
-			NOT = { has_country_flag = Greater_Korea_claimed }
-			ai = no
-		}
-		allow = {
-			war = no
-			prestige = 10
-			is_vassal = no
-			war_policy = jingoism
-		}
-		effect = {
-			badboy = 10
-			prestige = 15
-			set_country_flag = Greater_Korea_claimed
-			1083 = {
-			add_core = KOR
-			}
-			1082 = {
-			add_core = KOR
-			}
-			1554 = {
-			add_core = KOR
-			}
-			1555 = {
-			add_core = KOR
-			}
-			1479 = {
-			add_core = KOR
-			}
-			1480 = {
-			add_core = KOR
-			}
-			1481 = {
-			add_core = KOR
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	Claim_Ionia = {
 		potential = {
 			tag = KNI
@@ -1766,41 +1724,6 @@ political_decisions = {
 		}
 	}
 	
-	Become_SWH = {
-		potential = {
-			OR = {
-				tag = LAU
-				tag = SCH
-				tag = HOL
-			}
-			OR = {
-				ai = no
-				AND = {
-					war = no
-					NOT = { exists = SWH }
-					is_vassal = no
-					owns = 529
-					owns = 369
-					owns = 370
-				}
-			}
-		}
-		allow = {
-			war = no
-			NOT = { exists = SWH }
-			is_vassal = no
-			owns = 529
-			owns = 369
-			owns = 370
-		}
-		effect = {
-			prestige = 20
-			change_tag = SWH
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	Become_RHI = {
 		potential = {
@@ -3709,136 +3632,7 @@ political_decisions = {
 			}
 		}
 	}
-	reconquer_algeria = {
-		picture = alg_regency
-		potential = {
-			OR = {
-				AND = {
-					is_disarmed = no
-					is_greater_power = yes
-					is_vassal = no
-					prestige = 50
-					war = no
-					OR = {
-						nationalism_n_imperialism = 1
-						AND = {
-							war_policy = jingoism
-							total_amount_of_ships = 30
-							total_amount_of_divisions = 60
-						}
-					}
-					ALD = {
-						all_core = {
-							OR = {
-								owned_by = FRR
-								owned_by = FRZ
-								owned_by = BOR
-								owned_by = VIC
-							}
-						}
-					}
-				}
-				ai = no
-			}
-			tag = TUR
-			NOT = { has_global_flag = oriental_crisis_sick_man }
-			TUN = {
-				all_core = {
-					owned_by = THIS
-				}
-			}
-			NOT = { has_global_flag = ott_algeria_conquered }
-		}
-
-		allow = {
-			is_disarmed = no
-			is_greater_power = yes
-			is_vassal = no
-			prestige = 50
-			war = no
-			OR = {
-				nationalism_n_imperialism = 1
-				AND = {
-					war_policy = jingoism
-					total_amount_of_ships = 30
-					total_amount_of_divisions = 60
-				}
-			}
-			ALD = {
-				all_core = {
-					OR = {
-						owned_by = FRR
-						owned_by = FRZ
-						owned_by = BOR
-						owned_by = VIC
-					}
-				}
-			}
-		}
-		effect = {
-			set_global_flag = ott_algeria_conquered
-			country_event = 123533
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				war = yes
-			}
-		}
-	}
-	finish_off_dahomey = {
-		picture = second_dahomey_war
-		potential = {
-			owns = 1919
-			NOT = {
-				AND = {
-				owns = 1920
-				owns = 1922
-				owns = 1921
-				}
-			}
-			DAH = {
-				OR = {
-					owns = 1920
-					owns = 1922
-					owns = 1921
-				}
-			}
-			has_global_flag = berlin_conference
-			OR = {
-				AND = {
-					is_disarmed = no
-					is_greater_power = yes
-					is_vassal = no
-					war = no
-				}
-				ai = no
-			}
-		}
-		allow = {
-			is_disarmed = no
-			is_greater_power = yes
-			is_vassal = no
-			war = no
-		}
-		effect = {
-			set_global_flag = dahomey_conquered
-			war = {
-				target = DAH
-				attacker_goal = { casus_belli = conquest_any }
-				defender_goal = { casus_belli = acquire_core_state state_province_id = 1919 }
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				war = yes
-			}
-		}
-	}
+	
 	build_chunnel = {
 		picture = chunnel
 		potential = {
@@ -4055,30 +3849,6 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	franklin_expedition = {
-		picture = Franklin-Ship
-		potential = {
-			tag = ENG
-			year = 1845
-			NOT = { year = 1846 }
-			NOT = { has_country_flag = franklin_sent }
-			OR = {
-				ai = no
-				money = 50000
-			}
-		}
-		allow = {
-			money = 50000
-		}
-		effect = {
-			prestige = 20
-			treasury = -50000
-			set_country_flag = franklin_sent
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
    
 	send_liman = {
 		picture = liman_sent
@@ -4266,32 +4036,6 @@ political_decisions = {
 			prestige = 3
 			child_labor = child_labor_illegal
 			social_reform = good_schools
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	retake_colombo = {
-		potential = {
-			tag = EIC
-			owns = 1321
-			owns = 1322
-			owns = 1324
-			ENG = { owns = 1323 }
-			OR = {
-				AND = {
-					war = no
-					vassal_of = ENG
-				}
-				ai = no
-			}
-		}
-		allow = {
-			war = no
-			vassal_of = ENG
-		}
-		effect = {
-			1323 = { secede_province = THIS }
 		}
 		ai_will_do = {
 			factor = 1
@@ -4521,45 +4265,6 @@ political_decisions = {
 		}
 		ai_will_do = {
 			factor = 0
-		}
-	}
-	dominican_ultimatum = {
-		picture = dom_spa
-		potential = {
-			tag = USA
-			war = no
-			HAI_2213 = { 2214 = { owner = { has_country_flag = DOM_claimed } } }
-			NOT = { has_country_flag = dominican_ultimatum_sent }
-			OR = {
-				AND = {
-					war = no
-					has_recently_lost_war = no
-					has_unclaimed_cores = no
-					is_greater_power = yes
-					total_amount_of_ships = 40
-				}
-				ai = no
-			}
-		}
-		allow = {
-			war = no
-			has_recently_lost_war = no
-			has_unclaimed_cores = no
-			is_greater_power = yes
-			total_amount_of_ships = 40
-		}
-		effect = {
-			set_country_flag = dominican_ultimatum_sent
-			any_country = {
-				limit = {
-					owns = 2214
-					has_country_flag = DOM_claimed
-				}
-				country_event = 123610
-			}
-		}
-		ai_will_do = {
-			factor = 1
 		}
 	}
 	greater_slovenia = {
