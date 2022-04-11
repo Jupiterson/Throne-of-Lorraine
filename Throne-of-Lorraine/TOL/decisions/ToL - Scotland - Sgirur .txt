@@ -1,15 +1,48 @@
 political_decisions = {
+    enforce_rule_over_sgirur = {
+		picture = reino_unido
+		potential = {
+		    tag = SCO
+			OR = {
+				ai = no
+				has_country_flag = scotlandbrazil_ai
+			}
+			BRZ = {
+				AND = {
+					exists = yes
+					is_independant = yes
+				}
+			}
+			NOT = { has_country_flag = enforce_rule_over_sgirur}
+			NOT = { has_country_flag = gaelic_english_bilinguism}
+			NOT = { has_country_flag = gaelic_assimilation}
+		}
+
+		allow = {
+			war = no
+			prestige = 30
+			naval_plans = 1
+			state_n_government = 1
+			is_greater_power = yes
+		}
+
+		effect = {
+		    set_country_flag = enforce_rule_over_sgirur
+			badboy = 5
+			war = {
+			    target = BRZ
+			    attacker_goal = { casus_belli = make_puppet_no_infamy }
+			    defender_goal = { casus_belli = status_quo }
+		    }
+		}
+	}
 #SCOTLAND FOREVER and brazil I guess
 	unite_the_kingdom = {
 		picture = reino_unido
 		potential = {
 			OR = {
-				tag = SCO
+				has_country_flag = enforce_rule_over_sgirur
 				tag = BRZ
-			}
-			OR = {
-				ai = no
-				has_country_flag = scotlandbrazil_ai
 			}
 			NOT = { has_country_flag = Union_of_PTBR}
 			NOT = { has_country_flag = gaelic_english_bilinguism}
