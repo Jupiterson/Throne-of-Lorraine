@@ -6289,6 +6289,7 @@ political_decisions = {
 				tag = DNN
 				tag = NOR
 			}
+			NOT = { has_country_flag = sapmi_rename }
 		}
 
 		allow = {
@@ -6301,6 +6302,7 @@ political_decisions = {
 		}
 
 		effect = {
+		    set_country_flag = sapmi_rename
 			prestige = 5
 			3338 = { change_province_name = "Giron" }
 			3339 = { change_province_name = "Roavvenjárga" }

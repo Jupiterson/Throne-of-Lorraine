@@ -501,18 +501,18 @@ country_event = {
 			}
 			change_controller = THIS
 		}
-		government = presidential_dictatorship
-		ruling_party_ideology = reactionary
-		political_reform = none_voting
+		government = democracy
+		ruling_party_ideology = liberal
+		political_reform = universal_voting
 		political_reform = population_equal_weight
-		political_reform = no_meeting
+		political_reform = yes_meeting
 		political_reform = free_press
 		random_owned = {
 			limit = { owner = { NOT = { political_parties = secret_ballots } } }
-			owner = { political_reform = non_secret_ballots }
+			owner = { political_reform = secret_ballots }
 		}
 		random_owned = {
-			limit = { owner = { NOT = { trade_unions = all_trade_unions } } }
+			limit = { owner = { NOT = { trade_unions = non_socialist } } }
 			owner = { political_reform = non_socialist }
 		}
 		add_country_modifier = {
@@ -528,8 +528,8 @@ country_event = {
 					type = officers
 				}
 			}
-			ideology = { factor = 0.3 value = conservative }
-			dominant_issue = { factor = 0.20 value = jingoism }
+			ideology = { factor = 0.3 value = liberal }
+			dominant_issue = { factor = 0.20 value = pro_military }
 		}
 		any_pop = {
 			limit = {
@@ -537,8 +537,8 @@ country_event = {
 				is_culture_group = italian
 				location = { is_core = THIS }
 			}
-			ideology = { factor = 0.25 value = conservative }
-			dominant_issue = { factor = 0.10 value = jingoism }
+			ideology = { factor = 0.25 value = liberal }
+			dominant_issue = { factor = 0.10 value = pro_military }
 		}
 		any_pop = {
 			limit = {
@@ -546,11 +546,11 @@ country_event = {
 			}
 			scaled_militancy = {
 				ideology = reactionary
-				factor = 4
+				factor = 6
 			}
 			scaled_militancy = {
 				ideology = conservative
-				factor = -6
+				factor = 3
 			}
 			scaled_militancy = {
 				ideology = liberal

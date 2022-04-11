@@ -3207,6 +3207,36 @@ categories =  {
         min_build_railroad = 3
     }
 
+	thimpu = {
+        movement_cost = 1.4
+        defence = 3
+        color = { 22 44 66 }
+        farm_rgo_size = -0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+
+        combat_width = -0.7
+
+        min_build_railroad = 3
+    }
+	
+	tumlong = {
+        movement_cost = 1.4
+        defence = 3
+        color = { 22 44 66 }
+        farm_rgo_size = -0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+
+        combat_width = -0.7
+
+        min_build_railroad = 3
+    }
+
     colombo = {
         movement_cost = 1.0
         color = { 22 44 66 }
@@ -3918,6 +3948,16 @@ categories =  {
         supply_limit = 10
     }
 	
+	brunei = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+    }
+	
 	nompen = {
         movement_cost = 1.0
         color = { 22 44 66 }
@@ -3958,6 +3998,16 @@ categories =  {
         supply_limit = 10
     }
 	
+	patna = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+    }
+	
 	malaka = {
         movement_cost = 1.0
         color = { 22 44 66 }
@@ -3966,6 +4016,436 @@ categories =  {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 10
+    }
+	
+	benin = {
+        movement_cost = 1.5
+        defence = 2.0
+        attrition = 1.5
+        color = { 0 32 0 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+        min_build_railroad = 3
+        immigrant_attract = -0.25
+        combat_width = -0.50
+    }
+	
+	kano = {
+        movement_cost = 1.2
+        color = { 208 155 0 }
+        farm_rgo_size = -0.3
+        farm_rgo_eff = -0.3
+        mine_rgo_size = -0.1
+        mine_rgo_eff = -0.1
+
+        supply_limit = 2
+
+        combat_width = -0.5
+
+        min_build_railroad = 3
+        immigrant_attract = -0.4
+        attrition = 1
+    }
+	
+	zinder = {
+        movement_cost = 1.2
+        color = { 208 155 0 }
+        farm_rgo_size = -0.3
+        farm_rgo_eff = -0.3
+        mine_rgo_size = -0.1
+        mine_rgo_eff = -0.1
+
+        supply_limit = 2
+
+        combat_width = -0.5
+
+        min_build_railroad = 3
+        immigrant_attract = -0.4
+        attrition = 1
+    }
+	
+	sokoto = {
+        movement_cost = 1.2
+        color = { 208 155 0 }
+        farm_rgo_size = -0.3
+        farm_rgo_eff = -0.3
+        mine_rgo_size = -0.1
+        mine_rgo_eff = -0.1
+
+        supply_limit = 2
+
+        combat_width = -0.5
+
+        min_build_railroad = 3
+        immigrant_attract = -0.4
+        attrition = 1
+    }
+	
+	rangoon = {
+        movement_cost = 1.05
+        immigrant_attract = 0.25
+        color = { 0 255 0 }
+        farm_rgo_size = 0.25
+        farm_rgo_eff = 0.025
+        mine_rgo_size = -0.25
+        mine_rgo_eff = -0.025
+        min_build_railroad = 1
+        supply_limit = 6
+    }
+	
+	cuttack = {
+        movement_cost = 1.05
+        immigrant_attract = 0.25
+        color = { 0 255 0 }
+        farm_rgo_size = 0.25
+        farm_rgo_eff = 0.025
+        mine_rgo_size = -0.25
+        mine_rgo_eff = -0.025
+        min_build_railroad = 1
+        supply_limit = 6
+    }
+	
+	luangprabang = {
+        movement_cost = 2.0
+        defence = 3.0
+        attrition = 1.5
+        color = { 0 25 0 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = -0.3
+        supply_limit = 1.4
+        min_build_railroad = 4
+        immigrant_attract = -0.25
+        combat_width = -0.80
+    }
+	
+	yazd = {
+        movement_cost = 1.5
+        defence = 3.0
+        ##attrition = 0.25
+        color = { 92 82 7 }
+        farm_rgo_size = -0.3
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        min_build_naval_base = 1
+        min_build_railroad = 3
+        immigrant_attract = -0.6
+        supply_limit = 2
+        combat_width = -0.6
+    }
+	
+	kerman = {
+        movement_cost = 1.5
+        defence = 3.0
+        ##attrition = 0.25
+        color = { 92 82 7 }
+        farm_rgo_size = -0.3
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        min_build_naval_base = 1
+        min_build_railroad = 3
+        immigrant_attract = -0.6
+        supply_limit = 2
+        combat_width = -0.6
+    }
+	
+	vizgapatnam = {
+        movement_cost = 1.2
+        defence = 1
+        color = { 91 123 45 }
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 6
+        combat_width = -0.20
+        min_build_railroad = 2
+		immigrant_attract = 0.10
+    }
+	
+	calicut = {
+        movement_cost = 1.5
+        defence = 2.0
+        attrition = 1.5
+        color = { 0 32 0 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+        min_build_railroad = 3
+        immigrant_attract = -0.25
+        combat_width = -0.50
+    }
+	
+	mysore = {
+        movement_cost = 1.0
+        color = { 241 221 184 }
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.1
+
+    }
+	
+	beirut = {
+        movement_cost = 1.2
+        color = { 208 155 0 }
+        farm_rgo_size = -0.3
+        farm_rgo_eff = -0.3
+        mine_rgo_size = -0.1
+        mine_rgo_eff = -0.1
+
+        supply_limit = 2
+
+        combat_width = -0.5
+
+        min_build_railroad = 3
+        immigrant_attract = -0.4
+        attrition = 1
+    }
+	
+	aleppo = {
+        movement_cost = 1.2
+        color = { 208 155 0 }
+        farm_rgo_size = -0.3
+        farm_rgo_eff = -0.3
+        mine_rgo_size = -0.1
+        mine_rgo_eff = -0.1
+
+        supply_limit = 2
+
+        combat_width = -0.5
+
+        min_build_railroad = 3
+        immigrant_attract = -0.4
+        attrition = 1
+    }
+	
+	mosul = {
+        movement_cost = 1.2
+        defence = 1
+        color = { 70 135 0 }
+
+        farm_rgo_size = 0.0
+        farm_rgo_eff = -0.1
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+
+        supply_limit = 3
+        min_build_railroad = 2
+        combat_width = -0.33
+		immigrant_attract = -0.3
+    }
+	
+	imphal = {
+        movement_cost = 2.0
+        defence = 3.0
+        attrition = 1.5
+        color = { 0 25 0 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = -0.3
+        supply_limit = 1.4
+        min_build_railroad = 4
+        immigrant_attract = -0.25
+        combat_width = -0.80
+    }
+	
+	yogyakarta = {
+        movement_cost = 2.0
+        defence = 3.0
+        attrition = 1.5
+        color = { 0 25 0 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = -0.3
+        supply_limit = 1.4
+        min_build_railroad = 4
+        immigrant_attract = -0.25
+        combat_width = -0.80
+    }
+	
+	taunggyi = {
+        movement_cost = 2.0
+        defence = 3.0
+        attrition = 1.5
+        color = { 0 25 0 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = -0.3
+        supply_limit = 1.4
+        min_build_railroad = 4
+        immigrant_attract = -0.25
+        combat_width = -0.80
+    }
+	
+	lagos = {
+        movement_cost = 1.3
+        attrition = 1.5
+        defence = 2
+
+        color = { 32 151 0 }
+        farm_rgo_size = -0.25
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.0
+        mine_rgo_eff = -0.2
+
+        supply_limit = 1
+        min_build_railroad = 3
+        min_build_fort = 1
+        combat_width = -0.25
+        immigrant_attract = -0.25
+    }
+	
+	bali = {
+        movement_cost = 1.3
+        attrition = 1.5
+        defence = 2
+
+        color = { 32 151 0 }
+        farm_rgo_size = -0.25
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.0
+        mine_rgo_eff = -0.2
+
+        supply_limit = 1
+        min_build_railroad = 3
+        min_build_fort = 1
+        combat_width = -0.25
+        immigrant_attract = -0.25
+    }
+	
+	ternate = {
+        movement_cost = 1.3
+        attrition = 1.5
+        defence = 2
+
+        color = { 32 151 0 }
+        farm_rgo_size = -0.25
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.0
+        mine_rgo_eff = -0.2
+
+        supply_limit = 1
+        min_build_railroad = 3
+        min_build_fort = 1
+        combat_width = -0.25
+        immigrant_attract = -0.25
+    }
+	
+	menado = {
+        movement_cost = 1.3
+        attrition = 1.5
+        defence = 2
+
+        color = { 32 151 0 }
+        farm_rgo_size = -0.25
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.0
+        mine_rgo_eff = -0.2
+
+        supply_limit = 1
+        min_build_railroad = 3
+        min_build_fort = 1
+        combat_width = -0.25
+        immigrant_attract = -0.25
+    }
+	
+	pontianak = {
+        movement_cost = 1.3
+        attrition = 1.5
+        defence = 2
+
+        color = { 32 151 0 }
+        farm_rgo_size = -0.25
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.0
+        mine_rgo_eff = -0.2
+
+        supply_limit = 1
+        min_build_railroad = 3
+        min_build_fort = 1
+        combat_width = -0.25
+        immigrant_attract = -0.25
+    }
+	
+	bandaaceh = {
+        movement_cost = 1.5
+        defence = 2.0
+        attrition = 1.5
+        color = { 0 32 0 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+        min_build_railroad = 3
+        immigrant_attract = -0.25
+        combat_width = -0.50
+    }
+	
+	dili = {
+        movement_cost = 1.5
+        defence = 2.0
+        attrition = 1.5
+        color = { 0 32 0 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+        min_build_railroad = 3
+        immigrant_attract = -0.25
+        combat_width = -0.50
+    }
+	
+	zamboanga = {
+        movement_cost = 1.5
+        defence = 2.0
+        attrition = 1.5
+        color = { 0 32 0 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = -0.3
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+        min_build_railroad = 3
+        immigrant_attract = -0.25
+        combat_width = -0.50
+    }
+	
+	makassar = {
+        movement_cost = 1.2
+        defence = 1.0
+        attrition = 0.8
+        color = { 88 122 37 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = 0.0
+        mine_rgo_size = -0.1
+        mine_rgo_eff = -0.1
+        supply_limit = 3
+        min_build_railroad = 3
+        immigrant_attract = -0.25
+        combat_width = -0.2
+    }
+	
+	palembang = {
+        movement_cost = 1.2
+        defence = 1.0
+        attrition = 0.8
+        color = { 88 122 37 }
+        farm_rgo_size = -0.1
+        farm_rgo_eff = 0.0
+        mine_rgo_size = -0.1
+        mine_rgo_eff = -0.1
+        supply_limit = 3
+        min_build_railroad = 3
+        immigrant_attract = -0.25
+        combat_width = -0.2
     }
 }
 
