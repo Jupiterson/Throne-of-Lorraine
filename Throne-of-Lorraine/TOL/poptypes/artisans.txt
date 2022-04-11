@@ -254,6 +254,22 @@ country_migration_target = {
 			government = pirate_republic
 		}
 	}
+	
+	modifier = {
+        factor = 100
+        THIS = {
+        OR = { 
+            has_pop_culture = native_american_minor
+            has_pop_culture = haida
+            has_pop_culture = inuit
+            has_pop_culture = dakota
+            has_pop_culture = cherokee
+            has_pop_culture = pueblo
+            has_pop_culture = cree
+            }
+        }
+        tag = HAD
+    }
 }
 
 migration_target = {

@@ -2240,6 +2240,28 @@ political_decisions = {
 			any_pop = { limit = { has_pop_culture = brazilian } literacy = 0.06 }
 			2344 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.1 } } #Montevideo
 			ARC = { 2348 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.1 } } }
+			add_country_modifier = {
+				name = america_new_world
+				duration = 3650
+			}
+		}
+	}
+	
+	JES_1836_setup = {
+		potential = {
+			tag = JES
+			always = no
+		}
+
+		allow = {
+			tag = JES
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = america_new_world
+				duration = 3650
+			}
 		}
 	}
 
@@ -2399,6 +2421,12 @@ political_decisions = {
 				}
 			}
 			AKI = {
+				add_country_modifier = {
+					name = america_new_world
+					duration = 5475
+				}
+			}
+			HAD = {
 				add_country_modifier = {
 					name = america_new_world
 					duration = 5475

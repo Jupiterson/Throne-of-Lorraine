@@ -1,19 +1,29 @@
 political_decisions = {
 	#for clean up
-	conquer_desert_dam = {
+	centralize = {
 		picture = form_the_rcmp
 		potential = {
-			ai = yes
-			NOT = { has_country_flag = administrated_roads }
+			NOT = { has_country_flag = centralized }
+			OR = { 
+			tag = DAM
+			tag = BUG
+			tag = HAD
+			}
 		}
 
 		allow = {
 			war = no			
+			OR = { 
+			AND = {
+			land_reform = yes_land_reform
+			admin_reform = yes_admin_reform
+			}
 			year = 1880
+			}
 		}
 
 		effect = {
-			set_country_flag = administrated_roads			
+			set_country_flag = centralized			
 			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
 		}
 	}

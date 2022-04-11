@@ -831,7 +831,9 @@ country_event = {
 			primary_culture = swedish
 			primary_culture = danish
 			primary_culture = belgican
+			primary_culture = north_andean
 			is_culture_group = arab
+			tag = LOR
 		}
 	}
 
@@ -879,7 +881,7 @@ country_event = {
 		name = "EVTOPTA232000000"
 		set_global_flag = lake_victoria_discovered
 		prestige = 40
-		random_owned = { limit = { owner = { primary_culture = british } } 3102 = { change_province_name = "Lake Victoria" } }
+		random_owned = { limit = { owner = { primary_culture = british } } 3102 = { change_province_name = "Lake London" } }
 		random_owned = { limit = { owner = { primary_culture = north_german } } 3102 = { change_province_name = "Lake Wilhelm" } }
 		random_owned = { limit = { owner = { capital = 619 } } 3102 = { change_province_name = "Lake Franz" } }
 		random_owned = { limit = { owner = { primary_culture = north_italian } } 3102 = { change_province_name = "Lake Vittorio" } }
@@ -899,6 +901,8 @@ country_event = {
 		}
 		random_owned = { limit = { owner = { capital = 1745 } } 3102 = { change_province_name = "Lake Ali Pasha" } }
 		random_owned = { limit = { owner = { capital = 599 } } 3102 = { change_province_name = "Lake Franz" } }
+		random_owned = { limit = { owner = { primary_culture = north_andean } } 3102 = { change_province_name = "Lake Jesus" } }
+		random_owned = { limit = { tag = LOR } 3102 = { change_province_name = "Lake Saarbrücken" } }
 		ai_chance = { factor = 100 }
 	}
 
@@ -922,6 +926,8 @@ country_event = {
 		random_owned = { limit = { owner = { primary_culture = belgican } } 3102 = { change_province_name = "Lake Saxe-Cobourg" } }
 		random_owned = { limit = { owner = { is_culture_group = arab } } 3102 = { change_province_name = "Lake al-Walid" } }
 		random_owned = { limit = { owner = { capital = 599 } } 3102 = { change_province_name = "Lake Wittelsbach" } }
+		random_owned = { limit = { owner = { primary_culture = north_andean } } 3102 = { change_province_name = "Lake Jerusalem" } }
+		random_owned = { limit = { tag = LOR } 3102 = { change_province_name = "Lake Metz" } }
 		ai_chance = { factor = 0 }
 	}
 
@@ -947,6 +953,8 @@ country_event = {
 		random_owned = { limit = { owner = { primary_culture = belgican } } 3102 = { change_province_name = "Lake Mercator" } }
 		random_owned = { limit = { owner = { is_culture_group = arab } } 3102 = { change_province_name = "Lake Arabia" } }
 		random_owned = { limit = { owner = { capital = 599 } } 3102 = { change_province_name = "Lake Boniface" } }
+		random_owned = { limit = { owner = { primary_culture = north_andean } } 3102 = { change_province_name = "Lake Columbia" } }
+		random_owned = { limit = { tag = LOR } 3102 = { change_province_name = "Lake Carolingian" } }
 		ai_chance = { factor = 0 }
 	}
 
@@ -974,6 +982,8 @@ country_event = {
 		random_owned = { limit = { owner = { primary_culture = danish } } 3102 = { change_province_name = "Lake Holger" } }
 		random_owned = { limit = { owner = { primary_culture = belgican } } 3102 = { change_province_name = "Lake Belgica" } }
 			random_owned = { limit = { owner = { capital = 599 } } 3102 = { change_province_name = "Lake Bayern" } }
+			random_owned = { limit = { owner = { primary_culture = north_andean } } 3102 = { change_province_name = "Lake Vatican" } }
+			random_owned = { limit = { tag = LOR } 3102 = { change_province_name = "Lake Forbach" } }
 		ai_chance = { factor = 0 }
 	}
 
@@ -998,7 +1008,9 @@ country_event = {
 		random_owned = { limit = { owner = { primary_culture = danish } } 3102 = { change_province_name = "Lake Copenhagen" } }
 		random_owned = { limit = { owner = { primary_culture = belgican } } 3102 = { change_province_name = "Lake Brussels" } }
 		random_owned = { limit = { owner = { is_culture_group = arab } } 3102 = { change_province_name = "Lake Makkah" } }
+		random_owned = { limit = { owner = { primary_culture = north_andean } } 3102 = { change_province_name = "Lake Petro" } }
 		random_owned = { limit = { owner = { capital = 599 } } 3102 = { change_province_name = "Lake Munich" } }
+		random_owned = { limit = { tag = LOR } 3102 = { change_province_name = "Lake Lothringen" } }
 		ai_chance = { factor = 0 }
 	}
 }
@@ -1042,7 +1054,9 @@ country_event = {
 			primary_culture = swedish
 			primary_culture = danish
 			primary_culture = belgican
+			primary_culture = north_andean
 			is_culture_group = arab
+			tag = LOR
 		}
 	}
 
@@ -1090,6 +1104,6 @@ country_event = {
 		name = "EVTOPTA232000003" # Name it ruler
 		set_global_flag = lake_victoria_discovered
 		prestige = 40
-		3102 = { change_province_name = "Lake Victoria" }
+		3102 = { change_province_name = "Lake Saarbrücken" }
 		}
 	}

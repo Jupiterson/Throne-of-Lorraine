@@ -441,6 +441,22 @@ demotion_chance = {
         factor = -100
         location = { NOT = { controlled_by = owner } }
     }
+	
+	modifier = {
+        factor = 100
+        THIS = {
+        OR = { 
+            has_pop_culture = native_american_minor
+            has_pop_culture = haida
+            has_pop_culture = inuit
+            has_pop_culture = dakota
+            has_pop_culture = cherokee
+            has_pop_culture = pueblo
+            has_pop_culture = cree
+            }
+        }
+        tag = HAD
+    }
 }
 
 #general migration chance mtth, same for all pops
@@ -474,9 +490,9 @@ migration_chance = {
 	#	location = { total_pops = 10000 }
 	#	country = { border_policy = closed_borders }
 	#}
-
-    modifier = { #-2.2 if pop is in colony
-        factor = -2.2
+	
+    modifier = { #-1.5 if pop is in colony
+        factor = -1.5
         state_scope = { is_colonial = yes }
     }
 
@@ -488,29 +504,9 @@ migration_chance = {
         }
     }
 
-    modifier = { #+0.2 if settlement
-        factor = 0.2
+    modifier = { #+0.5 if settlement
+        factor = 0.5
         country = { colonial_policy = settlement }
-    }
-
-    modifier = { #+0.25 pop is germanic, loc cntrld, NOT states listed, country: has flag
-        factor = 0.25
-		is_culture_group = germanic
-        location = {
-            controlled_by = owner
-            NOT = {
-                state_id = 701 #Posen
-                state_id = 682 #Lower Silesia
-                state_id = 690 #Westpreussen
-                state_id = 695 #Ostpreussen
-                state_id = 354 #Latvia
-                state_id = 349 #Estonia
-                state_id = 706 #Masovia
-            }
-        }
-        country = {
-			has_country_flag = prussian_settlement_commission
-		}
     }
 
     group = { #higher migration if needs < num, max +0.3
@@ -573,6 +569,42 @@ migration_chance = {
             unemployment = 0.5
             #NOT = { unemployment = 1 }
         }
+		
+		modifier = {
+        factor = 100
+        THIS = {
+        OR = { 
+            has_pop_culture = native_american_minor
+            has_pop_culture = haida
+            has_pop_culture = inuit
+            has_pop_culture = dakota
+            has_pop_culture = cherokee
+            has_pop_culture = pueblo
+            has_pop_culture = cree
+            }
+        }
+        tag = HAD
+    }
+		
+#		modifier = {
+#
+ #       factor = 2.5
+#        THIS = {
+#		OR = { 
+#            has_pop_culture = native_american_minor
+#			has_pop_culture = haida
+#			has_pop_culture = inuit
+#			has_pop_culture = dakota
+#			has_pop_culture = cherokee
+#			has_pop_culture = pueblo
+#			has_pop_culture = cree
+#			}
+ #       }
+  #      location = {
+#           is_core = HAD
+#        }
+#    }
+
     }
 }
 
@@ -763,6 +795,7 @@ emigration_chance = {
                 government = democracy
                 government = parliamentary_republic
                 government = constitutional_empire
+				government = constitutional_theocracy
                 government = hms_government
                 government = dominion
                 government = colonial_company
@@ -781,6 +814,7 @@ emigration_chance = {
             is_primary_culture = no
         }
     }
+	
 
     modifier = {
         factor = -100
@@ -962,6 +996,13 @@ emigration_chance = {
         factor = -1
         country = { has_country_flag = micro_nation }
     }
+	
+	
+	#modifier = {
+     #   factor = 50.0
+      #  is_culture_group = native_american
+      #  country = { NOT = { is_culture_group = native_american } }
+    #}
 }
 
 #general assimilation mtth, same for all pops
@@ -1006,22 +1047,23 @@ assimilation_chance = {
         }
     }
 
-    modifier = {
-        factor = -20
-        has_culture_core = yes
-		NOT = {
-		    AND = {
-		        country = { has_country_flag = can_ignore_cultural_core }
-			    OR = {
-			        has_pop_culture = finnish
-			        has_pop_culture = estonian
-			        has_pop_culture = norwegian
-			        has_pop_culture = latvian
-					has_pop_culture = sami
-		        }
-            }
-		}
-	}
+    #modifier = {
+    #   factor = -20
+    #    has_culture_core = yes
+	#	NOT = {
+	#	    AND = {
+	#	        country = { has_country_flag = can_ignore_cultural_core }
+	#		    OR = {
+	#		        has_pop_culture = finnish
+	#		        has_pop_culture = estonian
+	#		        has_pop_culture = norwegian
+	#		        has_pop_culture = latvian
+	#				has_pop_culture = sami
+	#		
+	#	        }
+     #       }
+	#	}
+	#}
 
     modifier = {
         factor = -0.2
@@ -1033,17 +1075,6 @@ assimilation_chance = {
         has_pop_religion = jewish
         NOT = { country = { has_country_flag = jewish_country } }
     }
-
-    modifier = {
-        factor = -1
-        OR = {
-            has_pop_religion = yazidi
-            has_pop_religion = druze
-            has_pop_culture = asian_minor
-			has_pop_religion = coptic
-        }
-    }
-
     group = {
         modifier = {
             factor = 0.2
@@ -1121,6 +1152,15 @@ assimilation_chance = {
         has_pop_culture = ainu
         country = { primary_culture = japanese }
     }
+	
+	    modifier = {
+        factor = 1.5
+		OR = { 
+        country = { primary_culture = greek }
+		country = { primary_culture = ashkenazi }
+		}
+    }
+
 
     modifier = {
         factor = -80
@@ -1162,14 +1202,14 @@ assimilation_chance = {
         OR = {
             is_culture_group = african_diaspora_cultures
             is_culture_group = west_african
-            is_culture_group = central_african
+           # is_culture_group = central_african
             is_culture_group = east_african
             is_culture_group = southern_african
         }
         OR = {
             NOT = { country = { is_culture_group = african_diaspora_cultures } }
             NOT = { country = { is_culture_group = west_african } }
-            NOT = { country = { is_culture_group = central_african } }
+            #NOT = { country = { is_culture_group = central_african } }
             NOT = { country = { is_culture_group = east_african } }
             NOT = { country = { is_culture_group = southern_african } }
             NOT = { country = { is_culture_group = arab } }
@@ -1181,21 +1221,6 @@ assimilation_chance = {
 #general conversion mtth, same for all pops
 conversion_chance = {
     factor = 0.1
-
-    modifier = {
-        factor = -100
-        OR = {
-            NOT = { location = { controlled_by = owner } }
-            country = { has_country_flag = freedom_of_religion }
-            AND = {
-                OR = {
-                    has_pop_religion = yazidi
-                    has_pop_religion = druze
-                }
-                location = { continent = oceania }
-            }
-        }
-    }
 
     modifier = {
         factor = -0.15
