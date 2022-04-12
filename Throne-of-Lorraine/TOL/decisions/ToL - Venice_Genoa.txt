@@ -262,6 +262,57 @@ political_decisions = {
 		}
 	}
 
+###################
+# MAZZINI FLAVOUR #
+###################
+
+    mazzini_reforms = {
+		picture = italian_islands
+		potential = {
+			tag = GEN
+			has_country_flag = mazzini_chad
+			NOT = {
+				has_country_flag = mazzini_reforms
+			}
+		}
+		
+		allow = {
+		    war = no
+			ideology = liberal
+			AND = {
+			    romanticism = 1 
+			    assocationism = 1
+			}
+		}
+		effect = {
+		    prestige = 15
+		    social_reform = acceptable_schools
+			social_reform = low_minimum_wage
+			political_reform = non_socialist
+			set_country_flag = mazzini_reforms
+		}
+	}
+	
+	spread_the_revolution = {
+		picture = italian_islands
+		potential = {
+			tag = GEN
+			has_country_flag = mazzini_chad
+			NOT = {
+				has_country_flag = spread_the_revolution
+			}
+		}
+		
+		allow = {
+		    prestige = 25
+		    war = no
+		}
+		
+		effect = {
+			set_country_flag = spread_the_revolution
+		}
+	}
+
 ####################
 # VENICE GENOA WAR #
 ####################

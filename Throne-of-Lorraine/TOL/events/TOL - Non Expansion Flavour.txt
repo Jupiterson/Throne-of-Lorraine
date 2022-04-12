@@ -416,10 +416,12 @@ country_event = {
 
 	trigger = {
 		tag = GEN
+		NOT = {
+			year = 1865
+		}
 		AND = {
-			OR = {
+			NOT = {
 				government = democracy
-				government = merchant_republic
 			}
 			OR = {
 				AND = {
