@@ -1246,6 +1246,28 @@ political_decisions = {
 		}
 	}
 
+	bhimsen_thapa = {
+	picture = bimtapa
+		potential = {
+			tag = NEP
+			NOT = { has_country_flag = gorkhali_ways }
+		}
+		allow = {
+			has_leader = "Bhimsen Thapa"
+		}
+		effect = {
+			set_country_flag = gorkhali_ways
+			add_country_modifier = {
+				name = gorkhali
+				duration = -1
+			}
+			plurality = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	#end_sikh_war = {
 	#	picture = form_india
 	#	potential = {
