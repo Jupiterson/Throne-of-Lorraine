@@ -293,23 +293,41 @@ political_decisions = {
 		}
 	}
 	
-	spread_the_revolution = {
+	increase_carbonari_activity = {
 		picture = italian_islands
 		potential = {
 			tag = GEN
 			has_country_flag = mazzini_chad
 			NOT = {
-				has_country_flag = spread_the_revolution
+				has_country_flag = increase_carbonari_activity
 			}
 		}
 		
 		allow = {
 		    prestige = 25
 		    war = no
+			ideology = liberal
 		}
 		
 		effect = {
-			set_country_flag = spread_the_revolution
+		    set_country_flag = increase_carbonari_activity
+		    set_country_flag = carbonari
+            set_global_flag = TUS_carbonari
+            any_country = {
+                limit = {
+                    NOT = { government = democracy }
+                    NOT = { tag = THIS }
+                    exists = yes
+                OR = {
+				    tag = PRO
+                    primary_culture = north_italian
+					primary_culture = central_italian
+                    primary_culture = south_italian
+					primary_culture = sicilian
+                }
+            }
+                country_event = 28020
+            }
 		}
 	}
 
