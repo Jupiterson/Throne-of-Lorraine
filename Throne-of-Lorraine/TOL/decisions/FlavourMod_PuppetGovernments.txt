@@ -70,6 +70,96 @@ political_decisions = {
 
 		ai_will_do = { factor = 1 }
 	}
+	
+	become_hanseatic = {
+		potential = {
+			ai = yes
+			exists = yes
+            vassal_of = HNS
+			OR = {
+				NOT = { government = hanseatic }
+			}
+			NOT = { has_country_flag = is_hansa }
+			#NOT = { has_country_flag = clean_up_colonial_government }
+			# HPM 0.4.5.2 port: dismantlement
+			NOT = { has_country_modifier = considering_colonial_offer }
+			NOT = { has_country_modifier = negotiating_treaty }
+			war = no
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = is_hansa
+			clr_country_flag = everywhere_genocide_only
+			clr_country_flag = non_colonial_genocide_only
+			clr_country_flag = colonial_genocide_only
+			clr_country_flag = preparations_to_kill
+			remove_country_modifier = preparations_to_kill
+			clr_country_flag = communist_gov
+			set_country_flag = absolute_monarchy_gov
+			clr_country_flag = semi_constitutional_monarchy_gov
+			clr_country_flag = constitutional_monarchy_gov
+			clr_country_flag = democracy_gov
+			clr_country_flag = presidential_dictatorship_gov
+			clr_country_flag = fascist_gov
+			clr_country_flag = radical_gov
+			government = hanseatic
+
+			#random_owned = {
+			#	limit = { owner = { primary_culture = volga_german } }
+			#	owner = { government = hms_government }
+			#}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	remove_hanseatic = {
+		potential = {
+			ai = yes
+			exists = yes
+           NOT = { vassal_of = HNS }
+		
+		  government = hanseatic 
+			
+			NOT = { has_country_flag = is_not_hansa }
+			#NOT = { has_country_flag = clean_up_colonial_government }
+			# HPM 0.4.5.2 port: dismantlement
+			NOT = { has_country_modifier = considering_colonial_offer }
+			NOT = { has_country_modifier = negotiating_treaty }
+			war = no
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = is_not_hansa
+			clr_country_flag = everywhere_genocide_only
+			clr_country_flag = non_colonial_genocide_only
+			clr_country_flag = colonial_genocide_only
+			clr_country_flag = preparations_to_kill
+			remove_country_modifier = preparations_to_kill
+			clr_country_flag = communist_gov
+			set_country_flag = absolute_monarchy_gov
+			clr_country_flag = semi_constitutional_monarchy_gov
+			clr_country_flag = constitutional_monarchy_gov
+			clr_country_flag = democracy_gov
+			clr_country_flag = presidential_dictatorship_gov
+			clr_country_flag = fascist_gov
+			clr_country_flag = radical_gov
+			government = democracy
+
+			#random_owned = {
+			#	limit = { owner = { primary_culture = volga_german } }
+			#	owner = { government = hms_government }
+			#}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
 
 	clean_up_colonial_government = {
 		potential = {

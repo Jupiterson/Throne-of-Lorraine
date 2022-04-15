@@ -44,15 +44,15 @@ country_migration_target = {
 	modifier = {
         factor = 100
         THIS = {
-        OR = { 
+      #  OR = { 
             has_pop_culture = native_american_minor
-            has_pop_culture = haida
-            has_pop_culture = inuit
-            has_pop_culture = dakota
-            has_pop_culture = cherokee
-            has_pop_culture = pueblo
-            has_pop_culture = cree
-            }
+      #      has_pop_culture = haida
+      #      has_pop_culture = inuit
+      #      has_pop_culture = dakota
+      #      has_pop_culture = cherokee
+      #      has_pop_culture = pueblo
+      #      has_pop_culture = cree
+      #      }
         }
         tag = HAD
     }

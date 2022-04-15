@@ -1,64 +1,586 @@
+#Free At Last!
 country_event = {
-	id = 728171
-	title = "Capital Situation"
-	desc = "Where should the capital be moved to?"
-	picture = "administration"
+
+	id = 100138
+	title = "EVTNAME800018"
+	desc = "EVTDESC800018"
+	picture = "unite"
+
+	trigger = {
+		is_vassal = yes
+		government = hanseatic
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	immediate = {
+		clr_country_flag = freedom_attempt_made
+		clr_country_flag = foreign_intervention
+		THIS = { government = republic }
+	}
+
+	option = {
+		name = "EVT800018OPTA"
+		any_pop = { militancy = -2 }
+		release_vassal = THIS
+		THIS = { government = republic }
+		random_country = {
+			limit = {
+				is_our_vassal = THIS
+			}
+			release_vassal = THIS
+			country_event = 100138
+		}
+		random_country = {
+			limit = {
+				OR = {
+				tag = SWE
+				tag = DNN
+				tag = DEN
+				tag = SCA
+				}
+				is_sphere_leader_of = THIS
+			}
+			country_event = 100140
+		}
+	}
+}
+
+country_event = {
+
+	id = 100140
+
+	is_triggered_only = yes
+
+	title = "Intervene?" #$FROMCOUNTRY$ Declares Independence
+	desc = "EVTDESC800014"
+	picture = "Unite"
+
+	option = {
+		name = "Time For War"
+		prestige = 5
+		any_pop = {
+			scaled_militancy = {
+				issue = pacifism
+				factor = 2
+			}
+		}
+		relation = {
+			who = FROM
+			value = -100
+		}
+		leave_alliance = FROM
+		war = {
+			target = FROM 
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_greater_power = no
+				is_secondary_power = no
+			}
+			modifier = {
+				factor = 2
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 0
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 0.25
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { jingoism = 5 }
+			}
+			modifier = {
+				factor = 0.8
+				war_exhaustion = 25
+			}
+			modifier = {
+				factor = 0.8
+				war_exhaustion = 50
+			}
+			modifier = {
+				factor = 0.5
+				num_of_revolts = 5
+			}
+			modifier = {
+				factor = 0.8
+				average_militancy = 4
+			}
+		}
+	}
+
+	option = {
+		name = "Puppet their Leader"
+		relation = {
+			who = FROM
+			value = -50
+		}
+		war = {
+			target = FROM 
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "EVT800013OPTC"
+		prestige = -5
+		any_pop = {
+			scaled_militancy = {
+				issue = jingoism
+				factor = 2
+			}
+		}
+		relation = {
+			who = FROM
+			value = 50
+		}
+		random_country = {
+			limit = {
+				is_sphere_leader_of = FROM
+				has_country_flag = meddled_in_foreign_affairs
+			}
+			clr_country_flag = meddled_in_foreign_affairs
+			prestige = 5
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				OR = {
+					government = proletarian_dictatorship
+					government = fascist_dictatorship
+				}
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 3
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 2
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 1.5
+				war_exhaustion = 25
+			}
+			modifier = {
+				factor = 1.5
+				war_exhaustion = 50
+			}
+			modifier = {
+				factor = 3
+				num_of_revolts = 5
+			}
+			modifier = {
+				factor = 1.5
+				average_militancy = 3
+			}
+			modifier = {
+				factor = 1.5
+				average_militancy = 4
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+
+	id = 100139
+
+	is_triggered_only = yes
+
+	title = "EVTNAME800014" #$FROMCOUNTRY$ Declares Independence
+	desc = "EVTDESC800014"
+	picture = "Unite"
+
+	option = {
+		name = "Time For War"
+		prestige = 5
+		any_pop = {
+			scaled_militancy = {
+				issue = pacifism
+				factor = 2
+			}
+		}
+		relation = {
+			who = FROM
+			value = -100
+		}
+		leave_alliance = FROM
+		war = {
+			target = FROM 
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_greater_power = no
+				is_secondary_power = no
+			}
+			modifier = {
+				factor = 2
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 0
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 0.25
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { jingoism = 5 }
+			}
+			modifier = {
+				factor = 0.8
+				war_exhaustion = 25
+			}
+			modifier = {
+				factor = 0.8
+				war_exhaustion = 50
+			}
+			modifier = {
+				factor = 0.5
+				num_of_revolts = 5
+			}
+			modifier = {
+				factor = 0.8
+				average_militancy = 4
+			}
+		}
+	}
+
+	option = {
+		name = "EVT800013OPTB"
+		relation = {
+			who = FROM
+			value = -50
+		}
+		random_country = {
+			limit = {
+				is_sphere_leader_of = FROM
+				has_country_flag = meddled_in_foreign_affairs
+			}
+			clr_country_flag = meddled_in_foreign_affairs
+			relation = {
+				who = THIS
+				value = -100
+			}
+			add_casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 12
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "EVT800013OPTC"
+		prestige = -5
+		any_pop = {
+			scaled_militancy = {
+				issue = jingoism
+				factor = 2
+			}
+		}
+		relation = {
+			who = FROM
+			value = 50
+		}
+		random_country = {
+			limit = {
+				is_sphere_leader_of = FROM
+				has_country_flag = meddled_in_foreign_affairs
+			}
+			clr_country_flag = meddled_in_foreign_affairs
+			prestige = 5
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				OR = {
+					government = proletarian_dictatorship
+					government = fascist_dictatorship
+				}
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 3
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 2
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 1.5
+				war_exhaustion = 25
+			}
+			modifier = {
+				factor = 1.5
+				war_exhaustion = 50
+			}
+			modifier = {
+				factor = 3
+				num_of_revolts = 5
+			}
+			modifier = {
+				factor = 1.5
+				average_militancy = 3
+			}
+			modifier = {
+				factor = 1.5
+				average_militancy = 4
+			}
+		}
+	}
+
+}
+
+
+
+# Event to Inherit
+country_event = {
+	id = 100136
+	title = "EVTNAME11101"
+	desc = "EVTDESC11101"
+	picture = "Celebration"
+
+	is_triggered_only = yes
+
+
+
+option = {
+		name = "EVTOPTA11101"
+		any_country = {
+			limit = {
+				OR = {
+					is_sphere_leader_of = THIS
+					is_our_vassal = THIS
+				}
+				NOT = { tag = FROM }
+			}
+			relation = {
+				who = FROM
+				value = -25
+			}
+			casus_belli = {
+				target = FROM
+				type = humiliate
+				months = 24
+			}
+			casus_belli = {
+				target = FROM
+				type = free_peoples
+				months = 24
+			}
+		}
+		any_owned = { secede_province = FROM }
+		FROM = { release_vassal = THIS }
+		FROM = { inherit = THIS }
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0.1
+				OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					alliance_with = FROM
+					relation = { who = FROM value = 100 }
+				}
+			}
+			modifier = {
+				factor = 2
+				is_culture_group = germanic
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { is_culture_group = germanic }
+			}
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { continent = europe } }
+			}
+			
+			
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB11101"
+		clr_country_flag = wants_to_unify
+		prestige = 1
+		leave_alliance = FROM
+		release_vassal = FROM
+		relation = {
+			who = FROM
+			value = -200
+		}
+		FROM = {
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+		}
+		FROM = {
+			country_event = 100137
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = 3
+			consciousness = 2
+		}
+		ai_chance = {
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				vassal_of = FROM
+			}
+			modifier = {
+				factor = 100
+				OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+				}
+			}
+			modifier = {
+				factor = 0.75
+				part_of_sphere = no
+			}
+			modifier = {
+				factor = 1.5
+				truce_with = FROM
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					relation = { who = FROM value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.25
+				in_sphere = FROM
+			}
+			modifier = {
+				factor = 0.25
+				government = fascist_dictatorship
+				FROM = { government = fascist_dictatorship }
+			}
+			modifier = {
+				factor = 0.25
+				government = proletarian_dictatorship
+				FROM = { government = proletarian_dictatorship }
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					government = democracy
+					government = prussian_constitutionalism
+					government = hms_government
+					government = semi_constitutional_empire
+					government = constitutional_empire
+				}
+				FROM = {
+					OR = {
+						government = democracy
+						government = prussian_constitutionalism
+						government = hms_government
+						government = semi_constitutional_empire
+						government = constitutional_empire
+					}
+				}
+			}
+			#modifier = {
+			#	factor = 0.1
+			#	is_greater_power = no
+			#	is_secondary_power = no
+			#}
+		}
+	}
+	
+}
+
+#National Unification - Notification if Country Refuses Unification
+country_event = {
+	id = 100137
+	title = "EVTNAME11102"
+	desc = "EVTDESC11102"
+	picture = "Administration"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "Keep it in the Lübeck, the Metropolis of our nation!"
-		capital = 530
-		prestige = 15
-		any_pop = {
-			limit = {
-				has_pop_culture = north_german
-			}
-			militancy = -5
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = volga_german
-			}
-			militancy = 5
+		name = "I guess no"
+		prestige = -25
+		ai_chance = {
+			factor = 5
 		}
 	}
+	
 	option = {
-		name = "Relocate it to the Center, the old and famous city of Königsberg!"
-		capital = 695
-		prestige = 10
-		research_points = 300
-		any_pop = {
-			limit = {
-				has_pop_culture = volga_german
-			}
-			militancy = -5
+		name = "Time For War"
+		badboy = 0.5
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
 		}
-		any_pop = {
-			limit = {
-				has_pop_culture = north_german
-			}
-			militancy = 5
-		}
-	}
-	option = {
-		name = "Move it to the great city of Riga, and adapt our traditions!"
-		capital = 354
-		any_pop = {
-			limit = {
-				has_pop_culture = north_german
-			}
-			militancy = 5
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = volga_german
-			}
-			militancy = -5
-		}
-		add_country_modifier = { name = small_immigration_boom duration = -1 }
-		prestige = 10
-		primary_culture = volga_german
-		add_accepted_culture = north_german
+		ai_chance = {
+			factor = 95
+		}	
 	}
 }
