@@ -238,67 +238,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	create_argentina = {
-		picture = argentina_chile_border_treaty
-		potential = {
-			is_greater_power = yes
-			NOT = {
-				primary_culture = platinean
-				OR = {
-					tag = ARC
-					tag = ARG
-					tag = LPL
-				}
-			}
-			OR = {
-				SBA = { exists = yes is_vassal = no ai = yes in_sphere = THIS }
-			}
-		}
-
-		allow = {
-			war = no
-			is_greater_power = yes
-			nationalism_n_imperialism = 1
-			OR = {
-				SBA = { exists = yes is_vassal = no ai = yes in_sphere = THIS war = no }
-			}
-			OR = {
-				ARC = { exists = yes in_sphere = THIS }
-				ARG = { exists = yes in_sphere = THIS }
-				LPL = { exists = yes in_sphere = THIS }
-			}
-		}
-
-		effect = {
-			prestige = 2
-			any_country = {
-				limit = {
-					exists = yes
-					tag = SBA
-					ai = yes
-					in_sphere = THIS
-				}
-				annex_to = THIS
-			}
-
-			random_country = {
-				limit = {
-					exists = yes
-					OR = {
-						tag = ARC
-						tag = ARG
-						tag = LPL
-					}
-					ai = yes
-					in_sphere = THIS
-				}
-				country_event = 97091
-			}
-
-		}
-		ai_will_do = { factor = 1 }
-	}
-
 	claim_argentina_chaco = {
 		picture = conquest_of_the_chaco
 		potential = {

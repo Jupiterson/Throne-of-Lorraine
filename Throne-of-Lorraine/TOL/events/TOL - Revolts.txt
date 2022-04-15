@@ -36,7 +36,10 @@ country_event = {
 	option = {
 		name = "Crush them!"
 		any_owned = {
-			limit = { is_core = FIN }
+			limit = { 
+			is_core = FIN
+            NOT = { is_core = SAP }
+			}
 			secede_province = FIN 
 		}
 		diplomatic_influence = {
@@ -1473,7 +1476,9 @@ country_event = {
 	option = {
 		name = "Crush them!"
 		any_owned = {
-			limit = { is_core = FIN }
+			limit = { is_core = FIN
+NOT = { is_core = SAP }
+			}
 			secede_province = FIN 
 		}
 		diplomatic_influence = {

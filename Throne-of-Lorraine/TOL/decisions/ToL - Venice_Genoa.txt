@@ -270,7 +270,6 @@ political_decisions = {
 	   picture = tresury_reforms
 		potential = {
 			tag = VEN
-#			NOT = { has_country_flag = hasmanifestdestiny }
 			NOT = { has_global_flag = merchant_war_threat }
 		}
 		allow = {
@@ -343,7 +342,7 @@ political_decisions = {
 			tag = GEN
 			has_global_flag = merchant_war
 			VEN = {
-					#is_disarmed = yes
+					is_disarmed = yes
 					exists = yes
 					truce_with = THIS
 			}
