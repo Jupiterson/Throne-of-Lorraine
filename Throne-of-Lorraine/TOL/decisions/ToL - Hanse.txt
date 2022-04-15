@@ -233,24 +233,12 @@ political_decisions = {
 		effect = {
 			set_country_flag = the_confederation_is_legitime
 			prestige = 10
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = {
-							has_country_flag = end_of_the_confederation
-						}
-					}
-				}
-			}
 			any_country = {
 				limit = {
-				    #is_culture_group = germanic
 					capital_scope = { continent = europe }
 					vassal_of = THIS
 				}
-				any_owned = {
-    add_core = THIS
-  }
+				country_event = 100136
 			}
 			set_country_flag = no_germany
 		}
