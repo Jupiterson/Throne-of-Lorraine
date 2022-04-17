@@ -312,11 +312,12 @@ political_decisions = {
 		effect = {
 		    set_country_flag = increase_carbonari_activity
 		    set_country_flag = carbonari
-            set_global_flag = TUS_carbonari
             any_country = {
                 limit = {
                     NOT = { government = democracy }
                     NOT = { tag = THIS }
+					NOT = { tag = AST }
+					NOT = { tag = NZL }
                     exists = yes
                 OR = {
 				    tag = PRO
