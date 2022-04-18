@@ -1435,7 +1435,7 @@
 		size = 26700
 	}
 }
-#Amritsar (2228000/557000 POPS)
+#Amritsar (501300 POPS)
 1233 = {
 	aristocrats = {
 		culture = panjabi
@@ -1530,7 +1530,7 @@
 	farmers = {
 		culture = panjabi
 		religion = hindu
-		size = 153750
+		size = 98050
 	}
 }
 #Firuzapur (952000/238000 POPS)
@@ -2438,78 +2438,78 @@
 	}
 
 }
-#Benares (2512000/628000 POPS)
+#Benares (314000 POPS - Halved with Ballia)
 1245 = {
 	aristocrats = {
 		culture = hindustani
 		religion = sunni
-		size = 750
+		size = 375
 	}
 
 	clergymen = {
 		culture = hindustani
 		religion = sunni
-		size = 500
+		size = 250
 	}
 
 	artisans = {
 		culture = hindustani
 		religion = sunni
-		size = 10000
+		size = 5000
 	}
 
 	artisans = {
 		culture = hindustani
 		religion = sunni
-		size = 1100
+		size = 550
 	}
 
 	soldiers = {
 		culture = hindustani
 		religion = sunni
-		size = 750
+		size = 375
 	}
 
 	farmers = {
 		culture = hindustani
 		religion = sunni
-		size = 60000
+		size = 30000
 	}
 
 	aristocrats = {
 		culture = hindustani
 		religion = hindu
-		size = 6500
+		size = 3250
 	}
 
 	clergymen = {
 		culture = hindustani
 		religion = hindu
-		size = 6250
+		size = 3125
 	}
 
 	artisans = {
 		culture = hindustani
 		religion = hindu
-		size = 10000
+		size = 5000
 	}
 
 	soldiers = {
 		culture = hindustani
 		religion = hindu
-		size = 3000
+		size = 1500
 	}
 
 	soldiers = {
 		culture = hindustani
 		religion = hindu
-		size = 3000
+		size = 1500
 	}
 
 	farmers = {
 		culture = hindustani
 		religion = hindu
-		size = 507250
+		size = 253625
 	}
 }
 #Gorakhpur (2476000/619000 POPS)
@@ -9766,5 +9766,169 @@
 		culture = assamese
 		religion = hindu
 		size = 24900
+	}
+}
+
+#Manali (Pahari Indo-Aryan Town separates Amritsar from Ladakh)
+#(55700 POPS)
+3528 = {
+	aristocrats = {
+		culture = nepali
+		religion = hindu
+		size = 1200
+	}
+
+	clergymen = {
+		culture = nepali
+		religion = hindu
+		size = 500
+	}
+
+	artisans = {
+		culture = nepali
+		religion = hindu
+		size = 2000
+	}
+
+	farmers = {
+		culture = nepali
+		religion = hindu
+		size = 52000
+	}
+}
+#Ballia (Separates Benares from Bihar)
+3529 = {
+	aristocrats = {
+		culture = hindustani
+		religion = sunni
+		size = 375
+	}
+
+	clergymen = {
+		culture = hindustani
+		religion = sunni
+		size = 250
+	}
+
+	artisans = {
+		culture = hindustani
+		religion = sunni
+		size = 5000
+	}
+
+	artisans = {
+		culture = hindustani
+		religion = sunni
+		size = 550
+	}
+
+	soldiers = {
+		culture = hindustani
+		religion = sunni
+		size = 375
+	}
+
+	farmers = {
+		culture = hindustani
+		religion = sunni
+		size = 30000
+	}
+
+	aristocrats = {
+		culture = hindustani
+		religion = hindu
+		size = 3250
+	}
+
+	clergymen = {
+		culture = hindustani
+		religion = hindu
+		size = 3125
+	}
+
+	artisans = {
+		culture = hindustani
+		religion = hindu
+		size = 5000
+	}
+
+	soldiers = {
+		culture = hindustani
+		religion = hindu
+		size = 1500
+	}
+
+	soldiers = {
+		culture = hindustani
+		religion = hindu
+		size = 1500
+	}
+
+	farmers = {
+		culture = hindustani
+		religion = hindu
+		size = 253625
+	}
+}
+#Itanagar (Chin and Kachin Burmese populated southeasternmost Tibetan province)
+3530 = {
+	aristocrats = {
+		culture = kachin
+		religion = animist
+		size = 750
+	}
+
+	clergymen = {
+		culture = kachin
+		religion = animist
+		size = 400
+	}
+
+	artisans = {
+		culture = kachin
+		religion = animist
+		size = 1950
+	}
+
+	soldiers = {
+		culture = kachin
+		religion = animist
+		size = 350
+	}
+
+	farmers = {
+		culture = kachin
+		religion = animist
+		size = 3555
+	}
+
+	aristocrats = {
+		culture = asian_minor
+		religion = animist
+		size = 750
+	}
+
+	clergymen = {
+		culture = asian_minor
+		religion = animist
+		size = 375
+	}
+
+	artisans = {
+		culture = asian_minor
+		religion = animist
+		size = 1900
+	}
+
+	soldiers = {
+		culture = asian_minor
+		religion = animist
+		size = 375
+	}
+
+	farmers = {
+		culture = asian_minor
+		religion = animist
+		size = 3460
 	}
 }

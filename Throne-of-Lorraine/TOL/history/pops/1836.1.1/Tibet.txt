@@ -124,24 +124,25 @@
 		size = 1490
 	}
 }
-#Shigatse (332000/83000 POPS)
+#Shigatse (74700 POPS)
+#8300 pops moved to Sakya - PROV3533
 1589 = {
 	aristocrats = {
 		culture = tibetan
 		religion = gelugpa
-		size = 1500
+		size = 1400
 	}
 
 	clergymen = {
 		culture = tibetan
 		religion = gelugpa
-		size = 1000
+		size = 800
 	}
 
 	artisans = {
 		culture = tibetan
 		religion = gelugpa
-		size = 22000
+		size = 20000
 	}
 
 	soldiers = {
@@ -153,7 +154,7 @@
 	farmers = {
 		culture = tibetan
 		religion = gelugpa
-		size =71200
+		size = 65200
 	}
 
 	clergymen = {
@@ -256,39 +257,39 @@
 		size = 600
 	}
 }
-#Ngari (304000/76000 POPS)
+#Ngari (7 thousand something POPS - split into equal quarters to populate Gyirong Purang and Tsurphu)
 1592 = {
 	aristocrats = {
 		culture = tibetan
 		religion = gelugpa
-		size = 500
+		size = 125
 	}
 
 	clergymen = {
 		culture = tibetan
 		religion = gelugpa
-		size = 775
+		size = 194
 	}
 
 	artisans = {
 		culture = tibetan
 		religion = gelugpa
-		size = 3800
+		size = 950
 	}
 
 	soldiers = {
 		culture = tibetan
 		religion = gelugpa
-		size = 750
+		size = 188
 	}
 
 	farmers = {
 		culture = tibetan
 		religion = gelugpa
-		size = 29175
+		size = 7294
 	}
 }
-#Tawang (836000/209000 POPS) #now NEFA in India  asian_minor = Chin
+#Tawang (836000/209000 POPS) #now NEFA in India all asian_minor = Chin and Kachin moved to 3530 Itanagar
 1593 = {
 	aristocrats = {
 		culture = tibetan
@@ -319,67 +320,6 @@
 		religion = gelugpa
 		size = 25900
 	}
-
-	aristocrats = {
-		culture = kachin
-		religion = animist
-		size = 750
-	}
-
-	clergymen = {
-		culture = kachin
-		religion = animist
-		size = 400
-	}
-
-	artisans = {
-		culture = kachin
-		religion = animist
-		size = 1950
-	}
-
-	soldiers = {
-		culture = kachin
-		religion = animist
-		size = 350
-	}
-
-	farmers = {
-		culture = kachin
-		religion = animist
-		size = 3555
-	}
-
-	aristocrats = {
-		culture = asian_minor
-		religion = animist
-		size = 750
-	}
-
-	clergymen = {
-		culture = asian_minor
-		religion = animist
-		size = 375
-	}
-
-	artisans = {
-		culture = asian_minor
-		religion = animist
-		size = 1900
-	}
-
-	soldiers = {
-		culture = asian_minor
-		religion = animist
-		size = 375
-	}
-
-	farmers = {
-		culture = asian_minor
-		religion = animist
-		size = 3460
-	}
-
 }
 #Aksai Chin
 3299 = {
@@ -462,4 +402,126 @@
 		size = 9000
 	}
 
+}
+#Sakya (POPS 8300)
+3533 = {
+	aristocrats = {
+		culture = tibetan
+		religion = gelugpa
+		size = 200
+	}
+
+	clergymen = {
+		culture = tibetan
+		religion = gelugpa
+		size = 100
+	}
+
+	artisans = {
+		culture = tibetan
+		religion = gelugpa
+		size = 2000
+	}
+
+	farmers = {
+		culture = tibetan
+		religion = gelugpa
+		size = 6000
+	}
+}
+#Gyirong
+3534 = {
+	aristocrats = {
+		culture = tibetan
+		religion = gelugpa
+		size = 125
+	}
+
+	clergymen = {
+		culture = tibetan
+		religion = gelugpa
+		size = 194
+	}
+
+	artisans = {
+		culture = tibetan
+		religion = gelugpa
+		size = 950
+	}
+
+	soldiers = {
+		culture = tibetan
+		religion = gelugpa
+		size = 188
+	}
+
+	farmers = {
+		culture = tibetan
+		religion = gelugpa
+		size = 7294
+	}
+}
+#Purang
+3535 = {
+	aristocrats = {
+		culture = tibetan
+		religion = gelugpa
+		size = 125
+	}
+
+	clergymen = {
+		culture = tibetan
+		religion = gelugpa
+		size = 194
+	}
+
+	artisans = {
+		culture = tibetan
+		religion = gelugpa
+		size = 950
+	}
+
+	soldiers = {
+		culture = tibetan
+		religion = gelugpa
+		size = 188
+	}
+
+	farmers = {
+		culture = tibetan
+		religion = gelugpa
+		size = 7294
+	}
+}
+#Tsurphu
+3536 = {
+	aristocrats = {
+		culture = tibetan
+		religion = gelugpa
+		size = 125
+	}
+
+	clergymen = {
+		culture = tibetan
+		religion = gelugpa
+		size = 194
+	}
+
+	artisans = {
+		culture = tibetan
+		religion = gelugpa
+		size = 950
+	}
+
+	soldiers = {
+		culture = tibetan
+		religion = gelugpa
+		size = 188
+	}
+
+	farmers = {
+		culture = tibetan
+		religion = gelugpa
+		size = 7294
+	}
 }
