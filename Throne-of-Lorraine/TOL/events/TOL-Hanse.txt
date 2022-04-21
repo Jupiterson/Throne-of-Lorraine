@@ -12,7 +12,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 600
+		months = 300
 	}
 
 	immediate = {
@@ -31,7 +31,8 @@ country_event = {
 				is_our_vassal = THIS
 			}
 			release_vassal = THIS
-			country_event = 100138
+			leave_alliance = THIS
+			country_event = 100139
 		}
 		random_country = {
 			limit = {

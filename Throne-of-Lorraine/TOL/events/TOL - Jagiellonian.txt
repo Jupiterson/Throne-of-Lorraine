@@ -1,0 +1,182 @@
+###HUNGARIAN###
+country_event = {
+    id = 100141
+    title = "HUNTIT" #Keep the Monarch
+    desc = "HUNDES"
+    picture = "monarch_death"
+    major = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = HUN
+        war = no
+        truce_with = POL
+		is_vassal = no
+    }
+
+    mean_time_to_happen =  {
+        days = 3
+    }
+
+    option = {
+        name = "REPHUN"                          #Republic
+         set_global_flag = no_jagiellonian_hun
+        any_greater_power = {
+            limit = {
+                capital_scope = { continent = europe }
+            }
+            relation = { who = THIS value = 30 }
+        }
+        prestige = -25
+        government = democracy
+		set_country_flag = Government_Democracy
+        ruling_party_ideology = liberal
+        political_reform = universal_voting
+        political_reform = population_equal_weight
+        political_reform = yes_meeting
+        political_reform = free_press
+        political_reform = all_trade_unions
+        political_reform = secret_ballots
+
+        any_pop = {
+            limit = {
+                location = { is_core = THIS }
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 4
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = -2
+            }
+            scaled_militancy = {
+                ideology = liberal
+                factor = -8
+            }
+            scaled_militancy = {
+                ideology = radical
+                factor = -4
+            }
+            scaled_militancy = {
+                ideology = socialist
+                factor = -2
+            }
+        }
+        any_greater_power = {
+            limit = {
+                OR = {
+					government = democracy
+					has_country_flag = Government_Democracy	
+				}
+            }
+            relation = { who = THIS value = 200 }
+        }
+        ai_chance = {
+            factor = 75
+        }
+    }
+
+    option = {
+           name = "HUNMON"                             #A Hungarian Monarch
+        set_global_flag = no_jagiellonian_hun
+        remove_country_modifier = louis_napoleon_iii
+        any_greater_power = {
+            limit = {
+                capital_scope = { continent = europe }
+            }
+            relation = { who = THIS value = 30 }
+        }
+        government = hms_government
+        ruling_party_ideology = conservative
+        political_reform = universal_voting
+        political_reform = state_equal_weight
+        political_reform = non_socialist
+        political_reform = state_press
+        political_reform = yes_meeting
+        political_reform = secret_ballots
+
+        any_pop = {
+            limit = {
+                location = { is_core = THIS }
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 4
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = -6
+            }
+            scaled_militancy = {
+                ideology = liberal
+                factor = -4
+            }
+            scaled_militancy = {
+                ideology = radical
+                factor = 4
+            }
+            scaled_militancy = {
+                ideology = socialist
+                factor = 2
+            }
+        }
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0
+                OR = {
+                    government = hms_government
+                    government = constitutional_empire
+                }
+            }
+        }
+    }
+
+    option = {
+         name = "JAGHUN"     #Jagiellonian Monarch
+        set_global_flag = jagiellonian_hun
+        any_greater_power = {
+            limit = {
+                capital_scope = { continent = europe }
+            }
+            relation = { who = THIS value = 30 }
+        }
+        prestige = 25
+		relation = { who = POL value = 400 }
+        government = absolute_monarchy
+        ruling_party_ideology = reactionary
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = underground_parties
+
+        any_pop = {
+            limit = {
+                location = { is_core = THIS }
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = -4
+            }
+            scaled_militancy = {
+                ideology = liberal
+                factor = 8
+            }
+            scaled_militancy = {
+                ideology = radical
+                factor = 4
+            }
+            scaled_militancy = {
+                ideology = socialist
+                factor = 2
+            }
+        }
+        ai_chance = {
+            factor = 10
+        }
+    }
+}

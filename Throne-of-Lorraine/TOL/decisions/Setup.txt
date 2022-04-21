@@ -678,9 +678,8 @@ political_decisions = {
 			}
 			any_owned = {
 				limit = {
-					is_core = ENG
+					is_core = SCO
 					is_overseas = no
-					NOT = { is_core = IRE }
 				}
 				add_province_modifier = {
 					name = baby_boom
@@ -1682,7 +1681,7 @@ political_decisions = {
 			}
 			any_owned = {
 				limit = {
-					is_core = DEN
+					is_core = DNN
 					is_overseas = no
 				}
 				add_province_modifier = {
@@ -1718,18 +1717,6 @@ political_decisions = {
 				}
 			literacy = -0.99
 			}
-			NOR = {
-				add_country_modifier = {
-					name = global_baby_boom
-					duration = 1825
-				}
-				all_core = {
-					add_province_modifier = {
-						name = baby_boom
-						duration = 1095
-					}
-				}
-			}		  
 			NEJ = {
 				add_country_modifier = {
 					name = global_baby_boom
@@ -1972,24 +1959,6 @@ political_decisions = {
 		}
 	}
 
-	SAR_1836_setup = {
-		picture = constantinople
-		potential = {
-			tag = SAR
-			always = no
-		}
-
-		allow = {
-			tag = SAR
-		}
-
-		effect = {
-			724 = { any_pop = { literacy = -0.1 } }
-			725 = { any_pop = { literacy = -0.1 } }
-			any_pop = { limit = { has_pop_culture = french } literacy = 0.4 }
-		}
-	}
-
 	USA_1836_setup = {
 		picture = constantinople
 		potential = {
@@ -2225,28 +2194,6 @@ political_decisions = {
 			}
 		}
 	}
-
-	URU_1836_setup = {
-		potential = {
-			tag = URU
-			always = no
-		}
-
-		allow = {
-			tag = URU
-		}
-
-		effect = {
-			any_pop = { limit = { has_pop_culture = brazilian } literacy = 0.06 }
-			2344 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.1 } } #Montevideo
-			ARC = { 2348 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.1 } } }
-			add_country_modifier = {
-				name = america_new_world
-				duration = 3650
-			}
-		}
-	}
-	
 	JES_1836_setup = {
 		potential = {
 			tag = JES
@@ -2261,117 +2208,7 @@ political_decisions = {
 			add_country_modifier = {
 				name = america_new_world
 				duration = 3650
-			}
-		}
-	}
-
-	BOL_1836_setup = {
-		potential = {
-			tag = BOL
-		}
-
-		allow = {
-		}
-
-		effect = {
-			2310 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } } #La Paz - Bolivia
-			2313 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } } #Chuquisaca/Sucre - Bolivia
-			activate_technology = flintlock_rifles
-			activate_technology = post_napoleonic_thought
-			activate_technology = post_nelsonian_thought
-		}
-	}
-
-	1836_switzerland_setup = {
-		picture = constantinople
-		potential = {
-			tag = SWI
-			always = no
-		}
-
-		allow = {
-			tag = SWI
-		}
-
-		effect = {
-			any_pop = { limit = { culture = ashkenazi } literacy = 0.70 }
-		}
-	}
-
-
-	ECU_1836_setup = {
-		potential = {
-			tag = ECU
-			always = no
-		}
-
-		allow = {
-		}
-
-		effect = {
-			2279 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
-				any_pop = { limit = { is_primary_culture = no } literacy = -0.99 }
-				activate_technology = flintlock_rifles
-				activate_technology = post_napoleonic_thought
-				activate_technology = post_nelsonian_thought
-		}
-	}
-
-	CHL_1836_setup = {
-		potential = {
-			tag = CHL
-			always = no
-		}
-
-		allow = {
-		}
-
-		effect = {
-			2324 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
-			2322 = { trade_goods = precious_metal add_province_modifier = { name = silver_mine duration = -1 } }
-			2323 = { trade_goods = precious_metal add_province_modifier = { name = silver_mine duration = -1 } }
-		}
-	}
-
-	CLM_1836_setup = {
-		potential = {
-			tag = CLM
-			always = no
-		}
-
-		allow = {
-		}
-
-		effect = {
-			CLM_1723 = { any_pop = { limit = { has_pop_culture = central_american } literacy = 0.02 } } #Panama
-			2247 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
-			VNZ = {
-				2264 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
-				add_country_modifier = {
-					name = global_baby_boom
-					duration = 3650
 				}
-
-			} #Venezuela
-			add_country_modifier = {
-				name = america_new_world
-				duration = 3650
-			}
-		}
-	}
-
-	FRCA_1836_setup = {
-		picture = constantinople
-		potential = {
-			tag = UCA
-			always = no
-		}
-
-		allow = {
-			tag = UCA
-		}
-
-		effect = {
 			UCA_2186 = { any_pop = { literacy = 0.10 } } #Guatemala
 			UCA_2193 = { any_pop = { literacy = 0.10 } } #Honduras
 			UCA_2186 = { any_pop = { literacy = 0.10 } } #El Salvador
@@ -2385,6 +2222,7 @@ political_decisions = {
 			MEX = { any_pop = { literacy = 0.10 } } 
 		}
 	}
+
 
 	ARC_1836_setup = {
 		picture = constantinople
