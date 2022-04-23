@@ -1,0 +1,29 @@
+political_decisions = {
+	TEX_Border_Victory = {
+		potential = {
+			tag = TEX
+		}
+		allow = {
+				war = no
+				TEX = {
+					all_core = {
+						OR = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+								}
+							}
+						}
+					}
+				}
+			}
+		effect = {
+			any_owned = {
+					limit = { is_core = VEL }
+					limit = { is_core = TEX }
+					remove_core = VEL
+			}	
+				}
+	}
+}
