@@ -1,5 +1,31 @@
 political_decisions = {
-
+		VEL_Border_Victory = {
+		potential = {
+			tag = VEL
+		}
+		allow = {
+				war = no
+				VEL = {
+					all_core = {
+						OR = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+								}
+							}
+						}
+					}
+				}
+			}
+		effect = {
+			any_owned = {
+					limit = { is_core = VEL }
+					limit = { is_core = TEX }
+					remove_core = TEX
+			}	
+				}
+	}
 	# Rancho
 	rancho = {
 		picture = MEX_rancho
