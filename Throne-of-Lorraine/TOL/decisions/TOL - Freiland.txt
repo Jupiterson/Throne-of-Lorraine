@@ -75,6 +75,8 @@ political_decisions = {
 			
 		effect = {
 			prestige = 20
+			inherit = GKS
+			inherit = VEL
 			change_tag = VKS
 			add_accepted_culture = gek
 			add_accepted_culture = veldlewer
@@ -135,6 +137,7 @@ political_decisions = {
 		VKS_National_Unity = {
 		potential = {
 			tag = VKS
+			NOT = { has_global_flag = VKS_National_Unity }
 			is_greater_power = yes
 		}
 		allow = {
@@ -143,6 +146,7 @@ political_decisions = {
 			}
 		effect = {
 			badboy = 10
+			set_global_flag = VKS_National_Unity
 			any_owned = {
 					limit = { is_core = VEL }
 					remove_core = VEL

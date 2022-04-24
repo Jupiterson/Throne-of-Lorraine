@@ -1,6 +1,7 @@
 political_decisions = {
 		VEL_Border_Victory = {
 		potential = {
+		NOT = { has_global_flag = VEL_Border_Victory }
 			tag = VEL
 		}
 		allow = {
@@ -19,6 +20,7 @@ political_decisions = {
 				}
 			}
 		effect = {
+			set_global_flag = VEL_Border_Victory
 			any_owned = {
 					limit = { is_core = VEL }
 					limit = { is_core = TEX }
