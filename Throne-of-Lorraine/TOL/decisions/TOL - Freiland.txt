@@ -96,4 +96,95 @@ political_decisions = {
 		ai_will_do = {
 			factor = 1
 	}
+	}
+	
+	VKS_Annnex_AKI = {
+		potential = {
+			tag = VKS
+			NOT = { has_global_flag = VKS_Annnex_AKI }
+		}
+		allow = {
+			tag = VKS
+			is_greater_power = yes
+			AKI = {
+					all_core = {
+						OR = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+								}
+							}
+						}
+					}
+			}
+		}
+		effect = {
+			add_accepted_culture = gek
+			add_accepted_culture = veldlewer
+			inherit = AKI
+			set_global_flag = VKS_Annnex_AKI
+						any_owned = {
+					limit = { is_core = AKI }
+					add_core = VKS
+						}
+		}
+	}
+	
+	
+		VKS_National_Unity = {
+		potential = {
+			tag = VKS
+			is_greater_power = yes
+		}
+		allow = {
+				war = no
+				has_global_flag = VKS_Annnex_AKI
+			}
+		effect = {
+			badboy = 10
+			any_owned = {
+					limit = { is_core = VEL }
+					remove_core = VEL
+			}
+						any_owned = {
+					limit = { is_core = AKI }
+					remove_core = AKI
+			}
+						any_owned = {
+					limit = { is_core = GKS }
+					remove_core = GKS
+			}
+						any_owned = {
+					limit = { is_core = TEX }
+					remove_core = TEX
+			}
+				}
+	}
+	
+		liberty_enlightening_the_world = {
+		potential = {
+			NOT = {
+				has_global_flag = statue_of_liberty_has_been_built
+			}
+			tag = VKS
+	
+		allow = {
+			has_global_flag = VKS_Annnex_AKI
+		}
+	
+		effect = {
+			set_global_flag = statue_of_liberty_has_been_built
+			any_pop = {
+				militancy = -0.5
+			}
+			VKS = {
+				country_event = { id=19300 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			}
+		}
+	}
 }
