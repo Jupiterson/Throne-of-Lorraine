@@ -374,6 +374,92 @@ country_event = {
 		}
 		relation = { who = GEN value = 100 }
 		GEN = { country_event = 28030 }
+		ai_chance = {
+            factor = 50
+				modifier = {
+                    factor = 1.25
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 0.3
+                    has_recently_lost_war = yes
+                }
+				modifier = {
+                    factor = 0
+                    is_disarmed = yes
+                }
+                modifier = {
+                    factor = 0.3
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 1.2
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 0.3
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+            }
+			ai_chance = {
+            factor = 50
+				modifier = {
+                    factor = 1.25
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 0.3
+                    has_recently_lost_war = yes
+                }
+				modifier = {
+                    factor = 0
+                    is_disarmed = yes
+                }
+                modifier = {
+                    factor = 0.3
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 1.2
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 0.3
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+            }
 	}
 	option = {
 		name = "Submit to the Tirrenian Republic"
@@ -463,6 +549,57 @@ country_event = {
 		}
 		relation = { who = GEN value = 100 }
 		GEN = { country_event = 28031 }
+		ai_chance = {
+            factor = 50
+                modifier = {
+                    factor = 0
+                    is_greater_power = yes
+                }
+				modifier = {
+                    factor = 0.5
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 1.5
+                    has_recently_lost_war = yes
+                }
+                modifier = {
+                    factor = 1.5
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 0.5
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 0.3
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 0.5
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 1.5
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 0.5
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 0.3
+                    industrial_score = 30
+                }
+                modifier = {
+                    factor = 0.8
+                    relation = { who = GEN value = 150 }
+                }
+				modifier = {
+                    factor = 1.5
+                    NOT = { relation = { who = GEN value = 50 } }
+                }
+            }
 	}
 }
 country_event = {
@@ -621,6 +758,49 @@ country_event = {
 		}
 		relation = { who = GEN value = 100 }
 		GEN = { country_event = 28030 }
+		ai_chance = {
+            factor = 50
+				modifier = {
+                    factor = 1.25
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 0.3
+                    has_recently_lost_war = yes
+                }
+				modifier = {
+                    factor = 0
+                    is_disarmed = yes
+                }
+                modifier = {
+                    factor = 0.3
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 1.2
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 0.3
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+            }
 	}
 	option = {
 		name = "Submit to the Tirrenian Republic"
@@ -710,6 +890,441 @@ country_event = {
 		}
 		relation = { who = GEN value = 100 }
 		GEN = { country_event = 28031 }
+		ai_chance = {
+            factor = 50
+                modifier = {
+                    factor = 0
+                    is_greater_power = yes
+                }
+				modifier = {
+                    factor = 0.5
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 1.5
+                    has_recently_lost_war = yes
+                }
+                modifier = {
+                    factor = 1.5
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 0.5
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 0.3
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 0.5
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 1.5
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 0.5
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 0.3
+                    industrial_score = 30
+                }
+                modifier = {
+                    factor = 0.8
+                    relation = { who = GEN value = 150 }
+                }
+				modifier = {
+                    factor = 1.5
+                    NOT = { relation = { who = GEN value = 50 } }
+                }
+            }
+	}
+}
+country_event = {
+	id = 28023
+	title = "Repubblica Lombarda" #The Milanese Revolution
+	desc = "EVTDESC100105"
+	picture = "MazzinianRevolution"
+	fire_only_once = yes
+
+	trigger = {
+		tag = LOM
+		has_country_flag = carbonari_activity
+		AND = {
+			NOT = {
+				government = democracy
+			}
+			OR = {
+			    average_militancy = 5
+				any_owned_province = {
+					is_capital = yes
+					controlled_by = REB
+				}
+			}		
+		}
+	}
+
+	mean_time_to_happen =  {
+		days = 15
+		modifier = {
+			factor = 0.5
+			has_country_modifier = springtime_of_nations
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { has_country_modifier = springtime_of_nations }
+		}
+		modifier = {
+			factor = 0.01
+			capital_scope = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 6
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 7
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 8
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 9
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.60
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.70
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.80
+		}
+	}
+
+	option = {
+		name = "Let's support Mazzini but also keep our independence"
+		prestige = -10
+		any_owned = { remove_province_modifier = liberal_agitation }
+		remove_country_modifier = springtime_of_nations
+		remove_country_modifier = global_liberal_agitation
+		random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		government = democracy
+		ruling_party_ideology = liberal
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		random_owned = {
+			limit = { owner = { NOT = { political_parties = secret_ballots } } }
+			owner = { political_reform = secret_ballots }
+		}
+		add_country_modifier = {
+			name = power_vacuum
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+				OR = {
+					type = soldiers
+					type = officers
+				}
+			}
+			ideology = { factor = 0.3 value = liberal }
+			dominant_issue = { factor = 0.20 value = pro_military }
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+				is_culture_group = italian
+				location = { is_core = THIS }
+			}
+			ideology = { factor = 0.25 value = liberal }
+			dominant_issue = { factor = 0.10 value = pro_military }
+		}
+		any_pop = {
+			limit = {
+				location = { is_core = THIS }
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 6
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 3
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = -6
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = -2
+			}
+		}
+   
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+				    AND = {
+			            government = democracy
+						ideology = liberal
+					}
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		relation = { who = GEN value = 100 }
+		GEN = { country_event = 28030 }
+		ai_chance = {
+            factor = 50
+				modifier = {
+                    factor = 1.25
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 0.3
+                    has_recently_lost_war = yes
+                }
+				modifier = {
+                    factor = 0
+                    is_disarmed = yes
+                }
+                modifier = {
+                    factor = 0.3
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 1.2
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 0.3
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+            }
+			ai_chance = {
+            factor = 50
+				modifier = {
+                    factor = 1.25
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 0.3
+                    has_recently_lost_war = yes
+                }
+				modifier = {
+                    factor = 0
+                    is_disarmed = yes
+                }
+                modifier = {
+                    factor = 0.3
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 1.2
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 0.3
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+            }
+	}
+	option = {
+		name = "Submit to the Tirrenian Republic"
+		prestige = -15
+		any_owned = { remove_province_modifier = liberal_agitation }
+		remove_country_modifier = springtime_of_nations
+		remove_country_modifier = global_liberal_agitation
+		random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		government = democracy
+		ruling_party_ideology = liberal
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		random_owned = {
+			limit = { owner = { NOT = { political_parties = secret_ballots } } }
+			owner = { political_reform = secret_ballots }
+		}
+		add_country_modifier = {
+			name = power_vacuum
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+				OR = {
+					type = soldiers
+					type = officers
+				}
+			}
+			ideology = { factor = 0.3 value = liberal }
+			dominant_issue = { factor = 0.20 value = pro_military }
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+				is_culture_group = italian
+				location = { is_core = THIS }
+			}
+			ideology = { factor = 0.25 value = liberal }
+			dominant_issue = { factor = 0.10 value = pro_military }
+		}
+		any_pop = {
+			limit = {
+				location = { is_core = THIS }
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 6
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 3
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = -6
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = -2
+			}
+		}
+   
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+				    AND = {
+			            government = democracy
+						ideology = liberal
+					}
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		relation = { who = GEN value = 100 }
+		GEN = { country_event = 28031 }
+		ai_chance = {
+            factor = 50
+                modifier = {
+                    factor = 0
+                    is_greater_power = yes
+                }
+				modifier = {
+                    factor = 0.5
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 1.5
+                    has_recently_lost_war = yes
+                }
+                modifier = {
+                    factor = 1.5
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 0.5
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 0.3
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 0.5
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 1.5
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 0.5
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 0.3
+                    industrial_score = 30
+                }
+                modifier = {
+                    factor = 0.8
+                    relation = { who = GEN value = 150 }
+                }
+				modifier = {
+                    factor = 1.5
+                    NOT = { relation = { who = GEN value = 50 } }
+                }
+            }
 	}
 }
 country_event = {
