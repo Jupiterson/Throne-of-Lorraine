@@ -301,6 +301,7 @@ country_event = {
 		}
 		government = democracy
 		ruling_party_ideology = liberal
+		release_vassal = THIS
 		political_reform = universal_voting
 		political_reform = population_equal_weight
 		political_reform = yes_meeting
@@ -476,6 +477,7 @@ country_event = {
 		}
 		government = democracy
 		ruling_party_ideology = liberal
+		release_vassal = THIS
 		political_reform = universal_voting
 		political_reform = population_equal_weight
 		political_reform = yes_meeting
@@ -685,6 +687,7 @@ country_event = {
 		}
 		government = democracy
 		ruling_party_ideology = liberal
+		release_vassal = THIS
 		political_reform = universal_voting
 		political_reform = population_equal_weight
 		political_reform = yes_meeting
@@ -817,6 +820,7 @@ country_event = {
 		}
 		government = democracy
 		ruling_party_ideology = liberal
+		release_vassal = THIS
 		political_reform = universal_voting
 		political_reform = population_equal_weight
 		political_reform = yes_meeting
@@ -945,13 +949,13 @@ country_event = {
 }
 country_event = {
 	id = 28023
-	title = "Repubblica Lombarda" #The Milanese Revolution
+	title = "Repubblica Napoletana" ##The Naples Revolution from France (no more cringe)
 	desc = "EVTDESC100105"
 	picture = "MazzinianRevolution"
 	fire_only_once = yes
 
 	trigger = {
-		tag = LOM
+		tag = NAP
 		has_country_flag = carbonari_activity
 		AND = {
 			NOT = {
@@ -963,7 +967,8 @@ country_event = {
 					is_capital = yes
 					controlled_by = REB
 				}
-			}		
+			}	
+            NAP = { vassal_of = FRA }
 		}
 	}
 
@@ -1026,6 +1031,7 @@ country_event = {
 		}
 		government = democracy
 		ruling_party_ideology = liberal
+		release_vassal = THIS
 		political_reform = universal_voting
 		political_reform = population_equal_weight
 		political_reform = yes_meeting
@@ -1201,6 +1207,393 @@ country_event = {
 		}
 		government = democracy
 		ruling_party_ideology = liberal
+		release_vassal = THIS
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		random_owned = {
+			limit = { owner = { NOT = { political_parties = secret_ballots } } }
+			owner = { political_reform = secret_ballots }
+		}
+		add_country_modifier = {
+			name = power_vacuum
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+				OR = {
+					type = soldiers
+					type = officers
+				}
+			}
+			ideology = { factor = 0.3 value = liberal }
+			dominant_issue = { factor = 0.20 value = pro_military }
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+				is_culture_group = italian
+				location = { is_core = THIS }
+			}
+			ideology = { factor = 0.25 value = liberal }
+			dominant_issue = { factor = 0.10 value = pro_military }
+		}
+		any_pop = {
+			limit = {
+				location = { is_core = THIS }
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 6
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 3
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = -6
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = -2
+			}
+		}
+   
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+				    AND = {
+			            government = democracy
+						ideology = liberal
+					}
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		relation = { who = GEN value = 100 }
+		GEN = { country_event = 28031 }
+		ai_chance = {
+            factor = 50
+                modifier = {
+                    factor = 0
+                    is_greater_power = yes
+                }
+				modifier = {
+                    factor = 0.5
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 1.5
+                    has_recently_lost_war = yes
+                }
+                modifier = {
+                    factor = 1.5
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 0.5
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 0.3
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 0.5
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 1.5
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 0.5
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 0.3
+                    industrial_score = 30
+                }
+                modifier = {
+                    factor = 0.8
+                    relation = { who = GEN value = 150 }
+                }
+				modifier = {
+                    factor = 1.5
+                    NOT = { relation = { who = GEN value = 50 } }
+                }
+            }
+	}
+}
+country_event = {
+	id = 28024
+	title = "Repubblica Napoletana" ##The Naples Revolution from the king
+	desc = "EVTDESC100105"
+	picture = "MazzinianRevolution"
+	fire_only_once = yes
+
+	trigger = {
+		tag = NAP
+		has_country_flag = carbonari_activity
+		AND = {
+			NOT = {
+				government = democracy
+			}
+			OR = {
+			    average_militancy = 5
+				any_owned_province = {
+					is_capital = yes
+					controlled_by = REB
+				}
+			}		
+		}
+	}
+
+	mean_time_to_happen =  {
+		days = 15
+		modifier = {
+			factor = 0.5
+			has_country_modifier = springtime_of_nations
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { has_country_modifier = springtime_of_nations }
+		}
+		modifier = {
+			factor = 0.01
+			capital_scope = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 6
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 7
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 8
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 9
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.60
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.70
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.80
+		}
+	}
+
+	option = {
+		name = "Let's support Mazzini but also keep our independence"
+		prestige = -10
+		any_owned = { remove_province_modifier = liberal_agitation }
+		remove_country_modifier = springtime_of_nations
+		remove_country_modifier = global_liberal_agitation
+		random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		government = democracy
+		ruling_party_ideology = liberal
+		release_vassal = THIS
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		random_owned = {
+			limit = { owner = { NOT = { political_parties = secret_ballots } } }
+			owner = { political_reform = secret_ballots }
+		}
+		add_country_modifier = {
+			name = power_vacuum
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+				OR = {
+					type = soldiers
+					type = officers
+				}
+			}
+			ideology = { factor = 0.3 value = liberal }
+			dominant_issue = { factor = 0.20 value = pro_military }
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+				is_culture_group = italian
+				location = { is_core = THIS }
+			}
+			ideology = { factor = 0.25 value = liberal }
+			dominant_issue = { factor = 0.10 value = pro_military }
+		}
+		any_pop = {
+			limit = {
+				location = { is_core = THIS }
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 6
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 3
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = -6
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = -2
+			}
+		}
+   
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+				    AND = {
+			            government = democracy
+						ideology = liberal
+					}
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		relation = { who = GEN value = 100 }
+		GEN = { country_event = 28030 }
+		ai_chance = {
+            factor = 50
+				modifier = {
+                    factor = 1.25
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 0.3
+                    has_recently_lost_war = yes
+                }
+				modifier = {
+                    factor = 0
+                    is_disarmed = yes
+                }
+                modifier = {
+                    factor = 0.3
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 1.2
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 0.3
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+            }
+			ai_chance = {
+            factor = 50
+				modifier = {
+                    factor = 1.25
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 0.3
+                    has_recently_lost_war = yes
+                }
+				modifier = {
+                    factor = 0
+                    is_disarmed = yes
+                }
+                modifier = {
+                    factor = 0.3
+                    NOT = { industrial_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    industrial_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+				modifier = {
+                    factor = 1.2
+                    prestige = 30
+                }
+				modifier = {
+                    factor = 0.3
+                    NOT = { military_score = 10 }
+                }
+				modifier = {
+                    factor = 1.2
+                    military_score = 15
+                }
+				modifier = {
+                    factor = 1.6
+                    industrial_score = 30
+                }
+            }
+	}
+	option = {
+		name = "Submit to the Tirrenian Republic"
+		prestige = -15
+		any_owned = { remove_province_modifier = liberal_agitation }
+		remove_country_modifier = springtime_of_nations
+		remove_country_modifier = global_liberal_agitation
+		random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		government = democracy
+		ruling_party_ideology = liberal
+		release_vassal = THIS
 		political_reform = universal_voting
 		political_reform = population_equal_weight
 		political_reform = yes_meeting
@@ -1329,7 +1722,7 @@ country_event = {
 }
 country_event = {
     id = 28030
-    title = "EVTNAME28020"
+    title = "$FROMCOUNTRY$ wants to be our ally"
     desc = "EVTDESC28020"
     picture = "carbonari" ##temp pic
 
@@ -1337,16 +1730,35 @@ country_event = {
 
     option = {
         name = "We accept the Alliance proposal"
+		from = set_country_flag = genoa_accepted
 		from = { create_alliance = THIS }
+		ai_chance = {
+            factor = 70
+                modifier = {
+                    factor = 2
+                    is_greater_power = yes
+                }
+				modifier = {
+                    factor = 1.5
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 1.2
+                    military_score = 15
+                }
+            }
     }
 	option = {
         name = "It's too risky"
 		from = { country_event = 28032 }
+		ai_chance = {
+            factor = 30
+        }
     }
 }
 country_event = {
     id = 28031
-    title = "EVTNAME28020"
+    title = "$FROMCOUNTRY$ wants our protection."
     desc = "EVTDESC28020"
     picture = "carbonari" ##temp pic
 
@@ -1354,16 +1766,35 @@ country_event = {
 
     option = {
         name = "We will indeed interfere in their affairs"
+		from = set_country_flag = genoa_accepted
 		THIS = { create_vassal = from }
+		ai_chance = {
+            factor = 80
+                modifier = {
+                    factor = 2
+                    is_greater_power = yes
+                }
+				modifier = {
+                    factor = 1.5
+                    is_secondary_power = yes
+                }
+				modifier = {
+                    factor = 1.2
+                    military_score = 15
+                }
+            }
     }
 	option = {
         name = "It's too risky"
 		from = { country_event = 28032 }
+		ai_chance = {
+            factor = 20
+        }
     }
 }
 country_event = {
     id = 28032
-    title = "EVTNAME28020"
+    title = "$FROMCOUNTRY$ has refused our friendship offer."
     desc = "EVTDESC28020"
     picture = "carbonari" ##temp pic
 
@@ -1371,5 +1802,39 @@ country_event = {
 
     option = {
         name = "We are on our own then"
+    }
+}
+country_event = {
+    id = 28033
+    title = "$FROMCOUNTRY$ wants our protection." ##france wonders what da naples is doin (spoiler they broke free)
+    desc = "EVTDESC28020"
+    picture = "carbonari" ##temp pic
+	trigger = {
+		tag = FRA
+	    NAP = { has_country_flag = genoa_accepted }
+	}
+
+	mean_time_to_happen =  {
+		days = 10
+	}
+
+
+    option = {
+        name = "We need to retake our control over Naples and end this wave of Liberal thought once and for all"
+		war = {
+		    target = GEN
+	        attacker_goal = { casus_belli = cut_down_to_size_no_add_wargoal }
+	        defender_goal = { casus_belli = cut_down_to_size_no_add_wargoal }
+	        call_ally = yes
+        }
+		ai_chance = {
+            factor = 85
+        }
+    }
+	option = {
+        name = "We can't do anything"
+		ai_chance = {
+            factor = 15
+        }
     }
 }
