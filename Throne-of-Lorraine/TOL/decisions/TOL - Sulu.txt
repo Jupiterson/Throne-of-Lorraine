@@ -1,0 +1,23 @@
+political_decisions = {
+murshiduls_vow = {
+	picture = borneowar
+		potential = {
+			tag = SUL
+			NOT = { has_country_flag = murshidul }
+		}
+		allow = {
+			has_leader = "Idris Murshidul"
+		}
+		effect = {
+			set_country_flag = murshidul
+			add_country_modifier = {
+				name = bangsamoro_or_death
+				duration = -1
+			}
+			plurality = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

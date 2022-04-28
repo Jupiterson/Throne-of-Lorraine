@@ -1,12 +1,46 @@
-SPA = { value = 100 }
-JAP = { value = 100 }
-NET = { value = 50 }
+VEN = { value = -10 }
+
+leader = {
+	name = "Idris Murshidul"
+	picture = sul_general
+	type = land
+	date="1836.1.1"
+	personality = cautious
+	background = school_of_defense
+	prestige = 0.4
+}
 
 army = {
-	name = "Royal army of Sulu"
+	name = "Sulu Island Militia"
 	location = 1464
 	regiment = {
-		name= "The Sultan's Elite"
+		name= "Jolo Watch"
 		type = irregular
-		home = 1464	}
+		home = 1464	
+	}
+}
+
+army = {
+	name = "Army of the Bangsamoro"
+	location = 3544
+	regiment = {
+		name= "Marawi Warriors"
+		type = irregular
+		home = 3543	
+	}
+	regiment = {
+		name= "Cotabato Warriors"
+		type = irregular
+		home = 3544	
+	}
+	regiment = {
+		name= "Sultan's Riders"
+		type = cavalry
+		home = 3546
+	}
+	regiment = {
+		name= "Pula Warriors"
+		type = irregular
+		home = 3547
+	}
 }
