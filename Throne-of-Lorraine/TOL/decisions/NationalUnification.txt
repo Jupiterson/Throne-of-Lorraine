@@ -919,7 +919,13 @@ outside_form_WSF = {
 		news_desc_medium = "form_italy_NEWS_MEDIUM"
 		news_desc_short = "form_italy_NEWS_SHORT"
 		potential = {
+		OR = {
 			tag = NIF
+<<<<<<< Updated upstream
+=======
+			tag = PRO
+			}
+>>>>>>> Stashed changes
 			capital_scope = { continent = europe }
 			NOT = {
 				has_country_flag = post_colonial_country
