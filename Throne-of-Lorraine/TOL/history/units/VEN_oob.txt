@@ -120,7 +120,7 @@ army = {
 
 
 army = {
-	name = "L'Esercito di San Marco "
+	name = "Lombardy Army"
 	location = 726
 	regiment = {
 		name= "1.1. Kavalleriedivision"
@@ -172,87 +172,31 @@ army = {
 }
 
 army = {
-	name = "L'Esercito Magellanico"
+	name = "The Australia Garrison"
 	location = 2468
 	regiment = {
-		name= "I.Magellanico"
+		name= "56th (West Essex) Regiment"
 		type = infantry
-		home = 2468
-	}
-}
-
-army = {
-	name = "L'Esercito Leonardiano"
-	location = 1462
-	regiment = {
-		name= "I.Leonardian"
-		type = infantry
-		home = 2565
+		home = 299
 	}
 
 	regiment = {
-		name= "II.Leonardian"
+		name= "2nd (The Queen's Royal) Regiment"
 		type = infantry
-		home = 1460
+		home = 283
 	}
 
 	regiment = {
-		name= "III.Leonardian"
+		name= "The Royal Lancaster Regiment"
 		type = infantry
-		home = 1461
-	}
-	
-	regiment = {
-		name= "IV.Leonardian"
-		type = infantry
-		home = 1462
-	}
-	
-	regiment = {
-		name= "I.Leonardian Cavalry"
-		type = cavalry
-		home = 1463
+		home = 285
 	}
 
-	regiment = {
-		name= "II.Leonardian Cavalry"
-		type = cavalry
-		home = 3540
-	}
-
-}
-
-army = {
-	name = "L'Esercito delle Indias"
-	location = 1291
-	regiment = {
-		name= "I.Indiano"
-		type = infantry
-		home = 1291
-	}
-
-	regiment = {
-		name= "II.Indiano"
-		type = infantry
-		home = 1292
-	}
-
-	regiment = {
-		name= "III.Indiano"
-		type = infantry
-		home = 1292
-	}
-	
-	regiment = {
-		name= "IV.Indiano"
-		type = infantry
-		home = 1293
-	}
 }
 
 navy = {
-	name = "Flotta di Trasporto"
-	location = 1291 #Ahmedabad
+	name = "3rd Transport Squadron"
+	location = 1321 #Colombo
 	ship = {
 		name= "11th Transport Flotilla"
 		type = clipper_transport
@@ -294,111 +238,114 @@ navy = {
 
 
 navy = {
-	name = "Flotta di Indias Orientales"
+	name = "Ceylon Station"
 	location = 2128 #Diego Garcia
 	ship = {
-		name= "VDD Grande Alessandro"
+		name= "HMS Ajax"
 		type = manowar
 	}
 
 	ship = {
-		name= "VDD Croce Rossa"
+		name= "HMS Armada"
 		type = manowar
 	}
 
 	ship = {
-		name= "VDD Rizzo d'Oro"
+		name= "HMS Caledonia"
 		type = manowar
 	}
 
 	ship = {
-		name= "VDD Bacchante"
+		name= "HMS Edinburgh"
+		type = manowar
+	}
+
+	ship = {
+		name= "HMS Egmont"
+		type = manowar
+	}
+
+	ship = {
+		name= "HMS Impregnable"
+		type = manowar
+	}
+
+	ship = {
+		name= "HMS Invincible"
+		type = manowar
+	}
+
+	ship = {
+		name= "HMS Minden"
+		type = manowar
+	}
+
+	ship = {
+		name= "HMS Poictiers"
+		type = manowar
+	}
+
+	ship = {
+		name= "HMS Warspite"
+		type = manowar
+	}
+
+	ship = {
+		name= "HMS Bacchante"
 		type = frigate
 	}
 
 	ship = {
-		name= "VDD Belvidera"
+		name= "HMS Belvidera"
 		type = frigate
 	}
 
 	ship = {
-		name= "VDD Europa"
+		name= "HMS Briton"
 		type = frigate
 	}
+
+	ship = {
+		name= "HMS Crescent"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Galatea"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Havannah"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Maidstone"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Menelaus"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Nymphe"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Tenedos"
+		type = frigate
+	}
+
 }
 
 
 navy = {
-	name = "Flotta di San Marco"
+	name = "Venetian Navy"
 	location = 729
-	ship = {
-		name= "VDD Giove Fulminante"
-		type = manowar
-	}
-
-	ship = {
-		name= "VDD Armada"
-		type = manowar
-	}
-
-	ship = {
-		name= "VDD San Vittorio"
-		type = manowar
-	}
-
-	ship = {
-		name= "VDD San Giovanni Battista"
-		type = manowar
-	}
-
-	ship = {
-		name= "VDD San Sebastiano"
-		type = manowar
-	}
-
-	ship = {
-		name= "VDD Sol d'Oro"
-		type = manowar
-	}
-
-	ship = {
-		name= "VDD Tigre"
-		type = manowar
-	}
-	ship = {
-		name= "VDD Amozzane Guerriera"
-		type = frigate
-	}
-
-	ship = {
-		name= "VDD Corona"
-		type = frigate
-	}
-
-	ship = {
-		name= "VDD Costanza"
-		type = frigate
-	}
-
-	ship = {
-		name= "VDD Madonna deela Salute"
-		type = frigate
-	}
-
-	ship = {
-		name= "VDD Regina del Mar"
-		type = frigate
-	}
-
-	ship = {
-		name= "VDD Trionfo"
-		type = frigate
-	}
-
-	ship = {
-		name= "VDD Leone Triofante"
-		type = frigate
-	}
 	ship = {
 		name= "1. Klipperflottille"
 		type = clipper_transport
