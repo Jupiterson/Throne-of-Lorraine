@@ -60,7 +60,7 @@ USA_121 = { 120 121 122 } #South Dakota
 
 USA_124 = { 123 124 125 } #Nebraska
 
-USA_126 = { 126 127 128 3397 } #Kansas
+USA_126 = { 126 127 128 } #Kansas
 
 USA_129 = { 131 129 130 } #Oklahoma
 
@@ -106,9 +106,9 @@ USA_2556 = { 209 207 208 210 214 2556 190 } #North Carolina
 
 USA_211 = { 211 213 216 60 } #Virginia
 
-USA_218 = { 218 217 215 2146 } #West Virginia
+USA_218 = { 218 217 215 } #West Virginia
 
-USA_219 = { 220 219 222 212 } #Maryland
+USA_219 = { 2146 220 219 222 212 } #Maryland
 
 USA_223 = { 223 224 225 226 227 2627 } #Pennsylvania
 
@@ -158,7 +158,7 @@ ENG_300 = { 300 301 302 3269 } #South East England
 
 ### Scandinavia
 
-DEN_251 = { 251 252 253 2636 3412 3328 } #Iceland & Greenland
+DEN_251 = { 251 252 253 2636 3412 } #Iceland & Greenland
 
 SWE_308 = { 309 308 305 306 307 } #Nordnoge
 
@@ -180,13 +180,13 @@ RUS_343 = { 343 344 341 340 342 339 } #Helsinki
 
 RUS_345 = { 345 346 347 } #Turku
 
-DEN_367 = { 367 366 2557 717 } #Jylland
+DEN_367 = { 367 366 2557 } #Jylland
 
 HOL_369 = { 369 530 529 } #Holstein
 
 SCH_370 = { 370 371 533 2236 } #Schleswig
 
-DEN_372 = { 372 373 696 } #Sjaelland
+DEN_372 = { 372 373 } #Sjaelland
 
 
 ### Low Countries
@@ -332,7 +332,7 @@ PRU_682 = { 682 683 684 685 689 3336 688 632 } #Lower Silesia
 
 PRU_690 = { 690 691 692 694 3469 } #Westpreu�en
 
-PRU_695 = { 695 697 698 693 3326 3327 3329 365 } #Ostpreu�en
+PRU_695 = { 695 696 697 698 693 3326 3327 3328 3329 365 } #Ostpreu�en
 
 PRU_701 = { 701 699 700 } #Posen
 
@@ -375,7 +375,7 @@ AUS_726 = { 726 727 728 2568 } #Lombardia
 
 #AUS_733 = { 733 736 } #Friuli
 
-AUS_729 = { 729 730 731 732 733 3262 } #Venetia
+AUS_729 = { 729 730 731 732 733 3262 717 } #Venetia
 
 #AUS_734 = { 734 735 } #South Tirol
 
@@ -406,7 +406,7 @@ PAP_752 = { 749 752 750 751 3266 } #Lazio
 
 SIC_753 = { 3261 753 757  } #Puglia
 
-SIC_754 = { 754 755 2567 } #Campania
+SIC_754 = { 754 755 2567 3397 } #Campania
 
 SYC_759 = { 759 760 761 756 758 } #Full Magna Graecia
 
