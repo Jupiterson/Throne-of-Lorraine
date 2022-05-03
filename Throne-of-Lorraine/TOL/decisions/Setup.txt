@@ -70,7 +70,7 @@ political_decisions = {
 			1434 = { secede_province = THIS }
 			1435 = { secede_province = THIS }
 			1205 = { secede_province = THIS }
-			2656 = { secede_province = THIS }
+			2656 = { secede_province = THIS } 
 			1194 = { secede_province = THIS }
 			2702 = { secede_province = THIS }
 			3298 = { secede_province = THIS }
@@ -1022,6 +1022,14 @@ political_decisions = {
 				name = ottoman_oppression
 				duration = -1
 			}
+		
+		WHA = {
+			add_country_modifier = {
+				name = the_slate_empire
+				duration = -1
+			}
+			}
+			
 			enable_canal = 4
 			enable_canal = 5
 			enable_canal = 6
