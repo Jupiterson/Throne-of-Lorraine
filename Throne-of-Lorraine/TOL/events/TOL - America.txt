@@ -1,0 +1,54 @@
+country_event = {
+	id = 100142
+	title = "EVTNAME443037"
+	desc = "EVTDESC443037"
+	picture = "convict_labor"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT443036OPTA" #Everyone
+		political_reform = yes_slavery
+		
+		ruling_party_ideology = reactionary
+		government = colonial_company
+		any_pop = {
+			limit = {
+			OR = {
+				has_pop_culture = afro_french
+				has_pop_culture = afro_dutch
+				has_pop_culture = afro_italian
+				has_pop_culture = afro_french
+				has_pop_culture = afro_caribean
+				has_pop_culture = afro_brazilian
+				has_pop_culture = afro_caribbean
+				has_pop_culture = afro_brazilian
+				has_pop_culture = afro_german
+				has_pop_culture = kreol
+				}
+				type = farmers
+			}
+			}
+		any_pop = { 
+		limit = { 
+		type = farmers 
+		OR = {
+				has_pop_culture = afro_french
+				has_pop_culture = afro_dutch
+				has_pop_culture = afro_italian
+				has_pop_culture = afro_french
+				has_pop_culture = afro_caribean
+				has_pop_culture = afro_brazilian
+				has_pop_culture = afro_caribbean
+				has_pop_culture = afro_brazilian
+				has_pop_culture = kreol
+				has_pop_culture = afro_german
+				} 
+			} 
+			militancy = 9 consciousness = 9 pop_type = slaves
+		}
+		state_scope = { is_slave = yes }
+		}
+		
+	}
+}

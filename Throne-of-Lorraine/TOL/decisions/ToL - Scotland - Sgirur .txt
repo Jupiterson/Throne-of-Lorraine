@@ -31,9 +31,10 @@ political_decisions = {
 			badboy = 5
 			war = {
 			    target = BRZ
-			    attacker_goal = { casus_belli = make_puppet_no_infamy }
+			    attacker_goal = { casus_belli = make_puppet	}
 			    defender_goal = { casus_belli = status_quo }
 		    }
+			badboy = -10
 		}
 	}
 #SCOTLAND FOREVER and brazil I guess
