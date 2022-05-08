@@ -136,7 +136,11 @@ national_awakening = {
 			NOT = { tag = PLC }
 			NOT = { tag = PLR }
 			NOT = { tag = PHC }
+			OR = {
 			NOT = { tag = HUN }
+			has_global_flag = jagiellonian_hun			
+			}
+			NOT = { has_global_flag = no_jagiellonian_hun }
 		}
 
 		allow = {

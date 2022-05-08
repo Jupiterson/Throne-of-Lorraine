@@ -74,6 +74,7 @@ peace_order = {
 	unification_annex_casus_belli
 	claim_colonial_region_full
 	annex_africa_full
+	annex_india_full
 	colonial_conquest_full
 	annex_core_country
 	unification_add_to_sphere
@@ -135,6 +136,7 @@ peace_order = {
 	conquest_tiny
 	conquest_minuscule
 	annex_africa
+	annex_india
 	establish_protectorate_BC_casus_belli
 	establish_protectorate_NI_casus_belli
 	establish_protectorate_casus_belli
@@ -6011,6 +6013,233 @@ conquest = {
 
 	war_name = WAR_CONQUEST_NAME
 }
+
+# Berlin Conference
+annex_india = {
+	sprite_index = 22
+	is_triggered_only = yes
+	months = 0
+	crisis = no
+
+	construction_speed = 1.5
+
+	badboy_factor = 0
+	prestige_factor = 0.5
+	peace_cost_factor = 0.6
+	penalty_factor = 2
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+
+	always = yes
+
+	can_use = {
+		OR = {
+			AND = {
+				THIS = { any_owned_province = { port = yes } }
+				any_owned_province = { port = yes }
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		NOT = { is_our_vassal = THIS }
+		number_of_states = 2
+		THIS = {
+			nationalism_n_imperialism = 1
+			capital_scope = { continent = europe }
+			slavery = no_slavery
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			NOT = { has_country_modifier = neutrality }
+			civilized = yes
+			has_global_flag = india_scramble
+		}
+		NOT = {
+			tag = BNG
+			has_country_flag = post_colonial_country
+		}
+		civilized = no
+		is_vassal = no
+		capital_scope = { is_core = HND }
+		ai = yes
+		OR = {
+			war_with = THIS
+			THIS = {
+				NOT = { has_country_modifier = punitive_effects }
+			}
+		}
+		#Claimed colonial regions can't be conquered with this CB
+		
+		NOT = {
+			AND = {
+				any_owned_province = {
+					is_core = HND
+				}
+				OR = {
+					any_neighbor_country = {
+						NOT = { tag = THIS tag = BNG }
+						civilized = yes
+						any_owned_province = {
+							is_core = HND
+						}
+					}
+					any_greater_power  = {
+						NOT = { tag = THIS tag = BNG }
+						any_owned_province = {
+							is_core = HND
+						}
+					}
+				}
+			}
+		}
+	}
+
+	allowed_states = {
+		any_owned_province = { is_colonial = no }
+		#NOT = { any_owned_province = { is_capital = yes } }
+		OR = {
+			THIS = { ai = no }
+			any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+			AND = {
+				any_owned_province = { port = yes }
+				THIS = { any_owned_province = { port = yes } }
+			}
+		}
+	}
+
+	po_demand_state = yes
+
+	war_name = WAR_CONCESSION_NAME
+
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.1
+		}
+	}
+}
+annex_india_full = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	always = yes
+
+	construction_speed = 2.5
+
+	badboy_factor = 0
+	prestige_factor = 0.5
+	peace_cost_factor = 0.6
+	penalty_factor = 2
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+
+	can_use = {
+		OR = {
+			AND = {
+				THIS = { total_amount_of_ships = 5 }
+				any_owned_province = { port = yes }
+			}
+			neighbour = THIS
+			war_with = THIS
+		}
+		NOT = { is_our_vassal = THIS }
+		OR = {
+			war_with = THIS
+			THIS = { military_score = 1 }
+		}
+		THIS = {
+			nationalism_n_imperialism = 1
+			capital_scope = { continent = europe }
+			slavery = no_slavery
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		    NOT = { has_country_modifier = neutrality_modifier }
+			NOT = { has_country_modifier = claimed_africa }
+			civilized = yes
+#			has_global_flag = india_scramble
+		}
+		civilized = no
+		is_vassal = no
+		NOT = {
+			tag = HND
+		}
+		capital_scope = { is_core = HND }	
+		ai = yes
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+		OR = {
+			any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+			AND = {
+				any_owned_province = { port = yes }
+				THIS = { any_owned_province = { port = yes } }
+			}
+		}
+
+		#Claimed colonial regions can't be conquered with this CB
+		NOT = {
+			AND = {
+				any_owned_province = {
+					is_core = HND
+				}
+				OR = {
+					any_neighbor_country = {
+						NOT = { tag = THIS tag = BNG }
+						civilized = yes
+						any_owned_province = {
+							is_core = HND
+						}
+					}
+					any_greater_power  = {
+						NOT = { tag = THIS tag = BNG }
+						any_owned_province = {
+							is_core = HND
+						}
+					}
+				}
+			}
+		}
+	}
+
+	po_annex = yes
+
+	war_name = WAR_PROTECTORATE_NAME
+
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.1
+		}
+	}
+
+	on_po_accepted = {
+		tech_school = unciv_tech_school
+	}
+}
+
+
 
 # Berlin Conference
 annex_africa = {

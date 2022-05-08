@@ -8,8 +8,8 @@
 country_event = {
 
 	id = 100150
-	title = "EVTNAME95500" #The Berlin Conference
-	desc = "EVTDESC95500"
+	title = "INDIA" #The Berlin Conference
+	desc = "INDIADESC"
 	news = yes
 	news_desc_long = "EVTDESC95500_NEWS_LONG"
 	news_desc_medium = "EVTDESC95500_NEWS_MEDIUM"
@@ -59,15 +59,9 @@ country_event = {
 	trigger = {
 		civilized = no
 		capital_scope = { is_core = HND }
-		has_global_flag = berlin_conference
+		has_global_flag = india_scramble
 		NOT = { has_country_flag = delay_unciv_annexation }
 		NOT = { has_country_flag = reaction_to_berlin_conference }
-		NOT = { tag = MOR }
-		NOT = { tag = TUN }
-		NOT = { tag = ALD }
-		NOT = { tag = TRI }
-		NOT = { tag = EGY }
-		NOT = { tag = LIB }
 	}
 
 	mean_time_to_happen = {
@@ -108,7 +102,7 @@ country_event = {
 		war = no
 		civilized = no
 		capital_scope = { is_core = HND }
-		NOT = { has_global_flag = berlin_conference }
+		NOT = { has_global_flag = india_scramble }
 		NOT = { has_country_flag = africa_in_the_modern_age }
 		any_owned_province = {
 			OR = {
@@ -117,14 +111,6 @@ country_event = {
 				any_neighbor_province = { owner = { has_country_modifier = western_influences } }
 			}
 		}
-		NOT = { tag = MOR }
-		NOT = { tag = TUN }
-		NOT = { tag = ALD }
-		NOT = { tag = TRI }
-		NOT = { tag = EGY }
-		NOT = { tag = LIB }
-		NOT = { tag = OMA }
-		NOT = { tag = CYR }
 	}
 
 	mean_time_to_happen = {
