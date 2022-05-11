@@ -521,6 +521,123 @@ country_event = {
 	}
 }
 
+#Hispanic
+country_event = {
+	title = "EVTNAME96170"
+	desc = "EVTDESC11103"
+	picture = "Celebration"
+
+	id = 11103
+
+	is_triggered_only = yes
+
+	option = {				# Accept inheritance
+		name = "EVTOPTA11103"
+		clr_country_flag = made_the_call_to_union
+		add_accepted_culture = aragonese
+		add_accepted_culture = asturleonese
+		add_accepted_culture = catalan
+		add_accepted_culture = spanish
+		add_accepted_culture = portuguese
+		add_accepted_culture = basque
+		GNA = {
+			all_core = {
+				add_core = THIS
+			}
+		}
+		all_core = {
+			limit = { NOT = { is_core = IBR } }
+			remove_core = THIS				
+		}
+		change_tag = IBR
+		any_country = {
+			limit = {
+				NOT = {
+					tag = THIS
+					tag = PAP
+					tag = SMR
+				}
+				NOT = { has_country_flag = post_colonial_country }
+				is_culture_group = THIS
+				is_greater_power = no
+				num_of_cities = 1
+			}
+			country_event = 11101
+		}
+		random_country = {
+			limit = {
+				tag = PAP
+				NOT = { tag = THIS }
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+			leave_alliance = THIS
+			any_owned = {
+				limit = {
+					NOT = { province_id = 749 }
+				}
+				secede_province = THIS
+			}
+		}
+		random_country = {
+			limit = { is_sphere_leader_of = PAP }
+			set_country_flag = objects_to_italy
+			diplomatic_influence = { who = PAP value = -200 }
+			leave_alliance = PAP
+		}
+		any_country = {
+			limit = { alliance_with = PAP }
+			set_country_flag = objects_to_italy
+			diplomatic_influence = { who = PAP value = -100 }
+			leave_alliance = PAP
+		}
+		any_country = {
+			limit = {
+				NOT = { is_culture_group = iberian }
+				exists = yes
+				OR = {
+					has_country_flag = objects_to_italy
+					OR = {
+						primary_culture = french
+						primary_culture = occitan
+					}
+					tag = AUS
+					tag = AUB
+					tag = KUK
+					AND = {
+						OR = {
+							neighbour = ITA
+							neighbour = ITS
+						}
+						is_greater_power = yes
+					}
+				}
+			}
+			country_event = { id = 96165 days = 20 }
+		}
+		prestige = 10
+		ai_chance = {
+			factor = 95
+		}
+	}
+
+	option = {
+		name = "EVTOPTB11103"
+		prestige = 5
+		set_country_flag = does_not_want_to_be_unified
+		clr_country_flag = made_the_call_to_union
+		any_pop = {
+			militancy = 2
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+
 # Notification of Pan-nationalist revolution giving influence
 country_event = {
 	id = 11104
