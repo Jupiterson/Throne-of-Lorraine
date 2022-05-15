@@ -22,6 +22,15 @@ country_event = {
 			country_event = 33411
 		}
 	}
+	
+	option = {
+		name = "Gone with the Muslims!"
+		set_country_flag = papal_sent_demand
+		set_global_flag = gone_with_them
+		TUR = {
+			country_event = 33411
+		}
+	}
 }	
 
 country_event = {
@@ -38,16 +47,11 @@ country_event = {
 		
 		any_owned = {
 			limit = {
-				OR = {
 					region = EGY_921
-					region = EGY_910 
-
-				}
 			}
 			secede_province = KNI
 		}
 		EGY_921 = { add_core = KNI }
-		EGY_910  = { add_core = KNI }
 		any_pop = {
 			militancy = 4
 		}		
@@ -102,7 +106,6 @@ country_event = {
 		name = "Call for the crusade!"
 		prestige = 20
 		EGY_921 = { add_core = KNI }
-		EGY_910  = { add_core = KNI }
 		casus_belli = {
 			target = TUR
 			type = liberate_country
@@ -400,6 +403,7 @@ country_event = {
 		TUR = { owns = 917 }
 		has_global_flag = last_crusade	
 		NOT = { war_with = TUR }
+		NOT = { has_global_flag = gone_with_them }
 	}
 	
 	mean_time_to_happen = {
@@ -414,10 +418,89 @@ country_event = {
 		}
 		clr_global_flag = last_crusade
 		set_global_flag = last_crusade_lost
-		TUR = { country_event = 33322 }
+		
+		TUR = { country_event = 33422 }
+
 	}
 	
 }
+
+#European failure
+country_event = {
+	id = 100154
+	title = "Cru8.t" 
+	desc = "Cru8.d"
+	picture = "DIM_aprilbeweging"
+	
+	trigger = {
+		tag = PAP
+		TUR = { owns = 917 }
+		has_global_flag = last_crusade	
+		NOT = { war_with = TUR }
+		has_global_flag = gone_with_them
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "...What now?"
+		prestige = -50
+		any_pop = {
+			militancy = 4
+		}
+		clr_global_flag = last_crusade
+		set_global_flag = last_crusade_lost
+		
+		TUR = { country_event = 33422 }
+		
+	    change_tag = PAA
+		clr_country_flag = catholic_country
+		set_country_flag = sunni_country
+		
+		government = theocracy
+		set_country_flag = theocratic_government		
+		add_accepted_culture = mashriqi
+		add_accepted_culture = maghrebi
+		add_accepted_culture = bedouin
+		
+		ITA = {
+				all_core = {
+					add_core = PAA
+				}
+			}
+			
+		KNI = {	
+		any_owned = {
+			limit = {
+				is_core = KNI
+			}
+			secede_province = TUR
+		}
+		}
+		
+		COP = {	
+		any_owned = {
+			limit = {
+				is_core = COP
+			}
+			secede_province = TUR
+		}
+		}
+		
+		VEN = {	
+		any_owned = {
+			limit = {
+				is_core = TUR
+			}
+			secede_province = TUR
+		}
+		}
+	}
+	
+}
+
 
 #peace with Turkey-win
 country_event = {
@@ -448,7 +531,7 @@ country_event = {
 	
 }
 
-#European victory
+#European victory - turkiye shall stay
 country_event = {
 	id = 33420
 	title = "Cru10.t"
@@ -459,6 +542,7 @@ country_event = {
 		tag = TUR
 		NOT = { owns = 917 }
 		has_global_flag = last_crusade	
+		NOT = { has_global_flag = gone_with_them }
 	}
 	
 	mean_time_to_happen = {
@@ -512,17 +596,84 @@ country_event = {
 		}
 		any_owned = {
 			limit = {
-				OR = {
 					region = EGY_921 
-					region = EGY_910 
-				}
 			}
 			secede_province = KNI
 		}
 		clr_global_flag = last_crusade
 		set_global_flag = last_crusade_win
-		PAP = { country_event = 33323 }		
+		PAP = { country_event = 33423 }		
 	}
+	
+	
+}
+
+#European victory - turkiye shall die
+country_event = {
+	id = 100153
+	title = "Cru10.t"
+	desc = "Cru10.d"
+	picture = "DIM_aprilbeweging"
+	
+	trigger = {
+		tag = TUR
+		NOT = { owns = 917 }
+		has_global_flag = last_crusade	
+		has_global_flag = gone_with_them
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "...Do as the treaty demands..."
+		prestige = -50
+		any_pop = {
+			militancy = 9
+		}
+		any_owned = {
+			limit = {
+				region = EGY_921 
+			}
+			secede_province = KNI
+		}
+		any_owned = {
+			limit = {
+				is_core = COP
+			}
+			secede_province = COP
+		}
+		any_owned = {
+			limit = {
+				is_core = ARM
+			}
+			secede_province = ARM
+		}
+		any_owned = {
+			limit = {
+				is_core = HDJ
+			}
+			secede_province = KNI
+		}
+		KNI = { change_tag = JER }
+		change_tag = LTN
+		clr_country_flag = sunni_country
+		set_country_flag = catholic_country
+		
+		government = theocracy
+		set_country_flag = theocratic_government		
+		remove_accepted_culture = mashriqi
+		remove_accepted_culture = bedouin
+		add_accepted_culture = greek
+		add_accepted_culture = neo_greek
+		
+		clr_global_flag = last_crusade
+		set_global_flag = last_crusade_win
+		PAP = { country_event = 33423 }		
+	}
+	
+	
 }
 
 #peace with Turkey-lost
