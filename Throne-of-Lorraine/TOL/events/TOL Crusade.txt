@@ -6,7 +6,7 @@ country_event = {
 	
 	trigger = {
 		tag = PAP
-		year = 1871
+		year = 1865
 		TUR = { owns = 917 }
 		NOT = { has_country_flag = papal_sent_demand }		
 	}	
@@ -21,6 +21,9 @@ country_event = {
 		TUR = {
 			country_event = 33411
 		}
+		ai_chance = {
+			factor = 80
+		}
 	}
 	
 	option = {
@@ -29,6 +32,17 @@ country_event = {
 		set_global_flag = gone_with_them
 		TUR = {
 			country_event = 33411
+		}
+	    ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				relation = { who = TUR value = -100 }
+			}
+			modifier = {
+				factor = 5
+				is_greater_power = yes
+			}
 		}
 	}
 }	
@@ -60,6 +74,10 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = -5
+				has_global_flag = gone_with_them
+			}
 		}		
 	}
 	
@@ -637,24 +655,28 @@ country_event = {
 				region = EGY_921 
 			}
 			secede_province = KNI
-		}
-		any_owned = {
-			limit = {
-				is_core = COP
-			}
-			secede_province = COP
+			add_core = KNI
 		}
 		any_owned = {
 			limit = {
 				is_core = ARM
 			}
 			secede_province = ARM
+			add_core = ARM
 		}
 		any_owned = {
 			limit = {
 				is_core = HDJ
 			}
 			secede_province = KNI
+			add_core = KNI
+		}
+		any_owned = {
+			limit = {
+				is_core = COP
+			}
+			secede_province = COP
+			add_core = COP
 		}
 		KNI = { change_tag = JER }
 		change_tag = LTN
@@ -738,4 +760,32 @@ country_event = {
 			militancy = -2
 		}		
 	}
+}
+
+####Papal return
+country_event = {
+	id = 100155
+	title = "Return of the Pope"
+	desc = "POPERETURN"
+	picture = "monarch_death"
+	
+	trigger = {
+		government = theocracy
+		has_country_flag = catholic_country
+		NOT = { exists = PAP tag = ITA }
+		exists = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Return of the Pope"
+		prestige = 50		
+		change_tag = PAP
+		add_accepted_culture = central_italian
+		749 = { add_core = THIS }	
+	}
+	
 }

@@ -483,6 +483,266 @@ claim_tunis = {
 			}
 		}
 	}
+	
+	holy_union = {
+		picture = crusade
+		potential = {
+		government = theocracy
+		NOT = { has_country_flag = holy_union }
+		exists = PAP
+		OR = { 
+        exists = JER	
+        exists = KNI
+        }
+        exists = LTN	
+		exists = COP
+OR = { 
+      tag = PAP
+      tag = JER
+      tag = KNI
+      tag = LTN
+	  tag = COP
+}	  
+		}
+		allow = {
+			war = no
+			OR = {
+				is_sphere_leader_of = PAP
+				PAP = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							empty = yes
+						}
+					}
+					war = no
+					is_mobilised = no
+				}
+			}
+			OR = {
+				is_sphere_leader_of = JER
+				JER = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							empty = yes
+						}
+					}
+					war = no
+					is_mobilised = no
+				}
+			}
+			OR = {
+				is_sphere_leader_of = KNI
+				KNI = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							empty = yes
+						}
+					}
+					war = no
+					is_mobilised = no
+				}
+			}
+            OR = {
+				is_sphere_leader_of = COP
+				COP = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							empty = yes
+						}
+					}
+					war = no
+					is_mobilised = no
+				}
+			}
+			OR = {
+				is_sphere_leader_of = LTN
+				LTN = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							empty = yes
+						}
+					}
+					war = no
+					is_mobilised = no
+				}
+			}
+		}
+		effect = {
+			set_country_flag = holy_union 
+			random_country = {
+				limit = {
+					tag = PAP
+					exists = yes
+					ai = yes
+				}
+				THIS = { create_vassal = PAP }
+			}
+			random_country = {
+				limit = {
+					tag = KNI
+					exists = yes
+					ai = yes
+				}
+				THIS = { create_vassal = KNI }
+			}
+			random_country = {
+				limit = {
+					tag = LTN
+					exists = yes
+					ai = yes
+				}
+				THIS = { create_vassal = LTN }
+			}
+			random_country = {
+				limit = {
+					tag = JER
+					exists = yes
+					ai = yes
+				}
+				THIS = { create_vassal = JER }
+			}
+			random_country = {
+				limit = {
+					tag = COP
+					exists = yes
+					ai = yes
+				}
+				THIS = { create_vassal = COP }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
+
+	holy_federation = {
+		picture = crusade
+		potential = {
+		NOT = { exists = RME  }
+		has_country_flag = holy_union 
+		government = theocracy
+		}
+		allow = {
+		war = no
+		mass_politics = 1
+		}
+		effect = {
+			set_global_flag = holy_union 
+			random_country = {
+				limit = {
+					tag = PAP
+					exists = yes
+					ai = yes
+					OR = {
+				is_vassal = no
+				vassal_of = THIS
+			}
+				}
+				THIS = { inherit = PAP }
+			}
+			random_country = {
+				limit = {
+					tag = KNI
+					exists = yes
+					ai = yes
+					OR = {
+				is_vassal = no
+				vassal_of = THIS
+			}
+				}
+				THIS = { inherit = KNI }
+			}
+			random_country = {
+				limit = {
+					tag = LTN
+					exists = yes
+					ai = yes
+					OR = {
+				is_vassal = no
+				vassal_of = THIS
+			}
+				}
+				THIS = { inherit = LTN }
+			}
+			random_country = {
+				limit = {
+					tag = JER
+					exists = yes
+					ai = yes
+					OR = {
+				is_vassal = no
+				vassal_of = THIS
+			}
+				}
+				THIS = { inherit = JER }
+			}
+			random_country = {
+				limit = {
+					tag = COP
+					exists = yes
+					ai = yes
+					OR = {
+				is_vassal = no
+				vassal_of = THIS
+			}
+				}
+				THIS = { inherit = COP }
+			}
+			change_tag = RME
+			THIS = {
+			any_owned = {
+				limit = {
+					is_core = JER
+					is_core = COP
+					is_core = KNI
+					is_core = PAP
+					is_core = NAP
+				}
+				add_core = THIS
+			}
+			}
+			JER = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			COP = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			KNI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			PAP = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			NAP = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			add_accepted_culture = syriac
+			add_accepted_culture = neo_greek
+			add_accepted_culture = copt
+			add_accepted_culture = greek
+			add_accepted_culture = south_italian
+			add_accepted_culture = central_italian
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 
 }
