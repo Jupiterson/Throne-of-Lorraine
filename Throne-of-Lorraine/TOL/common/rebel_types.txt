@@ -2068,7 +2068,7 @@ pan_nationalist_rebels = {
 			limit = {
 				owner = { is_culture_group = britannian }
 			}
-			owner = { country_event = 100135 }
+			owner = { country_event = 96200 } #100135 } #96200 is the placeholder for now
 		}
 		random_owned = {
 			limit = {
@@ -2090,7 +2090,7 @@ pan_nationalist_rebels = {
 					NOT = { is_culture_group = pan_romanian }
 					NOT = { is_culture_group = scandinavian }
 					NOT = { is_culture_group = iberian }
-					NOT = { is_culture_group = britannian }
+					#NOT = { is_culture_group = britannian }
 				}
 			}
 			owner = { country_event = 96200 }

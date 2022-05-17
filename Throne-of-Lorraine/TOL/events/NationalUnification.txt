@@ -527,7 +527,7 @@ country_event = {
 	desc = "EVTDESC11103"
 	picture = "Celebration"
 
-	id = 11103
+	id = 111030
 
 	is_triggered_only = yes
 
@@ -580,42 +580,6 @@ country_event = {
 				}
 				secede_province = THIS
 			}
-		}
-		random_country = {
-			limit = { is_sphere_leader_of = PAP }
-			set_country_flag = objects_to_italy
-			diplomatic_influence = { who = PAP value = -200 }
-			leave_alliance = PAP
-		}
-		any_country = {
-			limit = { alliance_with = PAP }
-			set_country_flag = objects_to_italy
-			diplomatic_influence = { who = PAP value = -100 }
-			leave_alliance = PAP
-		}
-		any_country = {
-			limit = {
-				NOT = { is_culture_group = iberian }
-				exists = yes
-				OR = {
-					has_country_flag = objects_to_italy
-					OR = {
-						primary_culture = french
-						primary_culture = occitan
-					}
-					tag = AUS
-					tag = AUB
-					tag = KUK
-					AND = {
-						OR = {
-							neighbour = ITA
-							neighbour = ITS
-						}
-						is_greater_power = yes
-					}
-				}
-			}
-			country_event = { id = 96165 days = 20 }
 		}
 		prestige = 10
 		ai_chance = {
