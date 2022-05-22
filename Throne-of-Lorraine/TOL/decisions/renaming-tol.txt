@@ -5830,7 +5830,6 @@ political_decisions = {
 				primary_culture = occitan
 				primary_culture = burgundian	
 			}
-			owns = 608
 			owns = 3250
 			owns = 3317
 			  NOT = { has_global_flag = french_swiss }
@@ -5842,13 +5841,12 @@ political_decisions = {
 
 		effect = {
 		set_global_flag = french_swiss
-			608 = {
-				change_province_name = "Nouveau Châtel"
-				state_scope = { change_region_name = "Les Montange d'este " }
+			609 = {
+				change_province_name = "Sion"
+				state_scope = { change_region_name = "Les Montange d'Este " }
 			}
 			3250 = { change_province_name = "Libreville" }
 			3317 = { change_province_name = "Lausanne" }
-			609 = { change_province_name = "Sion" }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -5869,13 +5867,12 @@ political_decisions = {
 
 		effect = {
 		set_global_flag = german_swiss
-			608 = {
-				change_province_name = "Neuburg"
+			609 = {
+				change_province_name = "Zion"
 				state_scope = { change_region_name = "West Alpen" }
 			}
 			3250 = { change_province_name = "Freiburg" }
 			3317 = { change_province_name = "Lausan" }
-			609 = { change_province_name = "Zion" }
 		}
 		ai_will_do = { factor = 1 }
 	}
