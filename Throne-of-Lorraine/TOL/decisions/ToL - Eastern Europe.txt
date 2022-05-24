@@ -859,4 +859,53 @@ national_awakening = {
 		}
    }
    
+   
+   cede_coast = {
+		picture = italian_dalmatia
+		potential = {
+			tag = UBD
+			NOT = { has_country_flag = coast }
+#			year = 1838
+			NOT = { year = 1845 }
+#			ai = yes
+			owns = 695
+			owns = 395
+			owns = 3423
+			SWE = { ai = yes }
+			RUS = { ai = yes }
+#		365 = {
+#			owner = {
+#								ai = yes
+#							}
+#							}
+#							693 = {
+#			owner = {
+#								ai = yes
+#							}
+#							}
+#							3423 = {
+#			owner = {
+#								ai = yes
+#							}
+#							}
+		}
+
+		allow = {
+	#	war = no
+		}
+
+		effect = {
+			prestige = 5
+			badboy = 2
+			set_country_flag = coast
+			693 = { secede_province = THIS }
+			365 = { secede_province = THIS }
+			3423 = { secede_province = THIS }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+   
 }
