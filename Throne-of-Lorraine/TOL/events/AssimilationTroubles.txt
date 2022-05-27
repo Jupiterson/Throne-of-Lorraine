@@ -16,6 +16,7 @@ province_event = {
 
 	trigger = {
 		has_recent_imigration = 30
+		NOT = { capital_scope = { continent = europe } }
 		is_colonial = no
 		owner = {
 			citizenship_policy = full_citizenship
@@ -84,6 +85,7 @@ province_event = {
 
 	trigger = {
 		has_recent_imigration = 30
+		NOT = { capital_scope = { continent = europe } }
 		is_colonial = no
 		unemployment = 0.05
 		has_pop_type = capitalists
@@ -151,6 +153,7 @@ province_event = {
 
 	trigger = {
 		has_recent_imigration = 30
+		NOT = { capital_scope = { continent = europe } }
 		is_colonial = no
 		owner = {
 			civilized = yes
@@ -224,6 +227,7 @@ province_event = {
 
 	trigger = {
 		has_recent_imigration = 30
+		NOT = { capital_scope = { continent = europe } }
 		is_colonial = no
 		owner = {
 			civilized = yes
@@ -289,6 +293,7 @@ province_event = {
 		has_national_minority = yes
 		is_colonial = no
 		has_pop_type = capitalists
+		NOT = { capital_scope = { continent = europe } }
 		NOT = {
 			poor_strata_everyday_needs = 0.9
 		}
@@ -353,6 +358,7 @@ province_event = {
 
 
 	trigger = {
+	NOT = { capital_scope = { continent = europe } }
 		has_recent_imigration = 30
 		has_national_minority = yes
 		is_colonial = no
@@ -431,6 +437,7 @@ province_event = {
 	title = "EVTNAME2060"
 	desc = "EVTDESC2060"
 	trigger = {
+	NOT = { capital_scope = { continent = europe } }
 		has_national_minority = yes
 		has_recent_imigration = 30
 		is_colonial = no
@@ -499,6 +506,7 @@ province_event = {
 
 
 	trigger = {
+	NOT = { capital_scope = { continent = europe } }
 		has_national_minority = yes
 		has_recent_imigration = 30
 		is_colonial = no
@@ -629,6 +637,7 @@ province_event = {
 	desc = "EVTDESC2090"
 
 	trigger = {
+	NOT = { capital_scope = { continent = europe } }
 		has_national_minority = yes
 		has_recent_imigration = 30
 		is_colonial = no
@@ -697,6 +706,7 @@ province_event = {
 	desc = "EVTDESC2100"
 
 	trigger = {
+	NOT = { capital_scope = { continent = europe } }
 		has_national_minority = yes
 		has_recent_imigration = 30
 		is_colonial = yes
@@ -753,6 +763,7 @@ province_event = {
 
 
 	trigger = {
+	NOT = { capital_scope = { continent = europe } }
 		has_national_minority = yes
 		has_recent_imigration = 30
 		owner = {
@@ -808,6 +819,7 @@ province_event = {
 
 
 	trigger = {
+	NOT = { capital_scope = { continent = europe } }
 		has_national_minority = yes
 		has_recent_imigration = 30
 		owner = {

@@ -299,15 +299,9 @@ political_decisions = {
 			tag = HNS
 			has_country_flag = yes_germany
 			NOT = { has_country_flag = no_germany }
-			BRN = { vassal_of = THIS }
-			POM = { vassal_of = THIS }
-			HAN = { vassal_of = THIS }
 		}
 		allow = {
 			year = 1850
-			BRN = { vassal_of = THIS }
-			POM = { vassal_of = THIS }
-			HAN = { vassal_of = THIS }
 			OR = {			
 				nationalism_n_imperialism = 1
 				AND = {

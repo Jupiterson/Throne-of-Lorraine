@@ -1,5 +1,33 @@
 political_decisions = {
 
+
+
+	accept_east_germans = {
+		potential = {
+			OR = {
+				tag = SWE
+				tag = SCA
+				tag = RUS
+			}
+			NOT = { has_country_flag = accepted_germans }
+			NOT = { slavery = no_slavery }
+		}
+
+		allow = {
+			NOT = { month = 5 }
+			state_n_government = 1
+			invention = national_fraternity
+			realism = 1
+		}
+
+		effect = {
+			set_country_flag = accepted_germans
+			badboy = -1
+			add_accepted_culture = volga_german
+		}
+	}
+
+
 	swedish_pomerania = {
 		picture = map_brandeburg
 		potential = {

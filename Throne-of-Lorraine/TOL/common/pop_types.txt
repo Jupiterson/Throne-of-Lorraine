@@ -1154,8 +1154,8 @@ assimilation_chance = {
     }
 	
 	    modifier = {
-        factor = 1.5
-		OR = { 
+        factor = 2.5
+		OR = {
         country = { primary_culture = greek }
 		country = { primary_culture = ashkenazi }
 		}
@@ -1238,6 +1238,13 @@ conversion_chance = {
         country = {
             civilized = no
             has_country_flag = missionary_activity
+        }
+    }
+	
+	modifier = {
+        factor = 1.5
+        country = {
+            has_country_flag = conversion_by_sword
         }
     }
 
