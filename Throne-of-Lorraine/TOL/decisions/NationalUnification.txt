@@ -1536,7 +1536,7 @@ form_ruthenia = {
 
 		effect = {
 			set_global_flag = indochina_formed
-			prestige = 20
+			prestige = 30
 			all_core = { add_core = IDC }
 			BUR = { all_core = { add_core = IDC } }
 			1356 = { add_core = IDC }
@@ -1552,6 +1552,8 @@ form_ruthenia = {
 			add_accepted_culture = karen
 			add_accepted_culture = kachin
 			add_accepted_culture = shan
+			add_accepted_culture = cham
+			add_accepted_culture = malay
 			any_country = {
 				limit = {
 					OR = {
