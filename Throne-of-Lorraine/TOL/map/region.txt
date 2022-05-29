@@ -6,43 +6,51 @@ USA_1 = { 1 2 3 4 5 2599 2630 2631 } #Alaska
 
 ENG_9 = { 11 2595 2596 2598 6 7 3485 } #Northwest Territories
 
-CAN_13 = { 13 14 20 21 15 19 16 17 } #Columbia
+CAN_13 = { 13 14 15 19 16 17 78 79 } #Columbia
 
 #CAN_18 = { 18 17 2629 } #New Caledonia
 
-ENG_22 = { 27 26 22 23 25 28 2597 18 2629 } #Alberta
+ENG_22 = { 28 2597 18 2629 } #Alberta
 
-ENG_30 = { 31 32 33 34 35 } #Saskatchewan
+CAN_26 = { 26 27 22 33 } #South-Central Canadian Plains
 
-ENG_36 = { 42 36 37 38 39 40 41 } #Manitoba
+CAN_35 = { 34 35 25 115 24 30 } #South-Central Canadian Steppes
+
+ENG_30 = { 31 32 23 } #Saskatchewan
+
+ENG_36 = { 36 37 38 39 40 } #Manitoba
 
 CAN_46 = { 46 57 55 51 56 52 53 54 } #Southern Ontario
 
 CAN_50 = { 49 50 47 48 2594 } #Northern Ontario
 
-CAN_58 = { 58 65 62 61 63 64 66 67 250 3280 } #Southern Quebec
+CAN_58 = { 58 65 63 64 66 67 250 3280 } #Southern Quebec
 
 CAN_60 = { 9 59 2593 2626 2592 } #Northern Quebec
 
 ENG_68 = { 68 69 70 71 72 73 } #Maritimes
 
-ENG_74 = { 74 75 76 77 2625 } #Newfoundland
+ENG_74 = { 74 75 76 77 2625 62 61 } #Newfoundland
 
 ### United States
 
-USA_78 = { 78 79 80 3464 3465 3466 } #Washington
+USA_78 = { 80 3464 3465 3466 20 } #Washington
 
-USA_81 = { 81 82 83 3461 3462 3463 } #Oregon
+USA_81 = { 81 83 85 3462 3454 3455 } #Oregon
 
-MEX_85_1 = { 104 84 85 86 3448 3452 3453 3454 3455 87 } #Northern California
+USA_3463 = { 91 3463 82 3461 } 
 
-MEX_85_2 = { 89 88 90 3449 3450 3451 2139 2138 } #Southern California
+MEX_85_1 = { 104 84 3448 87 3450 } #Northern California
 
-USA_91 = { 91 92 93 3475 3476 114 3467 113 } #Idaho
+USA_3453 = { 3452 3453 86 3449 } #East Central Californian Mountains
 
-MEX_94 = { 94 96 95 3457 3458 } #Nevada
+MEX_85_2 = { 89 90 2139 2138 } #Southern California
 
-MEX_97 = { 97 98 99 3459 } #Utah
+USA_91 = { 3475 3476 } #Idaho
+
+MEX_94 = { 94 96 88 98 3459 3451 95 3457 3458 } #Nevada
+
+#MEX_97 = { } #Utah
 
 MEX_100 = { 100 101 102 3460 2148 3456 } #Arizona
 
@@ -50,31 +58,39 @@ MEX_103 = { 105 103 2662 134 135 136 43 } #New Mexico
 
 #USA_106 = { } #Colorado
 
-USA_111 = { 108 109 107 110 111 3468 } #Wyoming
+USA_111 = { 107 110 111 3468 93 3467 113 } #Wyoming/Duivelsberg
 
-USA_116 = { 116 115 24 30 106 112 } #Montana
+VLD_108 = { 108 109 99 97 } #Dood-Ruitersberg
 
-USA_118 = { 117 118 119 } #North Dakota
+VLD_21 = { 21 114 92 } #Drakensberg
 
-USA_121 = { 120 121 122 } #South Dakota
+USA_116 = { 116 112 119 121 122 } #Montana/Centrale Grote Steppe
 
-USA_124 = { 123 124 125 } #Nebraska
+#USA_118 = { } #North Dakota
 
-USA_126 = { 126 127 128 3397 } #Kansas
+#USA_121 = { } #South Dakota
 
-USA_129 = { 131 129 130 } #Oklahoma
+DAK_106 = { 106 124 125 127 } #Northeast Great Plains
+
+DAK_128 = { 128 3397 131 129 } #Southeast Great Plains
+
+#USA_124 = { } #Nebraska
+
+#USA_126 = { } #Kansas
+
+#USA_129 = { } #Oklahoma
 
 TEX_132 = { 133 132 137 138 } #Texas
 
 USA_139 = { 139 141 } #Louisiana
 
-USA_144 = { 142 143 144 145 } #Arkansas
+USA_144 = { 142 143 144 145 130 } #Arkansas
 
-USA_148 = { 146 148 147 149 150 } #Missouri
+USA_148 = { 146 148 147 149 150 126 } #Missouri
 
-USA_151 = { 151 152 153 154 } #Iowa
+USA_151 = { 151 152 153 154 123 } #Iowa
 
-USA_158 = { 155 156 157 158 } #Minnesota
+USA_158 = { 155 156 157 158 118 120 117 41 42 } #Minnesota
 
 USA_162 = { 159 160 161 162 163 164 166 177 } #Wisconsin
 
@@ -88,35 +104,39 @@ USA_178 = { 178 179 180 183 182 181 228 } #Ohio
 
 #USA_185 = { } #Kentucky
 
-USA_188 = { 184 185 186 187 188 } #Tennessee
+USA_188 = { 184 186 187 188 189 } #Tennessee
 
-USA_194 = { 192 193 189 } #Mississippi
+#USA_194 = { } #Mississippi
 
 USA_197 = { 197 194 140 } #Mobile
 
-USA_196 = { 195 196 191 } #Alabama
+USA_196 = { 195 196 192 193 } #Alabama
 
 USA_200 = { 199 3284 198 } #Florida
 
-USA_201 = { } #Georgia
+#USA_201 = { } #Georgia
 
-USA_205 = { 201 202 204 2555 205 206 } #South Carolina
+USA_205 = { 202 204 2555 205 206 } #South Carolina
 
-USA_2556 = { 209 207 208 210 214 2556 190 } #North Carolina
+USA_2556 = { 209 207 208 210 214 } #North Carolina
 
-USA_211 = { 211 213 216 60 } #Virginia
+USA_190 = { 2556 190 191 201 } #South Appalachia
 
-USA_218 = { 218 217 215 2146 } #West Virginia
+#USA_211 = { } #Virginia
 
-USA_219 = { 220 219 222 212 } #Maryland
+USA_218 = { 218 217 215 2146 185 216 } #West Virginia/Mont Saint Louis
 
-USA_223 = { 223 224 225 226 227 2627 } #Pennsylvania
+USA_219 = { 220 219 222 212 211 213 60 } #Maryland
 
-USA_231 = { } #New Jersey
+USA_223 = { 223 224 226 } #Pennsylvania
+
+USA_225 = { 225 2627 227 } #Northern Appalachia
+
+#USA_231 = { } #New Jersey
 
 USA_232 = { 232 233 234 245 241 229 231 230 243 244 242 } #New York
 
-USA_243 = { } #Massachusets
+#USA_243 = { } #Massachusets
 
 USA_247 = { 247 246 248 249 } #New England
 
