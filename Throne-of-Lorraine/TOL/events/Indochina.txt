@@ -153,7 +153,7 @@ country_event = {
 		relation = { who = FROM value = -50 }
 		any_pop = { militancy = 3 }
 		any_owned = {
-			limit = { region = DAI_1380 }
+			limit = { region = DAI_1375 }
 			secede_province = FROM
 			1380 = { trade_goods = coffee }
 		}
@@ -931,15 +931,6 @@ country_event = {
 			owner = {
 				any_owned = {
 					limit = { region = DAI_1375 }
-					secede_province = FROM
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { owns = 1380 } }
-			owner = {
-				any_owned = {
-					limit = { region = DAI_1380 }
 					secede_province = FROM
 				}
 			}
