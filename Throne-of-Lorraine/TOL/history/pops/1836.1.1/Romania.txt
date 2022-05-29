@@ -32,13 +32,13 @@
 		size = 76900
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 40000
 	}
 
-	serfs = {
+	farmers = {
 		culture = gypsy
 		religion = orthodox
 		size = 10000
@@ -190,13 +190,13 @@
 		size = 550
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 47450
 	}
 
-	serfs = {
+	farmers = {
 		culture = gypsy
 		religion = orthodox
 		size = 3000
@@ -344,13 +344,13 @@
 		size = 300
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 26025
 	}
 
-	serfs = {
+	farmers = {
 		culture = gypsy
 		religion = orthodox
 		size = 7000
@@ -398,13 +398,13 @@
 		size = 150
 	}
 
-	serfs = {
+	farmers = {
 		culture = hungarian
 		religion = catholic
 		size = 8500
 	}
 
-	serfs = {
+	farmers = {
 		culture = french
 		religion = catholic
 		size = 2000
@@ -618,13 +618,13 @@
 		size = 42600
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 20000
 	}
 
-	serfs = {
+	farmers = {
 		culture = gypsy
 		religion = orthodox
 		size = 1000
@@ -718,13 +718,13 @@
 		size = 250
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 20325
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = catholic
 		size = 2000
@@ -924,13 +924,13 @@
 		size = 5000
 	}
 
-	serfs = {
+	farmers = {
 		culture = gypsy
 		religion = orthodox
 		size = 2000
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 20000
@@ -1076,7 +1076,7 @@
 		size = 31575
 	}
 
-	serfs = {
+	farmers = {
 		culture = hungarian
 		religion = orthodox
 		size = 15000
@@ -1207,22 +1207,28 @@
 	artisans = {
 		culture = romanian
 		religion = orthodox
-		size = 1800
+		size = 4800
+	}
+	
+	capitalists = {
+		culture = hungarian
+		religion = protestant
+		size = 300
 	}
 
 	soldiers = {
 		culture = romanian
 		religion = orthodox
-		size = 350
+		size = 3350
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 31500
 	}
 
-	serfs = {
+	farmers = {
 		culture = gypsy
 		religion = orthodox
 		size = 2000
@@ -1231,7 +1237,7 @@
 	aristocrats = {
 		culture = hungarian
 		religion = catholic
-		size = 200
+		size = 300
 	}
 
 	clergymen = {
@@ -1312,10 +1318,22 @@
 		size = 250
 	}
 
-	farmers = {
+	craftsmen = {
 		culture = hungarian
 		religion = protestant
-		size = 41325
+		size = 31325
+	}
+	
+    craftsmen = {
+		culture = polish
+		religion = protestant
+		size = 5325
+	}
+	
+	farmers = {
+		culture = hungarian
+		religion = catholic
+		size = 52100
 	}
 
 	aristocrats = {
@@ -1374,13 +1392,25 @@
 		size = 250
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
-		size = 22275
+		size = 12275
+	}
+	
+	craftsmen = {
+		culture = hungarian
+		religion = protestant
+		size = 31325
+	}
+	
+    craftsmen = {
+		culture = polish
+		religion = protestant
+		size = 5325
 	}
 
-	serfs = {
+	farmers = {
 		culture = gypsy
 		religion = orthodox
 		size = 1000
@@ -1519,13 +1549,13 @@
 		size = 25
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 22270
 	}
 
-	serfs = {
+	farmers = {
 		culture = gypsy
 		religion = orthodox
 		size = 100
@@ -1665,13 +1695,13 @@
 		size = 100
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 7450
 	}
 
-	serfs = {
+	farmers = {
 		culture = gypsy
 		religion = orthodox
 		size = 1500
@@ -1705,6 +1735,18 @@
 		culture = hungarian
 		religion = catholic
 		size = 12150
+	}
+	
+	craftsmen = {
+		culture = hungarian
+		religion = protestant
+		size = 31325
+	}
+	
+    craftsmen = {
+		culture = polish
+		religion = protestant
+		size = 5325
 	}
 
 	aristocrats = {
@@ -1811,7 +1853,7 @@
 		size = 29500
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 20000
@@ -1950,6 +1992,12 @@
 		religion = orthodox
 		size = 1300
 	}
+	
+	capitalists = {
+		culture = hungarian
+		religion = protestant
+		size = 50
+	}
 
 	soldiers = {
 		culture = romanian
@@ -1957,7 +2005,7 @@
 		size = 300
 	}
 
-	serfs = {
+	farmers = {
 		culture = romanian
 		religion = orthodox
 		size = 24150
@@ -2028,6 +2076,18 @@
 		religion = protestant
 		size = 28875
 	}
+	
+	craftsmen = {
+		culture = hungarian
+		religion = protestant
+		size = 31325
+	}
+	
+    craftsmen = {
+		culture = polish
+		religion = protestant
+		size = 5325
+	}
 
 	aristocrats = {
 		culture = hungarian
@@ -2082,6 +2142,12 @@
 		religion = jewish
 		size = 1175
 	}
+	
+	capitalists = {
+		culture = hungarian
+		religion = protestant
+		size = 300
+	}
 }
 #Bukovina Region (204000) #See Ukraine.txt for balance of region
 #under the rule of Austria in 1836
@@ -2129,7 +2195,7 @@
 		size = 150
 	}
 
-	serfs = {
+	farmers = {
 		culture = ruthenyan
 		religion = orthodox
 		size = 9025
