@@ -2,6 +2,7 @@ political_decisions = {
 	form_britannia = {
 		picture = reform_the_uk
 		potential = {
+		NOT = { exists = ENG }
 			OR = {
 				NOT = { tag = SCO }
 				has_country_flag = gaelic_assimilation
@@ -10,13 +11,76 @@ political_decisions = {
 				ai = no
 				OR = {
 					AND = {
-						NOT = { tag = SCO }
-						NOT = { tag = WHA }
-					}
-					AND = {
 						has_country_flag = britannia_ai
 						ai = no
 					}
+				AND = {
+				OR = {
+					ENL = {
+						all_core = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+									OR = {
+										is_vassal = no
+										vassal_of = THIS
+									}
+									war = no
+									is_greater_power = no
+								}
+							}
+						}
+					}
+					UOW = {
+						all_core = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+									OR = {
+										is_vassal = no
+										vassal_of = THIS
+									}
+									war = no
+									is_greater_power = no
+								}
+							}
+						}
+					}
+				}
+				SCO = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								OR = {
+									is_vassal = no
+									vassal_of = THIS
+								}
+								war = no
+								is_greater_power = no
+							}   
+						}
+					}
+				}				   
+				WHA = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								OR = {
+									is_vassal = no
+									vassal_of = THIS
+								}
+								war = no
+								is_greater_power = no
+							}
+						}
+					}
+				}
 				}
 			}
 			capital_scope = { continent = europe }

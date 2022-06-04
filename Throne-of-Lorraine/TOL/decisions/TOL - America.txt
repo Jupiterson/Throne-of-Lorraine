@@ -371,6 +371,15 @@ political_decisions = {
                 capital_scope = { continent = australia_new_zealand }
 				capital_scope = { continent = europe }
             }
+			NOT = { 
+			OR = { 
+			tag = USA
+			tag = AKI
+			tag = VEL
+			tag = NAF
+			tag = TEX
+			}
+			}
         }
 
         allow = {

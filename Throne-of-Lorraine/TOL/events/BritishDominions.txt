@@ -56,7 +56,7 @@ country_event = {
 			limit = { location = { is_core = AST } }
 			militancy = -10
 		}
-		AST = { all_core = { remove_core = THIS remove_core = ENG } }
+		AST = { all_core = { remove_core = THIS remove_core = ITA } }
 		any_owned = { limit = { is_core = AST } secede_province = AST }
 		create_vassal = AST
 		AST = {
@@ -186,7 +186,7 @@ country_event = {
 			militancy = -10
 		}
 		AST = {
-			all_core = { remove_core = THIS remove_core = ENG }
+			all_core = { remove_core = THIS remove_core = ITA }
 		}
 		release_vassal = AST
 		AST = {
@@ -282,7 +282,7 @@ country_event = {
 		}
 		NZL = {
 			set_country_flag = post_colonial_country
-			all_core = { remove_core = THIS remove_core = ENG }
+			all_core = { remove_core = THIS remove_core = ITA }
 		}
 		any_owned = { limit = { is_core = NZL } secede_province = NZL }
 		create_vassal = NZL
@@ -417,7 +417,7 @@ country_event = {
 			militancy = -10
 		}
 		NZL = {
-			all_core = { remove_core = THIS remove_core = ENG }
+			all_core = { remove_core = THIS remove_core = ITA }
 		}
 		release_vassal = NZL
 		NZL = {
@@ -533,7 +533,7 @@ country_event = {
 			limit = { location = { is_core = SAF } }
 			militancy = -10
 		}
-		SAF = { all_core = { remove_core = THIS remove_core = ENG } }
+		SAF = { all_core = { remove_core = THIS remove_core = ITA } }
 		release_vassal = SAF
 		SAF = {
 			government = dominion
@@ -686,7 +686,7 @@ country_event = {
 			militancy = -10
 		}
 		SAF = {
-			all_core = { remove_core = THIS remove_core = ENG }
+			all_core = { remove_core = THIS remove_core = ITA }
 		}
 		release_vassal = SAF
 		SAF = {
@@ -887,321 +887,6 @@ country_event = {
 			target = FROM
 			type = become_independent
 			months = 120
-		}
-	}
-}
-
-#The Northwest Territories - England/Canada Annex White Horse
-country_event = {
-
-	id = 44339
-	title = "EVTNAME44339"
-	desc = "EVTDESC44339"
-	picture = "Southpole3"
-
-	trigger = {
-		OR = {
-			tag = CAN
-			tag = ENG
-		}
-		war = no
-		money = 1100
-		OR = {
-			revolution_n_counterrevolution = 1
-			year = 1880
-		}
-		OR = {
-			NOT = { has_global_flag = berlin_conference }
-			NOT = { invention = mission_to_civilize }
-			NOT = { invention = colonial_negotiations }
-			AND = {
-				is_greater_power = no
-				is_secondary_power = no
-			}
-		}
-		OR = {
-			###Northern Quebec###
-			AND = {
-				9 = { empty = yes } #Fort Simpson
-				owns = 59
-				owns = 2593
-			}
-			###N-W Territories###
-			AND = {
-				38 = { empty = no }
-				31 = { empty = no }
-				2596 = { empty = yes } #Fort Resolution
-				owns = 2595 #Nunavut
-			}
-			AND = {
-				6 = { empty = no }
-				7 = { empty = no }
-				2596 = { empty = no }
-				2598 = { empty = yes } #Fort Liard
-				owns = 2629
-			}
-			AND = {
-				6 = { empty = no }
-				7 = { empty = no }
-				2596 = { empty = no }
-				2598 = { empty = no }
-				9 = { empty = no }
-				11 = { empty = yes } #Echo Bay
-				OR = {
-					owns = 23
-					owns = 31
-				}
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 0.2
-			6 = { empty = yes }
-		}
-		modifier = {
-			factor = 3
-			6 = { empty = no }
-			7 = { empty = no }
-			2596 = { empty = no }
-			NOT = { year = 1880 }
-		}
-		modifier = {
-			factor = 1.5
-			6 = { empty = no }
-			7 = { empty = no }
-			2596 = { empty = no }
-			year = 1880
-			NOT = { year = 1900 }
-		}
-	}
-
-	option = {
-		name = "EVT44339OPTA"
-		treasury = -1000
-		###Northern Quebec###
-		random_owned = {
-			limit = {
-				9 = { empty = yes } #Fort Simpson
-				59 = { owned_by = THIS }
-				2593 = { owned_by = THIS }
-			}
-			owner = { prestige = -3 }
-			9 = { secede_province = THIS add_core = RPL any_pop = { literacy = -0.99 } }
-			2626 = { secede_province = THIS add_core = RPL any_pop = { literacy = -0.99 } }
-		}
-		###N-W Territories###
-		random_owned = {
-			limit = {
-				6 = { empty = no }
-				7 = { empty = no }
-				38 = { empty = no }
-				31 = { empty = no }
-				2596 = { empty = yes }
-				2595 = { owned_by = THIS }
-			}
-			owner = { prestige = -5 }
-			2596 = { secede_province = THIS add_core = RPL any_pop = { literacy = -0.99 } } #Fort Resolution
-		}
-		random_owned = {
-			limit = {
-				6 = { empty = no }
-				7 = { empty = no }
-				2596 = { empty = no }
-				2598 = { empty = yes }
-				2629 = { owned_by = THIS }
-			}
-			owner = { prestige = -3 }
-			2598 = { secede_province = THIS add_core = RPL any_pop = { literacy = -0.99 } }
-		}
-
-		random_owned = {
-			limit = {
-				6 = { empty = no }
-				7 = { empty = no }
-				2596 = { empty = no }
-				2598 = { empty = no }
-				9 = { empty = no }
-				11 = { empty = yes } #Echo Bay
-				OR = {
-					23 = { owned_by = THIS }
-					31 = { owned_by = THIS }
-				}
-			}
-			owner = { prestige = -3 }
-			11 = { secede_province = THIS add_core = RPL any_pop = { literacy = -0.99 } }
-		}
-	}
-}
-
-
-#The Southern Rhodesia Dominion
-country_event = {
-
-	id = 44341
-
-	title = "EVTNAME44341"
-	desc = "EVTDESC44341"
-	picture = "danishgovernment"
-
-	major = yes
-
-	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
-		war = no
-		year = 1924
-		any_owned_province = { is_core = RHO }
-	}
-
-	mean_time_to_happen = {
-		months = 6
-		modifier = {
-			factor = 10
-			has_country_flag = RHO_independence_refused
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = RHO }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = RHO }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.5
-			year = 1910
-			NOT = { has_country_flag = RHO_independence_refused }
-		}
-	}
-
-	option = {
-		name = "EVT44330OPTA"
-		clr_country_flag = RHO_independence_refused
-		prestige = -20
-		badboy = -5
-		any_pop = {
-			limit = { location = { is_core = RHO } }
-			militancy = -10
-		}
-		RHO = { government = dominion all_core = { remove_core = ENG } }
-		ZAM = { all_core = { remove_core = RHO } }
-		any_owned = { limit = { is_core = RHO } secede_province = RHO }
-		create_vassal = RHO
-		relation = { who = RHO value = 200 }
-		diplomatic_influence = { who = RHO value = 200 }
-		any_pop = { consciousness = 1 }
-		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 0
-				OR = {
-					government = proletarian_dictatorship
-					government = parliamentary_republic
-					government = fascist_dictatorship
-					government = presidential_dictatorship
-				}
-			}
-			modifier = {
-				factor = 0.25
-				OR = {
-					government = absolute_monarchy
-					government = absolute_empire
-				}
-			}
-			modifier = {
-				factor = 1.5
-				government = democracy
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 0.75
-				war_policy = pro_military
-			}
-			modifier = {
-				factor = 1.25
-				war_policy = anti_military
-			}
-			modifier = {
-				factor = 1.5
-				war_policy = pacifism
-			}
-			modifier = {
-				factor = 1.2
-				militancy = 3
-			}
-			modifier = {
-				factor = 1.2
-				militancy = 5
-			}
-			modifier = {
-				factor = 2.0
-				exists = CAN
-			}
-			modifier = {
-				factor = 2.0
-				exists = AST
-			}
-
-		}
-	}
-	option = {
-		name = "EVT44330OPTB"
-		set_country_flag = RHO_independence_refused
-		any_owned = {
-			limit = { is_core = RHO }
-			any_pop = { militancy = 3 }
-		}
-		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 1.75
-				OR = {
-					government = absolute_monarchy
-					government = absolute_empire
-				}
-			}
-			modifier = {
-				factor = 0.5
-				government = democracy
-			}
-			modifier = {
-				factor = 1.5
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 1.25
-				war_policy = pro_military
-			}
-			modifier = {
-				factor = 0.75
-				war_policy = anti_military
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = pacifism
-			}
-			modifier = {
-				factor = 0.8
-				militancy = 3
-			}
-			modifier = {
-				factor = 0.8
-				militancy = 5
-			}
 		}
 	}
 }
