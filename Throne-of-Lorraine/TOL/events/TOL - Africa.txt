@@ -735,3 +735,25 @@ country_event = {
 		}
 	}
 }
+
+
+#Suez Canal is Finished
+country_event = {
+	id = 100169
+	title = "EVTNAME36971"
+	desc = "EVTDESC36971"
+	picture = "suez_canal_built"
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVT36971OPTA"
+		set_country_flag = suez_builder
+		enable_canal = 2
+	}
+}
