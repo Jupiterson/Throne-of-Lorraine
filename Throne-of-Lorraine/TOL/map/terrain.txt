@@ -828,6 +828,48 @@ categories =  {
         min_build_railroad = 1
         supply_limit = 6
     }
+	
+	luxor = {
+        movement_cost = 1.05
+        ##attrition = 0.25
+        color = { 0 255 0 }
+        farm_rgo_size = 0.25
+        farm_rgo_eff = 0.025
+        mine_rgo_size = -0.25
+        mine_rgo_eff = -0.025
+        min_build_railroad = 1
+        supply_limit = 6
+    }
+	
+	giza = {
+        movement_cost = 1.05
+        ##attrition = 0.25
+        color = { 0 255 0 }
+        farm_rgo_size = 0.25
+        farm_rgo_eff = 0.025
+        mine_rgo_size = -0.25
+        mine_rgo_eff = -0.025
+        min_build_railroad = 1
+        supply_limit = 6
+    }
+	
+	aswan = {
+        movement_cost = 1.2
+        color = { 208 155 0 }
+        farm_rgo_size = -0.3
+        farm_rgo_eff = -0.3
+        mine_rgo_size = -0.1
+        mine_rgo_eff = -0.1
+
+        supply_limit = 2
+
+        combat_width = -0.5
+
+        min_build_railroad = 3
+        immigrant_attract = -0.4
+        attrition = 1
+    }
+	
     prague = {
         movement_cost = 1.0
         color = { 22 44 66 }
