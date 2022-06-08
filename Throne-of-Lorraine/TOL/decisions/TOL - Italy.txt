@@ -26,24 +26,24 @@ political_decisions = {
 		}
 	}
 	
-	san_marco_canal = {
-		picture = Regnum_Neapoli
-		potential = {
-			tag = VEN
-			NOT = { has_country_flag = San_Marco_Canal }
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			set_country_flag = San_Marco_Canal 
-			country_event = { id = 100169 }
-			enable_canal = 2
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+#	san_marco_canal = {
+#		picture = Regnum_Neapoli
+#		potential = {
+#			tag = VEN
+#			NOT = { has_country_flag = San_Marco_Canal }
+#		}
+#		allow = {
+#			war = no
+#		}
+#		effect = {
+#			set_country_flag = San_Marco_Canal 
+#			country_event = { id = 100169 }
+#			enable_canal = 2
+#		}
+#		ai_will_do = {
+#			factor = 1
+#		}
+#	}
 	
 	form_north_italian_union = {
 		potential = {
