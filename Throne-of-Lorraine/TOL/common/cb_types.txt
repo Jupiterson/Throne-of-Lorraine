@@ -6018,7 +6018,7 @@ conquest = {
 
 # Berlin Conference
 annex_india = {
-	sprite_index = 22
+	sprite_index = 34
 	is_triggered_only = yes
 	months = 0
 	crisis = no
@@ -6053,7 +6053,7 @@ annex_india = {
 		NOT = { is_our_vassal = THIS }
 		number_of_states = 2
 		THIS = {
-			nationalism_n_imperialism = 1
+#			nationalism_n_imperialism = 1
 			capital_scope = { continent = europe }
 			slavery = no_slavery
 			OR = {
@@ -6069,7 +6069,6 @@ annex_india = {
 			has_country_flag = post_colonial_country
 		}
 		civilized = no
-		is_vassal = no
 		capital_scope = { is_core = HND }
 		ai = yes
 		OR = {
@@ -6130,7 +6129,7 @@ annex_india = {
 	}
 }
 annex_india_full = {
-	sprite_index = 21
+	sprite_index = 34
 	is_triggered_only = yes
 	months = 12
 	crisis = no
@@ -6168,7 +6167,7 @@ annex_india_full = {
 			THIS = { military_score = 1 }
 		}
 		THIS = {
-			nationalism_n_imperialism = 1
+#			nationalism_n_imperialism = 1
 			capital_scope = { continent = europe }
 			slavery = no_slavery
 			OR = {
@@ -6178,7 +6177,7 @@ annex_india_full = {
 		    NOT = { has_country_modifier = neutrality_modifier }
 			NOT = { has_country_modifier = claimed_africa }
 			civilized = yes
-#			has_global_flag = india_scramble
+			has_global_flag = india_scramble
 		}
 		civilized = no
 		is_vassal = no
@@ -6245,7 +6244,7 @@ annex_india_full = {
 
 # Berlin Conference
 annex_africa = {
-	sprite_index = 22
+	sprite_index = 34
 	is_triggered_only = yes
 	months = 0
 	crisis = no
@@ -6815,7 +6814,7 @@ annex_africa = {
 	}
 }
 annex_africa_full = {
-	sprite_index = 21
+	sprite_index = 34
 	is_triggered_only = yes
 	months = 12
 	crisis = no
