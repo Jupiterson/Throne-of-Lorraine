@@ -98,3 +98,28 @@ country_event = {
 			}
 	}
 }
+
+
+#Slavery trade rgo removed on abolition
+province_event = {
+    id = 38506
+    title = "EVTNAME38506"
+    desc = "EVTDESC38506"
+
+    trigger = {
+        trade_goods = sugar
+        OR = {
+            owner = { slavery = no_slavery }
+            state_scope = { is_slave = no }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "EVT38506OPTA"
+        trade_goods = cotton
+    }
+}
