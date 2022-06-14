@@ -120,10 +120,10 @@ policy_focus = {  #Now Population Policy
 	
 	resettle_focus = {
 		immigrant_attract = 1.0 #increases attractiveness to immigrants by 10 %
-		assimilation_rate = 0.20
+		#assimilation_rate = 0.20
 		immigrant_push = 0.25
-		pop_militancy_modifier = 0.5
-		pop_consciousness_modifier = 0.5
+		pop_militancy_modifier = 0.1
+		pop_consciousness_modifier = 0.25
 		icon = 2
 		limit = {
 			owner = { NOT = { OR = { government = democracy } } }
@@ -144,8 +144,8 @@ policy_focus = {  #Now Population Policy
 	integration_focus = {
 		assimilation_rate = 0.75
 		education_efficiency_modifier = 0.1
-		pop_militancy_modifier = 0.5
-		pop_consciousness_modifier = 0.5
+		non_accepted_pop_militancy_modifier = 0.1
+		non_accepted_pop_consciousness_modifier = 0.1
 		icon = 40
 		limit = {
 			owner = { NOT = { OR = { government = colonial_company } } }
@@ -164,22 +164,32 @@ policy_focus = {  #Now Population Policy
 	exploitation_focus = {
 	farm_rgo_eff = 0.75
 	mine_rgo_eff = 0.75
-	local_RGO_throughput = 0.5
+	    local_RGO_throughput = 0.5
+		immigrant_push = 0.5
+		badboy = 0.02
 	    immigrant_attract = -2.0
 		assimilation_rate = -1.50
 		education_efficiency_modifier = -0.3
 		pop_militancy_modifier = 0.9
 		pop_consciousness_modifier = 0.9
-		population_growth = -0.005
+		population_growth = -0.0004
 		
 		icon = 39
 		limit = {
 			owner = { NOT = { OR = { government = democracy } } }
+			OR = {
+			is_colonial = yes
+			is_overseas = yes
+			NOT = { is_core = THIS }
+			tag = USA
+			tag = FRA
+			}
 			owner = {
 				OR = {
 					debt_law = serfdom
 					slavery = yes_slavery
 					slavery = freedom_of_womb
+					citizens_rights = primary_culture_only
 				}
 			}
 			NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
@@ -191,8 +201,9 @@ policy_focus = {  #Now Population Policy
 	    immigrant_attract = -2.0
 		immigrant_push = 2.0
 		assimilation_rate = -1.50
-		pop_militancy_modifier = 0.1
-		population_growth = -0.00125
+		pop_militancy_modifier = 0.25
+		population_growth = -0.0002
+		badboy = 0.01
 		
 		icon = 9
 		limit = {
@@ -202,6 +213,7 @@ policy_focus = {  #Now Population Policy
 					debt_law = serfdom
 					slavery = yes_slavery
 					slavery = freedom_of_womb
+					citizens_rights = primary_culture_only
 				}
 			}
 			NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
