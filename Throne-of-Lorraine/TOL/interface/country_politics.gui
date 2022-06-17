@@ -926,6 +926,34 @@ guiTypes = {
 
 			}
 			
+			windowType = {
+			name = "external_policy"
+			backGround =""
+			position = { x = 843 y = 517 }
+			size = { x=151 y=92 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = "0"
+			verticalBorder = ""
+			fullScreen = no
+			
+				iconType = {
+				name = "external_policy_reform"
+				spriteType = "GFX_politics_external_policy"
+				position = { x = 6 y = 14 }
+				Orientation = "UPPER_LEFT"
+					}
+				instantTextBoxType = { 
+				name = "reform_name"
+				position = { x = 39 y = 20 } #WAS { x = 40 y = 15 }
+				font = "vic_18"
+				text = "REFORM_NAME"	
+				maxWidth = 150
+				maxHeight = 20	
+					}
+
+			}
+			
 			#windowType = {
 			#name = "pollution"
 			#backGround =""

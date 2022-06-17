@@ -342,6 +342,75 @@ political_reforms = {
 			global_immigrant_attract = 0.03
 		}
 	}
+	
+	external_policy = {
+    	no_policy = {		
+		}
+		expansion = {
+		allow = {
+				OR = {
+					 war_policy = jingoism 
+					 war_policy = pro_military
+				}
+			}
+			global_immigrant_attract = -0.04
+			global_assimilation_rate = 0.05
+			tax_efficiency = 0.05
+			mobilisation_size = 0.1
+			cb_generation_speed_modifier = 1.0
+			badboy = 0.05
+			suppression_points_modifier = 1.0
+			leadership_modifier = 0.1
+			army_tech_research_bonus = 0.05
+		}
+		diplomacy = {
+		allow = {
+				OR = {
+					NOT = { war_policy = jingoism }
+					NOT = { war_policy = pro_military}
+				}
+			}
+			global_immigrant_attract = 0.01
+			global_assimilation_rate = -0.05
+			mobilisation_size = -0.1
+			cb_generation_speed_modifier = -0.5
+			badboy = -0.05
+			suppression_points_modifier = -0.5
+			global_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
+			culture_tech_research_bonus = 0.05
+		}
+		market_control = {
+		allow = {
+				OR = {
+					NOT = { trade_policy = free_trade }
+					NOT = { economic_policy = laissez_faire }
+				}
+			}
+			global_immigrant_attract = 0.02
+			tax_efficiency = 0.05
+			industry_tech_research_bonus = 0.05
+			commerce_tech_research_bonus = 0.05
+			navy_tech_research_bonus = 0.05
+			administrative_efficiency_modifier = 0.05
+			tariff_efficiency_modifier = 0.05
+			administrative_multiplier = 2
+		}
+		isolationism = {
+		allow = {
+				NOT = { is_greater_power = yes }
+			}
+			global_immigrant_attract = -0.1
+		    goods_demand = -0.025
+	        research_points_on_conquer = -1
+	        core_pop_consciousness_modifier = -0.1
+	        core_pop_militancy_modifier = -0.1
+        	research_points_modifier = -0.3
+	        cb_generation_speed_modifier = -0.25
+	        min_tariff = 0.2
+		}
+	}
+
 
 	voting_system = {
 		first_past_the_post = {
@@ -508,6 +577,7 @@ political_reforms = {
 		primary_culture_only = {
 			rules = { primary_culture_voting = yes }
 			non_accepted_pop_consciousness_modifier = 0.01
+			global_assimilation_rate = -0.05		
 			allow = {
 				citizenship_policy = residency
 				NOT = { has_country_flag = theocratic_government }
