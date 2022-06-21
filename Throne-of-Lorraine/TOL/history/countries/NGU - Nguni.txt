@@ -1,6 +1,7 @@
-capital = 2114
+capital = 2111
 primary_culture = zulu
 culture = southern_bantu
+culture = sotho
 religion = animist
 government = absolute_monarchy
 plurality = 0.0
@@ -10,12 +11,12 @@ non_state_culture_literacy = 0.01
 
 # Political reforms
 slavery = yes_slavery
-upper_house_composition = party_appointed
+upper_house_composition = appointed
 vote_franschise = none_voting
 public_meetings = no_meeting
 press_rights = state_press
 trade_unions = no_trade_unions
-voting_system = first_past_the_post
+voting_system = jefferson_method
 political_parties = underground_parties
 
 # Social Reforms
@@ -27,6 +28,7 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
+
 # New Reforms
 conscription = no_draft
 debt_law = peonage
@@ -37,9 +39,10 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
+
 set_country_flag = animist_country
 
-ruling_party = SUA_conservative
+ruling_party = ZUL_conservative
 upper_house = {
 	fascist = 0
 	liberal = 0
@@ -52,21 +55,5 @@ upper_house = {
 
 set_country_flag = lacking_writing_system
 
-#Starting Consciousness
-consciousness = 0
-nonstate_consciousness = 0
-
-oob = "SUA_oob.txt"
-1861.1.1 = {
-	oob = "/1861/SUA_oob.txt"
-}
-1861.1.1 = {
-
-foreign_weapons = yes_foreign_weapons
-
-# Technologies
-flintlock_rifles = 1
-
-# Inventions
-
+	set_country_flag = attack_the_laagers
 }

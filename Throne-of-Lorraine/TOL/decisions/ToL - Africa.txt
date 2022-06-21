@@ -440,3 +440,51 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 }
+
+################
+# SOUTH AFRICA #
+################
+
+	form_nguni = {
+		picture = form_nguni
+		potential = {
+		
+        primary_culture = zulu
+		NOT = { exists = NGU }
+		}
+
+		allow = {
+            owns = 2100
+			owns = 2099
+			owns = 2098
+			owns = 2097
+			owns = 2096
+            owns = 2111
+			owns = 2112
+			owns = 2113
+			owns = 2114
+			war = no
+
+		}
+
+		effect = {
+		
+		    prestige = 5
+			
+		    change_tag = NGU
+			
+            ZUL_2113 = {
+			add_core = THIS
+		    }
+		    ENG_2096 = {
+			add_core = THIS
+			}
+		    2114 = {
+			add_core = THIS
+		    }	
+			2109 = {
+			add_core = THIS
+		}	
+		}
+		ai_will_do = { factor = 1 }
+	}
