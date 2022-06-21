@@ -145,10 +145,12 @@ national_awakening = {
 
 		allow = {
 			war = no
+			OR = {
 			AND = {
 				HUN = { exists = yes is_vassal = yes }
 				NOT = { year = 1850 }
 			}
+			tag = HUN }
 			OR = {
 				state_n_government = 1
 				POL = {
