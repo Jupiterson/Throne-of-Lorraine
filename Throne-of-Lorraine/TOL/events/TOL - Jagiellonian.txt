@@ -180,23 +180,3 @@ country_event = {
         }
     }
 }
-
-country_event = {
-
-	id = 100175
-	title = "The Punishment" #Removed
-	desc = "The Poles decidied that we should lose Transylvania"
-	picture = "administration"
-
-    trigger = {
-        tag = HUN
-        vassal_of = POL
-		war = no
-    }
-
-	option = {
-		name = "Oh well"
-		release = SIE
-		POL = { create_vassal = SIE	}
-	}
-}
