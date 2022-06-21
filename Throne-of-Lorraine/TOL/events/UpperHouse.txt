@@ -427,8 +427,8 @@ country_event = {
 	picture = "Upperhouse"
 
 	trigger = {
+	    is_greater_power = yes
 		civilized = yes
-		is_greater_power = yes
 		social_reform_want = 0.15
 		health_care = no_health_care
 		has_country_flag = medicine_invented
