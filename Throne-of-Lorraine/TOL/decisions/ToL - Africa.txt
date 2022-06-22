@@ -639,7 +639,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 		potential = {
         tag = MZA
-		NOT = { has_country_flag = expand_mzansi }
+		NOT = { has_country_flag = expand_mzansi }		
 		}
 
 		allow = {
@@ -665,7 +665,8 @@ political_decisions = {
 		POR_2054 = {
 		add_core = THIS }
 		badboy = 15
-		set_country_flag = { expand_mzansi }
+		set_country_flag = expand_mzansi
+
 
 		}
 }
