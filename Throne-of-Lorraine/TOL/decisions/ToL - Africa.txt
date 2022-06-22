@@ -441,19 +441,16 @@ political_decisions = {
 	}
 }
 
-##############
-#SOUTH AFRICA#
-##############
-
+################
+# SOUTH AFRICA #
+################
 political_decisions = {
-
 	form_nguni = {
 		picture = form_nguni
-		ai_will_do = { factor = 1 }
 		potential = {
+		
         primary_culture = zulu
 		NOT = { exists = NGU }
-		NOT = { exists = MZA }
 		}
 
 		allow = {
@@ -467,7 +464,8 @@ political_decisions = {
 			owns = 2113
 			owns = 2114
 			war = no
-        }
+
+		}
 
 		effect = {
 		
@@ -486,186 +484,8 @@ political_decisions = {
 		    }	
 			2109 = {
 			add_core = THIS
-		    }	
+		}	
 		}
-		
+		ai_will_do = { factor = 1 }
 	}
-	
-		claim_zulu = {
-		picture = invade_zulu
-		ai_will_do = { factor = 1 }
-		potential = {
-            year = 1845
-			capital = 2100	
-			has_global_flag = xhosaprophet
-			NOT = { has_country_flag = zulwar_passed }
-		}
-
-		allow = {
-            year = 1850
-			capital = 2100	
-			has_global_flag = xhosaprophet
-        }
-
-		effect = {
-		    ZUL_2113  = {
-			add_core = THIS }
-			2114  = {
-			add_core = THIS }
-			2110  = {
-			add_core = THIS }
-			2050  = {
-			add_core = THIS }
-			2049 = {
-			add_core = THIS }
-			badboy = 10
-			set_country_flag = zulwar_passed
-		}
-		
-	}
-	
-	    holy_education = {
-		picture = xhosa_misc
-		ai_will_do = { factor = 1 }
-		potential = {
-            year = 1860
-			capital = 2100	
-			has_global_flag = xhosaprophet	    
-			NOT = { has_country_flag = holyed_passed }
-		}
-
-		allow = {
-            year = 1865
-			capital = 2100	
-			has_global_flag = xhosaprophet
-        }
-
-		effect = {
-            add_country_modifier = { name = holy_education duration = 3650 }
-			clr_country_flag = lacking_writing_system 
-			remove_country_modifier =lacks_writing_system 
-			set_country_flag = holyed_passed
-		}
-	
-	}
-	
-		reform_prophet_administration = {
-		picture = xhosa_misc
-		ai_will_do = { factor = 1 }
-		potential = {
-             tag = XHO
-			 civilization_progress = 0.25
-			 has_global_flag = xhosaprophet	    
-			 NOT = { admin_reform = yes_admin_reform  }
-		}
-
-		allow = {
-        government = theocracy
-		NOT = { has_country_flag = lacking_writing_system  }
-        }
-
-		effect = {
-          economic_reform = yes_admin_reform
-		}
-	
-	}
-	
-		core_south_africa = {
-		picture = xhosa_map1
-		ai_will_do = { factor = 1 }
-		potential = {
-             tag = NGU
-			 capital = 2100
- 			 has_global_flag = xhosaprophet	
-             NOT = { has_country_flag = core_south_africa }			 
-		}
-
-		allow = {
-        government = theocracy
-        owns = 2113
-        }
-
-		effect = {
-         	ENG_2087  = {
-			add_core = THIS }
-			ENG_2092  = {
-			add_core = THIS }
-			ORA_2103  = {
-			add_core = THIS }
-			TRN_2108  = {
-			add_core = THIS }
-			2049 = {
-			add_core = THIS }
-			2050 = {
-			add_core = THIS }
-			badboy = 10
-			set_country_flag = core_south_africa
-		}
-	
-	}
-	
-		form_mzansi = {
-		picture = xhosa_map2
-		ai_will_do = { factor = 1 }
-		potential = {
-        tag = NGU
-		capital = 2100
-		has_country_flag = core_south_africa
-		has_global_flag = xhosaprophet	
-		}
-
-		allow = {
-            owns = 2100
-			owns = 2113
-			owns = 2050
-			owns = 2114
-			owns = 2104
-            owns = 2101
-			owns = 2106
-			war = no
-        }
-
-		effect = {
-		
-		    prestige = 30
-		    change_tag = MZA
-			add_accepted_culture = sotho
-			add_accepted_culture = khoisan
-			add_accepted_culture = southern_bantu
-		}
-}
-		expand_mzansi = {
-		picture = xhosa_map3
-		ai_will_do = { factor = 1 }
-		potential = {
-        tag = MZA
-		NOT = { has_country_flag = expand_mzansi }
-		}
-
-		allow = {
-		prestige = 100
-			war = no
-        }
-
-		effect = {
-		ENG_2083 = {
-		add_core = THIS }
-		ENG_2078  = {
-		add_core = THIS }
-		ENG_2074  = {
-		add_core = THIS }
-		ENG_2087  = {
-		add_core = THIS }
-		ENG_2071 = {
-		add_core = THIS }
-		ENG_2068 = {
-		add_core = THIS }
-		POR_2049 = {
-		add_core = THIS }
-		POR_2054 = {
-		add_core = THIS }
-		badboy = 15
-		set_country_flag = { expand_mzansi }
-
-		}
 }
