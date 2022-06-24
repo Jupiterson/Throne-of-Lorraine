@@ -761,21 +761,21 @@ help_ai_spain = { #Uncivs
 	min_military_spending = 0.3
 }
 
-help_ai_russia = {
-	trigger = {
-		tag = RUS
-		ai = yes
-	}
-	icon = 10
-	tax_efficiency = 0.08
-	administrative_efficiency_modifier = 0.03
-	education_efficiency_modifier = 0.2
-	mobilisation_size = 0.01
-	war_exhaustion = -0.5
-	min_military_spending = 0.3
-}
+#help_ai_russia = {
+#	trigger = {
+#		tag = RUS
+#		ai = yes
+#	}
+#	icon = 10
+#	tax_efficiency = 0.08
+#	administrative_efficiency_modifier = 0.03
+#	education_efficiency_modifier = 0.2
+#	mobilisation_size = 0.01
+#	war_exhaustion = -0.5
+#	min_military_spending = 0.3
+#}
 
-yellow_river = {
+yellow_river = {   #Huan He
 	trigger = {
 		owns = 1508 #Kaifeng
 		owns = 1510 #Luoyang
@@ -1546,4 +1546,15 @@ constitutional_theocracy_nation = {
 	global_immigrant_attract = 0.5
 	research_points_modifier = 0.05
 	global_population_growth =  0.01
+}
+
+poland_starting_war = {
+	trigger = {
+		tag = POL
+		NOT = { HUN = { vassal_of = POL }  truce_with = HUN }
+		war = yes
+		NOT = { year = 1838 }
+	}
+	icon = 10
+	mobilisation_size = 0.5
 }
