@@ -53,68 +53,6 @@ political_decisions = {
 		}
 	}
 	
-	roman_romanization_edict_1 = { 
-		picture = romanization
-		potential = {
-			tag = NIR
-			has_country_flag = expanded_empire
-			NOT = { has_country_flag = romanization_edict }
-		}
-
-		allow = {
-			all_core = { owned_by = THIS }
-			war = no
-		}
-
-		effect = {
-			set_country_flag = romanization_edict
-			any_owned = {
-				limit = {
-					is_core = NIR
-				}
-				add_province_modifier = {
-					name = roman_cultural_unity_1
-					duration = -1
-				}
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	 roman_romanization_edict_3 = {
-		picture = romanization
-		potential = {
-			tag = NIR
-			OR = {
-			has_country_flag = africa_will_be_retaken 
-			has_country_flag = da_wae
-			}			 
-			NOT = { has_country_flag = romanization_edict }
-		}
-
-		allow = {
-			all_core = { owned_by = THIS }
-			war = no
-		}
-
-		effect = {
-			set_country_flag = romanization_edict
-			any_owned = {
-				limit = {
-					is_core = NIR
-					NOT = {
-					has_province_modifier = roman_cultural_unity_1
-					}
-				}
-				add_province_modifier = {
-					name = roman_cultural_unity_2
-					duration = -1
-				}
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
 	expand_the_empire = {
 		picture = roman_temple
 		potential = {
@@ -511,7 +449,7 @@ form_byzantium = {
 			}
 			EGY_1755 = {
 				add_core = THIS
-			}						  
+			}			
 			set_country_flag = levant
 			add_accepted_culture = syriac   
 		}

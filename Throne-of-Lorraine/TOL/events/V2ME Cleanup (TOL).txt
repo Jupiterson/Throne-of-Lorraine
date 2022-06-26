@@ -182,7 +182,6 @@ country_event = {
 			country_event = 477877788
 			neutrality = yes
 		}
-		
 		#new round of dismantlement (soon to be deprecated, remove later)
 		any_country = {
 			limit = {
@@ -495,7 +494,6 @@ country_event = {
 				remove_core = MAS
 			}
 		}
-		
 		#fix for bad modifier
 		any_country = {
 			limit = {
@@ -4391,7 +4389,6 @@ country_event = {
 				civilized = yes
 				war = no
 				revolution_n_counterrevolution = 1
-				owns = 912
 				owns = 913
 				owns = 914
 				owns = 915
@@ -4924,7 +4921,8 @@ country_event = {
 			}
 			add_country_modifier = { name = religious_minority_oppression duration = 365 }
 		}
-		
+		912 = { remove_core = BYZ remove_core = KNI }
+		1121 = { remove_core = COP }
 		#slave pop growth
 		any_country = {
 			limit = {
