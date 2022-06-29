@@ -319,8 +319,11 @@ political_decisions = {
 		}
 
 		allow = {
+		OR = {
 			admin_reform = yes_admin_reform
 			land_reform = yes_land_reform
+			civilized = yes
+			}
 			all_core = { owned_by = THIS }
 		}
 

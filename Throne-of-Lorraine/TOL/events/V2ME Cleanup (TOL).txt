@@ -36,6 +36,52 @@ country_event = {
 	option = {
 		name = "Checking..."
 		
+##		TIN = {
+#		any_owned = {
+#			limit = {
+#				owned_by = THIS
+#			}
+#			any_neighbor_province = {
+#				limit = {
+#					AND = {
+#						NOT = {
+#							owned_by = THIS
+#						}
+#						controlled_by = THIS	
+#					}
+#					owner = {
+#						num_of_cities = 2
+#					}
+#				}
+#				set_province_flag = RecentAquire
+#				secede_province = THIS
+#			}
+#		}
+#	}
+#		any_country = {
+#				limit = {
+#					NOT = {
+#						tag = TIN
+#					}
+#				}
+#			any_owned = {
+#				limit = {
+#					AND = {
+#					controlled_by = TIN
+#					owner = {
+#						NOT = {
+#						num_of_cities = 2
+#						}
+#					}
+#				}
+#			set_province_flag = RecentAquire
+#			owner = {
+#				annex_to = TIN
+#				}
+#			}
+#		}
+#		}
+		
 		any_country = {
 			limit = {
 				exists = yes
