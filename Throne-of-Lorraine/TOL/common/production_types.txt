@@ -923,6 +923,14 @@ RGO_template_slaves = {
 			amount = 1
 			effect_multiplier = 3.0
 		}
+		
+		{
+			poptype = farmers
+			effect = throughput
+			amount = 1
+			effect_multiplier = -1.0
+		}
+		
 	}
 
 	type = rgo

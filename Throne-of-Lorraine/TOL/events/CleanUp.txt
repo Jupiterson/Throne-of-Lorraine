@@ -515,6 +515,7 @@ country_event = {
 			government = democracy
 			has_country_flag = Government_Democracy
 		}
+		NOT = { has_country_flag = resciondend }
 		vote_franschise = none_voting
 		ruling_party_ideology = radical
 		civilized = yes
@@ -527,6 +528,7 @@ country_event = {
 	option = {
 		name = "EVT60090OPTA"
 		government = parliamentary_republic
+		set_country_flag = resciondend
 		clr_country_flag = communist_gov
 		clr_country_flag = absolute_monarchy_gov
 		clr_country_flag = semi_constitutional_monarchy_gov

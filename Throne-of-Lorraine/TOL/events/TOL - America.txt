@@ -52,6 +52,29 @@ country_event = {
 		
 	}
 
+#If TEX lost Santa Fe
+country_event = {
+	id = 100175
+	title = "the Lost Territory"
+	desc = "We lost the Desert"
+	fire_only_once = yes
+	picture = "arab_revolt"
+
+	trigger = {
+		tag = TEX
+		NOT = { owns = 105 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Sad times..."
+		prestige = -5
+		any_owned = { limit = { region = MEX_100 } secede_province = XXX }
+	}
+}
+
+
 
 #Colonization of America
 country_event = {

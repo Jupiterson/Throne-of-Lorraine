@@ -1059,7 +1059,12 @@ political_decisions = {
             is_greater_power = yes
             NOT = { exists = GFC }
 			NOT = { exists = FER }
-			NOT = { exists = GER }
+			NOT = {
+			exists = GER
+            is_culture_group = germanic
+			tag = FRM
+			tag = LUS
+			}
             NOT = {
                 has_global_flag = outside_germany
             }
