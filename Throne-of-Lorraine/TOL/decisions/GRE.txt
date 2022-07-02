@@ -69,7 +69,7 @@ political_decisions = {
 	picture = unite_with_greece
 		potential = {
 			primary_culture = greek
-			NOT = { tag = GRE tag = BYZ }
+			NOT = { tag = GRE tag = BYZ tag = RME tag = PAA }
 			exists = GRE
 			NOT = { has_country_flag = unite_with_greece }
 			OR = {

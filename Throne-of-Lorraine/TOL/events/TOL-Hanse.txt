@@ -12,7 +12,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 600
+		months = 300
 	}
 
 	immediate = {
@@ -24,14 +24,14 @@ country_event = {
 	option = {
 		name = "EVT800018OPTA"
 		any_pop = { militancy = -2 }
-		release_vassal = THIS
 		THIS = { government = republic }
 		random_country = {
 			limit = {
 				is_our_vassal = THIS
 			}
 			release_vassal = THIS
-			country_event = 100138
+			leave_alliance = THIS
+			country_event = 100139
 		}
 		random_country = {
 			limit = {
@@ -72,6 +72,12 @@ country_event = {
 			value = -100
 		}
 		leave_alliance = FROM
+		badboy = 5
+		casus_belli = { 
+			target = FROM 
+			type = conquest 
+			months = 36 
+		}
 		war = {
 			target = FROM 
 			attacker_goal = { casus_belli = conquest }
@@ -128,6 +134,12 @@ country_event = {
 		relation = {
 			who = FROM
 			value = -50
+		}
+		badboy = 1
+		casus_belli = { 
+			target = FROM 
+			type = make_puppet 
+			months = 36 
 		}
 		war = {
 			target = FROM 
@@ -234,7 +246,13 @@ country_event = {
 			who = FROM
 			value = -100
 		}
+		badboy = 1
 		leave_alliance = FROM
+		casus_belli = { 
+			target = FROM 
+			type = make_puppet 
+			months = 36 
+		}
 		war = {
 			target = FROM 
 			attacker_goal = { casus_belli = make_puppet }

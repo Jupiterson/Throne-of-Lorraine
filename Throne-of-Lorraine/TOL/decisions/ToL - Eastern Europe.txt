@@ -70,6 +70,7 @@ national_awakening = {
 
 		potential = {
 			primary_culture = polish
+			ai = yes
 			NOT = { exists = POL }
 			NOT = { has_country_flag = post_colonial_country }
 			NOT = { tag = PLC }
@@ -135,7 +136,11 @@ national_awakening = {
 			NOT = { tag = PLC }
 			NOT = { tag = PLR }
 			NOT = { tag = PHC }
+			OR = {
 			NOT = { tag = HUN }
+			has_global_flag = jagiellonian_hun			
+			}
+			NOT = { has_global_flag = no_jagiellonian_hun }
 		}
 
 		allow = {
@@ -235,144 +240,6 @@ national_awakening = {
 		}
 	}
 
-	unite_poland_lithuania = {
-		picture = become_poland_lithuania
-
-		potential = {
-			OR = {
-				primary_culture = polish
-				primary_culture = lithuanian
-			}
-			NOT = { exists = PLC }
-			NOT = {
-				has_country_flag = post_colonial_country
-				has_country_flag = polish_lithuania_ruthenia_formed
-				has_country_flag = ruthenyans_accepted_culture
-			}
-			NOT = { tag = WSF }
-			NOT = { tag = PLR }
-			NOT = { tag = PHC }
-		}
-
-		allow = {
-			war = no
-			LIT = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							ai = yes
-							in_sphere = THIS
-							OR = {
-								is_vassal = no
-								vassal_of = THIS
-							}
-							war = no
-							is_greater_power = no
-						}
-					}
-				}
-			}
-			POL = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							ai = yes
-							in_sphere = THIS
-							OR = {
-								is_vassal = no
-								vassal_of = THIS
-							}
-							war = no
-							is_greater_power = no
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			prestige = 30
-			random_owned = {
-				limit = { owner = { accepted_culture = south_german } } owner = { remove_accepted_culture = south_german }
-			}
-			random_owned = {
-				limit = { owner = { accepted_culture = north_german } } owner = { remove_accepted_culture = north_german }
-			}
-			random_owned = {
-				limit = { owner = { accepted_culture = czech } } owner = { remove_accepted_culture = czech }
-			}
-			random_owned = {
-				limit = { owner = { primary_culture = polish } }
-				owner = {
-					add_accepted_culture = lithuanian
-					all_core = {
-						add_core = PLC
-						remove_core = POL
-					}
-				}
-				LIT = {
-					all_core = { add_core = PLC }
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { primary_culture = lithuanian }
-				}
-				owner = {
-					add_accepted_culture = polish
-					all_core = {
-						add_core = PLC
-						remove_core = LIT
-					}
-				}
-				POL = {
-					all_core = { add_core = PLC }
-				}
-			}
-			LAT = {
-				all_core = { add_core = PLC }
-			}
-			BYE = {
-				all_core = { add_core = PLC }
-			}
-			RUS_958 = { add_core = PLC }
-			PRU_695 = { add_core = PLC }
-			RUS_959 = { add_core = PLC }
-			690 = { add_core = PLC }
-			3469 = { add_core = PLC }
-			692 = { add_core = PLC }
-			any_country = {
-				limit = {
-					OR = {
-						in_sphere = THIS
-						vassal_of = THIS
-					}
-				}
-				any_owned = {
-					limit = { is_core = PLC }
-					secede_province = THIS
-				}
-			}
-			change_tag = PLC
-			capital = 706
-			any_greater_power = {
-				limit = {
-					OR = {
-						primary_culture = russian
-						is_culture_group = germanic
-					}
-					neighbour = THIS
-				}
-				relation = { who = THIS value = -200 }
-				leave_alliance = THIS
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	stop_poland_lithuania = {
 		picture = become_poland_lithuania
 		alert = no
@@ -434,7 +301,6 @@ national_awakening = {
 			713 = { add_core = POL }
 			715 = { add_core = POL }
 			716 = { add_core = POL }
-			717 = { add_core = POL }
 			719 = { add_core = POL }
 			936 = { add_core = POL }
 			937 = { add_core = POL }
@@ -854,10 +720,7 @@ national_awakening = {
 	lithuanian_poland_lithuania_ruthenia = {
 		picture = poland_lithuania_ruthenia
 		potential = {
-			OR = {
-				primary_culture = polish
-				primary_culture = lithuanian
-			}
+			tag = PHC
 			NOT = { exists = PLC }
 			NOT = {
 				has_country_flag = post_colonial_country
@@ -865,89 +728,49 @@ national_awakening = {
 			}
 			NOT = { tag = WSF }
 			NOT = { tag = PLR }
-			NOT = { tag = PHC }
-			LIT = {
-				has_country_flag = ruthenyans_accepted_culture
-			}
+			exists = UKR
+			exists = BYE
 		}
 		allow = {
 			war = no
-			LIT = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							ai = yes
+			BYE = {
+			OR = {
 							in_sphere = THIS
-							OR = {
-								is_vassal = no
-								vassal_of = THIS
+							vassal_of = THIS
 							}
 							war = no
-							is_greater_power = no
 						}
-					}
-				}
-			}
-			POL = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							ai = yes
+		   UKR = {
+			OR = {
 							in_sphere = THIS
-							OR = {
-								is_vassal = no
-								vassal_of = THIS
+							vassal_of = THIS
 							}
 							war = no
-							is_greater_power = no
 						}
-					}
-				}
-			}
+					
+						
 		}
 		effect = {
 			any_country = {
 				any_owned = {
-					limit = { is_core = POL }
+					limit = { is_core = PHC }
 					add_core = PLR
 					remove_core = POL
+					remove_core = HUN
 				}
 				any_owned = {
-					limit = { is_core = LIT }
+					limit = { is_core = UKR }
 					add_core = PLR
-					remove_core = LIT
+					
 				}
-			}
-			random_owned = {
-				limit = { owner = { primary_culture = polish } }
-				owner = {
-					add_accepted_culture = lithuanian
-					add_accepted_culture = ruthenyan
+				any_owned = {
+					limit = { is_core = BYE }
+					add_core = PLR
+					
 				}
-			}
-			random_owned = {
-				limit = {
-					owner = { primary_culture = lithuanian }
-				}
-				owner = {
-					add_accepted_culture = polish
-				}
-			}
-			PRU_695 = {
-				add_core = PLR
-			}
-			PRU_682 = {
-				add_core = PLR
-			}
-			RUS_354 = {
-				add_core = PLR
-			}
-			PRU_690 = {
-				add_core = PLR
 			}
 			change_tag = PLR
+			add_accepted_culture = ruthenyan
 			prestige = 40
 			any_country = {
 				limit = {
@@ -983,55 +806,6 @@ national_awakening = {
 			factor = 1
 		}
 	}
-	
-	poland_baltic_thingy = {
-		picture = russify_baltic_states
-		potential = {
-			OR = {
-				tag = PLC
-				tag = PLR
-			}
-			NOT = { has_country_flag = poland_baltic_thingy }
-		}
-		allow = {
-			RUS_349 = {
-				owned_by = THIS
-			}
-			RUS_354 = {
-				owned_by = THIS
-			}
-			citizens_rights = all_voting_pops
-			citizenship_policy = full_citizenship
-			OR = {
-				is_secondary_power = yes
-				is_greater_power = yes
-			}
-		}
-		effect = {
-			set_country_flag = poland_baltic_thingy
-			RUS_349 = {
-				add_core = THIS
-			}
-			add_accepted_culture = estonian
-			add_accepted_culture = latvian
-			prestige = 15
-			any_pop = {
-				limit = {
-					OR = {
-						has_pop_culture = latvian
-						has_pop_culture = estonian
-					}
-				}
-				militancy = -2
-				consciousness = -1
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-  
 	
 	claim_prussia = {
 		picture = map_ingria
@@ -1084,5 +858,6 @@ national_awakening = {
 			
 		}
    }
+   
    
 }

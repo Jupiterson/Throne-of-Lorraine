@@ -1,0 +1,77 @@
+political_decisions = {
+
+cede_coast = {
+		picture = italian_dalmatia
+		potential = {
+			tag = UBD
+			NOT = { has_country_flag = coast_ceded }
+			year = 1838
+			NOT = { year = 1845 }
+			ai = yes
+			owns = 695
+			owns = 350
+			SWE = { ai = yes }
+			RUS = { ai = yes }
+		}
+
+		allow = {
+		war = no
+	365 = {
+			owner = {
+								ai = yes
+							}
+							}
+							693 = {
+			owner = {
+								ai = yes
+							}
+							}
+							3423 = {
+			owner = {
+								ai = yes
+							}
+							}
+		}
+
+		effect = {
+			prestige = 5
+			badboy = 2
+			set_country_flag = coast_ceded
+			693 = { secede_province = THIS }
+			365 = { secede_province = THIS }
+			3423 = { secede_province = THIS }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	cede_silesia = {
+		potential = {
+			tag = SAX
+			NOT = { has_country_flag = coast }
+			ai = yes
+			NOT = { owns = 3337 }
+		}
+
+		allow = {
+		war = no
+		}
+
+		effect = {
+			set_country_flag = coast
+			any_owned = {
+			limit = { 
+			is_core = SLS
+			}
+			secede_province = SLS 
+		}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

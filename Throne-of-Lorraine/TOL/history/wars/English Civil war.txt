@@ -1,0 +1,28 @@
+name = "The English Civil War"
+
+1835.11.12 = {
+	add_attacker = UOW
+	add_defender = ENL
+
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+	war_goal = {
+		casus_belli = civil_war
+		actor = UOW
+		receiver = ENL
+	}
+	war_goal = {
+		casus_belli = civil_war
+		actor = ENL
+		receiver = UOW
+	}
+
+}
+
+1838.4.21 = {
+	rem_attacker = UOW
+	rem_defender = ENL
+}

@@ -193,19 +193,31 @@ army = {
 }
 
 leader = {
-	name = "Othon Danglis"
+	name = "Yared Psen-Macari"
+	picture = cop_malek
 	type = land
-	date="1832.1.1"
-	personality = defiant
-	background = expert_raider
+	date= "1826.1.1"
+	personality = relentless
+	background = gallant
 	prestige = 0.3
 }
 
 leader = {
-	name = "Tharyvoulos Manos"
+	name = "Tawadros Psen-Lot"
+	picture = cop_massoud
 	type = land
-	date="1832.1.1"
+	date= "1836.1.1"
+	personality = defiant
+	background = expert_raider
+	prestige = 0.25
+}
+
+leader = {
+	name = "Ghabri Psen-Jerjer"
+	picture = cop_sharif
+	type = land
+	date= "1816.1.1"
 	personality = balanced_p
 	background = drillmaster
-	prestige = 0.1
+	prestige = 0.45
 }

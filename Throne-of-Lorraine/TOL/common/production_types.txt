@@ -865,7 +865,7 @@ RGO_template_labourers = {
 			poptype = slaves
 			effect = throughput
 			amount = 1
-			effect_multiplier = 1.4
+			effect_multiplier = 2.0
 		}
 	}
 
@@ -895,13 +895,48 @@ RGO_template_mines = {
 			poptype = slaves
 			effect = throughput
 			amount = 1
-			effect_multiplier = 1.4
+			effect_multiplier = 2.0
 		}
 	}
 
 	type = rgo
 	workforce = 40000
 }
+
+RGO_template_slaves = {
+
+	owner = {
+		poptype = aristocrats
+		effect = output
+	}
+
+	employees = {
+		{
+			poptype = serfs
+			effect = throughput
+			amount = 1
+		}
+
+		{
+			poptype = slaves
+			effect = throughput
+			amount = 1
+			effect_multiplier = 3.0
+		}
+		
+		{
+			poptype = farmers
+			effect = throughput
+			amount = 1
+			effect_multiplier = -1.0
+		}
+		
+	}
+
+	type = rgo
+	workforce = 50000
+}
+
 
 ### RGOs #####################################################################################
 cattle_ranch = {
@@ -1050,6 +1085,14 @@ tropical_wood_lodge = {
 	value = 4
 	farm = yes
 }
+
+sugar_plantation = {
+	template = RGO_template_slaves
+	output_goods = sugar
+	value = 2.5
+	farm = yes
+}
+
 
 ### Artisans #####################################################################################
 
@@ -1691,7 +1734,7 @@ synthetic_fabric_factory = {
 }
 
 synthetic_silk_factory = {	   
-	template = modern_factory_template #9.125
+	template = factory_template #9.125
 	input_goods = {	 
 		oil = 8.3 #99.6 108.725
 	}

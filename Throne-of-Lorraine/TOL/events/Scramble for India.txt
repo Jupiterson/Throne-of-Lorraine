@@ -1,0 +1,133 @@
+#Events from 955182 to 955200 used in Congo.txt
+#################################################################################################################
+#																												#
+#					Events for the Berlin Conference and Annexation of African Minors							#
+#																												#
+#################################################################################################################
+
+country_event = {
+
+	id = 100150
+	title = "INDIA" #The Berlin Conference
+	desc = "INDIADESC"
+	news = yes
+	news_desc_long = "EVTDESC95500_NEWS_LONG"
+	news_desc_medium = "EVTDESC95500_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC95500_NEWS_SHORT"
+	picture = "scramble_for_africa"
+	major = yes
+
+	trigger = {
+		OR = {
+			is_greater_power = yes
+			AND = {
+				colonial_nation = yes
+				any_owned_province = { is_core = HND }
+			}
+		}
+		capital_scope = { continent = europe }
+		organic_chemistry = 1
+		market_structure = 1
+		invention = mission_to_civilize
+		NOT = { has_global_flag = india_scramble }
+	}
+
+	allow_multiple_instances = no
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.8
+			capital = 549
+		}
+	}
+
+	option = {
+		name = "INDIAOPT"
+		set_global_flag = india_scramble
+		prestige = 25
+	}
+}
+
+country_event = {
+
+	id = 100151
+	title = "EVTNAME95502" #The Age of Colonialism
+	desc = "EVTDESC95502"
+	picture = "scramble_for_africa"
+
+	trigger = {
+		civilized = no
+		capital_scope = { is_core = HND }
+		has_global_flag = india_scramble
+		NOT = { has_country_flag = delay_unciv_annexation }
+		NOT = { has_country_flag = reaction_to_berlin_conference }
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = "EVT95502OPTA"
+		set_country_flag = reaction_to_berlin_conference
+		any_country = {
+			limit = {
+				civilized = yes
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+					colonial_nation = yes
+				}
+				capital_scope = { continent = europe }
+			}
+			leave_alliance = THIS
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+	}
+}
+
+#Canditate for Removal
+country_event = {
+
+	id = 100152
+	title = "EVTNAME95503" #the Modern Age
+	desc = "EVTDESC95503"
+	picture = "zulu"
+
+	trigger = {
+		war = no
+		civilized = no
+		capital_scope = { is_core = HND }
+		NOT = { has_global_flag = india_scramble }
+		NOT = { has_country_flag = africa_in_the_modern_age }
+		any_owned_province = {
+			OR = {
+				port = yes
+				any_neighbor_province = { owner = { civilized = yes } }
+				any_neighbor_province = { owner = { has_country_modifier = western_influences } }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVT95503OPTA"
+		set_country_flag = africa_in_the_modern_age
+		any_country = {
+			limit = {
+				civilized = yes
+				NOT = { relation = { who = THIS value = 25 } }
+				capital_scope = { continent = europe }
+			}
+			relation = { who = THIS value = 50 }
+		}
+	}
+}
+

@@ -120,7 +120,7 @@ political_decisions = {
 		potential = {
 			ai = yes
 			exists = yes
-           NOT = { vassal_of = HNS }
+           NOT = { vassal_of = HNS tag = HNS }
 		
 		  government = hanseatic 
 			
@@ -433,7 +433,7 @@ political_decisions = {
 						tag = XIN
 						tag = MCK
 						tag = IMG
-						tag = MGL
+						#tag = MGL
 					}
 					vassal_of = QNG
 				}

@@ -6,43 +6,51 @@ USA_1 = { 1 2 3 4 5 2599 2630 2631 } #Alaska
 
 ENG_9 = { 11 2595 2596 2598 6 7 3485 } #Northwest Territories
 
-CAN_13 = { 13 14 20 21 15 19 16 17 } #Columbia
+CAN_13 = { 13 14 15 19 16 17 78 79 } #Columbia
 
 #CAN_18 = { 18 17 2629 } #New Caledonia
 
-ENG_22 = { 27 26 22 23 25 28 2597 18 2629 } #Alberta
+ENG_22 = { 28 2597 18 2629 } #Alberta
 
-ENG_30 = { 31 32 33 34 35 } #Saskatchewan
+CAN_26 = { 26 27 22 33 } #South-Central Canadian Plains
 
-ENG_36 = { 42 36 37 38 39 40 41 } #Manitoba
+CAN_35 = { 34 35 25 115 } #South-Central Canadian Steppes
+
+ENG_30 = { 31 32 23 } #Saskatchewan
+
+ENG_36 = { 36 37 38 39 40 } #Manitoba
 
 CAN_46 = { 46 57 55 51 56 52 53 54 } #Southern Ontario
 
 CAN_50 = { 49 50 47 48 2594 } #Northern Ontario
 
-CAN_58 = { 58 65 62 61 63 64 66 67 250 3280 } #Southern Quebec
+CAN_58 = { 58 65 63 64 66 67 250 } #Southern Quebec
 
 CAN_60 = { 9 59 2593 2626 2592 } #Northern Quebec
 
 ENG_68 = { 68 69 70 71 72 73 } #Maritimes
 
-ENG_74 = { 74 75 76 77 2625 } #Newfoundland
+ENG_74 = { 74 75 76 77 2625 62 61 3475 } #Newfoundland
 
 ### United States
 
-USA_78 = { 78 79 80 3464 3465 3466 } #Washington
+USA_78 = { 80 3464 3465 3466 20 } #Washington
 
-USA_81 = { 81 82 83 3461 3462 3463 } #Oregon
+USA_81 = { 81 83 85 3462 3454 3455 } #Oregon
 
-MEX_85_1 = { 104 84 85 86 3448 3452 3453 3454 3455 87 } #Northern California
+USA_3463 = { 91 3463 82 3461 } 
 
-MEX_85_2 = { 89 88 90 3449 3450 3451 2139 2138 } #Southern California
+MEX_85_1 = { 104 84 3448 87 3450 } #Northern California
 
-USA_91 = { 91 92 93 3475 3476 114 3467 113 } #Idaho
+USA_3453 = { 3452 3453 86 3449 } #East Central Californian Mountains
 
-MEX_94 = { 94 96 95 3457 3458 } #Nevada
+MEX_85_2 = { 89 90 2139 2138 } #Southern California
 
-MEX_97 = { 97 98 99 3459 } #Utah
+USA_91 = { } #Idaho
+
+MEX_94 = { 94 96 88 98 3459 3451 95 3457 3458 } #Nevada
+
+#MEX_97 = { } #Utah
 
 MEX_100 = { 100 101 102 3460 2148 3456 } #Arizona
 
@@ -50,77 +58,89 @@ MEX_103 = { 105 103 2662 134 135 136 43 } #New Mexico
 
 #USA_106 = { } #Colorado
 
-USA_111 = { 108 109 107 110 111 3468 } #Wyoming
+USA_111 = { 107 110 111 3468 93 3467 113 } #Wyoming/Duivelsberg
 
-USA_116 = { 116 115 24 30 106 112 } #Montana
+VLD_108 = { 108 109 99 97 } #Dood-Ruitersberg
 
-USA_118 = { 117 118 119 } #North Dakota
+VLD_21 = { 21 114 92 } #Drakensberg
 
-USA_121 = { 120 121 122 } #South Dakota
+USA_116 = { 116 112 119 121 122 } #Montana/Centrale Grote Steppe
 
-USA_124 = { 123 124 125 } #Nebraska
+#USA_118 = { } #North Dakota
 
-USA_126 = { 126 127 128 } #Kansas
+#USA_121 = { } #South Dakota
 
-USA_129 = { 131 129 130 } #Oklahoma
+DAK_106 = { 106 124 125 127 } #Northeast Great Plains
+
+DAK_128 = { 128 3397 131 129 } #Southeast Great Plains
+
+#USA_124 = { } #Nebraska
+
+#USA_126 = { } #Kansas
+
+#USA_129 = { } #Oklahoma
 
 TEX_132 = { 133 132 137 138 } #Texas
 
 USA_139 = { 139 141 } #Louisiana
 
-USA_144 = { 142 143 144 145 } #Arkansas
+USA_144 = { 142 143 144 145 130 } #Arkansas
 
-USA_148 = { 146 148 147 149 150 } #Missouri
+USA_148 = { 146 148 147 149 150 126 } #Missouri
 
-USA_151 = { 151 152 153 154 } #Iowa
+USA_151 = { 151 152 153 154 123 } #Iowa
 
-USA_158 = { 155 156 157 158 } #Minnesota
+USA_158 = { 155 156 157 158 118 120 117 41 42 } #Minnesota
 
 USA_162 = { 159 160 161 162 163 164 166 177 } #Wisconsin
 
-USA_168 = { 168 167 165 } #Illinois
+USA_168 = { 168 167 165 24 } #Illinois
 
-USA_170 = { 169 170 172 171 } #Indiana
+USA_170 = { 169 170 172 171 30 } #Indiana
 
 USA_176 = { 173 174 175 176 } #Michigan
 
-USA_178 = { 178 179 180 183 182 181 228 } #Ohio
+USA_178 = { 178 179 180 183 182 181 228 3280 } #Ohio
 
 #USA_185 = { } #Kentucky
 
-USA_188 = { 184 185 186 187 188 } #Tennessee
+USA_188 = { 184 186 187 188 189 } #Tennessee
 
-USA_194 = { 192 193 189 } #Mississippi
+#USA_194 = { } #Mississippi
 
 USA_197 = { 197 194 140 } #Mobile
 
-USA_196 = { 195 196 191 } #Alabama
+USA_196 = { 195 196 192 193 } #Alabama
 
 USA_200 = { 199 3284 198 } #Florida
 
-USA_201 = { } #Georgia
+#USA_201 = { } #Georgia
 
-USA_205 = { 201 202 204 2555 205 206 } #South Carolina
+USA_205 = { 202 204 2555 205 206 } #South Carolina
 
-USA_2556 = { 209 207 208 210 214 2556 190 } #North Carolina
+USA_2556 = { 209 207 208 210 214 } #North Carolina
 
-USA_211 = { 211 213 216 60 } #Virginia
+USA_190 = { 2556 190 191 201 } #South Appalachia
 
-USA_218 = { 218 217 215 } #West Virginia
+#USA_211 = { } #Virginia
 
-USA_219 = { 2146 220 219 222 212 } #Maryland
+USA_218 = { 218 217 215 2146 185 216 } #West Virginia/Mont Saint Louis
 
-USA_223 = { 223 224 225 226 227 2627 } #Pennsylvania
+USA_219 = { 220 219 222 212 211 213 60 } #Maryland
 
-USA_231 = { } #New Jersey
+USA_223 = { 223 224 226 } #Pennsylvania
+
+USA_225 = { 225 2627 227 } #Northern Appalachia
+
+#USA_231 = { } #New Jersey
 
 USA_232 = { 232 233 234 245 241 229 231 230 243 244 242 } #New York
 
-USA_243 = { } #Massachusets
+#USA_243 = { } #Massachusets
 
-USA_247 = { 247 246 248 249 } #New England
+USA_247 = { 247 248 249 } #New England
 
-AKI_235 = { 235 236 237 238 239 240 } #New Brandenburg
+AKI_235 = { 235 236 237 238 239 240 3476 246 } #New Brandenburg
 
 
 ### United Kingdom
@@ -158,7 +178,7 @@ ENG_300 = { 300 301 302 3269 } #South East England
 
 ### Scandinavia
 
-DEN_251 = { 251 252 253 2636 3412 } #Iceland & Greenland
+DEN_251 = { 251 252 253 2636 3412 3328 } #Iceland & Greenland
 
 SWE_308 = { 309 308 305 306 307 } #Nordnoge
 
@@ -180,13 +200,13 @@ RUS_343 = { 343 344 341 340 342 339 } #Helsinki
 
 RUS_345 = { 345 346 347 } #Turku
 
-DEN_367 = { 367 366 2557 } #Jylland
+DEN_367 = { 367 366 2557 717 } #Jylland
 
 HOL_369 = { 369 530 529 } #Holstein
 
 SCH_370 = { 370 371 533 2236 } #Schleswig
 
-DEN_372 = { 372 373 } #Sjaelland
+DEN_372 = { 372 373 696 } #Sjaelland
 
 
 ### Low Countries
@@ -273,7 +293,7 @@ POR_518 = { 518 519 520 3400 3473 } #Douro
 
 POR_521 = { 521 522 523 524 } #Estremadura
 
-POR_525 = { 525 526 527 3287 } #Alentejo
+POR_525 = { 525 526 527 } #Alentejo
 
 POR_2134 = { 2134 2135 2136 } #Macaronesia
 
@@ -324,15 +344,15 @@ SWI_603 = { 606 605 604 3272 } #Swiss Mittelland
 
 SWI_588 = { 603 611 588 614 2669 3253 } #East Switzerland
 
-SWI_607 = { 607 608 609 3250 3271 3317 } #R�gion L�manique
+SWI_607 = { 607 609 3250 3271 3317 } #R�gion L�manique
 
-SWI_2568 = { } #Alpen
+#SWI_2568 = { } #Alpen
 
 PRU_682 = { 682 683 684 685 689 3336 688 632 } #Lower Silesia
 
 PRU_690 = { 690 691 692 694 3469 } #Westpreu�en
 
-PRU_695 = { 695 696 697 698 693 3326 3327 3328 3329 365 } #Ostpreu�en
+PRU_695 = { 695 697 698 693 3326 3327 3329 365 } #Ostpreu�en
 
 PRU_701 = { 701 699 700 } #Posen
 
@@ -375,7 +395,7 @@ AUS_726 = { 726 727 728 2568 } #Lombardia
 
 #AUS_733 = { 733 736 } #Friuli
 
-AUS_729 = { 729 730 731 732 733 3262 717 } #Venetia
+AUS_729 = { 729 730 731 732 733 3262 } #Venetia
 
 #AUS_734 = { 734 735 } #South Tirol
 
@@ -406,7 +426,7 @@ PAP_752 = { 749 752 750 751 3266 } #Lazio
 
 SIC_753 = { 3261 753 757  } #Puglia
 
-SIC_754 = { 754 755 2567 3397 } #Campania
+SIC_754 = { 754 755 2567 } #Campania
 
 SYC_759 = { 759 760 761 756 758 } #Full Magna Graecia
 
@@ -455,7 +475,7 @@ EGY_843 = { 848 843 844 846 847 845 } #Aegean Islands
 
 TUR_853 = { 849 853 852 851 850 3307 3308 3420 803 } #Albania
 
-TUR_855 = { 855 856 857 2690 } #Cyprus
+TUR_855 = { 855 856 857 } #Cyprus
 
 TUR_860 = { 860 828 858 859 3302 3470 } #Thrace
 
@@ -490,11 +510,11 @@ TUR_894 = { 894 896 895 900 3345 3362 } #Adana
 
 EGY_897 = { 897 905 898 } #Aleppo
 
-EGY_903 = { 902 903 3358 } #Syria
+EGY_903 = { 902 903 } #Syria
 
 #EGY_910 = { } #Transjordan
 
-EGY_915 = { 913 915 912 914 3361 } #Lebanon
+EGY_915 = { 913 915 914 } #Lebanon
 
 EGY_921 = { 917 920 919 918 916 909 3357 3474 922 } #Palestine
 
@@ -749,7 +769,9 @@ ENG_1264 = { 1264 1265 1266 1267 1268 1269 } #Rajputana
 
 HYD_1283 = { 1283 1286 1287 1308 } #Hyderabad
 
-ENG_1291 = { 1291 1296 1294 1295 1292 1293 } #Gujarat
+ENG_1291 = { 1296 1294 1295 } #Inner Gujarat
+
+VEN_1293 = { 1291 1292 1293 } #Outer Gujarat
 
 ENG_1297 = { 1297 1298 1299 1300 1301 1303 } #Bombay
 
@@ -833,9 +855,9 @@ NET_1449 = { 1430 1431 1432 1435 1434 1433 1436 1437 } #Celebes
 
 NET_1451 = { 1452 1453 1454 1560 } #Western New Guinea
 
-SPA_1455 = { 1455 1456 1457 1458 } #Luz�n
+SPA_1455 = { 1455 1456 1457 1458 } #Luzon
 
-SPA_1459 = { 1459 1460 1461 2565 } #Visayas
+SPA_1459 = { 2565 1459 1460 1461 } #Visayas
 
 SPA_1463 = { 1463 1462 1464 3310 } #Mindanao
 
@@ -978,7 +1000,7 @@ ALD_1718 = { 1718 1719 1711 1807 } #Sahara
 
 TUN_1726 = { 1725 1726 1727 1728 1729 1730 } #Tunisia
 
-TRI_1731 = { 1731 1733 1734 1732 1744 1740 1741 1742 3394 3395 3290 } #Tripolitania
+TRI_1731 = { 1731 1733 1734 1732 1744 1740 1741 3290 } #Tripolitania
 
 TRI_1735 = { 1735 1736 1738 2585 } #Cyrenaica
 
@@ -1082,26 +1104,30 @@ ASH_1910 = { 1915 1916 } #Volta
 
 FRA_1907 = { 1912 1911 1913 1910 } #Ghana
 
-FRA_1914 = { 1914 1917 1918 1922 } #Togo
+FRA_1914 = { 1914 1917 1918 1922 3394 } #Togo
 
 FRA_1919 = { 1919 1920 1921 } #Dahomey
 
-FRA_1923 = { 1923 1924 1925 1926 1927 } #Yoruba States
+FRA_1923 = { 1925 1926 } #Yoruba States
 
 FRA_1927 = { 1948 1938 1939 1940 1941 1946 1810 } #Hausaland
 
-FRA_1930 = { 1928 1929 1930 1931 1932 1161 } #Benin
+FRA_1930 = { 1928 1929 1930 1931 1932 1161 3361 608 } #Benin
 
-SOK_1934 = { 1933 1934 1935 1936 } #Biafra
+SOK_1934 = { 1933 1934 1935 1936 2690  } #Biafra
 
 SOK_1945 = { 1945 1947 1949 } #Kano
 
 SOK_1937 = { 1937 1942 1943 1944 1950 } #Tukari
 
+OYO_1742 = { 1742 1925 1927 912 3358 } #Kwara
+
+OYO_1924 = { 1924 1923 3395 3287 } #Egba-Ogun
+
 
 ### Central Africa
 
-SPA_1955 = { 1955 1954 1973 } #Equatorial Guinea
+SPA_1955 = { 1955 1954 } #Equatorial Guinea
 
 ENG_1956 = { 1956 1957 1958 1959 1962 } #Cameroon
 
@@ -1111,7 +1137,7 @@ FRA_1965 = { 1965 1966 1967 1968 1970 1971 1969 } #Ubangi-Shari
 
 #FRA_1970 = { } #Bangassou
 
-FRA_1972 = { 1972 1974 1975 1976 } #Gabon
+FRA_1972 = { 1972 1974 1975 1976 1973 } #Gabon
 
 BEL_1977 = { 1982 1983 1985 2000 } #Bas-Congo
 

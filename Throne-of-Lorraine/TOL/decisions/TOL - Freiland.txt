@@ -1,0 +1,297 @@
+political_decisions = {
+	TEX_Border_Victory = {
+		potential = {
+			tag = TEX
+			NOT = { has_global_flag = TEX_Border_Victory }
+		}
+		allow = {
+				war = no
+				TEX = {
+					all_core = {
+						OR = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+								}
+							}
+						}
+					}
+				}
+			}
+		effect = {
+			prestige = 25
+			any_owned = {
+					limit = { is_core = VEL }
+					limit = { is_core = TEX }
+					remove_core = VEL
+			}	
+			set_global_flag = TEX_Border_Victory
+				}
+	}
+	
+	TEX_Form_VKS = {
+		potential = {
+			tag = TEX
+			NOT = {
+				exists = VKS
+			}
+		}
+		
+		allow = {
+			is_greater_power = yes
+			war = no
+			VEL = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+						TEX = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+						GKS = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+			
+		effect = {
+			prestige = 20
+			inherit = GKS
+			inherit = VEL
+			change_tag = VKS
+			add_accepted_culture = gek
+			add_accepted_culture = veldlewer
+			add_accepted_culture = ashkenazi
+						any_owned = {
+					limit = { is_core = VEL }
+					add_core = VKS
+			}
+									any_owned = {
+					limit = { is_core = GKS }
+					add_core = VKS
+			}
+									any_owned = {
+					limit = { is_core = TEX }
+					add_core = VKS
+			}
+				limit = {
+			}
+		}
+		ai_will_do = {
+			factor = 1
+	}
+	}
+	
+	VKS_Annnex_AKI = {
+		potential = {
+			tag = VKS
+			NOT = { has_global_flag = VKS_Annnex_AKI }
+		}
+		allow = {
+			tag = VKS
+			is_greater_power = yes
+			AKI = {
+					all_core = {
+						OR = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+								}
+							}
+						}
+					}
+			}
+		}
+		effect = {
+			add_accepted_culture = american_german
+			add_accepted_culture = akino_german
+			inherit = AKI
+			set_global_flag = VKS_Annnex_AKI
+						any_owned = {
+					limit = { is_core = AKI }
+					add_core = VKS
+						}
+		}
+	}
+	
+	
+		VKS_National_Unity = {
+		potential = {
+			tag = VKS
+			NOT = { has_global_flag = VKS_National_Unity }
+			is_greater_power = yes
+		}
+		allow = {
+				war = no
+				has_global_flag = VKS_Annnex_AKI
+			}
+		effect = {
+			remove_accepted_culture = american_german
+			remove_accepted_culture = akino_german
+			remove_accepted_culture = gek
+			remove_accepted_culture = veldlewer
+			badboy = 10
+			set_global_flag = VKS_National_Unity
+			any_owned = {
+					limit = { is_core = VEL }
+					remove_core = VEL
+			}
+						any_owned = {
+					limit = { is_core = AKI }
+					remove_core = AKI
+			}
+						any_owned = {
+					limit = { is_core = GKS }
+					remove_core = GKS
+			}
+						any_owned = {
+					limit = { is_core = TEX }
+					remove_core = TEX
+			}
+				}
+	}
+	
+		liberty_enlightening_the_world = {
+		potential = {
+			NOT = {
+				has_global_flag = statue_of_liberty_has_been_built
+			}
+			tag = VKS
+		}
+		allow = {
+			has_global_flag = VKS_Annnex_AKI
+		}
+	
+		effect = {
+			set_global_flag = statue_of_liberty_has_been_built
+			any_pop = {
+				militancy = -0.5
+			}
+			VKS = {
+				country_event = { id=19300 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			}
+		}
+	
+	VKS_Border = {
+		potential = {
+			tag = VKS
+			NOT = { has_global_flag = Fat_Nuts }
+			has_global_flag = TEX_Border_Victory
+		}
+		allow = {
+			war = no
+			}
+		effect = {
+			set_global_flag = VKS_Border
+			3451 = { secede_province = THIS }
+			88 = { secede_province = THIS }
+			3449 = { secede_province = THIS }
+			108 = { secede_province = THIS }
+			109 = { secede_province = THIS }
+			110 = { secede_province = THIS }
+			111 = { secede_province = THIS }
+			99 = { secede_province = THIS }
+			98 = { secede_province = THIS }
+			97 = { secede_province = THIS }
+			3459 = { secede_province = THIS }
+			96 = { secede_province = THIS }
+			3458 = { secede_province = THIS }
+			94 = { secede_province = THIS }
+			95 = { secede_province = THIS }
+			3457 = { secede_province = THIS }
+			3452 = { secede_province = THIS }
+			86 = { secede_province = THIS }
+			3453 = { secede_province = THIS }
+			113 = { secede_province = THIS }
+			3467 = { secede_province = THIS }
+			114 = { secede_province = THIS }
+			92 = { secede_province = THIS }
+			3476 = { secede_province = THIS }
+			3475 = { secede_province = THIS }
+			91 = { secede_province = THIS }
+			93 = { secede_province = THIS }
+			80 = { secede_province = THIS }
+			3466 = { secede_province = THIS }
+			3465 = { secede_province = THIS }
+			3464 = { secede_province = THIS }
+			79 = { secede_province = THIS }
+			3468 = { secede_province = THIS }
+			107 = { secede_province = THIS }
+			82 = { secede_province = THIS }
+			3463 = { secede_province = THIS }
+			3461 = { secede_province = THIS }
+			add_core = 78
+			set_global_flag = Fat_Nuts
+			
+		}
+	}
+	VKS_Free_Slaves = {
+		potential = {
+			tag = VKS
+			NOT = { has_global_flag = VKS_freedom }
+		}
+		allow = {
+				war = no
+				has_global_flag = VKS_National_Unity
+			}
+		effect = {
+			any_owned = {
+				limit = { is_core = NAF }
+					add_core = VKS
+						}
+			prestige = 25
+			add_accepted_culture = afro_french
+			set_global_flag = VKS_Freedom
+		}
+	}
+		VKS_Destroy_Amauldi = {
+		potential = {
+			has_global_flag = VKS_Freedom
+			tag = VKS
+			NOT = { has_global_flag = VKS_Destroy_Amauldi }
+		}
+		allow = {
+			tag = VKS
+			is_greater_power = yes
+			USA = {
+					all_core = { owned_by = THIS }	
+			}
+		}
+		effect = {
+			any_owned = {
+				limit = { is_core = USA }
+					add_core = VKS
+						}
+			any_owned = {
+				imit = { is_core = USA }
+					remove_core = USA
+			}
+			prestige = 25
+			set_global_flag = VKS_Destroy_Amauldi
+		}
+	}
+}

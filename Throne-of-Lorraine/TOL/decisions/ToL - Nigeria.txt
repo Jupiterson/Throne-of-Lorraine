@@ -3,7 +3,7 @@ political_decisions = {
 expell_christians = {
 		picture = patagonia_map
 		potential = {
-			tag = OYO
+			tag = IFE
 			NOT = { has_country_flag = expelled_chr }
 			2392 = { empty = yes }
 			2396 = { empty = yes }
@@ -31,6 +31,56 @@ expell_christians = {
 				release = KRI
 				}
 			THIS = { country_event = 23299 }
+		}
+	}
+	
+	
+	form_ife = {
+		picture = map_nigeria
+
+		potential = {
+			is_culture_group = yoruboid
+			NOT = { exists = IFE }
+			}
+
+		allow = {
+			IFE = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							ai = yes
+							in_sphere = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
+							war = no
+							is_greater_power = no
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 30		
+			any_country = {
+				limit = {
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				any_owned = {
+					limit = { is_core = IFE }
+					secede_province = THIS
+				}
+			}
+			change_tag = IFE 
+  
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 

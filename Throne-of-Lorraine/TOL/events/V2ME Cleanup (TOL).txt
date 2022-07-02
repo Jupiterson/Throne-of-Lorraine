@@ -36,6 +36,52 @@ country_event = {
 	option = {
 		name = "Checking..."
 		
+##		TIN = {
+#		any_owned = {
+#			limit = {
+#				owned_by = THIS
+#			}
+#			any_neighbor_province = {
+#				limit = {
+#					AND = {
+#						NOT = {
+#							owned_by = THIS
+#						}
+#						controlled_by = THIS	
+#					}
+#					owner = {
+#						num_of_cities = 2
+#					}
+#				}
+#				set_province_flag = RecentAquire
+#				secede_province = THIS
+#			}
+#		}
+#	}
+#		any_country = {
+#				limit = {
+#					NOT = {
+#						tag = TIN
+#					}
+#				}
+#			any_owned = {
+#				limit = {
+#					AND = {
+#					controlled_by = TIN
+#					owner = {
+#						NOT = {
+#						num_of_cities = 2
+#						}
+#					}
+#				}
+#			set_province_flag = RecentAquire
+#			owner = {
+#				annex_to = TIN
+#				}
+#			}
+#		}
+#		}
+		
 		any_country = {
 			limit = {
 				exists = yes
@@ -182,7 +228,6 @@ country_event = {
 			country_event = 477877788
 			neutrality = yes
 		}
-		
 		#new round of dismantlement (soon to be deprecated, remove later)
 		any_country = {
 			limit = {
@@ -495,7 +540,6 @@ country_event = {
 				remove_core = MAS
 			}
 		}
-		
 		#fix for bad modifier
 		any_country = {
 			limit = {
@@ -4100,7 +4144,7 @@ country_event = {
 								region = SIA_1366 #Cambodia
 								region = DAI_1369 #Tonkin
 								region = DAI_1375 #Annam
-								region = DAI_1380 #Cochinchina
+								#region = DAI_1380 #Cochinchina
 							}
 						}
 						add_core = IDC
@@ -4391,7 +4435,6 @@ country_event = {
 				civilized = yes
 				war = no
 				revolution_n_counterrevolution = 1
-				owns = 912
 				owns = 913
 				owns = 914
 				owns = 915
@@ -4924,7 +4967,8 @@ country_event = {
 			}
 			add_country_modifier = { name = religious_minority_oppression duration = 365 }
 		}
-		
+		912 = { remove_core = BYZ remove_core = KNI }
+		1121 = { remove_core = COP }
 		#slave pop growth
 		any_country = {
 			limit = {

@@ -1265,22 +1265,6 @@ pan_roman = {
 		radicalism = 10
 	}
 	
-	neo_roman = {
-		color = { 116 46 129 }															
-		first_names = { Appius Aulus Caelus Decimus Decius Drusus Faustus Gaius Gnaeus Lucius Mamercus Manius Marcus Mettius Numerius Publius Quintus Secundus Septimus Servius Sextus Spurius Tertius Titus Tiberius Titus
-			Albinus Albus Agricola Agrippa Aratus Asina Auspex Balbus Barbatus Bibulus Brutus Bubo Buteo 
-			Caesar Calvus Calvinus Cato Catulus Cethegus Cicero Cinna Cotta Crispian Curio Dama Damasus Dentatus Dives Dolabella Donatus Draco Emeritus Eugenius Euphemius Falco Falx Felix Fimbria Flaccus Florus Fronto Gala Galerus Gemellus Gorgonius Gracchus Gracilis Habitus Herma Hilarius Horatius Ignatius Iuba Labeo Laenas Lepidus Leptis Lentulus Libo Longinus Longus Lucan Lucullus Lupius Macro Martialis Marullus Maximus Memmius Mercator Messalla Montanus Murena Mus Nasica Oceanus Octavianus Opis
-			Optatus Otho Paenula Pantera Pavo Peregrinus Pertinax Petronax Pictor Pilatus Polus Prisca Primus Procyon Pulcher 
-			Quarto Quiricus Regillus Remus Romanus Romulus Rufus Ruso Sabinus Salinator Scaevola Scipio Scrofa Seneca Senna 
-			Severus Sorex Statius Strabo Super Superbus Tacitus Tertulus Trebonius Tibullus Tullius Ursinus Ursus Valens Varro Varus Vergilius Viator Victor Vindex Virilis Vitalis Vitus Zeno Zoilus Zosimus }
-	
-		last_names = { Aemilia Antonia Atilia Atia Aufidia Aurelia Caecilia Calpurnia Cassia Claudia
-			Clodia Cornelia Domitia Fabia Flavia Fulvia Furia Gabinia Galeria Horatia Julia
-			Junia Licinia Livia Lucia Mamilia Manlia Maria Memmia Nigidia Octavia Papiria Plinia 
-			Postumia Pompeia Rabiria Quinctia Salvia Scribonia Sempronia Sertoria Silia Titia
-			Tullia Ulpia Valeria Vesuvia Vinicia Viridia Vitellia }
-	}
-	
 	immundus = {
 		color = { 190 10 90}															
 		first_names = { Aemilia Antonia Atilia Atia Aufidia Aurelia Caecilia Calpurnia Cassia Claudia
@@ -1469,6 +1453,35 @@ east_slavic = {
 			Giorgi Grigoriy Igor Ivan Kirill Konstantin Lavr Leonid Lev Maxim
 			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei
 			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yur
+			
+			Vasiliy Ivan Dmitriy Yuriy Andrei Semen Fyodor Afanasiy Akim Aleksandr Alexei Anatoliy Arkadiy 
+			Dorofey Feodosiy Feofilakt Gavriil Innokentiy Iosif Lavrentiy Makariy Matveiy Mikhail Nazariy 
+			Onisim Pavel Prokopiy Pyotr Radomir Saveliy Sergei Terentiy Valeriy Yakim Yevgeniy
+			Afanasiy Athanasius Alexandr Alexander Alexei Alexis Andrei Andrew Boris Briachislav 
+			Bretislaus Nikifor
+			Daniil Daniel Davyd David Demid Dmitriy Demetrius Dobrynia Fedot Theodat Feodor Theodore 
+			Gavriil Gabriel Gleb
+			Grigoriy Gregory Iakov Jacob Igor Iliya Ingvar Ingvar Ivan John Iziaslav Kirill Cyril 
+			Konstantin Constantine Koz'ma Cosma Lev Leo Matfei Matthew Mikhail Michael Mitrofan 
+			Mstislav Nikita Oleg Helge Pavel Paul Putiata Radoslav Rodislav Rogvolod Roman 
+			Rostislav Rurik 
+			Rurik Ruslan Simeon Simon Stanislav Stanislav Stepan Stephen Sudislav
+			Svetozar Sviatopolk Svatopluk Sviatoslav Sviatoslav Terentiy Trifon Vasiliy Basil Vasilko 
+			Viacheslav Vladimir Vladimir Vladislav Vladislav Voislav Volodar Vseslav
+			Vsevolod Vyshata Vysheslav Yaropolk Yaroslav Jaroslav Yefimiy Yelisey Yemelyan Emil Yeremey 
+			Yevstafiy Yuriy George			
+			
+			Andrei Lubko Olgierd Bryachislav Vasiliy Svyatoslav Vladimir Izyaslav Vseslav Boris Aleksandr Adrian 
+			Afanasiy Daniil Dmitriy Dorofey Faddey Feodosiy Feofil Foma Fyodor Gavriil Grigoriy Igor Ivan 
+			Mikhail Naum Nikita Nikolai Pankrati Prokhor Pyotr Radoslav Ruslan Semen Serafim Sevastian Stanislav 
+			Timofeiy Varfolomeiy Vikentiy Yaroslav Mefodiy
+			
+			Ivan Dmitriy Yuriy Andrei Semen Boris Fyodor Oleg Afanasiy Akim Aleksandr Alexei Anatoliy Arkadiy 
+			Dorofey Feodosiy Feofilakt Gavriil Innokentiy Iosif Lavrentiy Makariy Matveiy Mikhail Nazariy 
+			Onisim Pavel Prokopiy Pyotr Radomir Saveliy Sergei Terentiy Valeriy Yakim Yevgeniy Yaroslav Yaropolk 
+			Vyacheslav Vsevolod Igor Izyaslav Rostislav Vladimir Mstislav Gleb Roman Ryurik Svyatoslav Ingvar 	
+			Stanislav Daniil Nikifor
+			
 		}
 
 		last_names = {
@@ -1531,11 +1544,7 @@ east_slavic = {
 			Kynev Kynkurogov Kyrnyshev Kyrov Kysov Kychanov 
 			Lyurov Michkin Moshev Oshev Oshkokov Porsin Purtov
 			Rakin Rochev Ruchev Syuzev Cheskidov Yusev
-			Kudymov Zyrianov 
-			
-			
-			
-			
+			Kudymov Zyrianov
 		}
 	}
 	#union = RUS
@@ -1546,7 +1555,7 @@ ruthenian = {
 	unit = EuropeanGC
 
 	ruthenyan = {
-		color = {128 113 72 }
+		color = {83 102 46} #color = {128 113 72 }
 			first_names = {
 				Alexei Andrei Anton Arkadiy Borys Cyril Dmitro Fyodor Hryhoriy Ivan Lavr Leonid Lev
 				Mikhail Mykola Nikita Oleksandr Pavel Petro Piotr Roman Ryhor Semyon Sergiy Stanislaw Uladzimir Valeriy
@@ -1691,18 +1700,18 @@ levantine = {
 	}
 	copt = {
 		color = {8 127 177}
-		first_names = { Adamantios Alexandros Anastasios Andreas Antonios Aristidis Athanasios Augustinos Benizelos Charalambos
-		Charilaos Dimitrios Diomidis Eleftherios Emmanouil Epameinontas Evripidis Gennaios Georgios Ilias
-		Ionnis Kitsos Konstantinos Kyriakos Kyriakoulis Leonidas Makarios Markos Mikhael Militiadis
-		Nikolaos Odysseas Othon Panagiotis Pavlos Petros Sofoklis Sotiris Spyridion Spyros
-		Staikos Stefanos Stylianos Themistoklis Theodoros Tharyvoulos Tzannis Vasos Viktor Zinovios
+		first_names = { 
+			Aaron Abanoub Abderahman Abianos Abisalom Ablarion Abraam 
+			Ahmod Aiai Aha Akhom Amon AmakhteAndronicus Androus Apanoub Apahour Apamon Apas Aretee Ashraf Athanasios Beet Bertouet Biktor Binyamin Bishoi Bolis Boutros Danyal "Da’oud" Ennikeran Erhu Ezra Farag Gerges Ghabri Guirguis Habil Hanouf Hanri Haroun Hesdy Ilyas Ishaaq
+			Jerjer Jinti Jori Keloj Krystafer Kyrillos Lot Macari Mareten Matta Mei Mikail
+			Milad Mina Musa Nakat Nahdi Nishde Nai Naui Nishti Nofr Noub Ounouf Ourot Ouini Ounisht Pajro Pakat Pakhom Pamin
+			Panous Papnouti Pashnona Pasnadi Patape Payom Philotheos Pijimi Pijoul Pikhit Pimen Pimoui Pishai "Pisha-eneh" Pishoui Psote Rami Rashad Rashi Roufail Ruweis Shenouda Shenouti Shosi "Sim'an" Sok Tadros Taio Tawadros Touma Yakovos Yared 
+			Yoannis Yousab Zacharias Zaia
 		}
 
-		last_names = { Charalambis Christakis-Zografos Danglis Dousmanis Foumis Gonatas Hatzianestis Kallergis Kanaris Katsimiros
-		Kolokotronis Kondylis Kountouriotis Kriezis Makriyannis Manos Mavrocordatos Mavrovouniotis Metaxas Mouskos
-		Nider Othonaios Palaskas Pangalos Papadiamantopoulos Papadopoulos Papagos Papoulas Parakevopouolos Plapoutas
-		Plastiras Sapountzakis Sarafis Smolenskis Sofoulis Soutsos Spyromilios Staikopoulos Stanotas "tes Elladas"
-		Trikoupis Tsakalotos Tsolakoglou Typaldos-Alfonsatos Tzavelas Vassos Venizelos Voulgaris Zaimis Zymvrakakis
+		last_names = { 
+			"Psen-Aaron" "Psen-Abanoub" "Psen-Abderahman" "Psen-Abianos" "Psen-Abisalom" "Psen-Ablarion" "Psen-Abraam" 
+			"Psen-Ahmod" "Psen-Aiai" "Psen-Aha" "Psen-Akhom" "Psen-Amon" "Psen-Amakhte" "Psen-Androus" "Psen-Apanoub" "Psen-Apahour" "Psen-Apamon" "Psen-Apas" "Psen-Aretee" "Psen-Ashraf"   "Psen-Bertouet" "Psen-Biktor" "Psen-Binyamin" "Psen-Bishoi" "Psen-Bolis" "Psen-Boutros" "Psen-Danyal" "Psen-Da'oud" "Psen-Ennikeran" "Psen-Erhu" "Psen-Ezra" "Psen-Farag" "Psen-Gerges" "Psen-Ghabri" "Psen-Guirguis" "Psen-Habil" "Psen-Hanouf" "Psen-Hanri" "Psen-Haroun" "Psen-Hesdy" "Psen-Ilyas" "Psen-Ishaaq" "Psen-Jerjer" "Psen-Jinti" "Psen-Jori" "Psen-Keloj" "Psen-Krystafer" "Psen-Kyrillos" "Psen-Lot" "Psen-Macari" "Psen-Mareten" "Psen-Matta" "Psen-Mei" "Psen-Mikail"	"Psen-Milad" "Psen-Mina" "Psen-Musa" "Psen-Nakat" "Psen-Nahdi" "Psen-Nishde" "Psen-Nai" "Psen-Naui" "Psen-Nishti" "Psen-Nofr" "Psen-Noub" "Psen-Ounouf" "Psen-Ourot" "Psen-Ouini" "Psen-Ounisht" "Psen-Pajro" "Psen-Pakat" "Psen-Pakhom" "Psen-Pamin" "Psen-Panous" "Psen-Papnouti" "Psen-Pashnona" "Psen-Pasnadi" "Psen-Patape" "Psen-Payom" "Psen-Philotheos" "Psen-Pijimi" "Psen-Pijoul" "Psen-Pikhit" "Psen-Pimen" "Psen-Pimoue" "Psen-Pishai" "Psen-Pishoui" "Psen-Psote" "Psen-Rami" "Psen-Rashad" "Psen-Rashi" "Psen-Roufail" "Psen-Ruweis" "Psen-Shenouda" "Psen-Shenouti" "Psen-Shosi" "Psen-Sim'an" "Psen-Sok" "Psen-Tadros" "Psen-Taio" "Psen-Tawadros" "Psen-Touma" "Psen-Yakovos" "Psen-Yared" "Psen-Yoannis" "Psen-Yousab" "Psen-Zacharias" "Psen-Zaia"
 		}
 		radicalism = 5
 	}
@@ -2192,7 +2201,7 @@ central_asian = {
 			}
 	}
 	kazak = {
-		color = {83 102 46}
+		color = {128 113 72 }  #color = {83 102 46}
 		first_names = {
 			Ablai "Abu al-Khayr" Aryn Bukei Chokan
 			Dulat Ibirai Isatai Ishim Jangir Kenisary
@@ -2585,6 +2594,15 @@ indo_iranian = {
 
 		last_names = { Pansara Vaghela Solanki Modhvadia Mehta Baro Parmar
 
+		}
+	}
+	venetoindio = {
+		color = {171 216 75}
+		first_names = { Chetan Fakirbhai Jivraj Madhavsingh Khemchand Manubhai Bharatsingh Balwantry Chabildas Maniraj
+
+		}
+
+		last_names = { Acciaioli Accorsi Aiello Albanese Alemanno Altobelli Amendola Antonelli Arbore Arcuri Arena Argenti Arpino Arrigoni Balbo Balestrieri Barzaghi Basile Battaglia Bellocchio Bencivenga Bergamasco Bevilacqua Bianchi Biral Bisceglie Borghese Bruni Cacciari Cafiero Caligari Cantoni Caracciolo Castelli Catalano Coppola D'Amico "De Fabritiis" "De Sanctis" "Di Stefano" Esposito Fabris Falcone Fenoglio Ferreri Genovese Grandi Graziani Grimaldi Iacono Iodice "La Terza" Locatelli Longaro Lopez Luzzati Maggio Magris Mainardi Malatesta Manin Marchegiani Marchese Masi Mastandrea Montani Morone Nardi Nicotra Nobile Nodari Ottaviano Pacifico Padovan Palazzi Pallavicino Palmas Palmieri Palumbo Pandolfi Pardo Pavese Pellizzon Prestigiacomo Quilici Ragonese Ranieri Riccardi Rizzo Romanelli Rossi Rovere Russo Sabatini Salvemini Santoro Schiaffino Servillo Severin Sonzogno Spagnoli Spinelli Tebaldi Tedeschi Torreggiani Torrisi Trevisan Turati Urbano Venier Venturi Veronesi Vicari Volpe Zambon Zeppilli Zerbin
 		}
 	}
 	marathi = {
@@ -3514,13 +3532,6 @@ native_american = {
 
 		last_names = { Piratininga Tabajara Temiminó Tamoio Tabajara Caeté Tupinaé Temiminó Tupina Aricobé }
 	}
-	metis = {
-		color = {15 68 192}
-		first_names = { Louis John Amroise-Dydime Gabriel Daniel James Jaque William Joel
-		}
-		last_names = { Riel Bruce Lépine Dumont Clarence Martin
-		}
-	}
 	dakota = {
 		color = {117 84 13}
 		first_names = { Wabasha Petette Tartunkanasiah Keejee Tarsega Wamadetunka Wannata Kokomako Shacope Penision Etaseepa 
@@ -4093,15 +4104,6 @@ west_african = {
 		last_names = { N'Dyaye Seeku Khaari Yaago Peya Ma-Dyigen Koddu Paate Penda Aram Kodu Tam Dior
 		}
 	}
-	yoruba = {
-		color = {240 75 89}
-		first_names = { Siyanbola Lawani Adeyemi Adelu Atiba Oluewu Amodo Majotu Makua Adebo Bello Onikepe Gbadegesin Ajikin Abisi Lauru Kase Agidigbo Ademufekun
-		}
-
-		last_names = { Oladigbolu Adeniran Agogoja Alowolodu Atobatele Zumaw Oyo Tofa Tonyon Bezon Hungbo Dudu
-		}
-	}
-	
 	alejo = {
 		color = {218 46 57}
 		first_names = { Siyanbola Lawani Adeyemi Adelu Atiba Oluewu Amodo Majotu Makua Adebo Bello Onikepe Gbadegesin Ajikin Abisi Lauru Kase Agidigbo Ademufekun
@@ -4118,8 +4120,78 @@ west_african = {
 		last_names = { Oladigbolu Adeniran Agogoja Alowolodu Atobatele Zumaw Oyo Tofa Tonyon Bezon Hungbo Dudu
 		}
 	}
+	ibibio = {
+        color = {99 157 68}
+        first_names = { Ekpenyong Effiom Offiong Edem Okoho Asibong Eyo Orok Eyamba Ekpo Effefiong Ededem Tete
+        }
+
+        last_names = { Eyamba Minika Oku Ekpe Efa Nta Ene
+        }
+    }
+    itsekari = {
+        color = {209 251 255}
+        first_names = { Taabansi Enweleana Jiofo Obalike Ewenetem Chiemeka Elechi Ikenna Nonyelum Obijiaku Oji Onyeka Orji Rapuluchukwu Udoka Zebenjo Zinachukwudi Dibia Dumaka Azuka Anene Jideofor Nnaemeka Nnamdi Nnanna
+        }
+
+        last_names = { Udene Onyeso Equiano Opobo Achebe
+        }
+    }
+	ibo = {
+        color = {88 27 192}
+        first_names = { Taabansi Enweleana Jiofo Obalike Ewenetem Chiemeka Elechi Ikenna Nonyelum Obijiaku Oji Onyeka Orji Rapuluchukwu Udoka Zebenjo Zinachukwudi Dibia Dumaka Azuka Anene Jideofor Nnaemeka Nnamdi Nnanna
+        }
+
+        last_names = { Udene Onyeso Equiano Opobo Achebe
+        }
+    }
+	neo_roman = {
+		color = { 135 146 82 }		 #color = { 116 46 129 }														
+		first_names = { Appius Aulus Caelus Decimus Decius Drusus Faustus Gaius Gnaeus Lucius Mamercus Manius Marcus Mettius Numerius Publius Quintus Secundus Septimus Servius Sextus Spurius Tertius Titus Tiberius Titus
+			Albinus Albus Agricola Agrippa Aratus Asina Auspex Balbus Barbatus Bibulus Brutus Bubo Buteo 
+			Caesar Calvus Calvinus Cato Catulus Cethegus Cicero Cinna Cotta Crispian Curio Dama Damasus Dentatus Dives Dolabella Donatus Draco Emeritus Eugenius Euphemius Falco Falx Felix Fimbria Flaccus Florus Fronto Gala Galerus Gemellus Gorgonius Gracchus Gracilis Habitus Herma Hilarius Horatius Ignatius Iuba Labeo Laenas Lepidus Leptis Lentulus Libo Longinus Longus Lucan Lucullus Lupius Macro Martialis Marullus Maximus Memmius Mercator Messalla Montanus Murena Mus Nasica Oceanus Octavianus Opis
+			Optatus Otho Paenula Pantera Pavo Peregrinus Pertinax Petronax Pictor Pilatus Polus Prisca Primus Procyon Pulcher 
+			Quarto Quiricus Regillus Remus Romanus Romulus Rufus Ruso Sabinus Salinator Scaevola Scipio Scrofa Seneca Senna 
+			Severus Sorex Statius Strabo Super Superbus Tacitus Tertulus Trebonius Tibullus Tullius Ursinus Ursus Valens Varro Varus Vergilius Viator Victor Vindex Virilis Vitalis Vitus Zeno Zoilus Zosimus }
+	
+		last_names = { Aemilia Antonia Atilia Atia Aufidia Aurelia Caecilia Calpurnia Cassia Claudia
+			Clodia Cornelia Domitia Fabia Flavia Fulvia Furia Gabinia Galeria Horatia Julia
+			Junia Licinia Livia Lucia Mamilia Manlia Maria Memmia Nigidia Octavia Papiria Plinia 
+			Postumia Pompeia Rabiria Quinctia Salvia Scribonia Sempronia Sertoria Silia Titia
+			Tullia Ulpia Valeria Vesuvia Vinicia Viridia Vitellia }
+	}
 }
 
+yoruboid = {
+	leader = african
+
+	unit = AfricanGC
+	yoruba = {
+		color = {240 75 89}
+		first_names = { Siyanbola Lawani Adeyemi Adelu Atiba Oluewu Amodo Majotu Makua Adebo Bello Onikepe Gbadegesin Ajikin Abisi Lauru Kase Agidigbo Ademufekun
+		}
+
+		last_names = { Oladigbolu Adeniran Agogoja Alowolodu Atobatele Zumaw Oyo Tofa Tonyon Bezon Hungbo Dudu
+		}
+	}
+	fon = {
+        color = {188 92 47}
+        first_names = { Behanzin Ghezo Glele Adandozan Agonglo Kpengla Tegbessou Agadja
+        }
+
+        last_names = { Madogugu Zedoko Basagla Chadakogundo
+        }
+    }
+	edo_culture = {
+        color = {88 99 154}
+        first_names = { Odayon Ode Edegbe Osahon Igodo Erediauwa Osemwende Adolo Ovonramwen Eweka Akenzua Ezoti Esigie
+        }
+
+        last_names = { Ewuare Nogbaisi Orhogbua Ehengbuda Akengbedo Akenzua Ogbebo
+        }
+    }
+	union = IFE
+	}
+	
 bantu = {
 	leader = african
 
@@ -4268,14 +4340,7 @@ southern_african = {
 		last_names = { Moshoeshoe Lerotholi Masopha Matsaba Leabua Mamohato
 		}
 	}
-	xhosa = {
-		color = {49 58 156}
-		first_names = { Mthuthuzeli Nolizwe Nonceba Paki Sipliwo Themba Uuka Thandiwe
-		}
-
-		last_names = { Behle Dosini Dlamini Gqunu Gxarha Hegebe Khawatu Khumalo Kwayi Maduna Qadi Rhadebe Ncuthu Mpemvu Sikhosana Xesibe Zangwa
-		}
-	}
+	
 #	yao = {
 #		color = {189 20 31}
 #		first_names = { Chekandino Chikumbu Chisisi Kapendi Linje Lukongolo Mapira Masibuwa Ndembo Ngolinga Ngombe Thenga Umi Utni Citiwala Kajombo Mbiya
@@ -4285,8 +4350,8 @@ southern_african = {
 #		}
 #	}
 	zulu = {
-		color = {0 0 0}
-		first_names = { Cetshwayo Ntshingwayo Dabulamanzi Sikukuni Sihayo Mavumengwana Mbilini Mnyamana Hamu Gawozi Mgojana Zibhebhu Hehlokazulu Manyonyoba Mahubulwana Mkhosana Dingiswayo Senzagkhona Sekhukhune Sekethwayo Somopho
+		color = {0 0 60}
+		first_names = { Behle Dosini Dlamini Gqunu Gxarha Hegebe Khawatu Khumalo Kwayi Maduna Qadi Rhadebe Ncuthu Mpemvu Sikhosana Xesibe Zangwa Mthuthuzeli Nolizwe Nonceba Paki Sipliwo Themba Uuka Thandiwe Cetshwayo Ntshingwayo Dabulamanzi Sikukuni Sihayo Mavumengwana Mbilini Mnyamana Hamu Gawozi Mgojana Zibhebhu Hehlokazulu Manyonyoba Mahubulwana Mkhosana Dingiswayo Senzagkhona Sekhukhune Sekethwayo Somopho
 		}
 
 		last_names = { kaMpande kaMahole KaMdlela waMswati Buthelezei Khoza kaSihayo kaMvundlana kaZikhala kaMaphitha

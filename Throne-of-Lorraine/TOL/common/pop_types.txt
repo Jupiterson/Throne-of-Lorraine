@@ -1047,23 +1047,27 @@ assimilation_chance = {
         }
     }
 
-    #modifier = {
-    #   factor = -20
-    #    has_culture_core = yes
-	#	NOT = {
-	#	    AND = {
-	#	        country = { has_country_flag = can_ignore_cultural_core }
-	#		    OR = {
-	#		        has_pop_culture = finnish
-	#		        has_pop_culture = estonian
-	#		        has_pop_culture = norwegian
-	#		        has_pop_culture = latvian
-	#				has_pop_culture = sami
-	#		
-	#	        }
-     #       }
-	#	}
-	#}
+    modifier = {
+       factor = -20
+        has_culture_core = yes
+		NOT = {
+		    AND = {
+		        country = { has_country_flag = can_ignore_cultural_core primary_culture = berber }
+			    OR = {
+			        has_pop_culture = finnish
+			        has_pop_culture = estonian
+			        has_pop_culture = norwegian
+			        has_pop_culture = latvian
+					has_pop_culture = sami
+		        }
+            }
+		}
+	}
+	
+	 modifier = {
+        factor = 50.0
+        country = { primary_culture = berber }
+    }
 
     modifier = {
         factor = -0.2
@@ -1153,9 +1157,9 @@ assimilation_chance = {
         country = { primary_culture = japanese }
     }
 	
-	    modifier = {
-        factor = 1.5
-		OR = { 
+	modifier = {
+        factor = 2.5
+		OR = {
         country = { primary_culture = greek }
 		country = { primary_culture = ashkenazi }
 		}
@@ -1240,6 +1244,19 @@ conversion_chance = {
             has_country_flag = missionary_activity
         }
     }
+	
+	modifier = {
+        factor = 1.5
+        country = {
+            has_country_flag = conversion_by_sword
+        }
+    }
+	
+	
+	modifier = {
+       factor = 10
+	   country = { primary_culture = berber }
+	}
 
     modifier = {
         factor = -0.95

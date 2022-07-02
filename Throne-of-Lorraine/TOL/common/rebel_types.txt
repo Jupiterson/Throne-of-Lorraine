@@ -1676,6 +1676,7 @@ pan_nationalist_rebels = {
 		democracy = democracy
 		federal_democracy = federal_democracy
 		theocracy = theocracy
+		constitutional_theocracy = constitutional_theocracy
 		colonial_company = democracy
 		hanseatic = democracy
 		merchant_republic = democracy
@@ -2068,7 +2069,7 @@ pan_nationalist_rebels = {
 			limit = {
 				owner = { is_culture_group = britannian }
 			}
-			owner = { country_event = 100135 }
+			owner = { country_event = 96200 } #100135 } #96200 is the placeholder for now
 		}
 		random_owned = {
 			limit = {
@@ -2090,7 +2091,7 @@ pan_nationalist_rebels = {
 					NOT = { is_culture_group = pan_romanian }
 					NOT = { is_culture_group = scandinavian }
 					NOT = { is_culture_group = iberian }
-					NOT = { is_culture_group = britannian }
+					#NOT = { is_culture_group = britannian }
 				}
 			}
 			owner = { country_event = 96200 }
@@ -2120,6 +2121,7 @@ carlist_rebels = {
 		democracy = absolute_monarchy
 		federal_democracy = absolute_monarchy
 		theocracy = theocracy
+		constitutional_theocracy = theocracy
 		colonial_company = absolute_monarchy
 		hanseatic = absolute_monarchy
 		merchant_republic = absolute_monarchy
@@ -2400,6 +2402,7 @@ christino_rebels = {
 		democracy = hms_government
 		federal_democracy = hms_government
 		theocracy = theocracy
+		constitutional_theocracy = theocracy
 		colonial_company = hms_government
 		hanseatic = hms_government
 		merchant_republic = hms_government
@@ -2658,6 +2661,7 @@ boxer_rebels = {
 		democracy = absolute_monarchy
 		federal_democracy = absolute_monarchy
 		theocracy = theocracy
+		constitutional_theocracy = theocracy
 		colonial_company = absolute_monarchy
 		hanseatic = absolute_monarchy
 		merchant_republic = absolute_monarchy
@@ -2946,6 +2950,7 @@ red_shirts = {
 		democracy = democracy
 		federal_democracy = federal_democracy
 		theocracy = democracy
+		constitutional_theocracy = democracy
 		colonial_company = democracy
 		hanseatic = hanseatic
 		merchant_republic = merchant_republic
@@ -3195,10 +3200,14 @@ indian_sepoys = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
+		absolute_empire = absolute_empire
+		semi_constitutional_empire = semi_constitutional_empire
+		constitutional_empire = constitutional_empire
 		dominion = democracy
 		democracy = democracy
 		federal_democracy = federal_democracy
 		theocracy = theocracy
+		constitutional_theocracy = constitutional_theocracy
 		colonial_company = democracy
 		hanseatic = hanseatic
 		merchant_republic = merchant_republic
@@ -3470,10 +3479,14 @@ indian_nationalists = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
+		absolute_empire = absolute_empire
+		semi_constitutional_empire = semi_constitutional_empire
+		constitutional_empire = constitutional_empire
 		dominion = democracy
 		democracy = democracy
 		federal_democracy = federal_democracy
 		theocracy = theocracy
+		constitutional_theocracy = constitutional_theocracy
 		colonial_company = democracy
 		hanseatic = hanseatic
 		merchant_republic = merchant_republic
@@ -4246,6 +4259,7 @@ reformist_rebels = {
 		democracy = peasant_republic
 		federal_democracy = federal_democracy
 		theocracy = constitutional_theocracy
+		constitutional_theocracy = democracy
 		colonial_company = colonial_company
 		hanseatic = democracy
 		merchant_republic = democracy
@@ -6803,6 +6817,7 @@ slave_revolt = {
 		democracy = democracy
 		federal_democracy = democracy
 		theocracy = democracy
+		constitutional_theocracy = democracy
 		colonial_company = democracy
 		hanseatic = democracy
 		merchant_republic = democracy

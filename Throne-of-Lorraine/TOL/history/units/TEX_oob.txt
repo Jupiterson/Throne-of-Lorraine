@@ -1,11 +1,22 @@
 
-FRA = {value = -100}
+FRA = {
+	value = -100
+}
+
 PIR = {
 	value = -100
 }
 
 JES = {
 	value = -25
+}
+
+AKI = {
+	value = -200
+}
+
+USA = { 
+	value = -200
 }
 
 leader = {
@@ -79,6 +90,18 @@ navy = {
 
 	ship = {
 		name= "Freiheit"
+		type = clipper_transport
+	}
+		ship = {
+		name= "Republik"
+		type = clipper_transport
+	}
+		ship = {
+		name= "Frei"
+		type = clipper_transport
+	}
+		ship = {
+		name= "Freiland"
 		type = clipper_transport
 	}
 

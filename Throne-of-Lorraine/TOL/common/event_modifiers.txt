@@ -1805,7 +1805,7 @@ international_negotiations = {
 the_statue_of_liberty = {
 	prestige = 0.01
 	global_immigrant_attract = 0.5	#100%
-	global_assimilation_rate = 0.5
+	global_assimilation_rate = 2
 	icon = 15
 }
 
@@ -5036,4 +5036,47 @@ growth_of_shiraz = {
 	farm_rgo_size = 0.4
 	mine_rgo_size = 0.4
 	icon = 11
+}
+
+
+the_slate_empire = {
+	min_tariff = 0.2
+	tariff_efficiency_modifier = 0.1
+	tax_efficiency = 0.05
+	icon = 9
+}
+
+lost_crusade = {
+	farm_rgo_size = -0.1
+	mine_rgo_size = -0.1
+	immigrant_attract = -0.25
+	immigrant_push = 0.25
+	prestige = -0.01
+	diplomatic_points_modifier = -0.05
+	research_points_modifier = -0.25
+	icon = 20
+}
+
+
+steam_valley = {
+	population_growth = 0.005
+	farm_rgo_size = 0.1
+	mine_rgo_size = 0.1
+	immigrant_attract = 0.1
+	icon = 19
+}
+
+holy_education = {
+	research_points = 0.5
+	core_pop_consciousness_modifier = 0.05
+    education_efficiency_modifier = 0.25
+	icon = 3
+}
+
+extremist_population = {
+	mobilisation_size = 5.0
+	mobilisation_economy_impact = -0.7
+	core_pop_militancy_modifier = -0.1
+	war_exhaustion = -0.03
+	icon = 17
 }
