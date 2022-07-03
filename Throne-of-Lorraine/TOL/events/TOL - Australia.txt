@@ -19,7 +19,6 @@ country_event = {
 		owns = 2475
 		owns = 2488
 		owns = 2494
-		year = 1851
 		NOT = { has_country_flag = australian_gold_migration }
 	}
 
@@ -66,7 +65,6 @@ country_event = {
 		owns = 2469
 		owns = 2488
 		owns = 2494
-		year = 1853
 		NOT = { has_country_flag = australian_gold_migration_2 }
 	}
 
@@ -223,5 +221,163 @@ country_event = {
 			}
 		}
 		set_country_flag = australian_gold_migration_2
+	}
+}
+
+#Colonization of Australia
+country_event = {
+	id = 100176
+	title = "Coastal Magellanica"
+	desc = "COLONIZATION"
+	fire_only_once = yes
+	picture = "arab_revolt"
+
+	trigger = {
+		owns = 2505
+		year = 1839
+		2501 = { empty = yes }
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+
+	option = {
+		name = "Free Land!"
+		prestige = 10
+		set_country_flag = australia_1
+		2501 = { add_core = THIS }
+		2506 = { add_core = THIS }
+		2604 = { add_core = THIS }
+		2488 = { add_core = THIS }
+		THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }  	
+		THIS = { all_core = { limit = { is_core = AST } remove_core = THIS } }  	
+	}
+}
+
+country_event = {
+	id = 100177
+	title = "Eastern Magellanica"
+	desc = "COLONIZATION"
+	fire_only_once = yes
+	picture = "arab_revolt"
+
+	trigger = {
+		owns = 2501
+		year = 1842
+		2487 = { empty = yes }
+		has_country_flag = australia_1
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "Free Land!"
+		prestige = 10
+		set_country_flag = australia_3
+		2487 = { add_core = THIS }
+		2485 = { add_core = THIS }
+		2484 = { add_core = THIS }
+		2486 = { add_core = THIS }
+		2483 = { add_core = THIS }
+		2470 = { add_core = THIS }
+		THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }  	
+		THIS = { all_core = { limit = { is_core = AST } remove_core = THIS } }  	
+	}
+}
+
+country_event = {
+	id = 100178
+	title = "Western Magellanica"
+	desc = "COLONIZATION"
+	fire_only_once = yes
+	picture = "arab_revolt"
+
+	trigger = {
+		owns = 2501
+		year = 1842
+		2602 = { empty = yes }
+		has_country_flag = australia_1
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "Free Land!"
+		prestige = 10
+		set_country_flag = australia_4
+		2602 = { add_core = THIS }
+		2502 = { add_core = THIS }
+		2499 = { add_core = THIS }
+		2497 = { add_core = THIS }
+		2498 = { add_core = THIS }
+		THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }  	
+		THIS = { all_core = { limit = { is_core = AST } remove_core = THIS } }  	
+	}
+}
+
+country_event = {
+	id = 100179
+	title = "Southern Magellanica"
+	desc = "COLONIZATION"
+	fire_only_once = yes
+	picture = "arab_revolt"
+
+	trigger = {
+		2504 = { empty = yes }
+		has_country_flag = australia_3
+		has_country_flag = australia_4
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "Free Land!"
+		prestige = 10
+		set_country_flag = australia_5
+		2504 = { add_core = THIS }
+		2496 = { add_core = THIS }
+		2494 = { add_core = THIS }
+		2491 = { add_core = THIS }
+		2493 = { add_core = THIS }
+		2481 = { add_core = THIS }
+		2477 = { add_core = THIS }
+		2478 = { add_core = THIS }
+		2476 = { add_core = THIS }
+		2480 = { add_core = THIS }
+		2479 = { add_core = THIS }
+		THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }  	
+		THIS = { all_core = { limit = { is_core = AST } remove_core = THIS } }  	
+	}
+}
+
+country_event = {
+	id = 100180
+	title = "The New Italy"
+	desc = "COLONIZATION"
+	fire_only_once = yes
+	picture = "arab_revolt"
+
+	trigger = {
+		has_country_flag = australia_5
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "Free Land!"
+		prestige = 10
+		badboy = 2
+		set_country_flag = australia_6
+		AST = { all_core = { limit = { empty = yes } secede_province = THIS } }  	
+		AST = { all_core = { limit = { is_core = AST } add_province_modifier = { name = new_italy duration = 1460 } } }  	
 	}
 }
