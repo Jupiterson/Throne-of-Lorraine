@@ -1051,22 +1051,13 @@ assimilation_chance = {
        factor = -20
         has_culture_core = yes
 		NOT = {
-		    AND = {
-		        country = { has_country_flag = can_ignore_cultural_core primary_culture = berber }
-			    OR = {
-			        has_pop_culture = finnish
-			        has_pop_culture = estonian
-			        has_pop_culture = norwegian
-			        has_pop_culture = latvian
-					has_pop_culture = sami
-		        }
-            }
+		        country = { OR = { has_country_flag = can_ignore_cultural_core primary_culture = berber primary_culture = ashkenazi } }
 		}
 	}
 	
 	 modifier = {
         factor = 50.0
-        country = { primary_culture = berber }
+        country = { OR = { primary_culture = berber primary_culture = ashkenazi } }
     }
 
     modifier = {

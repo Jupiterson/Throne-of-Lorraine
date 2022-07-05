@@ -116,6 +116,7 @@ peace_order = {
 	place_in_the_sun
 	dismantle_forts
 	china_acquire_state
+	yoruba_acquire_state
 	acquire_state
 	acquire_state_mid
 	acquire_state_late
@@ -11326,6 +11327,88 @@ claim_colonial_region = {
 			from = jingoism
 			to = pro_military
 			value = 0.1
+		}
+	}
+}
+# Ife Reunification
+yoruba_acquire_state = {
+	sprite_index = 22
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 0
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 0
+	break_truce_militancy_factor = 0
+	truce_months = 84
+
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	always = yes
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		neighbour = THIS
+		OR = {
+			any_owned_province = {
+				is_core = IFE
+			}
+			is_culture_group = yoruboid
+		}
+		is_vassal = no
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
+		OR = {
+			any_owned_province = {
+				is_core = IFE
+			}
+			NOT = { is_culture_group = yoruboid }
+		}
+	}
+
+	allowed_states = {
+		OR = {
+#			AND = {
+#				any_owned_province = {
+#					is_core = IFE
+#				}
+#				year = 1900
+#			}
+			AND = {
+				any_owned_province = {
+					is_core = IFE
+				}
+				THIS = { ai = no }
+			}
+			any_owned_province = {
+				is_core = IFE
+				owner = { civilized = no }
+			}
+#			any_owned_province = {
+#				owner = { is_culture_group = yoruboid }
+#				NOT = { is_core = IFE }
+#			}
+		}
+	}
+
+	po_demand_state = yes
+
+	war_name = WAR_IFE_REUNIFICATION
+
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.10
 		}
 	}
 }
