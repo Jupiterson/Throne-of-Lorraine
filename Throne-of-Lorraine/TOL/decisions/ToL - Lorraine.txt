@@ -256,5 +256,46 @@ political_decisions = {
 
 		ai_will_do = { factor = 1 }
 	}
+	
+		lothar_accept = {
+		potential = {
+			tag = LOT
+			NOT = { has_country_flag = lotaccept }
+		}
+		
+		allow = {
+			NOT = { war = yes }
+		}
+		
+		effect = { 
+			set_country_flag = lotaccept
+			add_accepted_culture = french
+			add_accepted_culture = rhinelander
+			add_accepted_culture = flemish
+			add_accepted_culture = belgican
+			add_accepted_culture = burgundian
+			add_accepted_culture = dutch
+			add_accepted_culture = provencial
+		}
+	}
+	
+	francia_accept = {
+		potential = {
+			tag = FRC
+			NOT = { has_country_flag = frcaccept }
+		}
+		
+		allow = {
+			NOT = { war = yes }
+		}
+		
+		effect = { 
+			set_country_flag = frcaccept
+			add_accepted_culture = french
+			add_accepted_culture = occitan
+			add_accepted_culture = north_german
+			add_accepted_culture = south_german
+		}
+	}
 	 
   }

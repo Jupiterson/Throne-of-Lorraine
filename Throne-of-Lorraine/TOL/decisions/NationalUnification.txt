@@ -445,10 +445,7 @@ outside_form_WSF = {
 							OR = {
 								is_vassal = no
 								vassal_of = THIS
-								#OR = {
-								#	vassal_of = HNS
-								#	HNS = { in_sphere = THIS }
-								#}
+								overlord = { is_culture_group = germanic }
 							}
 							war = no
 							is_greater_power = no
@@ -631,6 +628,7 @@ outside_form_WSF = {
 								OR = {
 									is_vassal = no
 									vassal_of = THIS
+									overlord = { is_culture_group = germanic }
 								}
 								war = no
 								is_greater_power = no

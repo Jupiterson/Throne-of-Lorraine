@@ -1,57 +1,20 @@
 #Holland & Zeeland Region - 1353000
 #Amsterdam (464000/116000 POPS)
 375 = {
-	######Jews
-	aristocrats = {
-		culture = ashkenazi
-		religion = jewish
-		size = 100
-	}
-
-	officers = {
-		culture = ashkenazi
-		religion = jewish
-		size = 100
-	}
-
-	soldiers = {
-		culture = ashkenazi
-		religion = jewish
-		size = 300
-	}
-
-	clergymen = {
-		culture = ashkenazi
-		religion = jewish
-		size = 100
-	}
-
-	artisans = {
-		culture = ashkenazi
-		religion = jewish
-		size = 3000
-	}
-
-	farmers = {
-		culture = ashkenazi
-		religion = jewish
-		size = 879
-	}
-	########
 	aristocrats = {
 		culture = dutch
 		religion = reformed
-		size = 1410
+		size = 110
 	}
 	officers = {
 		culture = dutch
 		religion = reformed
-		size = 329
+		size = 129
 	}
 	bureaucrats = {
 		culture = dutch
 		religion = reformed
-		size = 2444
+		size = 444
 	}
 	clergymen = {
 		culture = dutch
@@ -61,7 +24,7 @@
 	artisans = {
 		culture = dutch
 		religion = catholic
-		size = 18800
+		size = 8800
 	}
 	artisans = {
 		culture = frisian
@@ -78,31 +41,6 @@
 		religion = protestant
 		size = 520
 	}
-	artisans = {
-		culture = low_german
-		religion = protestant
-		size = 17520
-	}
-	artisans = {
-		culture = french
-		religion = hugenott
-		size = 7520
-	}
-	artisans = {
-		culture = swedish
-		religion = hugenott
-		size = 2520
-	}	
-	artisans = {
-		culture = north_german
-		religion = protestant
-		size = 12520
-	}
-	soldiers = {
-		culture = dutch
-		religion = catholic
-		size = 9400
-	}
 	soldiers = {
 		culture = dutch
 		religion = catholic
@@ -112,11 +50,6 @@
 		culture = dutch
 		religion = reformed
 		size = 44911
-	}
-	artisans = {
-		culture = flemish
-		religion = catholic
-		size = 7990
 	}
 }
 #Rotterdam (567000/141750 POPS)
@@ -193,7 +126,17 @@
 	aristocrats = {
 		culture = dutch
 		religion = reformed
-		size = 282
+		size = 1410
+	}
+	officers = {
+		culture = dutch
+		religion = reformed
+		size = 329
+	}
+	bureaucrats = {
+		culture = dutch
+		religion = reformed
+		size = 2444
 	}
 	clergymen = {
 		culture = dutch
@@ -201,9 +144,34 @@
 		size = 164
 	}
 	artisans = {
+		culture = low_german
+		religion = protestant
+		size = 17520
+	}
+	artisans = {
+		culture = french
+		religion = hugenott
+		size = 7520
+	}
+	artisans = {
+		culture = swedish
+		religion = hugenott
+		size = 2520
+	}	
+	artisans = {
+		culture = north_german
+		religion = protestant
+		size = 12520
+	}
+	soldiers = {
 		culture = dutch
 		religion = catholic
-		size = 11280
+		size = 9400
+	}
+	artisans = {
+		culture = dutch
+		religion = catholic
+		size = 21280
 	}
 	soldiers = {
 		culture = dutch
@@ -215,6 +183,48 @@
 		religion = reformed
 		size = 23053
 	}
+	artisans = {
+		culture = flemish
+		religion = catholic
+		size = 7990
+	}
+		######Jews
+	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	officers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 300
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 3000
+	}
+
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 879
+	}
+	########
 }
 #Middelburg (170000/42500 POPS)
 378 = {
@@ -625,12 +635,12 @@
 	farmers = {
 		culture = low_german
 		religion = reformed
-		size = 43323
+		size = 23323
 	}
 	farmers = {
-		culture = low_german
+		culture = french
 		religion = protestant
-		size = 1034
+		size = 11034
 	}
 	######Jews
 
@@ -683,7 +693,12 @@
 	farmers = {
 		culture = low_german
 		religion = reformed
-		size = 38352
+		size = 31352
+	}
+	farmers = {
+		culture = french
+		religion = protestant
+		size = 7034
 	}
 	artisans = {
 		culture = low_german
@@ -711,7 +726,12 @@
 	artisans = {
 		culture = dutch
 		religion = reformed
-		size = 15640
+		size = 11640
+	}
+	farmers = {
+		culture = french
+		religion = protestant
+		size = 4034
 	}
 	soldiers = {
 		culture = dutch
@@ -780,7 +800,12 @@
 	farmers = {
 		culture = low_german
 		religion = reformed
-		size = 15745
+		size = 12745
+	}
+	farmers = {
+		culture = french
+		religion = protestant
+		size = 3034
 	}
 	farmers = {
 		culture = low_german

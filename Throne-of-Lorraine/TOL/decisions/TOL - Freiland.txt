@@ -230,8 +230,6 @@ political_decisions = {
 			3467 = { secede_province = THIS }
 			114 = { secede_province = THIS }
 			92 = { secede_province = THIS }
-			3476 = { secede_province = THIS }
-			3475 = { secede_province = THIS }
 			91 = { secede_province = THIS }
 			93 = { secede_province = THIS }
 			80 = { secede_province = THIS }
@@ -244,7 +242,11 @@ political_decisions = {
 			82 = { secede_province = THIS }
 			3463 = { secede_province = THIS }
 			3461 = { secede_province = THIS }
-			add_core = 78
+			USA_78 = { add_core = THIS }
+			VLD_108 = { add_core = THIS }
+			VLD_21 = { add_core = THIS }
+			USA_111 = { add_core = THIS }
+			78 = { add_core = THIS }
 			set_global_flag = Fat_Nuts
 			
 		}
@@ -259,10 +261,11 @@ political_decisions = {
 				has_global_flag = VKS_National_Unity
 			}
 		effect = {
-			any_owned = {
-				limit = { is_core = NAF }
-					add_core = VKS
-						}
+			NAF = {
+				all_core = {
+					add_core = THIS
+				}
+			}
 			prestige = 25
 			add_accepted_culture = afro_french
 			set_global_flag = VKS_Freedom
@@ -273,15 +276,23 @@ political_decisions = {
 			has_global_flag = VKS_Freedom
 			tag = VKS
 			NOT = { has_global_flag = VKS_Destroy_Amauldi }
+			OR = {
+			USA = { vassal_of = ENG } 
+            NOT = { exists = USA }
+			}
 		}
 		allow = {
 			tag = VKS
 			is_greater_power = yes
+			OR = {
 			USA = {
 					all_core = { owned_by = THIS }	
 			}
+					USA = { vassal_of = ENG } 
+			}
 		}
 		effect = {
+		inherit = USA
 			any_owned = {
 				limit = { is_core = USA }
 					add_core = VKS

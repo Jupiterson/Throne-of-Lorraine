@@ -69,20 +69,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = thuringia_stronk
 			PRU_554 = { add_core = THIS }
-			PRU = {
-				diplomatic_influence = { who = WEI value = -200 }
-				diplomatic_influence = { who = MEI value = -200 }
-				diplomatic_influence = { who = REU value = -200 }
-				diplomatic_influence = { who = SWG value = -200 }
-				diplomatic_influence = { who = COB value = -200 }
-			}
-			AUS = {
-				diplomatic_influence = { who = WEI value = -200 }
-				diplomatic_influence = { who = MEI value = -200 }
-				diplomatic_influence = { who = REU value = -200 }
-				diplomatic_influence = { who = SWG value = -200 }
-				diplomatic_influence = { who = COB value = -200 }
-			}
+			change_tag = THU
 		}
 	}
 
@@ -1061,8 +1048,10 @@ political_decisions = {
 			NOT = { exists = FER }
 			NOT = {
 			exists = GER
+			exists = GCF
             is_culture_group = germanic
 			tag = FRM
+			tag = FER
 			tag = LUS
 			}
             NOT = {
