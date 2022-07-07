@@ -101,6 +101,7 @@ political_decisions = {
 			FRZ = { set_country_flag = palais_garnier_built }
 			BOR = { set_country_flag = palais_garnier_built }
 			VIC = { set_country_flag = palais_garnier_built }
+			FRA = { set_country_flag = palais_garnier_built }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -176,6 +177,7 @@ political_decisions = {
 			capital = 425
 			NOT = {
 				has_country_flag = the_eiffel_tower_was_built
+				has_country_flag = the_eiffel_tower_is_beiong_built
 			}
 
 			OR = {
@@ -195,10 +197,11 @@ political_decisions = {
 
 		effect = {
 			country_event = 37236
-			FRR = { set_country_flag = the_eiffel_tower_was_built }
-			FRZ = { set_country_flag = the_eiffel_tower_was_built }
-			BOR = { set_country_flag = the_eiffel_tower_was_built }
-			VIC = { set_country_flag = the_eiffel_tower_was_built }
+			FRR = { set_country_flag = the_eiffel_tower_was_built set_country_flag = the_eiffel_tower_is_beiong_built }
+			FRZ = { set_country_flag = the_eiffel_tower_was_built set_country_flag = the_eiffel_tower_is_beiong_built }
+			BOR = { set_country_flag = the_eiffel_tower_was_built set_country_flag = the_eiffel_tower_is_beiong_built }
+			VIC = { set_country_flag = the_eiffel_tower_was_built set_country_flag = the_eiffel_tower_is_beiong_built }
+			FRA = { set_country_flag = the_eiffel_tower_was_built set_country_flag = the_eiffel_tower_is_beiong_built }
 		}
 
 		ai_will_do = { factor = 1 }
