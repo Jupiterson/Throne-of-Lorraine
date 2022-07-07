@@ -2361,6 +2361,7 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = 1836_set_up
+			LUN = { neutrality = yes }
 			set_country_flag = existing_country
 			any_country = { limit = { exists = yes } set_country_flag = existing_country }
 			#################Class Literacy Setup######################
