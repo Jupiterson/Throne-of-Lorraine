@@ -1,4 +1,4 @@
-POR = {
+BSQ = {
 	value = 125
 }
 
@@ -7,7 +7,7 @@ NET = {
 }
 
 LOA = {
-	value = 50
+	value = 150
 }
 
 LBA = {
@@ -23,25 +23,46 @@ KUB = {
 }
 
 LUN = {
-	value = 50
+	value = 150
 }
 
 army = {
-	name = "Army of the Kongo Kingdom"
-	location = 1983
-regiment = {
-		name= "MweneKongo's Guards"
-	type = irregular
-	home = 1983	}
-
-
-regiment = {
-		name= "1st Kongo Warriors"
-	type = irregular
-	home = 1982	}
-regiment = {
-		name= "2nd Kongo Warriors"
-	type = irregular
-	home = 2001
+	name = "Army of the Kong Kingdom"
+	location = 3548
+	
+	regiment = {
+		name= "Fama's Guards"
+		type = irregular
+		home = 3548
+	}
+	regiment = {
+		name= "Sabaka Warriors"
+		type = irregular
+		home = 3549
+	}
+	regiment = {
+		name= "Mande Warriors"
+		type = irregular
+		home = 3550
+	}
+	regiment = {
+		name= "Pygmy Warriors"
+		type = irregular
+		home = 3551
+	}
+	regiment = {
+		name= "Kauvino Border Guards"
+		type = irregular
+		home = 3552
+	}
+	regiment = {
+		name= "Catomvo Settler Force"
+		type = irregular
+		home = 3553
+	}
+	regiment = {
+		name= "Mbanza Warriors"
+		type = irregular
+		home = 2001
 	}
 }
