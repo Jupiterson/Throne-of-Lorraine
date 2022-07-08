@@ -1,0 +1,28 @@
+name = "The Jesuite War"
+
+1835.10.2 = {
+	add_attacker = BTU
+	add_defender = GAB
+
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+	war_goal = {
+		casus_belli = conquest_any
+		actor = BTU
+		receiver = GAB
+	}
+	war_goal = {
+		casus_belli = status_quo
+		actor = GAB
+		receiver = BTU
+	}
+
+}
+
+1837.4.21 = {
+	rem_attacker = BTU
+	rem_defender = GAB
+}

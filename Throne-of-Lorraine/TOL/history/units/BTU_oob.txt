@@ -1,0 +1,161 @@
+BSQ = { value = -100 }
+LOA = { value = -150 }
+KON = { value = -150 }
+KZB = { value = -30 }
+BUG = { value = -60 }
+LUN = { value = -150 }
+UBH = { value = -20 }
+RWA = { value = -20 }
+GAB = { value = -200 }
+
+army = {
+	name = "Guards of the Babantu Empire"
+	location = 3559
+	
+	regiment = {
+		name= "Ratasta's Guards (1)"
+		type = infantry
+		home = 1986
+	}
+	regiment = {
+		name= "Ratasta's Guards (2)"
+		type = infantry
+		home = 1986
+	}
+	regiment = {
+		name= "Ratasta's Guards (3)"
+		type = irregular
+		home = 1986
+	}
+	regiment = {
+		name= "Ratasta's Guards (4)"
+		type = cavalry
+		home = 1986
+	}
+	regiment = {
+		name= "Ratasta's Guards (5)"
+		type = artillery
+		home = 1986
+	}
+}
+
+army = {
+	name = "First Corp of the Babantu Empire"
+	location = 1994
+	
+	regiment = {
+		name= "Dejuh Brigade (1)"
+		type = irregular
+		home = 3558
+	}
+	regiment = {
+		name= "Dejuh Brigade (2)"
+		type = irregular
+		home = 3558
+	}
+	regiment = {
+		name= "Kananga Border Guard (1)"
+		type = irregular
+		home = 1984
+	}
+	regiment = {
+		name= "Kananga Border Guard (2)"
+		type = irregular
+		home = 1984
+	}
+	regiment = {
+		name= "Cahinka Lunda Defectors"
+		type = irregular
+		home = 3557
+	}
+	regiment = {
+		name= "Southern Babantu Reserve"
+		type = irregular
+		home = 3557
+	}
+	regiment = {
+		name= "Mussumba Lunda Defectors"
+		type = irregular
+		home = 1988
+	}
+}
+
+army = {
+	name = "Second Corp of the Babantu Empire"
+	location = 3554
+	regiment = {
+		name= "Mirza Brigade (1)"
+		type = irregular
+		home = 3560
+	}
+	regiment = {
+		name= "Mirza Brigade (2)"
+		type = irregular
+		home = 3560
+	}
+	regiment = {
+		name= "Munza Brigade (1)"
+		type = irregular
+		home = 1989
+	}
+	regiment = {
+		name= "Munza Brigade (2)"
+		type = irregular
+		home = 1989
+	}
+	regiment = {
+		name= "Munza Brigade (3)"
+		type = irregular
+		home = 1989
+	}
+	regiment = {
+		name= "Yutu Brigade (1)"
+		type = irregular
+		home = 3559
+	}
+	regiment = {
+		name= "Yutu Brigade (2)"
+		type = irregular
+		home = 3559
+	}
+}
+
+army = {
+	name = "Third Corp of the Babantu Empire"
+	location = 1991
+	regiment = {
+		name= "Yutu Brigade (3)"
+		type = irregular
+		home = 3559
+	}
+	regiment = {
+		name= "Lega Slave Brigade (1)"
+		type = irregular
+		home = 1991
+	}
+	regiment = {
+		name= "Lega Slave Brigade (2)"
+		type = irregular
+		home = 3547
+	}
+	regiment = {
+		name= "Zaer Brigade (1)"
+		type = irregular
+		home = 3561
+	}
+	regiment = {
+		name= "Zaer Brigade (2)"
+		type = irregular
+		home = 3561
+	}
+	regiment = {
+		name= "Lubai Brigade"
+		type = irregular
+		home = 3545
+	}
+	regiment = {
+		name= "Vusobe Brigade"
+		type = irregular
+		home = 3544
+	}
+}

@@ -4228,14 +4228,14 @@ bantu = {
 		last_names = { Kasang Nambing Kalong Mukaz Ditend Yaava Namwan Naweej Kamong Isot Kat Muteba
 		}
 	}
-	#african_minor = {
-	#	color = { 63 32 10 }
-	#	first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife #Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
-	#	}
-	#
-	#	last_names = { Mussa Mutato Bowelle Makeda Nzinga Sundiata
-	#	}
-	#}
+	african_minor = {
+		color = { 63 32 10 }
+		first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife #Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
+		}
+	
+		last_names = { Mussa Mutato Bowelle Makeda Nzinga Sundiata
+		}
+	}
 	swahili = {
 		color = {84 96 204}
 		first_names = { Ahmed Jabari Kamari Amiri  Asani Babu Balozi Darweshi Erevu Faraji Fupi Heri Hishima Ibada Huru Husani Imara Issa Jahidi Jalali Juma Jumaane Kafeel Khamisi Kifimbo Kivuli Kondo Lumbwi Machupa Mbwana Mosi Salehe Safi Zuberi
@@ -4245,14 +4245,38 @@ bantu = {
 		}
 	}
 	lacustrine_bantu = {
-		color = {128 175 93}
+		color = {217 246 111}
 		first_names = { Mutesa Mwanga Kalema Kiweewa Ssemakookiro Jjunju Kyabaggo Namugala Kikulwe Kabulu
 		}
 
 		last_names = { Njovu Ndiga Ngo Nseenene Mmamba Ngonge Ngabi
 		}
 	}
-		nyasa = {
+	lacus_bantu = {
+		color = {227 255 71}
+		first_names = { Mutesa Mwanga Kalema Kiweewa Ssemakookiro Jjunju Kyabaggo Namugala Kikulwe Kabulu
+		}
+
+		last_names = { Njovu Ndiga Ngo Nseenene Mmamba Ngonge Ngabi
+		}
+	}
+	christ_bantu = {
+		color = {144 188 44}
+		first_names = { Mutesa Mwanga Kalema Kiweewa Ssemakookiro Jjunju Kyabaggo Namugala Kikulwe Kabulu
+		}
+
+		last_names = { Njovu Ndiga Ngo Nseenene Mmamba Ngonge Ngabi
+		}
+	}
+	christ_bakongo = {
+		color = {137 204 112}
+		first_names = { Mutesa Mwanga Kalema Kiweewa Ssemakookiro Jjunju Kyabaggo Namugala Kikulwe Kabulu
+		}
+
+		last_names = { Njovu Ndiga Ngo Nseenene Mmamba Ngonge Ngabi
+		}
+	}
+	nyasa = {
 		color = {18 88 48}
 		first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
 		}
@@ -4260,9 +4284,24 @@ bantu = {
 		last_names = { Mwale Phiri Mkunkhuntha Mbewe Kalimakudzulu
 		}
 	}
-	
- southern_bantu = {
-		color = {192 167 66}
+	rundi_ganda = {
+		color = {187 216 81}
+		first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
+		}
+
+		last_names = { Mwale Phiri Mkunkhuntha Mbewe Kalimakudzulu
+		}
+	}
+	lega_bantu = {
+		color = {207 235 71}
+		first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
+		}
+
+		last_names = { Mwale Phiri Mkunkhuntha Mbewe Kalimakudzulu
+		}
+	}
+	southern_bantu = {
+		color = {128 135 43}
 		first_names = { Kinjikitile Fambaltate Songea Ebabruma Mputa Mbemchapa Atepa Matola Magobi Rjoroza Wasesse Rinyizea Chapwanya Chakoma Kapola Kapungu Kindunda Kinjalla Kiwanga Mahengu Mburu Mhavanginonya Namkina Ngosingosi Schabruma Sentambandu Uawula Ulanga
 		}
 
@@ -4317,11 +4356,19 @@ southern_african = {
 
 	unit = ZuluGC
 	khoisan = {
-		color = {122 46 133}
+		color = {110 118 170}
 		first_names = { Naresib Gabeb Gorakhab Oasib Na-khom Tsawub Gaob Hanab O-Naib Khaub Khomab Hab
 		}
 
 		last_names = { Hamab Khomaa Khaumab O-Naimab Hanamab Gamab Nakhomab Manassee Oasmab
+		}
+	}
+	pygmy = {
+		color = {230 131 15}
+		first_names = { "192.168" "192.228" "145.1" "127.0" "172.16" "192.0" "255.255" "198.18" "203.0" "168.212" "192.168" "2.134" "135.58" "192.168" "227.21" "95.88"
+		}
+
+		last_names = { ".0.1" ".17.57" ".332.63" ".0.5" ".0.9" ".0.7" ".255.255" ".0.6" ".113.255" ".226.204" ".17.43" ".213.2" ".42.17" ".178.1" ".6.173" ".246.182"
 		}
 	}
 	malagasy = {

@@ -1,7 +1,7 @@
 capital = 1972
-primary_culture = forest_bantu
-culture = forest_bantu
-religion = catholic
+primary_culture = christ_bantu
+culture = christ_bakongo
+religion = jesuite
 government = democracy
 plurality = 0.0
 nationalvalue = nv_order
@@ -36,9 +36,19 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
-set_country_flag = catholic_country
+oob = "GAB_oob.txt"
 
-set_country_flag = post_colonial_country
+foreign_training = yes_foreign_training
+education_reform = yes_education_reform
+admin_reform = yes_admin_reform
+finance_reform = finance_reform_two
+foreign_officers = yes_foreign_officers
+foreign_weapons = yes_foreign_weapons
+foreign_naval_officers = yes_foreign_naval_officers
+western_shipyards = yes_western_shipyards
+
+set_country_flag = catholic_country
+set_country_flag = delay_unciv_annexation
 
 ruling_party = GAB_conservative
 upper_house = {
