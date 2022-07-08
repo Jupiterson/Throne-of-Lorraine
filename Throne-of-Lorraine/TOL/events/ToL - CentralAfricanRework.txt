@@ -1,6 +1,6 @@
 country_event = {
 	id = 2425353
-	title = "Rand I dies"
+	title = "Rand I Dies"
 	desc = "LUNDAKINGDIESNEUT"
 	picture = "lunda_kingded"
 	fire_only_once = yes
@@ -109,6 +109,79 @@ country_event = {
 			}
 		}
 		change_tag_no_core_switch = ANG
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 2425355
+	title = "Ratasta II Dies"
+	desc = "RATASTABANTUDIES"
+	picture = "lunda_kingded"
+	fire_only_once = yes
+
+	trigger = {
+		tag = BTU
+		year = 1839
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "We choose the patriot. §RGain 3 infamy§W"
+		badboy = 3
+		GAB = { any_owned = { add_core = BTU } }
+		any_pop = { militancy = 3 }
+		move_issue_percentage = {
+            from = pro_military
+            to = jingoism
+            value = 0.10
+        }
+		move_issue_percentage = {
+            from = anti_military
+            to = pro_military
+            value = 0.10
+        }
+		move_issue_percentage = {
+            from = pacifism
+            to = pro_military
+            value = 0.10
+        }
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "We choose the peaceful."
+		any_pop = { militancy = -2 }
+		move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.10
+        }
+		move_issue_percentage = {
+            from = pro_military
+            to = anti_military
+            value = 0.10
+        }
+		move_issue_percentage = {
+            from = anti_military
+            to = pacifism
+            value = 0.10
+        }
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "What turmoil? We are invencible!"
+		any_pop = { militancy = 8 }
+		move_issue_percentage = {
+            from = pro_military
+            to = jingoism
+            value = 0.30
+        }
+		add_country_modifier = { name = power_vacuum duration = 300 }
 		ai_chance = { factor = 0 }
 	}
 }
