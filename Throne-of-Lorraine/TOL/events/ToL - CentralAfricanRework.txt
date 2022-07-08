@@ -16,10 +16,8 @@ country_event = {
 
 	option = {
 		name = "It's time to free our bretheren."
-		any_neighbor_province = {
-			limit = { is_core = LUN }
-			secede_province = THIS
-		}
+		2081 = { secede_province = THIS }
+		3296 = { secede_province = THIS }
 		ai_chance = { factor = 1 }
 	}
 	
@@ -28,6 +26,89 @@ country_event = {
 		any_pop = { militancy = 8 }
 		add_country_modifier = { name = power_vacuum duration = -1 }
 		add_country_modifier = { name = neutrality_modifier duration = -1 } 
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 2425354
+	title = "The Kongo Civil War"
+	desc = "KONGOAGAINSTPYGMY"
+	picture = "kongo_civilwar"
+	fire_only_once = yes
+
+	trigger = {
+		tag = KON
+		year = 1845
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Damn."
+		ANG = {
+			2001 = { secede_province = THIS }
+			2009 = { secede_province = THIS }
+			3553 = { secede_province = THIS }
+			3552 = { secede_province = THIS }
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = KON
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			2001 = {
+					sub_unit = { type = irregular value = current }
+					sub_unit = { type = irregular value = current }
+			}
+			2009 = {
+					sub_unit = { type = irregular value = current }
+					sub_unit = { type = irregular value = current }
+			}
+			3553 = {
+					sub_unit = { type = irregular value = current }
+					sub_unit = { type = irregular value = current }
+			}
+			3552 = {
+					sub_unit = { type = irregular value = current }
+					sub_unit = { type = irregular value = current }
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "For the Pygmy! (play as the Bayak)"
+		ANG = {
+			2001 = { secede_province = THIS }
+			2009 = { secede_province = THIS }
+			3553 = { secede_province = THIS }
+			3552 = { secede_province = THIS }
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = KON
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			2001 = {
+					sub_unit = { type = irregular value = current }
+					sub_unit = { type = irregular value = current }
+			}
+			2009 = {
+					sub_unit = { type = irregular value = current }
+					sub_unit = { type = irregular value = current }
+			}
+			3553 = {
+					sub_unit = { type = irregular value = current }
+					sub_unit = { type = irregular value = current }
+			}
+			3552 = {
+					sub_unit = { type = irregular value = current }
+					sub_unit = { type = irregular value = current }
+			}
+		}
+		change_tag_no_core_switch = ANG
 		ai_chance = { factor = 0 }
 	}
 }
