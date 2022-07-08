@@ -2367,7 +2367,7 @@ political_decisions = {
 					name = the_bantu_empire
 					duration = -1
 				}
-				any_owned = {
+				any_owned = { limit = { is_core = BTU }
 					add_province_modifier = {
 						name = the_bantu_empire_provs
 						duration = -1
