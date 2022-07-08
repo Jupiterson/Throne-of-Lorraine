@@ -2362,7 +2362,18 @@ political_decisions = {
 		effect = {
 			set_global_flag = 1836_set_up
 			LUN = { neutrality = yes }
-			BTU = { add_country_modifier = { name = the_bantu_empire duration = 3650 } }
+			BTU = { 
+				add_country_modifier = {
+					name = the_bantu_empire
+					duration = -1
+				}
+				any_owned = {
+					add_province_modifier = {
+						name = the_bantu_empire_provs
+						duration = -1
+					}
+				}
+			}
 			set_country_flag = existing_country
 			any_country = { limit = { exists = yes } set_country_flag = existing_country }
 			#################Class Literacy Setup######################

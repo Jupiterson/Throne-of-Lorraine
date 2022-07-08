@@ -5000,19 +5000,24 @@ tiniri_menace = {
 
 the_bantu_empire = {
 	badboy = 0.05
-	mobilisation_size = 0.03
+	mobilisation_size = 0.30
+	assimilation_rate = -0.5
+	pop_militancy_modifier = 0.3
+	pop_consciousness_modifier = -0.2
+	prestige = 0.1
+	diplomatic_points_modifier = -0.05
+	research_points_modifier = -0.25
+	icon = 15
+}
+
+the_bantu_empire_provs = {
 	assimilation_rate = -0.5
 	farm_rgo_size = -0.5
 	mine_rgo_size = -0.8
 	immigrant_attract = -0.5
 	immigrant_push = 0.35
-	pop_militancy_modifier = 0.3
-	pop_consciousness_modifier = -0.2
 	life_rating = -0.45
-	prestige = 0.1
-	diplomatic_points_modifier = -0.05
-	research_points_modifier = -0.25
-	icon = 17
+	icon = 15
 }
 
 slavepopupdated = {
