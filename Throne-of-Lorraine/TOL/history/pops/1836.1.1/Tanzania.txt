@@ -251,7 +251,7 @@
 	farmers = {
 		culture = lacus_bantu
 		religion = animist
-		size = 42900
+		size = 12900
 	}
 
 	slaves = {
@@ -407,67 +407,67 @@
 #Iringa (300000/75000 POPS)
 2042 = {
 	aristocrats = {
-		culture = lacus_bantu
+		culture = nyasa
 		religion = animist
 		size = 1500
 	}
 
 	clergymen = {
-		culture = lacus_bantu
+		culture = nyasa
 		religion = animist
 		size = 800
 	}
 
 	artisans = {
-		culture = lacus_bantu
+		culture = nyasa
 		religion = animist
 		size = 3200
 	}
 
 	soldiers = {
-		culture = lacus_bantu
+		culture = nyasa
 		religion = animist
 		size = 800
 	}
 
 	farmers = {
-		culture = lacus_bantu
+		culture = nyasa
 		religion = animist
 		size = 40900
 	}
 
 	aristocrats = {
-		culture = african_minor
+		culture = lacus_bantu
 		religion = animist
 		size = 450
 	}
 
 	clergymen = {
-		culture = african_minor
+		culture = lacus_bantu
 		religion = animist
 		size = 225
 	}
 
 	artisans = {
-		culture = african_minor
+		culture = lacus_bantu
 		religion = animist
 		size = 1150
 	}
 
 	soldiers = {
-		culture = african_minor
+		culture = lacus_bantu
 		religion = animist
 		size = 225
 	}
 
 	farmers = {
-		culture = african_minor
+		culture = lacus_bantu
 		religion = animist
 		size = 30950
 	}
 
 	slaves = {
-		culture = nyasa
+		culture = african_minor
 		religion = animist
 		size = 5000
 	}
@@ -711,7 +711,13 @@
 	farmers = {
 		culture = african_minor
 		religion = animist
-		size = 35750
+		size = 30750
+	}
+	
+	farmers = {
+		culture = nyasa
+		religion = animist
+		size = 5000
 	}
 
 	aristocrats = {
@@ -1022,4 +1028,43 @@
 		size = 8000
 	}
 
+}
+
+#Songo (164000/41000 POPS)
+2055 = {
+	aristocrats = {
+		culture = south_forest_bantu
+		religion = animist
+		size = 1800
+	}
+
+	clergymen = {
+		culture = south_forest_bantu
+		religion = animist
+		size = 1600
+	}
+
+	artisans = {
+		culture = south_forest_bantu
+		religion = animist
+		size = 8000
+	}
+
+	soldiers = {
+		culture = south_forest_bantu
+		religion = animist
+		size = 1800
+	}
+
+	farmers = {
+		culture = south_forest_bantu
+		religion = animist
+		size = 22800
+	}
+
+	slaves = {
+		culture = african_minor
+		religion = animist
+		size = 8000
+	}
 }
