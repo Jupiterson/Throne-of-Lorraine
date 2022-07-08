@@ -1,0 +1,33 @@
+country_event = {
+	id = 2425353
+	title = "Rand I dies"
+	desc = "LUNDAKINGDIESNEUT"
+	picture = "lunda_kingded"
+	fire_only_once = yes
+
+	trigger = {
+		tag = LUN
+		NOT = { has_province_modifier = neutrality_modifier }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "It's time to free our bretheren."
+		any_neighbor_province = {
+			limit = { is_core = LUN }
+			secede_province = THIS
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Never!"
+		any_pop = { militancy = 8 }
+		add_country_modifier = { name = power_vacuum duration = -1 }
+		add_country_modifier = { name = neutrality_modifier duration = -1 } 
+		ai_chance = { factor = 0 }
+	}
+}
