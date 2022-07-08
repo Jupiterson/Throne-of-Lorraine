@@ -1,37 +1,39 @@
-BRD = {
-	value = 70
-}
-
-RWA = {
-	value = 80
-}
-
-LBA = {
-	value = 40
-}
-
-KZB = {
-	value = 30
-}
-
-KUB = {
-	value = 25
-}
-
-LUN = {
-	value = 30
-}
+BRD = { value = 70 }
+RWA = { value = 80 }
+LBA = { value = 40 }
+KZB = { value = -100 }
+KRW = { value = -100 }
+KUB = { value = 25 }
+LUN = { value = 30 }
 
 army = {
-	name = "Royal army of Buganda"
+	name = "Royal Army of Buganda"
 	location = 2019
-regiment = {
+	regiment = {
 		name= "King's Guards"
-	type = irregular	home = 2019	}
+		type = irregular
+		home = 2019
+	}
 
-
-regiment = {
+	regiment = {
 		name= "Bugandan Warriors"
-	type = irregular
-	home = 2020	}
+		type = irregular
+		home = 2020
+	}
+}
+
+navy = {
+	name = "Bugandan Navy"
+	location = 2011
+
+	ship = {
+		name= "Bugandan Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Bugandan Frigate"
+		type = frigate
+	}
+
 }

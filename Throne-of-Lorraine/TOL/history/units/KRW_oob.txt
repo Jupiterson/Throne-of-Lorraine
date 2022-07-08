@@ -1,0 +1,27 @@
+KZB = { value = -100 }
+BUG = { value = -100 }
+army = {
+	name = "Army of Karagwe"
+	location = 2044
+	regiment = {
+		name= "1. Mwanza Army"
+		type = irregular
+		home = 2044
+	}
+}
+
+navy = {
+	name = "Karagwan Navy"
+	location = 2039
+
+	ship = {
+		name= "Karagwan Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Karagwan Frigate"
+		type = frigate
+	}
+
+}

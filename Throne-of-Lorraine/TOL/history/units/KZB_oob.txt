@@ -1,0 +1,26 @@
+KRW = { value = -100 }
+BUG = { value = -100 }
+army = {
+	name = "Army of Kazaro"
+	location = 2029
+	regiment = {
+		name= "1. Kazaran Army"
+		type = irregular
+		home = 2055
+	}
+}
+navy = {
+	name = "Kazaran Navy"
+	location = 2055
+
+	ship = {
+		name= "Kazaran Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Kazaran Frigate"
+		type = frigate
+	}
+
+}
