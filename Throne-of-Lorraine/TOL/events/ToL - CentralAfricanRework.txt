@@ -16,9 +16,10 @@ country_event = {
 
 	option = {
 		name = "It's time to free our bretheren."
-		2081 = { secede_province = THIS }
-		3296 = { secede_province = THIS }
+		2081 = { secede_province = YEK }
+		3296 = { secede_province = YEK }
 		change_tag = YEK
+		2014 = { secede_province = YEK }
 		ai_chance = { factor = 1 }
 	}
 	
