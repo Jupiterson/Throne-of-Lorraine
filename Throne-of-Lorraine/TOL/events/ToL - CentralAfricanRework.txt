@@ -7,7 +7,7 @@ country_event = {
 
 	trigger = {
 		tag = LUN
-		NOT = { has_province_modifier = neutrality_modifier }
+		NOT = { has_country_modifier = neutrality_modifier }
 	}
 
 	mean_time_to_happen = {
@@ -18,6 +18,7 @@ country_event = {
 		name = "It's time to free our bretheren."
 		2081 = { secede_province = THIS }
 		3296 = { secede_province = THIS }
+		change_tag = YEK
 		ai_chance = { factor = 1 }
 	}
 	
@@ -27,11 +28,128 @@ country_event = {
 		add_country_modifier = { name = power_vacuum duration = -1 }
 		add_country_modifier = { name = neutrality_modifier duration = -1 } 
 		ai_chance = { factor = 0 }
+		country_event = { id = 2425356 days = 21 }
+	}
+
+}
+
+country_event = {
+	id = 2425356
+	title = "The Lundan Succession War"
+	desc = "LUNDAKINGDIESSUCCESSION"
+	picture = "lunda_kingded"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We won't let them ruin our nation."
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 2081
+					province_id = 3296
+				}
+			}
+			secede_province = YEK
+		}
+		YEK = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = LUN
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						YEK = { owns = 2081 }
+					}
+				}
+				owner = {
+					YEK = {
+						2081 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						YEK = { owns = 3296 }
+					}
+				}
+				owner = {
+					YEK = {
+						3296 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Jaim IX is our heir! (play as Yeke)"
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 2081
+					province_id = 3296
+				}
+			}
+			secede_province = YEK
+		}
+		YEK = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = LUN
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						YEK = { owns = 2081 }
+					}
+				}
+				owner = {
+					YEK = {
+						2081 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						YEK = { owns = 3296 }
+					}
+				}
+				owner = {
+					YEK = {
+						3296 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
+		change_tag_no_core_switch = YEK
+		ai_chance = { factor = 0 }
 	}
 }
+
 country_event = {
 	id = 2425354
-	title = "The Kongo Civil War"
+	title = "The Congo Civil War"
 	desc = "KONGOAGAINSTPYGMY"
 	picture = "kongo_civilwar"
 	fire_only_once = yes
@@ -47,32 +165,83 @@ country_event = {
 
 	option = {
 		name = "Damn."
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 2001
+					province_id = 2009
+					province_id = 3553
+					province_id = 3552
+				}
+			}
+			secede_province = ANG
+		}
 		ANG = {
-			2001 = { secede_province = THIS }
-			2009 = { secede_province = THIS }
-			3553 = { secede_province = THIS }
-			3552 = { secede_province = THIS }
 			add_country_modifier = { name = small_country_draft duration = 600 }
 			war = {
 				target = KON
 				attacker_goal = { casus_belli = conquest_any }
 				defender_goal = { casus_belli = conquest_any }
 			}
-			2001 = {
-					sub_unit = { type = irregular value = current }
-					sub_unit = { type = irregular value = current }
+			random_owned = {
+				limit = {
+					owner = {
+						ANG = { owns = 2001 }
+					}
+				}
+				owner = {
+					ANG = {
+						2001 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
 			}
-			2009 = {
-					sub_unit = { type = irregular value = current }
-					sub_unit = { type = irregular value = current }
+			random_owned = {
+				limit = {
+					owner = {
+						ANG = { owns = 2009 }
+					}
+				}
+				owner = {
+					ANG = {
+						2009 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
 			}
-			3553 = {
-					sub_unit = { type = irregular value = current }
-					sub_unit = { type = irregular value = current }
+			random_owned = {
+				limit = {
+					owner = {
+						ANG = { owns = 3553 }
+					}
+				}
+				owner = {
+					ANG = {
+						3553 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
 			}
-			3552 = {
-					sub_unit = { type = irregular value = current }
-					sub_unit = { type = irregular value = current }
+			random_owned = {
+				limit = {
+					owner = {
+						ANG = { owns = 3552 }
+					}
+				}
+				owner = {
+					ANG = {
+						3552 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
 			}
 		}
 		ai_chance = { factor = 1 }
@@ -80,32 +249,83 @@ country_event = {
 	
 	option = {
 		name = "For the Pygmy! (play as the Bayak)"
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 2001
+					province_id = 2009
+					province_id = 3553
+					province_id = 3552
+				}
+			}
+			secede_province = ANG
+		}
 		ANG = {
-			2001 = { secede_province = THIS }
-			2009 = { secede_province = THIS }
-			3553 = { secede_province = THIS }
-			3552 = { secede_province = THIS }
 			add_country_modifier = { name = small_country_draft duration = 600 }
 			war = {
 				target = KON
 				attacker_goal = { casus_belli = conquest_any }
 				defender_goal = { casus_belli = conquest_any }
 			}
-			2001 = {
-					sub_unit = { type = irregular value = current }
-					sub_unit = { type = irregular value = current }
+			random_owned = {
+				limit = {
+					owner = {
+						ANG = { owns = 2001 }
+					}
+				}
+				owner = {
+					ANG = {
+						2001 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
 			}
-			2009 = {
-					sub_unit = { type = irregular value = current }
-					sub_unit = { type = irregular value = current }
+			random_owned = {
+				limit = {
+					owner = {
+						ANG = { owns = 2009 }
+					}
+				}
+				owner = {
+					ANG = {
+						2009 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
 			}
-			3553 = {
-					sub_unit = { type = irregular value = current }
-					sub_unit = { type = irregular value = current }
+			random_owned = {
+				limit = {
+					owner = {
+						ANG = { owns = 3553 }
+					}
+				}
+				owner = {
+					ANG = {
+						3553 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
 			}
-			3552 = {
-					sub_unit = { type = irregular value = current }
-					sub_unit = { type = irregular value = current }
+			random_owned = {
+				limit = {
+					owner = {
+						ANG = { owns = 3552 }
+					}
+				}
+				owner = {
+					ANG = {
+						3552 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
 			}
 		}
 		change_tag_no_core_switch = ANG
@@ -184,4 +404,440 @@ country_event = {
 		add_country_modifier = { name = power_vacuum duration = 300 }
 		ai_chance = { factor = 0 }
 	}
+}
+
+country_event = {
+	id = 2425357
+	title = "We've won the Lunda Succession War!"
+	desc = "YEKEWINS"
+	picture = "kongo_civilwar"
+	fire_only_once = yes
+
+	trigger = {
+		tag = YEK
+		year = 1841
+		NOT = { year = 1844 }
+		LUN = { has_recently_lost_war = yes }
+		NOT = { has_country_modifier = neutrality_modifier }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Perfect."
+		LUN = { all_core = { remove_core = LUN add_core = YEK } }
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = {
+	id = 2425357
+	title = "We've won the Lunda Succession War!"
+	desc = "YEKEWINS"
+	picture = "kongo_civilwar"
+	fire_only_once = yes
+
+	trigger = {
+		tag = YEK
+		year = 1841
+		NOT = { year = 1844 }
+		LUN = { has_recently_lost_war = yes }
+		NOT = { has_country_modifier = neutrality_modifier }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Perfect."
+		LUN = { all_core = { remove_core = LUN add_core = YEK } }
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = {
+	id = 2425358
+	title = "Unrest in Fualrume"
+	desc = "FUALRUMEREBELS"
+	picture = "alb_revolt_1"
+	fire_only_once = yes
+
+	trigger = {
+		tag = YEK
+		year = 1845
+		BTU = { owns = 3555 NOT = { accepted_culture = lacustrine_bantu } }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Support them."
+		set_global_flag = fualrume_supported
+		BTU = { country_event = { id = 2425359 days = 13 } }
+		BTU = { any_owned = {
+			limit = {
+				OR = {
+					province_id = 3554
+					province_id = 3555
+					province_id = 3556
+				}
+			}
+			secede_province = KUB
+		} }
+		KUB = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = BTU
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3554 }
+					}
+				}
+				owner = {
+					KUB = {
+						3554 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3555 }
+					}
+				}
+				owner = {
+					KUB = {
+						3555 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3556 }
+					}
+				}
+				owner = {
+					KUB = {
+						3556 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Our 'brothers'? What a nationalistic joke."
+		BTU = { country_event = { id = 2425360 days = 13 } }
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "Play as the revolt. (starts in 13 days)"
+		set_global_flag = fualrume_supported
+		BTU = { country_event = { id = 2425359 days = 13 } }
+		BTU = { any_owned = {
+			limit = {
+				OR = {
+					province_id = 3554
+					province_id = 3555
+					province_id = 3556
+				}
+			}
+			secede_province = KUB
+		} }
+		KUB = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = BTU
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3554 }
+					}
+				}
+				owner = {
+					KUB = {
+						3554 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3555 }
+					}
+				}
+				owner = {
+					KUB = {
+						3555 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3556 }
+					}
+				}
+				owner = {
+					KUB = {
+						3556 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
+		change_tag_no_core_switch = KUB
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+country_event = {
+	id = 2425359
+	title = "The Fualruman Rebellion"
+	desc = "FUELROMANSTARTSSUPPORT"
+	picture = "alb_revolt_1"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We won't let them ruin our nation."
+		KUB = {
+			create_alliance = YEK
+			# Audax Validator "." Ignore_NEXT
+			war = { attacker_goal = { casus_belli = call_allies_cb } call_ally = yes }
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "For Kuba! (play as Kuba)"
+		KUB = {
+			create_alliance = YEK
+			# Audax Validator "." Ignore_NEXT
+			war = { attacker_goal = { casus_belli = call_allies_cb } call_ally = yes }
+		}
+		change_tag_no_core_switch = KUB
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 2425360
+	title = "The Fualruman Rebellion"
+	desc = "FUELROMANSTARTS"
+	picture = "alb_revolt_1"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We won't let them ruin our nation."
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 3554
+					province_id = 3555
+					province_id = 3556
+				}
+			}
+			secede_province = KUB
+		}
+		KUB = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = BTU
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3554 }
+					}
+				}
+				owner = {
+					KUB = {
+						3554 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3555 }
+					}
+				}
+				owner = {
+					KUB = {
+						3555 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3556 }
+					}
+				}
+				owner = {
+					KUB = {
+						3556 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "For Kuba! (play as Kuba)"
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 3554
+					province_id = 3555
+					province_id = 3556
+				}
+			}
+			secede_province = KUB
+		}
+		KUB = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = BTU
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3554 }
+					}
+				}
+				owner = {
+					KUB = {
+						3554 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3555 }
+					}
+				}
+				owner = {
+					KUB = {
+						3555 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3556 }
+					}
+				}
+				owner = {
+					KUB = {
+						3556 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
+		change_tag_no_core_switch = KUB
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 2425361
+	title = "The Fualruman Proposal"
+	desc = "FUALROMEISAGOODBOY"
+	picture = "alb_revolt_1"
+	fire_only_once = yes
+
+	trigger = {
+		tag = KUB
+		has_global_flag = fualrume_supported
+		year = 1845
+		NOT = { year = 1848 }
+		KUB = { owns = 3554 owns = 3555 owns = 3556 }
+		KUB = { NOT = { at_war_with = BTU } }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Ok then. (Game Over)"
+		YEK = {
+			inherit = KUB 
+			set_country_flag = languagetrollingskuba
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "I'm a player and I don't want to die."
+		change_tag_no_core_switch = YEK
+		YEK = {
+			inherit = KUB 
+			set_country_flag = languagetrollingskuba
+		}
+		ai_chance = { factor = 0 }
+	}
+
 }
