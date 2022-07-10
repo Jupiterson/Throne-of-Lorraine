@@ -45,6 +45,46 @@ country_event = {
 	option = {
 		name = "The Slave trade is great" 
 		
+		any_pop = {
+            limit = {
+                type = slaves
+                location = {
+                    OR = {
+                        trade_goods = cotton
+                        trade_goods = fish
+                        trade_goods = fruit
+                        trade_goods = tea
+                        trade_goods = tobacco
+                        trade_goods = grain
+                        trade_goods = coffee
+                        trade_goods = cattle
+                        trade_goods = wool
+                        trade_goods = silk
+                        trade_goods = timber
+                    }
+                }
+                unemployment = 0.80
+            }
+            pop_type = farmers
+        }
+        any_pop = {
+            limit = {
+                type = slaves
+                location = {
+                    OR = {
+                        trade_goods = coal
+                        trade_goods = iron
+                        trade_goods = oil
+                        trade_goods = precious_metal
+                        trade_goods = sulphur
+                    }
+                }
+               unemployment = 0.80
+            }
+            pop_type = labourers
+        }
+
+		
 			any_pop = {
 				limit = {
 					type = slaves 
