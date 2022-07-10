@@ -16,9 +16,10 @@ country_event = {
 
 	option = {
 		name = "It's time to free our bretheren."
+		remove_country_modifier = neutrality_modifier
+		change_tag = YEK
 		2081 = { secede_province = YEK }
 		3296 = { secede_province = YEK }
-		change_tag = YEK
 		2014 = { secede_province = YEK }
 		ai_chance = { factor = 1 }
 	}
@@ -26,8 +27,11 @@ country_event = {
 	option = {
 		name = "Never!"
 		any_pop = { militancy = 8 }
+		2081 = { secede_province = LUN }
+		3296 = { secede_province = LUN }
+		2014 = { secede_province = LUN }
 		add_country_modifier = { name = power_vacuum duration = -1 }
-		add_country_modifier = { name = neutrality_modifier duration = -1 } 
+		remove_country_modifier = neutrality_modifier
 		ai_chance = { factor = 0 }
 		country_event = { id = 2425356 days = 21 }
 	}
@@ -57,8 +61,8 @@ country_event = {
 			add_country_modifier = { name = small_country_draft duration = 600 }
 			war = {
 				target = LUN
-				attacker_goal = { casus_belli = conquest_any }
-				defender_goal = { casus_belli = conquest_any }
+				attacker_goal = { casus_belli = civil_war }
+				defender_goal = { casus_belli = civil_war }
 			}
 			random_owned = {
 				limit = {
@@ -482,146 +486,12 @@ country_event = {
 		name = "Support them."
 		set_global_flag = fualrume_supported
 		BTU = { country_event = { id = 2425359 days = 13 } }
-		BTU = { any_owned = {
-			limit = {
-				OR = {
-					province_id = 3554
-					province_id = 3555
-					province_id = 3556
-				}
-			}
-			secede_province = KUB
-		} }
-		KUB = {
-			add_country_modifier = { name = small_country_draft duration = 600 }
-			war = {
-				target = BTU
-				attacker_goal = { casus_belli = conquest_any }
-				defender_goal = { casus_belli = conquest_any }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						KUB = { owns = 3554 }
-					}
-				}
-				owner = {
-					KUB = {
-						3554 = {
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-						}
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						KUB = { owns = 3555 }
-					}
-				}
-				owner = {
-					KUB = {
-						3555 = {
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-						}
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						KUB = { owns = 3556 }
-					}
-				}
-				owner = {
-					KUB = {
-						3556 = {
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-						}
-					}
-				}
-			}
-		}
 		ai_chance = { factor = 1 }
 	}
 	
 	option = {
 		name = "Our 'brothers'? What a nationalistic joke."
 		BTU = { country_event = { id = 2425360 days = 13 } }
-		ai_chance = { factor = 0 }
-	}
-	
-	option = {
-		name = "Play as the revolt. (starts in 13 days)"
-		set_global_flag = fualrume_supported
-		BTU = { country_event = { id = 2425359 days = 13 } }
-		BTU = { any_owned = {
-			limit = {
-				OR = {
-					province_id = 3554
-					province_id = 3555
-					province_id = 3556
-				}
-			}
-			secede_province = KUB
-		} }
-		KUB = {
-			add_country_modifier = { name = small_country_draft duration = 600 }
-			war = {
-				target = BTU
-				attacker_goal = { casus_belli = conquest_any }
-				defender_goal = { casus_belli = conquest_any }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						KUB = { owns = 3554 }
-					}
-				}
-				owner = {
-					KUB = {
-						3554 = {
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-						}
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						KUB = { owns = 3555 }
-					}
-				}
-				owner = {
-					KUB = {
-						3555 = {
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-						}
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						KUB = { owns = 3556 }
-					}
-				}
-				owner = {
-					KUB = {
-						3556 = {
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-						}
-					}
-				}
-			}
-		}
-		change_tag_no_core_switch = KUB
 		ai_chance = { factor = 0 }
 	}
 
@@ -637,6 +507,69 @@ country_event = {
 
 	option = {
 		name = "We won't let them ruin our nation."
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 3554
+					province_id = 3555
+					province_id = 3556
+				}
+			}
+			secede_province = KUB
+		}
+		KUB = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = BTU
+				attacker_goal = { casus_belli = become_independent }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3554 }
+					}
+				}
+				owner = {
+					KUB = {
+						3554 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3555 }
+					}
+				}
+				owner = {
+					KUB = {
+						3555 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3556 }
+					}
+				}
+				owner = {
+					KUB = {
+						3556 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
 		KUB = {
 			create_alliance = YEK
 			# Audax Validator "." Ignore_NEXT
@@ -647,6 +580,69 @@ country_event = {
 	
 	option = {
 		name = "For Kuba! (play as Kuba)"
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 3554
+					province_id = 3555
+					province_id = 3556
+				}
+			}
+			secede_province = KUB
+		}
+		KUB = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = BTU
+				attacker_goal = { casus_belli = become_independent }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3554 }
+					}
+				}
+				owner = {
+					KUB = {
+						3554 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3555 }
+					}
+				}
+				owner = {
+					KUB = {
+						3555 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KUB = { owns = 3556 }
+					}
+				}
+				owner = {
+					KUB = {
+						3556 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
 		KUB = {
 			create_alliance = YEK
 			# Audax Validator "." Ignore_NEXT
@@ -681,7 +677,7 @@ country_event = {
 			add_country_modifier = { name = small_country_draft duration = 600 }
 			war = {
 				target = BTU
-				attacker_goal = { casus_belli = conquest_any }
+				attacker_goal = { casus_belli = become_independent }
 				defender_goal = { casus_belli = conquest_any }
 			}
 			random_owned = {
@@ -749,7 +745,7 @@ country_event = {
 			add_country_modifier = { name = small_country_draft duration = 600 }
 			war = {
 				target = BTU
-				attacker_goal = { casus_belli = conquest_any }
+				attacker_goal = { casus_belli = become_independent }
 				defender_goal = { casus_belli = conquest_any }
 			}
 			random_owned = {
@@ -833,12 +829,26 @@ country_event = {
 	
 	option = {
 		name = "I'm a player and I don't want to die."
+		YEK = { country_event = { id = 2425362 days = 2 } }
 		change_tag_no_core_switch = YEK
-		YEK = {
-			inherit = KUB 
-			set_country_flag = languagetrollingskuba
-		}
 		ai_chance = { factor = 0 }
 	}
 
+}
+
+country_event = {
+	id = 2425362
+	title = "The Fualruman Rebellion"
+	desc = "Kuba now will join us as planned."
+	picture = "alb_revolt_1"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		inherit = KUB 
+		set_country_flag = languagetrollingskuba
+		ai_chance = { factor = 1 }
+	}
+	
 }
