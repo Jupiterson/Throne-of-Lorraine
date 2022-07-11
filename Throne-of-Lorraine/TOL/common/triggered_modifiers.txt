@@ -761,19 +761,16 @@ help_ai_spain = { #Uncivs
 	min_military_spending = 0.3
 }
 
-#help_ai_russia = {
-#	trigger = {
-#		tag = RUS
-#		ai = yes
-#	}
-#	icon = 10
-#	tax_efficiency = 0.08
-#	administrative_efficiency_modifier = 0.03
-#	education_efficiency_modifier = 0.2
-#	mobilisation_size = 0.01
-#	war_exhaustion = -0.5
-#	min_military_spending = 0.3
-#}
+help_ai_poland = {
+	trigger = {
+		tag = POL
+		ai = yes
+	}
+	icon = 10
+	mobilisation_size = 0.05
+	war_exhaustion = -0.5
+	min_military_spending = 0.3
+}
 
 yellow_river = {   #Huan He
 	trigger = {
@@ -1557,4 +1554,24 @@ poland_starting_war = {
 	}
 	icon = 10
 	mobilisation_size = 2.5
+}
+
+jesuit_help = {
+	trigger = {
+		tag = JES
+		#government = constitutional_theocracy
+	}
+	global_population_growth = 0.002
+	global_immigrant_attract = 20.0
+	icon = 17
+}
+
+
+weak_freiland = {
+	trigger = {
+		tag = TEX
+		NOT = { owns = 43 }
+	}
+	global_immigrant_attract = -2.0
+	icon = 17
 }

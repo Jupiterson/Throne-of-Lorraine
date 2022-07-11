@@ -1,0 +1,41 @@
+leader = {
+	name = "Lusignan"
+	type = land
+	date="1833.1.1"
+	personality = romantic
+	background = poet
+	prestige = 0.1
+}
+
+
+army = {
+	name = "Order of Cyprus"
+	location = 855
+	regiment = {
+		name= "Cypriot Knights"
+		type = infantry
+		home = 855
+	}
+
+}
+
+navy = {
+	name = "Cypriot Navy"
+	location = 855
+
+	ship = {
+		name= "1st Clipper Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2nd Steam Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "Maria"
+		type = frigate
+	}
+	
+	}
