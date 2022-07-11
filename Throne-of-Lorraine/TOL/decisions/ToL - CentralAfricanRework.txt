@@ -1,2 +1,58 @@
 political_decisions = {
+	language_kuba = {
+		picture = map_congo_free_state
+		potential = {
+			has_country_flag = languagetrollingskuba
+			NOT = { has_country_flag = language_kuba }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = language_kuba
+			3554 = {
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = pygmy
+							has_pop_culture = bakongo
+						}
+					} 
+					move_pop = 2917
+				}
+			}
+			# Audax Validator "." Ignore_NEXT
+			3554 = { assimilate = yes }
+			2917 = { any_pop = { move_pop = 3554 } }
+			3555 = {
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = pygmy
+							has_pop_culture = bakongo
+						}
+					} 
+					move_pop = 2916
+				}
+			}
+			# Audax Validator "." Ignore_NEXT
+			3555 = { assimilate = yes }
+			2916 = { any_pop = { move_pop = 3555 } }
+			3556 = {
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = pygmy
+							has_pop_culture = bakongo
+						}
+					} 
+					move_pop = 2915
+				}
+			}
+			# Audax Validator "." Ignore_NEXT
+			3556 = { assimilate = yes }
+			2915 = { any_pop = { move_pop = 3556 } }
+		}
+		ai_will_do = { factor = 1 }
+	}
 }
