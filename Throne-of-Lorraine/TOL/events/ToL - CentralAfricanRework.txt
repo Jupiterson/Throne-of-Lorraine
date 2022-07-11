@@ -857,7 +857,7 @@ country_event = {
 	id = 2425363
 	title = "Nyanzan Sentiment Grows"
 	desc = "NYANZANSUNITE"
-	picture = "lunda_kingded"
+	picture = "alb_revolt_1"
 	fire_only_once = yes
 
 	trigger = {
@@ -882,7 +882,7 @@ country_event = {
 	id = 2425364
 	title = "Nyanzan War"
 	desc = "NYANZANSUNITE"
-	picture = "lunda_kingded"
+	picture = "alb_revolt_1"
 	fire_only_once = yes
 
 	trigger = {
@@ -962,7 +962,7 @@ country_event = {
 country_event = {
 	id = 2425365
 	title = "Nyanzan War"
-	desc = "NYANZANSUNITE"
+	desc = "NYANZANWAR"
 	picture = "alb_revolt_1"
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -993,3 +993,100 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = 2425366
+	title = "Nyanzan War"
+	desc = "Multiple parts of Nyanza are joining our rebellion."
+	picture = "alb_revolt_1"
+	fire_only_once = yes
+
+	trigger = {
+		tag = LBA
+		year = 1838
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = "Long live Nyanza!"
+		1997 = { secede_province = THIS }
+		2021 = { secede_province = THIS }
+		2022 = { secede_province = THIS }
+		2029 = { secede_province = THIS }
+		2019 = { secede_province = THIS }
+		1997 = {
+							sub_unit = { type = infantry value = current }
+							sub_unit = { type = irregular value = current }
+		}
+		2021 = {
+							sub_unit = { type = infantry value = current }
+							sub_unit = { type = irregular value = current }
+		}
+		2022 = {
+							sub_unit = { type = infantry value = current }
+							sub_unit = { type = irregular value = current }
+		}
+		2029 = {
+							sub_unit = { type = infantry value = current }
+							sub_unit = { type = irregular value = current }
+		}
+		2019 = {
+							sub_unit = { type = infantry value = current }
+							sub_unit = { type = irregular value = current }
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 2425367
+	title = "We win!"
+	desc = "After a war against our cousins, we can now claim Greater Nyanza."
+	picture = "alb_revolt_1"
+	fire_only_once = yes
+
+	trigger = {
+		tag = LBA
+		owns = 2019
+		owns = 2023
+		owns = 2028
+		owns = 2029
+		owns = 2044
+		war = no		
+		NOT = { year = 1842 }
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = "Long live Nyanza!"
+		BHA = { all_core = { add_core = LBA } }
+		RWA = { all_core = { add_core = LBA } }
+		1990 = { add_core = LBA }
+		1991 = { add_core = LBA }
+		2020 = { add_core = LBA }
+	}
+}
+
+#country_event = {
+#	id = 2425368
+#	title = "The Situation of Mbarara"
+#	desc = "MBARARAFULLSTOP"
+#	picture = "alb_revolt_1"
+#	fire_only_once = yes
+#
+#	trigger = {
+#	}
+#
+#	mean_time_to_happen = {
+#		days = x
+#	}
+#
+#	option = {
+#		name = ""
+#	}
+#}
