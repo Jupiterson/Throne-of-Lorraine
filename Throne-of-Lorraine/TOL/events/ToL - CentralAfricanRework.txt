@@ -1069,24 +1069,260 @@ country_event = {
 		1990 = { add_core = LBA }
 		1991 = { add_core = LBA }
 		2020 = { add_core = LBA }
+		set_country_flag = eyeyea_quenoparelafiesta
 	}
 }
 
-#country_event = {
-#	id = 2425368
-#	title = "The Situation of Mbarara"
-#	desc = "MBARARAFULLSTOP"
-#	picture = "alb_revolt_1"
-#	fire_only_once = yes
-#
-#	trigger = {
-#	}
-#
-#	mean_time_to_happen = {
-#		days = x
-#	}
-#
-#	option = {
-#		name = ""
-#	}
-#}
+country_event = {
+	id = 2425368
+	title = "The Situation of Mbarara"
+	desc = "MBARARAFULLSTOP"
+	picture = "uk_seizes_lagos"
+	fire_only_once = yes
+
+	trigger = {
+		tag = LBA
+		has_country_flag = eyeyea_quenoparelafiesta
+		BTU = { owns = 2020 }
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	option = {
+		name = "Spark a crisis between locals. §RGain 2 infamy§W"
+		badboy = 2
+		BTU = { country_event = 2425369 }
+	}
+	
+	option = {
+		name = "Why?"
+		set_country_flag = youhavestoppedtheparty
+	}
+}
+
+country_event = {
+	id = 2425369
+	title = "The Mbabaran Crisis"
+	desc = "MBARARAFULLSTOPBTU"
+	picture = "uk_seizes_lagos"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Hm?"
+		LBA = { country_event = 2425370 }
+		ai_chance = { factor = 0.01 }
+	}
+	
+	option = {
+		name = "Give in to the Legans."
+		LBA = { country_event = 2425373 }
+		random_owned = {
+				limit = {
+					owner = {
+						BTU = { owns = 1990 }
+					}
+				}
+				owner = {
+					1990 = { secede_province = LBA }
+				}
+		}
+		random_owned = {
+				limit = {
+					owner = {
+						BTU = { owns = 1991 }
+					}
+				}
+				owner = {
+					1991 = { secede_province = LBA }
+				}
+		}
+		random_owned = {
+				limit = {
+					owner = {
+						BTU = { owns = 3547 }
+					}
+				}
+				owner = {
+					3547 = { secede_province = LBA }
+				}
+		}
+		random_owned = {
+				limit = {
+					owner = {
+						BTU = { owns = 2020 }
+					}
+				}
+				owner = {
+					2020 = { secede_province = LBA }
+				}
+		}
+		ai_chance = { factor = 0.01 }
+	}
+	
+	option = {
+		name = "Demand reparations immediately!"
+		LBA = { country_event = 2425374 }
+		ai_chance = { factor = 0.98 }
+	}
+	
+}
+
+country_event = {
+	id = 2425370
+	title = "The Babantuans don't care"
+	desc = "MBARARAFULLSTOPBTUWHA"
+	picture = "uk_seizes_lagos"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Just uncover the truth."
+		BTU = { country_event = 2425371 }
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "I fear for my life, cold hearted Babantuans..."
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = 2425371
+	title = "The Nyanzans did it!"
+	desc = "MBARARAFULLSTOPUNCOVERED"
+	picture = "uk_seizes_lagos"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We declare war."
+		casus_belli = {
+                target = FROM
+                type = war_reparations
+                months = 120
+        }
+		FROM = {
+			casus_belli = {
+                target = THIS
+                type = acquire_state
+                months = 120
+			}
+        }
+		war = {
+				target = FROM
+				attacker_goal = { casus_belli = war_reparations }
+				defender_goal = { casus_belli = state_province_id - 1990 }
+		}
+		BTU = { country_event = 2425372 }
+	}
+}
+
+country_event = {
+	id = 2425372
+	title = "War For Our Freedom"
+	desc = "We are now at war against the Babantuans."
+	picture = "uk_seizes_lagos"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "This is what we wanted, didn't we? Hurray!"
+	}
+}
+
+country_event = {
+	id = 2425373
+	title = "The Babantuans have given in"
+	desc = "MBARARAFULLSTOPGIVENIN"
+	picture = "uk_seizes_lagos"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Perfect!"
+	}
+}
+
+country_event = {
+	id = 2425374
+	title = "The Babantuans Demand Reparations"
+	desc = "MBARARAFULLSTOPREPS"
+	picture = "uk_seizes_lagos"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Give it to them and run away."
+		treasury = -40000
+		BTU = { country_event = 2425375 }
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "How about no?"
+		BTU = { country_event = 2425376 }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = 2425375
+	title = "The Nyanzans Have Given Us Reparations"
+	desc = "After all the Nyanzans don't want to fight us, and have given us the money."
+	picture = "uk_seizes_lagos"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Perfect!"
+		treasury = 40000
+	}
+}
+
+country_event = {
+	id = 2425376
+	title = "The Nyanzans Have Refused"
+	desc = "After all the Nyanzans want to fight us, so we'll give them what they want, a war."
+	picture = "uk_seizes_lagos"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Perfect."
+		casus_belli = {
+                target = FROM
+                type = war_reparations
+                months = 120
+        }
+		FROM = {
+			casus_belli = {
+                target = THIS
+                type = acquire_state
+                months = 120
+			}
+        }
+		war = {
+				target = FROM
+				attacker_goal = { casus_belli = war_reparations }
+				defender_goal = { casus_belli = state_province_id - 1990 }
+		}
+		BTU = { country_event = 2425376 }
+	}
+}
+
+country_event = {
+	id = 2425376
+	title = "The Babantuans Fight US"
+	desc = "After all the Babantuans want to fight us, so we'll give them what they want, a war."
+	picture = "uk_seizes_lagos"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Perfect..."
+	}
+}
