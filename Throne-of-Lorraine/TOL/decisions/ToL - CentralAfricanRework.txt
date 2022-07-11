@@ -55,4 +55,48 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	yeke_claims = {
+		picture = map_congo_free_state
+		potential = {
+			tag = YEK
+			has_global_flag = timetotrollbabantu
+			NOT = { has_country_flag = yeke_claims }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = yeke_claims
+			3552 = { secede_province = YEK }
+			1984 = { secede_province = YEK }
+			3557 = { secede_province = YEK }
+			1988 = { secede_province = YEK }
+			3560 = { secede_province = YEK }
+			1989 = { secede_province = YEK }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	nyanza_claims = {
+		picture = map_congo_free_state
+		potential = {
+			tag = LBA
+			has_global_flag = timetotrollbabantu
+			NOT = { has_country_flag = nyanza_claims }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = nyanza_claims
+			1998 = { secede_province = LBA }
+			3561 = { secede_province = LBA }
+			3545 = { secede_province = LBA }
+			3546 = { secede_province = LBA }
+			1997 = { secede_province = LBA }
+			1989 = { secede_province = LBA }
+		}
+		ai_will_do = { factor = 1 }
+	}
 }
