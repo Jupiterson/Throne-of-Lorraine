@@ -64,6 +64,7 @@ country_event = {
 				attacker_goal = { casus_belli = civil_war }
 				defender_goal = { casus_belli = civil_war }
 			}
+			government = democracy
 			random_owned = {
 				limit = {
 					owner = {
@@ -116,6 +117,7 @@ country_event = {
 				attacker_goal = { casus_belli = conquest_any }
 				defender_goal = { casus_belli = conquest_any }
 			}
+			government = democracy
 			random_owned = {
 				limit = {
 					owner = {
@@ -915,6 +917,7 @@ country_event = {
 				attacker_goal = { casus_belli = conquest_any }
 				defender_goal = { casus_belli = acquire_all_cores }
 			}
+			government = democracy
 			2055 = {
 							sub_unit = { type = infantry value = current }
 							sub_unit = { type = irregular value = current }
@@ -943,6 +946,7 @@ country_event = {
 				attacker_goal = { casus_belli = conquest_any }
 				defender_goal = { casus_belli = acquire_all_cores }
 			}
+			government = democracy
 			2055 = {
 							sub_unit = { type = infantry value = current }
 							sub_unit = { type = irregular value = current }
@@ -1316,7 +1320,7 @@ country_event = {
 
 country_event = {
 	id = 2425376
-	title = "The Babantuans Fight US"
+	title = "The Babantuans Fight Us"
 	desc = "After all the Babantuans want to fight us, so we'll give them what they want, a war."
 	picture = "uk_seizes_lagos"
 	fire_only_once = yes
@@ -1324,5 +1328,72 @@ country_event = {
 
 	option = {
 		name = "Perfect..."
+	}
+}
+
+country_event = {
+	id = 2425377
+	title = "Nyanza-Yeke Cooperation?"
+	desc = "COOPERATIONBABANTUSCARE"
+	picture = "diplomats_examining"
+	fire_only_once = yes
+
+	trigger = {
+		tag = LBA
+		owns = 3547
+		YEK = { has_country_flag = languagetrollingskuba }
+		BTU = { owns = 1988 owns = 1998 }
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	option = {
+		name = "We think this is a good idea."
+		YEK = { country_event = 2425378 }
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Why?"
+		set_country_flag = youhavestoppedtheparty
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 2425378
+	title = "Nyanza-Yeke Cooperation?"
+	desc = "COOPERATIONBABANTUMARK"
+	picture = "diplomats_examining"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Perfect..."
+		government = constitutional_empire
+		set_global_flag = timetotrollbabantu
+		LBA = { country_event = 2425379 }
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "No, we love peace."
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 2425379
+	title = "Nyanza-Yeke Cooperation?"
+	desc = "The Yeke have accepted our proposals."
+	picture = "diplomats_examining"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Perfect..."
+		government = constitutional_empire
 	}
 }
