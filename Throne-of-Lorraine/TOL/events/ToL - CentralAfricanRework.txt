@@ -172,6 +172,7 @@ country_event = {
 
 	option = {
 		name = "Damn."
+		set_country_flag = damnheded
 		any_owned = {
 			limit = {
 				OR = {
@@ -256,6 +257,7 @@ country_event = {
 	
 	option = {
 		name = "For the Pygmy! (play as the Bayak)"
+		set_country_flag = damnheded
 		any_owned = {
 			limit = {
 				OR = {
@@ -1396,5 +1398,55 @@ country_event = {
 		name = "Perfect..."
 		government = constitutional_empire
 		create_alliance = YEK
+	}
+}
+
+country_event = {
+	id = 2425380
+	title = "We win!"
+	desc = "After a bloody war against the false heirs of this great country, we can now have its throne."
+	picture = "diplomats_examining"
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			AND = { tag = ANG KON = { exists = no } }
+			AND = { tag = KON ANG = { exists = no } has_country_flag = damnheded }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Great!"
+		random_owned = {
+				limit = {
+					owner = {
+						THIS = { tag = ANG }
+					}
+				}
+				owner = {
+					KON = { all_core = { add_core = ANG } }
+					3552 = { remove_core = THIS }
+					3553 = { remove_core = THIS }
+					1984 = { remove_core = THIS }
+					2001 = { remove_core = THIS }
+					2009 = { remove_core = THIS }
+					3551 = { remove_core = THIS }
+					2006 = { remove_core = THIS }
+				}
+		}
+		random_owned = {
+				limit = {
+					owner = {
+						THIS = { tag = KON }
+					}
+				}
+				owner = {
+					any_pop = { limit = { has_pop_culture = pygmy } reduce_pop = 0.75 }
+				}
+			}
+		}
 	}
 }
