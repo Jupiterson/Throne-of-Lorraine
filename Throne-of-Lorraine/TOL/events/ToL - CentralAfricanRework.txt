@@ -1427,6 +1427,7 @@ country_event = {
 					}
 				}
 				owner = {
+					set_country_flag = timetoakato
 					KON = { all_core = { add_core = ANG } }
 					3552 = { remove_core = THIS }
 					3553 = { remove_core = THIS }
@@ -1444,9 +1445,201 @@ country_event = {
 					}
 				}
 				owner = {
+					set_country_flag = timetocoingto
 					any_pop = { limit = { has_pop_culture = pygmy } reduce_pop = 0.75 }
 				}
 			}
 		}
+	}
+}
+
+country_event = {
+	id = 2425354
+	title = "The Aka Civil War"
+	desc = "KONGOAGAINSTPYGMY"
+	picture = "kongo_civilwar"
+
+	trigger = {
+		tag = ANG
+		OR = {
+			AND = { year = 1853 NOT = { year = 1854 } }
+			AND = { year = 1874 NOT = { year = 1875 } }
+			AND = { year = 1891 NOT = { year = 1892 } }
+		}
+		owns = 3550
+		KON = { exists = no }
+	}
+
+	mean_time_to_happen = {
+		months = 11
+	}
+
+	option = {
+		name = "Damn."
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 3548
+					province_id = 3549
+					province_id = 3550
+					province_id = 2003
+				}
+			}
+			secede_province = KON
+		}
+		KON = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = ANG
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KON = { owns = 3548 }
+					}
+				}
+				owner = {
+					KON = {
+						3548 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KON = { owns = 3549 }
+					}
+				}
+				owner = {
+					KON = {
+						3549 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KON = { owns = 3550 }
+					}
+				}
+				owner = {
+					KON = {
+						3550 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KON = { owns = 2003 }
+					}
+				}
+				owner = {
+					KON = {
+						2003 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "For the Pygmy! (play as the Bayak)"
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 3548
+					province_id = 3549
+					province_id = 3550
+					province_id = 2003
+				}
+			}
+			secede_province = KON
+		}
+		KON = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = ANG
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KON = { owns = 3548 }
+					}
+				}
+				owner = {
+					KON = {
+						3548 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KON = { owns = 3549 }
+					}
+				}
+				owner = {
+					KON = {
+						3549 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KON = { owns = 3550 }
+					}
+				}
+				owner = {
+					KON = {
+						3550 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						KON = { owns = 2003 }
+					}
+				}
+				owner = {
+					KON = {
+						2003 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
+		change_tag_no_core_switch = ANG
+		ai_chance = { factor = 0 }
 	}
 }

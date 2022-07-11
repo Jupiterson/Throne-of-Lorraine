@@ -68,14 +68,14 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = yeke_claims
-			3552 = { secede_province = YEK }
-			1984 = { secede_province = YEK }
-			3557 = { secede_province = YEK }
-			1988 = { secede_province = YEK }
-			3560 = { secede_province = YEK }
-			1989 = { secede_province = YEK }
-			1990 = { secede_province = YEK }
-			2046 = { secede_province = YEK }
+			3552 = { add_core = YEK }
+			1984 = { add_core = YEK }
+			3557 = { add_core = YEK }
+			1988 = { add_core = YEK }
+			3560 = { add_core = YEK }
+			1989 = { add_core = YEK }
+			1990 = { add_core = YEK }
+			2046 = { add_core = YEK }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -92,15 +92,94 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = nyanza_claims
-			1998 = { secede_province = LBA }
-			3561 = { secede_province = LBA }
-			3545 = { secede_province = LBA }
-			3546 = { secede_province = LBA }
-			1987 = { secede_province = LBA }
-			2016 = { secede_province = LBA }
-			2017 = { secede_province = LBA }
-			1997 = { secede_province = LBA }
-			1989 = { secede_province = LBA }
+			1998 = { add_core = LBA }
+			3561 = { add_core = LBA }
+			3545 = { add_core = LBA }
+			3546 = { add_core = LBA }
+			1987 = { add_core = LBA }
+			2016 = { add_core = LBA }
+			2017 = { add_core = LBA }
+			1997 = { add_core = LBA }
+			1989 = { add_core = LBA }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	congo_claims_one = {
+		picture = map_congo_free_state
+		potential = {
+			tag = KON
+			has_country_flag = timetocoingto
+			NOT = { has_country_flag = congo_claims_one }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = congo_claims_one
+			3553 = { add_core = KON }
+			3554 = { add_core = KON }
+			3557 = { add_core = KON }
+			3558 = { add_core = KON }
+			3540 = { add_core = KON }
+			1993 = { add_core = KON }
+			3542 = { add_core = KON }
+			1980 = { add_core = KON }
+			1975 = { add_core = KON }
+			1972 = { add_core = KON }
+			1974 = { add_core = KON }
+			LOA = { all_core = { add_core = KON } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	congo_claims_two = {
+		picture = map_congo_free_state
+		potential = {
+			tag = KON
+			has_country_flag = congo_claims_one
+			owns = 3553
+			owns = 3554
+			owns = 3557
+			owns = 3558
+			owns = 3540
+			owns = 1993
+			owns = 3542
+			owns = 1980
+			owns = 1975
+			owns = 1972
+			owns = 1974
+			NOT = { has_country_flag = congo_claims_two }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = congo_claims_two
+			add_accepted_culture = south_forest_bantu
+			add_accepted_culture = christ_bantu
+			add_accepted_culture = christ_bakongo
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	pygmy_claims_one = {
+		picture = map_congo_free_state
+		potential = {
+			tag = ANG
+			has_country_flag = timetoakato
+			NOT = { has_country_flag = pygmy_claims_one }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = pygmy_claims_one
+			LOA = { all_core = { add_core = ANG } }
+			2004 = { add_core = ANG }
+			2005 = { add_core = ANG }
+			2007 = { add_core = ANG }
+			2008 = { add_core = ANG }
 		}
 		ai_will_do = { factor = 1 }
 	}
