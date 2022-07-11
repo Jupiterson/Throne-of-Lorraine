@@ -862,7 +862,6 @@ country_event = {
 
 	trigger = {
 		OR = { tag = BUG tag = KZB tag = KRW }
-		THIS = { exists = yes }
 		year = 1838
 	}
 
@@ -872,19 +871,22 @@ country_event = {
 
 	option = {
 		name = "Oh no."
-		all_core = { add_core = LBA }
+		BUG = { all_core = { add_core = LBA } }
+		KZB = { all_core = { add_core = LBA } }
+		KRW = { all_core = { add_core = LBA } }
 		ai_chance = { factor = 1 }
 	}
 }
 
 country_event = {
-	id = 2425363
-	title = "Nyanzan Sentiment Grows"
+	id = 2425364
+	title = "Nyanzan War"
 	desc = "NYANZANSUNITE"
 	picture = "lunda_kingded"
 	fire_only_once = yes
 
 	trigger = {
+		tag = BUG
 		OR = {
 			owns = 2019
 			owns = 2023
@@ -901,16 +903,11 @@ country_event = {
 
 	option = {
 		name = "Oh no."
-		any_owned = {
-			limit = {
-				OR = {
-					province_id = 2055
-					province_id = 2039
-					province_id = 2011
-				}
-			}
-			secede_province = LBA
-		}
+		KZB = { country_event = 2425365 }
+		KRW = { country_event = 2425365 }
+		2055 = { secede_province = THIS secede_province = LBA }
+		2039 = { secede_province = THIS secede_province = LBA }
+		2011 = { secede_province = THIS secede_province = LBA }
 		LBA = {
 			add_country_modifier = { name = small_country_draft duration = 600 }
 			war = {
@@ -918,56 +915,15 @@ country_event = {
 				attacker_goal = { casus_belli = conquest_any }
 				defender_goal = { casus_belli = acquire_all_cores }
 			}
-			random_owned = {
-				limit = {
-					owner = {
-						LBA = { owns = 2055 }
-					}
-				}
-				owner = {
-					LBA = {
-						2055 = {
+			2055 = {
 							sub_unit = { type = infantry value = current }
 							sub_unit = { type = irregular value = current }
 							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-						}
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						LBA = { owns = 2039 }
-					}
-				}
-				owner = {
-					LBA = {
-						2039 = {
-							sub_unit = { type = infantry value = current }
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-						}
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						LBA = { owns = 2011 }
-					}
-				}
-				owner = {
-					LBA = {
-						2011 = {
-							sub_unit = { type = infantry value = current }
-							sub_unit = { type = cavalry value = current }
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = cavalry value = current }
-						}
-					}
-				}
+							sub_unit = { type = frigate value = current }
+							sub_unit = { type = frigate value = current }
+							sub_unit = { type = clipper_transport value = current }
+							sub_unit = { type = clipper_transport value = current }
+							sub_unit = { type = clipper_transport value = current }
 			}
 		}
 		ai_chance = { factor = 1 }
@@ -975,76 +931,65 @@ country_event = {
 	
 	option = {
 		name = "For a united Nyanza! (play as Nyanza)"
-		any_owned = {
-			limit = {
-				OR = {
-					province_id = 2055
-					province_id = 2039
-					province_id = 2011
-				}
-			}
-			secede_province = LBA
-		}
+		KZB = { country_event = 2425365 }
+		KRW = { country_event = 2425365 }
+		2055 = { secede_province = THIS secede_province = LBA }
+		2039 = { secede_province = THIS secede_province = LBA }
+		2011 = { secede_province = THIS secede_province = LBA }
 		LBA = {
 			add_country_modifier = { name = small_country_draft duration = 600 }
 			war = {
 				target = THIS
-				attacker_goal = { casus_belli = become_independent }
-				defender_goal = { casus_belli = conquest_any }
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = acquire_all_cores }
 			}
-			random_owned = {
-				limit = {
-					owner = {
-						LBA = { owns = 2055 }
-					}
-				}
-				owner = {
-					LBA = {
-						2055 = {
+			2055 = {
 							sub_unit = { type = infantry value = current }
 							sub_unit = { type = irregular value = current }
 							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-						}
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						LBA = { owns = 2039 }
-					}
-				}
-				owner = {
-					LBA = {
-						2039 = {
-							sub_unit = { type = infantry value = current }
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = irregular value = current }
-						}
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						LBA = { owns = 2011 }
-					}
-				}
-				owner = {
-					LBA = {
-						2011 = {
-							sub_unit = { type = infantry value = current }
-							sub_unit = { type = cavalry value = current }
-							sub_unit = { type = irregular value = current }
-							sub_unit = { type = cavalry value = current }
-						}
-					}
-				}
+							sub_unit = { type = frigate value = current }
+							sub_unit = { type = frigate value = current }
+							sub_unit = { type = clipper_transport value = current }
+							sub_unit = { type = clipper_transport value = current }
+							sub_unit = { type = clipper_transport value = current }
 			}
 		}
 		change_tag_no_core_switch = LBA
 		ai_chance = { factor = 0 }
 	}
+}
+
+country_event = {
+	id = 2425365
+	title = "Nyanzan War"
+	desc = "NYANZANSUNITE"
+	picture = "alb_revolt_1"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Oh no."
+		LBA = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = acquire_all_cores }
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "For a united Nyanza! (play as Nyanza)"
+		LBA = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = acquire_all_cores }
+			}
+		}
+		change_tag_no_core_switch = LBA
+		ai_chance = { factor = 0 }
+	}
+	
 }
