@@ -1221,7 +1221,7 @@ country_event = {
 		war = {
 				target = FROM
 				attacker_goal = { casus_belli = war_reparations }
-				defender_goal = { casus_belli = state_province_id - 1990 }
+				defender_goal = { casus_belli = acquire_state state_province_id = 1990 }
 		}
 		BTU = { country_event = 2425372 }
 	}
@@ -1314,7 +1314,7 @@ country_event = {
 		war = {
 				target = FROM
 				attacker_goal = { casus_belli = war_reparations }
-				defender_goal = { casus_belli = state_province_id - 1990 }
+				defender_goal = { casus_belli = acquire_state state_province_id = 1990 }
 		}
 		BTU = { country_event = 2425376 }
 	}

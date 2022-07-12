@@ -602,7 +602,7 @@ country_event = {
 	}
 	}
 	
-			country_event = {
+country_event = {
 
 	id = 50008
     is_triggered_only = yes
@@ -615,12 +615,14 @@ country_event = {
 	option = {
 		name = "xhosaprophet9_option1"   
         money = 25000
-		FROM = { money = -25000
-		         2049 = { secede_province = FROM }
-				} 
+		FROM = {
+			money = -25000
+		    2049 = { secede_province = FROM }
+		} 
 	}
-		option = {
+	
+	option = {
 		name = "xhosaprophet9_option2"   
-                relation = { who = FROM value = -100
+        relation = { who = FROM value = -100 }
 	}
-	}
+}
