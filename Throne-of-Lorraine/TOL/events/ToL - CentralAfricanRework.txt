@@ -1653,6 +1653,7 @@ country_event = {
 	trigger = {
 		tag = LOA
 		year = 1838
+		NOT = { has_global_flag = cooperationwjesuites }
 	}
 
 	mean_time_to_happen = {
@@ -1906,6 +1907,74 @@ country_event = {
 	id = 2425390
 	title = "The Loango Plan Refused"
 	desc = "The Babantu have refused our plan to partition Loango."
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Damn."
+    }
+
+}
+
+country_event = {
+	id = 2425391
+	title = "Treaty of Friendship with Loango"
+	desc = "The Loango have proposed to us to cooperate in the Jesuite matter."
+	picture = "diplomats_examining"
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = "It's perfect!"
+		FROM = { country_event = 2425392 }
+		ai_chance = { factor = 0.90 }
+	}
+	
+	option = {
+		name = "Never!"
+		FROM = { country_event = 2425393 }
+		ai_chance = { factor = 0.10 }
+	}
+
+}
+
+country_event = {
+	id = 2425392
+	title = "Treaty of Friendship with the Jesuites"
+	desc = "The Jesuites have accepted our cooperation."
+	picture = "diplomats_examining"
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = "It's perfect!"
+		create_alliance = JES
+		set_global_flag = cooperationwjesuites
+		random_owned = {
+				limit = {
+					owner = {
+						 GAB = { exists = yes }
+					}
+				}
+				owner = {
+					3538 = { secede_province = LOA }
+					3539 = { secede_province = LOA }
+					2624 = { remove_core = LOA }
+					1977 = { remove_core = LOA }
+					3541 = { remove_core = LOA }
+				}
+		}
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = {
+	id = 2425393
+	title = "Treaty of Friendship with the Jesuites"
+	desc = "The Jesuites have accepted our cooperation."
 	picture = "diplomats_examining"
     
     is_triggered_only = yes
