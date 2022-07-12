@@ -333,4 +333,42 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	jesuit_larp_babantu = {
+		picture = map_congo_free_state
+		potential = {
+			tag = GAB
+			ai = no
+			GAB = { exists = yes }
+			owns = 1975
+			NOT = { has_country_flag = jesuit_larp_babantu }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = jesuit_larp_babantu
+			BTU = { all_core = { add_core = GAB } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	jesuit_larp_babantutwo = {
+		picture = map_congo_free_state
+		potential = {
+			tag = GAB
+			ai = no
+			GAB = { exists = yes }
+			owns = 1975
+			NOT = { has_country_flag = jesuit_larp_babantu_2 }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = jesuit_larp_babantu_2
+			BTU = { all_core = { remove_core = BTU } }
+			government = theocracy
+		}
+		ai_will_do = { factor = 1 }
+	}
 }
