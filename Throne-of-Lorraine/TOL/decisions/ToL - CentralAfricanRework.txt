@@ -10,6 +10,7 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = language_kuba
+			country_event = 2425395
 			3554 = {
 				any_pop = {
 					limit = {
@@ -21,9 +22,6 @@ political_decisions = {
 					move_pop = 2917
 				}
 			}
-			# Audax Validator "." Ignore_NEXT
-			3554 = { assimilate = yes }
-			2917 = { any_pop = { move_pop = 3554 } }
 			3555 = {
 				any_pop = {
 					limit = {
@@ -35,9 +33,6 @@ political_decisions = {
 					move_pop = 2916
 				}
 			}
-			# Audax Validator "." Ignore_NEXT
-			3555 = { assimilate = yes }
-			2916 = { any_pop = { move_pop = 3555 } }
 			3556 = {
 				any_pop = {
 					limit = {
@@ -49,9 +44,6 @@ political_decisions = {
 					move_pop = 2915
 				}
 			}
-			# Audax Validator "." Ignore_NEXT
-			3556 = { assimilate = yes }
-			2915 = { any_pop = { move_pop = 3556 } }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -427,6 +419,59 @@ political_decisions = {
 				}
 			}
 				
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	magic_farmland_question_mark = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = magic_farmland_question_mark }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			money = 1000000
+		}
+		effect = {
+			set_country_flag = magic_farmland_question_mark
+			treasury = -1000000
+			1986 = {
+				trade_goods = grain
+				terrain = farmlands
+				add_province_modifier = {
+						name = meaning_of_life_discovered
+						duration = -1
+				}
+			}
+			3559 = {
+				trade_goods = grain
+				terrain = farmlands
+				add_province_modifier = {
+						name = meaning_of_life_discovered
+						duration = -1
+				}
+			}
+			1994 = {
+				trade_goods = grain
+				terrain = farmlands
+				add_province_modifier = {
+						name = meaning_of_life_discovered
+						duration = -1
+				}
+			}
+			add_country_modifier = {
+					name = the_bantu_empire_recovers
+					duration = -1
+			}
+			any_owned = { limit = { is_core = BTU }
+					add_province_modifier = {
+						name = the_bantu_empire_provs
+						duration = -1
+					}
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
