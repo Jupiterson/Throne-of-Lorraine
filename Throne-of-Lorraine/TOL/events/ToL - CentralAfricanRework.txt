@@ -378,7 +378,9 @@ country_event = {
             to = pro_military
             value = 0.10
         }
-		ai_chance = { factor = 0 }
+		remove_country_modifier = the_bantu_empire
+		any_owned = { remove_province_modifier = the_bantu_empire_provs }
+		ai_chance = { factor = 0.50 }
 	}
 	
 	option = {
@@ -399,7 +401,7 @@ country_event = {
             to = pacifism
             value = 0.10
         }
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 0.50 }
 	}
 	
 	option = {
@@ -1984,4 +1986,188 @@ country_event = {
         name = "Damn."
     }
 
+}
+
+country_event = {
+	id = 2425354
+	title = "The War against Babantuan Animism"
+	desc = "BABANTUANANIMISMDED"
+	picture = "kongo_civilwar"
+	fire_only_once = yes
+
+	trigger = {
+		tag = GAB
+		has_country_flag = jesuit_larp_babantu_2
+	}
+
+	mean_time_to_happen = {
+		months = 25
+	}
+
+	option = {
+		name = "Damn."
+		set_global_flag = babantugonnatroll
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 3557
+					province_id = 3558
+					province_id = 3559
+					province_id = 1989
+					province_id = 3561
+					province_id = 1998
+					province_id = 1986
+				}
+			}
+			secede_province = BTU
+		}
+		casus_belli = {
+                target = BTU
+                type = conquest_any
+                months = 120
+        }
+		BTU = { casus_belli = {
+                target = THIS
+                type = cut_down_to_size_no_infamy
+                months = 120
+        } }
+		BTU = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = GAB
+				attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						BTU = { owns = 3557 }
+					}
+				}
+				owner = {
+					BTU = {
+						3557 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						BTU = { owns = 3558 }
+					}
+				}
+				owner = {
+					BTU = {
+						3558 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						BTU = { owns = 3559 }
+					}
+				}
+				owner = {
+					BTU = {
+						3559 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Freedom of Religion for the Babantu! (play as the revolt)"
+		set_global_flag = babantugonnatroll
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 3557
+					province_id = 3558
+					province_id = 3559
+					province_id = 1989
+					province_id = 3561
+					province_id = 1988
+					province_id = 1986
+				}
+			}
+			secede_province = BTU
+		}
+		casus_belli = {
+                target = BTU
+                type = conquest_any
+                months = 120
+        }
+		BTU = { casus_belli = {
+                target = THIS
+                type = cut_down_to_size_no_infamy
+                months = 120
+        } }
+		BTU = {
+			add_country_modifier = { name = small_country_draft duration = 600 }
+			war = {
+				target = GAB
+				attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
+				defender_goal = { casus_belli = conquest_any }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						BTU = { owns = 3557 }
+					}
+				}
+				owner = {
+					BTU = {
+						3557 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						BTU = { owns = 3558 }
+					}
+				}
+				owner = {
+					BTU = {
+						3558 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						BTU = { owns = 3559 }
+					}
+				}
+				owner = {
+					BTU = {
+						3559 = {
+							sub_unit = { type = irregular value = current }
+							sub_unit = { type = irregular value = current }
+						}
+					}
+				}
+			}
+		}
+		change_tag_no_core_switch = BTU
+		ai_chance = { factor = 0 }
+	}
 }

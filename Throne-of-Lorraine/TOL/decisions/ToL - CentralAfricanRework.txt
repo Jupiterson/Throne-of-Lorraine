@@ -371,4 +371,63 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	animist_babantu_peace = {
+		picture = map_congo_free_state
+		potential = {
+			tag = BTU
+			BTU = { exists = yes }
+			has_global_flag = babantugonnatroll
+			GAB = { is_disarmed = yes }
+			NOT = { has_country_flag = animist_babantu_peace }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = animist_babantu_peace
+			GAB = { all_core = { add_core = BTU } }
+			government = democracy
+			GAB = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 3557
+							province_id = 3558
+							province_id = 3559
+							province_id = 1989
+							province_id = 3561
+							province_id = 1998
+							province_id = 1986
+							province_id = 1988
+							province_id = 3560
+							province_id = 1984
+							province_id = 3552
+							province_id = 3553
+							province_id = 3554
+							province_id = 3555
+							province_id = 3556
+							province_id = 1987
+							province_id = 1990
+							province_id = 3547
+							province_id = 1991
+							province_id = 3546
+							province_id = 3545
+							province_id = 1992
+							province_id = 1994 
+							province_id = 3544
+							province_id = 1985
+							province_id = 2009
+							province_id = 3551
+							province_id = 2006
+							province_id = 2020
+						}
+					}
+					secede_province = BTU
+				}
+			}
+				
+		}
+		ai_will_do = { factor = 1 }
+	}
 }
