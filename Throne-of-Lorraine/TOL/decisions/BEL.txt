@@ -128,11 +128,11 @@ political_decisions = {
 			owns = 1982
 			owns = 1985
 			owns = 3296
-			NOT = { BEL_1984 = { NOT = { owned_by = THIS } } }
-			NOT = { BEL_1987 = { NOT = { owned_by = THIS } } }
-			NOT = { BEL_1990 = { NOT = { owned_by = THIS } } }
-			NOT = { BEL_1996 = { NOT = { owned_by = THIS } } }
-			NOT = { BEL_1992 = { NOT = { owned_by = THIS } } }
+			NOT = { 1984 = { NOT = { owned_by = THIS } } }
+			NOT = { 1987 = { NOT = { owned_by = THIS } } }
+			NOT = { 1990 = { NOT = { owned_by = THIS } } }
+			NOT = { 1996 = { NOT = { owned_by = THIS } } }
+			NOT = { 1992 = { NOT = { owned_by = THIS } } }
 			CNG = {
 				all_core = { owned_by = THIS }
 				NOT = { any_core = { has_province_modifier = the_massacre } }

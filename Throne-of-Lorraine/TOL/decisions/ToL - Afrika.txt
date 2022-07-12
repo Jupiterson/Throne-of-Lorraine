@@ -5,20 +5,20 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = centralized }
 			OR = { 
-			tag = DAM
-			tag = BUG
-			tag = HAD
+				tag = DAM
+				tag = BUG
+				tag = HAD
 			}
 		}
 
 		allow = {
 			war = no			
 			OR = { 
-			AND = {
-			land_reform = yes_land_reform
-			admin_reform = yes_admin_reform
-			}
-			year = 1880
+				AND = {
+					land_reform = yes_land_reform
+					admin_reform = yes_admin_reform
+				}
+				year = 1880
 			}
 		}
 
@@ -64,9 +64,9 @@ political_decisions = {
 		}
 
 		effect = {
-		   badboy = 6
-		   set_country_flag = collapsing
-		  add_country_modifier = {
+			badboy = 6
+			set_country_flag = collapsing
+			add_country_modifier = {
 				name = collapsing_nation
 				duration = -1
 			}
@@ -103,188 +103,23 @@ political_decisions = {
 	#----Kongo----#
 	###############	
 	
-	claim_loango = {
-		picture = map_congo
-		potential = {
-			tag = KON
-			NOT = { has_country_flag = loango }
-		}
-
-		allow = {
-			admin_reform = yes_admin_reform
-			land_reform = yes_land_reform
-			all_core = { owned_by = THIS }
-		}
-
-		effect = {
-			badboy = 3
-			LOA = {
-				all_core = {
-					add_core = THIS
-				}
-			}				   
-			set_country_flag = loango
-			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	claim_lunda = {
-		picture = map_congo_free_state
-		potential = {
-			tag = KON
-			has_country_flag = loango
-			NOT = { has_country_flag = lunda }
-		}
-
-		allow = {
-			all_core = { owned_by = THIS }
-		}
-
-		effect = {
-			badboy = 4
-			LUN = {
-				all_core = {
-					add_core = THIS
-				}
-			}				   
-			set_country_flag = lunda
-			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	claim_south_central = {
-		picture = banda_oriental
-		potential = {
-			tag = KON
-			has_country_flag = lunda
-			NOT = { has_country_flag = south_central }
-		}
-
-		allow = {
-			all_core = { owned_by = THIS }
-		}
-
-		effect = {
-			badboy = 4
-			ENG_2014 = {
-				add_core = THIS
-			} 
-			POR_2003 = {
-				add_core = THIS
-			} 
-			POR_2006 = {
-				add_core = THIS
-			} 
-			BEL_1984 = {
-				add_core = THIS
-			} 	
-			2080 = { add_core = THIS }	
-			2082 = { add_core = THIS }	
-			2076 = { add_core = THIS }	
-			2081 = { add_core = THIS }	
-			set_country_flag = south_central
-			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	jungle_conquest = {
-		picture = banatia_map
-		potential = {
-			tag = KON
-			has_country_flag = south_central
-			NOT = { has_country_flag = jungle }
-		}
-
-		allow = {
-			all_core = { owned_by = THIS }
-		}
-
-		effect = {
-			badboy = 4
-			FRA_1978 = {
-				add_core = THIS
-			} 
-			FRA_1972 = {
-				add_core = THIS
-			} 
-			BEL_1992 = {
-				add_core = THIS
-			} 
-			BEL_1996 = {
-				add_core = THIS
-			} 				   
-			BEL_1990 = {
-				add_core = THIS
-			} 
-			set_country_flag = jungle
-			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-		
-	claim_tangyika = {
-		picture = banatia_map
-		potential = {
-			tag = KON
-			has_country_flag = jungle
-			NOT = { has_country_flag = tangyska }
-		}
-
-		allow = {
-			all_core = { owned_by = THIS }
-		}
-
-		effect = {
-			badboy = 4
-			RWA = {
-				all_core = {
-					add_core = THIS
-				}
-			}
-			UBH = {
-				all_core = {
-					add_core = THIS
-				}
-			}
-			KZB = {
-				all_core = {
-					add_core = THIS
-				}
-			}				
-			ENG_2016 = {
-				add_core = THIS
-			} 
-			2020 = { add_core = THIS }	
-			2035 = { add_core = THIS }	
-			set_country_flag = tangyska
-			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	
 	form_bantu	= {
 		picture = form_rajputana
 		potential = {
-			tag = KON
-			has_country_flag = tangyska
+			BTU = { exists = no }
+			owns = 1986
+			capital_scope = { continent = central_africa }
 		}
 
 		allow = {
-		civilized = yes
-			KON = {
-				all_core = {
+			civilized = yes
+			all_core = {
 					OR = {
 						owned_by = THIS
 						owner = { in_sphere = THIS }
 						owner = { vassal_of = THIS }
 					}
-				}
-			}			
+			}		
 		}
 
 		effect = {
@@ -298,8 +133,6 @@ political_decisions = {
 			add_accepted_culture = south_forest_bantu
 			add_accepted_culture = swahili
 			add_accepted_culture = lacustrine_bantu
-			add_accepted_culture = nyasa
-			add_accepted_culture = southern_bantu
 		}
 
 		ai_will_do = { factor = 1 }
@@ -442,14 +275,10 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-}
 
 ##############
 #SOUTH AFRICA#
 ##############
-
-political_decisions = {
-
 	form_nguni = {
 		picture = form_nguni
 		ai_will_do = { factor = 1 }
@@ -607,14 +436,13 @@ political_decisions = {
 	
 	}
 	
-		form_mzansi = {
+	form_mzansi = {
 		picture = xhosa_map2
-		ai_will_do = { factor = 1 }
 		potential = {
-        tag = NGU
-		capital = 2100
-		has_country_flag = core_south_africa
-		has_global_flag = xhosaprophet	
+			tag = NGU
+			capital = 2100
+			has_country_flag = core_south_africa
+			has_global_flag = xhosaprophet	
 		}
 
 		allow = {
@@ -629,47 +457,39 @@ political_decisions = {
         }
 
 		effect = {
-		
 		    prestige = 30
 		    change_tag = MZA
 			add_accepted_culture = sotho
 			add_accepted_culture = khoisan
 			add_accepted_culture = southern_bantu
 		}
-}
-		expand_mzansi = {
-		picture = xhosa_map3
 		ai_will_do = { factor = 1 }
+	}
+	
+	expand_mzansi = {
+		picture = xhosa_map3
 		potential = {
-        tag = MZA
-		NOT = { has_country_flag = expand_mzansi }		
+			tag = MZA
+			NOT = { has_country_flag = expand_mzansi }		
 		}
 
 		allow = {
-		prestige = 100
+			prestige = 100
 			war = no
         }
 
 		effect = {
-		ENG_2083 = {
-		add_core = THIS }
-		ENG_2078  = {
-		add_core = THIS }
-		ENG_2074  = {
-		add_core = THIS }
-		ENG_2087  = {
-		add_core = THIS }
-		ENG_2071 = {
-		add_core = THIS }
-		ENG_2068 = {
-		add_core = THIS }
-		POR_2049 = {
-		add_core = THIS }
-		POR_2054 = {
-		add_core = THIS }
-		badboy = 15
-		set_country_flag = expand_mzansi
-
-
+			ENG_2083 = { add_core = THIS }
+			ENG_2078  = { add_core = THIS }
+			ENG_2074  = { add_core = THIS }
+			ENG_2087  = { add_core = THIS }
+			ENG_2071 = { add_core = THIS }
+			ENG_2068 = { add_core = THIS }
+			POR_2049 = { add_core = THIS }
+			POR_2054 = { add_core = THIS }
+			badboy = 15
+			set_country_flag = expand_mzansi
 		}
+		ai_will_do = { factor = 1 }
+	}
 }
