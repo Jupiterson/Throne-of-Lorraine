@@ -183,4 +183,23 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	loango_plan = {
+        picture = map_congo
+        potential = {
+			tag = KON
+			ai = no
+			NOT = { has_global_flag = flauhaut_plan }
+        }
+        allow = {
+			war = no
+        }
+        effect = {
+			set_global_flag = flauhaut_plan
+			BTU = { country_event = 2425388 }
+			relation = { who = LOA value = -200 }
+        }
+
+        ai_will_do = { factor = 1 }	
+	}
 }

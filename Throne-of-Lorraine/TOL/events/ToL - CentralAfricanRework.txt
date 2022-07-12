@@ -1842,3 +1842,77 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = 2425388
+	title = "The Loango Plan"
+	desc = "THELOANGOPLANBTU"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "We accept."		
+		set_global_flag = theloangoplanbtu
+		relation = { who = FROM value = 50 }
+		create_alliance = FROM
+		FROM = { country_event = 2425389 }
+		ai_chance = { factor = 1 }
+    }
+	
+	option = {
+        name = "This is not in our interests."
+		set_global_flag = theloangoplanbtuno
+		relation = { who = FROM value = -50 }
+		FROM = { country_event = 2425390 }
+		ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+	id = 2425389
+	title = "The Loango Plan Accepted"
+	desc = "The Babantu have accepted our plan to partition Loango."
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Perfect!"
+		casus_belli = {
+                target = LOA
+                type = cut_down_to_size_no_infamy
+                months = 120
+        }
+		LOA = { casus_belli = {
+                target = THIS
+                type = humiliate_no_infamy
+                months = 120
+        } }
+		war = {
+				target = LOA
+				attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
+				defender_goal = { casus_belli = humiliate_no_infamy }
+		}
+		# Audax Validator "." Ignore_NEXT
+		war = { attacker_goal = { casus_belli = call_allies_cb } call_ally = yes }
+    }
+
+}
+
+country_event = {
+	id = 2425390
+	title = "The Loango Plan Refused"
+	desc = "The Babantu have refused our plan to partition Loango."
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Damn."
+    }
+
+}
