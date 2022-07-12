@@ -440,9 +440,6 @@ form_byzantium = {
 			EGY_915 = {
 				add_core = THIS
 			}
-			EGY_910 = {
-				add_core = THIS
-			}
 			EGY_921 = {
 				add_core = THIS
 			}
@@ -475,7 +472,8 @@ form_byzantium = {
 				all_core = {
 										add_core = THIS
 										}
-				}				   
+				}				
+            THIS = { all_core = { limit = { empty = yes } remove_core = THIS } }				
 			set_country_flag = egypt
 			add_accepted_culture = copt   
 		}
@@ -521,6 +519,7 @@ form_byzantium = {
 			1733 = { add_core = THIS }	
 			1731 = { add_core = THIS }					
 			set_country_flag = maghreb
+			THIS = { all_core = { limit = { empty = yes } remove_core = THIS } }	
 			add_accepted_culture = copt   
 		}
 		ai_will_do = { factor = 1 }
@@ -563,6 +562,18 @@ form_byzantium = {
 			#		}
 			#	}
 			SAR_765 = {
+				add_core = THIS
+			}	
+SIC_753 = {
+				add_core = THIS
+			}
+SIC_754 = {
+				add_core = THIS
+			}
+SIC_763 = {
+				add_core = THIS
+			}	
+PAP_752 = {
 				add_core = THIS
 			}				
 			set_country_flag = o_t_italia

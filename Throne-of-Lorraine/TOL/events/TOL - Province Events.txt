@@ -1,0 +1,31 @@
+province_event = {
+    
+    id = 33445
+
+    trigger = {
+		NOT = { has_province_modifier = pirate_sugar }
+		or = {
+			province_id = 3309
+			province_id = 3319
+			province_id = 2214
+			province_id = 2215
+		}
+    }
+
+    mean_time_to_happen =  {
+        months = 1
+
+    }
+
+    title = "EVTNAME33445"
+    desc = "EVTDESC33445"
+
+    option = {
+        name = "Good, but also bad?"
+        trade_goods = sugar
+        add_province_modifier = {
+            name = pirate_sugar
+            duration = -1
+        }
+    }
+}

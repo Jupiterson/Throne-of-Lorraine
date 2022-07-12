@@ -1558,3 +1558,18 @@ poland_starting_war = {
 	icon = 10
 	mobilisation_size = 2.5
 }
+
+pirate_sugar = {
+	trigger = {
+		or = {
+			province = 3309
+			province = 3319
+			province = 2214
+			province = 2215
+		}
+		
+	}
+	population_growth = -0.007
+	rgo_output = 1
+	
+}

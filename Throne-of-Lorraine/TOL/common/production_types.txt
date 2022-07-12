@@ -611,6 +611,7 @@ explosives_factory = {
 	}
 }
 
+
 ############# CHEAP FACTORIES
 
 ammunition_factory = {
@@ -698,6 +699,24 @@ liquor_distillery = {
 	bonus = {
 		trigger = { trade_goods_in_state = fruit }
 		value = 0.05
+	}
+}
+
+rum_distillery = {
+	template = cheap_factory_template
+	input_goods = {
+		sugar = 4		#22
+		glass = 10		#37.7	total input+maint = 72.7
+	}
+	output_goods = liquor
+	value = 20		#81.4 - profit = 8.7
+	bonus = {
+		trigger = { has_building = glass_factory }
+		value = 0.15
+	}
+	bonus = {
+		trigger = { trade_goods_in_state = sugar }
+		value = 0.1
 	}
 }
 
@@ -1087,7 +1106,7 @@ tropical_wood_lodge = {
 }
 
 sugar_plantation = {
-	template = RGO_template_slaves
+	template = RGO_template_farmers
 	output_goods = sugar
 	value = 2.5
 	farm = yes

@@ -35,6 +35,55 @@ country_event = {
 		}
 	}
 }
+#stolen from GFM
+country_event = {
+    id = 123641
+    title = "More Infamy Reduction"
+    desc = "You have taken the option to increase infamy reduction. To what level do you wish to set it?"
+    fire_only_once = yes
+	is_triggered_only = yes
+	picture = "infamy"
+    option = {
+        name = "I'd like to have -0.05 more infamy reduction."
+        any_country = {
+			add_country_modifier = {
+                name = lower_infamy_a
+				duration = -1
+			}
+        }
+		add_country_modifier = { name = lower_infamy_a duration = -1 }
+	}
+    option = {
+        name = "-0.1 more is the way to go."
+        any_country = {
+			add_country_modifier = {
+                name = lower_infamy_b
+				duration = -1
+			}
+        }
+		add_country_modifier = { name = lower_infamy_b duration = -1 }
+	}
+    option = {
+        name = "Let's go ham with -0.15"
+        any_country = {
+			add_country_modifier = {
+                name = lower_infamy_c
+				duration = -1
+			}
+        }
+		add_country_modifier = { name = lower_infamy_c duration = -1 }
+	}
+    option = {
+        name = "Just disable imfamy"
+        any_country = {
+			add_country_modifier = {
+                name = lower_infamy_d
+				duration = -1
+			}
+        }
+		add_country_modifier = { name = lower_infamy_d duration = -1 }
+	}
+}
 
 country_event = {
 	id = 123465
