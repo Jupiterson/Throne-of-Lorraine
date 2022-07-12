@@ -499,4 +499,278 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	migration_to_loango = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = migration_to_saurimo }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			owns = 1985
+			money = 10000
+		}
+		effect = {
+			set_country_flag = migration_to_saurimo
+			treasury = -10000
+			1986 = {
+				any_pop = {
+					limit = {
+						unemployment = 0.90
+					}
+					move_pop = 1985
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	migration_to_lowercongo = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = migration_to_saurimo }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			owns = 1985
+			money = 10000
+		}
+		effect = {
+			set_country_flag = migration_to_saurimo
+			treasury = -10000
+			1986 = {
+				any_pop = {
+					limit = {
+						unemployment = 0.90
+					}
+					move_pop = 1985
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	migration_to_uppercongo = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = migration_to_saurimo }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			owns = 1985
+			money = 10000
+		}
+		effect = {
+			set_country_flag = migration_to_saurimo
+			treasury = -10000
+			1986 = {
+				any_pop = {
+					limit = {
+						unemployment = 0.90
+					}
+					move_pop = 1985
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	migration_to_angola = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = migration_to_saurimo }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			owns = 1985
+			money = 10000
+		}
+		effect = {
+			set_country_flag = migration_to_saurimo
+			treasury = -10000
+			1986 = {
+				any_pop = {
+					limit = {
+						unemployment = 0.90
+					}
+					move_pop = 1985
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	migration_to_namibia = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = migration_to_saurimo }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			owns = 1985
+			money = 10000
+		}
+		effect = {
+			set_country_flag = migration_to_saurimo
+			treasury = -10000
+			1986 = {
+				any_pop = {
+					limit = {
+						unemployment = 0.90
+					}
+					move_pop = 1985
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	migration_to_africanminor = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = migration_to_saurimo }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			owns = 1985
+			money = 10000
+		}
+		effect = {
+			set_country_flag = migration_to_saurimo
+			treasury = -10000
+			1986 = {
+				any_pop = {
+					limit = {
+						unemployment = 0.90
+					}
+					move_pop = 1985
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	migration_to_nyasa = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = migration_to_saurimo }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			owns = 1985
+			money = 10000
+		}
+		effect = {
+			set_country_flag = migration_to_saurimo
+			treasury = -10000
+			1986 = {
+				any_pop = {
+					limit = {
+						unemployment = 0.90
+					}
+					move_pop = 1985
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	migration_to_selectcape = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = migration_to_saurimo }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			owns = 1985
+			money = 10000
+		}
+		effect = {
+			set_country_flag = migration_to_saurimo
+			treasury = -10000
+			1986 = {
+				any_pop = {
+					limit = {
+						unemployment = 0.90
+					}
+					move_pop = 1985
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	migration_to_botswana = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = migration_to_saurimo }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			owns = 1985
+			money = 10000
+		}
+		effect = {
+			set_country_flag = migration_to_saurimo
+			treasury = -10000
+			1986 = {
+				any_pop = {
+					limit = {
+						unemployment = 0.90
+					}
+					move_pop = 1985
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	migration_to_zimbabwe = {
+		picture = farmland_babantu
+		potential = {
+			tag = BTU
+			ai = no
+			NOT = { has_country_flag = migration_to_saurimo }
+		}
+		allow = {
+			war = no
+			owns = 1986
+			owns = 1985
+			money = 10000
+		}
+		effect = {
+			set_country_flag = migration_to_saurimo
+			treasury = -10000
+			1986 = {
+				any_pop = {
+					limit = {
+						unemployment = 0.90
+					}
+					move_pop = 1985
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 }
