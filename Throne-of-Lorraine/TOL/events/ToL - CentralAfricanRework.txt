@@ -1454,7 +1454,7 @@ country_event = {
 }
 
 country_event = {
-	id = 2425354
+	id = 2425381
 	title = "The Aka Civil War"
 	desc = "The Congo are rebelling against our rule, time to show them what's good!"
 	picture = "kongo_civilwar"
@@ -1641,5 +1641,81 @@ country_event = {
 		}
 		change_tag_no_core_switch = ANG
 		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 2425382
+	title = "Jesuit Social Unrest"
+	desc = "JESUITSOCIALUNREST"
+	picture = "rebellion"
+
+	trigger = {
+		tag = LOA
+		year = 1838
+	}
+
+	mean_time_to_happen = {
+		days = 11
+	}
+
+	option = {
+		name = "Calm them down with some autonomy."
+		random_owned = {
+				limit = {
+					owner = {
+						 GAB = { exists = no }
+					}
+				}
+				owner = {
+					1978 = { secede_province = GAB }
+					create_vassal = GAB
+				}
+		}
+		random_owned = {
+				limit = {
+					owner = {
+						 GAB = { exists = yes }
+					}
+				}
+				owner = {
+					1978 = { secede_province = GAB }
+				}
+		}
+		religion = jesuite
+		ai_chance = { factor = 0.10 }
+	}
+	
+	option = {
+		name = "Calm them down... by force."
+		any_pop = { limit = { has_pop_culture = christ_bakongo } reduce_pop = 0.98 militancy = 8 }
+		remove_accepted_culture = christ_bakongo
+		religion = animist
+		random_owned = {
+				limit = {
+					owner = {
+						 GAB = { exists = yes }
+					}
+				}
+				owner = {
+					GAB = { country_event = 2425383 }
+				}
+		}
+		ai_chance = { factor = 0.90 }
+	}
+}
+
+country_event = {
+	id = 2425383
+	title = "The Madingou Crisis"
+	desc = "JESUITSOCIALUNRESTGAB"
+	picture = "diplomats_examining"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Perfect..."
+		government = constitutional_empire
+		create_alliance = YEK
 	}
 }
