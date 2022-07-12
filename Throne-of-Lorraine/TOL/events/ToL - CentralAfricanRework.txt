@@ -443,7 +443,7 @@ country_event = {
 }
 
 country_event = {
-	id = 2425357
+	id = 2425400
 	title = "We've won the Lunda Succession War!"
 	desc = "YEKEWINS"
 	picture = "kongo_civilwar"
@@ -815,7 +815,7 @@ country_event = {
 		year = 1845
 		NOT = { year = 1848 }
 		KUB = { owns = 3554 owns = 3555 owns = 3556 }
-		KUB = { NOT = { at_war_with = BTU } }
+		KUB = { NOT = { war_with = BTU } }
 	}
 
 	mean_time_to_happen = {
@@ -909,8 +909,11 @@ country_event = {
 		name = "Oh no."
 		KZB = { country_event = 2425365 }
 		KRW = { country_event = 2425365 }
+		# Audax Validator "." Ignore_NEXT
 		2055 = { secede_province = THIS secede_province = LBA }
+		# Audax Validator "." Ignore_NEXT
 		2039 = { secede_province = THIS secede_province = LBA }
+		# Audax Validator "." Ignore_NEXT
 		2011 = { secede_province = THIS secede_province = LBA }
 		LBA = {
 			add_country_modifier = { name = small_country_draft duration = 600 }
@@ -938,8 +941,11 @@ country_event = {
 		name = "For a united Nyanza! (play as Nyanza)"
 		KZB = { country_event = 2425365 }
 		KRW = { country_event = 2425365 }
+		# Audax Validator "." Ignore_NEXT
 		2055 = { secede_province = THIS secede_province = LBA }
+		# Audax Validator "." Ignore_NEXT
 		2039 = { secede_province = THIS secede_province = LBA }
+		# Audax Validator "." Ignore_NEXT
 		2011 = { secede_province = THIS secede_province = LBA }
 		LBA = {
 			add_country_modifier = { name = small_country_draft duration = 600 }
@@ -1070,7 +1076,7 @@ country_event = {
 
 	option = {
 		name = "Long live Nyanza!"
-		BHA = { all_core = { add_core = LBA } }
+		UBH = { all_core = { add_core = LBA } }
 		RWA = { all_core = { add_core = LBA } }
 		1990 = { add_core = LBA }
 		1991 = { add_core = LBA }
@@ -1316,12 +1322,12 @@ country_event = {
 				attacker_goal = { casus_belli = war_reparations }
 				defender_goal = { casus_belli = acquire_state state_province_id = 1990 }
 		}
-		BTU = { country_event = 2425376 }
+		BTU = { country_event = 2425399 }
 	}
 }
 
 country_event = {
-	id = 2425376
+	id = 2425399
 	title = "The Babantuans Fight Us"
 	desc = "After all the Babantuans want to fight us, so we'll give them what they want, a war."
 	picture = "uk_seizes_lagos"
@@ -1412,6 +1418,7 @@ country_event = {
 		OR = {
 			AND = { tag = ANG KON = { exists = no } }
 			AND = { tag = KON ANG = { exists = no } has_country_flag = damnheded }
+		}
 	}
 
 	mean_time_to_happen = {
@@ -1448,7 +1455,6 @@ country_event = {
 					set_country_flag = timetocoingto
 					any_pop = { limit = { has_pop_culture = pygmy } reduce_pop = 0.75 }
 				}
-			}
 		}
 	}
 }
@@ -1743,7 +1749,7 @@ country_event = {
 }
 
 country_event = {
-	id = 2425383
+	id = 2425384
 	title = "The Madingou Crisis"
 	desc = "JESUITSOCIALUNRESTLOA"
 	picture = "diplomats_examining"
@@ -1753,7 +1759,7 @@ country_event = {
 	option = {
 		name = "Send them reparations."
 		treasury = -50000
-		GAB = { country_event = 2425384 }
+		GAB = { country_event = 2425385 }
 		ai_chance = { factor = 0.40 }
 	}
 	
@@ -1765,19 +1771,19 @@ country_event = {
 		remove_accepted_culture = bakongo
 		any_pop = { limit = { has_pop_culture = bakongo } reduce_pop = 0.88 militancy = 8 }
 		any_pop = { limit = { has_pop_culture = christ_bakongo } reduce_pop = 1.12 militancy = -8 }
-		GAB = { country_event = 2425385 }
+		GAB = { country_event = 2425386 }
 		ai_chance = { factor = 0.10 }
 	}
 	
 	option = {
 		name = "Refuse."
-		GAB = { country_event = 2425386 }
+		GAB = { country_event = 2425397 }
 		ai_chance = { factor = 0.50 }
 	}
 }
 
 country_event = {
-	id = 2425384
+	id = 2425385
 	title = "The Loango send us reparations"
 	desc = "After a series of threats to the central government in Kinshasa, they have given us reparations."
 	picture = "diplomats_examining"
@@ -1791,7 +1797,7 @@ country_event = {
 }
 
 country_event = {
-	id = 2425385
+	id = 2425386
 	title = "The Loango have become Jesuite"
 	desc = "After a series of threats to the central government in Kinshasa, they have given up on their animistic believes."
 	picture = "diplomats_examining"
@@ -1805,7 +1811,7 @@ country_event = {
 }
 
 country_event = {
-	id = 2425386
+	id = 2425397
 	title = "The Loango have refuse"
 	desc = "After a series of threats to the central government in Kinshasa, they have refused all offers and prepare for war."
 	picture = "diplomats_examining"
@@ -2193,7 +2199,7 @@ country_event = {
 }
 
 country_event = {
-	id = 2425395
+	id = 2425396
 	title = "Moving pops..."
 	desc = "Click OK and go away."
 	picture = "diplomats_examining"
