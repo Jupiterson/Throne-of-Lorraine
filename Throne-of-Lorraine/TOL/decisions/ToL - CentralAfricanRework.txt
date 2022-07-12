@@ -193,11 +193,50 @@ political_decisions = {
         }
         allow = {
 			war = no
+			year = 1840
+			NOT = { year = 1850 }
         }
         effect = {
 			set_global_flag = flauhaut_plan
 			BTU = { country_event = 2425388 }
 			relation = { who = LOA value = -200 }
+        }
+
+        ai_will_do = { factor = 1 }	
+	}
+	
+	loango_plan_peace = {
+        picture = map_congo
+        potential = {
+			tag = KON
+			ai = no
+			LOA = { is_disarmed = yes }
+			year = 1840
+			NOT = { year = 1850 }
+			has_global_flag = flauhaut_plan
+			NOT = { has_country_flag = loango_partitioned }
+        }
+        allow = {
+			war = no
+        }
+        effect = {
+			set_global_flag = loango_partitioned
+			LOA = {
+				any_owned = {
+					limit = { OR = {
+						province_id = 3538
+						province_id = 3539
+						province_id = 2624
+						province_id = 1977
+						province_id = 3541
+						province_id = 3544
+						province_id = 2010
+						province_id = 1985
+					} }
+					secede_province = BTU
+				}
+			}
+			inherit = LOA
         }
 
         ai_will_do = { factor = 1 }	
@@ -272,6 +311,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = loango_claims_three
 			KON = { all_core = { remove_core = KON } }
+			government = absolute_empire
 		}
 		ai_will_do = { factor = 1 }
 	}
