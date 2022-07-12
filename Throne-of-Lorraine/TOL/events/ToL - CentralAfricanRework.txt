@@ -1989,7 +1989,7 @@ country_event = {
 }
 
 country_event = {
-	id = 2425354
+	id = 2425394
 	title = "The War against Babantuan Animism"
 	desc = "BABANTUANANIMISMDED"
 	picture = "kongo_civilwar"
@@ -2170,4 +2170,44 @@ country_event = {
 		change_tag_no_core_switch = BTU
 		ai_chance = { factor = 0 }
 	}
+}
+
+country_event = {
+	id = 2425395
+	title = "Assimilating..."
+	desc = "Click OK and go away."
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "OK."
+		# Audax Validator "." Ignore_NEXT
+		3554 = { assimilate = yes }
+		# Audax Validator "." Ignore_NEXT
+		3555 = { assimilate = yes }
+		# Audax Validator "." Ignore_NEXT
+		3556 = { assimilate = yes }
+		country_event = 2425396
+    }
+
+}
+
+country_event = {
+	id = 2425395
+	title = "Moving pops..."
+	desc = "Click OK and go away."
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "OK."
+		2917 = { any_pop = { move_pop = 3554 } }
+		2916 = { any_pop = { move_pop = 3555 } }
+		2915 = { any_pop = { move_pop = 3556 } }
+    }
+
 }
