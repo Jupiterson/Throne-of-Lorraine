@@ -1,0 +1,675 @@
+political_decisions = {
+	#for clean up
+	centralize = {
+		picture = form_the_rcmp
+		potential = {
+			NOT = { has_country_flag = centralized }
+			OR = { 
+			tag = DAM
+			tag = BUG
+			tag = HAD
+			}
+		}
+
+		allow = {
+			war = no			
+			OR = { 
+			AND = {
+			land_reform = yes_land_reform
+			admin_reform = yes_admin_reform
+			}
+			year = 1880
+			}
+		}
+
+		effect = {
+			set_country_flag = centralized			
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+		}
+	}
+	
+	incorparate_yemen = {
+		picture = become_yemen
+		potential = {
+			tag = ETH
+			YEM = { vassal_of = THIS }
+		}
+		allow = {
+			year = 1846
+		}
+		effect = {
+			prestige = 5
+			set_country_flag = incorparated
+			random_country = {
+				limit = {
+					tag = YEM
+					exists = yes
+					ai = yes
+				}
+				THIS = { inherit = YEM }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	collapse_modifier_isa = {
+		picture = embrace_minority
+		potential = {
+			tag = MAS
+			NOT = { has_country_flag = collapsing }
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+		   badboy = 6
+		   set_country_flag = collapsing
+		  add_country_modifier = {
+				name = collapsing_nation
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	reform_caliphate = {
+		picture = tanzania_shop
+		potential = {
+			tag = MAS
+			NOT = { has_country_flag = reformed_nation }
+		}
+
+		allow = {
+			war = no
+			money = 10000
+			admin_reform = yes_admin_reform
+			land_reform = yes_land_reform
+			finance_reform = yes_finance_reform
+		}
+
+		effect = {
+		remove_country_modifier = collapsing_nation
+		set_country_flag = reformed_nation
+			money = -10000
+			
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	###############
+	#----Kongo----#
+	###############	
+	
+	claim_loango = {
+		picture = map_congo
+		potential = {
+			tag = KON
+			NOT = { has_country_flag = loango }
+		}
+
+		allow = {
+			admin_reform = yes_admin_reform
+			land_reform = yes_land_reform
+			all_core = { owned_by = THIS }
+		}
+
+		effect = {
+			badboy = 3
+			LOA = {
+				all_core = {
+					add_core = THIS
+				}
+			}				   
+			set_country_flag = loango
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_lunda = {
+		picture = map_congo_free_state
+		potential = {
+			tag = KON
+			has_country_flag = loango
+			NOT = { has_country_flag = lunda }
+		}
+
+		allow = {
+			all_core = { owned_by = THIS }
+		}
+
+		effect = {
+			badboy = 4
+			LUN = {
+				all_core = {
+					add_core = THIS
+				}
+			}				   
+			set_country_flag = lunda
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_south_central = {
+		picture = banda_oriental
+		potential = {
+			tag = KON
+			has_country_flag = lunda
+			NOT = { has_country_flag = south_central }
+		}
+
+		allow = {
+			all_core = { owned_by = THIS }
+		}
+
+		effect = {
+			badboy = 4
+			ENG_2014 = {
+				add_core = THIS
+			} 
+			POR_2003 = {
+				add_core = THIS
+			} 
+			POR_2006 = {
+				add_core = THIS
+			} 
+			BEL_1984 = {
+				add_core = THIS
+			} 	
+			2080 = { add_core = THIS }	
+			2082 = { add_core = THIS }	
+			2076 = { add_core = THIS }	
+			2081 = { add_core = THIS }	
+			set_country_flag = south_central
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	jungle_conquest = {
+		picture = banatia_map
+		potential = {
+			tag = KON
+			has_country_flag = south_central
+			NOT = { has_country_flag = jungle }
+		}
+
+		allow = {
+			all_core = { owned_by = THIS }
+		}
+
+		effect = {
+			badboy = 4
+			FRA_1978 = {
+				add_core = THIS
+			} 
+			FRA_1972 = {
+				add_core = THIS
+			} 
+			BEL_1992 = {
+				add_core = THIS
+			} 
+			BEL_1996 = {
+				add_core = THIS
+			} 				   
+			BEL_1990 = {
+				add_core = THIS
+			} 
+			set_country_flag = jungle
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+		
+	claim_tangyika = {
+		picture = banatia_map
+		potential = {
+			tag = KON
+			has_country_flag = jungle
+			NOT = { has_country_flag = tangyska }
+		}
+
+		allow = {
+			all_core = { owned_by = THIS }
+		}
+
+		effect = {
+			badboy = 4
+			RWA = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			UBH = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			KZB = {
+				all_core = {
+					add_core = THIS
+				}
+			}				
+			ENG_2016 = {
+				add_core = THIS
+			} 
+			2020 = { add_core = THIS }	
+			2035 = { add_core = THIS }	
+			set_country_flag = tangyska
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	form_bantu	= {
+		picture = form_rajputana
+		potential = {
+			tag = KON
+			has_country_flag = tangyska
+		}
+
+		allow = {
+		civilized = yes
+			KON = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
+			}			
+		}
+
+		effect = {
+			prestige = 50
+			badboy = -10
+			set_country_flag = bantu_unite
+			change_tag = BTU
+			add_accepted_culture = bakongo
+			add_accepted_culture = mongo
+			add_accepted_culture = forest_bantu
+			add_accepted_culture = south_forest_bantu
+			add_accepted_culture = swahili
+			add_accepted_culture = lacustrine_bantu
+			add_accepted_culture = nyasa
+			add_accepted_culture = southern_bantu
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	#####################
+	#####################
+	#  TINIRI SULTANATE #
+	#####################
+	#####################
+	
+		claim_east_sahara = {
+		picture = form_the_rcmp
+		potential = {
+			tag = TIN
+			NOT = { has_country_flag = east_sahara }
+		}
+
+		allow = {
+		OR = {
+			admin_reform = yes_admin_reform
+			land_reform = yes_land_reform
+			civilized = yes
+			}
+			all_core = { owned_by = THIS }
+		}
+
+		effect = {
+			badboy = 7
+			COP = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			EGY = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			TRI_1735 = {
+				add_core = THIS
+			} 
+			TRI_1731 = {
+				add_core = THIS
+			} 
+			FRA_1813 = {
+				add_core = THIS
+			} 
+			ENG_1825 = {
+				add_core = THIS
+			} 
+			ENG_1818 = {
+				add_core = THIS
+			} 
+			EGY_1758 = {
+				add_core = THIS
+			} 			
+			set_country_flag = east_sahara
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+	claim_mecca = {
+		picture = form_the_rcmp
+		potential = {
+			tag = TIN
+			has_country_flag = east_sahara
+			NOT = { has_country_flag = mecca_claimed }
+		}
+
+		allow = {
+			all_core = { owned_by = THIS }
+		}
+
+		effect = {
+			badboy = 10
+			HDJ = {
+				all_core = {
+					add_core = THIS
+				}
+			}	  
+			EGY_1827 = {
+				add_core = THIS
+			} 
+			EGY_1834 = {
+				add_core = THIS
+			} 
+			EGY_1771 = {
+				add_core = THIS
+			} 		
+			set_country_flag = mecca_claimed
+			THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	declare_caliphate = {
+		picture = form_the_rcmp
+		potential = {
+			tag = TIN
+			has_country_flag = mecca_claimed
+			NOT = { has_country_flag = caliphate }
+		}
+
+		allow = {
+			all_core = { owned_by = THIS }
+		}
+
+		effect = {
+			badboy = 3
+			add_accepted_culture = bedouin
+			add_accepted_culture = mashriqi
+			add_accepted_culture = misri
+			add_accepted_culture = songhai
+			add_accepted_culture = hausa
+			any_country = {
+			limit = {
+				NOT = {
+				tag = TIN 
+				tag = BOS
+				tag = SEV
+				tag = TAR
+				tag = KRN
+				tag = AGC
+				is_culture_group = indo_iranian
+				is_culture_group = central_asian
+				is_culture_group = east_asian
+				}
+				OR = {
+					has_country_flag = sunni_country
+					has_country_flag = shiite_country
+				}
+			}
+			country_event = 100119
+		}
+			set_country_flag = caliphate
+			government = absolute_empire
+		}
+		ai_will_do = { factor = 1 }
+	}
+}
+
+##############
+#SOUTH AFRICA#
+##############
+
+political_decisions = {
+
+	form_nguni = {
+		picture = form_nguni
+		ai_will_do = { factor = 1 }
+		potential = {
+        primary_culture = zulu
+		NOT = { exists = NGU }
+		NOT = { exists = MZA }
+		}
+
+		allow = {
+            owns = 2100
+			owns = 2099
+			owns = 2098
+			owns = 2097
+			owns = 2096
+            owns = 2111
+			owns = 2112
+			owns = 2113
+			owns = 2114
+			war = no
+        }
+
+		effect = {
+		
+		    prestige = 5
+			
+		    change_tag = NGU
+			
+            ZUL_2113 = {
+			add_core = THIS
+		    }
+		    ENG_2096 = {
+			add_core = THIS
+			}
+		    2114 = {
+			add_core = THIS
+		    }	
+			2109 = {
+			add_core = THIS
+		    }	
+		}
+		
+	}
+	
+		claim_zulu = {
+		picture = invade_zulu
+		ai_will_do = { factor = 1 }
+		potential = {
+            year = 1845
+			capital = 2100	
+			has_global_flag = xhosaprophet
+			NOT = { has_country_flag = zulwar_passed }
+		}
+
+		allow = {
+            year = 1850
+			capital = 2100	
+			has_global_flag = xhosaprophet
+        }
+
+		effect = {
+		    ZUL_2113  = {
+			add_core = THIS }
+			2114  = {
+			add_core = THIS }
+			2110  = {
+			add_core = THIS }
+			2050  = {
+			add_core = THIS }
+			2049 = {
+			add_core = THIS }
+			badboy = 10
+			set_country_flag = zulwar_passed
+		}
+		
+	}
+	
+	    holy_education = {
+		picture = xhosa_misc
+		ai_will_do = { factor = 1 }
+		potential = {
+            year = 1860
+			capital = 2100	
+			has_global_flag = xhosaprophet	    
+			NOT = { has_country_flag = holyed_passed }
+		}
+
+		allow = {
+            year = 1865
+			capital = 2100	
+			has_global_flag = xhosaprophet
+        }
+
+		effect = {
+            add_country_modifier = { name = holy_education duration = 3650 }
+			clr_country_flag = lacking_writing_system 
+			remove_country_modifier =lacks_writing_system 
+			set_country_flag = holyed_passed
+		}
+	
+	}
+	
+		reform_prophet_administration = {
+		picture = xhosa_misc
+		ai_will_do = { factor = 1 }
+		potential = {
+             tag = XHO
+			 civilization_progress = 0.25
+			 has_global_flag = xhosaprophet	    
+			 NOT = { admin_reform = yes_admin_reform  }
+		}
+
+		allow = {
+        government = theocracy
+		NOT = { has_country_flag = lacking_writing_system  }
+        }
+
+		effect = {
+          economic_reform = yes_admin_reform
+		}
+	
+	}
+	
+		core_south_africa = {
+		picture = xhosa_map1
+		ai_will_do = { factor = 1 }
+		potential = {
+             tag = NGU
+			 capital = 2100
+ 			 has_global_flag = xhosaprophet	
+             NOT = { has_country_flag = core_south_africa }			 
+		}
+
+		allow = {
+        government = theocracy
+        owns = 2113
+        }
+
+		effect = {
+         	ENG_2087  = {
+			add_core = THIS }
+			ENG_2092  = {
+			add_core = THIS }
+			ORA_2103  = {
+			add_core = THIS }
+			TRN_2108  = {
+			add_core = THIS }
+			2049 = {
+			add_core = THIS }
+			2050 = {
+			add_core = THIS }
+			badboy = 10
+			set_country_flag = core_south_africa
+		}
+	
+	}
+	
+		form_mzansi = {
+		picture = xhosa_map2
+		ai_will_do = { factor = 1 }
+		potential = {
+        tag = NGU
+		capital = 2100
+		has_country_flag = core_south_africa
+		has_global_flag = xhosaprophet	
+		}
+
+		allow = {
+            owns = 2100
+			owns = 2113
+			owns = 2050
+			owns = 2114
+			owns = 2104
+            owns = 2101
+			owns = 2106
+			war = no
+        }
+
+		effect = {
+		
+		    prestige = 30
+		    change_tag = MZA
+			add_accepted_culture = sotho
+			add_accepted_culture = khoisan
+			add_accepted_culture = southern_bantu
+		}
+}
+		expand_mzansi = {
+		picture = xhosa_map3
+		ai_will_do = { factor = 1 }
+		potential = {
+        tag = MZA
+		NOT = { has_country_flag = expand_mzansi }		
+		}
+
+		allow = {
+		prestige = 100
+			war = no
+        }
+
+		effect = {
+		ENG_2083 = {
+		add_core = THIS }
+		ENG_2078  = {
+		add_core = THIS }
+		ENG_2074  = {
+		add_core = THIS }
+		ENG_2087  = {
+		add_core = THIS }
+		ENG_2071 = {
+		add_core = THIS }
+		ENG_2068 = {
+		add_core = THIS }
+		POR_2049 = {
+		add_core = THIS }
+		POR_2054 = {
+		add_core = THIS }
+		badboy = 15
+		set_country_flag = expand_mzansi
+
+
+		}
+}
