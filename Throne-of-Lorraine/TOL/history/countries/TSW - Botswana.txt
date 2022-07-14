@@ -1,7 +1,10 @@
-capital = 2094
-primary_culture = sotho
+capital = 2074
+primary_culture = southern_bantu
+culture = southern_bantu
+culture = south_forest_bantu
+culture = khoisan
 religion = animist
-government = absolute_monarchy
+government = democracy
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01
@@ -9,7 +12,7 @@ non_state_culture_literacy = 0
 
 
 # Political reforms
-slavery = yes_slavery
+slavery = no_slavery
 upper_house_composition = appointed
 vote_franschise = none_voting
 public_meetings = no_meeting
@@ -50,5 +53,3 @@ upper_house = {
 	communist = 0
 }
 set_country_flag = lacking_writing_system
-
-oob = "TSW_oob.txt"

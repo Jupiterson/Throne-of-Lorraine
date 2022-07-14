@@ -1,3 +1,7 @@
+POR = {
+	truce_until = 1841.1.1
+	value = 125
+}
 
 ZUL = {
 	value = -50
@@ -16,7 +20,7 @@ XHO = {
 }
 
 leader = {
-   name = "Fanomezantsoa"
+   name = "Soshangane"
    type = land
    date = 1836.1.1
    background = natural_born_leader
@@ -24,29 +28,36 @@ leader = {
 }
 
 army = {
-	name = "Army of the Arbota Empire"
-	location = 2057
+	name = "Army of the Gaza Empire"
+	location = 2050
 	regiment = {
 		name= "King's Guard"
 		type = irregular
-		home = 2057
+		home = 2050
 	}
 
 	regiment = {
-		name= "Arbota Warriors"
+		name= "Gaza Warriors"
 		type = irregular
-		home = 2057
+		home = 2050
 	}
 
 	regiment = {
-		name= "Arbota Warriors"
+		name= "Nguni Warriors"
 		type = irregular
 		home = 2051
 	}
 
 	regiment = {
-		name= "Arbota Warriors"
+		name= "Maputo Warriors"
+		type = irregular
+		home = 2049
+	}
+
+	regiment = {
+		name= "Massekisse Warriors"
 		type = irregular
 		home = 2052
 	}
+
 }
