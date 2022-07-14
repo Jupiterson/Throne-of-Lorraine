@@ -220,6 +220,10 @@ country_event = {
 		change_tag = PHC 
 		capital = 703		
 		badboy = 10	
+		
+	    ai_chance = {
+            factor = 75
+        }
 	}
 	
 		option = {
@@ -230,12 +234,20 @@ country_event = {
 		secede_province = POL
 		}
         }	
-        badboy = 5			
+        badboy = 5		
+
+        ai_chance = {
+            factor = 24
+        }		
 	}
 	
 	option = {
 		name = "The war weakened them enough."
 		prestige = 20
         badboy = -5		
+		
+	     ai_chance = {
+            factor = 1
+        }
 	}
 }
