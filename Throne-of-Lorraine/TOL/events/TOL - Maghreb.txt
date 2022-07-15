@@ -10,28 +10,37 @@ country_event = {
 	option = {
 		name = "GNAE.O.1"
 		GNA = {
-			country_event = { id=441 days=0 }
+			country_event = { id=441 days=1 }
 			}
 		ai_chance = {
-		factor = 33
+		factor = 30
 		}
 	}
 	option = {
 		name = "GNAE.O.2"
 		GNA = {
-			country_event = { id=442 days=0 }
+			country_event = { id=442 days=1 }
 		}
 		ai_chance = {
-		factor = 34
+		factor = 30
 		}
 	}	
 	option = {
 		name = "GNAE.O.3"
 		GNA = {
-			country_event = { id=443 days=0 }
+			country_event = { id=443 days=1 }
 		}
 		ai_chance = {
-		factor = 33
+		factor = 30
+		}
+	}
+	option = {
+		name = "GNAE.O.4"
+		GNA = {
+			country_event = { id=456 days=1 }
+			}
+		ai_chance = {
+		factor = 10
 		}
 	}
 }
@@ -46,7 +55,7 @@ country_event = {
 	option = {
 		name = "GNAE.ACCEPT.1"
 		FROM = {
-			country_event = { id=445 days=0 }
+			country_event = { id=445 days=1 }
 		}
 			ai_chance = {
 			factor = 70
@@ -55,7 +64,7 @@ country_event = {
 	option = {
 		name = "GNAE.HAGGLE.1"
 		FROM = {
-			country_event = { id=446 days=0 }
+			country_event = { id=446 days=1 }
 		}
 		ai_chance = {
 		factor = 20
@@ -64,7 +73,7 @@ country_event = {
 	option = {
 		name = "GNAE.DECLINE"
 		FROM = {
-			country_event = { id=447 days=0 }
+			country_event = { id=447 days=1 }
 			}
 		ai_chance = {
 		factor = 10
@@ -81,7 +90,7 @@ country_event = {
 		option = {
 		name = "GNAE.ACCEPT.2"
 		FROM = {
-			country_event = { id=448 days=0 }
+			country_event = { id=448 days=1 }
 		}
 			ai_chance = {
 			factor = 60
@@ -90,7 +99,7 @@ country_event = {
 	option = {
 		name = "GNAE.HAGGLE.2"
 		FROM = {
-			country_event = { id=449 days=0 }
+			country_event = { id=449 days=1 }
 		}
 		ai_chance = {
 		factor = 20
@@ -99,7 +108,7 @@ country_event = {
 	option = {
 		name = "GNAE.DECLINE.2"
 		FROM = {
-			country_event = { id=447 days=0 }
+			country_event = { id=447 days=1 }
 			}
 		ai_chance = {
 		factor = 20
@@ -116,7 +125,7 @@ country_event = {
 		option = {
 		name = "GNAE.ACCEPT.3"
 		FROM = {
-			country_event = { id=451 days=0 }
+			country_event = { id=451 days=1 }
 		}
 			ai_chance = {
 			factor = 80
@@ -125,7 +134,7 @@ country_event = {
 	option = {
 		name = "GNAE.HAGGLE.2"
 		FROM = {
-			country_event = { id=452 days=0 }
+			country_event = { id=452 days=1 }
 		}
 		ai_chance = {
 		factor = 19
@@ -134,10 +143,36 @@ country_event = {
 	option = {
 		name = "GNAE.DECLINE.2"
 		FROM = {
-			country_event = { id=447 days=0 }
+			country_event = { id=447 days=1 }
 			}
 		ai_chance = {
 		factor = 1
+		}
+	}
+}
+country_event = {
+	id = 456
+	title = "GNAE.OFFER.4.TITLE.456"
+	desc = "GNAE.OFFER.4.DESC.456"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAE.ACCEPT.4"
+		FROM = {
+			country_event = { id=457 days=1 }
+		}
+			ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = "GNAE.DECLINE"
+		FROM = {
+			country_event = { id=447 days=1 }
+			}
+		ai_chance = {
+		factor = 90
 		}
 	}
 }
@@ -150,7 +185,7 @@ country_event = {
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE1ACCEPTED"
+		name = "GNAE.1.ACCEPTED"
 		money = -10000
 		research_points = 10000
 		add_country_modifier = {
@@ -162,7 +197,11 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEFICKLE"
+		name = "GNAE.FICKLE"
+		relation = {
+			who = GNA
+			value = -50
+		}
 	}
 }
 country_event = {
@@ -185,7 +224,11 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEFICKLE"
+		name = "GNAE.FICKLE"
+		relation = {
+			who = GNA
+			value = -100
+		}
 	}
 }
 country_event = {
@@ -211,7 +254,7 @@ country_event = {
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.1.ACCEPTED"
+		name = "GNAE.2.ACCEPTED"
 		create_alliance = GNA
 		research_points = 10000
 		add_country_modifier = {
@@ -224,6 +267,10 @@ country_event = {
 	}
 	option = {
 		name = "GNAE.FICKLE"
+		relation = {
+			who = GNA
+			value = -50
+		}
 	}
 }
 country_event = {
@@ -247,7 +294,11 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEFICKLE"
+		name = "GNAE.FICKLE"
+		relation = {
+			who = GNA
+			value = -50
+		}
 	}
 }
 country_event = {
@@ -271,7 +322,11 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEFICKLE"
+		name = "GNAE.FICKLE"
+		relation = {
+			who = GNA
+			value = -50
+		}
 	}
 }
 country_event = {
@@ -295,7 +350,37 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEFICKLE"
+		name = "GNAE.FICKLE"
+		relation = {
+			who = GNA
+			value = -50
+		}
+	}
+}
+country_event = {
+	id = 457
+	title = "GNAE.ACCEPT.4.TITLE.457"
+	desc = "GNAE.ACCEPT.4.DESC.457"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAE.4.ACCEPTED"
+		research_points = 10000
+		add_country_modifier = {
+		name = western_influences
+		duration = 36
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "GNAE.FICKLE"
+		relation = {
+			who = GNA
+			value = -50
+		}
 	}
 }
 country_event = {
