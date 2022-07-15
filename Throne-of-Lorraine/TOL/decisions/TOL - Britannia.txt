@@ -3,6 +3,7 @@ political_decisions = {
 		picture = reform_the_uk
 		potential = {
 			NOT = { exists = ENG }
+			NOT = { exists = CLT }
 			OR = {
 				NOT = { tag = SCO }
 				has_country_flag = gaelic_assimilation
@@ -83,13 +84,14 @@ political_decisions = {
 						}
 					}
 				}
+			}
 				capital_scope = { continent = europe }
 				NOT = { has_country_flag = post_colonial_country }
 				is_culture_group = britannian
 				NOT = { exists = ENG }
 				NOT = { tag = CLT }
 				NOT = { tag = UPB }
-			}
+			
 		}
 
 		allow = {
