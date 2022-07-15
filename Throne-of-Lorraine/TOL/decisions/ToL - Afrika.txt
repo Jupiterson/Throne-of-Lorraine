@@ -318,9 +318,13 @@ political_decisions = {
 		    }	
 			2109 = {
 			add_core = THIS
+			2104 = {
+			add_core = THIS
+
 		    }	
 		}
 		
+	}
 	}
 	
 		claim_zulu = {
@@ -328,14 +332,14 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 		potential = {
             year = 1845
-			capital = 2100	
+			has_country_flag = xhosa_country
 			has_global_flag = xhosaprophet
 			NOT = { has_country_flag = zulwar_passed }
 		}
 
 		allow = {
             year = 1850
-			capital = 2100	
+            has_country_flag = xhosa_country
 			has_global_flag = xhosaprophet
         }
 
@@ -361,14 +365,14 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 		potential = {
             year = 1860
-			capital = 2100	
+            has_country_flag = xhosa_country
 			has_global_flag = xhosaprophet	    
 			NOT = { has_country_flag = holyed_passed }
 		}
 
 		allow = {
             year = 1865
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
         }
 
@@ -407,7 +411,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 		potential = {
              tag = NGU
-			 capital = 2100
+			 has_country_flag = xhosa_country
  			 has_global_flag = xhosaprophet	
              NOT = { has_country_flag = core_south_africa }			 
 		}
@@ -440,7 +444,7 @@ political_decisions = {
 		picture = xhosa_map2
 		potential = {
 			tag = NGU
-			capital = 2100
+			has_country_flag = xhosa_country
 			has_country_flag = core_south_africa
 			has_global_flag = xhosaprophet	
 		}
@@ -453,6 +457,7 @@ political_decisions = {
 			owns = 2104
             owns = 2101
 			owns = 2106
+			owns = 2105
 			war = no
         }
 
@@ -476,6 +481,7 @@ political_decisions = {
 		allow = {
 			prestige = 100
 			war = no
+			civilized = yes
         }
 
 		effect = {
@@ -491,6 +497,33 @@ political_decisions = {
 			ENG_2094 = { add_core = THIS }
 			badboy = 15
 			set_country_flag = expand_mzansi
+		}
+		ai_will_do = { factor = 1 }
+	}
+	reform_xhosa = {
+		picture = xhosa_map4
+		potential = {
+			OR = {
+			tag = GCA
+			tag = RHA
+			tag = NDL
+			}
+			NOT = { exists = XHO }
+		}
+			
+		allow = {
+            owns = 2100
+			owns = 2098
+			owns = 2097
+			owns = 2096
+			war = no
+        }
+
+		effect = {
+		    change_tag = XHO
+			ENG_2096 = {
+			add_core = THIS
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
