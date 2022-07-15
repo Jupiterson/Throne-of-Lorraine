@@ -1,0 +1,300 @@
+# -The Granadan Exchange-
+# What to Offer?
+country_event = {
+	id = 440
+	title = "GNAETITLE440"
+	desc = "GNAEDESC440"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAEA01"
+		GNA = {
+			country_event = { id=441 days=0 }
+			}
+		ai_chance = {
+		factor = 33
+		}
+	}
+	option = {
+		name = "GNAEA02"
+		GNA = {
+			country_event = { id=442 days=0 }
+		}
+		ai_chance = {
+		factor = 34
+		}
+	}	
+	option = {
+		name = "GNAEA03"
+		GNA = {
+			country_event = { id=443 days=0 }
+		}
+		ai_chance = {
+		factor = 33
+		}
+	}
+}
+#Granada Receiving Offers
+country_event = {
+	id = 441
+	title = "GNAEOFFER1TITLE441"
+	desc = "GNAEOFFER1DESC441"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAEACCEPT1"
+		FROM = {
+			country_event = { id=445 days=0 }
+		}
+			ai_chance = {
+			factor = 70
+		}
+	}
+	option = {
+		name = "GNAEHAGGLE1"
+		FROM = {
+			country_event = { id=446 days=0 }
+		}
+		ai_chance = {
+		factor = 20
+		}
+	}
+	option = {
+		name = "GNAEDECLINE"
+		FROM = {
+			country_event = { id=447 days=0 }
+			}
+		ai_chance = {
+		factor = 10
+		}
+	}
+}
+country_event = {
+	id = 442
+	title = "GNAEOFFER2TITLE442"
+	desc = "GNAEOFFER2DESC442"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+		option = {
+		name = "GNAEACCEPT2"
+		FROM = {
+			country_event = { id=448 days=0 }
+		}
+			ai_chance = {
+			factor = 60
+		}
+	}
+	option = {
+		name = "GNAEHAGGLE2"
+		FROM = {
+			country_event = { id=449 days=0 }
+		}
+		ai_chance = {
+		factor = 20
+		}
+	}
+	option = {
+		name = "GNAEDECLINE2"
+		FROM = {
+			country_event = { id=447 days=0 }
+			}
+		ai_chance = {
+		factor = 20
+		}
+	}
+}
+country_event = {
+	id = 443
+	title = "GNAEOFFER3TITLE443"
+	desc = "GNAEOFFER3DESC443"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+		option = {
+		name = "GNAEACCEPT3"
+		FROM = {
+			country_event = { id=451 days=0 }
+		}
+			ai_chance = {
+			factor = 80
+		}
+	}
+	option = {
+		name = "GNAEHAGGLE2"
+		FROM = {
+			country_event = { id=452 days=0 }
+		}
+		ai_chance = {
+		factor = 19
+		}
+	}
+	option = {
+		name = "GNAEDECLINE2"
+		FROM = {
+			country_event = { id=447 days=0 }
+			}
+		ai_chance = {
+		factor = 1
+		}
+	}
+}
+#Granada's Responses
+country_event = {
+	id = 445
+	title = "GNAEACCEPT1TITLE"
+	desc = "GNAEACCEPT1DESC"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAE1ACCEPTED"
+		money = -10000
+		research_points = 10000
+		add_country_modifier = {
+		name = western_influences
+		duration = 36
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "GNAEFICKLE"
+	}
+}
+country_event = {
+	id = 446
+	title = "GNAE.HAGGLE.1.T1TITLE"
+	desc = "GNAE.HAGGLE.1.DESC"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAE.1.HAGGLED"
+		money = -12000
+		research_points = 10000
+		add_country_modifier = {
+		name = western_influences
+		duration = 36
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "GNAEFICKLE"
+	}
+}
+country_event = {
+	id = 447
+	title = "GNAE.DECLINED.1.T1TITLE"
+	desc = "GNAE.DECLINED.1.DESC"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAE.1.DECLINED"
+		relation = {
+			who = GNA
+			value = -100
+		}
+	}
+}
+country_event = {
+	id = 448
+	title = "GNAE.ACCEPTED.2.T1TITLE"
+	desc = "GNAE.ACCEPTED.2.DESC"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAE.1.ACCEPTED"
+		create_alliance = GNA
+		research_points = 10000
+		add_country_modifier = {
+		name = western_influences
+		duration = 36
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "GNAEFICKLE"
+	}
+}
+country_event = {
+	id = 449
+	title = "GNAE.HAGGLE.2.T1TITLE"
+	desc = "GNAE.HAGGLE.2.DESC"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAE.2.HAGGLED"
+		money = -5000
+		create_alliance = GNA
+		research_points = 10000
+		add_country_modifier = {
+		name = western_influences
+		duration = 36
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "GNAEFICKLE"
+	}
+}
+country_event = {
+	id = 451
+	title = "GNAE.ACCEPTED.3.T1TITLE"
+	desc = "GNAE.ACCEPTED.3.DESC"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAE.3.ACCEPTED"
+		create_alliance = GNA
+		money = -5000
+		research_points = 10000
+		add_country_modifier = {
+		name = western_influences
+		duration = 36
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "GNAEFICKLE"
+	}
+}
+country_event = {
+	id = 451
+	title = "GNAE.HAGGLED.3.T1TITLE"
+	desc = "GNAE.HAGGLED.3.DESC"
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "GNAE.3.HAGGLED"
+		create_alliance = GNA
+		money = -7000
+		research_points = 10000
+		add_country_modifier = {
+		name = western_influences
+		duration = 36
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "GNAEFICKLE"
+	}
+}

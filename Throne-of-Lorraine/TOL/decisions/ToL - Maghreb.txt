@@ -579,4 +579,30 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 modifier = { factor = 0 badboy = 0.7 } }
 	}
+	
+	granadan_exchange = {
+		potential = {
+			civilized = no
+			OR = {
+				primary_culture = maghrebi
+				primary_culture = berber
+				}
+			NOT = {
+				has_country_flag = granadan_exchange_flag
+				has_country_flag = granadan_exchange_proposed
+			}
+		}
+		allow = {
+			war = no
+			relation = {
+			who = GNA
+			value = 200
+			}
+		}
+		effect = {
+			set_country_flag = granadan_exchange_proposed
+			THIS = {
+				country_event = { id=440 days=0 }
+		}
+	}		
 }
