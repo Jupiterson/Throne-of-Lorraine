@@ -594,10 +594,15 @@ political_decisions = {
 		}
 		allow = {
 			war = no
-			relation = {
-			who = GNA
-			value = 200
-			}
+			any_neighbor_country = {
+				AND = {
+					relation = {
+					who = THIS
+					value = 200
+					}
+					primary_culture = mozarabic
+					}
+				}
 		}
 		effect = {
 			set_country_flag = granadan_exchange_proposed

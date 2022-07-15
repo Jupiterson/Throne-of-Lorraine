@@ -2,13 +2,13 @@
 # What to Offer?
 country_event = {
 	id = 440
-	title = "GNAETITLE440"
-	desc = "GNAEDESC440"
+	title = "GNAE.TITLE.440"
+	desc = "GNAE.DESC.440"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAEA01"
+		name = "GNAE.O.1"
 		GNA = {
 			country_event = { id=441 days=0 }
 			}
@@ -17,7 +17,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEA02"
+		name = "GNAE.O.2"
 		GNA = {
 			country_event = { id=442 days=0 }
 		}
@@ -26,7 +26,7 @@ country_event = {
 		}
 	}	
 	option = {
-		name = "GNAEA03"
+		name = "GNAE.O.3"
 		GNA = {
 			country_event = { id=443 days=0 }
 		}
@@ -38,13 +38,13 @@ country_event = {
 #Granada Receiving Offers
 country_event = {
 	id = 441
-	title = "GNAEOFFER1TITLE441"
-	desc = "GNAEOFFER1DESC441"
+	title = "GNAE.OFFER.1.TITLE.441"
+	desc = "GNAE.OFFER.1.DESC.441"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAEACCEPT1"
+		name = "GNAE.ACCEPT.1"
 		FROM = {
 			country_event = { id=445 days=0 }
 		}
@@ -53,7 +53,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEHAGGLE1"
+		name = "GNAE.HAGGLE.1"
 		FROM = {
 			country_event = { id=446 days=0 }
 		}
@@ -62,7 +62,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEDECLINE"
+		name = "GNAE.DECLINE"
 		FROM = {
 			country_event = { id=447 days=0 }
 			}
@@ -73,13 +73,13 @@ country_event = {
 }
 country_event = {
 	id = 442
-	title = "GNAEOFFER2TITLE442"
-	desc = "GNAEOFFER2DESC442"
+	title = "GNAE.OFFER.2.TITLE.442"
+	desc = "GNAE.OFFER.2.DESC.442"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 		option = {
-		name = "GNAEACCEPT2"
+		name = "GNAE.ACCEPT.2"
 		FROM = {
 			country_event = { id=448 days=0 }
 		}
@@ -88,7 +88,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEHAGGLE2"
+		name = "GNAE.HAGGLE.2"
 		FROM = {
 			country_event = { id=449 days=0 }
 		}
@@ -97,7 +97,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEDECLINE2"
+		name = "GNAE.DECLINE.2"
 		FROM = {
 			country_event = { id=447 days=0 }
 			}
@@ -108,13 +108,13 @@ country_event = {
 }
 country_event = {
 	id = 443
-	title = "GNAEOFFER3TITLE443"
-	desc = "GNAEOFFER3DESC443"
+	title = "GNAE.OFFER.3.TITLE.443"
+	desc = "GNAE.OFFER.3.DESC.443"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 		option = {
-		name = "GNAEACCEPT3"
+		name = "GNAE.ACCEPT.3"
 		FROM = {
 			country_event = { id=451 days=0 }
 		}
@@ -123,7 +123,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEHAGGLE2"
+		name = "GNAE.HAGGLE.2"
 		FROM = {
 			country_event = { id=452 days=0 }
 		}
@@ -132,7 +132,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEDECLINE2"
+		name = "GNAE.DECLINE.2"
 		FROM = {
 			country_event = { id=447 days=0 }
 			}
@@ -144,8 +144,8 @@ country_event = {
 #Granada's Responses
 country_event = {
 	id = 445
-	title = "GNAEACCEPT1TITLE"
-	desc = "GNAEACCEPT1DESC"
+	title = "GNAE.ACCEPT.1.TITLE.445"
+	desc = "GNAE.ACCEPT.1.DESC.445"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
@@ -167,8 +167,8 @@ country_event = {
 }
 country_event = {
 	id = 446
-	title = "GNAE.HAGGLE.1.T1TITLE"
-	desc = "GNAE.HAGGLE.1.DESC"
+	title = "GNAE.HAGGLE.1.TITLE.446"
+	desc = "GNAE.HAGGLE.1.DESC.446"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
@@ -190,8 +190,8 @@ country_event = {
 }
 country_event = {
 	id = 447
-	title = "GNAE.DECLINED.1.T1TITLE"
-	desc = "GNAE.DECLINED.1.DESC"
+	title = "GNAE.DECLINED.1.TITLE.447"
+	desc = "GNAE.DECLINED.1.DESC.447"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
@@ -205,8 +205,8 @@ country_event = {
 }
 country_event = {
 	id = 448
-	title = "GNAE.ACCEPTED.2.T1TITLE"
-	desc = "GNAE.ACCEPTED.2.DESC"
+	title = "GNAE.ACCEPTED.2.TITLE".448
+	desc = "GNAE.ACCEPTED.2.DESC.448"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
@@ -223,13 +223,13 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAEFICKLE"
+		name = "GNAE.FICKLE"
 	}
 }
 country_event = {
 	id = 449
-	title = "GNAE.HAGGLE.2.T1TITLE"
-	desc = "GNAE.HAGGLE.2.DESC"
+	title = "GNAE.HAGGLE.2.TITLE.449"
+	desc = "GNAE.HAGGLE.2.DESC.449"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
@@ -252,8 +252,8 @@ country_event = {
 }
 country_event = {
 	id = 451
-	title = "GNAE.ACCEPTED.3.T1TITLE"
-	desc = "GNAE.ACCEPTED.3.DESC"
+	title = "GNAE.ACCEPTED.3.TITLE.451"
+	desc = "GNAE.ACCEPTED.3.DESC.451"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
@@ -275,9 +275,9 @@ country_event = {
 	}
 }
 country_event = {
-	id = 451
-	title = "GNAE.HAGGLED.3.T1TITLE"
-	desc = "GNAE.HAGGLED.3.DESC"
+	id = 452
+	title = "GNAE.HAGGLED.3.TITLE.452"
+	desc = "GNAE.HAGGLED.3.DESC.452"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
@@ -298,3 +298,108 @@ country_event = {
 		name = "GNAEFICKLE"
 	}
 }
+country_event = {
+	id = 444
+	title = "TRI.LORE.TITLE.444"
+	desc = "TRI.LORE.DESC.444"
+	fire_only_once = yes
+	picture = "centennial"
+	
+	trigger = {
+		tag = TRI
+		}
+	mean_time_to_happen = {
+		months = 0
+		}
+	option = {
+		name = "Neat."
+		}
+	option = {
+		name = "Don't care, didn't ask."
+		money = -1
+		}
+}
+country_event = {
+	id = 450
+	title = "ALD.LORE.TITLE.450"
+	desc = "ALD.LORE.DESC.450"
+	fire_only_once = yes
+	picture = "centennial"
+	
+	trigger = {
+		tag = ALD
+		}
+	mean_time_to_happen = {
+		months = 0
+		}
+	option = {
+		name = "Neat."
+		}
+	option = {
+		name = "Don't care, didn't ask."
+		money = -1
+		}
+}		
+country_event = {
+	id = 453
+	title = "TLE.LORE.TITLE.453"
+	desc = "TLE.LORE.DESC.453"
+	fire_only_once = yes
+	picture = "centennial"
+	
+	trigger = {
+		tag = TLE
+		}
+	mean_time_to_happen = {
+		months = 0
+		}
+	option = {
+		name = "Neat."
+		}
+	option = {
+		name = "Don't care, didn't ask."
+		money = -1
+		}
+}
+country_event = {
+	id = 454
+	title = "FEZ.LORE.TITLE.454"
+	desc = "FEZ.LORE.DESC.454"
+	fire_only_once = yes
+	picture = "centennial"
+	
+	trigger = {
+		tag = FEZ
+		}
+	mean_time_to_happen = {
+		months = 0
+		}
+	option = {
+		name = "Neat."
+		}
+	option = {
+		name = "Don't care, didn't ask."
+		money = -1
+		}
+}		
+country_event = {
+	id = 455
+	title = "MRR.LORE.TITLE.455"
+	desc = "MRR.LORE.DESC.455"
+	fire_only_once = yes
+	picture = "centennial"
+	
+	trigger = {
+		tag = MRR
+		}
+	mean_time_to_happen = {
+		months = 0
+		}
+	option = {
+		name = "Neat."
+		}
+	option = {
+		name = "Don't care, didn't ask."
+		money = -1
+		}
+}		
