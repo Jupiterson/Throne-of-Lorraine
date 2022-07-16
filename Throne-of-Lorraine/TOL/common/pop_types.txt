@@ -1054,11 +1054,6 @@ assimilation_chance = {
 		        country = { OR = { has_country_flag = can_ignore_cultural_core primary_culture = berber primary_culture = ashkenazi } }
 		}
 	}
-	
-	 modifier = {
-        factor = 50.0
-        country = { OR = { primary_culture = berber primary_culture = ashkenazi } }
-    }
 
     modifier = {
         factor = -0.2
@@ -1142,19 +1137,35 @@ assimilation_chance = {
     #    is_accepted_culture = yes
     #}
 
+#Pops being assimilative
     modifier = {
         factor = 1.5
-        has_pop_culture = ainu
-        country = { primary_culture = japanese }
-    }
-	
-	modifier = {
-        factor = 2.5
 		OR = {
-        country = { primary_culture = greek }
-		country = { primary_culture = ashkenazi }
+        has_pop_culture = ainu
+		AND = {
+		has_pop_culture = tatar
+		country = { primary_culture = ruthenyan }
+		}
+		AND = {
+		has_pop_culture = czech
+		country = { primary_culture = south_german }
+		}
 		}
     }
+#pops that can assimilate quickly	
+	modifier = {
+        factor = 1.5
+		OR = {
+        country = { primary_culture = greek }
+		country = { primary_culture = yoruba }
+		}
+    }
+#Hyper assimilatives	
+	 modifier = {
+        factor = 50.0
+        country = { OR = { primary_culture = berber primary_culture = ashkenazi } }
+    }
+
 
 
     modifier = {
