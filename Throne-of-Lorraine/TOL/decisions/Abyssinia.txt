@@ -1,0 +1,102 @@
+political_decisions = {
+	form_new_ankober = {
+		picture = map_indonesia
+		potential = {
+			tag = AMC
+		}
+
+		allow = {
+			tag = AMC
+			civilized = yes
+			AND = {
+				1437 = {
+					average_militancy = 3
+				}
+				1442 = {
+					average_militancy = 3
+				}
+				1421 = {
+					average_militancy = 3
+				}
+				1432 = {
+					average_militancy = 3
+				}
+				1433 = {
+					average_militancy = 3
+				}
+				3398 = {
+					average_militancy = 3
+				}
+				2647 = {
+					average_militancy = 3
+				}
+				1484 = {
+					average_militancy = 3
+				}
+				OR = {
+					all_core = {
+						is_accepted_culture = yes
+						}
+					all_core = {
+						is_primary_culture = yes
+						}
+					}
+				}
+		}
+
+		effect = {
+			1437 = {
+				add_core = NWA
+				secede_province = THIS
+				remove_core = AMC
+			}
+			
+			change_tag = NWA
+			
+			1442 = {
+				add_core = NWA
+				secede_province = THIS
+				remove_core = AMC
+			}
+			1421 = {
+				add_core = NWA
+				secede_province = THIS
+				remove_core = AMC
+			}
+			1433 = {
+				add_core = NWA
+				secede_province = THIS
+				remove_core = AMC
+			}
+			1432 = {
+				add_core = NWA
+				secede_province = THIS
+				remove_core = AMC
+			}
+			2647 = {
+				add_core = NWA
+				secede_province = THIS
+				remove_core = AMC
+			}
+			3398 = {
+				add_core = NWA
+				secede_province = THIS
+				remove_core = AMC
+			}
+			1384 = {
+				add_core = NWA
+				secede_province = THIS
+				remove_core = AMC
+			}
+			NWA = {
+				government = democracy
+				political_reform = state_equal_weight
+				political_reform = universal_voting
+				political_reform = gerrymandering
+				political_reform = no_colonies
+				social_reform = ten_hours
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+}
