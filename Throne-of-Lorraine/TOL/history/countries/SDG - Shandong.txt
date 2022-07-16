@@ -1,16 +1,13 @@
-capital = 1616
-primary_culture = buyeo
-culture = korean
+capital = 1563
+primary_culture = han_chinese
 religion = confucian
-government = absolute_empire
+government = presidential_dictatorship
 plurality = 0.0
-nationalvalue = nv_tradition
-literacy = 0.05
-non_state_culture_literacy = 0.04
-prestige = 25
+nationalvalue = nv_order
+literacy = 0.04
 
 # Political reforms
-slavery = yes_slavery
+slavery = no_slavery
 upper_house_composition = appointed
 vote_franschise = none_voting
 public_meetings = no_meeting
@@ -29,35 +26,33 @@ pensions = no_pensions
 school_reforms = no_schools
 
 # New Reforms
-conscription = no_draft
-debt_law = serfdom
+conscription = two_year_draft
+debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = closed_borders
-centralization = regionalism
+centralization = unitary
 colonial_policy = no_colonies
 
 set_country_flag = mahayana_country
 
-ruling_party = CHI_conservative
+ruling_party = HUI_reactionary
 upper_house = {
 	fascist = 0
-	liberal = 0
-	conservative = 75
-	reactionary = 25
+	liberal = 10
+	conservative = 30
+	reactionary = 60
 	radical = 0
 	socialist = 0
 	communist = 0
 }
 
-decision = QNG_setup
+
+foreign_weapons = yes_foreign_weapons
 
 # Technologies
-monetary_reform = yes_monetary_reform
-firearms_production = yes_firearms_production
-
-# Technologies
+flintlock_rifles = 1
 
 # Inventions
 #bottling_process = yes
@@ -65,19 +60,3 @@ modern_winemaking = yes
 big_sail_ships = yes
 sail_ships_transport = yes
 big_sail_support = yes
-
-# Starting Consciousness
-consciousness = 0
-nonstate_consciousness = 0
-
-oob = "CHI_oob.txt"
-1861.1.1 = {
-	oob = "/1861/CHI_oob.txt"
-}
-1861.1.1 = {
-# Inventions
-	set_global_flag = taiping_has_happened
-	set_global_flag = hong
-	set_global_flag = yang
-	decision = clear_out_the_manchu_elite
-}
