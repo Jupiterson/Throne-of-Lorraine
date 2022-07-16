@@ -384,7 +384,7 @@ country_event = {
 
 	trigger = {
             year = 1841
-			capital = 2100		
+			has_country_flag = xhosa_country		
 	}
 
 	fire_only_once = yes
@@ -403,11 +403,17 @@ country_event = {
                 	militancy = -5}
 		set_global_flag = xhosaprophet
 		set_country_flag = xhosaprophet
+		ai_chance = {
+			factor = 50
+		}
 	}
 	option = {
 		name = "xhosaprophet1_option2"
 		any_pop = {consciousness = -5 
 		           militancy = 5}
+		 ai_chance = {
+			factor = 50
+		}
 	}
 	}
 	
@@ -443,7 +449,7 @@ country_event = {
 
 	trigger = {
             year = 1845
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
 	}
 
@@ -469,7 +475,7 @@ country_event = {
 
 	trigger = {
             year = 1849
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
 	}
 
@@ -515,11 +521,17 @@ country_event = {
   				defender_goal = { casus_belli = status_quo }
 		badboy = -12		
 	}
+	ai_chance = {
+			factor = 80
+		}
 	}
 		option = {
 		name = "xhosaprophet5_option2"
         any_pop = {militancy = 5}
 		cattle = -10
+		ai_chance = {
+			factor = 20
+		}
 	}
 	}
 	
@@ -529,7 +541,7 @@ country_event = {
 
 	trigger = {
             year = 1853
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
 	}
 
@@ -556,7 +568,7 @@ country_event = {
 
 	trigger = {
             year = 1858
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
 	}
 
@@ -582,7 +594,7 @@ country_event = {
 
 	trigger = {
             year = 1870
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
 	}
 
@@ -626,3 +638,139 @@ country_event = {
         relation = { who = FROM value = -100 }
 	}
 }
+
+	country_event = {
+
+	id = 50009
+
+	trigger = {
+            year = 1858
+			tag = XHO
+			NOT = { has_global_flag = xhosaprophet }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 18
+	}
+
+	title = "xhosaprophet10_title"
+	desc = "xhosaprophet10_desc"
+	picture = "xhosa_chief"
+
+	option = {
+		name = "xhosaprophet10_option1"   
+        country_event = {
+	            id = 500011
+	            days = 6
+}
+	}
+	}
+	
+	country_event = {
+
+	id = 500010
+
+	trigger = {
+            year = 1858
+			tag = NGU
+			has_country_flag = xhosa_country
+			NOT = { has_global_flag = xhosaprophet }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 18
+	}
+
+	title = "xhosaprophet11_title"
+	desc = "xhosaprophet11_desc"
+	picture = "xhosa_chief"
+
+	option = {
+		name = "xhosaprophet11_option1"   
+        any_pop = { consciousness = 3 }  
+	}
+	}
+	
+	country_event = {
+
+	id = 500011
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "xhosacollapse_title"
+	desc = "xhosacollapse_desc"
+	picture = "xhosa_war"
+	
+	immediate = {
+		       2098 = { add_core = RHA }
+			   2097 = { add_core = RHA }
+			   2099 = { add_core = RHA }
+               2096 = { add_core = NDL }
+               2100 = { add_core = GCA }
+               2111 = { add_core = GCA }
+	}
+
+	option = {
+		name = "xhosacollsapse_option1"
+             change_tag = RHA		
+               any_owned = {
+			     limit = {
+				is_core = NDL
+			}
+			secede_province = NDL
+			remove_core = THIS
+		}
+		         any_owned = {
+			limit = {
+				is_core = GCA 
+			}
+			secede_province = GCA
+			remove_core = THIS
+		}
+		2111 = { remove_core = THIS }		  		   
+	}
+	option = {
+		name = "xhosacollsapse_option2"    
+ 	          change_tag = GCA		
+               any_owned = {
+			     limit = {
+				is_core = NDL
+			}
+			secede_province = NDL
+			remove_core = THIS
+		}
+		         any_owned = {
+			limit = {
+				is_core = RHA
+			}
+			secede_province = RHA
+			remove_core = THIS
+		}
+		RHA = { capital = 2098 }
+	}
+	option = {
+		name = "xhosacollsapse_option3"     
+           	   change_tag = NDL		
+               any_owned = {
+			     limit = {
+				is_core = RHA
+			}
+			secede_province = RHA
+			remove_core = THIS
+		}
+		RHA = { capital = 2098 }
+		         any_owned = {
+			limit = {
+				is_core = GCA
+			}
+			secede_province = GCA
+			remove_core = THIS
+		}
+		2111 = { remove_core = THIS }
+	}
+	}
