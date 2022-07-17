@@ -374,9 +374,9 @@ political_decisions = {
 		}
 
 		effect = {
-			any_owned = { secede_province = NET }
-			annex_to = NET
-			NET = { inherit = EIC }
+			any_owned = { secede_province = FRA }
+			annex_to = FRA
+			FRA = { inherit = EIC }
 		}
 
 		ai_will_do = { factor = 1 }

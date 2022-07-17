@@ -28,7 +28,7 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
-			badboy = 10
+			badboy = 5
 		}
 		ai_will_do = {
 			factor = 1 
@@ -140,6 +140,31 @@ political_decisions = {
 			
 		}
 	}
+
+	claim_galicia_hun = {
+		picture = unite_with_poland
+		potential = {
+			tag = HUN
+			NOT = { has_country_flag = galicia_claimed }
+			has_country_flag = down_the_danube
+		}
+		allow = {
+			exists = yes
+			NOT = { is_vassal = yes }
+			war_policy = jingoism
+		}
+		effect = {
+			set_country_flag = down_the_danube
+			AUS_702 = { add_core = THIS }
+			AUS_662 = { add_core = THIS }
+			RUS_715 = { add_core = THIS }
+			badboy = 5
+		}
+		ai_will_do = {
+			factor = 1 
+		}
+	}
+	
 	
   reconsile_serbia = {
 		picture = knights_hospitaller_paul
