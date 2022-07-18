@@ -163,3 +163,57 @@ country_event = {
 		ai_chance = { factor = 30 }
 	}
 }
+
+country_event = {
+	id = 100184
+	title = "The lost Cause..."
+	desc = "BALKANLAR"
+	picture = "bulgarian_parade"
+	trigger = {
+		tag = TUR
+		OR = {
+		NOT = {
+		owns = 805
+		owns = 808
+		owns = 833
+		owns = 825
+		}
+		NOT = { owns = 860}
+		}
+	}
+   fire_only_once = yes
+   
+   mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "Release the Balkans as a puppet"
+		prestige = 20
+		any_owned = {
+			limit = {
+				continent = europe
+				NOT = { region = TUR_860 }
+			}
+			secede_province = RUM
+			add_core = RUM
+			remove_core = TUR
+		}
+		create_vassal = RUM
+        ai_chance = { factor = 100 }
+		}
+		
+	option = {
+		name = "Play as the Balkans"
+		prestige = 20
+		any_owned = {
+			limit = {
+				continent = europe
+				NOT = { region = TUR_860 }
+			}
+			secede_province = RUM
+			add_core = RUM
+			remove_core = TUR
+		}
+		change_tag_no_core_switch = RUM
+
+		}
+}
