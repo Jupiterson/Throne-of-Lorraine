@@ -517,9 +517,8 @@ country_event = {
 		name = "xhosaprophet5_option1"
 		cattle = -10 
 		war = { target = XHO
-                attacker_goal = { casus_belli = conquest_low }
-  				defender_goal = { casus_belli = status_quo }
-		badboy = -12		
+                attacker_goal = { casus_belli = conquest_any }
+  				defender_goal = { casus_belli = status_quo }		
 	}
 	ai_chance = {
 			factor = 80
@@ -662,7 +661,7 @@ country_event = {
 	option = {
 		name = "xhosaprophet10_option1"   
         country_event = {
-	            id = 500011
+	            id = 50011
 	            days = 6
 }
 	}
@@ -670,7 +669,7 @@ country_event = {
 	
 	country_event = {
 
-	id = 500010
+	id = 50010
 
 	trigger = {
             year = 1858
@@ -697,7 +696,7 @@ country_event = {
 	
 	country_event = {
 
-	id = 500011
+	id = 50011
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -774,3 +773,319 @@ country_event = {
 		2111 = { remove_core = THIS }
 	}
 	}
+	
+	country_event = {
+
+	id = 50012
+
+	trigger = {
+            year = 1860
+			tag = SCO
+			owns = 2087
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 68
+	}
+
+	title = "datiach_tension_title"
+	desc = "datiach_tension_desc"
+	picture = "sepoy"
+
+	option = {
+		name = "datiach_tension_option1"   
+		any_pop = {
+			limit = { has_pop_culture = griqua 
+			}
+		militancy = 8 
+	    consciousness = 5 
+	    }
+		country_event = {
+	            id = 50013
+	            days = 246
+        }
+	}
+}
+	
+	country_event = {
+
+	id = 50013
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "datiach_demands_title"
+	desc = "datiach_demands_desc"
+	picture = "storming_palace_communists"
+
+	option = {
+		name = "datiach_demands_option1"
+           random_list = {
+			80 = { country_event = { id = 50014 days = 1 }		  		    }
+			20 = { any_owned = {
+			    limit = {
+				is_core = DTI
+			}}
+			secede_province = DTI 
+			war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}
+		}    		   
+	}
+	}
+	option = {
+		name = "datiach_demands_option2"    
+               any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		}
+		war = { target = DTI
+                attacker_goal = { casus_belli = conquest_any}
+  				defender_goal = { casus_belli = become_independent }		
+	          }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "datiach_demands_option3"   
+               any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		}
+		war = { target = DTI
+                attacker_goal = { casus_belli = conquest_any}
+  				defender_goal = { casus_belli = become_independent }		
+	          }
+        change_tag_no_core_switch = DTI
+	}
+}
+
+
+	country_event = {
+
+	id = 50014
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "datiach_negotiations_title"
+	desc = "datiach_negotiations_desc"
+	picture = "treaty"
+
+	option = {
+		name = "datiach_negotiations_option1"
+           random_list = {
+			40 = { country_event = { id = 50016 days = 1 }}
+			60 = { any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		} war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}}
+		}    		   
+	}
+	option = {
+		name = "datiach_negotiations_option2"    
+               random_list = {
+            5 = { country_event = { id = 50015 days = 1 }}
+			95 = { any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		} war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}}
+		    }    		   
+		}
+	}
+
+    country_event = {
+
+	id = 50015
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	title = "datiach_defeat_title"
+	desc = "datiach_defeat_desc"
+	picture = "treaty"
+
+	option = {
+		name = "datiach_defeat_option1"   
+		any_pop = {
+			limit = { has_pop_culture = griqua 
+			}
+	    consciousness = 8 
+	         }
+	    }
+    }
+	
+	country_event = {
+
+	id = 50016
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	title = "datiach_compromise_title"
+	desc = "datiach_compromise_desc"
+	picture = "treaty"
+
+	option = {
+		name = "datiach_compromise_option1"   
+		any_pop = {
+			limit = { has_pop_culture = griqua 
+			}
+	    consciousness = -3
+	         }
+			 SAF = { add_accepted_culture = griqua }
+			 SAF = { all_core = { remove_core = DTI } }
+	    }
+    }
+	
+	country_event = {
+    id = 50017
+	title = "neamhnaid_title"
+	desc = "neamhnaid_desc"
+    news = yes
+    news_title = "neamhnaid"
+    news_desc_long = "neamhnaid_NEWS_LONG"
+    news_desc_medium = "neamhnaid_NEWS_MEDIUM"
+    news_desc_short = "neamhnaid_NEWS_SHORT"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "datiann_surrender_option1"
+        prestige = -50
+        DTI = { all_core = { remove_core = SAF } }
+        random_country = {
+            limit = {
+                war_with = THIS
+                controls = 2087
+            }
+            end_war = THIS
+            country_event = 50018
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    primary_culture = griqua
+                    alliance_with = FROM
+                }
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+
+    option = {
+        name = "datiann_surrender_option2"
+        prestige = -25
+		DTI = { all_core = { remove_core = SAF } }
+        casus_belli = {
+                target = DTI
+                type = conquest_any
+                months = 60
+            }
+        random_country = {
+            limit = {
+                war_with = THIS
+                controls = 2087
+            }
+            end_war = THIS
+            country_event = 50019
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    primary_culture = griqua
+                    alliance_with = FROM
+                }
+                war_with = THIS
+            }
+            end_war = THIS
+
+        }
+    }
+}
+
+	country_event = { 
+    id = 50018
+	title = "datiann_recc_title"
+	desc = "datiann_recc_desc"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "datiann_recc_option1"
+        prestige = 25
+        FROM = {
+            any_owned = {
+                limit = { is_core = DTI }
+                secede_province = THIS
+            }
+            relation = { who = THIS value = 200 }
+            diplomatic_influence = { who = THIS value = 50 }
+        }
+        any_pop = {
+            limit = { has_pop_culture = scottish }
+            consciousness = 2
+        }
+        any_country = {
+            limit = {
+                alliance_with = FROM
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+}
+
+country_event = {
+    id = 50019
+    picture = "treaty"
+	title = "datiann_anger_title"
+	desc = "datiann_anger_desc"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "datiann_anger_option1"
+        prestige = 25
+        FROM = {
+            any_owned = {
+                limit = { is_core = DTI }
+                secede_province = THIS
+            }
+            casus_belli = {
+                target = THIS
+                type = cut_down_to_size
+                months = 240
+            }
+            casus_belli = {
+                target = DTI
+                type = cut_down_to_size
+                months = 240
+            }
+        }
+        any_pop = {
+            limit = { has_pop_culture = scottish }
+            militancy = 8
+            consciousness = 4
+        }
+        any_country = {
+            limit = {
+                alliance_with = FROM
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+}
