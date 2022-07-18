@@ -8,8 +8,13 @@ political_decisions = {
 				NOT = { tag = SCO }
 				has_country_flag = gaelic_assimilation
 			}
+
 			OR = {
+			AND = {
+				is_culture_group = britannian
 				ai = no
+				NOT = { tag = SCO }
+				}
 				OR = {
 					AND = {
 						has_country_flag = britannia_ai
