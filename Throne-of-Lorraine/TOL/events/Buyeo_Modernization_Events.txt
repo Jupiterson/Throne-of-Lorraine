@@ -113,7 +113,65 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = 651902
+	title = "EVTNAME651902"
+	desc = "EVTDESC651902"
+	picture = "guangzhou_uprising"
 
+	trigger = {
+		tag = QNG
+		has_country_flag = victory_of_Buyeo
+		NOT = { has_country_flag = southern_provinces_reorganized }
+	}
+
+	mean_time_to_happen = { months = 8 }
+
+	option = {
+		name = "The South shall never rise again ... right?"
+		set_country_flag = southern_provinces_reorganized
+		any_owned = {
+			remove_core = YNN
+		}
+		any_owned = {
+			remove_core = GXI
+		}
+		any_owned = {
+			remove_core = FJN
+		}
+		FJN = {
+			government = merchant_republic
+		}
+		CHI_1504 = {
+			any_pop = {
+                            militancy = 4
+                            consciousness = 2
+			}
+			add_core = GNG
+		}
+		CHI_1601 = {
+			any_pop = {
+                            militancy = 4
+                            consciousness = 2
+			}
+			add_core = GUI
+		}
+		CHI_1604 = {
+			add_core = FJN
+		}
+		CHI_1610 = {
+			add_core = FJN
+		}
+		CHI_1482 = {
+			any_pop = {
+                            militancy = 4
+                            consciousness = 2
+			}
+			add_core = FJN
+		}	
+		prestige = 20
+	}
+}
 
 country_event = {
 	id = 651890
