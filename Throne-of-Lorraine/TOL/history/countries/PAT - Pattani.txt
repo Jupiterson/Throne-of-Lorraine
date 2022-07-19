@@ -52,9 +52,17 @@ upper_house = {
 }
 
 set_country_flag = sunni_country
-foreign_weapons = yes_foreign_weapons
-flintlock_rifles = 1
 
+#Military Reforms
+	foreign_weapons = yes_foreign_weapons
+	military_constructions = yes_military_constructions
+	foreign_artillery = yes_foreign_artillery
+	
+#Technologies
+	flintlock_rifles = 1
+	post_napoleonic_thought = 1
+	bronze_muzzle_loaded_artillery = 1
+	
 # Inventions
 
 # Starting Consciousness

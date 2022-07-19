@@ -1,0 +1,22 @@
+political_decisions = {
+	coal_in_carezzonico = {
+		picture = deoraa
+		potential = {
+			tag = VEN
+			owns = 2565
+			NOT = { has_country_flag = prospecting_cebu }
+		}
+		
+		allow = {
+			mechanized_mining = 1
+			money = 50000
+		}
+		
+		effect = {
+			set_country_flag = prospecting_cebu
+			money = -50000
+			2565 = { trade_goods = coal }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}
