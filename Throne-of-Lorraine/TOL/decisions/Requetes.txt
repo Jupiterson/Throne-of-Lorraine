@@ -1,0 +1,25 @@
+political_decisions = {
+	dios_y_pueblo = {
+		picture = requetes
+		potential = {
+			tag = BSQ
+			NOT = { has_country_flag = requete_spirit }
+		}
+		
+		allow = {
+			has_leader = "Carlos Fal Conde"
+		}
+		
+		effect = {
+			set_country_flag = requete_spirit
+			add_country_modifier = {
+				name = requete
+				duration = -1
+			}
+			plurality = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
