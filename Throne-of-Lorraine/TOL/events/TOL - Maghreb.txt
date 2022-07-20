@@ -53,7 +53,8 @@ country_event = {
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "A fair deal, we accept. (Gain 10,000)"
+		name = "A fair deal, we accept."
+		money = 10000
 		FROM = {
 			country_event = { id=445 days=1 }
 		}
@@ -88,7 +89,8 @@ country_event = {
 	picture = "gibraltar_strait"
 	
 		option = {
-		name = "Anything to fend off the Reconquista. (Will form an alliance)"
+		name = "Anything to fend off the Reconquista."
+		create_alliance = FROM
 		FROM = {
 			country_event = { id=448 days=1 }
 		}
@@ -123,7 +125,9 @@ country_event = {
 	picture = "gibraltar_strait"
 	
 		option = {
-		name = "A victory for Granadan diplomacy!"
+		name = "A victory for diplomacy!"
+		money = 5000
+		create_alliance = FROM
 		FROM = {
 			country_event = { id=451 days=1 }
 		}
@@ -133,6 +137,8 @@ country_event = {
 	}
 	option = {
 		name = "They seem desperate. Squeeze them for all they are worth! (Demand 7,000 and an alliance)"
+		money = 7000
+		create_alliance = FROM
 		FROM = {
 			country_event = { id=452 days=1 }
 		}
@@ -196,13 +202,6 @@ country_event = {
 			factor = 100
 		}
 	}
-	option = {
-		name = "Well now I don't feel like it."
-		relation = {
-			who = GNA
-			value = -50
-		}
-	}
 }
 country_event = {
 	id = 446
@@ -219,6 +218,9 @@ country_event = {
 		name = western_influences
 		duration = 36
 		}
+		FROM = {
+		country_event = { id=458 days=1 }
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -228,6 +230,8 @@ country_event = {
 		relation = {
 			who = GNA
 			value = -100
+		FROM = {
+		country_event = { id=459 days=1 }
 		}
 	}
 }
@@ -265,13 +269,6 @@ country_event = {
 			factor = 100
 		}
 	}
-	option = {
-		name = "I've changed my mind, they are not worth defending."
-		relation = {
-			who = GNA
-			value = -50
-		}
-	}
 }
 country_event = {
 	id = 449
@@ -289,12 +286,18 @@ country_event = {
 		name = western_influences
 		duration = 36
 		}
+		FROM = {
+			country_event = { id=460 days=1 }
+		}
 		ai_chance = {
 			factor = 100
 		}
 	}
 	option = {
 		name = "Outrageous!"
+		FROM = {
+		country_event = { id=459 id=1}
+		}
 		relation = {
 			who = GNA
 			value = -50
@@ -321,13 +324,6 @@ country_event = {
 			factor = 100
 		}
 	}
-	option = {
-		name = "I...have lost interest."
-		relation = {
-			who = GNA
-			value = -50
-		}
-	}
 }
 country_event = {
 	id = 452
@@ -345,12 +341,18 @@ country_event = {
 		name = western_influences
 		duration = 36
 		}
+		FROM = {
+		country_event = { id=461 days=1 }
+		}
 		ai_chance = {
 			factor = 100
 		}
 	}
 	option = {
 		name = "Outrageous!"
+		FROM = {
+		country_event = { id=459 days=1}
+		}
 		relation = {
 			who = GNA
 			value = -50
@@ -375,14 +377,8 @@ country_event = {
 			factor = 100
 		}
 	}
-	option = {
-		name = "Their generosity disgusts me, decline."
-		relation = {
-			who = GNA
-			value = -50
-		}
-	}
 }
+
 #Granada Receives Benefits
 
 country_event = {
@@ -394,7 +390,7 @@ country_event = {
 	
 	option = {
 		name = "Free gold!"
-		money = 10000
+		money = 12000
 	}
 }
 country_event = {
@@ -405,9 +401,37 @@ country_event = {
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "This whole operation was their idea!"
+		name = "They simply don't know how to haggle..."
 	}
 }
+country_event = {
+	id = 460
+	title = "Payment Arrives"
+	desc = "GNAE.ACCEPTED.2.DESC.460"
+	is_triggered_only = yes
+	picture = "Gibraltar_strait"
+	
+	option = {
+		name = "Money and meatshields..."
+		money = 5000
+		create_alliance = FROM
+	}
+}
+country_event = {
+	id = 461
+	title = "Payment Arrives"
+	desc = "GNAE.ACCEPTED.3.DESC.461"
+	is_triggered_only = yes
+	picture = "Gibraltar_strait"
+	
+	option = {
+		name = "Desperate Fools!"
+		money = 7000
+		create_alliance = FROM
+	}
+}
+
+#Lore Events
 
 country_event = {
 	id = 444
