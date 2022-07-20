@@ -1,0 +1,119 @@
+#Korea
+
+political_decisions = {
+	yi_seongmin_coup = {
+		picture = peking_field_force
+		
+		potential = {
+			tag = KOR
+			QNG = {
+				has_country_flag = chuseok_coup
+			}
+			NOT = { has_country_flag = yi_seongmin_in_korea }
+		}
+
+		allow = {
+			war = no
+			government = presidential_dictatorship
+		}
+
+		effect = {
+			set_country_flag = yi_seongmin_in_korea
+			define_general = { 
+				name = "Yi Seongmin" 
+				personality = audacious
+				background = eccentric_genius
+			}
+			plurality = -10
+			upper_house = {
+				ideology = reactionary
+				value = 99
+			}
+			tech_school = army_tech_school
+			any_pop = {
+				limit = { type = officers }
+				militancy = 2
+				consciousness = 2
+			}
+			any_pop = {
+				limit = { type = bureaucrats }
+				militancy = 2
+				consciousness = 2
+			}
+			any_pop = {
+				limit = { type = soldiers }
+				militancy = 1
+				consciousness = 3
+			}
+			activate_technology = flintlock_rifles
+			activate_technology = muzzle_loaded_rifles
+			activate_technology = breech_loaded_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = iron_muzzle_loaded_artillery
+			activate_technology = iron_breech_loaded_artillery
+			activate_technology = army_command_principle
+			activate_technology = army_professionalism
+			activate_technology = military_staff_system
+			activate_technology = military_plans
+			activate_technology = military_statistics
+			activate_technology = army_risk_management
+			activate_technology = army_decision_making
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	seize_manchuria = {
+		picture = peking_field_force
+		
+		potential = {
+			tag = KOR
+			QNG = {
+				has_country_flag = western_anarchy
+			}
+			KOR = {
+				has_country_flag = yi_seongmin_in_korea
+			}
+			NOT = { has_country_flag = march_on_manchuria }
+		}
+
+		allow = {
+			war = no
+			government = presidential_dictatorship
+		}
+
+		effect = {
+			set_country_flag = march_on_manchuria
+			QNG = {
+				country_event = 651908
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}
+
+
+
+
+#Buyeo
+
+#Liangjiang
+
+#Huguang
+
+#Shanxi
+
+#Shandong
+
+#Min-Zhe
+
+#Liangguang
+
+#Sichuan
+
+#Shaan-Gan
+
+#Guizhou
+
+#Pingnan Guo
+
+#Foreign Powers

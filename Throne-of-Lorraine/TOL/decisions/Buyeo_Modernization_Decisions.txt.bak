@@ -49,6 +49,7 @@ political_decisions = {
 		effect = {
 			treasury = -15000
 			set_country_flag = beifang_armies_modernized
+			limit = { is_culture_group = east_asian }
 			activate_technology = military_staff_system
 			activate_technology = army_professionalism
 			activate_technology = bronze_muzzle_loaded_artillery

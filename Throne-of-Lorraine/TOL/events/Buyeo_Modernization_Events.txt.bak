@@ -1417,7 +1417,7 @@ country_event = {
 		war = {
 			target = KOR
 			attacker_goal = { casus_belli = acquire_core_state state_province_id = 1616 }
-			defender_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
 			call_ally = yes
 		}	
 	}
