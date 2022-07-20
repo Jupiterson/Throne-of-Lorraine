@@ -47,13 +47,13 @@ country_event = {
 #Granada Receiving Offers
 country_event = {
 	id = 441
-	title = "GNAE.OFFER.1.TITLE.441"
+	title = "The Granadan Exchange"
 	desc = "GNAE.OFFER.1.DESC.441"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.ACCEPT.1"
+		name = "A fair deal, we accept. (Gain 10,000)"
 		FROM = {
 			country_event = { id=445 days=1 }
 		}
@@ -62,7 +62,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.HAGGLE.1"
+		name = "Surely they could spare a little more? (Demand 12,000)"
 		FROM = {
 			country_event = { id=446 days=1 }
 		}
@@ -71,7 +71,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.DECLINE"
+		name = "Stronger foes at our backs is the last thing we need."
 		FROM = {
 			country_event = { id=447 days=1 }
 			}
@@ -82,13 +82,13 @@ country_event = {
 }
 country_event = {
 	id = 442
-	title = "GNAE.OFFER.2.TITLE.442"
+	title = "The Granadan Exchange"
 	desc = "GNAE.OFFER.2.DESC.442"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 		option = {
-		name = "GNAE.ACCEPT.2"
+		name = "Anything to fend off the Reconquista. (Will form an alliance)"
 		FROM = {
 			country_event = { id=448 days=1 }
 		}
@@ -97,7 +97,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.HAGGLE.2"
+		name = "Their cannon fodder will help, but funds will help more. (Demand 5,000 and an alliance)"
 		FROM = {
 			country_event = { id=449 days=1 }
 		}
@@ -106,7 +106,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.DECLINE.2"
+		name = "An alliance they are sure to break. The answer is no."
 		FROM = {
 			country_event = { id=447 days=1 }
 			}
@@ -117,13 +117,13 @@ country_event = {
 }
 country_event = {
 	id = 443
-	title = "GNAE.OFFER.3.TITLE.443"
+	title = "The Granadan Exchange"
 	desc = "GNAE.OFFER.3.DESC.443"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 		option = {
-		name = "GNAE.ACCEPT.3"
+		name = "A victory for Granadan diplomacy!"
 		FROM = {
 			country_event = { id=451 days=1 }
 		}
@@ -132,7 +132,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.HAGGLE.2"
+		name = "They seem desperate. Squeeze them for all they are worth! (Demand 7,000 and an alliance)"
 		FROM = {
 			country_event = { id=452 days=1 }
 		}
@@ -141,7 +141,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.DECLINE.2"
+		name = "Turn the beggars from our door."
 		FROM = {
 			country_event = { id=447 days=1 }
 			}
@@ -152,13 +152,13 @@ country_event = {
 }
 country_event = {
 	id = 456
-	title = "GNAE.OFFER.4.TITLE.456"
+	title = "The Granadan Exchange"
 	desc = "GNAE.OFFER.4.DESC.456"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.ACCEPT.4"
+		name = "Allah shall reward our generosity."
 		FROM = {
 			country_event = { id=457 days=1 }
 		}
@@ -167,7 +167,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.DECLINE"
+		name = "Who put this drivel on my desk?"
 		FROM = {
 			country_event = { id=447 days=1 }
 			}
@@ -179,13 +179,13 @@ country_event = {
 #Granada's Responses
 country_event = {
 	id = 445
-	title = "GNAE.ACCEPT.1.TITLE.445"
+	title = "They Accept!"
 	desc = "GNAE.ACCEPT.1.DESC.445"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.1.ACCEPTED"
+		name = "This shall carry us far..."
 		money = -10000
 		research_points = 10000
 		add_country_modifier = {
@@ -197,7 +197,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.FICKLE"
+		name = "Well now I don't feel like it."
 		relation = {
 			who = GNA
 			value = -50
@@ -206,13 +206,13 @@ country_event = {
 }
 country_event = {
 	id = 446
-	title = "GNAE.HAGGLE.1.TITLE.446"
+	title = "Negotiations"
 	desc = "GNAE.HAGGLE.1.DESC.446"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.1.HAGGLED"
+		name = "They have mastered the art of exploitation..."
 		money = -12000
 		research_points = 10000
 		add_country_modifier = {
@@ -224,7 +224,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.FICKLE"
+		name = "Outrageous!"
 		relation = {
 			who = GNA
 			value = -100
@@ -233,13 +233,13 @@ country_event = {
 }
 country_event = {
 	id = 447
-	title = "GNAE.DECLINED.1.TITLE.447"
+	title = "They Refuse."
 	desc = "GNAE.DECLINED.1.DESC.447"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.1.DECLINED"
+		name = "Outrageous!"
 		relation = {
 			who = GNA
 			value = -100
@@ -248,13 +248,13 @@ country_event = {
 }
 country_event = {
 	id = 448
-	title = "GNAE.ACCEPTED.2.TITLE".448
+	title = "They Accept!"
 	desc = "GNAE.ACCEPTED.2.DESC.448"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.2.ACCEPTED"
+		name = "We shall defend them to the last for this gift."
 		create_alliance = GNA
 		research_points = 10000
 		add_country_modifier = {
@@ -266,7 +266,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.FICKLE"
+		name = "I've changed my mind, they are not worth defending."
 		relation = {
 			who = GNA
 			value = -50
@@ -275,13 +275,13 @@ country_event = {
 }
 country_event = {
 	id = 449
-	title = "GNAE.HAGGLE.2.TITLE.449"
+	title = "Negotiations"
 	desc = "GNAE.HAGGLE.2.DESC.449"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.2.HAGGLED"
+		name = "They press our patience, but a deal is a deal."
 		money = -5000
 		create_alliance = GNA
 		research_points = 10000
@@ -294,7 +294,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.FICKLE"
+		name = "Outrageous!"
 		relation = {
 			who = GNA
 			value = -50
@@ -303,13 +303,13 @@ country_event = {
 }
 country_event = {
 	id = 451
-	title = "GNAE.ACCEPTED.3.TITLE.451"
+	title = "They Accept!"
 	desc = "GNAE.ACCEPTED.3.DESC.451"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.3.ACCEPTED"
+		name = "We are masters of diplomacy."
 		create_alliance = GNA
 		money = -5000
 		research_points = 10000
@@ -322,7 +322,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.FICKLE"
+		name = "I...have lost interest."
 		relation = {
 			who = GNA
 			value = -50
@@ -331,13 +331,13 @@ country_event = {
 }
 country_event = {
 	id = 452
-	title = "GNAE.HAGGLED.3.TITLE.452"
+	title = "Negotiations"
 	desc = "GNAE.HAGGLED.3.DESC.452"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.3.HAGGLED"
+		name = "Their greed is boundless, but our need is great."
 		create_alliance = GNA
 		money = -7000
 		research_points = 10000
@@ -350,7 +350,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.FICKLE"
+		name = "Outrageous!"
 		relation = {
 			who = GNA
 			value = -50
@@ -359,13 +359,13 @@ country_event = {
 }
 country_event = {
 	id = 457
-	title = "GNAE.ACCEPT.4.TITLE.457"
+	title = "They Accept!"
 	desc = "GNAE.ACCEPT.4.DESC.457"
 	is_triggered_only = yes
 	picture = "gibraltar_strait"
 	
 	option = {
-		name = "GNAE.4.ACCEPTED"
+		name = "Wait, really? I didn't expect that to work..."
 		research_points = 10000
 		add_country_modifier = {
 		name = western_influences
@@ -376,16 +376,42 @@ country_event = {
 		}
 	}
 	option = {
-		name = "GNAE.FICKLE"
+		name = "Their generosity disgusts me, decline."
 		relation = {
 			who = GNA
 			value = -50
 		}
 	}
 }
+#Granada Receives Benefits
+
+country_event = {
+	id = 458
+	title = "Payment Arrives"
+	desc = "GNAE.ACCEPTED.1.DESC.458
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "Free gold!"
+		money = 10000
+	}
+}
+country_event = {
+	id = 459
+	title = "Too Steep"
+	desc = "GNAE.REFUSED.DESC.459
+	is_triggered_only = yes
+	picture = "gibraltar_strait"
+	
+	option = {
+		name = "This whole operation was their idea!"
+	}
+}
+
 country_event = {
 	id = 444
-	title = "TRI.LORE.TITLE.444"
+	title = "The Hafsid Plight"
 	desc = "TRI.LORE.DESC.444"
 	fire_only_once = yes
 	picture = "centennial"
@@ -406,7 +432,7 @@ country_event = {
 }
 country_event = {
 	id = 450
-	title = "ALD.LORE.TITLE.450"
+	title = "A Fractured Land"
 	desc = "ALD.LORE.DESC.450"
 	fire_only_once = yes
 	picture = "centennial"
@@ -427,7 +453,7 @@ country_event = {
 }		
 country_event = {
 	id = 453
-	title = "TLE.LORE.TITLE.453"
+	title = "A Fractured Land"
 	desc = "TLE.LORE.DESC.453"
 	fire_only_once = yes
 	picture = "centennial"
@@ -448,7 +474,7 @@ country_event = {
 }
 country_event = {
 	id = 454
-	title = "FEZ.LORE.TITLE.454"
+	title = "Battle for Morocco"
 	desc = "FEZ.LORE.DESC.454"
 	fire_only_once = yes
 	picture = "centennial"
@@ -469,7 +495,7 @@ country_event = {
 }		
 country_event = {
 	id = 455
-	title = "MRR.LORE.TITLE.455"
+	title = "Battle for Morocco"
 	desc = "MRR.LORE.DESC.455"
 	fire_only_once = yes
 	picture = "centennial"
