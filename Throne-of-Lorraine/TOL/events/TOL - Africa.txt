@@ -53,7 +53,35 @@
 				1711 = { secede_province = TIN add_core = TIN }
 				1718 = { secede_province = TIN add_core = TIN }
 				1719 = { secede_province = TIN add_core = TIN }
-				1807 = { secede_province = TIN add_core = TIN }				
+				1807 = { secede_province = TIN add_core = TIN }	
+      #Morocco
+        1779 = { add_core = MOR }
+		1781 = { add_core = MOR }
+		1782 = { add_core = MOR }
+		1801 = { add_core = MOR }
+		3430 = { add_core = MOR }
+		3431 = { add_core = MOR }	  
+		1775 = { add_core = MOR }	
+		1696 = { add_core = MOR }
+			1773 = { add_core = MOR }
+			1774 = { add_core = MOR }
+			1716 = { add_core = MOR }
+			1722 = { add_core = MOR }
+			2609 = { add_core = MOR }
+			1801 = { add_core = MOR }
+			1802 = { add_core = MOR }
+			1803 = { add_core = MOR }
+			1804 = { add_core = MOR }
+			1805 = { add_core = MOR }
+			3430 = { add_core = MOR }
+			3431 = { add_core = MOR }
+			1782 = { add_core = MOR }
+			1781 = { add_core = MOR }
+			1775 = { add_core = MOR }
+			1776 = { add_core = MOR }
+			1777 = { add_core = MOR }
+			1778 = { add_core = MOR }
+			1779 = { add_core = MOR }
 			TIN = { all_core = { secede_province = TIN } }
 			TIN = { country_event = 100118 }
 		    set_global_flag = tiniri
@@ -83,7 +111,35 @@
 				1711 = { secede_province = TIN add_core = TIN }
 				1718 = { secede_province = TIN add_core = TIN }
 				1719 = { secede_province = TIN add_core = TIN }
-				1807 = { secede_province = TIN add_core = TIN }				
+				1807 = { secede_province = TIN add_core = TIN }
+      #Morocco
+        1779 = { add_core = MOR }
+		1781 = { add_core = MOR }
+		1782 = { add_core = MOR }
+		1801 = { add_core = MOR }
+		3430 = { add_core = MOR }
+		3431 = { add_core = MOR }	
+        1775 = { add_core = MOR }	
+            1696 = { add_core = MOR }
+			1773 = { add_core = MOR }
+			1774 = { add_core = MOR }
+			1716 = { add_core = MOR }
+			1722 = { add_core = MOR }
+			2609 = { add_core = MOR }
+			1801 = { add_core = MOR }
+			1802 = { add_core = MOR }
+			1803 = { add_core = MOR }
+			1804 = { add_core = MOR }
+			1805 = { add_core = MOR }
+			3430 = { add_core = MOR }
+			3431 = { add_core = MOR }
+			1782 = { add_core = MOR }
+			1781 = { add_core = MOR }
+			1775 = { add_core = MOR }
+			1776 = { add_core = MOR }
+			1777 = { add_core = MOR }
+			1778 = { add_core = MOR }
+			1779 = { add_core = MOR }		
 			TIN = { all_core = { secede_province = TIN } }
 			TIN = { country_event = 100118 }
 		    set_global_flag = tiniri
@@ -120,7 +176,14 @@ country_event = {
 		}
 		1781 = { secede_province = TIN add_core = TIN }	
 		MGH = { all_core = { add_core = THIS } } 
-		TIN = { all_core = { limit = { empty = yes } secede_province = THIS } }  		
+		TIN = { all_core = { limit = { empty = yes } secede_province = THIS } }  
+        any_owned = {
+			limit = {
+			is_core = MAS
+			}
+			add_core = MOR
+			
+		}			
 		add_country_flag = can_ignore_cultural_core
 		add_country_flag = exteme_assimilation
 		add_country_flag = theocratic_inetgration
@@ -351,6 +414,119 @@ country_event = {
 }
 
 
+country_event = {
+	id = 100185
+	title = "EVTNAME99890"
+	desc = "EVTDESC99890"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = TIN
+		has_recently_lost_war = yes
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = "EVT99800OPTA"
+		any_owned = {
+			limit = {
+			OR = {
+				is_core = FOO
+				is_core = MOR
+				}
+			}
+			secede_province = MOR
+			add_core = MOR
+			
+		}
+		any_owned = {
+			limit = {
+			OR = {
+				is_core = KNG
+				is_core = ASH
+				is_core = MAS
+				}
+			}
+			secede_province = TOU
+			add_core = TOU
+		}	
+        1718 = { add_core = ALD }
+		1711 = { add_core = ALD }		
+		any_owned = {
+			limit = {
+			OR = {
+				is_core = ALD
+				is_core = TRI
+				is_core = TUN
+				is_core = RGA
+				is_core = DAM
+				is_core = MGH
+				}
+			}
+			secede_province = ALD
+			add_core = ALD
+			
+		}
+		
+		any_owned = {
+			limit = {
+			is_core = IFE
+			}
+			secede_province = IFE
+			
+		}
+		
+		any_owned = {
+			limit = {
+			continent = europe
+			}
+			secede_province = ADU
+			add_core = ADU
+			
+		}
+		
+		any_country = {
+			limit = {
+				any_core = { owned_by = THIS }
+				NOT = { OR = { tag = MGH } }
+			}
+			country_event = 100186
+		}
+		
+	change_tag_no_core_switch = MOR
+	TIN = {			
+		any_owned = {
+			limit = {
+			owned_by = TIN
+			}
+			secede_province = XXX
+			
+		}		
+	}
+	}
+	
+}	
+
+
+#release event
+country_event = {
+	id = 100186
+	title = "EVTNAME36971"
+	desc = "EVTDESC36971"
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Let's be free"
+		FROM = { release = THIS } 
+	}
+}
 
 
 #Suez Canal is Finished
