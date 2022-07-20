@@ -5017,7 +5017,7 @@ the_bantu_empire_provs = {
 	immigrant_attract = -0.5
 	immigrant_push = 0.35
 	life_rating = -0.45
-	population_growth = 0.01
+	population_growth = 0.004
 	icon = 15
 }
 
@@ -5141,4 +5141,14 @@ pirate_sugar = {
 	pop_consciousness_modifier = 0.02
 	pop_militancy_modifier = 0.01
 	
+}
+
+### Basque Christian Commune ###
+requete = {
+	org_regain = -0.3
+	land_organisation = 0.3
+	land_attack_modifier = 0.3
+	supply_consumption = 0.15
+	mobilisation_size = 0.05
+	icon = 11
 }

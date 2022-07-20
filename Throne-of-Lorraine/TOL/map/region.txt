@@ -827,9 +827,13 @@ SIA_1392 = { 1346 1353 1347 1348 1349 } #Ayutthaya
 
 ### East Indies
 
-BRU_1394 = { 1426 10 2637 2665 1428 3325 } #West Borneo
+BRU_1394 = { 1426 10 2637 2665 1428 } #West Borneo
 
-BRU_1396 = { 1393 1394 1395 1396 1397 } #Sabah & Sarawak
+BRU_1396 = { 1393 1394 1395 3583 } #Sarawak
+
+BRU_3577 = { 1396 3579 3580 3584 } #West Sabah
+
+BRU_3325 = { 3325 1397 3581 3582 } #East Sabah
 
 NET_1398 = { 1398 1404 1403 1410 1399 } #Sumatra
 
@@ -841,7 +845,7 @@ NET_1413 = { 1413 1414 1415 1416 1417 2244 } #Western Java
 
 NET_1418 = { 1418 1419 1420 1421 } #Eastern Java
 
-NET_1423 = {  1429 1424 1425 3276 3398 } #East Borneo
+NET_1423 = { 1429 1424 1425 3276 3398 } #East Borneo
 
 NET_1426 = { 1423 1422 1427 3275 } #South Borneo
 
@@ -855,11 +859,19 @@ NET_1449 = { 1430 1431 1432 1435 1434 1433 1436 1437 } #Celebes
 
 NET_1451 = { 1452 1453 1454 1560 } #Western New Guinea
 
-SPA_1455 = { 1455 1456 1457 1458 } #Luzon
+SPA_1455 = { 1455 1457 1458 3570 } #Southern Luzon
+
+PHL_1456 = { 1456 3564 3565 3566 } #Northern Luzon
+
+PHL_3565 = { 3568 3567 3569 } #Central Luzon
 
 SPA_1459 = { 2565 1459 1460 1461 } #Visayas
 
-SPA_1463 = { 1463 1462 1464 3310 } #Mindanao
+SPA_1463 = { 1462 3571 3572 1464 } #Northwestern Mindanao
+
+PHL_3571 = { 3573 3574 3575 3310 } #Moroland
+
+PHL_3573 = { 3577 3576 3578 1463 } #Eastern Mindanao
 
 
 ### China

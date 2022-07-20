@@ -95,44 +95,13 @@ army = {
 
 }
 army = {
-	name = "India Division"
-	location = 1317
+	name = "Goan Militia"
+	location = 1303
 	regiment = {
 		name= "1. Brigade"
 		type = irregular
-		home = 1317
+		home = 1303
 	}
-
-	regiment = {
-		name= "2. Brigade"
-		type = irregular
-		home = 1318
-	}
-
-	regiment = {
-		name= "3. Brigade"
-		type = irregular
-		home = 1316
-	}
-
-	regiment = {
-		name= "4. Brigade"
-		type = irregular
-		home = 1319
-	}
-
-	regiment = {
-		name= "5. Brigade"
-		type = irregular
-		home = 1316
-	}
-
-	regiment = {
-		name= "6. Brigade"
-		type = irregular
-		home = 1316
-	}
-
 }
 army = {
 	name = "West Ethopian Army"
@@ -159,6 +128,26 @@ army = {
 	}
 }
 
+army = {
+	name = "East Indies Army"
+	location = 1442
+	regiment = {
+		name= "1.East Asian Militia"
+		type = infantry
+		home = 1442
+	}
+
+	regiment = {
+		name= "2.East Asian Militia"
+		type = infantry
+		home = 1432
+	}
+	regiment = {
+		name= "1. East Asian Artillery"
+		type = artillery
+		home = 1384
+	}
+}
 
 navy = {
 	name = "Main Land Navy"
@@ -206,7 +195,7 @@ navy = {
 }
 navy = {
 	name = "Navy in India"
-	location = 1317
+	location = 1303
 	ship = {
 		name= "Liya"
 		type = frigate
