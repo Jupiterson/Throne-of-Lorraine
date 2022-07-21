@@ -575,6 +575,7 @@ political_decisions = {
 	picture = cape_map
         potential = {
             tag = SCO
+			tag = ENG
             owns = 2087
 			has_global_flag = won_datiann_war 
         }
@@ -597,4 +598,86 @@ political_decisions = {
             factor = 1
         }
     }
-}
+	
+	cape_merchants = {
+		picture = reichstag
+		potential = {
+			OR = { tag = BHU
+			       tag = MLW
+				   tag = ALM
+				   tag = KAB }
+			NOT = { has_global_flag = cape_merchant_setup }
+		        ai = yes  
+	   }
+    
+		allow = { OR = 
+		         ai = yes    
+		         { tag = BHU
+			       tag = MLW
+				   tag = ALM
+				   tag = KAB } }
+    
+		effect = {
+			SCO = { add_country_modifier = {
+				name = german_cape_merchants
+				duration = 36500 }
+			}
+			set_global_flag = cape_merchant_setup
+		}
+		ai_will_do = {
+            factor = 1
+        }
+	 }
+	 
+	 remove_datiach_culture = {
+		picture = noimage
+		potential = {
+			tag = SAF
+			accepted_culture = griqua
+		OR = { government = fascist_dictatorship
+		       government = presidential_dictatorship
+			   government = absolute_monarchy
+		}	
+	   }
+    
+		allow = {
+		is_vassal = no
+		}
+    
+		effect = {
+		remove_accepted_culture = griqua	
+		any_pop = {
+            limit = { has_pop_culture = griqua }
+            militancy = 8
+            consciousness = 8
+        }
+		}
+		ai_will_do = {
+            factor = 1
+        }
+	 }
+	 
+	 the_low_german_issue = {
+		picture = low_german_merchants
+		potential = {
+		has_country_modifier = german_cape_merchants	
+		civilized = yes
+		NOT = { has_global_flag = cape_merchants_removed }
+	   }
+    
+		allow = {
+		state_n_government = 1
+		market_structure = 1
+		naval_statistics = 1
+		invention = double_standard
+		}
+    
+		effect = {
+		country_event = 50022
+		set_global_flag = cape_merchants_removed
+        }
+		ai_will_do = {
+            factor = 1
+        }
+	 }
+    }

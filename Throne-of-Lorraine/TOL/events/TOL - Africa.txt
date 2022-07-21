@@ -414,6 +414,29 @@ country_event = {
 }
 
 
+
+
+#Suez Canal is Finished
+country_event = {
+	id = 100169
+	title = "EVTNAME36971"
+	desc = "EVTDESC36971"
+	picture = "suez_canal_built"
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVT36971OPTA"
+		set_country_flag = suez_builder
+		enable_canal = 2
+	}
+}
+
 country_event = {
 	id = 100185
 	title = "EVTNAME99890"
@@ -525,28 +548,6 @@ country_event = {
 	option = {
 		name = "Let's be free"
 		FROM = { release = THIS } 
-	}
-}
-
-
-#Suez Canal is Finished
-country_event = {
-	id = 100169
-	title = "EVTNAME36971"
-	desc = "EVTDESC36971"
-	picture = "suez_canal_built"
-
-	fire_only_once = yes
-
-	is_triggered_only = yes
-
-
-	mean_time_to_happen = { days = 1 }
-
-	option = {
-		name = "EVT36971OPTA"
-		set_country_flag = suez_builder
-		enable_canal = 2
 	}
 }
 
@@ -956,7 +957,8 @@ country_event = {
 
 	trigger = {
             year = 1860
-			tag = SCO
+			OR  = { tag = SCO
+			        tag = ENG }
 			owns = 2087
 	}
 
@@ -1008,6 +1010,9 @@ country_event = {
 			war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}
 		}    		   
 	}
+	ai_chance = {
+			factor = 50
+		}
 	}
 	option = {
 		name = "datiach_demands_option2"    
@@ -1022,7 +1027,7 @@ country_event = {
   				defender_goal = { casus_belli = become_independent }		
 	          }
 		ai_chance = {
-			factor = 100
+			factor = 50
 		}
 	}
 	option = {
@@ -1063,7 +1068,10 @@ country_event = {
 			}
 			secede_province = DTI
 		} war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}}
-		}    		   
+		}
+            ai_chance = {
+			factor = 50
+		}		
 	}
 	option = {
 		name = "datiach_negotiations_option2"    
@@ -1076,6 +1084,9 @@ country_event = {
 			secede_province = DTI
 		} war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}}
 		    }    		   
+		}
+		ai_chance = {
+			factor = 50
 		}
 	}
 
@@ -1158,6 +1169,9 @@ country_event = {
             }
             end_war = THIS
         }
+		ai_chance = {
+			factor = 50
+		}
     }
 
     option = {
@@ -1188,6 +1202,9 @@ country_event = {
             end_war = THIS
 
         }
+		ai_chance = {
+			factor = 50
+		}
     }
 }
 
@@ -1263,5 +1280,103 @@ country_event = {
             }
             end_war = THIS
         }
+    }
+}
+
+	country_event = { 
+    id = 50020
+	title = "suez_rubha_merchants_title"
+	desc = "suez_rubha_merchants_desc"
+    picture = "Suez3"
+
+    trigger = {
+            has_country_modifier = german_cape_merchants
+			has_global_flag = suez_canal_built
+	}
+
+    option = {
+        name = "suez_rubha_merchants_option1"
+        remove_country_modifier = german_cape_merchants 
+		set_global_flag = cape_merchants_removed
+    }
+}
+
+    country_event = { 
+    id = 50021
+	title = "rubha_merchants_transfer_title"
+	desc = "rubha_merchants_transfer_desc"
+    picture = "WilhelmIV"
+
+    trigger = {
+            owns = 2087
+			NOT = { has_global_flag = cape_merchants_removed }
+			NOT = { has_country_modifier = german_cape_merchants }
+	}
+
+    option = {
+        name = "rubha_merchants_transfer_option1"
+        any_country = {
+            limit = {
+                has_country_modifier = german_cape_merchants
+            }
+            remove_country_modifier = german_cape_merchants
+        }
+		add_country_modifier = {
+				name = german_cape_merchants
+				duration = 36500 }
+    }
+}
+
+country_event = { 
+    id = 50022
+	title = "rubha_merchant_solving_title"
+	desc = "rubha_merchant_solving_desc"
+    picture = "rubhach_merchants"
+
+    is_triggered_only = yes
+	
+    option = {
+        name = "rubha_merchants_solving_option1"
+        treasury = -30000
+		SAF = { add_accepted_culture = low_german }
+		remove_country_modifier = german_cape_merchants
+		any_pop = {
+            limit = { has_pop_culture = low_german }
+            consciousness = -2
+        }
+		ai_chance = {
+			factor = 30
+		}
+    }
+	
+	option = {
+        name = "rubha_merchants_solving_option2"
+        treasury = 10000
+		remove_country_modifier = german_cape_merchants
+		any_pop = {
+            limit = { has_pop_culture = low_german }
+            consciousness = 3
+        }
+		ai_chance = {
+			factor = 60
+		}
+    }
+	
+	option = {
+        name = "rubha_merchants_solving_option3"
+        treasury = 25000
+		remove_country_modifier = german_cape_merchants
+		ENG_2087 = { 
+		any_pop = {
+            limit = { has_pop_culture = low_german }
+	        reduce_pop = 0.40
+            consciousness = 8
+			militancy = 8
+            }
+		}
+		badboy = 5
+		ai_chance = {
+			factor = 10
+		}
     }
 }
