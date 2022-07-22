@@ -99,30 +99,6 @@ country_event = {
 		}
 	}
 }
-country_event = {
-
-	id = 50003
-	title = "EVTNAME50003"
-	desc = "EVTDESC50003"
-	picture = "juiz_de_fora"
-
-	trigger = {
-		tag = BRZ
-		year = 1860
-	}
-
-	mean_time_to_happen = { months = 12 }
-
-	fire_only_once = yes
-
-	option = {
-		name = "EVTOPTA50003"
-		2446 = {
-			change_province_name = "Juiz de Fora"
-			trade_goods = coffee
-		}
-	}
-}
 
 # BRZ - Coronation of Dom Pedro II
 country_event = {
