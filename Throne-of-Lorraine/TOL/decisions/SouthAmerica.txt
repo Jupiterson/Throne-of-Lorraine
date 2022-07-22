@@ -113,30 +113,6 @@ political_decisions = {
 		}
 	}
 
-	law_1420_of_general_common_education = {
-		potential = {
-			OR = {
-				tag = ARG
-				tag = ARC
-			}
-			NOT = { has_country_flag = 1420_passed }
-			NOT = { school_reforms = low_schools }
-			NOT = { school_reforms = acceptable_schools }
-			NOT = { school_reforms = good_schools }
-		}
-		allow = {
-			phenomenology_n_hermeneutic = 1
-			ruling_party_ideology = conservative
-			NOT = { school_reforms = low_schools }
-		}
-		effect = {
-			social_reform = low_schools
-			set_country_flag = 1420_passed
-		}
-	}
-
-
-
 	new_life_in_the_new_world = {
 		picture = new_life
 		potential = {
