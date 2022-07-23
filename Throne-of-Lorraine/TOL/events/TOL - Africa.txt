@@ -1380,3 +1380,65 @@ country_event = {
 		}
     }
 }
+
+country_event = {
+	id = 50023
+	title = "south_africa_baby_boom_title"
+	desc = "south_africa_baby_boom_desc"
+    picture = "rubhach_merchants"
+	fire_only_once = yes
+	
+	trigger = {
+	year = 1888
+    OR = {
+	    owns = 2087
+        } 
+	}
+
+	mean_time_to_happen = { months = 7 }
+
+	option = {
+		name = south_african_baby_boom_option1
+		XHO = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		BSH = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		TSW = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		ZUL = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		BAP = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		SHO = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		GAZ = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		ZAF = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		MLW = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		
+			
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
