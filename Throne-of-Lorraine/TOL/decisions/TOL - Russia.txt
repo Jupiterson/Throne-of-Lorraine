@@ -69,6 +69,25 @@ political_decisions = {
 
 		ai_will_do = { factor = 1 }
 	}
+	annex_mongolia = {
+		picture = ever_victorious
+		potential = {
+			tag = RUS
+			is_our_vassal = MGL
+		} 
+		allow = {
+			war = no
+			MGL = { in_sphere = RUS }
+			nationalism_n_imperialism  = 1
+		}
+		effect = {
+			prestige = 10
+			badboy = 4
+			inherit = MGL
+		}
+
+		ai_will_do = { factor = 1 }
+	}
 	claim_moldavia = {
 		picture = romanians_marching
 		potential = {
