@@ -171,32 +171,6 @@ political_decisions = {
 		}
 	}
 	
-	 become_england = {
-		picture = annex_united_baltic_duchy
-		potential = {
-			tag = ENG
-			exists = SCO
-			exists = WHA
-		}
-
-		allow = {
-			war = no
-		}
-
-		effect = {
-			set_country_flag = became_memel
-			inherit = ENL
-			change_tag_no_core_switch = ENL
-			remove_accepted_culture = scottish
-			remove_accepted_culture = welsh
-			primary_culture = british
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
 	core_FRZ = {
 		picture = enact_dual_monarchy
 		potential = {

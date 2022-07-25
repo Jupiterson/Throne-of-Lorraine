@@ -286,31 +286,54 @@ political_decisions = {
 	occupation_of_the_arabian_desert = {
 		picture = map_arabia
 		potential = {
-				OR = {
-						owns = 1178
+			OR = {
+				AND = { #Trucial States
+					owns = 1167 #Abu Dhabi
+					12 = { empty = yes } #Liwa
+				}
+				AND = { #Yemen
+					OR = {
+						owns = 1175
 						owns = 1173
 						owns = 1176
-						owns = 1157 #Riyadh
-					    owns = 1160 #Hail
-				    	owns = 1167 #Abu Dhabi
 					}
-			
+					3273 = { empty = yes } #Seiyun
+				}
+				AND = { #Oman
+					owns = 1166 #Sana'a
+					1172 = { empty = yes } #Taizz
+				}
+				AND = { #Arabia
+					owns = 1157 #Riyadh
+					owns = 1160 #Hail
+					2586 = { empty = yes } #Al-Ahsa
+					1158 = { empty = yes } #Rafha
+				}
+				AND = { #Iraq Desert
+					owns = 1157 #Riyadh
+					owns = 1160 #Hail
+					3292 = { empty = yes } #Al-Salman
+				}
+			}
 		}
 
 		allow = {
 			OR = {
+				AND = { #Trucial States
+					owns = 1167 #Abu Dhabi
+					12 = { empty = yes } #Liwa
+					OR = {
+						year = 1920
+						state_n_government = 1
+					}
+			  }
+				AND = { #Yemen
+					OR = {
 						owns = 1178
 						owns = 1173
 						owns = 1176
-						owns = 1157 #Riyadh
-					    owns = 1160 #Hail
-				    	owns = 1167 #Abu Dhabi
 					}
-					12 = { empty = yes }
-				    3273 = { empty = yes }
-					1172 = { empty = yes }
-					2586 = { empty = yes }
-					1170 = { empty = yes }
+					3273 = { empty = yes } #Seiyun
 					OR = {
 						year = 1870
 						AND = {
@@ -318,27 +341,75 @@ political_decisions = {
 							NOT = { capital_scope = { continent = europe } }
 						}
 					}
-				
-			
+				}
+				AND = { #Arabia
+					owns = 1157 #Riyadh
+					owns = 1160 #Hail
+					2586 = { empty = yes } #Al-Ahsa
+					OR = {
+						year = 1920
+						AND = {
+							state_n_government = 1
+							NOT = { capital_scope = { continent = europe } }
+						}
+					}
+				}
+			}
 		}
 
 		effect = {
-#			any_owned = {
-#				limit = {
-#					province_id = 12
-#					province_id = 3273
-#					province_id = 1172
-#					province_id = 2586
-#					province_id = 1170
-#				}
-#				secede_province = THIS
-#				owner = { prestige = 1 }
-#			}
-            12 = { secede_province = THIS }
-			3273 = { secede_province = THIS }
-			1172 = { secede_province = THIS }
-			2586 = { secede_province = THIS }
-			1170 = { secede_province = THIS } 
+			#Trucial#
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1167 #Abu Dhabi
+						12 = { empty = yes }
+					}
+				}
+				12 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
+				owner = { prestige = 1 }
+			}
+			#Yemen#
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							owns = 1178
+							owns = 1173
+							owns = 1174
+							owns = 1176
+						}
+						3273 = { empty = yes } #Seiyun
+						1172 = { empty = yes } #Seiyun
+					}
+				}
+				3273 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
+				1172 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
+				owner = { prestige = 1 }
+			}
+			#Oman#
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1166 #Muscat
+						1170 = { empty = yes } #Taizz
+					}
+				}
+				1170 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 15 }
+				owner = { prestige = 1 }
+			}
+			#Arabia#
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1157 #Riyadh
+						owns = 1160 #Hail
+						2586 = { empty = yes } #Al-Ahsa
+					}
+				}
+				2586 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
+				owner = { prestige = 1 }
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
