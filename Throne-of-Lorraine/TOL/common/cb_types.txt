@@ -72,6 +72,7 @@ peace_order = {
 	unification_casus_belli
 	xhosa_unification
 	civil_war
+	akino_cb
 	jihad_cb
 	unification_annex_casus_belli
 	claim_colonial_region_full
@@ -1352,7 +1353,6 @@ civil_war = {
 	constructing_cb = no
 	crisis = no
 	peace_cost_factor = 1
-#	great_war_obligatory = yes
 
 	can_use = {
 		NOT = { is_our_vassal = THIS }
@@ -13161,4 +13161,38 @@ jihad_cb = {
             value = 0.1
         }
     }
+}
+
+
+# AKI - NPU
+akino_cb = {
+	sprite_index = 10
+	is_triggered_only = yes
+	months = 1
+	constructing_cb = no
+	crisis = no
+	peace_cost_factor = 85
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		always = no
+	}
+
+	po_disarmament = yes
+
+	tws_battle_factor = 2.0
+
+	war_name = WAR_AKINO_NAME
+
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.25
+		}
+	}
+
+	on_po_accepted = {
+		country_event = 100188	
+	}
 }
