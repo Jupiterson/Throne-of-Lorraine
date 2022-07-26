@@ -4,43 +4,43 @@ ENL = { value = -50}
 UOW = { value = -100}
 
 army = {
-	name = "The Welsh Army"
+	name = "Byddin Frenhinol"
 	location = 273
 	regiment = {
-		name= "Yr Adran Troedfilwyr 1af"
-		type = infantry
+		name= "Yr Marchogion Trwm 1af"
+		type = cuirassier
 		home = 273
 	}
-		regiment = {
-		name= "2il Adran y Troedfilwyr"
-		type = infantry
+	regiment = {
+		name= "2il Marchogion Trwm"
+		type = cuirassier
 		home = 273
 	}
 
 	regiment = {
-		name= "3edd Adran y Troedfilwyr"
+		name= "Yr Adran y Troedfilwyr 1af"
 		type = infantry
 		home = 275
 	}
 
 	regiment = {
-		name= "4edd Adran y Troedfilwyr"
+		name= "2il Adran y Troedfilwyr"
 		type = infantry
-		home = 274
+		home = 275
 	}
 	
 	regiment = {
+		name= "3ed Adran y Troedfilwyr"
+		type = infantry
+		home = 274
+	}
+	regiment = {
+		name= "4ed Adran y Troedfilwyr"
+		type = infantry
+		home = 274
+	}
+	regiment = {
 		name= "5ed Adran y Troedfilwyr"
-		type = infantry
-		home = 274
-	}
-	regiment = {
-		name= "6ed Adran y Troedfilwyr"
-		type = infantry
-		home = 274
-	}
-	regiment = {
-		name= "7ed Adran y Troedfilwyr"
 		type = infantry
 		home = 286
 	}
@@ -76,10 +76,19 @@ navy = {
 	}
 
 	ship = {
-		name= "Llong Drafnidiaeth"
+		name= "Llong Drafnidiaeth 1"
 		type = clipper_transport
 	}
-
+	
+	ship = {
+		name= "Llong Drafnidiaeth 2"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "Llong Drafnidiaeth 3"
+		type = clipper_transport
+	}
 }
 
 leader = {

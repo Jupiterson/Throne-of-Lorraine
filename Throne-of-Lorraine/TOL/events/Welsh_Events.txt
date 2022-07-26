@@ -1,0 +1,76 @@
+country_event = {
+	id = 9111
+	title = "EVTNAME9111"
+	desc = "EVTDESC9111"
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "EVTOPTA9111"
+		any_country = {
+			limit = { has_country_flag = offer_made }
+			country_event = { id = 9112 days = 0 }
+		}	
+	}
+	
+	option = { 
+		name = "EVTOPTB9111"
+		WHA = { war = { target = GEN 
+			attacker_goal = { casus_belli = place_in_the_sun state_province_id = 3480 }
+			defender_goal = { casus_belli = status_quo }
+			any_country = {
+			limit = { has_country_flag = offer_made }
+			country_event = 9113
+				}
+			}
+		}
+	}
+}	
+
+country_event = {
+	id = 9112
+	title = "EVTNAME9112"
+	desc = "EVTDESC9112"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "EVTOPTA9112"
+		prestige = 10
+		badboy = 2
+		3480 = {
+			add_core = WHA
+			remove_core = GEN 
+		}
+		FROM = {
+			3480 = { secede_province = THIS }
+		}
+		WHA = {
+			treasury = -10000
+		}
+		GEN = {
+			treasury = 10000
+		}
+	}
+}
+	
+country_event = {
+	id = 9113
+	title = "EVTNAME9113"
+	desc = "EVTDESC9113"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "EVTOPTA9113"
+		badboy = -2
+		3480 = {
+			add_core = WHA
+		}
+	}
+}
+	
+	
+
+
+	
