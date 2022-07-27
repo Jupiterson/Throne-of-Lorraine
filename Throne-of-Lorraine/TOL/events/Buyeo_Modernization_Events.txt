@@ -1008,7 +1008,7 @@ country_event = {
 		any_owned = {
 			limit = {
 				OR = {
-					NOT = ( is_capital = yes }
+					NOT = { is_capital = yes }
 				}
 			}
           	remove_core = QNG
@@ -1364,7 +1364,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "The traitorous curs! Call in the provinces, we need to take down the rogue general."
+		name = "The traitorous curs!"
 		any_owned = {
 			limit = {
 				is_core = MCK 
@@ -1374,22 +1374,7 @@ country_event = {
 		MCK = {
 			annex_to = KOR
 		}
-		kill_leader = "Yi Seongmin"
-		create_alliance = HUI
-		relation = {
-				who = HUI
-				value = 200
-		}
-		create_alliance = SZC
-		relation = {
-				who = SZC
-				value = 200
-		}
-		create_alliance = XBI
-		relation = {
-				who = XBI
-				value = 200
-		}
+		kill_leader = "Lee Seongmin"
 		prestige = -10
 		KOR = {
 			country_event = 651912
@@ -1406,7 +1391,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "The Chinese will liberate Dadu!"
+		name = "Its time we reassert our imperial authority! To Dadu, for the Buyeo!"
 		set_country_flag = dadu_war
 		1616 = {
 			secede_province = CHI
@@ -1416,8 +1401,8 @@ country_event = {
 		}
 		war = {
 			target = KOR
-			attacker_goal = { casus_belli = acquire_core_state state_province_id = 1616 }
-			defender_goal = { casus_belli = conquest }
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = make_puppet }
 			call_ally = yes
 		}	
 	}
@@ -1433,22 +1418,34 @@ country_event = {
 		has_country_flag = dadu_war
 		NOT = { has_country_flag = first_korea_buyeo_war }
 		tag = QNG
-		owns = 1616
+		is_vassal = no
+		is_our_vassal = KOR
 		truce_with = KOR
 	}
 
 	mean_time_to_happen = { days = 7 }
 
 	option = {
-		name = "Though we have won, our empire is in shambles"
+		name = "This victory paves the way to our reassertion of imperial authority"
 		set_country_flag = first_korea_buyeo_war 
 		prestige = 10
-		release_vassal = MGL
-		release_vassal = ALT
-		release_vassal = TNT
-		release_vassal = HUI
-		release_vassal = SZC
-		release_vassal = XBI
+		KOR = { 
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = MCK 
+						province_id = 1616
+					}
+				}
+				secede_province = MCK
+			}
+			MCK = {
+				annex_to = QNG
+			}
+		KOR = {
+			kill_leader = "Lee Seongmin"
+			government = dominion
+		}
 	}
 }
 
@@ -1462,9 +1459,7 @@ country_event = {
 		has_country_flag = dadu_war
 		NOT = { has_country_flag = first_korea_buyeo_war }
 		tag = QNG
-		KOR = {
-			owns = 1616
-		}
+		NOT = { is_our_vassal = KOR }
 		truce_with = KOR
 	}
 
@@ -1474,10 +1469,19 @@ country_event = {
 		name = "We are humiliated and disgraced"
 		set_country_flag = first_korea_buyeo_war 
 		prestige = 10
-		release_vassal = MGL
-		release_vassal = ALT
-		release_vassal = TNT
-		release_vassal = XIN
+		any_country = {
+			limit = {
+				vassal_of = QNG
+			}
+			release_vassal = THIS
+		}
+		any_owned = {
+			limit = {
+					is_core = MCK 
+			}
+			is_core = KOR
+		}
+		government = absolute_empire
 	}
 }
 
