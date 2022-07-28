@@ -1018,9 +1018,20 @@ country_event = {
 				remove_core = QNG
 			}
 		}
-		HUI = {
-			any_owned = {
-				remove_core = QNG
+		QNG = {
+			limit = {
+				has_country_modifier = the_half_half_system
+			}
+			remove_accepted_culture = korean
+			remove_country_modifier = the_half_half_system
+		}
+		QNG = {
+			limit = {
+				NOT = { has_country_modifier = disunited_china }
+			}
+			add_country_modifier = {
+				name = disunited_china
+				duration = -1
 			}
 		}
 		political_reform = regionalism

@@ -1,5 +1,6 @@
 
 political_decisions = {
+
 	yi_seongmin_coup = {
 		picture = peking_field_force
 		
@@ -275,7 +276,7 @@ political_decisions = {
 			has_country_flag = han_secured
 			has_country_flag = korea_warpath
 			NOT = { exists = QNG }
-			NOT = { has_country_flag = korea_claims_mandate }
+			NOT = { has_country_flag = country_claims_mandate }
 		}
 
 		allow = {
@@ -294,7 +295,7 @@ political_decisions = {
 		}
 
 		effect = {
-			set_country_flag = korea_claims_mandate
+			set_country_flag = country_claims_mandate
 			badboy = -5
 			capital = 1616
 			government = absolute_empire
@@ -309,7 +310,7 @@ political_decisions = {
 		potential = {
 			tag = KOR
 			is_greater_power = yes
-			has_country_flag = korea_claims_mandate
+			has_country_flag = country_claims_mandate
 			has_country_flag =  yi_seongmin_in_korea
 			NOT = { has_country_flag = kdom_shu_established }
 		}
@@ -359,7 +360,7 @@ political_decisions = {
 		potential = {
 			tag = KOR
 			is_greater_power = yes
-			has_country_flag = korea_claims_mandate
+			has_country_flag = country_claims_mandate
 			has_country_flag =  yi_seongmin_in_korea
 			NOT = { has_country_flag = kdom_chu_established }
 		}
@@ -415,7 +416,7 @@ political_decisions = {
 		potential = {
 			tag = KOR
 			is_greater_power = yes
-			has_country_flag = korea_claims_mandate
+			has_country_flag = country_claims_mandate
 			has_country_flag =  yi_seongmin_in_korea
 			NOT = { has_country_flag = kdom_wu_established }
 		}
@@ -465,7 +466,7 @@ political_decisions = {
 		potential = {
 			tag = KOR
 			is_greater_power = yes
-			has_country_flag = korea_claims_mandate
+			has_country_flag = country_claims_mandate
 			has_country_flag =  yi_seongmin_in_korea
 			has_country_flag = kdom_wu_established
 			NOT = { has_country_flag = wuyue_established }
@@ -519,7 +520,7 @@ political_decisions = {
 		potential = {
 			tag = KOR
 			is_greater_power = yes
-			has_country_flag = korea_claims_mandate
+			has_country_flag = country_claims_mandate
 			has_country_flag =  yi_seongmin_in_korea
 			has_country_flag = kdom_wu_established
 			NOT = { has_country_flag = yue_established }
@@ -602,7 +603,16 @@ political_decisions = {
 					value = 50
 				}
 			}
-			any_owned = {
+			CHI_1612 = {
+				add_core = QNG
+			}
+			CHI_1616 = {
+				add_core = QNG
+			}
+			CHI_1508 = {
+				add_core = QNG
+			}
+			CHI_1510 = {
 				add_core = QNG
 			}
 		}
@@ -617,9 +627,7 @@ political_decisions = {
 			has_country_flag = chuseok_coup
 			has_country_flag = first_korea_buyeo_war 
 			NOT = { has_country_flag = buyeo_emperor_restored }
-			NOT = {
-				has_country_flag = yongping_dead
-			}
+			NOT = { has_country_flag = yongping_dead }
 		}
 
 		allow = {
@@ -641,6 +649,200 @@ political_decisions = {
 				duration = 1825
 			}
 		}
+	}
+	
+	
+	retake_jin = {
+		picture = peking_field_force
+		
+		potential = {
+			tag = QNG
+			has_country_flag = buyeo_emperor_restored
+			has_country_flag = international_outreach_qng
+			NOT = { has_country_flag = yongping_dead }
+			NOT = { has_country_flag = retake_jin }
+		}
+
+		allow = {
+			war = no
+			owns = 1616
+			has_unclaimed_cores = no
+			war_policy = jingoism
+		}
+
+		effect = {
+			set_country_flag = retake_jin 
+			badboy = 2
+			CHI_1572 = {
+				add_core = KOR
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	retake_shandong = {
+		picture = peking_field_force
+		
+		potential = {
+			tag = QNG
+			has_country_flag = buyeo_emperor_restored
+			has_country_flag = international_outreach_qng
+			has_country_flag = retake_jin
+			NOT = { has_country_flag = yongping_dead }
+			NOT = { has_country_flag = retake_sdg  }
+		}
+
+		allow = {
+			war = no
+			owns = 1616
+			has_unclaimed_cores = no
+			war_policy = jingoism
+		}
+
+		effect = {
+			set_country_flag = retake_sdg 
+			badboy = 2
+			CHI_1563 = {
+				add_core = KOR
+			}
+			CHI_1565 = {
+				add_core = KOR
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	southern_expedition = {
+		picture = peking_field_force
+		
+		potential = {
+			tag = QNG
+			has_country_flag = buyeo_emperor_restored
+			has_country_flag = international_outreach_qng
+			has_country_flag = retake_sdg
+			NOT = { has_country_flag = yongping_dead }
+			NOT = { has_country_flag = retake_wu }
+		}
+
+		allow = {
+			war = no
+			owns = 1616
+			has_unclaimed_cores = no
+			nationalism_n_imperialism = 1
+			war_policy = jingoism
+		}
+
+		effect = {
+			set_country_flag = retake_wu 
+			badboy = 5
+			HUI = {
+				any_core = {
+					add_core = QNG
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_the_mandate_of_heaven = {
+		picture = peking_field_force
+		
+		potential = {
+			tag = QNG
+			has_country_flag = buyeo_emperor_restored
+			has_country_flag = international_outreach_qng
+			has_country_flag = retake_wu
+			NOT = { has_country_flag = country_claims_mandate }
+		}
+
+		allow = {
+			OR = {
+				is_greater_power = yes
+				AND = {
+					is_secondary_power = yes
+					prestige = 100
+				}
+			}
+			war = no
+			has_unclaimed_cores = no
+			war_policy = jingoism
+			revolution_n_counterrevolution = 1
+			romanticism = 1
+			social_science = 1
+		}
+
+		effect = {
+			set_country_flag = country_claims_mandate
+			capital = 1616
+			government = absolute_empire
+			CHI = {
+				all_core = {
+					add_core = QNG
+				}
+			}
+			prestige = 40
+			QNG = {
+				limit = {
+					has_country_modifier = disunited_china
+				}
+				remove_country_modifier = disunited_china
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	accept_the_han = {
+		picture = peking_field_force
+		
+		potential = {
+			tag = QNG
+			tag = KOR
+			has_country_flag = country_claims_mandate
+			has_country_flag = international_outreach_qng
+			NOT = { has_country_flag = accept_the_han }
+		}
+
+		allow = {
+			OR = {
+				is_greater_power = yes
+				AND = {
+					is_secondary_power = yes
+					prestige = 100
+				}
+			}
+			has_unclaimed_cores = no
+			has_unclaimed_cores = no
+			press_rights = free_press
+			public_meetings = yes_meeting
+			slavery = no_slavery
+			debt_law = bankruptcy
+			war_policy = jingoism
+			mass_politics = 1
+			behaviorism = 1
+			social_science = 1
+			OR = {
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
+			}
+		}
+
+		effect = {
+			add_accepted_culture = han_chinese
+			any_owned = {
+				any_pop = {
+                    limit = { has_pop_culture = han_chinese }
+                    militancy = -5
+					conciousness = -5
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
 	}
 	
 	permaanant_regency = {
