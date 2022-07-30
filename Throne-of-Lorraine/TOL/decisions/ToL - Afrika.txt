@@ -372,8 +372,6 @@ political_decisions = {
 
 		allow = {
             year = 1865
-			has_country_flag = xhosa_country	
-			has_global_flag = xhosaprophet
         }
 
 		effect = {
@@ -389,8 +387,8 @@ political_decisions = {
 		picture = xhosa_misc
 		ai_will_do = { factor = 1 }
 		potential = {
-             tag = XHO
 			 civilization_progress = 0.25
+			 has_country_flag = xhosa_country
 			 has_global_flag = xhosaprophet	    
 			 NOT = { admin_reform = yes_admin_reform  }
 		}
@@ -488,10 +486,8 @@ political_decisions = {
 			ENG_2083 = { add_core = THIS }
 			ENG_2078  = { add_core = THIS }
 			ENG_2074  = { add_core = THIS }
-			ENG_2087  = { add_core = THIS }
 			ENG_2071 = { add_core = THIS }
 			ENG_2068 = { add_core = THIS }
-			POR_2049 = { add_core = THIS }
 			POR_2054 = { add_core = THIS }
 			POR_2053 = { add_core = THIS }
 			ENG_2094 = { add_core = THIS }
