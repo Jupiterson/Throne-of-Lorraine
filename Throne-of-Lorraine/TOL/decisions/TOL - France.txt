@@ -631,7 +631,7 @@ political_decisions = {
 		}
 
 		effect = {
-			FRA = { set_country_flag = enacted_french_schooling set_country_flag = french_assimilation }
+			THIS = { set_country_flag = enacted_french_schooling set_country_flag = french_assimilation }
 			remove_accepted_culture = arpitan
 			remove_accepted_culture = breton
 			remove_accepted_culture = belgican
@@ -770,11 +770,11 @@ political_decisions = {
 		potential = {
 			tag = FRA
 			NOT = { has_country_flag = fascism }
-			has_country_flag = order_embraced
+#			has_country_flag = order_embraced
 		}
 
 		allow = {
-			social_science = 1
+#			social_science = 1
 		}
 
 		effect = {
@@ -823,8 +823,9 @@ political_decisions = {
 				remove_core = FRA
 			}
 			change_tag = VIC 
-			enable_ideology = fascist
+			country_event = 1003
 			THIS = { government = fascist_dictatorship }
+			ruling_party_ideology = fascist
 		}
 
 		ai_will_do = { factor = 1 }

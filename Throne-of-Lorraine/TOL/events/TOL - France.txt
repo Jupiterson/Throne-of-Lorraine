@@ -487,3 +487,40 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+
+	id = 100190
+	title = "Return of the Monarchy?"
+	desc = "The Monarchy is back, but should we keep it?"
+	picture = "treaty"
+
+	trigger = {
+		tag = FRR
+		OR = {
+		government = absolute_monarchy
+		government = prussian_constitutionalism
+		government = hms_government
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = "The Monarchy is back guys"
+		change_tag = FRA
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = "We must contest this"
+		government = democracy
+		ai_chance = {
+			factor = 90
+		}
+	}
+}
