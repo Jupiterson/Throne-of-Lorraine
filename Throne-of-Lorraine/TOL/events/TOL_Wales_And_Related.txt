@@ -1,0 +1,255 @@
+country_event = {
+	id = 9111
+	title = "EVTNAME9111"
+	desc = "EVTDESC9111"
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "EVTOPTA9111"
+		3480 = {
+			add_core = WHA
+		}
+		any_country = {
+			limit = { has_country_flag = offer_made }
+			country_event = { id = 9112 days = 0 }
+		}	
+	}
+	
+	option = { 
+		name = "EVTOPTB9111"
+		WHA = { war = { target = GEN 
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 3480 }
+			defender_goal = { casus_belli = status_quo }
+			any_country = {
+			limit = { has_country_flag = offer_made }
+			country_event = 9113
+				}
+			}
+		}
+	}
+}	
+
+country_event = {
+	id = 9112
+	title = "EVTNAME9112"
+	desc = "EVTDESC9112"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "EVTOPTA9112"
+		prestige = 10
+		badboy = 2
+		3480 = {
+			add_core = WHA
+			remove_core = GEN 
+		}
+		FROM = {
+			3480 = { secede_province = THIS }
+		}
+		WHA = {
+			treasury = -10000
+		}
+		GEN = {
+			treasury = 10000
+		}
+	}
+}
+	
+country_event = {
+	id = 9113
+	title = "EVTNAME9113"
+	desc = "EVTDESC9113"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "EVTOPTA9113"
+		badboy = -2
+		3480 = {
+			add_core = WHA
+		}
+	}
+}
+
+country_event = {
+	id = 9114
+	title = "EVTNAME9114"
+	desc = "EVTDESC9114"
+	major = yes
+	trigger = {
+		war = no
+		tag = UOW
+		is_our_vassal = WHA 
+		truce_with = WHA
+		}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "EVTOPTA9114"
+		286 = {
+			add_core = UOW
+		}
+		FROM = {
+			286 = { secede_province = THIS }
+			}
+		3585 = {
+			add_core = UOW
+		}
+		FROM = {
+			3585 = { secede_province = THIS }
+			}
+		286 = { change_province_name = "Shropshire" }
+		3585 = { change_province_name = "Herefordshire" }
+		}
+	}
+			
+country_event = {
+	id = 9115
+	title = "EVTNAME9115"
+	desc = "EVTDESC9115"
+	trigger = {
+		war = no
+		tag = WHA
+		owns = 3589
+		}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.5 }
+	
+	option = {
+		name = "EVTOPTA9115"
+		prestige = 10
+		298 = {
+			add_core = WHA
+		}
+		3588 = {
+			add_core = WHA
+		}
+		3268 = {
+			add_core = WHA
+		}
+		299 = {
+			add_core = WHA
+		}
+		3589 = {
+			add_core = WHA
+		}
+		298 = { change_province_name = "Caerfaddon" }
+		3588 = { change_province_name = "Caerwysg" }
+		3268 = { change_province_name = "Dwr Pontydd" }
+		299 = { change_province_name = "Tryriw" }
+		3589 = { change_province_name = "Aberplym" }
+		}
+	}
+	
+	country_event = {
+	id = 9116
+	title = "EVTNAME9116"
+	desc = "EVTDESC9116"
+	trigger = {
+		tag = ENL
+		war = no
+		owns = 300
+			WHA = {
+				owns = 3589
+			}
+		}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.5 }
+	
+	option = { 
+		name = "EVTOPTA9116"
+		war = { target = WHA 
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 3589 }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	
+	option = { 
+		name = "EVTOPTB9116"
+		prestige = 10
+		create_alliance = WHA
+		treasury = 10000
+		build_factory_in_capital_state = [steamer_shipyard]
+		relation = { 
+					who = WHA
+						value = 300
+			}
+		298 = { remove_core = ENL }
+		299 = { remove_core = ENL }
+		3588 = { remove_core = ENL }
+		3589 = { remove_core = ENL }
+		3268 = { remove_core = ENL }
+		add_country_modifier = {
+			name = Anglo_Welsh_Trade_Agreement 
+			duration = 1825
+		}
+	}
+}
+
+	country_event = {
+	id = 9117
+	title = "EVTNAME9117"
+	desc = "EVTDESC9117"
+	trigger = {
+		tag = ENL
+		year = 1841
+		war = no
+		owns = 297
+		NOT = {
+			ENL = 
+				{ has_country_modifier = Anglo_Welsh_Trade_Agreement } 
+			}
+		WHA = {
+			owns = 298
+		}
+	}
+	
+	fire_only_once = no
+	
+	mean_time_to_happen = { days = 0.1 }
+		
+	option = { 
+		name = "EVTOPTA9117"
+		badboy = 5
+		298 = {
+			add_core = ENL
+		}
+		3588 = {
+			add_core = ENL
+		}
+		3268 = {
+			add_core = ENL
+		}
+		299 = {
+			add_core = ENL
+		}
+		3589 = {
+			add_core = ENL
+		}
+		war = { target = WHA 
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 3589 }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}	
+		
+	option = { 
+		name = "EVTOPTB9117"
+		prestige = 10
+		create_alliance = WHA
+		treasury = 20000
+		add_country_modifier = {
+			name = Anglo_Welsh_Trade_Agreement 
+			duration = 1825
+		}
+	}
+}
+	

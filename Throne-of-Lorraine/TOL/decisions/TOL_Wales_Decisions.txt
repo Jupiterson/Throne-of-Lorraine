@@ -14,7 +14,6 @@ political_decisions = {
 			GEN = {
 				owns= 3480
 				war = yes
-				war_exhaustion = 8
 			}
 		}
 
@@ -49,6 +48,44 @@ political_decisions = {
 			3480 = { change_province_name = "Ynysek Syllan" }
 		}
 	}
-}
 
-	
+	intervene_in_the_english_civil_war = {
+		picture = english_civil_war
+		potential = {
+			tag = WHA
+			NOT = { has_country_flag = welsh_intervention }
+		}
+		
+		allow = {
+			war = no
+			is_disarmed = no
+			owns = 3480
+			UOW = {
+				war = yes
+			}
+			ENL = {
+				war = yes
+			}
+		}
+			
+		effect = {
+			badboy = -3
+			set_country_flag = welsh_intervention
+			WHA = { war = { target = UOW
+				attacker_goal = { casus_belli = acquire_state state_province_id = 3588 }
+				defender_goal = { casus_belli = make_puppet }
+				call_ally = no
+					}
+				military_access = ENL
+				relation = { 
+					who = ENL
+						value = 50
+			}
+		}
+			ENL = { military_access = WHA }
+		}
+	}
+}
+				
+			
+				

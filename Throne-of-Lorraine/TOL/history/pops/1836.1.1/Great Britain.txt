@@ -762,27 +762,45 @@
 	}
 
 	clergymen = {
-		culture = welsh
+		culture = british
 		religion = reformed
-		size = 250
+		size = 125
+	}
+	
+	clergymen = {
+		culture = british
+		religion = reformed
+		size = 125
 	}
 
 	craftsmen = {
 		culture = welsh
 		religion = reformed
-		size = 1000
+		size = 750
+	}
+	
+	craftsmen = {
+		culture = welsh
+		religion = reformed
+		size = 250
 	}
 
 	artisans = {
 		culture = welsh
 		religion = protestant
-		size = 4000
+		size = 3000
+	}
+	
+	artisans = {
+		culture = british
+		religion = protestant
+		size = 1000
 	}
 
 	farmers = {
 		culture = british
 		religion = protestant
-		size = 1750
+		size = 2000
 	}
 	
 	farmers = {
@@ -1424,11 +1442,17 @@
 	artisans = {
 		culture = welsh
 		religion = reformed
-		size = 4250
+		size = 4000
+	}
+	
+	artisans = {
+		culture = british
+		religion = reformed
+		size = 250
 	}
 
 	soldiers = {
-		culture = british
+		culture = welsh
 		religion = reformed
 		size = 1100
 	}
@@ -1436,7 +1460,13 @@
 	labourers = {
 		culture = welsh
 		religion = reformed
-		size = 38875
+		size = 28875
+	}
+	
+	labourers = {
+		culture = british
+		religion = reformed
+		size = 10000
 	}
 }
 #Coventry (432000/108000 POPS)
@@ -2452,7 +2482,7 @@
 	}
 
 }
-#Normandie Region
+
 #Channel Islands (72000/18000 POPS)
 419 = {
 	aristocrats = {
