@@ -1014,10 +1014,11 @@ country_event = {
 	trigger = {
 		tag = LBA
 		year = 1838
+		NOT = { year = 1840 }
 	}
 
 	mean_time_to_happen = {
-		months = 3
+		days = 1
 	}
 
 	option = {
