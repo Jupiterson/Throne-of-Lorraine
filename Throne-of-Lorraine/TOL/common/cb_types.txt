@@ -97,6 +97,7 @@ peace_order = {
 	free_peoples
 	free_allied_cores
 	free_balkans
+	convert_cb
 	oriental_crisis
 	unification_release_puppet_cb
 	release_puppet
@@ -119,6 +120,7 @@ peace_order = {
 	dismantle_forts
 	china_acquire_state
 	yoruba_acquire_state
+	amazon_acquire_state
 	acquire_state
 	acquire_state_mid
 	acquire_state_late
@@ -5916,229 +5918,211 @@ conquest = {
 
 # Berlin Conference
 annex_india = {
-	sprite_index = 34
-	is_triggered_only = yes
-	months = 0
-	crisis = no
+    sprite_index = 22
+    is_triggered_only = yes
+    months = 0
+    crisis = no
 
-	construction_speed = 1.5
+    construction_speed = 1.5
 
-	badboy_factor = 0
-	prestige_factor = 0.5
-	peace_cost_factor = 0.6
-	penalty_factor = 2
+    badboy_factor = 0
+    prestige_factor = 0.5
+    peace_cost_factor = 0.6
+    penalty_factor = 2
 
-	break_truce_prestige_factor = 5
-	break_truce_infamy_factor = 2
-	break_truce_militancy_factor = 2
-	truce_months = 0
+    break_truce_prestige_factor = 5
+    break_truce_infamy_factor = 2
+    break_truce_militancy_factor = 2
+    truce_months = 60
 
-	good_relation_prestige_factor = 0
-	good_relation_infamy_factor = 0
-	good_relation_militancy_factor = 0
+    good_relation_prestige_factor = 0
+    good_relation_infamy_factor = 0
+    good_relation_militancy_factor = 0
 
-	always = yes
+    always = yes
 
-	can_use = {
-		OR = {
-			AND = {
-				THIS = { any_owned_province = { port = yes } }
-				any_owned_province = { port = yes }
-			}
-			neighbour = THIS
-			AND = { war_with = THIS ai = no }
-		}
-		NOT = { is_our_vassal = THIS }
-		number_of_states = 2
-		THIS = {
-#			nationalism_n_imperialism = 1
-			capital_scope = { continent = europe }
-			slavery = no_slavery
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-			NOT = { has_country_modifier = neutrality }
-			civilized = yes
-			has_global_flag = india_scramble
-		}
-		NOT = {
-			tag = BNG
-			has_country_flag = post_colonial_country
-		}
-		civilized = no
-		capital_scope = { is_core = HND }
-		ai = yes
-		OR = {
-			war_with = THIS
-			THIS = {
-				NOT = { has_country_modifier = punitive_effects }
-			}
-		}
-		#Claimed colonial regions can't be conquered with this CB
-		
-		NOT = {
-			AND = {
-				any_owned_province = {
-					is_core = HND
-				}
-				OR = {
-					any_neighbor_country = {
-						NOT = { tag = THIS tag = BNG }
-						civilized = yes
-						any_owned_province = {
-							is_core = HND
-						}
-					}
-					any_greater_power  = {
-						NOT = { tag = THIS tag = BNG }
-						any_owned_province = {
-							is_core = HND
-						}
-					}
-				}
-			}
-		}
-	}
+    can_use = {
+        NOT = { has_country_flag = congo_master }
+        OR = {
+            AND = {
+                THIS = { num_of_ports = 1 }
+                num_of_ports = 1
+            }
+            OR = {
+                neighbour = THIS
+                any_owned_province = {
+                    any_neighbor_province = {
+                        owner = {
+                            vassal_of = THIS
+                        }
+                    }
+                }
+            }
+            AND = { war_with = THIS ai = no }
+        }
+        NOT = { is_our_vassal = THIS }
+        number_of_states = 2
+        THIS = {
+            capital_scope = { continent = europe }
+            NOT = { tag = RUS }
+            NOT = { tag = TUR }
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+            NOT = { has_country_modifier = neutrality }
+            civilized = yes
+            has_global_flag = india_scramble
+        }
+		NOT = { has_country_modifier = neutrality }
+        NOT = {
+            has_country_flag = post_colonial_country
+        }
+        NOT = { is_greater_power = yes }
+        is_vassal = no
+        civilized = no
+        capital_scope = {
+            is_core = HND
+        }
+        ai = yes
+        OR = {
+            war_with = THIS
+            THIS = {
+                NOT = { has_country_modifier = punitive_effects }
+            }
+        }
+    }
 
-	allowed_states = {
-		any_owned_province = { is_colonial = no }
-		#NOT = { any_owned_province = { is_capital = yes } }
-		OR = {
-			THIS = { ai = no }
-			any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			AND = {
-				any_owned_province = { port = yes }
-				THIS = { any_owned_province = { port = yes } }
-			}
-		}
-	}
+    allowed_states = {
+        any_owned_province = { is_colonial = no }
+        #NOT = { any_owned_province = { is_capital = yes } }
+        OR = {
+            THIS = { ai = no }
+            any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+            AND = {
+                any_owned_province = { port = yes }
+                THIS = { any_owned_province = { port = yes } }
+            }
+            any_owned_province = {
+                any_neighbor_province = {
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+        }
+    }
 
-	po_demand_state = yes
+    po_demand_state = yes
 
-	war_name = WAR_CONCESSION_NAME
+    war_name = WAR_CONCESSION_NAME
 
-	on_add = {
-		move_issue_percentage = {
-			from = jingoism
-			to = pro_military
-			value = 0.1
-		}
-	}
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.1
+        }
+        badboy = 2.5
+    }
 }
+
 annex_india_full = {
-	sprite_index = 34
-	is_triggered_only = yes
-	months = 12
-	crisis = no
+    sprite_index = 22
+    is_triggered_only = yes
+    months = 0
+    crisis = no
 
-	always = yes
+    construction_speed = 1.5
 
-	construction_speed = 2.5
+    badboy_factor = 0
+    prestige_factor = 0.5
+    peace_cost_factor = 0.6
+    penalty_factor = 2
 
-	badboy_factor = 0
-	prestige_factor = 0.5
-	peace_cost_factor = 0.6
-	penalty_factor = 2
+    break_truce_prestige_factor = 0
+    break_truce_infamy_factor = 0
+    break_truce_militancy_factor = 0
+    truce_months = 60
 
-	break_truce_prestige_factor = 5
-	break_truce_infamy_factor = 2
-	break_truce_militancy_factor = 2
-	truce_months = 0
+    good_relation_prestige_factor = 0
+    good_relation_infamy_factor = 0
+    good_relation_militancy_factor = 0
 
-	good_relation_prestige_factor = 0
-	good_relation_infamy_factor = 0
-	good_relation_militancy_factor = 0
+    always = yes
 
-	can_use = {
-		OR = {
-			AND = {
-				THIS = { total_amount_of_ships = 5 }
-				any_owned_province = { port = yes }
-			}
-			neighbour = THIS
-			war_with = THIS
-		}
-		NOT = { is_our_vassal = THIS }
-		OR = {
-			war_with = THIS
-			THIS = { military_score = 1 }
-		}
-		THIS = {
-#			nationalism_n_imperialism = 1
-			capital_scope = { continent = europe }
-			slavery = no_slavery
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		    NOT = { has_country_modifier = neutrality_modifier }
-			NOT = { has_country_modifier = claimed_africa }
-			civilized = yes
-			has_global_flag = india_scramble
-		}
-		civilized = no
-		is_vassal = no
-		NOT = {
-			tag = HND
-		}
-		capital_scope = { is_core = HND }	
-		ai = yes
-		OR = {
-			war_with = THIS
-			THIS = { NOT = { has_country_modifier = punitive_effects } }
-		}
-		OR = {
-			any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			AND = {
-				any_owned_province = { port = yes }
-				THIS = { any_owned_province = { port = yes } }
-			}
-		}
+    can_use = {
+        #NOT = { has_country_flag = congo_master }
+        OR = {
+            AND = {
+                THIS = { num_of_ports = 1 }
+                num_of_ports = 1
+            }
+            OR = {
+                neighbour = THIS
+                any_owned_province = {
+                    any_neighbor_province = {
+                        owner = {
+                            vassal_of = THIS
+                        }
+                    }
+                }
+            }
+            AND = { war_with = THIS ai = no }
+        }
+        NOT = { is_our_vassal = THIS }
+        NOT = { number_of_states = 2 }
+        THIS = {
+            capital_scope = { continent = europe }
+            NOT = { tag = RUS }
+            NOT = { tag = TUR }
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+            NOT = { has_country_modifier = neutrality }
+            civilized = yes
+            has_global_flag = india_scramble
+        }
+		NOT = { has_country_modifier = neutrality }
+        is_vassal = no
+        civilized = no
+        NOT = {
+            has_country_flag = post_colonial_country
+        }
+        capital_scope = {
+            is_core = HND
+        }
+        #ai = yes
+        OR = {
+            war_with = THIS
+            THIS = { NOT = { has_country_modifier = punitive_effects } }
+        }
+        NOT = { is_greater_power = yes }
+        OR = {
+            any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+            AND = {
+                any_owned_province = { port = yes }
+                THIS = { any_owned_province = { port = yes } }
+            }
+        }
+    }
 
-		#Claimed colonial regions can't be conquered with this CB
-		NOT = {
-			AND = {
-				any_owned_province = {
-					is_core = HND
-				}
-				OR = {
-					any_neighbor_country = {
-						NOT = { tag = THIS tag = BNG }
-						civilized = yes
-						any_owned_province = {
-							is_core = HND
-						}
-					}
-					any_greater_power  = {
-						NOT = { tag = THIS tag = BNG }
-						any_owned_province = {
-							is_core = HND
-						}
-					}
-				}
-			}
-		}
-	}
+    po_annex = yes
 
-	po_annex = yes
+    war_name = WAR_PROTECTORATE_NAME
 
-	war_name = WAR_PROTECTORATE_NAME
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.1
+        }
+        badboy = 2.5
+    }
 
-	on_add = {
-		move_issue_percentage = {
-			from = jingoism
-			to = pro_military
-			value = 0.1
-		}
-	}
-
-	on_po_accepted = {
-		tech_school = unciv_tech_school
-	}
+    on_po_accepted = { tech_school =  unciv_tech_school }
 }
-
-
 
 # Berlin Conference
 annex_africa = {
@@ -11468,6 +11452,85 @@ yoruba_acquire_state = {
 	}
 }
 
+# Amozon Reunification
+amazon_acquire_state = {
+	sprite_index = 22
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 0
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 0
+	break_truce_militancy_factor = 0
+	truce_months = 84
+
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	always = yes
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		neighbour = THIS
+		OR = {
+			any_owned_province = {
+				is_core = AMZ
+			}
+			is_culture_group = amazonic
+		}
+		THIS = { is_culture_group = amazonic }
+		is_vassal = no
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
+		OR = {
+			any_owned_province = {
+				is_core = AMZ
+			}
+			NOT = { is_culture_group = amazonic }
+		}
+	}
+
+	allowed_states = {
+		OR = {
+			AND = {
+				any_owned_province = {
+					is_core = AMZ
+				}
+				THIS = { ai = no }
+			}
+			any_owned_province = {
+				is_core = AMZ
+				owner = { civilized = no }
+			}
+#			any_owned_province = {
+#				owner = { is_culture_group = amazonic }
+#				NOT = { is_core = AMZ }
+#			}
+		}
+	}
+
+	po_demand_state = yes
+
+	war_name = WAR_AMZ_REUNIFICATION
+
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.10
+		}
+	}
+}
+
+
 # Claim Colonial Region - Annex
 claim_colonial_region_full = {
 	sprite_index = 22
@@ -13196,3 +13259,406 @@ akino_cb = {
 		country_event = 100188	
 	}
 }
+
+
+# Convert Nation CB
+convert_cb = {
+    sprite_index = 23
+    is_triggered_only = yes
+    months = 12
+
+    badboy_factor = 1.5
+    prestige_factor = 1
+    peace_cost_factor = 15
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 1
+    break_truce_militancy_factor = 1
+    truce_months = 60
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    po_remove_prestige = yes
+
+    tws_battle_factor = 2.0
+
+    war_name = WAR_HUMILIATE_NAME
+
+    can_use = {
+		#war_with = THIS
+		THIS = {
+			religious_policy = moralism
+			OR = {
+			war_policy = jingoism
+			war_policy = pro_military
+			}
+			OR = {
+			government = theocracy
+			has_country_flag = convert_cb_yes
+			}
+		}
+		NOT = {
+			AND = {
+				religion = catholic
+				THIS = { religion = catholic }
+			}
+			AND = {
+				religion = protestant
+				THIS = { religion = protestant }
+			}
+			AND = {
+				religion = jesuite
+				THIS = { religion = jesuite }
+			}
+			AND = {
+				religion = reformed
+				THIS = { religion = reformed }
+			}
+			AND = {
+				religion = orthodox
+				THIS = { religion = orthodox }
+			}
+			AND = {
+				religion = coptic
+				THIS = { religion = coptic }
+			}
+			AND = {
+				religion = sunni
+				THIS = { religion = sunni }
+			}
+			AND = {
+				religion = shiite
+				THIS = { religion = shiite }
+			}
+			AND = {
+				religion = ibadi
+				THIS = { religion = ibadi }
+			}
+			AND = {
+				religion = druze
+				THIS = { religion = druze }
+			}
+			AND = {
+				religion = jewish
+				THIS = { religion = jewish }
+			}
+			AND = {
+				religion = yazidi
+				THIS = { religion = yazidi }
+			}
+			AND = {
+				religion = mahayana
+				THIS = { religion = mahayana }
+			}
+			AND = {
+				religion = gelugpa
+				THIS = { religion = gelugpa }
+			}
+			AND = {
+				religion = theravada
+				THIS = { religion = theravada }
+			}
+			AND = {
+				religion = sikh
+				THIS = { religion = sikh }
+			}
+			AND = {
+				religion = zoroastrian
+				THIS = { religion = zoroastrian }
+			}
+			AND = {
+				religion = animist
+				THIS = { religion = animist }
+			}
+			AND = {
+				religion = hindu
+				THIS = { religion = hindu }
+			}
+			AND = {
+				religion = shinto
+				THIS = { religion = shinto }
+			}
+			AND = {
+				religion = tengri
+				THIS = { religion = tengri }
+			}
+		}
+    }
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.25
+        }
+    }
+
+	on_po_accepted = {
+        country_event = 172661    # Convert Event
+		random_owned = {
+			limit = {
+				owner = {
+					religion = sunni
+				}
+			}
+			owner = {
+				prestige = 15
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = catholic
+					}
+				}
+			}
+			owner = {
+				religion = catholic
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = protestant
+					}
+				}
+			}
+			owner = {
+				religion = protestant
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = jesuite
+					}
+				}
+			}
+			owner = {
+				religion = jesuite
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = reformed
+					}
+				}
+			}
+			owner = {
+				religion = reformed
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = orthodox
+					}
+				}
+			}
+			owner = {
+				religion = orthodox
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = coptic
+					}
+				}
+			}
+			owner = {
+				religion = coptic
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = sunni
+					}
+				}
+			}
+			owner = {
+				religion = sunni
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = shiite
+					}
+				}
+			}
+			owner = {
+				religion = shiite
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = ibadi
+					}
+				}
+			}
+			owner = {
+				religion = ibadi
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = druze
+					}
+				}
+			}
+			owner = {
+				religion = druze
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = jewish
+					}
+				}
+			}
+			owner = {
+				religion = jewish
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = yazidi
+					}
+				}
+			}
+			owner = {
+				religion = yazidi
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = mahayana
+					}
+				}
+			}
+			owner = {
+				religion = mahayana
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = gelugpa
+					}
+				}
+			}
+			owner = {
+				religion = gelugpa
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = theravada
+					}
+				}
+			}
+			owner = {
+				religion = theravada
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = sikh
+					}
+				}
+			}
+			owner = {
+				religion = sikh
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = zoroastrian
+					}
+				}
+			}
+			owner = {
+				religion = zoroastrian
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = animist
+					}
+				}
+			}
+			owner = {
+				religion = animist
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = hindu
+					}
+				}
+			}
+			owner = {
+				religion = hindu
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = shinto
+					}
+				}
+			}
+			owner = {
+				religion = shinto
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						religion = tengri
+					}
+				}
+			}
+			owner = {
+				religion = tengri
+			}
+		}
+    }
+}
+

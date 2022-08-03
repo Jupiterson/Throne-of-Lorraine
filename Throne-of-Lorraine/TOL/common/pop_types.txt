@@ -1136,20 +1136,34 @@ assimilation_chance = {
     #    factor = -1
     #    is_accepted_culture = yes
     #}
-
+	
 #Pops being assimilative
     modifier = {
         factor = 1.5
 		OR = {
-        has_pop_culture = ainu
-		AND = {
-		has_pop_culture = tatar
-		country = { primary_culture = ruthenyan }
+			has_pop_culture = ainu
+			AND = {
+				has_pop_culture = tatar
+				country = { primary_culture = ruthenyan }
+			}
 		}
 		AND = {
-		has_pop_culture = czech
-		country = { primary_culture = south_german }
+			OR = {
+			has_pop_culture = burgundian
+			has_pop_culture = occitan
+			has_pop_culture = breton
+			has_pop_culture = catalan
+			has_pop_culture = provencial
+			has_pop_culture = belgican
+			}
+        }
+		AND = {
+			country = { primary_culture = french }
+			country = { primary_culture = { has_country_flag = french_assimilation } }
 		}
+		AND = {
+			has_pop_culture = czech
+			country = { primary_culture = south_german }
 		}
     }
 #pops that can assimilate quickly	

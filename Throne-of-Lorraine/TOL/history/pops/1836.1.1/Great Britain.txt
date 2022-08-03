@@ -609,13 +609,13 @@
 	}
 
 	clerks = {
-		culture = british
+		culture = welsh
 		religion = reformed
 		size = 50
 	}
 
 	craftsmen = {
-		culture = british
+		culture = welsh
 		religion = reformed
 		size = 1100
 	}
@@ -762,27 +762,45 @@
 	}
 
 	clergymen = {
-		culture = welsh
+		culture = british
 		religion = reformed
-		size = 250
+		size = 125
+	}
+	
+	clergymen = {
+		culture = british
+		religion = reformed
+		size = 125
 	}
 
 	craftsmen = {
 		culture = welsh
 		religion = reformed
-		size = 1000
+		size = 750
+	}
+	
+	craftsmen = {
+		culture = welsh
+		religion = reformed
+		size = 250
 	}
 
 	artisans = {
 		culture = welsh
 		religion = protestant
-		size = 4000
+		size = 3000
+	}
+	
+	artisans = {
+		culture = british
+		religion = protestant
+		size = 1000
 	}
 
 	farmers = {
 		culture = british
 		religion = protestant
-		size = 1750
+		size = 2000
 	}
 	
 	farmers = {
@@ -1424,11 +1442,17 @@
 	artisans = {
 		culture = welsh
 		religion = reformed
-		size = 4250
+		size = 4000
+	}
+	
+	artisans = {
+		culture = british
+		religion = reformed
+		size = 250
 	}
 
 	soldiers = {
-		culture = british
+		culture = welsh
 		religion = reformed
 		size = 1100
 	}
@@ -1436,7 +1460,13 @@
 	labourers = {
 		culture = welsh
 		religion = reformed
-		size = 38875
+		size = 28875
+	}
+	
+	labourers = {
+		culture = british
+		religion = reformed
+		size = 10000
 	}
 }
 #Coventry (432000/108000 POPS)
@@ -1962,7 +1992,13 @@
 	aristocrats = {
 		culture = british
 		religion = reformed
-		size = 1500
+		size = 1000
+	}
+	
+	aristocrats = {
+		culture = cornish
+		religion = reformed
+		size = 500
 	}
 
 	clergymen = {
@@ -1972,79 +2008,98 @@
 	}
 
 	artisans = {
-		culture = british
+		culture = cornish
 		religion = reformed
-		size = 3500
+		size = 2500
 	}
 
+	artisans = {
+		culture = welsh
+		religion = reformed
+		size = 1000
+	}
+	
 	soldiers = {
 		culture = british
 		religion = reformed
-		size = 1500
+		size = 500
+	}
+	
+	soldiers = {
+		culture = cornish
+		religion = reformed
+		size = 500
 	}
 
+
 	labourers = {
-		culture = welsh
+		culture = cornish
 		religion = reformed
-		size = 36250
+		size = 20250
 	}
 	
 	labourers = {
-		culture = british
+		culture = welsh
 		religion = reformed
-		size = 26250
+		size = 10250
 	}
 
 	farmers = {
-		culture = british
+		culture = cornish
 		religion = catholic
-		size = 1100
+		size = 800
+	}
+	
+	farmers = {
+		culture = welsh
+		religion = catholic
+		size = 300
+	}
+	
+	farmers = {
+		culture = scottish
+		religion = catholic
+		size = 100
 	}
 
 
 }
-#Exeter (812000/203000 POPS)
+#Exeter (89000/22350 POPS)
 3268 = {
 	clergymen = {
-		culture = british
+		culture = cornish
 		religion = reformed
-		size = 250
+		size = 125
 	}
 
 	artisans = {
 		culture = british
 		religion = reformed
-		size = 2000
+		size = 1000
 	}
 
 	soldiers = {
 		culture = british
 		religion = reformed
-		size = 500
+		size = 250
 	}
 
 	farmers = {
-		culture = british
+		culture = cornish
 		religion = reformed
-		size = 10000
-	}
-	
-	farmers = {
-		culture = welsh
-		religion = reformed
-		size = 8000
-	}
-
-	farmers = {
-		culture = british
-		religion = catholic
-		size = 500
+		size = 5000
 	}
 
 	farmers = {
 		culture = scottish
 		religion = catholic
-		size = 1100
+		size = 750
+	}
+
+	farmers = {
+		culture = british
+		religion = catholic
+		size = 4050
 	}
 }
 
@@ -2347,37 +2402,37 @@
 	officers = {
 		culture = british
 		religion = reformed
-		size = 1100
+		size = 1000
 	}
 
 	bureaucrats = {
 		culture = british
 		religion = reformed
-		size = 750
+		size = 700
 	}
 
 	clergymen = {
 		culture = british
 		religion = reformed
-		size = 500
+		size = 400
 	}
 
 	artisans = {
 		culture = british
 		religion = reformed
-		size = 6000
+		size = 4000
 	}
 
 	soldiers = {
 		culture = british
 		religion = reformed
-		size = 1100
+		size = 1000
 	}
 
 	labourers = {
 		culture = british
 		religion = reformed
-		size = 53000
+		size = 47450
 	}
 
 }
@@ -2427,7 +2482,7 @@
 	}
 
 }
-#Normandie Region
+
 #Channel Islands (72000/18000 POPS)
 419 = {
 	aristocrats = {
@@ -2515,4 +2570,181 @@
 		religion = reformed
 		size = 30
 	}
+}
+
+3587 = {
+	aristocrats = {
+		culture = british
+		religion = reformed
+		size = 200
+	}
+
+	bureaucrats = {
+		culture = british
+		religion = reformed
+		size = 100
+	}
+
+	clergymen = {
+		culture = british
+		religion = reformed
+		size = 200
+	}
+
+	soldiers = {
+		culture = british
+		religion = reformed
+		size = 500
+	}
+
+	farmers = {
+		culture = british
+		religion = reformed
+		size = 6500
+	}
+
+	artisans = {
+		culture = british
+		religion = reformed
+		size = 400
+	}
+}
+
+3588  = {
+	clergymen = {
+		culture = cornish
+		religion = reformed
+		size = 100
+	}
+	
+	clergymen = {
+		culture = cornish
+		religion = reformed
+		size = 25
+	}
+
+
+	artisans = {
+		culture = cornish
+		religion = reformed
+		size = 750
+	}
+	
+	artisans = {
+		culture = welsh
+		religion = reformed
+		size = 250
+	}
+
+	soldiers = {
+		culture = cornish
+		religion = reformed
+		size = 250
+	}
+
+	farmers = {
+		culture = cornish
+		religion = reformed
+		size = 5000
+	}
+	
+	farmers = {
+		culture = british
+		religion = reformed
+		size = 3000
+	}
+	
+	farmers = {
+		culture = welsh
+		religion = reformed
+		size = 1000
+	}
+
+	labourers = {
+		culture = welsh
+		religion = catholic
+		size = 250
+	}
+
+	farmers = {
+		culture = welsh
+		religion = catholic
+		size = 550
+	}
+}
+#PlymouthTOL
+3589  = {
+
+	aristocrats = {
+		culture = british
+		religion = reformed
+		size = 1000
+	}
+	
+	clergymen = {
+		culture = cornish
+		religion = reformed
+		size = 250
+	}
+	
+	clergymen = {
+		culture = british
+		religion = reformed
+		size = 250
+	}
+
+	artisans = {
+		culture = cornish
+		religion = reformed
+		size = 1000
+	}
+	
+	artisans = {
+		culture = british
+		religion = reformed
+		size = 500
+	}
+
+	soldiers = {
+		culture = british
+		religion = reformed
+		size = 250
+	}
+
+	farmers = {
+		culture = cornish
+		religion = reformed
+		size = 10000
+	}
+
+	farmers = {
+		culture = scottish
+		religion = catholic
+		size = 1000
+	}
+
+	farmers = {
+		culture = british
+		religion = catholic
+		size = 2000
+	}
+	
+	labourers = {
+		culture = cornish
+		religion = reformed
+		size = 5000
+	}
+	
+	officers = {
+		culture = british
+		religion = reformed
+		size = 1000
+	}
+	
+	labourers = {
+		culture = british
+		religion = reformed
+		size = 1500
+	}
+	
 }
