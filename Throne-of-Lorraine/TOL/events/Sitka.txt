@@ -3093,28 +3093,6 @@ country_event = {
 	}
 }
 country_event = {
-	id = 123562
-	title = "The Eure Expedition"
-	desc = "The Eure, a French dispatch boat, is being sent to finalize our claims to the Kerguelen islands."
-	fire_only_once = yes
-	picture = "kerguelen"
-	mean_time_to_happen = { months = 3 }
-	trigger = {
-		3414 = { empty = yes }
-		year = 1893
-		OR = {
-			tag = FRR
-			tag = FRZ
-			tag = BOR
-			tag = VIC
-		}
-	}
-	option = {
-		name = "Glory to the French Empire!"
-		3414 = { secede_province = THIS }
-	}
-}
-country_event = {
 	id = 123570
 	title = "The integration of Bukhara"
 	desc = "The time has come to integrate our vassal, the Khanate of Bukhara into our empire."
