@@ -1954,6 +1954,8 @@ political_decisions = {
 			any_owned = { 
 				add_province_modifier = { name = french_terror duration = -1 } 
 		 	}
+			442 = { add_province_modifier = { name = rival_paris duration = 4380 } }
+			442 = { remove_province_modifier = french_terror }
 			FRA = {
 			add_country_modifier = {
 					name = nobility_fra
