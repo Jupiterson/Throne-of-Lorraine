@@ -70,7 +70,10 @@ country_event = {
 	option = {
 		name = "Sad times..."
 		prestige = -5
-		any_owned = { limit = { region = MEX_100 } secede_province = XXX }
+		any_owned = { limit = { is_core = ZUN } secede_province = ZUN remove_core = TEX }
+		any_owned = { limit = { is_core = NAV } secede_province = NAV remove_core = TEX }
+		any_owned = { limit = { is_core = HOP } secede_province = HOP remove_core = TEX }
+		any_owned = { limit = { is_core = OOD } secede_province = OOD remove_core = TEX }
 	}
 }
 

@@ -4881,29 +4881,21 @@ french_terror = {
 #	war_exhaustion = 0.05
 	immigrant_push = 0.05
 	local_RGO_output = -0.5
-	pop_consciousness_modifier = 0.5
-	pop_militancy_modifier = 0.5
-	non_accepted_pop_consciousness_modifier = 0.05
-	non_accepted_pop_militancy_modifier = 0.05
+#	pop_consciousness_modifier = 0.5
+#	pop_militancy_modifier = 0.5
+#	non_accepted_pop_consciousness_modifier = 0.05
+#	non_accepted_pop_militancy_modifier = 0.05
 	local_ruling_party_support = -0.80
 	#goods_demand = -0.03
 	icon = 1
 }
 
-#stubborn_nobility = {
-#	global_immigrant_attract = -0.75
-#	global_population_growth = -0.0025
-#	diplomatic_points_modifier = -0.1
-#	assimilation_rate = -0.1
-#	badboy = 0.1
-#	war_exhaustion = 0.5
-# #   icon = 20
-#}
-
 nobility_fra = {
 	global_immigrant_attract = -0.75
 	global_population_growth = -0.0025
 	diplomatic_points_modifier = -0.1
+	global_pop_consciousness_modifier = 0.55
+	global_pop_militancy_modifier = 0.55
 	icon = 20
 }
 
@@ -5155,6 +5147,14 @@ pirate_sugar = {
 	pop_consciousness_modifier = 0.02
 	pop_militancy_modifier = 0.01
 	
+}
+
+rival_paris = {
+	farm_rgo_size = 0.1
+	mine_rgo_size = 0.1
+	immigrant_attract = 0.05
+	education_efficiency_modifier = 0.25
+	icon = 19
 }
 
 ### Basque Christian Commune ###

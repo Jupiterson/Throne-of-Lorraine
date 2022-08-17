@@ -724,6 +724,16 @@ national_awakening = {
 			CRI_970 = { add_core = THIS }
 			RUS_964 = { add_core = THIS }
 			set_country_flag = ruthenyans_accepted_culture
+			UKR = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BYE = {
+				all_core = {
+					add_core = THIS
+				}
+			}
 			any_pop = {
 				limit = {
 					has_pop_culture = ruthenyan
