@@ -3688,8 +3688,11 @@ country_event = {
 		name = "EVT10225OPTC"
 		any_owned = {
 			limit = {
+			OR = {
 				is_core = SAA
-#				NOT = { is_core = CRO }
+				is_core = LUX
+				is_core = KOL
+				}
 			}
 			secede_province = SAA
 		}
@@ -3706,10 +3709,15 @@ country_event = {
 				name = no_more_war
 				duration = 14
 		}
-		casus_belli = {
+		war = {
 			target = SAA
-			type = annex_core_country
-			months = 30
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally = yes
 		}
 		SAA = {
 			political_reform = mandatory_service
@@ -3750,9 +3758,7 @@ country_event = {
 
 	option = {
 		name = "EVT10226OPTA"
-#		AUS_771 = { add_core = HUN }
 		prestige = 10
-		LOR = { country_event = 10227 }
 		clr_global_flag = saarbrucker_revolution_occurred
 		any_pop = {
 			limit = { is_primary_culture = yes }
@@ -3767,113 +3773,8 @@ country_event = {
 			militancy = 4
 			consciousness = 3
 		}
-		any_owned = {
-			limit = {
-				OR = {
-					is_core = SLV
-					is_core = ROM
-					is_core = SER
-					is_core = CRO
-				}
-			}
-			remove_province_modifier = nationalist_agitation
-			add_province_modifier = {
-				name = nationalist_agitation
-				duration = 1095
-			}
-		}
 	}
 }
-
-country_event = {
-	id = 10227
-	title = "EVTNAME10227" #The Hungarian Question
-	desc = "EVTDESC10227"
-	picture = "administration"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT10227OPTA"
-		diplomatic_influence = {
-			who = HUN
-			value = -100
-		}
-		any_pop = {
-			limit = { is_primary_culture = yes }
-			militancy = -6
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = romanian
-				location = { is_core = ROM }
-			}
-			militancy = 6
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = polish
-				location = { is_core = POL }
-			}
-			militancy = 6
-		}
-		ai_chance = {
-			factor = 75
-		}
-	}
-
-	option = {
-		name = "EVT10227OPTB"
-		set_country_flag = austria_let_hungary_go
-		prestige = -25
-		badboy = -2
-		relation = {
-			who = HUN
-			value = 100
-		}
-		diplomatic_influence = {
-			who = HUN
-			value = 100
-		}
-		any_pop = {
-			limit = { is_primary_culture = yes }
-			scaled_militancy = {
-				issue = jingoism
-				factor = 6
-			}
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = romanian
-				location = { is_core = ROM }
-			}
-			militancy = 8
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = polish
-				location = { is_core = POL }
-			}
-			militancy = 8
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					is_core = POL
-					is_core = ROM
-				}
-			}
-			add_province_modifier = {
-				name = nationalist_agitation
-				duration = 1095
-			}
-		}
-		ai_chance = {
-			factor = 25
-		}
-	}
-}
-
 
 # Prussian Constitutional Reform
 country_event = {

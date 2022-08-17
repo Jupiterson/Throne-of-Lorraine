@@ -1,0 +1,85 @@
+#Silesian provinces
+country_event = {
+	id = 100183
+	title = "Our Exclave"
+	desc = "Our exclave needs home rule"
+	picture = "crete_revolt"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAX
+		NOT = { 682 = { owned_by = THIS } }
+		owns = 632
+		owns = 688
+		war = no
+		NOT = { exists = SLS }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
+
+	option = {
+		name = "Crush them!"
+		any_owned = {
+			limit = { 
+			province_id = 632
+			province_id = 688
+			}
+			secede_province = SLS 
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+}
+
+#Provencial provinces
+country_event = {
+	id = 100192
+	title = "Their Exclave"
+	desc = "Their exclave needs our rule"
+	picture = "crete_revolt"
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { 467 = { owned_by = THIS } }
+		owns = 3432
+		owns = 470
+		owns = 461
+		owns = 449
+		war = no
+		ai = yes
+		NOT = { exists = SLS }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+	}
+
+	option = {
+		name = "Annex"
+		any_owned = {
+			limit = { 
+			province_id = 467
+			}
+			secede_province = THIS 
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+}

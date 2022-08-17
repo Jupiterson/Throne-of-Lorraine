@@ -35,6 +35,55 @@ country_event = {
 		}
 	}
 }
+#stolen from GFM
+country_event = {
+    id = 123641
+    title = "More Infamy Reduction"
+    desc = "You have taken the option to increase infamy reduction. To what level do you wish to set it?"
+    fire_only_once = yes
+	is_triggered_only = yes
+	picture = "infamy"
+    option = {
+        name = "I'd like to have -0.05 more infamy reduction."
+        any_country = {
+			add_country_modifier = {
+                name = lower_infamy_a
+				duration = -1
+			}
+        }
+		add_country_modifier = { name = lower_infamy_a duration = -1 }
+	}
+    option = {
+        name = "-0.1 more is the way to go."
+        any_country = {
+			add_country_modifier = {
+                name = lower_infamy_b
+				duration = -1
+			}
+        }
+		add_country_modifier = { name = lower_infamy_b duration = -1 }
+	}
+    option = {
+        name = "Let's go ham with -0.15"
+        any_country = {
+			add_country_modifier = {
+                name = lower_infamy_c
+				duration = -1
+			}
+        }
+		add_country_modifier = { name = lower_infamy_c duration = -1 }
+	}
+    option = {
+        name = "Just disable imfamy"
+        any_country = {
+			add_country_modifier = {
+                name = lower_infamy_d
+				duration = -1
+			}
+        }
+		add_country_modifier = { name = lower_infamy_d duration = -1 }
+	}
+}
 
 country_event = {
 	id = 123465
@@ -3041,28 +3090,6 @@ country_event = {
 			}
 			reduce_pop = 0.7
 		}
-	}
-}
-country_event = {
-	id = 123562
-	title = "The Eure Expedition"
-	desc = "The Eure, a French dispatch boat, is being sent to finalize our claims to the Kerguelen islands."
-	fire_only_once = yes
-	picture = "kerguelen"
-	mean_time_to_happen = { months = 3 }
-	trigger = {
-		3414 = { empty = yes }
-		year = 1893
-		OR = {
-			tag = FRR
-			tag = FRZ
-			tag = BOR
-			tag = VIC
-		}
-	}
-	option = {
-		name = "Glory to the French Empire!"
-		3414 = { secede_province = THIS }
 	}
 }
 country_event = {

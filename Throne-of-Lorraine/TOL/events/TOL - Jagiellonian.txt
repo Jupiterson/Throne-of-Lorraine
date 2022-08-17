@@ -145,7 +145,7 @@ country_event = {
         }
         prestige = 25
 		relation = { who = POL value = 400 }
-        government = absolute_monarchy
+        government = absolute_empire
         ruling_party_ideology = reactionary
         political_reform = none_voting
         political_reform = party_appointed
@@ -179,4 +179,75 @@ country_event = {
             factor = 10
         }
     }
+}
+
+#Hungary is defeated
+country_event = {
+
+	id = 100181
+	title = "EVTNAME100181"
+	desc = "EVTDESC100181"
+	picture = "unite"
+
+	trigger = {
+	    tag = POL
+		HUN = { vassal_of = THIS }
+		war = no
+		NOT = {
+		has_global_flag = no_jagiellonian_hun
+		}
+	}
+
+	mean_time_to_happen = {
+		 days = 3
+	}
+
+	immediate = {
+	HUN = { government = colonial_company }
+	}
+
+	option = {
+		name = "Rush through reform, reunite Poland-Hungary"
+		inherit = HUN
+		POL = {
+					all_core = { add_core = PHC }
+				}
+				
+	    HUN = {
+					all_core = { add_core = PHC }
+				}
+		add_accepted_culture = hungarian
+		change_tag = PHC 
+		capital = 703		
+		badboy = 10	
+		
+	    ai_chance = {
+            factor = 75
+        }
+	}
+	
+		option = {
+		name = "Let's punish Hungary for what they did."
+		HUN = {
+		any_owned = {
+		limit = { OR = { is_core = SIE is_core = POL is_core = SLV } }
+		secede_province = POL
+		}
+        }	
+        badboy = 5		
+
+        ai_chance = {
+            factor = 24
+        }		
+	}
+	
+	option = {
+		name = "The war weakened them enough."
+		prestige = 20
+        badboy = -5		
+		
+	     ai_chance = {
+            factor = 1
+        }
+	}
 }

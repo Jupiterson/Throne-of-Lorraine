@@ -53,7 +53,35 @@
 				1711 = { secede_province = TIN add_core = TIN }
 				1718 = { secede_province = TIN add_core = TIN }
 				1719 = { secede_province = TIN add_core = TIN }
-				1807 = { secede_province = TIN add_core = TIN }				
+				1807 = { secede_province = TIN add_core = TIN }	
+      #Morocco
+        1779 = { add_core = MOR }
+		1781 = { add_core = MOR }
+		1782 = { add_core = MOR }
+		1801 = { add_core = MOR }
+		3430 = { add_core = MOR }
+		3431 = { add_core = MOR }	  
+		1775 = { add_core = MOR }	
+		1696 = { add_core = MOR }
+			1773 = { add_core = MOR }
+			1774 = { add_core = MOR }
+			1716 = { add_core = MOR }
+			1722 = { add_core = MOR }
+			2609 = { add_core = MOR }
+			1801 = { add_core = MOR }
+			1802 = { add_core = MOR }
+			1803 = { add_core = MOR }
+			1804 = { add_core = MOR }
+			1805 = { add_core = MOR }
+			3430 = { add_core = MOR }
+			3431 = { add_core = MOR }
+			1782 = { add_core = MOR }
+			1781 = { add_core = MOR }
+			1775 = { add_core = MOR }
+			1776 = { add_core = MOR }
+			1777 = { add_core = MOR }
+			1778 = { add_core = MOR }
+			1779 = { add_core = MOR }
 			TIN = { all_core = { secede_province = TIN } }
 			TIN = { country_event = 100118 }
 		    set_global_flag = tiniri
@@ -83,7 +111,35 @@
 				1711 = { secede_province = TIN add_core = TIN }
 				1718 = { secede_province = TIN add_core = TIN }
 				1719 = { secede_province = TIN add_core = TIN }
-				1807 = { secede_province = TIN add_core = TIN }				
+				1807 = { secede_province = TIN add_core = TIN }
+      #Morocco
+        1779 = { add_core = MOR }
+		1781 = { add_core = MOR }
+		1782 = { add_core = MOR }
+		1801 = { add_core = MOR }
+		3430 = { add_core = MOR }
+		3431 = { add_core = MOR }	
+        1775 = { add_core = MOR }	
+            1696 = { add_core = MOR }
+			1773 = { add_core = MOR }
+			1774 = { add_core = MOR }
+			1716 = { add_core = MOR }
+			1722 = { add_core = MOR }
+			2609 = { add_core = MOR }
+			1801 = { add_core = MOR }
+			1802 = { add_core = MOR }
+			1803 = { add_core = MOR }
+			1804 = { add_core = MOR }
+			1805 = { add_core = MOR }
+			3430 = { add_core = MOR }
+			3431 = { add_core = MOR }
+			1782 = { add_core = MOR }
+			1781 = { add_core = MOR }
+			1775 = { add_core = MOR }
+			1776 = { add_core = MOR }
+			1777 = { add_core = MOR }
+			1778 = { add_core = MOR }
+			1779 = { add_core = MOR }		
 			TIN = { all_core = { secede_province = TIN } }
 			TIN = { country_event = 100118 }
 		    set_global_flag = tiniri
@@ -120,7 +176,14 @@ country_event = {
 		}
 		1781 = { secede_province = TIN add_core = TIN }	
 		MGH = { all_core = { add_core = THIS } } 
-		TIN = { all_core = { limit = { empty = yes } secede_province = THIS } }  		
+		TIN = { all_core = { limit = { empty = yes } secede_province = THIS } }  
+        any_owned = {
+			limit = {
+			is_core = MAS
+			}
+			add_core = MOR
+			
+		}			
 		add_country_flag = can_ignore_cultural_core
 		add_country_flag = exteme_assimilation
 		add_country_flag = theocratic_inetgration
@@ -374,6 +437,120 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = 100185
+	title = "EVTNAME99890"
+	desc = "EVTDESC99890"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = TIN
+		has_recently_lost_war = yes
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = "EVT99800OPTA"
+		any_owned = {
+			limit = {
+			OR = {
+				is_core = FOO
+				is_core = MOR
+				}
+			}
+			secede_province = MOR
+			add_core = MOR
+			
+		}
+		any_owned = {
+			limit = {
+			OR = {
+				is_core = KNG
+				is_core = ASH
+				is_core = MAS
+				}
+			}
+			secede_province = TOU
+			add_core = TOU
+		}	
+        1718 = { add_core = ALD }
+		1711 = { add_core = ALD }		
+		any_owned = {
+			limit = {
+			OR = {
+				is_core = ALD
+				is_core = TRI
+				is_core = TUN
+				is_core = RGA
+				is_core = DAM
+				is_core = MGH
+				}
+			}
+			secede_province = ALD
+			add_core = ALD
+			
+		}
+		
+		any_owned = {
+			limit = {
+			is_core = IFE
+			}
+			secede_province = IFE
+			
+		}
+		
+		any_owned = {
+			limit = {
+			continent = europe
+			}
+			secede_province = ADU
+			add_core = ADU
+			
+		}
+		
+		any_country = {
+			limit = {
+				any_core = { owned_by = THIS }
+				NOT = { OR = { tag = MGH } }
+			}
+			country_event = 100186
+		}
+		
+	change_tag_no_core_switch = MOR
+	TIN = {			
+		any_owned = {
+			limit = {
+			owned_by = TIN
+			}
+			secede_province = XXX
+			
+		}		
+	}
+	}
+	
+}	
+
+
+#release event
+country_event = {
+	id = 100186
+	title = "EVTNAME36971"
+	desc = "EVTDESC36971"
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Let's be free"
+		FROM = { release = THIS } 
+	}
+}
+
 ##############
 #SOUTH AFRICA#
 ##############
@@ -384,7 +561,7 @@ country_event = {
 
 	trigger = {
             year = 1841
-			capital = 2100		
+			has_country_flag = xhosa_country		
 	}
 
 	fire_only_once = yes
@@ -403,11 +580,17 @@ country_event = {
                 	militancy = -5}
 		set_global_flag = xhosaprophet
 		set_country_flag = xhosaprophet
+		ai_chance = {
+			factor = 50
+		}
 	}
 	option = {
 		name = "xhosaprophet1_option2"
 		any_pop = {consciousness = -5 
 		           militancy = 5}
+		 ai_chance = {
+			factor = 50
+		}
 	}
 	}
 	
@@ -443,7 +626,7 @@ country_event = {
 
 	trigger = {
             year = 1845
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
 	}
 
@@ -469,8 +652,10 @@ country_event = {
 
 	trigger = {
             year = 1849
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
+			exists = ZUL
+	        exists = XHO
 	}
 
 	fire_only_once = yes
@@ -511,15 +696,20 @@ country_event = {
 		name = "xhosaprophet5_option1"
 		cattle = -10 
 		war = { target = XHO
-                attacker_goal = { casus_belli = conquest_low }
+                attacker_goal = { casus_belli = conquest_any }
   				defender_goal = { casus_belli = status_quo }
-		badboy = -12		
 	}
+	ai_chance = {
+			factor = 80
+		}
 	}
 		option = {
 		name = "xhosaprophet5_option2"
         any_pop = {militancy = 5}
 		cattle = -10
+		ai_chance = {
+			factor = 20
+		}
 	}
 	}
 	
@@ -529,7 +719,7 @@ country_event = {
 
 	trigger = {
             year = 1853
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
 	}
 
@@ -556,7 +746,7 @@ country_event = {
 
 	trigger = {
             year = 1858
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
 	}
 
@@ -582,7 +772,7 @@ country_event = {
 
 	trigger = {
             year = 1870
-			capital = 2100	
+			has_country_flag = xhosa_country	
 			has_global_flag = xhosaprophet
 	}
 
@@ -602,7 +792,7 @@ country_event = {
 	}
 	}
 	
-			country_event = {
+country_event = {
 
 	id = 50008
     is_triggered_only = yes
@@ -615,12 +805,643 @@ country_event = {
 	option = {
 		name = "xhosaprophet9_option1"   
         money = 25000
-		FROM = { money = -25000
-		         2049 = { secede_province = FROM }
-				} 
+		FROM = {
+			money = -25000
+		    2049 = { secede_province = FROM }
+		} 
 	}
-		option = {
+	
+	option = {
 		name = "xhosaprophet9_option2"   
-                relation = { who = FROM value = -100
+        relation = { who = FROM value = -100 }
+	}
+}
+
+	country_event = {
+
+	id = 50009
+
+	trigger = {
+            year = 1858
+			tag = XHO
+			NOT = { has_global_flag = xhosaprophet }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 18
+	}
+
+	title = "xhosaprophet10_title"
+	desc = "xhosaprophet10_desc"
+	picture = "xhosa_chief"
+
+	option = {
+		name = "xhosaprophet10_option1"   
+        country_event = {
+	            id = 50011
+	            days = 6
+}
 	}
 	}
+	
+	country_event = {
+
+	id = 50010
+
+	trigger = {
+            year = 1858
+			tag = NGU
+			has_country_flag = xhosa_country
+			NOT = { has_global_flag = xhosaprophet }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 18
+	}
+
+	title = "xhosaprophet11_title"
+	desc = "xhosaprophet11_desc"
+	picture = "xhosa_chief"
+
+	option = {
+		name = "xhosaprophet11_option1"   
+        any_pop = { consciousness = 3 }  
+	}
+	}
+	
+	country_event = {
+
+	id = 50011
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "xhosacollapse_title"
+	desc = "xhosacollapse_desc"
+	picture = "xhosa_war"
+	
+	immediate = {
+		       2098 = { add_core = RHA }
+			   2097 = { add_core = RHA }
+			   2099 = { add_core = RHA }
+               2096 = { add_core = NDL }
+               2100 = { add_core = GCA }
+               2111 = { add_core = GCA }
+	}
+
+	option = {
+		name = "xhosacollsapse_option1"
+             change_tag = RHA		
+               any_owned = {
+			     limit = {
+				is_core = NDL
+			}
+			secede_province = NDL
+			remove_core = THIS
+		}
+		         any_owned = {
+			limit = {
+				is_core = GCA 
+			}
+			secede_province = GCA
+			remove_core = THIS
+		}
+		2111 = { remove_core = THIS }		  		   
+	}
+	option = {
+		name = "xhosacollsapse_option2"    
+ 	          change_tag = GCA		
+               any_owned = {
+			     limit = {
+				is_core = NDL
+			}
+			secede_province = NDL
+			remove_core = THIS
+		}
+		         any_owned = {
+			limit = {
+				is_core = RHA
+			}
+			secede_province = RHA
+			remove_core = THIS
+		}
+		RHA = { capital = 2098 }
+	}
+	option = {
+		name = "xhosacollsapse_option3"     
+           	   change_tag = NDL		
+               any_owned = {
+			     limit = {
+				is_core = RHA
+			}
+			secede_province = RHA
+			remove_core = THIS
+		}
+		RHA = { capital = 2098 }
+		         any_owned = {
+			limit = {
+				is_core = GCA
+			}
+			secede_province = GCA
+			remove_core = THIS
+		}
+		2111 = { remove_core = THIS }
+	}
+	}
+	
+	country_event = {
+
+	id = 50012
+
+	trigger = {
+            year = 1860
+			OR  = { tag = SCO
+			        tag = ENG }
+			owns = 2087
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 68
+	}
+
+	title = "datiach_tension_title"
+	desc = "datiach_tension_desc"
+	picture = "sepoy"
+
+	option = {
+		name = "datiach_tension_option1"   
+		any_pop = {
+			limit = { has_pop_culture = griqua 
+			}
+		militancy = 8 
+	    consciousness = 5 
+	    }
+		country_event = {
+	            id = 50013
+	            days = 246
+        }
+	}
+}
+	
+	country_event = {
+
+	id = 50013
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "datiach_demands_title"
+	desc = "datiach_demands_desc"
+	picture = "storming_palace_communists"
+
+	option = {
+		name = "datiach_demands_option1"
+           random_list = {
+			80 = { country_event = { id = 50014 days = 1 }		  		    }
+			20 = { any_owned = {
+			    limit = {
+				is_core = DTI
+			}}
+			secede_province = DTI 
+			war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}
+		}    		   
+	}
+	ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "datiach_demands_option2"    
+               any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		}
+		war = { target = DTI
+                attacker_goal = { casus_belli = conquest_any}
+  				defender_goal = { casus_belli = become_independent }		
+	          }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "datiach_demands_option3"   
+               any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		}
+		war = { target = DTI
+                attacker_goal = { casus_belli = conquest_any}
+  				defender_goal = { casus_belli = become_independent }		
+	          }
+        change_tag_no_core_switch = DTI
+	}
+}
+
+
+	country_event = {
+
+	id = 50014
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "datiach_negotiations_title"
+	desc = "datiach_negotiations_desc"
+	picture = "treaty"
+
+	option = {
+		name = "datiach_negotiations_option1"
+           random_list = {
+			40 = { country_event = { id = 50016 days = 1 }}
+			60 = { any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		} war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}}
+		}
+            ai_chance = {
+			factor = 50
+		}		
+	}
+	option = {
+		name = "datiach_negotiations_option2"    
+               random_list = {
+            5 = { country_event = { id = 50015 days = 1 }}
+			95 = { any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		} war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}}
+		    }    		   
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+    country_event = {
+
+	id = 50015
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	title = "datiach_defeat_title"
+	desc = "datiach_defeat_desc"
+	picture = "treaty"
+
+	option = {
+		name = "datiach_defeat_option1"   
+		any_pop = {
+			limit = { has_pop_culture = griqua 
+			}
+	    consciousness = 8 
+	         }
+	    }
+    }
+	
+	country_event = {
+
+	id = 50016
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	title = "datiach_compromise_title"
+	desc = "datiach_compromise_desc"
+	picture = "treaty"
+
+	option = {
+		name = "datiach_compromise_option1"   
+		any_pop = {
+			limit = { has_pop_culture = griqua 
+			}
+	    consciousness = -3
+	         }
+			 SAF = { add_accepted_culture = griqua }
+			 SAF = { all_core = { remove_core = DTI } }
+	    }
+    }
+	
+	country_event = {
+    id = 50017
+	title = "neamhnaid_title"
+	desc = "neamhnaid_desc"
+    news = yes
+    news_title = "neamhnaid"
+    news_desc_long = "neamhnaid_NEWS_LONG"
+    news_desc_medium = "neamhnaid_NEWS_MEDIUM"
+    news_desc_short = "neamhnaid_NEWS_SHORT"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "datiann_surrender_option1"
+        prestige = -50
+        DTI = { all_core = { remove_core = SAF } }
+        random_country = {
+            limit = {
+                war_with = THIS
+                controls = 2087
+            }
+            end_war = THIS
+            country_event = 50018
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    primary_culture = griqua
+                    alliance_with = FROM
+                }
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+		ai_chance = {
+			factor = 50
+		}
+    }
+
+    option = {
+        name = "datiann_surrender_option2"
+        prestige = -25
+		DTI = { all_core = { remove_core = SAF } }
+        casus_belli = {
+                target = DTI
+                type = conquest_any
+                months = 60
+            }
+        random_country = {
+            limit = {
+                war_with = THIS
+                controls = 2087
+            }
+            end_war = THIS
+            country_event = 50019
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    primary_culture = griqua
+                    alliance_with = FROM
+                }
+                war_with = THIS
+            }
+            end_war = THIS
+
+        }
+		ai_chance = {
+			factor = 50
+		}
+    }
+}
+
+	country_event = { 
+    id = 50018
+	title = "datiann_recc_title"
+	desc = "datiann_recc_desc"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "datiann_recc_option1"
+        prestige = 25
+        FROM = {
+            any_owned = {
+                limit = { is_core = DTI }
+                secede_province = THIS
+            }
+            relation = { who = THIS value = 200 }
+            diplomatic_influence = { who = THIS value = 50 }
+        }
+        any_pop = {
+            limit = { has_pop_culture = scottish }
+            consciousness = 2
+        }
+        any_country = {
+            limit = {
+                alliance_with = FROM
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+}
+
+country_event = {
+    id = 50019
+    picture = "treaty"
+	title = "datiann_anger_title"
+	desc = "datiann_anger_desc"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "datiann_anger_option1"
+        prestige = 25
+        FROM = {
+            any_owned = {
+                limit = { is_core = DTI }
+                secede_province = THIS
+            }
+            casus_belli = {
+                target = THIS
+                type = cut_down_to_size
+                months = 240
+            }
+            casus_belli = {
+                target = DTI
+                type = cut_down_to_size
+                months = 240
+            }
+        }
+        any_pop = {
+            limit = { has_pop_culture = scottish }
+            militancy = 8
+            consciousness = 4
+        }
+        any_country = {
+            limit = {
+                alliance_with = FROM
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+}
+
+	country_event = { 
+    id = 50020
+	title = "suez_rubha_merchants_title"
+	desc = "suez_rubha_merchants_desc"
+    picture = "Suez3"
+
+    trigger = {
+            has_country_modifier = german_cape_merchants
+			has_global_flag = suez_canal_built
+			ai = yes
+	}
+
+    option = {
+        name = "suez_rubha_merchants_option1"
+        remove_country_modifier = german_cape_merchants 
+		set_global_flag = cape_merchants_removed
+    }
+}
+
+    country_event = { 
+    id = 50021
+	title = "rubha_merchants_transfer_title"
+	desc = "rubha_merchants_transfer_desc"
+    picture = "WilhelmIV"
+
+    trigger = {
+            owns = 2087
+			NOT = { has_global_flag = cape_merchants_removed }
+			NOT = { has_country_modifier = german_cape_merchants }
+	}
+
+    option = {
+        name = "rubha_merchants_transfer_option1"
+        any_country = {
+            limit = {
+                has_country_modifier = german_cape_merchants
+            }
+            remove_country_modifier = german_cape_merchants
+        }
+		add_country_modifier = {
+				name = german_cape_merchants
+				duration = 36500 }
+    }
+}
+
+country_event = { 
+    id = 50022
+	title = "rubha_merchant_solving_title"
+	desc = "rubha_merchant_solving_desc"
+    picture = "rubhach_merchants"
+
+    is_triggered_only = yes
+	
+    option = {
+        name = "rubha_merchants_solving_option1"
+        treasury = -30000
+		SAF = { add_accepted_culture = low_german }
+		remove_country_modifier = german_cape_merchants
+		any_pop = {
+            limit = { has_pop_culture = low_german }
+            consciousness = -2
+        }
+		ai_chance = {
+			factor = 30
+		}
+    }
+	
+	option = {
+        name = "rubha_merchants_solving_option2"
+        treasury = 10000
+		remove_country_modifier = german_cape_merchants
+		any_pop = {
+            limit = { has_pop_culture = low_german }
+            consciousness = 3
+        }
+		ai_chance = {
+			factor = 60
+		}
+    }
+	
+	option = {
+        name = "rubha_merchants_solving_option3"
+        treasury = 25000
+		remove_country_modifier = german_cape_merchants
+		ENG_2087 = { 
+		any_pop = {
+            limit = { has_pop_culture = low_german }
+	        reduce_pop = 0.40
+            consciousness = 8
+			militancy = 8
+            }
+		}
+		badboy = 5
+		ai_chance = {
+			factor = 10
+		}
+    }
+}
+
+country_event = {
+	id = 50023
+	title = "south_africa_baby_boom_title"
+	desc = "south_africa_baby_boom_desc"
+    picture = "rubhach_merchants"
+	fire_only_once = yes
+	
+	trigger = {
+	year = 1888
+    OR = {
+	    owns = 2087
+        } 
+	}
+
+	mean_time_to_happen = { months = 7 }
+
+	option = {
+		name = south_african_baby_boom_option1
+		XHO = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		BSH = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		TSW = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		ZUL = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		BAP = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		SHO = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		GAZ = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		ZAF = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		MLW = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		
+			
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

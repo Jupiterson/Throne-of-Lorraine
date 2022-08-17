@@ -2,15 +2,15 @@ capital = 1955
 primary_culture = forest_bantu
 culture = east_kwa
 religion = animist
-government = democracy
+government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.10
 non_state_culture_literacy = 0.01
-civilized = yes
+civilized = no
 
 # Political reforms
-slavery = nno_slavery
+slavery = no_slavery
 upper_house_composition = appointed
 vote_franschise = none_voting
 public_meetings = no_meeting
@@ -40,8 +40,11 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
-set_country_flag = animist_country
+education_reform = yes_education_reform
+admin_reform = yes_admin_reform
+western_shipyards = yes_western_shipyards
 
+set_country_flag = catholic_country
 ruling_party = OYO_conservative
 upper_house = {
 	fascist = 0

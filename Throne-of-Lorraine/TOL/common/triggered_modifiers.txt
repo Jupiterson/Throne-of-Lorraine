@@ -639,7 +639,7 @@ democratic_nation = {
 	ruling_party_support = 0.5
 	core_pop_militancy_modifier = -0.1
 	research_points_modifier = 0.05
-	global_population_growth = 0.01
+	global_population_growth = 0.001
 }
 social_reformed_nation = {
 		trigger = {
@@ -1557,4 +1557,19 @@ poland_starting_war = {
 	}
 	icon = 10
 	mobilisation_size = 2.5
+}
+
+pirate_sugar = {
+	trigger = {
+		or = {
+			province = 3309
+			province = 3319
+			province = 2214
+			province = 2215
+		}
+		
+	}
+	population_growth = -0.007
+	rgo_output = 1
+	
 }

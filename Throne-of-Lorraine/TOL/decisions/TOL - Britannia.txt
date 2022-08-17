@@ -2,93 +2,101 @@ political_decisions = {
 	form_britannia = {
 		picture = reform_the_uk
 		potential = {
-		NOT = { exists = ENG }
+			NOT = { exists = ENG }
+			NOT = { exists = CLT }
 			OR = {
 				NOT = { tag = SCO }
 				has_country_flag = gaelic_assimilation
 			}
+
 			OR = {
+			AND = {
+				is_culture_group = britannian
 				ai = no
+				NOT = { tag = SCO }
+				}
 				OR = {
 					AND = {
 						has_country_flag = britannia_ai
 						ai = no
 					}
-				AND = {
-				OR = {
-					ENL = {
-						all_core = {
-							OR = {
-								owned_by = THIS
-								owner = {
-									in_sphere = THIS
-									OR = {
-										is_vassal = no
-										vassal_of = THIS
-									}
-									war = no
-									is_greater_power = no
-								}
-							}
-						}
-					}
-					UOW = {
-						all_core = {
-							OR = {
-								owned_by = THIS
-								owner = {
-									in_sphere = THIS
-									OR = {
-										is_vassal = no
-										vassal_of = THIS
-									}
-									war = no
-									is_greater_power = no
-								}
-							}
-						}
-					}
-				}
-				SCO = {
-					all_core = {
+					AND = {
 						OR = {
-							owned_by = THIS
-							owner = {
-								in_sphere = THIS
-								OR = {
-									is_vassal = no
-									vassal_of = THIS
+							ENL = {
+								all_core = {
+									OR = {
+										owned_by = THIS
+										owner = {
+											in_sphere = THIS
+											OR = {
+												is_vassal = no
+												vassal_of = THIS
+											}
+											war = no
+											is_greater_power = no
+										}
+									}
 								}
-								war = no
-								is_greater_power = no
-							}   
+							}
+							UOW = {
+								all_core = {
+									OR = {
+										owned_by = THIS
+										owner = {
+											in_sphere = THIS
+											OR = {
+												is_vassal = no
+												vassal_of = THIS
+											}
+											war = no
+											is_greater_power = no
+										}
+									}
+								}
+							}
 						}
-					}
-				}				   
-				WHA = {
-					all_core = {
-						OR = {
-							owned_by = THIS
-							owner = {
-								in_sphere = THIS
+						SCO = {
+							all_core = {
 								OR = {
-									is_vassal = no
-									vassal_of = THIS
+									owned_by = THIS
+									owner = {
+										in_sphere = THIS
+										OR = {
+											is_vassal = no
+											vassal_of = THIS
+										}
+										war = no
+										is_greater_power = no
+									}   
 								}
-								war = no
-								is_greater_power = no
+							}
+						}				   
+						WHA = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									owner = {
+										in_sphere = THIS
+										OR = {
+											is_vassal = no
+											vassal_of = THIS
+										}
+										war = no
+										is_greater_power = no
+									}
+								}
 							}
 						}
 					}
-				}
 				}
 			}
-			capital_scope = { continent = europe }
-			NOT = { has_country_flag = post_colonial_country }
-			is_culture_group = britannian
-			NOT = { exists = ENG }
-			NOT = { tag = CLT }
-			NOT = { tag = UPB }
+				capital_scope = { continent = europe }
+				NOT = { has_country_flag = post_colonial_country }
+				is_culture_group = britannian
+				NOT = { exists = ENG }
+				NOT = { tag = CLT }
+				NOT = { tag = UPB }
+			
 		}
 
 		allow = {

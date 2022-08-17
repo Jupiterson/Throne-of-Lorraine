@@ -28,7 +28,7 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
-			badboy = 10
+			badboy = 5
 		}
 		ai_will_do = {
 			factor = 1 
@@ -43,11 +43,44 @@ political_decisions = {
 				tag = PHC
 			}
 			NOT = { has_country_flag = ill_union }
-			has_country_flag = illyrian_rev
+			NOT = { exists = ILL exists = YUG }
 		}
 
 		allow = {
 		state_n_government = 1	
+		ILL = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+		BUL = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+		SER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
 		}
 
 		effect = {
@@ -65,6 +98,12 @@ political_decisions = {
 				}
 			}
 			
+			BUL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			
 			SLO = {
 				all_core = {
 					add_core = THIS
@@ -72,6 +111,7 @@ political_decisions = {
 			}
 			add_accepted_culture = serb
 			add_accepted_culture = slovene
+			add_accepted_culture = bulgarian
 			add_accepted_culture = illyrian
 			
 			any_pop = {
@@ -100,12 +140,37 @@ political_decisions = {
 			
 		}
 	}
+
+	claim_galicia_hun = {
+		picture = unite_with_poland
+		potential = {
+			tag = HUN
+			NOT = { has_country_flag = galicia_claimed }
+			has_country_flag = down_the_danube
+		}
+		allow = {
+			exists = yes
+			NOT = { is_vassal = yes }
+			war_policy = jingoism
+		}
+		effect = {
+			set_country_flag = galicia_claimed
+			AUS_702 = { add_core = THIS }
+			AUS_662 = { add_core = THIS }
+			RUS_715 = { add_core = THIS }
+			badboy = 5
+		}
+		ai_will_do = {
+			factor = 1 
+		}
+	}
+	
 	
   reconsile_serbia = {
 		picture = knights_hospitaller_paul
 		potential = {
 			tag = HUN
-			NOT = { has_country_flag = serb_stuff }
+			NOT = { has_country_flag = serb_stuff has_country_flag = ill_union }
 		}
 
 		allow = {

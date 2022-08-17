@@ -1,0 +1,19 @@
+name = "The Arbota Expidition"
+
+1835.11.10 = {
+	add_attacker = SCO
+	add_defender = GAZ
+
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+	war_goal = {
+		casus_belli = conquest_any
+		actor = SCO
+		receiver = GAZ
+	}
+
+}
+

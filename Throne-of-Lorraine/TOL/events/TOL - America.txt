@@ -70,7 +70,10 @@ country_event = {
 	option = {
 		name = "Sad times..."
 		prestige = -5
-		any_owned = { limit = { region = MEX_100 } secede_province = XXX }
+		any_owned = { limit = { is_core = ZUN } secede_province = ZUN remove_core = TEX }
+		any_owned = { limit = { is_core = NAV } secede_province = NAV remove_core = TEX }
+		any_owned = { limit = { is_core = HOP } secede_province = HOP remove_core = TEX }
+		any_owned = { limit = { is_core = OOD } secede_province = OOD remove_core = TEX }
 	}
 }
 
@@ -423,4 +426,361 @@ country_event = {
 		THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }  	
 	}
 }
+
+#Akino Constitutional ciris
+country_event = {
+	id = 100187
+	title = "EVTNAME11380019" #Constitutional Crisis - in HMS Government
+	desc = "EVTDESC11380024"
+	picture = "Unite"
+	is_triggered_only = yes
+
+	trigger = {
+		tag = AKI
+		
+		OR = {
+		
+		#angry people
+		any_pop = {
+			has_pop_culture = american_german 
+			militancy = 6 
+		}
+		
+		#recently lost war
+		has_recently_lost_war = yes
+		
+		#dumb election
+		AND = {
+		election = no
+		OR = {
+			AND = {
+				has_country_flag = tory_election_win
+				NOT = { ruling_party_ideology = conservative }
+			}
+			AND = {
+				has_country_flag = socialist_election_win
+				NOT = { ruling_party_ideology = socialist }
+			}
+			AND = {
+				has_country_flag = liberal_election_win
+				NOT = { ruling_party_ideology = liberal }
+			}
+			AND = {
+				has_country_flag = communist_election_win
+				NOT = { ruling_party_ideology = communist }
+			}
+			AND = {
+				has_country_flag = fascist_election_win
+				NOT = { ruling_party_ideology = fascist }
+			}
+			AND = {
+				has_country_flag = reactionary_election_win
+				NOT = { ruling_party_ideology = reactionary }
+			}
+			AND = {
+				has_country_flag = anarcho_liberal_election_win
+				NOT = { ruling_party_ideology = radical }
+			}
+		}
+		NOT = { has_country_flag = no_constitutional_crisis }
+		NOT = { has_country_flag = political_showdown }
+		NOT = { has_country_flag = election_initialized }
+		   }
+		   }
+		}
+		
+	
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+
+  option = {
+		name = "A civil war is brewing"
+		prestige = -10
+		
+		#German Coalition
+		#NEN 
+        release = NEN
+		create_vassal = NEN	
+		create_alliance = NEN
+		
+		#QUE
+        release = QUE
+		create_vassal = QUE	
+		create_alliance = QUE
+		
+		#ALQ
+        release = ALQ
+		create_vassal = ALQ	
+		create_alliance = ALQ
+		
+		#VIN 
+        release = VIN
+		create_vassal = VIN	
+		create_alliance = VIN
+		
+		any_owned = {
+			limit = { 
+			is_core = QUE
+			}
+			secede_province = QUE 
+		}
+		
+		any_owned = {
+			limit = { 
+			is_core = VIN
+			}
+			secede_province = VIN 
+		}
+		
+		any_owned = {
+			limit = { 
+			is_core = ALQ
+			}
+			secede_province = ALQ 
+		}
+		
+		any_owned = {
+			limit = { 
+			is_core = NEN
+			}
+			secede_province = NEN 
+		}
+		
+		
+		#Native Coalition
+		
+		#NPU
+        release = NPU
+		
+		#WMA
+		release = WMA
+		NPU = {
+		create_vassal = WMA	
+		create_alliance = WMA
+		}
+		
+		#ILN
+		release = ILN
+		NPU = {
+		create_vassal = ILN	
+		create_alliance = ILN
+		}
+		
+		#SEE
+		release = SEE
+		NPU = {
+		create_vassal = SEE	
+		create_alliance = SEE
+		}
+		
+		#MIA
+		release = MIA
+		NPU = {
+		create_vassal = MIA	
+		create_alliance = MIA
+		}
+		
+		#HUR
+		release = HUR
+		NPU = {
+		create_vassal = HUR	
+		create_alliance = HUR
+		}
+		
+		#IRO
+		release = IRO
+		NPU = {
+		create_vassal = IRO	
+		create_alliance = IRO
+		}
+	
+	
+		AKI = { all_core = { add_core = NPU } }
+		
+    	war = {
+			target = NPU 
+			attacker_goal = { casus_belli = akino_cb }
+			defender_goal = { casus_belli = akino_cb }
+			call_ally = yes
+		}
+	}
+	
+	
+	  option = {
+		name = "Down with the Foreigners!"
+		prestige = -10
+		
+		#German Coalition
+		#NEN 
+        release = NEN
+		create_vassal = NEN	
+		create_alliance = NEN
+		
+		#QUE
+        release = QUE
+		create_vassal = QUE	
+		create_alliance = QUE
+		
+		#ALQ
+        release = ALQ
+		create_vassal = ALQ	
+		create_alliance = ALQ
+		
+		#VIN 
+        release = VIN
+		create_vassal = VIN	
+		create_alliance = VIN
+		
+		any_owned = {
+			limit = { 
+			is_core = QUE
+			}
+			secede_province = QUE 
+		}
+		
+		any_owned = {
+			limit = { 
+			is_core = VIN
+			}
+			secede_province = VIN 
+		}
+		
+		any_owned = {
+			limit = { 
+			is_core = ALQ
+			}
+			secede_province = ALQ 
+		}
+		
+		any_owned = {
+			limit = { 
+			is_core = NEN
+			}
+			secede_province = NEN 
+		}
+		
+		
+		#Native Coalition
+		
+		#NPU
+        release = NPU
+		
+		#WMA
+		release = WMA
+		NPU = {
+		create_vassal = WMA	
+		create_alliance = WMA
+		}
+		
+		#ILN
+		release = ILN
+		NPU = {
+		create_vassal = ILN	
+		create_alliance = ILN
+		}
+		
+		#SEE
+		release = SEE
+		NPU = {
+		create_vassal = SEE	
+		create_alliance = SEE
+		}
+		
+		#MIA
+		release = MIA
+		NPU = {
+		create_vassal = MIA	
+		create_alliance = MIA
+		}
+		
+		#HUR
+		release = HUR
+		NPU = {
+		create_vassal = HUR	
+		create_alliance = HUR
+		}
+		
+		#IRO
+		release = IRO
+		NPU = {
+		create_vassal = IRO	
+		create_alliance = IRO
+		}
+	
+	
+		AKI = { all_core = { add_core = NPU } }
+		
+    	war = {
+			target = NPU 
+			attacker_goal = { casus_belli = akino_cb }
+			defender_goal = { casus_belli = akino_cb }
+			call_ally = yes
+		}
+		change_tag_no_core_switch = NPU
+	}
+	
+
+}
+country_event = {
+	id = 100188
+	title = "Lost the War"
+	desc = "We lost the war of the League"
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 10
+	}
+
+	option = {
+		name = "fair well"
+		THIS = {
+		any_country = {
+				limit = {
+					vassal_of = THIS
+				}
+				annex_to = THIS
+			}
+		}
+		FROM = {
+		any_country = {
+				limit = {
+					vassal_of = THIS
+				}
+				annex_to = THIS
+			}
+		}
+		FROM = { inherit = THIS }
+		FROM = { country_event = 100189 }
+	}
+}
+	
+
+country_event = {
+	id = 100189
+	title = "We Won the War"
+	desc = "We won the war of the League"
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 10
+	}
+
+	option = {
+		name = "Very Nice"
+		
+		any_country = {
+				limit = {
+					vassal_of = THIS
+				}
+				annex_to = THIS
+			}
+		THIS = { inherit = FROM }
+	}
+}
+	
 

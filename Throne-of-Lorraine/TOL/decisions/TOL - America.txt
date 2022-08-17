@@ -1,30 +1,30 @@
 political_decisions = {
-	colonize_kannata_aki = {
-		picture = form_the_rcmp
-		potential = {
-			tag = AKI
-			NOT = { has_country_flag = kanatta }
-			is_vassal = no
-		}
-
-		allow = {
-			war = no			
-			empiricism = 1
-			state_n_government = 1
-			prestige = 30
-		}
-
-		effect = {
-			set_country_flag = kanatta
-			9 = { add_core = AKI }
-			2626 = { add_core = AKI }
-			2593 = { add_core = AKI }
-			37 = { add_core = AKI }
-			2595 = { add_core = AKI }
-			59 = { add_core = AKI }			
-			AKI = { all_core = { limit = { empty = yes } secede_province = THIS } }
-		}
-	}
+#	colonize_kannata_aki = {
+#		picture = form_the_rcmp
+#		potential = {
+#			tag = AKI
+#			NOT = { has_country_flag = kanatta }
+#			is_vassal = no
+#		}
+#
+#		allow = {
+#			war = no			
+#			empiricism = 1
+#			state_n_government = 1
+#			prestige = 30
+#		}
+#
+#		effect = {
+#			set_country_flag = kanatta
+#			9 = { add_core = AKI }
+#			2626 = { add_core = AKI }
+#			2593 = { add_core = AKI }
+#			37 = { add_core = AKI }
+#			2595 = { add_core = AKI }
+#			59 = { add_core = AKI }			
+#			AKI = { all_core = { limit = { empty = yes } secede_province = THIS } }
+#		}
+#	}
 	
 	claim_new_england = {
 		picture = german_tirol
@@ -51,46 +51,45 @@ political_decisions = {
    }
 
    
-	colonize_kannata_vel = {
-		picture = form_the_rcmp
-		potential = {
-			tag = VEL
-			NOT = { has_country_flag = kanatta }
-			is_vassal = no
-		}
-
-		allow = {
-			war = no			
-			empiricism = 1
-			state_n_government = 1
-			prestige = 30
-		}
-
-		effect = {
-			set_country_flag = kanatta
-			39 = { add_core = VEL }
-			38 = { add_core = VEL }
-			2596 = { add_core = VEL }
-			11 = { add_core = VEL }
-			31 = { add_core = VEL }
-			32 = { add_core = VEL }
-			23 = { add_core = VEL }
-			2598 = { add_core = VEL }
-			6 = { add_core = VEL }			
-			7 = { add_core = VEL }
-			48 = { add_core = VEL }
-			47 = { add_core = VEL }
-			2594 = { add_core = VEL }
-			2629 = { add_core = VEL }
-			18 = { add_core = VEL }
-			2597 = { add_core = VEL }
-			28 = { add_core = VEL }	
-			26 = { add_core = VEL }
-			27 = { add_core = VEL }			
-			VEL = { all_core = { limit = { empty = yes } secede_province = THIS } }
-		}
-	}
-	
+#	colonize_kannata_vel = {
+#		picture = form_the_rcmp
+#		potential = {
+#			tag = VEL
+#			NOT = { has_country_flag = kanatta }
+#			is_vassal = no
+#		}
+#
+#		allow = {
+#			war = no			
+#			empiricism = 1
+#			state_n_government = 1
+#			prestige = 30
+#		}
+#
+#		effect = {
+#			set_country_flag = kanatta
+#			39 = { add_core = VEL }
+#			38 = { add_core = VEL }
+#			2596 = { add_core = VEL }
+#			11 = { add_core = VEL }
+#			31 = { add_core = VEL }
+#			32 = { add_core = VEL }
+#			23 = { add_core = VEL }
+#			2598 = { add_core = VEL }
+#			6 = { add_core = VEL }			
+#			7 = { add_core = VEL }
+#			48 = { add_core = VEL }
+#			47 = { add_core = VEL }
+#			2594 = { add_core = VEL }
+#			2629 = { add_core = VEL }
+#			18 = { add_core = VEL }
+#			2597 = { add_core = VEL }
+#			28 = { add_core = VEL }	
+#			26 = { add_core = VEL }
+#			27 = { add_core = VEL }			
+#			VEL = { all_core = { limit = { empty = yes } secede_province = THIS } }
+#		}
+#	}
 	
 	
 	claim_freiland = {
@@ -146,7 +145,7 @@ political_decisions = {
 				war = {
 					target = NAF
 					attacker_goal = { casus_belli = civil_war }
-					defender_goal = { casus_belli = status_quo }
+					defender_goal = { casus_belli = civil_war }
 				}
 			}
 			create_alliance = NAF
@@ -334,17 +333,15 @@ political_decisions = {
 		effect = {
 			set_global_flag = gewesten_formed
 			prestige = 10
-			#any_country = {
-			#	limit = {
-			#		OR = {
-			#			primary_culture = gek
-			#			primary_culture = veldlewer
-			#		}
-			#		all_core = { add_core = VEP }
-			#	}
-			#}
 			VEL = { all_core = { add_core = VEP } }
 			GKS = { all_core = { add_core = VEP } }
+			TEX = { all_core = { add_core = VEP } }
+			TEX_132 = {
+				remove_core = VEP
+			}
+			SPA_2209 = {
+				remove_core = VEP
+			}
 			add_accepted_culture = gek
 			add_accepted_culture = veldlewer
 			change_tag = VEP

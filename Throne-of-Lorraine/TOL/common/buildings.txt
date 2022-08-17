@@ -539,6 +539,27 @@ liquor_distillery = {
     pop_build_factory = yes
 }
 
+rum_distillery = {
+    type = factory
+
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 80
+        steel = 200
+        cement = 300
+    }
+    time = 182
+    visibility = yes
+    onmap = no
+
+    default_enabled = yes
+    production_type = rum_distillery
+    pop_build_factory = yes
+}
+
 winery = {
     type = factory
     on_completion = factory

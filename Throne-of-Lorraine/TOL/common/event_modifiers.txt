@@ -1360,6 +1360,11 @@ small_baby_boom = {
 	icon = 19
 }
 
+medium_baby_boom = {
+	population_growth = 0.003
+	icon = 19
+}
+
 baby_boom = {
 	population_growth = 0.005
 	icon = 19
@@ -4876,29 +4881,21 @@ french_terror = {
 #	war_exhaustion = 0.05
 	immigrant_push = 0.05
 	local_RGO_output = -0.5
-	pop_consciousness_modifier = 0.5
-	pop_militancy_modifier = 0.5
-	non_accepted_pop_consciousness_modifier = 0.05
-	non_accepted_pop_militancy_modifier = 0.05
+#	pop_consciousness_modifier = 0.5
+#	pop_militancy_modifier = 0.5
+#	non_accepted_pop_consciousness_modifier = 0.05
+#	non_accepted_pop_militancy_modifier = 0.05
 	local_ruling_party_support = -0.80
 	#goods_demand = -0.03
 	icon = 1
 }
 
-#stubborn_nobility = {
-#	global_immigrant_attract = -0.75
-#	global_population_growth = -0.0025
-#	diplomatic_points_modifier = -0.1
-#	assimilation_rate = -0.1
-#	badboy = 0.1
-#	war_exhaustion = 0.5
-# #   icon = 20
-#}
-
 nobility_fra = {
 	global_immigrant_attract = -0.75
 	global_population_growth = -0.0025
 	diplomatic_points_modifier = -0.1
+	global_pop_consciousness_modifier = 0.55
+	global_pop_militancy_modifier = 0.55
 	icon = 20
 }
 
@@ -4998,6 +4995,52 @@ tiniri_menace = {
 	icon = 15
 }
 
+the_bantu_empire = {
+	badboy = 0.05
+	mobilisation_size = 0.30
+	assimilation_rate = -0.5
+	pop_militancy_modifier = 0.3
+	pop_consciousness_modifier = -0.2
+	prestige = 0.1
+	diplomatic_points_modifier = -0.05
+	research_points_modifier = -0.25
+	icon = 15
+}
+
+the_bantu_empire_provs = {
+	assimilation_rate = -0.5
+	farm_rgo_size = -0.5
+	mine_rgo_size = -0.8
+	immigrant_attract = -0.5
+	immigrant_push = 0.35
+	life_rating = -0.45
+	population_growth = 0.004
+	icon = 15
+}
+
+meaning_of_life_discovered = { #(Four)
+	assimilation_rate = 0.5
+	farm_rgo_size = 0.5
+	mine_rgo_size = 0.8
+	immigrant_attract = 0.5
+	immigrant_push = -0.35
+	life_rating = 0.45
+	population_growth = 0.011
+	icon = 15
+}
+
+the_bantu_empire_recovers = {
+	badboy = -0.05
+	mobilisation_size = 0.50
+	assimilation_rate = 0.5
+	pop_militancy_modifier = -0.3
+	pop_consciousness_modifier = -0.4
+	prestige = 0.7
+	diplomatic_points_modifier = 0.45
+	research_points_modifier = 0.45
+	icon = 15
+}
+
 slavepopupdated = {
 	icon = 17
 }
@@ -5026,6 +5069,15 @@ the_slate_empire = {
 	min_tariff = 0.2
 	tariff_efficiency_modifier = 0.1
 	tax_efficiency = 0.05
+	icon = 9
+}
+
+Anglo_Welsh_Trade_Agreement = {
+	min_tariff = 0.2
+	tariff_efficiency_modifier = 0.15
+	badboy = -0.01
+	import_cost = -.05
+	non_accepted_pop_militancy_modifier = -0.01
 	icon = 9
 }
 
@@ -5071,41 +5123,51 @@ new_italy = {
 	icon = 11
 }
 
-##Buyeo Modifiers
+#next 4 stolen from GFM 
 
-southern_devastation = {
-	global_population_growth = -0.04
-	war_exhaustion = 0.0005
-	non_accepted_pop_consciousness_modifier = 0.005
-	prestige = -0.1
-	icon = 9
+lower_infamy_a = {
+    badboy = -0.05
 }
 
-buyeo_financial_crisis = {
-	tax_efficiency = -0.3
-	administrative_efficiency_modifier = -0.1
-	non_accepted_pop_militancy_modifier = -0.2
-	non_accepted_pop_consciousness_modifier = -0.2
-	icon = 9	
+lower_infamy_b = {
+    badboy = -0.1
 }
 
-disunited_china = {
-	administrative_efficiency_modifier = -0.15
-	tax_efficiency = -0.05
-	non_accepted_pop_militancy_modifier = -0.1
-	prestige = -0.1
-	mobilisation_size = -0.5
-	icon = 9
-}
-confucius_society = {
-	research_points = -1
-	prestige = 0.01
-	education_efficiency_modifier = 0.025
-	icon = 9
+lower_infamy_c = {
+    badboy = -0.15
 }
 
-looting_cooldown = {
-	prestige = -0.1
-	badboy = 0.05
-	icon = 9
+lower_infamy_d = {
+    badboy = -25.0
+}
+
+pirate_sugar = {
+	population_growth = -0.0007
+	rgo_output = 0.8
+	pop_consciousness_modifier = 0.02
+	pop_militancy_modifier = 0.01
+	
+}
+
+rival_paris = {
+	farm_rgo_size = 0.1
+	mine_rgo_size = 0.1
+	immigrant_attract = 0.05
+	education_efficiency_modifier = 0.25
+	icon = 19
+}
+
+### Basque Christian Commune ###
+requete = {
+	org_regain = -0.3
+	land_organisation = 0.3
+	land_attack_modifier = 0.3
+	supply_consumption = 0.15
+	mobilisation_size = 0.05
+	icon = 11
+}
+
+german_cape_merchants = {
+	tariff_efficiency_modifier = -0.1
+	icon = 10
 }

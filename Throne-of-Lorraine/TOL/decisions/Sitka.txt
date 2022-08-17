@@ -366,6 +366,12 @@ political_decisions = {
 			473 = {
 			add_core = KNI
 			}
+			3433 = {
+			add_core = KNI
+			}
+			3401 = {
+			add_core = KNI
+			}
 			765 = {
 			add_core = KNI
 			}
@@ -520,9 +526,6 @@ political_decisions = {
 			add_core = MAD
 			}
 			2128 = {
-			add_core = MAD
-			}
-			3414 = {
 			add_core = MAD
 			}
 			2244 = {
@@ -1512,59 +1515,6 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	
-	Claim_Oceania = {
-		potential = {
-			OR = {
-				tag = AST
-				tag = NZL
-			}
-			NOT = { has_country_flag = Oceania_claimed }
-			OR = {
-				AND = {
-					war = no
-					prestige = 50
-					is_vassal = no
-					is_disarmed = no
-					war_policy = jingoism
-					OR = {
-						is_greater_power = yes
-						is_secondary_power = yes
-					}
-				}
-				ai = no
-			}
-		}
-		allow = {
-			war = no
-			prestige = 50
-			is_vassal = no
-			is_disarmed = no
-			war_policy = jingoism
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-		effect = {
-			badboy = 11
-			prestige = 20
-			set_country_flag = Oceania_claimed
-			AST = {
-				all_core = {
-					add_core = THIS
-				}
-			}
-			NZL = {
-				all_core = {
-					add_core = THIS
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
 	Reclaim_Kuldscha = {
 		potential = {
@@ -2085,7 +2035,7 @@ political_decisions = {
 			1099 = {
 				add_core = GEO
 			}
-			3406 = {
+			1055 = {
 				add_core = GEO
 			}
 			2548 = {
@@ -2094,7 +2044,7 @@ political_decisions = {
 			1098 = {
 				add_core = GEO
 			}
-			3047 = {
+			3407 = {
 				add_core = GEO
 			}
 			1100 = {
@@ -3383,7 +3333,9 @@ political_decisions = {
 					duration = -1
 				}
 			}
-		
+		HUN = {
+				prestige = -10
+			}
 		
 		}
 		ai_will_do = {
