@@ -907,7 +907,7 @@ country_event = {
 	mean_time_to_happen = { months = 8 }
 
 	option = {
-		name = "How dare they defy us! Put them down"
+		name = "How dare they defy us!"
 		set_country_flag = provincial_defiance
 		any_owned = {
 			limit = {
@@ -932,7 +932,7 @@ country_event = {
 
 	option = {
 		name = "Protect Han rights and traditions! (Play as Liangjiang)"
-		set_country_flag = provincial_defiance
+		set_country_flag = provincial_defiance	
 		any_owned = {
 			limit = {
 				is_core = HUI
@@ -981,8 +981,6 @@ country_event = {
 	}
 }
 
-# Remember to add cores and rename Dongsansheng/Manchukuo to Northern Korea
-
 country_event = {
 	id = 651904
 	title = "EVTNAME651904"
@@ -1020,10 +1018,12 @@ country_event = {
 		}
 		QNG = {
 			limit = {
-				has_country_modifier = the_half_half_system
+				NOT = { has_country_modifier = the_half_half_system }
 			}
-			remove_accepted_culture = korean
-			remove_country_modifier = the_half_half_system
+			add_country_modifier = {
+				name = the_half_half_system
+				duration = -1
+			}
 		}
 		QNG = {
 			limit = {
@@ -1033,6 +1033,10 @@ country_event = {
 				name = disunited_china
 				duration = -1
 			}
+		}
+		add_country_modifier = {
+			name = buyeo_regency_government
+			duration = -1
 		}
 		political_reform = regionalism
 		social_reforms = no_schools
@@ -1375,15 +1379,12 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "The traitorous curs!"
+		name = "Strip him of his titles and summon him to Dadu at once!"
 		any_owned = {
 			limit = {
 				is_core = MCK 
 			}
-          	secede_province = MCK
-		}
-		MCK = {
-			annex_to = KOR
+          	secede_province = KOR
 		}
 		kill_leader = "Lee Seongmin"
 		prestige = -10
@@ -1404,12 +1405,6 @@ country_event = {
 	option = {
 		name = "Its time we reassert our imperial authority! To Dadu, for the Buyeo!"
 		set_country_flag = dadu_war
-		1616 = {
-			secede_province = CHI
-		}
-		CHI = {
-			annex_to = KOR
-		}
 		war = {
 			target = KOR
 			attacker_goal = { casus_belli = make_puppet }
@@ -1443,19 +1438,13 @@ country_event = {
 		KOR = { 
 			any_owned = {
 				limit = {
-					OR = {
-						is_core = MCK 
-						province_id = 1616
-					}
+					is_core = MCK 
 				}
-				secede_province = MCK
+				secede_province = QNG
 			}
-			MCK = {
-				annex_to = QNG
-			}
-		KOR = {
 			kill_leader = "Lee Seongmin"
 			government = dominion
+			clr_country_flag = yi_seongmin_in_korea
 		}
 	}
 }
@@ -1479,6 +1468,7 @@ country_event = {
 	option = {
 		name = "We are humiliated and disgraced"
 		set_country_flag = first_korea_buyeo_war 
+		set_country_flag = regency_killed
 		prestige = 10
 		any_country = {
 			limit = {
@@ -1486,13 +1476,35 @@ country_event = {
 			}
 			release_vassal = THIS
 		}
-		any_owned = {
-			limit = {
+		KOR = {
+			any_owned = {
+				limit = {
 					is_core = MCK 
+				}	
+				add_core = KOR
 			}
-			is_core = KOR
+			country_event = 651916
 		}
-		government = absolute_empire
+		QNG = {
+			limit = {
+				has_country_modifier = buyeo_regency_government
+			}
+			remove_country_modifier = buyeo_regency_government
+		}
+	}
+}
+
+country_event = {
+	id = 651916
+	title = "EVTNAME651916"
+	desc = "EVTDESC651916"
+	picture = "guangzhou_uprising"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Hooray for King Lee!"
+		prestige = 20
 	}
 }
 
@@ -1505,7 +1517,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "The Buyeo will pay dearly for this humiliation"
+		name = "The Buyeo will pay dearly for this humiliation. To Dadu!"
 		dominant_issue = {
 			value = jingoism
 			factor = 24
@@ -1518,6 +1530,23 @@ country_event = {
 		}
 		QNG = {
 			country_event = 651909
+		}
+	}
+	
+	option = {
+		name = "We must obey our masters. Surrender Lee Seongmin and withdraw to the Yalu."
+		prestige = -50
+		leave_alliance = QNG
+		kill_leader = "Lee Seongmin"
+		clr_country_flag = yi_seongmin_in_korea
+		any_owned = {
+			limit = {
+				is_core = MCK 
+			}
+          	secede_province = QNG
+		}
+		QNG = {
+			prestige = 20
 		}
 	}
 }

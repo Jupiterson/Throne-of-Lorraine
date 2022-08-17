@@ -648,6 +648,7 @@ political_decisions = {
 				name = law_changed_by_force
 				duration = 1825
 			}
+			remove_country_modifier = buyeo_regency_government
 		}
 	}
 	
@@ -840,6 +841,10 @@ political_decisions = {
 					conciousness = -5
 				}
 			}
+			QNG = {
+				limit = { has_country_modifier = the_half_half_system }
+				remove_country_modifier = the_half_half_system
+			}
 		}
 
 		ai_will_do = { factor = 1 }
@@ -871,6 +876,12 @@ political_decisions = {
 			set_country_flag = yongping_dead
 			government = prussian_constitutionalism
 			prestige = 50
+			add_country_modifier = {
+				name = law_changed_by_force
+				duration = 1825
+			}
+			remove_country_modifier = buyeo_regency_government
+				
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -907,6 +918,10 @@ political_decisions = {
 		effect = {
 			set_country_flag = qng_tungusic_banner
 			add_accepted_culture = manchu
+			QNG = {
+				limit = { has_country_modifier = the_half_half_system }
+				remove_country_modifier = the_half_half_system
+			}
 			capital = 1479
 			MCK = {
 				all_core = {
@@ -1138,6 +1153,10 @@ political_decisions = {
 					}
 					secede_province = THIS
 				}
+			}
+			KOR = {
+				limit = { has_country_modifier = the_half_half_system }
+				remove_country_modifier = the_half_half_system
 			}
 			change_tag = KOR
 			add_accepted_culture = korean
