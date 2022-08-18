@@ -849,8 +849,8 @@ country_event = {
 
 country_event = {
 	id = 651901
-	title = "EVTNAME651900"
-	desc = "EVTDESC651900"
+	title = "EVTNAME651901"
+	desc = "EVTDESC651901"
 	picture = "guangzhou_uprising"
 
 	trigger = {
@@ -947,9 +947,17 @@ country_event = {
 		}
 		HUI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		KOR = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 		change_tag_no_core_switch = HUI
@@ -972,9 +980,17 @@ country_event = {
 		}
 		HUI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		KOR = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 		change_tag_no_core_switch = KOR
@@ -1038,6 +1054,12 @@ country_event = {
 			name = buyeo_regency_government
 			duration = -1
 		}
+		1616 = {
+			add_province_modifier = {
+				name = dadu_resistance
+				duration = 1825
+			}
+		}	
 		political_reform = regionalism
 		social_reforms = no_schools
 		political_reform = none_voting
@@ -1084,9 +1106,23 @@ country_event = {
 		}
 		SXI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		JCH = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		FJN = {
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 	}
@@ -1114,9 +1150,23 @@ country_event = {
 		}
 		SXI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		JCH = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		FJN = {
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 		change_tag_no_core_switch = JCH
@@ -1145,9 +1195,23 @@ country_event = {
 		}
 		SXI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		JCH = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		FJN = {
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 		change_tag_no_core_switch = FJN
@@ -1176,9 +1240,23 @@ country_event = {
 		}
 		SXI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		JCH = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		FJN = {
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 		change_tag_no_core_switch = SXI
@@ -1217,15 +1295,23 @@ country_event = {
 		}
 		GNG = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		GUI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 	}
 
 	option = {
-		name = "Pacify Lingnan in the name of Buyeo! (Play as Liangguang)"
+		name = "The Pearl River calls! (Play as Liangguang)"
 		set_country_flag = southern_anarchy
 		any_owned = {
 			limit = {
@@ -1241,16 +1327,24 @@ country_event = {
 		}
 		GNG = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		GUI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 		change_tag_no_core_switch = GNG
 	}
 
 	option = {
-		name = "Bring peace once more to Shangri-La (Play as Guizhou)"
+		name = "To Guilin! (Play as Guizhou)"
 		set_country_flag = southern_anarchy
 		any_owned = {
 			limit = {
@@ -1266,9 +1360,17 @@ country_event = {
 		}
 		GNG = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		GUI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 		change_tag_no_core_switch = GUI
@@ -1307,9 +1409,17 @@ country_event = {
 		}
 		XBI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		SZC = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 		release_vassal = XIN
@@ -1332,9 +1442,17 @@ country_event = {
 		}
 		XBI = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		SZC = {
 			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 		prestige = -5
 		release_vassal = XIN
@@ -1445,6 +1563,10 @@ country_event = {
 			kill_leader = "Lee Seongmin"
 			government = dominion
 			clr_country_flag = yi_seongmin_in_korea
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
 		}
 	}
 }
@@ -1522,6 +1644,7 @@ country_event = {
 			value = jingoism
 			factor = 24
 		}
+		remove_country_modifier = chinese_provincial_government
 		prestige = -5
 		leave_alliance = QNG
 		relations = {

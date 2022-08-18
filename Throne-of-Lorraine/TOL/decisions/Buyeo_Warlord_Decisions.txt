@@ -648,6 +648,9 @@ political_decisions = {
 				name = law_changed_by_force
 				duration = 1825
 			}
+			1616 = {
+				remove_province_modifier = dadu_resistance
+			}
 			remove_country_modifier = buyeo_regency_government
 		}
 	}
@@ -867,14 +870,16 @@ political_decisions = {
 				1616 = {
 					average_militancy = 1.0
 					average_consciousness = 1.0
+					has_province_modifier = dadu_resistance
 				}
 			}
+			
 		}
 
 		effect = {
 			set_country_flag = qng_eternal_regency 
 			set_country_flag = yongping_dead
-			government = prussian_constitutionalism
+			government = presidential_dictatorship
 			prestige = 50
 			add_country_modifier = {
 				name = law_changed_by_force
@@ -917,7 +922,6 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = qng_tungusic_banner
-			add_accepted_culture = manchu
 			QNG = {
 				limit = { has_country_modifier = the_half_half_system }
 				remove_country_modifier = the_half_half_system
@@ -1060,7 +1064,7 @@ political_decisions = {
 	
 	}					
 	
-	form_tunguska = {
+	tunguskan_hegemony = {
 		picture = peking_field_force
 		
 		potential = {
@@ -1081,7 +1085,11 @@ political_decisions = {
 		effect = {
 			set_country_flag = unite_the_tungusics
 			add_accepted_culture = siberian
+			add_accepted_culture = manchu
 			change_tag = MCK
+			MCK = {
+				government = absolute_monarchy
+			}
 			QNG = {
 				all_core = {
 					add_core = MCK
