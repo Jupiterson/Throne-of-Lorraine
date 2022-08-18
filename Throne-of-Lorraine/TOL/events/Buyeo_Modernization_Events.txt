@@ -4,7 +4,7 @@ country_event = {
 	id = 651888
 	title = "EVTNAME651888"
 	desc = "EVTDESC651888"
-	picture = "guangzhou_uprising"
+	picture = "china_disunited
 
 	trigger = {
 		tag = QNG
@@ -37,7 +37,7 @@ country_event = {
 	id = 651887
 	title = "EVTNAME651887"
 	desc = "EVTDESC651887"
-	picture = "guangzhou_uprising"
+	picture = "chinese_farmers"
 
 	is_triggered_only = yes
 
@@ -50,7 +50,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = "Not my corn and sweet potatoes!"
+		name = "A world without chili is truly dark and terrifying"
 		set_country_flag = buyeo_start2
 		QNG = {
 			any_owned = {
@@ -93,7 +93,7 @@ country_event = {
 	id = 651889
 	title = "EVTNAME651889"
 	desc = "EVTDESC651889"
-	picture = "guangzhou_uprising"
+	picture = "burnt_canton"
 
 	trigger = {
 		tag = QNG
@@ -113,6 +113,16 @@ country_event = {
 		add_country_modifier = {
 			name = buyeo_financial_crisis
 			duration = -1
+		}
+		any_owned_province = {
+			limit = { 
+				OR = {
+					is_core = GXI
+					is_core = FJN
+					is_core = YNN
+				}
+			}
+			reduce_pop = 0.85
 		}
 		prestige = -5
 	}
@@ -181,7 +191,7 @@ country_event = {
 	id = 651902
 	title = "EVTNAME651902"
 	desc = "EVTDESC651902"
-	picture = "guangzhou_uprising"
+	picture = "south_china_map"
 
 	trigger = {
 		tag = QNG
@@ -250,7 +260,7 @@ country_event = {
 	id = 651891
 	title = "EVTNAME651891"
 	desc = "EVTDESC651891"
-	picture = "guangzhou_uprising"
+	picture = "1876_famine"
 
 	trigger = {
 		OR = {
@@ -360,7 +370,7 @@ country_event = {
 	id = 651892
 	title = "EVTNAME651892"
 	desc = "EVTDESC651892"
-	picture = "guangzhou_uprising"
+	picture = "draw_tears_iron"
 
 	trigger = {
 		tag = QNG
@@ -397,7 +407,7 @@ country_event = {
 	id = 651893
 	title = "EVTNAME651893"
 	desc = "EVTDESC651893"
-	picture = "guangzhou_uprising"
+	picture = "nian_rebels"
 
 	trigger = {
 		tag = QNG
@@ -498,7 +508,7 @@ country_event = {
 	id = 651894
 	title = "EVTNAME651894"
 	desc = "EVTDESC651894"
-	picture = "guangzhou_uprising"
+	picture = "nian_victory"
 
 	trigger = {
 		tag = QNG
@@ -558,7 +568,7 @@ country_event = {
 	id = 651896
 	title = "EVTNAME651896"
 	desc = "EVTDESC651896"
-	picture = "guangzhou_uprising"
+	picture = "confucian_scholars"
 
 	trigger = {
 		tag = QNG
@@ -596,7 +606,7 @@ country_event = {
 	id = 651897
 	title = "EVTNAME651897"
 	desc = "EVTDESC651897"
-	picture = "guangzhou_uprising"
+	picture = "chinese_protest"
 
 	trigger = {
 		tag = QNG
@@ -703,7 +713,7 @@ country_event = {
 	id = 651898
 	title = "EVTNAME651898"
 	desc = "EVTDESC651898"
-	picture = "guangzhou_uprising"
+	picture = "chinese_trains"
 
 	trigger = {
 		tag = QNG
@@ -745,7 +755,7 @@ country_event = {
 	id = 651899
 	title = "EVTNAME651899"
 	desc = "EVTDESC651899"
-	picture = "guangzhou_uprising"
+	picture = "1887_floods"
 
 	trigger = {
 		tag = QNG
@@ -765,6 +775,9 @@ country_event = {
 			any_pop = {
                             consciousness = 4
 			}
+			add_province_modifier = {
+				name = chinese_floods duration = 1800
+			}
 		}
 		CHI_1510 = {
 			any_pop = {
@@ -772,6 +785,9 @@ country_event = {
 			}
 			any_pop = {
                             consciousness = 4
+			}
+			add_province_modifier = {
+				name = chinese_floods duration = 1800
 			}
 		}
 	}
@@ -783,7 +799,7 @@ country_event = {
 	id = 651900
 	title = "EVTNAME651900"
 	desc = "EVTDESC651900"
-	picture = "guangzhou_uprising"
+	picture = "modern_china"
 
 	trigger = {
 		tag = QNG
@@ -851,7 +867,7 @@ country_event = {
 	id = 651901
 	title = "EVTNAME651901"
 	desc = "EVTDESC651901"
-	picture = "guangzhou_uprising"
+	picture = "new_buyeo_army"
 
 	trigger = {
 		tag = QNG
@@ -896,11 +912,11 @@ country_event = {
 	id = 651903
 	title = "EVTNAME651903"
 	desc = "EVTDESC651903"
-	picture = "guangzhou_uprising"
+	picture = "korea_wu"
 
 	trigger = {
 		tag = QNG
-		westernized = yes
+		civilized = yes
 		NOT = { has_country_flag = provincial_defiance }
 	}
 
@@ -1001,11 +1017,11 @@ country_event = {
 	id = 651904
 	title = "EVTNAME651904"
 	desc = "EVTDESC651904"
-	picture = "guangzhou_uprising"
+	picture = "attacking_imperial_forces"
 
 	trigger = {
 		tag = QNG
-		westernized = yes
+		civilized = yes
 		has_country_flag = provincial_defiance 
 		NOT = { has_country_flag = chuseok_coup }
 	}
@@ -1072,11 +1088,11 @@ country_event = {
 	id = 651905
 	title = "EVTNAME651905"
 	desc = "EVTDESC651905"
-	picture = "guangzhou_uprising"
+	picture = "imperial_protection"
 
 	trigger = {
 		tag = QNG
-		westernized = yes
+		civilized = yes
 		has_country_flag = chuseok_coup
 		NOT = { has_country_flag = modernizer_defiance }
 	}
@@ -1267,11 +1283,11 @@ country_event = {
 	id = 651906
 	title = "EVTNAME651906"
 	desc = "EVTDESC651906"
-	picture = "guangzhou_uprising"
+	picture = "beiyang_exercises"
 
 	trigger = {
 		tag = QNG
-		westernized = yes
+		civilized = yes
 		has_country_flag = modernizer_defiance
 		NOT = { has_country_flag = southern_anarchy }
 	}
@@ -1279,7 +1295,7 @@ country_event = {
 	mean_time_to_happen = { months = 2 }
 
 	option = {
-		name = "Such insolence!"
+		name = "The mountains are high and the Emperor is far away"
 		set_country_flag = southern_anarchy
 		any_owned = {
 			limit = {
@@ -1381,11 +1397,11 @@ country_event = {
 	id = 651907
 	title = "EVTNAME651907"
 	desc = "EVTDESC651907"
-	picture = "guangzhou_uprising"
+	picture = "sichuan_china_army"
 
 	trigger = {
 		tag = QNG
-		westernized = yes
+		civilized = yes
 		has_country_flag = southern_anarchy
 		NOT = { has_country_flag = western_anarchy }
 	}
@@ -1492,7 +1508,7 @@ country_event = {
 	id = 651908
 	title = "EVTNAME651908"
 	desc = "EVTDESC651908"
-	picture = "guangzhou_uprising"
+	picture = "manchuria"
 
 	is_triggered_only = yes
 
@@ -1516,7 +1532,7 @@ country_event = {
 	id = 651909
 	title = "EVTNAME651909"
 	desc = "EVTDESC651909"
-	picture = "guangzhou_uprising"
+	picture = "battle_of_palikiao"
 
 	is_triggered_only = yes
 
@@ -1536,7 +1552,7 @@ country_event = {
 	id = 651910
 	title = "EVTNAME651910"
 	desc = "EVTDESC651910"
-	picture = "guangzhou_uprising"
+	picture = "winning_china"
 
 	trigger = {
 		has_country_flag = dadu_war
@@ -1575,7 +1591,7 @@ country_event = {
 	id = 651911
 	title = "EVTNAME651911"
 	desc = "EVTDESC651911"
-	picture = "guangzhou_uprising"
+	picture = "losing_china"
 
 	trigger = {
 		has_country_flag = dadu_war
@@ -1620,7 +1636,7 @@ country_event = {
 	id = 651916
 	title = "EVTNAME651916"
 	desc = "EVTDESC651916"
-	picture = "guangzhou_uprising"
+	picture = "winning_korea"
 
 	is_triggered_only = yes
 
@@ -1634,7 +1650,7 @@ country_event = {
 	id = 651912
 	title = "EVTNAME651912"
 	desc = "EVTDESC651912"
-	picture = "guangzhou_uprising"
+	picture = "battle_of_palikiao"
 
 	is_triggered_only = yes
 
@@ -1678,11 +1694,11 @@ country_event = {
 	id = 651913
 	title = "EVTNAME651913"
 	desc = "EVTDESC651913"
-	picture = "guangzhou_uprising"
+	picture = "black_flag_army"
 
 	trigger = {
 		tag = QNG
-		westernized = yes
+		civilized = yes
 		has_country_flag = dadu_war
 		NOT = { has_country_flag = shandong_secedes }
 		war = yes

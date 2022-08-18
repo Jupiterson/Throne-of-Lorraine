@@ -2,7 +2,7 @@
 political_decisions = {
 
 	yi_seongmin_coup = {
-		picture = peking_field_force
+		picture = tonghak_reforms
 		
 		potential = {
 			tag = KOR
@@ -67,7 +67,7 @@ political_decisions = {
 	}
 	
 	seize_manchuria = {
-		picture = peking_field_force
+		picture = outer_manchuria_map
 		
 		potential = {
 			tag = KOR
@@ -96,7 +96,7 @@ political_decisions = {
 	}
 
 	depose_the_buyeo_emperor = {
-		picture = peking_field_force
+		picture = china_execution
 		
 		potential = {
 			tag = KOR
@@ -150,7 +150,7 @@ political_decisions = {
 	
 
 	master_of_the_west_sea = {
-		picture = peking_field_force
+		picture = shandong_map
 		
 		potential = {
 			tag = KOR
@@ -188,7 +188,7 @@ political_decisions = {
 	
 
 	pacify_the_interior = {
-		picture = peking_field_force
+		picture = shanxi_map
 		
 		potential = {
 			tag = KOR
@@ -233,7 +233,7 @@ political_decisions = {
 	
 
 	secure_the_han = {
-		picture = peking_field_force
+		picture = central_china_map
 		
 		potential = {
 			tag = KOR
@@ -268,7 +268,7 @@ political_decisions = {
 	
 
 	claim_the_mandate_of_heaven = {
-		picture = peking_field_force
+		picture = mandate_of_heaven
 		
 		potential = {
 			tag = KOR
@@ -305,7 +305,7 @@ political_decisions = {
 	}
 
 	estab_kdom_shu = {
-		picture = peking_field_force
+		picture = sichuan_map
 		
 		potential = {
 			tag = KOR
@@ -355,7 +355,7 @@ political_decisions = {
 	}
 	
 	estab_kdom_chu = {
-		picture = peking_field_force
+		picture = hunan_map
 		
 		potential = {
 			tag = KOR
@@ -411,7 +411,7 @@ political_decisions = {
 	}
 
 	estab_kdom_wu = {
-		picture = peking_field_force
+		picture = wu_map
 		
 		potential = {
 			tag = KOR
@@ -461,7 +461,7 @@ political_decisions = {
 	}
 	
 	estab_wuyue_min = {
-		picture = peking_field_force
+		picture = ningbo_china
 		
 		potential = {
 			tag = KOR
@@ -515,7 +515,7 @@ political_decisions = {
 	}
 	
 	estab_kdom_yue = {
-		picture = peking_field_force
+		picture = yue_map
 		
 		potential = {
 			tag = KOR
@@ -531,13 +531,13 @@ political_decisions = {
 			GNG = {
 				all_core = {
 					OR = {
-						owned_by = GNG
+						owned_by = KOR
 						owner = {
-							in_sphere = GNG
+							in_sphere = KOR
 							war = no
 						}
 						owner = {
-							vassal_of = GNG
+							vassal_of = KOR
 							war = no
 						}
 					}
@@ -572,7 +572,7 @@ political_decisions = {
 	}
 	
 	regain_international_legitimacy = {
-		picture = peking_field_force
+		picture = sino_western_interaction
 		
 		potential = {
 			tag = QNG
@@ -620,7 +620,7 @@ political_decisions = {
 	}
 
 	restore_the_emperor = {
-		picture = peking_field_force
+		picture = hundred_days_reform
 		
 		potential = {
 			tag = QNG
@@ -657,7 +657,7 @@ political_decisions = {
 	
 	
 	retake_jin = {
-		picture = peking_field_force
+		picture = shanxi_map
 		
 		potential = {
 			tag = QNG
@@ -686,7 +686,7 @@ political_decisions = {
 	}
 	
 	retake_shandong = {
-		picture = peking_field_force
+		picture = shandong_map
 		
 		potential = {
 			tag = QNG
@@ -719,7 +719,7 @@ political_decisions = {
 	}
 	
 	southern_expedition = {
-		picture = peking_field_force
+		picture = wu_map
 		
 		potential = {
 			tag = QNG
@@ -752,7 +752,7 @@ political_decisions = {
 	}
 	
 	claim_the_mandate_of_heaven = {
-		picture = peking_field_force
+		picture = mandate_of_heaven
 		
 		potential = {
 			tag = QNG
@@ -800,7 +800,7 @@ political_decisions = {
 	}
 	
 	accept_the_han = {
-		picture = peking_field_force
+		picture = han_chinese
 		
 		potential = {
 			tag = QNG
@@ -854,7 +854,7 @@ political_decisions = {
 	}
 	
 	permaanant_regency = {
-		picture = peking_field_force
+		picture = manchuria
 		
 		potential = {
 			tag = QNG
@@ -868,8 +868,6 @@ political_decisions = {
 			state_n_government = 1
 			NOT = { 
 				1616 = {
-					average_militancy = 1.0
-					average_consciousness = 1.0
 					has_province_modifier = dadu_resistance
 				}
 			}
@@ -886,7 +884,7 @@ political_decisions = {
 				duration = 1825
 			}
 			remove_country_modifier = buyeo_regency_government
-				
+			release_vassal = HNN
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -894,7 +892,7 @@ political_decisions = {
 	}
 	
 	take_up_tungusic_banner = {
-		picture = peking_field_force
+		picture = tungusic_banner
 		
 		potential = {
 			tag = QNG
@@ -957,7 +955,7 @@ political_decisions = {
 	}
 	
 	regain_northern_korea = {
-		picture = peking_field_force
+		picture = korea_map
 		
 		potential = {
 			tag = QNG
@@ -993,7 +991,7 @@ political_decisions = {
 	}
 	
 	free_north_tungus = {
-		picture = peking_field_force
+		picture = evenks
 		potential = {
 			tag = QNG
 			has_country_flag = chuseok_coup
@@ -1065,7 +1063,7 @@ political_decisions = {
 	}					
 	
 	tunguskan_hegemony = {
-		picture = peking_field_force
+		picture = tunguska_map
 		
 		potential = {
 			tag = QNG
@@ -1106,7 +1104,7 @@ political_decisions = {
 	}
 	
 	form_the_korean_federation = {
-		picture = peking_field_force
+		picture = korea_map
 		
 		potential = {
 			OR = {
@@ -1174,7 +1172,7 @@ political_decisions = {
 	}
 	
 	incorporate_buyeo_lands = {
-		picture = peking_field_force
+		picture = manchuria
 		
 		potential = {
 			tag = KOR
@@ -1213,6 +1211,65 @@ political_decisions = {
 			1553 = {
 				add_core = KOR
 			}
+		}
+	}
+	
+	reunification_of_china = {
+		picture = form_china
+		potential = {
+			is_culture_group = east_asian
+			NOT = { tag = QNG }
+			NOT = { tag = CHI }
+		}
+
+		allow = {
+			war = no
+			owns = 1616
+			CHI = {
+				exists = no
+			}
+			CHI = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			mass_politics = 1
+		}
+
+		effect = {
+			change_tag = CHI
+			CHI = {
+				all_core = {
+					limit = {
+						NOT = { owned_by = CHI } 
+					}
+					secede_province = CHI
+				}
+			}
+			add_accepted_culture = han_chinese
+			add_accepted_culture = hanhui
+			add_accepted_culture = hakka
+			add_accepted_culture = miao
+			add_accepted_culture = min
+			add_accepted_culture = zhuang
+			add_accepted_culture = yi
+			add_accepted_culture = yue
+			add_accepted_culture = buyeo
+			primary_culture = han_chinese
+		}
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
