@@ -82,7 +82,7 @@ political_decisions = {
 
 		allow = {
 			war = no
-			government = presidential_dictatorship
+			government = absolute_monarchy
 		}
 
 		effect = {
@@ -101,16 +101,14 @@ political_decisions = {
 		potential = {
 			tag = KOR
 			has_country_flag = yi_seongmin_in_korea
-			NOT = { exists = QNG }
-			NOT = { has_country_flag = buyeo_deposed }
 			is_our_vassal = QNG
 		}
 
-			allow = {
+		allow = {
 			war = no
-			owns = 1616
+			nationalism_n_imperialism = 1
 			NOT = { average_militancy = 3.0 }
-			government = presidential_dictatorship
+			government = absolute_monarchy
 			war_policy = jingoism
 		}
 
@@ -118,7 +116,6 @@ political_decisions = {
 			inherit = QNG
 			set_country_flag = buyeo_deposed
 			set_country_flag = korea_warpath
-			government = parliamentary_republic
 			badboy = 5
 			prestige = 10
 			any_country = {
@@ -267,7 +264,7 @@ political_decisions = {
 	}
 	
 
-	claim_the_mandate_of_heaven = {
+	kor_claim_the_mandate_of_heaven = {
 		picture = mandate_of_heaven
 		
 		potential = {
@@ -742,7 +739,7 @@ political_decisions = {
 			set_country_flag = retake_wu 
 			badboy = 5
 			HUI = {
-				any_core = {
+				any_owned_province = {
 					add_core = QNG
 				}
 			}
@@ -803,8 +800,10 @@ political_decisions = {
 		picture = han_chinese
 		
 		potential = {
-			tag = QNG
-			tag = KOR
+			OR = {
+				tag = QNG
+				tag = KOR
+			}
 			has_country_flag = country_claims_mandate
 			has_country_flag = international_outreach_qng
 			NOT = { has_country_flag = accept_the_han }
@@ -818,7 +817,6 @@ political_decisions = {
 					prestige = 100
 				}
 			}
-			has_unclaimed_cores = no
 			has_unclaimed_cores = no
 			press_rights = free_press
 			public_meetings = yes_meeting
@@ -840,8 +838,7 @@ political_decisions = {
 			any_owned = {
 				any_pop = {
                     limit = { has_pop_culture = han_chinese }
-                    militancy = -5
-					conciousness = -5
+                    militancy = -2
 				}
 			}
 			QNG = {
