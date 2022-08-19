@@ -22,7 +22,10 @@ country_event = {
 			is_greater_power = yes
 			AND = {
 				colonial_nation = yes
+				OR = {
 				any_owned_province = { is_core = HND }
+				any_owned_province = { is_core = DRA }
+				}
 			}
 		}
 		capital_scope = { continent = europe }
@@ -44,6 +47,19 @@ country_event = {
 
 	option = {
 		name = "INDIAOPT"
+		any_country = {
+			limit = {
+				civilized = yes
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+					colonial_nation = yes
+				}
+				capital_scope = { continent = europe }
+			}
+		set_country_flag = india_scramble_country
+		}
+		set_country_flag = india_scramble_country
 		set_global_flag = india_scramble
 		prestige = 25
 	}
@@ -58,10 +74,13 @@ country_event = {
 
 	trigger = {
 		civilized = no
+		OR = {
 		capital_scope = { is_core = HND }
+		capital_scope = { is_core = DRA }
+		}
 		has_global_flag = india_scramble
 		NOT = { has_country_flag = delay_unciv_annexation }
-		NOT = { has_country_flag = reaction_to_berlin_conference }
+		NOT = { has_country_flag = reaction_to_india_conference }
 	}
 
 	mean_time_to_happen = {
@@ -70,7 +89,7 @@ country_event = {
 
 	option = {
 		name = "EVT95502OPTA"
-		set_country_flag = reaction_to_berlin_conference
+		set_country_flag = reaction_to_india_conference
 		any_country = {
 			limit = {
 				civilized = yes
@@ -101,7 +120,10 @@ country_event = {
 	trigger = {
 		war = no
 		civilized = no
+		OR = {
 		capital_scope = { is_core = HND }
+		capital_scope = { is_core = DRA }
+		}
 		NOT = { has_global_flag = india_scramble }
 		NOT = { has_country_flag = africa_in_the_modern_age }
 		any_owned_province = {
@@ -119,7 +141,7 @@ country_event = {
 
 	option = {
 		name = "EVT95503OPTA"
-		set_country_flag = africa_in_the_modern_age
+		set_country_flag = india_in_the_modern_age
 		any_country = {
 			limit = {
 				civilized = yes
