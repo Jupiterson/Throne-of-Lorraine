@@ -49,7 +49,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = "A world without chili is truly dark and terrifying"
+		name = "Not my corn and sweet potatoes!"
 		set_country_flag = buyeo_start2
 		QNG = {
 			any_owned = {
@@ -271,14 +271,14 @@ country_event = {
 			owns = 1568
 		}
 		year = 1876
-		NOT = { has_country_flag = 1876_chinese_famine }
+		NOT = { has_global_flag = 1876_chinese_famine }
 	}
 
 	mean_time_to_happen = { months = 6 }
 
 	option = {
 		name = "Focus on Famine Relief"
-		set_country_flag = 1876_chinese_famine
+		set_global_flag = 1876_chinese_famine
 		CHI_1572 = {
 			any_pop = {
                             reduce_pop = 0.75
@@ -1541,7 +1541,7 @@ country_event = {
 			}
           	secede_province = KOR
 		}
-		kill_leader = "Lee Seongmin"
+		kill_leader = 16318
 		prestige = -10
 		KOR = {
 			country_event = 651912
@@ -1603,7 +1603,7 @@ country_event = {
 				}
 				secede_province = QNG
 			}
-			kill_leader = "Lee Seongmin"
+			kill_leader = 16318
 			government = dominion
 			clr_country_flag = yi_seongmin_in_korea
 			add_country_modifier = {
@@ -1705,7 +1705,7 @@ country_event = {
 		name = "We must obey our masters. Surrender Lee Seongmin and withdraw to the Yalu."
 		prestige = -50
 		leave_alliance = QNG
-		kill_leader = "Lee Seongmin"
+		kill_leader = 16318
 		clr_country_flag = yi_seongmin_in_korea
 		any_owned = {
 			limit = {

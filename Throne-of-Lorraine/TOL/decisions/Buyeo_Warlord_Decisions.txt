@@ -11,6 +11,7 @@ political_decisions = {
 				has_country_flag = korean_army
 			}
 			NOT = { has_country_flag = yi_seongmin_in_korea }
+			NOT = { has_country_flag = united_korea }
 		}
 
 		allow = {
@@ -106,7 +107,7 @@ political_decisions = {
 
 		allow = {
 			war = no
-			nationalism_n_imperialism = 1
+			state_n_government = 1
 			NOT = { average_militancy = 3.0 }
 			government = absolute_monarchy
 			war_policy = jingoism
@@ -168,7 +169,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = west_sea_claimed 
-			badboy = 10
+			badboy = 4
 			CHI_1563 = {
 				add_core = KOR
 			}
@@ -207,7 +208,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = pacified_interior 
-			badboy = 15
+			badboy = 10
 			CHI_1508 = {
 				add_core = KOR
 			}
@@ -250,7 +251,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag =  han_secured 
-			badboy = 5
+			badboy = 4
 			CHI_1519 = {
 				add_core = KOR
 			}
@@ -277,17 +278,10 @@ political_decisions = {
 		}
 
 		allow = {
-			OR = {
-				is_greater_power = yes
-				AND = {
-					is_secondary_power = yes
-					prestige = 100
-				}
-			}
 			war = no
 			has_unclaimed_cores = no
 			war_policy = jingoism
-			revolution_n_counterrevolution = 1
+			nationalism_n_imperialism = 1
 			social_science = 1
 		}
 
@@ -335,7 +329,6 @@ political_decisions = {
 			set_country_flag = kdom_shu_established 
 			badboy = 2
 			SZC = {
-				government = absolute_monarchy
 				all_core = {
 					limit = {
 						NOT = { owned_by = KOR } 
@@ -344,7 +337,13 @@ political_decisions = {
 				}
 			}
 			release_vassal = SZC
-			SZC = { capital = 1578 }
+			SZC = { 
+				capital = 1578 
+				government = absolute_monarchy
+			}
+			CHI_1505 = {
+				add_core = SZC
+			}
 		}
 
 		ai_will_do = { factor = 1 }
@@ -383,9 +382,8 @@ political_decisions = {
 				
 		effect = {
 			set_country_flag = kdom_chu_established 
-			badboy = 5
+			badboy = 2
 			JCH = {
-				government = absolute_monarchy
 				all_core = {
 					limit = {
 						NOT = { owned_by = KOR } 
@@ -400,7 +398,10 @@ political_decisions = {
 				 remove_core = JCH
 			}
 			release_vassal = JCH
-			JCH = { capital = 1524 }
+			JCH = { 
+				capital = 1524 
+				government = absolute_monarchy
+			}
 		}
 
 		ai_will_do = { factor = 1 }
@@ -439,9 +440,8 @@ political_decisions = {
 				
 		effect = {
 			set_country_flag = kdom_wu_established 
-			badboy = 5
+			badboy = 2
 			HUI = {
-				government = absolute_monarchy
 				all_core = {
 					limit = {
 						NOT = { owned_by = KOR } 
@@ -450,7 +450,10 @@ political_decisions = {
 				}
 			}
 			release_vassal = HUI
-			HUI = { capital = 1543 }
+			HUI = { 
+				capital = 1543
+				government = absolute_monarchy
+			}
 		}
 
 		ai_will_do = { factor = 1 }
@@ -471,7 +474,7 @@ political_decisions = {
 
 		allow = {
 			war = no
-			HUI = {
+			FJN = {
 				all_core = {
 					OR = {
 						owned_by = KOR
@@ -483,6 +486,9 @@ political_decisions = {
 							vassal_of = KOR
 							war = no
 						}
+						province_id = 1538
+						province_id = 1608
+						province_id = 1484
 					}
 				}
 			}
@@ -495,7 +501,6 @@ political_decisions = {
 				add_core = FJN
 			}
 			FJN = {
-				government = pirate_republic
 				all_core = {
 					limit = {
 						NOT = { owned_by = KOR } 
@@ -504,7 +509,10 @@ political_decisions = {
 				}
 			}
 			release_vassal = FJN
-			FJN = { capital = 1604 }
+			FJN = { 
+				capital = 1604
+				government = pirate_republic
+			}
 		}
 
 		ai_will_do = { factor = 1 }
@@ -537,6 +545,10 @@ political_decisions = {
 							vassal_of = KOR
 							war = no
 						}
+						province_id = 1498
+						province_id = 1499
+						province_id = 1496
+						province_id = 2632
 					}
 				}
 			}
@@ -546,7 +558,6 @@ political_decisions = {
 			set_country_flag = yue_established 
 			badboy = 2
 			GNG = {
-				government = absolute_monarchy
 				all_core = {
 					limit = {
 						NOT = { owned_by = KOR } 
@@ -555,11 +566,14 @@ political_decisions = {
 				}
 			}
 			release_vassal = GNG
-			GNG = { capital = 1493 }
-			DAI_1375 = {
-				add_core = GNG
+			GNG = { 
+				capital = 1493 
+				government = absolute_monarchy
 			}
 			DAI_1369 = {
+				add_core = GNG
+			}
+			DAI_1374 = {
 				add_core = GNG
 			}
 		}
@@ -576,6 +590,7 @@ political_decisions = {
 			has_country_flag = chuseok_coup
 			has_country_flag = first_korea_buyeo_war 
 			NOT = { has_country_flag = international_outreach_qng }
+			is_vassal = no
 		}
 
 		allow = {
@@ -625,6 +640,7 @@ political_decisions = {
 			has_country_flag = first_korea_buyeo_war 
 			NOT = { has_country_flag = buyeo_emperor_restored }
 			NOT = { has_country_flag = yongping_dead }
+			is_vassal = no
 		}
 
 		allow = {
@@ -731,7 +747,7 @@ political_decisions = {
 			war = no
 			owns = 1616
 			has_unclaimed_cores = no
-			nationalism_n_imperialism = 1
+			state_n_government = 1
 			war_policy = jingoism
 		}
 
@@ -760,17 +776,10 @@ political_decisions = {
 		}
 
 		allow = {
-			OR = {
-				is_greater_power = yes
-				AND = {
-					is_secondary_power = yes
-					prestige = 100
-				}
-			}
 			war = no
 			has_unclaimed_cores = no
 			war_policy = jingoism
-			revolution_n_counterrevolution = 1
+			nationalism_n_imperialism = 1
 			romanticism = 1
 			social_science = 1
 		}
@@ -805,7 +814,6 @@ political_decisions = {
 				tag = KOR
 			}
 			has_country_flag = country_claims_mandate
-			has_country_flag = international_outreach_qng
 			NOT = { has_country_flag = accept_the_han }
 		}
 
@@ -821,10 +829,8 @@ political_decisions = {
 			press_rights = free_press
 			public_meetings = yes_meeting
 			slavery = no_slavery
-			debt_law = bankruptcy
 			war_policy = jingoism
-			mass_politics = 1
-			behaviorism = 1
+			revolution_n_counterrevolution = 1
 			social_science = 1
 			OR = {
 				government = absolute_empire
@@ -834,6 +840,7 @@ political_decisions = {
 		}
 
 		effect = {
+			set_country_flag = accept_the_han
 			add_accepted_culture = han_chinese
 			any_owned = {
 				any_pop = {
@@ -858,6 +865,7 @@ political_decisions = {
 			has_country_flag = chuseok_coup
 			NOT = { has_country_flag = buyeo_emperor_restored }
 			NOT = { has_country_flag = qng_eternal_regency }
+			is_vassal = no
 		}
 
 		allow = {
@@ -1126,7 +1134,6 @@ political_decisions = {
 			press_rights = free_press
 			public_meetings = yes_meeting
 			slavery = no_slavery
-			debt_law = bankruptcy
 			war = no
 			nationalism_n_imperialism = 1
 			KOR = {
@@ -1182,7 +1189,6 @@ political_decisions = {
 			press_rights = free_press
 			public_meetings = yes_meeting
 			slavery = no_slavery
-			debt_law = bankruptcy
 			war = no
 			revolution_n_counterrevolution = 1
 		}

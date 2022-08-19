@@ -5929,7 +5929,7 @@ annex_india = {
     badboy_factor = 0
     prestige_factor = 0.5
     peace_cost_factor = 0.6
-    penalty_factor = 0
+    penalty_factor = 2
 
     break_truce_prestige_factor = 5
     break_truce_infamy_factor = 2
@@ -5965,13 +5965,15 @@ annex_india = {
         number_of_states = 2
         THIS = {
             capital_scope = { continent = europe }
+            NOT = { tag = RUS }
+            NOT = { tag = TUR }
             OR = {
                 is_greater_power = yes
                 is_secondary_power = yes
             }
             NOT = { has_country_modifier = neutrality }
             civilized = yes
-            has_country_flag = india_scramble_country
+            has_global_flag = india_scramble
         }
 		NOT = { has_country_modifier = neutrality }
         NOT = {
@@ -5980,14 +5982,9 @@ annex_india = {
         NOT = { is_greater_power = yes }
         is_vassal = no
         civilized = no
-		OR = {
         capital_scope = {
             is_core = HND
         }
-		capital_scope = {
-            is_core = DRA
-        }
-		}
         ai = yes
         OR = {
             war_with = THIS
@@ -6086,7 +6083,7 @@ annex_india_full = {
             }
             NOT = { has_country_modifier = neutrality }
             civilized = yes
-            has_country_flag = india_scramble_country
+            has_global_flag = india_scramble
         }
 		NOT = { has_country_modifier = neutrality }
         is_vassal = no
@@ -6094,14 +6091,9 @@ annex_india_full = {
         NOT = {
             has_country_flag = post_colonial_country
         }
-        OR = {
         capital_scope = {
             is_core = HND
         }
-		capital_scope = {
-            is_core = DRA
-        }
-		}
         #ai = yes
         OR = {
             war_with = THIS

@@ -4,7 +4,7 @@ province_event = {
 
     trigger = {
 		NOT = { has_province_modifier = pirate_sugar }
-		OR = {
+		or = {
 			province_id = 3309
 			province_id = 3319
 			province_id = 2214
@@ -17,7 +17,7 @@ province_event = {
 
     }
 
-    title = "Production of Sugar"
+    title = "EVTNAME33445"
     desc = "EVTDESC33445"
 
     option = {

@@ -43,20 +43,6 @@ country_event = {
 				}
 				secede_province = THIS
 			}
-			any_owned = {
-				limit = {
-					is_core = PER
-					is_overseas = yes
-				}
-				secede_province = THIS
-			}
-			any_owned = {
-				limit = {
-					is_core = AFG
-					is_overseas = yes
-				}
-				secede_province = THIS
-			}
 		}
 	}
 }
@@ -192,7 +178,7 @@ country_event = {
 		government = prussian_constitutionalism
 		any_pop = {
 			limit = {
-				culture = french
+				culture = british
 				location = { is_core = HND }
 			}
 			reduce_pop = 1.5
@@ -209,20 +195,6 @@ country_event = {
 			any_owned = {
 				limit = {
 					is_core = HND
-					is_overseas = yes
-				}
-				secede_province = EIC
-			}
-			any_owned = {
-				limit = {
-					is_core = DRA
-					is_overseas = yes
-				}
-				secede_province = EIC
-			}
-			any_owned = {
-				limit = {
-					is_core = MLD
 					is_overseas = yes
 				}
 				secede_province = EIC
