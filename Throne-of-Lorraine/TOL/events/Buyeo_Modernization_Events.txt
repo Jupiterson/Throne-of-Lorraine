@@ -1523,7 +1523,7 @@ country_event = {
 	}
 }
 
-# Need decisions for Yi Seongmin to defect to Korea and for Korea to annex Manchuria
+# Decisions for Yi Seongmin to defect to Korea and for Korea to annex Manchuria
 
 country_event = {
 	id = 651908
@@ -1578,6 +1578,8 @@ country_event = {
 	title = "EVTNAME651910"
 	desc = "EVTDESC651910"
 	picture = "winning_china"
+	fire_only_once = yes
+	major = yes
 
 	trigger = {
 		has_country_flag = dadu_war
@@ -1617,6 +1619,8 @@ country_event = {
 	title = "EVTNAME651911"
 	desc = "EVTDESC651911"
 	picture = "losing_china"
+	fire_only_once = yes
+	major = yes
 
 	trigger = {
 		has_country_flag = dadu_war
