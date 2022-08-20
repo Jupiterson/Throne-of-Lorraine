@@ -1312,6 +1312,7 @@ country_event = {
 	option = {
 		name = "The mountains are high and the Emperor is far away"
 		set_country_flag = southern_anarchy
+		prestige = -5
 		any_owned = {
 			limit = {
 				is_core = GNG
@@ -1338,12 +1339,18 @@ country_event = {
 				duration = -1
 			}
 		}
-		prestige = -5
+		any_owned = {
+			limit = {
+				is_core = DAI
+			}
+            secede_province = DAI
+		}
 	}
 
 	option = {
 		name = "The Pearl River calls! (Play as Liangguang)"
 		set_country_flag = southern_anarchy
+		prestige = -5
 		any_owned = {
 			limit = {
 				is_core = GNG
@@ -1370,13 +1377,19 @@ country_event = {
 				duration = -1
 			}
 		}
-		prestige = -5
+		any_owned = {
+			limit = {
+				is_core = DAI
+			}
+            secede_province = DAI
+		}
 		change_tag_no_core_switch = GNG
 	}
 
 	option = {
 		name = "To Guilin! (Play as Guizhou)"
 		set_country_flag = southern_anarchy
+		prestige = -5
 		any_owned = {
 			limit = {
 				is_core = GNG
@@ -1403,7 +1416,12 @@ country_event = {
 				duration = -1
 			}
 		}
-		prestige = -5
+		any_owned = {
+			limit = {
+				is_core = DAI
+			}
+            secede_province = DAI
+		}
 		change_tag_no_core_switch = GUI
 	}
 }
