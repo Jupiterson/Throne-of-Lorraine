@@ -1478,6 +1478,9 @@ country_event = {
 			}
             secede_province = MGL
 		}
+		release_vassal = MGL
+		release_vassal = TNT
+		release_vassal = ALT
 	}
 
 	option = {
@@ -1517,6 +1520,9 @@ country_event = {
 			}
             secede_province = MGL
 		}
+		release_vassal = MGL
+		release_vassal = TNT
+		release_vassal = ALT
 		change_tag_no_core_switch = SZC
 	}
 
@@ -1549,6 +1555,9 @@ country_event = {
 			}
             secede_province = MGL
 		}
+		release_vassal = MGL
+		release_vassal = TNT
+		release_vassal = ALT
 		change_tag_no_core_switch = XBI
 	}
 }
@@ -1608,8 +1617,6 @@ country_event = {
 	title = "EVTNAME651910"
 	desc = "EVTDESC651910"
 	picture = "winning_china"
-	fire_only_once = yes
-	major = yes
 
 	trigger = {
 		has_country_flag = dadu_war
@@ -1641,6 +1648,13 @@ country_event = {
 				duration = -1
 			}
 		}
+		any_owned = {
+				limit = {
+					is_core = MCK 
+				}	
+				add_core = QNG
+			}
+		}
 	}
 }
 
@@ -1649,8 +1663,7 @@ country_event = {
 	title = "EVTNAME651911"
 	desc = "EVTDESC651911"
 	picture = "losing_china"
-	fire_only_once = yes
-	major = yes
+
 
 	trigger = {
 		has_country_flag = dadu_war
@@ -1750,6 +1763,12 @@ country_event = {
 		QNG = {
 			prestige = 20
 			create_vassal = KOR
+			any_owned = {
+				limit = {
+					is_core = MCK 
+				}	
+				add_core = QNG
+			}
 		}
 		government = dominion
 	}

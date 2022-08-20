@@ -880,13 +880,15 @@ political_decisions = {
 			set_country_flag = qng_eternal_regency 
 			set_country_flag = yongping_dead
 			government = presidential_dictatorship
+			capital = 3440
 			prestige = 50
 			add_country_modifier = {
 				name = law_changed_by_force
 				duration = 1825
 			}
 			remove_country_modifier = buyeo_regency_government
-			release_vassal = HNN
+			release = HNN
+			release = SDG
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1005,7 +1007,6 @@ political_decisions = {
 			war = no
 			has_unclaimed_cores = no
 			nationalism_n_imperialism = 1
-			analytic_philosophy = 1
 			romanticism = 1
 			war_policy = jingoism
 		}
@@ -1089,8 +1090,6 @@ political_decisions = {
 
 		allow = {
 			war = no
-			revolution_n_counterrevolution = 1
-			social_science = 1
 			has_unclaimed_cores = no
 		}
 
