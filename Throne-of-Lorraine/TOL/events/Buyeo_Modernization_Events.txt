@@ -830,6 +830,18 @@ country_event = {
 		activate_technology = ad_hoc_money_bill_printing
 		
 		any_country = {
+			QNG = {
+				limit = {
+					has_country_modifier = confucius_society
+				}
+				remove_country_modifier = confucius_society
+			}
+			QNG = {
+				limit = {
+					has_country_modifier = self_strengthening_movement
+				}
+				remove_country_modifier = self_strengthening_movement
+			}
 			limit = { 
 				OR = { 
 					is_culture_group = east_asian
@@ -1038,7 +1050,7 @@ country_event = {
 			ideology = reactionary
 			value = 0.99
 		}
-		any_owned = {
+		all_core = {
 			limit = {
 				OR = {
 					NOT = { is_capital = yes }
@@ -1603,7 +1615,7 @@ country_event = {
 				}
 				secede_province = QNG
 			}
-			kill_leader = 16318
+			kill_leader = 16494
 			government = dominion
 			clr_country_flag = yi_seongmin_in_korea
 			add_country_modifier = {
@@ -1704,18 +1716,24 @@ country_event = {
 	option = {
 		name = "We must obey our masters. Surrender Lee Seongmin and withdraw to the Yalu."
 		prestige = -50
-		leave_alliance = QNG
-		kill_leader = 16318
-		clr_country_flag = yi_seongmin_in_korea
 		any_owned = {
-			limit = {
-				is_core = MCK 
+				limit = {
+					is_core = MCK 
+					NOT = { is_core = KOR }
+				}
+				secede_province = QNG
 			}
-          	secede_province = QNG
+		kill_leader = 16494
+		clr_country_flag = yi_seongmin_in_korea
+		add_country_modifier = {
+			name = chinese_provincial_government	
+			duration = -1
 		}
 		QNG = {
 			prestige = 20
+			create_vassal = KOR
 		}
+		government = dominion
 	}
 }
 
