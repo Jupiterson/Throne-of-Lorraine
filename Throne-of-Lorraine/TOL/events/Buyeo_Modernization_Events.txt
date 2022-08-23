@@ -1,0 +1,1824 @@
+# Starting Event
+
+country_event = {
+	id = 651888
+	title = "EVTNAME651888"
+	desc = "EVTDESC651888"
+	picture = "china_disunited"
+
+	trigger = {
+		tag = QNG
+		year = 1836
+		NOT = { has_country_flag = buyeo_start1 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "The Empire long divided, must unite"
+		set_country_flag = buyeo_start1
+		add_country_modifier = {
+			name = disunited_china	
+			duration = -1
+		}
+		remove_country_modifier = western_influences
+		add_country_modifier = {
+			name = uncivilized_isolationism
+			duration = -1
+		}
+		country_event = 651887
+		
+	}
+}
+
+
+country_event = {
+	id = 651887
+	title = "EVTNAME651887"
+	desc = "EVTDESC651887"
+	picture = "chinese_farmers"
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = QNG
+		year = 1836
+		NOT = { has_country_flag = buyeo_start2 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Not my corn and sweet potatoes!"
+		set_country_flag = buyeo_start2
+		QNG = {
+			any_owned = {
+				limit = { is_core = MIN }
+				any_pop = {
+					reduce_pop = 0.83
+				}
+			}
+		}
+		FJN = {
+			any_owned = {
+				limit = { is_core = MIN }
+				any_pop = {
+					reduce_pop = 0.83
+				}
+			}
+		}
+		GXI = {
+			any_owned = {
+				limit = { is_core = MIN }
+				any_pop = {
+					reduce_pop = 0.83
+				}
+			}
+		}
+		YNN = {
+			any_owned = {
+				limit = { is_core = MIN }
+				any_pop = {
+					reduce_pop = 0.83
+				}
+			}
+		}
+	}
+}
+
+#Consequences of the Three Feudatories War
+
+country_event = {
+	id = 651889
+	title = "EVTNAME651889"
+	desc = "EVTDESC651889"
+	picture = "burnt_canton"
+
+	trigger = {
+		tag = QNG
+		has_country_flag = victory_of_Buyeo
+		NOT = { has_country_flag = southern_devastation }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Even in victory, we have won nothing but defeat"
+		set_country_flag = southern_devastation
+		add_country_modifier = {
+			name = southern_devastation
+			duration = 1460
+		}
+		add_country_modifier = {
+			name = buyeo_financial_crisis
+			duration = -1
+		}
+		any_owned_province = {
+			limit = { 
+				OR = {
+					is_core = GXI
+					is_core = FJN
+					is_core = YNN
+				}
+			}
+			reduce_pop = 0.85
+		}
+		prestige = -5
+	}
+}
+
+
+
+country_event = {
+	id = 651890
+	title = "EVTNAME651890"
+	desc = "EVTDESC651890"
+	picture = "guangzhou_uprising"
+
+	trigger = {
+		AND = {
+			owns = 1500
+			owns = 1501
+			owns = 1493
+			owns = 1504
+		}
+		has_country_flag = southern_devastation
+		NOT = { has_country_flag = hakka_punti_war }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Send troops to split the communities"
+		set_country_flag = hakka_punti_war
+		1493 = {
+			any_pop = {
+                            limit = { has_pop_culture = hakka }
+                            militancy = 5
+                            reduce_pop = 0.5
+							move_pop = 1504
+			}
+			any_pop = {
+                            limit = { has_pop_culture = yue }
+                            militancy = 5
+                            reduce_pop = 0.95
+			}
+			
+		}
+	}
+	
+	option = {
+		name = "Do nothing, the Chinese can manage themselves"
+		set_country_flag = hakka_punti_war
+		set_country_flag = hakka_angry
+		1493 = {
+			any_pop = {
+                            limit = { has_pop_culture = hakka }
+                            militancy = 8
+                            reduce_pop = 0.25
+			}
+			any_pop = {
+                            limit = { has_pop_culture = yue }
+                            militancy = 5
+                            reduce_pop = 0.95	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 651902
+	title = "EVTNAME651902"
+	desc = "EVTDESC651902"
+	picture = "south_china_map"
+
+	trigger = {
+		tag = QNG
+		has_country_flag = victory_of_Buyeo
+		NOT = { has_country_flag = southern_provinces_reorganized }
+	}
+
+	mean_time_to_happen = { months = 8 }
+
+	option = {
+		name = "The South shall never rise again ... right?"
+		set_country_flag = southern_provinces_reorganized
+		any_owned = {
+			remove_core = YNN
+		}
+		any_owned = {
+			remove_core = GXI
+		}
+		any_owned = {
+			remove_core = FJN
+		}
+		FJN = {
+			government = merchant_republic
+		}
+		CHI_1504 = {
+			any_pop = {
+                            militancy = 4
+                            consciousness = 2
+			}
+			add_core = GNG
+		}
+		CHI_1601 = {
+			any_pop = {
+                            militancy = 4
+                            consciousness = 2
+			}
+			add_core = GUI
+		}
+		CHI_1604 = {
+			add_core = FJN
+		}
+		CHI_1610 = {
+			add_core = FJN
+		}
+		CHI_1482 = {
+			any_pop = {
+                            militancy = 4
+                            consciousness = 2
+			}
+			add_core = FJN
+		}
+		CHI_1485 = {
+			any_pop = {
+                            militancy = 4
+                            consciousness = 2
+			}
+			add_core = FJN
+		}
+		prestige = 20
+	}
+}
+
+#The Chinese Famine of 1876-1879 and the Nian Revolt
+
+country_event = {
+	id = 651891
+	title = "EVTNAME651891"
+	desc = "EVTDESC651891"
+	picture = "1876_famine"
+
+	trigger = {
+		OR = {
+			owns = 1618
+			owns = 1572
+			owns = 1510
+			owns = 1512
+			owns = 1567
+			owns = 1568
+		}
+		year = 1876
+		NOT = { has_global_flag = 1876_chinese_famine }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Focus on Famine Relief"
+		set_global_flag = 1876_chinese_famine
+		CHI_1572 = {
+			any_pop = {
+                            reduce_pop = 0.75
+			}
+			any_pop = {
+                            militancy = -2
+                            consciousness = 4
+			}
+		}
+		
+		CHI_1612 = {
+			any_pop = {
+                            reduce_pop = 0.90
+			}
+			any_pop = {
+                            militancy = -2
+                            consciousness = 4
+			}
+		}
+		
+		CHI_1510 = {
+			any_pop = {
+                            reduce_pop = 0.95
+			}
+			any_pop = {
+                            militancy = -2
+                            consciousness = 4
+			}
+		}
+		
+		CHI_1563 = {
+			any_pop = {
+                            reduce_pop = 0.95
+			}
+			any_pop = {
+                            militancy = -2
+                            consciousness = 4
+			}
+		}
+		money = -120000
+	}
+	
+	option = {
+		name = "Development must come first"
+		set_country_flag = 1876_chinese_famine
+		CHI_1572 = {
+			any_pop = {
+                            reduce_pop = 0.50
+			}
+			any_pop = {
+                            militancy = -1
+                            consciousness = 6
+			}
+		}
+		CHI_1612 = {
+			any_pop = {
+                            reduce_pop = 0.85
+			}
+			any_pop = {
+                            militancy = -1
+                            consciousness = 6
+			}
+		}
+		CHI_1510 = {
+			any_pop = {
+                            reduce_pop = 0.90
+			}
+			any_pop = {
+                            militancy = -1
+                            consciousness = 6
+			}
+		}
+		CHI_1563 = {
+			any_pop = {
+                            reduce_pop = 0.90
+			}
+			any_pop = {
+                            militancy = -1
+                            consciousness = 6
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = 651892
+	title = "EVTNAME651892"
+	desc = "EVTDESC651892"
+	picture = "draw_tears_iron"
+
+	trigger = {
+		tag = QNG
+		has_country_flag = 1876_chinese_famine
+		NOT = { has_country_flag = 1876_famine_relief }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "At least some people want to help"
+		set_country_flag = 1876_famine_relief
+		CHI_2221 = {
+			any_pop = {
+                            consciousness = 3
+			}
+		}
+		CHI_1510 = {
+			any_pop = {
+                            consciousness = -2
+			}
+		}
+		CHI_1563 = {
+			any_pop = {
+                            consciousness = -2
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = 651893
+	title = "EVTNAME651893"
+	desc = "EVTDESC651893"
+	picture = "nian_rebels"
+
+	trigger = {
+		tag = QNG
+		has_country_flag = 1876_chinese_famine
+		NOT = { has_country_flag = nian_bandits }
+	}
+
+	mean_time_to_happen = { years = 2 }
+
+	option = {
+		name = "We must deal with this threat to our nation"
+		set_country_flag = nian_bandits
+		NIA = {
+			set_country_flag = nian_rebellion
+		}
+		CHI_1612 = {
+			any_pop = {
+                            militancy = 2
+                            consciousness = 2
+			}
+			add_core = NIA
+		}
+		CHI_1508 = {
+			any_pop = {
+                            militancy = 2
+                            consciousness = 2
+			}
+			add_core = NIA
+		}
+		CHI_1510 = {
+			any_pop = {
+                            militancy = 2
+                            consciousness = 2
+			}
+			add_core = NIA
+		}
+		CHI_1572 = {
+			any_pop = {
+                            militancy = 2
+                            consciousness = 2
+			}
+			add_core = NIA
+		}
+		
+		any_owned = {
+			limit = {
+				is_core = NIA
+			}
+            secede_province = NIA
+		}
+		
+		war = {
+			target = NIA
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 651895
+	title = "EVTNAME651895"
+	desc = "EVTDESC651895"
+	picture = "guangzhou_uprising"
+
+	trigger = {
+		tag = NIA
+		has_country_flag = nian_rebellion
+		NOT = { has_country_flag = rebellion_resources }
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	option = {
+		name = "Down with the Qing"
+		set_country_flag = rebellion_resources
+		NIA = {
+			capital_scope = {
+					sub_unit = { type = cuirassier value = current }
+					sub_unit = { type = cuirassier value = current }
+					sub_unit = { type = cuirassier value = current }
+					sub_unit = { type = cuirassier value = current }
+					sub_unit = { type = infantry value = current }
+					sub_unit = { type = infantry value = current }
+					sub_unit = { type = dragoon value = current }
+					sub_unit = { type = dragoon value = current }
+			}
+			define_general = { name = "Zhang Lexing" personality = defence_2.1 background = attack_5.1 } 
+		}
+		small_arms = 2000
+		canned_food = 3000
+		ammunition = 5000
+	}
+}
+
+country_event = {
+	id = 651894
+	title = "EVTNAME651894"
+	desc = "EVTDESC651894"
+	picture = "nian_victory"
+
+	trigger = {
+		tag = QNG
+		has_country_flag = nian_bandits
+		NOT = { has_country_flag = end_of_the_nian }
+		AND = {
+			owns = 1572
+			owns = 1612
+			owns = 1510
+			owns = 1563
+		}
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	option = {
+		name = "I hope this doesn't become a trend"
+		set_country_flag = end_of_the_nian
+		CHI_1572 = {
+			any_pop = {
+                            militancy = -3
+                            consciousness = -3
+			}
+			remove_core = NIA
+		}
+		CHI_1612 = {
+			any_pop = {
+                            militancy = -3
+                            consciousness = -3
+			}
+			remove_core = NIA
+		}
+		
+		CHI_1510 = {
+			any_pop = {
+                            militancy = -3
+                            consciousness = -3
+			}
+			remove_core = NIA
+		}
+		
+		CHI_1508 = {
+			any_pop = {
+                            militancy = -3
+                            consciousness = -3
+			}
+			remove_core = NIA
+		}
+	}
+}
+
+
+
+#Modernization Consequences
+
+country_event = {
+	id = 651896
+	title = "EVTNAME651896"
+	desc = "EVTDESC651896"
+	picture = "confucian_scholars"
+
+	trigger = {
+		tag = QNG
+		civilization_progress = 0.5
+		NOT = { has_country_flag = eastern_learning_circle }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Can't they see reforms are necessary?"
+		set_country_flag = eastern_learning_circle
+		add_country_modifier = {
+			name = confucius_society
+			duration = -1
+		}
+		any_pop = {
+			limit = { pop_majority_ideology = reactionary }
+			consciousness = 6
+			militancy = 4
+		}
+		any_pop = {
+			limit = { pop_majority_ideology = conservative }
+			consciousness = 3
+			militancy = 2
+		}
+		
+		prestige = 15
+	}
+}
+
+
+
+country_event = {
+	id = 651897
+	title = "EVTNAME651897"
+	desc = "EVTDESC651897"
+	picture = "chinese_protest"
+
+	trigger = {
+		tag = QNG
+		has_country_flag = yongping_tax_reform
+		NOT = { has_country_flag = anqing_riots }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Undo the reforms"
+		set_country_flag = anqing_riots
+		random_owned = {
+			limit = { owner = { civilized = no } }
+			owner = {
+				economic_reform = no_finance_reform
+			}
+		}
+		CHI_2221 = {
+			any_pop = {
+				limit = { type = aristocrats }
+				militancy = -2
+			}
+		}
+			
+		CHI_1540 = {
+			any_pop = {
+				limit = { type = aristocrats }
+				militancy = -2
+			}
+		}
+
+		CHI_1540 = {
+			any_pop = {
+				limit = { type = aristocrats }
+				militancy = -2
+			}
+		}
+				
+		CHI_1470 = {
+			any_pop = {
+				limit = { type = aristocrats }
+				militancy = -2
+			}
+		}
+				
+		CHI_1477 = {
+			any_pop = {
+				limit = { type = aristocrats }
+				militancy = -2
+			}
+		}
+		prestige = -5
+	}
+	
+	option = {
+		name = "Who do they think they are? Shoot them and anyone who defies the edicts."
+		set_country_flag = anqing_riots
+		CHI_2221 = {
+			any_pop = {
+				limit = { type = aristocrats }
+				militancy = 2
+				reduce_pop = 0.75
+			}
+		}
+			
+		CHI_1540 = {
+			any_pop = {
+				limit = { type = aristocrats }
+				militancy = 2
+				reduce_pop = 0.75
+			}
+		}
+
+		CHI_1540 = {
+			any_pop = {
+				limit = { type = aristocrats }
+				militancy = 2
+				reduce_pop = 0.75
+			}
+		}
+				
+		CHI_1470 = {
+			any_pop = {
+				limit = { type = aristocrats }
+				militancy = 2
+				reduce_pop = 0.75
+			}
+		}
+				
+		CHI_1477 = {
+			any_pop = {
+				limit = { type = aristocrats }
+				militancy = 2
+				reduce_pop = 0.75
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = 651898
+	title = "EVTNAME651898"
+	desc = "EVTDESC651898"
+	picture = "chinese_trains"
+
+	trigger = {
+		tag = QNG
+		transport_improv = yes_transport_improv
+		NOT = { has_country_flag = feng_shui_protection }
+	}
+
+	mean_time_to_happen = { years = 4 }
+
+	option = {
+		name = "Send guards to protect the railways from future destruction."
+		set_country_flag = feng_shui_protection
+		any_prov = {
+			infrastructure = -1
+		}
+		treasury = -1500
+		prestige = 10
+	}
+	
+	option = {
+		name = "Find a way to placate them. Even if we have to make everyone carry a bagua at all times!"
+		set_country_flag = feng_shui_protection
+		any_prov = {
+			infrastructure = -1
+		}
+		any_pop = {
+			limit = { pop_majority_ideology = reactionary }
+			militancy = -1
+		}
+		treasury = -3500
+	}
+}
+
+#1887 Flood
+
+
+
+country_event = {
+	id = 651899
+	title = "EVTNAME651899"
+	desc = "EVTDESC651899"
+	picture = "1887_floods"
+
+	trigger = {
+		tag = QNG
+		year = 1887
+		NOT = { has_country_flag = 1887_huanghe_flood }
+	}
+
+	mean_time_to_happen = { months = 8 }
+
+	option = {
+		name = "Something must be done to ensure this never happens again..."
+		set_country_flag = 1887_huanghe_flood
+		CHI_1508 = {
+			any_pop = {
+                            reduce_pop = 0.95
+			}
+			any_pop = {
+                            consciousness = 4
+			}
+			add_province_modifier = {
+				name = chinese_floods duration = 1800
+			}
+		}
+		CHI_1510 = {
+			any_pop = {
+                            reduce_pop = 0.95
+			}
+			any_pop = {
+                            consciousness = 4
+			}
+			add_province_modifier = {
+				name = chinese_floods duration = 1800
+			}
+		}
+	}
+}
+
+# Decisions giving technology to warlord states as well as restoring already researched technology to Buyeo
+
+country_event = {
+	id = 651900
+	title = "EVTNAME651900"
+	desc = "EVTDESC651900"
+	picture = "modern_china"
+
+	trigger = {
+		tag = QNG
+		civilized = yes
+		NOT = { has_country_flag = china_modernized }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Our nation has changed greatly"
+		set_country_flag = china_modernized
+		
+		activate_technology = experimental_railroad
+		activate_technology = early_railroad
+		activate_technology = piston_steam_engine
+		activate_technology = post_nelsonian_thought
+		activate_technology = battleship_column_doctrine
+		activate_technology = flintlock_rifles
+		activate_technology = army_professionalism
+		activate_technology = bronze_muzzle_loaded_artillery
+		activate_technology = clipper_design
+		activate_technology = steamers
+		activate_technology = iron_steamers
+		activate_technology = hot_blast
+		activate_technology = mechanized_mining
+		activate_technology = regenerative_furnaces
+		activate_technology = no_standard
+		activate_technology = ad_hoc_money_bill_printing
+		
+		any_country = {
+			QNG = {
+				limit = {
+					has_country_modifier = confucius_society
+				}
+				remove_country_modifier = confucius_society
+			}
+			QNG = {
+				limit = {
+					has_country_modifier = self_strengthening_movement
+				}
+				remove_country_modifier = self_strengthening_movement
+			}
+			limit = { 
+				OR = { 
+					is_culture_group = east_asian
+					tag = KOR
+				}
+				exists = no
+			}
+			civilized = yes
+			activate_technology = experimental_railroad
+			activate_technology = early_railroad
+			activate_technology = piston_steam_engine
+			activate_technology = post_nelsonian_thought
+			activate_technology = battleship_column_doctrine
+			activate_technology = flintlock_rifles
+			activate_technology = army_professionalism
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = clipper_design
+			activate_technology = steamers
+			activate_technology = iron_steamers
+			activate_technology = hot_blast
+			activate_technology = mechanized_mining
+			activate_technology = regenerative_furnaces
+			activate_technology = no_standard
+			activate_technology = ad_hoc_money_bill_printing
+			activate_technology = private_banks
+			activate_technology = basic_chemistry 
+			activate_technology = classicism_n_early_romanticism
+			activate_technology = malthusian_thought
+			activate_technology = enlightenment_thought
+		}
+	}
+}
+
+country_event = {
+	id = 651901
+	title = "EVTNAME651901"
+	desc = "EVTDESC651901"
+	picture = "new_buyeo_army"
+
+	trigger = {
+		tag = QNG
+		civilized = yes
+		has_country_flag = korean_army
+		has_country_flag = china_modernized
+		NOT = { has_country_flag = buyeo_army_modernization }
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = "Black cat or white cat, if it can catch mice, it's a good cat"
+		set_country_flag = buyeo_army_modernization
+		any_country = {
+			limit = { 
+				OR = { 
+					is_culture_group = east_asian
+					tag = KOR
+				}
+				exists = no
+			}
+			activate_technology = flintlock_rifles
+			activate_technology = muzzle_loaded_rifles
+			activate_technology = breech_loaded_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = iron_muzzle_loaded_artillery
+			activate_technology = iron_breech_loaded_artillery
+			activate_technology = army_command_principle
+			activate_technology = army_professionalism
+			activate_technology = military_staff_system
+			activate_technology = military_plans
+			activate_technology = military_statistics
+		}
+	}
+}
+
+#More Natural Disasters
+
+#The Warlords
+
+country_event = {
+	id = 651903
+	title = "EVTNAME651903"
+	desc = "EVTDESC651903"
+	picture = "korea_wu"
+
+	trigger = {
+		tag = QNG
+		civilized = yes
+		NOT = { has_country_flag = provincial_defiance }
+	}
+
+	mean_time_to_happen = { months = 8 }
+
+	option = {
+		name = "How dare they defy us!"
+		set_country_flag = provincial_defiance
+		any_owned = {
+			limit = {
+				is_core = HUI
+			}
+          	secede_province = HUI
+		}
+		any_owned = {
+			limit = {
+				is_core = KOR
+			}
+          	secede_province = KOR
+		}
+		HUI = {
+			government = presidential_dictatorship
+		}
+		KOR = {
+			government = presidential_dictatorship
+		}
+		prestige = -5
+	}
+
+	option = {
+		name = "Protect Han rights and traditions! (Play as Liangjiang)"
+		set_country_flag = provincial_defiance	
+		any_owned = {
+			limit = {
+				is_core = HUI
+			}
+          	secede_province = HUI
+		}
+		any_owned = {
+			limit = {
+				is_core = KOR
+			}
+          	secede_province = KOR
+		}
+		HUI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		KOR = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		prestige = -5
+		change_tag_no_core_switch = HUI
+	}
+
+	option = {
+		name = "We will play second fiddle to the Buyeo no longer! (Play as Silla)"
+		set_country_flag = provincial_defiance
+		any_owned = {
+			limit = {
+				is_core = HUI
+			}
+          	secede_province = HUI
+		}
+		any_owned = {
+			limit = {
+				is_core = KOR
+			}
+          	secede_province = KOR
+		}
+		HUI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		KOR = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		prestige = -5
+		change_tag_no_core_switch = KOR
+	}
+}
+
+country_event = {
+	id = 651904
+	title = "EVTNAME651904"
+	desc = "EVTDESC651904"
+	picture = "attacking_imperial_forces"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = QNG
+		civilized = yes
+		has_country_flag = provincial_defiance 
+		NOT = { has_country_flag = chuseok_coup }
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = "Even if not all see it that way, we did what we had to do"
+		set_country_flag = chuseok_coup
+		upper_house = {
+			ideology = reactionary
+			value = 0.99
+		}
+		all_core = {
+			limit = {
+				OR = {
+					NOT = { is_capital = yes }
+				}
+			}
+          	remove_core = QNG
+		}
+		KOR = {
+			any_owned = {
+				remove_core = QNG
+			}
+		}
+		QNG = {
+			limit = {
+				NOT = { has_country_modifier = the_half_half_system }
+			}
+			add_country_modifier = {
+				name = the_half_half_system
+				duration = -1
+			}
+		}
+		QNG = {
+			limit = {
+				NOT = { has_country_modifier = disunited_china }
+			}
+			add_country_modifier = {
+				name = disunited_china
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = buyeo_regency_government
+			duration = -1
+		}
+		1616 = {
+			add_province_modifier = {
+				name = dadu_resistance
+				duration = 1825
+			}
+		}	
+		political_reform = regionalism
+		social_reforms = no_schools
+		political_reform = none_voting
+		political_reform = serfdom
+		prestige = -50
+	}
+}
+
+country_event = {
+	id = 651905
+	title = "EVTNAME651905"
+	desc = "EVTDESC651905"
+	picture = "imperial_protection"
+
+	trigger = {
+		tag = QNG
+		civilized = yes
+		has_country_flag = chuseok_coup
+		NOT = { has_country_flag = modernizer_defiance }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Their ignorance of heaven's will will doom us all!"
+		set_country_flag = modernizer_defiance
+		any_owned = {
+			limit = {
+				is_core = FJN
+			}
+          	secede_province = FJN
+		}
+		any_owned = {
+			limit = {
+				is_core = JCH
+			}
+          	secede_province = JCH
+		}
+		any_owned = {
+			limit = {
+				is_core = SXI
+			}
+          	secede_province = SXI
+		}
+		SXI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		JCH = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		FJN = {
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		prestige = -5
+	}
+
+	option = {
+		name = "Changsha will lead China into a bright future! (Play as Huguang)"
+		set_country_flag = modernizer_defiance
+		any_owned = {
+			limit = {
+				is_core = FJN
+			}
+          	secede_province = FJN
+		}
+		any_owned = {
+			limit = {
+				is_core = JCH
+			}
+          	secede_province = JCH
+		}
+		any_owned = {
+			limit = {
+				is_core = SXI
+			}
+          	secede_province = SXI
+		}
+		SXI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		JCH = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		FJN = {
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		prestige = -5
+		change_tag_no_core_switch = JCH
+	}
+
+	option = {
+		name = "China's hopes lie in the warehouses of Hangzhou! (Play as Min-Zhe)"
+		set_country_flag = modernizer_defiance
+		any_owned = {
+			limit = {
+				is_core = FJN
+			}
+          	secede_province = FJN
+		}
+		any_owned = {
+			limit = {
+				is_core = JCH
+			}
+          	secede_province = JCH
+		}
+		any_owned = {
+			limit = {
+				is_core = SXI
+			}
+          	secede_province = SXI
+		}
+		SXI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		JCH = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		FJN = {
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		prestige = -5
+		change_tag_no_core_switch = FJN
+	}
+
+	option = {
+		name = "Taiyuan's coal will shine as a beacon for others!! (Play as Huguang)!"
+		set_country_flag = modernizer_defiance
+		any_owned = {
+			limit = {
+				is_core = FJN
+			}
+          	secede_province = FJN
+		}
+		any_owned = {
+			limit = {
+				is_core = JCH
+			}
+          	secede_province = JCH
+		}
+		any_owned = {
+			limit = {
+				is_core = SXI
+			}
+          	secede_province = SXI
+		}
+		SXI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		JCH = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		FJN = {
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		prestige = -5
+		change_tag_no_core_switch = SXI
+	}
+}
+
+country_event = {
+	id = 651906
+	title = "EVTNAME651906"
+	desc = "EVTDESC651906"
+	picture = "beiyang_exercises"
+
+	trigger = {
+		tag = QNG
+		civilized = yes
+		has_country_flag = modernizer_defiance
+		NOT = { has_country_flag = southern_anarchy }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "The mountains are high and the Emperor is far away"
+		set_country_flag = southern_anarchy
+		prestige = -5
+		any_owned = {
+			limit = {
+				is_core = GNG
+			}
+          	secede_province = GNG
+		}
+		any_owned = {
+			limit = {
+				is_core = GUI
+			}
+          	secede_province = GUI
+		}
+		GNG = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		GUI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = DAI
+			}
+            secede_province = DAI
+		}
+	}
+
+	option = {
+		name = "The Pearl River calls! (Play as Liangguang)"
+		set_country_flag = southern_anarchy
+		prestige = -5
+		any_owned = {
+			limit = {
+				is_core = GNG
+			}
+          	secede_province = GNG
+		}
+		any_owned = {
+			limit = {
+				is_core = GUI
+			}
+          	secede_province = GUI
+		}
+		GNG = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		GUI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = DAI
+			}
+            secede_province = DAI
+		}
+		change_tag_no_core_switch = GNG
+	}
+
+	option = {
+		name = "To Guilin! (Play as Guizhou)"
+		set_country_flag = southern_anarchy
+		prestige = -5
+		any_owned = {
+			limit = {
+				is_core = GNG
+			}
+          	secede_province = GNG
+		}
+		any_owned = {
+			limit = {
+				is_core = GUI
+			}
+          	secede_province = GUI
+		}
+		GNG = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		GUI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = DAI
+			}
+            secede_province = DAI
+		}
+		change_tag_no_core_switch = GUI
+	}
+}
+
+country_event = {
+	id = 651907
+	title = "EVTNAME651907"
+	desc = "EVTDESC651907"
+	picture = "sichuan_china_army"
+
+	trigger = {
+		tag = QNG
+		civilized = yes
+		has_country_flag = southern_anarchy
+		NOT = { has_country_flag = western_anarchy }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Things do not bode well."
+		set_country_flag = western_anarchy
+		any_owned = {
+			limit = {
+				is_core = XBI
+			}
+          	secede_province = XBI
+		}
+		any_owned = {
+			limit = {
+				is_core = SZC
+			}
+          	secede_province = SZC
+		}
+		XBI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		SZC = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		prestige = -5
+		release_vassal = XIN
+		any_owned = {
+			limit = {
+				is_core = MGL
+			}
+            secede_province = MGL
+		}
+		release_vassal = MGL
+		release_vassal = TNT
+		release_vassal = ALT
+	}
+
+	option = {
+		name = "Remember to get some mala on the way (Play as Sichuan)"
+		set_country_flag = western_anarchy
+		any_owned = {
+			limit = {
+				is_core = XBI
+			}
+          	secede_province = XBI
+		}
+		any_owned = {
+			limit = {
+				is_core = SZC
+			}
+          	secede_province = SZC
+		}
+		XBI = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		SZC = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		prestige = -5
+		release_vassal = XIN
+		any_owned = {
+			limit = {
+				is_core = MGL
+			}
+            secede_province = MGL
+		}
+		release_vassal = MGL
+		release_vassal = TNT
+		release_vassal = ALT
+		change_tag_no_core_switch = SZC
+	}
+
+	option = {
+		name = "To the sandy Loess Plateau we go! (Play as Shaan-Gan)"
+		set_country_flag = western_anarchy
+		any_owned = {
+			limit = {
+				is_core = XBI
+			}
+          	secede_province = XBI
+		}
+		any_owned = {
+			limit = {
+				is_core = SZC
+			}
+          	secede_province = SZC
+		}
+		XBI = {
+			government = presidential_dictatorship
+		}
+		SZC = {
+			government = presidential_dictatorship
+		}
+		prestige = -5
+		release_vassal = XIN
+		any_owned = {
+			limit = {
+				is_core = MGL
+			}
+            secede_province = MGL
+		}
+		release_vassal = MGL
+		release_vassal = TNT
+		release_vassal = ALT
+		change_tag_no_core_switch = XBI
+	}
+}
+
+# Decisions for Yi Seongmin to defect to Korea and for Korea to annex Manchuria
+
+country_event = {
+	id = 651908
+	title = "EVTNAME651908"
+	desc = "EVTDESC651908"
+	picture = "manchuria"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Strip him of his titles and summon him to Dadu at once!"
+		any_owned = {
+			limit = {
+				is_core = MCK 
+			}
+          	secede_province = KOR
+		}
+		kill_leader = 16318
+		prestige = -10
+		KOR = {
+			country_event = 651912
+		}
+	}
+}
+
+country_event = {
+	id = 651909
+	title = "EVTNAME651909"
+	desc = "EVTDESC651909"
+	picture = "battle_of_palikiao"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Its time we reassert our imperial authority! To Dadu, for the Buyeo!"
+		set_country_flag = dadu_war
+		any_country = {
+			leave_alliance = QNG
+			leave_alliance = KOR
+		}
+		war = {
+			target = KOR
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = make_puppet }
+			call_ally = yes
+		}	
+	}
+}
+
+country_event = {
+	id = 651910
+	title = "EVTNAME651910"
+	desc = "EVTDESC651910"
+	picture = "winning_china"
+
+	trigger = {
+		has_country_flag = dadu_war
+		NOT = { has_country_flag = first_korea_buyeo_war }
+		tag = QNG
+		is_vassal = no
+		is_our_vassal = KOR
+		truce_with = KOR
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = "This victory paves the way to our reassertion of imperial authority"
+		set_country_flag = first_korea_buyeo_war 
+		prestige = 10
+		KOR = { 
+			any_owned = {
+				limit = {
+					is_core = MCK 
+				}
+				secede_province = QNG
+			}
+			kill_leader = 16494
+			government = dominion
+			clr_country_flag = yi_seongmin_in_korea
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = -1
+			}
+		}
+		any_owned = {
+				limit = {
+					is_core = MCK 
+				}	
+				add_core = QNG
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 651911
+	title = "EVTNAME651911"
+	desc = "EVTDESC651911"
+	picture = "losing_china"
+
+
+	trigger = {
+		has_country_flag = dadu_war
+		NOT = { has_country_flag = first_korea_buyeo_war }
+		tag = QNG
+		NOT = { is_our_vassal = KOR }
+		truce_with = KOR
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = "We are humiliated and disgraced"
+		set_country_flag = first_korea_buyeo_war 
+		set_country_flag = regency_killed
+		prestige = 10
+		any_country = {
+			limit = {
+				vassal_of = QNG
+			}
+			release_vassal = THIS
+		}
+		KOR = {
+			any_owned = {
+				limit = {
+					is_core = MCK 
+				}	
+				add_core = KOR
+			}
+			country_event = 651916
+		}
+		QNG = {
+			limit = {
+				has_country_modifier = buyeo_regency_government
+			}
+			remove_country_modifier = buyeo_regency_government
+		}
+	}
+}
+
+country_event = {
+	id = 651916
+	title = "EVTNAME651916"
+	desc = "EVTDESC651916"
+	picture = "winning_korea"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Hooray for King Lee!"
+		prestige = 20
+	}
+}
+
+country_event = {
+	id = 651912
+	title = "EVTNAME651912"
+	desc = "EVTDESC651912"
+	picture = "battle_of_palikiao"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The Buyeo will pay dearly for this humiliation. To Dadu!"
+		dominant_issue = {
+			value = jingoism
+			factor = 24
+		}
+		remove_country_modifier = chinese_provincial_government
+		prestige = -5
+		leave_alliance = QNG
+		relations = {
+			who = QNG
+			value = -200
+		}
+		QNG = {
+			country_event = 651909
+		}
+	}
+	
+	option = {
+		name = "We must obey our masters. Surrender Lee Seongmin and withdraw to the Yalu."
+		prestige = -50
+		any_owned = {
+				limit = {
+					is_core = MCK 
+					NOT = { is_core = KOR }
+				}
+				secede_province = QNG
+			}
+		kill_leader = 16494
+		clr_country_flag = yi_seongmin_in_korea
+		add_country_modifier = {
+			name = chinese_provincial_government	
+			duration = -1
+		}
+		QNG = {
+			prestige = 20
+			create_vassal = KOR
+			any_owned = {
+				limit = {
+					is_core = MCK 
+				}	
+				add_core = QNG
+			}
+		}
+		government = dominion
+	}
+}
+
+country_event = {
+	id = 651913
+	title = "EVTNAME651913"
+	desc = "EVTDESC651913"
+	picture = "black_flag_army"
+
+	trigger = {
+		tag = QNG
+		civilized = yes
+		has_country_flag = dadu_war
+		NOT = { has_country_flag = shandong_secedes }
+		war = yes
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Why now all of all times?"
+		set_country_flag = shandong_secedes
+		any_owned = {
+			limit = {
+				is_core = SDG
+			}
+          	secede_province = SDG
+		}
+		SDG = {
+			government = peasant_republic
+		}
+		prestige = -5
+	}
+
+	option = {
+		name = "The Heavenly Path opens up! To Mount Tai! (Play as Shandong)"
+		set_country_flag = shandong_secedes
+		any_owned = {
+			limit = {
+				is_core = SDG
+			}
+          	secede_province = SDG
+		}
+		SDG = {
+			government = peasant_republic
+		}
+		prestige = -5
+		change_tag_no_core_switch = SDG
+	}
+}
+

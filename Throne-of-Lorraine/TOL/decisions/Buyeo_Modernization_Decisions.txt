@@ -1,0 +1,495 @@
+# Modernization Decisions
+
+political_decisions = {
+	reign_of_the_yongping_emperor = {
+		picture = hundred_days_reform
+		potential = {
+			tag = QNG
+			civilized = no
+			NOT = { has_country_flag = yongping_emperor }
+		}
+
+		allow = {
+			war = no
+			year = 1860
+			government = absolute_empire
+		}
+
+		effect = {
+			set_country_flag = yongping_emperor
+			add_country_modifier = {
+				name = self_strengthening_movement
+				duration = -1
+			}
+			1617 = {
+				add_province_modifier = {
+					name = foreign_trading_post
+					duration = -1
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	
+	}
+	
+	modernize_the_northern_armies = {
+		picture = peking_field_force
+		
+		potential = {
+			tag = QNG
+			has_country_flag = yongping_emperor
+			NOT = { has_country_flag = beifang_armies_modernized }
+		}
+
+		allow = {
+			war = no
+			money = 15000
+		}
+
+		effect = {
+			treasury = -15000
+			set_country_flag = beifang_armies_modernized
+			activate_technology = military_staff_system
+			activate_technology = army_professionalism
+			activate_technology = bronze_muzzle_loaded_artillery
+			random_owned = {
+				limit = { owner = { civilized = no } }
+				owner = {
+					military_reform = yes_foreign_weapons
+					military_reform = yes_foreign_officers
+					activate_technology = flintlock_rifles
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	establish_jiangnan_ports = {
+		picture = beiyang_fleet
+		potential = {
+			tag = QNG
+			has_country_flag = yongping_emperor
+			NOT = { has_country_flag = jiangnan_ports }
+		}
+		
+		allow = {
+			war = no
+			money = 20000
+			owns = 1604
+			owns = 1539
+		}
+
+		effect = {
+			treasury = -20000
+			activate_technology = post_nelsonian_thought
+			activate_technology = battleship_column_doctrine
+			set_country_flag = jiangnan_ports
+			random_owned = {
+				limit = { owner = { civilized = no } }
+				owner = {
+					military_reform = yes_western_shipyards
+				}
+			}
+			
+			1604 = {
+				naval_base = 2
+				add_province_modifier = {
+					name = foreign_trading_post
+					duration = -1
+				}
+			}
+			
+			1539 = {
+				naval_base = 2
+				add_province_modifier = {
+					name = foreign_trading_post
+					duration = -1
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}	
+	
+	use_our_jesuit_contacts = {
+		picture = ever_victorious
+		potential = {
+			tag = QNG
+			has_country_flag = yongping_emperor
+			NOT = { has_country_flag = jesuit_expedition }
+		}
+		
+		allow = {
+			war = no
+			money = 10000
+			relation = { 
+				who = JES
+				value = 100
+			}
+			religious_policy = pluralism
+		}
+
+		effect = {
+			treasury = -100000
+			set_country_flag = jesuit_expedition
+			research_points = 4500
+			remove_country_modifier = uncivilized_isolationism
+			relation = {
+				who = JES
+				value = 100
+			}
+			any_pop = {
+				limit = {
+					pop_majority_ideology = reactionary
+				}
+				militancy = 2.0
+				consciousness = 2.0
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	chinese_jesuit_education = {
+		picture = hainan_china
+		potential = {
+			tag = QNG
+			NOT = { has_country_flag = chinese_jesuit_education}
+			year = 1870
+			has_country_flag = jesuit_expedition
+		}
+
+		allow = {
+			year = 1885
+			war = no
+			OR = { 
+				civilized = yes
+				civilization_progress = 0.5
+			}
+			money = 20000
+			relation = { 
+				who = JES
+				value = 150
+			}
+		}
+
+		effect = {
+			treasury = -20000
+			set_country_flag = chinese_jesuit_education
+			research_points = 2000
+			add_country_modifier = {
+				name = jesuits_education
+				duration = 3650
+			}
+			any_pop = {
+                limit = { is_culture_group = east_asian }
+                militancy = 2
+				consciousness = 4
+			}
+			school_reforms = low_schools
+		}
+
+		ai_will_do = { factor = 1 }
+	
+	}
+	
+	new_korean_army = {
+		picture = the_new_army
+		potential = {
+			tag = QNG
+			has_country_flag = yongping_emperor
+			NOT = { has_country_flag = korean_army }
+			year = 1880
+		}
+
+		allow = {
+			year = 1885
+			OR = { 
+				civilized = yes
+				AND = {
+					civilization_progress = 0.75
+					foreign_weapons = yes_foreign_weapons
+					foreign_training = yes_foreign_training
+					foreign_officers = yes_foreign_officers
+					army_schools = yes_army_schools
+					foreign_navies = yes_foreign_navies
+				}
+			}
+			war = no
+			OR = {  
+				money = 75000 
+				ai = yes 
+			}
+		}
+
+		effect = {
+			random_owned = {
+				limit = { owner = { ai = no } }
+				owner = { treasury = -750000 }
+			}
+			set_country_flag = korean_army
+			define_general = { 
+				name = "Lee Seongmin" 
+				personality = audacious
+				background = eccentric_genius
+			}
+			tech_school = army_tech_school
+			any_pop = {
+				limit = { type = officers }
+				militancy = 2
+				consciousness = 2
+			}
+			any_pop = {
+				limit = { type = bureaucrats }
+				militancy = 2
+				consciousness = 2
+			}
+			any_pop = {
+				limit = { type = soldiers }
+				militancy = 1
+				consciousness = 3
+			}
+			activate_technology = flintlock_rifles
+			activate_technology = muzzle_loaded_rifles
+			activate_technology = breech_loaded_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = iron_muzzle_loaded_artillery
+			activate_technology = iron_breech_loaded_artillery
+			activate_technology = army_command_principle
+			activate_technology = army_professionalism
+			activate_technology = military_staff_system
+			activate_technology = military_plans
+			activate_technology = military_statistics
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	expanding_the_coal_mines = {
+		picture = eastern_china_railway
+		potential = {
+			tag = QNG
+			has_country_flag = yongping_emperor
+			NOT = { has_country_flag = expanding_the_coal_mines }
+			has_country_flag = end_of_the_nian
+		}
+
+		allow = {
+			war = no
+			OR = { 
+				civilized = yes
+				civilization_progress = 0.5
+			}
+			money = 50000
+			owns = 1572
+		}
+
+		effect = {
+			treasury = -500000
+			set_country_flag = expanding_the_coal_mines
+			activate_technology = hot_blast
+			activate_technology = mechanized_mining
+			activate_technology = regenerative_furnaces
+			1572 = {
+				add_province_modifier = {
+					name = gold_rush
+					duration = 3650
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	
+	}
+	
+	shanxi_railways = {
+		picture = trans_siberian_railway
+		potential = {
+			tag = QNG
+			NOT = { has_country_flag = shanxi_railways}
+			year = 1870
+			has_country_flag = expanding_the_coal_mines
+		}
+
+		allow = {
+			war = no
+			OR = { 
+				civilized = yes
+				civilization_progress = 0.5
+			}
+			money = 43500
+			owns = 1572
+		}
+
+		effect = {
+			activate_technology = experimental_railroad
+			activate_technology = early_railroad  
+			activate_technology = piston_steam_engine
+			treasury = -43500
+			set_country_flag = shanxi_railways
+			random_owned = {
+				limit = { owner = { civilized = no } }
+				owner = {
+					economic_reform = yes_transport_improv
+				}
+			}
+			1616 = {
+				infrastructure = 1
+			}
+			1576 = {
+				infrastructure = 1
+			}
+			1572 = {
+				infrastructure = 1
+			}
+			1573 = {
+				infrastructure = 1
+			}
+			1575 = {
+				infrastructure = 1
+			}
+			1576 = {
+				add_province_modifier = {
+					name = baby_boom
+					duration = 365
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	china_merchants_shipping = {
+		picture = china_merchants_group
+		potential = {
+			tag = QNG
+			has_country_flag = yongping_emperor
+			NOT = { has_country_flag = china_merchants_shipping }
+			year = 1873
+		}	
+			
+		allow = {
+			war = no
+			money = 15500
+			steamer_convoy = 10
+		}
+
+		effect = {
+			treasury = -15500
+			steamer_convoy = -10
+			any_country = {
+				limit = { is_culture_group = east_asian }
+				activate_technology = clipper_design
+				activate_technology = steamers
+				activate_technology = iron_steamers
+			}
+			set_country_flag = china_merchants_shipping
+			random_owned = {
+				limit = { owner = { civilized = no } }
+				owner = {
+					military_reform = yes_foreign_navies
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	centralization_edicts = {
+		picture = china_map
+		potential = {
+			tag = QNG
+			NOT = { has_country_flag = centralization_edict }
+			has_country_flag = 1887_huanghe_flood
+			has_country_flag = yongping_emperor
+			has_country_modifier = the_half_half_system
+			has_country_modifier = disunited_china
+		}
+
+		allow = {
+			war = no
+		}
+			
+		effect = {
+			set_country_flag = centralization_edict
+			remove_country_modifier = the_half_half_system
+			remove_country_modifier = disunited_china
+			economic_reform = yes_admin_reform
+			any_pop = {
+				militancy = 4
+				consciousness = 4
+			}
+			centralization = unitary
+			remove_accepted_culture = korean
+		}
+				
+		ai_will_do = { factor = 1 }
+		
+	}
+
+	yongping_taxation_reforms = {
+		picture = hundred_days_reform
+		potential = {
+			tag = QNG
+			NOT = { has_country_flag = centralization_edict }
+			has_country_flag = southern_devastation
+			has_country_flag = yongping_emperor
+			has_country_modifier = buyeo_financial_crisis
+		}
+
+		allow = {
+			year = 1875
+			war = no
+			money = 8000
+		}
+			
+		effect = {
+			treasury = -8000
+			set_country_flag = china_tax_reform
+			remove_country_modifier = buyeo_financial_crisis
+			economic_reform = yes_finance_reform
+			economic_reform = yes_land_reform
+			activate_technology = no_standard
+			activate_technology = ad_hoc_money_bill_printing
+			any_pop = {
+				militancy = 4
+				consciousness = 4
+			}
+		}
+				
+		ai_will_do = { factor = 1 }
+		
+	}
+
+	loot_the_chinese_people = {
+		picture = hundred_days_reform
+		potential = {
+			ai = yes
+			tag = QNG
+			civilized = no
+			NOT = { has_country_modifier = looting_cooldown }
+			has_country_flag = yongping_emperor
+		}
+
+		allow = {
+			NOT = { money = 10000 }
+			war = no
+		}
+			
+		effect = {
+			treasury = 150000
+			set_country_flag = china_tax_reform
+			add_country_modifier = {
+				name = looting_cooldown
+				duration = 1825
+			}
+			any_pop = {
+				militancy = 6
+				consciousness = 6
+			}
+		}
+				
+		ai_will_do = { factor = 1 }
+		
+	}
+}
