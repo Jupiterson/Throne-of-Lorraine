@@ -13,12 +13,11 @@ political_decisions = {
 			AND = {
 				is_culture_group = britannian
 				ai = no
-				NOT = { tag = SCO }
 				}
 				OR = {
 					AND = {
 						has_country_flag = britannia_ai
-						ai = no
+						ai = yes
 					}
 					AND = {
 						OR = {

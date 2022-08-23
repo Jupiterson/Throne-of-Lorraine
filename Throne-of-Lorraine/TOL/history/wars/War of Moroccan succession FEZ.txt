@@ -1,0 +1,28 @@
+name = "War of Moroccan succession"
+
+1835.10.2 = {
+	add_attacker = FEZ
+	add_defender = GNA
+
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+	war_goal = {
+		casus_belli = conquest
+		actor = FEZ
+		receiver = GNA
+	}
+	war_goal = {
+		casus_belli = conquest
+		actor = GNA
+		receiver = FEZ
+	}
+
+}
+
+1837.4.21 = {
+	rem_attacker = FEZ
+	rem_defender = GNA
+}
