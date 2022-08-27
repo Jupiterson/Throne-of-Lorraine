@@ -524,7 +524,6 @@ political_decisions = {
 		picture = reino_undino
 		potential = {
 			tag = GNA 
-			has_country_flag = cadiz
 			NOT = { has_country_flag = sevilla }
 		}
 
@@ -669,28 +668,6 @@ political_decisions = {
 		}
 	}
 	
-	claim_cadiz = {
-		picture = create_iberia
-		potential = {
-			tag = GNA 
-			NOT = { has_country_flag = cadiz }
-		}
-
-		allow = {
-			state_n_government = 1 
-			all_core = {
-				owned_by = THIS
-			}
-		}
-
-		effect = {
-			prestige = 5
-			badboy = 1
-			set_country_flag = cadiz
-			512 = { add_core = GNA }
-			
-		}
-	}
 	
 	master_of_the_maghreb = {
 		picture = map_africa

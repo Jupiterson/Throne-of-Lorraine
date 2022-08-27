@@ -81,5 +81,55 @@ country_event = {
 			factor = 100
 		}
 	}
+}
+	
+country_event = {
+	id = 100197
+	title = "The Revolt is won"
+	desc = "The Revolt is won"
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARR
+		war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Annex"
+		ALB = { inherit = ARR }
+		#BUL = { inherit = BRR }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+}
+
+country_event = {
+	id = 100198
+	title = "The Revolt is won"
+	desc = "The Revolt is won"
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRR
+		war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Annex"
+		BUL = { inherit = BRR }
+		ai_chance = {
+			factor = 100
+		}
+	}
 	
 }
