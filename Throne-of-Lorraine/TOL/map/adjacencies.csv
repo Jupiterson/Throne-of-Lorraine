@@ -93,7 +93,6 @@ From;To;Type;Through;Data;Comment
 1540;1538;sea;2826;0;Nantong - Shanghai through the Yantze River
 1540;1539;sea;2826;0;Nantong - Suzhou through the Yantze River
 1541;1539;sea;2826;0;Tongzhou - Suzhou through the Yantze River
-1452;1454;sea;2856;0;Biak - Merah Strait
 2406;2562;sea;2825;0;Penghu - Taiwan Strait
 2406;1485;sea;2825;0;Penghu - Taiwan Strait
 1071;1142;sea;2787;0;Bandar abbhas - Homuz Strait
@@ -138,7 +137,7 @@ From;To;Type;Through;Data;Comment
 1444;1451;sea;2854;0;Alor-Aru Strait
 1446;1451;sea;2854;0;Dili-Aru Strait
 1450;1449;sea;2853;0;Ceram-Ambon Strait
-1449;1447;sea;2852;0;Ambon Strait
+1449;1452;sea;2852;0;Ambon Strait
 1447;1448;sea;2853;0;Ternate-Jilolo Strait
 1451;1453;sea;2862;0;Aru-Sorong Strait
 1450;1453;sea;2853;0;Ceram-Sorong Strait
@@ -151,6 +150,9 @@ From;To;Type;Through;Data;Comment
 1679;1678;sea;2845;0;Amari-Okinawa Strait
 1637;1635;sea;2829;0;Cheju-Kwangju Strait
 3260;1645;sea;2841;0;Sado-Niigata Strait
+2647;1448;sea;2853;0;Tidore-Jilolo Strait
+1452;1448;sea;2853;0;Bacan-Jilolo Strait
+2647;1452;sea;2853;0;Tidore-Bacan Strait
 #;;;;;
 # Oceanian Straits;;;;;
 #;;;;;
@@ -333,9 +335,11 @@ From;To;Type;Through;Data;Comment
 1698;1690;impassable;0;0;Atlas Mountains
 ;;;;;
 ;;;;;
-#New Guinea Mountains;;;;;
+#New Guinea and Sumatra Mountains;;;;;
 1560;1454;impassable;0;0;New Guinea Mountains
 2530;2529;impassable;0;0;New Guinea Mountains
+1409;3295;impassable;0;0;scary mountain
+1409;1425;impassable;0;0;scary mountain
 ;;;;;
 ;;;;;
 #Pamir Mountains;;;;;

@@ -52,14 +52,24 @@ upper_house = {
 }
 
 set_country_flag = sunni_country
-foreign_weapons = yes_foreign_weapons
-flintlock_rifles = 1
+
+#Military Reforms
+	foreign_weapons = yes_foreign_weapons
+	military_constructions = yes_military_constructions
+	foreign_artillery = yes_foreign_artillery
+	foreign_officers = yes_foreign_officers
+	foreign_naval_officers = yes_foreign_naval_officers
+	
+#Technologies
+	military_staff_system = 1
+	flintlock_rifles = 1
+	post_napoleonic_thought = 1
+	bronze_muzzle_loaded_artillery = 1
 
 # Inventions
+small_arms_production = yes
+ammunition_production = yes
 
-# Starting Consciousness
-consciousness = 0
-nonstate_consciousness = 0
 
 oob = "PHG_oob.txt"
 1861.1.1 = {
@@ -69,13 +79,5 @@ oob = "PHG_oob.txt"
 	literacy = 0.05
 	non_state_culture_literacy = 0.02
 
-foreign_training = yes_foreign_training
-foreign_weapons = yes_foreign_weapons
-
-# Technologies
-military_staff_system = 1
-flintlock_rifles = 1
-
-# Inventions
 
 }
