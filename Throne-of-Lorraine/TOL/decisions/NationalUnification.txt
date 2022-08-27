@@ -1418,6 +1418,14 @@ form_ruthenia = {
 			NOT = { has_global_flag = indochina_formed }
 			NOT = { exists = IDC }
 			is_culture_group = southeast_asian
+			NOT = {
+				OR = {
+					primary_culture = malay
+					primary_culture = javan
+					primary_culture = sumatran
+					primary_culture = moluccan
+				}
+			}
 		}
 
 		allow = {
