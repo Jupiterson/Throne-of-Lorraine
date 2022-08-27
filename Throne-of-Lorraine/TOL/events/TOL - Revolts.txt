@@ -345,6 +345,7 @@ country_event = {
 			attacker_goal = { casus_belli = conquest_any }
 			defender_goal = { casus_belli = status_quo }
 		}
+		TRI = { country_event = { id = 100195 days = 1 } }
 	}
 	option = {
 		name = "Tunis shall be free!"
@@ -359,6 +360,7 @@ country_event = {
 			defender_goal = { casus_belli = status_quo }
 		}
 		change_tag_no_core_switch = TUN
+		TUN = { country_event = { id = 100195 days = 1 } }
 	}
 }
 

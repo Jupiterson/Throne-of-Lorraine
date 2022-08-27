@@ -277,7 +277,10 @@ political_decisions = {
 			NOT = { has_country_flag = mallorca }
 			exists = SRD
 			exists = CRS
+			OR = {
 			exists = TUN 
+			exists = SQI
+			}
 			exists = SYC
 			NOT = { year = 1845 }
 		}
@@ -297,11 +300,17 @@ political_decisions = {
 	cede_gibralta = {
 		picture = italian_dalmatia
 		potential = {
-			tag = SPA
+		OR = {
+			tag = GNA
+			tag = MOR
+			}
 			NOT = { has_country_flag = gibralta }
 			exists = SRD
-		exists = CRS
+		    exists = CRS
+			OR = {
 			exists = TUN 
+			exists = SQI
+			}
 			exists = SYC
 			ARN = { owns = 502 }
 			NOT = { year = 1845 }
@@ -316,6 +325,8 @@ political_decisions = {
 			badboy = 2
 			set_country_flag = gibralta
 			517 = { secede_province = THIS }
+			2590 = { secede_province = THIS }
+			1689 = { secede_province = THIS }
 		}
 	}
 	

@@ -81,6 +81,7 @@ political_decisions = {
 			or = {
 				tag = FEZ
 				tag = MRR
+				tag = GNA
 			}
 			NOT = { exists = MGH }
 			NOT = { exists = MOR }
@@ -147,7 +148,58 @@ political_decisions = {
 					add_core = MOR
 				}
 			}
+			GNA = {
+				any_owned = {
+					limit = { 
+					OR = {
+							is_core = FEZ
+							is_core = MRR
+							}
+							is_core = GNA
+						}
+					
+					remove_core = MRR
+					remove_core = FEZ
+					remove_core = GNA
+					add_core = MOR
+				}
+			}
+			FEZ = {
+				any_owned = {
+					limit = { 
+					OR = {
+							is_core = FEZ
+							is_core = MRR
+							}
+							is_core = GNA
+						}
+					
+					remove_core = MRR
+					remove_core = FEZ
+					remove_core = GNA
+					add_core = MOR
+				}
+			}
+			MRR = {
+				any_owned = {
+					limit = { 
+					OR = {
+							is_core = FEZ
+							is_core = MRR
+							}
+							is_core = GNA
+						}
+					
+					remove_core = MRR
+					remove_core = FEZ
+					remove_core = GNA
+					add_core = MOR
+				}
+			}
 			change_tag = MOR
+			add_accepted_culture = mozarabic
+			add_accepted_culture = maghrebi
+			
 			any_country = {
 				limit = {
 					vassal_of = THIS
