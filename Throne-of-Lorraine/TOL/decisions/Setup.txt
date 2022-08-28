@@ -2356,6 +2356,16 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = 1836_set_up
+			GAB = { country_event = 2425397 }
+			BTU = { country_event = 2425398 }
+			LUN = { country_event = 2425399 }
+			RWA = { country_event = 2425400 }
+			BHA = { country_event = 2425401 }
+			KZB = { country_event = 2425402 }
+			KRW = { country_event = 2425402 }
+			BUG = { country_event = 2425402 }
+			LOA = { country_event = 2425403 }
+			KON = { country_event = 2425404 }
 			LUN = { neutrality = yes add_country_modifier = { name = neutrality_modifier duration = 2555 } }
 			BTU = { 
 				add_country_modifier = {
