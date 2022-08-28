@@ -539,14 +539,14 @@ political_decisions = {
 		}
 	}
 
-	literacy_ENG = {
+	literacy_ENL = {
 		potential = {
-			tag = ENG
+			tag = ENL
 			always = no
 		}
 
 		allow = {
-			tag = ENG
+			tag = ENL
 		}
 
 		effect = {
@@ -561,13 +561,11 @@ political_decisions = {
 						has_pop_religion = shiite
 						has_pop_religion = mahayana
 						has_pop_religion = sikh
-						has_pop_religion = animist
 						
 						has_pop_culture = afro_italian
 						is_culture_group = south_asian
 						is_culture_group = indo_iranian
 						has_pop_culture = central_american
-						has_pop_culture = mayan
 						has_pop_culture = afro_caribbean
 						has_pop_culture = afro_french
 						has_pop_culture = kreol
@@ -580,11 +578,6 @@ political_decisions = {
 			}
 
 			any_pop = { limit = { has_pop_culture = central_american } literacy = 0.09 }
-
-			any_pop = {
-				limit = { has_pop_religion = animist }
-				literacy = -0.09
-			}
 
 			any_pop = {
 				limit = {
@@ -1961,6 +1954,8 @@ political_decisions = {
 			any_owned = { 
 				add_province_modifier = { name = french_terror duration = -1 } 
 		 	}
+			442 = { add_province_modifier = { name = rival_paris duration = 4380 } }
+			442 = { remove_province_modifier = french_terror }
 			FRA = {
 			add_country_modifier = {
 					name = nobility_fra
@@ -2234,14 +2229,14 @@ political_decisions = {
 			}
 		}
 	}
-	JES_1836_setup = {
+	MEX_1836_setup = {
 		potential = {
-			tag = JES
+			tag = MEX
 			always = no
 		}
 
 		allow = {
-			tag = JES
+			tag = MEX
 		}
 
 		effect = {
@@ -2249,17 +2244,18 @@ political_decisions = {
 				name = america_new_world
 				duration = 3650
 				}
-			UCA_2186 = { any_pop = { literacy = 0.10 } } #Guatemala
-			UCA_2193 = { any_pop = { literacy = 0.10 } } #Honduras
-			UCA_2186 = { any_pop = { literacy = 0.10 } } #El Salvador
-			UCA_2197 = { any_pop = { literacy = 0.10 } }  #Nicaragua
-			2182 = {
-				any_pop = { limit = { has_pop_culture = mexican } literacy = 0.10 }
+			MEX = {
+				any_pop = { 
+					limit = { 
+						has_pop_culture = pipil 
+					} 
+					literacy = 0.10 
+				}
 				any_pop = { limit = { has_pop_culture = central_american } literacy = 0.10 }
 			}
-
-			2172 = { any_pop = { limit = { has_pop_culture = mexican } literacy = 0.10 } }
-			MEX = { any_pop = { literacy = 0.10 } } 
+			MEX = { any_pop = { limit = { has_pop_culture = tarascan } literacy = 0.15 } }
+			MEX = { any_pop = { limit = { has_pop_culture = nahua } literacy = 0.20 } } 
+			MEX = { any_pop = { limit = { has_pop_culture = mayan } literacy = 0.20 } }
 		}
 	}
 

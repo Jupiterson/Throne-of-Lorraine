@@ -286,6 +286,7 @@ political_decisions = {
         primary_culture = zulu
 		NOT = { exists = NGU }
 		NOT = { exists = MZA }
+		NOT = { exists = ROQ }
 		}
 
 		allow = {
@@ -394,7 +395,8 @@ political_decisions = {
 		}
 
 		allow = {
-        government = theocracy
+        OR = { government = theocracy
+		       government = constitutional_theocracy }
 		NOT = { has_country_flag = lacking_writing_system  }
         }
 
@@ -415,7 +417,8 @@ political_decisions = {
 		}
 
 		allow = {
-        government = theocracy
+        OR = { government = theocracy
+		       government = constitutional_theocracy }
         owns = 2113
         }
 
@@ -606,18 +609,12 @@ political_decisions = {
 		        ai = yes  
 	   }
     
-		allow = { 
-			
-			OR = { 
-				ai = yes
-				OR = {
-					tag = BHU
-					tag = MLW
-					tag = ALM
-					tag = KAB 
-				} 
-			}
-		}
+		allow = { OR = 
+		         ai = yes    
+		         { tag = BHU
+			       tag = MLW
+				   tag = ALM
+				   tag = KAB } }
     
 		effect = {
 			SCO = { add_country_modifier = {
@@ -682,4 +679,382 @@ political_decisions = {
             factor = 1
         }
 	 }
-    }
+	 form_qamata = {
+		picture = xhosa_map3
+		potential = {
+        owns  = 2087	
+		owns  = 2057	
+ 		tag = MZA
+		OR = { government = theocracy
+		       government = constitutional_theocracy }
+		}
+			
+		allow = {
+		is_greater_power = yes
+		war = no
+        }
+
+		effect = {
+		    change_tag = ROQ
+			set_country_flag = formed_qamata
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	push_north_qamata = {
+		picture = marching_africans
+		potential = {
+        tag = ROQ
+		has_country_flag = formed_qamata
+		}
+			
+		allow = {
+		war = no
+        }
+
+		effect = {
+		ENG_2067 = { add_core = THIS }
+		POR_2060 = { add_core = THIS }
+		ENG_2039 = { add_core = THIS }
+		ENG_2016 = { add_core = THIS }
+		ENG_2014 = { add_core = THIS }
+		POR_2005 = { add_core = THIS }
+		add_accepted_culture = nyasa
+		add_accepted_culture = mifangaro
+		add_accepted_culture = lacustrine_bantu
+		set_country_flag = push_basin_qamata
+		set_country_flag = claim_mad_qamata
+		clr_country_flag = formed_qamata
+		badboy = 5
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_imerina_qamata = {
+		picture = marching_africans
+		potential = {
+        tag = ROQ
+		has_country_flag = claim_mad_qamata
+		}
+			
+		allow = {
+		war = no
+		controls = 2060
+        }
+
+		effect = {
+		MAD_2117 = { add_core = THIS }
+		MAD_2121  = { add_core = THIS }
+		2124 = { add_core = THIS }
+		2123 = { add_core = THIS }
+		2126 = { add_core = THIS }
+		2125 = { add_core = THIS }
+		2127 = { add_core = THIS }
+		add_accepted_culture = malagasy
+		set_country_flag = push_east_coast_qamata
+		clr_country_flag = claim_mad_qamata
+		badboy = 3
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	push_east_coast_qamata = {
+		picture = marching_africans
+		potential = {
+        tag = ROQ
+		has_country_flag = push_east_coast_qamata
+		}
+			
+		allow = {
+		war = no
+		owns = 2115
+        }
+
+		effect = {
+		ENG_2044 = { add_core = THIS }
+		ENG_2036 = { add_core = THIS }
+		BEL_2034 = { add_core = THIS }
+		ENG_2024 = { add_core = THIS }
+		ENG_2026 = { add_core = THIS }
+		ENG_2019 = { add_core = THIS }
+		SOM_1868 = { add_core = THIS }
+		ENG_2011 = { add_core = THIS }
+		add_accepted_culture = african_minor
+		add_accepted_culture = swahili
+		add_accepted_culture = lacus_bantu
+		add_accepted_culture = rundi_ganda
+		set_country_flag = ethiopia_qamata
+		clr_country_flag = push_east_coast_qamata
+		badboy = 5
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	ethiopia_qamata = {
+		picture = marching_africans
+		potential = {
+        tag = ROQ
+		has_country_flag = ethiopia_qamata
+		}
+			
+		allow = {
+		war = no
+		controls = 2031
+        }
+
+		effect = {
+		ETH_1865 = { add_core = THIS }
+		SOM_1872 = { add_core = THIS }
+		ETH_1859 = { add_core = THIS }
+		ETH_1852 = { add_core = THIS }
+		ETH_1853 = { add_core = THIS }
+		ENG_1848 = { add_core = THIS }
+		SOM_1868 = { add_core = THIS }
+		set_country_flag = claim_sudan_qamata
+		clr_country_flag = ethiopia_qamata
+		badboy = 5
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	push_basin_qamata = {
+		picture = marching_africans
+		potential = {
+        tag = ROQ
+		has_country_flag = push_basin_qamata
+		}
+			
+		allow = {
+		war = no
+		owns = 2012
+		owns = 2004
+        }
+
+		effect = {
+		POR_3550 = { add_core = THIS }
+		POR_2009 = { add_core = THIS }
+		FRA_3553 = { add_core = THIS }
+		FRA_3555 = { add_core = THIS }
+		BEL_1988 = { add_core = THIS }
+		BEL_3558 = { add_core = THIS }
+		BEL_1982 = { add_core = THIS }
+		FRA_2010 = { add_core = THIS }
+		BEL_1992 = { add_core = THIS }
+		FRA_1998 = { add_core = THIS }
+		BEL_1990 = { add_core = THIS }
+		BEL_1996 = { add_core = THIS }
+		FRA_1977 = { add_core = THIS }
+		FRA_1974 = { add_core = THIS }
+		FRA_1981 = { add_core = THIS }
+		add_accepted_culture = bakongo
+		add_accepted_culture = mongo
+		add_accepted_culture = forest_bantu
+		add_accepted_culture = south_forest_bantu
+		add_accepted_culture = lega_bantu
+		add_accepted_culture = pygmy
+		clr_country_flag = push_basin_qamata
+		set_country_flag = claim_ubanga_qamata
+		badboy = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	push_sudan_qamata = {
+		picture = marching_africans
+		potential = {
+        tag = ROQ
+		has_country_flag = claim_ubanga_qamata
+		has_country_flag = claim_sudan_qamata
+		}
+			
+		allow = {
+		war = no
+		owns = 1973
+		owns = 1965
+		owns = 1981
+		owns = 2021
+		owns = 2026
+		owns = 1864
+		owns = 1862
+		owns = 1854
+		owns = 1850
+        }
+
+		effect = {
+		FRA_1965 = { add_core = THIS }
+		ENG_1956 = { add_core = THIS }
+		SOK_1963 = { add_core = THIS }
+		ENG_1818 = { add_core = THIS }
+		ENG_1825 = { add_core = THIS }
+		ENG_1844 = { add_core = THIS }
+		EGY_1842 = { add_core = THIS }
+		EGY_1838 = { add_core = THIS }
+		EGY_1827 = { add_core = THIS }
+		EGY_1834 = { add_core = THIS }
+		add_accepted_culture = azande
+		add_accepted_culture = nilotic
+		clr_country_flag = claim_ubanga_qamata
+		clr_country_flag = claim_sudan_qamata
+		set_country_flag = claim_egypt_qamata
+		set_country_flag = claim_west_africa_qamata
+		badboy = 5
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	push_west_qamata = {
+		picture = marching_africans
+		potential = {
+        tag = ROQ
+		has_country_flag = claim_west_africa_qamata
+		}
+			
+		allow = {
+		war = no
+		owns = 1957
+		owns = 1824
+        }
+
+		effect = {
+		SPA_1955 = { add_core = THIS }
+		SOK_1934 = { add_core = THIS }
+		FRA_1930 = { add_core = THIS }
+		OYO_1924 = { add_core = THIS }
+		FRA_1923 = { add_core = THIS }
+		OYO_1742 = { add_core = THIS }
+		FRA_1927 = { add_core = THIS }
+		SOK_1937 = { add_core = THIS }
+		SOK_1945 = { add_core = THIS }
+		NIR_1825 = { add_core = THIS }
+		FRA_1813 = { add_core = THIS }
+		FRA_1919 = { add_core = THIS }
+		FRA_1914 = { add_core = THIS }
+		ASH_1910 = { add_core = THIS }
+		FRA_1907 = { add_core = THIS }
+		ASH_1909 = { add_core = THIS }
+		FRA_1892 = { add_core = THIS }
+		FRA_1893 = { add_core = THIS }
+		ENG_1887 = { add_core = THIS }
+		FRA_1883 = { add_core = THIS }
+		FRA_1878 = { add_core = THIS }
+		FRA_1788 = { add_core = THIS }
+		FRA_1783 = { add_core = THIS }
+		FRA_1801 = { add_core = THIS }
+		FRA_1798 = { add_core = THIS }
+		FRA_1901 = { add_core = THIS }
+		FRA_1808 = { add_core = THIS }
+		FRA_1803 = { add_core = THIS }
+		ALD_1718 = { add_core = THIS }
+		FRA_1775 = { add_core = THIS }
+		MOR_1696 = { add_core = THIS }
+		add_accepted_culture = east_kwa
+		add_accepted_culture = hausa
+		add_accepted_culture = fulbe
+		add_accepted_culture = yoruba
+		add_accepted_culture = fon
+		add_accepted_culture = edo_culture
+		add_accepted_culture = neo_roman
+		add_accepted_culture = itsekari
+		add_accepted_culture = ibo
+		add_accepted_culture = ibibio
+		add_accepted_culture = gur
+		add_accepted_culture = songhai
+		add_accepted_culture = mande
+		add_accepted_culture = senufo
+		add_accepted_culture = kru
+		add_accepted_culture = western_nigritic
+		add_accepted_culture = songhai
+		set_country_flag = claim_morocco_qamata
+		clr_country_flag = claim_west_africa_qamata
+		badboy = 20
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	push_maghreb_qamata = {
+		picture = marching_africans
+		potential = {
+        tag = ROQ
+		has_country_flag = claim_morocco_qamata
+		}
+			
+		allow = {
+		war = no
+		owns = 1716
+		owns = 1711
+		owns = 1773
+        }
+
+		effect = {
+		TUN_1726 = { add_core = THIS }
+		ALD_1713 = { add_core = THIS }
+		ALD_1708 = { add_core = THIS }
+		FRA_1700 = { add_core = THIS }
+		ALD_1704 = { add_core = THIS }
+		MOR_1694 = { add_core = THIS }
+		MOR_1683 = { add_core = THIS }
+		MOR_1693 = { add_core = THIS }
+		MOR_1686 = { add_core = THIS }
+		MOR_1688 = { add_core = THIS }
+		set_country_flag = qamata_complete_1
+		clr_country_flag = claim_morocco_qamata
+		badboy = 5
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	push_egypt_qamata = {
+		picture = marching_africans
+		potential = {
+        tag = ROQ
+		has_country_flag = claim_egypt_qamata
+		}
+			
+		allow = {
+		war = no
+		owns = 1835
+        }
+
+		effect = {
+		EGY_1771 = { add_core = THIS }
+		EGY_1762 = { add_core = THIS }
+		EGY_1745 = { add_core = THIS }
+		EGY_1751 = { add_core = THIS }
+		EGY_1758 = { add_core = THIS }
+		TRI_1735 = { add_core = THIS }
+		TRI_1731 = { add_core = THIS }
+		set_country_flag = qamata_complete_2
+		clr_country_flag = claim_egypt_qamata
+		badboy = 5
+		}
+		ai_will_do = { factor = 1 }
+	}
+	cleanse_qamata = {
+		picture = qamata_god
+		potential = {
+		tag = ROQ
+        has_country_flag = qamata_complete_1
+        has_country_flag = qamata_complete_2	
+        NOT = { has_country_flag = qamata_finished }
+	   }
+    
+		allow = {
+		has_unclaimed_cores = no
+		}
+    
+		effect = {
+		badboy = 20
+		any_pop = {
+            limit = { NOT = { OR = { religion = animist
+			                         religion = fetishist}}}
+		reduce_pop = 0.01							 
+        }
+		set_country_flag = qamata_finished
+		}
+		ai_will_do = {
+            factor = 1
+        }
+	 }
+	 }
+	
+	

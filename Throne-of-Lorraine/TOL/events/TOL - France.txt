@@ -490,6 +490,125 @@ country_event = {
 
 country_event = {
 
+	id = 100191
+	title = "Fate of the Huguenot Capital"
+	desc = "PROTESTANTCAPITAL"
+	picture = "border_ruffians"
+    fire_only_once = yes
+	trigger = {
+	owns = 442
+	NOT = { accepted_culture = occitan has_country_flag = dois_de_lhomme }
+	year = 1840
+	}
+
+	mean_time_to_happen = {
+		months = 48
+	}
+
+	option = {
+		name = "Resettle the Inhabitants"
+	any_pop = { 
+	  limit = {
+		has_pop_culture = occitan 
+		location = {
+						province_id = 442
+					} 
+				} 
+				move_pop = 2348 
+			}
+	
+   any_pop = { 
+	  limit = {
+		has_pop_culture = arpitan 
+		location = {
+						province_id = 442
+					} 
+				} 
+				move_pop = 573 
+			}	
+	any_pop = { 
+	  limit = {
+		has_pop_culture = afro_french 
+		location = {
+						province_id = 442
+					} 
+				} 
+				move_pop = 195 
+			
+		}
+	any_pop = { 
+	  limit = {
+		has_pop_culture = french 
+		location = {
+						province_id = 442
+					} 
+				} 
+				reduce_pop = 0.7
+			}
+		FRZ = { capital = 425 }
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = {
+		name = "Gone with the City"
+	any_pop = { 
+	  limit = {
+		has_pop_culture = occitan 
+		location = {
+						province_id = 442
+					} 
+				} 
+				reduce_pop = 0.1
+			}
+			
+	any_pop = { 
+	  limit = {
+		has_pop_culture = afro_french 
+		location = {
+						province_id = 442
+					} 
+				} 
+				reduce_pop = 0.1
+			}
+			
+    any_pop = { 
+	  limit = {
+		has_pop_culture = arpitan 
+		location = {
+						province_id = 442
+					} 
+				} 
+				reduce_pop = 0.1
+			}
+			
+	any_pop = { 
+	  limit = {
+		has_pop_culture = french 
+		location = {
+						province_id = 442
+					} 
+				} 
+				reduce_pop = 0.2
+			}
+			FRZ = { capital = 425 }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "Let them be for now"
+		prestige = -20
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+
 	id = 100190
 	title = "Return of the Monarchy?"
 	desc = "The Monarchy is back, but should we keep it?"

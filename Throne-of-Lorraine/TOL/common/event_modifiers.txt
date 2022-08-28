@@ -4881,29 +4881,21 @@ french_terror = {
 #	war_exhaustion = 0.05
 	immigrant_push = 0.05
 	local_RGO_output = -0.5
-	pop_consciousness_modifier = 0.5
-	pop_militancy_modifier = 0.5
-	non_accepted_pop_consciousness_modifier = 0.05
-	non_accepted_pop_militancy_modifier = 0.05
+#	pop_consciousness_modifier = 0.5
+#	pop_militancy_modifier = 0.5
+#	non_accepted_pop_consciousness_modifier = 0.05
+#	non_accepted_pop_militancy_modifier = 0.05
 	local_ruling_party_support = -0.80
 	#goods_demand = -0.03
 	icon = 1
 }
 
-#stubborn_nobility = {
-#	global_immigrant_attract = -0.75
-#	global_population_growth = -0.0025
-#	diplomatic_points_modifier = -0.1
-#	assimilation_rate = -0.1
-#	badboy = 0.1
-#	war_exhaustion = 0.5
-# #   icon = 20
-#}
-
 nobility_fra = {
 	global_immigrant_attract = -0.75
 	global_population_growth = -0.0025
 	diplomatic_points_modifier = -0.1
+	global_pop_consciousness_modifier = 0.55
+	global_pop_militancy_modifier = 0.55
 	icon = 20
 }
 
@@ -5072,7 +5064,7 @@ growth_of_shiraz = {
 	icon = 11
 }
 
-
+#Wales
 the_slate_empire = {
 	min_tariff = 0.2
 	tariff_efficiency_modifier = 0.1
@@ -5087,6 +5079,30 @@ Anglo_Welsh_Trade_Agreement = {
 	import_cost = -.05
 	non_accepted_pop_militancy_modifier = -0.01
 	icon = 9
+}
+
+Padarn_Railway = {
+	population_growth = 0.001
+	local_RGO_output = 0.05
+	immigrant_attract = 0.01
+	icon = 13
+}
+	
+Talyllyn_And_Ffestiniog_Railways = {
+	population_growth = 0.001
+	local_RGO_output = 0.05
+	immigrant_attract = 0.05
+	local_factory_output = 0.05
+	icon = 13
+}
+	
+Trevithick_&_Sons_Boiler_Works = {
+	immigrant_attract = 0.05
+	local_factory_output = 0.05
+	local_repair = 0.15
+	local_ship_build = -0.15
+	population_growth = 0.001
+	icon = 13
 }
 
 lost_crusade = {
@@ -5157,6 +5173,23 @@ pirate_sugar = {
 	
 }
 
+rival_paris = {
+	farm_rgo_size = 0.1
+	mine_rgo_size = 0.1
+	immigrant_attract = 0.05
+	education_efficiency_modifier = 0.25
+	icon = 19
+}
+
+religious_uniity = {
+	pop_consciousness_modifier = -0.25
+	pop_militancy_modifier = -0.25
+	war_exhaustion = -0.05
+	global_assimilation_rate = 0.5
+	icon = 17
+}
+
+
 ### Basque Christian Commune ###
 requete = {
 	org_regain = -0.3
@@ -5170,4 +5203,68 @@ requete = {
 german_cape_merchants = {
 	tariff_efficiency_modifier = -0.1
 	icon = 10
+}
+
+
+## ToL China ##
+
+southern_devastation = {
+	global_population_growth = -0.04
+	war_exhaustion = 0.0005
+	non_accepted_pop_consciousness_modifier = 0.005
+	prestige = -0.1
+	icon = 18
+}
+
+buyeo_financial_crisis = {
+	tax_efficiency = -0.3
+	administrative_efficiency_modifier = -0.1
+	non_accepted_pop_militancy_modifier = -0.2
+	non_accepted_pop_consciousness_modifier = -0.2
+	icon = 12	
+}
+
+disunited_china = {
+	administrative_efficiency_modifier = -0.15
+	tax_efficiency = -0.05
+	non_accepted_pop_militancy_modifier = -0.1
+	prestige = -0.1
+	mobilisation_size = -0.5
+	icon = 10
+}
+confucius_society = {
+	research_points = -1
+	prestige = 0.01
+	education_efficiency_modifier = -0.025
+	icon = 8
+}
+
+looting_cooldown = {
+	prestige = -0.1
+	badboy = 0.05
+	icon = 9
+}
+
+chinese_provincial_government = {
+	prestige = -0.1
+	badboy = -0.1
+	cb_generation_speed_modifier = -0.50
+	icon = 9
+}
+
+buyeo_regency_government = {
+	global_pop_consciousness_modifier = 0.2
+	global_pop_militancy_modifier = 0.1
+	political_reform_desire  = 0.25
+	cb_generation_speed_modifier = -0.50
+	influence_modifier = -0.50
+	org_regain = -0.25
+	badboy = 0.05
+	icon = 18
+}
+
+dadu_resistance = {
+	pop_militancy_modifier = 0.05
+	pop_consciousness_modifier = 0.05
+	icon = 20
 }

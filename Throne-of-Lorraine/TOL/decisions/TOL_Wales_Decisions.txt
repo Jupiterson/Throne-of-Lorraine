@@ -85,7 +85,95 @@ political_decisions = {
 			ENL = { military_access = WHA }
 		}
 	}
-}
-				
+	
+	invest_in_trevithick = {
+		potential = {
+			tag = WHA
+			NOT = { has_country_flag = invested_in_trev }
+		}
 			
-				
+		allow = {
+				war = no
+				year = 1841
+				owns = 3589
+				money = 75000
+				compound_steam_engines = 1
+				total_amount_of_ships = 10
+		}
+		
+			effect = {
+				set_country_flag = invested_in_trev
+				prestige = 5
+				money = -75000
+				years_of_research = 0.4
+				3589 = {
+					naval_base = 1
+					life_rating = 2
+					add_province_modifier = { name = Trevithick_&_Sons_Boiler_Works duration = 36500 }
+				}
+			}
+	}
+
+	welsh_cornwall = {
+		potential = {
+			tag = WHA
+			NOT = { has_country_flag = welsh_cornwall }
+		}
+		
+		allow = {
+			war = no
+			owns = 3589
+		}
+		
+		effect = {
+			prestige = 10
+			set_country_flag = welsh_cornwall
+		298 = {
+			add_core = WHA
+		}
+		3588 = {
+			add_core = WHA
+		}
+		3268 = {
+			add_core = WHA
+		}
+		299 = {
+			add_core = WHA
+		}
+		3589 = {
+			add_core = WHA
+		}
+		298 = { change_province_name = "Caerfaddon" }
+		3588 = { change_province_name = "Caerwysg" }
+		3268 = { change_province_name = "Dwr Pontydd" }
+		299 = { change_province_name = "Tryriw" }
+		3589 = { change_province_name = "Aberplym" }
+		}
+	}
+
+	cornish_equality = {
+		potential = {
+			tag = WHA
+			has_country_flag = welsh_cornwall
+			NOT = { has_country_flag = cornish_boom }
+		}
+		
+		allow = {
+			war = no
+			owns = 3589
+			citizens_rights = culture_voting_only
+			state_n_government = 1
+		}
+		
+		effect = {
+			add_accepted_culture = cornish
+			add_country_flag = cornish_boom
+			CRN = { 
+				all_core = {
+				add_province_modifier = { name = baby_boom duration = 1825 }
+				}
+			}
+		}
+	}
+}
+

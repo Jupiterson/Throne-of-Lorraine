@@ -698,8 +698,6 @@ national_awakening = {
 				tag = LIT
 				tag = RUS
 			}
-			owns = 718
-			owns = 958
 			NOT = {
 				has_country_flag = ruthenyans_accepted_culture
 				accepted_culture = ruthenyan
@@ -707,11 +705,37 @@ national_awakening = {
 		}
 		allow = {
 			958 = {
-				owned_by = THIS
+				OR = {
+							owned_by = THIS
+							owner = {
+								ai = yes
+								in_sphere = THIS
+								OR = {
+									is_vassal = no
+									vassal_of = THIS
+								}
+							}
+						}
+			} 
+			
+			718 = {
+				OR = {
+							owned_by = THIS
+							owner = {
+								ai = yes
+								in_sphere = THIS
+								OR = {
+									is_vassal = no
+									vassal_of = THIS
+								}
+								war = no
+								is_greater_power = no
+							}
+						}
 			}
+
 			nationalism_n_imperialism  = 1
 			citizens_rights = all_voting_pops
-			citizenship_policy = full_citizenship
 		}
 		effect = {
 			add_accepted_culture = ruthenyan
@@ -724,6 +748,16 @@ national_awakening = {
 			CRI_970 = { add_core = THIS }
 			RUS_964 = { add_core = THIS }
 			set_country_flag = ruthenyans_accepted_culture
+			UKR = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BYE = {
+				all_core = {
+					add_core = THIS
+				}
+			}
 			any_pop = {
 				limit = {
 					has_pop_culture = ruthenyan

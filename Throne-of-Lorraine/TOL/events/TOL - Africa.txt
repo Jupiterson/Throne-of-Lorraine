@@ -7,7 +7,7 @@
 	major = yes
 
      trigger = {
-		NOT = { has_global_flag = tiniri_disabled exists = TIN exists = MGH }
+		NOT = { has_global_flag = tiniri_disabled exists = TIN exists = MGH exists = SQI }
 		year = 1866
 		OR = {
 			tag = CLN
@@ -1442,6 +1442,65 @@ country_event = {
 			
 		ai_chance = {
 			factor = 1
+		}
+	}
+}
+
+
+country_event = {
+
+	id = 100195
+	title = "Rise of the Eastern Dynasty"
+	desc = "With the Genoans forced out of Tunisia, we can start the Rise of our undesputed reign over the Maghreb"
+	picture = "treaty"
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "We shall Rise!"
+		change_tag = SQI
+		inherit = TUN
+		inherit = TRI
+		prestige = 10
+		set_country_flag = sarqi_rise
+		TLE = {
+		all_core = {
+				add_core = SQI
+			} 
+		}
+		COP = {
+		all_core = {
+				add_core = SQI
+			} 
+		}
+		RGA = {
+		all_core = {
+				add_core = SQI
+			} 
+		}
+		MOR = {
+		all_core = {
+				add_core = SQI
+			} 
+		}
+		TRI = {
+		all_core = {
+				add_core = SQI
+			} 
+		}
+		1738 = { secede_province = SQI }
+		ai_chance = {
+			factor = 0.75
+		}
+	}
+
+	option = {
+		name = "It's not worth it."
+		prestige = -10
+		ai_chance = {
+			factor = 0.25
 		}
 	}
 }
