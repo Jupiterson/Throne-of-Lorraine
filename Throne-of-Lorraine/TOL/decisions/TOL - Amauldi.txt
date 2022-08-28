@@ -4,26 +4,73 @@ political_decisions = {
 #	picture = map_east_indies
 #	potential = {
 #		NOT = {	has_country_flag = melayu_raya	}
-#		tag = USA
+#		tag = TUR
+#		ai = no
 #	}
 #
 #	allow = {
-#		war = no
-#	}
-#
+#    }
 #	effect = {
+#	potential = { }
+#	allow = { }
+ #   effect = { capital = 219 }
+	#}
 #		set_country_flag = melayu_raya
-#			any_owned = {
+#		any_owned = {
 #				limit = {
-#					pop_majority_culture = afro_french 
+#					pop_majority_culture = greek 
 #				}
-#				add_core = SAA	
+#				secede_province = GRR
 #			}
+#		any_owned = {
+#				limit = {
+#					pop_majority_culture = bulgarian 
+#				}
+#				secede_province = BRR
+#			}			
+#		any_owned = {
+#				limit = {
+#					pop_majority_culture = serbian 
+#				}
+#				secede_province = SRR
+#			}
+#		any_owned = {
+#				limit = {
+#					pop_majority_culture = albanian 
+#				}
+#				secede_province = ARR
+#			}
+#		GRR = {
+#		war = {
+#			target = THIS
+#			attacker_goal = { casus_belli = liberate_country country = GRE }
+#			defender_goal = { casus_belli = conquest_any }
+#			call_ally = yes
+#		}
+#		}
+#		
+#		BRR = {
+#		war = {
+#			target = THIS
+#			attacker_goal = { casus_belli = liberate_country country = BUL }
+#			defender_goal = { casus_belli = conquest_any }
+#			call_ally = yes
+#		}
+#		}
+#		
+#		ARR = {
+#		war = {
+#			target = THIS
+#			attacker_goal = { casus_belli = liberate_country country = ALB }
+#			defender_goal = { casus_belli = conquest_any }
+#			call_ally = yes
+#		}
+#		}
 #		
 #	}
 #
 #	ai_will_do = { factor = 0 }
-#}
+#}#
 
 	amauldi_change_capital = {
 	picture = diplo_annex
@@ -202,5 +249,41 @@ political_decisions = {
 			}
 		}
 		ai_will_do = { factor = 1 }
+	}
+	
+	
+	emancipate_afros = {
+		picture = embrace_the_jews
+		potential = {
+			tag = USA
+			NOT = {
+				has_country_flag = emancipated_afros
+				accepted_culture = afro_french
+			}
+		}
+		allow = {
+			nationalism_n_imperialism  = 1
+			citizens_rights = all_voting_pops
+			citizenship_policy = full_citizenship
+			slavery = no_slavery
+			NOT = { debt_law = serfdom }
+		}
+		effect = {
+			add_accepted_culture = afro_french
+			prestige = 10
+			set_country_flag = emancipated_afros
+			any_pop = {
+				limit = {
+					has_pop_culture = afro_french
+
+				}
+				militancy = -4
+				consciousness = -2
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
 	}
 }

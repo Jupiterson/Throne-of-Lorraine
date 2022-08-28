@@ -2985,44 +2985,61 @@
 442 = {
 	aristocrats = {
 		culture = french
-		religion = catholic
-		size = 1100
+		religion = hugenott
+		size = 2100
 	}
 
 	officers = {
 		culture = french
-		religion = catholic
+		religion = hugenott
 		size = 300
 	}
 
 	bureaucrats = {
 		culture = french
-		religion = catholic
-		size = 700
+		religion = hugenott
+		size = 1000
 	}
 
 	clergymen = {
 		culture = french
-		religion = catholic
-		size = 825
+		religion = hugenott
+		size = 1825
 	}
 
 	artisans = {
 		culture = french
-		religion = catholic
+		religion = hugenott
 		size = 5500
 	}
-
+	
+	artisans = {
+		culture = occitan
+		religion = hugenott
+		size = 5500
+	}
+	
+	artisans = {
+		culture = breton
+		religion = hugenott
+		size = 2500
+	}
+	
+	artisans = {
+		culture = arpitan
+		religion = hugenott
+		size = 2100
+	}
 	soldiers = {
 		culture = french
-		religion = catholic
+		religion = hugenott
 		size = 1150
 	}
 
 	farmers = {
 		culture = french
-		religion = catholic
-		size = 63925
+		religion = hugenott
+		size = 83925
 	}
 	
 	serfs = {
@@ -3034,9 +3051,23 @@
 	farmers = {
 		culture = occitan
 		religion = hugenott
-		size = 33925
+		size = 99925
 		militancy = 9
 		rebel_type = nationalist_rebels
+	}
+	
+	farmers = {
+		culture = yankee
+		religion = catholic
+		size = 13925
+	}
+	
+	slaves = {
+		culture = afro_french
+		religion = hugenott
+		size = 33925
+		militancy = 9
+		rebel_type = slave_revolt
 	}
 }
 #Poitiers (288000/72000 POPS)

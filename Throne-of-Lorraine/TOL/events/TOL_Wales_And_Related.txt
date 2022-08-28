@@ -148,7 +148,7 @@ country_event = {
 		}
 	}
 	
-	country_event = {
+country_event = {
 	id = 9116
 	title = "EVTNAME9116"
 	desc = "EVTDESC9116"
@@ -159,6 +159,7 @@ country_event = {
 			WHA = {
 				owns = 3589
 			}
+		NOT = { ENL = { has_country_flag = refused_welsh_deal } }
 		}
 	
 	fire_only_once = yes
@@ -167,6 +168,7 @@ country_event = {
 	
 	option = { 
 		name = "EVTOPTA9116"
+		add_country_flag = refused_welsh_deal
 		war = { target = WHA 
 			attacker_goal = { casus_belli = acquire_core_state state_province_id = 3589 }
 			defender_goal = { casus_belli = status_quo }
@@ -195,7 +197,7 @@ country_event = {
 	}
 }
 
-	country_event = {
+country_event = {
 	id = 9117
 	title = "EVTNAME9117"
 	desc = "EVTDESC9117"
@@ -205,9 +207,9 @@ country_event = {
 		war = no
 		owns = 297
 		NOT = {
-			ENL = 
-				{ has_country_modifier = Anglo_Welsh_Trade_Agreement } 
-			}
+			ENL = { has_country_modifier = Anglo_Welsh_Trade_Agreement } 
+			ENL = { has_country_flag = refused_welsh_deal }
+		}
 		WHA = {
 			owns = 298
 		}
@@ -219,6 +221,7 @@ country_event = {
 		
 	option = { 
 		name = "EVTOPTA9117"
+		add_country_flag = refused_welsh_deal
 		badboy = 5
 		298 = {
 			add_core = ENL
@@ -253,3 +256,32 @@ country_event = {
 	}
 }
 	
+country_event = { 
+	id = 9318
+	title = "EVTNAME9318"
+	desc = "EVTDESC9318"
+	trigger = {
+		tag = WHA
+		war = no
+		owns = 298
+		owns = 299
+		owns = 3268
+		owns = 3588
+		owns = 3589
+		NOT = { has_country_flag = cornish_boom }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.5 }
+	
+	option = { 
+		name = "EVTOPTA9318"
+		add_country_flag = cornish_boom
+		CRN = { 
+			all_core = {
+				add_province_modifier = { name = baby_boom duration = 1825 }
+			} 
+		}
+	}	
+}

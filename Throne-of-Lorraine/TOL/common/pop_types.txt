@@ -1141,29 +1141,29 @@ assimilation_chance = {
     modifier = {
         factor = 1.5
 		OR = {
-        has_pop_culture = ainu
-		AND = {
-		has_pop_culture = tatar
-		country = { primary_culture = ruthenyan }
+			has_pop_culture = ainu
+			AND = {
+				has_pop_culture = tatar
+				country = { primary_culture = ruthenyan }
+			}
 		}
 		AND = {
-		OR = {
-		has_pop_culture = burgundian
-		has_pop_culture = occitan
-		has_pop_culture = breton
-		has_pop_culture = catalan
-		has_pop_culture = provencial
-		has_pop_culture = belgican
+			OR = {
+			has_pop_culture = burgundian
+			has_pop_culture = occitan
+			has_pop_culture = breton
+			has_pop_culture = catalan
+			has_pop_culture = provencial
+			has_pop_culture = belgican
+			}
         }
 		AND = {
-        country = { primary_culture = french }
-		country = { primary_culture = has_country_flag = french_assimilation }
-		}
+			country = { primary_culture = french }
+			country = { primary_culture = { has_country_flag = french_assimilation } }
 		}
 		AND = {
-		has_pop_culture = czech
-		country = { primary_culture = south_german }
-		}
+			has_pop_culture = czech
+			country = { primary_culture = south_german }
 		}
     }
 #pops that can assimilate quickly	
@@ -1262,12 +1262,17 @@ conversion_chance = {
     }
 	
 	modifier = {
-        factor = 1.5
+        factor = 50
         country = {
             has_country_flag = conversion_by_sword
         }
     }
 	
+	
+	modifier = {
+        factor = 5
+        country = { has_country_flag = religious_unity }
+    }
 	
 	modifier = {
        factor = 10
@@ -1282,6 +1287,7 @@ conversion_chance = {
             has_pop_religion = shiite
             has_pop_religion = sunni
             has_pop_religion = ibadi
+			NOT = { country = { has_country_flag = religious_unity } }
             AND = {
                 has_pop_religion = shinto
                 has_culture_core = yes
@@ -1297,11 +1303,13 @@ conversion_chance = {
 
     modifier = {
         factor = -0.75
+		NOT = { country = { has_country_flag = religious_unity } }
         OR = {
             country = { capital_scope = { pop_majority_religion = sunni } }
             country = { capital_scope = { pop_majority_religion = shiite } }
             country = { capital_scope = { pop_majority_religion = ibadi } }
             country = { primary_culture = turkish }
+			
         }
         OR = {
             has_pop_religion = orthodox
@@ -1314,6 +1322,7 @@ conversion_chance = {
 
     modifier = {
         factor = -0.75
+		NOT = { country = { has_country_flag = religious_unity } }
         OR = {
             country = { capital_scope = { pop_majority_religion = protestant } }
             country = { capital_scope = { pop_majority_religion = catholic } }
@@ -1329,13 +1338,17 @@ conversion_chance = {
 
     modifier = {
         factor = 0.8
+		OR = {
         has_pop_religion = animist
+		country = { has_country_flag = religious_unity }
+		}
         OR = {
             location = { continent = africa }
             location = { continent = south_west_africa }
             location = { continent = west_africa }
             location = { continent = east_africa }
             location = { continent = central_africa }
+			country = { has_country_flag = religious_unity }
         }
         country = { civilized = yes }
     }
@@ -1387,7 +1400,7 @@ conversion_chance = {
 
 
     modifier = {
-        factor = 0.1
+        factor = 0.5
         country = { government = theocracy }
     }
 

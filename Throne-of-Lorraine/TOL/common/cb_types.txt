@@ -4786,6 +4786,7 @@ china_acquire_state = {
 	always = yes
 
 	can_use = {
+		state_n_government = 1
 		NOT = {
 			AND = {
 				#THIS = { ai = yes }
@@ -4804,6 +4805,8 @@ china_acquire_state = {
 		}
 		THIS = {
 			NOT = { tag = LAN }
+			NOT = { tag = QNG }
+			NOT = { tag = KOR }
 			is_culture_group = east_asian
 			NOT = {
 				has_country_modifier = neutrality_modifier
