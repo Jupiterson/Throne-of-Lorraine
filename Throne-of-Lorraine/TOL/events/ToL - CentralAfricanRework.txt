@@ -861,7 +861,7 @@ country_event = {
 	id = 2425363
 	title = "Nyanzan Sentiment Grows"
 	desc = "NYANZANSUNITE"
-	picture = "alb_revolt_1"
+	picture = "nyanza"
 	fire_only_once = yes
 
 	trigger = {
@@ -886,7 +886,7 @@ country_event = {
 	id = 2425364
 	title = "Nyanzan War"
 	desc = "NYANZANSUNITE"
-	picture = "alb_revolt_1"
+	picture = "nyanza"
 	fire_only_once = yes
 
 	trigger = {
@@ -973,7 +973,7 @@ country_event = {
 	id = 2425365
 	title = "Nyanzan War"
 	desc = "NYANZANWAR"
-	picture = "alb_revolt_1"
+	picture = "nyanza"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1008,7 +1008,7 @@ country_event = {
 	id = 2425366
 	title = "Nyanzan War"
 	desc = "Multiple parts of Nyanza are joining our rebellion."
-	picture = "alb_revolt_1"
+	picture = "nyanza"
 	fire_only_once = yes
 
 	trigger = {
@@ -1055,7 +1055,7 @@ country_event = {
 	id = 2425367
 	title = "We win!"
 	desc = "After a war against our cousins, we can now claim Greater Nyanza."
-	picture = "alb_revolt_1"
+	picture = "nyanza"
 	fire_only_once = yes
 
 	trigger = {
@@ -1205,7 +1205,7 @@ country_event = {
 	id = 2425371
 	title = "The Nyanzans did it!"
 	desc = "MBARARAFULLSTOPUNCOVERED"
-	picture = "uk_seizes_lagos"
+	picture = "nyanza"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1236,7 +1236,7 @@ country_event = {
 	id = 2425372
 	title = "War For Our Freedom"
 	desc = "We are now at war against the Babantuans."
-	picture = "uk_seizes_lagos"
+	picture = "nyanza"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1249,7 +1249,7 @@ country_event = {
 	id = 2425373
 	title = "The Babantuans have given in"
 	desc = "MBARARAFULLSTOPGIVENIN"
-	picture = "uk_seizes_lagos"
+	picture = "nyanza"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1298,7 +1298,7 @@ country_event = {
 	id = 2425376
 	title = "The Nyanzans Have Refused"
 	desc = "After all the Nyanzans want to fight us, so we'll give them what they want, a war."
-	picture = "uk_seizes_lagos"
+	picture = "nyanza"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1329,7 +1329,7 @@ country_event = {
 	id = 2425399
 	title = "The Babantuans Fight Us"
 	desc = "After all the Babantuans want to fight us, so we'll give them what they want, a war."
-	picture = "uk_seizes_lagos"
+	picture = "nyanza"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1653,7 +1653,7 @@ country_event = {
 	id = 2425382
 	title = "Jesuit Social Unrest"
 	desc = "JESUITSOCIALUNREST"
-	picture = "rebellion"
+	picture = "problem_jesuite"
 	fire_only_once = yes
 
 	trigger = {
@@ -1732,7 +1732,7 @@ country_event = {
 	id = 2425383
 	title = "The Madingou Crisis"
 	desc = "JESUITSOCIALUNRESTGAB"
-	picture = "diplomats_examining"
+	picture = "problem_jesuite"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1752,7 +1752,7 @@ country_event = {
 	id = 2425384
 	title = "The Madingou Crisis"
 	desc = "JESUITSOCIALUNRESTLOA"
-	picture = "diplomats_examining"
+	picture = "problem_jesuite"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1764,7 +1764,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Reform our government to be fully Jesuite."
+		name = "Reform our government to be fully Jesuit."
 		government = theocracy
 		religion = jesuite
 		primary_culture = christ_bakongo
@@ -1776,7 +1776,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Refuse."
+		name = "We refuse."
 		GAB = { country_event = 2425397 }
 		ai_chance = { factor = 0.50 }
 	}
@@ -1786,7 +1786,7 @@ country_event = {
 	id = 2425385
 	title = "The Loango sent us reparations"
 	desc = "After a series of threats to the central government in Kinshasa, they have given us reparations."
-	picture = "diplomats_examining"
+	picture = "problem_jesuite"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1798,9 +1798,9 @@ country_event = {
 
 country_event = {
 	id = 2425386
-	title = "The Loango have become Jesuite"
+	title = "The Loango have become Jesuit"
 	desc = "After a series of threats to the central government in Kinshasa, they have given up on their animistic believes."
-	picture = "diplomats_examining"
+	picture = "problem_jesuite"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1814,7 +1814,7 @@ country_event = {
 	id = 2425397
 	title = "The Loango have refused"
 	desc = "After a series of threats to the central government in Kinshasa, they have refused all offers and prepare for war."
-	picture = "diplomats_examining"
+	picture = "problem_jesuite"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1834,9 +1834,9 @@ country_event = {
 
 country_event = {
 	id = 2425387
-	title = "The Jesuite Declare War!"
+	title = "The Jesuits Declare War!"
 	desc = "After a series of threats to the central government in Kinshasa, war has started over Madingou."
-	picture = "diplomats_examining"
+	picture = "problem_jesuite"
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1854,7 +1854,7 @@ country_event = {
 	id = 2425388
 	title = "The Loango Plan"
 	desc = "THELOANGOPLANBTU"
-	picture = "diplomats_examining"
+	picture = "berlin_congress_major"
     
     is_triggered_only = yes
     fire_only_once = yes
@@ -1881,7 +1881,7 @@ country_event = {
 	id = 2425389
 	title = "The Loango Plan Accepted"
 	desc = "The Babantu have accepted our plan to partition Loango."
-	picture = "diplomats_examining"
+	picture = "berlin_congress_major"
     
     is_triggered_only = yes
     fire_only_once = yes
@@ -1913,7 +1913,7 @@ country_event = {
 	id = 2425390
 	title = "The Loango Plan Refused"
 	desc = "The Babantu have refused our plan to partition Loango."
-	picture = "diplomats_examining"
+	picture = "berlin_congress_major"
     
     is_triggered_only = yes
     fire_only_once = yes
