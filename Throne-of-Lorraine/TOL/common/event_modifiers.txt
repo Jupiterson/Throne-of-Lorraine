@@ -4896,7 +4896,6 @@ nobility_fra = {
 	diplomatic_points_modifier = -0.1
 	global_pop_consciousness_modifier = 0.55
 	global_pop_militancy_modifier = 0.55
-	icon = 1
 }
 
 
@@ -5064,7 +5063,7 @@ growth_of_shiraz = {
 	icon = 11
 }
 
-
+#Wales
 the_slate_empire = {
 	min_tariff = 0.2
 	tariff_efficiency_modifier = 0.1
@@ -5079,6 +5078,30 @@ Anglo_Welsh_Trade_Agreement = {
 	import_cost = -.05
 	non_accepted_pop_militancy_modifier = -0.01
 	icon = 9
+}
+
+Padarn_Railway = {
+	population_growth = 0.001
+	local_RGO_output = 0.05
+	immigrant_attract = 0.01
+	icon = 13
+}
+	
+Talyllyn_And_Ffestiniog_Railways = {
+	population_growth = 0.001
+	local_RGO_output = 0.05
+	immigrant_attract = 0.05
+	local_factory_output = 0.05
+	icon = 13
+}
+	
+Trevithick_&_Sons_Boiler_Works = {
+	immigrant_attract = 0.05
+	local_factory_output = 0.05
+	local_repair = 0.15
+	local_ship_build = -0.15
+	population_growth = 0.001
+	icon = 13
 }
 
 lost_crusade = {
@@ -5185,7 +5208,7 @@ german_cape_merchants = {
 ## ToL China ##
 
 southern_devastation = {
-	global_population_growth = -0.04
+	global_population_growth = -0.004
 	war_exhaustion = 0.0005
 	non_accepted_pop_consciousness_modifier = 0.005
 	prestige = -0.1
