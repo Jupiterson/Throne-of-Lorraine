@@ -1078,21 +1078,6 @@ political_decisions = {
 			#		duration = -1
 			#	}
 			#}
-			3446 = {
-				state_scope = {
-					change_region_name = "Tuath Ghalldachd"
-				}
-			}
-			2446 = {
-				state_scope = {
-					change_region_name = "Deas Ghalldachd"
-				}
-			}
-			2442 = {
-				state_scope = {
-					change_region_name = "Dun Eideanur"
-				}
-			}
 			864 = { change_province_name = "Karesi" }
 			1717 = { change_province_name = "Bouira" }
 			1721 = { change_province_name = "El Tarf" }
@@ -2094,15 +2079,12 @@ political_decisions = {
 		effect = {
 			any_pop = { limit = { has_pop_culture = french } literacy = 0.4 }
 			2435 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.11 } }
-			BRZ_2462 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
-			2457 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.02 } }
 			BRZ_2408 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.02 } }
 			2410 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.06 } }
 			2448 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.02 } }
 			2447 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
 			2463 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.01 } }
 			2424 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.02 } }
-			2450 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.03 } }
 			2459 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.01 } }
 			2462 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.01 } }
 			BRZ_2421 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.03 } }
