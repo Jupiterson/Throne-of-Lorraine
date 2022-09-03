@@ -87105,7 +87105,7 @@
     }
 
     text_scale = 3.499999
-	text_rotation = 5.864451
+    text_rotation = 5.864451
     building_construction = {
         x = 3281.000000
         y = 452.000000
@@ -87131,8 +87131,7 @@
 
 }
 
- # Mutare
-
+# Mutare
 2070 = {
     text_position = {
         x = 3307.300049
@@ -99050,8 +99049,8 @@
 
 2345 = {
     text_position = {
-        x = 1919.640000
-        y = 419.520000
+        x = 1910.995000
+        y = 400.140000
     }
 
     text_scale = 3.999998
@@ -99066,8 +99065,8 @@
     }
 
     building_construction = {
-        x = 1935.000000
-        y = 423.100006
+        x = 1913.120000
+        y = 389.600000
     }
 
     military_construction = {
@@ -99095,17 +99094,22 @@
 } # Tacuarembo
 
 2346 = {
+    text_position = {
+        x = 1923.870000
+        y = 434.345000
+    }
+
+    text_scale = 4
     unit = {
         x = 1918.000000
         y = 453.000000
     }
 
-    text_position = {
-        x = 1918.000000
-        y = 449.399994
+    factory = {
+        x = 1910.099976
+        y = 455.000000
     }
 
-    text_scale = 2.799999
     building_construction = {
         x = 1943.000000
         y = 438.000000
@@ -99114,11 +99118,6 @@
     military_construction = {
         x = 1926.000000
         y = 450.000000
-    }
-
-    factory = {
-        x = 1910.099976
-        y = 455.000000
     }
 
     building_position = {
@@ -101693,6 +101692,15 @@
             y = 825.000000
         }
 
+        naval_base = {
+            x = 2020.058333
+            y = 926.795000
+        }
+
+    }
+
+    building_rotation = {
+        naval_base = 1.570796
     }
 
 } # Macapa
@@ -102053,25 +102061,25 @@
 } # Chapada
 
 2425 = {
+    text_position = {
+        x = 2084.300000
+        y = 870.940000
+    }
+
+    text_scale = 6
     unit = {
         x = 2094.000000
         y = 866.000000
     }
 
-    text_position = {
-        x = 2094.000000
-        y = 857.000000
-    }
-
-    text_scale = 4.699998
-    building_construction = {
-        x = 2080.000000
-        y = 844.000000
-    }
-
     factory = {
         x = 2079.000000
         y = 874.000000
+    }
+
+    building_construction = {
+        x = 2080.000000
+        y = 844.000000
     }
 
 } # Teresina
@@ -103139,7 +103147,8 @@
         y = 678.650000
     }
 
-    text_scale = 3
+    text_rotation = 4.536559
+    text_scale = 7
     unit = {
         x = 2079.316667
         y = 679.261905
@@ -103256,35 +103265,36 @@
 } # Rio de Janeiro
 
 2447 = {
+    text_position = {
+        x = 2139.140000
+        y = 590.140000
+    }
+
+    text_rotation = 0.450226
+    text_scale = 3
     unit = {
         x = 2132.000000
         y = 592.000000
     }
 
-    text_position = {
-        x = 2126.800049
-        y = 591.299988
-    }
-
-    text_scale = 2.700000
     city = {
-        x = 2114.300049
-        y = 592.700012
-    }
-
-    building_construction = {
-        x = 2125.000000
-        y = 596.200012
-    }
-
-    military_construction = {
-        x = 2127.199951
-        y = 587.200012
+        x = 2132.780000
+        y = 589.840000
     }
 
     factory = {
         x = 2136.300049
         y = 596.799988
+    }
+
+    building_construction = {
+        x = 2122.640000
+        y = 587.140000
+    }
+
+    military_construction = {
+        x = 2127.199951
+        y = 587.200012
     }
 
     building_position = {
@@ -103307,17 +103317,22 @@
 } # Campos
 
 2448 = {
-    unit = {
-        x = 2155.000000
-        y = 604.000000
-    }
-
     text_position = {
-        x = 2155.000000
-        y = 600.400024
+        x = 2161.753333
+        y = 621.220000
     }
 
     text_scale = 2.999999
+    unit = {
+        x = 2167.180000
+        y = 629.066667
+    }
+
+    factory = {
+        x = 2160.899902
+        y = 609.200012
+    }
+
     building_construction = {
         x = 2153.399902
         y = 612.000000
@@ -103326,11 +103341,6 @@
     military_construction = {
         x = 2148.000000
         y = 595.599976
-    }
-
-    factory = {
-        x = 2160.899902
-        y = 609.200012
     }
 
     building_position = {
