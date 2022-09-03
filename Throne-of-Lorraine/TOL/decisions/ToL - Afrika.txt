@@ -609,12 +609,14 @@ political_decisions = {
 		        ai = yes  
 	   }
     
-		allow = { OR = 
-		         ai = yes    
-		         { tag = BHU
+		allow = { 
+		ai = yes
+		OR = {   
+		          tag = BHU
 			       tag = MLW
 				   tag = ALM
-				   tag = KAB } }
+				   tag = KAB } 
+				   }
     
 		effect = {
 			SCO = { add_country_modifier = {
