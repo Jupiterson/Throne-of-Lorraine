@@ -95,8 +95,19 @@ country_event = {
 	picture = "burnt_canton"
 
 	trigger = {
-		tag = QNG
-		has_country_flag = victory_of_Buyeo
+		OR = {
+			tag = QNG
+			tag = FJN
+			tag = GXI
+			tag = YNN
+			tag = JCH
+		}
+		QNG = {
+			OR = {
+				has_country_flag = victory_of_Buyeo
+				has_country_flag = victory_of_feudatories
+			}
+		}
 		NOT = { has_country_flag = southern_devastation }
 	}
 
@@ -109,9 +120,14 @@ country_event = {
 			name = southern_devastation
 			duration = 1460
 		}
-		add_country_modifier = {
-			name = buyeo_financial_crisis
-			duration = -1
+		QNG = {
+			limit = {
+				NOT = { has_country_modifier = buyeo_financial_crisis }
+			}
+			add_country_modifier = {
+				name = buyeo_financial_crisis
+				duration = -1
+			}
 		}
 		any_owned_province = {
 			limit = { 
@@ -119,6 +135,7 @@ country_event = {
 					is_core = GXI
 					is_core = FJN
 					is_core = YNN
+					is_core = JCH
 				}
 			}
 			reduce_pop = 0.85
@@ -142,15 +159,17 @@ country_event = {
 			owns = 1493
 			owns = 1504
 		}
-		has_country_flag = southern_devastation
-		NOT = { has_country_flag = hakka_punti_war }
+		QNG = {
+			has_country_flag = southern_devastation
+		}
+		NOT = { has_global_flag = hakka_punti_war }
 	}
 
 	mean_time_to_happen = { months = 6 }
 
 	option = {
 		name = "Send troops to split the communities"
-		set_country_flag = hakka_punti_war
+		set_global_flag = hakka_punti_war
 		1493 = {
 			any_pop = {
                             limit = { has_pop_culture = hakka }
@@ -169,8 +188,7 @@ country_event = {
 	
 	option = {
 		name = "Do nothing, the Chinese can manage themselves"
-		set_country_flag = hakka_punti_war
-		set_country_flag = hakka_angry
+		set_global_flag = hakka_punti_war
 		1493 = {
 			any_pop = {
                             limit = { has_pop_culture = hakka }
@@ -1038,14 +1056,14 @@ country_event = {
 		tag = QNG
 		civilized = yes
 		has_country_flag = provincial_defiance 
-		NOT = { has_country_flag = chuseok_coup }
+		NOT = { has_global_flag = chuseok_coup }
 	}
 
 	mean_time_to_happen = { days = 7 }
 
 	option = {
 		name = "Even if not all see it that way, we did what we had to do"
-		set_country_flag = chuseok_coup
+		set_global_flag = chuseok_coup
 		upper_house = {
 			ideology = reactionary
 			value = 0.99

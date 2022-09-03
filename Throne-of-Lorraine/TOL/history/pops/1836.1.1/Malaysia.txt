@@ -3,66 +3,7 @@
 #Ruled By Johor, Kedah (Pattani in Code), Abyssinia and Pahang
 #Singapore (36000/9000 POPS)
 1384 = {
-	aristocrats = {
-		culture = han_chinese
-		religion = mahayana
-		size = 55
-	}
-
-	labourers = {
-		culture = min
-		religion = protestant
-		size = 900
-	}
-
-	labourers = {
-		culture = min
-		religion = mahayana
-		size = 2400
-	}
-
-	aristocrats = {
-		culture = yue
-		religion = mahayana
-		size = 55
-	}
-
-	clergymen = {
-		culture = yue
-		religion = protestant
-		size = 50
-	}
-
-	clergymen = {
-		culture = yue
-		religion = mahayana
-		size = 50
-	}
-
-	artisans = {
-		culture = yue
-		religion = protestant
-		size = 1450
-	}
-
-	farmers = {
-		culture = yue
-		religion = mahayana
-		size = 3000
-	}
-
-	artisans = {
-		culture = han_chinese
-		religion = mahayana
-		size = 1000
-	}
-
-	artisans = {
-		culture = han_chinese
-		religion = protestant
-		size = 500
-	}
-
+	
 	aristocrats = {
 		culture = malay
 		religion = sunni
@@ -126,13 +67,13 @@
 	}
 
 	aristocrats = {
-		culture = venetian
+		culture = ethiopian
 		religion = catholic
 		size = 375
 	}
 
 	bureaucrats = {
-		culture = venetian
+		culture = ethiopian
 		religion = catholic
 		size = 50
 	}
@@ -278,7 +219,7 @@
 #Kuala Lumpur (68000/17000 POPS)
 1387 = {
 	aristocrats = {
-		culture = moluccan
+		culture = sumatran
 		religion = sunni
 		size = 15
 	}
@@ -296,7 +237,7 @@
 	}
 
 	soldiers = {
-		culture = moluccan
+		culture = sumatran
 		religion = sunni
 		size = 315
 	}
@@ -314,25 +255,25 @@
 	}
 
 	clergymen = {
-		culture = moluccan
+		culture = sumatran
 		religion = sunni
 		size = 5
 	}
 
 	labourers = {
-		culture = moluccan
+		culture = sumatran
 		religion = sunni
 		size = 1230
 	}
 	
 	artisans = {
-		culture = moluccan
+		culture = sumatran
 		religion = sunni
 		size = 1000
 	}
 
 	farmers = {
-		culture = moluccan
+		culture = sumatran
 		religion = mahayana
 		size = 820
 	}
@@ -495,6 +436,12 @@
 		religion = sunni
 		size = 3915
 	}
+	
+	artisans = {
+		culture = min
+		religion = mahayana
+		size = 100
+	}
 
 	soldiers = {
 		culture = malay
@@ -531,6 +478,12 @@
 		culture = malay
 		religion = sunni
 		size = 2725
+	}
+	
+	artisans = {
+		culture = min
+		religion = mahayana
+		size = 150
 	}
 
 	soldiers = {
@@ -576,13 +529,13 @@
 	clergymen = {
 		culture = malay
 		religion = sunni
-		size = 2050
+		size = 2075
 	}
 
 	artisans = {
 		culture = malay
 		religion = sunni
-		size = 3300
+		size = 3550
 	}
 
 	soldiers = {
@@ -603,23 +556,6 @@
 		size = 500
 	}
 
-	clergymen = {
-		culture = yue
-		religion = mahayana
-		size = 25
-	}
-
-	artisans = {
-		culture = yue
-		religion = mahayana
-		size = 250
-	}
-
-	farmers = {
-		culture = yue
-		religion = mahayana
-		size =  13875
-	}
 }
 #Kuching (88000/22000 POPS)
 1394 = {
@@ -1166,7 +1102,8 @@
 }
 
 3581 = {
-aristocrats = {
+	
+	aristocrats = {
 		culture = dayak
 		religion = animist
 		size = 75
@@ -1234,7 +1171,8 @@ aristocrats = {
 }
 
 3582 = {
-aristocrats = {
+	
+	aristocrats = {
 		culture = dayak
 		religion = animist
 		size = 75
@@ -1344,5 +1282,51 @@ aristocrats = {
 		culture = dayak
 		religion = animist
 		size = 2700
+	}
+}
+
+#Chinese Pops in Lake Poyang for use for Main Chinese Diaspora Event
+
+3235 = {
+	labourers = {
+		culture = yue
+		religion = mahayana
+		size = 13000
+	}
+	
+	labourers = {
+		culture = hakka
+		religion = mahayana
+		size = 8000
+	}
+	
+	labourers = {
+		culture = min
+		religion = mahayana
+		size = 9400
+	}
+	
+	farmers = {
+		culture = min
+		religion = mahayana
+		size = 18000
+	}
+	
+	farmers = {
+		culture = hakka
+		religion = mahayana
+		size = 5000
+	}
+	
+	artisans = {
+		culture = yue
+		religion = mahayana
+		size = 3200
+	}
+	
+	artisans = {
+		culture = min
+		religion = mahayana
+		size = 5000
 	}
 }
