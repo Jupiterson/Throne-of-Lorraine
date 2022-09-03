@@ -543,6 +543,9 @@ form_byzantium = {
 			badboy = 8
 			PAP = {
 				all_core = {
+				limit = {
+				is_core = ITA
+				}
 					add_core = THIS
 					}
 				} 
@@ -565,6 +568,9 @@ form_byzantium = {
 				add_core = THIS
 			}	
 SIC_753 = {
+				add_core = THIS
+			}
+			SYC_759 = {
 				add_core = THIS
 			}
 SIC_754 = {

@@ -1,3 +1,4 @@
+#genoa chooses to give scilly or refuse
 country_event = {
 	id = 9111
 	title = "EVTNAME9111"
@@ -30,6 +31,7 @@ country_event = {
 	}
 }	
 
+#peacefully transfer scilly
 country_event = {
 	id = 9112
 	title = "EVTNAME9112"
@@ -56,7 +58,8 @@ country_event = {
 		}
 	}
 }
-	
+
+#declare war on genoa
 country_event = {
 	id = 9113
 	title = "EVTNAME9113"
@@ -73,6 +76,7 @@ country_event = {
 	}
 }
 
+#redraw the welsh border as Westminster
 country_event = {
 	id = 9114
 	title = "EVTNAME9114"
@@ -107,47 +111,8 @@ country_event = {
 		3585 = { change_province_name = "Herefordshire" }
 		}
 	}
-			
-country_event = {
-	id = 9115
-	title = "EVTNAME9115"
-	desc = "EVTDESC9115"
-	trigger = {
-		war = no
-		tag = WHA
-		owns = 3589
-		}
 	
-	fire_only_once = yes
-	
-	mean_time_to_happen = { days = 0.5 }
-	
-	option = {
-		name = "EVTOPTA9115"
-		prestige = 10
-		298 = {
-			add_core = WHA
-		}
-		3588 = {
-			add_core = WHA
-		}
-		3268 = {
-			add_core = WHA
-		}
-		299 = {
-			add_core = WHA
-		}
-		3589 = {
-			add_core = WHA
-		}
-		298 = { change_province_name = "Caerfaddon" }
-		3588 = { change_province_name = "Caerwysg" }
-		3268 = { change_province_name = "Dwr Pontydd" }
-		299 = { change_province_name = "Tryriw" }
-		3589 = { change_province_name = "Aberplym" }
-		}
-	}
-	
+#how should england deal with welsh occupation of cornwall
 country_event = {
 	id = 9116
 	title = "EVTNAME9116"
@@ -197,6 +162,7 @@ country_event = {
 	}
 }
 
+#renew the trade agreement or not?
 country_event = {
 	id = 9117
 	title = "EVTNAME9117"
@@ -242,7 +208,101 @@ country_event = {
 			attacker_goal = { casus_belli = acquire_core_state state_province_id = 3589 }
 			defender_goal = { casus_belli = status_quo }
 		}
-	}	
+	}
+	
+	option = { 
+		name = "EVTOPTB9117"
+		prestige = 10
+		create_alliance = WHA
+		treasury = 20000
+		add_country_modifier = {
+			name = Anglo_Welsh_Trade_Agreement 
+			duration = 1825
+		}
+	}
+}
+
+#padarn railway
+province_event = {
+	id = 9118
+	title = "EVTNAME9118"
+	desc = "EVTDESC9118"
+	trigger = {
+		province_ID = 276
+		owned_by = WHA
+		year = 1846
+		}
+		
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.4 }
+	
+	option = {
+		name = "EVTOPTA9118"
+		prestige = 1
+		276 = {
+			infrastructure = 1
+			life_rating = 1
+			add_province_modifier = {
+			name = Padarn_Railway
+			duration = 36500
+			}
+		}
+	}
+}
+
+#talyllyn and ffestiniog railways
+province_event = {
+	id = 9119
+	title = "EVTNAME9119"
+	desc = "EVTDESC9119"
+	trigger = {
+		province_ID = 276
+		owned_by = WHA
+		year = 1866
+		}
+		
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.4 }
+	
+	option = {
+		name = "EVTOPTA9119"
+		prestige = 1
+		276 = {
+		infrastructure = 1
+		life_rating = 1
+			add_province_modifier = {
+			name = Talyllyn_And_Ffestiniog_Railways
+			duration = 36500
+			}
+		}
+	}
+}
+	
+#accepted deal, but at war now anyway, remove modifier
+country_event = {
+	id = 59101
+	title = "EVTNAME959501"
+	desc = "EVTDESC959501"
+	trigger = {
+		tag = ENL
+		has_country_modifier = Anglo_Welsh_Trade_Agreement
+		ENL = {
+			war_with = WHA
+			}
+		}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.2 }
+	
+	option = {
+		name = "EVTOPTA959501"
+		add_country_flag = refused_welsh_deal
+		remove_country_modifier = Anglo_Welsh_Trade_Agreement
+		prestige = -5
+		}
 		
 	option = { 
 		name = "EVTOPTB9117"
@@ -255,33 +315,55 @@ country_event = {
 		}
 	}
 }
+
+#bridge to ynys mon
+province_event = {
+	id = 592102
+	title = "EVTNAME959503"
+	desc = "EVTDESC959503"
+	trigger = {
+		province_ID = 3586
+		owned_by = WHA
+		year = 1850
+		}
+		
+	fire_only_once = yes
 	
+	mean_time_to_happen = { days = 0.3 }
+	
+	option = {
+		name = "EVTOPTA959503"
+		prestige = 2
+		3586 = {
+			infrastructure = 1
+			life_rating = 2
+		}
+	}
+}
+
+#Trevithick passes away
 country_event = { 
-	id = 9318
-	title = "EVTNAME9318"
-	desc = "EVTDESC9318"
+	id = 593103
+	title = "EVTNAME959504"
+	desc = "EVTDESC959504"
 	trigger = {
 		tag = WHA
-		war = no
+		year = 1840
 		owns = 298
 		owns = 299
 		owns = 3268
 		owns = 3588
 		owns = 3589
-		NOT = { has_country_flag = cornish_boom }
+		NOT = { has_country_flag = RIP_Trevithick }
 	}
 	
 	fire_only_once = yes
 	
-	mean_time_to_happen = { days = 0.5 }
+	mean_time_to_happen = { days = 0.3 }
 	
-	option = { 
-		name = "EVTOPTA9318"
-		add_country_flag = cornish_boom
-		CRN = { 
-			all_core = {
-				add_province_modifier = { name = baby_boom duration = 1825 }
-			} 
-		}
-	}	
+	option = {
+		name = "EVTOPTA959504"
+		prestige = 1
+		set_global_flag = RIP_Trevithick
+	}
 }
