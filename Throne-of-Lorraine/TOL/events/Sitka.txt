@@ -3423,17 +3423,6 @@ country_event = {
 			472 = { add_core = FRR }
 		}
 
-		#add French cores to Savoia
-		random_country = {
-			limit = {
-				tag = FRR
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				465 = { NOT = { is_core = FRR } }
-			}
-			465 = { add_core = FRR }
-		}
 		random_country = {
 			limit = {
 				tag = FRR
@@ -3457,17 +3446,6 @@ country_event = {
 			472 = { add_core = FRZ }
 		}
 
-		#add French cores to Savoia
-		random_country = {
-			limit = {
-				tag = FRZ
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				465 = { NOT = { is_core = FRZ } }
-			}
-			465 = { add_core = FRZ }
-		}
 		random_country = {
 			limit = {
 				tag = FRZ
@@ -3491,17 +3469,6 @@ country_event = {
 			472 = { add_core = BOR }
 		}
 
-		#add French cores to Savoia
-		random_country = {
-			limit = {
-				tag = BOR
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				465 = { NOT = { is_core = BOR } }
-			}
-			465 = { add_core = BOR }
-		}
 		random_country = {
 			limit = {
 				tag = BOR
@@ -3525,17 +3492,6 @@ country_event = {
 			472 = { add_core = VIC }
 		}
 
-		#add French cores to Savoia
-		random_country = {
-			limit = {
-				tag = VIC
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				465 = { NOT = { is_core = VIC } }
-			}
-			465 = { add_core = VIC }
-		}
 		random_country = {
 			limit = {
 				tag = VIC
@@ -3550,33 +3506,13 @@ country_event = {
 		#add Austrian cores to South Tyrol
 		random_country = {
 			limit = {
-				tag = AUS
+				tag = BAV
 				exists = yes
 				truce_with = THIS
 				NOT = { alliance_with = THIS }
-				734 = { NOT = { is_core = AUS } }
+				734 = { NOT = { is_core = BAV } }
 			}
-			734 = { add_core = AUS }
-		}
-		random_country = {
-			limit = {
-				tag = KUK
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				734 = { NOT = { is_core = KUK } }
-			}
-			734 = { add_core = KUK }
-		}
-		random_country = {
-			limit = {
-				tag = DNB
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				734 = { NOT = { is_core = DNB } }
-			}
-			734 = { add_core = DNB }
+			734 = { add_core = BAV }
 		}
 		random_country = {
 			limit = {
@@ -3584,9 +3520,29 @@ country_event = {
 				exists = yes
 				truce_with = THIS
 				NOT = { alliance_with = THIS }
-				734 = { NOT = { is_core = AUB } }
+				734 = { NOT = { is_core = KUK } }
 			}
 			734 = { add_core = AUB }
+		}
+		random_country = {
+			limit = {
+				tag = GER
+				exists = yes
+				truce_with = THIS
+				NOT = { alliance_with = THIS }
+				734 = { NOT = { is_core = GER } }
+			}
+			734 = { add_core = GER }
+		}
+		random_country = {
+			limit = {
+				tag = STY
+				exists = yes
+				truce_with = THIS
+				NOT = { alliance_with = THIS }
+				734 = { NOT = { is_core = STY } }
+			}
+			734 = { add_core = STY }
 		}
 		random_country = {
 			limit = {
@@ -3637,8 +3593,9 @@ country_event = {
 		any_owned = {
 			limit = {
 				is_core = LOM
+				is_core = VEN
 			}
-			secede_province = LOM
+			secede_province = VEN
 		}
 
 
@@ -3699,53 +3656,6 @@ country_event = {
 				remove_core = THIS
 			}
 		}
-
-		#Corsica to France or independent
-		random_country = {
-			limit = {
-				tag = FRR
-				exists = yes
-				NOT = { alliance_with = THIS }
-				473 = { owned_by = THIS }
-			}
-			473 = { secede_province = FRR }
-		}
-		random_country = {
-			limit = {
-				tag = FRZ
-				exists = yes
-				NOT = { alliance_with = THIS }
-				473 = { owned_by = THIS }
-			}
-			473 = { secede_province = FRZ }
-		}
-		random_country = {
-			limit = {
-				tag = BOR
-				exists = yes
-				NOT = { alliance_with = THIS }
-				473 = { owned_by = THIS }
-			}
-			473 = { secede_province = BOR }
-		}
-		random_country = {
-			limit = {
-				tag = VIC
-				exists = yes
-				NOT = { alliance_with = THIS }
-				473 = { owned_by = THIS }
-			}
-			473 = { secede_province = VIC }
-		}
-		random_country = {
-			limit = {
-				tag = CRS
-				NOT = { alliance_with = THIS }
-				473 = { owned_by = THIS }
-			}
-			473 = { secede_province = CRS }
-		}
-
 		#release San Marino
 		random_country = {
 			limit = {
@@ -3756,17 +3666,7 @@ country_event = {
 			3266 = { secede_province = SMR }
 		}
 
-		#Lugano to Switzerland
-		random_country = {
-			limit = {
-				tag = SWI
-				exists = yes
-				NOT = { alliance_with = THIS }
-				2568 = { owned_by = THIS }
-			}
-			2568 = { secede_province = SWI }
-		}
-
+	
 		#Malta to England or independent
 		random_country = {
 			limit = {
@@ -3875,133 +3775,6 @@ country_event = {
 				764 = { owned_by = THIS }
 			}
 			764 = { secede_province = SYC }
-		}
-
-		#give Aosta to France
-		random_country = {
-			limit = {
-				tag = FRR
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				721 = { owned_by = THIS }
-			}
-			721 = { secede_province = FRR }
-		}
-		random_country = {
-			limit = {
-				tag = FRR
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				3435 = { owned_by = THIS }
-			}
-			3435 = { secede_province = FRR }
-		}
-		random_country = {
-			limit = {
-				tag = FRR
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				3434 = { owned_by = THIS }
-			}
-			3434 = { secede_province = FRR }
-		}
-		#give Aosta to France
-		random_country = {
-			limit = {
-				tag = FRZ
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				721 = { owned_by = THIS }
-			}
-			721 = { secede_province = FRZ }
-		}
-		random_country = {
-			limit = {
-				tag = FRZ
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				3435 = { owned_by = THIS }
-			}
-			3435 = { secede_province = FRZ }
-		}
-		random_country = {
-			limit = {
-				tag = FRZ
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				3434 = { owned_by = THIS }
-			}
-			3434 = { secede_province = FRZ }
-		}
-
-		#give Aosta to France
-		random_country = {
-			limit = {
-				tag = BOR
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				721 = { owned_by = THIS }
-			}
-			721 = { secede_province = BOR }
-		}
-		random_country = {
-			limit = {
-				tag = BOR
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				3435 = { owned_by = THIS }
-			}
-			3435 = { secede_province = BOR }
-		}
-		random_country = {
-			limit = {
-				tag = BOR
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				3434 = { owned_by = THIS }
-			}
-			3434 = { secede_province = BOR }
-		}
-
-		#give Aosta to France
-		random_country = {
-			limit = {
-				tag = VIC
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				721 = { owned_by = THIS }
-			}
-			721 = { secede_province = VIC }
-		}
-		random_country = {
-			limit = {
-				tag = VIC
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				3435 = { owned_by = THIS }
-			}
-			3435 = { secede_province = VIC }
-		}
-		random_country = {
-			limit = {
-				tag = VIC
-				exists = yes
-				truce_with = THIS
-				NOT = { alliance_with = THIS }
-				3434 = { owned_by = THIS }
-			}
-			3434 = { secede_province = VIC }
 		}
 
 		#stopgap give Aosta to Aosta
@@ -5048,21 +4821,30 @@ country_event = {
 		#give Gibraltar to UK
 		random_country = {
 			limit = {
-				tag = ENG
+				tag = GEN
 				exists = yes
 				NOT = { alliance_with = THIS }
 				517 = { owned_by = THIS }
 			}
-			517 = { secede_province = ENG }
+			517 = { secede_province = GEN }
 		}
 		random_country = {
 			limit = {
-				tag = ENL
+				tag = NIF
 				exists = yes
 				NOT = { alliance_with = THIS }
 				517 = { owned_by = THIS }
 			}
-			517 = { secede_province = ENL }
+			517 = { secede_province = NIF }
+		}
+		random_country = {
+			limit = {
+				tag = ITA
+				exists = yes
+				NOT = { alliance_with = THIS }
+				517 = { owned_by = THIS }
+			}
+			517 = { secede_province = ITA }
 		}
 		#give Girona to France if it has a truce
 		random_country = {
@@ -5226,6 +5008,13 @@ country_event = {
 		}
 		any_owned = {
 			limit = {
+				is_core = GNA
+			}
+			remove_core = IBR
+			secede_province = GNA
+		}
+		any_owned = {
+			limit = {
 				province_id = 3252
 			}
 			remove_core = IBR
@@ -5263,13 +5052,6 @@ country_event = {
 			}
 			remove_core = IBR
 			secede_province = ATR
-		}
-		any_owned = {
-			limit = {
-				is_core = CAT
-			}
-			remove_core = IBR
-			secede_province = CAT
 		}
 		#Olivenza Portugal cores
 		3287 = { remove_core = THIS }
