@@ -178,8 +178,17 @@ country_event = {
 		owns = 833
 		owns = 825
 		}
-		NOT = { owns = 860}
+		NOT = { 
+		owns = 860 
+		OR = {
+		exists = GRR
+		exists = ARR
+		exists = SRR
+		exists = BRR
 		}
+		}
+		}
+		war = no
 	}
    fire_only_once = yes
    

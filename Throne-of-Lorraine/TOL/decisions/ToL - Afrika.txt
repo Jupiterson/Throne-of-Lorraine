@@ -7,7 +7,14 @@ political_decisions = {
 			OR = { 
 				tag = DAM
 				tag = BUG
+				AND = {
 				tag = HAD
+				year = 1880
+				}
+				tag = COP
+				tag = SUD
+				tag = MKA
+				tag = EGY
 			}
 		}
 
@@ -19,6 +26,7 @@ political_decisions = {
 					admin_reform = yes_admin_reform
 				}
 				year = 1880
+				civilized = yes
 			}
 		}
 
@@ -609,12 +617,14 @@ political_decisions = {
 		        ai = yes  
 	   }
     
-		allow = { OR = 
-		         ai = yes    
-		         { tag = BHU
+		allow = { 
+		ai = yes
+		OR = {   
+		          tag = BHU
 			       tag = MLW
 				   tag = ALM
-				   tag = KAB } }
+				   tag = KAB } 
+				   }
     
 		effect = {
 			SCO = { add_country_modifier = {
