@@ -4896,7 +4896,6 @@ nobility_fra = {
 	diplomatic_points_modifier = -0.1
 	global_pop_consciousness_modifier = 0.55
 	global_pop_militancy_modifier = 0.55
-	icon = 20
 }
 
 
@@ -5105,6 +5104,34 @@ Trevithick_&_Sons_Boiler_Works = {
 	icon = 13
 }
 
+Welsh_Coaling_Port = {
+	immigrant_attract = 0.03
+	local_repair = 0.10
+	assimilation_rate = 0.15
+	icon = 9
+}
+	
+coaling_port_tolls = {
+	prestige = 0
+	icon = 1
+}
+
+welsh_mineral_railway = {
+	immigrant_attract = 0.05
+	local_RGO_output = 0.05
+	local_RGO_throughput = 0.1
+	population_growth = 0.0011
+	local_factory_throughput = 0.05
+	icon = 13
+}
+
+expand_scilly = { 
+	immigrant_attract = 0.02
+	assimilation_rate = 0.2
+	local_artisan_output = 0.20
+	population_growth = 0.001
+}
+
 lost_crusade = {
 	farm_rgo_size = -0.1
 	mine_rgo_size = -0.1
@@ -5209,7 +5236,7 @@ german_cape_merchants = {
 ## ToL China ##
 
 southern_devastation = {
-	global_population_growth = -0.04
+	global_population_growth = -0.004
 	war_exhaustion = 0.0005
 	non_accepted_pop_consciousness_modifier = 0.005
 	prestige = -0.1
