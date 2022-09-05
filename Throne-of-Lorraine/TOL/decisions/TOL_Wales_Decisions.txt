@@ -261,41 +261,6 @@ purchase_scilly = {
 		}
 	}
 	
-	invest_in_scilly = {
-		potential = {
-			tag = WHA
-			owns = 3480
-			NOT = { has_country_flag = invested_in_scilly }
-		}
-		
-		allow = {
-			war = no
-			money = 50000
-			battleship_column_doctrine = 1
-			market_structure = 1
-			stock_exchange = 1
-			3480 = {
-				has_building = naval_base 
-			}
-			NOT = {
-				3480 = {
-					is_colonial 
-				}
-			}
-		}
-		
-		effect = {
-			set_country_flag = invested_in_scilly
-			money = -50000
-			3480 = {
-				naval_base = 2
-				life_rating = 1
-				trade_goods = precious_goods
-				add_province_modifier = expand_scilly
-			}
-		}
-	}
-	
 	protect_brittany = {
 		potential = {
 			tag = WHA
@@ -316,7 +281,7 @@ purchase_scilly = {
 		}
 		
 		effect = {
-			set_country_flag = protect_brittany
+			set_country_flag = protecting_brittany
 			badboy = 10
 			420 = { add_core = WHA }
 			421 = { add_core = WHA }
@@ -324,6 +289,66 @@ purchase_scilly = {
 			423 = { add_core = WHA }
 			424 = { add_core = WHA }
 		}
+	}
+	
+	reclaim_old_lands = {
+		potential = {
+			tag = ENL
+			owns = 3589
+			NOT = { has_country_flag = claim_marches }
+		}
+		
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+			is_greater_power = yes
+		}
+		
+		effect = {
+			set_country_flag = claim_marches
+			badboy = 8
+			286 = { add_core = ENL }
+			3585 = { add_core = ENL }
+			ENL = {
+				any_pop = { 
+					limit = { has_pop_culture = Welsh } 
+					consciousness = 3
+					militancy = 2
+				}
+			}
+		}
+	}
+	
+	invest_in_scilly = {
+		potential = {
+			tag = WHA
+			owns = 3480
+			NOT = { has_country_flag = toasty_scilly }
+		}
+		
+		allow = {
+			war = no
+			money = 50000
+			battleship_column_doctrine = 1
+			market_structure = 1
+			stock_exchange = 1
+			3480 = {
+				has_building = naval_base 
+				is_colonial = no
+			}
+		}
+		
+		effect = {
+			set_country_flag = toasty_scilly
+			money = -50000
+			3480 = {
+				naval_base = 2
+				life_rating = 3
+				trade_goods = precious_goods
+				add_province_modifier = { name = expand_scilly duration = 36500 }
+			}
+		}
+		
 	}
 }
 

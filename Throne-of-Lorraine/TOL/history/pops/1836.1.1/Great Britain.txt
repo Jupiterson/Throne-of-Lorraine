@@ -734,7 +734,13 @@
 	aristocrats = {
 		culture = welsh
 		religion = protestant
-		size = 500
+		size = 400
+	}
+	
+	aristocrats = {
+		culture = british
+		religion = reformed
+		size = 100
 	}
 
 	craftsmen = {
@@ -743,9 +749,9 @@
 		size = 750
 	}
 	
-	craftsmen = {
-		culture = welsh
-		religion = protestant
+	soldiers = {
+		culture = british
+		religion = reformed
 		size = 250
 	}
 
@@ -758,7 +764,19 @@
 	farmers = {
 		culture = welsh
 		religion = protestant
-		size = 10000
+		size = 7000
+	}
+	
+	farmers = {
+		culture = british
+		religion = reformed
+		size = 1000
+	}
+	
+	farmers = {
+		culture = british
+		religion = reformed
+		size = 2000
 	}
 }
 #Ynys Mon (47000/11750 POPS)
@@ -1381,26 +1399,38 @@
 286 = {
 	aristocrats = {
 		culture = welsh
-		religion = reformed
+		religion = protestant
 		size = 500
 	}
 
 	artisans = {
 		culture = welsh
+		religion = protestant
+		size = 3000
+	}
+	
+	artisans = {
+		culture = british
 		religion = reformed
-		size = 4000
+		size = 1000
 	}
 
 	soldiers = {
 		culture = welsh
-		religion = reformed
+		religion = protestant
 		size = 1100
 	}
 
 	labourers = {
 		culture = welsh
+		religion = protestant
+		size = 16000
+	}
+	
+	labourers = {
+		culture = british
 		religion = reformed
-		size = 20000
+		size = 4000
 	}
 }
 #Coventry (432000/108000 POPS)
