@@ -105,3 +105,34 @@ country_event = {
 		any_pop = { consciousness = -2 }
 	}
 }
+country_event = {
+	id = 59010
+	title = "EVTNAME59010"
+	desc = "EVTDESC59010"
+	picture = "english_civil_war"
+	
+	trigger = {
+		tag = UOW
+		war = no
+		owns = 300
+		NOT = { 
+			truce_with = ENL
+		}
+		ENL = {
+			owns = 277
+			war = no
+		}
+	}
+	
+	fire_only_once = no
+	
+	option = {
+		name = "EVTOPTA59010"
+		war = {
+			target = ENL
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+			call_ally = no
+		}
+	}
+}
