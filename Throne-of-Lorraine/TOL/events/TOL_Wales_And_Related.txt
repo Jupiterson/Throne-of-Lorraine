@@ -8,6 +8,7 @@ country_event = {
 	
 	option = { 
 		name = "EVTOPTA9111"
+		ai_chance = { factor = 100 }
 		3480 = {
 			add_core = WHA
 		}
@@ -18,9 +19,12 @@ country_event = {
 	}
 	
 	option = { 
+		3480 = {
+			add_core = WHA
+		}
 		name = "EVTOPTB9111"
 		WHA = { war = { target = GEN 
-			attacker_goal = { casus_belli = negotiated_transfer state_province_id = 3480 }
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 3480 }
 			defender_goal = { casus_belli = status_quo }
 			any_country = {
 			limit = { has_country_flag = offer_made }
@@ -447,7 +451,7 @@ country_event = {
 		name "EVTOPTC59004"
 		war = { 
 			target = UBD 
-			attacker_goal = { casus_belli = negotiated_transfer state_province_id = 2409 }
+			attacker_goal = { casus_belli = place_in_the_sun state_province_id = 2409 }
 			defender_goal = { casus_belli = status_quo }
 		}
 	}
@@ -536,7 +540,7 @@ country_event = {
 		name "EVTOPTC59007"
 		war = { 
 			target = BSQ 
-			attacker_goal = { casus_belli = negotiated_transfer state_province_id = 203 }
+			attacker_goal = { casus_belli = place_in_the_sun state_province_id = 203 }
 			defender_goal = { casus_belli = status_quo }
 		}
 	}
