@@ -1706,20 +1706,32 @@
 	clergymen = {
 		culture = breton
 		religion = catholic
-		size = 1050
+		size = 1000
+	}
+	
+	clergymen = {
+		culture = cornish
+		religion = protestant
+		size = 50
 	}
 
 	artisans = {
 		culture = breton
 		religion = catholic
-		size = 9500
+		size = 9000
 		militancy = 9
 	}
+	
+	artisans = {
+		culture = cornish
+		religion = protestant
+		size = 2300
+	}
 
 	artisans = {
 		culture = breton
 		religion = catholic
-		size = 6000
+		size = 5000
 	}
 
 	soldiers = {
@@ -1731,15 +1743,22 @@
 	serfs = {
 		culture = breton
 		religion = catholic
-		size = 60500
+		size = 60000
 		militancy = 5
 		rebel_type = nationalist_rebels
+	}
+	
+	serfs = {
+		culture = cornish
+		religion = protestant
+		size = 500
+		militancy = 5
 	}
 
 	farmers = {
 		culture = breton
 		religion = catholic
-		size = 40800
+		size = 40000
 		militancy = 9
 		rebel_type = nationalist_rebels
 	}
@@ -1845,13 +1864,25 @@
 	clergymen = {
 		culture = breton
 		religion = catholic
-		size = 800
+		size = 500
+	}
+	
+	clergymen = {
+		culture = cornish
+		religion = protestant
+		size = 300
 	}
 
 	artisans = {
 		culture = breton
 		religion = catholic
-		size = 4400
+		size = 4000
+	}
+	
+	artisans = {
+		culture = cornish
+		religion = protestant
+		size = 400
 	}
 
 	soldiers = {
@@ -1863,17 +1894,30 @@
 	serfs = {
 		culture = breton
 		religion = catholic
-		size = 50500
+		size = 50000
 		militancy = 5
 		rebel_type = nationalist_rebels
+	}
+	
+	serfs = {
+		culture = cornish
+		religion = protestant
+		size = 500
+		militancy = 5
 	}
 
 	farmers = {
 		culture = breton
 		religion = catholic
-		size = 30700
+		size = 30000
 		militancy = 9
 		rebel_type = nationalist_rebels
+	}
+	
+	farmers = {
+		culture = cornish
+		religion = protestant
+		size = 700
 	}
 }
 #Nantes (476000/119000 POPS)

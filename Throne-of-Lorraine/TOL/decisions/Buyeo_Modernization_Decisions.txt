@@ -50,7 +50,7 @@ political_decisions = {
 			treasury = -15000
 			set_country_flag = beifang_armies_modernized
 			activate_technology = military_staff_system
-			activate_technology = army_professionalism
+			activate_technology = army_command_principle
 			activate_technology = bronze_muzzle_loaded_artillery
 			random_owned = {
 				limit = { owner = { civilized = no } }
@@ -92,7 +92,7 @@ political_decisions = {
 				}
 			}
 			
-			1604 = {
+			1608 = {
 				naval_base = 2
 				add_province_modifier = {
 					name = foreign_trading_post
@@ -100,7 +100,7 @@ political_decisions = {
 				}
 			}
 			
-			1539 = {
+			1538 = {
 				naval_base = 2
 				add_province_modifier = {
 					name = foreign_trading_post
@@ -251,15 +251,12 @@ political_decisions = {
 			}
 			activate_technology = flintlock_rifles
 			activate_technology = muzzle_loaded_rifles
-			activate_technology = breech_loaded_rifles
 			activate_technology = bronze_muzzle_loaded_artillery
 			activate_technology = iron_muzzle_loaded_artillery
-			activate_technology = iron_breech_loaded_artillery
 			activate_technology = army_command_principle
 			activate_technology = army_professionalism
 			activate_technology = military_staff_system
 			activate_technology = military_plans
-			activate_technology = military_statistics
 		}
 
 		ai_will_do = { factor = 1 }
