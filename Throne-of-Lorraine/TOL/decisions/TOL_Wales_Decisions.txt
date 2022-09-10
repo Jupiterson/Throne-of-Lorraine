@@ -79,8 +79,8 @@ purchase_scilly = {
 				relation = { 
 					who = ENL
 						value = 50
+				}
 			}
-		}
 			badboy = -3
 			ENL = { military_access = WHA }
 		}
@@ -162,13 +162,12 @@ purchase_scilly = {
 		allow = {
 			war = no
 			owns = 3589
-			citizens_rights = culture_voting_only
 			state_n_government = 1
 		}
 		
 		effect = {
 			add_accepted_culture = cornish
-			add_country_flag = cornish_boom
+			set_country_flag = cornish_boom
 			CRN = { 
 				all_core = {
 				add_province_modifier = { name = baby_boom duration = 1825 }
@@ -332,6 +331,7 @@ purchase_scilly = {
 			battleship_column_doctrine = 1
 			market_structure = 1
 			stock_exchange = 1
+			trade_policy = free_trade
 			3480 = {
 				has_building = naval_base 
 				is_colonial = no
@@ -349,6 +349,96 @@ purchase_scilly = {
 			}
 		}
 		
+	}
+	
+	integrate_the_bretons = {
+		potential = {
+			tag = WHA
+			owns = 420
+			NOT = { has_country_flag = breton_accepted }
+		}
+		
+		allow = {
+			war = no
+			revolution_n_counterrevolution = 1
+			citizens_rights = all_voting_pops 
+			public_meetings = yes_meeting 
+			press_rights = free_press 
+			is_greater_power = yes
+			WHA = {
+				is_core = 420
+			}
+		}
+		
+		effect = { 
+			set_country_flag = breton_accepted
+			add_accepted_culture = breton
+			prestige = 10
+		}
+	}
+	
+	control_channel_isles = {
+		potential = {
+			tag = WHA
+			owns = 420
+			NOT = { has_country_flag = channel_isles }
+		}
+		
+		allow = {
+			trade_policy = free_trade
+			business_banks = 1
+			market_regulations = 1
+			WHA = {
+				is_core = 420
+			}
+			3480 = {
+				has_province_modifier  = expand_scilly
+			}
+		}
+		
+		effect = { 
+			set_country_flag = channel_isles
+			419 = { add_core = WHA }
+			3587 = { add_core = WHA }
+			badboy = 8
+		}
+	}
+	
+	scilly_model = {
+		potential = {
+			NOT = { has_country_flag = channel_trade }
+			tag = WHA
+			owns = 3587
+			owns = 419
+		}
+		
+		allow = {
+			trade_policy = free_trade
+			economic_responsibility = 1
+			neoclassical_theory = 1
+			raider_group_doctrine = 1
+			iron_steamers = 1
+			money = 100000
+			is_greater_power = yes
+		}
+		
+		effect = {
+			set_country_flag = scilly_model 
+			prestige = 10
+			money = -100000
+			3587 = {
+				add_core = WHA
+				life_rating = 2
+				remove_core = FRA
+				add_province_modifier = { name = expand_scilly duration = 36500 }
+			}
+			419 = {
+				add_core = WHA
+				life_rating = 2
+				remove_core = ENL
+				add_province_modifier = { name = expand_scilly duration = 36500 }
+			}
+		}
 	}
 }
 
