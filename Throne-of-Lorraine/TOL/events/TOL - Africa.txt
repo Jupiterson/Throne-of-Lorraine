@@ -960,7 +960,9 @@ country_event = {
 	trigger = {
             year = 1860
 			OR  = { tag = SCO
-			        tag = ENG }
+			        tag = ENG
+   					tag = UPB
+					tag = CLT}
 			owns = 2087
 	}
 
