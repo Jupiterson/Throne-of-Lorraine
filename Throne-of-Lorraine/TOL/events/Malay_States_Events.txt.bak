@@ -1,0 +1,502 @@
+#Padri Events
+
+country_event = {
+	id = 651924
+	title = "EVTNAME651924"
+	desc = "EVTDESC651924"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = SAK
+		government = theocracy
+		NOT = { has_global_flag = padri_terror }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "For the Imam!"
+		set_country_flag = padri_terror
+		add_country_modifier = {
+			name = padri_fundementalism
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = 651920
+	title = "EVTNAME651920"
+	desc = "EVTDESC651920"
+	picture = "aceh_jihad"
+
+	trigger = {
+		tag = SAK
+		has_recently_lost_war = yes
+		OR = {
+			government = theocracy
+			government = constitutional_theocracy
+		}
+	}
+
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = "Central Sumatra breathes a sigh of relief"
+		set_country_flag = fall_of_the_padri
+		SAK = {
+			limit = { government = theocracy }
+			government = absolute_empire
+		}
+		SAK = {
+			limit = { government = constitutional_theocracy }
+			government = semi_constitutional_empire
+		}
+		SAK = {
+			limit = { has_country_modifier = padri_fundementalism }
+			remove_country_modifier = padri_fundementalism
+		}
+		10 = {
+			change_province_name = "Pagaruyung"
+		}
+		prestige = -10
+	}
+}
+
+# Chinese Migration Events and Nanyang
+
+country_event = {
+	id = 651921
+	title = "EVTNAME651921"
+	desc = "EVTDESC651921"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = QNG
+		has_country_flag = southern_devastation
+		NOT = { has_global_flag = chinese_diaspora }
+	}
+
+	mean_time_to_happen = { years = 1 }
+
+	option = {
+		name = "Hopefully they will be able to make a better life overseas"
+		set_global_flag = chinese_diaspora
+		3235 = {
+			any_pop = {
+                limit = { 
+					has_pop_culture = yue
+					type = labourers
+				}
+				move_pop = 2575
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = hakka
+					type = labourers
+				}
+				move_pop = 1387
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = min
+					type = labourers
+				}
+				move_pop = 1389
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = min
+					type = labourers
+				}
+				move_pop = 1402
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = min
+					type = farmers
+				}
+				move_pop = 1406
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = hakka
+					type = farmers
+				}
+				pop_type = labourers
+				move_pop = 1404
+			}
+		}
+		2575 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier = gold_rush
+		}
+		2575 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1387 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier = gold_rush
+		}
+		1387 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1389 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1389 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1402 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1402 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1406 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1406 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1404 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1404 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		any_country = {
+			limit = {
+				OR = {
+					owns = 2575
+					owns = 1387
+					owns = 1389
+					owns = 1402
+					owns = 1404
+					owns = 1406	
+				}
+				NOT = {
+					
+				}
+			}
+			country_event = 651922
+		}
+	}
+}
+
+country_event = {
+	id = 651922
+	title = "EVTNAME651922"
+	desc = "EVTDESC651922"
+	picture = "chinese_migrants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Welcome to Malaya!"
+		set_country_flag = chinese_immigrant_arrival
+		prestige = 5
+		any_pop = {
+			militancy = 2
+			consciousness = 4
+		}
+	}
+}
+
+country_event = {
+	id = 651923
+	title = "EVTNAME651923"
+	desc = "EVTDESC651923"
+	picture = "chinese_migrants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Get them out of my sight"
+		prestige = 5
+		any_pop = {
+			limit = { 
+				OR = {
+					has_pop_culture = sumatran
+					has_pop_culture = malay
+				}
+				pop_majority_issue = reactionary
+				pop_majority_religion = sunni
+			}
+			pop_type = bureaucrats
+			move_pop = 2505
+			militancy = 4
+		}
+		SLW = {
+			all_core = {
+				add_core = AST
+			}
+		}
+	}
+	
+	option = {
+		name = "I guess it is cruel to send them to die by spiders. Send one of my least favourite sons with them (Play as Marege Darulsalaam)"
+		set_country_flag = chinese_immigrant_arrival
+		prestige = -5
+		any_pop = {
+			limit = { 
+				OR = {
+					has_pop_culture = sumatran
+					has_pop_culture = malay
+				}
+				pop_majority_issue = reactionary
+				pop_majority_religion = sunni
+			}
+			pop_type = bureaucrats
+			move_pop = 2505
+		}
+		SLW = {
+			all_core = {
+				add_core = AST
+			}
+		}
+		change_tag_no_core_switch = AST
+	}
+}
+
+# Johor Civil War Events
+
+country_event = {
+	id = 651924
+	title = "EVTNAME651924"
+	desc = "EVTDESC651924"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = PHG
+		is_substate = yes
+		year = 1837
+		NOT = { bendahara_mahmud }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "All hail Bendahara Mahmud Muzaffar Shah!"
+		set_country_flag = bendahara_mahmud
+		prestige = 15
+		define_general = { 
+			name = "Mahmud Muzaffar Shah" 
+			personality = implacable
+			background = spoiled
+		}
+		small_arms = 1000
+		regular_clothes = 1000
+		canned_food = 3000
+		treasury = 8000
+		JOH = {
+			release_vassal = PHG
+			country_event = 651922
+		}
+	}
+}
+
+country_event = {
+	id = 651925
+	title = "EVTNAME651925"
+	desc = "EVTDESC651925"
+	picture = "chinese_migrants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Restore Bendahara Hussein!"
+		set_global_flag = pahang_civil_war
+		prestige = -10
+		war = {
+			target = PHG
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}	
+	}
+}
+
+country_event = {
+	id = 651926
+	title = "EVTNAME651926"
+	desc = "EVTDESC651926"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = PHG
+		has_global_flag = pahang_civil_war
+		tag = PHG
+		truce_with = JOH
+		is_vassal = no
+		NOT = { pahang_civil_war_victory }
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "At last, Malaya stands free from Sumatran oppression"
+		set_country_flag = pahang_civil_war_victory
+		prestige = 30
+		JOH = {
+			release_vassal = PAT
+			release_vassal = ATJ
+			1384 = {
+				secede_province = PHG
+			}
+			1388 = {
+				secede_province = PHG
+			}
+			country_event = 651927
+		}
+	}
+}
+
+country_event = {
+	id = 651927
+	title = "EVTNAME651927"
+	desc = "EVTDESC651927"
+	picture = "chinese_migrants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Weakness only begets rebellion"
+		set_country_flag = pahang_civil_war_defeat
+		prestige = -10
+		war = {
+			target = ATJ
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}	
+	}
+}
+
+country_event = {
+	id = 651928
+	title = "EVTNAME651928"
+	desc = "EVTDESC651928"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = JOH
+		has_global_flag = pahang_civil_war
+		truce_with = PHG
+		is_our_vassal = PHG
+		NOT = { pahang_civil_war_victory }
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "We have restored order in Pahang at last"
+		set_country_flag = pahang_civil_war_victory
+		prestige = 30
+		inherit = PHG
+		define_general = { 
+			name = "Bendahara Ali" 
+			personality = merciless
+			background = aristocrat
+		}
+	}
+}
+
+# Farquhar's Retirement and Crawfurd's Acenssion Events
+
+country_event = {
+	id = 651929
+	title = "EVTNAME651929"
+	desc = "EVTDESC651929"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = SCO
+		owns = 1413
+		year = 1836
+		NOT = { has_country_flag = no_more_farquhar }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "His name will never be forgotten, right?"
+		set_country_flag = no_more_farquhar
+		prestige = 30
+		relation = {
+			who = JOH
+			value = -10
+		}
+		relation = {
+			who = BRU
+			value = -10
+		}
+		relation = {
+			who = SLW
+			value = -10
+		}
+	}
+}
+
+country_event = {
+	id = 651930
+	title = "EVTNAME651930"
+	desc = "EVTDESC651930"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = SCO
+		owns = 1413
+		year = 1836
+		NOT = { has_country_flag = crawfurd_in_the_east }
+		has_country_flag = no_more_farquhar
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "This new guy seems a lot less friendly"
+		set_country_flag = crawfurd_in_the_east
+		prestige = 10
+	}
+}

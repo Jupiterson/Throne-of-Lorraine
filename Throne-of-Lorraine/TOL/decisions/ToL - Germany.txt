@@ -1107,94 +1107,44 @@ political_decisions = {
             }
 			#Saar
 			any_owned = {
-                limit = { is_core = SAA NOT = { is_core = THIS } }
+                limit = {  is_core = SAA }
                 secede_province = SAA
             }
 			#Bavaria
-			any_owned = {
-                limit = {
-				region = BAV_599
-				region = BAV_595
-				region = AUS_612
-				NOT = { is_core = THIS } 
-				}
-                secede_province = BAV
-            }
-            #BAV_599 = { secede_province = BAV  }
-			#BAV_595 = { secede_province = BAV  }
-			#AUS_612 = { secede_province = BAV  }
-			
+            BAV_599 = { secede_province = BAV  }
+			BAV_595 = { secede_province = BAV  }
+			AUS_612 = { secede_province = BAV  }
 			#Würtemberg
-			any_owned = {
-                limit = {
-				region = WUR_589
-				region = BAD_586
-				region = FRA_412
-				NOT = { is_core = THIS } 
-				}
-                secede_province = WUR
-            }
-			#WUR_589 = { secede_province = WUR  }
-			#BAD_586 = { secede_province = WUR  }
-			#FRA_412 = { secede_province = WUR  }
-			
+			WUR_589 = { secede_province = WUR  }
+			BAD_586 = { secede_province = WUR  }
+			FRA_412 = { secede_province = WUR  }
 			#Westfalen-Hessen
-			any_owned = {
-                limit = {
-				region = PRU_581
-				region = HES_2560
-				NOT = { is_core = THIS } 
-				}
-                secede_province = WES
-            }
-			#PRU_581 = { secede_province = WES  }
-			#HES_2560 = { secede_province = WES  }
-			
+			PRU_581 = { secede_province = WES  }
+			HES_2560 = { secede_province = WES  }
 			#Rhineland
-			any_owned = {
-                limit = {
-				region = PRU_575
-				region = PRU_578
-				NOT = { is_core = THIS } 
-				}
-                secede_province = RHI
-            }
-			#PRU_575 = { secede_province = RHI  }
-			#PRU_578 = { secede_province = RHI  }
-			
+			PRU_575 = { secede_province = RHI  }
+			PRU_578 = { secede_province = RHI  }
 			#Styria-Austria
-			any_owned = {
-                limit = {
-				region = AUS_613
-				region = AUS_619
-				#region = AUS_624
-				NOT = { is_core = THIS } 
-				}
-                secede_province = STY
-            }
-			#AUS_613 = { secede_province = STY  }
-			#AUS_619 = { secede_province = STY  }
+			AUS_613 = { secede_province = STY  }
+			AUS_619 = { secede_province = STY  }
 			AUS_624 = { add_core = STY  }
 			any_owned = {
-                limit = {  is_core = STY NOT = { is_core = THIS } }
+                limit = {  is_core = STY }
                 secede_province = STY
             }
 			any_owned = {
-                limit = {  is_core = SLO NOT = { is_core = THIS } }
+                limit = {  is_core = SLO }
                 secede_province = STY
             }
 			#Silesia
 			any_owned = {
-                limit = {  is_core = SLS NOT = { is_core = THIS } }
+                limit = {  is_core = SLS }
                 secede_province = SLS
             }
-			any_owned = {
-                limit = {  is_core = SWI NOT = { is_core = THIS } }
-                secede_province = SWI
-            }
+			release_vassal = SWI
 			#Liechtenstein
 			any_owned = {
-                limit = {  is_core = LIE NOT = { is_core = THIS } }
+                limit = {  is_core = LIE }
                 secede_province = SWI
             }
 			#Luxembourg
@@ -1203,114 +1153,38 @@ political_decisions = {
                 add_core = LIG			
             }
 			#Saxony
-			any_owned = {
-                limit = {
-				region = SAX_558
-				region = PRU_554
-				region = LUS_552
-				NOT = { is_core = THIS } 
-				}
-                secede_province = SAX
-            }
-			#SAX_558 = { secede_province = SAX  }
-			#PRU_554 = { secede_province = SAX  }
-			#LUS_552 = { secede_province = SAX  }
+			SAX_558 = { secede_province = SAX  }
+			PRU_554 = { secede_province = SAX  }
+			LUS_552 = { secede_province = SAX  }
 			#Hanover
 			any_owned = {
-                limit = { 
-				is_core = HAN
-				region = HAN_528
-				NOT = { is_core = THIS } 
-				}
+                limit = {  is_core = HAN }
                 secede_province = HAN
             }
-			#HAN_528 = { secede_province = HAN  }
-			
+			HAN_528 = { secede_province = HAN  }
 			#Holstein
-			any_owned = {
-                limit = { 
-				region = HOL_369
-				NOT = { is_core = THIS } 
-				}
-                secede_province = HOL
-            }
 			3295 = { secede_province = HOL }
 			3295 = { secede_province = HOL }
-			#HOL_369 = { secede_province = HOL  }
-			
+			HOL_369 = { secede_province = HOL  }
 			#Mecklenburg-Pomerania
-			any_owned = {
-                limit = { 
-				region = PRU_544
-				region = PRU_546
-				NOT = { is_core = THIS } 
-				}
-                secede_province = MEC
-            }
-			#PRU_544 = { secede_province = MEC  }
-			#PRU_546 = { secede_province = MEC  }
-			
+			PRU_544 = { secede_province = MEC  }
+			PRU_546 = { secede_province = MEC  }
 			#Westpreussen-Pomerlia
-			any_owned = {
-                limit = { 
-				region = PRU_690
-				NOT = { is_core = THIS } 
-				}
-                secede_province = PML
-            }
-			#PRU_690 = { secede_province = PML  }
-			
+			PRU_690 = { secede_province = PML  }
 			#Brandenburg 
+			PRU_553 = { secede_province = BRN  }
+			PRU_549 = { secede_province = BRN  }
 			any_owned = {
-                limit = { 
-				region = PRU_553
-				region = PRU_549
-				NOT = { is_core = THIS } 
-				}
+                limit = {  is_core = BRA }
                 secede_province = BRN
-            }
-			#PRU_553 = { secede_province = BRN  }
-			#PRU_549 = { secede_province = BRN  }
-			any_owned = {
-                limit = {  is_core = BRA NOT = { is_core = THIS }  }
-                secede_province = BRN
-            }	
-            #Lorraine
-            any_owned = {
-                limit = { 
-				is_core = LOR
-				NOT = { is_core = THIS } 
-				}
-                secede_province = LOR
-            }
-            #Böhmen			
-            any_owned = {
-                limit = { 
-				is_core = BOH
-				NOT = { is_core = THIS } 
-				}
-                secede_province = BOE
-				add_core = BOE
-            }
-            #UBD			
-            any_owned = {
-                limit = { 
-				is_core = UBD
-				NOT = { is_core = THIS } 
-				}
-                secede_province = UBD
-            }	
-            #DAN			
-            any_owned = {
-                limit = { 
-				is_core = DAN
-				NOT = { is_core = THIS } 
-				}
-                secede_province = DAN
-            }				
+            }		
 			
+			release_vassal = BOH
+			release_vassal = UBD
 			release_vassal = HNS
+			release_vassal = DAN
 			release_vassal = LIG
+			release_vassal = LOR
 			release_vassal = BRE
        
             create_vassal = BAV
@@ -1326,11 +1200,6 @@ political_decisions = {
             create_vassal = MEC
 			create_vassal = PLM
 			create_vassal = SAA
-			create_vassal = LOR
-			create_vassal = SWI
-			create_vassal = BOE
-			create_vassal = UBD
-			create_vassal = DAN
 			
             set_global_flag = outside_germany
 			

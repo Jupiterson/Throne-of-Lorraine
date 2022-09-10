@@ -675,8 +675,8 @@ country_event = {
 			THIS = { release = KWT release_vassal = KWT leave_alliance = KWT }
 		}
 		random_owned = {
-			limit = { COP = { exists = yes vassal_of = TUR } }
-			THIS = { release = COP release_vassal = COP leave_alliance = COP }
+			limit = { EGY = { exists = yes vassal_of = TUR } }
+			THIS = { release = EGY release_vassal = EGY leave_alliance = EGY }
 		}
 		random_owned = {
 			limit = { TUN = { exists = yes vassal_of = TUR } }

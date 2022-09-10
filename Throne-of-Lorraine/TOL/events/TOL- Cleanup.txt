@@ -133,28 +133,3 @@ country_event = {
 	}
 	
 }
-
-country_event = {
-	id = 100200
-	title = "Romanian Union"
-	desc = "It's time to unite with Mundungsland"
-	fire_only_once = yes
-
-	trigger = {
-		tag = ROM
-		exists = DAN
-		DAN = { ai = yes }
-	}
-
-	mean_time_to_happen = { days = 1 }
-
-	option = {
-		name = "Yes"
-		inherit = DAN
-		
-		ai_chance = {
-			factor = 100
-		}
-	}
-	
-}
