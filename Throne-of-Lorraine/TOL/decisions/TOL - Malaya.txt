@@ -64,7 +64,7 @@ political_decisions = {
 					NOT = { has_province_modifier = plantation }
 				}
 				add_province_modifier = {
-					name = 
+					name = plantation
 					duration = -1
 				}
 				limit = {
@@ -84,7 +84,7 @@ political_decisions = {
 	}
 	
 	accept_tionghua_population = {
-		picture = korea_map
+		picture = coolies
 		
 		potential = {
 			OR = {
@@ -420,3 +420,4 @@ political_decisions = {
 		}
 
 	}
+}

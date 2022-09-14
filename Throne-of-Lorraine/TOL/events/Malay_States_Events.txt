@@ -1,6 +1,30 @@
 #Padri Events
 
 country_event = {
+	id = 651924
+	title = "EVTNAME651924"
+	desc = "EVTDESC651924"
+	picture = "aceh_jihad"
+
+	trigger = {
+		tag = SAK
+		government = theocracy
+		NOT = { has_country_flag = padri_terror }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "For the Imam!"
+		set_country_flag = padri_terror
+		add_country_modifier = {
+			name = padri_fundementalism
+			duration = -1
+		}
+	}
+}
+
+country_event = {
 	id = 651920
 	title = "EVTNAME651920"
 	desc = "EVTDESC651920"
@@ -35,6 +59,8 @@ country_event = {
 		10 = {
 			change_province_name = "Pagaruyung"
 		}
+		remove_accepted_culture = bedouin
+		primary_culture = malay
 		prestige = -10
 	}
 }
