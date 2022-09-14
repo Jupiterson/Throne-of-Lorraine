@@ -5302,3 +5302,33 @@ dadu_resistance = {
 	pop_consciousness_modifier = 0.05
 	icon = 20
 }
+
+chinese_education = {
+	non_accepted_pop_militancy_modifier = 0.02
+	non_accepted_pop_consciousness_modifier = 0.05
+	assimilation_rate = 0.25
+	prestige = 0.1
+	education_efficiency_modifier = 0.35
+	icon = 17
+}
+
+hong_leong = {
+	factory_owner_cost = -0.1
+	rgo_throughput = 0.25
+	rgo_output = 0.2
+	icon = 11
+}
+
+chinese_chamber_of_commerce = {
+	factory_owner_cost = -0.15
+	import_cost = -0.2
+	influence_modifier = 0.1
+	icon = 1
+}
+
+padri_fundementalism = {
+	global_pop_consciousness_modifier = -0.25
+	global_pop_militancy_modifier = 0.05
+	local_RGO_throughput = -0.50
+	icon = 20
+}
