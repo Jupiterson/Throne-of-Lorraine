@@ -1,0 +1,422 @@
+
+political_decisions = {
+
+#Straits Chinese Decisions
+
+	kangchu_system = {
+		picture = kangchu
+		
+		potential = {
+			OR = { 
+				tag = JOH
+				tag = PHG
+			}
+			owns = 1385
+			NOT = { has_global_flag = kangchu_system }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			year = 1840
+		}
+
+		effect = {
+			set_global_flag = kangchu_system
+			economic_reform = yes_land_reform
+			3235 = {
+				any_pop = {
+					limit = { 
+						has_pop_culture = yue
+						type = artisans
+					}
+					pop_type = labourers
+					move_pop = 1388
+				}
+				any_pop = {
+					limit = { 
+						has_pop_culture = min
+						type = artisans
+					}
+					pop_type = labourers
+					move_pop = 1385
+				}
+			}
+			1388 = {
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				limit = {
+					NOT = { has_province_modifier = baby_boom }
+				}
+				add_province_modifier = {
+					name = baby_boom
+					duration = 1875
+				}
+				add_core = LAN
+			}
+			1385 = {
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = 
+					duration = -1
+				}
+				limit = {
+					NOT = { has_province_modifier = baby_boom }
+				}
+				add_province_modifier = {
+					name = baby_boom
+					duration = 1875
+				}
+				add_core = LAN
+			}
+			add_accepted_culture = min
+			add_accepted_culture = yue
+			add_accepted_culture = hakka
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	accept_tionghua_population = {
+		picture = korea_map
+		
+		potential = {
+			OR = {
+				primary_culture = malay
+				primary_culture = sumatran
+				primary_culture = javan
+				primary_culture = moluccan
+				tag = RIA
+			}
+			NOT = { has_country_flag = accept_tionghua }
+			NOT = { government = fascist_dictatorship }
+		}
+
+		allow = {
+			vote_franschise = universal_voting
+			political_parties = secret_ballots
+			citizens_rights = all_voting_pops
+			press_rights = free_press
+			public_meetings = yes_meeting
+			slavery = no_slavery
+			war = no
+			nationalism_n_imperialism = 1
+			any_owned_province = {
+				NOT = { minorities = no }
+			}	
+		}
+
+		effect = {
+			set_country_flag = accept_tionghua
+			add_accepted_culture = min
+			add_accepted_culture = yue
+			add_accepted_culture = hakka
+			prestige = 10
+		}
+	}
+	
+	
+#Nanyang Decisions	
+	jews_of_the_east = {
+		picture = coolies
+		
+		potential = {
+			OR = { 
+				tag = GXI
+				tag = GNG
+				tag = FJN
+				tag = TAI
+			}
+			is_vassal = no
+			NOT = { has_country_flag = israel_of_the_east }
+			has_global_flag = kangchu_system
+			has_global_flag = chinese_diaspora
+		}
+
+		allow = {
+			war = no
+			has_unclaimed_cores = no
+			nationalism_n_imperialism = 1
+			romanticism = 1
+		}
+
+		effect = {
+			set_country_flag = israel_of_the_east
+			LAN = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			badboy = 5
+		}
+		ai_will_do = { factor = 0.4 }
+	}
+	
+	south_china_unity = {
+		picture = south_china_map
+		
+		potential = {
+			OR = { 
+				tag = LAN
+			}
+			has_global_flag = chuseok_coup
+			is_vassal = no
+			NOT = { has_country_flag = south_china_thalassocracy }
+		}
+
+		allow = {
+			war = no
+			has_unclaimed_cores = no
+			nationalism_n_imperialism = 1
+			romanticism = 1
+		}
+
+		effect = {
+			set_country_flag = south_china_thalassocracy
+			CHI_1482 = {
+				add_core = THIS
+			}
+			CHI_1493 = {
+				add_core = THIS
+			}
+			CHI_1499 = {
+				add_core = THIS
+			}
+			TAI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			SAI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			badboy = 10
+		}
+		ai_will_do = { factor = 0.4 }
+	}
+	
+	incorporate_nanyang = {
+		picture = intiation_triad
+		
+		potential = {
+			tag = LAN
+			has_country_flag = israel_of_the_east
+			is_vassal = no
+			NOT = { has_country_flag = nanyang_incorporated }
+		}
+
+		allow = {
+			tag = LAN
+			war = no
+			has_unclaimed_cores = no
+			social_science = 1
+			OR = {
+				is_greater_power = yes
+				AND = {
+					is_secondary_power = yes
+					prestige = 50
+				}
+			}
+			OR = {
+				colonial_policy = settlement
+				colonial_policy = civilizing
+			}
+		}
+
+		effect = {
+			set_country_flag = nanyang_incorporated
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							is_core = CHI
+							is_core = LAN
+						}
+					}
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					is_coastal = yes
+				}
+				add_core = LAN
+			}
+			badboy = 10
+		}
+		ai_will_do = { factor = 0.4 }
+	}
+	
+	unite_nanyang = {
+		picture = nanyang
+		potential = {
+			OR = { 
+				tag = SAI
+				tag = GNG
+				tag = FJN
+				tag = TAI
+			}
+			LAN = {
+				exists = no
+			}
+			is_vassal = no
+			has_country_flag = israel_of_the_east
+			NOT = { has_country_flag = united_nanyang }
+		}
+
+		allow = {
+			war = no
+			LAN = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			revolution_n_counterrevolution = 1
+		}
+
+		effect = {
+			set_country_flag = united_nanyang
+			CHI_1504 = {
+				remove_core = THIS	
+			}
+			CHI_1545 = {
+				remove_core = THIS
+			}
+			CHI_1547 = {
+				remove_core = THIS	
+			}
+			CHI_1604 = {
+				remove_core = THIS	
+			}
+			CHI_1610 = {
+				remove_core = THIS
+			}
+			change_tag = LAN
+			add_accepted_culture = hakka
+			add_accepted_culture = yue
+			add_accepted_culture = min
+			add_accepted_culture = konketsu
+			remove_accepted_culture = han_chinese
+			remove_accepted_culture = zhuang
+			remove_accepted_culture = japanese
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	found_hong_leong = {
+		picture = chinese_family
+		potential = {
+			NOT = { has_country_flag = ocbc }
+			tag = LAN
+		}
+
+		allow = {
+			war = no
+			business_banks = 1
+			year = 1905
+		}
+
+		effect = {
+			set_country_flag = ocbc
+			prestige = 10
+			add_country_modifier = {
+				name = hong_leong
+				duration = -1
+			}
+			activate_technology = investment_banks
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	south_china_schooling = {
+		picture = imperial_examinations
+		potential = {
+			NOT = { has_country_flag = sc_schools }
+			tag = LAN
+			has_country_flag = mccc
+		}
+
+		allow = {
+			war = no
+			phenomenology_n_hermeneutic = 1
+			school_reforms = acceptable_schools
+			money = 1000000
+		}
+
+		effect = {
+			set_country_flag = sc_schools
+			treasury = -1000000
+			prestige = 30
+			add_country_modifier = {
+				name = chinese_education
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	chamber_of_commerce = {
+		picture = malayan_chinese_chamber_of_commerce
+		potential = {
+			NOT = { has_country_flag = mccc }
+			OR = {
+				tag = LAN
+				tag = SAI
+				AND = {
+					OR = {
+						tag = JOH
+						tag = PHG
+						tag = PAT
+						tag = BRU
+						tag = SAK
+						tag = ATJ
+						tag = SIA
+						tag = RIA
+						tag = JAV
+						tag = MLY
+						tag = INO
+					}
+					accepted_culture = min
+				}
+			}
+		}
+
+		allow = {
+			war = no
+			market_regulations = 1
+			collectivist_theory = 1
+			OR = {
+				economic_policy = laissez_faire
+				economic_policy = interventionist
+				economic_policy = state_capitalism
+			}
+			money = 100000
+		}
+
+		effect = {
+			set_country_flag = mccc
+			prestige = 10
+			add_country_modifier = {
+				name = chinese_chamber_of_commerce
+				duration = -1
+			}
+			tech_school = nanyang_tech_school
+		}
+
+	}

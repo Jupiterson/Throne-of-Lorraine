@@ -1,0 +1,220 @@
+#Padri Events
+
+country_event = {
+	id = 651920
+	title = "EVTNAME651920"
+	desc = "EVTDESC651920"
+	picture = "aceh_jihad"
+
+	trigger = {
+		tag = SAK
+		has_recently_lost_war = yes
+		OR = {
+			government = theocracy
+			government = constitutional_theocracy
+		}
+	}
+
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = "Central Sumatra breathes a sigh of relief"
+		set_country_flag = fall_of_the_padri
+		SAK = {
+			limit = { government = theocracy }
+			government = absolute_empire
+		}
+		SAK = {
+			limit = { government = constitutional_theocracy }
+			government = semi_constitutional_empire
+		}
+		SAK = {
+			limit = { has_country_modifier = padri_fundementalism }
+			remove_country_modifier = padri_fundementalism
+		}
+		10 = {
+			change_province_name = "Pagaruyung"
+		}
+		prestige = -10
+	}
+}
+
+# Chinese Migration Events and Nanyang
+
+country_event = {
+	id = 651921
+	title = "EVTNAME651921"
+	desc = "EVTDESC651921"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = QNG
+		has_country_flag = southern_devastation
+		NOT = { has_global_flag = chinese_diaspora }
+	}
+
+	mean_time_to_happen = { years = 1 }
+
+	option = {
+		name = "Hopefully they will be able to make a better life overseas"
+		set_global_flag = chinese_diaspora
+		3235 = {
+			any_pop = {
+                limit = { 
+					has_pop_culture = yue
+					type = labourers
+				}
+				move_pop = 2575
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = hakka
+					type = labourers
+				}
+				move_pop = 1387
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = min
+					type = labourers
+				}
+				move_pop = 1389
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = min
+					type = labourers
+				}
+				move_pop = 1402
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = min
+					type = farmers
+				}
+				move_pop = 1406
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = hakka
+					type = farmers
+				}
+				pop_type = labourers
+				move_pop = 1404
+			}
+		}
+		2575 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier = gold_rush
+		}
+		2575 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1387 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier = gold_rush
+		}
+		1387 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1389 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1389 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1402 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1402 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1406 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1406 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1404 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1404 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		any_country = {
+			limit = {
+				OR = {
+					owns = 2575
+					owns = 1387
+					owns = 1389
+					owns = 1402
+					owns = 1404
+					owns = 1406	
+				}
+				NOT = {
+					
+				}
+			}
+			country_event = 651922
+		}
+	}
+}
+
+country_event = {
+	id = 651922
+	title = "EVTNAME651922"
+	desc = "EVTDESC651922"
+	picture = "chinese_migrants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Welcome to Malaya!"
+		set_country_flag = chinese_immigrant_arrival
+		prestige = 5
+		any_pop = {
+			militancy = 2
+			consciousness = 4
+		}
+	}
+}
