@@ -420,4 +420,636 @@ political_decisions = {
 		}
 
 	}
+
+	#Uniting Malaya Decisions
+
+	form_malayan_empire = {
+		picture = korea_map
+		
+		potential = {
+			primary_culture = malay
+			civilized = yes
+			NOT = { has_country_flag = unite_malay_empire }
+		}
+
+		allow = {
+			MLY = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			primary_culture = malay
+			is_vassal = no
+			state_n_government = 1
+		}
+
+		effect = {
+			set_country_flag = unite_malay_empire
+			THIS = {
+				limit = {
+					OR = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+				government = absolute_empire
+			}
+			MLY = {
+				all_core = {
+					limit = {
+						NOT = { owned_by = THIS } 
+					}
+					secede_province = THIS
+				}
+			}
+			change_tag = MLY
+			prestige = 10
+		}
+	}
+	
+	malays_never_die = {
+		picture = korea_map
+		
+		potential = {
+			primary_culture = malay
+			has_country_flag = unite_malay_empire
+			NOT = { has_country_flag = malay_irrendata }
+		}
+
+		allow = {
+			MLY = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			nationalism_n_imperialism = 1
+		}
+
+		effect = {
+			set_country_flag = malay_irrendata
+			DJA = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			BRU = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			SAK = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			RIA = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			PAT = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			ATJ = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			prestige = 10
+		}
+	}
+	
+	malayu_raya = {
+		picture = korea_map
+		
+		potential = {
+			primary_culture = malay
+			has_country_flag = malay_irrendata
+			NOT = { has_country_flag = malayu_raya }
+		}
+
+		allow = {
+			MLY = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			nationalism_n_imperialism = 1
+		}
+
+		effect = {
+			badboy = 10
+			NET_1446 = {
+				add_core = MLY
+			}
+			NET_1447  = {
+				add_core = MLY
+			}
+			NET_1449 = {
+				add_core = MLY
+			}
+			NET_1413 = {
+				add_core = MLY
+			}
+			NET_1446 = {
+				add_core = MLY
+			}
+			SUL = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			add_accepted_culture = sumatran
+			add_accepted_culture = dayak
+			add_accepted_culture = asian_minor
+			add_accepted_culture = moro
+		}
+	}
+
+#Java and Bali Decisions
+
+	heirs_to_the_majapahit = {
+		picture = korea_map
+		
+		potential = {
+			primary_culture = javan
+			civilized = yes
+			NOT = { has_country_flag = majapahit_heir }
+		}
+
+		allow = {
+			JAV = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			BAL = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			primary_culture = javan
+			is_vassal = no
+			prestige = 30
+		}
+
+		effect = {
+			set_country_flag = majapahit_heir
+			BAL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			JAV = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			THIS = {
+				change_tag = JAV
+				government = absolute_empire
+			}
+			prestige = 10
+		}
+	}
+
+	lamun_huwus_kalah_nusantara = {
+		picture = korea_map
+		
+		potential = {
+			primary_culture = javan
+			civilized = yes
+			has_country_flag = majapahit_heir
+			NOT = { has_country_flag = nusantara_claim }
+		}
+
+		allow = {
+			primary_culture = javan
+			is_vassal = no
+			prestige = 30
+			romanticism = 1
+			nationalism_n_imperialism = 1
+			war_policy = jingoism
+		}
+
+		effect = {
+			set_country_flag = majapahit_heir
+			MLY = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BRU = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			DJA = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			SAK = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			ATJ = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			MAL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BAL_1438 = {
+				add_core = THIS
+			}
+			prestige = 10
+		}
+	}
+	
+	united_nusantara = {
+		picture = korea_map
+		
+		potential = {
+			primary_culture = javan
+			civilized = yes
+			has_country_flag = nusantara_claim
+			NOT = { has_country_flag = nusantara_union }
+		}
+
+		allow = {
+			has_unclaimed_cores = no
+			revolution_n_counterrevolution = 1
+			social_science = 1
+			citizenship_policy = full_citizenship
+		}
+
+		effect = {
+			set_country_flag = nusantara_union
+			add_accepted_culture = moluccan
+			add_accepted_culture = papuan
+			add_accepted_culture = dayak
+			add_accepted_culture = asian_minor
+		}
+	}
+
+#Malaya Development Decisions
+
+	malayan_rubber_boom = {
+        picture = commodities_in_central_asia
+        potential = {
+            owns = 2575
+            owns = 1384
+            NOT = { has_global_flag = malayan_rubber_boom }
+        }
+
+        allow = {
+            war = no
+            money = 50000
+            organic_chemistry = 1
+			biologism = 1
+            business_regulations = 1
+        }
+
+        effect = {
+            set_global_flag = malayan_rubber_boom
+            treasury = -50000
+            1384 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+            1385 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+			1386 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+			1388 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+			1390 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+			1391 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+			8 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+        }
+        ai_will_do = {  factor = 1 }
+    }
+	
+	royal_selangor_pewter = {
+        picture = commodities_in_central_asia
+        potential = {
+            owns = 2575
+            owns = 1387
+            NOT = { has_global_flag = royal_selangor }
+        }
+
+        allow = {
+            war = no
+            money = 50000
+            modern_central_bank_system = 1
+            investment_banks = 1
+            business_regulations = 1
+        }
+
+        effect = {
+            set_global_flag = royal_selangor
+            treasury = -50000
+            1387 = { 
+				trade_goods = precious_metals
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+				limit = {
+					has_province_modifier = gold_rush
+				}
+				remove_province_modifier = gold_rush	
+				add_province_modifier = {
+					name = gold_rush
+					duration = 3650
+				}
+			}
+            2575 = { 
+				trade_goods = precious_metals
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+				limit = {
+					has_province_modifier = gold_rush
+				}
+				remove_province_modifier = gold_rush	
+				add_province_modifier = {
+					name = gold_rush
+					duration = 3650
+				}
+			}
+			THIS = {
+				limit = {
+					primary_culture = malay
+					OR = {
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+				tech_school = malay_tech_school
+			}
+		}
+			
+        ai_will_do = {  factor = 1 }
+    }
+
+#Johor and Pahang Decisions
+	
+	daeng_ibrahim = {
+		picture = hundred_days_reform
+		potential = {
+			tag = PHG
+			NOT = { has_country_flag = daeng_ibrahim }
+			has_country_flag = pahang_civil_war_victory
+		}
+
+		allow = {
+			year = 1841
+			war = no
+			money = 8000
+		}
+			
+		effect = {
+			treasury = -8000
+			economic_reform = yes_land_reform
+			1390 = {
+				life_rating = 5
+				trade_goods = precious_metal
+				change_province_name = "Pekan"
+				add_province_modifier = { name = recently_built_city duration = 365 }
+			}
+		}
+				
+		ai_will_do = { factor = 1 }
+		
+	}
+	
+	capital_muar = {
+		picture = hundred_days_reform
+		potential = {
+			tag = PHG
+			NOT = { has_country_flag = daeng_ibrahim }
+			has_country_flag = pahang_civil_war_victory
+		}
+
+		allow = {
+			year = 1840
+			war = no
+			money = 8000
+		}
+			
+		effect = {
+			economic_reform = yes_land_reform
+			capital = 1385
+			treasury = -8000
+			1385 = {
+				life_rating = 5
+				trade_goods = precious_metal
+				change_province_name = "Muar"
+				add_province_modifier = { name = recently_built_city duration = 365 }
+			}
+		}
+				
+		ai_will_do = { factor = 1 }
+		
+	}
+	
+	abu_bakar = {
+		picture = hundred_days_reform
+		potential = {
+			tag = PHG
+			NOT = { has_country_flag = daeng_ibrahim }
+			has_country_flag = daeng_ibrahim
+		}
+
+		allow = {
+			year = 1862
+			war = no
+			money = 18000
+		}
+			
+		effect = {
+			set_country_flag = abu_bakar
+			treasury = -18000
+			add_country_modifier = {
+				name = ivory_tower_intellectual
+				duration = 3650
+			}
+			economic_reform = yes_transport_improv
+			economic_reform = yes_pre_indust
+			economic_reform = yes_industrial_construction
+			activate_technology = piston_steam_engine
+			build_factory_in_capital_state = lumber_mill
+		}
+				
+		ai_will_do = { factor = 1 }
+		
+	}
+	
+	regain_straits_ports = {
+        picture = map_central_america
+        potential = {
+			1384 = { owned_by = ETH }
+            1386 = { owned_by = ETH }
+            }
+            OR = {
+                tag = PHG
+				tag = PAT
+				tag = JOH
+				tag = MLY
+            }
+            NOT = { has_country_flag = melaka_purchase }
+        }
+
+        allow = {
+            war = no
+            money = 55000
+            1384 = {
+                owner = {
+                    war = no
+                    relation = { who = THIS value = 100 }
+                }
+            }
+			OR = {
+				AND = {
+					military_score = 8
+					total_amount_of_ships = 10
+				}
+				civilized = yes
+			}
+        }
+
+        effect = {
+            set_country_flag = melaka_purchase
+            1384 = { owner = { country_event = 32550 } }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
 }

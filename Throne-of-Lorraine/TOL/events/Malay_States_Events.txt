@@ -244,3 +244,355 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = 651923
+	title = "EVTNAME651923"
+	desc = "EVTDESC651923"
+	picture = "chinese_migrants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Get them out of my sight"
+		prestige = 5
+		any_pop = {
+			limit = { 
+				OR = {
+					has_pop_culture = sumatran
+					has_pop_culture = malay
+				}
+				pop_majority_issue = reactionary
+				pop_majority_religion = sunni
+			}
+			pop_type = bureaucrats
+			move_pop = 2505
+			militancy = 4
+		}
+		SLW = {
+			all_core = {
+				add_core = AST
+			}
+		}
+	}
+	
+	option = {
+		name = "I guess it is cruel to send them to die by spiders. Send one of my least favourite sons with them (Play as Marege Darulsalaam)"
+		set_country_flag = chinese_immigrant_arrival
+		prestige = -5
+		any_pop = {
+			limit = { 
+				OR = {
+					has_pop_culture = sumatran
+					has_pop_culture = malay
+				}
+				pop_majority_issue = reactionary
+				pop_majority_religion = sunni
+			}
+			pop_type = bureaucrats
+			move_pop = 2505
+		}
+		SLW = {
+			all_core = {
+				add_core = AST
+			}
+		}
+		change_tag_no_core_switch = AST
+	}
+}
+
+# Johor Civil War Events
+
+country_event = {
+	id = 651924
+	title = "EVTNAME651924"
+	desc = "EVTDESC651924"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = PHG
+		is_substate = yes
+		year = 1837
+		NOT = { bendahara_mahmud }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "All hail Bendahara Mahmud Muzaffar Shah!"
+		set_country_flag = bendahara_mahmud
+		prestige = 15
+		define_general = { 
+			name = "Mahmud Muzaffar Shah" 
+			personality = implacable
+			background = spoiled
+		}
+		small_arms = 1000
+		regular_clothes = 1000
+		canned_food = 3000
+		treasury = 8000
+		JOH = {
+			release_vassal = PHG
+			country_event = 651922
+		}
+	}
+}
+
+country_event = {
+	id = 651925
+	title = "EVTNAME651925"
+	desc = "EVTDESC651925"
+	picture = "chinese_migrants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Restore Bendahara Hussein!"
+		set_global_flag = pahang_civil_war
+		prestige = -10
+		war = {
+			target = PHG
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}	
+	}
+}
+
+country_event = {
+	id = 651926
+	title = "EVTNAME651926"
+	desc = "EVTDESC651926"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = PHG
+		has_global_flag = pahang_civil_war
+		tag = PHG
+		truce_with = JOH
+		is_vassal = no
+		NOT = { pahang_civil_war_victory }
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "At last, Malaya stands free from Sumatran oppression"
+		set_country_flag = pahang_civil_war_victory
+		prestige = 30
+		JOH = {
+			release_vassal = PAT
+			release_vassal = ATJ
+			1384 = {
+				secede_province = PHG
+			}
+			1388 = {
+				secede_province = PHG
+			}
+			country_event = 651927
+		}
+	}
+}
+
+country_event = {
+	id = 651927
+	title = "EVTNAME651927"
+	desc = "EVTDESC651927"
+	picture = "chinese_migrants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Weakness only begets rebellion"
+		set_country_flag = pahang_civil_war_defeat
+		prestige = -10
+		war = {
+			target = ATJ
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}	
+	}
+}
+
+country_event = {
+	id = 651928
+	title = "EVTNAME651928"
+	desc = "EVTDESC651928"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = JOH
+		has_global_flag = pahang_civil_war
+		truce_with = PHG
+		is_our_vassal = PHG
+		NOT = { pahang_civil_war_victory }
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "We have restored order in Pahang at last"
+		set_country_flag = pahang_civil_war_victory
+		prestige = 30
+		inherit = PHG
+		define_general = { 
+			name = "Bendahara Ali" 
+			personality = merciless
+			background = aristocrat
+		}
+	}
+}
+
+# Farquhar's Retirement and Crawfurd's Acenssion Events
+
+country_event = {
+	id = 651929
+	title = "EVTNAME651929"
+	desc = "EVTDESC651929"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = SCO
+		owns = 1413
+		year = 1836
+		NOT = { has_country_flag = no_more_farquhar }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "His name will never be forgotten, right?"
+		set_country_flag = no_more_farquhar
+		prestige = 30
+		relation = {
+			who = JOH
+			value = -10
+		}
+		relation = {
+			who = BRU
+			value = -10
+		}
+		relation = {
+			who = SLW
+			value = -10
+		}
+	}
+}
+
+country_event = {
+	id = 651930
+	title = "EVTNAME651930"
+	desc = "EVTDESC651930"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = SCO
+		owns = 1413
+		year = 1836
+		NOT = { has_country_flag = crawfurd_in_the_east }
+		has_country_flag = no_more_farquhar
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "This new guy seems a lot less friendly"
+		set_country_flag = crawfurd_in_the_east
+		prestige = 10
+	}
+}
+
+#Melaka Purchase
+
+country_event = {
+    id = 651931
+    title = "EVTNAME651931"
+    desc = "EVTDESC651931"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Return the ports to their rightful owners"
+        money = 50000
+        FROM = { country_event = 651932 }
+		ai_chance = {
+		factor = 60
+			modifier = {
+				factor = 1.5
+				is_greater_power = no
+			}
+			modifier = {
+				factor = 1.3
+				alliance_with = FROM
+			}
+			modifier = {
+				factor = 1.2
+				relation = { who = FROM value = 150 }
+			}
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+				alliance_with = FROM
+			}
+		}
+    }
+
+    option = {
+        name = "They are ours!"
+        FROM = { country_event = 651933 }
+        ai_chance = {
+            factor = 40
+                modifier = {
+                    factor = 0.2
+                    is_greater_power = no
+                }
+
+                modifier = {
+                    factor = 1.2
+                    FROM = { is_greater_power = no }
+                }
+                modifier = {
+                    factor = 1.3
+                    NOT = { relation = { who = FROM value = 0 } }
+                }
+            }
+    }
+}
+
+country_event = {
+    id = 651932
+    title = "EVTNAME651932"
+    desc = "EVTDESC651932"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "At last, our ancient capitals have been restored to us"
+        prestige = 5
+        money = -50000
+        1384 = { secede_province = THIS }
+		1386 = { secede_province = THIS }
+		THIS = {
+			capital = 1386
+		}
+        relation = { who = FROM value = 50 }
+        any_pop = { consciousness = -1 }
+    }
+}
+
+country_event = {
+    id = 651933
+    title = "EVTNAME651933"
+    desc = "EVTDESC651933"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "We will get our cities back someday, by force if necessary"
+        relation = { who = FROM value = -100 }
+    }
+}
