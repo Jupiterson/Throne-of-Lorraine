@@ -663,7 +663,7 @@ political_decisions = {
 		}
 
 		effect = {
-			set_country_flag = majapahit_heir
+			set_country_flag = nusantara_claim 
 			MLY = {
 				all_core = {
 					add_core = THIS
@@ -929,6 +929,7 @@ political_decisions = {
 		}
 			
 		effect = {
+			set_country_flag = daeng_ibrahim
 			treasury = -8000
 			economic_reform = yes_land_reform
 			1390 = {
@@ -957,6 +958,7 @@ political_decisions = {
 		}
 			
 		effect = {
+			set_country_flag = capital_muar
 			treasury = -8000
 			economic_reform = yes_land_reform
 			1385 = {
@@ -1020,6 +1022,7 @@ political_decisions = {
         }
 
         allow = {
+			set_country_flag = melaka_purchase
             war = no
             money = 55000
             1384 = {
