@@ -9961,7 +9961,13 @@ colonial_conquest = {
 			}
 			#Indonesia
 			AND = {
-				THIS = { owns = 1413 }
+				THIS = { 
+					owns = 1413 
+					OR = {
+						has_global_flag = india_scramble
+						nationalism_n_imperialism = 1
+					}
+				}
 				any_owned_province = {
 					OR = {
 						region = ATJ_1405

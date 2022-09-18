@@ -723,3 +723,247 @@ country_event = {
 		}
     }
 }
+
+#Indonesian War of Independence
+
+country_event = {
+	id = 651936
+	title = "EVTNAME651936"
+	desc = "EVTDESC651936"
+	picture = "nationalists"
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Withdraw from Indonesia"
+		prestige = -30
+		FROM = {
+			change_tag = INO
+		}
+		any_owned = {
+			limit = {
+				is_core = INO
+			}
+			secede_province = INO
+		}
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				is_culture_group = southeast_asian
+			}
+			country_event = 651934
+		}
+		FROM = {
+			country_event = 651937
+		}
+	}
+
+	option = {
+		name = "Crush the rebels!"
+		FROM = {
+			change_tag = INO
+		}
+		war = {
+			target = INO
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = acquire_all_cores }
+			call_ally = no
+		}	
+		ai_chance = { factor = 99 }
+	}
+}
+
+country_event = {
+	id = 651937
+	title = "EVTNAME651937"
+	desc = "EVTDESC651937"
+	picture = "nationalists"
+
+	trigger = {
+		tag = INO
+		has_global_flag = indonesian_war_ongoing
+		any_country = {
+			limit = {
+				has_country_flag = indonesia_master
+			}
+			truce_with = INO
+			any_owned_province = {
+				NOT = { is_core = INO }
+			}
+		}
+		NOT = { has_country_flag = indonesian_war_victory }
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "Indonesia Raya!"
+		set_country_flag = indonesian_war_victory
+		prestige = 30
+		capital = 1413
+		1413 = {
+			change_province_name = Jakarta
+		}
+		remove_country_modifier = indonesian_nationalism
+		any_country = {
+			limit = {
+				has_country_flag = indonesia_master
+			}
+			any_country = {
+				limit = {
+					vassal_of = THIS
+					is_culture_group = southeast_asian
+				}
+				country_event = 651934
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 651938
+	title = "EVTNAME651938"
+	desc = "EVTDESC651938"
+	picture = "jambi_uprising"
+
+	trigger = {
+		has_country_flag = indonesia_master
+		has_global_flag = indonesian_war_ongoing
+		any_country = {
+			limit = {
+				has_country_flag = indonesia_master
+			}
+			truce_with = INO
+		}
+		is_our_vassal = INO
+		NOT = { has_country_flag = indonesian_war_victory }
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "The rebels have been supressed, as they always will be"
+		set_country_flag = indonesian_war_victory
+		clr_global_flag = indonesian_war_ongoing
+		INO = {
+			limit = {
+				has_country_flag = scottish_colonial_vassal
+			}
+			civilized = no
+			any_owned = {
+				secede_province = THIS
+			}
+		}
+		INO = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1413
+						province_id = 1408
+						province_id = 1418
+						province_id = 1406
+					}
+				}
+				secede_province = PRK
+				remove_country_modifier = indonesian_nationalism
+			}
+		}
+		PRK = {
+			any_owned = {
+				secede_province = THIS
+			}
+		}
+	}
+}
+
+#Indonesian National Awakening
+
+country_event = {
+	id = 651939
+	title = "EVTNAME651939"
+	desc = "EVTDESC651939"
+	picture = "mutiny_execution"
+
+	trigger = {
+		has_global_flag = indonesia_organized
+		NOT = { has_global_flag = indonesian_massacres }
+		has_country_flag = indonesia_master
+	}
+
+	mean_time_to_happen = { years = 1 }
+
+	option = {
+		name = "Worrisome"
+		set_global_flag = indonesian_massacres
+		1418 = {
+			any_pop = {
+			limit = {
+				is_culture_group = southeast_asian
+			}
+			consciousness = 8
+			militancy = -1
+			reduce_pop = 0.95
+		}
+		any_pop = {
+			limit = {
+				is_culture_group = southeast_asian
+			}
+			consciousness = 5
+			militancy = 3
+		}
+	}
+}
+
+country_event = {
+	id = 651940
+	title = "EVTNAME651940"
+	desc = "EVTDESC651940"
+	picture = "indonesian_nationalism"
+
+	trigger = {
+		has_global_flag = indonesian_massacres
+		OR = {
+            primary_culture = malay
+			primary_culture = javan
+			primary_culture = moluccan
+			primary_culture = sumatran
+			tag = SAK
+		}
+		NOT = { has_country_flag = indonesian_revolutionary_inform }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "We want no part of this Indonesian movement"
+		set_country_flag = indonesian_revolutionary_inform
+		set_country_flag = reject_indo_unity
+		any_pop = {
+			limit = {
+				is_culture_group = southeast_asian
+			}
+			consciousness = 4
+			militancy = 2
+		}
+	}
+	
+	option = {
+		name = "We stand with the Indonesians"
+		set_country_flag = indonesian_revolutionary_inform
+		set_country_flag = indonesian_revolutionary_ally
+		add_country_modifier = {
+			name = indonesian_nationalism
+			duration = -1
+		}
+		any_country = {
+			limit = {
+				has_country_flag = indonesia_master
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+	}
+}
