@@ -1,9 +1,9 @@
 #Padri Events
 
 country_event = {
-	id = 651924
-	title = "EVTNAME651924"
-	desc = "EVTDESC651924"
+	id = 651935
+	title = "EVTNAME651935"
+	desc = "EVTDESC651935"
 	picture = "aceh_jihad"
 
 	trigger = {
@@ -263,10 +263,6 @@ country_event = {
 		set_global_flag = exiled_marege
 		name = "No"
 		prestige = 5
-		add_country_modifier = {
-			name = padri_fundementalism
-			duration = 90
-		}
 	}
 
 	option = {
@@ -288,9 +284,10 @@ country_event = {
 		}
 		2505 = {
 			remove_core = SLW
-			release_vassal = AST
+			secede_province = AST
 		}
 		AST = {
+			capital = 2505
 			government = theocracy
 			religion = sunni
 			clr_country_flag = catholic_country
@@ -302,10 +299,6 @@ country_event = {
 			remove_accepted_culture = venetian
 			any_owned = {
 				assimilate = yes
-			}
-			add_country_modifier = {
-				name = padri_fundementalism
-				duration = 90
 			}
 		}
 	}
@@ -328,10 +321,10 @@ country_event = {
 		}
 		2505 = {
 			remove_core = SLW
-			release_vassal = AST
-			release_vassal = AST
+			secede_province = AST
 		}
 		AST = {
+			capital = 2505
 			government = theocracy
 			religion = sunni
 			clr_country_flag = catholic_country
@@ -343,10 +336,6 @@ country_event = {
 			remove_accepted_culture = venetian
 			any_owned = {
 				assimilate = yes
-			}
-			add_country_modifier = {
-				name = padri_fundementalism
-				duration = 90
 			}
 		}
 		change_tag_no_core_switch = AST
@@ -387,7 +376,7 @@ country_event = {
 			release_vassal = PHG
 			country_event = 651925
 		}
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 99 }
 	}
 	
 	option = {
@@ -420,14 +409,13 @@ country_event = {
 	option = {
 		name = "Restore Bendahara Ali!"
 		set_global_flag = pahang_civil_war
-		prestige = -10
 		war = {
 			target = PHG
 			attacker_goal = { casus_belli = make_puppet }
 			defender_goal = { casus_belli = status_quo }
 			call_ally = yes
 		}	
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 99 }
 	}
 }
 
@@ -453,9 +441,7 @@ country_event = {
 		set_country_flag = pahang_civil_war_victory
 		prestige = 30
 		JOH = {
-			release_vassal = PAT
-			release_vassal = ATJ
-			1384 = {
+			1385 = {
 				secede_province = PHG
 			}
 			1388 = {
@@ -477,19 +463,27 @@ country_event = {
 	option = {
 		name = "Weakness only begets rebellion"
 		set_country_flag = pahang_civil_war_defeat
+		release_vassal = PAT
+		release_vassal = ATJ
 		prestige = -10
-		war = {
-			target = ATJ
-			attacker_goal = { casus_belli = conquest }
-			defender_goal = { casus_belli = status_quo }
-			call_ally = yes
-		}	
-		war = {
-			target = PAT
-			attacker_goal = { casus_belli = conquest }
-			defender_goal = { casus_belli = status_quo }
-			call_ally = yes
-		}	
+		relation = { 
+			who = PAT 
+			value = -200 
+		}
+		relation = { 
+			who = ATJ 
+			value = -200 
+		}
+		ATJ = {
+			any_owned = {
+				add_core = JOH
+			}
+		}
+		PAT = {
+			any_owned = {
+				add_core = JOH
+			}
+		}
 	}
 }
 
@@ -542,7 +536,7 @@ country_event = {
 	option = {
 		name = "His name will never be forgotten, right?"
 		set_country_flag = no_more_farquhar
-		prestige = 30
+		prestige = -10
 		relation = {
 			who = JOH
 			value = -10
@@ -577,46 +571,46 @@ country_event = {
         money = 50000
         FROM = { country_event = 651931 }
 		ai_chance = {
-		factor = 60
-			modifier = {
-				factor = 1.5
-				is_greater_power = no
-			}
-			modifier = {
-				factor = 1.3
-				alliance_with = FROM
-			}
-			modifier = {
-				factor = 1.2
-				relation = { who = FROM value = 150 }
-			}
-			modifier = {
-				factor = 1.5
-				is_greater_power = yes
-				alliance_with = FROM
+				factor = 60
+				modifier = {
+					factor = 1.5
+					is_greater_power = no
+				}
+				modifier = {
+					factor = 1.3
+					alliance_with = FROM
+				}
+				modifier = {
+					factor = 1.2
+					relation = { who = FROM value = 150 }
+				}
+				modifier = {
+					factor = 1.5
+					is_greater_power = yes
+					alliance_with = FROM
+				}
 			}
 		}
-    }
 
     option = {
         name = "They are not ready yet"
         FROM = { country_event = 651932 }
         ai_chance = {
             factor = 40
-                modifier = {
-                    factor = 0.2
-                    is_greater_power = no
-                }
-
-                modifier = {
-                    factor = 1.2
-                    FROM = { is_greater_power = no }
-                }
-                modifier = {
-                    factor = 1.3
-                    NOT = { relation = { who = FROM value = 0 } }
-                }
+            modifier = {
+                factor = 0.2
+                is_greater_power = no
             }
+
+            modifier = {
+                factor = 1.2
+                FROM = { is_greater_power = no }
+            }
+            modifier = {
+                factor = 1.3
+                NOT = { relation = { who = FROM value = 0 } }
+            }
+        }
     }
 }
 
@@ -722,6 +716,9 @@ country_event = {
     option = {
         name = "Free at last"
 		overlord = {
+			relation = { who = THIS value = -200 }
+			diplomatic_influence = { who = THIS value = -200 }
+			leave_alliance = THIS
 			release_vassal = THIS
 		}
     }
