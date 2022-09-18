@@ -221,26 +221,6 @@ country_event = {
 					
 				}
 			}
-			country_event = 651922
-		}
-	}
-}
-
-country_event = {
-	id = 651922
-	title = "EVTNAME651922"
-	desc = "EVTDESC651922"
-	picture = "chinese_migrants"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Welcome to Malaya!"
-		set_country_flag = chinese_immigrant_arrival
-		prestige = 5
-		any_pop = {
-			militancy = 2
-			consciousness = 4
 		}
 	}
 }
@@ -443,7 +423,7 @@ country_event = {
 		tag = PHG
 		truce_with = JOH
 		is_vassal = no
-		NOT = {has_country_flag = pahang_civil_war_victory }
+		NOT = { pahang_civil_war_victory }
 	}
 
 	mean_time_to_happen = { days = 14 }
@@ -504,7 +484,7 @@ country_event = {
 		has_global_flag = pahang_civil_war
 		truce_with = PHG
 		is_our_vassal = PHG
-		NOT = { has_country_flag = pahang_civil_war_victory }
+		NOT = { pahang_civil_war_victory }
 	}
 
 	mean_time_to_happen = { days = 14 }
