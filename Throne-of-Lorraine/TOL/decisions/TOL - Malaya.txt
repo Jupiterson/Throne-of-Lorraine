@@ -421,7 +421,13 @@ political_decisions = {
 		picture = map_east_indies
 		
 		potential = {
-			primary_culture = malay
+			OR = {
+				primary_culture = malay
+				tag = SAK
+				tag = MAL
+				tag = SLW
+				tag = SUL
+			}
 			NOT = { has_country_flag = unite_malay_empire }
 			NOT = { exists = MLY }
 			is_vassal = no
