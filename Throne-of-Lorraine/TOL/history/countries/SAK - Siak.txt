@@ -1,7 +1,7 @@
-capital = 1401
-primary_culture = malay
-religion = sunni
-government = absolute_monarchy
+capital = 10
+primary_culture = bedouin
+culture = malay
+government = theocracy
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01
@@ -48,12 +48,22 @@ upper_house = {
 	communist = 0
 }
 
-set_country_flag = sunni_country
-foreign_weapons = yes_foreign_weapons
-flintlock_rifles = 1
+#Military Reforms
+	foreign_weapons = yes_foreign_weapons
+	military_constructions = yes_military_constructions
+	foreign_artillery = yes_foreign_artillery
+	foreign_officers = yes_foreign_officers
+	foreign_naval_officers = yes_foreign_naval_officers
+	
+#Technologies
+	military_staff_system = 1
+	flintlock_rifles = 1
+	post_napoleonic_thought = 1
+	bronze_muzzle_loaded_artillery = 1
 
-# Technologies
-
+# Inventions
+small_arms_production = yes
+ammunition_production = yes
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0

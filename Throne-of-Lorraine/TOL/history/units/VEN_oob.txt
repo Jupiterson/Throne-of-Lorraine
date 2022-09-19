@@ -101,35 +101,10 @@ army = {
 	name = "IV. Armee"
 	location = 729
 	regiment = {
-		name= "1.4. Infanteriedivision"
-		type = infantry
-		home = 612
-	}
-
-	regiment = {
-		name= "2.4. Infanteriedivision"
-		type = infantry
-		home = 629
-	}
-
-	regiment = {
 		name= "3.4. Infanteriedivision"
 		type = infantry
 		home = 726
 	}
-
-	regiment = {
-		name= "1.5. Infanteriedivision"
-		type = infantry
-		home = 614
-	}
-
-	regiment = {
-		name= "2.5. Infanteriedivision"
-		type = infantry
-		home = 648
-	}
-
 	regiment = {
 		name= "3.5. Infanteriedivision"
 		type = infantry
@@ -139,52 +114,33 @@ army = {
 
 
 army = {
-	name = "Lombardy Army"
-	location = 726
+	name = "Esercito de San Marco"
+	location = 729
 	regiment = {
-		name= "1.1. Kavalleriedivision"
-		type = cuirassier
-		home = 619
+		name= "1.Moschettoni"
+		type = dragoon
+		home = 730
 	}
-
 	regiment = {
-		name= "2.1. Kavalleriedivision"
-		type = cuirassier
-		home = 639
-	}
-
-	regiment = {
-		name= "3.1. Kavalleriedivision"
-		type = cuirassier
-		home = 631
-	}
-
-	regiment = {
-		name= "2.2. Infanteriedivision"
+		name= "1.Fuciliere"
 		type = infantry
 		home = 729
 	}
 
 	regiment = {
-		name= "3.2. Infanteriedivision"
+		name= "2.Fuciliere"
 		type = infantry
 		home = 771
 	}
 
 	regiment = {
-		name= "1.3. Infanteriedivision"
-		type = infantry
-		home = 618
+		name= "1.Artigliere"
+		type = artillery
+		home = 731
 	}
 
 	regiment = {
-		name= "2.3. Infanteriedivision"
-		type = infantry
-		home = 773
-	}
-
-	regiment = {
-		name= "3.3. Infanteriedivision"
+		name= "2.Artigliere"
 		type = artillery
 		home = 728
 	}
@@ -214,34 +170,36 @@ army = {
 }
 
 navy = {
-	name = "3rd Transport Squadron"
-	location = 1321 #Colombo
+	name = "Agostinian Squadron"
+	location = 1291 #Ahmedabad
 	ship = {
-		name= "11th Transport Flotilla"
-		type = clipper_transport
+		name= "HMS Warspite"
+		type = manowar
+	}
+
+		ship = {
+		name= "HMS Minden"
+		type = manowar
 	}
 
 	ship = {
-		name= "12th Transport Flotilla"
-		type = clipper_transport
-	}
-	ship = {
-		name= "13th Transport Flotilla"
-		type = clipper_transport
+		name= "HMS Poictiers"
+		type = manowar
 	}
 
 	ship = {
-		name= "14th Transport Flotilla"
-		type = clipper_transport
-	}
-	ship = {
-		name= "15th Transport Flotilla"
-		type = clipper_transport
+		name= "HMS Briton"
+		type = frigate
 	}
 
 	ship = {
-		name= "16th Transport Flotilla"
-		type = clipper_transport
+		name= "HMS Bacchante"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Belvidera"
+		type = frigate
 	}
 	ship = {
 		name= "17th Transport Flotilla"
@@ -257,8 +215,8 @@ navy = {
 
 
 navy = {
-	name = "Ceylon Station"
-	location = 2128 #Diego Garcia
+	name = "St. Mark's Home Fleet"
+	location = 729 #Venice city proper
 	ship = {
 		name= "HMS Ajax"
 		type = manowar
@@ -295,36 +253,6 @@ navy = {
 	}
 
 	ship = {
-		name= "HMS Minden"
-		type = manowar
-	}
-
-	ship = {
-		name= "HMS Poictiers"
-		type = manowar
-	}
-
-	ship = {
-		name= "HMS Warspite"
-		type = manowar
-	}
-
-	ship = {
-		name= "HMS Bacchante"
-		type = frigate
-	}
-
-	ship = {
-		name= "HMS Belvidera"
-		type = frigate
-	}
-
-	ship = {
-		name= "HMS Briton"
-		type = frigate
-	}
-
-	ship = {
 		name= "HMS Crescent"
 		type = frigate
 	}
@@ -358,13 +286,39 @@ navy = {
 		name= "HMS Tenedos"
 		type = frigate
 	}
+	ship = {
+		name= "11th Transport Flotilla"
+		type = clipper_transport
+	}
 
+	ship = {
+		name= "12th Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "13th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "14th Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "15th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "16th Transport Flotilla"
+		type = clipper_transport
+	}
 }
 
 
 navy = {
-	name = "Venetian Navy"
-	location = 729
+	name = "Leonardian Trade Fleet"
+	location = 1462
 	ship = {
 		name= "1. Klipperflottille"
 		type = clipper_transport
