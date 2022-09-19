@@ -295,6 +295,9 @@ political_decisions = {
 		NOT = { exists = NGU }
 		NOT = { exists = MZA }
 		NOT = { exists = ROQ }
+		OR = { NOT = { tag = ZUL }
+		       AND = { tag = ZUL
+			           year = 1841}}
 		}
 
 		allow = {
