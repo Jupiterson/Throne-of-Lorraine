@@ -1417,7 +1417,20 @@ form_ruthenia = {
 		potential = {
 			NOT = { has_global_flag = indochina_formed }
 			NOT = { exists = IDC }
-			is_culture_group = southeast_asian
+			OR = {
+				primary_culture = thai
+				primary_culture vietnamese
+				primary_culture = khmer
+				primary_culture = cham
+				primary_culture = lao
+				primary_culture = shan
+				primary_culture = burmese
+				primary_culture = mon_indochinese
+				primary_culture = asian_minor
+				primary_culture = karen
+				tag = PAT
+				tag = PHG
+			}
 		}
 
 		allow = {
@@ -1561,6 +1574,7 @@ form_ruthenia = {
 			SIA = { all_core = { add_core = IDC } }
 			CAM = { all_core = { add_core = IDC } }
 			DAI = { all_core = { add_core = IDC } }
+			LXA = { all_core = { add_core = IDC } }
 			change_tag = IDC
 			add_accepted_culture = thai
 			add_accepted_culture = burmese
