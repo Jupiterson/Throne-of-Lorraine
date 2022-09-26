@@ -865,57 +865,26 @@ political_decisions = {
 	unite_with_nepal = {
 		picture = gtfo
 		potential = {
-			tag = SHI
-			exists = NEP
+			tag = NEP
+			exists = SHI
 			NOT = { has_country_flag = unite_with_nepal }
 		}
 
 		allow = {
-			war = no
-			is_vassal = no
-			OR = {
-				part_of_sphere = no
-				sphere_owner = { is_sphere_leader_of = NEP }
-			}
+			civilization_progress = 0.5
 			NEP = {
 				war = no
 				neighbour = SHI
 				is_vassal = no
 			}
-			NOT = { has_global_flag = sw_set }
 		}
 
 		effect = {
+			prestige = 10
 			set_country_flag = unite_with_nepal
-			random_country = {
-				limit = {
-					tag = NEP
-					ai = yes
-					SHI = { ai = yes }
-				}
+			SHI = { all_core = { add_core = THIS } }
+			NEP = {
 				inherit = SHI
-			}
-			random_country = {
-				limit = {
-					tag = NEP
-					ai = yes
-					SHI = { ai = no }
-				}
-				any_owned = { secede_province = SHI }
-				SHI = {
-					random_owned = {
-						limit = { province_id = 1326 }
-						owner = { capital = 1326 }
-					}
-					change_tag = NEP
-				}
-			}
-			random_country = {
-				limit = {
-					tag = NEP
-					ai = no
-				}
-				country_event = 60130
 			}
 		}
 

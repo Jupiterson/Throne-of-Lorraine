@@ -8,7 +8,6 @@ political_decisions = {
 			tag = KOR
 			QNG = {
 				has_country_flag = chuseok_coup
-				has_country_flag = korean_army
 			}
 			NOT = { has_country_flag = yi_seongmin_in_korea }
 			NOT = { has_country_flag = united_korea }
@@ -642,8 +641,7 @@ political_decisions = {
 
 		allow = {
 			war = no
-			militancy = 4.0
-			consciousness = 4.0
+			NOT = { militancy = 4.0 }
 			state_n_government = 1
 			upper_house = {
 				ideology = reactionary
@@ -657,6 +655,17 @@ political_decisions = {
 			add_country_modifier = {
 				name = law_changed_by_force
 				duration = 1825
+			}
+			add_accepted_culture = KOR
+			KOR = {
+				all_core = {
+					add_core = QNG
+				}
+			}
+			MCK = {
+				all_core = {
+					add_core = QNG
+				}
 			}
 			1616 = {
 				remove_province_modifier = dadu_resistance
