@@ -1706,20 +1706,32 @@
 	clergymen = {
 		culture = breton
 		religion = catholic
-		size = 1050
+		size = 1000
+	}
+	
+	clergymen = {
+		culture = cornish
+		religion = protestant
+		size = 50
 	}
 
 	artisans = {
 		culture = breton
 		religion = catholic
-		size = 9500
+		size = 9000
 		militancy = 9
 	}
+	
+	artisans = {
+		culture = cornish
+		religion = protestant
+		size = 2300
+	}
 
 	artisans = {
 		culture = breton
 		religion = catholic
-		size = 6000
+		size = 5000
 	}
 
 	soldiers = {
@@ -1731,15 +1743,22 @@
 	serfs = {
 		culture = breton
 		religion = catholic
-		size = 60500
+		size = 60000
 		militancy = 5
 		rebel_type = nationalist_rebels
+	}
+	
+	serfs = {
+		culture = cornish
+		religion = protestant
+		size = 500
+		militancy = 5
 	}
 
 	farmers = {
 		culture = breton
 		religion = catholic
-		size = 40800
+		size = 40000
 		militancy = 9
 		rebel_type = nationalist_rebels
 	}
@@ -1845,13 +1864,25 @@
 	clergymen = {
 		culture = breton
 		religion = catholic
-		size = 800
+		size = 500
+	}
+	
+	clergymen = {
+		culture = cornish
+		religion = protestant
+		size = 300
 	}
 
 	artisans = {
 		culture = breton
 		religion = catholic
-		size = 4400
+		size = 4000
+	}
+	
+	artisans = {
+		culture = cornish
+		religion = protestant
+		size = 400
 	}
 
 	soldiers = {
@@ -1863,17 +1894,30 @@
 	serfs = {
 		culture = breton
 		religion = catholic
-		size = 50500
+		size = 50000
 		militancy = 5
 		rebel_type = nationalist_rebels
+	}
+	
+	serfs = {
+		culture = cornish
+		religion = protestant
+		size = 500
+		militancy = 5
 	}
 
 	farmers = {
 		culture = breton
 		religion = catholic
-		size = 30700
+		size = 30000
 		militancy = 9
 		rebel_type = nationalist_rebels
+	}
+	
+	farmers = {
+		culture = cornish
+		religion = protestant
+		size = 700
 	}
 }
 #Nantes (476000/119000 POPS)
@@ -2422,7 +2466,7 @@
 	}
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 56775
 		militancy = 9
 	}
@@ -2614,7 +2658,7 @@
 
 	farmers = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 42400
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -2985,72 +3029,72 @@
 442 = {
 	aristocrats = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 2100
 	}
 
 	officers = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 300
 	}
 
 	bureaucrats = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
 	clergymen = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1825
 	}
 
 	artisans = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 5500
 	}
 	
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 5500
 	}
 	
 	artisans = {
 		culture = breton
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 2500
 	}
 	
 	artisans = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 2100
 	}
 	soldiers = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1150
 	}
 
 	farmers = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 83925
 	}
 	
 	serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 24800
 	}
 	
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 99925
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3064,7 +3108,7 @@
 	
 	slaves = {
 		culture = afro_french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 33925
 		militancy = 9
 		rebel_type = slave_revolt
@@ -3098,7 +3142,7 @@
 	
    serfs = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 24800
 	}
 	
@@ -3137,7 +3181,7 @@
 	
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 33500
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3145,7 +3189,7 @@
 	
 	serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 24800
 	}
 
@@ -3179,7 +3223,7 @@
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 200
 	}
 
@@ -3209,13 +3253,13 @@
 	
 	serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 24800
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 42050
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3255,13 +3299,13 @@
 	
 	serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 24800
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 51000
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3301,7 +3345,7 @@
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 3500
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3309,7 +3353,7 @@
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 62050
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3317,7 +3361,7 @@
 	
 	serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 24800
 	}
 
@@ -3345,7 +3389,7 @@
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1750
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3358,7 +3402,7 @@
 	}
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 5000
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3372,7 +3416,7 @@
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 86200
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3381,7 +3425,7 @@
 		
 	serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 34800
 	}
 
@@ -3401,25 +3445,25 @@
 
 	aristocrats = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 300
 	}
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 750
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 5000
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
@@ -3431,7 +3475,7 @@
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 52350
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3439,7 +3483,7 @@
 	
 	serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 24800
 	}
 }
@@ -3477,7 +3521,7 @@
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 73125
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3485,7 +3529,7 @@
 	
 	serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 24800
 	}
 
@@ -3519,25 +3563,25 @@
 
 	clerks = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 350
 	}
 
 	craftsmen = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 6500
 	}
 
 	clergymen = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
 	clergymen = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
@@ -3549,19 +3593,19 @@
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	artisans = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	artisans = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3569,7 +3613,7 @@
 
 	artisans = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3673,7 +3717,7 @@
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
@@ -3685,7 +3729,7 @@
 
 	craftsmen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 9000
 	}
 
@@ -3697,7 +3741,7 @@
 
 	farmers = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20725
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3712,7 +3756,7 @@
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 35025
 		militancy = 9
 	}
@@ -3727,7 +3771,7 @@
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1150
 		militancy = 9
 	}
@@ -3740,19 +3784,19 @@
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 8000
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1650
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 41100
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3760,20 +3804,20 @@
 
 	   farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 11100
 	}
 	
    serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30500
 		militancy = 5
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 60100
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3783,7 +3827,7 @@
 454 = {
 	aristocrats = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1700
 	}
 
@@ -3795,7 +3839,7 @@
 
 	clergymen = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 750
 	}
 
@@ -3807,7 +3851,7 @@
 
 	artisans = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 4000
 	}
 
@@ -3819,20 +3863,20 @@
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20300
 	}
 	
 	   serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30500
 		militancy = 5
 	}
 
 	farmers = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 100800
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3850,13 +3894,13 @@
 
 	officers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 350
 	}
 
 	bureaucrats = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 800
 	}
 
@@ -3868,57 +3912,57 @@
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	artisans = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 5000
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1750
 	}
 
 	farmers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20000
 	}
 	
 	 serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10500
 		militancy = 5
 	}	
 	
 	 serfs = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20000
 		militancy = 5
 	}	
 	
 	farmers = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30000
 	}
 	
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 32300
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3934,25 +3978,25 @@
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1050
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 7500
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1500
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 64150
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -3960,14 +4004,14 @@
 	
 	 serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30500
 		militancy = 5
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 40400
 	}
 }
@@ -3980,13 +4024,13 @@
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1050
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 7500
 	}
 
@@ -3998,13 +4042,13 @@
 	
 	farmers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20000
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 64150
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4012,14 +4056,14 @@
 	
 	   serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30500
 		militancy = 5
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20400
 	}
 }
@@ -4027,31 +4071,31 @@
 457 = {
 	aristocrats = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 800
 	}
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 450
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 4000
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20350
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4059,21 +4103,21 @@
 	
 	   serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20500
 		militancy = 5
 	}
 	
 	 serfs = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20000
 		militancy = 5
 	}
 	
 	farmers = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20350
 	}
 
@@ -4113,61 +4157,61 @@
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	artisans = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 6000
 	}
 	craftsmen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	soldiers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1600
 	}
 
 	farmers = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30510
 	}
 	
 	farmers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30510
 	}
 	
 	serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20500
 		militancy = 5
 	}
 		
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 50510
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4189,19 +4233,19 @@
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 7000
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1400
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 40675
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4210,13 +4254,13 @@
 		
 	farmers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20510
 	}
 	
 	   serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10500
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4224,7 +4268,7 @@
 
 	serfs = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30000
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4232,7 +4276,7 @@
 
 	farmers = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20975
 	}
 }
@@ -4246,31 +4290,31 @@
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 850
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 3000
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 3000
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1250
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 34700
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4278,44 +4322,44 @@
 	
 	serfs = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30500
 		militancy = 5
 	}
 
 	farmers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	aristocrats = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 400
 	}
 
 	clergymen = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 350
 	}
 
 	artisans = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 2500
 	}
 
 	soldiers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 450
 	}
 
 	farmers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 31300
 	}
 
@@ -4323,37 +4367,37 @@
 3471 = {
 	aristocrats = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 400
 	}
 
 	clergymen = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 350
 	}
 
 	artisans = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1500
 	}
 
 	artisans = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1500
 	}
 
 	soldiers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 450
 	}
 
 	farmers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20300
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4361,13 +4405,13 @@
 
 	farmers = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 9000
 	}
 
 	farmers = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 2000
 	}
 
@@ -4375,31 +4419,31 @@
 3472 = {
 	aristocrats = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1200
 	}
 
 	clergymen = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 550
 	}
 
 	clergymen = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 300
 	}
 
 	artisans = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 2000
 	}
 
 	artisans = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
@@ -4411,19 +4455,19 @@
 
 	soldiers = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
 	soldiers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 250
 	}
 
 	serfs = {
 		culture = gascon
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 34700
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4431,7 +4475,7 @@
 
 	serfs = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30000
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4439,7 +4483,7 @@
 
 	farmers = {
 		culture = basque
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 		
 	}
@@ -4450,13 +4494,13 @@
 461 = {
 	aristocrats = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1800
 	}
 
 	officers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 450
 	}
 
@@ -4468,46 +4512,46 @@
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1300
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1100
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size= 1800
 
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 70500
 		militancy = 9
 	}
 	
 	serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 50500
 		militancy = 5
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 13150
 	}
 }
@@ -4515,13 +4559,13 @@
 462 = {
 	aristocrats = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1200
 	}
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 850
 	}
 
@@ -4533,27 +4577,27 @@
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1300
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 70750
 		militancy = 9
 	}
 	
 	   serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30500
 		militancy = 5
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 15750
 	}
 }
@@ -4561,13 +4605,13 @@
 463 = {
 	aristocrats = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 700
 	}
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 450
 	}
 
@@ -4579,13 +4623,13 @@
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 40000
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4593,14 +4637,14 @@
 	
 	   serfs = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 30500
 		militancy = 5
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 12050
 	}
 }
@@ -4608,31 +4652,31 @@
 464 = {
 	aristocrats = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 100
 	}
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 75
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1250
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 150
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		militancy = 9
 		size = 11425
 	}
@@ -4716,7 +4760,7 @@
 
 	farmers = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 51800
 		militancy = 9
 		rebel_type = nationalist_rebels
@@ -4775,7 +4819,7 @@
 
 	farmers = {
 		culture = arpitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 46175
 		militancy = 8
 	}
@@ -4791,73 +4835,73 @@
 467 = {
 	aristocrats = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 900
 	}
 
 	officers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 300
 	}
 
 	bureaucrats = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 700
 	}
 
 	clergymen = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 500
 	}
 
 	artisans = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	artisans = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 
 	artisans = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 7000
 	}
 
 	craftsmen = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 3000
 	}
 
 	soldiers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
 	farmers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 40400
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 12400
 	}
 }
@@ -4865,80 +4909,80 @@
 468 = {
 	aristocrats = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 650
 	}
 
 	clergymen = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 325
 	}
 
 	artisans = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 8000
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 600
 	}
 
 	farmers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 35625
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10300
 	}
 	
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10300
 	}
 }
 3432 = {
 	aristocrats = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 650
 	}
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 325
 	}
 
 	artisans = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 8000
 	}
 
 	soldiers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 600
 	}
 
 	farmers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 35625
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10300
 	}
 }
@@ -4946,43 +4990,43 @@
 469 = {
 	aristocrats = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 250
 	}
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 100
 	}
 
 	artisans = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1500
 	}
 
 	soldiers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 350
 	}
 
 	farmers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 18600
 	}
 
 	clergymen = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 300
 	}
 
 	farmers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10000
 	}
 }
@@ -4996,37 +5040,37 @@
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 250
 	}
 
 	artisans = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 6000
 	}
 	
 	artisans = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 7000
 	}
 
 	soldiers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 2200
 	}
 
 	farmers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 40950
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 10300
 	}
 }
@@ -5040,13 +5084,13 @@
 
 	clergymen = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 150
 	}
 
 	artisans = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1600
 	}
 
@@ -5058,13 +5102,13 @@
 
 	farmers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 25000
 	}
 
 	farmers = {
 		culture = occitan
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 5600
 	}
 }
@@ -5096,25 +5140,25 @@
 
 	farmers = {
 		culture = north_italian
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 19025
 	}
 
 	farmers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 20825
 	}
 
 	farmers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 8825
 	}
 
 	clergymen = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 225
 	}
 }
@@ -5124,43 +5168,43 @@
 473 = {
 	aristocrats = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 400
 	}
 
 	aristocrats = {
 		culture = north_italian
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 150
 	}
 
 	officers = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 50
 	}
 
 	bureaucrats = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 100
 	}
 
 	clergymen = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 200
 	}
 
 	artisans = {
 		culture = north_italian
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1500
 	}
 
 	artisans = {
 		culture = provencial
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1100
 	}
 
@@ -5182,31 +5226,31 @@
 2622 = {
 	aristocrats = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 100
 	}
 
 	clergymen = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 125
 	}
 
 	artisans = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 1000
 	}
 
 	soldiers = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 350
 	}
 
 	farmers = {
 		culture = french
-		religion = hugenott
+		religion = reformed #hugenott
 		size = 45225
 	}
 }
