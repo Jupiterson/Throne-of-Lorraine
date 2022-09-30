@@ -223,11 +223,11 @@ purchase_scilly = {
 		
 		effect = {
 			set_country_flag = coaling_port
-			2409 = {
-				add_province_modifier = Welsh_Coaling_Port
-				change_province_name = Ynys Owain
-				money = -20000
 				prestige = 1
+				money = -20000
+			2409 = {
+				add_province_modifier =  { name = Welsh_Coaling_Port duration = -1 }
+				change_province_name = "Ynys Owain"
 				life_rating = 1
 			}
 		}
