@@ -2203,10 +2203,6 @@ country_event = {
 
 	trigger = {
             tag = ORA
-			has_global_flag = 3rd_frontier_war
-            has_recently_lost_war = no		
-			ORA = { NOT = {owns = 2096 }}		
-			war = no
 	}
 
 	fire_only_once = yes
@@ -2282,6 +2278,8 @@ country_event = {
 	option = {
 		name = "SCO_grow_option2"
 		prestige = -10 
+		2092 = { secede_province = SCO }
+		2092 = { secede_province = ORA }
 		ai_chance = {
 			factor = 50
 		}
@@ -2305,6 +2303,7 @@ country_event = {
 	option = {
 		name = "KHB_grow_option1"
 		2089 = { secede_province = KHB }
+		3601 = { secede_province = KHB }
 		3596 = { secede_province = KHB }
 	}
 	}
@@ -2436,6 +2435,7 @@ country_event = {
             has_global_flag = 3rd_frontier_war
             has_recently_lost_war = no		
 			war = no
+			XHO = { NOT = {owns = 3592 }}	
 	}
 
 	fire_only_once = yes
@@ -2451,7 +2451,7 @@ country_event = {
 		2092 = { secede_province = ORA }
 		2096 = { add_core = ORA }
 		2097 = { add_core = ORA }
-		any_country = { limit = { owns = 2087 } = { country_event = { id = 50049 days = 110 } } }
+		SCO = { country_event = { id = 50049 days = 110 } } 
 		KHB = { country_event = { id = 50051 days = 54 } }
 	}
 	}
