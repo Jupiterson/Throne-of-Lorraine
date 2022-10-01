@@ -2203,6 +2203,10 @@ country_event = {
 
 	trigger = {
             tag = ORA
+			has_global_flag = 3rd_frontier_war
+            has_recently_lost_war = no		
+			ORA = { NOT = {owns = 2096 }}		
+			war = no
 	}
 
 	fire_only_once = yes
