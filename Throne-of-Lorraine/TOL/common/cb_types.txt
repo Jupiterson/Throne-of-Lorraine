@@ -13083,6 +13083,78 @@ enslave_cb = {
     }
 }
 
+babantu_acquire_state = {
+	sprite_index = 22
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 0
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 0
+	break_truce_militancy_factor = 0
+	truce_months = 84
+
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	always = yes
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		neighbour = THIS
+		OR = {
+			primary_culture = south_forest_bantu
+			primary_culture = lacustrine_bantu
+		}
+		THIS = { primary_culture = south_forest_bantu }
+		is_vassal = no
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
+		OR = {
+			any_owned_province = {
+				is_core = BTU
+			}
+			NOT = { primary_culture = south_forest_bantu }
+		}
+		has_global_flag = warlord_era_has_begun_btu
+	}
+
+	allowed_states = {
+		OR = {
+			AND = {
+				any_owned_province = {
+					is_core = BTU
+				}
+				THIS = { ai = no }
+			}
+			any_owned_province = {
+				is_core = BTU
+				owner = { civilized = no }
+			}
+		}
+	}
+
+	po_demand_state = yes
+
+	war_name = WAR_BTU_REUNIFICATION
+
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.10
+		}
+	}
+}
+
 demand_concession_casus_belli_no_infamy = {
 	sprite_index = 7
 	is_triggered_only = yes
