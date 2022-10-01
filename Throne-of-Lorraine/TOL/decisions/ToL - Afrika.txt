@@ -298,6 +298,10 @@ political_decisions = {
 		OR = { NOT = { tag = ZUL }
 		       AND = { tag = ZUL
 			           year = 1841}}
+		NOT = { government = absolute_empire }
+		NOT = { government = semi_constitutional_empire }
+		NOT = { government = constitutional_empire }
+		       
 		}
 
 		allow = {
@@ -325,18 +329,26 @@ political_decisions = {
 		    ENG_2096 = {
 			add_core = THIS
 			}
+			ENG_3592 = {
+			add_core = THIS
+			}
 		    2114 = {
 			add_core = THIS
 		    }	
 			2109 = {
 			add_core = THIS
+			}
 			2104 = {
 			add_core = THIS
-
+		    }
+            3593 = {
+			add_core = THIS
 		    }	
+            3594 = {
+			add_core = THIS
+		    }				
 		}
 		
-	}
 	}
 	
 		claim_zulu = {
@@ -436,6 +448,8 @@ political_decisions = {
 		effect = {
          	ENG_2087  = {
 			add_core = THIS }
+			ENG_2091  = {
+			add_core = THIS }
 			ENG_2092  = {
 			add_core = THIS }
 			ORA_2103  = {
@@ -534,9 +548,18 @@ political_decisions = {
 			ENG_2096 = {
 			add_core = THIS
 			}
+			ENG_3592 = {
+			add_core = THIS
+			}
 			2111 = {
 			add_core = THIS
 			}
+			3593 = {
+			add_core = THIS
+		    }	
+            3594 = {
+			add_core = THIS
+		    }				
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -612,21 +635,12 @@ political_decisions = {
 	cape_merchants = {
 		picture = reichstag
 		potential = {
-			OR = { tag = BHU
-			       tag = MLW
-				   tag = ALM
-				   tag = KAB }
 			NOT = { has_global_flag = cape_merchant_setup }
 		        ai = yes  
+				tag = CLN
 	   }
     
 		allow = { 
-		ai = yes
-		OR = {   
-		          tag = BHU
-			       tag = MLW
-				   tag = ALM
-				   tag = KAB } 
 				   }
     
 		effect = {
@@ -1199,6 +1213,86 @@ political_decisions = {
             factor = 1
         }
 	 }
+	 
+    integrate_KHB = {
+		picture = marching_africans
+		potential = {
+		is_our_vassal = KHB
+		KHB = { owns = 2089 }
+		NOT = { has_country_flag = integrated_KHB }
+		year = 1852
+	    }
+    
+		allow = {
+		war = no
+		is_our_vassal = KHB
+		neighbour = KHB
+		}
+    
+		effect = {
+		KHB = { country_event = 50054 }
+	    badboy = 2
+		set_country_flag = integrated_KHB
+		}
+		ai_will_do = {
+            factor = 1
+        }
 	 }
+	 
+	 rename_KHB_SCO = {
+		potential = {
+			OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			owns = 2087
+			owns = 3591
+			owns = 2089
+			NOT = { has_global_flag = KHB_renamed_SCO }
+			has_global_flag = KHB_renamed_KHB
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = KHB_renamed_SCO
+			clr_global_flag = KHB_renamed_KHB
+			3591 = { change_province_name = "Neamhnaid" }
+			3596 = { change_province_name = "Crail" }
+			2089 = { change_province_name = "Drumnadrochit" }
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	rename_KHB_KHB = {
+		potential = {
+			primary_culture = khoisan
+			owns = 3591
+			NOT = { has_global_flag = KHB_renamed_KHB }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			clr_global_flag = KHB_renamed_SCO
+			set_global_flag = KHB_renamed_KHB
+			3591 = { change_province_name = "Khub" }
+			3596 = { change_province_name = "!Hana" }
+			2089 = { change_province_name = "!Khoa" }
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	 }
+	 
 	
 	

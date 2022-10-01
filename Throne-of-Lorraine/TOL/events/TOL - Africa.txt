@@ -889,6 +889,10 @@ country_event = {
 			   2097 = { add_core = RHA }
 			   2099 = { add_core = RHA }
                2096 = { add_core = NDL }
+			   3592 = { add_core = NDL }
+			   3595 = { add_core = NDL }
+			   3593 = { add_core = NDL }
+			   3594 = { add_core = NDL }
                2100 = { add_core = GCA }
                2111 = { add_core = GCA }
 	}
@@ -1703,12 +1707,12 @@ country_event = {
 	            attacker_goal = { casus_belli = cut_down_to_size }
 	            defender_goal = { casus_belli = cut_down_to_size }
                 }
-		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		any_country = { limit = { has_country_flag = in_BAP_coalition }
 		               war = {
 	            target = ZUL
 	            attacker_goal = { casus_belli = cut_down_to_size }
 	            defender_goal = { casus_belli = cut_down_to_size }
-                } }
+                } country_event = 50056 }
 				
 		clr_country_flag = bapedi_start
 		clr_global_flag = bapedi_start
@@ -2087,6 +2091,368 @@ country_event = {
 		SHO = { leave_alliance = BAP }
 	}
 	}
+	
+	country_event = {
+
+	id = 50056
+
+	is_triggered_only = yes
+
+	title = "ZUL_war_inform_title"
+	desc = "ZUL_war_inform_desc"
+	picture = "zulu_soldiers"
+
+	option = {
+		name = "ZUL_war_inform_option1"
+	}
+	}
+	
+###Cape Wars###
+	
+	country_event = {
+
+	id = 50044
+
+	trigger = {
+            tag = ORA
+            war = yes
+            controls = 3592
+			has_global_flag = 3rd_frontier_war
+			war_with = XHO
+	}
+
+	fire_only_once = yes
+
+	title = "ORA_vict_title"
+	desc = "ORA_vict_desc"
+	picture = "boer_troops"
+
+	option = {
+		name = "ORA_vict_option1"
+		end_war = XHO
+		clr_global_flag = 3rd_frontier_war
+		3592 = { secede_province = ORA }
+		3595 = { secede_province = ORA }
+		3593 = { remove_core = XHO }
+		3594 = { remove_core = XHO }
+		prestige = 5	
+		SCO = { country_event = { id = 50049 days = 110 } }
+		KHB = { country_event = { id = 50051 days = 54 } }
+		ai_chance = {
+			factor = 80
+		}
+	}
+	
+	option = {
+		name = "ORA_vict_option2"
+		badboy = 2
+		prestige = 10	
+		ai_chance = {
+			factor = 20
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50045
+
+	trigger = {
+            tag = XHO
+            war = yes
+            controls = 3593
+			has_global_flag = 3rd_frontier_war 
+			war_with = ORA
+	}
+
+	fire_only_once = yes
+
+	title = "XHO_vict_title"
+	desc = "XHO_vict_desc"
+	picture = "boer_troops"
+
+	option = {
+		name = "XHO_vict_option1"
+		end_war = ORA
+		clr_global_flag = 3rd_frontier_war
+		3593 = { secede_province = XHO }
+		3594 = { secede_province = XHO }
+		3592 = { remove_core = ORA }
+		3595 = { remove_core = ORA }
+		prestige = 5	
+		SCO = { country_event = { id = 50049 days = 110 } }
+		KHB = { country_event = { id = 50051 days = 54 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "XHO_vict_option2"
+		badboy = 2
+		prestige = 10	
+		ai_chance = {
+			factor = 50
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50046
+
+	trigger = {
+            tag = ORA
+	}
+
+	fire_only_once = yes
+
+	title = "ORA_start_title"
+	desc = "ORA_start_desc"
+	picture = "trekboers_crossing_the_karoo"
+
+	option = {
+		name = "ORA_start_option1"
+		small_arms = 5
+		canned_food =5
+		wine = 5
+		ammunition = 5
+		money = 1000
+		set_global_flag = 3rd_frontier_war
+	}
+	}
+	
+	country_event = {
+
+	id = 50047
+
+	trigger = {
+            tag = XHO
+            has_global_flag = 3rd_frontier_war
+            has_recently_lost_war = no		
+			ORA = { NOT = {owns = 2091 }}		
+			war = no
+	}
+
+	fire_only_once = yes
+
+	title = "XHO_front_title"
+	desc = "XHO_front_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "XHO_front_option1"
+		clr_global_flag = 3rd_frontier_war
+		prestige = 10
+		2092 = { secede_province = XHO }
+		2091 = { add_core = XHO }
+		2092 = { add_core = XHO }
+		SCO = { country_event = { id = 50049 days = 110 } }
+		KHB = { country_event = { id = 50051 days = 54 } }
+	}
+	}
+	
+	country_event = {
+
+	id = 50049
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "SCO_grow_title"
+	desc = "SCO_grow_desc"
+	picture = "trekkers_under_mountain"
+
+	option = {
+		name = "SCO_grow_option1"
+        ORA = { country_event = 50052 }
+       ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+			    ORA = { ai = yes }
+		}		
+	} }
+	
+	option = {
+		name = "SCO_grow_option2"
+		prestige = -10 
+		ai_chance = {
+			factor = 50
+		}
+			}
+        }			
+	
+	
+	
+	country_event = {
+
+	id = 50051
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "KHB_grow_title"
+	desc = "KHB_grow_desc"
+	picture = "trekkers_under_mountain"
+
+	option = {
+		name = "KHB_grow_option1"
+		2089 = { secede_province = KHB }
+		3596 = { secede_province = KHB }
+	}
+	}
+	
+	country_event = {
+
+	id = 50052
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "ORA_response_title"
+	desc = "ORA_response_desc"
+	picture = "boer_war"
+
+	option = {
+		name = "ORA_response_option1"
+		2092 = { secede_province = ORA }
+		FROM = { inherit = ORA }
+        ai_chance = {
+			factor = 95
+		}		
+	}
+	
+	option = {
+		name = "ORA_response_option2"
+		2092 = { secede_province = ORA }
+		FROM = { country_event = 50053 }
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+			    ORA = { ai = no }
+		}
+			}
+			}
+			}	
+			
+	country_event = {
+
+	id = 50053
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "SCO_ORA_response_title"
+	desc = "SCO_ORA_response_desc"
+	picture = "boer_war"
+
+	option = {
+		name = "SCO_ORA_response_option1"
+        casus_belli = {
+	            target = ORA
+	            type = conquest
+	            months = 12
+              }
+		 war = {
+	            target = ORA
+	            attacker_goal = { casus_belli = conquest }
+                }		
+	}
+	}
+	
+	country_event = {
+
+	id = 50054
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "KHB_response_title"
+	desc = "KHB_response_desc"
+	picture = "boer_war"
+
+	option = {
+		name = "KHB_response_option1"
+		FROM = { inherit = KHB }
+        ai_chance = {
+			factor = 95
+		}		
+	}
+	
+	option = {
+		name = "KHB_response_option2"
+		FROM = { country_event = 50055 }
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+			    KHB = { ai = no }
+		}
+			}}}
+			
+	country_event = {
+
+	id = 50055
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "SCO_KHB_response_title"
+	desc = "SCO_KHB_response_desc"
+	picture = "boer_war"
+
+	option = {
+		name = "SCO_KHB_response_option1"
+        casus_belli = {
+	            target = KHB
+	            type = conquest_any
+	            months = 12
+              }
+		 war = {
+	            target = KHB
+	            attacker_goal = { casus_belli = conquest }
+                }		
+	}
+	}
+	
+	country_event = {
+
+	id = 50050
+
+	trigger = {
+            tag = ORA
+            has_global_flag = 3rd_frontier_war
+            has_recently_lost_war = no		
+			war = no
+	}
+
+	fire_only_once = yes
+
+	title = "ORA_front_title"
+	desc = "ORA_front_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ORA_front_option1"
+		clr_global_flag = 3rd_frontier_war
+		prestige = 10
+		2092 = { secede_province = ORA }
+		2096 = { add_core = ORA }
+		2097 = { add_core = ORA }
+		any_country = { limit = { owns = 2087 } = { country_event = { id = 50049 days = 110 } } }
+		KHB = { country_event = { id = 50051 days = 54 } }
+	}
+	}
+	
+	
 
 
 #SQI

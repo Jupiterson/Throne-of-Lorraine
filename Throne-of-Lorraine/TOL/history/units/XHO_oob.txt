@@ -3,6 +3,7 @@ SUA = { value = 30 }
 ZUL = { value = -70 }
 MAT = { value = 50 }
 GAZ = { value = -70 }
+KHB = { value = 20 }
 
 leader = {
    name = "Maqoma"
@@ -14,7 +15,7 @@ leader = {
 
 army = {
 	name = "Army of the Xhosa"
-	location = 2100
+	location = 3592
 	regiment = {
 		name= "1st Xhosa Warriors"
 		type = irregular
@@ -29,5 +30,10 @@ army = {
 		name= "3rd Xhosa Warriors"
 		type = irregular
 		home = 2098
+	}
+	regiment = {
+		name= "4th Xhosa Warriors"
+		type = irregular
+		home = 2096
 	}
 }
