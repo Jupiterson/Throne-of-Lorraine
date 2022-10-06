@@ -306,12 +306,8 @@ political_decisions = {
 
 		allow = {
             owns = 2100
-			owns = 2099
 			owns = 2098
-			owns = 2097
-			owns = 2096
             owns = 2111
-			owns = 2112
 			owns = 2113
 			owns = 2114
 			war = no
@@ -1292,7 +1288,394 @@ political_decisions = {
             factor = 1
         }
 	}
-	 }
+	
+###  An Empire of Empty Promises  ##
+
+    SHO_fix_raids= {
+	    picture = marching_africans
+		potential = {
+			tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = kariba_raids
+			NOT = { has_country_flag = fixed_raids }
+		}
+		
+		allow = {
+			NOT = { war_exhaustion = 1 } 
+			military_spending = 0.5
+			2635 = { units_in_province = 4 }
+			2072 = { units_in_province = 2 }
+			2068 = { units_in_province = 2 }
+			money = 500
+		}
+		
+		effect = {
+			set_country_flag = fixed_raids
+			money = -500
+			set_country_flag = ongoing_raids_fix 				
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	SHO_fix_leaders = {
+	    picture = tresury_reforms
+		potential = {
+			tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = apathetic_leaders
+			NOT = { has_country_flag = fixed_leaders }
+		}
+		
+		allow = {
+			administration_spending = 0.5
+			military_spending = 0.5
+			civilization_progress = 0.1
+			money = 5000
+		}
+		
+		effect = {
+			set_country_flag = fixed_leaders
+			money = -5000
+			remove_country_modifier = apathetic_leaders
+			prestige = 5
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	SHO_foreign_meddling = {
+	    picture = treaty_signing
+		potential = {
+			tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = foreign_meddling
+			NOT = { has_country_flag = fixing_meddling }
+		}
+		
+		allow = {
+		    money = 2500
+			NOT = { badboy = 0.05 }
+			prestige = 10
+		}
+		
+		effect = {
+			set_country_flag = fixing_meddling
+			money = -2500	
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	SHO_MAD_meddling = {
+	    picture = treaty_signing
+		potential = {
+			tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = foreign_meddling
+			has_country_flag = fixing_meddling 
+			NOT = { has_country_flag = fixing_meddling_MAD }
+			exists = MAD
+		}
+		
+		allow = {
+		    OR = { stronger_army_than = MAD
+			       AND = { relation = { who = MAD value = 100 }}
+				   MAD = { war_exhaustion = 8 }
+			}
+		}
+		
+		effect = {
+		    set_country_flag = fixing_meddling_MAD
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	SHO_SCO_meddling = {
+	    picture = treaty_signing
+		potential = {
+			tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = foreign_meddling
+			has_country_flag = fixing_meddling 
+			NOT = { has_country_flag = fixing_meddling_SCO }
+			exists = SCO
+		}
+		
+		allow = {
+		    OR = { stronger_army_than = SCO 
+			       AND = { relation = { who =  SCO value = 100 }}
+				   SCO = { war_exhaustion = 8 }
+			}}
+		
+		effect = {
+		    set_country_flag = fixing_meddling_SCO
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	SHO_ENG_meddling = {
+	    picture = treaty_signing
+		potential = {
+			tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = foreign_meddling
+			has_country_flag = fixing_meddling 
+			NOT = { has_country_flag = fixing_meddling_SCO }
+			exists = ENG
+		}
+		
+		allow = {
+		    OR = { stronger_army_than = ENG 
+			       AND = { relation = { who = ENG value = 100 }}
+				   ENG = { war_exhaustion = 8 }
+			}}
+		
+		effect = {
+		    set_country_flag = fixing_meddling_SCO
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	SHO_UPB_meddling = {
+	    picture = treaty_signing
+		potential = {
+			tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = foreign_meddling
+			has_country_flag = fixing_meddling 
+			NOT = { has_country_flag = fixing_meddling_SCO }
+			exists = UPB
+		}
+		
+		allow = {
+		    OR = { stronger_army_than = UPB 
+			       AND = { relation = { who = UPB value = 100 }}
+				   UPB = { war_exhaustion = 8 }
+			}}
+		
+		effect = {
+		    set_country_flag = fixing_meddling_SCO
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	SHO_CLT_meddling = {
+	    picture = treaty_signing
+		potential = {
+			tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = foreign_meddling
+			has_country_flag = fixing_meddling 
+			NOT = { has_country_flag = fixing_meddling_SCO }
+			exists = CLT
+		}
+		
+		allow = {
+		    OR = { stronger_army_than = CLT 
+			       AND = { relation = { who = CLT value = 100 }}
+				   CLT = { war_exhaustion = 8 }
+			}}
+		
+		effect = {
+		    set_country_flag = fixing_meddling_SCO
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	SHO_remove_meddling = {
+	    picture = treaty_signing
+		potential = {
+			tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = foreign_meddling
+			has_country_flag = fixing_meddling 
+			has_country_flag = fixing_meddling_SCO
+			has_country_flag = fixing_meddling_MAD
+		}
+		
+		allow = {
+		NOT = { badboy = 0.05 }
+		}
+		
+		effect = {
+		    clr_country_flag = fixing_meddling_MAD 
+			clr_country_flag = fixing_meddling_SCO
+			clr_country_flag = fixing_meddling
+			remove_country_modifier = foreign_meddling
+			prestige = 10
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	SHO_fix_empire = {
+	    picture = treaty_signing
+		potential = {
+			tag = SHO
+			has_global_flag = SHO_start
+			NOT = { has_country_modifier = kariba_raids }
+			NOT = { has_country_modifier = foreign_meddling }
+			NOT = { has_country_modifier = apathetic_leaders }
+			has_country_modifier = empire_empty_promises 
+		}
+		
+		allow = {
+		war = no
+		prestige = 15
+		money = 7500
+		}
+		
+		effect = {
+		clr_global_flag = SHO_start
+		remove_country_modifier = empire_empty_promises 
+		prestige = 5
+		money = -7500
+		inherit = MAT
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	form_tsonga = {
+		picture = map_zimbabwe
+		ai_will_do = { factor = 1 }
+		potential = {
+		NOT = { exists = SHO }
+        primary_culture = southern_bantu
+		NOT = { tag = SHO }
+		}
+
+		allow = {
+            owns = 2070
+			OR = { owns = 2056
+			       owns = 2635
+				   owns = 2071 }
+			war = no
+        }
+
+		effect = {
+		    prestige = 5
+		    change_tag = SHO	
+		}
+		
+	}
+	
+	expand_MLW = {
+		picture = map_malawi
+		ai_will_do = { factor = 1 }
+		potential = {
+		tag = MLW
+		year = 1856
+		NOT = { has_country_flag = MLW_grow }
+		}
+
+		allow = {
+			war = no
+        }
+
+		effect = {
+		    all_core = { limit = { empty = yes } secede_province = MLW }
+			set_country_flag = MLW_grow
+		}
+		
+	}
+	
+	expand_north_SHO = {
+		picture = map_zambia
+		ai_will_do = { factor = 1 }
+		potential = {
+		tag = SHO
+		year = 1860
+		is_vassal = no
+		NOT = { has_country_flag = expanded_zam_SHO }
+		}
+
+		allow = {
+			war = no
+        }
+
+		effect = {
+		   ENG_2014 = { add_core = SHO }
+		   ENG_2016 = { add_core = SHO }
+		   add_accepted_culture = lacustrine_bantu
+		   set_country_flag = expanded_zam_SHO
+		}
+		
+	}
+	
+	expand_nyasa_SHO = {
+		picture = map_malawi
+		ai_will_do = { factor = 1 }
+		potential = {
+		tag = SHO
+		year = 1858
+		is_vassal = no
+		NOT = { has_country_flag = expanded_nyas }
+		}
+
+		allow = {
+			war = no
+        }
+
+		effect = {
+		   ENG_2067 = { add_core = SHO }
+		   ENG_2039 = { add_core = SHO }
+		   2581 = { add_core = SHO }
+		   add_accepted_culture = nyasa
+		   set_country_flag = expanded_nyas
+		}
+		
+	}
+	
+	expand_zafimava_SHO = {
+		picture = map_mozambique
+		ai_will_do = { factor = 1 }
+		potential = {
+		tag = SHO
+		year = 1865
+		is_vassal = no
+		NOT = { has_country_flag = expanded_zafi }
+		}
+
+		allow = {
+			war = no
+        }
+
+		effect = {
+		   2059 = { add_core = SHO }
+		   POR_2060 = { add_core = SHO }
+		   add_accepted_culture = mifangaro
+		   set_country_flag = expanded_zafi
+		}
+		
+	}
+}
 	 
 	
 	

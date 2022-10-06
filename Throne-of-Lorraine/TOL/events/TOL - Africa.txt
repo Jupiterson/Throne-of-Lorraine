@@ -1091,11 +1091,12 @@ country_event = {
 			}
 			secede_province = DTI
 		} war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}}
-		    }    		   
-		}
-		ai_chance = {
+		    }   
+        ai_chance = {
 			factor = 50
+		}			
 		}
+		
 	}
 
     country_event = {
@@ -1683,6 +1684,10 @@ country_event = {
 			has_country_flag = bapedi_start		
             exists = ZUL			
 	}
+	
+	mean_time_to_happen =  {
+		months = 3
+	}
 
 	fire_only_once = yes
 
@@ -1707,6 +1712,13 @@ country_event = {
 	            attacker_goal = { casus_belli = cut_down_to_size }
 	            defender_goal = { casus_belli = cut_down_to_size }
                 }
+				
+		any_country = { limit = { has_country_flag = in_BAP_coalition }
+		               casus_belli = {
+	                        target = ZUL
+	                        type = cut_down_to_size
+	                        months = 12
+                         }}
 		any_country = { limit = { has_country_flag = in_BAP_coalition }
 		               war = {
 	            target = ZUL
@@ -1718,7 +1730,7 @@ country_event = {
 		clr_global_flag = bapedi_start
 		set_global_flag = zulu_coalition_war
 		ai_chance = {
-			factor = 80
+			factor = 60
 			modifier = {
 				factor = 100
 			    ZUL = { ai = no }
@@ -1735,7 +1747,7 @@ country_event = {
 		any_country = {limit = { has_country_flag = in_BAP_coalition }
 		               clr_country_flag = in_BAP_coalition }
 		ai_chance = {
-			factor = 20
+			factor = 40
 
 	}
 	}
@@ -1912,14 +1924,6 @@ country_event = {
 		any_owned = {
 		    limit = { is_core = TSW }
 			secede_province = TSW
-		}
-		any_owned = {
-			limit = { is_core = KRB }
-			secede_province = KRB
-		}
-		any_owned = {
-			limit = { is_core = TIK }
-			secede_province = TIK
 		}
 	}
 	}
@@ -2244,7 +2248,6 @@ country_event = {
 		name = "XHO_front_option1"
 		clr_global_flag = 3rd_frontier_war
 		prestige = 10
-		2092 = { secede_province = XHO }
 		2091 = { add_core = XHO }
 		2092 = { add_core = XHO }
 		SCO = { country_event = { id = 50049 days = 110 } }
@@ -2457,7 +2460,549 @@ country_event = {
 	}
 	
 	
+	
+###  An Empire of Empty Promises  ##
+	
+	country_event = {
 
+	id = 50057
+
+	trigger = {
+            tag = SHO
+	}
+
+	fire_only_once = yes
+
+	title = "SHO_start_title"
+	desc = "SHO_start_desc"
+	picture = "great_zimbabwe_crumbling"
+
+	option = {
+		name = "SHO_start_option1"
+		set_global_flag = SHO_start
+		add_country_modifier = {
+				name = empire_empty_promises 
+				duration = 36500 }
+		add_country_modifier = {
+				name = kariba_raids
+				duration = 36500 }
+		add_country_modifier = {
+				name = foreign_meddling
+				duration = 36500 }
+		add_country_modifier = {
+				name = apathetic_leaders
+				duration = 36500 }
+	}
+	}
+	
+	country_event = {
+	
+	id = 50058
+
+	trigger = {
+            tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = kariba_raids
+			has_country_flag = ongoing_raids_fix 
+			NOT = { war_exhaustion = 1 }
+			military_spending = 0.5
+			2635 = { units_in_province = 4 }
+			2072 = { units_in_province = 2 }
+			2068 = { units_in_province = 2 }
+	}
+	
+	mean_time_to_happen = { months = 12 }
+
+	fire_only_once = yes
+
+	title = "raids_win_title"
+	desc = "raids_win_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "raids_win_option1"
+		clr_country_flag = ongoing_raids_fix
+		remove_country_modifier = kariba_raids 
+		prestige = 5
+	}
+	}
+	
+	country_event = {
+	
+	id = 50059
+
+	trigger = {
+            tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = kariba_raids
+			has_country_flag = ongoing_raids_fix 
+			OR =  { war_exhaustion = 1  
+			        NOT = { military_spending = 0.5 }
+			        NOT = { 2635 = { units_in_province = 4 }}
+			        NOT = { 2072 = { units_in_province = 2 }}
+			        NOT = { 2068 = { units_in_province = 2 }}}
+	}
+
+	allow_multiple_instances = yes
+
+	title = "raids_lose_title"
+	desc = "raids_lose_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "raids_lose_option1"
+		clr_country_flag = ongoing_raids_fix
+		clr_country_flag = fixed_raids
+	}
+	}
+	
+	country_event = {
+
+	id = 50060
+
+	trigger = {
+            year = 1853
+			tag = SHO
+			has_global_flag = SHO_start
+			owns = 2056
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 9
+	}
+
+	title = "shona_tension_title"
+	desc = "shona_tension_desc"
+	picture = "monarch_death"
+
+	option = {
+		name = "shona_tension_option1"   
+		any_pop = {
+			limit = { is_primary_culture = no
+			}
+		militancy = 5
+	    consciousness = 3
+	    }
+		clr_global_flag = SHO_start
+		country_event = {
+	            id = 50061
+	            days = 87
+        }
+	}
+}
+
+    country_event = {
+
+	id = 50061
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "SHO_civil_war_title"
+	desc = "SHO_civil_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "SHO_civil_war_option1"
+	    any_owned = {
+			limit = {
+			is_core = TIK
+			}
+			secede_province = TIK
+		}
+		MAT = { release_vassal = MAT
+		        leave_alliance = SHO
+                government = absolute_monarchy }
+		set_global_flag = tsonga_civil_war
+		remove_country_modifier = empire_empty_promises
+		remove_country_modifier = kariba_raids
+		remove_country_modifier = foreign_meddling
+		remove_country_modifier = apathetic_leaders
+		change_tag = BLO
+		capital = 2068
+		all_core = {
+			remove_core = BLO
+		}
+		ENG_2068 = { add_core = BLO }
+		war = { target = TIK  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
+		MAT = { country_event = 50062 }
+            ai_chance = {
+			factor = 100
+		}		
+	}
+	option = {
+		name = "SHO_civil_war_option2"    
+        any_owned = {
+            limit = {
+			is_core = TIK
+			}
+			secede_province = TIK
+		}
+		MAT = { release_vassal = MAT
+		        leave_alliance = SHO
+                government = absolute_monarchy }
+		war = { target = TIK  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
+		set_global_flag = tsonga_civil_war
+		remove_country_modifier = empire_empty_promises
+		remove_country_modifier = kariba_raids
+		remove_country_modifier = foreign_meddling
+		remove_country_modifier = apathetic_leaders
+		change_tag = BLO
+		capital = 2068
+		all_core = {
+			remove_core = BLO
+		}
+		ENG_2068 = { add_core = BLO }
+		change_tag_no_core_switch = TIK
+		MAT = { country_event = 50062 }
+	}
+		
+	option = {
+		name = "SHO_civil_war_option3"    
+        any_owned = {
+			limit = {
+			is_core = TIK
+			}
+			secede_province = TIK
+		}
+		MAT = { release_vassal = MAT
+		        leave_alliance = SHO
+                government = absolute_monarchy }
+		war = { target = TIK  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
+		set_global_flag = tsonga_civil_war
+		remove_country_modifier = empire_empty_promises
+		remove_country_modifier = kariba_raids
+		remove_country_modifier = foreign_meddling
+		remove_country_modifier = apathetic_leaders
+		change_tag = BLO
+		capital = 2068
+		all_core = {
+			remove_core = BLO
+		}
+		ENG_2068 = { add_core = BLO }
+		change_tag_no_core_switch = MAT
+		MAT = { country_event = {
+	            id = 50062
+	            days = 1
+        }	
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50062
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "MAT_civil_war_title"
+	desc = "MAT_civil_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "MAT_civil_war_option1"
+		primary_culture = southern_bantu
+        add_accepted_culture = zulu
+		war = { target = BLO  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
+		war = { target = TIK  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}	
+            ai_chance = {
+			factor = 50
+		}		
+	}
+	option = {
+		name = "MAT_civil_war_option2"    
+		war = { target = BLO  attacker_goal = { casus_belli = status_quo} defender_goal = { casus_belli = civil_war }}
+		war = { target = TIK  attacker_goal = { casus_belli = status_quo} defender_goal = { casus_belli = civil_war }}
+		ai_chance = {
+			factor = 50
+		}	
+	}
+	}
+	
+	country_event = {
+
+	id = 50063
+
+	fire_only_once = yes
+	
+	trigger = {
+			tag = BLO
+			has_global_flag = tsonga_civil_war
+			owns = 2635
+	}
+	
+	title = "KRB_civil_war_title"
+	desc = "KRB_civil_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "KRB_civil_war_option1"
+		any_owned = {
+			limit = {
+			is_core = KRB
+			}
+			secede_province = KRB
+		}
+		MAT = { country_event = 50064 }
+		KRB = { country_event = 50065 }
+            ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = "KRB_civil_war_option2"    
+		any_owned = {
+			limit = {
+			is_core = KRB
+			}
+			secede_province = KRB
+		}
+		MAT = { country_event = 50064 }
+		change_tag_no_core_switch = KRB
+		KRB = { country_event = {
+	            id = 50065
+	            days = 1 }
+        }		
+	}
+	}
+	
+	country_event = {
+
+	id = 50064
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "MAT_KRB_civil_war_title"
+	desc = "MAT_KRB_civil_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "MAT_KRB_civil_war_option1"
+		any_owned = {
+			limit = {
+			is_core = KRB
+			}
+			secede_province = KRB
+		}	
+	}
+	}
+	
+	country_event = {
+
+	id = 50065
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "KRB2_civil_war_title"
+	desc = "KRB2_civil_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "KRB2_civil_war_option1"
+		primary_culture = southern_bantu
+        add_accepted_culture = lacustrine_bantu
+		war = { target = BLO  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
+		war = { target = TIK  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
+		war = { target = MAT attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}	
+        ai_chance = {
+			factor = 50
+		}		}
+            		
+	option = {
+		name = "KRB2_civil_war_option2" 
+        war = { target = BLO attacker_goal = { casus_belli = status_quo} defender_goal = { casus_belli = civil_war }}
+		war = { target = TIK  attacker_goal = { casus_belli = status_quo} defender_goal = { casus_belli = civil_war }}
+		war = { target = MAT attacker_goal = { casus_belli = status_quo} defender_goal = { casus_belli = civil_war }}		
+		ai_chance = {
+			factor = 50
+		}	
+	}
+	}
+	
+	country_event = {
+
+	id = 50066
+
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = KRB
+	}
+	
+	title = "KRB_grow_title"
+	desc = "KRB_grow_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "KRB_grow_option1"	
+		2012 = { secede_province = KRB }
+		2015 = { secede_province = KRB }
+		2013 = { secede_province = KRB }
+		790 = { secede_province = KRB }
+	}
+	}
+	
+	country_event = {
+
+	id = 50067
+
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = MLW
+		has_global_flag = tsonga_civil_war
+		exists = TIK
+	}
+	
+	title = "MLW_war_title"
+	desc = "MLW_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "MLW_war_option1"
+		    war = { target = TIK  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = conquest_any }}
+		ai_chance = {
+			factor = 50
+		}	
+	}
+	
+	option = {
+		name = "MLW_war_option2"	
+		ai_chance = {
+			factor = 50
+		}	
+	}
+	}
+	
+	country_event = {
+
+	id = 50068
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { exists = MLW }
+		owns = 2066
+		OR = { 2581 = { empty = yes }
+		       2040 = { empty = yes }
+			   2042 = { empty = yes }
+	}
+	}
+	
+	title = "MLW_retreat_title"
+	desc = "MLW_retreat_desc"
+	picture = "rhodesia_map"
+
+	option = {
+		name = "MLW_retreat_option1"
+		MLW = { all_core = { limit = { empty = yes } secede_province = THIS }}
+		any_owned = { limit = { OR = { province_id = 2581 
+                                      province_id = 2040 
+                                      province_id = 2041  
+                                      province_id = 2038 
+                                      province_id = 2042 }									 
+									 } secede_province = MLW }			 
+				    }
+	}
+	
+	country_event = {
+
+	id = 50069
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TIK
+		has_global_flag = tsonga_civil_war
+	}
+	
+	title = "mad_scot_title"
+	desc = "mad_scot_desc"
+	picture = "MAD_revolt"
+
+	option = {
+		name = "mad_scot_option1"
+		set_country_flag = mad_scot		 
+    }
+	}
+	
+	country_event = {
+
+	id = 50070
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = mad_scot
+		war = no
+	}
+	
+	title = "mad_scot_choice_title"
+	desc = "mad_scot_choice_desc"
+	picture = "MAD_revolt"
+
+	option = {
+		name = "mad_scot_choice_option1"
+		clr_country_flag = mad_scot	
+        prestige = 5
+        ai_chance = {
+			factor = 34
+		}		
+    }
+	
+	option = {
+		name = "mad_scot_choice_option2"
+		clr_country_flag = mad_scot		 
+		prestige = -10
+		any_country = { limit = { owns = 2057 }
+		diplomatic_influence = {
+	            who = THIS
+	            value = 500
+                }
+				create_vassal = THIS }
+		government = dominion
+		ai_chance = {
+			factor = 33
+		}
+    }
+	
+	option = {
+		name = "mad_scot_choice_option3"
+		clr_country_flag = mad_scot		
+        government = peasant_republic
+        prestige = -5	
+        ai_chance = {
+			factor = 33
+		}		
+    }
+	}
+	
+	country_event = {
+
+	id = 50071
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SHO
+		war = no 
+		has_global_flag = tsonga_civil_war
+	}
+	
+	title = "tsonga_aftermath_title"
+	desc = "tsonga_aftermath_desc"
+	picture = "great_zimbabwe_crumbling"
+
+	option = {
+		name = "tsonga_aftermath_option1"
+		clr_global_flag = tsonga_civil_war	 
+    }
+	}
 
 #SQI
 

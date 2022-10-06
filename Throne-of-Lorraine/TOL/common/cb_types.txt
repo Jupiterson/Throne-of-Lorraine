@@ -120,6 +120,7 @@ peace_order = {
 	dismantle_forts
 	china_acquire_state
 	yoruba_acquire_state
+	tsonga_acquire_state
 	amazon_acquire_state
 	acquire_state
 	acquire_state_mid
@@ -11445,6 +11446,91 @@ yoruba_acquire_state = {
 	po_demand_state = yes
 
 	war_name = WAR_IFE_REUNIFICATION
+
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.10
+		}
+	}
+}
+
+# Tsonga reunification
+
+tsonga_acquire_state = {
+	sprite_index = 22
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 0
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 0
+	break_truce_militancy_factor = 0
+	truce_months = 84
+
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	always = yes
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		neighbour = THIS
+		OR = {
+			any_owned_province = {
+				is_core = SHO
+			}
+			is_culture_group = tsonga
+		}
+		THIS = { is_culture_group = tsonga }
+		is_vassal = no
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
+		OR = {
+			any_owned_province = {
+				is_core = SHO
+			}
+			NOT = { is_culture_group = tsonga }
+		}
+	}
+
+	allowed_states = {
+		OR = {
+#			AND = {
+#				any_owned_province = {
+#					is_core = SHO
+#				}
+#				year = 1900
+#			}
+			AND = {
+				any_owned_province = {
+					is_core = SHO
+				}
+				THIS = { ai = no }
+			}
+			any_owned_province = {
+				is_core = SHO
+				owner = { civilized = no }
+			}
+#			any_owned_province = {
+#				owner = { is_culture_group = tsonga }
+#				NOT = { is_core = SHO }
+#			}
+		}
+	}
+
+	po_demand_state = yes
+
+	war_name = WAR_SHO_REUNIFICATION
 
 	on_add = {
 		move_issue_percentage = {
