@@ -1115,9 +1115,7 @@ political_decisions = {
 	   }
     
 		allow = {
-		OR = { ai = yes
 		       relation = { who = XHO value = 50 }
-			   }
 		}
     
 		effect = {
@@ -1140,9 +1138,7 @@ political_decisions = {
 	   }
     
 		allow = {
-		OR = { ai = yes
 		       relation = { who = SHO value = 50 }
-			   }
 		}
     
 		effect = {
@@ -1330,10 +1326,11 @@ political_decisions = {
 		}
 		
 		allow = {
-			administration_spending = 0.5
-			military_spending = 0.5
-			civilization_progress = 0.1
-			money = 5000
+			OR = { AND = { administration_spending = 0.5
+			               military_spending = 0.5
+			               civilization_progress = 0.1
+			               money = 5000}
+				ai = yes }
 		}
 		
 		effect = {

@@ -1684,10 +1684,6 @@ country_event = {
 			has_country_flag = bapedi_start		
             exists = ZUL			
 	}
-	
-	mean_time_to_happen =  {
-		months = 3
-	}
 
 	fire_only_once = yes
 
@@ -2806,18 +2802,17 @@ country_event = {
 		name = "KRB2_civil_war_option1"
 		primary_culture = southern_bantu
         add_accepted_culture = lacustrine_bantu
-		war = { target = BLO  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
-		war = { target = TIK  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
-		war = { target = MAT attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}	
+		any_country = { limit = { primary_culture = southern_bantu }
+                        war = { target = KRB attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}}
+         war = { target = MAT attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = status_quo }}						
         ai_chance = {
 			factor = 50
 		}		}
             		
 	option = {
 		name = "KRB2_civil_war_option2" 
-        war = { target = BLO attacker_goal = { casus_belli = status_quo} defender_goal = { casus_belli = civil_war }}
-		war = { target = TIK  attacker_goal = { casus_belli = status_quo} defender_goal = { casus_belli = civil_war }}
-		war = { target = MAT attacker_goal = { casus_belli = status_quo} defender_goal = { casus_belli = civil_war }}		
+        any_country = { limit = { primary_culture = southern_bantu }
+                        war = { target = KRB attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = status_quo }}} 		
 		ai_chance = {
 			factor = 50
 		}	
@@ -2951,7 +2946,7 @@ country_event = {
 		clr_country_flag = mad_scot	
         prestige = 5
         ai_chance = {
-			factor = 34
+			factor = 60
 		}		
     }
 	
@@ -2967,7 +2962,7 @@ country_event = {
 				create_vassal = THIS }
 		government = dominion
 		ai_chance = {
-			factor = 33
+			factor = 10
 		}
     }
 	
@@ -2977,7 +2972,7 @@ country_event = {
         government = peasant_republic
         prestige = -5	
         ai_chance = {
-			factor = 33
+			factor = 30
 		}		
     }
 	}
