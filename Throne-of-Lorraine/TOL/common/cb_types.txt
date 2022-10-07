@@ -13097,7 +13097,7 @@ babantu_acquire_state = {
 	break_truce_prestige_factor = 1
 	break_truce_infamy_factor = 0
 	break_truce_militancy_factor = 0
-	truce_months = 84
+	truce_months = 24
 
 	good_relation_prestige_factor = 1
 	good_relation_infamy_factor = 1
@@ -13112,33 +13112,20 @@ babantu_acquire_state = {
 			primary_culture = south_forest_bantu
 			primary_culture = lacustrine_bantu
 		}
-		THIS = { primary_culture = south_forest_bantu }
 		is_vassal = no
 		OR = {
 			war_with = THIS
 			THIS = { NOT = { has_country_modifier = no_more_war } }
 		}
-		OR = {
-			any_owned_province = {
+		any_owned_province = {
 				is_core = BTU
-			}
-			NOT = { primary_culture = south_forest_bantu }
 		}
 		has_global_flag = warlord_era_has_begun_btu
 	}
 
 	allowed_states = {
-		OR = {
-			AND = {
-				any_owned_province = {
+		any_owned_province = {
 					is_core = BTU
-				}
-				THIS = { ai = no }
-			}
-			any_owned_province = {
-				is_core = BTU
-				owner = { civilized = no }
-			}
 		}
 	}
 
