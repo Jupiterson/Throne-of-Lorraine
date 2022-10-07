@@ -2674,6 +2674,21 @@ country_event = {
 	}
 
 }
+
+country_event = {
+	id = 24254061
+	title = "The Breakup of the Babantu"
+	desc = "We could take advantage of the warlords in the Babantu to claim their throne and become the Babantu Empire."
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "That seems like a great idea! (you need to control all Babantu cores)"
+    }
+
+}
 country_event = {
 	id = 2425407
 	title = "The Khoekhio Affair"
@@ -2701,6 +2716,7 @@ country_event = {
 		name = "I think our free trial of Khoekhio has ended."
 		2078 = { secede_province = KH1 }
 		2079 = { secede_province = KH1 }
+		KH1 = { country_event = 24254103 }
 		KH2 = { country_event = 2425408 }
 		KH3 = { country_event = 2425409 }
 		ai_chance = { factor = 0.90 }
@@ -2749,4 +2765,110 @@ country_event = {
 		}
 		ai_chance = { factor = 0.10 }
 	}
+}
+country_event = {
+	id = 24254071
+	title = "The Khoekhio Affair"
+	desc = "NAMIBIAGOESBYEBYEKHO"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Well, shit."
+    }
+
+}
+country_event = {
+	id = 24254103
+	title = "The Khoekhio Affair"
+	desc = "After protests in Basque Khoekhio, we have been given the colony."
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "This can cause problems with our neighbours."
+    }
+
+}
+country_event = {
+	id = 2425408
+	title = "The Khoekhio Affair"
+	desc = "KHONEGETSNAMIBIAFORTWO"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Well, shit."
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We can't let them get away with this!"
+		war = {
+				target = KH1
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+		}
+		KH1 = { country_event = 24254101 }
+		ai_chance = { factor = 0 }
+    }
+
+}
+country_event = {
+	id = 2425409
+	title = "The Khoekhio Affair"
+	desc = "KHONEGETSNAMIBIAFORTHREE"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Well, shit."
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We can't let them get away with this!"
+		war = {
+				target = KH1
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+		}
+		KH1 = { country_event = 24254102 }
+		ai_chance = { factor = 0 }
+    }
+
+}
+country_event = {
+	id = 24254101
+	title = "The Khoekhio Affair"
+	desc = "DZALRISPROTESTS"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Well, shit."
+    }
+
+}
+country_event = {
+	id = 24254102
+	title = "The Khoekhio Affair"
+	desc = "LHUBUGAOPROTESTS"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Well, shit."
+    }
+
 }

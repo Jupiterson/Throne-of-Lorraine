@@ -963,4 +963,29 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	khoikhoihomeland = {
+		picture = map_namibia
+		potential = {
+			primary_culture = khoisan
+			NMB = { exists = no }
+			NOT = { has_global_flag = khoihoihohioh }
+		}
+		allow = {
+			war = no
+			NMB = { all_core = { OR = { owned_by = THIS owned_by = SCO owned_by = KHB empty = yes } } }
+			year = 1854
+			ai = no
+		}
+		effect = {
+			set_country_flag = khoihoihohioh
+			change_tag = NMB
+			any_core = {
+				limit = {
+					empty = yes
+				}
+				secede_province = THIS
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 }
