@@ -13207,6 +13207,7 @@ babantu_acquire_state = {
 				is_core = BTU
 		}
 		has_global_flag = warlord_era_has_begun_btu
+		NOT = { has_global_flag = yeahbabanture }
 	}
 
 	allowed_states = {
