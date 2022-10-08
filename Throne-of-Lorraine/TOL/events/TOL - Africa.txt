@@ -1682,7 +1682,8 @@ country_event = {
 			NOT = { has_global_flag = xhosa_accepted }
 			NOT = { has_global_flag = tsonga_accepted }              
 			has_country_flag = bapedi_start		
-            exists = ZUL			
+            exists = ZUL		
+            NOT = { war_with = ZUL }			
 	}
 	
 	mean_time_to_happen = { days = 4 } 
