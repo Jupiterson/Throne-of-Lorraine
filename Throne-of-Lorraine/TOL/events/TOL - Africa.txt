@@ -1684,6 +1684,8 @@ country_event = {
 			has_country_flag = bapedi_start		
             exists = ZUL			
 	}
+	
+	mean_time_to_happen = { days = 4 } 
 
 	fire_only_once = yes
 
@@ -1726,7 +1728,7 @@ country_event = {
 		clr_global_flag = bapedi_start
 		set_global_flag = zulu_coalition_war
 		ai_chance = {
-			factor = 60
+			factor = 80
 			modifier = {
 				factor = 100
 			    ZUL = { ai = no }
@@ -1743,7 +1745,7 @@ country_event = {
 		any_country = {limit = { has_country_flag = in_BAP_coalition }
 		               clr_country_flag = in_BAP_coalition }
 		ai_chance = {
-			factor = 40
+			factor = 20
 
 	}
 	}
@@ -2505,8 +2507,9 @@ country_event = {
 			2635 = { units_in_province = 4 }
 			2072 = { units_in_province = 2 }
 			2068 = { units_in_province = 2 }
-			year = 1839
 	}
+	
+	mean_time_to_happen = { months = 3 }
 
 	fire_only_once = yes
 
@@ -2560,11 +2563,11 @@ country_event = {
 			tag = SHO
 			has_global_flag = SHO_start
 			owns = 2056
-			SCO = { war = no }
-			HNS = { war = no }
-			RUS = { war = no }
-			NET = { war = no }
 	}
+
+    mean_time_to_happen = { months = 3 }
+	
+	fire_only_once = yes
 
 	title = "shona_tension_title"
 	desc = "shona_tension_desc"
@@ -2933,6 +2936,8 @@ country_event = {
 		has_country_flag = mad_scot
 		war = no
 	}
+	
+	mean_time_to_happen = { months = 2 }
 	
 	title = "mad_scot_choice_title"
 	desc = "mad_scot_choice_desc"
