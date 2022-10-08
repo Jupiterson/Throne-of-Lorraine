@@ -2505,9 +2505,8 @@ country_event = {
 			2635 = { units_in_province = 4 }
 			2072 = { units_in_province = 2 }
 			2068 = { units_in_province = 2 }
+			year = 1839
 	}
-	
-	mean_time_to_happen = { months = 12 }
 
 	fire_only_once = yes
 
@@ -2561,12 +2560,10 @@ country_event = {
 			tag = SHO
 			has_global_flag = SHO_start
 			owns = 2056
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen =  {
-		months = 9
+			SCO = { war = no }
+			HNS = { war = no }
+			RUS = { war = no }
+			NET = { war = no }
 	}
 
 	title = "shona_tension_title"
