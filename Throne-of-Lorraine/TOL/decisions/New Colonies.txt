@@ -339,57 +339,6 @@
 		ai_will_do = { factor = 1 }
 	}
 
-	buy_caprivi_strip = {
-		picture = map_namibia
-		potential = {
-			civilized = yes
-			owns = 2082
-			owns = 2078
-			owns = 2080
-			owns = 2079
-			NOT = { owns = 2081 }
-			NOT = { has_global_flag = caprivi_purchase_tried }
-			2081 = {
-				owner = {
-					NOT = {
-						capital_scope = { continent = africa }
-						capital_scope = { continent = west_africa }
-						capital_scope = { continent = east_africa }
-						capital_scope = { continent = central_africa }
-						capital_scope = { continent = south_west_africa }
-					}
-				}
-			}
-			OR = {
-				2081 = { owner = { has_country_flag = treaty_of_heligoland } }
-				2081 = { owner = { NOT = { tag = ENG } } }
-				NOT = { is_culture_group = germanic }
-			}
-		}
-
-		allow = {
-			war = no
-			mass_politics = 1
-			2013 = { empty = no }
-			2081 = {
-				owner = {
-					NOT = { truce_with = THIS }
-					is_vassal = no
-				}
-			}
-			OR = {
-				money = 100000
-				ai = yes
-			}
-		}
-
-		effect = {
-			2081 = { owner = { country_event = 955201 } }
-			set_global_flag = caprivi_purchase_tried
-		}
-		ai_will_do = { factor = 1 }
-	}
-
 	free_botswana = {
 		picture = map_botswana
 		potential = {

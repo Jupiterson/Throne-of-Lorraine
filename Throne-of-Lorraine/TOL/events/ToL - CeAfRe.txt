@@ -2420,6 +2420,16 @@ country_event = {
 			}
 			secede_province = AZA
 		}
+		random_owned = {
+				limit = {
+					owner = {
+						KRB = { ai = no primary_culture = lacustrine_bantu }
+					}
+				}
+				owner = {
+					KRB = { country_event = 24254061 }
+				}
+		}
 		government = absolute_monarchy
 		prestige = -50
 	}
@@ -2491,6 +2501,16 @@ country_event = {
 				is_core = AZA
 			}
 			secede_province = AZA
+		}
+		random_owned = {
+				limit = {
+					owner = {
+						KRB = { ai = no primary_culture = lacustrine_bantu }
+					}
+				}
+				owner = {
+					KRB = { country_event = 24254061 }
+				}
 		}
 		government = absolute_monarchy
 		prestige = -50
@@ -2565,6 +2585,16 @@ country_event = {
 			}
 			secede_province = AZA
 		}
+		random_owned = {
+				limit = {
+					owner = {
+						KRB = { ai = no primary_culture = lacustrine_bantu }
+					}
+				}
+				owner = {
+					KRB = { country_event = 24254061 }
+				}
+		}
 		government = absolute_monarchy
 		prestige = -50
 		change_tag_no_core_switch = CGO
@@ -2594,6 +2624,17 @@ country_event = {
 				tag = ZAN
 				BTU = { all_core = { owned_by = THIS } exists = no }
 			}
+			
+			AND = {
+				tag = LBA
+				BTU = { all_core = { owned_by = THIS } exists = no }
+			}
+			
+			AND = {
+				tag = KRB
+				BTU = { all_core = { owned_by = THIS } exists = no }
+				primary_culture = lacustrine_bantu
+			}
 		}
 		year = 1854
 		has_global_flag = warlord_era_has_begun_btu
@@ -2605,6 +2646,7 @@ country_event = {
 	
 	option = {
 		name = "Aaand the empire is here, again."
+		set_global_flag = yeahbabanture
 		random_owned = {
 			limit = {
 					owner = {
@@ -2616,7 +2658,218 @@ country_event = {
 				}
 		}
 		government = absolute_empire
+		random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							NOT = { primary_culture = south_forest_bantu }
+							NOT = { accepted_culture = south_forest_bantu }
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture = south_forest_bantu
+				}
+		}
 		prestige = 30
 	}
+
+}
+
+country_event = {
+	id = 24254061
+	title = "The Breakup of the Babantu"
+	desc = "We could take advantage of the warlords in the Babantu to claim their throne and become the Babantu Empire."
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "That seems like a great idea! (you need to control all Babantu cores)"
+    }
+
+}
+country_event = {
+	id = 2425407
+	title = "The Khoekhio Affair"
+	desc = "NAMIBIAGOESBYEBYE"
+	picture = "ALB_revolt_2"
+	fire_only_once = yes
+
+	trigger = {
+		tag = BSQ
+		year = 1843
+		owns = 2078
+		owns = 2079
+		NOT = {
+			owns = 2083
+			owns = 2084
+			owns = 3597
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 11
+	}
+
+	option = {
+		name = "I think our free trial of Khoekhio has ended."
+		2078 = { secede_province = KH1 }
+		2079 = { secede_province = KH1 }
+		KH1 = { country_event = 24254103 }
+		KH2 = { country_event = 2425408 }
+		KH3 = { country_event = 2425409 }
+		ai_chance = { factor = 0.90 }
+	}
+	
+	option = {
+		name = "We might want to strenghten the colony."
+		KH1 = { country_event = 24254071 }
+		KH2 = { country_event = 24254071 }
+		KH3 = { country_event = 24254071 }
+		KH1 = {
+			casus_belli = {
+                target = THIS
+                type = acquire_state
+                months = 120
+			}
+        }		
+		KH2 = {
+			casus_belli = {
+                target = THIS
+                type = acquire_state
+                months = 120
+			}
+        }
+		KH3 = {
+			casus_belli = {
+                target = THIS
+                type = acquire_state
+                months = 120
+			}
+        }
+		war = {
+				target = KH1
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = acquire_state state_province_id = 2079 }
+		}
+		war = {
+				target = KH2
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = acquire_state state_province_id = 2079 }
+		}
+		war = {
+				target = KH3
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = acquire_state state_province_id = 2079 }
+		}
+		ai_chance = { factor = 0.10 }
+	}
+}
+country_event = {
+	id = 24254071
+	title = "The Khoekhio Affair"
+	desc = "NAMIBIAGOESBYEBYEKHO"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Well, shit."
+    }
+
+}
+country_event = {
+	id = 24254103
+	title = "The Khoekhio Affair"
+	desc = "After protests in Basque Khoekhio, we have been given the colony."
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "This can cause problems with our neighbours."
+    }
+
+}
+country_event = {
+	id = 2425408
+	title = "The Khoekhio Affair"
+	desc = "KHONEGETSNAMIBIAFORTWO"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Well, shit."
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We can't let them get away with this!"
+		war = {
+				target = KH1
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+		}
+		KH1 = { country_event = 24254101 }
+		ai_chance = { factor = 0 }
+    }
+
+}
+country_event = {
+	id = 2425409
+	title = "The Khoekhio Affair"
+	desc = "KHONEGETSNAMIBIAFORTHREE"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Well, shit."
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We can't let them get away with this!"
+		war = {
+				target = KH1
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = conquest_any }
+		}
+		KH1 = { country_event = 24254102 }
+		ai_chance = { factor = 0 }
+    }
+
+}
+country_event = {
+	id = 24254101
+	title = "The Khoekhio Affair"
+	desc = "DZALRISPROTESTS"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Well, shit."
+    }
+
+}
+country_event = {
+	id = 24254102
+	title = "The Khoekhio Affair"
+	desc = "LHUBUGAOPROTESTS"
+	picture = "diplomats_examining"
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = "Well, shit."
+    }
 
 }
