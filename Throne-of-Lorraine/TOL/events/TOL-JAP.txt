@@ -2677,7 +2677,18 @@ country_event = {
 		name = "Formosa is an invaluable strategic position, and this opportunity cannot be missed. To Formosa!"
 		set_country_flag = taiwan_line_of_advantage
 		random_country = {
-			limit = { owns = 2681 }
+			limit = { 
+				owns = 2681
+				NOT = { tag = QNG }
+			}
+			relation = { who = THIS value = -100 }
+			country_event = 97679
+		}
+		random_country = {
+			limit = { 
+				owns = 2681
+				tag = QNG 
+			}
 			relation = { who = THIS value = -100 }
 			country_event = 97679
 		}
@@ -2844,6 +2855,128 @@ country_event = {
 			modifier = {
 				factor = 0
 				1482 = { owner = { NOT = { tag = QNG } } } 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 659999
+	title = "EVTNAME97679" #The Japanese Demand
+	desc = "EVTDESC97679"
+	picture = "ship_attacked"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Taiwan is not worth a war with Japan."
+		random_owned = {
+			limit = { owner = { NOT = { number_of_states = 2 } } }
+			THIS = { civilized = no }
+			JAP = { inherit = THIS }
+			THIS = { civilized = yes }
+		}
+		random_owned = {
+			limit = { owner = { number_of_states = 2 } }
+			owner = {
+				prestige = -10
+				any_owned = {
+					limit = { region = CHI_1485 }
+					add_core = TAI
+					secede_province = JAP
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.1
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 2
+				any_greater_power = { war_with = THIS }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { any_greater_power = { war_with = THIS } }
+				war = yes
+			}
+		}
+	}
+
+	option = {
+		name = "Let.Them.Come."
+		random_owned = {
+			limit = {
+				owner = { NOT = { number_of_states = 2 } }
+			}
+			JAP = {
+				diplomatic_influence = { who = THIS value = -100 }
+				war = {
+					target = THIS
+					attacker_goal = { casus_belli = conquest_any }
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { number_of_states = 2 }
+				is_colonial = no
+			}
+			JAP = {
+				diplomatic_influence = { who = THIS value = -100 }
+				war = {
+					target = THIS
+					attacker_goal = {
+						casus_belli = acquire_any_state
+						state_province_id = 1485
+					}
+					call_ally = yes
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { number_of_states = 2 }
+				is_colonial = yes
+			}
+			JAP = {
+				diplomatic_influence = { who = THIS value = -100 }
+				war = {
+					target = THIS
+					attacker_goal = {
+						casus_belli = place_in_the_sun
+						state_province_id = 1485
+					}
+					call_ally = yes
+				}
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				FROM = { brigades_compare = 3 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { FROM = { brigades_compare = 3 } }
+				FROM = { brigades_compare = 1 }
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					is_greater_power = no
+					is_secondary_power = yes
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
 			}
 		}
 	}
