@@ -261,7 +261,10 @@ political_decisions = {
 				exists = no
 			}
 			is_vassal = no
-			has_country_flag = israel_of_the_east
+			OR = { 
+				tag = SAI
+				has_country_flag = israel_of_the_east
+			}
 			NOT = { has_country_flag = united_nanyang }
 		}
 
