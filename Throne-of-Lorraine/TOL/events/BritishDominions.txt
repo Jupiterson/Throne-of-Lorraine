@@ -469,11 +469,15 @@ country_event = {
 
 	trigger = {
 		war = no
-		year = 1909
+		year = 1890
 		any_owned_province = { is_core = SAF }
 		NOT = { exists = SAF }
 		NOT = { has_country_flag = SAF_independence_resoundly_refused }
 		is_possible_vassal = SAF
+        OR = { primary_culture = scottish
+               accepted_culture = scottish}
+	    NOT = { tag = ORA }
+		NOT = { tag = DTI }
 	}
 
 	mean_time_to_happen = {

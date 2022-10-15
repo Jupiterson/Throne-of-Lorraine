@@ -676,6 +676,9 @@ province_event = { # Iron found
 			}
 			AND = {
 				OR = {
+				    province_id = 3590 #Cape Town
+					province_id = 2108 #Nylstroom
+					province_id = 2110 #Hoedspruit
 					province_id = 1702 #Setif
 					province_id = 1629 #Wonsan
 					province_id = 958 #Kiev
@@ -700,9 +703,6 @@ province_event = { # Iron found
 			}
 			AND = {
 				OR = {
-					province_id = 2087 #Cape Town
-					province_id = 2108 #Nylstroom
-					province_id = 2110 #Hoedspruit
 					province_id = 1727 #Gafsa
 					province_id = 1630 #Kangnung
 					province_id = 1522 #Wuchang
