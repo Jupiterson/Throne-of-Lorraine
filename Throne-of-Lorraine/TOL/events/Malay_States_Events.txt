@@ -860,6 +860,12 @@ country_event = {
 				secede_province = THIS
 			}
 		}
+		any_owned = {
+			limit = {
+				continent = east_indies
+			}
+			add_core = INO
+		}
 		prestige = 30
 		change_tag = INO
 		1413 = {
@@ -872,6 +878,16 @@ country_event = {
 			}
 			country_event = 651933
 		}
+		add_accepted_culture = javan
+		add_accepted_culture = malay
+		add_accepted_culture = sumatran
+		add_accepted_culture = moluccan
+		add_accepted_culture = dayak
+		add_accepted_culture = moro
+		add_accepted_culture = melanesian
+		add_accepted_culture = asian_minor
+		add_accepted_culture = filipino
+		add_accepted_culture = rusoni
 	}
 }
 
