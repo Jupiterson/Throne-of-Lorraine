@@ -427,6 +427,7 @@ political_decisions = {
 			primary_culture = malay
 			NOT = { has_country_flag = unite_malay_empire }
 			NOT = { exists = MLY }
+			NOT = { tag = INO }
 			is_vassal = no
 		}
 
@@ -616,6 +617,7 @@ political_decisions = {
 			primary_culture = javan
 			civilized = yes
 			NOT = { has_country_flag = majapahit_heir }
+			NOT = { tag = INO }
 		}
 
 		allow = {
