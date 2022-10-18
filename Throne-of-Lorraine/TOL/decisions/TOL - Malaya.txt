@@ -427,6 +427,7 @@ political_decisions = {
 			primary_culture = malay
 			NOT = { has_country_flag = unite_malay_empire }
 			NOT = { exists = MLY }
+			NOT = { tag = INO }
 			is_vassal = no
 		}
 
@@ -616,6 +617,7 @@ political_decisions = {
 			primary_culture = javan
 			civilized = yes
 			NOT = { has_country_flag = majapahit_heir }
+			NOT = { tag = INO }
 		}
 
 		allow = {
@@ -1337,8 +1339,8 @@ political_decisions = {
 				primary_culture = rusoni
 				primary_culture = dayak
 				primary_culture = asian_minor
-				tag = LAN
 				tag = SAI
+				tag = SAK
             }
             exists = INO
 			INO = {
@@ -1376,6 +1378,9 @@ political_decisions = {
 			any_owned = {
 				add_core = INO
 			}
+			all_core = {
+				add_core = INO
+			}
             random_country = {
                 limit = {
                     tag = INO
@@ -1402,18 +1407,6 @@ political_decisions = {
                 }
                 country_event = 60130
             }
-			INO = {
-				add_accepted_culture = javan
-				add_accepted_culture = malay
-				add_accepted_culture = sumatran
-				add_accepted_culture = moluccan
-				add_accepted_culture = dayak
-				add_accepted_culture = moro
-				add_accepted_culture = melanesian
-				add_accepted_culture = asian_minor
-				add_accepted_culture = filipino
-				add_accepted_culture = rusoni
-			}
         }
         ai_will_do = { factor = 1 }
     }
