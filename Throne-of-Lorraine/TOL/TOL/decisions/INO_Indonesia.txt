@@ -1,0 +1,30 @@
+political_decisions = {
+
+	#Pancasila (pronounced pan-sha-si-la)
+	pancasila = {
+		picture = indoctrinal_education_communist
+		potential = {
+			NOT = { has_country_flag = pancasila }
+			tag = INO
+			
+		}
+
+		allow = {
+			ideological_thought = 1
+			romanticism = 1
+		}
+
+		effect = {
+			prestige = 15
+			any_pop = { consciousness = 2 }
+			any_pop = { militancy = 0.5 }
+			add_country_modifier = { name = "pancasila" duration = 3650 }
+			set_country_flag = pancasila
+		}
+
+		ai_will_do = { factor = 1 }
+
+	}
+
+}
+

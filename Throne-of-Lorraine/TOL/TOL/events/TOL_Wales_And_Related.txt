@@ -1,0 +1,650 @@
+#genoa chooses to give scilly or refuse
+country_event = {
+	id = 9111
+	title = "EVTNAME9111"
+	desc = "EVTDESC9111"
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "EVTOPTA9111"
+		ai_chance = { factor = 100 }
+		3480 = {
+			add_core = WHA
+		}
+		any_country = {
+			limit = { has_country_flag = offer_made }
+			country_event = { id = 9112 days = 0 }
+		}	
+	}
+	
+	option = { 
+		3480 = {
+			add_core = WHA
+		}
+		name = "EVTOPTB9111"
+		WHA = { war = { target = GEN 
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 3480 }
+			defender_goal = { casus_belli = status_quo }
+			any_country = {
+			limit = { has_country_flag = offer_made }
+			country_event = 9113
+				}
+			}
+		}
+	}
+}	
+
+#peacefully transfer scilly
+country_event = {
+	id = 9112
+	title = "EVTNAME9112"
+	desc = "EVTDESC9112"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "EVTOPTA9112"
+		prestige = 5
+		badboy = 2
+		3480 = {
+			add_core = WHA
+			remove_core = GEN 
+		}
+		FROM = {
+			3480 = { secede_province = THIS }
+		}
+		WHA = {
+			treasury = -10000
+		}
+		GEN = {
+			treasury = 10000
+		}
+	}
+}
+
+#declare war on genoa
+country_event = {
+	id = 9113
+	title = "EVTNAME9113"
+	desc = "EVTDESC9113"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "EVTOPTA9113"
+		}
+	}
+
+
+#redraw the welsh border as Westminster
+country_event = {
+	id = 9114
+	title = "EVTNAME9114"
+	desc = "EVTDESC9114"
+	major = yes
+	trigger = {
+		war = no
+		tag = UOW
+		is_our_vassal = WHA 
+		truce_with = WHA
+		}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.3 }
+	
+	option = {
+		name = "EVTOPTA9114"
+		286 = {
+			add_core = UOW
+		}
+		FROM = {
+			286 = { secede_province = THIS }
+			}
+		3585 = {
+			add_core = UOW
+		}
+		FROM = {
+			3585 = { secede_province = THIS }
+			}
+		286 = { change_province_name = "Shropshire" }
+		3585 = { change_province_name = "Herefordshire" }
+		}
+	}
+	
+#how should england deal with welsh occupation of cornwall
+country_event = {
+	id = 9116
+	title = "EVTNAME9116"
+	desc = "EVTDESC9116"
+	trigger = {
+		tag = ENL
+		war = no
+		owns = 300
+			WHA = {
+				owns = 3589
+			}
+		NOT = { ENL = { has_country_flag = refused_welsh_deal } }
+		}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.5 }
+	
+	option = { 
+		name = "EVTOPTA9116"
+		add_country_flag = refused_welsh_deal
+		war = { target = WHA 
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 3589 }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	
+	option = { 
+		name = "EVTOPTB9116"
+		prestige = 10
+		create_alliance = WHA
+		treasury = 10000
+		build_factory_in_capital_state = [steamer_shipyard]
+		relation = { 
+					who = WHA
+						value = 300
+			}
+		298 = { remove_core = ENL }
+		299 = { remove_core = ENL }
+		3588 = { remove_core = ENL }
+		3589 = { remove_core = ENL }
+		3268 = { remove_core = ENL }
+		add_country_modifier = {
+			name = Anglo_Welsh_Trade_Agreement 
+			duration = 1825
+		}
+	}
+}
+
+#renew the trade agreement or not?
+country_event = {
+	id = 9117
+	title = "EVTNAME9117"
+	desc = "EVTDESC9117"
+	trigger = {
+		tag = ENL
+		year = 1841
+		war = no
+		owns = 297
+		ENL = { 
+			NOT = { 
+				{ has_country_modifier = Anglo_Welsh_Trade_Agreement } 
+				{ has_country_flag = refused_welsh_deal }
+		}
+		WHA = {
+			owns = 298
+		}
+	}
+	
+	fire_only_once = no
+	
+	mean_time_to_happen = { days = 0.1 }
+		
+	option = { 
+		name = "EVTOPTA9117"
+		add_country_flag = refused_welsh_deal
+		badboy = 5
+		298 = {
+			add_core = ENL
+		}
+		3588 = {
+			add_core = ENL
+		}
+		3268 = {
+			add_core = ENL
+		}
+		299 = {
+			add_core = ENL
+		}
+		3589 = {
+			add_core = ENL
+		}
+		war = { target = WHA 
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 3589 }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+	
+	option = { 
+		name = "EVTOPTB9117"
+		prestige = 10
+		create_alliance = WHA
+		treasury = 20000
+		add_country_modifier = {
+			name = Anglo_Welsh_Trade_Agreement 
+			duration = 1825
+		}
+	}
+}
+
+#padarn railway
+province_event = {
+	id = 9118
+	title = "EVTNAME9118"
+	desc = "EVTDESC9118"
+	trigger = {
+		province_ID = 276
+		owned_by = WHA
+		year = 1846
+		}
+		
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.4 }
+	
+	option = {
+		name = "EVTOPTA9118"
+		prestige = 1
+		276 = {
+			infrastructure = 1
+			life_rating = 1
+			add_province_modifier = {
+			name = Padarn_Railway
+			duration = 36500
+			}
+		}
+	}
+}
+
+#talyllyn and ffestiniog railways
+province_event = {
+	id = 9119
+	title = "EVTNAME9119"
+	desc = "EVTDESC9119"
+	trigger = {
+		province_ID = 276
+		owned_by = WHA
+		year = 1866
+		}
+		
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.4 }
+	
+	option = {
+		name = "EVTOPTA9119"
+		prestige = 1
+		276 = {
+		infrastructure = 1
+		life_rating = 1
+			add_province_modifier = {
+			name = Talyllyn_And_Ffestiniog_Railways
+			duration = 36500
+			}
+		}
+	}
+}
+	
+#accepted deal, but at war now anyway, remove modifier
+country_event = {
+	id = 59101
+	title = "EVTNAME959501"
+	desc = "EVTDESC959501"
+	trigger = {
+		tag = ENL
+		has_country_modifier = Anglo_Welsh_Trade_Agreement
+		ENL = {
+			war_with = WHA
+			}
+		}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.2 }
+	
+	option = {
+		name = "EVTOPTA959501"
+		add_country_flag = refused_welsh_deal
+		remove_country_modifier = Anglo_Welsh_Trade_Agreement
+		prestige = -5
+		}
+		
+	option = { 
+		name = "EVTOPTB9117"
+		prestige = 10
+		create_alliance = WHA
+		treasury = 20000
+		add_country_modifier = {
+			name = Anglo_Welsh_Trade_Agreement 
+			duration = 1825
+		}
+	}
+}
+
+#bridge to ynys mon
+province_event = {
+	id = 592102
+	title = "EVTNAME959503"
+	desc = "EVTDESC959503"
+	trigger = {
+		province_ID = 3586
+		owned_by = WHA
+		year = 1850
+		}
+		
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.3 }
+	
+	option = {
+		name = "EVTOPTA959503"
+		prestige = 2
+		3586 = {
+			infrastructure = 1
+			life_rating = 2
+		}
+	}
+}
+
+#Trevithick passes away
+country_event = { 
+	id = 593103
+	title = "EVTNAME959504"
+	desc = "EVTDESC959504"
+	trigger = {
+		tag = WHA
+		year = 1840
+		owns = 298
+		owns = 299
+		owns = 3268
+		owns = 3588
+		owns = 3589
+		NOT = { has_country_flag = RIP_Trevithick }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.3 }
+	
+	option = {
+		name = "EVTOPTA959504"
+		prestige = 1
+		set_global_flag = RIP_Trevithick
+	}
+}
+
+#Choose which island to buy
+country_event = {
+	id = 59001
+	title = "EVTNAME59001"
+	desc = "EVTDESC59001"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA59001"
+		UBD = {
+			country_event = 59002
+		}
+	}
+	
+	option = { 
+		name = "EVTOPTB59001"
+		BSQ = {
+			country_event = 59003
+		}
+	}
+}
+
+#you chose teutonic order
+country_event = {
+	id = 59002
+	title = "EVTNAME59002"
+	desc = "EVTDESC59002"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA59002"
+		treasury = 30000
+		WHA = {
+			country_event = 59005
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB59002"
+		WHA = {
+			country_event = 59004
+		}
+	}
+}
+
+#teutons want more money
+country_event = {
+	id = 59004
+	title = "EVTNAME59004"
+	desc = "EVTDESC59004"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA59004"
+		2409 = {
+			add_core = WHA
+			remove_core = UBD 
+		}
+		UBD = {
+			treasury = 50000
+		}
+		WHA = {
+			FROM = {
+				2409 = { secede_province = THIS }
+			}
+			treasury = -50000
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB59004"
+		prestige = -10
+	}
+	
+	option = {
+		name "EVTOPTC59004"
+		war = { 
+			target = UBD 
+			attacker_goal = { casus_belli = place_in_the_sun state_province_id = 2409 }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+}
+
+#teutons agree 
+country_event = {
+	id = 59005
+	title = "EVTNAME59005"
+	desc = "EVTDESC59005"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA59005"
+		treasury = -30000
+		prestige = 5
+		2409 = {
+			add_core = WHA
+			remove_core = UBD 
+			}
+		WHA = {
+			FROM = {
+				2409 = { secede_province = THIS }
+			}
+			
+		}
+	}
+}
+
+#you chose the basques
+country_event = {
+	id = 59003
+	title = "EVTNAME59003"
+	desc = "EVTDESC59003"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA59003"
+		treasury = 30000
+		WHA = {
+			country_event = 59006
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB59003"
+		WHA = {
+			country_event = 59007
+		}
+	}
+}
+
+#basques want more money
+country_event = {
+	id = 59007
+	title = "EVTNAME59007"
+	desc = "EVTDESC59007"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA59007"
+		203 = {
+			add_core = WHA
+			remove_core = BSQ 
+		}
+		BSQ = {
+			treasury = 50000
+		}
+		WHA = {
+			FROM = {
+				203 = { secede_province = THIS }
+			}
+			treasury = -50000
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB59007"
+		prestige = -10
+	}
+	
+	option = {
+		name "EVTOPTC59007"
+		war = { 
+			target = BSQ 
+			attacker_goal = { casus_belli = place_in_the_sun state_province_id = 203 }
+			defender_goal = { casus_belli = status_quo }
+		}
+	}
+}
+
+#basques agree 
+country_event = {
+	id = 59006
+	title = "EVTNAME59006"
+	desc = "EVTDESC59006"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA59006"
+		treasury = -30000
+		prestige = 5
+		203 = {
+			add_core = WHA
+			remove_core = BSQ 
+			}
+		WHA = {
+			FROM = {
+				203 = { secede_province = THIS }
+			}
+		}
+	}
+}
+
+#coaling port tolls
+country_event = {
+	id = 59008
+	title = "EVTNAME59008"
+	desc = "EVTDESC59008"
+	trigger = {
+		tag = WHA
+		has_country_flag = coaling_port
+		NOT = { has_country_modifier = coaling_port_tolls }
+		OR = {
+			owns = 2409
+			owns = 203
+		}
+	}
+	
+	fire_only_once = no
+	
+	option = {
+		name = "EVTOPTA59008"
+		add_tax_relative_income = 0.15
+		add_country_modifier = { name = coaling_port_tolls duration = 365 }
+		prestige = 1
+	}
+}
+
+#south wales mineral railway
+province_event = {
+	id = 59009
+	title = "EVTNAME59009"
+	desc = "EVTDESC59009"
+	trigger = {
+		tag = WHA 
+		has_country_flag = coaling_port
+		owns = 273
+		year = 1863
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.2 }
+	
+	option = {
+		name = "EVTOPTA59009"
+		prestige = 1
+		273 = {
+			add_province_modifier =  { name = welsh_mineral_railway duration = 36500 }
+			infrastructure = 1
+			life_rating = 2
+		}
+	}
+}	
+
+#isle of mann railway
+province_event = {
+	id = 59011
+	title = "EVTNAME59011"
+	desc = "EVTDESC59011"
+	
+	trigger = {
+		tag = IOM
+		owns = 304
+		year = 1873
+		steel_railroad = 1
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0.5 }
+	
+	option = {
+		name = "EVTOPTA59011"
+		304 = {
+			infrastructure = 1
+			life_rating = 2
+			add_province_modifier = { name = IOM_Railway duration = 36500 }
+		}
+	}
+}

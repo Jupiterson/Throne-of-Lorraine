@@ -1,0 +1,3708 @@
+#Tiniri
+ country_event = {
+	id = 100117 
+	title = "Rise of the Tiniri Sultanate"
+	desc = "EVENT100117"
+	fire_only_once = yes
+	major = yes
+
+     trigger = {
+		NOT = { has_global_flag = tiniri_disabled exists = TIN exists = MGH exists = SQI }
+		year = 1866
+		OR = {
+			tag = CLN
+			AND = {
+				ai = no 
+				OR = {
+					tag = MAS
+					tag = DAM
+					tag = MOR
+					tag = FEZ
+					tag = MRR
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 5
+	}
+
+
+	option = {
+		name = "EVT99800OPTA"
+		prestige = -20
+		#Occupied
+		        1699 = { secede_province = TIN add_core = TIN }
+				1698 = { secede_province = TIN add_core = TIN }
+				1722 = { secede_province = TIN add_core = TIN }
+				#1697 = { secede_province = TIN add_core = TIN }
+				1720 = { secede_province = TIN add_core = TIN }
+				1716 = { secede_province = TIN add_core = TIN }		
+                2609 = { secede_province = TIN add_core = TIN }	
+                1812 = { secede_province = TIN add_core = TIN }					
+      #Un-occupied
+		        1773 = { secede_province = TIN add_core = TIN }
+				1774 = { secede_province = TIN add_core = TIN }
+				1781 = { secede_province = TIN add_core = TIN }
+				1775 = { secede_province = TIN add_core = TIN }
+				1779 = { secede_province = TIN add_core = TIN }
+				1782 = { secede_province = TIN add_core = TIN }
+				3430 = { secede_province = TIN add_core = TIN }		
+                3431 = { secede_province = TIN add_core = TIN }		
+		        1801 = { secede_province = TIN add_core = TIN }
+				1711 = { secede_province = TIN add_core = TIN }
+				1718 = { secede_province = TIN add_core = TIN }
+				1719 = { secede_province = TIN add_core = TIN }
+				1807 = { secede_province = TIN add_core = TIN }	
+      #Morocco
+        1779 = { add_core = MOR }
+		1781 = { add_core = MOR }
+		1782 = { add_core = MOR }
+		1801 = { add_core = MOR }
+		3430 = { add_core = MOR }
+		3431 = { add_core = MOR }	  
+		1775 = { add_core = MOR }	
+		1696 = { add_core = MOR }
+			1773 = { add_core = MOR }
+			1774 = { add_core = MOR }
+			1716 = { add_core = MOR }
+			1722 = { add_core = MOR }
+			2609 = { add_core = MOR }
+			1801 = { add_core = MOR }
+			1802 = { add_core = MOR }
+			1803 = { add_core = MOR }
+			1804 = { add_core = MOR }
+			1805 = { add_core = MOR }
+			3430 = { add_core = MOR }
+			3431 = { add_core = MOR }
+			1782 = { add_core = MOR }
+			1781 = { add_core = MOR }
+			1775 = { add_core = MOR }
+			1776 = { add_core = MOR }
+			1777 = { add_core = MOR }
+			1778 = { add_core = MOR }
+			1779 = { add_core = MOR }
+			TIN = { all_core = { secede_province = TIN } }
+			TIN = { country_event = 100118 }
+		    set_global_flag = tiniri
+	}
+	
+	option = {
+		name = "Join them" 
+		prestige = -20
+		#Occupied
+		        1699 = { secede_province = TIN add_core = TIN }
+				1698 = { secede_province = TIN add_core = TIN }
+				1722 = { secede_province = TIN add_core = TIN }
+				#1697 = { secede_province = TIN add_core = TIN }
+				1720 = { secede_province = TIN add_core = TIN }
+				1716 = { secede_province = TIN add_core = TIN }		
+                2609 = { secede_province = TIN add_core = TIN }		
+				1812 = { secede_province = TIN add_core = TIN }	
+      #Un-occupied
+		        1773 = { secede_province = TIN add_core = TIN }
+				1774 = { secede_province = TIN add_core = TIN }
+				1775 = { secede_province = TIN add_core = TIN }
+				1779 = { secede_province = TIN add_core = TIN }
+				1782 = { secede_province = TIN add_core = TIN }
+				3430 = { secede_province = TIN add_core = TIN }		
+                3431 = { secede_province = TIN add_core = TIN }		
+		        1801 = { secede_province = TIN add_core = TIN }
+				1711 = { secede_province = TIN add_core = TIN }
+				1718 = { secede_province = TIN add_core = TIN }
+				1719 = { secede_province = TIN add_core = TIN }
+				1807 = { secede_province = TIN add_core = TIN }
+      #Morocco
+        1779 = { add_core = MOR }
+		1781 = { add_core = MOR }
+		1782 = { add_core = MOR }
+		1801 = { add_core = MOR }
+		3430 = { add_core = MOR }
+		3431 = { add_core = MOR }	
+        1775 = { add_core = MOR }	
+            1696 = { add_core = MOR }
+			1773 = { add_core = MOR }
+			1774 = { add_core = MOR }
+			1716 = { add_core = MOR }
+			1722 = { add_core = MOR }
+			2609 = { add_core = MOR }
+			1801 = { add_core = MOR }
+			1802 = { add_core = MOR }
+			1803 = { add_core = MOR }
+			1804 = { add_core = MOR }
+			1805 = { add_core = MOR }
+			3430 = { add_core = MOR }
+			3431 = { add_core = MOR }
+			1782 = { add_core = MOR }
+			1781 = { add_core = MOR }
+			1775 = { add_core = MOR }
+			1776 = { add_core = MOR }
+			1777 = { add_core = MOR }
+			1778 = { add_core = MOR }
+			1779 = { add_core = MOR }		
+			TIN = { all_core = { secede_province = TIN } }
+			TIN = { country_event = 100118 }
+		    set_global_flag = tiniri
+			change_tag_no_core_switch = TIN
+	}
+}
+
+country_event = {
+	id = 100118
+	title = "From the Depths"
+	desc = "EVENT100118"
+	picture = "arab_revolt"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Lets take our Land"
+		capital = 1699
+		TIN = { all_core = { secede_province = THIS } }  	
+		random_list = {
+			20 = { 1699 = { any_pop = { reduce_pop = 3.5 } } }
+			20 = { 1699 = { any_pop = { reduce_pop = 5 } } }
+			20 = { 1699 = { any_pop = { reduce_pop = 7.5 } } }
+		}
+		any_pop = { 
+		limit = { 
+		type = soldiers 
+			} 
+			reduce_pop = 10.0
+		}
+		1781 = { secede_province = TIN add_core = TIN }	
+		MGH = { all_core = { add_core = THIS } } 
+		TIN = { all_core = { limit = { empty = yes } secede_province = THIS } }  
+        any_owned = {
+			limit = {
+			is_core = MAS
+			}
+			add_core = MOR
+			
+		}			
+		add_country_flag = can_ignore_cultural_core
+		add_country_flag = exteme_assimilation
+		add_country_flag = theocratic_inetgration
+        ruling_party_ideology = conservative
+		add_country_modifier = { name = extremist_population duration = 4800 }
+		
+	}
+}
+
+country_event = {
+	id = 99890 #Segu War
+	title = "EVTNAME99890"
+	desc = "EVTDESC99890"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = MAS
+		year = 1844
+		NOT = { year = 1855 }
+		owns = 609
+		NOT = { has_country_flag = segu_war }
+	}
+
+	mean_time_to_happen = {
+		months = 5
+	}
+
+	option = {
+		name = "EVT99800OPTA"
+		prestige = -10
+		1800 = { secede_province = SEG }
+		war = {
+			target = SEG
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = status_quo }
+		}
+		set_country_flag = segu_war
+	}
+}	
+	
+#Hausa rebellion	
+ country_event = {
+	id = 99800 #Hausa REbellion
+	title = "EVTNAME99800"
+	desc = "EVTDESC99800"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = MAS
+		year = 1843
+		NOT = { year = 1855 }
+		owns = 1941
+		NOT = { has_country_flag = hasua }
+	}
+
+	mean_time_to_happen = {
+		months = 5
+	}
+
+	option = {
+		name = "EVT99800OPTA"
+		prestige = -20
+		any_owned = {
+			limit = { is_core = ARO }
+			secede_province = ARO
+		}
+		
+		ARO = {
+			any_pop = { militancy = -6 }
+		}
+		war = {
+			target = ARO
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = status_quo }
+		}
+		set_country_flag = hasua
+	}
+}
+
+#Morrocan civil war
+country_event = {
+	id = 2010000 #Goods for armies
+	title = "Moroc0.t"
+	desc = "Moroc0.d"
+	fire_only_once = yes
+	picture = "supportwar"
+
+	trigger = {
+		tag = FEZ
+		NOT = { year = 1840 }
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "Now, to the south!"
+		small_arms = 400
+		regular_clothes = 400
+		canned_food = 500
+		artillery = 100
+		ammunition = 200
+	}
+}
+
+#Building Nouadhibou
+country_event = {
+	id = 202000 #colonize coastal Mauritania
+	title = "Moroc1.t"
+	desc = "Moroc1.d"
+	fire_only_once = yes
+	picture = "al_wajbah"
+
+	trigger = {
+		tag = MOR
+		civilized = yes
+		owns = 1774
+		1775 = { empty = yes }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	option = {
+		name = "The Berbers must be subjugated..."
+		prestige = 10
+		1775 = {
+			change_province_name = "Nouadhibou"
+			secede_province = THIS
+			fort = 1
+			naval_base = 1
+		}
+	}
+}
+#Conquest of inner Mauritania
+country_event = {
+	id = 203000 #colonize inner Mauritania
+	title = "Moroc2.t"
+	desc = "Moroc2.d"
+	fire_only_once = yes
+	picture = "arab_revolt"
+
+	trigger = {
+		tag = MOR
+		civilized = yes
+		owns = 1775
+		owns = 1776
+		1779 = { empty = yes }
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+
+	option = {
+		name = "The Sahel is our oyster!"
+		prestige = 10
+		1779 = { add_core = THIS }
+		1781 = { add_core = THIS }
+		1782 = { add_core = THIS }
+		1801 = { add_core = THIS }
+		3430 = { add_core = THIS }
+		3431 = { add_core = THIS }
+		THIS = { all_core = { limit = { empty = yes } secede_province = THIS } }  	
+	}
+}
+
+#Loss of connection to Algeria
+country_event = {
+	id = 204000 #Algerian part of the nation is released
+	title = "lossAlg.t"
+	desc = "lossAlg.d"
+	fire_only_once = yes
+	picture = "arab_revolt"
+
+	trigger = {
+		tag = TRI
+		civilized = no
+		NOT = {
+			AND = {
+				owns = 1729
+				owns = 1730
+			}
+		}
+		NOT = { owns = 1711 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "We are forever weakened..."
+		prestige = -10
+		random_country = {
+			limit = {
+				tag = RGA
+				owns = 1703
+			}
+			THIS = { 
+				any_owned = {
+					limit = {
+						is_core = RGA
+					}
+					secede_province = RGA
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				NOT = { tag = RGA }
+				owns = 1703
+			}
+			THIS = {
+				any_owned = {
+					limit = {
+						is_core = ALD
+					}
+					secede_province = ALD
+				}
+			}
+		}
+	}
+}
+
+
+
+
+#Suez Canal is Finished
+country_event = {
+	id = 100169
+	title = "EVTNAME36971"
+	desc = "EVTDESC36971"
+	picture = "suez_canal_built"
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVT36971OPTA"
+		set_country_flag = suez_builder
+		enable_canal = 2
+	}
+}
+
+country_event = {
+	id = 100185
+	title = "EVTNAME99890"
+	desc = "EVTDESC99890"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = TIN
+		has_recently_lost_war = yes
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = "EVT99800OPTA"
+		any_owned = {
+			limit = {
+			OR = {
+				is_core = FOO
+				is_core = MOR
+				}
+			}
+			secede_province = MOR
+			add_core = MOR
+			
+		}
+		any_owned = {
+			limit = {
+			OR = {
+				is_core = KNG
+				is_core = ASH
+				is_core = MAS
+				}
+			}
+			secede_province = TOU
+			add_core = TOU
+		}	
+        1718 = { add_core = ALD }
+		1711 = { add_core = ALD }		
+		any_owned = {
+			limit = {
+			OR = {
+				is_core = ALD
+				is_core = TRI
+				is_core = TUN
+				is_core = RGA
+				is_core = DAM
+				is_core = MGH
+				}
+			}
+			secede_province = ALD
+			add_core = ALD
+			
+		}
+		
+		any_owned = {
+			limit = {
+			is_core = IFE
+			}
+			secede_province = IFE
+			
+		}
+		
+		any_owned = {
+			limit = {
+			continent = europe
+			}
+			secede_province = ADU
+			add_core = ADU
+			
+		}
+		
+		any_country = {
+			limit = {
+				any_core = { owned_by = THIS }
+				NOT = { OR = { tag = MGH } }
+			}
+			country_event = 100186
+		}
+		
+	change_tag_no_core_switch = MOR
+	TIN = {			
+		any_owned = {
+			limit = {
+			owned_by = TIN
+			}
+			secede_province = XXX
+			
+		}		
+	}
+	}
+	
+}	
+
+
+#release event
+country_event = {
+	id = 100186
+	title = "EVTNAME36971"
+	desc = "EVTDESC36971"
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Let's be free"
+		FROM = { release = THIS } 
+	}
+}
+
+##############
+#SOUTH AFRICA#
+##############
+
+country_event = {
+
+	id = 50000
+
+	trigger = {
+            year = 1838
+			has_country_flag = xhosa_country		
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	title = "xhosaprophet1_title"
+	desc = "xhosaprophet1_desc"
+	picture = "xhosa_prophet"
+
+	option = {
+		name = "xhosaprophet1_option1"
+		any_pop = {consciousness = 5 
+                	militancy = -5}
+		set_global_flag = xhosaprophet
+		set_country_flag = xhosaprophet
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "xhosaprophet1_option2"
+		any_pop = {consciousness = -5 
+		           militancy = 5}
+		 ai_chance = {
+			factor = 50
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50001
+
+	trigger = {
+            year = 1839
+			tag = ZUL
+			has_global_flag = xhosaprophet
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	title = "xhosaprophet2_title"
+	desc = "xhosaprophet2_desc"
+	picture = "xhosa_prophet"
+
+	option = {
+		name = "xhosaprophet2_option1"
+		any_pop = {consciousness = 2}
+	}
+	}
+	
+		country_event = {
+
+	id = 50002
+
+	trigger = {
+            year = 1845
+			has_country_flag = xhosa_country	
+			has_global_flag = xhosaprophet
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 6
+	}
+
+	title = "xhosaprophet3_title"
+	desc = "xhosaprophet3_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "xhosaprophet3_option1"
+		years_of_research = 5
+	}
+	}
+	
+	country_event = {
+
+	id = 50003
+
+	trigger = {
+            year = 1849
+			has_country_flag = xhosa_country	
+			has_global_flag = xhosaprophet
+			exists = ZUL
+	        exists = XHO
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 6
+	}
+
+	title = "xhosaprophet4_title"
+	desc = "xhosaprophet4_desc"
+	picture = "xhosa_war"
+
+	option = {
+		name = "xhosaprophet4_option1"
+		ZUL = { country_event = 50004 }
+		cattle = 10
+		                  
+	}
+		option = {
+		name = "xhosaprophet4_option2"
+		ZUL = { country_event = 50004 }
+		cattle = 10
+	}
+	}
+	
+		country_event = {
+
+	id = 50004
+
+	fire_only_once = yes
+
+	title = "xhosaprophet5_title"
+	desc = "xhosaprophet5_desc"
+	picture = "xhosa_war"
+	is_triggered_only = yes
+
+	option = {
+		name = "xhosaprophet5_option1"
+		cattle = -10 
+		war = { target = XHO
+                attacker_goal = { casus_belli = conquest_any }
+  				defender_goal = { casus_belli = status_quo }
+	}
+	ai_chance = {
+			factor = 80
+		}
+	}
+		option = {
+		name = "xhosaprophet5_option2"
+        any_pop = {militancy = 5}
+		cattle = -10
+		ai_chance = {
+			factor = 20
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50005
+
+	trigger = {
+            year = 1853
+			has_country_flag = xhosa_country	
+			has_global_flag = xhosaprophet
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 4
+	}
+
+	title = "xhosaprophet6_title"
+	desc = "xhosaprophet6_desc"
+	picture = "xhosa_marriage"
+
+	option = {
+		name = "xhosaprophet6_option1"
+		any_pop = { consciousness = -3 }                 
+        prestige = 5		
+	}
+	}
+	
+	country_event = {
+
+	id = 50006
+
+	trigger = {
+            year = 1858
+			has_country_flag = xhosa_country	
+			has_global_flag = xhosaprophet
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 18
+	}
+
+	title = "xhosaprophet7_title"
+	desc = "xhosaprophet7_desc"
+	picture = "xhosa_chief"
+
+	option = {
+		name = "xhosaprophet7_option1"   
+        government = theocracy		
+	}
+	}
+	
+		country_event = {
+
+	id = 50007
+
+	trigger = {
+            year = 1870
+			has_country_flag = xhosa_country	
+			has_global_flag = xhosaprophet
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 18
+	}
+
+	title = "xhosaprophet8_title"
+	desc = "xhosaprophet8_desc"
+	picture = "xhosa_woman"
+
+	option = {
+		name = "xhosaprophet8_option1"   
+        any_pop = { consciousness = 6 }
+	}
+	}
+	
+country_event = {
+
+	id = 50008
+    is_triggered_only = yes
+	fire_only_once = yes
+
+	title = "xhosaprophet9_title"
+	desc = "xhosaprophet9_desc"
+	picture = "xhosa_woman"
+
+	option = {
+		name = "xhosaprophet9_option1"   
+        money = 25000
+		FROM = {
+			money = -25000
+		    2049 = { secede_province = FROM }
+		} 
+	}
+	
+	option = {
+		name = "xhosaprophet9_option2"   
+        relation = { who = FROM value = -100 }
+	}
+}
+
+	country_event = {
+
+	id = 50009
+
+	trigger = {
+            year = 1858
+			tag = XHO
+			NOT = { has_global_flag = xhosaprophet }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 18
+	}
+
+	title = "xhosaprophet10_title"
+	desc = "xhosaprophet10_desc"
+	picture = "xhosa_chief"
+
+	option = {
+		name = "xhosaprophet10_option1"   
+        country_event = {
+	            id = 50011
+	            days = 6
+}
+	}
+	}
+	
+	country_event = {
+
+	id = 50010
+
+	trigger = {
+            year = 1858
+			tag = NGU
+			has_country_flag = xhosa_country
+			NOT = { has_global_flag = xhosaprophet }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 18
+	}
+
+	title = "xhosaprophet11_title"
+	desc = "xhosaprophet11_desc"
+	picture = "xhosa_chief"
+
+	option = {
+		name = "xhosaprophet11_option1"   
+        any_pop = { consciousness = 3 }  
+	}
+	}
+	
+	country_event = {
+
+	id = 50011
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "xhosacollapse_title"
+	desc = "xhosacollapse_desc"
+	picture = "xhosa_war"
+	
+	immediate = {
+		       2098 = { add_core = RHA }
+			   2097 = { add_core = RHA }
+			   2099 = { add_core = RHA }
+               2096 = { add_core = NDL }
+			   3592 = { add_core = NDL }
+			   3595 = { add_core = NDL }
+			   3593 = { add_core = NDL }
+			   3594 = { add_core = NDL }
+               2100 = { add_core = GCA }
+               2111 = { add_core = GCA }
+	}
+
+	option = {
+		name = "xhosacollsapse_option1"
+             change_tag = RHA		
+               any_owned = {
+			     limit = {
+				is_core = NDL
+			}
+			secede_province = NDL
+			remove_core = THIS
+		}
+		         any_owned = {
+			limit = {
+				is_core = GCA 
+			}
+			secede_province = GCA
+			remove_core = THIS
+		}
+		2111 = { remove_core = THIS }		  		   
+	}
+	option = {
+		name = "xhosacollsapse_option2"    
+ 	          change_tag = GCA		
+               any_owned = {
+			     limit = {
+				is_core = NDL
+			}
+			secede_province = NDL
+			remove_core = THIS
+		}
+		         any_owned = {
+			limit = {
+				is_core = RHA
+			}
+			secede_province = RHA
+			remove_core = THIS
+		}
+		RHA = { capital = 2098 }
+	}
+	option = {
+		name = "xhosacollsapse_option3"     
+           	   change_tag = NDL		
+               any_owned = {
+			     limit = {
+				is_core = RHA
+			}
+			secede_province = RHA
+			remove_core = THIS
+		}
+		RHA = { capital = 2098 }
+		         any_owned = {
+			limit = {
+				is_core = GCA
+			}
+			secede_province = GCA
+			remove_core = THIS
+		}
+		2111 = { remove_core = THIS }
+	}
+	}
+	
+	country_event = {
+
+	id = 50012
+
+	trigger = {
+            year = 1860
+			OR  = { tag = SCO
+			        tag = ENG
+   					tag = UPB
+					tag = CLT}
+			owns = 2087
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 68
+	}
+
+	title = "datiach_tension_title"
+	desc = "datiach_tension_desc"
+	picture = "sepoy"
+
+	option = {
+		name = "datiach_tension_option1"   
+		any_pop = {
+			limit = { has_pop_culture = griqua 
+			}
+		militancy = 8 
+	    consciousness = 5 
+	    }
+		country_event = {
+	            id = 50013
+	            days = 246
+        }
+	}
+}
+	
+	country_event = {
+
+	id = 50013
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "datiach_demands_title"
+	desc = "datiach_demands_desc"
+	picture = "storming_palace_communists"
+
+	option = {
+		name = "datiach_demands_option1"
+           random_list = {
+			80 = { country_event = { id = 50014 days = 1 }		  		    }
+			20 = { any_owned = {
+			    limit = {
+				is_core = DTI
+			}}
+			secede_province = DTI 
+			war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}
+		}    		   
+	}
+	ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "datiach_demands_option2"    
+               any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		}
+		war = { target = DTI
+                attacker_goal = { casus_belli = conquest_any}
+  				defender_goal = { casus_belli = become_independent }		
+	          }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "datiach_demands_option3"   
+               any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		}
+		war = { target = DTI
+                attacker_goal = { casus_belli = conquest_any}
+  				defender_goal = { casus_belli = become_independent }		
+	          }
+        change_tag_no_core_switch = DTI
+	}
+}
+
+
+	country_event = {
+
+	id = 50014
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "datiach_negotiations_title"
+	desc = "datiach_negotiations_desc"
+	picture = "treaty"
+
+	option = {
+		name = "datiach_negotiations_option1"
+           random_list = {
+			40 = { country_event = { id = 50016 days = 1 }}
+			60 = { any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		} war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}}
+		}
+            ai_chance = {
+			factor = 50
+		}		
+	}
+	option = {
+		name = "datiach_negotiations_option2"    
+               random_list = {
+            5 = { country_event = { id = 50015 days = 1 }}
+			95 = { any_owned = {
+			     limit = {
+				is_core = DTI
+			}
+			secede_province = DTI
+		} war = { target = DTI  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = become_independent }}}
+		    }   
+        ai_chance = {
+			factor = 50
+		}			
+		}
+		
+	}
+
+    country_event = {
+
+	id = 50015
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	title = "datiach_defeat_title"
+	desc = "datiach_defeat_desc"
+	picture = "treaty"
+
+	option = {
+		name = "datiach_defeat_option1"   
+		any_pop = {
+			limit = { has_pop_culture = griqua 
+			}
+	    consciousness = 8 
+	         }
+	    }
+    }
+	
+	country_event = {
+
+	id = 50016
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	title = "datiach_compromise_title"
+	desc = "datiach_compromise_desc"
+	picture = "treaty"
+
+	option = {
+		name = "datiach_compromise_option1"   
+		any_pop = {
+			limit = { has_pop_culture = griqua 
+			}
+	    consciousness = -3
+	         }
+			 SAF = { add_accepted_culture = griqua }
+			 SAF = { all_core = { remove_core = DTI } }
+	    }
+    }
+	
+	country_event = {
+    id = 50017
+	title = "neamhnaid_title"
+	desc = "neamhnaid_desc"
+    news = yes
+    news_title = "neamhnaid"
+    news_desc_long = "neamhnaid_NEWS_LONG"
+    news_desc_medium = "neamhnaid_NEWS_MEDIUM"
+    news_desc_short = "neamhnaid_NEWS_SHORT"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "datiann_surrender_option1"
+        prestige = -50
+        DTI = { all_core = { remove_core = SAF } }
+        random_country = {
+            limit = {
+                war_with = THIS
+                controls = 2087
+            }
+            end_war = THIS
+            country_event = 50018
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    primary_culture = griqua
+                    alliance_with = FROM
+                }
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+		ai_chance = {
+			factor = 50
+		}
+    }
+
+    option = {
+        name = "datiann_surrender_option2"
+        prestige = -25
+		DTI = { all_core = { remove_core = SAF } }
+        casus_belli = {
+                target = DTI
+                type = conquest_any
+                months = 60
+            }
+        random_country = {
+            limit = {
+                war_with = THIS
+                controls = 2087
+            }
+            end_war = THIS
+            country_event = 50019
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    primary_culture = griqua
+                    alliance_with = FROM
+                }
+                war_with = THIS
+            }
+            end_war = THIS
+
+        }
+		ai_chance = {
+			factor = 50
+		}
+    }
+}
+
+	country_event = { 
+    id = 50018
+	title = "datiann_recc_title"
+	desc = "datiann_recc_desc"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "datiann_recc_option1"
+        prestige = 25
+        FROM = {
+            any_owned = {
+                limit = { is_core = DTI }
+                secede_province = THIS
+            }
+            relation = { who = THIS value = 200 }
+            diplomatic_influence = { who = THIS value = 50 }
+        }
+        any_pop = {
+            limit = { has_pop_culture = scottish }
+            consciousness = 2
+        }
+        any_country = {
+            limit = {
+                alliance_with = FROM
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+}
+
+country_event = {
+    id = 50019
+    picture = "treaty"
+	title = "datiann_anger_title"
+	desc = "datiann_anger_desc"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "datiann_anger_option1"
+        prestige = 25
+        FROM = {
+            any_owned = {
+                limit = { is_core = DTI }
+                secede_province = THIS
+            }
+            casus_belli = {
+                target = THIS
+                type = cut_down_to_size
+                months = 240
+            }
+            casus_belli = {
+                target = DTI
+                type = cut_down_to_size
+                months = 240
+            }
+        }
+        any_pop = {
+            limit = { has_pop_culture = scottish }
+            militancy = 8
+            consciousness = 4
+        }
+        any_country = {
+            limit = {
+                alliance_with = FROM
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+}
+
+	country_event = { 
+    id = 50020
+	title = "suez_rubha_merchants_title"
+	desc = "suez_rubha_merchants_desc"
+    picture = "Suez3"
+
+    trigger = {
+            has_country_modifier = german_cape_merchants
+			has_global_flag = suez_canal_built
+			ai = yes
+	}
+
+    option = {
+        name = "suez_rubha_merchants_option1"
+        remove_country_modifier = german_cape_merchants 
+		set_global_flag = cape_merchants_removed
+    }
+}
+
+    country_event = { 
+    id = 50021
+	title = "rubha_merchants_transfer_title"
+	desc = "rubha_merchants_transfer_desc"
+    picture = "WilhelmIV"
+
+    trigger = {
+            owns = 2087
+			NOT = { has_global_flag = cape_merchants_removed }
+			NOT = { has_country_modifier = german_cape_merchants }
+	}
+
+    option = {
+        name = "rubha_merchants_transfer_option1"
+        any_country = {
+            limit = {
+                has_country_modifier = german_cape_merchants
+            }
+            remove_country_modifier = german_cape_merchants
+        }
+		add_country_modifier = {
+				name = german_cape_merchants
+				duration = 36500 }
+    }
+}
+
+country_event = { 
+    id = 50022
+	title = "rubha_merchant_solving_title"
+	desc = "rubha_merchant_solving_desc"
+    picture = "rubhach_merchants"
+
+    is_triggered_only = yes
+	
+    option = {
+        name = "rubha_merchants_solving_option1"
+        treasury = -30000
+		SAF = { add_accepted_culture = low_german }
+		remove_country_modifier = german_cape_merchants
+		any_pop = {
+            limit = { has_pop_culture = low_german }
+            consciousness = -2
+        }
+		ai_chance = {
+			factor = 30
+		}
+    }
+	
+	option = {
+        name = "rubha_merchants_solving_option2"
+        treasury = 10000
+		remove_country_modifier = german_cape_merchants
+		any_pop = {
+            limit = { has_pop_culture = low_german }
+            consciousness = 3
+        }
+		ai_chance = {
+			factor = 60
+		}
+    }
+	
+	option = {
+        name = "rubha_merchants_solving_option3"
+        treasury = 25000
+		remove_country_modifier = german_cape_merchants
+		ENG_2087 = { 
+		any_pop = {
+            limit = { has_pop_culture = low_german }
+	        reduce_pop = 0.40
+            consciousness = 8
+			militancy = 8
+            }
+		}
+		badboy = 5
+		ai_chance = {
+			factor = 10
+		}
+    }
+}
+
+country_event = {
+	id = 50023
+	title = "south_africa_baby_boom_title"
+	desc = "south_africa_baby_boom_desc"
+    picture = "rubhach_merchants"
+	fire_only_once = yes
+	
+	trigger = {
+	year = 1888
+    OR = {
+	    owns = 2087
+        } 
+	}
+
+	mean_time_to_happen = { months = 7 }
+
+	option = {
+		name = south_african_baby_boom_option1
+		XHO = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		BSH = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		TSW = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		ZUL = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		BAP = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		SHO = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		GAZ = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		ZAF = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		MLW = { all_core = {
+				add_province_modifier = { name = medium_baby_boom duration = 1825 }
+			} 
+		}
+		
+			
+		ai_chance = {
+			factor = 1
+		}
+	}
+} 
+
+#SAF misc events
+
+country_event = {
+	id = 50072
+	title = "south_africa_gift_give1_title"
+	desc = "south_africa_gift_give1_desc"
+    picture = "xhosa_learning"
+	fire_only_once = no
+	
+	trigger = {
+	OR = { primary_culture =  southern_bantu 
+	       primary_culture =  nyasa
+		   primary_culture =  zulu
+		   primary_culture =  sotho
+		   primary_culture =  mifangaro
+		   primary_culture =  khoisan }
+		   money = 100
+		   civilized = no
+	}
+
+	mean_time_to_happen = { months = 20 }
+
+	option = {
+		name = south_africa_gift_give1_option1
+		random_country = { limit = { OR = { primary_culture =  southern_bantu 
+	                                        primary_culture =  nyasa
+		                                    primary_culture =  zulu
+		                                    primary_culture =  sotho
+		                                    primary_culture =  mifangaro
+		                                    primary_culture =  khoisan }
+								    NOT = { war_with = THIS }}
+
+		                                    country_event = 50073}
+        money = -100		
+        ai_chance = {
+			factor = 70
+		}		
+		}
+		
+		option = {
+		name = south_africa_gift_give1_option2
+		ai_chance = {
+			factor = 30
+		}
+		}
+	}
+	
+	country_event = {
+	id = 50073
+	title = "south_africa_gift_give2_title"
+	desc = "south_africa_gift_give2_desc"
+    picture = "xhosa_learning"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = south_africa_gift_give2_option1
+        money = 100		
+            relation = {
+	        who = FROM
+	        value = 20
+            }		
+		}
+
+	}
+	
+	country_event = {
+	id = 50074
+	title = "south_africa_insult1_title"
+	desc = "south_africa_insult1_desc"
+    picture = "diplomats_examining"
+	fire_only_once = no
+	
+	trigger = {
+	OR = { primary_culture =  southern_bantu 
+	       primary_culture =  nyasa
+		   primary_culture =  zulu
+		   primary_culture =  sotho
+		   primary_culture =  mifangaro
+		   primary_culture =  khoisan }
+	civilized = no
+	}
+
+	mean_time_to_happen = { months = 38 }
+
+	option = {
+		name = south_africa_insult1_option1
+		random_country = { limit = { OR = { primary_culture =  southern_bantu 
+	                                        primary_culture =  nyasa
+		                                    primary_culture =  zulu
+		                                    primary_culture =  sotho
+		                                    primary_culture =  mifangaro
+		                                    primary_culture =  khoisan }
+									NOT = { alliance_with = THIS }}
+		                                    country_event = 50075}		
+        ai_chance = {
+			factor = 50
+		}		
+		}
+		
+		option = {
+		name = south_africa_insult1_option2
+		ai_chance = {
+			factor = 50
+		}
+		}
+	}
+	
+	country_event = {
+	id = 50075
+	title = "south_africa_insult2_title"
+	desc = "south_africa_insult2_desc"
+    picture = "diplomats_examining"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = south_africa_insult2_option1
+            relation = {
+	        who = FROM
+	        value = -25
+            }		
+		}
+
+	}
+	
+	country_event = {
+	id = 50076
+	title = "south_africa_generic_war_title"
+	desc = "south_africa_generic_war_desc"
+    picture = "xhosa_war"
+	fire_only_once = no
+	
+	trigger = {
+	OR = { primary_culture =  southern_bantu 
+	       primary_culture =  nyasa
+		   primary_culture =  zulu
+		   primary_culture =  sotho
+		   primary_culture =  mifangaro
+		   primary_culture =  khoisan }
+	civilized = no
+    any_neighbor_country = { OR = { primary_culture =  southern_bantu 
+	       primary_culture =  nyasa
+		   primary_culture =  zulu
+		   primary_culture =  sotho
+		   primary_culture =  mifangaro
+		   primary_culture =  khoisan }}
+	}
+
+	mean_time_to_happen = { months = 59 }
+
+	option = {
+		name = south_africa_generic_war_option1
+		random_country = { limit = { OR = { primary_culture =  southern_bantu 
+	                                        primary_culture =  nyasa
+		                                    primary_culture =  zulu
+		                                    primary_culture =  sotho
+		                                    primary_culture =  mifangaro
+		                                    primary_culture =  khoisan }
+									NOT = { alliance_with = THIS }
+									NOT = { relation = { who = THIS value = 1 }}
+									neighbour = THIS 
+									NOT = { war_with = THIS } }
+									country_event = 50077
+		                            }		
+        ai_chance = {
+			factor =35
+		}		
+		}
+		
+		option = {
+		name = south_africa_generic_war_option2
+		ai_chance = {
+			factor = 65
+		}
+		}
+	}
+	
+	country_event = {
+	id = 50077
+	title = "south_africa_war_response_title"
+	desc = "south_africa_war_response_desc"
+    picture = "xhosa_war"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = south_africa_war_response_option1
+            FROM = { war = {
+	            target = THIS
+	            attacker_goal = { casus_belli = war_reparations }
+                }}		
+		}
+
+	}
+	
+	province_event = {
+	id = 50078
+	title = "south_africa_bountiful_harvest_title"
+	desc = "south_africa_bountiful_harvest_desc"
+	fire_only_once = no
+	
+	trigger = {
+	owner = { OR = { primary_culture =  southern_bantu 
+	       primary_culture =  nyasa
+		   primary_culture =  zulu
+		   primary_culture =  sotho
+		   primary_culture =  mifangaro
+		   primary_culture =  khoisan }
+		   civilized = no}
+	NOT = { has_province_modifier = SAF_famine }
+	NOT = { has_province_modifier = baby_boom }
+	owned_by = THIS
+	controlled_by = THIS
+	OR = { continent = africa
+	       continent = east_africa
+           continent = south_west_africa }
+	}
+
+	mean_time_to_happen = { months = 110 }
+
+	option = {
+		name = south_africa_bountiful_harvest_option1	
+         add_province_modifier = {
+	                        name = baby_boom
+	                        duration = 730
+                            }									
+		}
+	}
+	
+	province_event = {
+	id = 50079
+	title = "south_africa_famine_title"
+	desc = "south_africa_famine_desc"
+	fire_only_once = no
+	
+	trigger = {
+	owner = { OR = { primary_culture =  southern_bantu 
+	       primary_culture =  nyasa
+		   primary_culture =  zulu
+		   primary_culture =  sotho
+		   primary_culture =  mifangaro
+		   primary_culture =  khoisan }
+		   civilized = no}
+	NOT = { has_province_modifier = SAF_famine }
+	NOT = { has_province_modifier = baby_boom }
+	owned_by = THIS
+	controlled_by = THIS
+	OR = { continent = africa
+	       continent = east_africa
+           continent = south_west_africa }
+	}
+
+	mean_time_to_happen = { months = 110 }
+
+	option = {
+		name = south_africa_famine_option1	
+         add_province_modifier = {
+	                        name = SAF_famine
+	                        duration = 730
+                            }									
+		}
+	}
+	
+	country_event = {
+	id = 50080
+	title = "south_africa_debate_title"
+	desc = "south_africa_debate_desc"
+    picture = "xhosa_learning"
+	fire_only_once = no
+	
+	trigger = {
+	OR = { primary_culture =  southern_bantu 
+	       primary_culture =  nyasa
+		   primary_culture =  zulu
+		   primary_culture =  sotho
+		   primary_culture =  mifangaro
+		   primary_culture =  khoisan }
+	civilized = no
+	war = no
+	}
+
+	mean_time_to_happen = { months = 39 }
+
+	option = {
+		name = south_africa_debate_option1
+		years_of_research = 1.5
+        ai_chance = {
+			factor = 50
+		}		
+		}
+		
+	option = {
+		name = south_africa_debate_option2
+		leadership = 30	
+        ai_chance = {
+			factor = 50
+		}			
+		}
+	}
+	
+	country_event = {
+	id = 50081
+	title = "south_africa_guns_title"
+	desc = "south_africa_guns_desc"
+    picture = "colonial_factory"
+	fire_only_once = no
+	
+	trigger = {
+	OR = { primary_culture =  southern_bantu 
+	       primary_culture =  nyasa
+		   primary_culture =  zulu
+		   primary_culture =  sotho
+		   primary_culture =  mifangaro
+		   primary_culture =  khoisan }
+	civilized = no
+	money = 5250
+	}
+
+	mean_time_to_happen = { months = 46 }
+
+	option = {
+		name = south_africa_guns_option1
+		small_arms = 5
+        ammunition = 5		
+        money = -5250	
+        ai_chance = {
+			factor = 70
+		}			
+		}
+		
+	option = {
+		name = south_africa_guns_option2		
+        ai_chance = {
+			factor = 30
+		}			
+		}
+	}
+	
+	country_event = {
+	id = 50083
+	title = "birth_of_bemba_title"
+	desc = "birth_of_bemba_desc"
+    picture = "colonial_factory"
+	fire_only_once = yes
+	
+	trigger = {
+	tag = CLN
+	790 = { empty = no }
+	3296 = { empty = no }
+	2042 = { empty = no }
+	2016 = { empty = yes }
+	2017 = { empty = yes }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = birth_of_bemba_option1
+		2017 = { secede_province = THIS }
+        2016 = { secede_province = THIS }	
+		2016 = { secede_province = ZAM }
+        2017 = { secede_province = ZAM }
+		}
+	}
+	
+	country_event = {
+	id = 50084
+	title = "SHO_expand_north_title"
+	desc = "SHO_expand_north_desc"
+    picture = "matabele_warriors"
+	fire_only_once = yes
+	
+	trigger = {
+	tag = SHO
+    has_country_flag = expanded_zam_SHO
+	2012 = { empty = yes }
+	2013 = { empty = yes }
+	2015 = { empty = yes }
+	790 = { empty = yes }
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	option = {
+		name = SHO_expand_north_option1
+		2012 = { secede_province = THIS }
+        2013 = { secede_province = THIS }	
+		2015 = { secede_province = THIS }
+        790 = { secede_province = THIS }	
+		}
+	}
+	
+	country_event = {
+
+	id = 50085
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { exists = TSW }
+		owns = 2074
+        2077 = { empty = yes }
+        2076 = { empty = yes }
+	}
+	
+	title = "TSW_retreat_title"
+	desc = "TSW_retreat_desc"
+	picture = "mfecane"
+
+	option = {
+		name = "TSW_retreat_option1"
+		2077 = { secede_province = THIS }
+		2076 = { secede_province = THIS }
+		any_owned = { limit = { OR = { province_id = 2077
+                                      province_id = 2076 }									 
+									 } secede_province = TSW }			 
+				    }
+	}
+	
+	country_event = {
+
+	id = 50086
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TSW
+		ai = yes
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	title = "TSW_retreat_title"
+	desc = "TSW_retreat_desc"
+	picture = "mfecane"
+
+	option = {
+		name = "TSW_retreat_option1"
+		set_country_flag = ai_said_no	
+    ai_chance = {
+			factor = 95
+		}		
+				    }
+					
+	option = {
+		name = "TSW_retreat_option1"	
+    ai_chance = {
+			factor = 5
+		}		
+				    }
+	}
+	
+	country_event = {
+
+	id = 50087
+
+	fire_only_once = no
+	
+	trigger = {
+		OR = { tag = BSH
+		       tag = BAP
+			   tag = BTH }
+		civilization_progress = 0.1
+		war = no
+		NOT = { has_country_flag = litema_event_happened }
+	}
+	
+	mean_time_to_happen = { months = 60 }
+	
+	title = "litema_start_title"
+	desc = "litema_start_desc"
+	picture = "litema"
+
+	option = {
+		name = "litema_start_option1"
+		set_country_flag = litema_event_happened
+	}
+					
+	}
+	
+	country_event = {
+
+	id = 50088
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = litema_event_happened
+		war = no
+		num_of_cities = 3
+		NOT = { average_militancy = 2 }
+	}
+	
+	mean_time_to_happen = { months = 85 }
+	
+	title = "litema_birth_title"
+	desc = "litema_birth_desc"
+	picture = "ditema_tsa_dinoko"
+
+	option = {
+		name = "litema_birth_option1"
+		prestige = 10	
+        plurality = 5
+		any_pop = { consciousness = 3 }
+		clr_country_flag = lacking_writing_system
+		remove_country_modifier = lacks_writing_system 
+		set_country_flag = BAP_writing_system
+		set_global_flag = BAP_writing_system_exists
+	}
+					
+	}
+	
+	country_event = {
+
+	id = 50089
+
+	fire_only_once = no
+	
+	trigger = {
+		tag = KHB
+		is_vassal = yes
+		overlord = { NOT = { neighbour = THIS }}
+	}
+	
+	title = "KHB_free_title"
+	desc = "KHB_free_desc"
+	picture = "KHB_free_desc"
+	
+	option = {
+		name = "KHB_free_option1"
+		release_vassal = KHB
+	}
+					
+	}
+
+###Zulu Coalition Events###
+
+country_event = {
+
+	id = 50024
+
+	trigger = {
+            year = 1836
+			tag = BAP	
+	}
+
+	fire_only_once = yes
+
+	title = "BAPstart_title"
+	desc = "BAPstart_desc"
+	picture = "zulu"
+
+	option = {
+		name = "BAPstart_option1"
+		set_global_flag = bapedi_start
+		set_country_flag = bapedi_start
+	}
+	}
+	
+	country_event = {
+
+	id = 50025
+
+	is_triggered_only = yes
+
+	title = "arbota_accept_title"
+	desc = "arbota_accept_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "arbota_accept_option1"
+		random_list = { 90 = { set_global_flag = arbota_accepted money = -100}
+		10 = { money = -100} }
+	}
+	}
+	
+	country_event = {
+
+	id = 50026
+
+	is_triggered_only = yes
+
+	title = "xhosa_invite_title"
+	desc = "xhosa_invite_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "xhosa_invite_option1"
+		BAP = { country_event = 50029 }
+		set_global_flag = xhosa_accepted
+		set_country_flag = in_BAP_coalition
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 100
+				OR = { ZUL = { ai = no }
+				       relation = { who = XHO value = 50 } }
+				
+			}
+		}
+	}
+	option = {
+		name = "xhosa_invite_option2"
+		BAP = { country_event = 50030 }
+		ai_chance = {
+			factor = 35
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50029
+
+	is_triggered_only = yes
+
+	title = "xhosa_accepted_title"
+	desc = "xhosa_accepted_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "xhosa_accepted_option1"
+	}
+	}
+	
+	country_event = {
+
+	id = 50030
+
+	is_triggered_only = yes
+
+	title = "xhosa_declined_title"
+	desc = "xhosa_declined_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "xhosa_declined_option1"
+	}
+	}
+	
+		country_event = {
+
+	id = 50027
+
+	is_triggered_only = yes
+
+	title = "tsonga_invite_title"
+	desc = "tsonga_invite_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "tsonga_invite_option1"
+		BAP = { country_event = 50028 }
+		set_global_flag = tsonga_accepted
+		set_country_flag = in_BAP_coalition
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				OR = { ZUL = { ai = no }
+				       relation = { who = SHO value = 50 } }
+				
+			}
+		}
+	}
+	option = {
+		name = "tsonga_invite_option2"
+		BAP = { country_event = 50031 }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50028
+
+	is_triggered_only = yes
+
+	title = "tsonga_accepted_title"
+	desc = "tsonga_accepted_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "tsonga_accepted_option1"
+	}
+	}
+	
+	country_event = {
+
+	id = 50031
+
+	is_triggered_only = yes
+
+	title = "tsonga_declined_title"
+	desc = "tsonga_declined_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "tsonga_declined_option1"
+	}
+	}
+	
+	country_event = {
+
+	id = 50032
+
+	trigger = {
+            year = 1840
+			tag = BAP	
+			has_global_flag = xhosa_accepted
+			XHO = {has_country_flag = in_BAP_coalition }
+	}
+
+	fire_only_once = yes
+
+	title = "xhosa_prep_title"
+	desc = "xhosa_prep_desc"
+	picture = "zulu_soldiers"
+
+	option = {
+		name = "xhosa_prep_option1"
+		end_war = XHO
+		create_alliance = XHO
+		clr_global_flag = xhosa_accepted
+	}
+	}
+	
+	country_event = {
+
+	id = 50033
+
+	trigger = {
+            year = 1840
+			tag = BAP	
+			has_global_flag  = tsonga_accepted
+			SHO = {has_country_flag = in_BAP_coalition }
+	}
+
+	fire_only_once = yes
+
+	title = "tsonga_prep_title"
+	desc = "tsonga_prep_desc"
+	picture = "zulu_soldiers"
+
+	option = {
+		name = "tsonga_prep_option1"
+		end_war = SHO
+		create_alliance = SHO
+		clr_global_flag = tsonga_accepted
+	}
+	}
+	
+	country_event = {
+
+	id = 50034
+
+	trigger = {
+            year = 1840
+			tag = BAP	
+			NOT = { has_global_flag = xhosa_accepted }
+			NOT = { has_global_flag = tsonga_accepted }              
+			has_country_flag = bapedi_start		
+            exists = ZUL		
+            NOT = { war_with = ZUL }			
+	}
+	
+	mean_time_to_happen = { days = 20 } 
+
+	fire_only_once = yes
+
+	title = "BAP_war_title"
+	desc = "BAP_war_desc"
+	picture = "xhosa_war"
+
+	option = {
+		name = "BAP_war_option1"
+		casus_belli = {
+	        target = ZUL
+	        type = cut_down_to_size
+	        months = 12
+            }
+        ZUL = { casus_belli = {
+	            target = BAP
+	            type = cut_down_to_size
+	            months = 12
+              }}
+		 war = {
+	            target = ZUL
+	            attacker_goal = { casus_belli = cut_down_to_size }
+	            defender_goal = { casus_belli = cut_down_to_size }
+                }
+				
+		any_country = { limit = { has_country_flag = in_BAP_coalition }
+		               casus_belli = {
+	                        target = ZUL
+	                        type = cut_down_to_size
+	                        months = 12
+                         }}
+		any_country = { limit = { has_country_flag = in_BAP_coalition }
+		               war = {
+	            target = ZUL
+	            attacker_goal = { casus_belli = cut_down_to_size }
+	            defender_goal = { casus_belli = cut_down_to_size }
+                } country_event = 50056 }
+				
+		clr_country_flag = bapedi_start
+		clr_global_flag = bapedi_start
+		set_global_flag = zulu_coalition_war
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 100
+			    ZUL = { ai = no }
+		}
+	}
+	}
+	
+	
+	option = {
+		name = "BAP_war_option2"
+		clr_country_flag = arbota_accepted 
+		clr_country_flag = bapedi_start
+		clr_global_flag = bapedi_start
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition
+					   country_event = 50082
+					   }
+			
+		ai_chance = {
+			factor = 20
+
+	}
+	}
+	}
+	
+	country_event = {
+
+	id = 50035
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            XHO = { NOT = { has_country_flag = in_BAP_coalition }}
+			SHO = { NOT = { has_country_flag = in_BAP_coalition }}
+	}
+
+	fire_only_once = yes
+
+	title = "ZUL_surr_title"
+	desc = "ZUL_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ZUL_surr_option1"
+		end_war = BAP
+		end_war = XHO
+		end_war = SHO
+		end_war = MAT
+		clr_global_flag = zulu_coalition_war
+		2114 = { add_core = BAP }
+		2110 = { add_core = BAP }
+		2112 = { add_core = XHO }
+		2112 = { add_core = GCA }
+		2111 = { add_core = GCA }
+		2100 = { add_core = GCA }
+		any_owned = {
+		    limit = { is_core = GAZ }
+					secede_province = GAZ
+		}
+        any_owned = {
+		    limit = { is_core = GCA }
+					secede_province = GCA
+		} 
+        any_owned = {
+					secede_province = BAP
+		}		
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+	}
+	}
+	
+	country_event = {
+
+	id = 50036
+
+	trigger = {
+            tag = BAP
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            war = no	
+			exists = ZUL	
+	}
+
+	fire_only_once = yes
+
+	title = "BAP_surr_title"
+	desc = "BAP_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "BAP_surr_option1"
+		end_war = ZUL
+		2109 = { add_core = ZUL }
+		any_owned = {
+			     limit = {
+				is_core = ZUL
+			}
+			secede_province = ZUL
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50037
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = arbota_accepted
+			has_global_flag = zulu_coalition_war
+            war_with = BAP	
+	} 
+
+	fire_only_once = yes
+
+	title = "arbota_rebel_title"
+	desc = "arbota_rebel_desc"
+	picture = "xhosa_war"
+
+	option = {
+		name = "arbota_rebel_option1"
+		clr_global_flag = arbota_accepted
+		any_owned = {
+			limit = {
+				is_core = GAZ
+			}
+			secede_province = GAZ
+		}
+		war = {
+	            target = GAZ
+	            attacker_goal = { casus_belli = conquest_any }
+  				defender_goal = { casus_belli = status_quo }
+                }
+		
+	}
+	}
+	
+	country_event = {
+
+	id = 50038
+
+	trigger = {
+            tag = XHO
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            has_country_flag = in_BAP_coalition			
+            war = no	
+            exists = ZUL				
+	}
+
+	fire_only_once = yes
+
+	title = "XHO_surr_title"
+	desc = "XHO_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "XHO_surr_option1"
+		end_war = ZUL
+		any_owned = {
+		limit = { is_core = XHO }
+			add_core = ZUL
+		}
+		any_owned = {
+			secede_province = ZUL
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50039
+
+	trigger = {
+            tag = SHO
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            has_country_flag = in_BAP_coalition	
+            war = no	
+            exists = ZUL		
+	}
+
+	fire_only_once = yes
+
+	title = "SHO_surr_title"
+	desc = "SHO_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "SHO_surr_option1"
+		end_war = ZUL
+		2071 = { add_core = ZUL }
+		3447 = { add_core = ZUL }
+		inherit = MAT
+	    any_owned = {
+		    limit = { is_core = ZUL }
+			secede_province = ZUL
+		} 
+		any_owned = {
+		    limit = { is_core = TSW }
+			secede_province = TSW
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50040
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = no		
+			war = no
+	}
+
+	fire_only_once = yes
+
+	title = "ZUL_victory_title"
+	desc = "ZUL_victory_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ZUL_victory_option1"
+		clr_global_flag = zulu_coalition_war
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+		prestige = 20
+		government = absolute_empire
+		2104 = { add_core = ZUL }
+		XHO = { all_core = { add_core = THIS } } 
+		2071 = { add_core = ZUL }
+		3447 = { add_core = ZUL }
+	}
+	}
+	
+	country_event = {
+
+	id = 50041 
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            XHO = { has_country_flag = in_BAP_coalition }
+			SHO = { NOT = { has_country_flag = in_BAP_coalition }}
+	}
+
+	fire_only_once = yes
+
+	title = "ZUL_surr_title"
+	desc = "ZUL_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ZUL_surr_option1"
+		end_war = BAP
+		end_war = XHO
+		end_war = SHO
+		end_war = MAT
+		clr_global_flag = zulu_coalition_war
+		2114 = { add_core = BAP }
+		2110 = { add_core = BAP }
+		2112 = { add_core = XHO }
+		any_owned = {
+		    limit = { is_core = GAZ }
+					secede_province = GAZ
+		}
+        any_owned = {
+		    limit = { is_core = XHO }
+					secede_province = XHO
+		} 
+        any_owned = {
+					secede_province = BAP
+		}		
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+		XHO = { leave_alliance = BAP }
+	}
+	}
+	
+	country_event = {
+
+	id = 50042
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            SHO = { has_country_flag = in_BAP_coalition }
+			XHO = { NOT = { has_country_flag = in_BAP_coalition }}
+	}
+
+	fire_only_once = yes
+
+	title = "ZUL_surr_title"
+	desc = "ZUL_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ZUL_surr_option1"
+		end_war = BAP
+		end_war = XHO
+		end_war = SHO
+		end_war = MAT
+		clr_global_flag = zulu_coalition_war
+		2114 = { add_core = BAP }
+		2112 = { add_core = XHO }
+		2112 = { add_core = GCA }
+		2111 = { add_core = GCA }
+		2100 = { add_core = GCA }
+		any_owned = {
+		    limit = { is_core = SHO }
+					secede_province = SHO
+		}
+        any_owned = {
+		    limit = { is_core = GCA }
+					secede_province = GCA
+		} 
+        any_owned = {
+					secede_province = BAP
+		}		
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+		SHO = { leave_alliance = BAP }
+	}
+	}
+	
+	country_event = {
+
+	id = 50043
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            SHO = { has_country_flag = in_BAP_coalition }
+			XHO = { has_country_flag = in_BAP_coalition }
+	}
+
+	fire_only_once = yes
+
+	title = "ZUL_surr_title"
+	desc = "ZUL_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ZUL_surr_option1"
+		end_war = BAP
+		end_war = XHO
+		end_war = SHO
+		end_war = MAT
+		clr_global_flag = zulu_coalition_war
+		2114 = { add_core = BAP }
+		2112 = { add_core = XHO }
+		any_owned = {
+		    limit = { is_core = SHO }
+					secede_province = SHO
+		}
+        any_owned = {
+		    limit = { is_core = XHO }
+					secede_province = XHO
+		} 
+        any_owned = {
+					secede_province = BAP
+		}		
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+		XHO = { leave_alliance = BAP }
+		SHO = { leave_alliance = BAP }
+	}
+	}
+	
+	country_event = {
+
+	id = 50056
+
+	is_triggered_only = yes
+
+	title = "ZUL_war_inform_title"
+	desc = "ZUL_war_inform_desc"
+	picture = "zulu_soldiers"
+
+	option = {
+		name = "ZUL_war_inform_option1"
+	}
+	}
+	
+	country_event = {
+
+	id = 50082
+
+	is_triggered_only = yes
+
+	title = "ZUL_war_inform2_title"
+	desc = "ZUL_war_inform2_desc"
+	picture = "zulu_soldiers"
+
+	option = {
+		name = "ZUL_war_inform2_option1"
+	}
+	}
+	
+###Cape Wars###
+	
+	country_event = {
+
+	id = 50044
+
+	trigger = {
+            tag = ORA
+            war = yes
+            controls = 3592
+			has_global_flag = 3rd_frontier_war
+			war_with = XHO
+	}
+
+	fire_only_once = yes
+
+	title = "ORA_vict_title"
+	desc = "ORA_vict_desc"
+	picture = "boer_troops"
+
+	option = {
+		name = "ORA_vict_option1"
+		end_war = XHO
+		clr_global_flag = 3rd_frontier_war
+		3592 = { secede_province = ORA }
+		3595 = { secede_province = ORA }
+		3593 = { remove_core = XHO }
+		3594 = { remove_core = XHO }
+		prestige = 5	
+		SCO = { country_event = { id = 50049 days = 110 } }
+		KHB = { country_event = { id = 50051 days = 54 } }
+		ai_chance = {
+			factor = 80
+		}
+	}
+	
+	option = {
+		name = "ORA_vict_option2"
+		badboy = 2
+		prestige = 10	
+		ai_chance = {
+			factor = 20
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50045
+
+	trigger = {
+            tag = XHO
+            war = yes
+            controls = 3593
+			has_global_flag = 3rd_frontier_war 
+			war_with = ORA
+	}
+
+	fire_only_once = yes
+
+	title = "XHO_vict_title"
+	desc = "XHO_vict_desc"
+	picture = "boer_troops"
+
+	option = {
+		name = "XHO_vict_option1"
+		end_war = ORA
+		clr_global_flag = 3rd_frontier_war
+		3593 = { secede_province = XHO }
+		3594 = { secede_province = XHO }
+		3592 = { remove_core = ORA }
+		3595 = { remove_core = ORA }
+		prestige = 5	
+		SCO = { country_event = { id = 50049 days = 110 } }
+		KHB = { country_event = { id = 50051 days = 54 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "XHO_vict_option2"
+		badboy = 2
+		prestige = 10	
+		ai_chance = {
+			factor = 50
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50046
+
+	trigger = {
+            tag = ORA
+	}
+
+	fire_only_once = yes
+
+	title = "ORA_start_title"
+	desc = "ORA_start_desc"
+	picture = "trekboers_crossing_the_karoo"
+
+	option = {
+		name = "ORA_start_option1"
+		small_arms = 5
+		canned_food =5
+		wine = 5
+		ammunition = 5
+		money = 1000
+		set_global_flag = 3rd_frontier_war
+	}
+	}
+	
+	country_event = {
+
+	id = 50047
+
+	trigger = {
+            tag = XHO
+            has_global_flag = 3rd_frontier_war
+            has_recently_lost_war = no		
+			ORA = { NOT = {owns = 2091 }}		
+			war = no
+	}
+
+	fire_only_once = yes
+
+	title = "XHO_front_title"
+	desc = "XHO_front_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "XHO_front_option1"
+		clr_global_flag = 3rd_frontier_war
+		prestige = 10
+		2091 = { add_core = XHO }
+		2092 = { add_core = XHO }
+		SCO = { country_event = { id = 50049 days = 110 } }
+		KHB = { country_event = { id = 50051 days = 54 } }
+	}
+	}
+	
+	country_event = {
+
+	id = 50049
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "SCO_grow_title"
+	desc = "SCO_grow_desc"
+	picture = "trekkers_under_mountain"
+
+	option = {
+		name = "SCO_grow_option1"
+        ORA = { country_event = 50052 }
+       ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+			    ORA = { ai = yes }
+		}		
+	} }
+	
+	option = {
+		name = "SCO_grow_option2"
+		prestige = -10 
+		2092 = { secede_province = SCO }
+		2092 = { secede_province = ORA }
+		ai_chance = {
+			factor = 50
+		}
+			}
+        }			
+	
+	
+	
+	country_event = {
+
+	id = 50051
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "KHB_grow_title"
+	desc = "KHB_grow_desc"
+	picture = "trekkers_under_mountain"
+
+	option = {
+		name = "KHB_grow_option1"
+		2089 = { secede_province = KHB }
+		3601 = { secede_province = KHB }
+		3596 = { secede_province = KHB }
+	}
+	}
+	
+	country_event = {
+
+	id = 50052
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "ORA_response_title"
+	desc = "ORA_response_desc"
+	picture = "boer_war"
+
+	option = {
+		name = "ORA_response_option1"
+		2092 = { secede_province = ORA }
+		FROM = { inherit = ORA }
+        ai_chance = {
+			factor = 95
+		}		
+	}
+	
+	option = {
+		name = "ORA_response_option2"
+		2092 = { secede_province = ORA }
+		FROM = { country_event = 50053 }
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+			    ORA = { ai = no }
+		}
+			}
+			}
+			}	
+			
+	country_event = {
+
+	id = 50053
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "SCO_ORA_response_title"
+	desc = "SCO_ORA_response_desc"
+	picture = "boer_war"
+
+	option = {
+		name = "SCO_ORA_response_option1"
+		diplomatic_influence = {
+			who = ORA
+			value = -400
+		}
+        casus_belli = {
+	            target = ORA
+	            type = conquest
+	            months = 12
+              }
+		 war = {
+	            target = ORA
+	            attacker_goal = { casus_belli = conquest }
+                }		
+	}
+	}
+	
+	country_event = {
+
+	id = 50054
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "KHB_response_title"
+	desc = "KHB_response_desc"
+	picture = "boer_war"
+
+	option = {
+		name = "KHB_response_option1"
+		FROM = { inherit = KHB }
+        ai_chance = {
+			factor = 95
+		}		
+	}
+	
+	option = {
+		name = "KHB_response_option2"
+		FROM = { country_event = 50055 }
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+			    KHB = { ai = no }
+		}
+			}}}
+			
+	country_event = {
+
+	id = 50055
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "SCO_KHB_response_title"
+	desc = "SCO_KHB_response_desc"
+	picture = "boer_war"
+
+	option = {
+		name = "SCO_KHB_response_option1"
+        casus_belli = {
+	            target = KHB
+	            type = conquest_any
+	            months = 12
+              }
+		 war = {
+	            target = KHB
+	            attacker_goal = { casus_belli = conquest }
+                }		
+	}
+	}
+	
+	country_event = {
+
+	id = 50050
+
+	trigger = {
+            tag = ORA
+            has_global_flag = 3rd_frontier_war
+            has_recently_lost_war = no		
+			war = no
+			XHO = { NOT = {owns = 3592 }}	
+	}
+
+	fire_only_once = yes
+
+	title = "ORA_front_title"
+	desc = "ORA_front_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ORA_front_option1"
+		clr_global_flag = 3rd_frontier_war
+		prestige = 10
+		2092 = { secede_province = ORA }
+		2096 = { add_core = ORA }
+		2097 = { add_core = ORA }
+		SCO = { country_event = { id = 50049 days = 110 } } 
+		KHB = { country_event = { id = 50051 days = 54 } }
+	}
+	}
+	
+	
+	
+###  An Empire of Empty Promises  ##
+	
+	country_event = {
+
+	id = 50057
+
+	trigger = {
+            tag = SHO
+	}
+
+	fire_only_once = yes
+
+	title = "SHO_start_title"
+	desc = "SHO_start_desc"
+	picture = "great_zimbabwe_crumbling"
+
+	option = {
+		name = "SHO_start_option1"
+		set_global_flag = SHO_start
+		add_country_modifier = {
+				name = empire_empty_promises 
+				duration = 36500 }
+		add_country_modifier = {
+				name = kariba_raids
+				duration = 36500 }
+		add_country_modifier = {
+				name = foreign_meddling
+				duration = 36500 }
+		add_country_modifier = {
+				name = apathetic_leaders
+				duration = 36500 }
+	}
+	}
+	
+	country_event = {
+	
+	id = 50058
+
+	trigger = {
+            tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = kariba_raids
+			has_country_flag = ongoing_raids_fix 
+			NOT = { war_exhaustion = 1 }
+			military_spending = 0.5
+			2635 = { units_in_province = 4 }
+			2072 = { units_in_province = 2 }
+			2068 = { units_in_province = 2 }
+	}
+	
+	mean_time_to_happen = { months = 3 }
+
+	fire_only_once = yes
+
+	title = "raids_win_title"
+	desc = "raids_win_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "raids_win_option1"
+		clr_country_flag = ongoing_raids_fix
+		remove_country_modifier = kariba_raids 
+		prestige = 5
+	}
+	}
+	
+	country_event = {
+	
+	id = 50059
+
+	trigger = {
+            tag = SHO
+			has_global_flag = SHO_start
+			has_country_modifier = kariba_raids
+			has_country_flag = ongoing_raids_fix 
+			OR =  { war_exhaustion = 1  
+			        NOT = { military_spending = 0.5 }
+			        NOT = { 2635 = { units_in_province = 4 }}
+			        NOT = { 2072 = { units_in_province = 2 }}
+			        NOT = { 2068 = { units_in_province = 2 }}}
+	}
+
+	allow_multiple_instances = yes
+
+	title = "raids_lose_title"
+	desc = "raids_lose_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "raids_lose_option1"
+		clr_country_flag = ongoing_raids_fix
+		clr_country_flag = fixed_raids
+	}
+	}
+	
+	country_event = {
+
+	id = 50060
+
+	trigger = {
+            year = 1853
+			tag = SHO
+			has_global_flag = SHO_start
+			owns = 2056
+	}
+
+    mean_time_to_happen = { months = 3 }
+	
+	fire_only_once = yes
+
+	title = "shona_tension_title"
+	desc = "shona_tension_desc"
+	picture = "monarch_death"
+
+	option = {
+		name = "shona_tension_option1"   
+		any_pop = {
+			limit = { is_primary_culture = no
+			}
+		militancy = 5
+	    consciousness = 3
+	    }
+		clr_global_flag = SHO_start
+		country_event = {
+	            id = 50061
+	            days = 87
+        }
+	}
+}
+
+    country_event = {
+
+	id = 50061
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "SHO_civil_war_title"
+	desc = "SHO_civil_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "SHO_civil_war_option1"
+	    any_owned = {
+			limit = {
+			is_core = TIK
+			}
+			secede_province = TIK
+		}
+		any_owned = {
+			limit = {
+			is_core = MLW
+			}
+			secede_province = TIK
+		}
+		MAT = { release_vassal = MAT
+		        leave_alliance = SHO
+                government = absolute_monarchy }
+		set_global_flag = tsonga_civil_war
+		remove_country_modifier = empire_empty_promises
+		remove_country_modifier = kariba_raids
+		remove_country_modifier = foreign_meddling
+		remove_country_modifier = apathetic_leaders
+		change_tag = BLO
+		capital = 2068
+		all_core = {
+			remove_core = BLO
+		}
+		ENG_2068 = { add_core = BLO }
+		war = { target = TIK  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
+		MAT = { country_event = 50062 }
+            ai_chance = {
+			factor = 100
+		}		
+	}
+	option = {
+		name = "SHO_civil_war_option2"    
+        any_owned = {
+            limit = {
+			is_core = TIK
+			}
+			secede_province = TIK
+		}
+		any_owned = {
+			limit = {
+			is_core = MLW
+			}
+			secede_province = TIK
+		}
+		MAT = { release_vassal = MAT
+		        leave_alliance = SHO
+                government = absolute_monarchy }
+		war = { target = TIK  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
+		set_global_flag = tsonga_civil_war
+		remove_country_modifier = empire_empty_promises
+		remove_country_modifier = kariba_raids
+		remove_country_modifier = foreign_meddling
+		remove_country_modifier = apathetic_leaders
+		change_tag = BLO
+		capital = 2068
+		all_core = {
+			remove_core = BLO
+		}
+		ENG_2068 = { add_core = BLO }
+		change_tag_no_core_switch = TIK
+		MAT = { country_event = 50062 }
+	}
+		
+	option = {
+		name = "SHO_civil_war_option3"    
+        any_owned = {
+			limit = {
+			is_core = TIK
+			}
+			secede_province = TIK
+		}
+		any_owned = {
+			limit = {
+			is_core = MLW
+			}
+			secede_province = TIK
+		}
+		MAT = { release_vassal = MAT
+		        leave_alliance = SHO
+                government = absolute_monarchy }
+		war = { target = TIK  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
+		set_global_flag = tsonga_civil_war
+		remove_country_modifier = empire_empty_promises
+		remove_country_modifier = kariba_raids
+		remove_country_modifier = foreign_meddling
+		remove_country_modifier = apathetic_leaders
+		change_tag = BLO
+		capital = 2068
+		all_core = {
+			remove_core = BLO
+		}
+		ENG_2068 = { add_core = BLO }
+		change_tag_no_core_switch = MAT
+		MAT = { country_event = {
+	            id = 50062
+	            days = 1
+        }	
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50062
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "MAT_civil_war_title"
+	desc = "MAT_civil_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "MAT_civil_war_option1"
+		primary_culture = southern_bantu
+        add_accepted_culture = zulu
+		war = { target = BLO  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}
+		war = { target = TIK  attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}	
+            ai_chance = {
+			factor = 50
+		}		
+	}
+	option = {
+		name = "MAT_civil_war_option2"    
+		war = { target = BLO  attacker_goal = { casus_belli = status_quo} defender_goal = { casus_belli = civil_war }}
+		war = { target = TIK  attacker_goal = { casus_belli = status_quo} defender_goal = { casus_belli = civil_war }}
+		ai_chance = {
+			factor = 50
+		}	
+	}
+	}
+	
+	country_event = {
+
+	id = 50063
+
+	fire_only_once = yes
+	
+	trigger = {
+			tag = BLO
+			has_global_flag = tsonga_civil_war
+			owns = 2635
+	}
+	
+	title = "KRB_civil_war_title"
+	desc = "KRB_civil_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "KRB_civil_war_option1"
+		any_owned = {
+			limit = {
+			is_core = KRB
+			}
+			secede_province = KRB
+		}
+		MAT = { country_event = 50064 }
+		KRB = { country_event = 50065 }
+            ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = "KRB_civil_war_option2"    
+		any_owned = {
+			limit = {
+			is_core = KRB
+			}
+			secede_province = KRB
+		}
+		MAT = { country_event = 50064 }
+		change_tag_no_core_switch = KRB
+		KRB = { country_event = {
+	            id = 50065
+	            days = 1 }
+        }		
+	}
+	}
+	
+	country_event = {
+
+	id = 50064
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "MAT_KRB_civil_war_title"
+	desc = "MAT_KRB_civil_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "MAT_KRB_civil_war_option1"
+		any_owned = {
+			limit = {
+			is_core = KRB
+			}
+			secede_province = KRB
+		}	
+	}
+	}
+	
+	country_event = {
+
+	id = 50065
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	title = "KRB2_civil_war_title"
+	desc = "KRB2_civil_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "KRB2_civil_war_option1"
+		primary_culture = southern_bantu
+        add_accepted_culture = lacustrine_bantu
+		any_country = { limit = { primary_culture = southern_bantu }
+                        war = { target = KRB attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = civil_war }}}
+         war = { target = MAT attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = status_quo }}						
+        ai_chance = {
+			factor = 50
+		}		}
+            		
+	option = {
+		name = "KRB2_civil_war_option2" 
+        any_country = { limit = { primary_culture = southern_bantu }
+                        war = { target = KRB attacker_goal = { casus_belli = civil_war} defender_goal = { casus_belli = status_quo }}} 		
+		ai_chance = {
+			factor = 50
+		}	
+	}
+	}
+	
+	country_event = {
+
+	id = 50066
+
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = KRB
+	}
+	
+	title = "KRB_grow_title"
+	desc = "KRB_grow_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "KRB_grow_option1"	
+		2012 = { secede_province = KRB }
+		2015 = { secede_province = KRB }
+		2013 = { secede_province = KRB }
+		790 = { secede_province = KRB }
+	}
+	}
+	
+	country_event = {
+
+	id = 50067
+
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = MLW
+		has_global_flag = tsonga_civil_war
+		exists = TIK
+	}
+	
+	title = "MLW_war_title"
+	desc = "MLW_war_desc"
+	picture = "matabele_warriors"
+
+	option = {
+		name = "MLW_war_option1"
+		    war = { target = TIK  attacker_goal = { casus_belli = conquest_any} defender_goal = { casus_belli = conquest_any }}
+		ai_chance = {
+			factor = 50
+		}	
+	}
+	
+	option = {
+		name = "MLW_war_option2"	
+		ai_chance = {
+			factor = 50
+		}	
+	}
+	}
+	
+	country_event = {
+
+	id = 50068
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { exists = MLW }
+		owns = 2066
+		OR = { 2581 = { empty = yes }
+		       2040 = { empty = yes }
+			   2042 = { empty = yes }
+	}
+	}
+	
+	title = "MLW_retreat_title"
+	desc = "MLW_retreat_desc"
+	picture = "mfecane"
+
+	option = {
+		name = "MLW_retreat_option1"
+		MLW = { all_core = { limit = { empty = yes } secede_province = THIS }}
+		any_owned = { limit = { OR = { province_id = 2581 
+                                      province_id = 2040 
+                                      province_id = 2041  
+                                      province_id = 2038 
+                                      province_id = 2042 }									 
+									 } secede_province = MLW }			 
+				    }
+	}
+	
+	country_event = {
+
+	id = 50069
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TIK
+		has_global_flag = tsonga_civil_war
+	}
+	
+	title = "mad_scot_title"
+	desc = "mad_scot_desc"
+	picture = "MAD_revolt"
+
+	option = {
+		name = "mad_scot_option1"
+		set_country_flag = mad_scot		 
+    }
+	}
+	
+	country_event = {
+
+	id = 50070
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = mad_scot
+		war = no
+		owns = 2068
+		owns = 2071
+		owns = 2635
+		owns = 2053
+	}
+	
+	mean_time_to_happen = { months = 2 }
+	
+	title = "mad_scot_choice_title"
+	desc = "mad_scot_choice_desc"
+	picture = "MAD_revolt"
+
+	option = {
+		name = "mad_scot_choice_option1"
+		clr_country_flag = mad_scot	
+        prestige = 5
+        ai_chance = {
+			factor = 60
+		}		
+    }
+	
+	option = {
+		name = "mad_scot_choice_option2"
+		clr_country_flag = mad_scot		 
+		prestige = -10
+		any_country = { limit = { owns = 2057 }
+		diplomatic_influence = {
+	            who = THIS
+	            value = 500
+                }
+				create_vassal = THIS }
+		government = dominion
+		ai_chance = {
+			factor = 10
+		}
+    }
+	
+	option = {
+		name = "mad_scot_choice_option3"
+		clr_country_flag = mad_scot		
+        government = peasant_republic
+        prestige = -5	
+        ai_chance = {
+			factor = 30
+		}		
+    }
+	}
+	
+	country_event = {
+
+	id = 50071
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SHO
+		war = no 
+		has_global_flag = tsonga_civil_war
+	}
+	
+	title = "tsonga_aftermath_title"
+	desc = "tsonga_aftermath_desc"
+	picture = "great_zimbabwe_crumbling"
+
+	option = {
+		name = "tsonga_aftermath_option1"
+		clr_global_flag = tsonga_civil_war	 
+    }
+	}
+
+#SQI
+
+country_event = {
+
+	id = 100195
+	title = "Rise of the Eastern Dynasty"
+	desc = "With the Genoans forced out of Tunisia, we can start the Rise of our undesputed reign over the Maghreb"
+	picture = "treaty"
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "We shall Rise!"
+		change_tag = SQI
+		inherit = TUN
+		inherit = TRI
+		prestige = 10
+		set_country_flag = sarqi_rise
+		TLE = {
+		all_core = {
+				add_core = SQI
+			} 
+		}
+		COP = {
+		all_core = {
+				add_core = SQI
+			} 
+		}
+		RGA = {
+		all_core = {
+				add_core = SQI
+			} 
+		}
+		MOR = {
+		all_core = {
+				add_core = SQI
+			} 
+		}
+		TRI = {
+		all_core = {
+				add_core = SQI
+			} 
+		}
+		1738 = { secede_province = SQI }
+		ai_chance = {
+			factor = 0.75
+		}
+	}
+
+	option = {
+		name = "It's not worth it."
+		prestige = -10
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+}
+
+#Hausa rebellion	
+ country_event = {
+	id = 100201
+	title = "Religious Tensions escalate"
+	desc = "SUDANCIVIL"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = SUD
+		year = 1852
+		NOT = { has_country_flag = sud_civil_war }
+	}
+
+	mean_time_to_happen = {
+		months = 5
+	}
+
+	option = {
+		name = "Nubia is Muslim!"
+	    any_owned = {
+			   limit = {
+			   is_core = EGY
+			   }
+			   secede_province = EGY
+			   }
+		change_tag = MKA
+		set_country_flag = sud_civil_war
+		change_tag_no_core_switch = EGY
+		war = {
+			target = MKA
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+		}
+		SUD = { all_core = { add_core = EGY } }
+		COP = { all_core = { add_core = EGY } }
+		
+	}
+	
+	option = {
+		name = "Nubia is Christian!"
+        any_owned = {
+			   limit = {
+			   is_core = EGY
+			   }
+			   secede_province = EGY
+			   }
+		change_tag = MKA
+		set_country_flag = sud_civil_war
+		war = {
+			target = EGY
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+		}
+		SUD = { all_core = { add_core = EGY } }
+		COP = { all_core = { add_core = EGY } }
+	}
+}

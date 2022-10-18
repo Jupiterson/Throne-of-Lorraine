@@ -1,0 +1,1049 @@
+#Padri Events
+
+country_event = {
+	id = 651935
+	title = "EVTNAME651935"
+	desc = "EVTDESC651935"
+	picture = "aceh_jihad"
+
+	trigger = {
+		tag = SAK
+		government = theocracy
+		NOT = { has_country_flag = padri_terror }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "For the Imam!"
+		set_country_flag = padri_terror
+		add_country_modifier = {
+			name = padri_fundementalism
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = 651920
+	title = "EVTNAME651920"
+	desc = "EVTDESC651920"
+	picture = "aceh_jihad"
+
+	trigger = {
+		tag = SAK
+		has_recently_lost_war = yes
+		OR = {
+			government = theocracy
+			government = constitutional_theocracy
+		}
+	}
+
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = "Central Sumatra breathes a sigh of relief"
+		set_country_flag = fall_of_the_padri
+		SAK = {
+			limit = { government = theocracy }
+			government = absolute_empire
+		}
+		SAK = {
+			limit = { government = constitutional_theocracy }
+			government = semi_constitutional_empire
+		}
+		SAK = {
+			limit = { has_country_modifier = padri_fundementalism }
+			remove_country_modifier = padri_fundementalism
+		}
+		10 = {
+			change_province_name = "Pagaruyung"
+		}
+		remove_accepted_culture = bedouin
+		primary_culture = malay
+		prestige = -10
+	}
+}
+
+# Chinese Migration Events and Nanyang
+
+country_event = {
+	id = 651921
+	title = "EVTNAME651921"
+	desc = "EVTDESC651921"
+	picture = "chinese_migrants"
+
+	trigger = {
+		tag = QNG
+		has_country_flag = southern_devastation
+		NOT = { has_global_flag = chinese_diaspora }
+	}
+
+	mean_time_to_happen = { years = 1 }
+
+	option = {
+		set_global_flag = chinese_diaspora
+		name = "Hopefully they will be able to make a better life overseas"
+		3235 = {
+			any_pop = {
+                limit = { 
+					has_pop_culture = yue
+					type = labourers
+				}
+				move_pop = 2575
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = hakka
+					type = labourers
+				}
+				move_pop = 1387
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = min
+					type = labourers
+				}
+				move_pop = 1389
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = min
+					type = labourers
+				}
+				move_pop = 1402
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = min
+					type = farmers
+				}
+				move_pop = 1406
+			}
+			any_pop = {
+                limit = { 
+					has_pop_culture = hakka
+					type = farmers
+				}
+				pop_type = labourers
+				move_pop = 1404
+			}
+		}
+		2575 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier = gold_rush
+		}
+		2575 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1387 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier = gold_rush
+		}
+		1387 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1389 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1389 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1402 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1402 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1406 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1406 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		1404 = {
+			limit = {
+				has_province_modifier = gold_rush
+			}
+			remove_province_modifier  = gold_rush
+		}
+		1404 = {		
+			add_province_modifier = {
+				name = gold_rush
+				duration = 3650
+			}
+			add_core = LAN
+		}
+		any_country = {
+			limit = {
+				OR = {
+					owns = 2575
+					owns = 1387
+					owns = 1389
+					owns = 1402
+					owns = 1404
+					owns = 1406	
+				}
+				NOT = {
+					
+				}
+			}
+			country_event = 651922
+		}
+	}
+}
+
+country_event = {
+	id = 651922
+	title = "EVTNAME651922"
+	desc = "EVTDESC651922"
+	picture = "chinese_migrants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Welcome to Malaya!"
+		set_country_flag = chinese_immigrant_arrival
+		prestige = 5
+		any_pop = {
+			militancy = 2
+			consciousness = 4
+		}
+	}
+}
+
+country_event = {
+	id = 651923
+	title = "EVTNAME651923"
+	desc = "EVTDESC651923"
+	picture = "australia3rd"
+
+	trigger = {
+		tag = SLW
+		owns = 2505
+		NOT = { has_global_flag = exiled_marege }
+	}
+
+	mean_time_to_happen = { years = 1 }
+
+	option = {
+		set_global_flag = exiled_marege
+		name = "No"
+		prestige = 5
+	}
+
+	option = {
+		set_global_flag = exiled_marege
+		name = "It is a good idea. Let's do it."
+		prestige = 5
+		any_pop = {
+			limit = { 
+				OR = {
+					has_pop_culture = sumatran
+					has_pop_culture = malay
+				}
+				pop_majority_issue = reactionary
+				pop_majority_religion = sunni
+			}
+			pop_type = bureaucrats
+			move_pop = 2505
+			militancy = 4
+		}
+		2505 = {
+			remove_core = SLW
+			secede_province = AST
+		}
+		AST = {
+			capital = 2505
+			government = theocracy
+			religion = sunni
+			clr_country_flag = catholic_country
+			set_country_flag = sunni_country
+			primary_culture = sumatran
+			add_accepted_culture = malay
+			add_accepted_culture = australian
+			add_accepted_culture = aborigine
+			remove_accepted_culture = venetian
+			any_owned = {
+				assimilate = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "We will bring the word of Islam to the Southern lands! (Play as Marege Darulsalaam)"
+		set_global_flag = exiled_marege
+		prestige = -5
+		any_pop = {
+			limit = { 
+				OR = {
+					has_pop_culture = sumatran
+					has_pop_culture = malay
+				}
+				pop_majority_issue = reactionary
+				pop_majority_religion = sunni
+			}
+			pop_type = bureaucrats
+			move_pop = 2505
+		}
+		2505 = {
+			remove_core = SLW
+			secede_province = AST
+		}
+		AST = {
+			capital = 2505
+			government = theocracy
+			religion = sunni
+			clr_country_flag = catholic_country
+			set_country_flag = sunni_country
+			primary_culture = sumatran
+			add_accepted_culture = malay
+			add_accepted_culture = australian
+			add_accepted_culture = aborigine
+			remove_accepted_culture = venetian
+			any_owned = {
+				assimilate = yes
+			}
+		}
+		change_tag_no_core_switch = AST
+	}
+}
+
+# Johor Civil War Events
+
+country_event = {
+	id = 651924
+	title = "EVTNAME651924"
+	desc = "EVTDESC651924"
+	picture = "pahang_sultan"
+
+	trigger = {
+		tag = PHG
+		is_substate = yes
+		year = 1837
+		NOT = { has_country_flag = bendahara_mahmud }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "All hail Sultan Mahmud Muzaffar Shah"
+		set_country_flag = bendahara_mahmud
+		prestige = 15
+		define_general = { 
+			name = "Mahmud Muzaffar Shah" 
+			personality = implacable
+			background = spoiled
+		}
+		small_arms = 1000
+		regular_clothes = 1000
+		canned_food = 3000
+		treasury = 8000
+		JOH = {
+			release_vassal = PHG
+			country_event = 651925
+		}
+		ai_chance = { factor = 99 }
+	}
+	
+	option = {
+		name = "On second thought treason might be a bad idea"
+		set_country_flag = bendahara_mahmud
+		prestige = -15
+		define_general = { 
+			name = "Mahmud Muzaffar Shah" 
+			personality = implacable
+			background = spoiled
+		}
+	}
+}
+
+country_event = {
+	id = 651925
+	title = "EVTNAME651925"
+	desc = "EVTDESC651925"
+	picture = "pahang_sultan"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Do nothing"
+		set_global_flag = pahang_civil_war
+		prestige = -10
+		country_event = 651927
+	}
+
+	option = {
+		name = "Restore Bendahara Ali!"
+		set_global_flag = pahang_civil_war
+		war = {
+			target = PHG
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}	
+		ai_chance = { factor = 99 }
+	}
+}
+
+country_event = {
+	id = 651926
+	title = "EVTNAME651926"
+	desc = "EVTDESC651926"
+	picture = "pahang_banner"
+
+	trigger = {
+		tag = PHG
+		has_global_flag = pahang_civil_war
+		tag = PHG
+		truce_with = JOH
+		is_vassal = no
+		NOT = {has_country_flag = pahang_civil_war_victory }
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "Three Cheers for Sultan Mahmud Muzzafar Shah!"
+		set_country_flag = pahang_civil_war_victory
+		prestige = 30
+		JOH = {
+			1385 = {
+				secede_province = PHG
+			}
+			1388 = {
+				secede_province = PHG
+			}
+			country_event = 651927
+		}
+	}
+}
+
+country_event = {
+	id = 651927
+	title = "EVTNAME651927"
+	desc = "EVTDESC651927"
+	picture = "aceh_jihad"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Weakness only begets rebellion"
+		set_country_flag = pahang_civil_war_defeat
+		release_vassal = PAT
+		release_vassal = ATJ
+		prestige = -10
+		relation = { 
+			who = PAT 
+			value = -200 
+		}
+		relation = { 
+			who = ATJ 
+			value = -200 
+		}
+		ATJ = {
+			any_owned = {
+				add_core = JOH
+			}
+		}
+		PAT = {
+			any_owned = {
+				add_core = JOH
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 651928
+	title = "EVTNAME651928"
+	desc = "EVTDESC651928"
+	picture = "johor_banner"
+
+	trigger = {
+		tag = JOH
+		has_global_flag = pahang_civil_war
+		truce_with = PHG
+		is_our_vassal = PHG
+		NOT = { has_country_flag = pahang_civil_war_victory }
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "Once more, the treachery of the Bendahara has been given its just desserts"
+		set_country_flag = pahang_civil_war_victory
+		prestige = 30
+		inherit = PHG
+		define_general = { 
+			name = "Bendahara Ali" 
+			personality = merciless
+			background = aristocrat
+		}
+	}
+}
+
+# Farquhar's Retirement and Crawfurd's Acenssion Events
+
+country_event = {
+	id = 651929
+	title = "EVTNAME651929"
+	desc = "EVTDESC651929"
+	picture = "william_farquhar"
+
+	trigger = {
+		tag = SCO
+		owns = 1413
+		year = 1838
+		NOT = { has_country_flag = no_more_farquhar }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "His name will never be forgotten, right?"
+		set_country_flag = no_more_farquhar
+		prestige = -10
+		relation = {
+			who = JOH
+			value = -10
+		}
+		relation = {
+			who = BRU
+			value = -10
+		}
+		relation = {
+			who = SLW
+			value = -10
+		}
+		relation = {
+			who = MAL
+			value = -30
+		}
+	}
+}
+
+#Melaka Purchase
+
+country_event = {
+    id = 651930
+    title = "EVTNAME651930"
+    desc = "EVTDESC651930"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Return the ports to their rightful owners"
+        money = 50000
+        FROM = { country_event = 651931 }
+		ai_chance = {
+				factor = 60
+				modifier = {
+					factor = 1.5
+					is_greater_power = no
+				}
+				modifier = {
+					factor = 1.3
+					alliance_with = FROM
+				}
+				modifier = {
+					factor = 1.2
+					relation = { who = FROM value = 150 }
+				}
+				modifier = {
+					factor = 1.5
+					is_greater_power = yes
+					alliance_with = FROM
+				}
+			}
+		}
+
+    option = {
+        name = "They are not ready yet"
+        FROM = { country_event = 651932 }
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 0.2
+                is_greater_power = no
+            }
+
+            modifier = {
+                factor = 1.2
+                FROM = { is_greater_power = no }
+            }
+            modifier = {
+                factor = 1.3
+                NOT = { relation = { who = FROM value = 0 } }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = 651931
+    title = "EVTNAME651931"
+    desc = "EVTDESC651931"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "At last, our ancient cities have been restored to us"
+        prestige = 5
+        money = -50000
+        1384 = { secede_province = THIS }
+		1386 = { secede_province = THIS }
+        relation = { who = FROM value = 50 }
+        any_pop = { consciousness = -1 }
+    }
+}
+
+country_event = {
+    id = 651932
+    title = "EVTNAME651932"
+    desc = "EVTDESC651932"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "We will get our cities back someday, by force if necessary"
+        relation = { who = FROM value = -100 }
+    }
+}
+
+#Treaty of Caledonia 
+
+country_event = {
+    id = 651933
+    title = "EVTNAME651933" 
+    desc = "EVTDESC651933"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "What a disgrace"
+        prestige = -50
+        THIS = {
+            any_owned = {
+                limit = {
+                    continent = east_indies
+                    is_core = FROM
+                }
+                secede_province = FROM
+            }
+        }
+		any_country = {
+			limit = { vassal_of = THIS }
+			any_owned = {
+                limit = {
+                    continent = east_indies
+                    is_core = FROM
+                }
+                secede_province = FROM
+            }
+		}
+		any_country = {
+			limit = { 
+				vassal_of = THIS 
+				OR = {
+					primary_culture = malay
+					primary_culture = javan
+					primary_culture = asian_minor
+					primary_culture = moluccan
+					primary_culture = sumatran
+					tag = SAK
+				}
+			}
+			country_event = 651934
+		}
+        any_country = {
+            limit = {
+                alliance_with = FROM
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+}
+
+#Treaty of Caledonia For Indonesia
+
+country_event = {
+    id = 651942
+    title = "EVTNAME651942" 
+    desc = "EVTDESC651942"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "What a disgrace"
+        prestige = -50
+        THIS = {
+            any_owned = {
+                limit = {
+                    continent = east_indies
+                    is_core = INO
+                }
+                secede_province = INO
+            }
+        }
+		any_country = {
+			limit = { vassal_of = THIS }
+			any_owned = {
+                limit = {
+                    continent = east_indies
+                    is_core = INO
+                }
+                secede_province = INO
+            }
+		}
+		any_country = {
+			limit = { 
+				vassal_of = THIS 
+				OR = {
+					primary_culture = malay
+					primary_culture = javan
+					primary_culture = asian_minor
+					primary_culture = moluccan
+					primary_culture = sumatran
+					tag = SAK
+				}
+			}
+			country_event = 651934
+		}
+        any_country = {
+            limit = {
+                alliance_with = FROM
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+}
+
+# Releases all vassals after Treaty of Caledonia
+
+country_event = {
+    id = 651934
+    title = "EVTNAME651934" 
+    desc = "EVTDESC651934"
+    picture = "treaty"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Free at last"
+		overlord = {
+			relation = { who = THIS value = -200 }
+			diplomatic_influence = { who = THIS value = -200 }
+			leave_alliance = THIS
+			release_vassal = THIS
+		}
+    }
+}
+
+#Indonesian War of Independence
+
+country_event = {
+	id = 651936
+	title = "EVTNAME651936"
+	desc = "EVTDESC651936"
+	picture = "nationalists"
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Withdraw from Indonesia"
+		prestige = -30
+		INO = {
+			all_core = {
+				add_core = FROM
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = INO
+			}
+			secede_province = FROM
+		}
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				is_culture_group = southeast_asian
+			}
+			country_event = 651934
+		}
+		FROM = {
+			country_event = 651937
+		}
+	}
+
+	option = {
+		name = "Crush the rebels!"
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = make_puppet
+			}
+			defender_goal = {
+				casus_belli = liberate_country
+				country = INO
+			}
+			call_ally = yes
+		}
+		ai_chance = { factor = 99 }
+	}
+}
+
+country_event = {
+	id = 651937
+	title = "EVTNAME651937"
+	desc = "EVTDESC651937"
+	picture = "nationalists"
+
+	trigger = {
+		has_country_flag = indo_war_leader
+		has_global_flag = indonesian_war_ongoing
+		1413 = {
+			owned_by = INO
+		}
+		NOT = { has_country_flag = indonesian_war_victory }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Indonesia Raya!"
+		set_country_flag = indonesian_war_victory
+		set_global_flag = indonesia_born
+		INO = {
+			any_owned = {
+				secede_province = THIS
+			}
+		}
+		any_owned = {
+			limit = {
+				continent = east_indies
+			}
+			add_core = INO
+		}
+		prestige = 30
+		change_tag = INO
+		1413 = {
+			change_province_name = Jakarta
+		}
+		remove_country_modifier = indonesian_nationalism
+		any_country = {
+			limit = {
+				has_country_flag = indonesia_master
+			}
+			country_event = 651933
+		}
+		add_accepted_culture = javan
+		add_accepted_culture = malay
+		add_accepted_culture = sumatran
+		add_accepted_culture = moluccan
+		add_accepted_culture = dayak
+		add_accepted_culture = moro
+		add_accepted_culture = melanesian
+		add_accepted_culture = asian_minor
+		add_accepted_culture = filipino
+		add_accepted_culture = rusoni
+	}
+}
+
+country_event = {
+	id = 651941
+	title = "EVTNAME651941"
+	desc = "EVTDESC651941"
+	picture = "jambi_uprising"
+
+	trigger = {
+		has_country_flag = indo_war_leader
+		has_global_flag = indonesian_war_ongoing
+		is_vassal = yes
+		NOT = { has_country_flag = indonesian_war_victory }
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "A dark day for Indonesia"
+		set_country_flag = indonesian_war_victory
+		clr_global_flag = indonesian_war_ongoing
+		clr_country_flag = indo_war_leader
+		remove_country_modifier = indonesian_nationalism
+		any_owned = {
+			limit = {
+				is_core = INO
+			}
+			secede_province = PRK
+		}
+		any_country = {
+			limit = {
+				owns = 1413
+				NOT = { 
+					OR = {
+						primary_culture = malay
+						primary_culture = javan
+						primary_culture = moluccan
+						primary_culture = sumatran 
+					}
+				}
+			}
+			country_event = 651938
+		}
+	}
+}
+
+country_event = {
+	id = 651938
+	title = "EVTNAME651938"
+	desc = "EVTDESC651938"
+	picture = "jambi_uprising"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The rebels have been supressed, as they always will be"
+		set_country_flag = indonesian_war_victory
+		clr_global_flag = indonesian_war_ongoing
+		PRK = {
+			any_owned = {
+				secede_province = THIS
+			}
+		}
+	}
+}
+
+#Indonesian National Awakening
+
+country_event = {
+	id = 651939
+	title = "EVTNAME651939"
+	desc = "EVTDESC651939"
+	picture = "mutiny_execution"
+
+	trigger = {
+		has_global_flag = indonesia_organized
+		NOT = { has_global_flag = indonesian_massacres }
+		has_country_flag = indonesia_master
+	}
+
+	mean_time_to_happen = { years = 1 }
+
+	option = {
+		name = "Worrisome"
+		set_global_flag = indonesian_massacres
+		1418 = {
+			any_pop = {
+				limit = {
+					is_culture_group = southeast_asian
+				}
+				consciousness = 8
+				militancy = -1
+				reduce_pop = 0.95
+			}
+		}
+		any_pop = {
+			limit = {
+				is_culture_group = southeast_asian
+			}
+			consciousness = 5
+			militancy = 3
+		}
+	}
+}
+
+country_event = {
+	id = 651940
+	title = "EVTNAME651940"
+	desc = "EVTDESC651940"
+	picture = "indonesian_nationalism"
+
+	trigger = {
+		has_global_flag = indonesian_massacres
+		OR = {
+            primary_culture = malay
+			primary_culture = javan
+			primary_culture = moluccan
+			primary_culture = sumatran
+			tag = SAK
+		}
+		NOT = { has_country_flag = indonesian_revolutionary_inform }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "We want no part of this Indonesian movement"
+		set_country_flag = indonesian_revolutionary_inform
+		set_country_flag = reject_indo_unity
+		any_pop = {
+			limit = {
+				is_culture_group = southeast_asian
+			}
+			consciousness = 4
+			militancy = 2
+		}
+		ai_chance = { factor = 99 }
+	}
+	
+	option = {
+		name = "We stand with the Indonesians"
+		set_country_flag = indonesian_revolutionary_inform
+		set_country_flag = indonesian_revolutionary_ally
+		add_country_modifier = {
+			name = indonesian_nationalism
+			duration = -1
+		}
+		any_country = {
+			limit = {
+				has_country_flag = indonesia_master
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+	}
+}

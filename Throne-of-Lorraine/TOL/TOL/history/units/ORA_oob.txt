@@ -1,0 +1,25 @@
+SCO = { value = 150 }
+
+leader = {
+	name = "Morven Stewart"
+	date = 1826.1.1
+	type = land
+	personality = hellbent
+	background = school_of_offense
+	prestige = 0.3
+}
+
+army = {
+	name = "Army of the Republic"
+	location = 3593
+	regiment = {
+		name= "Drummonder Cuirassiers"
+		type = cuirassier
+		home = 3593
+	}
+	regiment = {
+		name= "Drummonder Hussars"
+		type = hussar
+		home = 3593
+	}
+}
