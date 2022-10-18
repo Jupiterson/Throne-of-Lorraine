@@ -224,8 +224,8 @@ purchase_scilly = {
 		effect = {
 			set_country_flag = coaling_port
 			2409 = {
-				add_province_modifier = Welsh_Coaling_Port
-				change_province_name = Ynys Owain
+				add_province_modifier = { name = Welsh_Coaling_Port duration = 36500 }
+				change_province_name = "Ynys Owain"
 				money = -20000
 				prestige = 1
 				life_rating = 1
@@ -238,7 +238,7 @@ purchase_scilly = {
 			tag = WHA
 			has_country_flag = buy_caribbean_island
 			NOT = { has_country_flag = coaling_port }
-			owns = 2409
+			owns = 203
 		}
 		
 		allow = {
@@ -248,10 +248,10 @@ purchase_scilly = {
 		
 		effect = {
 			set_country_flag = coaling_port
-			add_country_modifier = { name = coaling_port_tolls duration = 365 }
+			add_province_modifier = { name = Welsh_Coaling_Port duration = 36500 }
 			203 = {
 				add_province_modifier = Welsh_Coaling_Port
-				change_province_name = Ynys Owain
+				change_province_name = "Ynys Owain"
 				money = -20000
 				prestige = 1
 				life_rating = 1
@@ -440,5 +440,27 @@ purchase_scilly = {
 			}
 		}
 	}
+	
+#	repopulate_the_marches = {
+#		potential = {
+#			NOT = { has_country_flag = relocating_welsh }
+#			tag = UOW
+#			owns = 286
+#			owns = 3585
+#		}
+#		
+#		allow = {
+#			NOT = {
+#				exists = ENL
+#			}
+#			war = no
+#			is_our_vassal = WHA 
+#			ideology = reactionary
+#			is_secondary_power
+#			state_n_government = 1
+#			citizenship_policy = residency
+#			citizens_rights = primary_culture_only 
+#			
+			
 }
 

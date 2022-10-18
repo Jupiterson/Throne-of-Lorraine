@@ -295,6 +295,9 @@ political_decisions = {
 		NOT = { exists = NGU }
 		NOT = { exists = MZA }
 		NOT = { exists = ROQ }
+		OR = { NOT = { tag = ZUL }
+		       AND = { tag = ZUL
+			           year = 1841}}
 		}
 
 		allow = {
@@ -1060,6 +1063,137 @@ political_decisions = {
 		reduce_pop = 0.01							 
         }
 		set_country_flag = qamata_finished
+		}
+		ai_will_do = {
+            factor = 1
+        }
+	 }
+	 
+#Zulu Coalition Decisions
+	 
+	 BAP_invite_arbota = {
+		picture = treaty_signing
+		potential = {
+		tag = BAP
+        has_country_flag = bapedi_start
+		NOT = { has_country_flag = invited_arbota }
+		NOT = { exists = GAZ }
+	    NOT = { owns = 2057 }
+	   }
+    
+		allow = {
+		money = 100
+		}
+    
+		effect = {
+		country_event = { id = 50025 days = 4 }					 			 
+		set_country_flag = invited_arbota
+		}
+		ai_will_do = {
+            factor = 1
+        }
+		}
+	
+	 BAP_invite_xhosa = {
+		picture = treaty_signing
+		potential = {
+		tag = BAP
+        has_country_flag = bapedi_start
+		NOT = { has_country_flag = invited_xhosa }
+		exists = XHO
+		NOT = { war_with = XHO }
+	   }
+    
+		allow = {
+		OR = { ai = yes
+		       relation = { who = XHO value = 50 }
+			   }
+		}
+    
+		effect = {
+		XHO = { country_event = 50026 }						 
+		set_country_flag = invited_xhosa
+		}
+		ai_will_do = {
+            factor = 1
+        }
+	 }
+	  
+	 BAP_invite_tsonga = {
+		picture = treaty_signing
+		potential = {
+		tag = BAP
+        has_country_flag = bapedi_start
+		NOT = { has_country_flag = invited_tsonga }
+		exists = SHO
+		NOT = { war_with = SHO }
+	   }
+    
+		allow = {
+		OR = { ai = yes
+		       relation = { who = SHO value = 50 }
+			   }
+		}
+    
+		effect = {
+		SHO = { country_event = 50027 }						 
+		set_country_flag = invited_tsonga
+		}
+		ai_will_do = {
+            factor = 1
+        }
+	 }
+	 
+	 BAP_buy_guns = {
+		picture = selling_guns
+		potential = {
+		tag = BAP
+        has_country_flag = bapedi_start
+		NOT = { has_country_flag = BAP_bought_guns }
+	   }
+    
+		allow = {
+		OR = { ai = yes
+		       relation = { who = SCO value = 15 }
+			   }
+		money = 3000	   
+		}
+    
+		effect = {
+		money = -3000
+        small_arms = 15
+        ammunition = 5		
+		set_country_flag = BAP_bought_guns
+		}
+		ai_will_do = {
+            factor = 1
+        }
+	 }
+	 
+	 BAP_mercenaries = {
+		picture = selling_guns
+		potential = {
+		tag = BAP
+        has_country_flag = bapedi_start
+		NOT = { has_country_flag = BAP_mercenaries }
+		exists = SHO
+	    }
+    
+		allow = {
+		OR = { ai = yes
+		       relation = { who = SCO value = 50 }
+			   }
+		money = 5000	   
+		}
+    
+		effect = {
+		money = -5000
+        define_general = {
+        	name = "Allistor McFergus"
+           	personality = implacable
+	        background = cursed_luck
+            }	
+		set_country_flag = BAP_mercenaries
 		}
 		ai_will_do = {
             factor = 1

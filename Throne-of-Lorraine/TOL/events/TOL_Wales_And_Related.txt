@@ -7,6 +7,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { 
+		ai_chance = { factor = 100 }
 		name = "EVTOPTA9111"
 		ai_chance = { factor = 100 }
 		3480 = {
@@ -14,7 +15,7 @@ country_event = {
 		}
 		any_country = {
 			limit = { has_country_flag = offer_made }
-			country_event = { id = 9112 days = 0 }
+			country_event = 9112
 		}	
 	}
 	
@@ -620,7 +621,7 @@ province_event = {
 			life_rating = 2
 		}
 	}
-}	
+}	4e
 
 #isle of mann railway
 province_event = {

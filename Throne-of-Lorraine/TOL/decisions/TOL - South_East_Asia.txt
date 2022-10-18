@@ -93,7 +93,9 @@ taungoo_restoration = {
 			prestige = 25
 			set_global_flag = burma_form_eob
 			BUR = { all_core = { add_core = BUR } }
-			TIB = { all_core = { add_core = BUR } }			
+			TIB = { all_core = { add_core = BUR } }		
+			3531 = { add_core = EOB }
+			3532 = { add_core = EOB }
 		}
 		ai_will_do = { factor = 1 }
 	}

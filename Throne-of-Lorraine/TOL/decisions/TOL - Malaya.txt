@@ -1,0 +1,1447 @@
+
+political_decisions = {
+
+#Straits Chinese Decisions
+
+	kangchu_system = {
+		picture = kangchu
+		
+		potential = {
+			OR = { 
+				tag = JOH
+				tag = PHG
+			}
+			owns = 1385
+			NOT = { has_global_flag = kangchu_system }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			year = 1840
+		}
+
+		effect = {
+			set_global_flag = kangchu_system
+			economic_reform = yes_land_reform
+			3235 = {
+				any_pop = {
+					limit = { 
+						has_pop_culture = yue
+						type = artisans
+					}
+					pop_type = labourers
+					move_pop = 1388
+				}
+				any_pop = {
+					limit = { 
+						has_pop_culture = min
+						type = artisans
+					}
+					pop_type = labourers
+					move_pop = 1385
+				}
+			}
+			1388 = {
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				limit = {
+					NOT = { has_province_modifier = baby_boom }
+				}
+				add_province_modifier = {
+					name = baby_boom
+					duration = 1875
+				}
+				add_core = LAN
+			}
+			1385 = {
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				limit = {
+					NOT = { has_province_modifier = baby_boom }
+				}
+				add_province_modifier = {
+					name = baby_boom
+					duration = 1875
+				}
+				add_core = LAN
+			}
+			add_accepted_culture = min
+			add_accepted_culture = yue
+			add_accepted_culture = hakka
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	accept_tionghua_population = {
+		picture = coolies
+		
+		potential = {
+			OR = {
+				primary_culture = malay
+				primary_culture = sumatran
+				primary_culture = javan
+				primary_culture = moluccan
+				tag = RIA
+			}
+			NOT = { has_country_flag = accept_tionghua }
+			NOT = { government = fascist_dictatorship }
+		}
+
+		allow = {
+			citizens_rights = all_voting_pops
+			press_rights = free_press
+			public_meetings = yes_meeting
+			war = no
+			nationalism_n_imperialism = 1
+		}
+
+		effect = {
+			set_country_flag = accept_tionghua
+			add_accepted_culture = min
+			add_accepted_culture = yue
+			add_accepted_culture = hakka
+			prestige = 10
+		}
+	}
+	
+	
+#Nanyang Decisions	
+	jews_of_the_east = {
+		picture = coolies
+		
+		potential = {
+			OR = { 
+				tag = GXI
+				tag = GNG
+				tag = FJN
+				tag = TAI
+			}
+			is_vassal = no
+			NOT = { has_country_flag = israel_of_the_east }
+			has_global_flag = kangchu_system
+			has_global_flag = chinese_diaspora
+		}
+
+		allow = {
+			war = no
+			has_unclaimed_cores = no
+			nationalism_n_imperialism = 1
+			romanticism = 1
+		}
+
+		effect = {
+			set_country_flag = israel_of_the_east
+			LAN = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			badboy = 5
+		}
+		ai_will_do = { factor = 0.4 }
+	}
+	
+	south_china_unity = {
+		picture = south_china_map
+		
+		potential = {
+			OR = { 
+				tag = LAN
+			}
+			has_global_flag = chuseok_coup
+			is_vassal = no
+			NOT = { has_country_flag = south_china_thalassocracy }
+		}
+
+		allow = {
+			war = no
+			has_unclaimed_cores = no
+			nationalism_n_imperialism = 1
+			romanticism = 1
+		}
+
+		effect = {
+			set_country_flag = south_china_thalassocracy
+			CHI_1482 = {
+				add_core = THIS
+			}
+			CHI_1493 = {
+				add_core = THIS
+			}
+			CHI_1499 = {
+				add_core = THIS
+			}
+			TAI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			SAI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			badboy = 10
+		}
+		ai_will_do = { factor = 0.4 }
+	}
+	
+	incorporate_nanyang = {
+		picture = intiation_triad
+		
+		potential = {
+			tag = LAN
+			has_country_flag = israel_of_the_east
+			is_vassal = no
+			NOT = { has_country_flag = nanyang_incorporated }
+		}
+
+		allow = {
+			tag = LAN
+			war = no
+			has_unclaimed_cores = no
+			social_science = 1
+			OR = {
+				is_greater_power = yes
+				AND = {
+					is_secondary_power = yes
+					prestige = 50
+				}
+			}
+			OR = {
+				colonial_policy = settlement
+				colonial_policy = civilizing
+			}
+		}
+
+		effect = {
+			set_country_flag = nanyang_incorporated
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							is_core = CHI
+							is_core = LAN
+						}
+					}
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					is_coastal = yes
+				}
+				add_core = LAN
+			}
+			badboy = 10
+		}
+		ai_will_do = { factor = 0.4 }
+	}
+	
+	unite_nanyang = {
+		picture = nanyang
+		potential = {
+			OR = { 
+				tag = SAI
+				tag = GNG
+				tag = FJN
+				tag = TAI
+			}
+			LAN = {
+				exists = no
+			}
+			is_vassal = no
+			has_country_flag = israel_of_the_east
+			NOT = { has_country_flag = united_nanyang }
+		}
+
+		allow = {
+			war = no
+			LAN = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			revolution_n_counterrevolution = 1
+		}
+
+		effect = {
+			set_country_flag = united_nanyang
+			CHI_1504 = {
+				remove_core = THIS	
+			}
+			CHI_1545 = {
+				remove_core = THIS
+			}
+			CHI_1547 = {
+				remove_core = THIS	
+			}
+			CHI_1604 = {
+				remove_core = THIS	
+			}
+			CHI_1610 = {
+				remove_core = THIS
+			}
+			change_tag = LAN
+			add_accepted_culture = hakka
+			add_accepted_culture = yue
+			add_accepted_culture = min
+			add_accepted_culture = konketsu
+			remove_accepted_culture = han_chinese
+			remove_accepted_culture = zhuang
+			remove_accepted_culture = japanese
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	found_hong_leong = {
+		picture = chinese_family
+		potential = {
+			NOT = { has_country_flag = ocbc }
+			tag = LAN
+		}
+
+		allow = {
+			war = no
+			business_banks = 1
+			year = 1905
+		}
+
+		effect = {
+			set_country_flag = ocbc
+			prestige = 10
+			add_country_modifier = {
+				name = hong_leong
+				duration = -1
+			}
+			activate_technology = investment_banks
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	south_china_schooling = {
+		picture = imperial_examinations
+		potential = {
+			NOT = { has_country_flag = sc_schools }
+			tag = LAN
+			has_country_flag = mccc
+		}
+
+		allow = {
+			war = no
+			phenomenology_n_hermeneutic = 1
+			school_reforms = acceptable_schools
+			money = 1000000
+		}
+
+		effect = {
+			set_country_flag = sc_schools
+			treasury = -1000000
+			prestige = 30
+			add_country_modifier = {
+				name = chinese_education
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	chamber_of_commerce = {
+		picture = malayan_chinese_chamber_of_commerce
+		potential = {
+			NOT = { has_country_flag = mccc }
+			OR = {
+				tag = LAN
+				tag = SAI
+				AND = {
+					OR = {
+						tag = JOH
+						tag = PHG
+						tag = PAT
+						tag = BRU
+						tag = SAK
+						tag = ATJ
+						tag = SIA
+						tag = RIA
+						tag = JAV
+						tag = MLY
+						tag = INO
+					}
+					accepted_culture = min
+				}
+			}
+		}
+
+		allow = {
+			war = no
+			market_regulations = 1
+			collectivist_theory = 1
+			OR = {
+				economic_policy = laissez_faire
+				economic_policy = interventionism
+				economic_policy = state_capitalism
+			}
+			money = 100000
+		}
+
+		effect = {
+			set_country_flag = mccc
+			prestige = 10
+			add_country_modifier = {
+				name = chinese_chamber_of_commerce
+				duration = -1
+			}
+			tech_school = nanyang_tech_school
+		}
+
+	}
+
+	#Uniting Malaya Decisions
+
+	form_malayan_empire = {
+		picture = map_east_indies
+		
+		potential = {
+			primary_culture = malay
+			NOT = { has_country_flag = unite_malay_empire }
+			NOT = { exists = MLY }
+			is_vassal = no
+		}
+
+		allow = {
+			MLY = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			war = no
+			primary_culture = malay
+			state_n_government = 1
+		}
+
+		effect = {
+			set_country_flag = unite_malay_empire
+			THIS = {
+				limit = {
+					OR = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+				government = absolute_empire
+			}
+			MLY = {
+				all_core = {
+					limit = {
+						NOT = { owned_by = THIS } 
+					}
+					secede_province = THIS
+				}
+			}
+			change_tag = MLY
+			prestige = 10
+		}
+	}
+	
+	malays_never_die = {
+		picture = the_aceh
+		
+		potential = {
+			tag = MLY
+			has_country_flag = unite_malay_empire
+			NOT = { has_country_flag = malay_irrendata }
+		}
+
+		allow = {
+			MLY = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			state_n_government = 1
+			war = no
+		}
+
+		effect = {
+			set_country_flag = malay_irrendata
+			DJA = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			BRU = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			SAK = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			RIA = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			PAT = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			ATJ = {
+				all_core = {
+					add_core = MLY
+				}
+			}
+			MLY = {
+				all_core = {
+					limit = {
+						NOT = { owned_by = THIS } 
+						OR = {
+							owner = {
+								in_sphere = THIS
+								war = no
+							}
+							owner = {
+								vassal_of = THIS
+								war = no
+							}
+						}
+					}
+					secede_province = THIS
+				}
+			}
+			prestige = 10
+		}
+	}
+	
+	malayu_raya = {
+		picture = map_indonesia
+		
+		potential = {
+			tag = MLY
+			has_country_flag = malay_irrendata
+			NOT = { has_country_flag = malayu_raya }
+		}
+
+		allow = {
+			MLY = {
+				all_core = {
+					OR = {
+						empty = yes
+						owned_by = THIS
+					}
+				}
+			}
+			nationalism_n_imperialism = 1
+			war = no
+		}
+
+		effect = {
+			set_country_flag = malayu_raya
+			badboy = 10
+			JAV = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			SLW = {
+				all_core = {
+					limit = {
+						NOT = { province_id = 2505 }
+					}
+					add_core = THIS
+				}
+			}
+			MAL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BAL_1438 = {
+				add_core = THIS
+			}
+			SUL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			add_accepted_culture = moluccan
+			add_accepted_culture = sumatran
+			add_accepted_culture = melanesian
+			add_accepted_culture = moro
+		}
+	}
+
+#Java and Bali Decisions
+
+	heirs_to_the_majapahit = {
+		picture = majapahit_flag
+		
+		potential = {
+			primary_culture = javan
+			civilized = yes
+			NOT = { has_country_flag = majapahit_heir }
+		}
+
+		allow = {
+			primary_culture = javan
+			is_vassal = no
+			prestige = 30
+			state_n_government = 1
+		}
+
+		effect = {
+			set_country_flag = majapahit_heir
+			BAL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			JAV = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			THIS = {
+				change_tag = NUS
+				government = absolute_empire
+			}
+			prestige = 10
+		}
+	}
+
+	lamun_huwus_kalah_nusantara = {
+		picture = map_indonesia
+		
+		potential = {
+			tag = NUS
+			civilized = yes
+			has_country_flag = majapahit_heir
+			NOT = { has_country_flag = nusantara_claim }
+		}
+
+		allow = {
+			tag = NUS
+			war = no
+			is_vassal = no
+			prestige = 30
+			romanticism = 1
+			nationalism_n_imperialism = 1
+			war_policy = jingoism
+		}
+
+		effect = {
+			set_country_flag = nusantara_claim 
+			MLY = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BRU = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			DJA = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			SAK = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			ATJ = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			SLW = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			MAL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BAL_1438 = {
+				add_core = THIS
+			}
+			SUL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			NUS = {
+				all_core = {
+					limit = {
+						NOT = { owned_by = THIS } 
+						OR = {
+							owner = {
+								in_sphere = THIS
+								war = no
+							}
+							owner = {
+								vassal_of = THIS
+								war = no
+							}
+						}
+					}
+					secede_province = THIS
+				}
+			}
+			add_accepted_culture = moluccan
+			add_accepted_culture = sumatran
+			add_accepted_culture = melanesian
+			add_accepted_culture = dayak
+			add_accepted_culture = asian_minor
+			prestige = 10
+		}
+	}
+	
+#Malaya Development Decisions
+
+	malayan_rubber_boom = {
+        picture = rubber_cycle
+        potential = {
+            owns = 2575
+            owns = 1384
+            NOT = { has_global_flag = malayan_rubber_boom }
+        }
+
+        allow = {
+            war = no
+            money = 50000
+            organic_chemistry = 1
+			biologism = 1
+            business_regulations = 1
+        }
+
+        effect = {
+            set_global_flag = malayan_rubber_boom
+            treasury = -50000
+            1384 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+            1385 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+			1386 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+			1388 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+			1390 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+			1391 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+			8 = { 
+				trade_goods = rubber
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+			}
+        }
+        ai_will_do = {  factor = 1 }
+    }
+	
+	royal_selangor_pewter = {
+        picture = selangor_pewter
+        potential = {
+            owns = 2575
+            owns = 1387
+            NOT = { has_global_flag = royal_selangor }
+        }
+
+        allow = {
+            war = no
+            money = 50000
+            modern_central_bank_system = 1
+            investment_banks = 1
+            business_regulations = 1
+        }
+
+        effect = {
+            set_global_flag = royal_selangor
+            treasury = -50000
+            1387 = { 
+				trade_goods = precious_metal
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+				limit = {
+					has_province_modifier = gold_rush
+				}
+				remove_province_modifier = gold_rush	
+				add_province_modifier = {
+					name = gold_rush
+					duration = 3650
+				}
+			}
+            2575 = { 
+				trade_goods = precious_metal
+				limit = {
+					NOT = { has_province_modifier = plantation }
+				}
+				add_province_modifier = {
+					name = plantation
+					duration = -1
+				}
+				life_rating = 15
+				limit = {
+					has_province_modifier = gold_rush
+				}
+				remove_province_modifier = gold_rush	
+				add_province_modifier = {
+					name = gold_rush
+					duration = 3650
+				}
+			}
+			THIS = {
+				limit = {
+					primary_culture = malay
+					OR = {
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+				tech_school = malay_tech_school
+			}
+		}
+			
+        ai_will_do = {  factor = 1 }
+    }
+
+#Johor and Pahang Decisions
+	
+	daeng_ibrahim = {
+		picture = ibrahim
+		potential = {
+			tag = PHG
+			NOT = { has_country_flag = daeng_ibrahim }
+			has_country_flag = pahang_civil_war_victory
+		}
+
+		allow = {
+			year = 1841
+			war = no
+			money = 8000
+		}
+			
+		effect = {
+			set_country_flag = daeng_ibrahim
+			treasury = -8000
+			economic_reform = yes_land_reform
+			1390 = {
+				life_rating = 5
+				change_province_name = "Pekan"
+				add_province_modifier = { name = recently_built_city duration = 365 }
+			}
+		}
+				
+		ai_will_do = { factor = 1 }
+		
+	}
+	
+	capital_muar = {
+		picture = johor_bahru
+		potential = {
+			tag = JOH
+			NOT = { has_country_flag = daeng_ibrahim }
+			has_country_flag = pahang_civil_war_victory
+		}
+
+		allow = {
+			year = 1841
+			war = no
+			money = 8000
+		}
+			
+		effect = {
+			set_country_flag = daeng_ibrahim
+			treasury = -8000
+			economic_reform = yes_land_reform
+			capital = 1385
+			1385 = {
+				life_rating = 5
+				change_province_name = "Johor Bahru"
+				add_province_modifier = { name = recently_built_city duration = 365 }
+			}
+		}
+				
+		ai_will_do = { factor = 1 }
+		
+	}
+	
+	abu_bakar = {
+		picture = abu_bakar
+		potential = {
+			tag = PHG
+			NOT = { has_country_flag = daeng_ibrahim }
+			has_country_flag = daeng_ibrahim
+		}
+
+		allow = {
+			year = 1862
+			war = no
+			money = 18000
+		}
+			
+		effect = {
+			set_country_flag = abu_bakar
+			treasury = -18000
+			add_country_modifier = {
+				name = ivory_tower_intellectual
+				duration = 3650
+			}
+			1390 = {
+				infrastructure = 1
+			}
+			economic_reform = yes_transport_improv
+			economic_reform = yes_pre_indust
+			economic_reform = yes_industrial_construction
+			activate_technology = piston_steam_engine
+			build_factory_in_capital_state = lumber_mill
+		}
+				
+		ai_will_do = { factor = 1 }
+		
+	}
+	
+	regain_straits_ports = {
+        picture = map_east_indies
+        potential = {
+			1384 = { owned_by = ETH }
+            1386 = { owned_by = ETH }
+            OR = {
+                tag = PHG
+				tag = PAT
+				tag = JOH
+				tag = MLY
+            }
+            NOT = { has_country_flag = melaka_purchase }
+        }
+
+        allow = {
+			set_country_flag = melaka_purchase
+            war = no
+            money = 55000
+            1384 = {
+                owner = {
+                    war = no
+                    relation = { who = THIS value = 100 }
+                }
+            }
+			OR = {
+				AND = {
+					military_score = 8
+					total_amount_of_ships = 10
+				}
+				civilized = yes
+			}
+        }
+
+        effect = {
+            set_country_flag = melaka_purchase
+            1384 = { owner = { country_event = 651930 } }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
+	treaty_of_caledonia = {
+        picture = treaty_signing
+        potential = {
+            OR = {
+                primary_culture = malay
+				primary_culture = javan
+				primary_culture = moluccan
+				primary_culture = sumatran
+				tag = SAK
+            }
+			
+            1413 = {
+                owner = {
+                    NOT = { 
+						OR = {
+							primary_culture = malay
+							primary_culture = javan
+							primary_culture = moluccan
+							primary_culture = sumatran 
+						}
+					}
+                    war_with = THIS
+                }
+            }
+			
+			NOT = { has_global_flag = indonesian_war_ongoing }
+        }
+
+        allow = {
+            war = yes
+            1413 = {
+                controlled_by = THIS
+                province_control_days = 365
+            }
+
+            THIS = {
+                all_core = {
+                    OR = {
+                        AND = {
+							controlled_by = THIS
+							province_control_days = 365
+						}
+                        controller = { alliance_with = THIS }
+                        empty = yes
+                        owner = {
+                            NOT = { war_with = THIS }
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            random_country = {
+                limit = {
+                    owns = 1413
+                    war_with = THIS
+                }
+				end_war = THIS
+				country_event = 651933
+            }
+			prestige = 50
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
+	treaty_of_caledonia2 = {
+        picture = treaty_signing
+        potential = {
+            OR = {
+                primary_culture = malay
+				primary_culture = javan
+				primary_culture = moluccan
+				primary_culture = sumatran
+				tag = SAK
+            }
+			
+            1413 = {
+                owner = {
+                    NOT = { 
+						OR = {
+							primary_culture = malay
+							primary_culture = javan
+							primary_culture = moluccan
+							primary_culture = sumatran 
+						}
+					}
+                    war_with = THIS
+                }
+            }
+			
+			has_global_flag = indonesian_war_ongoing
+        }
+
+        allow = {
+            war = yes
+            1413 = {
+                controlled_by = THIS
+                province_control_days = 365
+            }
+
+            INO = {
+                all_core = {
+                    OR = {
+                        AND = {
+							controlled_by = THIS
+							province_control_days = 365
+						}
+                        controller = { alliance_with = THIS }
+                        empty = yes
+                        owner = {
+                            NOT = { war_with = THIS }
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            random_country = {
+                limit = {
+                    owns = 1413
+                    war_with = THIS
+                }
+				end_war = THIS
+				country_event = 651942
+            }
+			prestige = 50
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
+#Indonesia Stuff
+
+	organize_indonesia = {
+        picture = map_indonesia
+        potential = {
+            civilized = yes
+            NOT = {
+                exists = INO
+                has_global_flag = indonesia_organized
+                is_culture_group = southeast_asian
+				has_global_flag = indonesia_born
+            }
+            nationalism_n_imperialism = 1
+            owns = 1413
+        }
+
+        allow = {
+            war = no
+            machine_guns = 1
+            market_regulations = 1
+            owns = 1413
+        }
+
+        effect = {
+            set_global_flag = indonesia_organized
+            prestige = 5
+            set_country_flag = indonesia_master
+
+			any_country = {
+				limit = {
+					OR = {
+						is_culture_group = southeast_asian
+						tag = SAK
+					}
+					civilized = no
+					vassal_of = THIS
+				}
+				any_owned = {
+					secede_province = THIS
+				}
+            }
+			
+			any_country = {
+				limit = {
+					OR = {
+						is_culture_group = southeast_asian
+						tag = SAK
+					}
+					civilized = yes
+					vassal_of = THIS
+				}
+				any_owned = {
+					add_core = INO
+					set_country_flag = scottish_colonial_vassal
+				}
+            }
+
+            any_owned = {
+                limit = {
+					continent = east_indies
+                }
+                add_core = INO
+            }
+
+            any_owned = {
+                limit = {
+                    is_core = INO
+                    NOT = { province_id = 1446 province_id = 2647 }
+                }
+                remove_core = JAV
+                remove_core = DJA
+                remove_core = SAK
+                remove_core = ATJ
+                remove_core = BAL
+                remove_core = SLW
+                remove_core = MAL
+                remove_core = PHG
+                remove_core = JOH
+                remove_core = PAT
+                remove_core = SUL
+                remove_core = BRU
+            }
+
+            INO = {
+                set_country_flag = post_colonial_country
+                tech_school = developing_tech_school
+            }
+			country_event = 199064
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	indonesian_war_of_independence = {
+		picture = indonesia_map
+		
+		potential = {
+			OR = {
+                primary_culture = malay
+				primary_culture = javan
+				primary_culture = moluccan
+				primary_culture = sumatran
+				tag = LAN
+            }
+			has_country_flag = indonesian_revolutionary_ally
+			not = { has_global_flag = indonesian_war_ongoing }
+			is_vassal = no
+		}
+
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+			military_score = 20
+		}
+
+		effect = {
+			set_country_flag = indo_war_leader
+			set_global_flag = indonesian_war_ongoing
+			any_country = {
+				limit = {
+					owns = 1413
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1408
+							province_id = 1418
+							province_id = 1406
+						}
+					}
+					secede_province = THIS
+				}
+				country_event = 651936
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	unite_with_indonesia = {
+        picture = indonesia_map
+        potential = {
+            OR = {
+                primary_culture = malay
+				primary_culture = javan
+				primary_culture = moluccan
+				primary_culture = sumatran
+				primary_culture = moro
+				primary_culture = filipino
+				primary_culture = rusoni
+				primary_culture = dayak
+				primary_culture = asian_minor
+				tag = LAN
+				tag = SAI
+            }
+            exists = INO
+			INO = {
+				has_country_flag = indonesian_war_victory
+			}
+            NOT = {
+                has_country_flag = ghost_country
+                has_country_flag = unite_with_indo
+                tag = INO
+            }
+        }
+
+        allow = {
+            war = no
+            NOT = { is_mobilised = yes }
+            OR = {
+                is_vassal = no
+                overlord = { is_our_vassal = INO }
+            }
+            OR = {
+                part_of_sphere = no
+                sphere_owner = { is_sphere_leader_of = INO }
+            }
+            INO = {
+                war = no
+            }
+			relation = {
+				who = INO
+				value = 150
+			}
+        }
+
+        effect = {
+            set_country_flag = unite_with_unite_with_indo
+			any_owned = {
+				add_core = INO
+			}
+            random_country = {
+                limit = {
+                    tag = INO
+                    ai = yes
+                    THIS = { ai = yes }
+                }
+                inherit = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = INO
+                    ai = yes
+                    THIS = { ai = no }
+                }
+                any_owned = { secede_province = THIS }
+                THIS = {
+                    change_tag = INO
+                }
+            }
+            random_country = {
+                limit = {
+                    tag = INO
+                    ai = no
+                }
+                country_event = 60130
+            }
+			INO = {
+				add_accepted_culture = javan
+				add_accepted_culture = malay
+				add_accepted_culture = sumatran
+				add_accepted_culture = moluccan
+				add_accepted_culture = dayak
+				add_accepted_culture = moro
+				add_accepted_culture = melanesian
+				add_accepted_culture = asian_minor
+				add_accepted_culture = filipino
+				add_accepted_culture = rusoni
+			}
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	malay_java_reconciliation = {
+		picture = the_aceh
+		
+		potential = {
+			tag = NUS
+			tag = MLY
+			NOT = { has_country_flag = accept_malay_java }
+			NOT = { government = fascist_dictatorship }
+			year = 1900
+		}
+
+		allow = {
+			citizens_rights = all_voting_pops
+			press_rights = free_press
+			public_meetings = yes_meeting
+			war = no
+			social_science = 1
+			revolution_n_counterrevolution = 1
+		}
+
+		effect = {
+			set_country_flag = accept_malay_java
+			add_accepted_culture = malay
+			add_accepted_culture = javan
+			add_accepted_culture = asian_minor
+			add_accepted_culture = moro
+			prestige = 10
+		}
+	}
+}

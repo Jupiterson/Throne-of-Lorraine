@@ -560,7 +560,7 @@ country_event = {
 	id = 50000
 
 	trigger = {
-            year = 1841
+            year = 1838
 			has_country_flag = xhosa_country		
 	}
 
@@ -599,7 +599,7 @@ country_event = {
 	id = 50001
 
 	trigger = {
-            year = 1842
+            year = 1839
 			tag = ZUL
 			has_global_flag = xhosaprophet
 	}
@@ -960,7 +960,9 @@ country_event = {
 	trigger = {
             year = 1860
 			OR  = { tag = SCO
-			        tag = ENG }
+			        tag = ENG
+   					tag = UPB
+					tag = CLT}
 			owns = 2087
 	}
 
@@ -1444,8 +1446,650 @@ country_event = {
 			factor = 1
 		}
 	}
-}
+} 
 
+###Zulu Coalition Events###
+
+country_event = {
+
+	id = 50024
+
+	trigger = {
+            year = 1836
+			tag = BAP	
+	}
+
+	fire_only_once = yes
+
+	title = "BAPstart_title"
+	desc = "BAPstart_desc"
+	picture = "zulu"
+
+	option = {
+		name = "BAPstart_option1"
+		set_global_flag = bapedi_start
+		set_country_flag = bapedi_start
+	}
+	}
+	
+	country_event = {
+
+	id = 50025
+
+	is_triggered_only = yes
+
+	title = "arbota_accept_title"
+	desc = "arbota_accept_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "arbota_accept_option1"
+		random_list = { 90 = { set_global_flag = arbota_accepted money = -100}
+		10 = { money = -100} }
+	}
+	}
+	
+	country_event = {
+
+	id = 50026
+
+	is_triggered_only = yes
+
+	title = "xhosa_invite_title"
+	desc = "xhosa_invite_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "xhosa_invite_option1"
+		BAP = { country_event = 50029 }
+		set_global_flag = xhosa_accepted
+		set_country_flag = in_BAP_coalition
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 100
+				OR = { ZUL = { ai = no }
+				       relation = { who = XHO value = 50 } }
+				
+			}
+		}
+	}
+	option = {
+		name = "xhosa_invite_option2"
+		BAP = { country_event = 50030 }
+		ai_chance = {
+			factor = 35
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50029
+
+	is_triggered_only = yes
+
+	title = "xhosa_accepted_title"
+	desc = "xhosa_accepted_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "xhosa_accepted_option1"
+	}
+	}
+	
+	country_event = {
+
+	id = 50030
+
+	is_triggered_only = yes
+
+	title = "xhosa_declined_title"
+	desc = "xhosa_declined_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "xhosa_declined_option1"
+	}
+	}
+	
+		country_event = {
+
+	id = 50027
+
+	is_triggered_only = yes
+
+	title = "tsonga_invite_title"
+	desc = "tsonga_invite_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "tsonga_invite_option1"
+		BAP = { country_event = 50028 }
+		set_global_flag = tsonga_accepted
+		set_country_flag = in_BAP_coalition
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				OR = { ZUL = { ai = no }
+				       relation = { who = SHO value = 50 } }
+				
+			}
+		}
+	}
+	option = {
+		name = "tsonga_invite_option2"
+		BAP = { country_event = 50031 }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50028
+
+	is_triggered_only = yes
+
+	title = "tsonga_accepted_title"
+	desc = "tsonga_accepted_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "tsonga_accepted_option1"
+	}
+	}
+	
+	country_event = {
+
+	id = 50031
+
+	is_triggered_only = yes
+
+	title = "tsonga_declined_title"
+	desc = "tsonga_declined_desc"
+	picture = "xhosa_learning"
+
+	option = {
+		name = "tsonga_declined_option1"
+	}
+	}
+	
+	country_event = {
+
+	id = 50032
+
+	trigger = {
+            year = 1840
+			tag = BAP	
+			has_global_flag = xhosa_accepted
+			XHO = {has_country_flag = in_BAP_coalition }
+	}
+
+	fire_only_once = yes
+
+	title = "xhosa_prep_title"
+	desc = "xhosa_prep_desc"
+	picture = "zulu_soldiers"
+
+	option = {
+		name = "xhosa_prep_option1"
+		end_war = XHO
+		create_alliance = XHO
+		clr_global_flag = xhosa_accepted
+	}
+	}
+	
+	country_event = {
+
+	id = 50033
+
+	trigger = {
+            year = 1840
+			tag = BAP	
+			has_global_flag  = tsonga_accepted
+			SHO = {has_country_flag = in_BAP_coalition }
+	}
+
+	fire_only_once = yes
+
+	title = "tsonga_prep_title"
+	desc = "tsonga_prep_desc"
+	picture = "zulu_soldiers"
+
+	option = {
+		name = "tsonga_prep_option1"
+		end_war = SHO
+		create_alliance = SHO
+		clr_global_flag = tsonga_accepted
+	}
+	}
+	
+	country_event = {
+
+	id = 50034
+
+	trigger = {
+            year = 1840
+			tag = BAP	
+			NOT = { has_global_flag = xhosa_accepted }
+			NOT = { has_global_flag = tsonga_accepted }              
+			has_country_flag = bapedi_start		
+            exists = ZUL			
+	}
+
+	fire_only_once = yes
+
+	title = "BAP_war_title"
+	desc = "BAP_war_desc"
+	picture = "xhosa_war"
+
+	option = {
+		name = "BAP_war_option1"
+		casus_belli = {
+	        target = ZUL
+	        type = cut_down_to_size
+	        months = 12
+            }
+        ZUL = { casus_belli = {
+	            target = BAP
+	            type = cut_down_to_size
+	            months = 12
+              }}
+		 war = {
+	            target = ZUL
+	            attacker_goal = { casus_belli = cut_down_to_size }
+	            defender_goal = { casus_belli = cut_down_to_size }
+                }
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               war = {
+	            target = ZUL
+	            attacker_goal = { casus_belli = cut_down_to_size }
+	            defender_goal = { casus_belli = cut_down_to_size }
+                } }
+				
+		clr_country_flag = bapedi_start
+		clr_global_flag = bapedi_start
+		set_global_flag = zulu_coalition_war
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 100
+			    ZUL = { ai = no }
+		}
+	}
+	}
+	
+	
+	option = {
+		name = "BAP_war_option2"
+		clr_country_flag = arbota_accepted 
+		clr_country_flag = bapedi_start
+		clr_global_flag = bapedi_start
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+		ai_chance = {
+			factor = 20
+
+	}
+	}
+	}
+	
+	country_event = {
+
+	id = 50035
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            XHO = { NOT = { has_country_flag = in_BAP_coalition }}
+			SHO = { NOT = { has_country_flag = in_BAP_coalition }}
+	}
+
+	fire_only_once = yes
+
+	title = "ZUL_surr_title"
+	desc = "ZUL_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ZUL_surr_option1"
+		end_war = BAP
+		end_war = XHO
+		end_war = SHO
+		end_war = MAT
+		clr_global_flag = zulu_coalition_war
+		2114 = { add_core = BAP }
+		2110 = { add_core = BAP }
+		2112 = { add_core = XHO }
+		2112 = { add_core = GCA }
+		2111 = { add_core = GCA }
+		2100 = { add_core = GCA }
+		any_owned = {
+		    limit = { is_core = GAZ }
+					secede_province = GAZ
+		}
+        any_owned = {
+		    limit = { is_core = GCA }
+					secede_province = GCA
+		} 
+        any_owned = {
+					secede_province = BAP
+		}		
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+	}
+	}
+	
+	country_event = {
+
+	id = 50036
+
+	trigger = {
+            tag = BAP
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes			
+	}
+
+	fire_only_once = yes
+
+	title = "BAP_surr_title"
+	desc = "BAP_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "BAP_surr_option1"
+		end_war = ZUL
+		2109 = { add_core = ZUL }
+		any_owned = {
+			     limit = {
+				is_core = ZUL
+			}
+			secede_province = ZUL
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50037
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = arbota_accepted
+			has_global_flag = zulu_coalition_war
+            war_with = BAP	
+	} 
+
+	fire_only_once = yes
+
+	title = "arbota_rebel_title"
+	desc = "arbota_rebel_desc"
+	picture = "xhosa_war"
+
+	option = {
+		name = "arbota_rebel_option1"
+		clr_global_flag = arbota_accepted
+		any_owned = {
+			limit = {
+				is_core = GAZ
+			}
+			secede_province = GAZ
+		}
+		war = {
+	            target = GAZ
+	            attacker_goal = { casus_belli = conquest_any }
+  				defender_goal = { casus_belli = status_quo }
+                }
+		
+	}
+	}
+	
+	country_event = {
+
+	id = 50038
+
+	trigger = {
+            tag = XHO
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            has_country_flag = in_BAP_coalition				
+	}
+
+	fire_only_once = yes
+
+	title = "XHO_surr_title"
+	desc = "XHO_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "XHO_surr_option1"
+		end_war = ZUL
+		any_owned = {
+		limit = { is_core = XHO }
+			add_core = ZUL
+		}
+		any_owned = {
+			secede_province = ZUL
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50039
+
+	trigger = {
+            tag = SHO
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            has_country_flag = in_BAP_coalition			
+	}
+
+	fire_only_once = yes
+
+	title = "SHO_surr_title"
+	desc = "SHO_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "SHO_surr_option1"
+		end_war = ZUL
+		2071 = { add_core = ZUL }
+		3447 = { add_core = ZUL }
+		inherit = MAT
+	    any_owned = {
+		    limit = { is_core = ZUL }
+			secede_province = ZUL
+		} 
+		any_owned = {
+		    limit = { is_core = TSW }
+			secede_province = TSW
+		}
+		any_owned = {
+			limit = { is_core = KRB }
+			secede_province = KRB
+		}
+		any_owned = {
+			limit = { is_core = TIK }
+			secede_province = TIK
+		}
+	}
+	}
+	
+	country_event = {
+
+	id = 50040
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = no		
+			war = no
+	}
+
+	fire_only_once = yes
+
+	title = "ZUL_victory_title"
+	desc = "ZUL_victory_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ZUL_victory_option1"
+		clr_global_flag = zulu_coalition_war
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+		prestige = 20
+		government = absolute_empire
+		2104 = { add_core = ZUL }
+		XHO = { all_core = { add_core = THIS } } 
+		2071 = { add_core = ZUL }
+		3447 = { add_core = ZUL }
+	}
+	}
+	
+	country_event = {
+
+	id = 50041 
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            XHO = { has_country_flag = in_BAP_coalition }
+			SHO = { NOT = { has_country_flag = in_BAP_coalition }}
+	}
+
+	fire_only_once = yes
+
+	title = "ZUL_surr_title"
+	desc = "ZUL_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ZUL_surr_option1"
+		end_war = BAP
+		end_war = XHO
+		end_war = SHO
+		end_war = MAT
+		clr_global_flag = zulu_coalition_war
+		2114 = { add_core = BAP }
+		2110 = { add_core = BAP }
+		2112 = { add_core = XHO }
+		any_owned = {
+		    limit = { is_core = GAZ }
+					secede_province = GAZ
+		}
+        any_owned = {
+		    limit = { is_core = XHO }
+					secede_province = XHO
+		} 
+        any_owned = {
+					secede_province = BAP
+		}		
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+		XHO = { leave_alliance = BAP }
+	}
+	}
+	
+	country_event = {
+
+	id = 50042
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            SHO = { has_country_flag = in_BAP_coalition }
+			XHO = { NOT = { has_country_flag = in_BAP_coalition }}
+	}
+
+	fire_only_once = yes
+
+	title = "ZUL_surr_title"
+	desc = "ZUL_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ZUL_surr_option1"
+		end_war = BAP
+		end_war = XHO
+		end_war = SHO
+		end_war = MAT
+		clr_global_flag = zulu_coalition_war
+		2114 = { add_core = BAP }
+		2112 = { add_core = XHO }
+		2112 = { add_core = GCA }
+		2111 = { add_core = GCA }
+		2100 = { add_core = GCA }
+		any_owned = {
+		    limit = { is_core = SHO }
+					secede_province = SHO
+		}
+        any_owned = {
+		    limit = { is_core = GCA }
+					secede_province = GCA
+		} 
+        any_owned = {
+					secede_province = BAP
+		}		
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+		SHO = { leave_alliance = BAP }
+	}
+	}
+	
+	country_event = {
+
+	id = 50043
+
+	trigger = {
+            tag = ZUL
+            has_global_flag = zulu_coalition_war
+            has_recently_lost_war = yes		
+            SHO = { has_country_flag = in_BAP_coalition }
+			XHO = { has_country_flag = in_BAP_coalition }
+	}
+
+	fire_only_once = yes
+
+	title = "ZUL_surr_title"
+	desc = "ZUL_surr_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ZUL_surr_option1"
+		end_war = BAP
+		end_war = XHO
+		end_war = SHO
+		end_war = MAT
+		clr_global_flag = zulu_coalition_war
+		2114 = { add_core = BAP }
+		2112 = { add_core = XHO }
+		any_owned = {
+		    limit = { is_core = SHO }
+					secede_province = SHO
+		}
+        any_owned = {
+		    limit = { is_core = XHO }
+					secede_province = XHO
+		} 
+        any_owned = {
+					secede_province = BAP
+		}		
+		any_country = {limit = { has_country_flag = in_BAP_coalition }
+		               clr_country_flag = in_BAP_coalition }
+		XHO = { leave_alliance = BAP }
+		SHO = { leave_alliance = BAP }
+	}
+	}
+
+
+#SQI
 
 country_event = {
 
