@@ -121,6 +121,7 @@ peace_order = {
 	china_acquire_state
 	yoruba_acquire_state
 	tsonga_acquire_state
+	batho_acquire_state
 	amazon_acquire_state
 	acquire_state
 	acquire_state_mid
@@ -11532,6 +11533,92 @@ tsonga_acquire_state = {
 	po_demand_state = yes
 
 	war_name = WAR_SHO_REUNIFICATION
+
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.10
+		}
+	}
+}
+
+# Lebatho Unification
+
+batho_acquire_state = {
+	sprite_index = 22
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 0
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 0
+	break_truce_militancy_factor = 0
+	truce_months = 84
+
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	always = yes
+
+	can_use = {
+	    year = 1848
+		NOT = { is_our_vassal = THIS }
+		neighbour = THIS
+		OR = {
+			any_owned_province = {
+				is_core = BTH
+			}
+			is_culture_group = sotho_tswana
+		}
+		THIS = { is_culture_group = sotho_tswana }
+		is_vassal = no
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
+		OR = {
+			any_owned_province = {
+				is_core = BTH
+			}
+			NOT = { is_culture_group = sotho_tswana }
+		}
+	}
+
+	allowed_states = {
+		OR = {
+#			AND = {
+#				any_owned_province = {
+#					is_core = BTH
+#				}
+#				year = 1900
+#			}
+			AND = {
+				any_owned_province = {
+					is_core = BTH
+				}
+				THIS = { ai = no }
+			}
+			any_owned_province = {
+				is_core = BTH
+				owner = { civilized = no }
+			}
+#			any_owned_province = {
+#				owner = { is_culture_group = sotho_tswana }
+#				NOT = { is_core = BTH }
+#			}
+		}
+	}
+
+	po_demand_state = yes
+
+	war_name = WAR_BTH_UNIFICATION
 
 	on_add = {
 		move_issue_percentage = {

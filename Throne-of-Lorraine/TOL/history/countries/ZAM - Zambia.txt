@@ -1,22 +1,20 @@
-capital = 2012
-primary_culture = south_forest_bantu
-culture = southern_bantu
-culture = nyasa
-religion = protestant
-government = democracy
+capital = 2016
+primary_culture = lacustrine_bantu
+religion = animist
+government = absolute_monarchy
 plurality = 0.0
-nationalvalue = nv_order
+nationalvalue = nv_tradition
 literacy = 0.01
 
-# Political reforms
-slavery = no_slavery
-upper_house_composition = appointed
-vote_franschise = landed_voting
+## Political reforms
+slavery = yes_slavery
+upper_house_composition = party_appointed
+vote_franschise = none_voting
 public_meetings = no_meeting
 press_rights = state_press
 trade_unions = no_trade_unions
 voting_system = first_past_the_post
-political_parties = harassment
+political_parties = underground_parties
 
 # Social Reforms
 wage_reform = no_minimum_wage
@@ -27,9 +25,10 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-# New Reforms
+
+#New Reforms
 conscription = no_draft
-debt_law = peonage
+debt_law = serfdom
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
@@ -37,11 +36,10 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
-set_country_flag = protestant_country
+set_country_flag = lacking_writing_system
+set_country_flag = animist_country
 
-set_country_flag = post_colonial_country
-
-ruling_party = ZAM_communist
+ruling_party = ZAM_conservative
 upper_house = {
 	fascist = 0
 	liberal = 16

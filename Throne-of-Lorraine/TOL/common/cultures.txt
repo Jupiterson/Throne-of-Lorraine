@@ -4441,14 +4441,6 @@ southern_african = {
 		last_names = { Tsiranana Ramanantsoa Ratsimandrava Andriamahazo Ratsiraka
 		}
 	}	
-	sotho = {
-		color = {158 135 43}
-		first_names = { Letsie Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
-		}
-
-		last_names = { Moshoeshoe Lerotholi Masopha Matsaba Leabua Mamohato
-		}
-	}
 	
 #	yao = {
 #		color = {189 20 31}
@@ -4467,6 +4459,23 @@ southern_african = {
 		}
 	}
 }
+
+sotho_tswana = {
+	leader = african
+
+	unit = ZuluGC
+	
+	sotho = {
+		color = {158 135 43}
+		first_names = { Letsie Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
+		}
+
+		last_names = { Moshoeshoe Lerotholi Masopha Matsaba Leabua Mamohato
+		}
+	}
+	union = BTH
+}
+
 mixed_cultures = {
 	leader = mixed
     unit = AfricanGC
