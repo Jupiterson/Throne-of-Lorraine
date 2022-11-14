@@ -932,114 +932,39 @@ country_event = {
 	}
 }
 
-#More Natural Disasters
-
 #The Warlords
 
 country_event = {
 	id = 651903
 	title = "EVTNAME651903"
 	desc = "EVTDESC651903"
-	picture = "korea_wu"
+	picture = "qing_emperor"
 
 	trigger = {
 		tag = QNG
 		civilized = yes
+		has_country_flag = china_modernized 
 		NOT = { has_country_flag = provincial_defiance }
 	}
 
 	mean_time_to_happen = { months = 8 }
 
 	option = {
-		name = "How dare they defy us!"
+		name = "If you want to provoke a man, strike at his wallet!"
 		set_country_flag = provincial_defiance
 		any_owned = {
 			limit = {
-				is_core = HUI
+				is_accepted_culture = yes
 			}
-          	secede_province = HUI
-		}
-		any_owned = {
-			limit = {
-				is_core = KOR
-			}
-          	secede_province = KOR
-		}
-		HUI = {
-			government = presidential_dictatorship
-		}
-		KOR = {
-			government = presidential_dictatorship
-		}
-		prestige = -5
-	}
-
-	option = {
-		name = "Protect Han rights and traditions! (Play as Liangjiang)"
-		set_country_flag = provincial_defiance	
-		any_owned = {
-			limit = {
-				is_core = HUI
-			}
-          	secede_province = HUI
-		}
-		any_owned = {
-			limit = {
-				is_core = KOR
-			}
-          	secede_province = KOR
-		}
-		HUI = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		KOR = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
+			add_province_modifier = {
+				name = dadu_resistance
+				duration = 1825
 			}
 		}
 		prestige = -5
-		change_tag_no_core_switch = HUI
-	}
-
-	option = {
-		name = "We will play second fiddle to the Buyeo no longer! (Play as Silla)"
-		set_country_flag = provincial_defiance
-		any_owned = {
-			limit = {
-				is_core = HUI
-			}
-          	secede_province = HUI
-		}
-		any_owned = {
-			limit = {
-				is_core = KOR
-			}
-          	secede_province = KOR
-		}
-		HUI = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		KOR = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		prestige = -5
-		change_tag_no_core_switch = KOR
 	}
 }
+
 
 country_event = {
 	id = 651904
@@ -1056,10 +981,10 @@ country_event = {
 		NOT = { has_country_flag = chuseok_coup }
 	}
 
-	mean_time_to_happen = { days = 7 }
+	mean_time_to_happen = { days = 14 }
 
 	option = {
-		name = "Even if not all see it that way, we did what we had to do"
+		name = "We did what was necessary"
 		set_country_flag = chuseok_coup
 		upper_house = {
 			ideology = reactionary
@@ -1069,14 +994,11 @@ country_event = {
 			limit = {
 				OR = {
 					NOT = { is_capital = yes }
+					NOT = { is_core = KOR }
+					NOT = { is_core = MCK }
 				}
 			}
           	remove_core = QNG
-		}
-		KOR = {
-			any_owned = {
-				remove_core = QNG
-			}
 		}
 		QNG = {
 			limit = {
@@ -1100,6 +1022,13 @@ country_event = {
 			name = buyeo_regency_government
 			duration = -1
 		}
+		QNG = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = dadu_resistance
+			}
+			remove_province_modifier = dadu_resistance
+		}
 		1616 = {
 			add_province_modifier = {
 				name = dadu_resistance
@@ -1111,14 +1040,84 @@ country_event = {
 		political_reform = none_voting
 		political_reform = serfdom
 		prestige = -50
+		release_vassal = KOR
+		KOR = {
+			government = absolute_monarchy
+		}
 	}
+
+	option = {
+		name = "I did what you wanted, now give me my prize! (Play as Silla)"
+		set_country_flag = chuseok_coup
+		upper_house = {
+			ideology = reactionary
+			value = 0.99
+		}
+		all_core = {
+			limit = {
+				OR = {
+					NOT = { is_capital = yes }
+					NOT = { is_core = KOR }
+					NOT = { is_core = MCK }
+				}
+			}
+          	remove_core = QNG
+		}
+		QNG = {
+			limit = {
+				NOT = { has_country_modifier = the_half_half_system }
+			}
+			add_country_modifier = {
+				name = the_half_half_system
+				duration = -1
+			}
+		}
+		QNG = {
+			limit = {
+				NOT = { has_country_modifier = disunited_china }
+			}
+			add_country_modifier = {
+				name = disunited_china
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = buyeo_regency_government
+			duration = -1
+		}
+		QNG = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = dadu_resistance
+			}
+			remove_province_modifier = dadu_resistance
+		}
+		1616 = {
+			add_province_modifier = {
+				name = dadu_resistance
+				duration = 1825
+			}
+		}	
+		political_reform = regionalism
+		social_reforms = no_schools
+		political_reform = none_voting
+		political_reform = serfdom
+		prestige = -50
+		release_vassal = KOR
+		KOR = {
+			government = absolute_monarchy
+		}
+		change_tag_no_core_switch = KOR
+	}
+	
 }
+
 
 country_event = {
 	id = 651905
 	title = "EVTNAME651905"
 	desc = "EVTDESC651905"
-	picture = "imperial_protection"
+	picture = "disunited_china"
 
 	trigger = {
 		tag = QNG
@@ -1130,452 +1129,359 @@ country_event = {
 	mean_time_to_happen = { months = 2 }
 
 	option = {
-		name = "Their ignorance of heaven's will will doom us all!"
+		name = "We must break the power of the traitors, before they break us!"
 		set_country_flag = modernizer_defiance
 		any_owned = {
 			limit = {
-				is_core = FJN
+				OR = {
+					is_core = FJN
+					is_core = GUI
+					is_core = GNG
+					is_core = SZC
+				}
 			}
-          	secede_province = FJN
+			secede_province = GMJ
+			add_core = GMJ
 		}
 		any_owned = {
 			limit = {
-				is_core = JCH
+				OR = {
+					is_core = JCH
+					is_core = SXI
+					is_core = XBI
+				}
 			}
-          	secede_province = JCH
+			secede_province = TPG
+			add_core = TPG
 		}
+		TPG = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = 3650
+			}
+		}
+		GMJ = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = 3650
+			}
+		}
+		release_vassal = XIN
 		any_owned = {
 			limit = {
-				is_core = SXI
+				is_core = MGL
 			}
-          	secede_province = SXI
+			secede_province = MGL
 		}
-		SXI = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
+		release_vassal = MGL
+		release_vassal = TNT
+		release_vassal = ALT
+		any_owned = {
+			limit = {
+				is_core = DAI
 			}
-		}
-		JCH = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		FJN = {
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
+            secede_province = DAI
 		}
 		prestige = -5
 	}
 
 	option = {
-		name = "Changsha will lead China into a bright future! (Play as Huguang)"
-		set_country_flag = modernizer_defiance
+		name = "Yongping is the rightful Emperor! (Play the Baohuanghui)"
 		any_owned = {
 			limit = {
-				is_core = FJN
+				OR = {
+					is_core = FJN
+					is_core = GUI
+					is_core = GNG
+					is_core = SZC
+				}
 			}
-          	secede_province = FJN
+			secede_province = GMJ
+			add_core = GMJ
 		}
 		any_owned = {
 			limit = {
-				is_core = JCH
+				OR = {
+					is_core = JCH
+					is_core = SXI
+					is_core = XBI
+				}
 			}
-          	secede_province = JCH
+			secede_province = TPG
+			add_core = TPG
 		}
-		any_owned = {
-			limit = {
-				is_core = SXI
-			}
-          	secede_province = SXI
-		}
-		SXI = {
+		TPG = {
 			government = presidential_dictatorship
 			add_country_modifier = {
 				name = chinese_provincial_government	
-				duration = -1
+				duration = 3650
 			}
 		}
-		JCH = {
+		GMJ = {
 			government = presidential_dictatorship
 			add_country_modifier = {
 				name = chinese_provincial_government	
-				duration = -1
+				duration = 3650
 			}
 		}
-		FJN = {
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
+		release_vassal = XIN
+		any_owned = {
+			limit = {
+				is_core = MGL
 			}
+			secede_province = MGL
+		}
+		release_vassal = MGL
+		release_vassal = TNT
+		release_vassal = ALT
+		any_owned = {
+			limit = {
+				is_core = DAI
+			}
+            secede_province = DAI
 		}
 		prestige = -5
-		change_tag_no_core_switch = JCH
+		change_tag_no_core_switch = TPG
 	}
 
 	option = {
-		name = "China's hopes lie in the warehouses of Hangzhou! (Play as Min-Zhe)"
-		set_country_flag = modernizer_defiance
+		name = "The hills are high, and the Emperor far away (Play the Xinan Hubao)"
 		any_owned = {
 			limit = {
-				is_core = FJN
+				OR = {
+					is_core = FJN
+					is_core = GUI
+					is_core = GNG
+					is_core = SZC
+				}
 			}
-          	secede_province = FJN
+			secede_province = GMJ
+			add_core = GMJ
 		}
 		any_owned = {
 			limit = {
-				is_core = JCH
+				OR = {
+					is_core = JCH
+					is_core = SXI
+					is_core = XBI
+				}
 			}
-          	secede_province = JCH
+			secede_province = TPG
+			add_core = TPG
 		}
-		any_owned = {
-			limit = {
-				is_core = SXI
-			}
-          	secede_province = SXI
-		}
-		SXI = {
+		TPG = {
 			government = presidential_dictatorship
 			add_country_modifier = {
 				name = chinese_provincial_government	
-				duration = -1
+				duration = 3650
 			}
 		}
-		JCH = {
+		GMJ = {
 			government = presidential_dictatorship
 			add_country_modifier = {
 				name = chinese_provincial_government	
-				duration = -1
+				duration = 3650
 			}
 		}
-		FJN = {
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
+		release_vassal = XIN
+		any_owned = {
+			limit = {
+				is_core = MGL
 			}
+			secede_province = MGL
+		}
+		release_vassal = MGL
+		release_vassal = TNT
+		release_vassal = ALT
+		any_owned = {
+			limit = {
+				is_core = DAI
+			}
+            secede_province = DAI
 		}
 		prestige = -5
-		change_tag_no_core_switch = FJN
-	}
-
-	option = {
-		name = "Taiyuan's coal will shine as a beacon for others!! (Play as Huguang)!"
-		set_country_flag = modernizer_defiance
-		any_owned = {
-			limit = {
-				is_core = FJN
-			}
-          	secede_province = FJN
-		}
-		any_owned = {
-			limit = {
-				is_core = JCH
-			}
-          	secede_province = JCH
-		}
-		any_owned = {
-			limit = {
-				is_core = SXI
-			}
-          	secede_province = SXI
-		}
-		SXI = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		JCH = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		FJN = {
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		prestige = -5
-		change_tag_no_core_switch = SXI
+		change_tag_no_core_switch = GMJ
 	}
 }
+
+country_event = {
+	id = 651913
+	title = "EVTNAME651913"
+	desc = "EVTDESC651913"
+	picture = "guangzhou_uprising"
+
+	trigger = {
+		tag = QNG
+		civilized = yes
+		has_country_flag = dadu_war
+		NOT = { has_country_flag = chinese_revolt }
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = "This is really, really bad”
+		set_country_flag = chinese_revolt
+		any_owned = {
+			limit = {
+				is_core = HUI
+				is_core = SDG
+			}
+          	secede_province = KMT
+			add_core = KMT
+		}
+		MIN = {
+			all_core = {
+				add_core = KMT
+			}
+		}
+		HUI = {
+			government = presidential_dictatorship
+		}
+		war = {
+			target = KMT
+			attacker_goal = { 
+				casus_belli = conquest
+			}
+			defender_goal = {
+				casus_belli = acquire_all_cores
+			}
+			call_ally = yes
+		}
+		prestige = -5
+	}
+
+	option = {
+		name = "Expel the Koreans, long live the Chinese Republic! (Play the Chinese Republic)"
+		set_country_flag = chinese_revolt
+		any_owned = {
+			limit = {
+				is_core = HUI
+				is_core = SDG
+			}
+          	secede_province = KMT
+			add_core = KMT
+		}
+		MIN = {
+			all_core = {
+				add_core = KMT
+			}
+		}
+		HUI = {
+			government = presidential_dictatorship
+		}
+		war = {
+			target = KMT
+			attacker_goal = { 
+				casus_belli = conquest
+			}
+			defender_goal = {
+				casus_belli = acquire_all_cores
+			}
+			call_ally = yes
+		}
+		prestige = -5
+		change_tag_no_core_switch = KMT
+	}
+}
+
+# Coalition Timer Events
 
 country_event = {
 	id = 651906
 	title = "EVTNAME651906"
 	desc = "EVTDESC651906"
-	picture = "beiyang_exercises"
+	picture = "winning_china"
 
 	trigger = {
-		tag = QNG
+		OR = {
+			tag = GMJ
+			tag = TPG
+		}
 		civilized = yes
-		has_country_flag = modernizer_defiance
-		NOT = { has_country_flag = southern_anarchy }
+		owns = 1616
+		NOT = { has_country_modifier = chinese_provincial_government }
 	}
 
-	mean_time_to_happen = { months = 2 }
+	mean_time_to_happen = { months = 8 }
 
 	option = {
-		name = "The mountains are high and the Emperor is far away"
-		set_country_flag = southern_anarchy
-		prestige = -5
-		any_owned = {
-			limit = {
-				is_core = GNG
-			}
-          	secede_province = GNG
+		name = "Our mandate has been restored once more"
+		add_country_modifier = {
+			name = chinese_provincial_government	
+			duration = 3650
 		}
-		any_owned = {
-			limit = {
-				is_core = GUI
-			}
-          	secede_province = GUI
-		}
-		GNG = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		GUI = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		any_owned = {
-			limit = {
-				is_core = DAI
-			}
-            secede_province = DAI
-		}
-	}
-
-	option = {
-		name = "The Pearl River calls! (Play as Liangguang)"
-		set_country_flag = southern_anarchy
-		prestige = -5
-		any_owned = {
-			limit = {
-				is_core = GNG
-			}
-          	secede_province = GNG
-		}
-		any_owned = {
-			limit = {
-				is_core = GUI
-			}
-          	secede_province = GUI
-		}
-		GNG = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		GUI = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		any_owned = {
-			limit = {
-				is_core = DAI
-			}
-            secede_province = DAI
-		}
-		change_tag_no_core_switch = GNG
-	}
-
-	option = {
-		name = "To Guilin! (Play as Guizhou)"
-		set_country_flag = southern_anarchy
-		prestige = -5
-		any_owned = {
-			limit = {
-				is_core = GNG
-			}
-          	secede_province = GNG
-		}
-		any_owned = {
-			limit = {
-				is_core = GUI
-			}
-          	secede_province = GUI
-		}
-		GNG = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		GUI = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		any_owned = {
-			limit = {
-				is_core = DAI
-			}
-            secede_province = DAI
-		}
-		change_tag_no_core_switch = GUI
+		prestige = 20
 	}
 }
+
 
 country_event = {
 	id = 651907
 	title = "EVTNAME651907"
 	desc = "EVTDESC651907"
-	picture = "sichuan_china_army"
+	picture = "losing_china"
 
 	trigger = {
-		tag = QNG
+		OR = {
+			tag = GMJ
+			tag = TPG
+		}
 		civilized = yes
-		has_country_flag = southern_anarchy
-		NOT = { has_country_flag = western_anarchy }
+		NOT = { owns = 1616 }
+		NOT = { has_country_modifier = chinese_provincial_government }
 	}
 
-	mean_time_to_happen = { months = 1 }
+	mean_time_to_happen = { months = 8 }
 
 	option = {
-		name = "Things do not bode well."
-		set_country_flag = western_anarchy
-		any_owned = {
-			limit = {
-				is_core = XBI
+		name = “What was the point of this coalition in the first place?"
+		THIS = {
+			limit = { tag = GMJ }
+			any_owned_province = {
+				limit = {
+					is_core = FJN
+				}
+				secede_province = FJN
 			}
-          	secede_province = XBI
-		}
-		any_owned = {
-			limit = {
-				is_core = SZC
+			any_owned_province = {
+				limit = {
+					is_core = GNG
+				}
+				secede_province = GNG
 			}
-          	secede_province = SZC
-		}
-		XBI = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
+			any_owned_province = {
+				limit = {
+					is_core = GUI
+				}
+				secede_province = GUI
 			}
+			all_core = { remove_core = GMJ }
+			change_tag = SZC
 		}
-		SZC = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
+		THIS = {
+			limit = { tag = TPG }
+			any_owned_province = {
+				limit = {
+					is_core = SXI
+				}	
+				secede_province = SXI
 			}
-		}
-		prestige = -5
-		release_vassal = XIN
-		any_owned = {
-			limit = {
-				is_core = MGL
+			any_owned_province = {
+				limit = {
+					is_core = XBI
+				}
+				secede_province = XBI
 			}
-            secede_province = MGL
+			all_core = { remove_core = TPG }
+			change_tag = JCH
 		}
-		release_vassal = MGL
-		release_vassal = TNT
-		release_vassal = ALT
-	}
-
-	option = {
-		name = "Remember to get some mala on the way (Play as Sichuan)"
-		set_country_flag = western_anarchy
-		any_owned = {
-			limit = {
-				is_core = XBI
-			}
-          	secede_province = XBI
-		}
-		any_owned = {
-			limit = {
-				is_core = SZC
-			}
-          	secede_province = SZC
-		}
-		XBI = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		SZC = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		prestige = -5
-		release_vassal = XIN
-		any_owned = {
-			limit = {
-				is_core = MGL
-			}
-            secede_province = MGL
-		}
-		release_vassal = MGL
-		release_vassal = TNT
-		release_vassal = ALT
-		change_tag_no_core_switch = SZC
-	}
-
-	option = {
-		name = "To the sandy Loess Plateau we go! (Play as Shaan-Gan)"
-		set_country_flag = western_anarchy
-		any_owned = {
-			limit = {
-				is_core = XBI
-			}
-          	secede_province = XBI
-		}
-		any_owned = {
-			limit = {
-				is_core = SZC
-			}
-          	secede_province = SZC
-		}
-		XBI = {
-			government = presidential_dictatorship
-		}
-		SZC = {
-			government = presidential_dictatorship
-		}
-		prestige = -5
-		release_vassal = XIN
-		any_owned = {
-			limit = {
-				is_core = MGL
-			}
-            secede_province = MGL
-		}
-		release_vassal = MGL
-		release_vassal = TNT
-		release_vassal = ALT
-		change_tag_no_core_switch = XBI
+		prestige = -10
 	}
 }
+
 
 # Decisions for Yi Seongmin to defect to Korea and for Korea to annex Manchuria
 
@@ -1788,52 +1694,3 @@ country_event = {
 		government = dominion
 	}
 }
-
-country_event = {
-	id = 651913
-	title = "EVTNAME651913"
-	desc = "EVTDESC651913"
-	picture = "black_flag_army"
-
-	trigger = {
-		tag = QNG
-		civilized = yes
-		has_country_flag = dadu_war
-		NOT = { has_country_flag = shandong_secedes }
-		war = yes
-	}
-
-	mean_time_to_happen = { days = 1 }
-
-	option = {
-		name = "Why now all of all times?"
-		set_country_flag = shandong_secedes
-		any_owned = {
-			limit = {
-				is_core = SDG
-			}
-          	secede_province = SDG
-		}
-		SDG = {
-			government = peasant_republic
-		}
-		prestige = -5
-	}
-
-	option = {
-		name = "The Heavenly Path opens up! To Mount Tai! (Play as Shandong)"
-		set_country_flag = shandong_secedes
-		any_owned = {
-			limit = {
-				is_core = SDG
-			}
-          	secede_province = SDG
-		}
-		SDG = {
-			government = peasant_republic
-		}
-		prestige = -5
-		change_tag_no_core_switch = SDG
-	}
-}
-
