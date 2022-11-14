@@ -945,6 +945,7 @@ country_event = {
 		civilized = yes
 		has_country_flag = china_modernized 
 		NOT = { has_country_flag = provincial_defiance }
+		year = 1894
 	}
 
 	mean_time_to_happen = { months = 8 }
@@ -978,14 +979,14 @@ country_event = {
 		tag = QNG
 		civilized = yes
 		has_country_flag = provincial_defiance 
-		NOT = { has_country_flag = chuseok_coup }
+		NOT = { has_global_flag = chuseok_coup }
 	}
 
 	mean_time_to_happen = { days = 14 }
 
 	option = {
 		name = "We did what was necessary"
-		set_country_flag = chuseok_coup
+		set_global_flag = chuseok_coup
 		upper_house = {
 			ideology = reactionary
 			value = 0.99
@@ -1048,7 +1049,7 @@ country_event = {
 
 	option = {
 		name = "I did what you wanted, now give me my prize! (Play as Silla)"
-		set_country_flag = chuseok_coup
+		set_global_flag = chuseok_coup
 		upper_house = {
 			ideology = reactionary
 			value = 0.99
@@ -1122,11 +1123,11 @@ country_event = {
 	trigger = {
 		tag = QNG
 		civilized = yes
-		has_country_flag = chuseok_coup
+		has_global_flag = chuseok_coup
 		NOT = { has_country_flag = modernizer_defiance }
 	}
 
-	mean_time_to_happen = { months = 2 }
+	mean_time_to_happen = { months = 4 }
 
 	option = {
 		name = "We must break the power of the traitors, before they break us!"
@@ -1315,15 +1316,18 @@ country_event = {
 	trigger = {
 		tag = QNG
 		civilized = yes
-		has_country_flag = dadu_war
-		NOT = { has_country_flag = chinese_revolt }
+		OR = {
+			has_global_flag = dadu_war
+			has_global_flag = imperial_restoration_war
+		}
+		NOT = { has_global_flag = chinese_revolt }
 	}
 
 	mean_time_to_happen = { days = 7 }
 
 	option = {
 		name = "This is really, really bad”
-		set_country_flag = chinese_revolt
+		set_global_flag = chinese_revolt
 		any_owned = {
 			limit = {
 				is_core = HUI
@@ -1355,7 +1359,7 @@ country_event = {
 
 	option = {
 		name = "Expel the Koreans, long live the Chinese Republic! (Play the Chinese Republic)"
-		set_country_flag = chinese_revolt
+		set_global_flag = chinese_revolt
 		any_owned = {
 			limit = {
 				is_core = HUI
@@ -1483,7 +1487,106 @@ country_event = {
 }
 
 
-# Decisions for Yi Seongmin to defect to Korea and for Korea to annex Manchuria
+## Events for the Yiwei War
+
+#The Yi-Zhang Alliance
+
+country_event = {
+	id = 651950
+	title = "EVTNAME651950"
+	desc = "EVTDESC651950"
+	picture = "treaty"
+
+	trigger = {
+		tag = TPG
+		civilized = yes
+		NOT = { owns = 1616 }
+		NOT = { has_country_modifier = chinese_provincial_government }
+		year = 1895
+		has_global_flag = chuseok_coup
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = "Send him a letter"
+		KOR = {
+			country_event = 651951
+		}
+	}
+}
+
+country_event = {
+	id = 651951
+	title = "EVTNAME651951"
+	desc = "EVTDESC651951"
+	picture = "administration"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We agree to the pact"
+		set_country_flag = agreed_to_baohuanghui_plot
+		relations = {
+			who = TPG
+			value = 200
+		}
+		FROM = {
+			country_event = 651952
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "It is too risky"
+		prestige = -10
+		relations = {
+			who = TPG
+			value = -200
+		}
+		FROM = {
+			country_event = 651953
+		}
+	}
+}
+
+country_event = {
+	id = 651952
+	title = "EVTNAME651952"
+	desc = "EVTDESC651952"
+	picture = "administration"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Everything is according to plan"
+		set_country_flag = baohuanghui_ready
+		small_arms = 3000
+		canned_food = 6000
+		ammunition = 10000
+		treasury = -1000
+	}
+}
+
+country_event = {
+	id = 651953
+	title = "EVTNAME651953"
+	desc = "EVTDESC651953"
+	picture = "administration"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We'll have to carry on without them"
+		set_country_flag = baohuanghui_ready
+		small_arms = 3000
+		canned_food = 6000
+		ammunition = 10000
+		treasury = -1000
+	}
+}
+
+#Buyeo-Korean War
 
 country_event = {
 	id = 651908
@@ -1526,116 +1629,10 @@ country_event = {
 		}
 		war = {
 			target = KOR
-			attacker_goal = { casus_belli = make_puppet }
-			defender_goal = { casus_belli = make_puppet }
-			call_ally = yes
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = conquest }
+			call_ally = no
 		}	
-	}
-}
-
-country_event = {
-	id = 651910
-	title = "EVTNAME651910"
-	desc = "EVTDESC651910"
-	picture = "winning_china"
-
-	trigger = {
-		has_country_flag = dadu_war
-		NOT = { has_country_flag = first_korea_buyeo_war }
-		tag = QNG
-		is_vassal = no
-		is_our_vassal = KOR
-		truce_with = KOR
-	}
-
-	mean_time_to_happen = { days = 7 }
-
-	option = {
-		name = "This victory paves the way to our reassertion of imperial authority"
-		set_country_flag = first_korea_buyeo_war 
-		prestige = 10
-		KOR = { 
-			any_owned = {
-				limit = {
-					is_core = MCK 
-				}
-				secede_province = QNG
-			}
-			kill_leader = 16494
-			government = dominion
-			clr_country_flag = yi_seongmin_in_korea
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = -1
-			}
-		}
-		any_owned = {
-				limit = {
-					is_core = MCK 
-				}	
-				add_core = QNG
-			}
-		}
-	}
-
-
-country_event = {
-	id = 651911
-	title = "EVTNAME651911"
-	desc = "EVTDESC651911"
-	picture = "losing_china"
-
-
-	trigger = {
-		has_country_flag = dadu_war
-		NOT = { has_country_flag = first_korea_buyeo_war }
-		tag = QNG
-		NOT = { is_our_vassal = KOR }
-		truce_with = KOR
-	}
-
-	mean_time_to_happen = { days = 7 }
-
-	option = {
-		name = "We are humiliated and disgraced"
-		set_country_flag = first_korea_buyeo_war 
-		set_country_flag = regency_killed
-		prestige = 10
-		any_country = {
-			limit = {
-				vassal_of = QNG
-			}
-			release_vassal = THIS
-		}
-		KOR = {
-			any_owned = {
-				limit = {
-					is_core = MCK 
-				}	
-				add_core = KOR
-			}
-			country_event = 651916
-		}
-		QNG = {
-			limit = {
-				has_country_modifier = buyeo_regency_government
-			}
-			remove_country_modifier = buyeo_regency_government
-		}
-	}
-}
-
-country_event = {
-	id = 651916
-	title = "EVTNAME651916"
-	desc = "EVTDESC651916"
-	picture = "winning_korea"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Hooray for King Lee!"
-		prestige = 20
 	}
 }
 
@@ -1648,7 +1645,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "The Buyeo will pay dearly for this humiliation. To Dadu!"
+		name = "We didn't take Manju for fun, we will march on Dadu!"
 		dominant_issue = {
 			value = jingoism
 			factor = 24
@@ -1661,12 +1658,13 @@ country_event = {
 			value = -200
 		}
 		QNG = {
+			release_vassal = KOR
 			country_event = 651909
 		}
 	}
 	
 	option = {
-		name = "We must obey our masters. Surrender Lee Seongmin and withdraw to the Yalu."
+		name = "On second thoughts maybe we should give up now"
 		prestige = -50
 		any_owned = {
 				limit = {
@@ -1683,7 +1681,6 @@ country_event = {
 		}
 		QNG = {
 			prestige = 20
-			create_vassal = KOR
 			any_owned = {
 				limit = {
 					is_core = MCK 
@@ -1694,3 +1691,164 @@ country_event = {
 		government = dominion
 	}
 }
+
+#Imperial Restoration War
+
+country_event = {
+	id = 651954
+	title = "EVTNAME651954"
+	desc = "EVTDESC651954"
+	picture = "black_flag_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Their invasion must have been coordinated, blast those traitors!"
+		set_global_flag = imperial_restoration_war
+		any_country = {
+			leave_alliance = QNG
+			leave_alliance = TPG
+		}
+		war = {
+			target = TPG
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = conquest }
+			call_ally = no
+		}
+	}
+}
+
+##End of the Yiwei War
+
+#Event that fires when Buyeo loses Dadu but survives
+
+country_event = {
+	id = 651911
+	title = "EVTNAME651911"
+	desc = "EVTDESC651911"
+	picture = "losing_china"
+	major = yes
+
+	trigger = {
+		tag = QNG
+		OR = {
+			has_global_flag = dadu_war
+			has_global_flag = imperial_restoration_war
+		}
+		has_global_flag = chinese_revolt
+		NOT = { has_country_flag = first_korea_buyeo_war }
+		NOT = { owns = 1616 }
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = "We are humiliated and disgraced"
+		set_global_flag = end_of_yiwei
+		set_country_flag = first_korea_buyeo_war 
+		set_country_flag = exiled_buyeo
+		prestige = -10
+		capital = 3440
+		any_country = {
+			limit = {
+				vassal_of = QNG
+			}
+			release_vassal = THIS
+		}
+		remove_country_modifier = buyeo_regency_government
+		KMT = {
+			prestige = -15
+		}
+		KOR = {
+			prestige = -15
+		}
+		TPG = {
+			prestige = -15
+		}
+	}
+}
+
+#Event that fires when Buyeo survives the Yiwei War but loses Dadu
+
+country_event = {
+	id = 651910
+	title = "EVTNAME651910"
+	desc = "EVTDESC651910"
+	picture = "winning_china"
+	major = yes
+	
+	trigger = {
+		tag = QNG
+		OR = {
+			has_global_flag = dadu_war
+			has_global_flag = imperial_restoration_war
+		}
+		has_global_flag = chinese_revolt
+		NOT = { has_country_flag = first_korea_buyeo_war }
+		owns = 1616
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = "This victory paves the way to our reassertion of imperial authority"
+		set_country_flag = first_korea_buyeo_war 
+		prestige = 10
+		set_global_flag = end_of_yiwei
+		CHI = {
+			all_core = {
+				add_core = QNG
+			}
+		}
+		KMT = {
+			prestige = -10
+		}
+		KOR = {
+			prestige = -10
+		}
+		TPG = {
+			prestige = -10
+		}
+	}
+}
+
+#Event that fires when Buyeo is wiped off the map
+
+country_event = {
+	id = 651916
+	title = "EVTNAME651916"
+	desc = "EVTDESC651916"
+	picture = "winning_korea"
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = KMT
+			tag = KOR
+			tag = TPG
+		}
+		QNG = {
+			exists = no
+		}
+		OR = {
+			has_global_flag = dadu_war
+			has_global_flag = imperial_restoration_war
+		}
+		has_global_flag = chinese_revolt
+		NOT = { has_country_flag = first_korea_buyeo_war }
+		NOT = { has_global_flag = fall_of_the_buyeo }
+		owns = 1616
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = "At long last, the Buyeo has entered the graves"
+		set_country_flag = first_korea_buyeo_war 
+		prestige = 50
+		set_global_flag = end_of_yiwei
+	}
+}
+

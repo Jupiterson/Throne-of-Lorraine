@@ -4788,7 +4788,7 @@ china_acquire_state = {
 	always = yes
 
 	can_use = {
-		state_n_government = 1
+		has_global_flag = end_of_yiwei
 		NOT = {
 			AND = {
 				#THIS = { ai = yes }
