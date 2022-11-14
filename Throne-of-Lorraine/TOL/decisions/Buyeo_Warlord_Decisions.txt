@@ -573,54 +573,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	restore_the_emperor = {
-		picture = hundred_days_reform
-		
-		potential = {
-			tag = QNG
-			has_global_flag = chuseok_coup
-			NOT = { has_country_flag = buyeo_emperor_restored }
-			NOT = { has_country_flag = yongping_dead }
-			has_country_flag = western_anarchy
-			is_vassal = no
-		}
-
-		allow = {
-			war = no
-			NOT = { militancy = 4.0 }
-			state_n_government = 1
-			upper_house = {
-				ideology = reactionary
-				value = 0.66
-			}
-		}
-
-		effect = {
-			set_country_flag = buyeo_emperor_restored
-			prestige = -10
-			add_country_modifier = {
-				name = law_changed_by_force
-				duration = 1825
-			}
-			add_accepted_culture = KOR
-			KOR = {
-				all_core = {
-					add_core = QNG
-				}
-			}
-			MCK = {
-				all_core = {
-					add_core = QNG
-				}
-			}
-			1616 = {
-				remove_province_modifier = dadu_resistance
-			}
-			remove_country_modifier = buyeo_regency_government
-		}
-	}
-	
-	
 	claim_the_mandate_of_heaven = {
 		picture = mandate_of_heaven
 		
@@ -628,7 +580,6 @@ political_decisions = {
 			tag = QNG
 			has_country_flag = buyeo_emperor_restored
 			has_country_flag = international_outreach_qng
-			has_country_flag = retake_wu
 			NOT = { has_country_flag = country_claims_mandate }
 		}
 
@@ -637,7 +588,6 @@ political_decisions = {
 			has_unclaimed_cores = no
 			nationalism_n_imperialism = 1
 			romanticism = 1
-			social_science = 1
 		}
 
 		effect = {
@@ -697,10 +647,9 @@ political_decisions = {
 		effect = {
 			set_country_flag = accept_the_han
 			add_accepted_culture = han_chinese
-			QNG = {
-				limit = { has_country_modifier = the_half_half_system }
-				remove_country_modifier = the_half_half_system
-			}
+			add_accepted_culture = hanhui
+			add_accepted_culture = hakka
+			add_accepted_culture = zhuang
 		}
 
 		ai_will_do = { factor = 1 }

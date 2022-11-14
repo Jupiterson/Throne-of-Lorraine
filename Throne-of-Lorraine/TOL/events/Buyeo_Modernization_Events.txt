@@ -1755,20 +1755,19 @@ country_event = {
 			}
 			release_vassal = THIS
 		}
-		remove_country_modifier = buyeo_regency_government
 		KMT = {
-			prestige = -15
+			prestige = -10
 		}
 		KOR = {
-			prestige = -15
+			prestige = -10
 		}
 		TPG = {
-			prestige = -15
+			prestige = -10
 		}
 	}
 }
 
-#Event that fires when Buyeo survives the Yiwei War but loses Dadu
+#Event that fires when Buyeo survives the Yiwei War 
 
 country_event = {
 	id = 651910
@@ -1793,21 +1792,28 @@ country_event = {
 	option = {
 		name = "This victory paves the way to our reassertion of imperial authority"
 		set_country_flag = first_korea_buyeo_war 
-		prestige = 10
+		set_country_flag = buyeo_emperor_restored
+		prestige = 20
 		set_global_flag = end_of_yiwei
+		remove_country_modifier = buyeo_regency_government
 		CHI = {
 			all_core = {
 				add_core = QNG
 			}
 		}
+		add_accepted_culture = KOR
+		add_country_modifier = {
+			name = law_changed_by_force
+			duration = 1825
+		}
 		KMT = {
-			prestige = -10
+			prestige = -15
 		}
 		KOR = {
-			prestige = -10
+			prestige = -15
 		}
 		TPG = {
-			prestige = -10
+			prestige = -15
 		}
 	}
 }
