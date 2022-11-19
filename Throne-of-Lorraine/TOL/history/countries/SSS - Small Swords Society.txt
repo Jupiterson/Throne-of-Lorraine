@@ -1,10 +1,10 @@
-capital = 3297
+capital = 1616
 primary_culture = hakka
 culture = han_chinese
 culture = yue
 culture = min
-religion = taiping
-government = theocracy
+religion = confucian
+government = presidential_dictatorship
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.02
@@ -37,9 +37,8 @@ penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = culture_voting_only
 border_policy = closed_borders
-centralization = unitary
+centralization = federalism
 colonial_policy = no_colonies
-
 
 ruling_party = TPG_conservative
 upper_house = {
@@ -52,7 +51,7 @@ upper_house = {
 	communist = 0
 }
 
-set_country_flag = protestant_country
+set_country_flag = mahayana_country
 set_country_flag = theocratic_government
 monetary_reform = yes_monetary_reform
 
@@ -70,9 +69,3 @@ big_sail_support = yes
 consciousness = 0
 nonstate_consciousness = 0
 
-1861.1.1 = {
-	oob = "/1861/TPG_oob.txt"
-	literacy = 0.07
-	non_state_culture_literacy = 0.04
-	set_country_flag = theocratic_government
-}

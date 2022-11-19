@@ -1029,6 +1029,7 @@ political_decisions = {
 			NOT = { tag = QNG }
 			NOT = { tag = CHI }
 			NOT = { tag = KOR }
+			NOT = { has_global_flag = chinese_reunification }
 		}
 
 		allow = {
@@ -1056,16 +1057,148 @@ political_decisions = {
 		}
 
 		effect = {
-			change_tag = CHI
+			THIS = {
+				limit = {
+					NOT = { tag = KMT }
+					NOT = { tag = TPG }
+				}
+				change_tag = CHI
+				set_global_flag = chinese_reunification
+				CHI = {
+					all_core = {
+						limit = {
+							NOT = { owned_by = CHI } 
+						}
+						secede_province = CHI
+					}
+				}
+				add_accepted_culture = han_chinese
+				add_accepted_culture = hanhui
+				add_accepted_culture = hakka
+				add_accepted_culture = miao
+				add_accepted_culture = min
+				add_accepted_culture = zhuang
+				add_accepted_culture = yi
+				add_accepted_culture = yue
+				add_accepted_culture = buyeo
+				primary_culture = han_chinese
+			}
+			THIS = {
+				limit = {
+					tag = TPG
+				}
+				set_global_flag = chinese_reunification 
+				set_country_flag = dann_empire
+				government = absolute_empire
+				MIN = {
+					all_core = {
+						limit = {
+							NOT = { owned_by = CHI } 
+						}
+						secede_province = TPG
+					}
+				}
+				CHI = {
+					all_core = {
+						add_core = TPG
+					}
+				}
+				add_accepted_culture = hanhui
+				add_accepted_culture = hakka
+				add_accepted_culture = miao
+				add_accepted_culture = min
+				add_accepted_culture = zhuang
+				add_accepted_culture = yi
+				add_accepted_culture = yue
+				add_accepted_culture = buyeo
+				add_accepted_culture = korean
+			}
+			THIS = {
+				limit = {
+					tag = KMT
+				}
+				set_global_flag = chinese_reunification 
+				set_country_flag = nationalist_china
+				MIN = {
+					all_core = {
+						limit = {
+							NOT = { owned_by = CHI } 
+						}
+						secede_province = KMT
+					}
+				}
+				CHI = {
+					all_core = {
+						add_core = KMT
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#Decisions for the Xinan Hubao
+
+	reunification_of_china_2 = {
+		picture = form_china
+		potential = {
+			is_culture_group = east_asian
+			tag = GMJ
+			NOT = { has_global_flag = chinese_reunification }
+			NOT = { has_country_flag = federal_china }
+			has_country_flag = end_of_unification_conference
+			government = democracy
+		}
+
+		allow = {
+			war = no
+			owns = 1616
 			CHI = {
+				exists = no
+			}
+			MIN = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			revolution_n_counterrevolution = 1
+		}
+
+		effect = {
+			set_global_flag = chinese_reunification 
+			set_country_flag = federal_china
+			government = federal_democracy
+			change_tag = SSS
+			MIN = {
 				all_core = {
 					limit = {
 						NOT = { owned_by = CHI } 
 					}
-					secede_province = CHI
+					secede_province = SSS
 				}
 			}
-			add_accepted_culture = han_chinese
+			CHI = {
+				all_core = {
+					add_core = SSS
+				}
+			}
+			add_accepted_culture = mongol
+			add_accepted_culture = oirat
+			add_accepted_culture = uighur
+			add_accepted_culture = vietnamese
+			add_accepted_culture = manchu
 			add_accepted_culture = hanhui
 			add_accepted_culture = hakka
 			add_accepted_culture = miao
@@ -1074,7 +1207,7 @@ political_decisions = {
 			add_accepted_culture = yi
 			add_accepted_culture = yue
 			add_accepted_culture = buyeo
-			primary_culture = han_chinese
+			add_accepted_culture = korean
 		}
 
 		ai_will_do = {
