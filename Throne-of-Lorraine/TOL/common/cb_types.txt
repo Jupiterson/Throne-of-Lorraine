@@ -4788,7 +4788,10 @@ china_acquire_state = {
 	always = yes
 
 	can_use = {
-		has_global_flag = end_of_yiwei
+		THIS = {
+			has_global_flag = end_of_yiwei
+			state_n_government = 1
+		}
 		NOT = {
 			AND = {
 				#THIS = { ai = yes }
@@ -4896,7 +4899,6 @@ china_acquire_state = {
 			}
 			AND = {
 				any_owned_province = {
-					NOT = {	is_core = THIS }
 					is_core = CHI
 				}
 				THIS = { ai = no }

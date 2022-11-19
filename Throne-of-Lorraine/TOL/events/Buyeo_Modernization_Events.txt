@@ -829,7 +829,6 @@ country_event = {
 	option = {
 		name = "Our nation has changed greatly"
 		set_country_flag = china_modernized
-		
 		activate_technology = experimental_railroad
 		activate_technology = early_railroad
 		activate_technology = piston_steam_engine
@@ -946,7 +945,6 @@ country_event = {
 		tag = QNG
 		civilized = yes
 		has_country_flag = china_modernized 
-		has_country_flag = china_modernized 
 		NOT = { has_country_flag = provincial_defiance }
 		year = 1894
 	}
@@ -1011,6 +1009,12 @@ country_event = {
 				duration = 1825
 			}
 		}
+		any_owned = {
+			limit = {
+				is_core = MIN
+			}
+			add_core = KMT
+		}
 		prestige = -5
 	}
 }
@@ -1029,6 +1033,7 @@ country_event = {
 		tag = QNG
 		civilized = yes
 		has_country_flag = provincial_defiance 
+		has_country_flag = huafuhui_formed
 		NOT = { has_global_flag = chuseok_coup }
 	}
 
@@ -1078,8 +1083,9 @@ country_event = {
 			limit = {
 				any_owned_province = {
 					has_province_modifier = dadu_resistance
+				}
+				remove_province_modifier = dadu_resistance
 			}
-			remove_province_modifier = dadu_resistance
 		}
 		1616 = {
 			add_province_modifier = {
@@ -1142,6 +1148,7 @@ country_event = {
 			limit = {
 				any_owned_province = {
 					has_province_modifier = dadu_resistance
+				}
 			}
 			remove_province_modifier = dadu_resistance
 		}
@@ -1207,6 +1214,14 @@ country_event = {
 			secede_province = TPG
 			add_core = TPG
 		}
+		CHI_1508 = {
+			secede_province = TPG
+			add_core = TPG
+		}
+		CHI_1510 = {
+			secede_province = TPG
+			add_core = TPG
+		}
 		TPG = {
 			government = presidential_dictatorship
 			add_country_modifier = {
@@ -1262,6 +1277,14 @@ country_event = {
 					is_core = XBI
 				}
 			}
+			secede_province = TPG
+			add_core = TPG
+		}
+		CHI_1508 = {
+			secede_province = TPG
+			add_core = TPG
+		}
+		CHI_1510 = {
 			secede_province = TPG
 			add_core = TPG
 		}
@@ -1324,6 +1347,14 @@ country_event = {
 			secede_province = TPG
 			add_core = TPG
 		}
+		CHI_1508 = {
+			secede_province = TPG
+			add_core = TPG
+		}
+		CHI_1510 = {
+			secede_province = TPG
+			add_core = TPG
+		}
 		TPG = {
 			government = presidential_dictatorship
 			add_country_modifier = {
@@ -1368,6 +1399,7 @@ country_event = {
 	trigger = {
 		tag = QNG
 		civilized = yes
+		has_country_flag = huafuhui_formed
 		OR = {
 			has_global_flag = dadu_war
 			has_global_flag = imperial_restoration_war
@@ -1378,12 +1410,14 @@ country_event = {
 	mean_time_to_happen = { days = 7 }
 
 	option = {
-		name = "This is really, really bad”
+		name = "This is really, really bad"
 		set_global_flag = chinese_revolt
 		any_owned = {
 			limit = {
-				is_core = HUI
-				is_core = SDG
+				OR = {
+					is_core = HUI
+					is_core = SDG
+				}
 			}
           	secede_province = KMT
 			add_core = KMT
@@ -1402,7 +1436,7 @@ country_event = {
 				casus_belli = conquest
 			}
 			defender_goal = {
-				casus_belli = acquire_all_cores
+				casus_belli = conquest
 			}
 			call_ally = yes
 		}
@@ -1414,16 +1448,12 @@ country_event = {
 		set_global_flag = chinese_revolt
 		any_owned = {
 			limit = {
-				is_core = HUI
-				is_core = SDG
+				OR = {
+					is_core = HUI
+					is_core = SDG
+				}
 			}
           	secede_province = KMT
-			add_core = KMT
-		}
-		MIN = {
-			all_core = {
-				add_core = KMT
-			}
 		}
 		HUI = {
 			government = presidential_dictatorship
@@ -1434,7 +1464,7 @@ country_event = {
 				casus_belli = conquest
 			}
 			defender_goal = {
-				casus_belli = acquire_all_cores
+				casus_belli = conquest
 			}
 			call_ally = yes
 		}
@@ -1493,46 +1523,65 @@ country_event = {
 	mean_time_to_happen = { months = 8 }
 
 	option = {
-		name = “What was the point of this coalition in the first place?"
-		THIS = {
-			limit = { tag = GMJ }
-			any_owned_province = {
-				limit = {
-					is_core = FJN
-				}
-				secede_province = FJN
+		name = "What was the point of this coalition in the first place?"
+		any_owned = {
+			limit = {
+				is_core = FJN
 			}
-			any_owned_province = {
-				limit = {
-					is_core = GNG
-				}
-				secede_province = GNG
-			}
-			any_owned_province = {
-				limit = {
-					is_core = GUI
-				}
-				secede_province = GUI
-			}
-			all_core = { remove_core = GMJ }
-			change_tag = SZC
+			secede_province = FJN
 		}
-		THIS = {
-			limit = { tag = TPG }
-			any_owned_province = {
-				limit = {
-					is_core = SXI
-				}	
-				secede_province = SXI
+		any_owned = {
+			limit = {
+				is_core = GNG
 			}
-			any_owned_province = {
-				limit = {
-					is_core = XBI
-				}
-				secede_province = XBI
+			secede_province = GNG
+		}
+		any_owned = {
+			limit = {
+				is_core = SXI
 			}
-			all_core = { remove_core = TPG }
-			change_tag = JCH
+			secede_province = SXI
+		}
+		any_owned = {
+			limit = {
+				is_core = HUI
+			}
+			secede_province = HUI
+		}
+		any_owned = {
+			limit = {
+				is_core = SDG
+			}
+			secede_province = SDG
+		}
+		any_owned = {
+			limit = {
+				is_core = HNN
+			}
+			secede_province = HNN
+		}
+		any_owned = {
+			limit = {
+				is_core = XBI
+			}
+			secede_province = XBI
+		}
+		any_owned = {
+			limit = {
+				is_core = GUI
+			}
+			secede_province = GUI
+		any_owned = {
+			limit = {
+				is_core = TAI
+			}
+			secede_province = TAI
+		}
+		any_owned = {
+			limit = {
+				is_core = DAI
+			}
+			secede_province = DAI
 		}
 		prestige = -10
 	}
@@ -1649,42 +1698,12 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "Order him to explain himself!"
-		any_owned = {
-			limit = {
-				is_core = MCK 
-			}
-          	secede_province = KOR
-		}
+		name = "This invasion must have been coordinated, blast those traitors!"
 		kill_leader = 16318
 		prestige = -10
 		KOR = {
 			country_event = 651912
 		}
-	}
-}
-
-country_event = {
-	id = 651909
-	title = "EVTNAME651909"
-	desc = "EVTDESC651909"
-	picture = "battle_of_palikiao"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Its time we reassert our imperial authority! To Dadu, for the Buyeo!"
-		set_country_flag = dadu_war
-		any_country = {
-			leave_alliance = QNG
-			leave_alliance = KOR
-		}
-		war = {
-			target = KOR
-			attacker_goal = { casus_belli = conquest }
-			defender_goal = { casus_belli = cut_down_to_size }
-			call_ally = no
-		}	
 	}
 }
 
@@ -1711,7 +1730,28 @@ country_event = {
 		}
 		QNG = {
 			release_vassal = KOR
-			country_event = 651909
+			set_country_flag = dadu_war
+			any_country = {
+				leave_alliance = QNG
+				leave_alliance = KOR
+			}
+			war = {
+				target = KOR
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = {
+					casus_belli = acquire_any_state
+					state_province_id = 1552
+				}
+				defender_goal = {
+					casus_belli = acquire_any_state
+					state_province_id = 1479
+				}
+				defender_goal = {
+					casus_belli = acquire_any_state
+					state_province_id = 1082
+				}
+				call_ally = no
+			}
 		}
 	}
 }
@@ -1727,7 +1767,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "Their invasion must have been coordinated, blast those traitors!"
+		name = "Time to end Yongping's faction once and for all."
 		set_global_flag = imperial_restoration_war
 		any_country = {
 			leave_alliance = QNG
@@ -1760,8 +1800,9 @@ country_event = {
 			has_global_flag = imperial_restoration_war
 		}
 		has_global_flag = chinese_revolt
-		NOT = { has_country_flag = first_korea_buyeo_war }
+		NOT = { has_global_flag = first_korea_buyeo_war }
 		NOT = { owns = 1616 }
+		war = no
 	}
 
 	mean_time_to_happen = { days = 7 }
@@ -1771,6 +1812,7 @@ country_event = {
 		set_global_flag = end_of_yiwei
 		set_global_flag = first_korea_buyeo_war 
 		set_country_flag = exiled_buyeo
+		set_country_flag = qng_eternal_regency
 		prestige = -10
 		capital = 3440
 		any_country = {
@@ -1807,8 +1849,9 @@ country_event = {
 			has_global_flag = imperial_restoration_war
 		}
 		has_global_flag = chinese_revolt
-		NOT = { has_country_flag = first_korea_buyeo_war }
+		NOT = { has_global_flag = first_korea_buyeo_war }
 		owns = 1616
+		war = no
 	}
 
 	mean_time_to_happen = { days = 7 }
@@ -1825,7 +1868,7 @@ country_event = {
 				add_core = QNG
 			}
 		}
-		add_accepted_culture = KOR
+		add_accepted_culture = korean
 		add_country_modifier = {
 			name = law_changed_by_force
 			duration = 1825
@@ -1865,9 +1908,10 @@ country_event = {
 			has_global_flag = imperial_restoration_war
 		}
 		has_global_flag = chinese_revolt
-		NOT = { has_country_flag = first_korea_buyeo_war }
+		NOT = { has_global_flag = first_korea_buyeo_war }
 		NOT = { has_global_flag = fall_of_the_buyeo }
 		owns = 1616
+		war = no
 	}
 
 	mean_time_to_happen = { days = 7 }
@@ -1890,9 +1934,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		OR = {
-			tag = TPG
-		}
+		tag = TPG
 		QNG = {
 			exists = no
 		}
@@ -1900,10 +1942,10 @@ country_event = {
 			has_global_flag = dadu_war
 			has_global_flag = imperial_restoration_war
 		}
-		has_global_flag = chinese_revolt
-		NOT = { has_country_flag = first_korea_buyeo_war }
+		NOT = { has_global_flag = first_korea_buyeo_war }
 		NOT = { has_global_flag = fall_of_the_buyeo }
 		owns = 1616
+		war = no
 	}
 
 	mean_time_to_happen = { days = 7 }
