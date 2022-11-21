@@ -1035,6 +1035,7 @@ country_event = {
 		has_country_flag = provincial_defiance 
 		has_country_flag = huafuhui_formed
 		NOT = { has_global_flag = chuseok_coup }
+		year = 1894
 	}
 
 	mean_time_to_happen = { days = 14 }
@@ -1603,7 +1604,6 @@ country_event = {
 		tag = TPG
 		civilized = yes
 		NOT = { owns = 1616 }
-		NOT = { has_country_modifier = chinese_provincial_government }
 		year = 1895
 		has_global_flag = chuseok_coup
 	}
@@ -1893,8 +1893,6 @@ country_event = {
 	picture = "winning_korea"
 	major = yes
 
-	is_triggered_only = yes
-
 	trigger = {
 		OR = {
 			tag = KMT
@@ -1908,7 +1906,6 @@ country_event = {
 		}
 		has_global_flag = chinese_revolt
 		NOT = { has_global_flag = first_korea_buyeo_war }
-		NOT = { has_global_flag = fall_of_the_buyeo }
 		owns = 1616
 		war = no
 	}
@@ -1930,8 +1927,6 @@ country_event = {
 	picture = "winning_korea"
 	major = yes
 
-	is_triggered_only = yes
-
 	trigger = {
 		tag = TPG
 		QNG = {
@@ -1942,7 +1937,6 @@ country_event = {
 			has_global_flag = imperial_restoration_war
 		}
 		NOT = { has_global_flag = first_korea_buyeo_war }
-		NOT = { has_global_flag = fall_of_the_buyeo }
 		owns = 1616
 		war = no
 	}
