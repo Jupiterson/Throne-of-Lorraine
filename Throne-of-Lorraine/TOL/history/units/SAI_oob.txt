@@ -1,37 +1,15 @@
 
 leader = {
-	name = "Teichii Suzuki"
+	name = "Hidenobu Ryo"
 	type = land
 	date = 1836.1.1
 	personality = efficient
 	background = old_school
 }
 
-leader = {
-	name = "Kenryo Sasaki"
-	type = land
-	date = 1836.1.1
-	personality = calm
-	background = school_of_offense
-}
-leader = {
-	name = "Sanji Okido"
-	type = sea
-	date = 1836.1.1
-	personality = reserved
-	background = gifted_administrator
-}
 
 leader = {
-	name = "Toshio Kimura"
-	type = sea
-	date = 1836.1.1
-	personality = harsh
-	background = engineer
-}
-
-leader = {
-	name = "Taiki Nomura"
+	name = "Yoshinori Ga-toppatan"
 	type = sea
 	date = 1836.1.1
 	personality = cautious
@@ -39,48 +17,35 @@ leader = {
 }
 
 army = {
-	name = "Capital Army"
-	location = 1455
+	name = "Wardens of the Southern Tael"
+	location = 1456
 	regiment = {
-		name= "Central Manila regiment"
-		type = infantry
-		home = 1455
-	}
-
-	regiment = {
-		name= "Manila artillery brigade"
+		name= "Chu Daiho"
 		type = artillery
 		home = 1455
 	}
 	
 	regiment = {
-		name= "2nd Manila artillery brigade"
+		name= "Nanbu Daiho"
 		type = artillery
-		home = 1455
-	}
-	
-	regiment = {
-		name= "3rd Manila artillery brigade"
-		type = artillery
-		home = 1455
-	}
-	regiment = {
-		name= "Northern Vigan regiment"
-		type = infantry
-		home = 1456
-	}
-
-	regiment = {
-		name= "Legazpi calvary"
-		type = cavalry
 		home = 1457
 	}
-
+	
+	regiment = {
+		name= "Chu Hohei"
+		type = infantry
+		home = 1455
+	}
+	regiment = {
+		name= "Kita Kihei"
+		type = cavalry
+		home = 1456
+	}
 }
 
 navy = {
-	name = "Main Oceangoing fleet"
-	location = 1455
+	name = "Woku Merchant Fleet"
+	location = 1456
 	ship = {
 		name= "Mamiya"
 		type = frigate

@@ -1,41 +1,36 @@
 #Luzon Region (2176000)
-#Ruled by Spain in 1836
+#Ruled by Woku-Ilocano mestizos and Venetian-Indian mestizos
+#Asian Minor pops are the Aeta and Mountain Austronesians (Manobo/Lumad and Igorot/Ifugao/Cordillerans)
 #Manila (780000/195000 POPS)
 1455 = {
 	aristocrats = {
 		culture = japanese
 		religion = kirishitan
-		size = 200
-	}
-
-	bureaucrats = {
-		culture = japanese
-		religion = kirishitan
-		size = 400
-	}
-
-	clergymen = {
-		culture = japanese
-		religion = kirishitan
-		size = 250
+		size = 62
 	}
 
 	artisans = {
 		culture = japanese
 		religion = kirishitan
-		size = 1050
+		size = 1000
 	}
 
-	soldiers = {
+	clergymen = {
 		culture = japanese
 		religion = kirishitan
-		size = 100
+		size = 375
 	}
 
+	officers = {
+		culture = japanese
+		religion = kirishitan
+		size = 500
+	}
+	
 	aristocrats = {
 		culture = konketsu
 		religion = kirishitan
-		size = 125
+		size = 63
 	}
 
 	bureaucrats = {
@@ -44,16 +39,34 @@
 		size = 450
 	}
 
-	clergymen = {
-		culture = konketsu
-		religion = kirishitan
-		size = 750
-	}
-
 	artisans = {
 		culture = konketsu
 		religion = kirishitan
-		size = 2000
+		size = 1000
+	}
+	
+	clergymen = {
+		culture = konketsu
+		religion = kirishitan
+		size = 375
+	}
+	
+	soldiers = {
+		culture = konketsu
+		religion = kirishitan
+		size = 3000
+	}
+	
+	farmers = { 
+		culture = konketsu
+		religion = kirishitan
+		size = 10000
+	}
+	
+	officers = {
+		culture = konketsu
+		religion = kirishitan
+		size = 500
 	}
 
 	artisans = {
@@ -62,28 +75,16 @@
 		size = 7000
 	}
 
-	soldiers = {
-		culture = konketsu
-		religion = kirishitan
-		size = 9000
-	}
-
 	farmers = {
 		culture = rusoni
 		religion = kirishitan
-		size = 26550
-	}
-
-	farmers = { 
-		culture = konketsu
-		religion = kirishitan
-		size = 20000
+		size = 16550
 	}
 
 	slaves = {
 		culture = rusoni
 		religion = kirishitan
-		size = 20000
+		size = 5000
 	}
 
 	artisans = {
@@ -95,27 +96,68 @@
 	farmers = {
 		culture = min
 		religion = mahayana
-		size = 30800
+		size = 10800
 	}
 }
 #Vigan (608000/152000 POPS)
 1456 = {
 	aristocrats = {
+		culture = japanese
+		religion = kirishitan
+		size = 650
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = kirishitan
+		size = 400
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = kirishitan
+		size = 437
+	}
+
+	artisans = {
+		culture = japanese
+		religion = kirishitan
+		size = 4200
+	}
+	
+	officers = {
+		culture = japanese  
+		religion = kirishitan
+		size = 350
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = kirishitan
+		size = 100
+	}
+	aristocrats = {
 		culture = konketsu
 		religion = kirishitan
-		size = 1100
+		size = 650
 	}
 
 	clergymen = {
 		culture = konketsu
 		religion = kirishitan
-		size = 625
+		size = 438
 	}
 
 	artisans = {
 		culture = konketsu
 		religion = kirishitan
-		size = 7350
+		size = 4200
+	}
+	
+	officers = {
+		culture = konketsu 
+		religion = kirishitan
+		size = 350
 	}
 
 	soldiers = {
@@ -127,19 +169,13 @@
 	farmers = {
 		culture = konketsu
 		religion = kirishitan
-		size = 44000
+		size = 30000
 	}
 
 	farmers = {
 		culture = min
 		religion = mahayana
-		size = 50525
-	}
-
-	slaves = {
-		culture = rusoni
-		religion = kirishitan
-		size = 20000
+		size = 35525
 	}
 }
 #Legazpi (564000/141000 POPS)
@@ -147,37 +183,80 @@
 	aristocrats = {
 		culture = konketsu
 		religion = kirishitan
-		size = 1100
+		size = 550
 	}
 
 	clergymen = {
 		culture = konketsu
 		religion = kirishitan
-		size = 625
+		size = 312
 	}
 
 	artisans = {
-		culture = rusoni
+		culture = konketsu
 		religion = kirishitan
-		size = 6500
+		size = 1500
 	}
-
+	
 	soldiers = {
 		culture = konketsu
 		religion = kirishitan
-		size = 4350
+		size = 1350
 	}
 
 	farmers = {
+		culture = konketsu
+		religion = kirishitan
+		size = 3000
+	}
+
+	officers = {
+		culture = konketsu
+		religion = kirishitan
+		size = 175
+	}
+	
+
+	aristocrats = {
+		culture = japanese
+		religion = kirishitan
+		size = 550
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = kirishitan
+		size = 313
+	}
+
+	artisans = {
+		culture = japanese
+		religion = kirishitan
+		size = 1500
+	}
+
+	officers = {
+		culture = japanese
+		religion = kirishitan
+		size = 175
+	}
+	
+	artisans = {
 		culture = rusoni
 		religion = kirishitan
-		size = 60525
+		size = 3500
+	}
+	
+	farmers = {
+		culture = rusoni
+		religion = kirishitan
+		size = 20525
 	}
 
 	farmers = {
 		culture = min 
 		religion = mahayana
-		size = 20000
+		size = 10000
 	}
 
 	clergymen = {
@@ -198,10 +277,16 @@
 		size = 100
 	}
 
+	farmers = { 
+		culture = asian_minor
+		religion = animist
+		size = 7000
+	}
+		
 	slaves = {
 		culture = rusoni
 		religion = kirishitan
-		size = 10350
+		size = 5350
 	}
 }
 #Mindoro (224000/56000 POPS)
@@ -378,7 +463,13 @@
 	farmers = {
 		culture = filipino
 		religion = catholic
-		size = 64750
+		size = 58750
+	}
+	
+	farmers = {
+		culture = asian_minor
+		religion = animist
+		size = 6000
 	}
 
 	clergymen = {
@@ -484,7 +575,7 @@
 	artisans = {
 		culture = filipino
 		religion = catholic
-		size = 3500
+		size = 3000
 	}
 
 	soldiers = {
@@ -496,9 +587,21 @@
 	farmers = {
 		culture = filipino
 		religion = catholic
-		size = 54050
+		size = 50050
 	}
 
+	artisans = {
+		culture = konketsu
+		religion = kirishitan
+		size = 500
+	}
+	
+	farmers = {
+		culture = konketsu
+		religion = kirishitan
+		size = 4000
+	}
+	
 	clergymen = {
 		culture = moro
 		religion = sunni
@@ -567,7 +670,7 @@
 	labourers = {
 		culture = moro
 		religion = sunni
-		size = 14800
+		size = 6800
 	}
 
 	aristocrats = {
@@ -597,7 +700,7 @@
 	labourers = {
 		culture = filipino
 		religion = catholic
-		size = 12200
+		size = 7200
 	}
 
 	aristocrats = {
@@ -627,7 +730,7 @@
 	labourers = {
 		culture = asian_minor
 		religion = animist
-		size = 7375
+		size = 5375
 	}
 }
 #Under rule of Spain in 1836
@@ -648,7 +751,7 @@
 	artisans = {
 		culture = filipino
 		religion = catholic
-		size = 2500
+		size = 2200
 	}
 
 	soldiers = {
@@ -660,7 +763,19 @@
 	labourers = {
 		culture = filipino
 		religion = catholic
-		size = 44900
+		size = 26900
+	}
+	
+	artisans = {
+		culture = konketsu
+		religion = kirishitan
+		size = 300
+	}
+	
+	labourers = {
+		culture = konketsu
+		religion = kirishitan
+		size = 3000
 	}
 
 	clergymen = {
@@ -678,7 +793,7 @@
 	labourers = {
 		culture = moro
 		religion = sunni
-		size = 12200
+		size = 7200
 	}
 
 	slaves = {
@@ -819,7 +934,7 @@
 	farmers = {
 		culture = rusoni
 		religion = kirishitan
-		size = 17725
+		size = 7725
 	}
 }
 
@@ -912,7 +1027,7 @@
 	farmers = {
 		culture = asian_minor
 		religion = animist
-		size = 17725
+		size = 7725
 	}
 	clergymen = {
 		culture = rusoni
@@ -991,13 +1106,13 @@
 	soldiers = {
 		culture = rusoni
 		religion = kirishitan
-		size = 2000
+		size = 1500
 	}
 
 	farmers = {
 		culture = rusoni
 		religion = kirishitan
-		size = 63000
+		size = 43000
 	}
 }
 
@@ -1061,13 +1176,13 @@
 	slaves = {
 		culture = asian_minor
 		religion = animist
-		size = 59800
+		size = 29800
 	}
 	
 	labourers = {
 		culture = moro
 		religion = sunni
-		size = 30800
+		size = 50800
 	}
 }
 
@@ -1193,13 +1308,13 @@
 	soldiers = {
 		culture = filipino
 		religion = catholic
-		size = 2000
+		size = 1100
 	}
 	
 	farmers = {
 		culture = filipino
 		religion = catholic
-		size = 41000
+		size = 31000
 	}
 }
 
@@ -1250,12 +1365,68 @@
 	soldiers = {
 		culture = asian_minor
 		religion = animist
-		size = 100
+		size = 1000
 	}
 
 	labourers = {
 		culture = asian_minor
 		religion = animist
-		size = 7375
+		size = 15375
+	}
+}
+
+3310 = {
+	aristocrats = {
+		culture = konketsu
+		religion = kirishitan
+		size = 600
+	}
+
+	clergymen = {
+		culture = konketsu
+		religion = kirishitan
+		size = 175
+	}
+
+	artisans = {
+		culture = konketsu
+		religion = kirishitan
+		size = 1100
+	}
+
+	soldiers = {
+		culture = konketsu
+		religion = kirishitan
+		size = 1425
+	}
+
+	farmers = {
+		culture = moro
+		religion = sunni
+		size = 2800
+	}
+
+	clergymen = {
+		culture = moro
+		religion = sunni
+		size = 25
+	}
+
+	artisans = {
+		culture = konketsu
+		religion = kirishitan
+		size = 575
+	}
+
+	farmers = {
+		culture = konketsu
+		religion = kirishitan
+		size = 50
+	}
+
+	slaves = {
+		culture = moro
+		religion = sunni
+		size = 15300
 	}
 }
