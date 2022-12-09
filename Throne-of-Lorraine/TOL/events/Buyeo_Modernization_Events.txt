@@ -1229,12 +1229,52 @@ country_event = {
 				name = chinese_provincial_government	
 				duration = 3650
 			}
+			define_general = {
+				name = "Zhang Zhidong"
+				personality = disciplined
+				background = politician
+			}
+			define_general = {
+				name = "Dong Fuxiang"
+				personality = audacious
+				background = nationalist
+			}
+			define_general = {
+				name = "Kang Youwei"
+				personality = intelligent
+				background = eccentric_genius
+			}
+			define_general = {
+				name = "Liang Qichao"
+				personality = clever
+				background = poet
+			}
 		}
 		GMJ = {
 			government = presidential_dictatorship
 			add_country_modifier = {
 				name = chinese_provincial_government	
 				duration = 3650
+			}
+			define_general = {
+				name = "Zhang Zhidong"
+				personality = disciplined
+				background = politician
+			}
+			define_general = {
+				name = "Dong Fuxiang"
+				personality = audacious
+				background = nationalist
+			}
+			define_general = {
+				name = "Kang Youwei"
+				personality = intelligent
+				background = eccentric_genius
+			}
+			define_general = {
+				name = "Liang Qichao"
+				personality = clever
+				background = poet
 			}
 		}
 		release_vassal = XIN
