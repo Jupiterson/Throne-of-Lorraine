@@ -196,6 +196,9 @@ country_event = {
 		NOT = {
 		has_global_flag = no_jagiellonian_hun
 		}
+		NOT = {
+		has_global_flag = forgiven_hungary
+		}
 	}
 
 	mean_time_to_happen = {
@@ -235,7 +238,8 @@ country_event = {
 		}
         }	
         badboy = 5		
-
+		set_global_flag = forgiven_hungary
+		
         ai_chance = {
             factor = 24
         }		
@@ -244,7 +248,8 @@ country_event = {
 	option = {
 		name = "The war weakened them enough."
 		prestige = 20
-        badboy = -5		
+        badboy = -5	
+		set_global_flag = forgiven_hungary		
 		
 	     ai_chance = {
             factor = 1
