@@ -1,14 +1,14 @@
 
 political_decisions = {
 
+#Korea
+
 	yi_seongmin_coup = {
 		picture = tonghak_reforms
 		
 		potential = {
 			tag = KOR
-			QNG = {
-				has_country_flag = chuseok_coup
-			}
+			has_global_flag = chuseok_coup
 			NOT = { has_country_flag = yi_seongmin_in_korea }
 			NOT = { has_country_flag = united_korea }
 			is_vassal = no
@@ -18,14 +18,13 @@ political_decisions = {
 			war = no
 			is_vassal = no
 			civilized = yes
-			government = presidential_dictatorship
+			state_n_government = 1
 		}
 
 		effect = {
 			set_country_flag = yi_seongmin_in_korea
-			government = absolute_monarchy
 			define_general = { 
-				name = "Lee Seongmin" 
+				name = "Yi Seongmin" 
 				personality = audacious
 				background = eccentric_genius
 			}
@@ -69,11 +68,8 @@ political_decisions = {
 		
 		potential = {
 			tag = KOR
-			QNG = {
-				has_country_flag = western_anarchy
-			}
 			KOR = {
-				has_country_flag = yi_seongmin_in_korea
+				has_country_flag = agreed_to_baohuanghui_plot
 			}
 			NOT = { has_country_flag = march_on_manchuria }
 		}
@@ -92,65 +88,13 @@ political_decisions = {
 		
 		ai_will_do = { factor = 1 }
 	}
-
-	depose_the_buyeo_emperor = {
-		picture = china_execution
-		
-		potential = {
-			tag = KOR
-			has_country_flag = yi_seongmin_in_korea
-			is_our_vassal = QNG
-		}
-
-		allow = {
-			war = no
-			state_n_government = 1
-			NOT = { average_militancy = 3.0 }
-			government = absolute_monarchy
-		}
-
-		effect = {
-			inherit = QNG
-			set_country_flag = buyeo_deposed
-			set_country_flag = korea_warpath
-			badboy = 5
-			prestige = 10
-			any_country = {
-				limit = { is_greater_power = yes }
-				relation = { 
-					who = KOR
-					value = -50
-				}
-			}
-			any_country = {
-				limit = { is_culture_group = east_asian }
-				relation = { 
-					who = KOR
-					value = -200
-				}
-				leave_alliance = KOR
-			}
-			CHI_1616 = {
-				add_core = KOR
-			}
-			QNG = {
-				set_country_flag = yongping_dead
-			}
-		}
-
-		ai_will_do = { factor = 1 }
-			
-	}
 	
-
 	master_of_the_west_sea = {
 		picture = shandong_map
 		
 		potential = {
 			tag = KOR
-			has_country_flag = yi_seongmin_in_korea
-			has_country_flag = korea_warpath
-			NOT = { exists = QNG }
+			has_global_flag = end_of_yiwei
 			NOT = { has_country_flag = west_sea_claimed }
 		}
 
@@ -174,6 +118,9 @@ political_decisions = {
 			CHI_1612 = {
 				add_core = KOR
 			}
+			CHI_1616 = {
+				add_core = KOR
+			}
 		}
 
 		ai_will_do = { factor = 1 }
@@ -187,8 +134,7 @@ political_decisions = {
 			tag = KOR
 			has_country_flag = yi_seongmin_in_korea
 			has_country_flag = west_sea_claimed
-			has_country_flag = korea_warpath
-			NOT = { exists = QNG }
+			has_global_flag = end_of_yiwei
 			NOT = { has_country_flag = pacified_interior }
 		}
 
@@ -231,8 +177,7 @@ political_decisions = {
 			tag = KOR
 			has_country_flag = yi_seongmin_in_korea
 			has_country_flag = pacified_interior
-			has_country_flag = korea_warpath
-			NOT = { exists = QNG }
+			has_global_flag = end_of_yiwei
 			NOT = { has_country_flag = han_secured }
 		}
 
@@ -265,8 +210,7 @@ political_decisions = {
 			tag = KOR
 			has_country_flag = yi_seongmin_in_korea
 			has_country_flag = han_secured
-			has_country_flag = korea_warpath
-			NOT = { exists = QNG }
+			has_global_flag = end_of_yiwei
 			NOT = { has_country_flag = country_claims_mandate }
 		}
 
@@ -292,7 +236,6 @@ political_decisions = {
 		
 		potential = {
 			tag = KOR
-			is_greater_power = yes
 			has_country_flag = country_claims_mandate
 			has_country_flag =  yi_seongmin_in_korea
 			NOT = { has_country_flag = kdom_shu_established }
@@ -347,7 +290,6 @@ political_decisions = {
 		
 		potential = {
 			tag = KOR
-			is_greater_power = yes
 			has_country_flag = country_claims_mandate
 			has_country_flag =  yi_seongmin_in_korea
 			NOT = { has_country_flag = kdom_chu_established }
@@ -405,7 +347,6 @@ political_decisions = {
 		
 		potential = {
 			tag = KOR
-			is_greater_power = yes
 			has_country_flag = country_claims_mandate
 			has_country_flag =  yi_seongmin_in_korea
 			NOT = { has_country_flag = kdom_wu_established }
@@ -457,7 +398,6 @@ political_decisions = {
 		
 		potential = {
 			tag = KOR
-			is_greater_power = yes
 			has_country_flag = country_claims_mandate
 			has_country_flag =  yi_seongmin_in_korea
 			has_country_flag = kdom_wu_established
@@ -516,7 +456,6 @@ political_decisions = {
 		
 		potential = {
 			tag = KOR
-			is_greater_power = yes
 			has_country_flag = country_claims_mandate
 			has_country_flag =  yi_seongmin_in_korea
 			has_country_flag = kdom_wu_established
@@ -574,12 +513,14 @@ political_decisions = {
 
 	}
 	
+#Buyeo
+	
 	regain_international_legitimacy = {
 		picture = sino_western_interaction
 		
 		potential = {
 			tag = QNG
-			has_country_flag = chuseok_coup
+			has_global_flag = chuseok_coup
 			NOT = { has_country_flag = international_outreach_qng }
 			is_vassal = no
 		}
@@ -622,148 +563,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	restore_the_emperor = {
-		picture = hundred_days_reform
-		
-		potential = {
-			tag = QNG
-			has_country_flag = chuseok_coup
-			NOT = { has_country_flag = buyeo_emperor_restored }
-			NOT = { has_country_flag = yongping_dead }
-			has_country_flag = western_anarchy
-			is_vassal = no
-		}
-
-		allow = {
-			war = no
-			NOT = { militancy = 4.0 }
-			state_n_government = 1
-			upper_house = {
-				ideology = reactionary
-				value = 0.66
-			}
-		}
-
-		effect = {
-			set_country_flag = buyeo_emperor_restored
-			prestige = -10
-			add_country_modifier = {
-				name = law_changed_by_force
-				duration = 1825
-			}
-			add_accepted_culture = KOR
-			KOR = {
-				all_core = {
-					add_core = QNG
-				}
-			}
-			MCK = {
-				all_core = {
-					add_core = QNG
-				}
-			}
-			1616 = {
-				remove_province_modifier = dadu_resistance
-			}
-			remove_country_modifier = buyeo_regency_government
-		}
-	}
-	
-	
-	retake_jin = {
-		picture = shanxi_map
-		
-		potential = {
-			tag = QNG
-			has_country_flag = buyeo_emperor_restored
-			has_country_flag = international_outreach_qng
-			NOT = { has_country_flag = yongping_dead }
-			NOT = { has_country_flag = retake_jin }
-		}
-
-		allow = {
-			war = no
-			owns = 1616
-			has_unclaimed_cores = no
-		}
-
-		effect = {
-			set_country_flag = retake_jin 
-			badboy = 2
-			CHI_1572 = {
-				add_core = QNG
-			}
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-	
-	retake_shandong = {
-		picture = shandong_map
-		
-		potential = {
-			tag = QNG
-			has_country_flag = buyeo_emperor_restored
-			has_country_flag = international_outreach_qng
-			has_country_flag = retake_jin
-			NOT = { has_country_flag = yongping_dead }
-			NOT = { has_country_flag = retake_sdg  }
-		}
-
-		allow = {
-			war = no
-			owns = 1616
-			has_unclaimed_cores = no
-		}
-
-		effect = {
-			set_country_flag = retake_sdg 
-			badboy = 2
-			CHI_1563 = {
-				add_core = QNG
-			}
-			CHI_1565 = {
-				add_core = QNG
-			}
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-	
-	southern_expedition = {
-		picture = wu_map
-		
-		potential = {
-			tag = QNG
-			has_country_flag = buyeo_emperor_restored
-			has_country_flag = international_outreach_qng
-			has_country_flag = retake_sdg
-			NOT = { has_country_flag = yongping_dead }
-			NOT = { has_country_flag = retake_wu }
-		}
-
-		allow = {
-			war = no
-			owns = 1616
-			has_unclaimed_cores = no
-			state_n_government = 1
-			nationalism_n_imperialism = 1
-			romanticism = 1
-		}
-
-		effect = {
-			set_country_flag = retake_wu 
-			badboy = 5
-			HUI = {
-				any_owned = {
-					add_core = QNG
-				}
-			}
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-	
 	claim_the_mandate_of_heaven = {
 		picture = mandate_of_heaven
 		
@@ -771,7 +570,6 @@ political_decisions = {
 			tag = QNG
 			has_country_flag = buyeo_emperor_restored
 			has_country_flag = international_outreach_qng
-			has_country_flag = retake_wu
 			NOT = { has_country_flag = country_claims_mandate }
 		}
 
@@ -780,7 +578,6 @@ political_decisions = {
 			has_unclaimed_cores = no
 			nationalism_n_imperialism = 1
 			romanticism = 1
-			social_science = 1
 		}
 
 		effect = {
@@ -840,55 +637,12 @@ political_decisions = {
 		effect = {
 			set_country_flag = accept_the_han
 			add_accepted_culture = han_chinese
-			QNG = {
-				limit = { has_country_modifier = the_half_half_system }
-				remove_country_modifier = the_half_half_system
-			}
+			add_accepted_culture = hanhui
+			add_accepted_culture = hakka
+			add_accepted_culture = zhuang
 		}
 
 		ai_will_do = { factor = 1 }
-	}
-	
-	permaanant_regency = {
-		picture = manchuria
-		
-		potential = {
-			tag = QNG
-			has_country_flag = chuseok_coup
-			NOT = { has_country_flag = buyeo_emperor_restored }
-			NOT = { has_country_flag = qng_eternal_regency }
-			has_country_flag = western_anarchy
-			is_vassal = no
-		}
-
-		allow = {
-			war = no
-			state_n_government = 1
-			NOT = { 
-				1616 = {
-					has_province_modifier = dadu_resistance
-				}
-			}
-			
-		}
-
-		effect = {
-			set_country_flag = qng_eternal_regency 
-			set_country_flag = yongping_dead
-			government = presidential_dictatorship
-			capital = 3440
-			prestige = 50
-			add_country_modifier = {
-				name = law_changed_by_force
-				duration = 1825
-			}
-			remove_country_modifier = buyeo_regency_government
-			release = HNN
-			release = SDG
-		}
-		
-		ai_will_do = { factor = 1 }
-		
 	}
 	
 	take_up_tungusic_banner = {
@@ -896,7 +650,7 @@ political_decisions = {
 		
 		potential = {
 			tag = QNG
-			has_country_flag = chuseok_coup
+			has_global_flag = chuseok_coup
 			has_country_flag = qng_eternal_regency
 			NOT = { has_country_flag = qng_tungusic_banner }
 		}
@@ -959,7 +713,7 @@ political_decisions = {
 		
 		potential = {
 			tag = QNG
-			has_country_flag = chuseok_coup
+			has_global_flag = chuseok_coup
 			has_country_flag = qng_tungusic_banner
 			KOR = {
 				any_owned_province = {
@@ -994,7 +748,7 @@ political_decisions = {
 		picture = evenks
 		potential = {
 			tag = QNG
-			has_country_flag = chuseok_coup
+			has_global_flag = chuseok_coup
 			has_country_flag = qng_tungusic_banner
 			NOT = { has_country_flag = free_northern_tungus }
 		}
@@ -1077,7 +831,7 @@ political_decisions = {
 		
 		potential = {
 			tag = QNG
-			has_country_flag = chuseok_coup
+			has_global_flag = chuseok_coup
 			has_country_flag = qng_eternal_regency
 			has_country_flag = free_northern_tungus
 			NOT = { has_country_flag = unite_the_tungusics }
@@ -1100,6 +854,8 @@ political_decisions = {
 		
 	}
 	
+#Korea and Buyeo
+	
 	form_the_korean_federation = {
 		picture = korea_map
 		
@@ -1107,7 +863,7 @@ political_decisions = {
 			OR = {
 				AND = {
 					tag = QNG
-					has_country_flag = chuseok_coup
+					has_global_flag = chuseok_coup
 					has_country_flag = qng_eternal_regency
 					NOT = { has_country_flag = qng_tungusic_banner }
 				}
@@ -1219,6 +975,184 @@ political_decisions = {
 		}
 	}
 	
+#Baohuanghui
+
+	imperial_restoration_war = {
+		picture = mandate_of_heaven
+		
+		potential = {
+			tag = TPG
+			TPG = {
+				has_country_flag = baohuanghui_ready
+			}
+			NOT = { has_country_flag = march_on_manchuria }
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = march_on_manchuria
+			QNG = {
+				country_event = 651954
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	tpg_claim_the_mandate_of_heaven = {
+		picture = form_china
+		
+		potential = {
+			tag = TPG
+			NOT = { has_country_flag = country_forms_china }
+		}
+
+		allow = {
+			war = no
+			CHI = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			nationalism_n_imperialism = 1
+		}
+
+		effect = {
+			set_country_flag = country_forms_china
+			badboy = -5
+			capital = 1616
+			government = absolute_empire
+			CHI = {
+				all_core = {
+					limit = {
+						NOT = { owned_by = TPG } 
+					}
+					secede_province = TPG
+				}
+			}
+			CHI = {
+				all_core = {
+					add_core = TPG
+				}
+			}
+			add_accepted_culture = han_chinese
+			add_accepted_culture = hanhui
+			add_accepted_culture = hakka
+			add_accepted_culture = miao
+			add_accepted_culture = min
+			add_accepted_culture = zhuang
+			add_accepted_culture = yi
+			add_accepted_culture = yue
+			add_accepted_culture = buyeo
+			add_accepted_culture = korean
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+#Nationalist China
+
+	expel_the_koreans = {
+		picture = form_china
+		potential = {
+			tag = KMT
+			QNG = {
+				war = yes
+			}
+			has_global_flag = chinese_revolt
+			OR = {
+				has_global_flag = dadu_war
+				has_global_flag = imperial_restoration_war
+			}
+			war = yes
+			NOT = { has_global_flag = end_of_yiwei }
+		}
+
+		allow = {
+			war = yes
+			1616 = {
+				controlled_by = THIS
+				province_control_days = 30
+			}
+			QNG = {
+				exists = yes
+			}
+		}
+
+		effect = {
+			QNG = {
+				end_war = KMT
+				end_war = TPG
+				any_owned = {
+					limit = {
+						is_core = KMT
+						NOT = { controlled_by = TPG }
+					}
+					secede_province = KMT
+				}
+				any_owned = {
+					limit = {
+						controlled_by = TPG
+					}
+					secede_province = TPG
+				}
+				country_event = 651911
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+#Remember to add events for new capital and government type
+	reunification_of_china_2 = {
+		picture = form_china
+		
+		potential = {
+			tag = KMT
+			NOT = { has_country_flag = country_forms_china }
+		}
+
+		allow = {
+			war = no
+			has_unclaimed_cores = no
+			nationalism_n_imperialism = 1
+		}
+
+		effect = {
+			set_country_flag = country_forms_china
+			badboy = -5
+			capital = 1616
+			CHI = {
+				all_core = {
+					add_core = KMT
+				}
+			}
+			add_accepted_culture = yue
+			add_accepted_culture = hakka
+			add_accepted_culture = min
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+#Xinan Hubao
+
+#Generic Chinese Reunification	
+
 	reunification_of_china = {
 		picture = form_china
 		potential = {
@@ -1226,6 +1160,8 @@ political_decisions = {
 			NOT = { tag = QNG }
 			NOT = { tag = CHI }
 			NOT = { tag = KOR }
+			NOT = { tag = KMT }
+			NOT = { tag = TPG }
 		}
 
 		allow = {
@@ -1271,6 +1207,7 @@ political_decisions = {
 			add_accepted_culture = yi
 			add_accepted_culture = yue
 			add_accepted_culture = buyeo
+			add_accepted_culture = korean
 			primary_culture = han_chinese
 		}
 
@@ -1279,25 +1216,9 @@ political_decisions = {
 		}
 	}
 
-#Liangjiang
 
-#Huguang
+#Decisions for the Xinan Hubao
 
-#Shanxi
-
-#Shandong
-
-#Min-Zhe
-
-#Liangguang
-
-#Sichuan
-
-#Shaan-Gan
-
-#Guizhou
-
-#Pingnan Guo
 
 #Foreign Powers
 

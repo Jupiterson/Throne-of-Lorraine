@@ -4788,7 +4788,10 @@ china_acquire_state = {
 	always = yes
 
 	can_use = {
-		state_n_government = 1
+		THIS = {
+			has_global_flag = end_of_yiwei
+			state_n_government = 1
+		}
 		NOT = {
 			AND = {
 				#THIS = { ai = yes }
@@ -4806,9 +4809,12 @@ china_acquire_state = {
 			is_culture_group = east_asian
 		}
 		THIS = {
-			NOT = { tag = LAN }
-			NOT = { tag = QNG }
 			NOT = { tag = KOR }
+			NOT = { 
+				tag = QNG
+				has_country_flag = exiled_buyeo
+			}
+			NOT = { tag = LAN }
 			is_culture_group = east_asian
 			NOT = {
 				has_country_modifier = neutrality_modifier
@@ -4893,7 +4899,6 @@ china_acquire_state = {
 			}
 			AND = {
 				any_owned_province = {
-					NOT = {	is_core = THIS }
 					is_core = CHI
 				}
 				THIS = { ai = no }

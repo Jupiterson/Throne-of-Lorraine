@@ -855,13 +855,13 @@
 	aristocrats = {
 		culture = cham
 		religion = sunni
-		size = 1500
+		size = 2000
 	}
 
 	clergymen = {
 		culture = cham
 		religion = sunni
-		size = 5000
+		size = 5225
 	}
 
 	artisans = {
@@ -879,37 +879,31 @@
 	farmers = {
 		culture = cham
 		religion = sunni
-		size = 85425
+		size = 92425
 	}
-
-	aristocrats = {
-		culture = asian_minor
-		religion = animist
-		size = 500
-	}
-
-	clergymen = {
-		culture = asian_minor
-		religion = animist
-		size = 225
-	}
-
+	
 	artisans = {
-		culture = cham
+		culture = yue
 		religion = animist
-		size = 1200
-	}
-
-	soldiers = {
-		culture = asian_minor
-		religion = animist
-		size = 7000
+		size = 800
 	}
 
 	farmers = {
-		culture = asian_minor
+		culture = yue
 		religion = animist
-		size = 11825
+		size = 7913
+	}
+	
+	artisans = {
+		culture = konketsu
+		religion = animist
+		size = 400
+	}
+
+	farmers = {
+		culture = konketsu
+		religion = animist
+		size = 3912
 	}
 }
 #Cochinchina Region (1384000)
@@ -955,13 +949,13 @@
 	farmers = {
 		culture = cham
 		religion = sunni
-		size = 67900
+		size = 77900
 	}
 
 	aristocrats = {
 		culture = cham
 		religion = sunni
-		size = 10600
+		size = 600
 	}
 
 	clergymen = {
@@ -982,39 +976,46 @@
 		size = 21800
 	}
 
-	clergymen = {
-		culture = cham
-		religion = sunni
-		size = 500
-	}
 
 	artisans = {
-		culture = cham
-		religion = sunni
-		size = 2600
+		culture = yue
+		religion = mahayana
+		size = 2400
 	}
 
 	farmers = {
-		culture = cham
-		religion = sunni
-		size = 4350
+		culture = yue
+		religion = mahayana
+		size = 3050
+	}
+
+	artisans = {
+		culture = konketsu
+		religion = kirishitan
+		size = 700
+	}
+
+	farmers = {
+		culture = konketsu
+		religion = kirishitan
+		size = 1300
 	}
 
 	clergymen = {
 		culture = cham
-		religion = catholic
+		religion = kirishitan
 		size = 125
 	}
 
 	artisans = {
 		culture = cham
-		religion = catholic
+		religion = kirishitan
 		size = 1100
 	}
 
 	farmers = {
 		culture = cham
-		religion = catholic
+		religion = kirishitan
 		size = 9875
 	}
 }
@@ -1118,22 +1119,28 @@
 		size = 700
 	}
 
-	soldiers = {
-		culture = asian_minor
-		religion = theravada
+	artisans = {
+		culture = yue
+		religion = mahayana
+		size = 300
+	}
+
+	farmers = {
+		culture = yue
+		religion = mahayana
+		size = 8725
+	}
+
+	artisans = {
+		culture = konketsu
+		religion = kirishitan
 		size = 150
 	}
 
 	farmers = {
-		culture = asian_minor
-		religion = theravada
-		size = 12725
-	}
-
-	clergymen = {
-		culture = asian_minor
-		religion = theravada
-		size = 300
+		culture = konketsu
+		religion = kirishitan
+		size = 2000
 	}
 
 	artisans = {
@@ -1151,15 +1158,8 @@
 	farmers = {
 		culture = khmer
 		religion = theravada
-		size = 27000
+		size = 37000
 	}
-
-	farmers = {
-		culture = asian_minor
-		religion = theravada
-		size = 6000
-	}
-
 }
 #Vinhlong (120000/30000 POPS)
 1383 = {
@@ -1199,12 +1199,6 @@
 		size = 150
 	}
 
-	artisans = {
-		culture = asian_minor
-		religion = sunni
-		size = 800
-	}
-
 	soldiers = {
 		culture = khmer
 		religion = theravada
@@ -1217,4 +1211,27 @@
 		size = 14900
 	}
 
+	artisans = {
+		culture = yue
+		religion = mahayana
+		size = 300
+	}
+
+	farmers = {
+		culture = yue
+		religion = mahayana
+		size = 3000
+	}
+
+	artisans = {
+		culture = konketsu
+		religion = kirishitan
+		size = 150
+	}
+
+	farmers = {
+		culture = konketsu
+		religion = kirishitan
+		size = 800
+	}
 }

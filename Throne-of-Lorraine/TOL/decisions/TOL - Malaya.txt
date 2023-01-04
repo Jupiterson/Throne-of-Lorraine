@@ -1290,6 +1290,12 @@ political_decisions = {
 				primary_culture = moluccan
 				primary_culture = sumatran
 				tag = LAN
+				NOT = {
+					tag = NUS
+				}
+				NOT = {
+					tag = MLY
+				}
             }
 			has_country_flag = indonesian_revolutionary_ally
 			not = { has_global_flag = indonesian_war_ongoing }
@@ -1415,8 +1421,10 @@ political_decisions = {
 		picture = the_aceh
 		
 		potential = {
-			tag = NUS
-			tag = MLY
+			OR = {
+				tag = NUS
+				tag = MLY
+			}
 			NOT = { has_country_flag = accept_malay_java }
 			NOT = { government = fascist_dictatorship }
 			year = 1900
