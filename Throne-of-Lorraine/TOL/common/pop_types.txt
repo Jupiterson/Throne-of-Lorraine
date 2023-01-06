@@ -788,6 +788,7 @@ emigration_chance = {
             location = { continent = north_america }
             location = { continent = south_america }
             location = { continent = australia_new_zealand }
+			location = { continent = africa }
         }
         country = {
             has_country_flag = new_world_nation
@@ -1029,6 +1030,7 @@ assimilation_chance = {
             location = { continent = north_america }
             location = { continent = south_america }
             location = { continent = australia_new_zealand }
+			location = { continent = africa }
         }
     }
 
@@ -1129,6 +1131,7 @@ assimilation_chance = {
             location = { continent = north_america }
             location = { continent = south_america }
             location = { continent = australia_new_zealand }
+			location = { continent = africa }
         }
     }
 
@@ -1196,6 +1199,7 @@ assimilation_chance = {
             location = { continent = north_america }
             location = { continent = south_america }
             location = { continent = australia_new_zealand }
+			AND = { location = { continent = africa } country = { has_country_flag = new_world_nation }}
         }
     }
 

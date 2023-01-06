@@ -3127,7 +3127,6 @@ country_event = {
             year = 1853
 			tag = SHO
 			has_global_flag = SHO_start
-			owns = 2056
 	}
 
     mean_time_to_happen = { months = 3 }
@@ -3505,7 +3504,7 @@ country_event = {
 
 	option = {
 		name = "mad_scot_option1"
-		set_country_flag = mad_scot		 
+		set_country_flag = mad_scot	
     }
 	}
 	
@@ -3587,6 +3586,502 @@ country_event = {
 		clr_global_flag = tsonga_civil_war	 
     }
 	}
+	
+### Colonial Scottish Stuff ###
+
+country_event = {
+
+	id = 50090
+
+	title = "ostiralia_asks_independence_title"
+	desc = "ostiralia_asks_independence_desc"
+	picture = "danishgovernment"
+
+	major = yes
+
+	trigger = {
+		war = no
+		year = 1899
+		any_owned_province = { is_core = NAL }
+		NOT = { exists = NAL }
+		NOT = { has_country_flag = NAL_independence_resoundly_refused }
+		is_possible_vassal = NAL
+        OR = { primary_culture = scottish
+               accepted_culture = scottish}
+	    NOT = {
+				capital_scope = { continent = africa }
+				capital_scope = { continent = west_africa }
+				capital_scope = { continent = central_africa }
+				capital_scope = { continent = east_africa }
+				capital_scope = { continent = south_west_africa }
+			}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 10
+			has_country_flag = NAL_independence_refused
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = NAL }
+				average_militancy = 3
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = NAL }
+				average_militancy = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			year = 1920
+			NOT = { has_country_flag = NAL_independence_refused }
+		}
+	}
+
+	option = {
+		name = "EVT44330OPTA"
+		clr_country_flag = NAL_independence_refused
+		prestige = -20
+		badboy = -5
+		any_pop = {
+			limit = { location = { is_core = NAL } }
+			militancy = -10
+		}
+		NAL = { all_core = { remove_core = THIS remove_core = ITA } }
+		release_vassal = NAL
+		NAL = {
+			government = dominion
+			prestige = -80
+			capital = 2087
+			set_country_flag = new_world_nation
+		}
+		relation = {
+			who = NAL
+			value = 50
+		}
+		diplomatic_influence = {
+			who = NAL
+			value = 200
+		}
+		any_pop = {
+			consciousness = 1
+		}
+		NAL = { capital = 2111 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				OR = {
+					government = proletarian_dictatorship
+					government = parliamentary_republic
+					government = fascist_dictatorship
+					government = presidential_dictatorship
+				}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					government = absolute_monarchy
+					government = absolute_empire
+				}
+			}
+			modifier = {
+				factor = 1.5
+				government = democracy
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 3
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 5
+			}
+
+		}
+	}
+	option = {
+		name = "EVT44330OPTB"
+		set_country_flag = NAL_independence_refused
+		any_owned = {
+			limit = { is_core = NAL }
+			any_pop = {
+				militancy = 3
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.75
+				OR = {
+					government = absolute_monarchy
+					government = absolute_empire
+				}
+			}
+			modifier = {
+				factor = 0.5
+				government = democracy
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 3
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 5
+			}
+			modifier = {
+				factor = 2.0
+				exists = CAN
+			}
+			modifier = {
+				factor = 2.0
+				exists = AST
+			}
+		}
+	}
+	option = {
+		name = "onwards_ostiralia"
+		clr_country_flag = NAL_independence_refused
+		prestige = -20
+		badboy = -5
+		any_pop = {
+			limit = { location = { is_core = NAL } }
+			militancy = -10
+		}
+		NAL = {
+			all_core = { remove_core = THIS remove_core = ITA }
+		}
+		release_vassal = NAL
+		NAL = {
+			prestige = -80
+			capital = 2087
+			set_country_flag = new_world_nation
+		}
+		relation = {
+			who = NAL
+			value = 50
+		}
+		diplomatic_influence = {
+			who = NAL
+			value = 200
+		}
+		any_pop = {
+			consciousness = 1
+		}
+		NAL = { capital = 2111 }
+		change_tag_no_core_switch = NAL
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "EVT44330OPTD"
+		set_country_flag = NAL_independence_resoundly_refused
+		any_owned = {
+			limit = { is_core = NAL }
+			add_province_modifier = {
+				name = nationalist_agitation
+				duration = 1825
+			}
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
+				militancy = 4
+			}
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+}
+
+country_event = {
+
+	id = 50091
+
+	title = "murcadia_asks_independence_title"
+	desc = "murcadia_asks_independence_desc"
+	picture = "danishgovernment"
+
+	major = yes
+
+	trigger = {
+		war = no
+		year = 1897
+		any_owned_province = { is_core = TRN }
+		NOT = { exists = TRN }
+		NOT = { has_country_flag = TRN_independence_resoundly_refused }
+		is_possible_vassal = TRN
+        OR = { primary_culture = scottish
+               accepted_culture = scottish}
+	    NOT = {
+				capital_scope = { continent = africa }
+				capital_scope = { continent = west_africa }
+				capital_scope = { continent = central_africa }
+				capital_scope = { continent = east_africa }
+				capital_scope = { continent = south_west_africa }
+			}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 10
+			has_country_flag = TRN_independence_refused
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = TRN }
+				average_militancy = 3
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = TRN }
+				average_militancy = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			year = 1920
+			NOT = { has_country_flag = TRN_independence_refused }
+		}
+	}
+
+	option = {
+		name = "EVT44330OPTA"
+		clr_country_flag = TRN_independence_refused
+		prestige = -20
+		badboy = -5
+		any_pop = {
+			limit = { location = { is_core = TRN } }
+			militancy = -10
+		}
+		TRN = { all_core = { remove_core = THIS remove_core = ITA } }
+		release_vassal = TRN
+		TRN = {
+			government = dominion
+			prestige = -80
+			capital = 2087
+			set_country_flag = new_world_nation
+		}
+		relation = {
+			who = TRN
+			value = 50
+		}
+		diplomatic_influence = {
+			who = TRN
+			value = 200
+		}
+		any_pop = {
+			consciousness = 1
+		}
+		TRN = { capital = 2106 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				OR = {
+					government = proletarian_dictatorship
+					government = parliamentary_republic
+					government = fascist_dictatorship
+					government = presidential_dictatorship
+				}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					government = absolute_monarchy
+					government = absolute_empire
+				}
+			}
+			modifier = {
+				factor = 1.5
+				government = democracy
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 3
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 5
+			}
+
+		}
+	}
+	option = {
+		name = "EVT44330OPTB"
+		set_country_flag = TRN_independence_refused
+		any_owned = {
+			limit = { is_core = TRN }
+			any_pop = {
+				militancy = 3
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.75
+				OR = {
+					government = absolute_monarchy
+					government = absolute_empire
+				}
+			}
+			modifier = {
+				factor = 0.5
+				government = democracy
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 3
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 5
+			}
+			modifier = {
+				factor = 2.0
+				exists = CAN
+			}
+			modifier = {
+				factor = 2.0
+				exists = AST
+			}
+		}
+	}
+	option = {
+		name = "onwards_murcadia"
+		clr_country_flag = TRN_independence_refused
+		prestige = -20
+		badboy = -5
+		any_pop = {
+			limit = { location = { is_core = TRN } }
+			militancy = -10
+		}
+		TRN = {
+			all_core = { remove_core = THIS remove_core = ITA }
+		}
+		release_vassal = TRN
+		TRN = {
+			prestige = -80
+			capital = 2087
+			set_country_flag = new_world_nation
+		}
+		relation = {
+			who = TRN
+			value = 50
+		}
+		diplomatic_influence = {
+			who = TRN
+			value = 200
+		}
+		any_pop = {
+			consciousness = 1
+		}
+		TRN = { capital = 2106 }
+		change_tag_no_core_switch = TRN
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "EVT44330OPTD"
+		set_country_flag = TRN_independence_resoundly_refused
+		any_owned = {
+			limit = { is_core = TRN }
+			add_province_modifier = {
+				name = nationalist_agitation
+				duration = 1825
+			}
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
+				militancy = 4
+			}
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+}
 
 #SQI
 

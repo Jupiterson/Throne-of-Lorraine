@@ -235,6 +235,7 @@ country_migration_target = {
 			capital_scope = { is_colonial = no continent = north_america }
 			capital_scope = { is_colonial = no continent = south_america }
 			capital_scope = { is_colonial = no continent = australia_new_zealand }
+			AND = { capital_scope = { is_colonial = no continent = africa } has_country_flag = new_world_nation }
 			primary_culture = australian
 		}
 		OR = {
@@ -260,6 +261,7 @@ country_migration_target = {
 			capital_scope = { is_colonial = no continent = north_america }
 			capital_scope = { is_colonial = no continent = south_america }
 			capital_scope = { is_colonial = no continent = australia_new_zealand }
+			AND = { capital_scope = { is_colonial = no continent = africa } has_country_flag = new_world_nation }
 			primary_culture = australian
 		}
 		OR = {

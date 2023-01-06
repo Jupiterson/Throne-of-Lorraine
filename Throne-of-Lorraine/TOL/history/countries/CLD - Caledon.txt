@@ -1,22 +1,23 @@
-capital = 3593
+capital = 2087
 primary_culture = scottish
 religion = protestant
-government = presidential_dictatorship
+government = democracy
 plurality = 25.0
 nationalvalue = nv_order
 literacy = 0.35
 non_state_culture_literacy = 0.05
 civilized = yes
-is_releasable_vassal = yes
+is_releasable_vassal = no
 
 # Political reforms
-slavery = no_slavery
+slavery = yes_slavery
 upper_house_composition = appointed
-vote_franschise = none_voting
-press_rights = state_press
+vote_franschise = wealth_voting
+public_meetings = yes_meeting
+press_rights = censored_press
 trade_unions = no_trade_unions
 voting_system = first_past_the_post
-political_parties = underground_parties
+political_parties = harassment
 
 # Social Reforms
 wage_reform = no_minimum_wage
@@ -39,31 +40,42 @@ colonial_policy = no_colonies
 
 set_country_flag = protestant_country
 
-ruling_party = ORA_conservative
+ruling_party = CLD_conservative
 upper_house = {
 	fascist = 0
-	liberal = 15
-	conservative = 65
-	reactionary = 19
+	liberal = 16
+	conservative = 75
+	reactionary = 9
 	radical = 0
 	socialist = 0
 	communist = 0
 }
 
-
 # Technologies
+post_napoleonic_thought = 1
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
 military_staff_system = 1
+army_command_principle = 1
 post_nelsonian_thought = 1
 clipper_design = 1
+naval_design_bureaus = 1
+alphabetic_flag_signaling = 1
+the_command_principle = 1
+classicism_n_early_romanticism = 1
 late_enlightenment_philosophy = 1
+malthusian_thought = 1
 enlightenment_thought = 1
+introspectionism = 1
+private_banks = 1
 no_standard = 1
+early_classical_theory_and_critique = 1
 freedom_of_trade = 1
 guild_based_production = 1
+piston_steam_engine = 1
 mechanical_production = 1
 hot_blast = 1
+basic_chemistry = 1
 
 #Inventions
 
@@ -71,13 +83,18 @@ hot_blast = 1
 consciousness = 3
 nonstate_consciousness = 1
 
-oob = "ORA_oob.txt"
+oob = "TRN_oob.txt"
 1861.1.1 = {
-	oob = "/1861/ORA_oob.txt"
+	oob = "/1861/TRN_oob.txt"
 	plurality = 60
 	literacy = 0.40
 	non_state_culture_literacy = 0.05
-	set_country_flag = had_orange_river_convention
+	set_country_flag = had_sand_river_convention
+}
+
+govt_flag = {
+	government = dominion
+	flag = absolute_monarchy
 }
 1861.1.1 = {
 

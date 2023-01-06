@@ -3343,62 +3343,58 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = 4778719
-	picture = "cape_map"
-	title = "The Loss of South Africa"
-	desc = "South Africa is lost. With it goes our influence in the countries in the region."
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = ENG
-		has_recently_lost_war = yes
-		NOT = {
-			owns = 2087
-			2087 = {
-				owner = {
-					OR = {
-						vassal_of = THIS
-						AND = {
-							tag = SAF
-							primary_culture = british
-						}
-					}
-				}
-			}
-		}
-		
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		set_country_flag = british_kicked_out_of_SAF
-	}
-	
-	option = {
-		name = "This is a serious setback."
-		prestige = -25
-		any_country = {
-			limit = {
-				exists = yes
-				vassal_of = THIS
-				OR = {
-					tag = BSH
-					tag = SUA
-					tag = ORA
-					tag = ZUL
-					tag = TRN
-					tag = NAL
-				}
-			}
-			country_event = 4778720
-		}
-	}
-}
+#country_event = {
+#	id = 4778719
+#	picture = "cape_map"
+#	title = "The Loss of South Africa"
+#	desc = "South Africa is lost. With it goes our influence in the countries in the region."
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		OR = {  primary_culture = scottish
+#				accepted_culture = scottish
+#			}
+#		has_recently_lost_war = yes
+#		NOT = {
+#			owns = 2087
+#			2087 = {
+#				owner = {
+#					vassal_of = THIS
+#				}
+#			}
+#		}
+#		
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	
+#	immediate = {
+#		set_country_flag = british_kicked_out_of_SAF
+#	}
+#	
+#	option = {
+#		name = "This is a serious setback."
+#		prestige = -25
+#		any_country = {
+#			limit = {
+#				exists = yes
+#				vassal_of = THIS
+#				OR = {
+#					tag = BSH
+#					tag = SUA
+#					tag = ORA
+#					tag = ZUL
+#					tag = TRN
+#					tag = NAL
+#				}
+#			}
+#			country_event = 4778720
+#		}
+#	}
+#}
 
 country_event = {
 	id = 4778720
