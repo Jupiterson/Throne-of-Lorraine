@@ -368,14 +368,15 @@ country_event = {
 			}
 			secede_province = DAI
 		}
-		war = {
-			target = DAI
-			attacker_goal = {
-				casus_belli = unification_annex_casus_belli
-			}
+		DAI = {
+			country_event = 652110
 		}
 	}
 }
+
+
+
+
 #Taiwan Rebellion
 country_event = {
 	id = 310011
@@ -384,17 +385,17 @@ country_event = {
 	picture = "Tawanese_Rebellion"
 	
 	is_triggered_only = yes	
-		option = {
+	
+	option = {
 		name = "Those ungrateful Tribes!"
+		CHI_1485 = { add_core = TAI }
 		any_owned = {
 			limit = {
 				OR = {
-					region = CHI_1485
 					is_core = TAI
 				}
 			}
 			secede_province = TAI 
-		CHI_1485 = { add_core = TAI }
 		}
 		war = {
 			target = TAI
@@ -403,7 +404,41 @@ country_event = {
 			}
 		}
 	}
+	
+	option = {
+		name = "The time has come to free ourselves from the Chinese yoke. Long live the Formosan Confederation! (Play as Formosa)"
+		CHI_1485 = { add_core = TAI }
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = TAI
+				}
+			}
+			secede_province = TAI 
+		}
+		war = {
+			target = TAI
+			attacker_goal = {
+				casus_belli = unification_annex_casus_belli
+			}
+		}
+		change_tag_no_core_switch = TAI
+		ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0.2
+                NOT = { relation = { who = FROM value = 150 } }
+            }
+
+            modifier = {
+                factor = 1.2
+                relation = { who = FROM value = 175 }
+            }
+		
+        }
+	}
 }
+
 #Victory of the Empire
 country_event = {
 	id = 310012
@@ -433,6 +468,7 @@ country_event = {
 		set_country_flag = victory_of_Buyeo
 	}
 }
+
 #Victory of the feudatories
 country_event = {
 	id = 310013

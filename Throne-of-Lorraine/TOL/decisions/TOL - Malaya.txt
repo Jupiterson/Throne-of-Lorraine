@@ -126,8 +126,12 @@ political_decisions = {
 				tag = GNG
 				tag = FJN
 				tag = TAI
+				tag = SAI
+				AND = {
+					tag = ANN
+					has_country_flag = chinese_vietnam
+				}
 			}
-			is_vassal = no
 			NOT = { has_country_flag = israel_of_the_east }
 			has_global_flag = kangchu_system
 			has_global_flag = chinese_diaspora
