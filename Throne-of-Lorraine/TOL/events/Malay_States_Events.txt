@@ -1008,6 +1008,10 @@ country_event = {
 			primary_culture = moluccan
 			primary_culture = sumatran
 			tag = SAK
+			AND = {
+				tag = CHA
+				NOT = { has_country_flag = cham_viet_alliance }
+			}
 		}
 		NOT = { has_country_flag = indonesian_revolutionary_inform }
 	}
@@ -1045,5 +1049,69 @@ country_event = {
 				value = -100
 			}
 		}
+	}
+}
+
+#Vietnam
+
+country_event = {
+	id = 652110
+	title = "EVTNAME652110"
+	desc = "EVTDESC652110"
+	picture = "Vietnamese_Rebellion"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "There is no shame in defeat against a superior foe. Agree to the Chinese demands."
+		any_owned = {
+			limit = {
+				is_core = GXI
+			}
+			secede_province = GXI
+		}
+		GXI = {
+			create_vassal = DAI
+		}
+		prestige = -10
+		ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0.2
+                NOT = { relation = { who = FROM value = 150 } }
+            }
+
+            modifier = {
+                factor = 1.2
+                relation = { who = FROM value = 175 }
+            }
+		
+        }
+	}
+	
+	option = {
+		name = "Why should we imitate others, bow our heads, stoop over and be slaves?"
+		GXI = {
+			war = {
+				target = DAI
+				attacker_goal = {
+					casus_belli = unification_annex_casus_belli
+				}
+				defender_goal_goal = {
+					casus_belli = status_quo
+				}
+			}
+		}
+		ai_chance = {
+            factor = 80
+            modifier = {
+                factor = 1.5
+                NOT = { relation = { who = FROM value = 150 } } 
+            }
+            modifier = {
+                factor = 1.3
+                NOT = { relation = { who = FROM value = 200 } }
+            }
+        }
 	}
 }
