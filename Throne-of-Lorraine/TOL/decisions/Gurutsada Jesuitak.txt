@@ -1,0 +1,30 @@
+political_decisions = {
+	gabonese_holy_militias = {
+		potential = {
+			tag = GAB
+			year = 1836
+			war = yes
+			NOT = { has_country_flag = great_gabonese_draft }
+		}
+		
+		allow = {
+			money = 4000
+		}
+		
+		effect = {
+			money = -4000
+			set_country_flag = great_gabonese_draft
+			any_pop = {
+				limit = {
+					has_pop_religion = jesuite
+				}
+				consciousness = 2
+			}
+			add_country_modifier = {
+				name = gabonese_holy_militias
+				duration = 1825
+			}
+		}
+	}	
+}	
+	
