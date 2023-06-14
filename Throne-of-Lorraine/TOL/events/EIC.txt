@@ -979,25 +979,6 @@ country_event = {
 }
 
 country_event = {
-	id = 9990012
-	title = "EVTNAME9990012"
-	desc = "EVTDESC9990012"
-	picture = "scottish_war"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVTDESC9990012OPTA"
-		release = MAH
-		release = BER
-		FRA = {
-			inherit = MAH
-			inherit = BER
-		}
-	}
-}
-
-country_event = {
 	id = 9990013
 	title = "EVTNAME9990013"
 	desc = "EVTDESC9990013"

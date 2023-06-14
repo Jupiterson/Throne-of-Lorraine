@@ -463,7 +463,16 @@ acquire_core_state = {
 		}
 		NOT = { is_our_vassal = THIS }
 		number_of_states = 1 # annex if you want their last state
-		is_vassal = no
+		OR = {
+			is_vassal = no
+			government = daimyo 
+		}
+		THIS = {
+			OR = {
+				is_vassal = no
+				government = daimyo 
+			}
+		}
 		any_owned_province = { is_core = THIS }
 		NOT = { has_country_modifier = neutrality_modifier }
 		THIS = { NOT = { has_country_modifier = neutrality_modifier } }
@@ -542,7 +551,16 @@ acquire_all_cores = {
 		civilized = yes
 		NOT = { is_our_vassal = THIS }
 		number_of_states = 2 # annex if you want their last state
-		is_vassal = no
+		OR = {
+			is_vassal = no
+			government = daimyo 
+		}
+		THIS = {
+			OR = {
+				is_vassal = no
+				government = daimyo 
+			}
+		}
 		any_owned_province = { is_core = THIS }
 		any_owned_province = { NOT = { is_core = THIS } }
 		NOT = { has_country_modifier = neutrality_modifier }
@@ -1540,13 +1558,7 @@ annex_core_country = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		NOT = {
-			AND = {
-				#THIS = { ai = yes }
-				has_global_flag = sw_set
-				NOT= { year = 1843 }
-			}
-		}
+		
 		OR = {
 			NOT = { has_country_modifier = war_focus }
 			THIS = {
@@ -1559,7 +1571,16 @@ annex_core_country = {
 			}
 		}
 		NOT = { is_our_vassal = THIS }
-		is_vassal = no
+		OR = {
+			is_vassal = no
+			government = daimyo 
+		}
+		THIS = {
+			OR = {
+				is_vassal = no
+				government = daimyo 
+			}
+		}
 		any_owned_province = { is_core = THIS }
 		NOT = {
 			any_owned_province = {

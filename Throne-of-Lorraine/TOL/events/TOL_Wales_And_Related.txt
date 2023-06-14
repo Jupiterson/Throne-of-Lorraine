@@ -449,10 +449,17 @@ country_event = {
 	
 	option = {
 		name "EVTOPTC59004"
-		war = { 
-			target = UBD 
-			attacker_goal = { casus_belli = place_in_the_sun state_province_id = 2409 }
-			defender_goal = { casus_belli = status_quo }
+		THIS = {
+			war = { 
+				target = UBD 
+				attacker_goal = { 
+					casus_belli = place_in_the_sun 
+					state_province_id = 2409 
+				}
+				defender_goal = { 
+					casus_belli = status_quo 
+				}
+			}
 		}
 	}
 }

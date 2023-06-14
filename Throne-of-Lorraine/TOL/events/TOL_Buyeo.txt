@@ -1,3 +1,131 @@
+#Surviving Qing
+
+country_event = {
+	id = 410000
+	title = "Pearlflood0.t"
+	desc = "Pearlflood0.d"
+	picture = "DIM_flood_1926"
+
+	trigger = {
+		AND = {
+			owns = 1500
+			owns = 1501
+			owns = 1493
+		}
+		year = 1851
+		war = no
+		NOT = { has_country_flag = Pearlflooding }
+	}
+
+	mean_time_to_happen = { months = 12 }
+
+	option = {
+		name = "Send troops and aid to the South!"
+		set_country_flag = Pearlflooding
+		1493 = {
+			any_pop = { reduce_pop = 0.90 }
+			add_province_modifier = { name = chinese_floods duration = 1800 }
+			add_province_modifier = { name = local_opium_habit duration = -1 }
+			remove_province_modifier = foreign_smugglers 
+		}
+		QNG = {
+			country_event = { id = 410001 days = 120 }
+		}
+	}
+}
+
+
+country_event = {
+	id = 410001
+	title = "Pearlflood1.t"
+	desc = "Pearlflood1.d"
+	picture = "DIM_flood_1916"
+
+	is_triggered_only = yes	
+
+	option = {
+		name = "This does not bode well for our rule in the south..."
+		1493 = {
+			any_pop = { reduce_pop = 0.80 }
+			add_province_modifier = { name = chinese_floods duration = 1800 }
+		}
+		1500 = {
+			any_pop = { reduce_pop = 0.80 }
+			add_province_modifier = { name = chinese_floods duration = 1800 }
+		}
+		1501 = {
+			any_pop = { reduce_pop = 0.80 }
+			add_province_modifier = { name = chinese_floods duration = 1800 }
+		}
+		QNG = {
+			country_event = { id = 410002 days = 120 }
+		}
+	}
+}
+
+
+country_event = {
+	id = 410002
+	title = "Pearlflood2.t"
+	desc = "Pearlflood2.d"
+	picture = "DIM_flood_1861_2"
+
+	is_triggered_only = yes	
+
+	option = {
+		name = "At least the disaster is over..."
+		set_global_flag = failure_in_pearl
+		1493 = {
+			any_pop = { reduce_pop = 0.95 }
+			remove_province_modifier = chinese_floods 
+		}
+		1500 = {
+			any_pop = { reduce_pop = 0.95 }
+			remove_province_modifier = chinese_floods 
+		}
+		1501 = {
+			any_pop = { reduce_pop = 0.95 }
+			remove_province_modifier = chinese_floods 
+		}
+	}
+}
+
+country_event = {
+	id = 203922
+	title = "The Willow Palisade"
+	desc = "The Willow Palisade has prevented Han migration into Manchuria, the homeland of the Buyeo for generations, and although old and falling apart, it still manages to stop immigration."
+	picture = "Willow_palisade"
+
+	trigger = {
+		tag = QNG
+		year = 1836
+	}
+
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "What an accomplishment."
+		any_owned = {
+			limit = {
+				is_core = THIS
+				AND = {
+					NOT = { pop_majority_culture = han_chinese }
+					NOT = { pop_majority_culture = korean }
+				}
+			}
+			add_province_modifier = {
+				name = willow_palisade
+				duration = 10950
+			}
+		}
+	}
+
+}
+
 # Starting Event
 
 country_event = {
@@ -245,7 +373,7 @@ country_event = {
                             militancy = 4
                             consciousness = 2
 			}
-			add_core = GUI
+			add_core = GZI
 		}
 		CHI_1604 = {
 			add_core = FJN
@@ -1196,7 +1324,7 @@ country_event = {
 			limit = {
 				OR = {
 					is_core = FJN
-					is_core = GUI
+					is_core = GZI
 					is_core = GNG
 					is_core = SZC
 				}
@@ -1229,6 +1357,15 @@ country_event = {
 				name = chinese_provincial_government	
 				duration = 3650
 			}
+		}
+		GMJ = {
+			government = presidential_dictatorship
+			add_country_modifier = {
+				name = chinese_provincial_government	
+				duration = 3650
+			}
+		}
+		TPG = {
 			define_general = {
 				name = "Zhang Zhidong"
 				personality = disciplined
@@ -1251,28 +1388,23 @@ country_event = {
 			}
 		}
 		GMJ = {
-			government = presidential_dictatorship
-			add_country_modifier = {
-				name = chinese_provincial_government	
-				duration = 3650
-			}
 			define_general = {
-				name = "Zhang Zhidong"
+				name = "Huang Feihong"
 				personality = disciplined
 				background = politician
 			}
 			define_general = {
-				name = "Dong Fuxiang"
+				name = "Ma Hongxing"
 				personality = audacious
 				background = nationalist
 			}
 			define_general = {
-				name = "Kang Youwei"
+				name = "Sun Jingwei"
 				personality = intelligent
 				background = eccentric_genius
 			}
 			define_general = {
-				name = "Liang Qichao"
+				name = "Wang Zhongshan"
 				personality = clever
 				background = poet
 			}
@@ -1302,7 +1434,7 @@ country_event = {
 			limit = {
 				OR = {
 					is_core = FJN
-					is_core = GUI
+					is_core = GZI
 					is_core = GNG
 					is_core = SZC
 				}
@@ -1341,6 +1473,50 @@ country_event = {
 			add_country_modifier = {
 				name = chinese_provincial_government	
 				duration = 3650
+			}
+		}
+		TPG = {
+			define_general = {
+				name = "Zhang Zhidong"
+				personality = disciplined
+				background = politician
+			}
+			define_general = {
+				name = "Dong Fuxiang"
+				personality = audacious
+				background = nationalist
+			}
+			define_general = {
+				name = "Kang Youwei"
+				personality = intelligent
+				background = eccentric_genius
+			}
+			define_general = {
+				name = "Liang Qichao"
+				personality = clever
+				background = poet
+			}
+		}
+		GMJ = {
+			define_general = {
+				name = "Huang Feihong"
+				personality = disciplined
+				background = politician
+			}
+			define_general = {
+				name = "Ma Hongxing"
+				personality = audacious
+				background = nationalist
+			}
+			define_general = {
+				name = "Sun Jingwei"
+				personality = intelligent
+				background = eccentric_genius
+			}
+			define_general = {
+				name = "Wang Zhongshan"
+				personality = clever
+				background = poet
 			}
 		}
 		release_vassal = XIN
@@ -1369,7 +1545,7 @@ country_event = {
 			limit = {
 				OR = {
 					is_core = FJN
-					is_core = GUI
+					is_core = GZI
 					is_core = GNG
 					is_core = SZC
 				}
@@ -1408,6 +1584,50 @@ country_event = {
 			add_country_modifier = {
 				name = chinese_provincial_government	
 				duration = 3650
+			}
+		}
+		TPG = {
+			define_general = {
+				name = "Zhang Zhidong"
+				personality = disciplined
+				background = politician
+			}
+			define_general = {
+				name = "Dong Fuxiang"
+				personality = audacious
+				background = nationalist
+			}
+			define_general = {
+				name = "Kang Youwei"
+				personality = intelligent
+				background = eccentric_genius
+			}
+			define_general = {
+				name = "Liang Qichao"
+				personality = clever
+				background = poet
+			}
+		}
+		GMJ = {
+			define_general = {
+				name = "Huang Feihong"
+				personality = disciplined
+				background = politician
+			}
+			define_general = {
+				name = "Ma Hongxing"
+				personality = audacious
+				background = nationalist
+			}
+			define_general = {
+				name = "Sun Jingwei"
+				personality = intelligent
+				background = eccentric_genius
+			}
+			define_general = {
+				name = "Wang Zhongshan"
+				personality = clever
+				background = poet
 			}
 		}
 		release_vassal = XIN
@@ -1470,6 +1690,28 @@ country_event = {
 		}
 		HUI = {
 			government = presidential_dictatorship
+		}
+		KMT = {
+			define_general = {
+				name = "Zhang Zhidong"
+				personality = disciplined
+				background = politician
+			}
+			define_general = {
+				name = "Dong Fuxiang"
+				personality = audacious
+				background = nationalist
+			}
+			define_general = {
+				name = "Kang Youwei"
+				personality = intelligent
+				background = eccentric_genius
+			}
+			define_general = {
+				name = "Liang Qichao"
+				personality = clever
+				background = poet
+			}
 		}
 		war = {
 			target = KMT
@@ -1609,9 +1851,9 @@ country_event = {
 		}
 		any_owned = {
 			limit = {
-				is_core = GUI
+				is_core = GZI
 			}
-			secede_province = GUI
+			secede_province = GZI
 		}
 		any_owned = {
 			limit = {
