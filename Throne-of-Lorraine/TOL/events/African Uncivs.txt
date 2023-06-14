@@ -51,12 +51,12 @@ country_event = { #Mzilikazi of Matabele flees to Matabeland
 		}
 
 		2108 = {
-			any_pop = { limit = { has_pop_culture = nguni }
+			any_pop = { limit = { has_pop_culture = southern_bantu }
 			reduce_pop = 0.8
 			}
 		}
 
-		2071 = { any_pop = { limit = { has_pop_culture = nguni } reduce_pop = 1.2 } }
+		2071 = { any_pop = { limit = { has_pop_culture = southern_bantu } reduce_pop = 1.2 } }
 
 		MAT = {
 			capital = 2071
