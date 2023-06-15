@@ -1,23 +1,21 @@
 capital = 1394
-primary_culture = hakka
-culture = malay
-culture = dayak
+primary_culture = malay
 culture = yue
-religion = kirishitan
-government = democracy
+religion = protestant
+government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01
 non_state_culture_literacy = 0.01
 
 # Political reforms
-slavery = no_slavery
+slavery = yes_slavery
 upper_house_composition = appointed
-vote_franschise = landed_voting
+vote_franschise = none_voting
 public_meetings = no_meeting
 press_rights = state_press
-trade_unions = state_controlled
-voting_system = jefferson_method
+trade_unions = no_trade_unions
+voting_system = first_past_the_post
 political_parties = underground_parties
 
 # Social Reforms
@@ -30,7 +28,7 @@ pensions = no_pensions
 school_reforms = no_schools
 
 govt_flag = {
-	government = democracy
+	government = hms_government
 	flag = democracy
 }
 
@@ -44,7 +42,7 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
-ruling_party = LAN_conservative
+ruling_party = SWK_conservative
 upper_house = {
 	fascist = 0
 	liberal = 10
@@ -55,16 +53,7 @@ upper_house = {
 	communist = 0
 }
 
-monetary_reform = yes_monetary_reform
-foreign_weapons = yes_foreign_weapons
-foreign_artillery = yes_foreign_artillery
-foreign_navies = yes_foreign_navies
-foreign_naval_officers = yes_foreign_naval_officers
-western_shipyards = yes_western_shipyards
-finance_reform = yes_finance_reform
-naval_schools = yes_naval_schools
-
-set_country_flag = catholic_country
+set_country_flag = sunni_country
 
 1861.1.1 = {
 	oob = "/1861/SWK_oob.txt"
