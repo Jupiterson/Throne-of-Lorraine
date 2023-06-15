@@ -615,7 +615,7 @@ country_event = {
 			average_militancy = 2
 			UTS = { average_militancy = 4 }
 			SAT = { average_militancy = 4 }
-			TOS = { average_militancy = 4 }
+			ASA = { average_militancy = 4 }
 			KAG = { average_militancy = 4 }
 			SEN = { average_militancy = 4 }
 			JAP = { average_militancy = 4 }
@@ -752,7 +752,7 @@ country_event = {
 			KAG = { is_vassal = no }
 			SEN = { is_vassal = no }
 			UTS = { is_vassal = no }
-			TOS = { is_vassal = no }
+			ASA = { is_vassal = no }
 			SAT = { is_vassal = no }
 		}
 		NOT = { has_country_flag = emperor_meiji }
@@ -780,7 +780,7 @@ country_event = {
 		SAT = { all_core = { add_core = TKG } }
 		UTS = { all_core = { add_core = TKG } }
 		SEN = { all_core = { add_core = TKG } }
-		TOS = { all_core = { add_core = TKG } }
+		ASA = { all_core = { add_core = TKG } }
 		KAG = { all_core = { add_core = TKG } }
 		any_country = {
 			limit = { substate_of = TKG }
@@ -1350,7 +1350,7 @@ country_event = {
 					tag = SEN
 					tag = UTS
 					tag = SAT
-					tag = TOS
+					tag = ASA
 					tag = KAG
 					tag = SAI
 				}
@@ -1828,7 +1828,7 @@ country_event = {
 					tag = SEN
 					tag = UTS
 					tag = SAT
-					tag = TOS
+					tag = ASA
 					tag = KAG
 					tag = SAI
 				}
@@ -1985,7 +1985,7 @@ country_event = {
 			tag = KAG
 			tag = SEN
 			tag = UTS
-			tag = TOS
+			tag = ASA
 			tag = SAT
 		}
 		substate_of = TKG
@@ -2868,151 +2868,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = 97682
-	title = "EVTNAME97682" #The Ezo Republic
-	desc = "EVTDESC97682"
-	picture = "ezo_republic"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = JAP
-		has_global_flag = boshin_war_has_happened
-		civilized = yes
-		NOT = { has_country_flag = peaceful_transition_to_japan }
-		EZO = {
-			is_core = 1642
-			election = no
-			exists = yes
-		}
-	}
-
-	mean_time_to_happen = { days = 10 }
-
-	option = {
-		name = "EVT97682OPTA" #Deny their request.
-		release_vassal = EZO
-		relation = { who = EZO value = -400 }
-		ai_chance = { factor = 100 }
-	}
-
-	option = {
-		name = "EVT97682OPTB" #Agree
-		add_tax_relative_income = 0.5
-		ai_chance = { factor = 0 }
-	}
-
-	option = {
-		name = "EVT97682OPTC" #Set them completely free
-		EZO = { all_core = { remove_core = THIS } }
-		release_vassal = EZO
-		relation = { who = EZO value = 400 }
-		ai_chance = { factor = 0 }
-	}
-	option = {
-		name = "EVT97683OPTB" #Set them completely free and play as them
-			EZO = { all_core = { remove_core = JAP remove_core = TKG } }
-			all_core = { limit = { state_id = 1086 } remove_core = TKG remove_core = JAP add_core = EZO }
-			any_owned = { limit = { is_core = EZO } secede_province = EZO }
-			relation = { who = EZO value = 400 }
-			diplomatic_influence = { who = EZO value = 400 }
-			change_tag_no_core_switch = EZO
-		ai_chance = { factor = 0 }
-		}
-	}
-
-country_event = {
-	id = 97683
-	title = "EVTNAME97683" #The Ezo Republic - Cores
-	desc = "EVTDESC97683"
-	picture = "ezo_request"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = JAP
-		owns = 1642
-		TKG = { exists = no }
-		has_global_flag = boshin_war_has_happened
-		civilized = yes
-		NOT = { has_country_flag = peaceful_transition_to_japan }
-		EZO = {
-			NOT = { is_core = 1642 }
-			exists = no
-			election = no
-		}
-	}
-
-	mean_time_to_happen = { days = 30 }
-
-	option = {
-		name = "EVT97683OPTA"
-		set_country_flag = ezo_republic
-		JAP_1088 = { add_core = EZO }
-		random_owned = { limit = { province_id = 1089 } add_core = EZO }
-		#random_owned = { limit = { province_id = 1087 } add_core = EZO }
-		#random_owned = { limit = { province_id = 1088 } add_core = EZO }
-		#random_owned = { limit = { province_id = 1086 } add_core = EZO }
-		release_vassal = EZO
-		relation = { who = EZO value = 400 }
-		EZO = {
-			civilized = yes
-			government = democracy
-			political_reform = population_equal_weight
-			political_reform = wealth_voting
-			political_reform = yes_meeting
-			political_reform = censored_press
-			political_reform = no_trade_unions
-			political_reform = non_secret_ballots
-			political_reform = proportional_representation
-			ruling_party_ideology = conservative
-			election = yes
-			small_arms = 50
-			canned_food = 50
-			ammunition = 50
-			artillery = 50
-			treasury = 50000
-		define_general = {
-			name = "Hijikata Toshizo"
-			personality = implacable
-			background = school_of_firepower
-				}
-			}
-		}
-	}
-
-country_event = {
-	id = 97684
-	title = "EVTNAME97684" #The Ezo Republic - Remove Cores
-	desc = "EVTDESC97684"
-	picture = "ezo_end"
-
-	fire_only_once = yes
-
-	trigger = {
-		OR = {
-			tag = JAP
-			tag = TKG
-			}
-		owns = 1642
-		has_global_flag = boshin_war_has_happened
-		civilized = yes
-		NOT = { has_country_flag = peaceful_transition_to_japan }
-		EZO = {
-			is_core = 1642
-			exists = no
-			}
-		}
-
-	mean_time_to_happen = { days = 5 }
-
-	option = {
-		name = "EVT97684OPTA"
-		EZO = { all_core = { remove_core = EZO } }
-	}
-}
-
 #The Death of Komei
 country_event = {
 	id = 69002
@@ -3044,7 +2899,7 @@ country_event = {
 			KAG = { is_vassal = no }
 			SEN = { is_vassal = no }
 			UTS = { is_vassal = no }
-			TOS = { is_vassal = no }
+			ASA = { is_vassal = no }
 			SAT = { is_vassal = no }
 		}
 		NOT = { has_country_flag = emperor_meiji }
@@ -3072,7 +2927,7 @@ country_event = {
 		SAT = { all_core = { add_core = JAP } }
 		UTS = { all_core = { add_core = JAP } }
 		SEN = { all_core = { add_core = JAP } }
-		TOS = { all_core = { add_core = JAP } }
+		ASA = { all_core = { add_core = JAP } }
 		KAG = { all_core = { add_core = JAP } }
 	}
 }

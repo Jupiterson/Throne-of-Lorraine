@@ -177,7 +177,7 @@ political_decisions = {
 			OR = {
 				average_militancy = 3
 				JAP = { is_substate = no }
-				TOS = { is_substate = no }
+				ASA = { is_substate = no }
 				SAT = { is_substate = no }
 				UTS = { is_substate = no }
 				KAG = { is_substate = no }
@@ -345,7 +345,7 @@ political_decisions = {
 				factor = 0
 				OR = {
 					SAT = { ai = no }
-					TOS = { ai = no }
+					ASA = { ai = no }
 					UTS = { ai = no }
 					KAG = { ai = no }
 					SEN = { ai = no }
@@ -737,7 +737,7 @@ political_decisions = {
 				SEN = { exists = yes }
 				UTS = { exists = yes }
 				SAT = { exists = yes }
-				TOS = { exists = yes }
+				ASA = { exists = yes }
 				KAG = { exists = yes }
 			}
 			has_country_flag = made_peace_with_emperor
@@ -766,9 +766,9 @@ political_decisions = {
 				SAT = { exists = no }
 			}
 			OR = {
-				is_sphere_leader_of = TOS
-				relation = { who = TOS value = 100 }
-				TOS = { exists = no }
+				is_sphere_leader_of = ASA
+				relation = { who = ASA value = 100 }
+				ASA = { exists = no }
 			}
 			OR = {
 				is_sphere_leader_of = KAG
@@ -797,10 +797,10 @@ political_decisions = {
 						remove_core = SEN
 					}
 			}
-			TOS = {
+			ASA = {
 					all_core = {
 						   add_core = TKG
-						remove_core = TOS
+						remove_core = ASA
 					}
 			}
 			SAT = {
@@ -840,7 +840,7 @@ political_decisions = {
 						tag = SEN
 						tag = UTS
 						tag = SAT
-						tag = TOS
+						tag = ASA
 						tag = KAG
 					}
 					exists = yes
@@ -893,7 +893,7 @@ political_decisions = {
 						tag = SEN
 						tag = UTS
 						tag = SAT
-						tag = TOS
+						tag = ASA
 						tag = KAG
 					}
 					exists = yes
@@ -1465,117 +1465,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	establish_the_kaitakushi = {
-		picture = kaitakushi
-		potential = {
-			primary_culture = japanese
-			1643 = { NOT = { life_rating = 25 } }
-			NOT = { has_country_flag = establish_the_kaitakushi }
-		}
-
-		allow = {
-			OR = {
-				tag = TKG
-				has_country_flag = ezo_republic
-				has_country_flag = peaceful_transition_to_japan
-			}
-			civilized = yes
-			war = no
-			owns = 1642
-			1642 = { NOT = { is_colonial = yes } OR = { NOT = { is_core = EZO } owner = { tag = EZO } } }
-			owns = 1643
-			1643 = { NOT = { is_colonial = yes } OR = { NOT = { is_core = EZO } owner = { tag = EZO } } }
-			owns = 1644
-			1644 = { NOT = { is_colonial = yes } OR = { NOT = { is_core = EZO } owner = { tag = EZO } } }
-			OR = {
-				AND = {
-					tag = JAP
-					TKG = { exists = no }
-					nationalism_n_imperialism = 1
-				}
-				AND = {
-					tag = TKG
-					JAP = { exists = no }
-					nationalism_n_imperialism = 1
-				}
-				AND = {
-					tag = EZO
-					revolution_n_counterrevolution = 1
-					is_vassal = no
-				}
-			}
-		}
-
-		effect = {
-			set_country_flag = establish_the_kaitakushi
-			remove_country_modifier = uncivilized_isolationism
-			1643 = { change_province_name = "Sapporo" life_rating = 25 }
-			1644 = { change_province_name = "Nemuro" life_rating = 25 }
-			random_owned = {
-				limit = { NOT = { exists = EZO } owner = { ai = yes } }
-				1642 = { state_scope = { any_owned = { secede_province = UTI } } }
-				THIS = { inherit = UTI }
-			}
-			random_owned = {
-				limit = {
-					owner = { ai = yes }
-					province_id = 1087
-					is_colonial = no
-				}
-				1087 = { secede_province = UTI }
-				THIS = { inherit = UTI }
-			}
-			random_owned = {
-				limit = {
-					owner = { ai = yes }
-					province_id = 1087
-					is_colonial = yes
-				}
-				1087 = {
-					add_province_modifier = { name = population_resettlement duration = 1825 }
-					add_province_modifier = { name = baby_boom duration = 1825 }
-					add_province_modifier = { name = plantation duration = -1 }
-					any_pop = {
-						limit = { type = bureaucrats }
-						reduce_pop = 0
-					}
-				}
-			}
-			random_owned = {
-				limit = { owner = { ai = yes } }
-				1642 = {
-					state_scope = {
-						change_region_name = "Hokkaido"
-						any_owned = {
-							add_province_modifier = { name = population_resettlement duration = 1825 }
-							add_province_modifier = { name = baby_boom duration = 1825 }
-							add_province_modifier = { name = plantation duration = -1 }
-						}
-						any_pop = {
-							limit = { type = bureaucrats }
-							reduce_pop = 0.1
-						}
-					}
-				}
-			}
-			random_owned = {
-				limit = { owner = { ai = no } }
-				1642 = {
-					state_scope = {
-						change_region_name = "Hokkaido"
-						any_owned = {
-							add_province_modifier = { name = population_resettlement duration = 3650 }
-							add_province_modifier = { name = baby_boom duration = 3650 }
-							add_province_modifier = { name = plantation duration = -1 }
-						}
-					}
-				}
-			}
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
+	
 	occupy_kita_ezo = {
 		picture = map_yellow_sea
 		potential = {
