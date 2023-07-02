@@ -1,5 +1,118 @@
 political_decisions = {
 
+	build_addis_ababa = {
+		picture = addis_ababa_building
+		potential = {
+			tag = ETH
+			owns = 1859
+			NOT = { has_country_flag = addis_ababa_built }
+			year = 1880
+		}
+
+		allow = {
+			war = no
+			OR = {
+				civilized = yes
+				civilization_progress = 0.5
+				year = 1886
+			}
+			owns = 1859
+		}
+
+		effect = {
+			set_country_flag = addis_ababa_built
+			prestige = 5
+			years_of_research = 1
+			1859 = {
+				change_province_name = "Addis Ababa"
+				life_rating = 5
+			}
+			capital = 1859
+			GON = { all_core = { remove_core = GON } }
+			SHW = { all_core = { remove_core = SHW } }
+			TIG = { all_core = { remove_core = TIG } }
+			ENG_1848 = { add_core = TIG }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	eth_mission_to_cairo = {
+		potential = {
+			tag = ETH
+			ai = yes
+			COP = {
+				ai = yes
+				exists = yes
+				neighbour = ETH
+				NOT = {
+					any_owned_province = { is_core = ETH }
+					casus_belli = ETH
+				}
+			}
+			NOT = {
+				has_country_flag = mission_to_cairo
+				any_owned_province = { is_core = COP }
+				any_owned_province = { is_core = SUD }
+				casus_belli = COP
+				truce_with = COP
+			}
+		}
+
+		allow = {
+			NOT = { war_with = COP }
+		}
+
+		effect = {
+			set_country_flag = mission_to_cairo
+			relation = { who = COP value = 200 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	unite_cushitica = {
+	picture = unite_cushitica
+		potential = {
+			OR = {
+				tag = GEL
+				tag = MAJ
+				tag = WRL
+			}
+			NOT = { has_global_flag = cushitica_united }
+		}
+
+		allow = {
+			war = no
+			1868 = { owned_by = THIS }
+			1872 = { owned_by = THIS }
+			1873 = { owned_by = THIS }
+		}
+
+		effect = {
+			set_global_flag = cushitica_united
+			prestige = 5
+			all_core = { add_core = SOM }
+			GEL = { all_core = { remove_core = GEL } }
+			MAJ = { all_core = { remove_core = MAJ } }
+			WRL = { all_core = { remove_core = WRL } }
+			1875 = { add_core = SOM }
+			1864 = { add_core = SOM }
+			1866 = { add_core = SOM }
+			1865 = { add_core = SOM }
+			1867 = { add_core = SOM }
+			2031 = { add_core = SOM }
+			2032 = { add_core = SOM }
+			change_tag = SOM
+			any_pop = { militancy = -4 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	conquest_of_levant = {
 		picture = map_levant
 		potential = {

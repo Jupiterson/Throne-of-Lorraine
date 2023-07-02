@@ -1433,4 +1433,135 @@ political_decisions = {
             factor = 1
         }
     }
+	
+	maas_to_memel = {
+		#picture = wallonien
+		potential = {
+			OR = {
+				tag = GER
+				tag = GCF
+			}
+			NOT = { has_global_flag = german_renamed_frborderlands }
+			owns = 392
+			owns = 393
+			owns = 394
+			owns = 395
+			owns = 398
+			owns = 3377
+		}
+		allow = {
+			war = no
+			is_greater_power = yes
+		}
+		effect = {
+			392 = { change_province_name = "Namen" }
+			393 = { change_province_name = "Dornick" }
+			394 = { change_province_name = "Karlstadt" }
+			395 = { change_province_name = "Lüttich" }
+			398 = { change_province_name = "Bastnach" }
+			3377 = { change_province_name = "Arel" }
+			prestige = 10
+			set_global_flag = german_renamed_frborderlands
+		}
+	}
+	
+	#Originally scripted by Paradox for Victoria
+#stolen by me
+	german_zoll_verein = {
+		picture = lmu
+		potential = {
+			has_country_flag = german_nation
+			NOT = {
+				has_country_flag = joined_lmu
+			}
+		}
+		allow = {
+			year = 1845
+			invention = silver_standard
+			NOT = { war_with = BAV }
+			NOT = { war_with = LOR }
+			NOT = { war_with = HNS }
+		}
+
+		effect = {
+			prestige = 25
+			add_country_modifier = {
+				name = latin_monetary_union
+				duration = -1
+			}
+			set_country_flag = joined_lmu
+			add_country_modifier = {
+				name = customs_union
+				duration = -1
+			}
+#			425 = { trade_goods = precious_goods }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	holy_roman_emperor = {
+		picture = german_confederation
+		potential = {
+			tag = GCF
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+#			has_global_flag = fantasy_countries_enabled
+		}
+
+		allow = {
+			is_greater_power = yes
+			rank = 1
+			war = no
+			prestige = 250
+		}
+
+		effect = {
+			prestige = -20
+			random_owned = { limit = { owner = { government = absolute_monarchy } } owner = { government = absolute_empire } }
+			random_owned = { limit = { owner = { government = prussian_constitutionalism } } owner = { government = semi_constitutional_empire } }
+			random_owned = { limit = { owner = { government = hms_government } } owner = { government = constitutional_empire } }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	finalize_the_italian_border = {
+		picture = italian_trentino
+		potential = {
+			OR = {
+				tag = GER
+				tag = GCF
+			}
+			exists = ITA
+			NOT = { exists = AUS }
+			NOT = { exists = KUK }
+			owns = 734
+			owns = 735
+			NOT = { has_global_flag = italian_claimed_south_tirol }
+		}
+		allow = {
+			war = no
+			is_greater_power = yes
+		}
+		effect = {
+			set_global_flag = italian_claimed_south_tirol
+			relation = { who = ITA value = 100 }
+			badboy = -1
+			734 = {
+				change_province_name = "Trento"
+				secede_province = ITA
+				remove_core = THIS
+			}
+			735 = { remove_core = ITA }
+			3288 = { remove_core = ITA }
+		}
+	}
 }
