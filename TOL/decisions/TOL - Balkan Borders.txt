@@ -1,0 +1,340 @@
+political_decisions = {
+	transylvanian_question = {
+		picture = erdely
+		potential = {
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+			is_sphere_leader_of = HUN
+			is_sphere_leader_of = ROM
+			NOT = { government = proletarian_dictatorship }
+			AUS_652 = { NOT = { owned_by = THIS } }
+			AUS_654 = {
+				OR = {
+					owned_by = HUN
+					owned_by = ROM
+				}
+				NOT = {
+					owned_by = THIS
+				}
+			}
+			AUS_657 = {
+				OR = {
+					owned_by = HUN
+					owned_by = ROM
+				}
+				NOT = {
+					owned_by = THIS
+				}
+			}
+			NOT = {
+				primary_culture = hungarian
+				primary_culture = romanian
+				truce_with = HUN
+				truce_with = ROM
+				exists = SIE
+			}
+			NOT = { has_country_flag = transylvanian_question }
+		}
+
+		allow = {
+			mass_politics = 1
+			war = no
+			is_disarmed = no
+			HUN = {
+				war = no
+				is_disarmed = no
+			}
+			ROM = {
+				war = no
+				is_disarmed = no
+			}
+		}
+
+		effect = {
+			set_country_flag = transylvanian_question
+			prestige = 5
+			HUN = { country_event = 188193 }
+			ROM = { country_event = 188193 }
+		}
+	}
+
+	kosovo_question = {
+		picture = map_balkans
+		potential = {
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+			is_sphere_leader_of = SER
+			is_sphere_leader_of = ALB
+			NOT = { government = proletarian_dictatorship }
+			TUR_803 = {
+				OR = {
+					owned_by = SER
+					owned_by = ALB
+				}
+			}
+			802 = {
+				OR = {
+					owned_by = SER
+					owned_by = ALB
+				}
+				NOT = {
+					owned_by = THIS
+				}
+			}
+			803 = {
+				OR = {
+					owned_by = SER
+					owned_by = ALB
+				}
+				NOT = {
+					owned_by = THIS
+				}
+			}
+			3420 = {
+				OR = {
+					owned_by = SER
+					owned_by = ALB
+				}
+				NOT = {
+					owned_by = THIS
+				}
+			}
+			3421 = {
+				OR = {
+					owned_by = SER
+					owned_by = ALB
+				}
+				NOT = {
+					owned_by = THIS
+				}
+			}
+			NOT = {
+				primary_culture = serb
+				primary_culture = albanian
+				truce_with = SER
+				truce_with = ALB
+			}
+			NOT = { has_country_flag = kosovo_question }
+		}
+
+		allow = {
+			mass_politics = 1
+			war = no
+			is_disarmed = no
+			SER = {
+				war = no
+				is_disarmed = no
+			}
+			ALB = {
+				war = no
+				is_disarmed = no
+			}
+		}
+
+		effect = {
+			set_country_flag = kosovo_question
+			prestige = 5
+			SER = { country_event = 188201 }
+			ALB = { country_event = 188201 }
+		}
+	}
+
+	slovak_question = {
+		picture = slovaks
+		potential = {
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+			is_sphere_leader_of = HUN
+			is_sphere_leader_of = CZH
+			NOT = { government = proletarian_dictatorship }
+			AUS_633 = {
+				OR = {
+					owned_by = HUN
+					owned_by = CZH
+				}
+				NOT = {
+					owned_by = THIS
+				}
+			}
+			NOT = {
+				primary_culture = hungarian
+				primary_culture = czech
+				primary_culture = slovak
+				truce_with = HUN
+				truce_with = CZH
+			}
+			NOT = { has_country_flag = slovak_question }
+		}
+
+		allow = {
+			mass_politics = 1
+			war = no
+			is_disarmed = no
+			HUN = {
+				war = no
+				is_disarmed = no
+			}
+			CZH = {
+				war = no
+				is_disarmed = no
+			}
+		}
+
+		effect = {
+			set_country_flag = slovak_question
+			prestige = 5
+			HUN = { country_event = 188209 }
+			CZH = { country_event = 188209 }
+		}
+	}
+
+	vojvodina_question = {
+		picture = greater_serbia
+		potential = {
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+			is_sphere_leader_of = HUN
+			is_sphere_leader_of = SER
+			NOT = { government = proletarian_dictatorship }
+			AUS_2538 = {
+				OR = {
+					owned_by = HUN
+					owned_by = SER
+				}
+				NOT = {
+					owned_by = THIS
+				}
+			}
+			NOT = {
+				primary_culture = hungarian
+				primary_culture = serb
+				truce_with = HUN
+				truce_with = SER
+			}
+			NOT = { has_country_flag = vojvodina_question }
+		}
+
+		allow = {
+			mass_politics = 1
+			war = no
+			is_disarmed = no
+			HUN = {
+				war = no
+				is_disarmed = no
+			}
+			SER = {
+				war = no
+				is_disarmed = no
+			}
+		}
+
+		effect = {
+			set_country_flag = vojvodina_question
+			prestige = 5
+			HUN = { country_event = 188217 }
+			SER = { country_event = 188217 }
+		}
+	}
+
+	dobrudja_question = {
+		picture = create_romania
+		potential = {
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+			is_sphere_leader_of = BUL
+			is_sphere_leader_of = ROM
+			NOT = { government = proletarian_dictatorship }
+			TUR_674 = {
+				OR = {
+					owned_by = BUL
+					owned_by = ROM
+				}
+				NOT = {
+					owned_by = THIS
+				}
+			}
+			NOT = {
+				primary_culture = bulgarian
+				primary_culture = romanian
+				truce_with = BUL
+				truce_with = ROM
+			}
+			NOT = { has_country_flag = dobrudja_question }
+		}
+
+		allow = {
+			mass_politics = 1
+			war = no
+			is_disarmed = no
+			BUL = {
+				war = no
+				is_disarmed = no
+			}
+			ROM = {
+				war = no
+				is_disarmed = no
+			}
+		}
+
+		effect = {
+			set_country_flag = dobrudja_question
+			prestige = 5
+			BUL = { country_event = 188225 }
+			ROM = { country_event = 188225 }
+		}
+	}
+
+	eastern_macedonia_question = {
+		picture = unite_with_greece
+		potential = {
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+			is_sphere_leader_of = BUL
+			is_sphere_leader_of = GRE
+			NOT = { government = proletarian_dictatorship }
+			TUR_823 = {
+				OR = {
+					owned_by = BUL
+					owned_by = GRE
+				}
+				NOT = {
+					owned_by = THIS
+				}
+			}
+			TUR_860 = {
+				NOT = {
+					owned_by = GRE
+				}
+			}
+			GRE = { NOT = { has_country_flag = greece_has_got_a_brand_new_bag } }
+			NOT = {
+				primary_culture = bulgarian
+				primary_culture = greek
+				truce_with = BUL
+				truce_with = GRE
+			}
+			NOT = { has_country_flag = eastern_macedonia_question }
+		}
+
+		allow = {
+			mass_politics = 1
+			war = no
+			is_disarmed = no
+			BUL = {
+				war = no
+				is_disarmed = no
+			}
+			GRE = {
+				war = no
+				is_disarmed = no
+			}
+		}
+
+		effect = {
+			set_country_flag = eastern_macedonia_question
+			prestige = 5
+			BUL = { country_event = 188233 }
+			GRE = { country_event = 188233 }
+		}
+	}
+}

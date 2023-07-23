@@ -1,7 +1,7 @@
 capital = 1646
 primary_culture = japanese
 religion = mahayana
-government = daimyo
+government = peasant_republic
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.40
@@ -11,8 +11,8 @@ prestige = 2
 # Political reforms
 slavery = no_slavery
 upper_house_composition = appointed
-vote_franschise = none_voting
-public_meetings = no_meeting
+vote_franschise = landed_voting
+public_meetings = yes_meeting
 press_rights = state_press
 trade_unions = no_trade_unions
 voting_system = jefferson_method
@@ -28,18 +28,18 @@ pensions = no_pensions
 school_reforms = no_schools
 
 # New Reforms
-conscription = no_draft
+conscription = mandatory_service
 debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = closed_borders
-centralization = unitary
+centralization = confederalism
 colonial_policy = no_colonies
 
 set_country_flag = mahayana_country
 
-ruling_party = NIP_conservative
+ruling_party = NIP_reactionary
 upper_house = {
 	fascist = 0
 	liberal = 17

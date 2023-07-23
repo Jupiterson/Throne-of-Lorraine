@@ -49,7 +49,7 @@ MSK = "countries/Mosquito Coast.txt"
 MAU = "countries/Mauritius.txt"
 SEY = "countries/Seychelles.txt"
 IOT = "countries/Indian Ocean Territory.txt"
-SGP = "countries/Singapore.txt"
+# SGP = "countries/Singapore.txt"
 MTQ = "countries/Martinique.txt"
 NAN = "countries/Curacao.txt"
 BHM = "countries/Bahamas.txt"
@@ -59,10 +59,10 @@ SVA = "countries/Svaneti.txt"
 MIG = "countries/Mingrelia.txt"
 GEN = "countries/Genoa.txt"
 PAT = "countries/Pattani.txt"
-STG = "countries/Sintang.txt"
-BGN = "countries/Bulungan.txt"
-SBS = "countries/Sambas.txt"
-PTK = "countries/Pontianak.txt"
+# STG = "countries/Sintang.txt"
+# BGN = "countries/Bulungan.txt"
+# SBS = "countries/Sambas.txt"
+# PTK = "countries/Pontianak.txt"
 RIA = "countries/Riau-Lingga.txt"
 BTN = "countries/Buton.txt"
 KUN = "countries/Kunduz.txt"
@@ -199,8 +199,6 @@ KML = "countries/Kumul.txt"
 SHK = "countries/Shilluk.txt"
 WRL	= "countries/Warsangali.txt"
 BHP = "countries/Bahawalpur.txt"
-EZO = "countries/Ezo.txt"
-AIN = "countries/Ainu.txt"
 CHY = "countries/Chechnya.txt"
 CHK = "countries/Champasak.txt"
 QNG = "countries/Qing China.txt"
@@ -234,7 +232,6 @@ YUC = "countries/Yucatan.txt"
 #North America
 AKI = "countries/Akino League.txt"
 BLZ = "countries/Belize.txt"
-FSA = "countries/Free States of America.txt" #NEEDS TO BE REMOVED
 GRN = "countries/Greenland.txt"
 JAM = "countries/Jamaica.txt"
 LSK = "countries/Alaska.txt"
@@ -359,6 +356,7 @@ EQG = "countries/Equatorial Guinea.txt"
 
 #Mein Afrika
 NIR = "countries/Novus Imperium Romanum.txt"
+
 #Africa
 AGC = "countries/Angoche.txt"
 ANG = "countries/Angola.txt"
@@ -450,9 +448,7 @@ HNN = "countries/Hunan.txt"
 HUI = "countries/Anhui.txt"
 INO = "countries/Indonesia.txt"
 KCH = "countries/Kachin.txt"
-KLM = "countries/Kalimantan.txt"
 KMT = "countries/Nationalist China.txt"
-KTI = "countries/Kutai.txt"
 LAN = "countries/Lanfang.txt"
 LXA = "countries/Lan Xang.txt"
 MAL = "countries/Maluku.txt"
@@ -460,21 +456,10 @@ MLY = "countries/Malaya.txt"
 SHA = "countries/Shan.txt"
 SLW = "countries/Sulawesi.txt"
 SAK = "countries/Siak.txt"
-SUL = "countries/Sulu.txt"
-SWK = "countries/Sarawak.txt"
 SZC = "countries/Sichuan.txt"
 TAI = "countries/Taiwan.txt"
 SUV = "countries/Suvarnabhumi Empire.txt"
 
-# Japan
-UTS = "countries/Utsunomiya.txt"
-KAG = "countries/Kaga.txt"
-RYU = "countries/Ryukyu.txt"
-SAT = "countries/Satsuma.txt"
-SEN = "countries/Sendai.txt"
-TKG = "countries/Shogunate Japan.txt"
-TOS = "countries/Tosa.txt"
-SAI = "countries/Sainantan.txt"
 
 # Australasia & the Pacific
 AOT	 = "countries/Aotearoa.txt"
@@ -668,7 +653,7 @@ TRA = "countries/Travancore.txt"
 ATJ = "countries/Atjeh.txt"
 BAL = "countries/Bali.txt"
 BHU = "countries/Bhutan.txt"
-BRU = "countries/Brunei.txt"
+
 BUR = "countries/Burma.txt"
 CAM = "countries/Cambodia.txt"
 CHI = "countries/China.txt"
@@ -750,7 +735,6 @@ PRU = "countries/Prussia.txt"
 GER = "countries/Germany.txt"
 AUS = "countries/Austria.txt"
 USA = "countries/USA.txt"
-JAP = "countries/Japan.txt"
 ITA = "countries/Italy.txt"
 KUK = "countries/Austria-Hungary.txt"
 
@@ -811,6 +795,7 @@ KH3 = "countries/lHubugao.txt"
 BLO = "countries/Baloyi.txt"
 BTH = "countries/Batho.txt"
 CLD = "countries/Caledon.txt"
+
  #NIGERIA
 EGB = "countries/Egba.txt"
 IBD = "countries/Ibadan.txt"
@@ -818,6 +803,7 @@ IFE = "countries/Ife.txt"
 IDA = "countries/Idah.txt"
 EBO = "countries/Ebony.txt"
 MAR = "countries/Maroon.txt"
+
 #Akino
 WMA = "countries/Westmark.txt"
 ILN = "countries/Illinois.txt"
@@ -828,6 +814,30 @@ HUR = "countries/Huron.txt"
 IRO = "countries/Iroquois.txt"   #Flags stolen from DoD
 VIN = "countries/Vinland.txt"    #Flags stolen from DoD
 ALQ = "countries/Algonquin.txt"
+
+# Japan and the Daimyo
+TKG = "countries/Shogunate Japan.txt"	#Kyogoku Shogunate
+JAP = "countries/Japan.txt"				#Imperial Japan
+
+SAT = "countries/Satsuma.txt"			#Kingdom of Kyushu
+
+KAG = "countries/Kaga.txt"				#Kanazawa-ikki
+
+SAI = "countries/Sainantan.txt"			#Sainantan
+
+AIN = "countries/Ainu.txt"				#Go-Abe/Ainu
+UTS = "countries/Utsunomiya.txt"		#Honda
+TAK = "countries/Takeda.txt"			#Takeda
+SEN = "countries/Sendai.txt"			#Date
+ASA = "countries/Asakura.txt"			#Asakura
+FUK = "countries/Ashina.txt"			#Ashina
+
+#Borneo
+SWK = "countries/Sarawak.txt"
+BRU = "countries/Brunei.txt"
+SUL = "countries/Sulu.txt"
+KLM = "countries/Kalimantan.txt"
+KTI = "countries/Kutai.txt"
 
 ##HoD Dominions
 dynamic_tags  = yes # any tags after this is considered dynamic dominions

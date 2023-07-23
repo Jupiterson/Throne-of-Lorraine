@@ -29,70 +29,6 @@ political_decisions = {
 		}
 	}
 
-	brunei_protectorate = {
-		picture = brunei_protectorate
-		potential = {
-			OR = {
-				tag = ENG
-				tag = SCO
-			}
-			OR = {
-				SWK = {
-					all_core = {
-						OR = {
-							owned_by = THIS
-							owner = { in_sphere = THIS }
-						}
-					}
-				}
-				owns = 1395
-				exists = SWK
-			}
-			OR = {
-				SWK = { any_core = { owned_by = THIS } }
-				JOH = { any_core = { owned_by = THIS } }
-				INO = { any_core = { owned_by = THIS } }
-				MLY = { any_core = { owned_by = THIS } }
-			}
-			OR = {
-				government = hms_government
-				government = prussian_constitutionalism
-				government = absolute_monarchy
-				government = absolute_empire
-				government = semi_constitutional_empire
-				government = constitutional_empire
-			}
-			NOT = { has_country_flag = brunei_protectorate }
-		}
-
-		allow = {
-			war = no
-			is_greater_power = yes
-			invention = the_dark_continent
-			OR = {
-				SWK = {
-					all_core = {
-						OR = {
-							owned_by = THIS
-							owner = { in_sphere = THIS }
-						}
-					}
-				}
-				owns = 1395
-			}
-		}
-
-		effect = {
-			badboy = 0.5
-			relation = { who = BRU value = 150 }
-			diplomatic_influence = { who = BRU value = 400 }
-			create_vassal = BRU
-			set_country_flag = brunei_protectorate
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
 	create_cambodian_protectorate = {
 		picture = unequal_treaty
 		potential = {
@@ -101,6 +37,8 @@ political_decisions = {
 			OR = {
 				capital_scope = { continent = europe }
 				tag = JAP
+				tag = ETH
+				tag = TKG
 			}
 			NOT = { tag = TUR }
 			CAM = {
@@ -121,7 +59,7 @@ political_decisions = {
 					part_of_sphere = no
 					in_sphere = THIS
 				}
-				OR = {
+				OR = {   
 					is_vassal = no
 					in_sphere = THIS
 				}
@@ -140,9 +78,20 @@ political_decisions = {
 		picture = unequal_treaty
 		potential = {
 			is_greater_power = yes
-			capital_scope = { continent = europe }
+			OR = {
+				capital_scope = { continent = europe }
+				tag = JAP
+				tag = TKG
+				tag = ETH
+			}
 			NOT = { tag = TUR }
 			owns = 1369
+			has_global_flag = berlin_conference
+		}
+
+		allow = {
+			war = no
+			revolution_n_counterrevolution = 1
 			OR = {
 				LUA = {
 					NOT = { has_country_flag = annexed_to_FRA }
@@ -190,12 +139,6 @@ political_decisions = {
 					}
 				}
 			}
-			has_global_flag = berlin_conference
-		}
-
-		allow = {
-			war = no
-			revolution_n_counterrevolution = 1
 		}
 
 		effect = {
@@ -220,120 +163,6 @@ political_decisions = {
 				tech_school = developing_tech_school
 				annex_to = THIS
 			}
-		}
-	}
-
-	siamese_border_treaty = {
-		picture = unequal_treaty
-		potential = {
-			is_greater_power = yes
-			capital_scope = { continent = europe }
-			NOT = { tag = TUR }
-			has_global_flag = berlin_conference
-			SIA = {
-				neighbour = THIS
-				any_owned_province = {
-					OR = {
-						is_core = DAI
-						is_core = CAM
-						is_core = LUA
-						is_core = WIA
-					}
-				}
-			}
-			owns = 1369
-			NOT = { has_country_flag = enacted_siamese_border_treaty }
-		}
-
-		allow = {
-			NOT = { war_with = SIA }
-			SIA = { war = no }
-			invention = the_dark_continent
-		}
-
-		effect = {
-			set_country_flag = enacted_siamese_border_treaty
-			SIA = { country_event = 95652 }
-		}
-	}
-
-	annex_champasak = {
-		picture = unequal_treaty
-		potential = {
-			is_greater_power = yes
-			capital_scope = { continent = europe }
-			NOT = { tag = TUR }
-			has_global_flag = berlin_conference
-			owns = 1368
-			CHK = { exists = yes ai = yes vassal_of = SIA }
-			OR = {
-				AND = {
-					SIA = { ai = yes neighbour = THIS has_recently_lost_war = yes }
-					truce_with = SIA
-				}
-				ai = yes
-			}
-			NOT = { has_country_flag = champassak_annexed }
-		}
-
-		allow = {
-			war = no
-			has_recently_lost_war = no
-		}
-
-		effect = {
-			set_country_flag = champassak_annexed
-			SIA = { release = CHK }
-			inherit = CHK
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	unequal_treaty_DAI = {
-		picture = unequal_treaty
-		potential = {
-			is_greater_power = yes
-			capital_scope = { continent = europe }
-			NOT = { tag = TUR }
-			NOT = { has_country_flag = negotiate_unequal_treaty }
-			NOT = { has_country_flag = tonkin_campaign }
-			DAI = {
-				capital = 1369
-				civilized = no
-				war_with = THIS
-				NOT = { has_country_flag = negotiate_unequal_treaty }
-				OR = {
-					owns = 1375 # Hue
-					owns = 1380 # Saigon
-				}
-			}
-		}
-
-		allow = {
-			war_with = DAI
-			DAI = {
-				OR = {
-					war_exhaustion = 40
-					any_owned_province = { controlled_by = THIS }
-				}
-				OR = {
-					national_provinces_occupied = 0.25
-					blockade = 0.75
-				}
-				war_exhaustion = 10
-			}
-		}
-
-		effect = {
-			set_country_flag = negotiate_unequal_treaty
-			DAI = {
-				set_country_flag = negotiate_unequal_treaty
-				country_event = 95655
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
 		}
 	}
 
@@ -400,64 +229,6 @@ political_decisions = {
 				tech_school = developing_tech_school
 			}
 		}
-		ai_will_do = { factor = 1 }
-	}
-
-	form_french_indochina = {
-		picture = map_east_indies
-		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
-			1380 = {
-				owned_by = THIS
-				is_colonial = yes
-			}
-			1369 = {
-				owned_by = THIS
-				is_colonial = yes
-			}
-			DAI = { exists = no }
-			NOT = { has_country_flag = created_french_indochina }
-		}
-
-		allow = {
-			owns = 1380
-			revolution_n_counterrevolution = 1
-		}
-
-		effect = {
-			set_country_flag = created_french_indochina
-			prestige = 10
-			1380 = {
-				add_province_modifier = {
-					name = colonial_recruitment
-					duration = 1825
-				}
-			}
-			any_owned = {
-				limit = { region = DAI_1380 }
-				add_province_modifier = {
-					name = colonial_exploitation
-					duration = 1825
-				}
-			}
-			any_neighbor_country = {
-				limit = {
-					OR = {
-						primary_culture = vietnamese
-						primary_culture = thai
-						primary_culture = lao
-						primary_culture = khmer
-					}
-					civilized = no
-				}
-				relation = { who = THIS value = -100 }
-			}
-			DAI = { government = colonial_company }
-		}
-
 		ai_will_do = { factor = 1 }
 	}
 
@@ -539,7 +310,12 @@ political_decisions = {
 	introduce_coffee_in_vietnam = {
 		picture = vietnam_coffee
 		potential = {
-			capital_scope = { continent = europe }
+			OR = {
+				capital_scope = { continent = europe }
+				tag = JAP
+				tag = TKG
+				tag = ETH
+			}
 			OR = {
 				AND = {
 					owns = 1380

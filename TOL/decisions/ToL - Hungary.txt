@@ -213,6 +213,124 @@ political_decisions = {
 			
 		}
    }
+   accepting_the_slovaks = {
+		picture = slovaks
+		potential = {
+			tag = HUN
+			SLV = {
+				exists = no
+			}
+			AUS_633 = {
+				owned_by = THIS
+			}
+			great_wars_enabled = yes
+			has_country_flag = hun_cro_settlement
+			NOT = { has_country_flag = accepting_the_slovaks }
+		}
+
+		allow = {
+			prestige = 50
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			NOT = {
+				government = fascist_dictatorship
+				government = presidential_dictatorship
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+			}
+			OR = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = radical
+				ruling_party_ideology = communist
+				ruling_party_ideology = socialist
+			}
+			mass_politics = 1
+		}
+
+		effect = {
+			prestige = 5
+			badboy = -2
+			add_accepted_culture = slovak
+			any_pop = { limit = { has_pop_culture = slovak }
+				militancy = -1
+				consciousness = 4
+			}
+			any_pop = { limit = { has_pop_culture = romanian }
+				militancy = 4
+				consciousness = 6
+			}
+			any_pop = { limit = { has_pop_culture = serb }
+				militancy = 4
+				consciousness = 6
+			}
+			any_pop = { limit = { has_pop_culture = illyrian }
+				militancy = 2
+				consciousness = 4
+			}
+			random_country = {
+				limit = {
+					tag = BOH
+					exists = yes
+				}
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
+			set_country_flag = accepting_the_slovaks
+		}
+
+	}
+
+	accepting_the_vlachs = {
+		picture = vlach
+		potential = {
+			tag = SIE
+			NOT = {
+				has_country_flag = accepting_vlachs
+				OR = {
+					accepted_culture = romanian
+					primary_culture = romanian
+				}
+			}
+		}
+
+		allow = {
+			prestige = 25
+			revolution_n_counterrevolution = 1
+			NOT = {
+				government = fascist_dictatorship
+				government = presidential_dictatorship
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+			}
+			OR = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = radical
+				ruling_party_ideology = communist
+				ruling_party_ideology = socialist
+			}
+		}
+
+		effect = {
+			badboy = -2
+			prestige = 5
+			add_accepted_culture = romanian
+			any_pop = {
+				limit = {
+					culture = romanian
+				}
+				militancy = -3
+				consciousness = -3
+			}
+			set_country_flag = accepting_vlachs
+		}
+		ai_will_do = {
+			factor = 0.6
+		}
+	}
 	
 	
 }

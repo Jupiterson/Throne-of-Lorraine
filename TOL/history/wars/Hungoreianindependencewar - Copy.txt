@@ -1,0 +1,40 @@
+name = "War of Hungarian Sucession"
+
+1830.10.2 = {
+	add_attacker = NFL
+  add_defender = SUA
+	
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+  
+	war_goal = {
+		casus_belli = annex_core_country
+		actor = TKG
+		receiver = SAT
+	}
+	
+	war_goal = {
+		casus_belli = status_quo
+		actor = SAT
+		receiver = TKG
+	}
+	war_goal = {
+		casus_belli = status_quo
+		actor = VEN
+		receiver = TKG
+	}
+	war_goal = {
+		casus_belli = status_quo
+		actor = SCO
+		receiver = TKG
+	}
+
+}
+
+1835.12.25 = {
+	rem_attacker = NFL
+  rem_defender = SUA
+}

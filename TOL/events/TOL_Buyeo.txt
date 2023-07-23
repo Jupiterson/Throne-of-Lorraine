@@ -1,3 +1,850 @@
+
+#########################################################
+#														#
+#			Revolt of the Three Feudatories				#
+#														#
+#########################################################
+
+#Guangxi Seizes Guangdong
+country_event = {
+	id = 310001
+	title = "FEU1.T"
+	desc = "FEU1.D"
+	picture = "Guangxi_revolt_pic"
+	
+	trigger = {
+		tag = QNG
+		year = 1839
+		NOT = { has_country_flag = victory_of_feudatories }
+		NOT = { has_country_flag = victory_of_Buyeo }		
+		NOT = { has_country_flag = Guangdong_bye_bye }
+		NOT = { war_with = GXI }
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1840
+		}
+		modifier = {
+			factor = 0.5
+			year = 1841
+		}
+		modifier = {
+			factor = 0.5
+			year = 1842
+		}
+		modifier = {
+			factor = 0.25
+			year = 1843
+		}
+	}	
+	option = {
+		name = "We are powerless..."
+		prestige = -10
+		money = 50000
+		relation = { who = GXI value = -100 }
+		any_owned = {
+			limit = {
+				or = {
+					region = CHI_1499
+					region = CHI_1493
+				}
+			}
+			secede_province = GXI
+		}
+		CHI_1499 = { add_core = GXI }
+		CHI_1493 = { add_core = GXI }
+		GXI = { country_event = 310002 }
+		any_pop = {
+			limit = { is_primary_culture = no }
+			militancy = 1
+		}
+		set_country_flag = Guangdong_bye_bye
+	}
+}
+#Guangxi Seizes Guangdong_Guangxi
+country_event = {
+	id = 310002
+	title = "FEU2.T"
+	desc = "FEU2.D"
+	picture = "Guangxi_revolt_pic"
+	
+	is_triggered_only = yes
+		option = {
+		name = "We welcome our bretheren!"
+		prestige = 10
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -1
+			}
+		}
+	}
+#Fujian Seizes Jiangxi
+country_event = {
+	id = 310003
+	title = "FEU3.T"
+	desc = "FEU3.D"
+	picture = "Bokgun_revolt_pic"
+	
+	trigger = {
+		tag = QNG
+		year = 1841
+		NOT = { has_country_flag = victory_of_feudatories }
+		NOT = { has_country_flag = victory_of_Buyeo }
+		NOT = { has_country_flag = Jiangxi_bye_bye }
+		NOT = { war_with = FJN }
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1842
+		}
+		modifier = {
+			factor = 0.5
+			year = 1843
+		}
+		modifier = {
+			factor = 0.5
+			year = 1844
+		}
+		modifier = {
+			factor = 0.25
+			year = 1845
+		}
+	}	
+		option = {
+		name = "Something needs to be done!"
+		prestige = -10
+		money = 50000
+		relation = { who = FJN value = -100 }
+		any_owned = {
+			limit = {
+				or = {
+					region = CHI_1547
+					region = CHI_1545
+				}
+			}
+			secede_province = FJN
+		}
+		CHI_1547 = { add_core = FJN }
+		CHI_1545 = { add_core = FJN }
+		FJN = { country_event = 310004 }
+		any_pop = {
+			limit = { is_primary_culture = no }
+			militancy = 1
+		}
+		set_country_flag = Jiangxi_bye_bye
+	}
+}
+#Fujian Seizes Jiangxi_Fujian
+country_event = {
+	id = 310004
+	title = "FEU4.T"
+	desc = "FEU4.D"
+	picture = "Bokgun_revolt_pic"
+	
+	is_triggered_only = yes
+		option = {
+		name = "Our infiltrators made quick work of the oppressors!"
+		prestige = 10
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -1
+			}
+		}
+	}
+#Yunnan Seizes Chengdu
+country_event = {
+	id = 310005
+	title = "FEU5.T"
+	desc = "FEU5.D"
+	picture = "Yunnan_revolt_pic"
+	
+	trigger = {
+		tag = QNG
+		year = 1843	
+		NOT = { has_country_flag = victory_of_feudatories }
+		NOT = { has_country_flag = victory_of_Buyeo }
+		NOT = { has_country_flag = Guizhou_bye_bye }
+		NOT = { war_with = YNN }
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1844
+		}
+		modifier = {
+			factor = 0.5
+			year = 1845
+		}
+		modifier = {
+			factor = 0.5
+			year = 1846
+		}
+		modifier = {
+			factor = 0.25
+			year = 1847
+		}
+	}	
+		option = {
+		name = "Not Chengdu!"
+		prestige = -10
+		money = 50000
+		relation = { who = YNN value = -100 }
+		any_owned = {
+			limit = {
+				region = CHI_1578
+			}
+			secede_province = YNN
+		}
+		CHI_1578 = { add_core = YNN}
+		YNN = { country_event = 310006 }
+		any_pop = {
+			limit = { is_primary_culture = no }
+			militancy = 1
+		}
+		set_country_flag = Guizhou_bye_bye
+	}
+}
+#Yunnan Seizes Guizhou_Yunnan
+country_event = {
+	id = 310006
+	title = "FEU6.T"
+	desc = "FEU6.D"
+	picture = "Yunnan_revolt_pic"
+	
+	is_triggered_only = yes
+		option = {
+		name = "It was risky, but it was worth it"
+		prestige = 10
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -1
+			}
+		}
+	}
+	
+country_event = {
+	id = 310007 #Three Feudatories Revolt
+	title = "FEU7.T"
+	desc = "FEU7.D"
+	picture = "Start_of_the_three_feudatories"
+	
+	trigger = {
+		tag = QNG
+		NOT = { has_country_flag = victory_of_Buyeo }
+		NOT = { has_country_flag = victory_of_feudatories }
+		NOT = { has_country_flag = feudatories_war_happened }
+		NOT = { owns = 1501 }
+		NOT = { owns = 1550 }
+		NOT = { owns = 1585 }		
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			year = 1844
+		}
+		modifier = {
+			factor = 0.5
+			year = 1845
+		}
+		modifier = {
+			factor = 0.5
+			year = 1846
+		}
+		modifier = {
+			factor = 0.25
+			year = 1847
+		}
+	}	
+	
+	option = {
+		name = "Mobilize the Troops."
+		money = 100000
+		QNG = { release_vassal = GXI }
+		QNG = { release_vassal = YNN }
+		QNG = { release_vassal = FJN }
+		war = {
+			target = GXI
+			attacker_goal = {
+				casus_belli = conquest
+			}
+			defender_goal = {
+				casus_belli = liberate_country
+				country = JCH
+			}
+			call_ally = yes
+		}
+		war = {
+			target = YNN
+			attacker_goal = {
+				casus_belli = conquest
+			}
+			defender_goal = {
+				casus_belli = liberate_country
+				country = JCH
+			}
+			call_ally = yes
+		}
+		war = {
+			target = FJN
+			attacker_goal = {
+				casus_belli = conquest
+			}
+			defender_goal = {
+				casus_belli = liberate_country
+				country = JCH
+			}
+			call_ally = yes
+		}
+		prestige = 10
+		badboy = -60
+		TIB = { country_event = 310008 }
+		BUR = { country_event = 310009 }
+		GXI = { country_event = 310010 }
+		FJN = { country_event = 310011 }
+		set_country_flag = feudatories_war_happened
+	}
+}
+#Tibet invades Xikang
+country_event = {
+	id = 310008 
+	title = "FEU8.T"
+	desc = "FEU8.D"
+	picture = "Start_of_the_three_feudatories"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "To Kham!"
+		war = {
+			target = YNN
+			attacker_goal = {
+				casus_belli = acquire_core_state
+				state_province_id = 1586
+			}
+		}
+	}
+}
+#Burma invades Dehong
+country_event = {
+	id = 310009
+	title = "FEU9.T"
+	desc = "FEU9.D"
+	picture = "Burmese_Intervention"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "To Dehong!"
+		war = {
+			target = YNN
+			attacker_goal = {
+				casus_belli = acquire_core_state
+				state_province_id = 1602
+			}
+		}
+	}
+}
+#Dai nam Rebellion
+country_event = {
+	id = 310010
+	title = "FEU10.T"
+	desc = "FEU10.D"
+	picture = "Vietnamese_Rebellion"
+	
+	is_triggered_only = yes	
+		option = {
+		name = "We should have expected this..."
+		any_owned = {
+			limit = {
+				OR = {
+					region = DAI_1369
+					is_core = DAI
+				}
+			}
+			secede_province = DAI
+		}
+		DAI = {
+			country_event = 652110
+		}
+	}
+}
+
+
+
+
+#Taiwan Rebellion
+country_event = {
+	id = 310011
+	title = "FEU11.T"
+	desc = "FEU11.D"
+	picture = "Tawanese_Rebellion"
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "Those ungrateful Tribes!"
+		CHI_1485 = { add_core = TAI }
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = TAI
+				}
+			}
+			secede_province = TAI 
+		}
+		war = {
+			target = TAI
+			attacker_goal = {
+				casus_belli = unification_annex_casus_belli
+			}
+		}
+	}
+	
+	option = {
+		name = "The time has come to free ourselves from the Chinese yoke. Long live the Formosan Confederation! (Play as Formosa)"
+		CHI_1485 = { add_core = TAI }
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = TAI
+				}
+			}
+			secede_province = TAI 
+		}
+		war = {
+			target = TAI
+			attacker_goal = {
+				casus_belli = unification_annex_casus_belli
+			}
+		}
+		change_tag_no_core_switch = TAI
+		ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0.2
+                NOT = { relation = { who = FROM value = 150 } }
+            }
+
+            modifier = {
+                factor = 1.2
+                relation = { who = FROM value = 175 }
+            }
+		
+        }
+	}
+}
+
+#Victory of the Empire
+country_event = {
+	id = 310012
+	title = "FEU12.T"
+	desc = "FEU12.D"
+	picture = "Start_of_the_three_feudatories"
+	
+	trigger = {
+		tag = QNG
+		NOT = { has_country_flag = victory_of_Buyeo }
+		NOT = { has_country_flag = victory_of_feudatories }
+		has_country_flag = feudatories_war_happened
+		owns = 1501
+		owns = 1550
+		owns = 1585		
+	}
+	mean_time_to_happen = {
+		months = 1
+	}	
+	
+	option = {
+	name = "Hang those traitors!"
+	prestige = 35
+		any_pop = {
+			militancy = -4
+		}
+		set_country_flag = victory_of_Buyeo
+	}
+}
+
+#Victory of the feudatories
+country_event = {
+	id = 310013
+	title = "FEU13.T"
+	desc = "FEU13.D"
+	picture = "Start_of_the_three_feudatories"
+	
+	trigger = {
+		OR = {
+			tag = FJN
+			tag = YNN
+			tag = GXI
+		}
+		QNG = { 
+				NOT = { has_country_flag = victory_of_Buyeo}
+				NOT = { has_country_flag = victory_of_feudatories}
+		}
+		JCH = {
+			owns = 1524
+		}	
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "FEU13A"
+		random_owned = {
+			any_country = {
+				limit = {
+					war_with = QNG
+				}
+				end_war = QNG
+			}
+		}
+		
+		YNN = { country_event = 310014 }
+		FJN = { country_event = 310014 }
+		GXI = { country_event = 310014 }
+		QNG = { 
+			country_event = 310015
+		}		
+	}
+}
+#Victory of the feudatories event-feud
+country_event = {
+	id = 310014
+	title = "FEU14.T"
+	desc = "FEU14.D"
+	picture = "Tawanese_Rebellion"
+	
+	is_triggered_only = yes	
+		option = {
+		name = "Southern China is now free!"
+		prestige = 35
+		any_pop = {
+			militancy = -4
+		}
+	}
+}
+#Victory of the feudatories event-emp
+country_event = {
+	id = 310015
+	title = "FEU15.T"
+	desc = "FEU15.D"
+	picture = "Tawanese_Rebellion"
+	
+	is_triggered_only = yes	
+		option = {
+		name = "This is very, very bad..."
+		prestige = -50
+		any_pop = {
+			militancy = 2
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1493
+					region = CHI_1499 
+					region = CHI_1504
+				}
+			}
+			secede_province = GXI
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1545
+					region = CHI_1547 
+					region = CHI_1482
+				}
+			}
+			secede_province = FJN
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = CHI_1578
+					region = CHI_1579 
+					region = CHI_1601
+					region = CHI_1505
+				}
+			}
+			secede_province = YNN
+		}
+		set_country_flag = victory_of_feudatories
+	}
+}
+
+#########################################
+#										#
+#	#Opium war events (credit: HFM)		#
+#										#
+#########################################
+
+#Opium Smuggling in China
+country_event = {
+	id = 1316080
+	title = "EVTNAME1316080"
+	desc = "EVTDESC1316080"
+	picture = "Opium"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPT1316080"
+		prestige = -10
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = GNG
+					is_core = GXI
+					is_core = FJN
+					region = CHI_1482
+					region = CHI_1547
+					region = CHI_1578
+					region = CHI_1526
+				}
+			}
+			add_province_modifier = { name = local_opium_habit duration = -1 }
+		}
+		CHI_1601 = { add_province_modifier = { name = local_opium_habit duration = -1 } }
+		CHI_1505 = { add_province_modifier = { name = local_opium_habit duration = -1 } }
+		1538 = { add_province_modifier = { name = "foreign_smugglers" duration = -1 } }
+		set_variable = { which = china_destablization value = 1 }
+		set_country_flag = opium_addiction
+	}
+}
+
+#Taiwanese start selling opium in the Yangtze
+country_event = {
+	id = 320000
+	title = "taiwanopium0.t"
+	desc = "taiwanopium0.d"
+	picture = "Opium"
+	is_triggered_only = yes
+
+	option = {
+		name = "Hang those bandits! Mobilize the junks!"
+		prestige = -10
+		1538 = {
+			sub_unit = { type = clipper_transport value = current }
+			sub_unit = { type = clipper_transport value = current }
+			sub_unit = { type = clipper_transport value = current }
+			sub_unit = { type = clipper_transport value = current }
+			sub_unit = { type = clipper_transport value = current }
+			sub_unit = { type = clipper_transport value = current }
+			sub_unit = { type = clipper_transport value = current }
+			sub_unit = { type = clipper_transport value = current }
+		}
+		war = {
+			target = TAI
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		set_country_flag = expedition_to_taiwan
+	}
+}
+
+#The Opium war
+
+country_event = {
+	id = 411000
+	title = "Opiumwars0.T" #The Arrow Incident 
+	desc = "Opiumwars0.D"
+	picture = "arrow_incident"
+
+	fire_only_once = yes
+
+	trigger = {
+		year = 1863
+		tag = QNG
+		owns = 1485
+		has_country_flag = expedition_to_taiwan
+		RUS = { has_country_flag = uighur_provocation_resolved }
+		NOT = {
+			any_greater_power = { war_with = VEN }
+			has_country_flag = arrow_incident
+			has_country_flag = gave_up_arrow
+			war_with = VEN
+			truce_with = VEN
+			war_with = ITA
+			truce_with = ITA
+			war_with = SCO
+			truce_with = SCO
+			war_with = CLT
+			truce_with = CLT
+			war_with = ENG
+			truce_with = ENG
+		}
+		OR = {
+			VEN = { 
+				is_greater_power = yes 
+			}
+			ITA = { 
+				is_greater_power = yes 
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+
+	option = {
+		name = "Let them come. Taiwan is sovereign Buyeo territory."
+		set_country_flag = arrow_incident
+		any_country = {
+			limit = { 
+				owns = 269
+				primary_culture	= scottish		
+			}
+			relation = { who = THIS value = -200 }
+			leave_alliance = QNG
+			country_event = 411002
+		}
+		any_country = {
+			limit = { 
+				owns = 729
+				primary_culture	= venetian	
+			}
+			relation = { who = THIS value = -200 }
+			leave_alliance = QNG
+			country_event = 411001
+		}
+		any_owned = {
+			limit = { port = yes }
+			remove_province_modifier = foreign_smugglers
+		}
+		ai_chance = { factor = 90 }
+	}
+	option = {
+		name = "Appeasement worked with the Russians, no?"
+		set_country_flag = gave_up_arrow
+		prestige = -10
+		remove_country_modifier = trade_restrictions
+		remove_country_modifier = lin_zexu
+		1493 = { remove_province_modifier = canton_system }
+		1608 = { secede_province = SCO }
+		random_owned = {
+			limit = {
+				port = yes
+				NOT = { has_province_modifier = foreign_smugglers }
+			}
+			add_province_modifier = {
+				name = foreign_smugglers
+				duration = 3650
+			}
+			state_scope = {
+				any_owned = {
+					add_province_modifier = {
+						name = local_opium_habit
+						duration = -1
+					}
+				}
+			}
+		}
+		any_country = {
+			limit = { 
+				owns = 269
+				primary_culture	= scottish		
+			}
+			relation = { who = QNG value = 100 } 
+		}
+		any_country = {
+			limit = { 
+				owns = 729
+				primary_culture	= venetian			
+			}
+			relation = { who = QNG value = 100 } 
+		}
+		any_pop = {
+			limit = { is_primary_culture = no }
+			militancy = 3
+		}
+		ai_chance = { 
+			factor = 10 
+		}
+	}
+}
+
+country_event = {
+	id = 411001
+	title = "Opiumwars1.T" #The Arrow Incident - Response from Scotland
+	desc = "Opiumwars1.D"
+	picture = "arrow_incident"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "This means war!"
+		badboy = 2
+		war = {
+			target = QNG
+			attacker_goal = { casus_belli = treaty_port_casus_belli }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		set_global_flag = second_opium_war
+		ai_chance = { factor = 99 }
+	}
+
+	option = {
+		name = "Opium cannot be a casus belli!"
+		prestige = -5
+		relation = { who = QNG value = -50 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				any_greater_power = { war_with = THIS }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 411002
+	title = "Opiumwars1.T" #The Arrow Incident - Response from Venice
+	desc = "Opiumwars1.D"
+	picture = "arrow_incident"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "This means war!"
+		badboy = 2
+		war = {
+			target = QNG
+			attacker_goal = { casus_belli = treaty_port_casus_belli }
+			defender_goal = { casus_belli = place_in_the_sun state_province_id = 1498 }
+			call_ally = yes
+		}
+		set_global_flag = second_opium_war
+		ai_chance = { factor = 99 }
+	}
+
+	option = {
+		name = "Opium cannot be a casus belli!"
+		prestige = -5
+		relation = { who = QNG value = -50 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				any_greater_power = { war_with = THIS }
+			}
+		}
+	}
+}
+
 #Surviving Qing
 
 country_event = {
