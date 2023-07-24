@@ -162,6 +162,7 @@ political_decisions = {
 	establish_panfrenchism = {
 	picture = establish_panfrenchism
 		potential = {
+			owns = 412
 			OR = {
 				primary_culture = french
 				primary_culture = occitan
@@ -169,7 +170,6 @@ political_decisions = {
 			is_greater_power = yes
 			capital = 425
 			has_country_modifier = louis_napoleon_iii
-			owns = 412
 			NOT = { exists = GCF }
 			NOT = { exists = GER }
 			NOT = { has_global_flag = pan_french_nationalism }
@@ -192,13 +192,13 @@ political_decisions = {
 	walloon_autonomy = {
 		picture = become_wallonia
 		potential = {
-			is_greater_power = yes
-			WLL = { all_core = { owned_by = THIS } }
 			OR = {
 				primary_culture = french
 				primary_culture = occitan
 			}
 			capital = 425
+			is_greater_power = yes
+			WLL = { all_core = { owned_by = THIS } }
 			NOT = { has_country_flag = walloon_autonomy }
 		}
 
@@ -418,16 +418,16 @@ political_decisions = {
 	clean_up_france_lost_rhine_crisis = {
 		picture = adolphe_thiers
 		potential = {
-			ai = yes
-			NOT = { has_global_flag = clean_up_france_lost_rhine_crisis }
 			OR = {
 				FRR = { truce_with = PRU has_country_modifier = rhine_crisis }
 				FRZ = { truce_with = PRU has_country_modifier = rhine_crisis }
 				BOR = { truce_with = PRU has_country_modifier = rhine_crisis }
 				VIC = { truce_with = PRU has_country_modifier = rhine_crisis }
 			}
-			575 = { OR = {owned_by = PRU owned_by = NGF owned_by = GER owned_by = GCF owned_by = AUS owned_by = SGF } }
+			575 = { OR = { owned_by = PRU owned_by = NGF owned_by = GER owned_by = GCF owned_by = AUS owned_by = SGF } }
 			PRU = { is_disarmed = no }
+			ai = yes
+			NOT = { has_global_flag = clean_up_france_lost_rhine_crisis }
 		}
 
 		allow = {
@@ -456,16 +456,16 @@ political_decisions = {
 		picture = channel_islands
 		potential = {
 			OR = {
-				419 = { owner = { war_with = THIS } }
-				419 = { owner = { truce_with = THIS } }
-			}
-			NOT = { owns = 419 }
-			OR = {
 				primary_culture = french
 				primary_culture = occitan
 			}
 			is_greater_power = yes
 			capital = 425
+			OR = {
+				419 = { owner = { war_with = THIS } }
+				419 = { owner = { truce_with = THIS } }
+			}
+			NOT = { owns = 419 }
 			419 = { NOT = { is_core = THIS } }
 		}
 
@@ -539,6 +539,8 @@ political_decisions = {
 	the_treaty_of_milan = {
 	picture = establish_panfrenchism
 		potential = {
+			owns = 465 #Annecy
+			owns = 721 #Aosta
 			OR = {
 				primary_culture = french
 				primary_culture = occitan
@@ -557,8 +559,6 @@ political_decisions = {
 					owns = 744 #Florence
 				}
 			}
-			owns = 465 #Annecy
-			owns = 721 #Aosta
 			NOT = { has_global_flag = the_treaty_of_milan }
 		}
 
@@ -685,7 +685,6 @@ political_decisions = {
 
 	remove_any_french_cores = {
 		potential = {
-			ai = yes
 			OR = {
 				any_owned_province = { is_core = FRZ }
 				any_owned_province = { is_core = FRR }
@@ -700,6 +699,7 @@ political_decisions = {
 				neighbour = BOR
 				neighbour = VIC
 			}
+			ai = yes
 		}
 		allow = {
 			OR = {
@@ -842,7 +842,7 @@ political_decisions = {
 			is_greater_power = yes
 			capital = 425
 			year = 1870
-			NOT = { school_reforms = good_schools}
+			NOT = { school_reforms = good_schools }
 			NOT = { has_country_flag = jules_ferry_enacted }
 		}
 
@@ -879,6 +879,7 @@ political_decisions = {
 	purchase_annam = {
 		picture = dreams_of_empire
 		potential = {
+			owns = 1380
 			capital_scope = { continent = europe }
 			is_greater_power = yes
 			NOT = { has_country_flag = purchase_annam }
@@ -898,7 +899,6 @@ political_decisions = {
 					owned_by = THIS
 				}
 			}
-			owns = 1380
 			NOT = { owns = 1375 }
 		}
 

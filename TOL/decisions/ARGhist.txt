@@ -4,6 +4,10 @@ political_decisions = {
 		picture = conquest_of_the_desert
 		potential = {
 			OR = {
+				owns = 2350 #azul
+				owns = 2381 #rio cuarto
+			}
+			OR = {
 				tag = ARG
 				tag = ARC
 				tag = LPL
@@ -14,7 +18,6 @@ political_decisions = {
 					is_greater_power = yes
 				}
 			}
-
 			OR = {
 				2391 = { empty = yes } #Neuquen
 				2392 = { empty = yes } #Viedma
@@ -22,10 +25,6 @@ political_decisions = {
 				2353 = { empty = yes }
 				2393 = { empty = yes }
 				2395 = { empty = yes }
-				}
-			OR = {
-				owns = 2350 #azul
-				owns = 2381 #rio cuarto
 			}
 			NOT = { has_country_flag = conquest_of_the_desert }
 		}
@@ -136,6 +135,10 @@ political_decisions = {
 		picture = conquest_of_the_chaco
 		potential = {
 			OR = {
+				owns = 2356 #Corrientes
+				owns = 2361	#Sancti Spiritu
+			}
+			OR = {
 				tag = ARG
 				tag = ARC
 				tag = LPL
@@ -148,10 +151,6 @@ political_decisions = {
 				2365 = { empty = yes }
 				2372 = { empty = yes }
 				2377 = { empty = yes }
-			}
-			OR = {
-				owns = 2356 #Corrientes
-				owns = 2361	#Sancti Spiritu
 			}
 			NOT = { has_country_flag = conquest_of_the_chaco }
 		}
@@ -295,10 +294,10 @@ political_decisions = {
 	found_la_plata = {
 		picture = la_plata_foundation
 		potential = {
-			primary_culture = francorientale
-			NOT = { has_global_flag = la_plata_founded }
 			owns = 2351
 			capital = 2348
+			primary_culture = francorientale
+			NOT = { has_global_flag = la_plata_founded }
 			realism = 1
 		}
 

@@ -2,12 +2,17 @@ political_decisions = {
 	request_military_aid = {
 		picture = military_aid
 		potential = {
-			is_greater_power = no
-			part_of_sphere = yes
-			civilized = yes
 			war = yes
+			civilized = yes
+			part_of_sphere = yes
 			is_substate = no
 			is_vassal = no
+			OR = {
+				capital_scope = { continent = north_america }
+				capital_scope = { continent = south_america }
+				capital_scope = { continent = europe }
+			}
+			is_greater_power = no
 			NOT = { has_country_flag = requested_military_aid }
 			NOT = {
 				OR = {
@@ -16,11 +21,6 @@ political_decisions = {
 					primary_culture = north_italian
 					primary_culture = south_italian
 				}
-			}
-			OR = {
-				capital_scope = { continent = north_america }
-				capital_scope = { continent = south_america }
-				capital_scope = { continent = europe }
 			}
 		}
 		allow = {

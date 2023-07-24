@@ -41,11 +41,6 @@ political_decisions = {
 		picture = slave_ship
 		potential = {
 			slavery = yes_slavery
-			has_global_flag = slave_trade_reinstated
-			NOT = { has_country_flag = slave_trade_leader }
-			NOT = { tag = USA }
-			NOT = { tag = EGY }
-			NOT = { has_country_flag = slave_trader }
 			capital_scope = {
 				OR = {
 					continent = north_america
@@ -53,6 +48,11 @@ political_decisions = {
 					continent = africa
 				}
 			}
+			has_global_flag = slave_trade_reinstated
+			NOT = { has_country_flag = slave_trade_leader }
+			NOT = { tag = USA }
+			NOT = { tag = EGY }
+			NOT = { has_country_flag = slave_trader }
 		}
 		allow = {
 			slavery = yes_slavery
@@ -350,9 +350,6 @@ political_decisions = {
 		picture = slaves_cotton
 		alert = no
 		potential = {
-			slavery = yes_slavery
-			civilized = yes
-			has_global_flag = american_civil_war_has_happened
 			any_pop = {
 				OR = {
 					has_pop_culture = afro_french
@@ -372,6 +369,9 @@ political_decisions = {
 					}
 				}
 			}
+			slavery = yes_slavery
+			civilized = yes
+			has_global_flag = american_civil_war_has_happened
 			NOT = {
 				has_country_modifier = enslaved_freedom
 			}

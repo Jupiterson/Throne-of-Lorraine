@@ -71,7 +71,6 @@ political_decisions = {
 	greater_germany_hungarian_border_treaty = {
 		picture = gtfo
 		potential = {
-			NOT = { has_country_flag = greater_germany_hungarian_border_treaty_tried }
 			OR = {
 				tag = GER
 				tag = GCF
@@ -96,6 +95,7 @@ political_decisions = {
 					}
 				}
 			}
+			NOT = { has_country_flag = greater_germany_hungarian_border_treaty_tried }
 			NOT = { has_global_flag = german_confederation_austrian }
 			NOT = {
 				exists = AUS
@@ -175,14 +175,6 @@ political_decisions = {
 		picture = treaty_signing
 		potential = {
 			OR = {
-				government = hms_government
-				government = prussian_constitutionalism
-				government = absolute_monarchy
-				government = absolute_empire
-				government = semi_constitutional_empire
-				government = constitutional_empire
-			}
-			OR = {
 				tag = PRU
 				tag = NGF
 				tag = GER
@@ -209,6 +201,14 @@ political_decisions = {
 					exists = yes
 					truce_with = THIS
 				}
+			}
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			NOT = { has_country_flag = ger_ai_banat }
 		}
@@ -360,9 +360,9 @@ political_decisions = {
 	wilhelmshaven_imperial_shipyard = {
 		picture = wilhelmshaven_imperial_shipyard
 		potential = {
-			NOT = { has_global_flag = wilhelmshaven_imperial_shipyard_built }
 			tag = GER
 			owns = 3259
+			NOT = { has_global_flag = wilhelmshaven_imperial_shipyard_built }
 			NOT = { capital = 599 }
 			NOT = { 3259 = { state_scope = { has_building = steamer_shipyard } } }
 		}
@@ -434,15 +434,15 @@ political_decisions = {
 	danzig_imperial_shipyard = {
 		picture = danzig_imperial_shipyard
 		potential = {
-			NOT = { has_global_flag = danzig_imperial_shipyard_built }
+			owns = 690
 			OR = {
 				tag = PRU
 				tag = GER
 				tag = NGF
 			}
 			NOT = { capital = 599 }
-			owns = 690
 			battleship_column_doctrine = 1
+			NOT = { has_global_flag = danzig_imperial_shipyard_built }
 			NOT = { 690 = { state_scope = { has_building = steamer_shipyard } } }
 		}
 

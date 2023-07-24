@@ -6,15 +6,15 @@ political_decisions = {
 		picture = herat
 		potential = {
 			tag = PER
-			1212 = { owner = { primary_culture = pashtun } }
 			owns = 1148
-			year = 1837
+			1212 = { owner = { primary_culture = pashtun } }
 			NOT = {
 				owns = 1212
 				truce_with = AFG
 				truce_with = HRT
 				has_global_flag = herat_expedition
 			}
+			year = 1837
 		}
 
 		allow = {
@@ -52,7 +52,6 @@ political_decisions = {
 		picture = herat
 		potential = {
 			tag = PER
-			is_vassal = no
 			owns = 1148
 			1212 = {
 				owner = {
@@ -62,6 +61,7 @@ political_decisions = {
 					NOT = { truce_with = THIS }
 				}
 			}
+			is_vassal = no
 			has_global_flag = herat_expedition
 			NOT = {
 				owns = 1212
@@ -184,6 +184,10 @@ political_decisions = {
 	the_great_game_panjab = {
 		picture = gtfo
 		potential = {
+			tag = ENG
+			is_greater_power = yes
+			has_country_flag = empress_of_india
+			exists = PNJ
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -192,10 +196,6 @@ political_decisions = {
 				government = semi_constitutional_empire
 				government = constitutional_empire
 			}
-			is_greater_power = yes
-			tag = ENG
-			has_country_flag = empress_of_india
-			exists = PNJ
 			PNJ = {
 				civilized = no
 				vassal_of = ENG

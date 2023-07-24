@@ -155,9 +155,6 @@ political_decisions = {
 	rescind_trade_policy = {
 		picture = specific_trade_policy
 		potential = {
-			ai = yes
-			exists = yes
-			year = 1846
 			OR = {
 				AND = {
 					OR = {
@@ -190,6 +187,9 @@ political_decisions = {
 					NOT = { trade_policy = free_trade }
 				}
 			}
+			ai = yes
+			exists = yes
+			year = 1846
 		}
 
 		allow = {

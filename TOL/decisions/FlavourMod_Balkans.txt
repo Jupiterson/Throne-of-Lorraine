@@ -92,7 +92,6 @@ political_decisions = {
 		picture = turkification
 		potential = {
 			tag = TUR
-			year = 1900
 			OR = {
 				AND = { owns = 860 NOT = { has_country_flag = turkification_istanbul } }
 				AND = { owns = 869 NOT = { has_country_flag = turkification_izmir } }
@@ -100,7 +99,7 @@ political_decisions = {
 				AND = { owns = 828 NOT = { has_country_flag = turkification_edirne } }
 				AND = { owns = 859 NOT = { has_country_flag = turkification_gelibolu } }
 				AND = { owns = 861 NOT = { has_country_flag = turkification_uskudar } }
-
+				year = 1900
 			}
 		}
 

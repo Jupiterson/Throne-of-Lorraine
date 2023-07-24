@@ -92,10 +92,6 @@ political_decisions = {
 	aden_protectorate = {
 		picture = aden_protectorate
 		potential = {
-			NOT = { is_culture_group = arab 
-			tag = VEN
-			tag = ETH
-			}
 			OR = {
 				any_owned_province = { is_core = LHJ }
 				any_owned_province = { is_core = FDL }
@@ -105,6 +101,11 @@ political_decisions = {
 				is_sphere_leader_of = FDL
 				is_sphere_leader_of = KTH
 				is_sphere_leader_of = MHR
+			}
+			NOT = {
+				is_culture_group = arab 
+				tag = VEN
+				tag = ETH
 			}
 			NOT = { has_global_flag = created_aden_protectorate }
 		}
@@ -216,11 +217,11 @@ political_decisions = {
 		alert = no
 
 		potential = {
-			has_global_flag = created_aden_protectorate
 			OR = {
 				owns = 1412
 				1412 = { owner = { OR = { vassal_of = THIS AND = { in_sphere = THIS is_vassal = no ai = yes } } } }
 			}
+			has_global_flag = created_aden_protectorate
 			NOT = { tag = YEM }
 			YEM = { exists = yes NOT = { owns = 1412 } }
 			OR = {

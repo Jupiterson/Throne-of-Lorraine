@@ -17,7 +17,10 @@ political_decisions = {
 					duration = -1
 				}
 			}
-			ENG = {
+			any_country = {
+				limit = {
+					EIC = { vassal_of = THIS }
+				}
 				add_country_modifier = {
 					name = eic_balance2
 					duration = 8030
@@ -25,7 +28,7 @@ political_decisions = {
 			}
 			any_country = {
 				limit = {
-					tag = ENG
+					EIC = { vassal_of = THIS }
 					ai = yes
 				}
 				add_country_modifier = {
@@ -286,9 +289,10 @@ political_decisions = {
 	eic_transfer_money_to_eng = {
 		potential = {
 			tag = EIC
-			ai = yes
 			money = 100001
-			ENG = { NOT = { money = 50000 } }
+			is_vassal = yes
+			ai = yes
+			overlord = { NOT = { money = 50000 } }
 		}
 
 		allow = {
@@ -296,9 +300,7 @@ political_decisions = {
 
 		effect = {
 			treasury = -100000
-			ENG = {
-				treasury = 100000
-			}
+			overlord = { treasury = 100000 }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -307,15 +309,15 @@ political_decisions = {
 	new_dehli_renovation = {
 		picture = new_dehli_renovation
 		potential = {
+			owns = 1236
+			owns = 1251
+			owns = 1304
+			owns = 1297
 			OR = {
 				tag = ENG
 				tag = EIC
 			}
 			is_greater_power = yes
-			owns = 1236
-			owns = 1251
-			owns = 1304
-			owns = 1297
 			year = 1900
 			NOT = { has_country_flag = new_dehli_renovation }
 		}

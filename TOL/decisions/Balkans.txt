@@ -125,12 +125,12 @@ political_decisions = {
 	unite_with_romania = {
 		picture = create_romania
 		potential = {
-			is_culture_group = pan_romanian
 			exists = ROM
+			is_culture_group = pan_romanian
 			NOT = {
+				tag = ROM
 				has_country_flag = ghost_country
 				has_country_flag = unite_with_romania
-				tag = ROM
 				tag = TNR
 				tag = URP
 			}
@@ -627,12 +627,6 @@ political_decisions = {
 	create_yugoslavia = {
 		picture = form_yugoslavia
 		potential = {
-			NOT = {
-				exists = YUG
-				is_culture_group = south_slavic
-				has_global_flag = yugoslavia_formed
-				tag = TUR
-			}
 			OR = {
 				primary_culture = french
 				primary_culture = occitan
@@ -647,6 +641,12 @@ political_decisions = {
 				is_sphere_leader_of = SLO
 				is_sphere_leader_of = ALB
 				is_sphere_leader_of = BUL
+			}
+			NOT = {
+				has_global_flag = yugoslavia_formed
+				is_culture_group = south_slavic
+				exists = YUG
+				tag = TUR
 			}
 		}
 		allow = {
@@ -785,8 +785,8 @@ political_decisions = {
 		picture = map_balkans
 		potential = {
 			OR = {
-				YUG = { vassal_of = THIS }
 				tag = YUG
+				YUG = { vassal_of = THIS }
 			}
 			NOT = { has_global_flag = albania_in_yugoslavia }
 		}
@@ -1920,13 +1920,13 @@ political_decisions = {
 				tag = ROM
 				tag = URP
 			}
-			WAL = { exists = no }
-			MOL = { exists = no }
-			exists = yes
 			OR = {
 				any_owned_province = { is_core = WAL }
 				any_owned_province = { is_core = MOL }
 			}
+			WAL = { exists = no }
+			MOL = { exists = no }
+			exists = yes
 		}
 
 		allow = {
@@ -1971,12 +1971,12 @@ political_decisions = {
 		picture = fiume_port
 		potential = {
 			owns = 773
-			778 = { NOT = { is_core = HUN } }
-			778 = { NOT = { is_core = PHC } }
 			OR = {
 				tag = HUN
 				tag = PHC
 			}
+			778 = { NOT = { is_core = HUN } }
+			778 = { NOT = { is_core = PHC } }
 			OR = {
 				773 = { is_core = HUN }
 				773 = { is_core = PHC }
@@ -2009,7 +2009,6 @@ political_decisions = {
 	austro_hungarian_border_treaty = {
 		picture = illyrianian_independence
 		potential = {
-			NOT = { has_country_flag = austro_hungarian_border_treaty_tried }
 			OR = {
 				AND = {
 					tag = HUN
@@ -2030,12 +2029,6 @@ political_decisions = {
 					HUN = { is_secondary_power = no is_greater_power = no }
 				}
 			}
-			exists = AUS
-			exists = HUN
-			OR = {
-				623 = { is_core = AUS }
-				624 = { is_core = HUN }
-			}
 			OR = {
 				AND = {
 					623 = { owned_by = AUS }
@@ -2046,6 +2039,11 @@ political_decisions = {
 					624 = { owned_by = AUS }
 				}
 			}
+			OR = {
+				623 = { is_core = AUS }
+				624 = { is_core = HUN }
+			}
+			NOT = { has_country_flag = austro_hungarian_border_treaty_tried }
 		}
 
 		allow = {
@@ -2087,9 +2085,7 @@ political_decisions = {
 	bulgarian_miracle = {
 		picture = bulgarian_miracle
 		potential = {
-			OR = {
-				tag = BUL
-			}
+			tag = BUL
 			owns = 809
 			owns = 816
 			NOT = { has_country_flag = the_bulgarian_miracle }
@@ -2134,9 +2130,9 @@ political_decisions = {
 	montenegro_borders = {
 		picture = montenegro_map
 		potential = {
+			any_owned_province = { is_core = MON }
 			NOT = { tag = CRO }
 			NOT = { tag = BOS }
-			any_owned_province = { is_core = MON }
 			NOT = { has_global_flag = montenegro_organized }
 			year = 1870
 		}
@@ -2197,8 +2193,8 @@ political_decisions = {
 	forcefully_remove_turkish_pops = {
 		picture = remove_undesireables
 		potential = {
-			ideological_thought = 1
 			has_pop_culture = turkish
+			ideological_thought = 1
 			NOT = {
 				has_country_modifier = turkish_oppression
 				vassal_of = TUR
@@ -2207,21 +2203,6 @@ political_decisions = {
 				government = parliamentary_republic
 				nationalvalue = nv_liberty
 				nationalvalue = nv_equality
-			}
-			OR = {
-				tag = YUG
-				tag = SER
-				tag = ALB
-				tag = BUL
-				tag = SLO
-				tag = ROM
-				tag = CRO
-				tag = BOS
-				tag = MON
-				tag = GRE
-				tag = BYZ
-				tag = ARM
-				tag = CLC
 			}
 		}
 		allow = {

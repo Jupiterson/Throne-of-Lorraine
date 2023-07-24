@@ -27,13 +27,13 @@ political_decisions = {
 	picture = claim_schleswig
 		potential = {
 			tag = DEN
-			is_vassal = no
 			SWH = {
 				exists = yes
 				owns = 370
 				owns = 371
 				is_vassal = no
 			}
+			is_vassal = no
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -89,9 +89,9 @@ political_decisions = {
 	copenhagen_convention = {
 		picture = sound_dues
 		potential = {
-			372 = { trade_goods = precious_goods NOT = { owned_by = THIS } }
 			is_greater_power = yes
 			capital_scope = { continent = europe }
+			372 = { trade_goods = precious_goods NOT = { owned_by = THIS } }
 			NOT = {
 				has_global_flag = sound_dues_abolished
 				has_global_flag = sound_dues_resisted

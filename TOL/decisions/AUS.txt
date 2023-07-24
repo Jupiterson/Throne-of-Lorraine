@@ -1,8 +1,11 @@
 political_decisions = {
-		enact_dual_monarchy_BOH = {
+	enact_dual_monarchy_BOH = {
 		picture = austroslav
 		potential = {
 			tag = BAV
+			any_owned_province = {
+				is_core = BOH
+			}
 			OR = {
 				government = absolute_monarchy
 				government = prussian_constitutionalism
@@ -10,9 +13,6 @@ political_decisions = {
 				government = absolute_empire
 				government = semi_constitutional_empire
 				government = constitutional_empire
-			}
-			any_owned_province = {
-				is_core = BOH
 			}
 			OR = {
 				NOT = { exists = BOH }
@@ -118,13 +118,13 @@ political_decisions = {
 
 	release_silesia = {
 		potential = {
-				tag = BAV
+			tag = BAV
 			owns = 2584
-			ai = yes
 			NOT = {
 				exists = SLS
 				has_country_flag = released_silesia
 			}
+			ai = yes
 		}
 
 		allow = {
@@ -197,16 +197,16 @@ political_decisions = {
 	embrace_slovene_minority = {
 		picture = embrace_minority
 		potential = {
-				tag = BAV
+			tag = BAV
 			any_owned_province = { is_core = SLO }
+			OR = {
+				accepted_culture = illyrian
+				NOT = { any_owned_province = { is_core = CRO } }
+			}
 			NOT = {
 				accepted_culture = slovene
 				has_country_flag = embraced_slovenes
 				has_country_flag = danube_proposal_in_progress
-			}
-			OR = {
-				accepted_culture = illyrian
-				NOT = { any_owned_province = { is_core = CRO } }
 			}
 		}
 		allow = {
@@ -245,16 +245,16 @@ political_decisions = {
 	embrace_illyrian_minority = {
 		picture = embrace_minority
 		potential = {
-				tag = BAV
+			tag = BAV
 			any_owned_province = { is_core = ILL }
+			OR = {
+				accepted_culture = czech
+				NOT = { any_owned_province = { is_core = BOH } }
+			}
 			NOT = {
 				accepted_culture = illyrian
 				has_country_flag = embraced_illyrians
 				has_country_flag = danube_proposal_in_progress
-			}
-			OR = {
-				accepted_culture = czech
-				NOT = { any_owned_province = { is_core = BOH } }
 			}
 		}
 		allow = {

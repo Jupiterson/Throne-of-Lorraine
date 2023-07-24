@@ -60,7 +60,6 @@ political_decisions = {
 		picture = sino_japanese_war
 		potential = {
 			tag = JAP
-			year = 1890
 			is_greater_power = yes
 			has_country_modifier = line_of_advantage
 			is_disarmed = no
@@ -78,6 +77,7 @@ political_decisions = {
 					NOT = { alliance_with = THIS }
 				}
 			}
+			year = 1890
 			NOT = { has_country_flag = taiwan_line_of_advantage }
 		}
 
@@ -99,10 +99,10 @@ political_decisions = {
 		picture = japan_fruits
 		potential = {
 			tag = JAP
+			owns = 1668
 			civilized = yes
 			has_country_flag = enacted_meiji_constitution
 			NOT = { has_country_flag = japan_fruits }
-			owns = 1668
 		}
 
 		allow = { war = no }
@@ -336,7 +336,6 @@ political_decisions = {
 	establish_karafuto_prefecture = {
 		picture = japanese_sakhalin
 		potential = {
-			NOT = { has_country_flag = established_the_karafuto_prefecture }
 			primary_culture = japanese
 			is_greater_power = yes
 			revolution_n_counterrevolution = 1
@@ -351,6 +350,7 @@ political_decisions = {
 				}
 			}
 			has_country_flag = establish_the_kaitakushi
+			NOT = { has_country_flag = established_the_karafuto_prefecture }
 		}
 
 		allow = {

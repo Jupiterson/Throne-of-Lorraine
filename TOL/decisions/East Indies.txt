@@ -2,9 +2,9 @@ political_decisions = {
 	singapore_strategy = {
 		picture = fortress_singapore
 		potential = {
+			owns = 1384
 			is_greater_power = yes
 			steel_steamers = 1
-			owns = 1384
 			1384 = { owner = { civilized = yes capital_scope = { NOT = {continent = asia } } } }
 			NOT = { has_country_flag = singapore_strategy }
 		}
@@ -139,10 +139,10 @@ political_decisions = {
 	create_laos_protectorate = {
 		picture = unequal_treaty
 		potential = {
+			owns = 1369
 			is_greater_power = yes
 			capital_scope = { continent = europe }
 			NOT = { tag = TUR }
-			owns = 1369
 			OR = {
 				LUA = {
 					NOT = { has_country_flag = annexed_to_FRA }
@@ -226,6 +226,7 @@ political_decisions = {
 	siamese_border_treaty = {
 		picture = unequal_treaty
 		potential = {
+			owns = 1369
 			is_greater_power = yes
 			capital_scope = { continent = europe }
 			NOT = { tag = TUR }
@@ -241,7 +242,6 @@ political_decisions = {
 					}
 				}
 			}
-			owns = 1369
 			NOT = { has_country_flag = enacted_siamese_border_treaty }
 		}
 
@@ -260,11 +260,11 @@ political_decisions = {
 	annex_champasak = {
 		picture = unequal_treaty
 		potential = {
+			owns = 1368
 			is_greater_power = yes
 			capital_scope = { continent = europe }
 			NOT = { tag = TUR }
 			has_global_flag = berlin_conference
-			owns = 1368
 			CHK = { exists = yes ai = yes vassal_of = SIA }
 			OR = {
 				AND = {
@@ -340,6 +340,7 @@ political_decisions = {
 	organize_laos = {
 		picture = unequal_treaty
 		potential = {
+			owns = 1356
 			civilized = yes
 			NOT = {
 				exists = LUA
@@ -352,7 +353,6 @@ political_decisions = {
 				primary_culture = khmer
 				primary_culture = thai
 			}
-			owns = 1356
 		}
 
 		allow = {
@@ -406,10 +406,6 @@ political_decisions = {
 	form_french_indochina = {
 		picture = map_east_indies
 		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
 			1380 = {
 				owned_by = THIS
 				is_colonial = yes
@@ -417,6 +413,10 @@ political_decisions = {
 			1369 = {
 				owned_by = THIS
 				is_colonial = yes
+			}
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
 			}
 			DAI = { exists = no }
 			NOT = { has_country_flag = created_french_indochina }
@@ -589,7 +589,6 @@ political_decisions = {
 		potential = {
 			owns = 2537
 			owns = 1531
-			NOT = { tag = GER }
 			OR = {
 				AND = {
 					OR = {
@@ -647,6 +646,7 @@ political_decisions = {
 					NOT = { has_global_flag = bismarck_islands_scandinavian }
 				}
 			}
+			NOT = { tag = GER }
 		}
 
 		allow = {

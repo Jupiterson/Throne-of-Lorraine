@@ -3,9 +3,9 @@ political_decisions = {
 		picture = kpm_shipping
 		potential = {
 			tag = NET
+			owns = 1413 #Batavia
 			colonial_nation = yes
 			is_canal_enabled = 2
-			owns = 1413 #Batavia
 			NOT = { has_country_flag = kpm_shipping_founded }
 		}
 
@@ -26,7 +26,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	 unite_England_with_netherlands = {  #man am I uncreative in naming
+	 unite_England_with_netherlands = {  #man am I uncreative in naming (real)
 		picture = reform_the_uk
 		potential = {
 			tag = NET
@@ -50,14 +50,12 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-
-
-
 	appoint_thorbecke = {
 		alert = no
 		picture = thorbecke_reforms
 		potential = {
 			tag = NET
+			has_country_flag = thorbecke
 			NOT = { year = 1860 }
 			OR = {
 				government = prussian_constitutionalism
@@ -65,7 +63,6 @@ political_decisions = {
 				government = absolute_monarchy
 				government = absolute_empire
 			}
-			has_country_flag = thorbecke
 			has_global_flag = liberal_revolutions_should_now_fire
 			NOT = { has_country_flag = thorbecke_reforms }
 		}

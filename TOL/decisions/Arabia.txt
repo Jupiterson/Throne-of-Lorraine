@@ -107,13 +107,13 @@ political_decisions = {
 	secularize_society = {
 		picture = the_holy_city
 		potential = {
-			NOT = { has_country_flag = secularized_muslim_society }
 			civilized = yes
 			OR = {
 				has_country_flag = sunni_country
 				has_country_flag = shiite_country
 				has_country_flag = ibadi_country
 			}
+			NOT = { has_country_flag = secularized_muslim_society }
 		}
 
 		allow = {
@@ -468,8 +468,8 @@ political_decisions = {
 	encourage_arab_nationalism = {
 		picture = form_the_ikhwan
 		potential = {
-			war_with = TUR
 			is_greater_power = yes
+			war_with = TUR
 			NOT = { has_global_flag = arab_nationalism_encouraged }
 			NOT = { tag = TUR }
 			TUR = {
@@ -523,9 +523,9 @@ political_decisions = {
 
 	ibn_saud = {
 		potential = {
+			tag = NEJ
 			has_global_flag = arab_revolt_has_begun
 			NOT = { has_country_flag = ibn_saud }
-			tag = NEJ
 		}
 
 		allow = {
@@ -609,14 +609,14 @@ political_decisions = {
 	the_holy_city = {
 	picture = the_holy_city
 		potential = {
+			1151 = {
+				owned_by = THIS
+				NOT = { has_province_modifier = holy_city }
+			}
 			OR = {
 				has_country_flag = sunni_country
 				has_country_flag = shiite_country
 				has_country_flag = ibadi_country
-			}
-			1151 = {
-				owned_by = THIS
-				NOT = { has_province_modifier = holy_city }
 			}
 		}
 
@@ -735,12 +735,12 @@ political_decisions = {
 	vassalize_trucial_states = {
 		picture = dubai_city
 		potential = {
-			NOT = { tag = ENG }
 			is_sphere_leader_of = ABU
 			ABU = {
-				ai = yes
 				is_vassal = no
+				ai = yes
 			}
+			NOT = { tag = ENG }
 			revolution_n_counterrevolution = 1
 			NOT = { has_global_flag = vassalized_trucials }
 		}

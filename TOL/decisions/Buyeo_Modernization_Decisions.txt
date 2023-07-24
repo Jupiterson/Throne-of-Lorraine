@@ -154,9 +154,9 @@ political_decisions = {
 		picture = hainan_china
 		potential = {
 			tag = QNG
+			has_country_flag = jesuit_expedition
 			NOT = { has_country_flag = chinese_jesuit_education}
 			year = 1870
-			has_country_flag = jesuit_expedition
 		}
 
 		allow = {
@@ -267,8 +267,8 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			has_country_flag = yongping_emperor
-			NOT = { has_country_flag = expanding_the_coal_mines }
 			has_country_flag = end_of_the_nian
+			NOT = { has_country_flag = expanding_the_coal_mines }
 		}
 
 		allow = {
@@ -303,9 +303,9 @@ political_decisions = {
 		picture = trans_siberian_railway
 		potential = {
 			tag = QNG
+			has_country_flag = expanding_the_coal_mines
 			NOT = { has_country_flag = shanxi_railways}
 			year = 1870
-			has_country_flag = expanding_the_coal_mines
 		}
 
 		allow = {
@@ -396,11 +396,11 @@ political_decisions = {
 		picture = china_map
 		potential = {
 			tag = QNG
-			NOT = { has_country_flag = centralization_edict }
 			has_country_flag = 1887_huanghe_flood
 			has_country_flag = yongping_emperor
 			has_country_modifier = the_half_half_system
 			has_country_modifier = disunited_china
+			NOT = { has_country_flag = centralization_edict }
 		}
 
 		allow = {
@@ -428,10 +428,10 @@ political_decisions = {
 		picture = hundred_days_reform
 		potential = {
 			tag = QNG
-			NOT = { has_country_flag = centralization_edict }
 			has_country_flag = southern_devastation
 			has_country_flag = yongping_emperor
 			has_country_modifier = buyeo_financial_crisis
+			NOT = { has_country_flag = centralization_edict }
 		}
 
 		allow = {
@@ -461,11 +461,11 @@ political_decisions = {
 	loot_the_chinese_people = {
 		picture = hundred_days_reform
 		potential = {
-			ai = yes
 			tag = QNG
+			has_country_flag = yongping_emperor
 			civilized = no
 			NOT = { has_country_modifier = looting_cooldown }
-			has_country_flag = yongping_emperor
+			ai = yes
 		}
 
 		allow = {

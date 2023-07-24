@@ -2,13 +2,13 @@ political_decisions = {
 	occupation_of_araucania = {
 		picture = conquest_of_the_desert
 		potential = {
-			tag = PEU 
+			tag = PEU
+			owns = 2328
 			OR = {
 				2333 = { empty = yes }
 				2334 = { empty = yes }
 				2335 = { empty = yes }
 			}
-			owns = 2328
 			NOT = { has_country_flag = occupation_of_araucania }
 		}
 		allow = {
@@ -53,9 +53,9 @@ political_decisions = {
 	annex_easter_island = {
 		picture = annex_easter_island
 		potential = {
-			civilized = yes
 			owns = 2332
 			2336 = { empty = yes }
+			civilized = yes
 		}
 
 		allow = {
@@ -75,11 +75,11 @@ political_decisions = {
 
 	valparaiso_harbor = {
 		picture = valparaiso_harbor
-			potential = {
-				NOT = { is_canal_enabled = 3 }
-				NOT = { has_country_flag = valpariasoharbor_built }
-				tag = PEU 
-				owns = 2325
+		potential = {
+			tag = PEU 
+			owns = 2325
+			NOT = { is_canal_enabled = 3 }
+			NOT = { has_country_flag = valpariasoharbor_built }
 		}
 
 		allow = {

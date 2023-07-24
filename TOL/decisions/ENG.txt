@@ -3,13 +3,13 @@ political_decisions = {
 		picture = bigben
 		potential = {
 			OR = {
-				ai = no
-				year = 1844
-			}
-			OR = {
 				tag = ENG
 				tag = ENL
 				tag = UOW
+			}
+			OR = {
+				ai = no
+				year = 1844
 			}
 			NOT = { has_country_flag = big_ben_construction }
 			300 = { NOT = { has_province_modifier = the_big_ben } }
@@ -33,9 +33,8 @@ political_decisions = {
 	gold_coast_treaty = {
 		picture = treaty_signing
 		potential = {
-			is_greater_power = yes
-			NOT = { tag = NET }
 			owns = 1908
+			is_greater_power = yes
 			is_canal_enabled = 2
 			OR = {
 				year = 1900
@@ -46,6 +45,7 @@ political_decisions = {
 				owns = 1413
 				NOT = { owns = 1910 }
 			}
+			NOT = { tag = NET }
 			NOT = { has_country_flag = gold_coast_treaty }
 		}
 
@@ -186,16 +186,16 @@ political_decisions = {
 	landship_committee = {
 		picture = landship
 		potential = {
-			NOT = { has_global_flag = landship_committee }
+			owns = 284
 			OR = {
 				tag = ENG
 				tag = ENL
 				tag = UOW
 			}
-			owns = 284
-			year = 1900
+			NOT = { has_global_flag = landship_committee }
 			invention = tank_experiments
 			NOT = { 284 = { state_scope = { has_building = barrel_factory } } }
+			year = 1900
 		}
 
 		allow = {
@@ -230,13 +230,13 @@ political_decisions = {
 	royal_aircraft_factory = {
 		picture = royal_aircraft_factory
 		potential = {
-			NOT = { has_global_flag = royal_aircraft_factory }
+			owns = 297
 			OR = {
 				tag = ENG
 				tag = ENL
 			}
-			owns = 297
 			aeronautics = 1
+			NOT = { has_global_flag = royal_aircraft_factory }
 			NOT = { 297 = { state_scope = { has_building = aeroplane_factory } } }
 		}
 
@@ -273,10 +273,6 @@ political_decisions = {
 	treaty_of_heligoland = {
 		picture = the_heligoland_question
 		potential = {
-			OR = {
-				ai = no
-				year = 1881
-			}
 			tag = ENG
 			533 = { owned_by = ENG }
 			OR = {
@@ -324,6 +320,10 @@ political_decisions = {
 						}
 					}
 				}
+			}
+			OR = {
+				ai = no
+				year = 1881
 			}
 			NOT = { has_country_flag = treaty_of_heligoland }
 		}
@@ -373,8 +373,8 @@ political_decisions = {
 	ric_reorganize = {
 		picture = ric_police
 		potential = {
-			any_owned_province = { is_core = IRE }
 			tag = ENG
+			any_owned_province = { is_core = IRE }
 			NOT = { has_country_flag = ric_reorganized }
 		}
 
@@ -395,6 +395,7 @@ political_decisions = {
 		picture = ireland
 		potential = {
 			tag = ENG
+			any_owned_province = { is_core = IRE }
 			NOT = {
 				exists = IRE
 				accepted_culture = irish
@@ -410,7 +411,6 @@ political_decisions = {
 				has_country_flag = help_for_the_irish
 				has_country_flag = irish_republican_brotherhood
 			}
-			any_owned_province = { is_core = IRE }
 		}
 
 		allow = {
@@ -451,18 +451,16 @@ political_decisions = {
 		picture = ireland
 		potential = {
 			tag = ENG
-			exists = IRE
 			IRE = {
+				owns = 254
 				OR = {
-									government = democracy
-				 
+					government = democracy
 					government = hms_government
 					government = constitutional_empire
 				}
 				ai = yes
 				vassal_of = ENG
 				NOT = { government = colonial_company }
-				owns = 254
 			}
 			truce_with = IRE
 			NOT = { has_country_flag = sinn_fein_victory }
@@ -506,8 +504,7 @@ political_decisions = {
 				NOT = { has_country_flag = the_irish_republic }
 				AND = {
 					has_country_flag = the_irish_republic
-					NOT = { 				government = democracy
-				  }
+					NOT = { government = democracy }
 					ENG = { has_country_flag = the_irish_dominion }
 				}
 			}
@@ -521,8 +518,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = the_irish_republic
 			prestige = 5
-							government = democracy
-				 
+			government = democracy
 			remove_accepted_culture = british
 		}
 

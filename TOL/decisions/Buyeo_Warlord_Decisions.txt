@@ -9,9 +9,9 @@ political_decisions = {
 		potential = {
 			tag = KOR
 			has_global_flag = chuseok_coup
+			is_vassal = no
 			NOT = { has_country_flag = yi_seongmin_in_korea }
 			NOT = { has_country_flag = united_korea }
-			is_vassal = no
 		}
 
 		allow = {
@@ -68,9 +68,7 @@ political_decisions = {
 		
 		potential = {
 			tag = KOR
-			KOR = {
-				has_country_flag = agreed_to_baohuanghui_plot
-			}
+			has_country_flag = agreed_to_baohuanghui_plot
 			NOT = { has_country_flag = march_on_manchuria }
 		}
 
@@ -521,8 +519,8 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			has_global_flag = chuseok_coup
-			NOT = { has_country_flag = international_outreach_qng }
 			is_vassal = no
+			NOT = { has_country_flag = international_outreach_qng }
 		}
 
 		allow = {
@@ -713,13 +711,13 @@ political_decisions = {
 		
 		potential = {
 			tag = QNG
-			has_global_flag = chuseok_coup
-			has_country_flag = qng_tungusic_banner
 			KOR = {
 				any_owned_province = {
 					is_core = QNG
 				}
 			}
+			has_global_flag = chuseok_coup
+			has_country_flag = qng_tungusic_banner
 		}
 
 		allow = {
@@ -872,8 +870,8 @@ political_decisions = {
 					NOT = { has_country_flag = yi_seongmin_in_korea }
 				}
 			}
-			NOT = { has_country_flag = united_korea }
 			is_vassal = no
+			NOT = { has_country_flag = united_korea }
 		}
 
 		allow = {
@@ -982,9 +980,7 @@ political_decisions = {
 		
 		potential = {
 			tag = TPG
-			TPG = {
-				has_country_flag = baohuanghui_ready
-			}
+			has_country_flag = baohuanghui_ready
 			NOT = { has_country_flag = march_on_manchuria }
 		}
 
@@ -1069,9 +1065,7 @@ political_decisions = {
 		picture = form_china
 		potential = {
 			tag = KMT
-			QNG = {
-				war = yes
-			}
+			QNG = { war = yes }
 			has_global_flag = chinese_revolt
 			OR = {
 				has_global_flag = dadu_war

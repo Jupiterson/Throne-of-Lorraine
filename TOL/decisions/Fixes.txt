@@ -24,12 +24,12 @@ political_decisions = {
 	ai_call_ally = {
 		picture = gtfo
 		potential = {
-			NOT = { has_country_modifier = called_eic }
-			ai = yes
 			war = yes
 			war_countries = {
 				stronger_army_than = THIS
 			}
+			ai = yes
+			NOT = { has_country_modifier = called_eic }
 		}
 		allow = {
 		}

@@ -132,15 +132,6 @@ political_decisions = {
 	form_saudi_arabia = {
 		picture = become_saudi_arabia
 		potential = {
-			NOT = {
-				tag = NEJ
-				tag = HDJ
-				tag = HAL
-				tag = TUR
-				tag = ARU
-				tag = ISR
-			}
-			NOT = { exists = ARA }
 			OR = {
 				is_sphere_leader_of = NEJ
 				is_sphere_leader_of = HDJ
@@ -153,6 +144,15 @@ political_decisions = {
 					}
 				}
 			}
+			NOT = {
+				tag = NEJ
+				tag = HDJ
+				tag = HAL
+				tag = TUR
+				tag = ARU
+				tag = ISR
+			}
+			NOT = { exists = ARA }
 		}
 
 		allow = {
@@ -459,7 +459,6 @@ political_decisions = {
 	form_arab_union = {
 	picture = form_arab_union
 		potential = {
-			NOT = { has_country_flag = post_colonial_country }
 			OR = {
 				primary_culture = mashriqi
 				primary_culture = bedouin
@@ -470,6 +469,7 @@ political_decisions = {
 				has_country_flag = shiite_country
 				has_country_flag = ibadi_country
 			}
+			NOT = { has_country_flag = post_colonial_country }
 			civilized = yes
 			NOT = {
 				exists = ARU
@@ -567,7 +567,6 @@ political_decisions = {
 	start_pearl_hunting = {
 		picture = bahrain_trade
 		potential = {
-			ai = yes
 			OR = {
 				1162 = { #Bahrain
 					NOT = { trade_goods = precious_goods }
@@ -587,6 +586,7 @@ political_decisions = {
 					NOT = { has_province_modifier = pearl_season }
 				}
 			}
+			ai = yes
 		}
 
 		allow = {
@@ -636,7 +636,6 @@ political_decisions = {
 	end_pearl_hunting = {
 		picture = bahrain_trade
 		potential = {
-			ai = yes
 			OR = {
 				1162 = {
 					trade_goods = precious_goods
@@ -655,6 +654,7 @@ political_decisions = {
 					NOT = { has_province_modifier = pearl_season }
 				}
 			}
+			ai = yes
 		}
 
 		allow = {
