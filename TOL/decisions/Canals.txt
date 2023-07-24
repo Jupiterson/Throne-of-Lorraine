@@ -327,8 +327,7 @@ political_decisions = {
 
 	found_suez_canal_company_eng_ai = {
 		picture = suezcanal
-		potential = {_flag = suez_canal_company_founded_backup }
-			year = 1875
+		potential = {
 			tag = ENG
 			is_greater_power = yes
 			interchangeable_parts = 1
@@ -343,7 +342,8 @@ political_decisions = {
 			NOT = { is_canal_enabled = 2 }
 			NOT = { has_global_flag = suez_canal_built }
 			has_global_flag = suez_canal_company_founded
-			NOT = { has_global
+			NOT = { has_global_flag = suez_canal_company_founded_backup }
+			year = 1875
 		}
 
 		allow = {

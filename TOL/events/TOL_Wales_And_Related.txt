@@ -177,6 +177,7 @@ country_event = {
 			NOT = { 
 				{ has_country_modifier = Anglo_Welsh_Trade_Agreement } 
 				{ has_country_flag = refused_welsh_deal }
+			}
 		}
 		WHA = {
 			owns = 298
@@ -344,7 +345,7 @@ province_event = {
 }
 
 #Trevithick passes away
-country_event = { 
+country_event = {
 	id = 593103
 	title = "EVTNAME959504"
 	desc = "EVTDESC959504"
@@ -448,7 +449,7 @@ country_event = {
 	}
 	
 	option = {
-		name "EVTOPTC59004"
+		name = "EVTOPTC59004"
 		THIS = {
 			war = { 
 				target = UBD 
@@ -544,7 +545,7 @@ country_event = {
 	}
 	
 	option = {
-		name "EVTOPTC59007"
+		name = "EVTOPTC59007"
 		war = { 
 			target = BSQ 
 			attacker_goal = { casus_belli = place_in_the_sun state_province_id = 203 }
