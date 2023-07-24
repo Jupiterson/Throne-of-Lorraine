@@ -2,8 +2,8 @@ political_decisions = {
 
 	form_baltic_states = {
 		potential = {
-			is_culture_group = baltic
 			tag = PRU
+			is_culture_group = baltic
 			NOT = { exists = UBD }
 			NOT = { has_global_flag = baltic_states_formed }
 			NOT = { has_country_flag = post_colonial_country }
@@ -282,11 +282,11 @@ political_decisions = {
 	incorporate_the_baltic_states = {
 		picture = annex_united_baltic_duchy
 		potential = {
-			is_greater_power = yes
 			OR = {
 				tag = GER
 				tag = GCF
 			}
+			is_greater_power = yes
 			exists = UBD
 			UBD = {
 				OR = {

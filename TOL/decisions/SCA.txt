@@ -3,10 +3,10 @@ political_decisions = {
 	abandon_the_icelanders = {
 		picture = iceland_map
 		potential = {
-			NOT = { tag = SCA }
-			NOT = { owns = 252 }
 			has_country_modifier = leader_of_kalmar
 			252 = { is_core = SCA }
+			NOT = { tag = SCA }
+			NOT = { owns = 252 }
 		}
 
 		allow = {
@@ -107,8 +107,8 @@ political_decisions = {
 		potential = {
 			tag = SCA
 			owns = 329 # Gothenburg
-			NOT = { capital = 329 }
 			capital = 322
+			NOT = { capital = 329 }
 		}
 
 		allow = {
@@ -131,10 +131,10 @@ political_decisions = {
 		news_desc_medium = "form_scandinavia_NEWS_MEDIUM"
 		news_desc_short = "form_scandinavia_NEWS_SHORT"
 		potential = {
+			is_culture_group = scandinavian
+			capital_scope = { continent = europe }
 			NOT = { exists = SCA }
 			NOT = { has_country_flag = post_colonial_country }
-			capital_scope = { continent = europe }
-			is_culture_group = scandinavian
 		}
 
 		allow = {
@@ -238,8 +238,6 @@ political_decisions = {
 		potential = {
 			has_country_modifier = kalmar_union
 			capital_scope = { continent = europe }
-			NOT = { exists = SCA }
-			NOT = { primary_culture = finnish }
 			OR = {
 				DEN = {
 					has_country_modifier = leader_of_kalmar
@@ -262,6 +260,8 @@ political_decisions = {
 					is_greater_power = no
 				}
 			}
+			NOT = { exists = SCA }
+			NOT = { primary_culture = finnish }
 		}
 
 		allow = {
@@ -374,13 +374,13 @@ political_decisions = {
 	danelaw = {
 		potential = {
 			tag = DNN
-			NOT = { has_country_flag = danelaw }
-#			has_global_flag = fantasy_countries_enabled
 			OR = {
 				owns = 300
 				owns = 292
 				owns = 281
 			}
+			NOT = { has_country_flag = danelaw }
+#			has_global_flag = fantasy_countries_enabled
 		}
 		allow = {
 			war = no

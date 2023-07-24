@@ -2,9 +2,9 @@ political_decisions = {
 	unciv_balance_qng = {
 		picture = reichstag
 		potential = {
-			ai = yes
 			tag = QNG
 			civilized = no
+			ai = yes
 			NOT = { has_country_flag = unciv_balance_flag }
 		}
 
@@ -53,7 +53,7 @@ political_decisions = {
 	japan_ai_dye = {
 		picture = reichstag
 		potential = {
-			ai = yes
+			owns = 1652
 			OR = {
 				tag = TKG
 				tag = JAP
@@ -67,6 +67,7 @@ political_decisions = {
 			SEN = { ai = yes }
 			KAG = { ai = yes }
 			TOS = { ai = yes }
+			ai = yes
 		}
 
 		allow = {
@@ -97,8 +98,14 @@ political_decisions = {
 
 	cleanup_morocco = {
 		potential = {
-			capital_scope = { continent = europe }
+			OR = {
+				owns = 1683 #Taza
+				owns = 1680 #Fez
+				owns = 1690 #Marrakesh
+				owns = 1694 #Agadir
+			}
 			is_greater_power = yes
+			capital_scope = { continent = europe }
 			has_global_flag = tangier_protocol_succeeded
 			NOT = { primary_culture = french }
 			NOT = { primary_culture = occitan }
@@ -106,12 +113,6 @@ political_decisions = {
 			NOT = { tag = IBR }
 			NOT = { tag = SPC }
 			ai = yes
-			OR = {
-				owns = 1683 #Taza
-				owns = 1680 #Fez
-				owns = 1690 #Marrakesh
-				owns = 1694 #Agadir
-			}
 			NOT = { has_global_flag = cleanup_morocco }
 			OR = {
 				SPA = {
@@ -204,7 +205,6 @@ political_decisions = {
 
 	ai_give_warships_steamer = {
 		potential = {
-			ai = yes
 			OR = {
 				is_greater_power = yes
 				tag = EIC
@@ -238,6 +238,7 @@ political_decisions = {
 					year = 1890
 				}
 			}
+			ai = yes
 			invention = steamer_transports
 			total_amount_of_ships = 5
 			OR = {
@@ -469,9 +470,6 @@ political_decisions = {
 
 	ai_give_warships_steamer_secondary_power = {
 		potential = {
-			year = 1837
-			ai = yes
-			is_disarmed = no
 			OR = {
 				tag = NET
 				tag = SAR
@@ -505,6 +503,9 @@ political_decisions = {
 					NOT = { total_amount_of_ships = 40 }
 				}
 			}
+			year = 1837
+			ai = yes
+			is_disarmed = no
 			NOT = { has_country_modifier = ai_warships_cooldown }
 			money = 3501
 			war = no
@@ -618,7 +619,6 @@ political_decisions = {
 
 	end_war_lan_kor_eng = {
 		potential = {
-			ai = yes
 			OR = {
 				tag = KOR
 				tag = LAN
@@ -627,6 +627,7 @@ political_decisions = {
 			vassal_of = QNG
 			war_with = ENG
 			war = yes
+			ai = yes
 		}
 
 		allow = {

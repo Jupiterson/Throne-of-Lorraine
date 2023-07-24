@@ -48,6 +48,7 @@ political_decisions = {
 	thu_unite = {
 		picture = german_confederation
 		potential = {
+			ai = no
 			OR = {
 				tag = WEI
 				tag = MEI
@@ -56,7 +57,6 @@ political_decisions = {
 				tag = COB
 			}
 			NOT = { has_country_flag = thuringia_stronk }
-			ai = no
 		}
 
 		allow = {
@@ -159,8 +159,8 @@ political_decisions = {
 	slovene_language_at_celje_gymnasium = { #original VIP event by Hrast, edited by Palisadoes
 		picture = czech_autonomy
 		potential = {
-			is_culture_group = germanic
 			owns = 767 #Maribor
+			is_culture_group = germanic
 			revolution_n_counterrevolution = 1
 			NOT = { has_global_flag = slovene_language_at_celje_gymnasium }
 		}
@@ -505,9 +505,9 @@ political_decisions = {
 	form_allemannia = {
 		picture = swabia
 		potential = {
+			has_country_flag = allemia			
 			capital_scope = { continent = europe }
 			NOT = { has_country_flag = post_colonial_country }
-			has_country_flag = allemia			
 			NOT = { exists = ALE }
 		}
 
@@ -556,9 +556,9 @@ political_decisions = {
 	partition_bohemia = {
 		picture = ems_dispatch
 		potential = {
-			NOT = { has_country_flag = partition_bohemia }
 			tag = SAX
 			3483 = { owned_by = BAV }
+			NOT = { has_country_flag = partition_bohemia }
 		}
 
 		allow = {
@@ -604,8 +604,8 @@ political_decisions = {
 		picture = declare_neutrality
 		potential = {
 			tag = BAV
-			NOT = { has_country_flag = schwiss_weak }
 			has_country_flag = swabians_weak
+			NOT = { has_country_flag = schwiss_weak }
 		}
 
 		allow = {
@@ -663,8 +663,8 @@ political_decisions = {
 		picture = swabia
 		potential = {
 			tag = BAV
-			NOT = { has_country_flag = claimed_allemania }
 			has_country_flag = schwiss_weak
+			NOT = { has_country_flag = claimed_allemania }
 		}
 
 		allow = {
@@ -703,8 +703,8 @@ political_decisions = {
 		picture = swabia
 		potential = {
 			tag = WUR
-			NOT = { has_country_flag = claimed_allemania }
 			has_country_flag = swabians_stronk
+			NOT = { has_country_flag = claimed_allemania }
 		}
 
 		allow = {
@@ -767,6 +767,7 @@ political_decisions = {
 	hesse_unite = {
 		picture = german_confederation
 		potential = {
+			ai = no
 			OR = {
 				tag = WLD
 				tag = HES
@@ -775,7 +776,6 @@ political_decisions = {
 				tag = NAS
 			}
 			NOT = { has_country_flag = hesse_stronk }
-			ai = no
 		}
 
 		allow = {
@@ -1047,12 +1047,12 @@ political_decisions = {
             NOT = { exists = GFC }
 			NOT = { exists = FER }
 			NOT = {
-			exists = GER
-			exists = GCF
-            is_culture_group = germanic
-			tag = FRM
-			tag = FER
-			tag = LUS
+				exists = GER
+				exists = GCF
+				is_culture_group = germanic
+				tag = FRM
+				tag = FER
+				tag = LUS
 			}
             NOT = {
                 has_global_flag = outside_germany

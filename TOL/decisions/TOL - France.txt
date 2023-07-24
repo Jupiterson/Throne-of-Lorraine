@@ -453,9 +453,9 @@ political_decisions = {
 	french_federation = {
 		picture = departements
 		potential = {
-			NOT = { has_country_flag = federation_complete }
-			has_country_flag = liberalism_embraced
 			tag = FRA
+			has_country_flag = liberalism_embraced
+			NOT = { has_country_flag = federation_complete }
 		}
 		allow = { 
 			empiricism = 1
@@ -554,8 +554,8 @@ political_decisions = {
 		picture = meeting
 		potential = {
 			tag = FRA
-			NOT = { has_country_flag = who_needs_rights_anyways }
 			has_country_flag = centralization_path
+			NOT = { has_country_flag = who_needs_rights_anyways }
 		}
 
 		allow = {
@@ -692,8 +692,8 @@ political_decisions = {
 		picture = meeting
 		potential = {
 			tag = FRA
-			NOT = { has_country_flag = order_embraced }
 			has_country_flag = who_needs_rights_anyways
+			NOT = { has_country_flag = order_embraced }
 		}
 
 		allow = {
@@ -770,8 +770,8 @@ political_decisions = {
 		picture = swastika
 		potential = {
 			tag = FRA
-			NOT = { has_country_flag = fascism }
 			has_country_flag = order_embraced
+			NOT = { has_country_flag = fascism }
 		}
 
 		allow = {

@@ -2,11 +2,11 @@ political_decisions = {
 found_the_school_of_military_aviation = { #original VIP event idea by General Perón, scripted by Scythe
 		picture = found_the_school_of_military_aviation
 		potential = {
+			owns = 2379 #Cordoba de Argentina
 			OR = {
 				tag = ARG
 				tag = LPL
 			}
-			owns = 2379 #Cordoba de Argentina
 			year = 1900
 			NOT = { has_country_flag = foundation_of_the_school_of_military_aviation }
 		}
@@ -86,6 +86,8 @@ found_the_school_of_military_aviation = { #original VIP event idea by General Pe
 		finalize_the_italian_border = {
 		picture = italian_trentino
 		potential = {
+			owns = 734
+			owns = 735
 			OR = {
 				tag = GER
 				tag = GCF
@@ -93,8 +95,6 @@ found_the_school_of_military_aviation = { #original VIP event idea by General Pe
 			exists = ITA
 			NOT = { exists = AUS }
 			NOT = { exists = KUK }
-			owns = 734
-			owns = 735
 			NOT = { has_global_flag = italian_claimed_south_tirol }
 		}
 		allow = {
@@ -117,17 +117,17 @@ found_the_school_of_military_aviation = { #original VIP event idea by General Pe
 	maas_to_memel = {
 		#picture = wallonien
 		potential = {
-			OR = {
-				tag = GER
-				tag = GCF
-			}
-			NOT = { has_global_flag = german_renamed_frborderlands }
 			owns = 392
 			owns = 393
 			owns = 394
 			owns = 395
 			owns = 398
 			owns = 3377
+			OR = {
+				tag = GER
+				tag = GCF
+			}
+			NOT = { has_global_flag = german_renamed_frborderlands }
 		}
 		allow = {
 			war = no
@@ -147,8 +147,8 @@ found_the_school_of_military_aviation = { #original VIP event idea by General Pe
 
 	miskatonic_university = {
 		potential = {
-			tag = NEN
 			owns = 245
+			tag = NEN
 			NOT = {
 				has_country_flag = miskatonic_u_class_of_1836
 			}
@@ -871,9 +871,9 @@ found_the_school_of_military_aviation = { #original VIP event idea by General Pe
 		picture = piracy
 		potential = {
 			owns = 1453
-			year = 1850
 			1454 = { empty = yes }
 			1560 = { empty = yes }
+			year = 1850
 			NOT = { has_global_flag = etna_expedition }
 		}
 

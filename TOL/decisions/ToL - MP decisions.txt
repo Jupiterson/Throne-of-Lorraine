@@ -3,9 +3,9 @@ political_decisions = {
 		alert = yes
 		picture = starting_options
 		potential = {
+			ai = no
 			NOT = { year = 1837 }
 			NOT = { has_country_flag = MP_leadership }
-			ai = no
 		}
 
 		allow = {

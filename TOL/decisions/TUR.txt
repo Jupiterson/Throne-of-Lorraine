@@ -785,11 +785,11 @@ political_decisions = {
 	become_kurdistan = {
 		picture = old_kurdistan_map
 		potential = {
+			primary_culture = kurdish
 			NOT = { tag = KDS }
 			NOT = { has_country_flag = yazidi_country }
 			NOT = { has_country_flag = became_kurdistan }
 			KDS = { exists = no }
-			primary_culture = kurdish
 		}
 
 		allow = {
@@ -889,7 +889,7 @@ political_decisions = {
 		picture = map_arabia
 		potential = {
 			OR = {
-				AND ={
+				AND = {
 					year = 1850
 					tag = TUR
 					AZH = { vassal_of = THIS }

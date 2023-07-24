@@ -2,17 +2,17 @@ political_decisions = {
 	form_britannia = {
 		picture = reform_the_uk
 		potential = {
+			is_culture_group = britannian
 			NOT = { exists = ENG }
 			NOT = { exists = CLT }
 			OR = {
 				NOT = { tag = SCO }
 				has_country_flag = gaelic_assimilation
 			}
-
 			OR = {
-			AND = {
-				is_culture_group = britannian
-				ai = no
+				AND = {
+					is_culture_group = britannian
+					ai = no
 				}
 				OR = {
 					AND = {
@@ -91,7 +91,6 @@ political_decisions = {
 			}
 				capital_scope = { continent = europe }
 				NOT = { has_country_flag = post_colonial_country }
-				is_culture_group = britannian
 				NOT = { exists = ENG }
 				NOT = { tag = CLT }
 				NOT = { tag = UPB }
@@ -360,12 +359,12 @@ political_decisions = {
 	rebuild_london = {
 		picture = london
 		potential = {
+			owns = 300
 			OR = {
 				tag = ENG
 				tag = ENL
 				tag = UOW
 			}
-			owns = 300
 			NOT = { has_global_flag = london_rebuilt }
 		}
 

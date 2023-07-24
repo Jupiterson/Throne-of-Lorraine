@@ -217,11 +217,11 @@ political_decisions = {
 		picture = passports
 		potential = {
 			tag = HNS
+			owns = 331
 			NOT = { 
 			has_country_flag = the_confederation_is_legitime
             has_country_flag = no_germany
 			}
-			owns = 331
 			NOT = { has_country_flag = hanse_reunited }
 		}
 
@@ -361,9 +361,7 @@ political_decisions = {
 embraced_south_in_hanse = {
 	picture = craftsmen_pic
 		potential = {
-			OR = {
-				tag = HNS			   
-			}
+			tag = HNS			   
 			NOT = { has_country_flag = embraced_south }
 			NOT = { has_country_flag = no_germany }
 		}
@@ -422,9 +420,7 @@ embraced_south_in_hanse = {
 	unite_the_coast = {
 		picture = annex_united_baltic_duchy
 		potential = {
-			OR = {
-				tag = HNS			  
-			}
+			tag = HNS			  
 			NOT = { has_country_flag = big_hanse}
 			NOT = { has_country_flag = embraced_south}
 		}
@@ -468,9 +464,7 @@ embraced_south_in_hanse = {
 	unite_the_coast_ubd = {
 		picture = annex_united_baltic_duchy
 		potential = {
-			OR = {
-				tag = UBD			  
-			}
+			tag = UBD			  
 			NOT = { has_country_flag = big_baltic}
 		}
 

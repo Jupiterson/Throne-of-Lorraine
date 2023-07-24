@@ -10,7 +10,6 @@ political_decisions = {
 				is_greater_power = yes
 				is_secondary_power = yes
 			}
-			NOT = { has_country_flag = museum_build }
 			OR = {
 				has_country_modifier = mycenaean_excavations
 				has_country_modifier = egyptian_excavations
@@ -20,6 +19,7 @@ political_decisions = {
 				has_country_modifier = minoan_excavations
 				has_country_modifier = pompeji_excavations
 			}
+			NOT = { has_country_flag = museum_build }
 		}
 
 		allow = {
@@ -41,8 +41,8 @@ political_decisions = {
 	maya_excavations = {
 		picture = maya_excavations
 		potential = {
-			has_global_flag = maya_ruins
 			is_greater_power = yes
+			has_global_flag = maya_ruins
 			NOT = { owns = 2189 }
 			NOT = {
 				has_country_modifier = maya_excavations
@@ -69,8 +69,8 @@ political_decisions = {
 	forced_maya_excavations = {
 		picture = maya_excavations
 		potential = {
-			has_global_flag = maya_ruins
 			has_country_flag = maya_refused
+			has_global_flag = maya_ruins
 			OR = {
 				owns = 2189
 				2189 = { owner = { vassal_of = THIS } }

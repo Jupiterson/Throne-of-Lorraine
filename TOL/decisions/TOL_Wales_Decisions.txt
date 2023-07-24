@@ -28,14 +28,14 @@ purchase_scilly = {
 		}
 	}
 
-	rename_scilly = {
+	rename_scilly = { #Silly
 		potential = {
+			owns = 3480
 			OR = {
 				tag = WHA
 				tag = CLT
 				tag = CRN
 			}
-			owns = 3480
 			NOT = { has_country_flag = scl_renamed }
 		}
 		
@@ -211,9 +211,9 @@ purchase_scilly = {
 	build_coaling_station_teutonoburg = {
 		potential = {
 			tag = WHA
+			owns = 2409
 			has_country_flag = buy_caribbean_island
 			NOT = { has_country_flag = coaling_port }
-			owns = 2409
 		}
 		
 		allow = {
@@ -236,9 +236,9 @@ purchase_scilly = {
 	build_coaling_station_bermuda = {
 		potential = {
 			tag = WHA
+			owns = 2409
 			has_country_flag = buy_caribbean_island
 			NOT = { has_country_flag = coaling_port }
-			owns = 2409
 		}
 		
 		allow = {
@@ -406,10 +406,10 @@ purchase_scilly = {
 	
 	scilly_model = {
 		potential = {
-			NOT = { has_country_flag = channel_trade }
 			tag = WHA
 			owns = 3587
 			owns = 419
+			NOT = { has_country_flag = channel_trade }
 		}
 		
 		allow = {

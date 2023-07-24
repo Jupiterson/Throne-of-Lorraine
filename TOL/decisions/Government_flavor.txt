@@ -2,13 +2,13 @@ political_decisions = {
 	dissolve_the_upper_house = {
 		picture = dissolve_the_parliament
 		potential = {
-			NOT = { has_country_modifier = interment_camps }
 			OR = {
 				has_country_flag = government_decisions_on
 				ai = yes
 			}
 			government = absolute_monarchy
 			upper_house_composition = appointed
+			NOT = { has_country_modifier = interment_camps }
 			NOT = { has_country_flag = dissolving_parliament }
 		}
 
@@ -195,11 +195,11 @@ political_decisions = {
 		picture = royal_gift
 		alert = no
 		potential = {
-			NOT = { is_greater_power = yes }
 			OR = {
 				has_country_flag = government_decisions_on
 				ai = yes
 			}
+			NOT = { is_greater_power = yes }
 		}
 
 		allow = {

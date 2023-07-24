@@ -4,8 +4,8 @@ political_decisions = {
 		picture = grants
 		alert = no
 		potential = {
-			has_country_flag = grants_shown
 			ai = no
+			has_country_flag = grants_shown
 			NOT = { has_country_flag = will_receive_grants }
 			NOT = { has_country_flag = hiding_the_decisions }
 		}
@@ -46,8 +46,8 @@ political_decisions = {
 		picture = grants
 		alert = no
 		potential = {
-			has_country_flag = grants_shown
 			ai = no
+			has_country_flag = grants_shown
 			NOT = { has_country_flag = will_give_grants }
 			NOT = { has_country_flag = hiding_the_decisions }
 		}
@@ -63,8 +63,8 @@ political_decisions = {
 		picture = grants
 		alert = no
 		potential = {
-			has_country_flag = grants_shown
 			ai = no
+			has_country_flag = grants_shown
 			has_country_flag = will_give_grants
 			NOT = { has_country_flag = hiding_the_decisions }
 		}

@@ -4,10 +4,7 @@ political_decisions = {
 		picture = vietnamese_empire
 		
 		potential = {
-			OR = {
-				tag = DAI
-			}
-			
+			tag = DAI
 			NOT = { has_global_flag = declared_nam_viet }
 		}
 

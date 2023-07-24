@@ -477,10 +477,10 @@ political_decisions = {
 		potential = {
 			tag = BTU
 			ai = no
-			NOT = { has_country_flag = migration_to_saurimo }
 			owns = 1985
 			owns = 2010
 			owns = 1998
+			NOT = { has_country_flag = migration_to_saurimo }
 		}
 		allow = {
 			war = no
@@ -514,7 +514,6 @@ political_decisions = {
 		potential = {
 			tag = BTU
 			ai = no
-			NOT = { has_country_flag = migration_to_loango }
 			owns = 2624
 			owns = 1977
 			owns = 3541
@@ -524,6 +523,7 @@ political_decisions = {
 			owns = 1978
 			owns = 1983
 			owns = 1982
+			NOT = { has_country_flag = migration_to_loango }
 		}
 		allow = {
 			war = no
@@ -582,7 +582,6 @@ political_decisions = {
 		potential = {
 			tag = BTU
 			ai = no
-			NOT = { has_country_flag = migration_to_lowercongo }
 			owns = 1999
 			owns = 3548
 			owns = 3549
@@ -590,6 +589,7 @@ political_decisions = {
 			owns = 2001
 			owns = 2009
 			owns = 1984
+			NOT = { has_country_flag = migration_to_lowercongo }
 		}
 		allow = {
 			war = no
@@ -643,7 +643,6 @@ political_decisions = {
 		potential = {
 			tag = BTU
 			ai = no
-			NOT = { has_country_flag = migration_to_uppercongo }
 			owns = 3550
 			owns = 2002
 			owns = 2003
@@ -652,6 +651,7 @@ political_decisions = {
 			owns = 3563
 			owns = 3552
 			owns = 3553
+			NOT = { has_country_flag = migration_to_uppercongo }
 		}
 		allow = {
 			war = no
@@ -710,11 +710,11 @@ political_decisions = {
 		potential = {
 			tag = BTU
 			ai = no
-			NOT = { has_country_flag = migration_to_angola }
 			owns = 2004
 			owns = 2005
 			owns = 2008
 			owns = 2007
+			NOT = { has_country_flag = migration_to_angola }
 		}
 		allow = {
 			war = no
@@ -764,7 +764,6 @@ political_decisions = {
 		potential = {
 			tag = BTU
 			ai = no
-			NOT = { has_country_flag = migration_to_namibia }
 			owns = 2078
 			owns = 2080
 			owns = 2082
@@ -772,6 +771,7 @@ political_decisions = {
 			owns = 2084
 			owns = 2085
 			owns = 2086
+			NOT = { has_country_flag = migration_to_namibia }
 		}
 		allow = {
 			war = no
@@ -824,13 +824,13 @@ political_decisions = {
 		potential = {
 			tag = BTU
 			ai = no
-			NOT = { has_country_flag = migration_to_northmozambique }
 			owns = 2063
 			owns = 2064
 			owns = 2060
 			owns = 2061
 			owns = 2065
 			owns = 2059
+			NOT = { has_country_flag = migration_to_northmozambique }
 		}
 		allow = {
 			war = no
@@ -883,12 +883,12 @@ political_decisions = {
 		potential = {
 			tag = BTU
 			ai = no
-			NOT = { has_country_flag = migration_to_botswana }
 			owns = 2074
 			owns = 2075
 			owns = 2076
 			owns = 2077
 			owns = 2574
+			NOT = { has_country_flag = migration_to_botswana }
 		}
 		allow = {
 			war = no
@@ -931,11 +931,11 @@ political_decisions = {
 		potential = {
 			tag = BTU
 			ai = no
-			NOT = { has_country_flag = migration_to_zambia }
 			owns = 790
 			owns = 2012
 			owns = 2015
 			owns = 3555
+			NOT = { has_country_flag = migration_to_zambia }
 		}
 		allow = {
 			war = no

@@ -2,12 +2,12 @@ political_decisions = {
 	maghera_expansion = {
 		picture = budapest_city
 		potential = {
+			owns = 729
 			OR = {
 				tag = VEN
 				tag = ITA
 				tag = NIF
 			}
-			owns = 729
 			NOT = { has_global_flag = venice_expanded }
 		}
 

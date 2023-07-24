@@ -4,10 +4,10 @@ political_decisions = {
 		picture = establish_the_sovnarkom
 		potential = {
 			tag = RUS
+			government = proletarian_dictatorship
 			NOT = {
 				has_country_flag = big_brother_is_watching
 			}
-			government = proletarian_dictatorship
 		}
 		allow = {
 			mass_politics = 1
@@ -36,6 +36,7 @@ political_decisions = {
 	manifesto_on_unshakable_autocracy = {
 		potential = {
 			tag = RUS
+			nationalism_n_imperialism = 1
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -43,7 +44,6 @@ political_decisions = {
 				government = constitutional_empire
 			}
 			NOT = { has_country_flag = the_manifesto }
-			nationalism_n_imperialism = 1
 		}
 
 		allow = { revolution_n_counterrevolution = 1 }
@@ -87,6 +87,7 @@ political_decisions = {
 	promulgate_the_ems_ukaz = {
 		potential = {
 			tag = RUS
+			owns = 958
 			NOT = { has_country_flag = ems_ukaz_dispatched }
 			OR = {
 				government = absolute_monarchy
@@ -94,7 +95,6 @@ political_decisions = {
 				government = prussian_constitutionalism
 				government = semi_constitutional_empire
 			}
-			owns = 958
 			OR = {
 				AND = {
 					exists = GER
@@ -217,16 +217,16 @@ political_decisions = {
 	japanese_outer_manchuria = {
 		picture = outer_manchuria_map
 		potential = {
-			OR = {
-				tag = JAP
-				tag = TKG
-				tag = EZO
-			}
 			owns = 1085
 			owns = 1084
 			owns = 2617
 			owns = 1083
 			owns = 1082
+			OR = {
+				tag = JAP
+				tag = TKG
+				tag = EZO
+			}
 			NOT = { has_global_flag = japanese_enkaishu }
 		}
 
@@ -250,17 +250,17 @@ political_decisions = {
 	chinese_outer_manchuria = {
 		picture = outer_manchuria_map
 		potential = {
+			owns = 1085
+			owns = 1084
+			owns = 2617
+			owns = 1083
+			owns = 1082
 			OR = {
 				tag = CHI
 				tag = QNG
 				tag = KOR
 				tag = MCK
 			}
-			owns = 1085
-			owns = 1084
-			owns = 2617
-			owns = 1083
-			owns = 1082
 			OR = {
 				has_global_flag = russian_vladivostok
 				has_global_flag = japanese_enkaishu
@@ -294,9 +294,6 @@ political_decisions = {
 			owns = 1084
 			owns = 1085
 			owns = 2617
-			NOT = { government = democracy }
-			NOT = { has_global_flag = manchus_expelled_primorye }
-			NOT = { has_global_flag = trying_to_expel_the_manchus }
 			OR = {
 				AND = {
 					primary_culture = russian
@@ -307,6 +304,9 @@ political_decisions = {
 					has_global_flag = japanese_enkaishu
 				}
 			}
+			NOT = { government = democracy }
+			NOT = { has_global_flag = manchus_expelled_primorye }
+			NOT = { has_global_flag = trying_to_expel_the_manchus }
 		}
 
 		allow = { war = no nationalism_n_imperialism = 1 citizenship_policy = residency }
@@ -402,6 +402,13 @@ political_decisions = {
 	the_great_game_bukhara = {
 		picture = gtfo
 		potential = {
+			tag = RUS
+			is_greater_power = yes
+			exists = BUK
+			OR = {
+				has_global_flag = crimea_has_happened
+				nationalism_n_imperialism = 1
+			}
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -411,13 +418,6 @@ political_decisions = {
 				government = constitutional_empire
 				government = merchant_republic
 			}
-			is_greater_power = yes
-			tag = RUS
-			OR = {
-				has_global_flag = crimea_has_happened
-				nationalism_n_imperialism = 1
-			}
-			exists = BUK
 			BUK = {
 				civilized = no
 				ai = yes
@@ -440,6 +440,13 @@ political_decisions = {
 	the_great_game_kokand = {
 		picture = gtfo
 		potential = {
+			tag = RUS
+			is_greater_power = yes
+			exists = KOK
+			OR = {
+				has_global_flag = crimea_has_happened
+				nationalism_n_imperialism = 1
+			}
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -449,13 +456,6 @@ political_decisions = {
 				government = constitutional_empire
 				government = merchant_republic
 			}
-			is_greater_power = yes
-			tag = RUS
-			OR = {
-				has_global_flag = crimea_has_happened
-				nationalism_n_imperialism = 1
-			}
-			exists = KOK
 			KOK = {
 				civilized = no
 				ai = yes
@@ -480,6 +480,13 @@ political_decisions = {
 	the_great_game_khiva = {
 		picture = gtfo
 		potential = {
+			tag = RUS
+			is_greater_power = yes
+			exists = KHI
+			OR = {
+				has_global_flag = crimea_has_happened
+				nationalism_n_imperialism = 1
+			}
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -489,13 +496,6 @@ political_decisions = {
 				government = constitutional_empire
 				government = merchant_republic
 			}
-			is_greater_power = yes
-			tag = RUS
-			OR = {
-				has_global_flag = crimea_has_happened
-				nationalism_n_imperialism = 1
-			}
-			exists = KHI
 			KHI = {
 				civilized = no
 				ai = yes
@@ -573,8 +573,6 @@ political_decisions = {
 		picture = names_of_the_rev
 		potential = {
 			tag = RUS
-			government = proletarian_dictatorship
-			NOT = { has_country_flag = names_of_the_revolution }
 			owns = 996
 			owns = 994
 			owns = 998
@@ -583,6 +581,8 @@ political_decisions = {
 			owns = 1034
 			owns = 1039
 			owns = 1058
+			government = proletarian_dictatorship
+			NOT = { has_country_flag = names_of_the_revolution }
 		}
 
 		allow = {
@@ -614,8 +614,6 @@ political_decisions = {
 		picture = names_of_the_rev
 		potential = {
 			tag = RUS
-			NOT = { government = proletarian_dictatorship }
-			has_country_flag = names_of_the_revolution
 			owns = 996
 			owns = 994
 			owns = 998
@@ -624,6 +622,8 @@ political_decisions = {
 			owns = 1034
 			owns = 1039
 			owns = 1058
+			has_country_flag = names_of_the_revolution
+			NOT = { government = proletarian_dictatorship }
 		}
 
 		allow = {
@@ -656,6 +656,10 @@ political_decisions = {
 	names_of_the_revolution_ukraine = {
 		picture = names_of_the_rev
 		potential = {
+			owns = 972
+			owns = 975
+			owns = 976
+			owns = 980
 			OR = {
 				tag = RUS
 				tag = SOV
@@ -663,10 +667,6 @@ political_decisions = {
 			}
 			government = proletarian_dictatorship
 			NOT = { has_global_flag = names_of_the_revolution_ukraine }
-			owns = 972
-			owns = 975
-			owns = 976
-			owns = 980
 		}
 
 		allow = {
@@ -691,12 +691,12 @@ political_decisions = {
 	remove_names_of_the_revolution_ukraine = {
 		picture = names_of_the_rev
 		potential = {
-			NOT = { government = proletarian_dictatorship }
-			has_global_flag = names_of_the_revolution_ukraine
 			owns = 972
 			owns = 975
 			owns = 976
 			owns = 980
+			has_global_flag = names_of_the_revolution_ukraine
+			NOT = { government = proletarian_dictatorship }
 		}
 
 		allow = {
@@ -720,13 +720,13 @@ political_decisions = {
 	expel_the_poles_GLM = {
 		picture = polish_expelled
 		potential = {
-			is_culture_group = east_slavic
 			OR = {
 				owns = 951
 				owns = 952
 				owns = 953
 				owns = 702
 			}
+			is_culture_group = east_slavic
 			NOT = { has_global_flag = poles_expelled }
 		}
 
@@ -777,11 +777,11 @@ political_decisions = {
 		picture = russify_baltic_states
 		potential = {
 			tag = RUS
-			NOT = { has_country_flag = russification_of_the_baltic_states }
 			is_our_vassal = UBD
 			UBD = { ai = yes }
+			NOT = { has_country_flag = russification_of_the_baltic_states }
 		}
-
+		
 		allow = {
 			war = no
 			OR = {
@@ -830,9 +830,6 @@ political_decisions = {
 		picture = caucasus_viceroyalty
 		potential = {
 			tag = RUS
-			NOT = { has_country_flag = caucasus_viceroyalty_established }
-			TCA = { ai = yes }
-			NOT = { has_global_flag = transcaucasia_formed }
 			OR = {
 				TCA = {
 					exists = yes
@@ -846,6 +843,9 @@ political_decisions = {
 					}
 				}
 			}
+			NOT = { has_country_flag = caucasus_viceroyalty_established }
+			TCA = { ai = yes }
+			NOT = { has_global_flag = transcaucasia_formed }
 		}
 
 		allow = {
@@ -890,7 +890,6 @@ political_decisions = {
 		picture = integrate_abkhazia
 		potential = {
 			tag = RUS
-			NOT = { has_country_flag = integrated_abkhazia }
 			owns = 1051
 			owns = 1049
 			owns = 1056
@@ -904,6 +903,7 @@ political_decisions = {
 				}
 				owns = 1095
 			}
+			NOT = { has_country_flag = integrated_abkhazia }
 		}
 
 		allow = {
@@ -947,7 +947,6 @@ political_decisions = {
 	drain_the_pinsk_marshes = {
 		picture = drain_the_pinsk_marshes
 		potential = {
-			NOT = { has_country_flag = marshes_ready }
 			OR = {
 				941 = {
 					owned_by = THIS
@@ -962,6 +961,7 @@ political_decisions = {
 					NOT = { life_rating = 35 }
 				}
 			}
+			NOT = { has_country_flag = marshes_ready }
 		}
 
 		allow = {
@@ -1320,13 +1320,13 @@ political_decisions = {
 	break_the_treaty_of_tartu = {
 		picture = treaty_signing
 		potential = {
-			has_global_flag = treaty_of_tartu
-			NOT = { has_global_flag = tartu_treaty_broke }
 			OR = {
 				tag = RUS
 				tag = RSF
 				tag = SOV
 			}
+			has_global_flag = treaty_of_tartu
+			NOT = { has_global_flag = tartu_treaty_broke }
 		}
 
 		allow = {

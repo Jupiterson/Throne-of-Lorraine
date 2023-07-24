@@ -1,9 +1,19 @@
 political_decisions = {
 
-outside_form_WSF = {
+	outside_form_WSF = {
 		picture = create_zapadoslavia
 		potential = {
 			is_greater_power = yes
+			OR = {
+				any_owned_province = { is_core = GLM }
+				any_owned_province = { is_core = CZH }
+				any_owned_province = { is_core = CPL }
+				any_owned_province = { is_core = POL }
+				is_sphere_leader_of = CZH
+				is_sphere_leader_of = CPL
+				is_sphere_leader_of = GLM
+				is_sphere_leader_of = POL
+			}
 			NOT = {
 				exists = WSF
 				has_global_flag = create_zapadoslavia
@@ -18,16 +28,6 @@ outside_form_WSF = {
 					primary_culture = czech
 					primary_culture = slovak
 				}
-			}
-			OR = {
-				any_owned_province = { is_core = GLM }
-				any_owned_province = { is_core = CZH }
-				any_owned_province = { is_core = CPL }
-				any_owned_province = { is_core = POL }
-				is_sphere_leader_of = CZH
-				is_sphere_leader_of = CPL
-				is_sphere_leader_of = GLM
-				is_sphere_leader_of = POL
 			}
 		}
 		allow = {
@@ -279,9 +279,9 @@ outside_form_WSF = {
 	
 	form_south_german_confederation = {
 		potential = {
-			capital_scope = { continent = europe }
 			is_greater_power = yes
 			primary_culture = south_german
+			capital_scope = { continent = europe }
 			NOT = {
 				has_country_flag = post_colonial_country
 				exists = SGF
@@ -437,12 +437,12 @@ outside_form_WSF = {
 		news_desc_medium = "form_germany_NEWS_MEDIUM"
 		news_desc_short = "form_germany_NEWS_SHORT"
 		potential = {
+			is_culture_group = germanic
 			capital_scope = { continent = europe }
 			NOT = { 
-			has_country_flag = post_colonial_country
-            has_country_flag = no_germany
+				has_country_flag = post_colonial_country
+				has_country_flag = no_germany
 			}
-			is_culture_group = germanic
 			NOT = { exists = GER exists = GCF }
 		}
 
@@ -617,15 +617,15 @@ outside_form_WSF = {
 		news_desc_medium = "form_germany_NEWS_MEDIUM"
 		news_desc_short = "form_germany_NEWS_SHORT"
 		potential = {
-			capital_scope = { continent = europe }
-			NOT = { has_country_flag = post_colonial_country }
 			primary_culture = ashkenazi
 			OR = {
-			accepted_culture = south_german
-			accepted_culture = volga_german
-			accepted_culture = rhinelander
-			accepted_culture = north_german
+				accepted_culture = south_german
+				accepted_culture = volga_german
+				accepted_culture = rhinelander
+				accepted_culture = north_german
 			}
+			capital_scope = { continent = europe }
+			NOT = { has_country_flag = post_colonial_country }
 			NOT = { exists = GER exists = GCF tag = ISR }
 		}
 
@@ -930,10 +930,10 @@ outside_form_WSF = {
 		news_desc_medium = "form_italy_NEWS_MEDIUM"
 		news_desc_short = "form_italy_NEWS_SHORT"
 		potential = {
-		OR = {
-			tag = NIF
-			tag = PRO
-			tag = PAP
+			OR = {
+				tag = NIF
+				tag = PRO
+				tag = PAP
 			}
 			capital_scope = { continent = europe }
 			NOT = {
@@ -1300,8 +1300,8 @@ outside_form_WSF = {
 		}
 	}
 
-#Ruthenia
-form_ruthenia = {
+	#Ruthenia
+	form_ruthenia = {
 		picture = form_antillean_confederation
 		potential = {
 			primary_culture = ruthenyan

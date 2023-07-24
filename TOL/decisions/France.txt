@@ -2,13 +2,13 @@ political_decisions = {
 
 	support_french_foreign_legion = {
 		potential = {
+			owns = 1700
 			OR = {
 				primary_culture = french
 				primary_culture = occitan
 			}
 			is_greater_power = yes
 			capital = 425
-			owns = 1700
 			NOT = { has_country_modifier = the_french_foreign_legion }
 		}
 		allow = {
@@ -82,13 +82,13 @@ political_decisions = {
 
 	palais_garnier = {
 		potential = {
-			NOT = { has_country_flag = palais_garnier_built }
 			OR = {
 				primary_culture = french
 				primary_culture = occitan
 			}
 			is_greater_power = yes
 			capital = 425
+			NOT = { has_country_flag = palais_garnier_built }
 		}
 
 		allow = {
@@ -179,7 +179,6 @@ political_decisions = {
 				has_country_flag = the_eiffel_tower_was_built
 				has_country_flag = the_eiffel_tower_is_beiong_built
 			}
-
 			OR = {
 				has_country_flag = world_fair_planner
 				year = 1887
@@ -297,13 +296,13 @@ political_decisions = {
 			}
 			is_greater_power = yes
 			capital = 425
-			NOT = { owns = 3246 }
-			NOT = { has_country_flag = st_barths_referendum }
 			OR = {
 				owns = 45
 				owns = 2230
 				owns = 2228
 			}
+			NOT = { owns = 3246 }
+			NOT = { has_country_flag = st_barths_referendum }
 		}
 
 		allow = {
@@ -377,37 +376,36 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-#The Devil's Island
-devil_island = {
-	picture = FRA_devils_island
-	potential = {
-		OR = {
-			primary_culture = french
-			primary_culture = occitan
+	#The Devil's Island
+	devil_island = {
+		picture = FRA_devils_island
+		potential = {
+			owns = 2241 #Cayenne
+			OR = {
+				primary_culture = french
+				primary_culture = occitan
+			}
+			is_greater_power = yes
+			capital = 425
+			year = 1852
+			penal_system = colonial_transportation
+			NOT = { has_country_flag = devil_island }
+			NOT = { has_country_modifier = penal_colonies }
 		}
-		is_greater_power = yes
-		capital = 425
-		owns = 2241 #Cayenne
-		year = 1852
-		penal_system = colonial_transportation
-		NOT = { has_country_flag = devil_island }
-		NOT = { has_country_modifier = penal_colonies }
-	}
-	allow = {
-		money = 5000
-	}
+		allow = {
+			money = 5000
+		}
 
-	effect = {
-		FRR = { set_country_flag = devil_island }
-		FRZ = { set_country_flag = devil_island }
-		BOR = { set_country_flag = devil_island }
-		VIC = { set_country_flag = devil_island }
-		treasury = -5000
-		prestige = 5
-		2241 = { life_rating = 1 }
-		add_country_modifier = { name = penal_colonies duration = -1 }
+		effect = {
+			FRR = { set_country_flag = devil_island }
+			FRZ = { set_country_flag = devil_island }
+			BOR = { set_country_flag = devil_island }
+			VIC = { set_country_flag = devil_island }
+			treasury = -5000
+			prestige = 5
+			2241 = { life_rating = 1 }
+			add_country_modifier = { name = penal_colonies duration = -1 }
+		}
 	}
-}
-
 
 }

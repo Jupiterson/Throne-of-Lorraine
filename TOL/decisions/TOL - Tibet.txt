@@ -130,9 +130,9 @@ political_decisions = {
 	tibet_form_eob = {
 		picture = tibet_capital
 		potential = {
+			tag = TIB
 			NOT = { has_global_flag = burma_form_eob }
 			NOT = { has_global_flag = tibet_form_eob }
-			tag = TIB
 			}
 
 		allow = {

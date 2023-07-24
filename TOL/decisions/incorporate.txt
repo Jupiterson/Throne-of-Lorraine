@@ -2,9 +2,9 @@ political_decisions = {
 	incorp = {
 		picture = diplo_annex
 		potential = {
+			ai = no
 			is_greater_power = yes
 			has_country_flag = government_decisions_on
-			ai = no
 			NOT = { has_global_flag = no_incorp }
 		}
 		allow = {

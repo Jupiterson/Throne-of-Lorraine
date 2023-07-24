@@ -2,11 +2,11 @@ political_decisions = {
 	form_algeria = {
 		picture = map_algeria
 		potential = {
-			NOT = { has_country_flag = post_colonial_country }
-			or = {
+			OR = {
 				tag = RGA
 				tag = TLE
 			}
+			NOT = { has_country_flag = post_colonial_country }
 			NOT = { exists = MGH }
 			NOT = { exists = ALD }
 			NOT = { has_global_flag = algeria_formed }
@@ -77,12 +77,12 @@ political_decisions = {
 	form_morocco = {
 		picture = map_morocco
 		potential = {
-			NOT = { has_country_flag = post_colonial_country }
-			or = {
+			OR = {
 				tag = FEZ
 				tag = MRR
 				tag = GNA
 			}
+			NOT = { has_country_flag = post_colonial_country }
 			NOT = { exists = MGH }
 			NOT = { exists = MOR }
 			NOT = { has_global_flag = morocco_formed }
@@ -238,9 +238,9 @@ political_decisions = {
 		picture = addis_ababa_building
 		potential = {
 			tag = MOR
-			NOT = { has_country_flag = marrakesh_renovated }
-			owns = 1690 #Marrakesh
 			ai = no
+			owns = 1690 #Marrakesh
+			NOT = { has_country_flag = marrakesh_renovated }
 		}
 
 		allow = {
@@ -267,10 +267,10 @@ political_decisions = {
 		picture = map_morocco
 		potential = {
 			tag = MOR
-			NOT = { has_country_flag = annexed_sahrawi }
-			has_country_flag = marrakesh_renovated
 			owns = 1696
+			has_country_flag = marrakesh_renovated
 			1774 = { empty = yes }
+			NOT = { has_country_flag = annexed_sahrawi }
 		}
 
 		allow = {
@@ -296,8 +296,8 @@ political_decisions = {
 	form_maghreb = {
 		picture = form_maghreb
 		potential = {
-			NOT = { has_country_flag = post_colonial_country }
 			primary_culture = maghrebi
+			NOT = { has_country_flag = post_colonial_country }
 			NOT = { exists = MGH }
 			NOT = { has_global_flag = maghreb_formed }
 		}
@@ -434,11 +434,11 @@ political_decisions = {
 	the_tunisian_hinterlands = {
 		picture = tunisia_map
 		potential = {
-			NOT = { has_global_flag = tunisia_claimed }
 			owns = 1725
 			NOT = {
 				owns = 1727			
 			}
+			NOT = { has_global_flag = tunisia_claimed }
 			NOT = {
 				OR = {
 					primary_culture = maghrebi
@@ -514,8 +514,8 @@ political_decisions = {
 			}
 			is_greater_power = yes
 			capital = 425
-			year = 1865
 			owns = 1700 #Algiers
+			year = 1865
 			NOT = { has_country_flag = bulit_notre_dame_afrique }
 		}
 		allow = {
@@ -539,9 +539,9 @@ political_decisions = {
 	the_constantine_hinterlands = {
 		picture = map_algeria
 		potential = {
+			owns = 1709
 			has_global_flag = tunisia_claimed
 			NOT = { has_global_flag = constantine_claimed }
-			owns = 1709
 			NOT = {
 				owns = 1708		
 			}

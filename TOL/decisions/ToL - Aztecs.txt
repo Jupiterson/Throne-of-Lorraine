@@ -3,6 +3,11 @@ political_decisions = {
 	belize_purchase = {
 		picture = map_central_america
 		potential = {
+			OR = {
+				primary_culture = central_american
+				primary_culture = mexican
+				primary_culture = mayan
+			}
 			2190 = { NOT = { owned_by = THIS } owner = { NOT = { capital_scope = { continent = north_america } } } }
 			2189 = {
 				OR = {
@@ -16,11 +21,6 @@ political_decisions = {
 				}
 			}
 			BLZ = { exists = no }
-			OR = {
-				primary_culture = central_american
-				primary_culture = mexican
-				primary_culture = mayan
-			}
 			NOT = { has_country_flag = belize_purchase }
 		}
 

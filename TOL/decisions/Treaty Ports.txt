@@ -424,9 +424,9 @@ political_decisions = {
 		picture = weihaiwei_china
 		potential = {
 			has_country_modifier = negotiating_treaty
+			tag = ENG
 			1569 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
 			NOT = { has_country_modifier = chinese_treaty_port }
-			tag = ENG
 		}
 
 		allow = {

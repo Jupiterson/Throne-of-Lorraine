@@ -78,9 +78,9 @@ taungoo_restoration = {
 	burma_form_eob = {
 		picture = burma_coat_of_arms
 		potential = {
+			tag = BUR
 			NOT = { has_global_flag = burma_form_eob }
 			NOT = { has_global_flag = tibet_form_eob }
-			tag = BUR
 			}
 
 		allow = {
@@ -102,8 +102,8 @@ taungoo_restoration = {
 	burma_claim_dali = {
 		picture = nanzhao_kingdom
 		potential = {
-			NOT = { has_country_flag = burma_claim_dali }
 			tag = BUR
+			NOT = { has_country_flag = burma_claim_dali }
 			}
 
 		allow = {
@@ -123,12 +123,12 @@ taungoo_restoration = {
 	suvarnabhumi_formation = {
 		picture = suv_emblem
 		potential = {
-			NOT = { has_country_flag = suvarnabhumi_formation }
 			OR = {
 				tag = SIA
 				tag = LXA
 				tag = CHK
 			}
+			NOT = { has_country_flag = suvarnabhumi_formation }
 			SUV = {exists = no}
 		}
 		allow = {
@@ -158,11 +158,11 @@ taungoo_restoration = {
 	laos_conquer_siam = {
 		picture = lao_troops
 		potential = {
-			NOT = { has_country_flag = laos_conquer_siam }
 			OR = {
 				tag = LXA
 				tag = CHK
 			}
+			NOT = { has_country_flag = laos_conquer_siam }
 		}
 		allow = {
 			prestige = 15
@@ -182,8 +182,8 @@ taungoo_restoration = {
 	siam_conquer_laos = {
 		picture = thai_troops
 		potential = {
-			NOT = { has_country_flag = siam_conquer_laos }
 			tag = SIA
+			NOT = { has_country_flag = siam_conquer_laos }
 		}
 		allow = {
 			prestige = 15
@@ -208,8 +208,8 @@ taungoo_restoration = {
 	suvarnabhumi_expands = {
 		picture = lao_troops
 		potential = {
-			NOT = { has_country_flag = suvarnabhumi_expands }
 			tag = SUV
+			NOT = { has_country_flag = suvarnabhumi_expands }
 		}
 		allow = {
 			prestige = 40
@@ -230,8 +230,8 @@ taungoo_restoration = {
 	suvarnabhumi_takes_shan = {
 		picture = suv_emblem
 		potential = {
-			NOT = { has_country_flag = suvarnabhumi_takes_shan }
 			tag = SUV
+			NOT = { has_country_flag = suvarnabhumi_takes_shan }
 		}
 		allow = {
 			prestige = 20

@@ -286,7 +286,6 @@ political_decisions = {
 		picture = starting_options
 		alert = no
 		potential = {
-			NOT = { has_global_flag = party_loyalty_eliminated }
 			OR = {
 				AND = {
 					ai = no
@@ -298,6 +297,7 @@ political_decisions = {
 					year = 1841
 				}
 			}
+			NOT = { has_global_flag = party_loyalty_eliminated }
 		}
 
 		allow = {

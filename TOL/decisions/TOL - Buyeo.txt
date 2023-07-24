@@ -48,10 +48,10 @@ political_decisions = {
 	kwangchowan_treaty_port_fra = {
 		picture = kwangchowan_china
 		potential = {
-			NOT = { tag = ENG }
 			is_greater_power = yes
 			1369 = { owned_by = THIS } #Hanoi
 			1496 = { owned_by = ENG } #HongKong
+			NOT = { tag = ENG }
 			2632 = { owner = { civilized = no NOT = { war_with = THIS }  } }
 			NOT = { has_country_flag = kwangchowan_treaty_port_fra }
 		}
@@ -201,8 +201,8 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			has_global_flag = kowloon_incident
-			truce_with = ENG
 			owns = 1496
+			truce_with = ENG
 			NOT = {
 				has_recently_lost_war = yes
 				has_country_flag = treaty_of_macao
@@ -345,10 +345,10 @@ political_decisions = {
 	clean_up_ai_fengtian = {
 		picture = weihaiwei_china
 		potential = {
+			owns = 1479 #Mukden
 			is_greater_power = yes
 			ai = yes
 			capital_scope = { continent = europe }
-			owns = 1479 #Mukden
 			NOT = { tag = RUS }
 			NOT = { has_country_flag = clean_up_ai_fengtian }
 		}
@@ -426,11 +426,11 @@ political_decisions = {
 	
 	torching_of_the_summer_palace = {
 		potential = {
-			NOT = { tag = QNG }
 			QNG = { owns = 1616 }
 			civilized = yes
 			is_greater_power = yes
 			state_n_government = 1
+			NOT = { tag = QNG }
 			war_with = QNG
 			NOT = { has_global_flag = summer_palace_torched }
 		}
@@ -479,10 +479,10 @@ political_decisions = {
 		picture = shanghai_china
 		potential = {
 			tag = TAI
+			QNG = { owns = 1538 }
 			year = 1850
 			NOT = { has_country_flag = opium_in_shanghai }
 			war = no
-			QNG = { owns = 1538 }
 		}
 		
 		allow = {

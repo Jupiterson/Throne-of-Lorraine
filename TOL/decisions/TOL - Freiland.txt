@@ -173,10 +173,10 @@ political_decisions = {
 	
 		liberty_enlightening_the_world = {
 		potential = {
+			tag = VKS
 			NOT = {
 				has_global_flag = statue_of_liberty_has_been_built
 			}
-			tag = VKS
 		}
 		allow = {
 			has_global_flag = VKS_Annnex_AKI
@@ -273,8 +273,8 @@ political_decisions = {
 	}
 		VKS_Destroy_Amauldi = {
 		potential = {
-			has_global_flag = VKS_Freedom
 			tag = VKS
+			has_global_flag = VKS_Freedom
 			NOT = { has_global_flag = VKS_Destroy_Amauldi }
 			OR = {
 			USA = { vassal_of = ENG } 

@@ -122,11 +122,11 @@ political_decisions = {
 	galleria_ve = {
 		picture = galleria_ve
 		potential = {
+			owns = 726
 			OR = {
 				tag = ITA
 				tag = ITS
 			}
-			owns = 726
 			NOT = { has_country_flag = shopping_in_milan }
 		}
 
@@ -182,8 +182,8 @@ political_decisions = {
 		picture = italia_irredenta
 		potential = {
 			tag = PAP
-			ai = yes
 			NOT = { has_country_flag = roman_republic_joins }
+			ai = yes
 		}
 
 		allow = {
@@ -221,8 +221,8 @@ political_decisions = {
 		picture = italia_irredenta
 		potential = {
 			tag = PAP
-			ai = yes
 			NOT = { has_country_flag = roman_republic_joins }
+			ai = yes
 		}
 
 		allow = {

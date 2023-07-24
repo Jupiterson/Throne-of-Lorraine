@@ -2,9 +2,9 @@ political_decisions = {
   return_german_aristo = {
 		picture = german_confederation
 		potential = {
+			tag = BOH
 			capital_scope = { continent = europe }
-			NOT = { has_country_flag = post_colonial_country }			
-			tag = BOH			
+			NOT = { has_country_flag = post_colonial_country }
 			NOT = { exists = GER }
 		}
 

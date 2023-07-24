@@ -7,11 +7,11 @@ political_decisions = {
 		picture = kangchu
 		
 		potential = {
+			owns = 1385
 			OR = { 
 				tag = JOH
 				tag = PHG
 			}
-			owns = 1385
 			NOT = { has_global_flag = kangchu_system }
 		}
 
@@ -160,9 +160,7 @@ political_decisions = {
 		picture = south_china_map
 		
 		potential = {
-			OR = { 
-				tag = LAN
-			}
+			tag = LAN
 			has_global_flag = chuseok_coup
 			is_vassal = no
 			NOT = { has_country_flag = south_china_thalassocracy }
@@ -317,8 +315,8 @@ political_decisions = {
 	found_hong_leong = {
 		picture = chinese_family
 		potential = {
-			NOT = { has_country_flag = ocbc }
 			tag = LAN
+			NOT = { has_country_flag = ocbc }
 		}
 
 		allow = {
@@ -345,9 +343,9 @@ political_decisions = {
 	south_china_schooling = {
 		picture = imperial_examinations
 		potential = {
-			NOT = { has_country_flag = sc_schools }
 			tag = LAN
 			has_country_flag = mccc
+			NOT = { has_country_flag = sc_schools }
 		}
 
 		allow = {
@@ -375,7 +373,6 @@ political_decisions = {
 	chamber_of_commerce = {
 		picture = malayan_chinese_chamber_of_commerce
 		potential = {
-			NOT = { has_country_flag = mccc }
 			OR = {
 				tag = LAN
 				tag = SAI
@@ -396,6 +393,7 @@ political_decisions = {
 					accepted_culture = min
 				}
 			}
+			NOT = { has_country_flag = mccc }
 		}
 
 		allow = {
@@ -1197,6 +1195,7 @@ political_decisions = {
 	organize_indonesia = {
         picture = map_indonesia
         potential = {
+            owns = 1413
             civilized = yes
             NOT = {
                 exists = INO
@@ -1205,7 +1204,6 @@ political_decisions = {
 				has_global_flag = indonesia_born
             }
             nationalism_n_imperialism = 1
-            owns = 1413
         }
 
         allow = {

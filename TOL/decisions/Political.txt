@@ -3,8 +3,8 @@ political_decisions = {
 	enact_liquor_prohibition = {
 		picture = enact_liquor_prohibition
 		potential = {
-			social_science = 1
 			has_country_modifier = temperance_league
+			social_science = 1
 			NOT = {
 				OR = {
 					has_country_modifier = liquor_prohibition
@@ -70,10 +70,10 @@ political_decisions = {
 	institute_central_bank = {
 		picture = institute_central_bank
 		potential = {
+			central_bank_money_bill_printing = 1
 			NOT = {
 				has_country_modifier = central_bank_established
 			}
-			central_bank_money_bill_printing = 1
 		}
 
 		allow = {
@@ -94,7 +94,10 @@ political_decisions = {
 	enact_female_suffrage = {
 		picture = enact_female_suffrage
 		potential = {
-			year = 1870
+			OR = {
+				vote_franschise = universal_weighted_voting
+				vote_franschise = universal_voting
+			}
 			civilized = yes
 			NOT = { has_country_modifier = female_suffrage }
 			OR = {
@@ -110,10 +113,7 @@ political_decisions = {
 				government = peasant_republic
 				government = pirate_republic
 			}
-			OR = {
-				vote_franschise = universal_weighted_voting
-				vote_franschise = universal_voting
-			}
+			year = 1870
 		}
 
 		allow = {
@@ -360,13 +360,13 @@ political_decisions = {
 		potential = {
 			ai = no
 			has_country_flag = government_decisions_on
+			debt_law = serfdom
 			OR = {
 				government = absolute_monarchy
 				government = absolute_empire
 				government = prussian_constitutionalism
 				government = semi_constitutional_empire
 			}
-			debt_law = serfdom
 		}
 
 		allow = {
@@ -804,7 +804,6 @@ political_decisions = {
 	abolish_slavery = {
 		picture = enslave_the_serfs_image
 		potential = {
-			NOT = { slavery = no_slavery }
 			OR = {
 				government = hms_government
 				government = constitutional_empire
@@ -816,6 +815,7 @@ political_decisions = {
 				government = peasant_republic
 				government = pirate_republic
 			}
+			NOT = { slavery = no_slavery }
 			NOT = { any_pop = { type = slaves } }
 			year = 1886
 		}
@@ -865,7 +865,6 @@ political_decisions = {
 	move_capital_to_historical_capital = {
 		picture = budapest_city
 		potential = {
-			exists = yes
 			OR = {
 				AND = { tag = GLM owns = 702 NOT = { capital = 702 } }
 				AND = { tag = NET owns = 375 NOT = { capital = 375 } }
@@ -980,15 +979,15 @@ political_decisions = {
 	population_exchanges = {
 		picture = population_to_turkey
 		potential = {
-			NOT = { has_country_flag = greece_has_got_a_brand_new_bag }
-			NOT = { has_country_flag = greater_bulgaria_claimed }
-			NOT = { has_country_flag = pop_ex }
-			NOT = { tag = TUR }
 			TUR = {
 				exists = yes
 				owns = 860
 				owns = 861
 			}
+			NOT = { has_country_flag = greece_has_got_a_brand_new_bag }
+			NOT = { has_country_flag = greater_bulgaria_claimed }
+			NOT = { has_country_flag = pop_ex }
+			NOT = { tag = TUR }
 			NOT = { tag = EGY }
 			NOT = { tag = ALB }
 			NOT = { tag = BOS }
@@ -1624,9 +1623,9 @@ political_decisions = {
 		picture = change_border_policy
 		alert = no
 		potential = {
+			ai = no
 			exists = yes
 			civilized = yes
-			ai = no
 			NOT = { has_country_flag = change_border_policy }
 			NOT = { has_country_modifier = law_changed_by_force }
 		}
@@ -1647,8 +1646,8 @@ political_decisions = {
 		picture = change_border_policy
 		alert = no
 		potential = {
-			has_country_flag = change_border_policy
 			ai = no
+			has_country_flag = change_border_policy
 		}
 
 		allow = {
@@ -1665,8 +1664,8 @@ political_decisions = {
 		picture = closed_border
 		alert = no
 		potential = {
-			exists = yes
 			ai = no
+			exists = yes
 			has_country_flag = change_border_policy
 			NOT = { border_policy = closed_borders }
 		}
@@ -1714,8 +1713,8 @@ political_decisions = {
 		picture = immigration_quotas
 		alert = no
 		potential = {
-			exists = yes
 			ai = no
+			exists = yes
 			has_country_flag = change_border_policy
 			NOT = { border_policy = quota_immigration }
 			OR = {
@@ -1765,8 +1764,8 @@ political_decisions = {
 		picture = immigrants_arriving
 		alert = no
 		potential = {
-			exists = yes
 			ai = no
+			exists = yes
 			has_country_flag = change_border_policy
 			NOT = { border_policy = open_borders }
 		}
@@ -1804,8 +1803,6 @@ political_decisions = {
 		picture = state_of_emergency
 		potential = {
 			state_n_government = 1
-			NOT = { has_country_flag = state_of_emergency }
-			NOT = { has_country_modifier = law_changed_by_force }
 			OR = {
 				AND = {
 					militancy = 3
@@ -1813,6 +1810,8 @@ political_decisions = {
 				}
 				militancy = 6
 			}
+			NOT = { has_country_flag = state_of_emergency }
+			NOT = { has_country_modifier = law_changed_by_force }
 		}
 
 		allow = {
@@ -1872,7 +1871,6 @@ political_decisions = {
 	renovate_capital = {
 		picture = budapest_city
 		potential = {
-			NOT = { has_country_flag = used_renovate_already }
 			OR = {
 				794 = { #Belgrade
 					owned_by = THIS
@@ -1979,6 +1977,7 @@ political_decisions = {
 					NOT = { life_rating = 38 }
 				}
 			}
+			NOT = { has_country_flag = used_renovate_already }
 			OR = {
 				ai = no
 				AND = {
@@ -2076,8 +2075,8 @@ political_decisions = {
 	suspend_political_powers = {
 		picture = pol_sus
 		potential = {
-			has_country_flag = government_decisions_on
 			ai = no
+			has_country_flag = government_decisions_on
 		}
 
 		allow = {
@@ -2123,9 +2122,9 @@ political_decisions = {
 	merchant_marine = {
 		picture = merchant_marine
 		potential = {
+			ai = no
 			war = yes
 			has_country_flag = government_decisions_on
-			ai = no
 			any_owned_province = { has_building = naval_base is_core = THIS }
 			NOT = { has_country_modifier = merchant_marine }
 		}
@@ -2157,11 +2156,11 @@ political_decisions = {
 		picture = brudeferden
 		potential = {
 			tag = NOR
-			NOT = { has_country_flag = nor_lang }
 			OR = {
 				ai = no
 				year = 1862
 			}
+			NOT = { has_country_flag = nor_lang }
 		}
 
 		allow = {

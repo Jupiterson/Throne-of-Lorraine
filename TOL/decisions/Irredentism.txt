@@ -466,11 +466,11 @@ political_decisions = {
 				tag = BRZ
 				tag = UPB
 			}
-			NOT = { has_country_flag = cisplatina_is_ours  }
 			OR = {
 				government = absolute_monarchy
 				government = fascist_dictatorship
 			}
+			NOT = { has_country_flag = cisplatina_is_ours  }
 		}
 
 		allow = {
@@ -545,9 +545,9 @@ political_decisions = {
 		alert = yes
 		picture = greater_syria
 		potential = {
-			NOT = { has_country_flag = claimed_greater_syria }
 			tag = SYR
 			government = fascist_dictatorship
+			NOT = { has_country_flag = claimed_greater_syria }
 		}
 
 		allow = {
@@ -582,8 +582,8 @@ political_decisions = {
 		alert = yes
 		picture = greater_illyriania_map
 		potential = {
-			NOT = { has_country_flag = claimed_greater_illyriania }
 			tag = CRO
+			NOT = { has_country_flag = claimed_greater_illyriania }
 		}
 
 		allow = {
@@ -612,8 +612,8 @@ political_decisions = {
 		alert = yes
 		picture = tibet_capital
 		potential = {
-			NOT = { has_country_flag = claimed_greater_tibet }
 			tag = TIB
+			NOT = { has_country_flag = claimed_greater_tibet }
 		}
 
 		allow = {
@@ -672,9 +672,7 @@ political_decisions = {
 	claim_tisza = {
 		picture = romanians_marching
 		potential = {
-
-				tag = ROM
-			
+			tag = ROM
 			NOT = { has_country_flag = claimed_tisza }
 		}
 
@@ -733,8 +731,8 @@ political_decisions = {
 		picture = claim_the_caribbean
 		potential = {
 			tag = ATC
-			NOT = { has_country_flag = claimed_the_caribbean }
 			is_vassal = no
+			NOT = { has_country_flag = claimed_the_caribbean }
 		}
 
 		allow = {
@@ -773,8 +771,7 @@ political_decisions = {
 	greater_bulgaria = {
 		picture = greater_bulgaria
 		potential = {
-				tag = BUL
-			
+			tag = BUL
 			NOT = { has_country_flag = greater_bulgaria_claimed }
 		}
 
@@ -1195,8 +1192,8 @@ political_decisions = {
 	suur_suomi = {
 		picture = suur_suomi
 		potential = {
-			NOT = { has_country_flag = suur_suomi }
 			tag = FIN
+			NOT = { has_country_flag = suur_suomi }
 			NOT = { exists = SUS }
 		}
 
@@ -1246,7 +1243,6 @@ political_decisions = {
 	grytviken = {
 		picture = grytviken
 		potential = {
-			NOT = { has_country_flag = grytviken }
 			2133 = {
 				owned_by = ENG
 			}
@@ -1255,6 +1251,7 @@ political_decisions = {
 				tag = SCA
 				tag = DNN
 			}
+			NOT = { has_country_flag = grytviken }
 		}
 
 		allow = {

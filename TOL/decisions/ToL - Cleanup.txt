@@ -4,12 +4,12 @@ cede_coast = {
 		picture = italian_dalmatia
 		potential = {
 			tag = UBD
+			owns = 695
+			owns = 350
 			NOT = { has_country_flag = coast_ceded }
 			year = 1838
 			NOT = { year = 1845 }
 			ai = yes
-			owns = 695
-			owns = 350
 			SWE = { ai = yes }
 			RUS = { ai = yes }
 		}
@@ -51,9 +51,9 @@ cede_coast = {
 	cede_silesia = {
 		potential = {
 			tag = SAX
+			NOT = { owns = 3337 }
 			NOT = { has_country_flag = coast }
 			ai = yes
-			NOT = { owns = 3337 }
 		}
 
 		allow = {

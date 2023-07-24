@@ -42,10 +42,10 @@ political_decisions = {
 	the_case_of_edgardo_mortara = {
 		potential = {
 			tag = PAP
+			owns = 741
 			government = theocracy
 			NOT = { has_country_flag = edgardo_mortara }
 			year = 1858
-			owns = 741
 		}
 
 		allow = {
@@ -618,12 +618,12 @@ political_decisions = {
 	conquest_of_the_adriatic = {
 	picture = conquest_adriatic
 		potential = {
+			owns = 729
+			owns = 736
 			OR = {
 				tag = ITA
 				tag = ITS
 			}
-			owns = 729
-			owns = 736
 			NOT = { has_country_flag = conquest_adriatic_happened }
 			NOT = {
 				AND = {
@@ -657,7 +657,6 @@ political_decisions = {
 	picture = build_vittoriano
 		potential = {
 			owns = 749
-			NOT = { has_country_flag = vittoriano_built }
 			OR = {
 				tag = ITA
 				tag = ITS
@@ -795,7 +794,6 @@ political_decisions = {
 		picture = SAR_appoint_camillo_cavour
 		potential = {
 			tag = SAR
-			year = 1850
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -804,6 +802,7 @@ political_decisions = {
 				government = semi_constitutional_empire
 				government = constitutional_empire
 			}
+			year = 1850
 			NOT = { has_country_flag = camillo_cavour_appointed }
 		}
 

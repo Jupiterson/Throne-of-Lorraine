@@ -29,15 +29,15 @@ political_decisions = {
 		picture = unequal_treaty
 		potential = {
 			is_greater_power = yes
-			NOT = {
-				has_country_flag = negotiate_unequal_treaty_TKG
-				is_culture_group = far_east_asian
-			}
 			TKG = {
 				civilized = no
 				war_with = THIS
 				has_country_flag = rejected_commodore_perry
 				NOT = { has_country_flag = negotiate_unequal_treaty_TKG }
+			}
+			NOT = {
+				has_country_flag = negotiate_unequal_treaty_TKG
+				is_culture_group = far_east_asian
 			}
 		}
 
@@ -918,12 +918,12 @@ political_decisions = {
 	bonin_administration = {
 		picture = meiji_court
 		potential = {
+			owns = 1654
+			owns = 2525
 			OR = {
 				tag = JAP
 				tag = TKG
 			}
-			owns = 1654
-			owns = 2525
 			NOT = { has_country_flag = bonin_administration }
 		}
 		allow = {
@@ -951,14 +951,14 @@ political_decisions = {
 	taiwan_administration = {
 		picture = meiji_court
 		potential = {
-			OR = {
-				tag = JAP
-				tag = TKG
-			}
 			owns = 1485
 			owns = 2562
 			owns = 2681
 			owns = 2406
+			OR = {
+				tag = JAP
+				tag = TKG
+			}
 			NOT = { has_global_flag = taiwan_administration }
 		}
 		allow = {
@@ -999,6 +999,10 @@ political_decisions = {
 	taiwan_administration_china = {
 		picture = taiwan_china
 		potential = {
+			owns = 1485
+			owns = 2562
+			owns = 2681
+			owns = 2406
 			OR = {
 				tag = TAI
 				tag = FJN
@@ -1006,10 +1010,6 @@ political_decisions = {
 				tag = KMT
 				tag = QNG
 			}
-			owns = 1485
-			owns = 2562
-			owns = 2681
-			owns = 2406
 			has_global_flag = taiwan_administration
 		}
 		allow = {
@@ -1136,13 +1136,13 @@ political_decisions = {
 				exists = yes
 				has_country_modifier = fukoku_kyohei
 			}
-			ai = yes
 			NOT = {
 				tag = JAP
 				tag = TKG
 				tag = RYU
 				has_country_flag = unite_with_japan
 			}
+			ai = yes
 		}
 
 		allow = {
@@ -1246,8 +1246,6 @@ political_decisions = {
 				tag = TKG
 			}
 			has_country_modifier = fukoku_kyohei
-			civilized = yes
-			NOT = { has_country_flag = negotiate_treaty_shimonoseki }
 			OR = {
 				1485 = {
 					owner = {
@@ -1258,6 +1256,8 @@ political_decisions = {
 				truce_with = QNG
 				truce_with = TPG
 			}
+			civilized = yes
+			NOT = { has_country_flag = negotiate_treaty_shimonoseki }
 		}
 
 		allow = {
@@ -1297,7 +1297,6 @@ political_decisions = {
 	anglo_japanese_alliance = {
 		picture = treaty_signing
 		potential = {
-			blue_and_brown_water_schools = 1
 			OR = {
 				tag = JAP
 				tag = TKG
@@ -1309,6 +1308,7 @@ political_decisions = {
 				is_greater_power = yes
 				ai = yes
 			}
+			blue_and_brown_water_schools = 1
 			NOT = {
 				has_country_flag = anglo_alliance_created
 				any_owned_province = { is_core = HND }
@@ -1346,12 +1346,12 @@ political_decisions = {
 		picture = map_yellow_sea
 		potential = {
 			OR = {
-				tag = JAP
-				tag = TKG
-			}
-			OR = {
 				owns = 1086 #Pogobi
 				owns = 1087 #Ootomari
+			}
+			OR = {
+				tag = JAP
+				tag = TKG
 			}
 			civilized = yes
 			NOT = { has_global_flag = japanese_sakhalin }
@@ -1432,10 +1432,10 @@ political_decisions = {
 	total_war_in_satsuma = {
 		picture = begin_line_of_advantage
 		potential = {
+			tag = SAT
+			has_country_flag = satsuma_rebellion
 			NOT = { has_country_modifier = small_country_draft }
 			NOT = { has_country_flag = satsuma_draft_happened }
-			has_country_flag = satsuma_rebellion
-			tag = SAT
 		}
 
 		allow = {
@@ -1580,9 +1580,9 @@ political_decisions = {
 		picture = map_yellow_sea
 		potential = {
 			primary_culture = japanese
+			owns = 1642
 			1643 = { empty = yes }
 			1644 = { empty = yes }
-			owns = 1642
 			exists = yes
 		}
 
@@ -1613,8 +1613,8 @@ political_decisions = {
 	picture = imperial_rescript
 		potential = {
 			tag = JAP
-			NOT = { has_country_flag = imperial_rescript_decreed }
 			has_country_flag = sent_iwakura_mission
+			NOT = { has_country_flag = imperial_rescript_decreed }
 		}
 
 		allow = {

@@ -47,13 +47,6 @@ political_decisions = {
 	outside_SCA = {
 		picture = form_scandinavia
 		potential = {
-			NOT = {
-				exists = SCA
-				is_culture_group = scandinavian
-				primary_culture = finnish
-				has_global_flag = scandinavian_political_union
-				tag = RUS
-			}
 			OR = {
 				any_owned_province = { is_core = SWE }
 				any_owned_province = { is_core = NOR }
@@ -67,6 +60,13 @@ political_decisions = {
 				is_sphere_leader_of = DNN
 				is_sphere_leader_of = GRN
 				is_sphere_leader_of = ICL
+			}
+			NOT = {
+				exists = SCA
+				is_culture_group = scandinavian
+				primary_culture = finnish
+				has_global_flag = scandinavian_political_union
+				tag = RUS
 			}
 		}
 		allow = {
@@ -163,11 +163,6 @@ political_decisions = {
 		picture = form_scandinavia
 		potential = {
 			tag = RUS
-			NOT = {
-				exists = SCA
-				is_culture_group = scandinavian
-				has_global_flag = scandinavian_political_union
-			}
 			OR = {
 				any_owned_province = { is_core = SWE }
 				any_owned_province = { is_core = NOR }
@@ -183,6 +178,11 @@ political_decisions = {
 				is_sphere_leader_of = DNN
 				is_sphere_leader_of = GRN
 				is_sphere_leader_of = ICL
+			}
+			NOT = {
+				exists = SCA
+				is_culture_group = scandinavian
+				has_global_flag = scandinavian_political_union
 			}
 		}
 		allow = {
@@ -343,9 +343,7 @@ political_decisions = {
 				tag = SCA
 			}
 			NOT = { has_global_flag = estonia_in_scandinavia}
-			NOT = {
-				tag = RUS
-			}
+			NOT = { tag = RUS }
 		}
 		allow = {
 			EST = {
@@ -406,9 +404,7 @@ political_decisions = {
 				tag = SCA
 			}
 			NOT = { has_global_flag = karelia_in_scandinavia}
-			NOT = {
-				tag = RUS
-			}
+			NOT = { tag = RUS }
 		}
 		allow = {
 			KRL = {
@@ -466,7 +462,7 @@ political_decisions = {
 		potential = {
 			PAP = {
 				vassal_of = THIS
-				NOT = {government = theocracy}
+				NOT = { government = theocracy }
 			}
 			has_country_flag = catholic_country
 		}
@@ -509,7 +505,6 @@ political_decisions = {
 					vassal_of = THIS
 				}
 			}
-			NOT = { has_global_flag = HUN_ROM_treaty }
 			AUS_652 = {
 				OR = {
 					owned_by = HUN
@@ -528,6 +523,7 @@ political_decisions = {
 					owned_by = ROM
 				}
 			}
+			NOT = { has_global_flag = HUN_ROM_treaty }
 		}
 		allow = {
 			war = no

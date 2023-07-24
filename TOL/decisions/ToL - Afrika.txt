@@ -3,19 +3,19 @@ political_decisions = {
 	centralize = {
 		picture = form_the_rcmp
 		potential = {
-			NOT = { has_country_flag = centralized }
 			OR = { 
 				tag = DAM
 				tag = BUG
 				AND = {
-				tag = HAD
-				year = 1880
+					tag = HAD
+					year = 1880
 				}
 				tag = COP
 				tag = SUD
 				tag = MKA
 				tag = EGY
 			}
+			NOT = { has_country_flag = centralized }
 		}
 
 		allow = {
@@ -114,8 +114,8 @@ political_decisions = {
 	form_bantu	= {
 		picture = form_rajputana
 		potential = {
-			BTU = { exists = no }
 			owns = 1986
+			BTU = { exists = no }
 			capital_scope = { continent = central_africa }
 		}
 
@@ -289,18 +289,21 @@ political_decisions = {
 ##############
 	form_nguni = {
 		picture = form_nguni
-		ai_will_do = { factor = 1 }
 		potential = {
-        primary_culture = zulu
-		NOT = { exists = NGU }
-		NOT = { exists = MZA }
-		NOT = { exists = ROQ }
-		OR = { NOT = { tag = ZUL }
-		       AND = { tag = ZUL
-			           year = 1841}}
-		NOT = { government = absolute_empire }
-		NOT = { government = semi_constitutional_empire }
-		NOT = { government = constitutional_empire }
+			primary_culture = zulu
+			NOT = { exists = NGU }
+			NOT = { exists = MZA }
+			NOT = { exists = ROQ }
+			OR = {
+				NOT = { tag = ZUL }
+				AND = {
+					tag = ZUL
+					year = 1841
+				}
+			}
+			NOT = { government = absolute_empire }
+			NOT = { government = semi_constitutional_empire }
+			NOT = { government = constitutional_empire }
 		       
 		}
 
@@ -344,6 +347,7 @@ political_decisions = {
 			add_core = THIS
 		    }				
 		}
+		ai_will_do = { factor = 1 }
 		
 	}
 	
@@ -351,10 +355,10 @@ political_decisions = {
 		picture = invade_zulu
 		ai_will_do = { factor = 1 }
 		potential = {
-            year = 1845
 			has_country_flag = xhosa_country
 			has_global_flag = xhosaprophet
 			NOT = { has_country_flag = zulwar_passed }
+            year = 1845
 		}
 
 		allow = {
@@ -384,10 +388,10 @@ political_decisions = {
 		picture = xhosa_misc
 		ai_will_do = { factor = 1 }
 		potential = {
-            year = 1860
             has_country_flag = xhosa_country
 			has_global_flag = xhosaprophet	    
 			NOT = { has_country_flag = holyed_passed }
+            year = 1860
 		}
 
 		allow = {
@@ -524,9 +528,9 @@ political_decisions = {
 		picture = xhosa_map4
 		potential = {
 			OR = {
-			tag = GCA
-			tag = RHA
-			tag = NDL
+				tag = GCA
+				tag = RHA
+				tag = NDL
 			}
 			NOT = { exists = XHO }
 		}
@@ -603,9 +607,11 @@ political_decisions = {
 	recore_cape = {
 	picture = cape_map
         potential = {
-            tag = SCO
-			tag = ENG
             owns = 2087
+			OR = {
+				tag = SCO
+				tag = ENG
+			}
 			has_global_flag = won_datiann_war 
         }
 
@@ -1209,13 +1215,13 @@ political_decisions = {
 	 
 	 rename_KHB_SCO = {
 		potential = {
+			owns = 2087
+			owns = 3591
+			owns = 2089
 			OR = {
 				primary_culture = scottish
 				accepted_culture = scottish
 			}
-			owns = 2087
-			owns = 3591
-			owns = 2089
 			NOT = { has_global_flag = KHB_renamed_SCO }
 			has_global_flag = KHB_renamed_KHB
 		}
@@ -1239,8 +1245,8 @@ political_decisions = {
 	
 	rename_KHB_KHB = {
 		potential = {
-			primary_culture = khoisan
 			owns = 3591
+			primary_culture = khoisan
 			NOT = { has_global_flag = KHB_renamed_KHB }
 		}
 		
@@ -1539,9 +1545,9 @@ political_decisions = {
 		picture = map_zimbabwe
 		ai_will_do = { factor = 1 }
 		potential = {
-		NOT = { exists = SHO }
-        primary_culture = southern_bantu
-		NOT = { tag = SHO }
+			primary_culture = southern_bantu
+			NOT = { exists = SHO }
+			NOT = { tag = SHO }
 		}
 
 		allow = {
@@ -1563,9 +1569,9 @@ political_decisions = {
 		picture = map_malawi
 		ai_will_do = { factor = 1 }
 		potential = {
-		tag = MLW
-		year = 1856
-		NOT = { has_country_flag = MLW_grow }
+			tag = MLW
+			year = 1856
+			NOT = { has_country_flag = MLW_grow }
 		}
 
 		allow = {
@@ -1583,10 +1589,10 @@ political_decisions = {
 		picture = map_zambia
 		ai_will_do = { factor = 1 }
 		potential = {
-		tag = SHO
-		year = 1860
-		is_vassal = no
-		NOT = { has_country_flag = expanded_zam_SHO }
+			tag = SHO
+			year = 1860
+			is_vassal = no
+			NOT = { has_country_flag = expanded_zam_SHO }
 		}
 
 		allow = {
@@ -1606,10 +1612,10 @@ political_decisions = {
 		picture = map_malawi
 		ai_will_do = { factor = 1 }
 		potential = {
-		tag = SHO
-		year = 1858
-		is_vassal = no
-		NOT = { has_country_flag = expanded_nyas }
+			tag = SHO
+			year = 1858
+			is_vassal = no
+			NOT = { has_country_flag = expanded_nyas }
 		}
 
 		allow = {
@@ -1631,10 +1637,10 @@ political_decisions = {
 		picture = map_mozambique
 		ai_will_do = { factor = 1 }
 		potential = {
-		tag = SHO
-		year = 1865
-		is_vassal = no
-		NOT = { has_country_flag = expanded_zafi }
+			tag = SHO
+			year = 1865
+			is_vassal = no
+			NOT = { has_country_flag = expanded_zafi }
 		}
 
 		allow = {
@@ -1836,10 +1842,10 @@ political_decisions = {
 	conquer_namib_TSW = {
 		picture = map_namibia
 		potential = {
-		OR = { tag = TSW
-		       tag = BTH }
 		owns = 3599
 		owns = 2077
+		OR = { tag = TSW
+		       tag = BTH }
 		year = 1877
 		NOT = { has_country_flag = conquered_namib }
 		}
@@ -2022,11 +2028,11 @@ political_decisions = {
 		picture = boer_leader  
 		ai_will_do = { factor = 1 }
 		potential = {
-		NOT = { has_country_flag = new_world_nation }
 		tag = ORA
+		has_leader = "Morven Stewart"
 		year = 1842
 		political_reform_name = none_voting
-		has_leader = "Morven Stewart"
+		NOT = { has_country_flag = new_world_nation }
 		}
 		
 
@@ -2057,9 +2063,9 @@ political_decisions = {
 		picture = drummonder_dream
 		ai_will_do = { factor = 1 }
 		potential = {
-		NOT = { has_country_flag = new_world_nation }
 		tag = ORA
 		year = 1843
+		NOT = { has_country_flag = new_world_nation }
 		}
 		
 
@@ -2103,8 +2109,6 @@ political_decisions = {
 				primary_culture = scottish
 				accepted_culture = scottish
 			}
-		NOT = { tag = ORA }
-		NOT = { tag = DTI }
 			owns = 2094
 			owns = 2101
 			owns = 2102
@@ -2113,6 +2117,8 @@ political_decisions = {
 			owns = 2106
 			owns = 2108
 			owns = 2109
+		NOT = { tag = ORA }
+		NOT = { tag = DTI }
 			NOT = { has_global_flag = TRN_organized }
 		}
 		allow = {
@@ -2188,10 +2194,6 @@ political_decisions = {
 	rename_TRN_SCO = {
 		picture = xhosa_map1
 		potential = {
-		OR = {
-				primary_culture = scottish
-				accepted_culture = scottish
-			}
 			owns = 2094
 			owns = 2101
 			owns = 2102
@@ -2200,6 +2202,10 @@ political_decisions = {
 			owns = 2106
 			owns = 2108
 			owns = 2109
+		OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
 			NOT = { has_global_flag = TRN_renamed_SCO }
 		}
 		allow = {
@@ -2235,12 +2241,6 @@ political_decisions = {
 	rename_TRN_BTH = {
 		picture = xhosa_map1
 		potential = {
-		OR = { primary_culture =  southern_bantu 
-	                     primary_culture =  nyasa
-		                 primary_culture =  zulu
-		                 primary_culture =  sotho
-		                 primary_culture =  mifangaro
-		                 primary_culture =  khoisan }
 			owns = 2094
 			owns = 2101
 			owns = 2102
@@ -2249,6 +2249,12 @@ political_decisions = {
 			owns = 2106
 			owns = 2108
 			owns = 2109
+		OR = { primary_culture =  southern_bantu 
+	                     primary_culture =  nyasa
+		                 primary_culture =  zulu
+		                 primary_culture =  sotho
+		                 primary_culture =  mifangaro
+		                 primary_culture =  khoisan }
 			NOT = { has_global_flag = TRN_renamed_BTH }
 		}
 		allow = {
@@ -2284,10 +2290,6 @@ political_decisions = {
 	rename_NAL_SCO = {
 		picture = xhosa_map1
 		potential = {
-		OR = {
-				primary_culture = scottish
-				accepted_culture = scottish
-			}
 			owns = 2100
 			owns = 2111
 			owns = 2112
@@ -2297,6 +2299,10 @@ political_decisions = {
 			owns = 2050
 			owns = 2049
 			owns = 2104
+		OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
 			NOT = { has_global_flag = NAL_renamed_SCO }
 		}
 		allow = {
@@ -2327,12 +2333,6 @@ political_decisions = {
 	rename_NAL_NGU = {
 		picture = xhosa_map1
 		potential = {
-		OR = { primary_culture =  southern_bantu 
-	                     primary_culture =  nyasa
-		                 primary_culture =  zulu
-		                 primary_culture =  sotho
-		                 primary_culture =  mifangaro
-		                 primary_culture =  khoisan }
 			owns = 2100
 			owns = 2111
 			owns = 2112
@@ -2342,6 +2342,12 @@ political_decisions = {
 			owns = 2050
 			owns = 2049
 			owns = 2104
+		OR = { primary_culture =  southern_bantu 
+	                     primary_culture =  nyasa
+		                 primary_culture =  zulu
+		                 primary_culture =  sotho
+		                 primary_culture =  mifangaro
+		                 primary_culture =  khoisan }
 			NOT = { has_global_flag = NAL_renamed_NGU }
 		}
 		allow = {
@@ -2372,16 +2378,16 @@ political_decisions = {
 	rename_qariega_NGU = {
 		picture = xhosa_map1
 		potential = {
+			owns = 2096
+			owns = 2097
+			owns = 3592
+			owns = 3595
 		OR = { primary_culture =  southern_bantu 
 	                     primary_culture =  nyasa
 		                 primary_culture =  zulu
 		                 primary_culture =  sotho
 		                 primary_culture =  mifangaro
 		                 primary_culture =  khoisan }
-			owns = 2096
-			owns = 2097
-			owns = 3592
-			owns = 3595
 			NOT = { has_global_flag = qariega_renamed_NGU }
 		}
 		allow = {
@@ -2403,14 +2409,14 @@ political_decisions = {
 	rename_qariega_SCO = {
 		picture = xhosa_map1
 		potential = {
-		OR = {
-				primary_culture = scottish
-				accepted_culture = scottish
-			}
 			owns = 2096
 			owns = 2097
 			owns = 3592
 			owns = 3595
+		OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
 			NOT = { has_global_flag = qariega_renamed_SCO }
 		}
 		allow = {

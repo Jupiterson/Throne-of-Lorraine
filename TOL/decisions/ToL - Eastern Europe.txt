@@ -70,8 +70,8 @@ national_awakening = {
 
 		potential = {
 			primary_culture = polish
-			ai = yes
 			NOT = { exists = POL }
+			ai = yes
 			NOT = { has_country_flag = post_colonial_country }
 			NOT = { tag = PLC }
 			NOT = { tag = WSF }
@@ -350,11 +350,6 @@ national_awakening = {
 
 		potential = {
 			primary_culture = polish
-			NOT = { owns = 706 }
-			NOT = { tag = PLC
-					tag = PHC
-					tag = PZN
-					}
 			any_neighbor_country = {
 				owns = 706
 				OR = {
@@ -362,6 +357,11 @@ national_awakening = {
 					tag = CPL
 				}
 			}
+			NOT = { owns = 706 }
+			NOT = { tag = PLC
+					tag = PHC
+					tag = PZN
+					}
 			NOT = { has_country_flag = unite_with_poland }
 			NOT = { has_country_flag = post_colonial_country }
 		}
@@ -866,14 +866,14 @@ national_awakening = {
 	claim_prussia = {
 		picture = map_ingria
 		potential = {
-		OR = {
-			tag = POL
-			tag = PLR
-			tag = PLC
-			tag = PHC
+			owns = 3327
+			OR = {
+				tag = POL
+				tag = PLR
+				tag = PLC
+				tag = PHC
 			}
 			NOT = { has_country_flag = prussia }
-			owns = 3327
 		}
 
 		allow = {
@@ -895,8 +895,8 @@ national_awakening = {
 		picture = map_ingria
 		potential = {
 			tag = LIT
-			NOT = { has_country_flag = prussia }
 			owns = 698
+			NOT = { has_country_flag = prussia }
 		}
 
 		allow = {

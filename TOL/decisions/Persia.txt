@@ -64,8 +64,8 @@ political_decisions = {
 		picture = suezcanalcompany
 		potential = {
 			tag = PER
-			civilized = no
 			has_country_modifier = silver_age
+			civilized = no
 			NOT = {	has_country_flag = dar_al_funun_built }
 		}
 		allow = {
@@ -143,9 +143,9 @@ political_decisions = {
 		picture = amir_kabir
 		potential = {
 			tag = PER
+			has_country_modifier = silver_age
 			NOT = { year = 1852 }
 			NOT = {	has_country_flag = amir_kabir }
-			has_country_modifier = silver_age
 		}
 
 		allow = {
@@ -190,7 +190,6 @@ political_decisions = {
 		picture = prince_mirza
 		potential = {
 			tag = PER
-			NOT = { has_country_flag = tea_in_iran }
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -199,6 +198,7 @@ political_decisions = {
 				government = semi_constitutional_empire
 				government = constitutional_empire
 			}
+			NOT = { has_country_flag = tea_in_iran }
 		}
 
 		allow = {

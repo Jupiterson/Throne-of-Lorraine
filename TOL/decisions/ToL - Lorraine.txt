@@ -101,8 +101,8 @@ political_decisions = {
 		picture = luxembourg_crisis
 		potential = {
 			tag = LOR
-			NOT = { has_country_flag = luxembourg_gone }
 			has_country_flag = champania
+			NOT = { has_country_flag = luxembourg_gone }
 		}
 
 		allow = {

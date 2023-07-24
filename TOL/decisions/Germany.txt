@@ -3,13 +3,13 @@ political_decisions = {
 	construct_germania_werft = {
 		picture = construct_germania_werft
 		potential = {
-			NOT = { has_global_flag = germania_werft_has_been_built }
+			owns = 369
 			OR = {
 				tag = HNS
 				tag = UBD
 				tag = GER
 			}
-			owns = 369
+			NOT = { has_global_flag = germania_werft_has_been_built }
 		}
 
 		allow = {
@@ -190,8 +190,8 @@ political_decisions = {
 
 	schwabing_circles = {
 		potential = {
-			is_culture_group = germanic
 			owns = 599
+			is_culture_group = germanic
 			NOT = { has_global_flag = schwabing_encircled }
 		}
 
@@ -209,15 +209,15 @@ political_decisions = {
 
 	support_biesterfelds = {
 		potential = {
+			owns = 585 #Lippe
 			OR = {
 				tag = LIP
 				tag = GER
 				tag = GCF
 			}
-			owns = 585 #Lippe
-			year = 1880
 			NOT = { has_country_flag = lippe_dispute_solved }
 			exists = PRU
+			year = 1880
 		}
 
 		allow = {
@@ -316,13 +316,13 @@ political_decisions = {
 	construct_the_walhalla = {
 		picture = construct_the_walhalla
 		potential = {
+			owns = 602
 			OR = {
 				tag = BAV
 				tag = SGF
 				tag = GCF
 				tag = GER
 			}
-			owns = 602
 			NOT = { has_global_flag = the_walhalla_is_built }
 		}
 
@@ -385,15 +385,15 @@ political_decisions = {
 	the_ruhr_boom = {
 		picture = essen_ruhr
 		potential = {
+			owns = 578
+			owns = 2561
+			owns = 575
 			OR = {
 				tag = PRU
 				tag = GER
 				tag = GCF
 				tag = NGF
 			}
-			owns = 578
-			owns = 2561
-			owns = 575
 			NOT = { has_global_flag = ruhr_boom_has_happened }
 		}
 
