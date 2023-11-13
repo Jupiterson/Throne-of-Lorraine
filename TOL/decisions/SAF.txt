@@ -299,7 +299,7 @@ educate_the_natives = {
 		picture = embrace_minority
 
 		potential = {
-			primary_culture = boer
+			primary_culture = scottish
 			nationalism_n_imperialism = 1
 			NOT = { has_country_flag = natives_educated }
 		}
@@ -338,7 +338,7 @@ educate_the_natives = {
 	boer_south_africa = {
 		picture = form_south_africa
 		potential = {
-			primary_culture = boer
+			primary_culture = scottish
 			nationalism_n_imperialism = 1
 			SAF = {
 				exists = no
@@ -363,7 +363,7 @@ educate_the_natives = {
 			SAF = {
 				all_core = { add_core = VLK }
 				primary_culture = british
-				add_accepted_culture = boer
+				add_accepted_culture = scottish
 			}
 			any_pop = {
 				limit = { is_primary_culture = yes }

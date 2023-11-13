@@ -135,8 +135,6 @@ political_decisions = {
 			ARG_2398 = { secede_province = THIS }
 			3296 = { secede_province = THIS }
 			1994 = { secede_province = THIS }
-			POR_2006 = { secede_province = THIS }
-			POR_2003 = { secede_province = THIS }
 			RUS_2590 = { secede_province = THIS }
 			ENG_2509 = { secede_province = THIS }
 			ENG_2513 = { secede_province = THIS }
@@ -153,9 +151,6 @@ political_decisions = {
 			FRA_1884 = { secede_province = THIS }
 			FRA_1892 = { secede_province = THIS }
 			FRA_1893 = { secede_province = THIS }
-			POR_1999 = { secede_province = THIS }
-			FRA_1978 = { secede_province = THIS }
-			FRA_1972 = { secede_province = THIS }
 			ENG_2125 = { secede_province = THIS }
 			NET_1451 = { secede_province = THIS }
 			AST_2534 = { secede_province = THIS }
@@ -648,7 +643,6 @@ political_decisions = {
 					OR = {
 						has_pop_culture = asian_minor
 						is_culture_group = west_african
-						is_culture_group = central_african
 						is_culture_group = east_african
 						is_culture_group = southern_african
 					}
@@ -869,7 +863,6 @@ political_decisions = {
 						has_pop_religion = sunni
 						has_pop_religion = shiite
 						has_pop_religion = mahayana
-						has_pop_culture = malayalam
 					}
 				}
 				literacy = -0.03
@@ -1585,7 +1578,6 @@ political_decisions = {
 			}
 
 			AUS_612 = { any_pop = { literacy = 0.1 } }
-			AUS_734 = { any_pop = { limit = { has_pop_culture = south_german } literacy = 0.1 } }
 			any_pop = { limit = { has_pop_culture = north_german } literacy = 0.5 }
 			any_pop = { limit = { has_pop_religion = protestant NOT = { has_pop_culture = north_german } literacy = 0.05 } }
 			any_pop = { limit = { has_pop_culture = czech } literacy = 0.37 }
@@ -1712,7 +1704,6 @@ political_decisions = {
 					OR = {
 						type = slaves
 						is_culture_group = west_african
-						is_culture_group = central_african
 						is_culture_group = east_african
 						is_culture_group = southern_african
 						has_pop_culture = afro_french
@@ -2003,9 +1994,7 @@ political_decisions = {
 			any_pop = { limit = { has_pop_culture = north_german } literacy = 0.5 }
 			any_pop = { limit = { has_pop_culture = irish } literacy = 0.2 }
 			any_pop = { limit = { has_pop_culture = akino_german } literacy = 0.35 }
-			USA_243 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.14 } }
 			USA_247 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.13 } }
-			USA_231 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.10 } }
 			USA_176 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.12 } }
 			USA_232 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.10 } }
 			USA_223 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.09 } }
@@ -2013,18 +2002,10 @@ political_decisions = {
 			USA_151 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.08 } }
 			USA_139 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.08 } }
 			USA_219 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.06 } }
-			USA_200 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.04 } }
-			USA_194 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = 0.02 } }
 			USA_170 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.01 } }
 			USA_148 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.01 } }
-			USA_185 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.03 } }
 			USA_196 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.04 } }
 			222 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.1 } }
-			USA_211 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.05 } }
-			USA_205 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.05 } }
-			USA_205 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.05 } }
-			USA_201 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.06 } }
-			USA_201 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.06 } }
 			USA_144 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.08 } }
 			USA_188 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.1 } }
 			USA_2556 = { any_pop = { limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } } literacy = -0.14 } }
@@ -2034,7 +2015,6 @@ political_decisions = {
 						type = slaves
 						has_pop_culture = afro_french
 						is_culture_group = west_african
-						is_culture_group = central_african
 						is_culture_group = east_african
 						is_culture_group = southern_african
 						has_pop_culture = dakota

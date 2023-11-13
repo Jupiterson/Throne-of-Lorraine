@@ -2263,7 +2263,6 @@ free_peoples = {
 			}
 			AND = {
 				FROM = { tag = BOL }
-				exists = PBC
 			}
 		}
 		FROM = {
@@ -2652,7 +2651,6 @@ liberate_country = {
 			}
 			AND = {
 				FROM = { tag = BOL }
-				exists = PBC
 			}
 		}
 		OR = {
@@ -6368,16 +6366,16 @@ annex_africa = {
 			}
 			#Angola
 			AND = {
-				any_owned_province = { region = POR_1999 }
+				any_owned_province = { region = POR_2005 }
 				OR = {
 					any_neighbor_country = {
 						NOT = { tag = THIS tag = ETH }
 						civilized = yes
-						any_owned_province = { region = POR_1999 }
+						any_owned_province = { region = POR_2005 }
 					}
 					any_greater_power = {
 						NOT = { tag = THIS tag = ETH }
-						any_owned_province = { region = POR_1999 }
+						any_owned_province = { region = POR_2005 }
 					}
 				}
 			}
@@ -6481,7 +6479,6 @@ annex_africa = {
 			AND = {
 				any_owned_province = {
 					OR = {
-						region = POR_2049
 						region = POR_2054
 						region = POR_2053
 						region = POR_2060
@@ -6493,7 +6490,6 @@ annex_africa = {
 						civilized = yes
 						any_owned_province = {
 							OR = {
-								region = POR_2049
 								region = POR_2054
 								region = POR_2053
 								region = POR_2060
@@ -6504,7 +6500,6 @@ annex_africa = {
 						NOT = { tag = THIS tag = ETH }
 						any_owned_province = {
 							OR = {
-								region = POR_2049
 								region = POR_2054
 								region = POR_2053
 								region = POR_2060
@@ -6789,10 +6784,8 @@ annex_africa_full = {
 			tag = TRI
 			tag = LIB
 			tag = CYR
-			primary_culture = kefficho
 			primary_culture = ethiopian
 			primary_culture = cushitic
-			primary_culture = harari
 			has_country_flag = post_colonial_country
 		}
 		OR = {
@@ -6951,16 +6944,16 @@ annex_africa_full = {
 			}
 			#Angola
 			AND = {
-				any_owned_province = { region = POR_1999 }
+				any_owned_province = { region = POR_2005 }
 				OR = {
 					any_neighbor_country = {
 						NOT = { tag = THIS tag = ETH }
 						civilized = yes
-						any_owned_province = { region = POR_1999 }
+						any_owned_province = { region = POR_2005 }
 					}
 					any_greater_power = {
 						NOT = { tag = THIS tag = ETH }
-						any_owned_province = { region = POR_1999 }
+						any_owned_province = { region = POR_2005 }
 					}
 				}
 			}
@@ -7064,7 +7057,6 @@ annex_africa_full = {
 			AND = {
 				any_owned_province = {
 					OR = {
-						region = POR_2049
 						region = POR_2054
 						region = POR_2053
 						region = POR_2060
@@ -7076,7 +7068,6 @@ annex_africa_full = {
 						civilized = yes
 						any_owned_province = {
 							OR = {
-								region = POR_2049
 								region = POR_2054
 								region = POR_2053
 								region = POR_2060
@@ -7087,7 +7078,6 @@ annex_africa_full = {
 						NOT = { tag = THIS tag = ETH }
 						any_owned_province = {
 							OR = {
-								region = POR_2049
 								region = POR_2054
 								region = POR_2053
 								region = POR_2060
@@ -9950,7 +9940,6 @@ colonial_conquest = {
 						region = POR_2060
 						region = POR_2053
 						region = POR_2054
-						region = POR_2049
 					}
 				}
 			}
@@ -9992,7 +9981,7 @@ colonial_conquest = {
 				THIS = { owns = 1413 }
 				any_owned_province = {
 					OR = {
-						region = ATJ_1405
+						region = ATJ_3295
 						region = NET_1401
 						region = NET_1398
 						region = NET_1413
@@ -10122,7 +10111,6 @@ colonial_conquest = {
 						region = POR_2060
 						region = POR_2053
 						region = POR_2054
-						region = POR_2049
 					}
 				}
 			}
@@ -10165,7 +10153,7 @@ colonial_conquest = {
 				THIS = { owns = 1413 }
 				any_owned_province = {
 					OR = {
-						region = ATJ_1405
+						region = ATJ_3295
 						region = NET_1401
 						region = NET_1398
 						region = NET_1413
@@ -10308,7 +10296,6 @@ colonial_conquest = {
 								region = POR_2060
 								region = POR_2053
 								region = POR_2054
-								region = POR_2049
 							}
 						}
 						add_core = MOZ
@@ -10407,7 +10394,6 @@ colonial_conquest_full = {
 						region = POR_2060
 						region = POR_2053
 						region = POR_2054
-						region = POR_2049
 					}
 				}
 			}
@@ -10448,7 +10434,7 @@ colonial_conquest_full = {
 				THIS = { owns = 1413 }
 				any_owned_province = {
 					OR = {
-						region = ATJ_1405
+						region = ATJ_3295
 						region = NET_1401
 						region = NET_1398
 						region = NET_1413
@@ -10468,7 +10454,7 @@ colonial_conquest_full = {
 				THIS = { owns = 1413 }
 				any_owned_province = {
 					OR = {
-						region = ATJ_1405
+						region = ATJ_3295
 						region = NET_1401
 						region = NET_1398
 						region = NET_1413
@@ -10620,7 +10606,6 @@ colonial_conquest_full = {
 								region = POR_2060
 								region = POR_2053
 								region = POR_2054
-								region = POR_2049
 							}
 						}
 						add_core = MOZ
@@ -10892,7 +10877,6 @@ claim_colonial_region = {
 				THIS = {
 					any_owned_province = {
 						OR = {
-							region = POR_2049
 							region = POR_2054
 							region = POR_2053
 							region = POR_2060
@@ -10901,7 +10885,6 @@ claim_colonial_region = {
 				}
 				any_owned_province = {
 					OR = {
-						region = POR_2049
 						region = POR_2054
 						region = POR_2053
 						region = POR_2060
@@ -10935,8 +10918,8 @@ claim_colonial_region = {
 			}
 			#Angola
 			AND = {
-				THIS = { any_owned_province = { region = POR_1999 } }
-				any_owned_province = { region = POR_1999 }
+				THIS = { any_owned_province = { region = POR_2005 } }
+				any_owned_province = { region = POR_2005 }
 			}
 			#Algiers
 			AND = {
@@ -11216,7 +11199,6 @@ claim_colonial_region = {
 				THIS = {
 					any_owned_province = {
 						OR = {
-							region = POR_2049
 							region = POR_2054
 							region = POR_2053
 							region = POR_2060
@@ -11225,7 +11207,6 @@ claim_colonial_region = {
 				}
 				any_owned_province = {
 					OR = {
-						region = POR_2049
 						region = POR_2054
 						region = POR_2053
 						region = POR_2060
@@ -11258,8 +11239,8 @@ claim_colonial_region = {
 			}
 			#Angola
 			AND = {
-				THIS = { any_owned_province = { region = POR_1999 } }
-				any_owned_province = { region = POR_1999 }
+				THIS = { any_owned_province = { region = POR_2005 } }
+				any_owned_province = { region = POR_2005 }
 			}
 			#Algiers
 			AND = {
@@ -11906,7 +11887,6 @@ claim_colonial_region_full = {
 					NOT = { tag = TUR }
 					any_owned_province = {
 						OR = {
-							region = POR_2049
 							region = POR_2054
 							region = POR_2053
 							region = POR_2060
@@ -11915,7 +11895,6 @@ claim_colonial_region_full = {
 				}
 				any_owned_province = {
 					OR = {
-						region = POR_2049
 						region = POR_2054
 						region = POR_2053
 						region = POR_2060
@@ -11950,8 +11929,8 @@ claim_colonial_region_full = {
 			#Angola
 			AND = {
 				NOT = { tag = TUR }
-				THIS = { any_owned_province = { region = POR_1999 } }
-				any_owned_province = { region = POR_1999 }
+				THIS = { any_owned_province = { region = POR_2005 } }
+				any_owned_province = { region = POR_2005 }
 			}
 			#Algiers
 			AND = {
@@ -12695,7 +12674,6 @@ liberate_puppet = {
 			}
 			AND = {
 				FROM = { tag = BOL }
-				exists = PBC
 			}
 		}
 		OR = {
@@ -12965,7 +12943,6 @@ liberate_puppet_no_infamy = {
 			}
 			AND = {
 				FROM = { tag = BOL }
-				exists = PBC
 			}
 		}
 		OR = {

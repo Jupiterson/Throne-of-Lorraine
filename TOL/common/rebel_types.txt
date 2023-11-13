@@ -1489,12 +1489,6 @@ nationalist_rebels = {
 		}
 		modifier = {
 			factor = 0
-			culture = north_andean
-			location = { is_core = BOL }
-			country = { tag = PBC }
-		}
-		modifier = {
-			factor = 0
 			location = {
 				OR = {
 					is_core = ANT
@@ -1777,7 +1771,6 @@ pan_nationalist_rebels = {
 				OR = {
 					primary_culture = breton
 					primary_culture = occitan
-					primary_culture = maltese
 					is_culture_group = american_cultures
 				}
 			}
@@ -3094,10 +3087,6 @@ red_shirts = {
 		modifier = {
 			factor = 1.05
 			political_reform_want = 0.15
-		}
-		modifier = {
-			factor = 0.5
-			has_country_modifier = call_to_union
 		}
 	}
 
@@ -6416,7 +6405,6 @@ native_rebels = {
 				OR = {
 					is_culture_group = arab
 					is_culture_group = west_african
-					is_culture_group = central_african
 					is_culture_group = east_african
 					is_culture_group = southern_african
 					is_culture_group = southeast_asian

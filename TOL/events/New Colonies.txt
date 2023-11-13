@@ -1586,7 +1586,6 @@ province_event = {
 
 	trigger = {
 		OR = {
-			region = FRA_1972
 			region = SPA_1955
 		}
 		owned_by = THIS
@@ -1638,7 +1637,6 @@ province_event = {
 	desc = "EVTDESC98837"
 
 	trigger = {
-		region = FRA_1978
 		owned_by = THIS
 		controlled_by = THIS
 		any_neighbor_province = {
@@ -1696,9 +1694,8 @@ province_event = {
 
 	trigger = {
 		OR = {
-			region = FRA_1978
 			region = BEL_1977
-			region = POR_1999
+			region = POR_2005
 		}
 		owned_by = THIS
 		controlled_by = THIS
@@ -2031,7 +2028,6 @@ province_event = {
 
 	trigger = {
 		OR = {
-			region = POR_2006
 			region = BEL_1987
 		}
 		owned_by = THIS
@@ -2596,9 +2592,7 @@ province_event = {
 
 	trigger = {
 		OR = {
-			region = POR_2003
-			region = POR_2006
-			region = POR_1999
+			region = POR_2005
 		}
 		owned_by = THIS
 		controlled_by = THIS
@@ -3409,9 +3403,7 @@ province_event = {
 
 	trigger = {
 		OR = {
-			region = POR_2003
-			region = POR_2006
-			region = POR_1999
+			region = POR_2005
 		}
 		owned_by = THIS
 		controlled_by = THIS
@@ -3464,10 +3456,9 @@ province_event = {
 
 	trigger = {
 		OR = {
-			region = POR_2049
+			region = POR_2054
 			region = POR_2053
 			region = POR_2060
-			region = POR_2054
 		}
 		owned_by = THIS
 		controlled_by = THIS

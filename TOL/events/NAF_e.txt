@@ -61,7 +61,9 @@ country_event = {
 	option = {
 		name = "Louisiana and Mississippi."
 		USA_139 = { add_core = NAF } #Louisiana
-		USA_194 = { add_core = NAF } #Mississippi
+		USA_196 = { add_core = NAF } #Alabama
+		USA_200 = { add_core = NAF } #Florida
+		USA_205 = { add_core = NAF } #South Carolina
 		NAF = { capital = 140 }
 		badboy = -2
 		country_event = 4413220
@@ -73,8 +75,9 @@ country_event = {
 	option = {
 		name = "Louisiana, Mississippi, Alabama, and Western Florida."
 		USA_139 = { add_core = NAF } #Louisiana
-		USA_194 = { add_core = NAF } #Mississippi
 		USA_196 = { add_core = NAF } #Alabama
+		USA_200 = { add_core = NAF } #Florida
+		USA_205 = { add_core = NAF } #South Carolina
 		198 = { add_core = NAF }
 		badboy = -5
 		country_event = 4413220
@@ -86,10 +89,8 @@ country_event = {
 	option = {
 		name = "New Africa shall encompass the Lower South!"
 		USA_139 = { add_core = NAF } #Louisiana
-		USA_194 = { add_core = NAF } #Mississippi
 		USA_196 = { add_core = NAF } #Alabama
 		USA_200 = { add_core = NAF } #Florida
-		USA_201 = { add_core = NAF } #Georgia
 		USA_205 = { add_core = NAF } #South Carolina
 		badboy = -10
 		country_event = 4413220
@@ -183,10 +184,8 @@ country_event = {
 		name = "The South is our land!"
 		USA_144 = { add_core = NAF } #Arkansas
 		USA_148 = { add_core = NAF } #Missouri
-		USA_185 = { add_core = NAF } #Kentucky
 		USA_188 = { add_core = NAF } #Tennessee
 		USA_2556 = { add_core = NAF } #North Carolina
-		USA_211 = { add_core = NAF } #Virginia
 		USA_218 = { add_core = NAF } #West Virginia
 		USA_219 = { add_core = NAF } #Maryland
 		badboy = 15
@@ -205,10 +204,8 @@ country_event = {
 		ENG_2228 = { add_core = NAF }
 		USA_144 = { add_core = NAF } #Arkansas
 		USA_148 = { add_core = NAF } #Missouri
-		USA_185 = { add_core = NAF } #Kentucky
 		USA_188 = { add_core = NAF } #Tennessee
 		USA_2556 = { add_core = NAF } #North Carolina
-		USA_211 = { add_core = NAF } #Virginia
 		USA_218 = { add_core = NAF } #West Virginia
 		USA_219 = { add_core = NAF } #Maryland
 		badboy = 25
@@ -963,10 +960,8 @@ country_event = { ##### minor slave revolt
 		}
 		OR = {
 			USA_139 = { owned_by = THIS } #Louisiana
-			USA_194 = { owned_by = THIS } #Mississippi
 			USA_196 = { owned_by = THIS } #Alabama
 			USA_200 = { owned_by = THIS } #Florida
-			USA_201 = { owned_by = THIS } #Georgia
 			USA_205 = { owned_by = THIS } #South Carolina
 		}
 		OR = {
@@ -1011,10 +1006,8 @@ country_event = { ##### minor slave revolt
 				}
 				OR = {
 					region = USA_139
-					region = USA_194
 					region = USA_196
 					region = USA_200
-					region = USA_201
 					region = USA_205
 				}
 			}
@@ -1084,10 +1077,8 @@ country_event = { ##### large slave
 		}
 		OR = {
 			USA_139 = { owned_by = THIS } #Louisiana
-			USA_194 = { owned_by = THIS } #Mississippi
 			USA_196 = { owned_by = THIS } #Alabama
 			USA_200 = { owned_by = THIS } #Florida
-			USA_201 = { owned_by = THIS } #Georgia
 			USA_205 = { owned_by = THIS } #South Carolina
 		}
 		OR = {
@@ -1132,10 +1123,8 @@ country_event = { ##### large slave
 				}
 				OR = {
 					region = USA_139
-					region = USA_194
 					region = USA_196
 					region = USA_200
-					region = USA_201
 					region = USA_205
 				}
 			}
@@ -1204,10 +1193,8 @@ country_event = { #####NAF notify revolt large
 					owned_by = FROM
 					OR = {
 						region = USA_139
-						region = USA_194
 						region = USA_196
 						region = USA_200
-						region = USA_201
 						region = USA_205
 					}
 				}

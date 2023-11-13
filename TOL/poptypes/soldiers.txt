@@ -183,14 +183,9 @@ country_migration_target = {
 			AND = {
 				THIS = { is_culture_group = french }
 				OR = {
-					primary_culture = french_canadian
-					primary_culture = neo_zelandais
 					primary_culture = australian
 					primary_culture = yankee
-					primary_culture = louisianan
 					primary_culture = french
-					primary_culture = wallonian
-					is_culture_group = pan_swiss
 				}
 			}
 			AND = {
@@ -205,7 +200,6 @@ country_migration_target = {
 				THIS = { is_culture_group = germanic }
 				OR = {
 					is_culture_group = germanic
-					is_culture_group = pan_swiss
 					is_culture_group = neo_germanic
 				}
 			}
