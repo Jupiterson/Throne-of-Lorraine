@@ -1,98 +1,716 @@
 political_decisions = {
+	egy_ita = {
+        picture = enact_muhammad_alis_reforms
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+			NOT = { has_country_flag = established_ita }
+        }
+        allow = { 
+			money = 25001
+			OR = {
+				year = 1843
+				part_of_sphere = yes
+			}
+		}
 
-	conquest_of_levant = {
+        effect = {
+            set_country_flag = established_ita
+			treasury = -25000
+            add_country_modifier = { name = international_technical_association duration = -1 }
+			country_event = 100300
+        }
+
+		ai_will_do = { factor = 1 }
+    }
+	nile_irrigation = {
+        picture = japan_land_tax_reform
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+			has_country_flag = established_ita
+			NOT = { has_country_flag = irrigated_nile }
+        }
+        allow = { 
+			money = 35001
+            invention = cotton_gin
+            high_pressure_steam_engine = 1
+			interchangeable_parts = 1
+        }
+
+        effect = {
+            set_country_flag = irrigated_nile
+			treasury = -35000
+            any_pop = {
+                limit = { is_primary_culture = yes pop_type = farmers }
+                money = 20
+            }
+            any_owned = { 
+                limit = { 
+					continent = africa 
+					is_core = COP 
+					trade_goods = cotton 
+				}
+                add_province_modifier = { name = fellah_system duration = -1 } 
+				add_province_modifier = { name = small_baby_boom duration = 3650 }
+            }
+        }
+
+		ai_will_do = { factor = 1 }
+    }
+	ita_charter = {
+        picture = byzantine_triumph
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+			has_country_flag = established_ita
+			NOT = { has_country_flag = chartered_ita }
+        }
+        allow = { 
+			war = no
+			money = 30001
+            year = 1856
+			OR = {
+				western_shipyards = yes_western_shipyards
+				pre_indust = yes_industrial_construction
+				civilized = yes
+			}
+			owns = 1751
+			owns = 1745
+        }
+
+        effect = {
+            set_country_flag = chartered_ita
+            any_pop = {
+                limit = { pop_type = artisans }
+				militancy = 4
+		    	consciousness = 4
+            }
+            build_factory_in_capital_state = steel_factory
+			build_factory_in_capital_state = clipper_shipyard
+			build_factory_in_capital_state = fabric_factory
+			1751 = {
+				any_pop = {
+                	limit = { pop_type = artisans }
+					reduce_pop = 0.75
+				}
+			}
+			1745 = {
+				any_pop = {
+                	limit = { pop_type = artisans }
+					reduce_pop = 1.25
+				}
+			}
+        }
+
+		ai_will_do = { factor = 1 }
+    }
+	founding_syntechnia = {
+        picture = begin_line_of_advantage
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+			has_country_flag = chartered_ita
+			NOT = { has_country_flag = syntechnia_founded }
+        }
+        allow = { 
+			war = no
+			civilized = yes
+			owns = 1751
+			1751 = {
+				state_scope = {
+					has_building = machine_parts_factory
+				}
+			}
+			regenerative_furnaces = 1
+			business_banks = 1
+			market_functionality = 1
+			industrial_score = 50
+        }
+
+        effect = {
+            set_country_flag = syntechnia_founded
+			prestige = 25
+			tech_school = egypt_tech_school
+			1751 = {
+				add_province_modifier = {
+					name = archigos_quarter
+					duration = -1
+				}
+			}
+        }
+
+		ai_will_do = { factor = 1 }
+    }
+
+	establish_the_syneisfora = {
+		picture = begin_line_of_advantage
+		potential = {
+			OR = {
+				tag = COP
+				tag = UCO
+			}
+			NOT = { has_country_flag = established_syneisfora }
+		}
+		allow = {
+			year = 1845
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+		}
+
+		effect = {
+			set_country_flag = established_syneisfora
+			add_country_modifier = { name = syneisfora duration = -1 }
+			political_reform = mandatory_service
+			any_pop = {
+                limit = { 
+					OR = {
+						is_accepted_culture = yes
+						is_primary_culture = yes
+					}
+					type = soldiers
+				}
+                militancy = 4
+                ideology = {
+                    value = liberal
+                    factor = 0.50
+                }
+            }
+		}
+	}
+
+	avenge_the_betrayal = {
 		picture = map_levant
 		potential = {
 			OR = {
 				tag = COP
 				tag = UCO
 			}
-			NOT = { has_country_flag = conquest_of_levant }
+			NOT = { has_country_flag = avenged_betrayal }
 		}
 		allow = {
 			is_vassal = no
+			civilized = yes
+			state_n_government = 1
 		}
 		effect = {
-			set_country_flag = conquest_of_levant
-			903 = { add_core = COP }
-			897 = { add_core = COP }
-			905 = { add_core = COP }
-			TUR_894 = { add_core = COP }
-			EGY_915 = { add_core = COP }
-			EGY_921 = { add_core = COP }
-			3362 = { add_core = COP }
-			902 = { add_core = COP }
-			909 = { add_core = COP }
-			922 = { add_core = COP }
-			badboy = 15
+			set_country_flag = avenged_betrayal
+			badboy = 10
+			EGY_1755 = { add_core = THIS }
+			EGY_921 = { add_core = THIS }
+			EGY_915 = { add_core = THIS }
+			EGY_903 = { add_core = THIS }
+			relation = {
+				who = TUR
+				value = -200
+			}
+			TUR = {
+				relation = {
+					who = COP
+					value = -200
+				}
+			}
+			relation = {
+				who = VEN
+				value = -200
+			}
+			VEN = {
+				relation = {
+					who = COP
+					value = -200
+				}
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
 
-	embrace_the_syriacs = { 
-		potential = { 
+	the_great_proclamation = {
+		picture = form_the_ikhwan
+		potential = {
 			OR = {
 				tag = COP
-				tag = GEO
-				tag = ARM
-				tag = ASY
+				tag = UCO
 			}
-			NOT = {
-				OR = {
-					accepted_culture = syriac
-					has_country_flag = embraced_syriac
-				}
-			}
+			NOT = { has_country_flag = great_proclaimed }
 		}
-		
 		allow = {
-			year = 1850
-			prestige = 70
-			owns = 917
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
 			owns = 902
-			owns = 900
+			owns = 1756
 			owns = 913
-			owns = 897
+			owns = 917
+			nationalism_n_imperialism = 1
 		}
-	
 		effect = {
-			set_country_flag = embraced_syriac
+			set_country_flag = great_proclaimed
+			badboy = 12
+			900 = { add_core = THIS }
+			893 = { add_core = THIS }
+			TUR_901 = { add_core = THIS }
+			TUR_893 = { add_core = THIS }
+			TUR_923 = { add_core = THIS }
+			EGY_897 = { add_core = THIS }
+			prestige = 20
+			plurality = 1
 			add_accepted_culture = syriac
-			prestige = 25			
+			add_accepted_culture = assyrian
+			relation = {
+				who = TUR
+				value = -200
+			}
+			TUR = {
+				relation = {
+					who = COP
+					value = -200
+				}
+			}
+			relation = {
+				who = PER
+				value = -200
+			}
+			PER = {
+				relation = {
+					who = COP
+					value = -200
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	sursock_and_brothers = {
+		picture = institute_central_bank
+		potential = {
+			OR = {
+				tag = COP
+				tag = UCO
+			}
+			NOT = { has_country_flag = sursock_in_government }
+		}
+
+		allow = {
+			has_country_modifier = international_technical_association
+			owns = 913
+			economic_responsibility = 1
+			management_strategy = 1
+			central_bank_money_bill_printing = 1
+			experimental_railroad = 1
+		}
+
+		effect = {
+			set_country_flag = sursock_in_government
+			add_country_modifier = { name = sursock_brothers_modifier duration = -1 }	
+			913 = { trade_goods = silk life_rating = 5 } 
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	
-	embrace_the_misri = {
-		picture = embrace_minority
+
+	establish_the_egyptian_railways = {
+        picture = robert_stephenson
+
 		potential = {
-			tag = COP
-			NOT = {
-				OR = {
-					accepted_culture = misri
-					has_country_flag = embraced_misri
+			OR = {
+				tag = COP
+				tag = UCO
+			}
+			NOT = { has_country_flag = establish_the_egyptian_railways }
+		}
+
+        allow = {
+            war = no
+            money = 150001
+            owns = 1745
+            owns = 1746
+            owns = 1747
+            owns = 1748
+            owns = 1749
+            owns = 1750
+            owns = 1751
+        }
+
+        effect = {
+           treasury = -150000
+        	1745 = { infrastructure = 1 }
+        	1746 = { infrastructure = 1 }
+        	1747 = { infrastructure = 1 }
+        	1748 = { infrastructure = 1 }
+        	1749 = { infrastructure = 1 }
+        	1750 = { infrastructure = 1 }
+        	1751 = { infrastructure = 1 }
+            set_country_flag = establish_the_egyptian_railways
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+	the_anaptyxi = {
+		picture = fuzhou_aresenal
+		potential = {
+			OR = {
+				tag = COP
+				tag = UCO
+			}
+			NOT = { has_country_flag = begun_anaptyxi }
+		}
+
+		allow = {
+			owns = 913
+			owns = 920
+			owns = 3474
+			owns = 916
+			owns = 902
+			OR = {
+				AND = {
+					tech_school = egypt_tech_school
+					has_country_modifier = sursock_brothers_modifier
+				}
+				AND = {
+					913 = { 
+						state_scope = {
+							has_building = steamer_shipyard
+						}
+					}
 				}
 			}
 		}
 
-		allow = {
-			year = 1850
-			prestige = 50
-		}
-
 		effect = {
-			set_country_flag = embraced_misri
-			add_accepted_culture = misri
-			prestige = 25			
+			set_country_flag = begun_anaptyxi
+			add_country_modifier = { name = anaptyxi_modifier duration = 3650 }	
+			913 = { add_province_modifier = { name = anaptyxi_modifier_city duration = 3650 } } 
+			920 = { add_province_modifier = { name = anaptyxi_modifier_city duration = 3650 } } 
+			3474 = { add_province_modifier = { name = anaptyxi_modifier_city duration = 3650 } } 
+			916 = { add_province_modifier = { name = anaptyxi_modifier_city duration = 3650 } trade_goods = iron } 
+			902 = { add_province_modifier = { name = anaptyxi_modifier_city duration = 3650 } trade_goods = iron } 			
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
 
+	pharaonism = {
+		picture = ismail_pasha
+		potential = {
+			OR = {
+				tag = COP
+				tag = UCO
+			}
+			NOT = { has_country_flag = pharaonism_enabled }
+		}
 
+		allow = {
+			nationalism_n_imperialism = 1
+			slavery = no_slavery
+			NOT = { num_of_revolts = 1 }
+		}
+
+		effect = {
+			set_country_flag = pharaonism_enabled
+			add_accepted_culture = misri
+			add_accepted_culture = nubian
+			random_owned = {
+				limit = { owner = { citizens_rights = culture_voting_only } }
+				owner = { social_reform = all_voting_pops }
+			}
+
+			random_owned = {
+				limit = { owner = { citizens_rights = primary_culture_only } }
+				owner = { social_reform = culture_voting_only }
+			}
+			plurality = 2
+			any_pop = {
+				limit = { OR = { has_pop_culture = misri has_pop_culture = nubian } }
+				consciousness = -4
+				militancy = -4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hellenic_cradle = {
+		picture = unite_with_greece
+		potential = {
+			OR = {
+				tag = COP
+				tag = UCO
+			}
+			has_country_flag = pharaonism_enabled
+			NOT = { has_country_flag = cradle_of_greece }
+		}
+
+		allow = {
+			revolution_n_counterrevolution = 1
+			is_greater_power = yes
+			war_policy = jingoism
+		}
+
+		effect = {
+			set_country_flag = cradle_of_greece
+			badboy = 12
+            TUR_855 = { add_core = THIS }
+            848 = { add_core = THIS }
+			847 = { add_core = THIS }
+			762 = { add_core = THIS }
+			763 = { add_core = THIS }
+			764 = { add_core = THIS }
+			SYC_759 = { add_core = THIS }
+			add_accepted_culture = greek
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organic_law = {
+        picture = mex_constitution
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+            NOT = { has_country_flag = organic_law_enacted }
+        }
+
+        allow = {
+            war = no
+            OR = {
+                upper_house = {
+                    ideology = liberal
+                    value = 0.4 
+			    }
+                upper_house = {
+                    ideology = socialist
+                    value = 0.25
+			    }
+                upper_house = {
+                    ideology = communist
+                    value = 0.2 
+			    }
+            }
+			biologism = 1
+			NOT = { school_reforms = good_schools}
+        }
+
+        effect = {
+            set_country_flag = organic_law_enacted
+            random_owned = {
+				limit = { owner = { school_reforms = acceptable_schools } }
+				owner = { social_reform = good_schools }
+			}
+
+			random_owned = {
+				limit = { owner = { school_reforms = low_schools } }
+				owner = { social_reform = acceptable_schools }
+			}
+
+			random_owned = {
+				limit = { owner = { school_reforms = no_schools } }
+				owner = { social_reform = low_schools }
+			}
+			any_pop = {
+				limit = { has_pop_culture = misri }
+				literacy = 0.05
+			}
+			any_pop = {
+				limit = { has_pop_culture = copt }
+				literacy = 0.05
+			}
+        }
+        ai_will_do = { factor = 1 }
+    }
+	school_of_business = {
+        picture = technical_fine_arts_school
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+            NOT = { has_country_flag = established_see }
+			has_country_flag = established_ita
+        }
+
+        allow = {
+            business_banks = 1
+			business_regulations = 1
+			1751 = { owned_by = THIS }
+        }
+
+        effect = {
+            set_country_flag = established_see
+            prestige = 5
+			years_of_research = 1
+        }
+        ai_will_do = { factor = 1 }
+    }
+	claim_the_nile = {
+        picture = map_africa
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+            NOT = { has_country_flag = claimed_nile }
+        }
+
+        allow = {
+            OR = {
+				civilization_progress = 0.50
+				civilized = yes
+			}
+			military_score = 15
+        }
+
+        effect = {
+            set_country_flag = claimed_nile
+			badboy = 10
+            EGY_1834 = { add_core = THIS }
+			EGY_1827 = { add_core = THIS }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	dual_provisions = {
+        picture = DIM_cultuurgebied_oost_sumatra
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+            NOT = { has_country_flag = issued_dual_provisions }
+        }
+
+        allow = {
+            1835 = { owned_by = THIS }
+			1827 = { owned_by = THIS }
+			nationalism_n_imperialism = 1
+        }
+
+        effect = {
+            set_country_flag = issued_dual_provisions
+			1835 = { life_rating = 3 }
+			1827 = { life_rating = 3 }
+			prestige = 10
+			any_pop = {
+                limit = { culture = nubian }
+                militancy = -2
+				consciousness = -2
+            }
+			EGY_1834 = { remove_core = SUD remove_core = EGY remove_core = MKA }
+			EGY_1827 = { remove_core = SUD remove_core = EGY remove_core = MKA }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	proothisi = {
+        picture = thorbecke_reforms
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+			OR = {
+				government = prussian_constitutionalism
+				government = semi_constitutional_empire
+				government = absolute_monarchy
+				government = absolute_empire
+			}
+			year = 1848
+            NOT = { has_country_flag = advancement_reforms }
+        }
+
+        allow = {
+            war = no
+			OR = {
+				average_militancy = 4
+				average_consciousness = 6
+			}
+			OR = {
+				upper_house = {
+                    ideology = liberal
+                    value = 0.35 
+			    }
+                ideology = liberal
+				pop_majority_ideology = liberal
+			}
+        }
+
+        effect = {
+            set_country_flag = advancement_reforms
+			prestige = -10
+			political_reform = universal_weighted_voting
+			political_reform = state_equal_weight
+			political_reform = gerrymandering
+			political_reform = censored_press
+			add_country_modifier = {
+				name = advancement_of_government
+				duration = 3650
+			}
+			any_owned = {
+				limit = { is_colonial = no }
+				any_pop = {
+					scaled_militancy = { ideology = liberal factor = -8 }
+					scaled_consciousness = { ideology = liberal factor = -8 }
+					scaled_militancy = { ideology = conservative factor = 4 }
+					scaled_consciousness = { ideology = conservative factor = 4 }
+					scaled_militancy = { ideology = reactionary factor = 8 }
+					scaled_consciousness = { ideology = reactionary factor = 8 }
+				}
+				any_pop = {
+					limit = { strata = rich }
+					ideology = { factor = 0.2 value = reactionary }
+				}
+			}
+        }
+        ai_will_do = { factor = 1 }
+    }
+	law_on_property = {
+        picture = abolish_slavery_romania
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+			slavery = yes_slavery
+        }
+
+        allow = {
+			civilized = yes
+            slavery = yes_slavery
+        }
+
+        effect = {
+			prestige = 5
+			political_reform = no_slavery
+			social_reform = child_labor_illegal
+			any_owned = {
+				limit = { is_colonial = no }
+				any_pop = {
+					limit = { strata = rich }
+					ideology = { factor = 0.5 value = reactionary }
+					militancy = 8
+				}
+			}
+        }
+        ai_will_do = { factor = 1 }
+    }
 	administrate_sand_copt = {
 		picture = form_the_rcmp
 		potential = {
@@ -117,9 +735,8 @@ political_decisions = {
 		}
 	}
 	
-		unite_the_copts = {
+	unite_the_copts = {
 		picture = become_poland_lithuania
-
 		potential = {
 			OR = {
 				primary_culture = ethiopian
@@ -127,7 +744,6 @@ political_decisions = {
 			}
 			NOT = { exists = UCO }
 		}
-
 		allow = {
 			war = no
 			ETH = {
@@ -217,46 +833,113 @@ political_decisions = {
 			factor = 1
 		}
 	}
-
-
-	
-	conquest_of_syria = {
-		picture = form_the_ikhwan
-		potential = {
-			OR = {
+	egy_andeno_expedition = {
+        picture = enact_muhammad_alis_reforms
+        potential = {
+            OR = {
 				tag = COP
 				tag = UCO
 			}
-			NOT = { has_country_flag = conquest_of_syria }
+			NOT = { has_country_flag = andeno_expedition_happened }
+        }
+        allow = { 
+			money = 150001
+			raider_group_doctrine = 1
+			is_greater_power = yes
+			total_amount_of_ships = 50
 		}
-		allow = {
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-			owns = 897
-		}
-		effect = {
-			set_country_flag = conquest_of_syria
-			TUR_935 = {
-				add_core = THIS
-			}
-			934 = { add_core = THIS }
-			929 = { add_core = THIS }
-			926 = { add_core = THIS }
-			927 = { add_core = THIS }
-			910 = { add_core = THIS }
-			931 = { add_core = THIS }
-			2639 = { add_core = THIS }
-			907 = { add_core = THIS }
-			904 = { add_core = THIS }
-			901 = { add_core = THIS }
-			TUR_923 = {
-				add_core = THIS
-			}
-			badboy = 15
-		}
+
+        effect = {
+            set_country_flag = andeno_expedition_happened
+			badboy = 5
+			1297 = { owner = { country_event = 100301 } }
+        }
+
 		ai_will_do = { factor = 1 }
-	}
-	
+    }
+	cop_royal_sea_lanes = {
+        picture = enact_muhammad_alis_reforms
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+			NOT = { has_country_flag = enacted_royal_sea }
+        }
+        allow = { 
+			money = 100001
+			paddle_steamers = 1
+			total_amount_of_ships = 20
+		}
+        effect = {
+            set_country_flag = enacted_royal_sea
+			treasury = -100000
+			1751 = { naval_base = 1 }
+			remove_country_modifier = cop_desmevmenos_modifier
+			relation = {
+				who = VEN
+				value = -100
+			}
+        }
+
+		ai_will_do = { factor = 1 }
+    }
+	cop_sieze_the_levant = {
+        picture = refuse_line_of_advantage
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+			NOT = { has_country_flag = siezed_levant }
+			1755 = { owned_by = VEN }
+			1756 = { owned_by = VEN }
+			800 = { owned_by = VEN }
+			920 = { owned_by = VEN }
+			3474 = { owned_by = VEN }
+			913 = { owned_by = VEN }
+        }
+        allow = { 
+			war = no
+			VEN = {
+				war = yes
+				NOT = { war_score = -10 }
+			}
+		}
+        effect = {
+            set_country_flag = siezed_levant
+			1755 = { secede_province = COP }
+			1756 = { secede_province = COP }
+			800 = { secede_province = COP }
+			920 = { secede_province = COP }
+			3474 = { secede_province = COP }
+			913 = { secede_province = COP }
+			VEN = { country_event = 100305 }
+        }
+
+		ai_will_do = { factor = 1 }
+    }
+	cop_epektasi_neron = {
+        picture = enact_muhammad_alis_reforms
+        potential = {
+            OR = {
+				tag = COP
+				tag = UCO
+			}
+			NOT = { has_country_flag = cop_begun_naval_expansion }
+        }
+        allow = { 
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+			screw_propelled_steamers = 1
+			naval_statistics = 1
+		}
+        effect = {
+            set_country_flag = cop_begun_naval_expansion
+			add_country_modifier = { name = cop_epektasi_modifier duration = -1 }
+			prestige = 20
+        }
+
+		ai_will_do = { factor = 1 }
+    }
 }

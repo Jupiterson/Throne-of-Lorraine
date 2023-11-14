@@ -2,10 +2,10 @@ capital = 1751
 primary_culture = copt
 culture = neo_greek
 religion = coptic
-government = hms_government
-plurality = 0.0
-nationalvalue = nv_tradition
-literacy = 0.01
+government = absolute_monarchy
+plurality = 0.1
+nationalvalue = nv_order
+literacy = 0.40
 non_state_culture_literacy = 0.01
 
 # Political reforms
@@ -41,9 +41,9 @@ colonial_policy = no_colonies
 ruling_party = EGY_conservative
 upper_house = {
 	fascist = 0
-	liberal = 10
-	conservative = 72
-	reactionary = 18
+	liberal = 25
+	conservative = 62
+	reactionary = 13
 	radical = 0
 	socialist = 0
 	communist = 0
@@ -55,15 +55,11 @@ set_country_flag = religious_unity
 # Technologies
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
-
-
+military_staff_system = 1
 
 foreign_training = yes_foreign_training
 foreign_weapons = yes_foreign_weapons
 foreign_officers = yes_foreign_officers
 foreign_artillery = yes_foreign_artillery
-monetary_reform = yes_monetary_reform
-education_reform = yes_education_reform
-
 
 oob = "COP_oob.txt"

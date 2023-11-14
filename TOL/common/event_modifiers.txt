@@ -5400,3 +5400,65 @@ gabonese_holy_militias = {
 	org_regain = 0.15
 	icon = 4
 }
+### KHEMET ###
+international_technical_association = {
+	research_points = 0.5
+	diplomatic_points_modifier = 0.10
+	max_loan_modifier = 1
+	icon = 5
+}
+syneisfora = {
+	mobilisation_size = 0.10
+	mobilisation_economy_impact = -0.30
+	land_unit_start_experience = 5
+	icon = 13
+}
+fellah_system = {
+	farm_rgo_size = 0.50
+	farm_rgo_eff = 0.25
+	icon = 13
+}
+archigos_quarter = {
+	population_growth = 0.005
+	local_factory_output = 0.1
+	local_factory_throughput = 0.1
+	icon = 5
+}
+sursock_brothers_modifier = {
+	tax_efficiency = 0.05
+	loan_interest = -0.10
+	icon = 9
+}
+anaptyxi_modifier = {
+	factory_throughput = 0.05
+	factory_owner_cost = -0.50
+	icon = 11
+}
+anaptyxi_modifier_city = {
+	population_growth = 0.01
+	local_factory_output = 0.25
+	local_factory_throughput = 0.25
+	immigrant_attract = 2
+	icon = 13
+}
+advancement_of_government = {
+	ruling_party_support = 0.05
+	core_pop_militancy_modifier = -0.02
+	core_pop_consciousness_modifier = 0.02
+	issue_change_speed = 0.50
+	icon = 7
+}
+cop_desmevmenos_modifier = {
+	leadership_modifier = -0.20
+	naval_organisation = -0.10
+	navy_tech_research_bonus = -0.10
+	tariff_efficiency_modifier = -0.10
+	icon = 17
+}
+cop_epektasi_modifier = {
+	cb_generation_speed_modifier = 0.25
+	tariff_efficiency_modifier = 0.25
+	naval_organisation = 0.10
+	prestige = 0.1
+	icon = 17
+}

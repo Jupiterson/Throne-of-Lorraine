@@ -1,0 +1,279 @@
+#Start of Khemet's exclusive flavour
+#Egyptian International Technical Association
+country_event = {
+	id = 100300
+	title = "cop_ita_NAME"
+	desc = "cop_ita_DESC"
+	picture = "cairo"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = "Antoine Clot Bey"
+		social_reform = trinket_health_care
+		economic_reform = yes_research_reform
+		activate_technology = malthusian_thought
+		activate_technology = late_enlightenment_philosophy
+		years_of_research = 0.33
+		FRA = {
+			diplomatic_influence = {
+				who = COP
+				value = 100
+			}
+		}
+			
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = "Muhammed Ali Pasha"
+		economic_reform = yes_admin_reform
+		military_reform = yes_army_schools
+		activate_technology = army_command_principle
+		TUR = {
+			diplomatic_influence = {
+				who = COP
+				value = 100
+			}
+		}
+		ai_chance = {
+			factor = 15
+		}
+	}
+	
+	option = {
+		name = "Barthelemy-Prosper Enfantin"
+		economic_reform = yes_land_reform
+		1745 = { 
+			life_rating = 1
+		}
+		1747 = { 
+			life_rating = 1
+		}
+		1748 = { 
+			life_rating = 1
+		}
+		1749 = { 
+			life_rating = 1
+		}
+		1750 = { 
+			life_rating = 1
+		}
+		1751 = { 
+			life_rating = 1
+		}
+		1746 = { 
+			life_rating = 1
+		}
+		LOR = {
+			diplomatic_influence = {
+				who = COP
+				value = 100
+			}
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = "Lorenzo Dandolo"
+		military_reform = yes_naval_schools
+		military_reform = yes_foreign_naval_officers
+		military_reform = yes_western_shipyards
+		activate_technology = post_nelsonian_thought
+		set_country_flag = using_foreign_shipyards
+		VEN = {
+			diplomatic_influence = {
+				who = COP
+				value = 100
+			}
+		}
+			
+		ai_chance = {
+			factor = 15
+		}
+	}
+	
+	option = {
+		name = "Robert Stephenson"
+		economic_reform = yes_transport_improv
+		economic_reform = yes_industrial_construction
+		set_country_flag = activate_experimental_railroad
+		activate_technology = experimental_railroad
+		activate_technology = piston_steam_engine
+		build_factory_in_capital_state = fabric_factory
+		build_railway_in_capital = {
+			in_whole_capital_state = yes # no = just in main capital province.
+			limit_to_world_greatest_level = yes
+		}
+		SCO = {
+			diplomatic_influence = {
+				who = COP
+				value = 100
+			}
+		}	
+		ai_chance = {
+			factor = 15
+		}
+	}
+	
+	option = {
+		name = "Frederick van der Woulfe"
+		economic_reform = monetary_reform_two
+		economic_reform = yes_finance_reform
+		activate_technology = no_standard
+		plurality = 5
+		NET = {
+			diplomatic_influence = {
+				who = COP
+				value = 100
+			}
+		}
+		ai_chance = {
+			factor = 15
+		}
+	}
+}
+country_event = {
+	id = 100301
+	title = "cop_andeno_TITLE"
+	desc = "cop_andeno_DESC"
+	picture = "cairo"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = "Its only one port"
+		treasury = 150000
+		1297 = { secede_province = COP }
+		COP = {
+			diplomatic_influence = {
+				who = FROM
+				value = 100
+			}
+			country_event = 100302
+		}
+			
+		ai_chance = {
+			factor = 80
+		}
+	}
+	
+	option = {
+		name = "Who do they think they are?"
+		COP = {
+			diplomatic_influence = {
+				who = FROM
+				value = -100
+			}
+			relation = {
+				who = FROM
+				value = -100
+			}
+			country_event = 100303
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+country_event = {
+	id = 100302
+	title = "cop_andeno_success_TITLE"
+	desc = "cop_andeno_success_DESC"
+	picture = "cairo"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = "Amazing"
+		treasury = -150000
+		prestige = 25
+		1297 = { 
+			life_rating = 3
+			trade_goods = coal
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = 100303
+	title = "cop_andeno_failure_TITLE"
+	desc = "cop_andeno_failure_DESC"
+	picture = "cairo"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = "This humiliation cannot go unpunished"
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = add_to_sphere }
+			call_ally = no
+		}
+		ai_chance = {
+			factor = 80
+		}
+	}		
+
+	option = {
+		name = "How humiliating"
+		prestige = -50
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+country_event = {
+	id = 100304
+	title = "cop_desmevmenos_event_TITLE"
+	desc = "cop_desmevmenos_event_DESC"
+	picture = "cairo"
+	major = yes
+	fire_only_once = yes
+
+	trigger = { tag = COP }
+	
+	option = {
+		name = "Khemet will one day look abroad"
+		add_country_modifier = { name = cop_desmevmenos_modifier duration = -1 }
+	}		
+}
+country_event = {
+	id = 100305
+	title = "cop_siezing_the_levant_TITLE"
+	desc = "cop_siezing_the_levant_DESC"
+	picture = "cairo"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = "They'll pay for this!"
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = acquire_any_state }
+			call_ally = no
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}	
+
+	option = {
+		name = "Let them have it, we are in no position to fighT"
+		prestige = -50
+		ai_chance = {
+			factor = 50
+		}
+	}	
+}
