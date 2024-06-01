@@ -4260,14 +4260,14 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	rio_branco_law = {
+	tirsinns_law = {
 		picture = Rio_Branco_Law
 		potential = {
 			OR = {
 				tag = BRZ
 				tag = UPB
 			}
-			NOT = { has_country_flag = rio_branco_law_passed }
+			NOT = { has_country_flag = tirsinns_law_passed }
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -4301,7 +4301,7 @@ political_decisions = {
 		}
 
 		effect = {
-			set_country_flag = rio_branco_law_passed
+			set_country_flag = tirsinns_law_passed
 			badboy = -1
 			political_reform = freedom_of_womb
 			any_pop = { limit = { type = slaves } consciousness = -3 militancy = -1 }
