@@ -807,7 +807,7 @@ political_decisions = {
 				2395 = { empty = yes }
 				2392 = { empty = yes }
 			}
-			NOT = { has_country_flag = arc_valley }
+			NOT = { has_global_flag = arc_valley }
 		}
 		allow = {
 			war = no
@@ -817,7 +817,7 @@ political_decisions = {
 			}
 		}
 		effect = {
-			set_country_flag = arc_valley
+			set_global_flag = arc_valley
 			prestige = 5
 			2383 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			2382 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
@@ -849,6 +849,11 @@ political_decisions = {
 	
 		potential = {
 			OR = {
+				tag = OCD
+				tag = FNC
+				tag = ARC
+			}
+			OR = {
 				2391 = { empty = yes }
 				2394 = { empty = yes }
 				2396 = { empty = yes }
@@ -856,8 +861,8 @@ political_decisions = {
 				2398 = { empty = yes }
 				2399 = { empty = yes }
 			}
-			has_country_flag = arc_valley
-			NOT = { has_country_flag = arc_chupaou }
+			has_global_flag = arc_valley
+			NOT = { has_global_flag = arc_chupaou }
 		}
 		allow = {
 			war = no
@@ -865,7 +870,7 @@ political_decisions = {
 			year = 1855
 		}
 		effect = {
-			set_country_flag = arc_chupaou
+			set_global_flag = arc_chupaou
 			prestige = 5
 			2391 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			2394 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
@@ -892,15 +897,20 @@ political_decisions = {
 		picture = falklands_map
 	
 		potential = {
-			has_country_flag = arc_chupaou
-			NOT = { has_country_flag = arc_malouines }
+			OR = {
+				tag = OCD
+				tag = FNC
+				tag = ARC
+			}
+			has_global_flag = arc_chupaou
+			NOT = { has_global_flag = arc_malouines }
 		}
 		allow = {
 			war = no
 			naval_plans = 1
 		}
 		effect = {
-			set_country_flag = arc_malouines
+			set_global_flag = arc_malouines
 			2131 = { add_core = ARC }
 			}
 			
@@ -914,15 +924,20 @@ political_decisions = {
 		picture = falklands_map
 	
 		potential = {
+			OR = {
+				tag = OCD
+				tag = FNC
+				tag = ARC
+			}
 			owns = 2131
-			has_country_flag = arc_malouines
-			NOT = { has_country_flag = consolidated_malouines }
+			has_global_flag = arc_malouines
+			NOT = { has_global_flag = consolidated_malouines }
 		}
 		allow = {
 			war = no
 		}
 		effect = {
-			set_country_flag = consolidated_malouines
+			set_global_flag = consolidated_malouines
 			prestige = 5
 			
 			2131 = { remove_core = GEN }
@@ -957,6 +972,11 @@ political_decisions = {
 	
 		potential = {
 			OR = {
+				tag = OCD
+				tag = FNC
+				tag = ARC
+			}
+			OR = {
 				2327 = { empty = yes }
 				2331 = { empty = yes }
 				2329 = { empty = yes }
@@ -967,8 +987,8 @@ political_decisions = {
 				2335 = { empty = yes }
 				2400 = { empty = yes }
 			}
-			has_country_flag = arc_chupaou
-			NOT = { has_country_flag = arc_mountains }
+			has_global_flag = arc_chupaou
+			NOT = { has_global_flag = arc_mountains }
 		}
 		allow = {
 			war = no
@@ -977,7 +997,7 @@ political_decisions = {
 			year = 1860
 		}
 		effect = {
-			set_country_flag = arc_mountains
+			set_global_flag = arc_mountains
 			prestige = 5
 			2327 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			2331 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
