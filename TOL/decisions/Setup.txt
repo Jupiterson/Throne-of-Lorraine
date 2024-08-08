@@ -79,7 +79,7 @@ political_decisions = {
 			FRA_1914 = { secede_province = THIS }
 			ASH_1910 = { secede_province = THIS }
 			ARG_2377 = { secede_province = THIS }
-			PRG_2338 = { secede_province = THIS }
+			SGR_2338 = { secede_province = THIS }
 			2372 = { secede_province = THIS }
 			2377 = { secede_province = THIS }
 			2362 = { secede_province = THIS }
@@ -522,7 +522,6 @@ political_decisions = {
 
 			diplomatic_influence = { who = ARC value = -100 }
 			diplomatic_influence = { who = CHL value = -100 }
-			diplomatic_influence = { who = PRG value = -100 }
 			diplomatic_influence = { who = SPU value = -100 }
 			diplomatic_influence = { who = PEU value = -100 }
 			diplomatic_influence = { who = ECU value = -100 }
@@ -530,7 +529,7 @@ political_decisions = {
 			diplomatic_influence = { who = VEN value = -100 }
 			diplomatic_influence = { who = UCA value = -100 }
 			diplomatic_influence = { who = MEX value = -100 }
-			diplomatic_influence = { who = BRZ value = -50 }
+			diplomatic_influence = { who = SGR value = -50 }
 		}
 	}
 
@@ -1080,7 +1079,6 @@ political_decisions = {
 			2720 = { change_province_name = "Skaggerak Approach" }
 			3373 = { change_province_name = "Filibe" }
 			451 = { change_province_name = "Lyon" }
-			2419 = { change_province_name = "Campo Grande" }
 			815 = { change_province_name = "Kircaali" }
 			1149 = { change_province_name = "Salehabad" }
 			3275 = { change_province_name = "Tekalong" }
@@ -2045,21 +2043,21 @@ political_decisions = {
 		}
 	}
 
-	BRZ_1836_setup = {
+	sgirur_1836_setup = {
 		picture = constantinople
 		potential = {
-			tag = BRZ
+			tag = SGR
 			always = no
 		}
 
 		allow = {
-			tag = BRZ
+			tag = SGR
 		}
 
 		effect = {
 			any_pop = { limit = { has_pop_culture = french } literacy = 0.4 }
 			2435 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.11 } }
-			BRZ_2408 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.02 } }
+			SGR_2408 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.02 } }
 			2410 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.06 } }
 			2448 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.02 } }
 			2447 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
@@ -2067,9 +2065,9 @@ political_decisions = {
 			2424 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.02 } }
 			2459 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.01 } }
 			2462 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.01 } }
-			BRZ_2421 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.03 } }
+			SGR_2421 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.03 } }
 			2434 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.03 } }
-			BRZ_2401 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.03 } }
+			SGR_2401 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.03 } }
 			2449 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.04 } }
 			2428 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.05 } }
 			2429 = { any_pop = { limit = { is_primary_culture = yes } literacy = -0.05 } }
@@ -2091,14 +2089,59 @@ political_decisions = {
 			}
 			add_country_modifier = {
 				name = america_new_world
-				duration = 10950
+				duration = 5475
 			}
-			add_country_modifier = {
-				name = global_baby_boom
-				duration = 2190
+			add_country_modifier = { 
+				name = scottish_trade_monopoly
+				duration = -1 
 			}
+			add_country_modifier = { 
+				name = institutionalized_slavery
+				duration = -1 
+			}
+			add_country_modifier = { 
+				name = king_james
+				duration = -1 
+			}
+			
+			set_country_flag = institutionalized_slavery
+		}
+	}
+	
+	SCO_1836_setup = {
+		picture = constantinople
+		potential = {
+			tag = SCO
+			always = no
+		}
 
-			set_country_flag = the_slavery_debate
+		allow = {
+			tag = SCO
+		}
+
+		effect = {
+			add_country_modifier = { 
+				name = sgirur_trade_revenues
+				duration = -1 
+			}
+		}
+	}
+	
+	AMZ_1836_setup = {
+		picture = constantinople
+		potential = {
+			tag = AMZ
+			always = no
+		}
+
+		allow = {
+			tag = AMZ
+		}
+
+		effect = {		
+			set_global_flag = AMZ_renamed_rabina
+			set_global_flag = AMZ_renamed_altamira
+			set_global_flag = AMZ_renamed_amazonas
 		}
 	}
 
@@ -2275,6 +2318,18 @@ political_decisions = {
 				}
 			}
 			VEL = {
+				add_country_modifier = {
+					name = america_new_world
+					duration = 5475
+				}
+			}
+			OCD = {
+				add_country_modifier = {
+					name = america_new_world
+					duration = 5475
+				}
+			}
+			FNC = {
 				add_country_modifier = {
 					name = america_new_world
 					duration = 5475
@@ -2730,12 +2785,10 @@ political_decisions = {
 			}
 			#################Setup UK Ideology######################
 
-			URU = { add_country_modifier = { name = credit_risk duration = 3650 } }
 			ECU = { add_country_modifier = { name = credit_risk duration = 3650 } }
 			UCA = { add_country_modifier = { name = credit_risk duration = 1825 } }
 			HAI = { add_country_modifier = { name = credit_risk duration = 5475 } }
 			SPU = { add_country_modifier = { name = credit_risk duration = 5475 } }
-			PRG = { add_country_modifier = { name = unrecognized_country duration = 3650 } }
 			#RGS = { add_country_modifier = { name = unrecognized_country duration = 3650 } }
 
 			#################Setup Texas######################
@@ -3143,6 +3196,22 @@ political_decisions = {
 		}
 	}
 	
+	oriental_1836_setup = {
+		picture = constantinople
+		potential = {
+			tag = FNC
+			always = no
+		}
+
+		allow = {
+			tag = FNC
+		}
+
+		effect = {
+			set_global_flag = ARC_renamed_cote_nord
+		}
+	}
+
 	cleanup_setup = {
 		potential = {
 			ai = yes

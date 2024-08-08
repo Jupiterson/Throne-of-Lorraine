@@ -242,11 +242,8 @@ political_reforms = {
 				NOT = { has_country_flag = communist_gov }
 				NOT = { has_country_flag = fascist_gov }
 				NOT = { has_country_flag = slave_revolution }
-				OR = {
-					NOT = { has_country_flag = the_slavery_debate }
-					year = 1875
-				}
-				NOT = { AND = { tag = BRZ NOT = { year = 1871 } } }
+				NOT = { has_country_flag = the_slavery_debate }
+				NOT = { has_country_flag = institutionalized_slavery }
 			}
 		}
 
@@ -254,11 +251,8 @@ political_reforms = {
 			rules = { slavery_allowed = no }
 			global_immigrant_attract = 0.01
 			allow = {
-				OR = {
-					NOT = { has_country_flag = the_slavery_debate }
-					year = 1875
-				}
-				NOT = { AND = { tag = BRZ NOT = { year = 1888 } } }
+				NOT = { has_country_flag = the_slavery_debate }
+				NOT = { has_country_flag = institutionalized_slavery }
 			}
 		}
 	}

@@ -1,0 +1,87 @@
+army = {
+	name = "Pionniers Occidentaux"
+	location = 2348
+	regiment = {
+		name= "Nouvelle Rochelle Guards"
+		type = infantry
+		home = 2348
+	}
+
+	regiment = {
+		name= "Calvins Men"
+		type = infantry
+		home = 2348
+	}
+	
+	regiment = {
+		name= "Protectors of the Steppe"
+		type = infantry
+		home = 2356
+	}
+
+	regiment = {
+		name= "Argent river Patrol"
+		type = hussar
+		home = 2360
+	}
+
+}
+
+leader = {
+	name = "Jan Dardier"
+	picture = european_general_34
+	date = 1836.1.1
+	type = land
+	personality = audacious
+	background = amateur
+}
+
+leader = {
+	name = "Roman Pujol"
+	picture = southamerican_admiral_3
+	date = 1836.1.1
+	type = sea
+	personality = disciplined
+	background = old_school
+}
+
+navy = {
+	name = "Occidental Navy"
+	location = 2348
+
+	ship = {
+		name = "Epervier"
+		type = frigate
+	}
+
+	ship = {
+		name = "Pallas"
+		type = frigate
+	}
+
+	ship = {
+		name = "Junon"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Flore"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Fontenoy"
+		type = manowar
+	}
+	
+	ship = {
+		name = "1. Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name = "2. Transport Flotilla"
+		type = clipper_transport
+	}
+
+}

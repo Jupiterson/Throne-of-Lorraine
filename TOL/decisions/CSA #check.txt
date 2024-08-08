@@ -2,10 +2,7 @@ political_decisions = {
 	enlist_coloured_troops = {
 		picture = coloured_troops
 		potential = {
-			OR = {
-				tag = USA
-				tag = BRZ
-			}
+			tag = USA
 			war = yes
 			slavery = yes_slavery
 			NOT = {
@@ -251,40 +248,6 @@ political_decisions = {
 					is_greater_power = no
 					is_secondary_power = no
 				}
-		}
-	}
-
-	#Mulatto-African tension
-	mulatto_african_tension = {
-		picture = coloured_troops
-		potential = {
-			tag = BRZ
-			slavery = yes_slavery
-			NOT = {
-				has_country_flag = mulatto_tensions_flag
-			}
-		}
-		allow = {
-			war = no
-			year = 1836
-		}
-		effect = {
-			add_country_modifier = {
-				name = mulatto_modifier
-				duration = 18000
-			}
-			set_country_flag = mulatto_tensions_flag
-			any_state = {
-				limit = {
-					is_slave = yes
-				}
-				any_pop = {
-					limit = {
-						type = slaves
-					}
-					militancy = -5
-				}
-			}
 		}
 	}
 

@@ -1,0 +1,296 @@
+## Antarctica ##
+
+country_event = {
+
+	id = 900000
+
+	fire_only_once = yes
+
+	title = "ARC_start_title"
+	desc = "ARC_start_desc"
+	picture = "viceroyalty_arc"
+
+	option = {
+		name = "ARC_start_option1"
+		country_event = { id = 900001 days = 0 } 
+	}
+}
+
+country_event = {
+
+	id = 900001
+
+	fire_only_once = yes
+
+	title = "ARC_start_title"
+	desc = "ARC_start2_desc"
+	picture = "arc_revolution"
+
+	option = {
+		name = "ARC_start2_option1"
+		country_event = { id = 900002 days = 0 }
+	}
+}
+
+country_event = {
+
+	id = 900002
+
+	fire_only_once = yes
+
+	title = "ARC_start_title"
+	desc = "ARC_start3_desc"
+	picture = "arc_mist"
+
+	option = {
+		name = "ARC_start3_option1"
+	}
+}
+
+## Sgirur ##
+
+country_event = {
+
+	id = 900003
+
+	fire_only_once = yes
+
+	title = "SGR_start_title"
+	desc = "SGR_start_desc"
+	picture = "viceroyalty_sgr"
+
+	option = {
+		name = "SGR_start_option1"
+		country_event = { id = 900004 days = 0 } 
+	}
+}
+
+country_event = {
+
+	id = 900004
+
+	fire_only_once = yes
+
+	title = "SGR_start_title"
+	desc = "SGR_start2_desc"
+	picture = "calumburgh_edict"
+
+	option = {
+		name = "SGR_start2_option1"
+		country_event = { id = 900005 days = 0 } 
+	}
+}
+
+country_event = {
+
+	id = 900005
+
+	fire_only_once = yes
+
+	title = "SGR_start_title"
+	desc = "SGR_start3_desc"
+	picture = "sgirur_independence_war"
+
+	option = {
+		name = "SGR_start3_option1"
+		country_event = { id = 900006 days = 0 } 
+	}
+}
+
+country_event = {
+
+	id = 900006
+
+	fire_only_once = yes
+
+	title = "SGR_start_title"
+	desc = "SGR_start4_desc"
+	picture = "sgirur_slaves"
+
+	option = {
+		name = "SGR_start4_option1"
+	}
+}
+
+country_event = {
+
+	id = 900007
+
+	is_triggered_only = yes
+
+	title = "adress_june_accords_title"
+	desc = "adress_june_accords_desc"
+	picture = "blockade"
+
+	option = {
+		name = "adress_june_accords_option1"
+		remove_country_modifier = scottish_trade_monopoly
+		clr_global_flag = scottish_trade_negotiations
+		set_global_flag = SCO_trade_hostile_solution
+		any_pop = {
+            consciousness = 1
+			militancy = 1
+        }
+		ai_chance = {
+			factor = 40
+		}
+	}
+	
+	option = {
+		name = "adress_june_accords_option2"
+		treasury = -500000
+		remove_country_modifier = scottish_trade_monopoly
+		clr_global_flag = scottish_trade_negotiations
+		set_global_flag = SCO_trade_diplomatic_solution
+		any_pop = {
+            consciousness = -2
+        }
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = {
+
+	id = 900011
+	
+	trigger = {
+		has_country_modifier = king_james
+		year = 1841
+	}
+	
+	mean_time_to_happen  {
+	        days = 250
+        }
+
+	fire_only_once = yes
+
+	title = "king_james_death_title"
+	desc = "king_james_death_desc"
+	picture = "james_death"
+
+	option = {
+		name = "sgirur_republican_option"
+		remove_country_modifier = king_james
+		government = democracy
+		nationalvalue = nv_liberty
+		set_country_flag = sgirur_freedom
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "sgirur_monarchist_option"
+		remove_country_modifier = king_james
+		set_country_flag = sgirur_monarchism
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+## Scotland events for June Accords ##
+
+country_event = {
+
+	id = 900009
+	
+	trigger = {
+		has_country_modifier = sgirur_trade_revenues
+		has_global_flag = SCO_trade_hostile_solution
+	}
+
+	fire_only_once = yes
+
+	title = "accords_hostile_title"
+	desc = "accords_hostile_desc"
+	picture = "blockade"
+
+	option = {
+		name = "accords_hostile_option1"
+		remove_country_modifier = sgirur_trade_revenues
+		set_country_flag = enforce_rule_over_sgirur
+		random_country = {
+            limit = {
+                tag = SGR
+                exists = yes
+            }
+            leave_alliance = THIS
+            THIS = {
+                diplomatic_influence = {
+                    who = SGR
+                    value = -200
+                }
+            }
+        }
+		relation = {
+            who = SGR
+            value = -50
+        }
+		war = {
+            target = SGR
+            attacker_goal = { casus_belli = make_puppet }
+            defender_goal = { casus_belli = status_quo }
+			call_ally = no
+        }
+		ai_chance = {
+			factor = 60
+		}
+	}
+	
+	option = {
+		name = "accords_hostile_option2"
+		remove_country_modifier = sgirur_trade_revenues
+		prestige = -20
+		random_country = {
+            limit = {
+                tag = SGR
+                exists = yes
+            }
+            leave_alliance = THIS
+            THIS = {
+                diplomatic_influence = {
+                    who = SGR
+                    value = -200
+                }
+            }
+        }
+		relation = {
+            who = SGR
+            value = -50
+        }
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+country_event = {
+
+	id = 900010
+	
+	trigger = {
+		has_country_modifier = sgirur_trade_revenues
+		has_global_flag = SCO_trade_diplomatic_solution
+	}
+
+	fire_only_once = yes
+
+	title = "accords_diplomatic_title"
+	desc = "accords_diplomatic_desc"
+	picture = "blockade"
+
+	option = {
+		name = "accords_diplomatic_option1"
+		remove_country_modifier = sgirur_trade_revenues
+		treasury = 500000
+		THIS = {
+			alliance = SGR
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

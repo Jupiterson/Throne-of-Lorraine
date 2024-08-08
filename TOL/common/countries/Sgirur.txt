@@ -1,14 +1,10 @@
 color = { 129 160 176 }
 absolute_monarchy = { 80 130 160 }
-absolute_empire = { 80 130 160 }
-parliamentary_republic = { 110 156 134  }
-fascist_dictatorship = { 0 40 10 }
-presidential_dictatorship = { 110 156 134 }
 proletarian_dictatorship = { 184 80 120 }
 graphical_culture = SouthAmericanGC
 
 party = {
-	name = "BRZ_liberal"
+	name = "SGR_liberal"
 	start_date = 1830.1.1
 	end_date = 2000.1.1
 
@@ -23,7 +19,7 @@ party = {
 }
 
 party = {
-	name = "BRZ_conservative"
+	name = "SGR_conservative"
 	start_date = 1830.1.1
 	end_date = 2000.1.1
 
@@ -38,7 +34,7 @@ party = {
 }
 
 party = {
-	name = "BRZ_reactionary"
+	name = "SGR_reactionary"
 	start_date = 1830.1.1
 	end_date = 2000.1.1
 
@@ -53,7 +49,7 @@ party = {
 }
 
 party = {
-	name = "BRZ_reactionary2"
+	name = "SGR_reactionary2"
 	start_date = 1830.1.1
 	end_date = 1870.1.1
 
@@ -68,7 +64,7 @@ party = {
 }
 
 party = {
-	name = "BRZ_conservative_2"
+	name = "SGR_conservative_2"
 	start_date = 1873.1.1
 	end_date = 2000.1.1
 
@@ -83,7 +79,7 @@ party = {
 }
 
 party = {
-	name = "BRZ_radical"
+	name = "SGR_radical"
 	start_date = 1830.1.1
 	end_date = 2000.1.1
 
@@ -98,7 +94,7 @@ party = {
 }
 
 party = {
-	name = "BRZ_socialist"
+	name = "SGR_socialist"
 	start_date = 1848.1.1
 	end_date = 2000.1.1
 
@@ -113,7 +109,7 @@ party = {
 }
 
 party = {
-	name = "BRZ_communist"
+	name = "SGR_communist"
 	start_date = 1848.1.1
 	end_date = 2000.1.1
 
@@ -128,7 +124,7 @@ party = {
 }
 
 party = {
-	name = "BRZ_fascist"
+	name = "SGR_fascist"
 	start_date = 1900.1.1
 	end_date = 2000.1.1
 
@@ -145,38 +141,42 @@ party = {
 
 unit_names = {
 	dreadnought = {
-			"Sao Paulo" "Minas Gerais" "Marechal Floriano" "Marechal Deodoro" "Rio de Janeiro"
-			Riachuelo Constituicao "Santa Catarina" "Almirante Amazonas"
-
+		"Duke of Tirsinns" "Calumburgh" "Sorley" "Athcinney" "Dallis" "Ciaran" "Reidnall"
+		"Strathclyde" "Port Maise"
 	}
 	ironclad = {
-			Brasil Tamandaré "Mariz e Barros" Colombo Bahia "Rio Grande Do Norte" Alagoas
-			"Espirito Santo" Fonseca
+		"Arran" "Islay" "Jura" "Lewis" "Harris" "Skye"
 	}
 	manowar = {
-			"Primeiro De Março" Paraíba Guanabara Trajano "Vital De Oliveira" Niterói
-			Sergipe Paraná Greenhalgh Macapá
+		"Duke of Tirsinns" "Calumburgh" "Sorley" "Athcinney" "Dallis" "Ciaran" "Reidnall"
+		"Strathclyde" "Port Maise"
 	}
 	cruiser = {
-			"Almirante Barrozo" República "Almirante Tamandaré" "Benjamin Constant" Aquidaban
-			Riachuelo Toneleros Fortaleza Tiradentes
+		"Hamilton" "Buccleuch" "Lennox" "Airson" "Atholl" "Montrose" "Roxburghe" "Lothian"
+		"Selkirk"
 	}
 	frigate = {
-			"Almirante Saldanha" Pernambuco Inhauma Jaceguay Frontin "Julio De Noronha" Niterói
-			Uniao Belém Vigia
+		"Loch Lomond" "Loch Ness" "Loch Morar" "Loch Tay" "Loch Awe"
 	}
 	monitor = {
-			Javary Solimões "Sete de Setembro" Ipiranga Independência  "Mato Grosso" Maranhão
-			GuanaBara Ceará Humaitá
+		"Duke of Tirsinns" "Calumburgh" "Sorley" "Athcinney" "Dallis" "Ciaran" "Reidnall"
+		"Strathclyde" "Port Maise"
 	}
 	clipper_transport = {
-
+		"Flying Spur" "Cutty Sark" "Falls of Clyde" "Glenlee" "Mull of Kintyre" "Walter Scott"
+		"William Wallace" Parkhead Govan Gorgie Leith "Mount Florida" "James Bruce"
+		"David Douglas" "Alexander Gordon Laing" "Patrick Miller" "William Symington"
+		"Archibald Cochrane" "Andrew Moray" "Water of Leith" "River Tay" "Alexander Dalzeel"
+		"John Gow" "William Kidd" "William Greaves"
 	}
 	steam_transport = {
-
+		"Flying Spur" "Cutty Sark" "Falls of Clyde" "Glenlee" "Mull of Kintyre" "Walter Scott"
+		"William Wallace" Parkhead Govan Gorgie Leith "Mount Florida" "James Bruce"
+		"David Douglas" "Alexander Gordon Laing" "Patrick Miller" "William Symington"
+		"Archibald Cochrane" "Andrew Moray" "Water of Leith" "River Tay" "Alexander Dalzeel"
+		"John Gow" "William Kidd" "William Greaves"
 	}
 	commerce_raider = {
-			Belmonte Jequitinhonha Amazonas Beberibe Iguatemi Mearim Araguari Parnaíba Cabral
-			Barroso Herval Silvado "Lima Barros"
+		"Enterprise" "Ossian" "Tweed" "Stornoway"
 	}
 }

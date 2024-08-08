@@ -1,7 +1,5 @@
 political_decisions = {
 
-
-
 	law_of_return_new_frisia = {
 		picture = law_of_return
 		potential = {
@@ -116,6 +114,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = frysk_constitution_enacted
+			government = democracy
 			political_reform = no_slavery
 			political_reform = state_equal_weight
 			political_reform = universal_weighted_voting
@@ -124,7 +123,7 @@ political_decisions = {
 			political_reform = all_trade_unions
 			political_reform = first_past_the_post
 			political_reform = gerrymandering
-			prestige = 25
+			prestige = 20
 			any_pop = {
 				consciousness = 2
 			}

@@ -1,0 +1,55 @@
+NET = {value = 50}
+
+leader = {
+	name = "Andries Staal"
+	type = land
+	date = 1836.1.1
+	personality = relentless
+	background = nationalist
+	prestige = 0.1
+}
+
+leader = {
+	name = "Erwin Cleerens"
+	type = sea
+	date = 1836.1.1
+	personality = coolminded
+	background = war_college
+	prestige = 0.1
+}
+
+army = {
+	name = "Bewakers fan Afrika"
+	location = 1887
+	regiment = {
+		name= "Bataafske Bewakers"
+		type = guard
+		home = 1887
+	}
+
+}
+
+navy = {
+	name = "Nije Fryske Marine"
+	location = 1887
+	ship = {
+		name= "Batavia"
+		type = manowar
+	}
+
+	ship = {
+		name= "Fret"
+		type = frigate
+	}
+
+	ship = {
+		name= "Panter"
+		type = frigate
+	}
+
+	ship = {
+		name= "Wolf"
+		type = frigate
+	}
+
+}

@@ -607,6 +607,8 @@ jungle;Jungle;Jungle;Dschungel;;Jungla;;;;;;;;;
 marsh;Marsh;Marais;Sumpf;;Pantano;;;;;;;;;
 coastal_desert;Coastal Desert;Désert côtier;Küstenwüste;;Desierto costero;;;;;;;;;
 dunchaluim;Farmlands;;;;;;;;;
+nouvelleorleans;Jungle;;;;;;;;;
+boisselot;Farmlands;;;;;;;;;
 STRATA_POOR;Poor;Classes défavorisées;Arm;;Pobre;;;;;;;;;
 STRATA_MIDDLE;Middle;Classes moyennes;Mittel;;Clase media;;;;;;;;;
 STRATA_RICH;Rich;Classes supérieures;Reich;;Rico;;;;;;;;;
@@ -766,10 +768,15 @@ DES;Deseret;Deseret;Dischret;;Deseret;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 QUE;Kolumbia;Qu?ec;Quebec;;Quebec;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 MTC;Metis Confederacy;Conf??ation m?isse;Metis-Konf?eration;;Conf de mestizos;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 VNZ;Venezuela;Venezuela;Venezuela;;Venezuela;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-BRZ;Sgìrùr;Br?il;Brasilien;;Brasil;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-URU;Occidentalie;Occidentalie;Occidentalie;;Occidentalie;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-PRG;New Provence;Paraguay;Paraguay;;Paraguay;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-ARG;Antarctique;Argentine;Argentinien;;Argentina;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SGR;Sgirur;;;;;;;;
+OCD;Occidentalie;Occidentalie;Occidentalie;;Occidentalie;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+OCD_reactionary;Union des Huguenots;;;;;;;;;
+OCD_liberal;Les Unitaires;;;;;;;;;;;
+OCD_conservative;Fete de Sainte;;;;;;;;;
+OCD_socialist;Parti Socialiste;;;;;;;;;
+OCD_radical;Parti Anarchiste;;;;;;;;;
+OCD_communist;Parti Communiste;;;;;;;;;
+OCD_fascist;Parti fasciste;;;;;;;;;
 CHL;Chile;Chili;Chile;;Chile;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PEU;Incan Tetriarchy;P?ou;Peru;;Per?;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BOL;Bolivia;Bolivie;Bolivien;;Bolivia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -865,17 +872,15 @@ HON_ADJ;Honduran;Hondurien;Honduranisch;;Hondure?;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,
 NIC_ADJ;Nicaraguan;Nicaraguayen;Nicaraguanisch;;Nicarag?nse;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PNM_ADJ;Panamanian;Panam?n;Panamaisch;;Paname?;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ELS_ADJ;El Salvadorian;Salvadorien;El Salvadorianisch;;Salvadore?;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-ARG_ADJ;Antartidan;Argentin;Argentinisch;;Argentina;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BOL_ADJ;Bolivian;Bolivien;Bolivianisch;;Boliviana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-BRZ_ADJ;Sgìrùri;;;;;;;;
+SGR_ADJ;Sgirenic;;;;;;;;
 CHL_ADJ;Chilean;Chilien;Chilenisch;;Chilena;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 CLM_ADJ;Colombian;Colombien;Kolumbianisch;;Colombiana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ECU_ADJ;Ecuadorian;?uatorien;Ekuadorianisch;;Ecuatoriana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 MEX_ADJ;Tenotxian;Tenochcain;Tenokanisch;;Mexicana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-PRG_ADJ;New Provencial;Paraguayen;Paraguayisch;;Paraguaya;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PEU_ADJ;Incan;P?uvien;Peruanisch;;Peruana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 TEX_ADJ;Freies;freies;freies;;Texana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-URU_ADJ;Occidentalian;Occidentalian;Occidentalian;;Occidentalian;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+OCD_ADJ;Occidental;x
 VNZ_ADJ;Venezuelan;V??u?ien;Venezuelanisch;;Venezolana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 CAT_ADJ;Catalonian;Catalan;Katalonisch;;Catalana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BAV_ADJ;Bavarian;Bavarois;Bayerisch;;B?ara;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1118,13 +1123,12 @@ mexican;Zakatekal-Euskarra;Mexicain;Mexikanisch;;Mexicana;;;;;;;;,,,,,,,,,,,,,,,
 central_american;Erdiko-Kolonbiarra Minor;Centre-am?icain;Mittelamerikanisch;;CentroColumbiana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 caribeno;Caribeno;Cariban;Karibisch;;Caribe?;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 north_andean;Enseignants;Nord-Andin;Nordandisch;;Norandina;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-francorientale;Antartidan;Platinien;Platineisch;;Platense;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-brazilian;Ùican;Br?ilien;Brasilianisch;;Brasile?;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+sgirenic;Sgirenic;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 african_diaspora_cultures;African Diaspora Cultures;Cultures de la diaspora africaine;Fremdafrikanisch;;Culturas de la di?pora africana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 afro_american;Afro Columbian;Afro-am?icain;Afroamerikanisch;;Afro-Columbiana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 afro_caribbean;Afro Caribbean;Afro-cara?e;Afrokaribisch;;Afro-caribe?;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 afro_caribeno;Afro Caribeno;Afro-cariban;Afro-Karibisch;;Afro-caribe?;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-afro_brazilian;Afro Gaelic;Afro-br?ilien;Afrobrasilianisch;;Afro-brasile?;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afro_scot;Afro Scot;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 afro_antillean;Afro Antillean;Afro-antillais;Afro-Antillisch;;Afro-antillana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 west_african;West African;Ouest-africain;Westafrikanisch;;Africana occidental;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 akan;Akan;Akan;Akanisch;;Akan;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -3110,7 +3114,7 @@ trustee_system_desc;Inmates police other inmates in this state's prisons, and pr
 penal_colonies;Penal Colonies;Colonies pénales;Strafkolonien;;Colonias penales;;;;;;;;;
 penal_colonies_desc;Scattered around our Empire lie several penal colonies, of varying size and shape, to which we banish our worst criminals.;Plusieurs colonies de taille et de forme variables sont dispersées autour de notre Empire. Elles accueillent nos pires criminels.;Um unser Reich herum verstreut liegen mehrere Strafkolonien verschiedener Größen und Ausführungen, in die wir unsere schlimmsten Verbrecher verbannen.;;Repartidas por nuestro imperio hay varias colonias penales de tamaño y formas variables a las que deportamos a nuestros peores criminales.;;;;;;;;;
 the_statue_of_liberty;The Statue of Liberty;La statue de la Libert?Die Freiheitsstatue;;La Estatua de la Libertad;;;;;;;;;
-the_statue_of_liberty_desc;The first thing people see as they approach New York harbor, by boat from the Old World, is the gleaming tip of an enormous torch, symbolizing the freedom and liberty of the New. For many of the immigrants to our great nation, this will be the lasting first impression of a country forged and born in liberty, and of a new home.;La première chose que les gens arrivant par bateau du vieux monde voient, lorqu'ils approchent le port de New-York, c'est la pointe brillante d'une énorme torche, symbolisant la libertée du nouveau monde. Pour beaucoup d'immigrants, ce sera la première impression marquante qu'ils auront de leur nouvelle maison ;Das erste, was die Menschen auf den Schiffen aus der Alten Welt sehen, wenn sie sich dem Hafen New Yorks nähern, ist der Schein einer gewaltigen Fackel, welche die Freiheit der Neuen Welt symbolisiert. Für viele der Einwanderer unserer großen Nation ist dies der bleibende Eindruck eines Landes, das in Freiheit geschaffen und geformt wurde, und einer neuen Heimat.;;;La primera cosa que ve la gente que se aproxima en barco al puerto de Nueva York desde el Viejo Mundo es la llameante punta de una enorme antorcha que simboliza la libertad del Nuevo Mundo. Para muchos de los inmigrantes que llegan a nuestra gran nación, ser?la primera impresión duradera de su nuevo hogar, un país forjado y nacido en libertad.;;;;;;;;
+the_statue_of_liberty_desc;The first thing people see as they approach New York harbor, by boat from the Old World, is the gleaming tip of an enormous torch, symbolizing the freedom and liberty of the New. For many of the immigrants to our great nation, this will be the lasting first impression of a country forged and born in liberty, and of a new home.;La premi?re chose que les gens arrivant par bateau du vieux monde voient, lorqu'ils approchent le port de New-York, c'est la pointe brillante d'une ?norme torche, symbolisant la libert?e du nouveau monde. Pour beaucoup d'immigrants, ce sera la premi?re impression marquante qu'ils auront de leur nouvelle maison ;Das erste, was die Menschen auf den Schiffen aus der Alten Welt sehen, wenn sie sich dem Hafen New Yorks n?hern, ist der Schein einer gewaltigen Fackel, welche die Freiheit der Neuen Welt symbolisiert. F?r viele der Einwanderer unserer gro?en Nation ist dies der bleibende Eindruck eines Landes, das in Freiheit geschaffen und geformt wurde, und einer neuen Heimat.;;;La primera cosa que ve la gente que se aproxima en barco al puerto de Nueva York desde el Viejo Mundo es la llameante punta de una enorme antorcha que simboliza la libertad del Nuevo Mundo. Para muchos de los inmigrantes que llegan a nuestra gran naci?n, ser?la primera impresi?n duradera de su nuevo hogar, un pa?s forjado y nacido en libertad.;;;;;;;;
 germania_werft;The Germaniawerft;L'arsenal Germania;Die Germaniawerft;;El Germaniawerft;;;;;;;;;
 germania_werft_desc;Ships steam out of the drydock in Kiel at an amazing rate, thanks to the Krupp family's Germaniawerft.;Les bateaux ?vapeur sortent de la cale sèche de Kiel ?un rythme effrén?grâce ?l'arsenal Germania de la famille Krupp.;Im Trockendock in Kiel werden Schiffe dank der Germaniawerft der Familie Krupp mit erstaunlicher Geschwindigkeit gebaut.;;Los barcos salen de los diques secos de Kiel a un ritmo increíble, gracias al astillero Germaniawerft de la familia Krupp.;;;;;;;;;
 colonial_mismanagement;Colonial Mismanagement;Mauvaise gestion coloniale;Koloniale Fehlverwaltung;;Mala gestión colonial;;;;;;;;;
@@ -3173,9 +3177,9 @@ EVTOPTA1107;That could come in handy;Cela pourrait être utile.;Das könnte gelege
 EVTNAME1109;Oil Well found in $PROVINCENAME$;Puits de pétrole découvert;Ölquelle;;Descubierto petroleo en $PROVINCENAME$;;;;;;;;;
 EVTDESC1109;A dried up old traveller has returned from the wilderness. When given a whiskey he says with a hoarse voice 'Oil! I have found Oil! An ocean of Oil!';Un vieux voyageur ratatin?est de retour du désert. Il se fait servir un whisky et dit d'une voix rauque "du pétrole ! J'ai trouv?du pétrole ! Un océan de pétrole !";Ein alter, verdörrter Vagabund ist aus der Wildnis zurückgekehrt. Bei einem Glas Whiskey sagt er mit heiserer Stimme: 'Öl! Ich habe Öl gefunden! Ein ganzes Meer davon!';El pozo de petróleo;Un viajero sediento ha regresado del desierto. Cuando se le dio un vaso de whisky, dijo con voz ronca: '¡Petróleo! ¡He encontrado petróleo! ¡Un mar de petróleo!';;;;;;;;;
 EVTOPTA1109;Oil!;Du pétrole !;Öl!;Un viajero sediento ha regresado del desierto. Cuando se le dio un vaso de whisky, dijo con voz ronca: '¡Petróleo! ¡He encontrado petróleo! ¡Un mar de petróleo!';¡Petróleo!;;;;;;;;;
-EVTNAME1139;Witwatersrand Gold Rush;Ruée vers l'or du Witwatersrand;Witwatersrand Goldrausch;¡Petróleo!;Fiebre del oro en Witwatersrand;;;;;;;;;
-EVTDESC1139;For a long time, rumors have circulated among natives of a mythical place on the highveld where gold nuggets the size of apples lie scattered openly on the ground. Whether the legend was originally a figment of fact or fiction, it was confirmed today, when prospectors in the Witwatersrand struck a motherlode of gold. News of the gold rush are spreading throughout the world like wildfire, and a new town has been incorporated in the province to deal with this new influx of fortune seekers and Uitlanders. The province will henceforth be known, simply, as 'Johannesburg'.;Pendant longtemps, des rumeurs ont circul?parmi les natifs d'un lieu mythique situ?sur un haut plateau o?les pépites d'or de la taille des pommes jonchent ouvertement le terrain. Que la légende est ét?le fruit de fait ou de fiction, il a ét?confirm?aujourd'hui, que les prospecteurs dans le Witwatersrand ont découvert un filon d'or. Les nouvelles de la ruée vers l'or se répandent ?travers le monde comme une traînée de poudre, et une nouvelle ville a ét?créée dans la province pour faire face ?ce nouvel afflux de chercheurs d'or et d'étrangers. La province sera désormais connue, tout simplement, comme «Johannesburg?;Seit langer Zeit kursieren unter den Eingeborenen Gerüchte um einen mythischen Ort auf dem Highveld, wo Goldnuggets von Apfelgröße offen auf dem Boden herumliegen. Ob die Legende nun ursprünglich auf Wahrheit oder Wunschdenken beruhte, ist unklar, aber sie wurde heute bestätigt, als Goldsucher im Witwatersrand auf ein gewaltiges Goldvorkommen stießen. Die Nachricht von diesem Goldrausch verbreitet sich wie ein Lauffeuer um die Welt, und eine neue Stadt wurde in der Provinz gegründet, um es mit dem Ansturm von Glückssuchern und Ausländern aufzunehmen. Ab sofort wird die Provinz einfach 'Johannesburg' genannt.;;Durante mucho tiempo, han circulado rumores entre los nativos acerca de un mítico donde hay pepitas de oro del tamaño de manzanas. Aparte de si originariamente había algo de verdad o no, hoy se ha visto confirmado cuando unos prospectores han hallado una veta madre de oro en Witwatersrand. Las noticias acerca de la fiebre del oro han corrido como la pólvora por todo el mundo. Se ha fundado una nueva ciudad en la provincia para gestionar este nuevo flujo de buscadores de fortuna. Por ello, a partir de ahora, la provincia ser?conocida como 'Johannesburgo'.;;;;;;;;;
-EVTOPTA1139;Strike The Earth!;Fouiller la terre !;Grabt!;;¡Cavad la tierra!;;;;;;;;;
+EVTNAME1139;Goddington Gold Rush;;;;;;;;;
+EVTDESC1139;For a long time, rumors have circulated among natives of a mythical place on the highveld where gold nuggets the size of apples lie scattered openly on the ground. Whether the legend was originally a figment of fact or fiction, it was confirmed today, when prospectors in the Goddington struck a motherlode of gold. News of the gold rush are spreading throughout the world like wildfire, and a new town has been incorporated in the province to deal with this new influx of fortune seekers and Outsiders.;;;;;;;;;
+EVTOPTA1139;Strike The Earth!;;;;;;;;;
 EVTNAME1140;Gold In The Black Hills!;De l'or dans les Black Hills !;Gold in den Black Hills!;;¡Oro en las Colinas Negras!;;;;;;;;;
 EVTDESC1140;Lt. Colonel Custer reports back from the Black Hills with an announcement that gold in substantial quantities has been discovered in the Dakota territory. Prospectors, miners and fortune-seekers flock to the area, but troubling reports tell of strange howls and cries coming from the hills at night. Some say that the Sioux are going on the warpath...;Le lieutenant-colonel Custer rapporte en revenant des Black Hills, que de l'or en quantit?importante, a ét?découvert dans le territoire du Dakota. Prospecteurs, mineurs et autres chercheurs de fortune s’installent dans la région, mais des rapports troublants parlent d’hurlements et de cris étranges provenant des collines la nuit. Certains disent que les Sioux sont sur le sentier de la guerre...;Oberstleutnant Custer berichtet aus den Black Hills, dass Gold in großen Mengen im Dakota-Territorium gefunden wurde. Gold- wie Glückssucher strömen in das Gebiet, aber beunruhigende Berichte künden von merkwürdigem Heulen und Schreien, das nachts aus den Hügeln dringt. Manche sagen, die Sioux machten sich für den Kriegspfad bereit ...;;El teniente coronel Custer trae un informe de las Colinas Negras, con el anuncio de que se ha descubierto una sustanciosa cantidad de oro en el territorio de Dakota. Prospectores, mineros y cazadores de fortuna acuden a la zona, mientras se producen turbadores informes de extraños gritos y aullidos provenientes de las colinas por las noches. Algunos dicen que los Sioux están en pie de guerra...;;;;;;;;;
 EVTOPTA1140;Mixed blessings;Bénédictions mêlées;Zweifelhafter Segen;;Ventajas y desventajas;;;;;;;;;
@@ -4493,10 +4497,10 @@ REMOVE_EVTNAME15310;The Flying University of $PROVINCENAME$;L'universit?volante 
 REMOVE_EVTDESC15310;She stalks through the city-streets of $PROVINCENAME$ with a heavy breath, her steps hurried. By the market square she has to take a detour to avoid being followed. Every shadow in the dark seems to conceal a $COUNTRY_ADJ$ policeman, or, even worse, a soldier. As she makes her way through the city, the illuminated clock-tower of the church seems to glare at her like a mean, infected yellow eye. She's already late. She arrives. Through the door, hushed voices can be heard whispering. She knocks. A slit in the door opens. The door itself opens. She lets out a sigh of relief. Class is still in session.\n\nAn underground university has formed in $PROVINCENAME$, providing higher education despite the ban on minority languages in academia.;Elle marche traversant la ville de $PROVINCENAME$ avec un respiration lourde, ses pas sont précipités. Par la place du march? elle doit prendre un détour pour éviter d'être suivie. Chaque ombre dans l'obscurit?semble cacher un policier $COUNTRY_ADJ$, ou, pire encore, un soldat. Comme elle a fait son chemin ?travers la la ville, la tour-horloge illuminée de l'église semble l'éblouir. Elle est déj?en retard. Elle arrive. Par la porte, des voix basses peuvent être entendues chuchoter. Elle frappe. Une fente dans la porte s'ouvre. La porte s'ouvre. Elle pousse un soupir de soulagement. La classe est toujours en session. \n\nUne universit?clandestine formée en $PROVINCENAME$, dispensant un enseignement supérieur malgr?l'interdiction des langues minoritaires dans les universités du pays. ;Schwer atmend zieht sie eiligen Schrittes durch die Straßen von $PROVINCENAME$. Am Marktplatz muss sie einen Umweg nehmen, um mögliche Verfolger abzuschütteln. Jeder Schatten im Dunkeln scheint einen $COUNTRY_ADJ$ Polizisten zu verbergen ... oder noch schlimmer, einen Soldaten. Während sie sich ihren Weg durch die Stadt bahnt, scheint sie die erleuchtete Turmuhr wie ein böses, gelbes Auge anzustarren. Sie ist schon zu spät. Sie kommt an. Durch die Tür kann man gedämpfte Stimmen flüstern hören. Sie klopft. Ein Schlitz in der Tür öffnet sich. Dann wird die Tür selbst geöffnet. Sie lässt einen erleichterten Seufzer heraus: Der Unterricht ist noch nicht vorbei.\n\nIn $PROVINCENAME$ hat sich eine Untergrund-Universität gegründet, die trotz des Bannes gegen Minderheitensprachen in akademischen Kreisen höhere Bildung vermittelt.;;Recorre las calles de $PROVINCENAME$ con respirar agitado y pasos apresurados. Al llegar a la plaza principal, tiene que dar un rodeo para evitar que la sigan. Cada sombra en la oscuridad parece ocultar a un policía de $COUNTRY$, o, lo que es peor, a un soldado. Mientras atraviesa la ciudad, el iluminado reloj de la torre de la iglesia parece mirarla fijamente, como un perverso y ponzoñoso ojo amarillo. Ya llega tarde. Llega. A través de la puerta, puede oírse el susurro de voces tranquilas. Llama a la puerta. Se abre apenas una rendija. La puerta se abre. Deja escapar un suspiro de alivio. La clase aún no ha terminado.\n\nEn $PROVINCENAME$, se ha formado una universidad clandestina que proporciona educación superior, a pesar de la prohibición de las lenguas minoritarias en la academia.;;;;;;;;;
 EVTOPTA15310;Horrid. Absolutely horrid.;Horrible. Absolument horrible.;Fürchterlich. Absolut fürchterlich.;;Mal asunto. Muy mal asunto.;;;;;;;;;
 EVTOPTB15310;Spare no effort in shutting it down.;Ne ménageons pas nos efforts pour la fermer.;Diese Universität muss um jeden Preis geschlossen werden.;;No escatimemos esfuerzos en cerrarla.;;;;;;;;;
-EVTNAME16000;A House Divided;Une maison divisée;Ein gespaltenes Haus;;Una casa dividida;;;;;;;;;
-REMOVE_EVTDESC16000;A house divided against itself cannot stand. I believe this government cannot endure, permanently, half slave and half free. I do not expect the Union to be dissolved ?I do not expect the house to fall ?but I do expect it will cease to be divided. It will become all one thing or all the other.' -- Abraham Lincoln\n\nIt is over. All attempts at compromise, the efforts of decades of public discourse on the issue of slavery, have failed. This morning the congressmen from the Southern states resigned their offices, and the slave states declared secession from the perpetual Union. A southern wind blows hard on our house divided.;Une maison divisée contre elle-même ne peut subsister. Je crois que ce gouvernement ne peut pas supporter, en permanence, d'être scind?en moiti?esclavagiste-moiti?libertaire. Je ne m'attends pas ?ce que l'Union se dissolve - Je ne m'attends pas ?ce que la maison commune tombe - mais je m'attends ?ce qu'elle cesse d'être divisée.  -- Abraham Lincoln -- \n\nC'est termin? Toutes les tentatives de compromis, les efforts de plusieurs décennies en discours publics sur la question de l'esclavage, ont échou? Ce matin, les congressistes des États du sud ont démissionn?de leurs charges, et les États esclavagistes ont déclar?la sécession de l'Union. Un vent du sud souffle durement sur notre maison divisée. ;Ein gespaltenes Haus ist nicht überlebensfähig. Ich glaube, dass diese Regierung, eine Hälfte Freiheitsliebende, eine Hälfte Sklavenhalter, nicht auf Dauer Bestand haben kann. Ich erwarte nicht die Auflösung der Union ?und ich erwarte nicht den Untergang des Hauses ?aber ich erwarte, dass es sich nicht mehr uneins sein wird. Entweder wird Letzteres passieren oder alles des Vorhergesagten.' -- Abraham Lincoln\n\nEs ist vorbei. Alle Kompromissversuche, alle öffentlichen Diskussionen bezüglich der Sklaverei sind endgültig gescheitert. An diesem Morgen sind die Kongressabgeordneten der Südstaaten geschlossen von ihren Ämtern zurückgetreten, und die Sklavenstaaten haben ihre Abspaltung von der Union erklärt. Der Wind des Südens bläst stark gegen unser gespaltenes Haus.;;Una casa dividida no puede durar. Creo que este gobierno no puede seguir siendo, permanentemente, medio esclavo y medio libre. No espero que la Unión se disuelva ?no espero que la casa se desmorone ?pero espero que dejar?de dividirse. O ser?una cosa o ser?la otra. -- Abraham Lincoln\n\nSe acab? Todos los intentos de compromiso, los esfuerzos de décadas de discurso público sobre el problema de la esclavitud, han fracasado. Esta mañana, los congresistas de los estados sureños dimitieron de sus cargos, y los estados esclavistas declararon la secesión de la perpetua Unión. Un viento del sur sopla con fuerza sobre nuestra casa dividida.;;;;;;;;;
-EVTOPTA16000;Three rousing cheers for the Union!;Hip hip hip hourra pour l'Union !;Ein dreifaches Hurra auf die Union!;;¡Tres vivos hurras por la Unión!;;;;;;;;;
-EVTOPTB16000;Advance the flag of Dixie! Hurrah!;Qu'on hisse le drapeau confédér?! Hourra !;Hisst die Dixie-Flagge! Hurra!;;¡Sacad la bandera sudista! ¡Hurra!;;;;;;;;;
+EVTNAME16000;The Slave Revolt;;;;;;;;;
+EVTDESC16000;It is over. All attempts at compromise, the efforts of decades of public discourse on the issue of slavery, have failed. This morning a large scale revolt had taken hold in our southern states wreaking havoc upon the local Amauldi minority. The now former slave states declared secession from the Kingdom. A southern wind blows hard on Amauldi land.;;;;;;;;;
+EVTOPTA16000;In Amauldi land I'll take my stand!;;;;;;;;;
+EVTOPTB16000;Advance the flag of Liberie! Hurrah!;;;;;;;;;
 EVTNAME16010;John Brown's Last Raid;Le raid sur Harpers Ferry de John Brown;John Browns letzter Überfall;;La última incursión de John Brown;;;;;;;;;
 REMOVE_EVTDESC16010;John Brown's body lies a-mouldering in the grave, but his soul is marching on.'--John Brown's Body, Union Marching song\n\nThe famed hero of the abolitionist movement, the late John Brown, was hanged in $PROVINCENAME$ today after a failed raid on a military armory. Supposedly, Brown had planned to use the arsenal's weapons to arm slaves and incite an open slave rebellion across the entire south. The raid, and John Brown's death, have furthered escalated southern tension over the slavery issue, and in some slave-states there is now even talk of secession from the Union.;?Le corps de John Brown pourrit dans la tombe, mais son âme est en marche ?. John Brown's Body, chanson de marche de l'Union. \n\nLe célèbre héros du mouvement abolitionniste, le regrett?John Brown, a ét?pendu ?$PROVINCENAME$ aujourd'hui, après un raid manqu?sur un arsenal militaire. Apparemment, Brown avait prévu d'utiliser des armes de l'arsenal pour armer les bras d'esclaves et inciter ?une révolte ouverte ?travers tout le Sud. Le raid, et la mort de John Brown, ont favoris?une escalade de tension sudiste sur la question de l'esclavage, et, dans certains Etats-esclavistes il est encore question de sécession de l'Union. ;John Brown's body lies a-mouldering in the grave, but his soul is marching on.'--John Brown's Body, Marschlied der Union\n\nDer Held der Abolitionismus-Bewegung, John Brown, wurde heute in $PROVINCENAME$ nach einem fehlgeschlagenen Überfall auf ein Waffenlager der Armee gehängt. Angeblich hatte Brown geplant, mit den Waffen aus dem Waffenlager Sklaven zu bewaffnen und den gesamten Süden mit einem Sklavenaufstand zu überziehen. Der Überfall und Browns Tod haben die Spannungen im Süden hinsichtlich der Sklavenfrage weiter eskaliert, und in manchen Sklavenstaaten wird nun offen über die Abspaltung von der Union diskutiert.;;El cuerpo incorruptible de John Brown yace en la tumba, pero su espíritu sigue avanzando. -- El cuerpo de John Brown, marcha de la Unión\n\nEl famoso héroe del movimiento abolicionista, el difunto John Brown, ha sido colgado hoy en $PROVINCENAME$ tras una incursión fallida a un arsenal militar. Al parecer, Brown había planeado utilizar las armas del arsenal para armar a los esclavos e instigar una rebelión de esclavos declarada por todo el sur. La incursión, y la muerte de John Brown, han impulsado la escalada de tensión sureña sobre el problema de la esclavitud, y en algunos estados esclavistas se habla ya, incluso, de secesión de la Unión.;;;;;;;;;
 EVTOPTA16010;His soul is, indeed, marching on.;Son âme poursuit le combat.;Sein Seele marschiert tatsächlich weiter.;;Su espíritu sigue avanzando, sin duda.;;;;;;;;;
@@ -4925,8 +4929,8 @@ EVTOPTA19300;I lift my lamp beside the golden door;De ma lumière, j'éclaire la p
 EVTNAME19500;Laagers Attacked!;Les camps attaqués !;Laagers angegriffen!;;¡Ataque a campamento!;;;;;;;;;
 EVTDESC19500;The smouldering remains of a Voortrekker wagon train was discovered by our scouts near the Bushman river a few days ago. In the devastation left after what must obviously have been an attack, we have found the remains of several Afrikaaner men, women and children. Spearheads left at the site tell a clear tale. It appears as if the Impis of the Zulu, to our South-east, is behind the massacre.;Le feu couvant les restes d'un wagon de train Voortrekker a ét?découvert par nos éclaireurs près de la rivière Bushman il y a quelques jours. Dans la dévastation laissée après ce qui doit évidemment avoir ét?une attaque, nous avons trouv?les restes de plusieurs afrikaner, hommes, femmes et enfants. Des fers de lance laissés sur le site racontent une histoire claire. Il semble que les Impis des Zoulous, ?notre Sud-Est, soient derrière le massacre. ;Vor ein paar Tagen haben unsere Kundschafter in der Nähe des Bushman-Flusses die schwelenden Überreste einer Voortrekker-Wagenburg gefunden. Dabei hat es sich offensichtlich um einen Angriff gehandelt. In den Trümmern haben wir die Überreste von mehreren Siedlern gefunden: Männern, Frauen und Kindern. Liegen gelassene Speerspitzen lassen eindeutig auf das Vorgefallene schließen. Es scheint, als ob die Impis der Zulu, deren Gebiet südöstlich von uns liegt, hinter dem Massaker stecken würden.;;Hace unos días, nuestros exploradores han descubierto los humeantes restos de un tren de vagones voortrekker (pioneros) cerca del río Bushman. En la destrucción resultante de lo que obviamente ha sido un ataque, hemos encontrado los restos de varios hombres, mujeres y niños afrikáners. Las puntas de lanza encontradas en el lugar hablan por s?solas. Parece ser que los impi, de la tribu zul?que se encuentra a nuestro sureste, están detrás de la masacre.;;;;;;;;;
 EVTOPTA19500;They shall not have died in vain!;Ils ne doivent pas être morts en vain !;Sie sollen nicht umsonst gestorben sein!;;¡Su muerte no ser?en vano!;;;;;;;;;
-EVTNAME19501;Witwatersrand Gold Rush;Ruée vers l'or du Witwatersrand;Witwatersrand-Goldrausch;;Fiebre del oro en las Witwatersrand;;;;;;;;;
-EVTDESC19501;Migrants have been moving in large numbers through our colony on the Cape, on their way to the newly incorporated town of 'Johannesburg', on the edge of the Witwatersrand mountains, where a major gold rush is taking place. The massive influx of foreign residents to the area is causing trouble along our borders, and this might be a valid excuse to end the independence of these pesky fringe states.;Les migrants ont ét?déplaçés en grand nombre ?travers notre colonie du Cap, sur le chemin de la ville nouvellement constituée de «Johannesburg? sur le bord des montagnes Witwatersrand, o?une ruée vers l'or est en cours. L'afflux massif des résidents étrangers ?la zone pose problème le long de nos frontières, et cela pourrait être une excuse valable pour mettre fin ?l'indépendance de ces agaçants Etats ?la marge. ;Einwanderer sind auf dem Weg zur neu gegründeten Stadt 'Johannesburg' am Rande des Witwatersrand-Gebirges, wo ein neuer Goldrausch ausgebrochen ist, in großer Zahl durch unsere Kolonie am Kap gezogen. Die massive Zuwanderung von Ausländern sorgt entlang unserer Grenzen für Probleme. Dies könnte eine legitime Entschuldigung dafür sein, die Unabhängigkeit dieser lästigen Randländer zu beenden.;;Gran cantidad de inmigrantes se han pasado por nuestra colonia del Cabo, de camino hacia la recién incorporada población de 'Johannesburgo', al pie de las montañas Witwatersrand, donde se est?extendiendo una importante fiebre del oro. El enorme flujo de residentes extranjeros a la zona est?causando problemas a lo largo de nuestras fronteras, y ello podría ser una buena excusa para poner fin a la independencia de estos molestos estados fronterizos.;;;;;;;;;
+EVTNAME19501;Goddington Gold Rush;Ruée vers l'or du Goddington;Goddington-Goldrausch;;Fiebre del oro en las Goddington;;;;;;;;;
+EVTDESC19501;Migrants have been moving in large numbers through our colony on the Cape, on their way to the newly incorporated town of 'Goddington', on the edge of the Goddington mountains, where a major gold rush is taking place. The massive influx of foreign residents to the area is causing trouble along our borders, and this might be a valid excuse to end the independence of these pesky fringe states.;Les migrants ont ét?déplaçés en grand nombre ?travers notre colonie du Cap, sur le chemin de la ville nouvellement constituée de «Johannesburg? sur le bord des montagnes Goddington, o?une ruée vers l'or est en cours. L'afflux massif des résidents étrangers ?la zone pose problème le long de nos frontières, et cela pourrait être une excuse valable pour mettre fin ?l'indépendance de ces agaçants Etats ?la marge. ;Einwanderer sind auf dem Weg zur neu gegründeten Stadt 'Goddington' am Rande des Goddington-Gebirges, wo ein neuer Goldrausch ausgebrochen ist, in großer Zahl durch unsere Kolonie am Kap gezogen. Die massive Zuwanderung von Ausländern sorgt entlang unserer Grenzen für Probleme. Dies könnte eine legitime Entschuldigung dafür sein, die Unabhängigkeit dieser lästigen Randländer zu beenden.;;Gran cantidad de inmigrantes se han pasado por nuestra colonia del Cabo, de camino hacia la recién incorporada población de 'Goddingtono', al pie de las montañas Goddington, donde se est?extendiendo una importante fiebre del oro. El enorme flujo de residentes extranjeros a la zona est?causando problemas a lo largo de nuestras fronteras, y ello podría ser una buena excusa para poner fin a la independencia de estos molestos estados fronterizos.;;;;;;;;;
 EVTOPTA19501;Merits due consideration;Mérite et considération;Das ist reifliche Überlegung wert.;;Los méritos merecen consideración;;;;;;;;;
 EVTNAME21000;Outbreak of Tuberculosis!;Épidémie de tuberculose !;Ausbruch von Tuberkulose!;;¡Epidemia de tuberculosis!;;;;;;;;;
 EVTDESC21000;One of the most common killers in the 19th century was tuberculosis, an infectious disease in humans that usually targets the lungs. Known today to be caused by various strains of mycobacteria, the historical explanations for tuberculosis range from vampirism to imbalances in the 'cardinal fluids'. Known since ancient times, and first described as a contagious disease by Avicenna in 1020, typical symptoms of the disease include chronic cough, fever, and the expulsion of blood-tinged phlegm. In the 19th century, the disease was sometimes romanticized, as several famous authors and poets of the era were known sufferers.;L'une des tueuses les plus communes du 19ème siècle a ét?la tuberculose, une maladie infectieuse chez l'homme qui cible généralement les poumons. Comprise, aujourd'hui, pour être provoquée par différentes souches de mycobactéries, alors que les explications historiques pour la tuberculose allaient du vampirisme ?des déséquilibres dans les «fluides cardinaux? Connue depuis l'antiquit? et d'abord décrite comme une maladie contagieuse par Avicenne en 1020, les symptômes typiques de la maladie comprennent la toux chronique, la fièvre, et l'expulsion de mucosités teintées de sang. Au 19e siècle, la maladie a ét?parfois mêlée de romantisme, car plusieurs auteurs et poètes de l'époque étaient connus en souffrir. ;Einer der größten Geißeln der Menschheit im neunzehnten Jahrhundert war die Tuberkulose, eine ansteckende Krankheit, die meistens die Lungen befällt. Heute wei?man, dass sie durch verschiedene Mykobakterien-Stämme ausgelöst wird. Historische Erklärungen der Tuberkulose reichen von Vampirismus bis zum Ungleichgewicht der 'Kardinalflüssigkeiten'. Diese Krankheit ist seit dem Altertum bekannt und wurde erstmals von Avicenna im Jahr 1020 als ansteckende Krankheit beschrieben. Typische Symptome sind chronischer Husten, Fiber und die Ausscheidung blutversetzten Schleims. Im neunzehnten Jahrhundert wurde die Krankheit manchmal im romantischen Licht gesehen, da mehrere berühmte Autoren und Dichter dieser Ära unter ihr litten.;;Uno de los exterminadores más habituales del siglo XIX fue la tuberculosis, una enfermedad infecciosa en los humanos que normalmente ataca a los pulmones. Aunque hoy se sabe que est?causada por diversas variedades de micro bacterias, las explicaciones históricas abarcan desde el vampirismo a desequilibrios en los 'fluidos primordiales'. Conocida desde los tiempos antiguos, y descrita por primera vez como enfermedad contagiosa por Avicena en 1020, los síntomas típicos de la enfermedad incluyen tos crónica, fiebre y expectoración de esputos sanguinolentos. Durante el siglo XIX, la enfermedad fue, en ocasiones, idealizada, ya que varios escritores y poetas famosos la padecieron.;;;;;;;;;
@@ -6155,7 +6159,7 @@ ALLIANCEREQDESC;$ACTOR$ offers us an Alliance. By accepting it we are promising 
 GUARANTTITLE;Proclaim Guarantee;Proclamer une garantie;Garantie proklamieren;$ACTOR$ proponuje nam zawarcie sojuszu. Zgadzaj¹c si? zobowi¹zujemy si?pomaga?sobie wzajemnie w wypadku wojny.;Proclamar garantía;$ACTOR$ ci propone un'alleanza. Accettando, ci impegniamo ad aiutarci a vicenda in tempi di guerra.;$ACTOR$ szövetséget ajánlott nekünk. Így téve meg kell ígérnünk nekik, hogy hábor?esetén egymást fogjuk segíteni.;$ACTOR$ nám nabíz?spojenectv? Pøijmeme-li ho, budeme si muset navzájem pomáhat v èase války.;;;;;;
 GUARANTNEWDESC;Do you wish to proclaim a guarantee for $COUNTRY$? If they are attacked, we will be called upon to join the fight.;Souhaitez-vous proclamer une garantie pour $COUNTRY$ ? S'ils sont attaqués, nous devrons alors les soutenir.;Wollen Sie eine Garantie für $COUNTRY$ proklamieren? Wenn sie angegriffen werden, müssen wir ihnen zu Hilfe kommen.;Gwarantuj niepodleg³oœæ;¿Quieres proclamar una garantía para $COUNTRY$? Si les atacan, nos pedirán que les unamos al combate.;Proclamarsi garante;Biztosíték kinyilatkoztatása;Vyhlásit garanci;;;;;;
 GUARANTDESC;Proclaiming a guarantee will give us a chance to defend them against those who declare war on them.;Proclamer une garantie nous fournira automatiquement un Casus Belli contre quiconque leur déclarera la guerre.;Eine Garantieproklamation gibt uns einen Kriegsgrund gegen jeden, der ihnen den Krieg erklärt.;;Proclamar una garantía nos dar?la oportunidad de defenderlos de los que le declaren la guerra.;;;;;;;;;
-HASGUARANT;We are already guaranteeing them.;Nous nous portons déj?garants pour eux.;Wir haben schon eine Garantie für sie proklamiert.;Gwarantuj¹c im niepodleg³oœæ, uzyskujemy casus belli wzglêdem tych, którzy wypowiedz?wojn?temu krajowi.;Ya los estamos garantizando.;Proclamarsi garante di una nazione ci fornir?un Casus Belli nei confronti di chiunque dichiarer?guerra a quella nazione.;A biztosíték vállalása egyben háborús indítékot is jelent azon nemzetek ellen, aki szövetségesedet megtámadja.;Vyhl?en?garance nám poskytne záminku k válce s kýmkoliv, kdo vyhlás?válku jim.;;;;;;
+HASGRARANT;We are already guaranteeing them.;Nous nous portons déj?garants pour eux.;Wir haben schon eine Garantie für sie proklamiert.;Gwarantuj¹c im niepodleg³oœæ, uzyskujemy casus belli wzglêdem tych, którzy wypowiedz?wojn?temu krajowi.;Ya los estamos garantizando.;Proclamarsi garante di una nazione ci fornir?un Casus Belli nei confronti di chiunque dichiarer?guerra a quella nazione.;A biztosíték vállalása egyben háborús indítékot is jelent azon nemzetek ellen, aki szövetségesedet megtámadja.;Vyhl?en?garance nám poskytne záminku k válce s kýmkoliv, kdo vyhlás?válku jim.;;;;;;
 CALLTITLE;A Call to Arms!;Appel aux armes !;Ein Ruf zu den Waffen!;Ju?zagwarantowaliœmy im niepodleg³oœæ.;¡Una llamada a las armas!;Siamo gi?loro garanti.;Már biztosítottunk õket;Ji?jsme jim poskytli garanci.;;;;;;
 CALLREQDESC;The nation of $COUNTRY$, your faithful ally, is requesting that you come to their aid in the conflict against $LIST$. ;La nation de $COUNTRY$, votre fidèle alli? demande que vous veniez ?son aide dans le conflit qui l'oppose ?$LIST$. ;Das Land $COUNTRY$, Ihr treuer Verbündeter, bittet Sie um Hilfe im Konflikt gegen $LIST$.;Do broni!;La nación de $COUNTRY$, tu aliado fiel, solicita tu ayuda en el conflicto contra $LIST$. ;Chiamata alle armi!;Fegyverbe hívás!;Volán?do zbran?;;;;;;
 CALLDESC;Call on your partner to aid you in this conflict.;Faites appel ?votre alli?pour vous aider dans ce conflit.;Bitten Sie Ihren Verbündeten, Ihnen in diesem Konflikt zu helfen.;Nasz wierny sojusznik, $COUNTRY$, prosi o pomoc w konflicie z $LIST$.;Pide a tu socio que te ayude en este conflicto.;$COUNTRY$, nazione tua fedele alleata, chiede il tuo aiuto nel conflitto contro: $LIST$.;$COUNTRY$ nemzete, a te h?szövetségesed arra kér, hogy legyél a segítségére $LIST$ ellen.;Zem?$COUNTRY$, v? vìrn?spojenec, vyžaduje vaši pomoc v konfliktu s $LIST$.;;;;;;
@@ -6866,19 +6870,6 @@ ANN_radical_2;The Radical Party;Parti radical;Die radikale Partei;;El Partido Ra
 ANN_socialist;The Socialist Party;Parti socialiste;Die sozialistische Partei;;El Partido Socialista;;;;;;;;;
 ANN_communist;The Communist Party;Parti communiste;Die kommunistische Partei;;El Partido Comunista;;;;;;;;;
 ANN_fascist;The Fascist Party;Parti fasciste;Die faschistische Partei;;El Partido Fascista;;;;;;;;;
-ARG_liberal;Partido Liberal;Partido Liberal;Partido Liberal;;Partido Liberal;;;;;;;;;
-ARG_liberal_2;Partido Unitario;Partido Unitario;Partido Unitario;;Partido Unitario;;;;;;;;;
-ARG_conservative;Partido Federal;Partido Federal;Partido Federal;;Partido Federal;;;;;;;;;
-ARG_conservative_2;Partido Nacional;Partido Nacional;Partido Nacional;;Partido Nacional;;;;;;;;;
-ARG_conservative_3;Autonomista Nacional;Autonomista Nacional;Autonomista Nacional;;Autonomista Nacional;;;;;;;;;
-ARG_conservative_4;Partido Autonomista;Partido Autonomista;Partido Autonomista;;Partido Autonomista;;;;;;;;;
-ARG_liberal_3;Unión Civica;Unión Civica;Unión Civica;;Unión Cívica;;;;;;;;;
-ARG_socialist;Partido Socialista;Partido Socialista;Partido Socialista;;Partido Socialista;;;;;;;;;
-ARG_conservative_5;Unión Civica Nacional;Unión Civica Nacional;Unión Civica Nacional;;Unión Cívica Nacional;;;;;;;;;
-ARG_liberal_4;Unión Civica Radical;Unión Civica Radical;Unión Civica Radical;;Unión Cívica Radical;;;;;;;;;
-ARG_reactionary;Partido Reaccionario;Partido réactionnaire;Partido Reactionary;;Partido Reaccionario;;;;;;;;;
-ARG_radical;Partido Radical;Partido radical;Partido Radical;;Partido Radical;;;;;;;;;
-ARG_communist;Partido Comunista;Partido communiste;Partido Communist;;Partido Comunista;;;;;;;;;
 ARM_conservative;Bey Faction;Faction Bey;Bey-Fraktion;;Facción bey;;;;;;;;;
 ARM_conservative_2;Armenakans;Armenakans;Armenakans;;Armenakans;;;;;;;;;
 ARM_liberal;Toughte Sherepa;Toughte Sherepa;Toughte Sherepa;;Toughte Sherepa;;;;;;;;;
@@ -8645,7 +8636,7 @@ PROV30;Fort Regina;Regina;Regina;;Regina;;;;;;;;;
 PROV37;Churchill;Churchill;Churchill;;Churchill;;;;;;;;;
 PROV38;Indian Lakes;Indian Lakes;Indian Lakes;;Indian Lakes;;;;;;;;;
 PROV39;Norway House;Norway House;Norway House;;Norway House;;;;;;;;;
-PROV46;Toronto;Toronto;Toronto;;Toronto;;;;;;;;;
+PROV46;Wehrendau;;;;;;;;;
 PROV47;Fort Severn;Fort Severn;Fort Severn;;Fuerte Severn;;;;;;;;;
 PROV48;Fort Albany;Fort Albany;Fort Albany;;Fuerte Albany;;;;;;;;;
 PROV50;Donderbaai;Thunder Bay;Thunder Bay;;Bahía de Thunder;;;;;;;;;
@@ -8728,12 +8719,12 @@ PROV181;Deiland;Dayton;Dayton;;Dayton;;;;;;;;;
 PROV182;Zinzinetti;Cincinnati;Cincinnati;;Cincinnati;;;;;;;;;
 PROV183;Sankt Maria;Marietta;Marietta;;Marietta;;;;;;;;;
 PROV184;Louisville;Louisville;Louisville;;Louisville;;;;;;;;;
-PROV187;Paducah;Paducah;Paducah;;Paducah;;;;;;;;;
-PROV188;Nashville;Nashville;Nashville;;Nashville;;;;;;;;;
-PROV189;Memphis;Memphis;Memphis;;Memphis;;;;;;;;;
-PROV190;Knoxville;Knoxville;Knoxville;;Knoxville;;;;;;;;;
+PROV187;Poncelet;;;;;;;;;
+PROV188;Melancon;;;;;;;;;
+PROV189;Sylvestre;;;;;;;;;
+PROV190;Neveux;;;;;;;;;
 PROV191;Chattanooga;Chattanooga;Chattanooga;;Chattanooga;;;;;;;;;
-PROV192;St Jean;Jackson;Jackson;;Jackson;;;;;;;;;
+PROV192;Juneau;;;;;;;;;
 PROV194;Bileau;Biloxi;Biloxi;;Biloxi;;;;;;;;;
 PROV195;Montgomeris;Montgomery;Montgomery;;Montgomery;;;;;;;;;
 PROV197;Mobile;Mobile;Mobile;;Mobile;;;;;;;;;
@@ -8749,18 +8740,18 @@ PROV206;Colombie;Colombie;Columbia;;Columbia;;;;;;;;;
 PROV207;Ville Vert;Greenville;Greenville;;Greenville;;;;;;;;;
 PROV208;Nouvelle Brest;Raleigh;Raleigh;;Raleigh;;;;;;;;;
 PROV209;Charlotte;Charlotte;Charlotte;;Charlotte;;;;;;;;;
-PROV210;Louiscit?Wilmington;Wilmington;;Wilmington;;;;;;;;;
+PROV210;Louiscit;;;;;;;;;
 PROV212;Manassas;Manassas;Manassas;;Manassas;;;;;;;;;
 PROV213;Henriville;Fredericksburg;Fredericksburg;;Fredericksburg;;;;;;;;;
-PROV214;Norfolk;Norfolk;Norfolk;;Norfolk;;;;;;;;;
+PROV214;Nilens;;;;;;;;;
 PROV215;Stuntent;Staunton;Staunton;;Staunton;;;;;;;;;
-PROV216;Roanoke;Roanoke;Roanoke;;Roanoke;;;;;;;;;
-PROV219;Baltimore;Baltimore;Baltimore;;Baltimore;;;;;;;;;
+PROV216;Rondelet;;;;;;;;;
+PROV219;Boisselot;;;;;;;;;
 PROV221;Âgerage;Hagerstown;Hagerstown;;Hagerstown;;;;;;;;;
 PROV222;Dover;Dover;Dover;;Dover;;;;;;;;;
 PROV223;Philendelphien;Philadelphia;Philadelphia;;Filadelfia;;;;;;;;;
 PROV224;Scranton;Scranton;Scranton;;Scranton;;;;;;;;;
-PROV225;Williamsport;Williamsport;Williamsport;;Williamsport;;;;;;;;;
+PROV225;Fousseret;;;;;;;;;
 PROV226;Fort Jean;Harrisburg;Harrisburg;;Harrisburg;;;;;;;;;
 PROV227;Pilleville;Pittsburgh;Pittsburgh;;Pittsburgh;;;;;;;;;
 PROV228;Folterland;Erie;Erie;;Erie;;;;;;;;;
@@ -8777,9 +8768,9 @@ PROV239;Wasserberg;Watertown;Watertown;;Watertown;;;;;;;;;
 PROV240;Plattburg;Plattsburgh;Plattsburgh;;Plattsburgh;;;;;;;;;
 PROV241;Artforte;Hartford;Hartford;;Hartford;;;;;;;;;
 PROV242;Providence;Providence;Providence;;Providence;;;;;;;;;
-PROV243;Boston;Boston;Boston;;Boston;;;;;;;;;
+PROV243;Duverney;;;;;;;;;
 PROV244;Nouvelle Montpellier;New Bedford;New Bedford;;New Bedford;;;;;;;;;
-PROV245;Pits;Pittsfield;Pittsfield;;Pittsfield;;;;;;;;;
+PROV245;Fosses;;;;;;;;;
 PROV246;Bierburg;Burlington;Burlington;;Burlington;;;;;;;;;
 PROV247;Neu Hamburg;Concord;Concord;;Concord;;;;;;;;;
 PROV248;Klein Riga;Lewiston;Lewiston;;Lewiston;;;;;;;;;
@@ -9207,10 +9198,10 @@ PROV779;Osijek;Osijek;Osijek;;Osijek;;;;;;;;;
 PROV780;Split;Split;Split;;Split;;;;;;;;;
 PROV781;Zadar;Zadar;Zadar;;Zadar;;;;;;;;;
 PROV782;Dubrovnik;Dubrovnik;Dubrovnik;;Dubrovnik;;;;;;;;;
-PROV783;Sarajevo;Sarajevo;Sarajevo;;Sarajevo;;;;;;;;;
+PROV783;Vrhbosna;;;;;;;;;
 PROV784;Bihac;Bihac;Bihac;;Bihac;;;;;;;;;
 PROV785;Banja Luka;Banja Luka;Banja Luka;;Banja Luka;;;;;;;;;
-PROV786;Tuzla;Tuzla;Tuzla;;Tuzla;;;;;;;;;
+PROV786;Soli;;;;;;;;;
 PROV787;Foca;Foca;Foca;;Foca;;;;;;;;;
 PROV788;Mostar;Mostar;Mostar;;Mostar;;;;;;;;;
 PROV789;Livno;Livno;Livno;;Livno;;;;;;;;;
@@ -10267,14 +10258,14 @@ PROV2121;Mahajanga;Mahajanga;Mahajanga;;Mahajanga;;;;;;;;;
 PROV2122;Toliara;Toliara;Toliara;;Toliara;;;;;;;;;
 PROV2123;Comoros;Comores;Komoren;;Comoros;;;;;;;;;
 PROV2125;Mauritius;Île Maurice;Mauritius;;Mauricio;;;;;;;;;
-PROV2126;Bourbon;Bourbon;Bourbon;;Bourbon;;;;;;;;;
+PROV2126;Anjaika;;;;;;;;;
 PROV2127;Seychelles;Seychelles;Seychellen;;Seychelles;;;;;;;;;
 PROV2128;Diego Garcia;Diego Garcia;Diego Garcia;;Diego García;;;;;;;;;
 PROV2129;Sant' Elena;Sainte-Hélène;Saint Helena;;Santa Elena;;;;;;;;;
 PROV2130;Igoera;Ascension;Ascension;;Ascensión;;;;;;;;;
 PROV2131;Nuova Elba;Malouines;Falklandinseln;;Islas Malvinas;;;;;;;;;
 PROV2132;Nikolaas Van Halen;Tristan da Cunha;Tristan da Cunha;;Tristan da Cunha;;;;;;;;;
-PROV2133;San Giovani Meridionale;Géorgie du Sud;South Georgia;;Georgia del Sur;;;;;;;;;
+PROV2133;San Giovanni Meridionale;Géorgie du Sud;South Georgia;;Georgia del Sur;;;;;;;;;
 PROV2134;Azor Lurra;Açores;Azoren;;Azores;;;;;;;;;
 PROV2135;Egurra Uhartea;Madère;Madeira;;Madeira;;;;;;;;;
 PROV2136;Isole Canarie;Îles Canaries;Kanarische Inseln;;Islas Canarias;;;;;;;;;
@@ -10442,32 +10433,32 @@ PROV2312;Oruro;Oruro;Oruro;;Oruro;;;;;;;;;
 PROV2313;Chuqichaca;Chuquisaca;Chuquisaca;;Chuquisaca;;;;;;;;;
 PROV2314;Ccantumarcani;Potosi;Potosi;;Potos;;;;;;;;;
 PROV2315;Tarija;Tarija;Tarija;;Tarija;;;;;;;;;
-PROV2316;Santa Cruz;Santa Cruz;Santa Cruz;;Santa Cruz;;;;;;;;;
-PROV2317;San Ignacio;San Ignacio;San Ignacio;;San Ignacio;;;;;;;;;
+PROV2316;Pumaqallo;;;;;;;;;
+PROV2317;Irasema;;;;;;;;;
 PROV2318;Robore;Robore;Robore;;Robore;;;;;;;;;
 PROV2319;Santa Ana;Santa Ana;Santa Ana;;Santa Ana;;;;;;;;;
-PROV2320;Riberalta;Riberalta;Riberalta;;Riberalta;;;;;;;;;
+PROV2320;Ygary;;;;;;;;;
 PROV2321;Toromanas;Cobija;Cobija;;Cobija;;;;;;;;;
 PROV2322;Qhupayapu;Copiapo;Copiapo;;Copiap;;;;;;;;;
 PROV2323;Qulqitanpu;La Serena;La Serena;;La Serena;;;;;;;;;
 PROV2324;Kancha;Santiago;Santiago;;Santiago;;;;;;;;;
 PROV2325;Aliamapu;Valparaiso;Valparaiso;;Valparaíso;;;;;;;;;
-PROV2327;Talca;Talca;Talca;;Talca;;;;;;;;;
-PROV2328;Valdivia;Valdivia;Valdivia;;Valdivia;;;;;;;;;
+PROV2327;Dubois;;;;;;;;;
+PROV2328;Prudence;;;;;;;;;
 PROV2330;Mawili;Cauquenes;Cauquenes;;Cauquenes;;;;;;;;;
-PROV2331;Chillán;Chillan;Chillan;;Chillán;;;;;;;;;
-PROV2332;Osorno;Osorno;Osorno;;Osorno;;;;;;;;;
-PROV2333;Puerto Aisén;Puerto Aisen;Puerto Aisen;;Puerto Aisen;;;;;;;;;
-PROV2334;Punta Arenas;Punta Arenas;Punta Arenas;;Punta Arenas;;;;;;;;;
-PROV2335;Porvenir;Porvenir;Porvenir;;Porvenir;;;;;;;;;
+PROV2331;Fleurette;;;;;;;;;
+PROV2332;Quentin;;;;;;;;;
+PROV2333;Port Rainier;;;;;;;;;
+PROV2334;Conseilles;;;;;;;;;
+PROV2335;Marlene;;;;;;;;;
 PROV2336;Easter Island;Île de Pâques;Osterinsel;;Isla de Pascua;;;;;;;;;
-PROV2337;Fortin Falcon;Fortin Falcon;Fortin Falcon;;Fortín Falcón;;;;;;;;;
-PROV2338;Puerto Guaran;Puerto Guarani;Puerto Guarani;;Puerto Guaran?;;;;;;;;
-PROV2339;Vila D'Artagnan;Asunción;Asuncion;;Asunción;;;;;;;;;
-PROV2340;Vila de Sylvia;Pilar;Pilar;;Pilar;;;;;;;;;
-PROV2341;Nova Narbona;Encarnación;Encarnacion;;Encarnación;;;;;;;;;
-PROV2342;Sant Peire;San Pedro;San Pedro;;San Pedro;;;;;;;;;
-PROV2343;Concepción;Concepción;Concepcion;;Concepción;;;;;;;;;
+PROV2337;Halcon Fortin;;;;;;;;;
+PROV2338;Port Guarani;;;;;;;;
+PROV2339;Mo'a;;;;;;;;;
+PROV2340;Neembucu;;;;;;;;;
+PROV2341;Itapua;;;;;;;;;
+PROV2342;Ycuamandyyu;;;;;;;;;
+PROV2343;Yaguarete Cora;;;;;;;;;
 PROV2344;Castel Colina;Montevideo;Montevideo;;Montevideo;;;;;;;;;
 PROV2345;Nova Tolon;Paysand;Paysandu;;Paysand;;;;;;;;;
 PROV2346;Bosc de Baston;Tacuarembo;Tacuarembo;;Tacuarembo;;;;;;;;;
@@ -10487,57 +10478,57 @@ PROV2360;Parana;Parana;Parana;;Paran?;;;;;;;;
 PROV2361;Sancti Spiritu;Santa Espiritu;Santa Espiritu;;Espíritu Santo;;;;;;;;;
 PROV2362;Reconquista;Reconquista;Reconquista;;Reconquista;;;;;;;;;
 PROV2363;Rosario;Rosario;Rosario;;Rosario;;;;;;;;;
-PROV2364;Resistencia;Resistencia;Resistencia;;Resistencia;;;;;;;;;
-PROV2365;Villa Ángela;Villa Angela;Villa Angela;;Villa Ángela;;;;;;;;;
-PROV2366;Formosa;Formosa;Formosa;;Formosa;;;;;;;;;
+PROV2364;Jepytaso;;;;;;;;;
+PROV2365;Tava Amapytu;;;;;;;;;
+PROV2366;Bishnud;;;;;;;;;
 PROV2368;Salta;Salta;Salta;;Salta;;;;;;;;;
 PROV2369;Jujuy;Jujuy;Jujuy;;Jujuy;;;;;;;;;
 PROV2370;Cochinoca;Cochinoca;Cochinoca;;Cochinoca;;;;;;;;;
-PROV2372;Rivadavia;Rivadavia;Rivadavia;;Rivadavia;;;;;;;;;
+PROV2372;Ruda;;;;;;;;;
 PROV2373;Tucumán;Tucuman;Tucuman;;Tucumán;;;;;;;;;
 PROV2374;Catamarca;Catamarca;Catamarca;;Catamarca;;;;;;;;;
 PROV2375;Vinchina;Vinchina;Vinchina;;Vinchina;;;;;;;;;
 PROV2376;Santiago del Estero;Santiago del Estero;Santiago del Estero;;Santiago del Estero;;;;;;;;;
-PROV2377;Añatuya;Anatuya;Anatuya;;Anatuya;;;;;;;;;
+PROV2377;Annahi;;;;;;;;;
 PROV2378;Mailín;Mailin;Mailin;;Mailín;;;;;;;;;
-PROV2379;Cómechingones Ayllus;Córdoba;Cordoba de Argentina;;Cordoba de Argentina;;;;;;;;;
+PROV2379;Ayllus;;;;;;;;;
 PROV2380;Villa Nueva;Villa Nueva;Villa Nueva;;Villa Nueva;;;;;;;;;
 PROV2381;Río Cuarto;Rio Cuarto;Rio Cuarto;;Río Cuarto;;;;;;;;;
-PROV2383;San Luis;San Luis;San Luis;;San Luis;;;;;;;;;
+PROV2383;Saint Louis;;;;;;;;;
 PROV2384;Mercedes;Mercedes;Mercedes;;Mercedes;;;;;;;;;
 PROV2385;La Rioja;Rioja;La Rioja;;La Rioja;;;;;;;;;
 PROV2386;Santa Rita;Santa Rita;Santa Rita;;Santa Rita;;;;;;;;;
 PROV2387;San Juan;San Juan;San Juan;;San Juan;;;;;;;;;
 PROV2388;Calingasta;Calingasta;Calingasta;;Calingasta;;;;;;;;;
 PROV2389;Mendoza;Mendoza;Mendoza;;Mendoza;;;;;;;;;
-PROV2390;San Rafael;San Rafael;San Rafael;;San Rafael;;;;;;;;;
-PROV2391;Neuquén;Neuquén;Neuquén;;Neuquén;;;;;;;;;
-PROV2392;Viedma;Viedma;Viedma;;Viedma;;;;;;;;;
+PROV2390;Saint Raphael;;;;;;;;;
+PROV2391;Dufresne;;;;;;;;;
+PROV2392;Leroyport;;;;;;;;;
 PROV2393;Telén;Telen;Telen;;Telen;;;;;;;;;
-PROV2394;Bariloche;Bariloche;Bariloche;;Bariloche;;;;;;;;;
-PROV2395;Curaco;Curaco;Curaco;;Curaco;;;;;;;;;
-PROV2396;Rawson;Rawson;Rawson;;Rawson;;;;;;;;;
-PROV2397;Esquel;Esquel;Esquel;;Esquel;;;;;;;;;
-PROV2398;Puerto Deseado;Puerto Deseado;Puerto Deseado;;Puerto Deseado;;;;;;;;;
-PROV2399;Río Gallegos;Rio Gallegos;Rio Gallegos;;Río Gallegos;;;;;;;;;
-PROV2400;Río Grande;Rio Grande;Rio Grande;;Río Grande;;;;;;;;;
+PROV2394;Blanchampe;;;;;;;;;
+PROV2395;Candelon;;;;;;;;;
+PROV2396;Beaufort;;;;;;;;;
+PROV2397;Elviron;;;;;;;;;
+PROV2398;Recherche;;;;;;;;;
+PROV2399;Gervais;;;;;;;;;
+PROV2400;Cap Houplain;;;;;;;;;
 PROV2401;Marabitanas;Marabitanas;Marabitanas;;Marabitanas;;;;;;;;;
 PROV2402;Manaus;Manaus;Manaus;;Manaos;;;;;;;;;
 PROV2403;Cachoeira;Cachoeira;Cachoeira;;Cachoeira;;;;;;;;;
-PROV2404;Tefe;Tefe;Tefe;;Tef?;;;;;;;;
+PROV2404;Tiburon;;;;;;;;
 PROV2405;Borba;Borba;Borba;;Borba;;;;;;;;;
 PROV2407;Tabatinga;Tabatinga;Tabatinga;;Tabatinga;;;;;;;;;
 PROV2408;Oriximina;Oriximina;Oriximina;;Oriximina;;;;;;;;;
 PROV2409;Teutonburg;Saint Vincent;Saint Vincent;;San Vincente;;;;;;;;;
 PROV2410;Nuova Genova;Belem;Belem;;Belém;;;;;;;;;
-PROV2411;Santarém;Santarem;Santarem;;Santarém;;;;;;;;;
+PROV2411;Tapas;;;;;;;;;;;;
 PROV2412;Óbidos;Obidos;Obidos;;Óbidos;;;;;;;;;
-PROV2413;Maraba;Maraba;Maraba;;Maraba;;;;;;;;;
+PROV2413;Mokoi;;;;;;;;;
 PROV2415;Macapa;Macapa;Macapa;;Macap?;;;;;;;;
-PROV2416;Dourados;Dourados;Dourados;;Dourados;;;;;;;;;
-PROV2417;Vila Bela;Vila Bela;Vila Bela;;Vila Bela;;;;;;;;;
-PROV2418;Cuiaba;Cuiaba;Cuiaba;;Cuiab?;;;;;;;;
-PROV2419;Corumba;Corumba;Corumba;;Corumba;;;;;;;;;
+PROV2416;Oro;;;;;;;;;
+PROV2417;Tava Iporava;;;;;;;;;
+PROV2418;Calabaza;;;;;;;;
+PROV2419;Kokue Tuichava;;;;;;;;;
 PROV2420;Iguatemi;Iguatemi;Iguatemi;;Iguatemi;;;;;;;;;
 PROV2421;Vila Boa;Vila Boa;Vila Boa;;Vila Boa;;;;;;;;;
 PROV2422;Aganja;Aganja;Aganja;;Aganja;;;;;;;;;
@@ -10656,12 +10647,12 @@ PROV2545;Rarotonga;Rarotonga;Rarotonga;;Rarotonga;;;;;;;;;
 PROV2546;Tongareva;Tongareva;Tongareva;;Tongareva;;;;;;;;;
 PROV2547;Tokelau;Tokelau;Tokelau;;Tokelau;;;;;;;;;
 PROV2549;Tarauaca;Tarauaca;Tarauaca;;Tarauaca;;;;;;;;;
-PROV2550;Forte do Príncipe;Forte do Principe;Forte do Principe;;Forte do Príncipe;;;;;;;;;
+PROV2550;Principe;;;;;;;;;
 PROV2551;Marquesas;Marquises;Marquesas;;Marquesas;;;;;;;;;
 PROV2552;Pitcairn;Pitcairn;Pitcairn;;Pitcairn;;;;;;;;;
 PROV2553;Tuamotus;Tuamotus;Tuamotus;;Tuamotus;;;;;;;;;
 PROV2555;Augusta;Augusta;Augusta;;Augusta;;;;;;;;;
-PROV2556;Asheville;Asheville;Asheville;;Asheville;;;;;;;;;
+PROV2556;Desmoulins;;;;;;;;;
 PROV2559;Tpolubiane;Suhaj;Suhaj;;Suhaj;;;;;;;;;
 PROV2560;Darmstadt;Darmstadt;Darmstadt;;Darmstadt;;;;;;;;;
 PROV2561;Siegburg;Siegburg;Siegburg;;Siegburg;;;;;;;;;
@@ -10982,18 +10973,18 @@ PROV2979;Costa Nuova Sarda;Costa Nuova Sarda;Costa Nuova Sarda;;Costa Nuova Sard
 PROV2980;Cote de Xavierville;Cote de Xavierville;Cote de Xavierville;;Cote de Xavierville;;;;;;;;;
 PROV2981;Cote de Cayenne;Küste von Amapa;;Costa de Amapa;;;;;;;;;
 PROV2982;Ciaran Bay;;;;;;;;;
-PROV2983;Oirthir Sgirur;Côte du Brésil;Küste von Brazil;;Costa de Brasil;;;;;;;;;
-PROV2984;Coast of Athcinnidh;;;;;;;;;
+PROV2983;Coast of Sgirur;;;;;;;;;
+PROV2984;Coast of Allardice;;;;;;;;;
 PROV2985;Coast of Gobharan;;;;;;;;;
 PROV2986;Port Eoghann Bay;;;;;;;;;
-PROV2987;Rio De Janeiro;Rio de Janeiro;Rio de Janeiro;;Río de Janeiro;;;;;;;;;
+PROV2987;Celinnes;;;;;;;;;
 PROV2988;Baia Paranagu?Baia Parangua;Baia Parangua;;Baia Parangua;;;;;;;;;
-PROV2989;Riviere d'Argent;Rio de la Plata;Rio De La Plata;;Río de la Plata;;;;;;;;;
-PROV2990;Bahia Blanca;Bahia Blanca;Bahia Blanca;;Bahía Blanca;;;;;;;;;
-PROV2991;Coast of Patagonia;Côte de Patagonie;Küste von Patagonia;;Costa de la Patagonia;;;;;;;;;
-PROV2992;Stretto di Pigafetta;Détroit de Magellan;Magellanstraße;;Estrecho de Magallanes;;;;;;;;;
-PROV2993;South Chilean Coast;Côte chilienne méridionale;Südchilenische Küste;;Costa meridional de Chile;;;;;;;;;
-PROV2994;Coast of Chile;Côte du Chili;Küste von Chile;;Costa de Chile;;;;;;;;;
+PROV2989;Riviere d'Argent;;;;;;;;;
+PROV2990;Baie Blanche;;;;;;;;;
+PROV2991;Coast of Chupaou;;;;;;;;;
+PROV2992;Détroit de Magellan;;;;;;;;;
+PROV2993;Côte chilienne méridionale;;;;;;;;;
+PROV2994;Côte du Chili;;;;;;;;;
 PROV2995;Maipo P'iti;Côte d'Atacama;Atacama-Küste;;Costa de Atacama;;;;;;;;;
 PROV2996;Choapa P'iti;Côte d'Antofagasta ;Antofagasta-Küste;;Costa de Antofagasta;;;;;;;;;
 PROV2997;Ari Quipaya Patan;Baie d'Arequipa;Arequipa Bay;;Bahía de Arequipa;;;;;;;;;
@@ -11036,24 +11027,24 @@ PROV3033;Cruiser Tablemount;Guyot du Cruiser;Cruiser Tablemount;;Meseta marina C
 PROV3034;Barracuda Fracture Zone;Zone de fracture de Barracuda;Barracuda-Frakturzone;;Zona de fractura de Barracuda;;;;;;;;;
 PROV3035;Eastern Sargasso Sea;Mer des Sargasses orientale;Ost-Sargassosee;;Mar de los Sargazos Oriental;;;;;;;;;
 PROV3036;Central Sargasso Sea;Mer des Sargasses centrale ;Zentral-Sargassosee;;Mar de los Sargazos Central;;;;;;;;;
-PROV3037;Fernando de Noronha Islands;Faille de Romanche;Romanche-Graben;;Paso de Romanche;;;;;;;;;
+PROV3037;Archibald Menzies Islands;;;;;;;;;
 PROV3038;East Guinea Basin;Bassin de Guinée orientale;Ostguinea-Becken;;Cuenca de Guinea Oriental;;;;;;;;;
 PROV3039;West Guinea Basin;Bassin de Guinée occidentale;Westguinea-Becken;;Cuenca de Guinea Occidental;;;;;;;;;
-PROV3040;Argentine Sea;Mer d'Argentine;Argentinische See;;Mar Argentino;;;;;;;;;
-REMOVE_PROV3041;New Georgia Islands;Îles de New Georgia;New Georgia-Inseln;;Islas de Nueva Georgia;;;;;;;;;
+PROV3040;Antartidan Sea;;;;;;;;;
+PROV3041;Antartidan Rise;;;;;;;;;
 PROV3042;Cornet Bank;Banc de Cornet;Cornet Bank;;Ribera de Cornet;;;;;;;;;
 PROV3043;Vema Channel;Canal de Vema ;Vemakanal;;Canal de Vema;;;;;;;;;
-PROV3044;South Brazil Basin;Bassin du Brésil méridional;Südbrasilianisches Becken;;Cuenca meridional de Brasil;;;;;;;;;
+PROV3044;South Sgirur Basin;;;;;;;;;
 PROV3045;Zapiola Plain;Plaine de Zapiola;Zapiola-Ebene;;Plataforma de Zapiola;;;;;;;;;
-PROV3046;Argentine Basin;Bassin d'Argentine;Argentinien-Ebene;;Cuenca de Argentina;;;;;;;;;
-PROV3047;Falkland Plateau;Plateau des Malouines;Falkland-Plateau;;Banco de las Malvinas;;;;;;;;;
-PROV3048;Coast of Falklands;Côte des Malouines;Falklandküste;;Costa de las Malvinas;;;;;;;;;
+PROV3046;Antartidan Basin;;;;;;;;;
+PROV3047;Nuova Elba Plateau;;;;;;;;;
+PROV3048;Coast of Nuova Elba;;;;;;;;;
 PROV3049;Romanche Gap;Archipel de Fernando de Noronha;Fernando de Noronha-Inseln;;Islas de Fernando de Noronha;;;;;;;;;
-PROV3050;North Brazil Basin;Bassin du Brésil septentrional;Nordbrasilianisches Becken;;Cuenca septentrional de Brasil;;;;;;;;;
+PROV3050;North Sgirur Basin;;;;;;;;;
 PROV3051;Sierra Leone Basin;Bassin de la Sierra Leone;Sierra Leone-Becken;;Cuenca de Sierra Leona;;;;;;;;;
 PROV3052;Martin Vaz Ridge;Dorsale de Martin Vaz;Martin Vaz-Rücken;;Dorsal de Martín Vaz;;;;;;;;;
-PROV3053;West Coast of Ascension;Côte occidentale d'Ascension;Westküste von Ascension;;Costa occidental de Ascensión;;;;;;;;;
-PROV3054;East Coast of Ascension;Côte orientale d'Ascension;Ostküste von Ascension;;Costa oriental de Ascensión;;;;;;;;;
+PROV3053;West Coast of Igoera;;;;;;;;;
+PROV3054;East Coast of Igoera;;;;;;;;;
 PROV3055;Walvis Ridge;Dorsal de Walvis;Walfischrücken;;Dorsal de Walvis;;;;;;;;;
 PROV3056;Cape Plain;Plaine du Cap;Kapebene;;Plataforma del Cabo;;;;;;;;;
 PROV3057;Gough Island;Île de Gough;Gough;;Isla de Gough ;;;;;;;;;
@@ -11192,10 +11183,10 @@ PROV3196;Timkin Plain;Plaine de Timkin ;Timkin-Ebene;;Litoral de Timkin ;;;;;;;;
 PROV3197;Syrus Reef;Récif de Syrus;Syrus-Riff;;Arrecifes de Syrus;;;;;;;;;
 PROV3198;Humboldt Plains;Plaine de Humboldt;Humboldtebene;;Litoral de Humboldt;;;;;;;;;
 PROV3199;Valdivia Flats;Vasière de Valdivia;Valdivia Flats;;Plataforma de Valdivia;;;;;;;;;
-PROV3200;Coast of South Georgia;Côte de Géorgie du sud;Küste von South Georgia;;Costa de Georgia del Sur;;;;;;;;;
-PROV3201;Argentine Plain;Plaine d'Argentine;Argentinien-Ebene;;Litoral de Argentina;;;;;;;;;
+PROV3200;Coast of San Giovanni Meridionale;;;;;;;;;
+PROV3201;Antartidan Plain;;;;;;;;;
 PROV3202;Zapiola Seamount;Mont sous-marin de Zapiola;Zapiola Seamount;;Plataforma de Zapiola ;;;;;;;;;
-PROV3203;West Coast of Saint Helena;Côte occidentale de Sainte-Hélène;Westküste von Saint Helena;;Costa Occidental de Santa Elena;;;;;;;;;
+PROV3203;West Coast of Sant' Elena;;;;;;;;;
 PROV3204;Moore Fracture Zone;Zone de fracture de Moore;Moore-Frakturzone;;Zona de Fractura Moore ;;;;;;;;;
 PROV3205;West Demerara Plain;Plaine occidentale de Demerara;West-Demerara-Ebene;;Litoral de Demerara Occidental;;;;;;;;;
 PROV3206;East Demerara Plain;Plaine orientale de Demerara;Ost-Demerara-Ebene;;Litoral de Demerara Oriental;;;;;;;;;
@@ -11324,7 +11315,7 @@ UCA_2186;Kaminaljuyu;Guatemala;Guatemala;;Guatemala;;;;;;;;;
 UCA_2197;Nicarao;Nicaragua;Nicaragua;;Nicaragua;;;;;;;;;
 UCA_2201;Ngabe;Costa Rica;Costa Rica;;Costa Rica;;;;;;;;;
 CLM_1723;Bannaba;Bannaba;Bannaba;;Bannaba;;;;;;;;;
-URU_2344;L'Artic;Uruguay;Uruguay;;Uruguay;;;;;;;;;
+OCD_2344;L'Artic;Uruguay;Uruguay;;Uruguay;;;;;;;;;
 ECU_2279;Karu Chinchaysuyu;Karu Chinchaysuyu;Karu Chinchaysuyu;;Karu Chinchaysuyu;;;;;;;;;
 HAI_2213;Nuova Sardegna;Nuova Sardegna;Nouva Sardegna;;Nouva Sardegna;;;;;;;;;
 SWE_318;Norrland;Norrland;Norrland;;Norrland;;;;;;;;;
@@ -11347,7 +11338,7 @@ OMA_1166;Oman;Oman;Oman;;Omán;;;;;;;;;
 HDJ_1151;Hedjaz;Hedjaz;Hedjaz;;Hedjaz;;;;;;;;;
 TUN_1726;Tunisia;Tunisie;Tunesien;;Túnez;;;;;;;;;
 FRA_1879;Guinea;Guinée;Guinea;;Guinea;;;;;;;;;
-ENG_1887;Liberia;Libéria;Liberia;;Liberia;;;;;;;;;
+ENG_1887;Nij Fryslan;;;;;;;;;
 FRA_1907;Ghana;Ghana;Ghana;;Ghana;;;;;;;;;
 FRA_1914;Togo;Togo;Togo;;Togo;;;;;;;;;
 ENG_2014;Zambia;Zambie;Zambia;;Zambia;;;;;;;;;
@@ -11474,38 +11465,40 @@ CLM_2251;Sion Outremer;Sion Outremer;Sion Outremer;;Sion Outremer;;;;;;;;;
 CLM_2247;Tabor Outremer;Tabor Outremer;Tabor Outremer;;Tabor Outremer;;;;;;;;;
 CLM_2262;Nouvelle Ardennes;Nouvelle Ardennes;Nouvelle Ardennes;;Nouvelle Ardennes;;;;;;;;;
 CLM_2256;Valle del Cauca;Valle del Cauca;Valle del Cauca;;Valle del Cauca;;;;;;;;;
-BRZ_2401;Amazonie;Amazonie;Amazonie;;Amazonie;;;;;;;;;
+SGR_2401;Manille;;;;;;;;;
+SGR_2404;Amazonas;;;;;;;;;
 VNZ_2234;Golfe des Martyrs;Golfe des Martyrs;Golfe des Martyrs;;Golfe des Martyrs;;;;;;;;;
 VNZ_2265;Refuge des Fideles;Refuge des Fideles;Refuge des Fideles;;Refuge des Fideles;;;;;;;;;
 VNZ_2278;Sainte Elmo;Sainte Elmo;Sainte Elmo;;Sainte Elmo;;;;;;;;;
-ENG_1979;Guyane;Guyane;Guyane;;Guyane;;;;;;;;;
+JES_1979;Nord Guyane;;;;;;;;;
+JES_2415;Sud Guyane;;;;;;;;;
 PEU_2289;Antisuyu;Antisuyu;Antisuyu;;Antisuyu;;;;;;;;;
-BRZ_2410;Dhoncan;Dhoncan;Dhoncan;;Dhoncan;;;;;;;;;
-BRZ_2439;Bag Atlhesacaid;Bag Atlhesacaid;Bag Atlhesacaid;;Bag Atlhesacaid;;;;;;;;;
-BRZ_2416;Grand Bosc;Grande Foret;Grande Foret;;Grande Foret;;;;;;;;;
-BRZ_2246;Minas Gerais;Minas Gerais;Minas Gerais;;Minas Gerais;;;;;;;;;
-BRZ_2447;Abhann Earaich;Abhann Earaich;Abhann Earaich;;Abhann Earaich;;;;;;;;;
-BRZ_2306;Rabert Brus;Rabert Brus;Rabert Brus;;Rabert Brus;;;;;;;;;
-BRZ_2462;Naom Andra;Naom Andra;;;;;;;;
-BRZ_2467;Nord-Oest Agricola;Nord-Est Paturages;Nord-Est Paturages;;Nord-Est Paturages;;;;;;;;;
+SGR_2410;Duncan;;;;;;;;;
+SGR_2439;Calumia;;;;;;;;;
+SGR_2416;Rabina;;;;;;;;;
+SGR_2246;Minas Gerais;Minas Gerais;Minas Gerais;;Minas Gerais;;;;;;;;;
+SGR_2447;Cote Nord;;;;;;;;;
+SGR_2306;Nova Scotia;;;;;;;;;
+SGR_2462;Riviere Sacree;;;;;;;;
+SGR_2463;Nouvelle Orleans;;;;;;;;;
 PEU_2291;Kashamarka;Kashamarka;Kashamarka;;Kashamarka;;;;;;;;;
 PEU_2300;Limaq;Limaq;Limaq;;Limaq;;;;;;;;;
 PEU_2303;Ariqipa;Ariqipa;Ariqipa;;Ariqipa;;;;;;;;;
-PRG_2338;Nord Chaco;Nord Chaceau;Nord Chaceau;;Nord Chaceau;;;;;;;;;
-PRG_2343;Bas Paraguaie;Bas Paraguaie;Bas Paraguaie;;Bas Paraguaie;;;;;;;;;
+SGR_2338;Yvatevo Chaqu;;;;;;;;;
+SGR_2343;Iguype;;;;;;;;;
 BOL_2321;Illapa;Illapa;Illapa;;Illapa;;;;;;;;;
 BOL_2317;Mama Cocha;La Paz;La Paz;;La Paz;;;;;;;;;
-CHL_2332;Mapu Raqko;Araucania;Araucania;;Araucania;;;;;;;;;
+CHL_2332;Pyrenees Pacifique;;;;;;;;;
 CHL_2322;Qullasuyu;Qullasuyu;Qullasuyu;;Qullasuyu;;;;;;;;;
-CHL_2327;Ainil;Los Ríos;Los Ríos;;Los Ríos;;;;;;;;;
+CHL_2327;Calvinie;;;;;;;;;
 ARG_2368;Inti;Jujuy;Jujuy;;Jujuy;;;;;;;;;
 ARG_2387;Tucma-Yucumán;Tucumán;Tucumán;;Tucumán;;;;;;;;;
-ARG_2377;Sud Chaco;Sud Chaceau;Sud Chaceau;;Sud Chaceau;;;;;;;;;
+ARG_2377;Nemby Chaqu;;;;;;;;;
 ARG_2357;Corrientes;Corrientes;Corrientes;;Corrientes;;;;;;;;;
-ARG_2363;Marchas Oest;Marches Ouest;Marches Ouest;;Marches Ouest;;;;;;;;;
-ARG_2355;Conca d'Argent;Ville d'Argent;Ville d'Argent;;Ville d'Argent;;;;;;;;;
-ARG_2391;Nord Chupat;Patagonie septentrionale;Patagonia Septentrional;;Patagonia Septentrional;;;;;;;;;
-ARG_2398;Sud Chupat;Patagonie méridionale;Patagonia Meridional;;Patagonia Meridional;;;;;;;;;
+ARG_2363;Marches de l'Ouest;;;;;;;;;
+ARG_2355;Nouvelle Provence;;;;;;;;;
+ARG_2391;Nord Chupaou;;;;;;;;;
+ARG_2398;Sud Chupaou;;;;;;;;;
 ENG_43;Nunavut;Nunavut;Nunavut;;Nunavut;;;;;;;;;
 SPA_1463;Nova Pelestrina;Mindanao;Mindanao;;Mindanao;;;;;;;;;
 SPA_1455;Usukine;Usukine;Usukine;;Usukine;;;;;;;;;
@@ -13034,6 +13027,7 @@ LEADERDIED_MAP;*;*;*;Id?do;*;Andare;Ugrás;Pøejít na;;;;;;
 american_german;Columbian German;;;;;;;;;;;;
 akino_german;Akino German;;;;;;;;;;;;
 gek;Gekke;;;;;;;;;;;;
+kolumbianisch;Kolumbianisch;;;;;;;;;;;;
 afro_german;Afro German;;;;;;;;;;;;
 free_german;Freilander;;;;;;;;;;;;
 veldlewer;Veldleuwer;;;;;;;;;;;;
@@ -13059,6 +13053,7 @@ claim_switzerland_desc;Our People demand more.More Land,more people and more glo
 sudeteland_exchange_title;Suedetenland Exchange;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 sudeteland_exchange_desc;With our growing power we can convince the Bohemians to give us their german land;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 NFL;Nij Fryslân;;;;;;;;;;;;
+NFL_democracy;Fresonia;;;;;;;;;;;;
 NFL_ADJ;Nij Frysk;;;;;;;;;;;;
 nij_frysk_constitution_title;Nij Frysk Constitution;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 centralize_nij_fryslan_title;Conquer the East;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13086,7 +13081,7 @@ frisian_farms;Frisian Farms;;;;;;;;;;;;
 FER;Fareynikte;;;;;;;;;;;;
 FER_ADJ;Fareynikt;;;;;;;;;;;;
 unite_the_kingdom_title;Unite Scotland and Sgirùr;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-unite_the_kingdom_desc;With the cultural similarities it may be a good idea to unite the two Nations;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+unite_the_kingdom_desc;With the cultural similarities it may be a good idea to unite the two Nations.;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PIR;Federazione Corsara;;;;;;;;;;;;
 PIR_ADJ;Pirata;;;;;;;;;;;;
 pirate;Pirate;;;;;;;;;;;;
@@ -13132,6 +13127,7 @@ PROV3534;Gyirong;;;;;;;;;
 PROV3535;Purang;;;;;;;;;
 PROV3536;Tsurphu;;;;;;;;;
 PROV3537;Artvin;;;;;;;;;
+ASH_1912;Gurland;;;;;;;;;
 venetoindio;Veneto-Indio;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 pipil;Highland Mayan;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 mangue;Totonac;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

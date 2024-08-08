@@ -7,7 +7,7 @@ political_decisions = {
 				ai = no
 				has_country_flag = scotlandbrazil_ai
 			}
-			BRZ = {
+			SGR = {
 				AND = {
 					exists = yes
 					is_independant = yes
@@ -30,21 +30,17 @@ political_decisions = {
 		    set_country_flag = enforce_rule_over_sgirur
 			badboy = 5
 			war = {
-			    target = BRZ
+			    target = SGR
 			    attacker_goal = { casus_belli = make_puppet	}
 			    defender_goal = { casus_belli = status_quo }
 		    }
-			badboy = -10
 		}
 	}
 #SCOTLAND FOREVER and brazil I guess
 	unite_the_kingdom = {
 		picture = reino_unido
 		potential = {
-			OR = {
-				has_country_flag = enforce_rule_over_sgirur
-				tag = BRZ
-			}
+			has_country_flag = enforce_rule_over_sgirur
 			NOT = { has_country_flag = Union_of_PTBR}
 			NOT = { has_country_flag = gaelic_english_bilinguism}
 			NOT = { has_country_flag = gaelic_assimilation}
@@ -56,7 +52,7 @@ political_decisions = {
 			nationalism_n_imperialism = 1
 			is_greater_power = yes
 			OR = {
-				BRZ = {
+				SGR = {
 					OR = {
 						substate_of  = THIS
 						vassal_of = THIS
@@ -77,13 +73,13 @@ political_decisions = {
 
 			any_country = {
 				limit = {
-					tag = BRZ
+					tag = SGR
 				}
 				annex_to = THIS
 			}
 
 			SCO = { all_core = { add_core = UPB } }
-			BRZ = { all_core = { add_core = UPB } }
+			SGR = { all_core = { add_core = UPB } }
 
 			add_accepted_culture = brazilian
 			add_accepted_culture = scottish

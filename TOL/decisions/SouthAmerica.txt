@@ -1,93 +1,5 @@
 political_decisions = {
 
-	golden_law = {
-		picture = golden_law
-		potential = {
-			OR = {
-				tag = BRZ
-				tag = UPB
-			}
-			NOT = { has_country_flag = golden_law_passed }
-			OR = {
-				has_country_flag = rio_branco_law_passed
-				slavery = freedom_of_womb
-			}
-			OR = {
-				government = hms_government
-				government = prussian_constitutionalism
-				government = absolute_monarchy
-				government = absolute_empire
-				government = semi_constitutional_empire
-				government = constitutional_empire
-			}
-			NOT = { slavery = no_slavery }
-		}
-
-		allow = {
-			NOT = { month = 5 }
-			invention = national_fraternity
-			realism = 1
-			OR = {
-				upper_house = { ideology = liberal value = 0.2 }
-				upper_house = { ideology = socialist value = 0.2 }
-			}
-		}
-
-		effect = {
-			clr_country_flag = the_slavery_debate
-			set_country_flag = golden_law_passed
-			badboy = -1
-			add_accepted_culture = afro_brazilian
-			political_reform = no_slavery
-			any_pop = { limit = { type = slaves } consciousness = -5 militancy = -6 }
-			any_pop = { limit = { type = aristocrats } militancy = 3 consciousness = 5 }
-		}
-	}
-
-
-	build_teresina = {
-		picture = build_teresina
-		potential = {
-			tag = BRZ
-			NOT = { has_country_flag = teresina_built }
-			year = 1852
-		}
-		allow = {
-			money = 5000
-		}
-		effect = {
-			set_country_flag = teresina_built
-			treasury = -5000
-			2426 = { change_province_name = "Teresina" }
-			2426 = {
-				add_province_modifier = { name = recently_built_city duration = 365 }
-			}
-		}
-	}
-
-	build_belo_horizonte = {
-		picture = build_belo_horizonte
-		potential = {
-			tag = BRZ
-			owns = 3443
-			year = 1870
-			NOT = { has_country_flag = bh_built }
-		}
-		allow = {
-			money = 5000
-		}
-		effect = {
-			set_country_flag = bh_built
-			treasury = -5000
-			3443 = { change_province_name = "Belo Horizonte" }
-			3443 = {
-				life_rating = 4
-				trade_goods = iron
-				add_province_modifier = { name = recently_built_city duration = 365 }
-			}
-		}
-	}
-
 	new_life_in_the_new_world = {
 		picture = new_life
 		potential = {
@@ -147,51 +59,10 @@ political_decisions = {
 			factor = 0
 			modifier = {
 				factor = 100
-				OR  = { tag = BRZ tag = CHL }
+				OR  = { tag = SGU tag = CHL }
 			}
 		}
 	}
-
-	brazilian_rubber_boom = {
-		picture = rubber_cycle
-		potential = {
-			tag = BRZ
-			owns = 2550
-			owns = 2419
-			owns = 2532
-			owns = 2410
-			owns = 2402
-			year = 1880
-			NOT = { has_country_flag = brazilian_rubber_boom }
-		}
-
-		allow = {
-			war = no
-			owns = 2550
-			owns = 2419
-			owns = 2532
-			owns = 2410
-			owns = 2402
-			state_n_government = 1
-			2550 = { trade_goods = rubber }
-		}
-
-		effect = {
-			set_country_flag = brazilian_rubber_boom
-			2410 = { add_province_modifier = { name = colonial_recruitment duration = 365 } }
-			2402 = { add_province_modifier = { name = colonial_recruitment duration = 365 } }
-			2419 = { change_province_name = "Campo Grande" trade_goods = cattle }
-			2550 = { change_province_name = "Porto Velho" add_province_modifier = { name = recently_built_city duration = 150 } }
-			2532 = { change_province_name = "Boa Vista" add_province_modifier = { name = recently_built_city duration = 150 } }
-			random_owned = { limit = { province_id = 2549 }
-				change_province_name = "Rio Branco" add_province_modifier = { name = recently_built_city duration = 100 }
-			}
-		}
-	}
-
-
-   
-
 
 	commodity_boom_colombia = {
 		picture = coffee_in_colombia

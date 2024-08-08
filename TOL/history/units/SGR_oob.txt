@@ -1,22 +1,126 @@
-army = {
+SCO = { 
+	value = 40 
+}
 
-	name = "I. Korps"
-	location = 594
+CLM = {
+	value = 150
+}
+
+JES = {
+	value = -100
+}
+
+PIR = {
+	value = -50
+}
+
+FRA = {
+	value = -50
+}
+
+army = {
+	name = "Army of the Parliament"
+	location = 2436
+	regiment = {
+		name= "Calumburgh Guards"
+		type = infantry
+		home = 2436
+	}
 
 	regiment = {
-		name = "XXX. Linieninfanteriebrigade"
+		name= "Gold Mountain Rifles"
 		type = infantry
-		home = 594
+		home = 3443
+	}
+
+	regiment = {
+		name= "Northeast Steppe Sentinels"
+		type = infantry
+		home = 2436
+	}
+
+	regiment = {
+		name= "Saint Andrew's Regiment"
+		type = infantry
+		home = 2426
+	}
+
+	regiment = {
+		name= "New Scotland Pioneers"
+		type = infantry
+		home = 2441
+	}
+
+	regiment = {
+		name= "Sons of the Forest"
+		type = infantry
+		home = 3446
 	}
 
 }
 
 leader = {
-	name = "Karl Hohenzollern-Sigmaringen"
-	picture = european_general_36
+	name = "Jean Alphonse"
+	picture = southamerican_general_2
 	date = 1830.1.1
 	type = land
-	personality = soldierly
-	background = aristocrat
+	personality = brash
+	background = school_of_the_bayonet
 	prestige = 0.1
+}
+
+leader = {
+	name = "Lachlan Morrison"
+	picture = european_general_55
+	date = 1836.1.1
+	type = land
+	personality = gutsy
+	background = war_college
+	prestige = 0.1
+}
+
+leader = {
+	name = "Rory Young"
+	picture = european_admiral_0
+	date = 1830.1.1
+	type = sea
+	personality = tactful
+	background = nationalist
+}
+
+navy = {
+	name = "Sgirenic Navy"
+	location = 2436
+
+	ship = {
+		name = "Triumphant"
+		type = frigate
+	}
+
+	ship = {
+		name = "Concordant"
+		type = frigate
+	}
+
+	ship = {
+		name = "Suppliant"
+		type = frigate
+	}
+
+	ship = {
+		name = "Reliant"
+		type = frigate
+	}
+
+	ship = {
+		name = "Hannibal"
+		type = clipper_transport
+	}
+
+
+	ship = {
+		name = "Scipio"
+		type = clipper_transport
+	}
+
 }

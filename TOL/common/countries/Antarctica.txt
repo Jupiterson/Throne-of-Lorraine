@@ -1,8 +1,8 @@
-color = { 55  119  135 }
+color = { 66 140 125 }
 graphical_culture = SouthAmericanGC
 
 party = {
-	name = "ARG_liberal"
+	name = "ARC_liberal"
 	start_date = 1830.1.1
 	end_date = 2000.1.1
 
@@ -17,7 +17,7 @@ party = {
 }
 
 party = {
-	name = "ARG_conservative"
+	name = "ARC_conservative"
 	start_date = 1835.1.1
 	end_date = 2000.1.1
 
@@ -32,7 +32,7 @@ party = {
 }
 
 party = {
-	name = "ARG_socialist"
+	name = "ARC_socialist"
 	start_date = 1848.1.1
 	end_date = 2000.1.1
 
@@ -47,7 +47,7 @@ party = {
 }
 
 party = {
-	name = "ARG_reactionary"
+	name = "ARC_reactionary"
 	start_date = 1820.1.1
 	end_date = 2000.1.1
 
@@ -62,7 +62,7 @@ party = {
 }
 
 party = {
-	name = "ARG_radical"
+	name = "ARC_radical"
 	start_date = 1830.1.1
 	end_date = 2000.1.1
 
@@ -77,7 +77,7 @@ party = {
 }
 
 party = {
-	name = "ARG_communist"
+	name = "ARC_communist"
 	start_date = 1848.1.1
 	end_date = 2000.1.1
 
@@ -92,7 +92,7 @@ party = {
 }
 
 party = {
-	name = "ARG_fascist"
+	name = "ARC_fascist"
 	start_date = 1900.1.1
 	end_date = 2000.1.1
 
@@ -108,43 +108,63 @@ party = {
 
 unit_names = {
 	dreadnought = {
-		"ARA Alvear" "ARA Argentina" "ARA General Rosas" "ARA Moreno" "ARA Paz" "ARA Presidente Avellaneda" "ARA Río de la Plata" "ARA Rivadavia" "ARA San Martín" "ARA Urquiza"
-		"ARA Yrigoyen"
+		"Richelieu" "Clemenceau" "Petain" "Poincare"
+		"Poitou" "Dévastation"
+		"Courbet" "Amiral Duperré" "Terrible" "Indomptable" "Caiman" "Requin" "Admiral Baudin"
+		"Formidable" "Hoche" "Marceau" "Magenta" "Neptune" "Brennus" "Charles Martel" "Carnot"
+		"Jauréguiberry" "Masséna" "Bouvet" "Charlemagne" "Saint Louis" "Gaulois"
+		"Iéna" "Suffren" "République" "Patrie" "Démocratie" "Justice" "Liberté" "Verité"
+		"Danton" "Diderot" "Mirabeau" "Vergniaud" "Voltaire" "Condorcet" "Courbet" "Antarctique"
+		"Jean Bart" "Nouvelle Orleans" "Nouvelle Rochelle" "Fleurus"
 	}
 	ironclad = {
-		"ARA Almirante Brown" "ARA Bouchard" "ARA Campichuelo" "ARA Cepeda" "ARA De las Heras" "ARA Federación" "ARA Huamitá" "ARA Independencia" "ARA Júpiter" "ARA Lavalle"
-		"ARA Libertad" "ARA Marte" "ARA Mercurio" "ARA Neptuno" "ARA Pavón" "ARA Plutón" "ARA Salado" "ARA Salta" "ARA Suipacha" "ARA Thomas"
+		"Congreve" "Foudroyante" "Lave" "Tonnante" "Gloire" "Invincible" "Normandie" "Couronne"
+		"Magenta" "Solferino" "Flandre" "Gauloise" "Magnanime" "Provence" "Revanche" "Savoie"
+		"Surveillante" "Valeureuse" "Héroïne"
 	}
 	manowar = {
-		"ARA América" "ARA Aquíles" "ARA Argentina" "ARA Argonauta" "ARA Furor" "ARA Héroe" "ARA Libertador" "ARA Navegante" "ARA Perla Negra" "ARA Río de la Plata"
-		"ARA Salvador" "ARA San Bernardo" "ARA San Claudio" "ARA San Honorato" "ARA San Joaquín" "ARA Santa Ana" "ARA Santa María" "ARA Santiago" "ARA Terror" "ARA Victoriosa"
+		"Alexandre" "Breslaw" "Prince Jérôme" "Ville de Nouvelle Orleans" "Ville de Nouvelle Rochelle" "Duguay-Trouin"
+		"Tage" "Donawerth" "Saint Louis" "Fontenoy" "Turenne" "Castiglione"
+		"Masséna" "Bayard"
 	}
 	cruiser = {
-		"ARA Almirante Brown" "ARA Álvarez Jonte" "ARA Belgrano" "ARA Buenos Aires" "ARA Castelli" "ARA Chichlana" "ARA Garibaldi" "ARA Güemes" "ARA Liniers" "ARA Matheu"
-		"ARA Mitre" "ARA Nueve de Julio" "ARA Paso" "ARA Patagonia" "ARA Patria" "ARA Pueyrredón" "ARA Roca" "ARA San Martín" "ARA Sarratea" "ARA Veinticinco de Mayo"
+		"Clovis" "Maurice de Saxe" "Vercingetorix" "Richemont" "Dunois" "Ney" "Leger" "Vauban"
+		"Conde" "Turenne" "Montebello" "Austerlitz" "Souverain" "Navarin" "Ulm" "Wagram"
+		"Algésiras" "Arcole" "Friedland" "Impérial" "Eylau" "Tilsitt" "Jena" "Auerstadt"
+		"Marengo" "Toulon" "Bellone" "Glorieuse" "Gracieuse" "Audacieuse" "Impétueuse" "Ardente"
+		"Victoire" "Guerrière" "Téméraire" "Triomphant" "Tigre" "Persévérante" "Vigilant"
+		"Tenace" "Élan" "Duguay Trouin" "Lamotte-Picquet" "Primaguet" "Duquesne" "Tourville"
+		"Colbert" "Foch" "Jeanne D'Arc" "Maroc" "Lafayette" "Davout" "Suchet" "Forbin"
+		"Surcouf" "Cosmao" "Lalande" "Galilée" "Lavoisier" "Linois" "La Galissionere"
+		"Gloire" "Marseillaise" "Georges Leygues" "De Grasse" "La Fantasque"
+		"Iphigenie" "Naiade" "Arethuse" "Dubourdieu" "Milan" "Belliqueuse" "Sfax" "Tage"
+		"Amiral Cécille" "Davout" "Suchet" "Coëtlogon" "Forbin" "Surcouf" "Cosmao" "Lalande"
+		"Troude" "Galilée" "Lavoisier" "Linois" "Tunisié" "Isly" "Bugeaud" "Chasseloup-Laubat"
+		"Friant" "Descartes" "Pascal" "Cassard" "D'Assas" "Du Chayla" "Catinat" "Protet"
+		"D'Entrecasteaux" "Guichen" "Châteaurenault" "D'Estrées" "Infernet" "Jurien de la Gravière"
+		"Pluton" "Emile Bertin" "Dupuy de Lome" "Admiral Charner" "Bruix" "Chanzy" "Latouche-Treville"
+		"Pothau" "Dupetit-Thouars" "Gueydon" "Montcalm" "Desaix" "Dupleix" "Kleber"
+		"Amiral Aube" "Conde" "Sully" "Leon Gambetta" "Victor Hugo" "Jules Michelet"
+		"Ernest Renan" "Edgar Quinet" "Waldeck-Rousseau" "Thionville" "Metz" "Mulhouse" "Colmar"
+		"D'Assas" "Du Chayla" "Catinat" "Protet" "D'Entrecasteaux" "Guichen" "Châteaurenault"
 	}
 	frigate = {
-		"ARA Azopardo" "ARA Cervantes" "ARA Espora" "ARA Garay" "ARA Hércules" "ARA Heroína" "ARA La Argentina" "ARA La Libertad" "ARA Murillo" "ARA Parker"
-		"ARA Piedra Buena" "ARA Presidente Sarmiento" "ARA República" "ARA Robinson" "ARA Rondeau" "ARA Rosales" "ARA Saavedra" "ARA Santísima Trinidad" "ARA Sarandí" "ARA Spiro"
+		"Condor" "Epervier" "Faucon" "Vautour" "Wattignies" "Levrier" "D'Iberville"
+		"Cassini" "Lahire" "Circé" "Hermione" "Pallas" "Sémiramis" "Armorique" "Junon"
+		"Magicienne" "Thémis" "Flore"
 	}
 	monitor = {
-		"ARA El Plata" "ARA Formosa" "ARA Gran Chaco" "ARA La Pampa" "ARA Lago Argentino" "ARA Los Andes" "ARA Mesopotamia" "ARA Posadas" "ARA Rawson" "ARA Resistencia"
-		"ARA San Fernando del Valle" "ARA San Miguel" "ARA San Salvador" "ARA Santa Rosa" "ARA Sirena" "ARA Somuncurá" "ARA Tetis" "ARA Tritón" "ARA Viedma" "ARA Vulcano"
+		"Océan" "Marengo" "Suffren" "Friedland" "Richelieu" "Colbert" "Trident"
 	}
 	clipper_transport = {
-		"ARA Águila" "ARA Apolo" "ARA Atlántida" "ARA Audaz" "ARA Ceres" "ARA Cóndor" "ARA Cruel" "ARA Delfín" "ARA Eolo" "ARA Esperanza"
-		"ARA Fénix" "ARA Fidela" "ARA Flora" "ARA Hera" "ARA Iris" "ARA Lanza" "ARA Minerva" "ARA Minotauro" "ARA Movimiento" "ARA Odisea"
-		"ARA Platense" "ARA Proserpina" "ARA Providencia" "ARA Prueba" "ARA Puma" "ARA Rayo" "ARA Relámpago" "ARA Salvadora" "ARA San José" "ARA San Juan Bautista"
-		"ARA Santa María" "ARA Servidora" "ARA Temeraria" "ARA Tiburón" "ARA Tranquila" "ARA Triunfo" "ARA Ulíses" "ARA Veloz" "ARA Victoria" "ARA Voladora"
 	}
 	steam_transport = {
-		"ARA Águila" "ARA Apolo" "ARA Atlántida" "ARA Audaz" "ARA Ceres" "ARA Cóndor" "ARA Cruel" "ARA Delfín" "ARA Eolo" "ARA Esperanza"
-		"ARA Fénix" "ARA Fidela" "ARA Flora" "ARA Hera" "ARA Iris" "ARA Lanza" "ARA Minerva" "ARA Minotauro" "ARA Movimiento" "ARA Odisea"
-		"ARA Platense" "ARA Proserpina" "ARA Providencia" "ARA Prueba" "ARA Puma" "ARA Rayo" "ARA Relámpago" "ARA Salvadora" "ARA San José" "ARA San Juan Bautista"
-		"ARA Santa María" "ARA Servidora" "ARA Temeraria" "ARA Tiburón" "ARA Tranquila" "ARA Triunfo" "ARA Ulíses" "ARA Veloz" "ARA Victoria" "ARA Voladora"
 	}
 	commerce_raider = {
-		"ARA Bermejo" "ARA Catamarca" "ARA Constitución" "ARA Córdoba" "ARA Corrientes" "ARA Entrerríos" "ARA Jujuy" "ARA La Plata" "ARA La Rioja" "ARA Mendoza"
-		"ARA Misiones" "ARA Paraná" "ARA Pilcomayo" "ARA Rosario" "ARA San Juan" "ARA San Luis" "ARA Santa Cruz" "ARA Sol Argentino" "ARA Tucumán" "ARA Uruguay"
+		"Asmodée" "Gomer" "Darien" "Labrador" "Ulloa" "Cacique" "Canada" "Christophe Colomb"
+		"Eldorado" "Magellan" "Montezuma" "Orénoque" "Panama" "Albatros" "Descartes" "Vauban"
+		"Caffarelli" "Mogador" "Pomone" "Isly" "Bellone" "Foudre" "Impératrice Eugénie"
+		"Souveraine" "Audacieuse" "Impétueuse" "Ardente" "Victoire" "Guerrière" "Renommée"
+		"Danaé" "Pandore" "Zénobie" "Clorinde" "Astrée"
 	}
 }

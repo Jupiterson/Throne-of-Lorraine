@@ -2342,6 +2342,33 @@ categories =  {
         supply_limit = 10
 		immigrant_attract = 0.25
     }
+	
+	nouvelleorleans = {
+        movement_cost = 1.2
+        attrition = 1
+        defence = 1
+
+        color = { 55 37 8 }
+        farm_rgo_size = -0.15
+        farm_rgo_eff = -0.2
+        mine_rgo_size = 0.0
+        mine_rgo_eff = -0.1
+
+        supply_limit = 5
+        combat_width = -0.25
+		immigrant_attract = 0.1
+    }
+	
+	boisselot = {
+        movement_cost = 1.0
+        color = { 125 104 165 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.25
+    }
 
     zanzibar = {
         movement_cost = 1.0

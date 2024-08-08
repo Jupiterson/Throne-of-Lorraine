@@ -1,21 +1,21 @@
-capital = 2447
+capital = 2463
 primary_culture = francorientale
 culture = occidentale
-religion = reformed
-government = presidential_dictatorship
+religion = catholic
+government = democracy
 plurality = 20.0
-nationalvalue = nv_equality
+nationalvalue = nv_liberty
 literacy = 0.64
 non_state_culture_literacy = 0.01
 civilized = yes
-prestige = 3
+is_releasable_vassal = no
 
 # Political reforms
-slavery = freedom_of_womb
+slavery = no_slavery
 upper_house_composition = appointed
-vote_franschise = none_voting
+vote_franschise = wealth_weighted_voting
 public_meetings = yes_meeting
-press_rights = state_press
+press_rights = free_press
 trade_unions = no_trade_unions
 voting_system = jefferson_method
 political_parties = harassment
@@ -29,19 +29,19 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-#New Reforms
-conscription = one_year_draft
+# New Reforms
+conscription = four_year_draft
 debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = culture_voting_only
 border_policy = open_borders
-centralization = confederalism
+centralization = unitary
 colonial_policy = no_colonies
 
 set_country_flag = catholic_country
 
-ruling_party = ARG_conservative
+ruling_party = ARC_conservative
 upper_house = {
 	fascist = 0
 	liberal = 30
@@ -53,28 +53,35 @@ upper_house = {
 }
 
 set_country_flag = new_world_nation
-decision = ARC_1836_setup
 
 # Technologies
 post_napoleonic_thought = 1
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
+military_staff_system = 1
 army_command_principle = 1
 post_nelsonian_thought = 1
+clipper_design = 1
+naval_design_bureaus = 1
+alphabetic_flag_signaling = 1
 the_command_principle = 1
-private_banks = 1
-no_standard = 1
-guild_based_production = 1
 classicism_n_early_romanticism = 1
 late_enlightenment_philosophy = 1
+malthusian_thought = 1
 enlightenment_thought = 1
+introspectionism = 1
+private_banks = 1
+no_standard = 1
+early_classical_theory_and_critique = 1
+freedom_of_trade = 1
+guild_based_production = 1
 piston_steam_engine = 1
 mechanical_production = 1
+hot_blast = 1
+basic_chemistry = 1
 
 # Inventions
 
 #Starting Consciousness
 consciousness = 2
 nonstate_consciousness = 0
-
-oob = "ARC_oob.txt"

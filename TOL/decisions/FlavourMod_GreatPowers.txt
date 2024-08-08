@@ -50,23 +50,17 @@ political_decisions = {
 			capital_scope = { continent = south_america }
 			is_greater_power = no
 			civilized = yes
-			OR = {
-				government = constitutional_empire
-				government = hms_government
-				government = democracy
-				government = parliamentary_republic
-			}
 			war = no
 			is_substate = no
 			is_vassal = no
-		}
-
-		allow = {
 			any_neighbor_country = {
 				government = proletarian_dictatorship
 				is_vassal = no
 				NOT = { truce_with = THIS }
 			}
+		}
+
+		allow = {
 			OR = {
 				government = constitutional_empire
 				government = hms_government

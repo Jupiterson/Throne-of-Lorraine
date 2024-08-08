@@ -1,0 +1,138 @@
+army = {
+	name = "L'armée du roi"
+	location = 2463
+	regiment = {
+		name= "Nouvelle Orleans Guards"
+		type = infantry
+		home = 2463
+	}
+
+	regiment = {
+		name= "Coastal Guard"
+		type = infantry
+		home = 2463
+	}
+
+	regiment = {
+		name= "Northern Coast Watch"
+		type = infantry
+		home = 2447
+	}
+
+	regiment = {
+		name= "St Xandre's Cannons"
+		type = artillery
+		home = 2464
+	}
+
+	regiment = {
+		name= "Castel Colina Cannons"
+		type = artillery
+		home = 2344
+	}
+
+	regiment = {
+		name= "Inlands Cavalry"
+		type = hussar
+		home = 2466
+	}
+
+}
+
+leader = {
+	name = "Carles Benet"
+	picture = european_general_34
+	date = 1836.1.1
+	type = land
+	personality = audacious
+	background = amateur
+}
+
+leader = {
+	name = "Andieu Lacroux"
+	picture = southamerican_general_7
+	date = 1836.1.1
+	type = land
+	personality = implacable
+	background = nationalist
+}
+
+leader = {
+	name = "Roman Pujol"
+	picture = southamerican_admiral_3
+	date = 1836.1.1
+	type = sea
+	personality = disciplined
+	background = old_school
+}
+
+navy = {
+	name = "Francoriental Navy"
+	location = 2463
+
+	ship = {
+		name = "Condor"
+		type = frigate
+	}
+
+	ship = {
+		name = "Faucon"
+		type = frigate
+	}
+
+	ship = {
+		name = "Hermione"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Armorique"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Themis"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cassini"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Levrier"
+		type = frigate
+	
+	}
+	ship = {
+		name = "Alexandre"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Ville de Nouvelle Orleans"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Donawerth"
+		type = manowar
+	}
+
+	ship = {
+		name = "1. Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name = "2. Transport Flotilla"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name = "3. Transport Flotilla"
+		type = clipper_transport
+	}
+
+}
