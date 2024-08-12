@@ -414,6 +414,8 @@ political_decisions = {
 			set_country_flag = finnished_consolidationSGR
 			prestige = 5
 			
+			SGR = { all_core = { limit = { empty = yes } secede_province = THIS } }
+			
 			2445 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			2456 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			2452 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
@@ -421,8 +423,6 @@ political_decisions = {
 			2453 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			2460 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			2458 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			
-			SGR = { all_core = { limit = { empty = yes } secede_province = THIS } }
 		}
 		ai_will_do = {
 			factor = 1
@@ -471,11 +471,11 @@ political_decisions = {
 			2422 = { add_core = SGR }
 			2423 = { add_core = SGR }
 			
+			SGR = { all_core = { limit = { empty = yes } secede_province = THIS } }
+			
 			2421 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			2422 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			2423 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			
-			SGR = { all_core = { limit = { empty = yes } secede_province = THIS } }
 		}
 		
 		ai_will_do = {
@@ -560,8 +560,8 @@ political_decisions = {
 			SGR_2416 = { add_core = THIS }
 			SGR_2408 = { add_core = THIS }
 			SGR_2404 = { add_core = THIS }
-			PRG_2343 = { add_core = THIS }
-			PRG_2338 = { add_core = THIS }
+			SGR_2343 = { add_core = THIS }
+			SGR_2338 = { add_core = THIS }
 			ARG_2377 = { add_core = THIS }
 			badboy = 10
         }
@@ -819,14 +819,6 @@ political_decisions = {
 		effect = {
 			set_global_flag = arc_valley
 			prestige = 5
-			2383 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2382 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2353 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2384 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2393 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2390 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2395 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2392 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			
 			2383 = { secede_province = THIS }
 			2382 = { secede_province = THIS }
@@ -836,6 +828,15 @@ political_decisions = {
 			2390 = { secede_province = THIS }
 			2395 = { secede_province = THIS }
 			2392 = { secede_province = THIS } 
+			
+			2383 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2382 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2353 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2384 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2393 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2390 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2395 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2392 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			}
 			
 		ai_will_do = {
@@ -872,12 +873,6 @@ political_decisions = {
 		effect = {
 			set_global_flag = arc_chupaou
 			prestige = 5
-			2391 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2394 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2396 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2397 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2398 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2399 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			
 			2391 = { secede_province = THIS }
 			2394 = { secede_province = THIS }
@@ -885,6 +880,13 @@ political_decisions = {
 			2397 = { secede_province = THIS }
 			2398 = { secede_province = THIS }
 			2399 = { secede_province = THIS }
+			
+			2391 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2394 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2396 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2397 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2398 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2399 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			}
 			
 		ai_will_do = {
@@ -999,15 +1001,6 @@ political_decisions = {
 		effect = {
 			set_global_flag = arc_mountains
 			prestige = 5
-			2327 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2331 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2329 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2328 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2332 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2333 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2334 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2335 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2400 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			
 			2327 = { secede_province = THIS }
 			2331 = { secede_province = THIS }
@@ -1018,6 +1011,16 @@ political_decisions = {
 			2334 = { secede_province = THIS }
 			2335 = { secede_province = THIS }
 			2400 = { secede_province = THIS }
+			
+			2327 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2331 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2329 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2328 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2332 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2333 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2334 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2335 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2400 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			}
 			
 		ai_will_do = {
