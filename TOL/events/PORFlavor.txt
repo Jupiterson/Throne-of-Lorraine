@@ -596,7 +596,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "Keep it in Edinburgh, the Metropolis of our nation!"
+		name = "Keep it in Edinburgh, the metropolis of our nation!"
 		capital = 269
 		prestige = 15
 		any_pop = {
@@ -607,13 +607,13 @@ country_event = {
 		}
 		any_pop = {
 			limit = {
-				has_pop_culture = brazilian
+				has_pop_culture = sgirenic
 			}
 			militancy = 5
 		}
 	}
 	option = {
-		name = "Relocate it West, the rising city of Belfast!"
+		name = "Relocate it west, the rising city of Belfast!"
 		capital = 254
 		prestige = 5
 		research_points = 300
@@ -625,13 +625,13 @@ country_event = {
 		}
 		any_pop = {
 			limit = {
-				has_pop_culture = brazilian
+				has_pop_culture = sgirenic
 			}
 			militancy = 5
 		}
 	}
 	option = {
-		name = "Move it Overseas, and adapt our traditions!"
+		name = "Move it overseas, and adapt our traditions!"
 		capital = 2436
 		any_pop = {
 			limit = {
@@ -641,13 +641,13 @@ country_event = {
 		}
 		any_pop = {
 			limit = {
-				has_pop_culture = brazilian
+				has_pop_culture = sgirenic
 			}
 			militancy = -5
 		}
 		add_country_modifier = { name = small_immigration_boom duration = -1 }
 		prestige = 5
-		primary_culture = brazilian
+		primary_culture = sgirenic
 		add_accepted_culture = scottish
 	}
 }

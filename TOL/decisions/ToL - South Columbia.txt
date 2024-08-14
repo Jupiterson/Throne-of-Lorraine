@@ -590,6 +590,8 @@ political_decisions = {
 			set_country_flag = conquered_congaltonia
 			prestige = 5
 			
+			SGR = { all_core = { limit = { empty = yes } secede_province = THIS } }
+			
 			2343 = {
 				change_province_name = "Renfro"			
 				add_province_modifier = { name = colonial_recruitment duration = 1460 }
@@ -655,13 +657,106 @@ political_decisions = {
 					change_region_name = "South Congaltonia"
               }
 			}
-			
-			SGR = { all_core = { limit = { empty = yes } secede_province = THIS } }
 		}
 		
 		ai_will_do = {
             factor = 1
         }
+		
+	accept_afro_scot = {
+	picture = black_rights 
+		potential = {
+			tag = SGR
+			has_country_flag = sgirur_freedom
+			NOT = { accepted_culture = afro_scot }
+			NOT = { has_country_flag = afro_scot_rights }
+		}
+		allow = {
+			NOT = { war = yes }
+			prestige = 20
+			mass_politics = 1
+			slavery = no_slavery 
+			NOT = { average_militancy = 3 }
+			OR = {
+				upper_house = {
+					ideology = socialist
+					value = 0.4
+				}
+				upper_house = {
+					ideology = liberal
+					value = 0.4
+				}
+				upper_house = {
+					ideology = anarcho_liberal
+					value = 0.4
+				}
+				upper_house = {
+					ideology = social_liberal
+					value = 0.4
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = anarcho_liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = anarcho_liberal
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = social_liberal
+						value = 0.20
+					}
+				}
+			}	
+		}
+		effect = {
+			add_accepted_culture = afro_scot
+			set_country_flag = afro_scot_rights
+			prestige = -15
+			any_pop = {
+			    limit = {
+			      NOT = { culture = afro_scot }
+			    }
+				  militancy = 2
+			}
+			any_pop = {
+			    limit = {
+			       culture = afro_scot
+				  }
+          consciousness = 2
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
 	}
 	
 ### ANTARTIDA DECISIONS ###
@@ -1026,6 +1121,101 @@ political_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+	
+	accept_afro_french = {
+	picture = black_rights 
+		potential = {
+			tag = ARC
+			NOT = { accepted_culture = afro_french }
+			NOT = { has_country_flag = afro_french_rights }
+		}
+		allow = {
+			NOT = { war = yes }
+			prestige = 20
+			revolution_n_counterrevolution = 1
+			slavery = no_slavery 
+			NOT = { average_militancy = 3 }
+			OR = {
+				upper_house = {
+					ideology = socialist
+					value = 0.4
+				}
+				upper_house = {
+					ideology = liberal
+					value = 0.4
+				}
+				upper_house = {
+					ideology = anarcho_liberal
+					value = 0.4
+				}
+				upper_house = {
+					ideology = social_liberal
+					value = 0.4
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = anarcho_liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = anarcho_liberal
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = social_liberal
+						value = 0.20
+					}
+				}
+			}	
+		}
+		effect = {
+			add_accepted_culture = afro_french
+			set_country_flag = afro_french_rights
+			prestige = -10
+			any_pop = {
+			    limit = {
+			      NOT = { culture = afro_french }
+			    }
+				  militancy = 2
+			}
+			any_pop = {
+			    limit = {
+			       culture = afro_french
+				  }
+          consciousness = 2
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
 	}
 	
 ### Renaming ###
