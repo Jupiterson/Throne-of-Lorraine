@@ -844,7 +844,7 @@ political_decisions = {
 			set_country_flag = unite_the_tungusics
 			add_accepted_culture = siberian
 			add_accepted_culture = manchu
-			government = federal_democracy
+			tag = TGS
 			prestige = 50
 		}
 		
@@ -869,21 +869,48 @@ political_decisions = {
 					tag = KOR
 					NOT = { has_country_flag = yi_seongmin_in_korea }
 				}
+				AND = {
+					tag = TGK
+					NOT = { has_country_flag = become_kudara }
+				}
 			}
 			is_vassal = no
 			NOT = { has_country_flag = united_korea }
 		}
 
 		allow = {
-			vote_franschise = universal_voting
-			political_parties = secret_ballots
-			citizens_rights = all_voting_pops
-			press_rights = free_press
-			public_meetings = yes_meeting
-			slavery = no_slavery
-			war = no
 			nationalism_n_imperialism = 1
 			KOR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			MCK = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			TKG = {
 				all_core = {
 					OR = {
 						owned_by = THIS
@@ -902,8 +929,23 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = united_korea
-			government = federal_democracy
 			KOR = {
+				all_core = {
+					limit = {
+						NOT = { owned_by = THIS } 
+					}
+					secede_province = THIS
+				}
+			}
+			MCK = {
+				all_core = {
+					limit = {
+						NOT = { owned_by = THIS } 
+					}
+					secede_province = THIS
+				}
+			}
+			TKG = {
 				all_core = {
 					limit = {
 						NOT = { owned_by = THIS } 
@@ -919,57 +961,10 @@ political_decisions = {
 				limit = { is_core = MIN }
 				remove_core = THIS
 			}
-			change_tag = KOR
+			change_tag = HGK
 			add_accepted_culture = korean
 			add_accepted_culture = buyeo
 			prestige = 10
-		}
-	}
-	
-	incorporate_buyeo_lands = {
-		picture = manchuria
-		
-		potential = {
-			tag = KOR
-			has_country_flag = united_korea
-			NOT = { has_country_flag = buyeo_lands }
-		}
-
-		allow = {
-			OR = {
-				AND = { 
-					has_unclaimed_cores = no
-					press_rights = free_press
-					public_meetings = yes_meeting
-					slavery = no_slavery
-					war = no
-					revolution_n_counterrevolution = 1
-				}
-				primary_culture = buyeo
-			}
-		}
-
-		effect = {
-			set_country_flag = buyeo_lands
-			government = federal_democracy
-			CHI_1479 = {
-				add_core = KOR
-			}
-			1002 = {
-				add_core = KOR
-			}
-			1082 = {
-				add_core = KOR
-			}
-			1083 = {
-				add_core = KOR
-			}
-			1552 = {
-				add_core = KOR
-			}
-			1553 = {
-				add_core = KOR
-			}
 		}
 	}
 	
