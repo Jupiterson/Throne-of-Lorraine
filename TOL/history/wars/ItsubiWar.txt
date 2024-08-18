@@ -1,0 +1,24 @@
+name = "The Tenko Rebellion"
+
+1835.4.19 = {
+	add_attacker = JAP
+	add_defender = TKG
+
+	war_goal = {
+		casus_belli = conquest
+		actor = JAP
+		receiver = TKG
+	}
+
+	war_goal = {
+		casus_belli = conquest
+		actor = TKG
+		receiver = JAP
+	}
+
+}
+
+1840.9.3 = {
+	rem_attacker = TKG
+	rem_defender = JAP
+}
