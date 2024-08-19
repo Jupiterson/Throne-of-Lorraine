@@ -465,12 +465,10 @@ acquire_core_state = {
 		number_of_states = 1 # annex if you want their last state
 		OR = {
 			is_vassal = no
-			government = daimyo 
 		}
 		THIS = {
 			OR = {
 				is_vassal = no
-				government = daimyo 
 			}
 		}
 		any_owned_province = { is_core = THIS }
@@ -548,17 +546,14 @@ acquire_all_cores = {
 				NOT= { year = 1843 }
 			}
 		}
-		civilized = yes
 		NOT = { is_our_vassal = THIS }
 		number_of_states = 2 # annex if you want their last state
 		OR = {
 			is_vassal = no
-			government = daimyo 
 		}
 		THIS = {
 			OR = {
 				is_vassal = no
-				government = daimyo 
 			}
 		}
 		any_owned_province = { is_core = THIS }
@@ -1573,12 +1568,10 @@ annex_core_country = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
 			is_vassal = no
-			government = daimyo 
 		}
 		THIS = {
 			OR = {
-				is_vassal = no
-				government = daimyo 
+				is_vassal = no 
 			}
 		}
 		any_owned_province = { is_core = THIS }

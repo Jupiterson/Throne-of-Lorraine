@@ -25,61 +25,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	french_military_mission_to_japan = {
-		picture = french_military_exp_japan
-		potential = {
-			OR = {
-				primary_culture = french
-				primary_culture = occitan
-			}
-			is_greater_power = yes
-			capital = 425
-			OR = {
-				AND = {
-					exists = JAP
-					JAP = { civilized = no }
-				}
-				AND = {
-					exists = TKG
-					TKG = { civilized = no }
-				}
-			}
-			NOT = { has_global_flag = military_mission_in_japan }
-		}
-
-		allow = {
-			state_n_government = 1
-			NOT = { war_with = JAP }
-			NOT = { truce_with = JAP }
-			NOT = { war_with = TKG }
-			NOT = { truce_with = TKG }
-		}
-
-		effect = {
-			prestige = 20
-			any_country = {
-				limit = {
-					OR = {
-						tag = TKG
-						tag = UTS
-						tag = JAP
-						tag = SAT
-					}
-					exists = yes
-				}
-				relation = { who = THIS value = 50 }
-				years_of_research = 1.5
-				military_reform = yes_foreign_training
-				military_reform = yes_foreign_officers
-				military_reform = yes_foreign_naval_officers
-			}
-			set_global_flag = military_mission_in_japan
-			
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
 	palais_garnier = {
 		potential = {
 			OR = {

@@ -5,55 +5,295 @@ USA = { value = 0 }
 RUS = { value = 75 }
 
 leader = {
-	name = "Kyogoku Nariaki"
+	name = "Mok Seongwu"
 	date = 1836.1.1
 	type = land
-	personality = disciplined
-	background = old_school
+	personality = clever
+	background = politician
 	prestige = 0.1
- }
+}
+
+leader = {
+	name = "Jin Sangji"
+	date = 1836.1.1
+	type = land
+	personality = defiant
+	background = innovative_tactician
+	prestige = 0.1
+}
+
+leader = {
+	name = "Sa Sinjang"
+	date = 1836.1.1
+	type = land
+	personality = strange
+	background = aristocrat
+	prestige = 0.1
+}
+
+leader = {
+	name = "Takano Choei"
+	date = 1836.1.1
+	type = land
+	personality = bold
+	background = aristocrat
+	prestige = 0.1
+}
+
+leader = {
+	name = "Hae Kwanghyeok"
+	date = 1836.1.1
+	type = land
+	personality = bold
+	background = aristocrat
+	prestige = 0.1
+}
+
+leader = {
+	name = "Prince Buyeo Geungchogo"
+	date = 1836.1.1
+	type = land
+	personality = efficient
+	background = adventurer
+	prestige = 0.1
+}
+
+leader = {
+	name = "Prince Buyeo Uijang"
+	date = 1836.1.1
+	type = land
+	personality = spirited
+	background = rising_star
+}
 
 army = {
-	name = "Army of the Shogunate"
-	location = 1640
+	name = "Imperial Guard"
+	location = 1638
 	regiment = {
-		name= "1.Samurai"
+		name= "1.Guard"
 		type = cavalry
-		home = 1640
+		home = 1638
 	}
 	regiment = {
-		name= "2.Samurai"
+		name= "2.Guard"
 		type = cavalry
-		home = 1645
+		home = 1638
 	}
 	regiment = {
-		name= "3.Samurai"
+		name= "1.Guard"
 		type = cavalry
-		home = 1659
+		home = 1638
 	}
 	regiment = {
-		name= "1.Choshu"
-		type = irregular
-		home = 1641
+		name= "1.Guard"
+		type = cavalry
+		home = 1638
 	}
 	regiment = {
-		name= "2.Choshu"
-		type = irregular
-		home = 1639
-	}
-	regiment = {
-		name= "3.Choshu"
+		name= "2.Guard"
 		type = irregular
 		home = 1638
+	}
+	regiment = {
+		name= "3.Guard"
+		type = irregular
+		home = 1638
+	}
+	regiment = {
+		name= "4.Guard"
+		type = infantry
+		home = 1638
+	}
+	regiment = {
+		name= "5.Guard"
+		type = artillery
+		home = 1640	}
+	regiment = {
+		name= "6.Guard"
+		type = artillery
+		home = 1638
+	}
+	regiment = {
+		name= "5.Guard"
+		type = artillery
+		home = 1638	}
+}
+
+navy = {
+	name = "Cheju Fleet"
+	location = 1637
+	ship = {
+		name= "Bimbap"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Bulgogi"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Kimchi"
+		type = clipper_transport
 	}
 }
 
 navy = {
-	name = "Imperial Fleet"
-	location = 1657
+	name = "Royal Fleet"
+	location = 1638
 	ship = {
-		name= "1 Yusosentai"
+		name= "Yakiniku"
+		type = frigate
+	}
+
+	ship = {
+		name= "Ramen"
 		type = clipper_transport
 	}
 
+	ship = {
+		name= "Kimchi"
+		type = clipper_transport
+	}
+}
+
+
+army = {
+	name = "Cheju Garrison"
+	location = 1637
+	regiment = {
+		name= "1.Guard"
+		type = cavalry
+		home = 1637
+	}
+	regiment = {
+		name= "2.Guard"
+		type = irregular
+		home = 1655
+	}
+}
+
+army = {
+	name = "Buyeo Geunchogo's Army"
+	location = 1647
+	regiment = {
+		name= "1.Army"
+		type = irregular
+		home = 1675
+	}
+	regiment = {
+		name= "2.Army"
+		type = irregular
+		home = 1675
+	}
+	regiment = {
+		name= "3.Army"
+		type = irregular
+		home = 1675
+	}
+	regiment = {
+		name= "1.Army"
+		type = artillery
+		home = 1640
+	}
+	regiment = {
+		name= "2.Army"
+		type = cavalry
+		home = 1640
+	}
+	regiment = {
+		name= "3.Army"
+		type = artillery
+		home = 1640
+	}
+	regiment = {
+		name= "4.Army"
+		type = cavalry
+		home = 1645
+	}
+	regiment = {
+		name= "5.Army"
+		type = artillery
+		home = 1645
+	}
+}
+
+army = {
+	name = "Hae's Army"
+	location = 1655
+	regiment = {
+		name= "1.Army"
+		type = irregular
+		home = 1655
+	}
+	regiment = {
+		name= "2.Army"
+		type = irregular
+		home = 1655
+	}
+	regiment = {
+		name= "3.Army"
+		type = artillery
+		home = 1665
+	}
+	regiment = {
+		name= "2.Army"
+		type = cavalry
+		home = 1665
+	}
+	regiment = {
+		name= "3.Army"
+		type = cavalry
+		home = 1665
+	}
+}
+
+army = {
+	name = "Buyeo Uijang's Army"
+	location = 1664
+	regiment = {
+		name= "1.Army"
+		type = irregular
+		home = 1661
+	}
+	regiment = {
+		name= "1.Guard"
+		type = cavalry
+		home = 1640
+	}
+	regiment = {
+		name= "2.Guard"
+		type = infantry
+		home = 1640
+	}
+	regiment = {
+		name= "1.Guard"
+		type = cavalry
+		home = 1640
+	}
+	regiment = {
+		name= "2.Guard"
+		type = cavalry
+		home = 1640
+	}
+	regiment = {
+		name= "2.Army"
+		type = irregular
+		home = 1661
+	}
+	regiment = {
+		name= "3.Army"
+		type = irregular
+		home = 1661
+	}
+	regiment = {
+		name= "4.Army"
+		type = irregular
+		home = 1663
+	}
+	regiment = {
+		name= "5.Army"
+		type = irregular
+		home = 1659
+	}
 }

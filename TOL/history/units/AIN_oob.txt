@@ -1,0 +1,85 @@
+RYU = { value = 125 }
+SUL = { value = 100 }
+BRU = { value = 100 }
+USA = { value = 0 }
+
+leader = {
+	name = "Shakushain"
+	date = 1836.1.1
+	type = land
+	personality = defiant
+	background = innovative_tactician
+	prestige = 0.1
+}
+
+leader = {
+	name = "Tanigaki Genjirou"
+	date = 1836.1.1
+	type = land
+	personality = strange
+	background = aristocrat
+	prestige = 0.1
+}
+
+leader = {
+	name = "Koshamain"
+	date = 1836.1.1
+	type = land
+	personality = bold
+	background = politician
+	prestige = 0.1
+}
+
+leader = {
+	name = "Aterui"
+	date = 1836.1.1
+	type = land
+	personality = disciplined
+	background = school_of_defence
+	prestige = 0.1
+}
+
+leader = {
+	name = "Prince Fujiwara no Ashitaka"
+	date = 1836.1.1
+	type = land
+	personality = clever
+	background = adventurer
+	prestige = 0.1
+}
+
+
+army = {
+	name = "Royal Guard"
+	location = 1673
+	regiment = {
+		name= "1.Guard"
+		type = dragoon
+		home = 1673
+	}
+	regiment = {
+		name= "2.Guard"
+		type = dragoon
+		home = 1668
+	}
+	regiment = {
+		name= "3.Guard"
+		type = cavalry
+		home = 1668
+	}
+}
+
+army = {
+	name = "Army of Yezo"
+	location = 1643
+	regiment = {
+		name= "1.army"
+		type = irregular
+		home = 1642
+	}
+	regiment = {
+		name= "2.army"
+		type = irregular
+		home = 1669
+	}
+}

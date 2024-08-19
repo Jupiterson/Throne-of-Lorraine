@@ -1,0 +1,100 @@
+political_decisions = {
+	
+	begin_line_of_advantage = {
+		picture = begin_line_of_advantage
+		potential = {
+			OR = {
+				tag = JAP
+			}
+			civilized = yes
+			has_country_modifier = fukoku_kyohei
+			NOT = {
+				has_country_flag = has_line_of_advantage
+				has_country_flag = refused_line_of_advantage
+			}
+		}
+
+		allow = {
+			OR = {
+				breech_loaded_rifles = 1
+				naval_decision_making = 1
+				army_decision_making = 1
+			}
+			NOT = { war_policy = pacifism }
+		}
+
+		effect = {
+			set_country_flag = has_line_of_advantage
+			remove_country_modifier = uncivilized_isolationism
+			add_country_modifier = {
+				name = line_of_advantage
+				duration = -1
+			}
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				dominant_issue = {
+					factor = 0.1
+					value = jingoism
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	refuse_line_of_advantage = {
+	picture = refuse_line_of_advantage
+		potential = {
+			OR = {
+				tag = JAP
+			}
+			civilized = yes
+			has_country_modifier = fukoku_kyohei
+			NOT = {
+				has_country_flag = has_line_of_advantage
+				has_country_flag = refused_line_of_advantage
+			}
+		}
+
+		allow = {
+			OR = {
+				empiricism = 1
+				private_bank_money_bill_printing = 1
+				iron_railroad = 1
+			}
+			NOT = { war_policy = jingoism }
+		}
+
+		effect = {
+			set_country_flag = refused_line_of_advantage
+			remove_country_modifier = uncivilized_isolationism
+			years_of_research = 0.5
+			add_country_modifier = {
+				name = no_line_of_advantage
+				duration = -1
+			}
+			move_issue_percentage = {
+				from = pro_military
+				to = anti_military
+				value = 0.10
+			}
+			move_issue_percentage = {
+				from = jingoism
+				to = pro_military
+				value = 0.10
+			}
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				ideology = {
+					value = liberal
+					factor = 0.10
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

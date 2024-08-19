@@ -844,7 +844,7 @@ political_decisions = {
 			set_country_flag = unite_the_tungusics
 			add_accepted_culture = siberian
 			add_accepted_culture = manchu
-			tag = TGS
+			change_tag = TGS
 			prestige = 50
 		}
 		
@@ -859,6 +859,10 @@ political_decisions = {
 		
 		potential = {
 			OR = {
+				primary_culture = buyeo
+				primary_culture = korean
+			}
+			OR = {
 				AND = {
 					tag = QNG
 					has_global_flag = chuseok_coup
@@ -870,8 +874,9 @@ political_decisions = {
 					NOT = { has_country_flag = yi_seongmin_in_korea }
 				}
 				AND = {
-					tag = TGK
-					NOT = { has_country_flag = become_kudara }
+					tag = TKG
+					has_country_flag = insane_big_brain_fiction
+					has_country_flag = betray_japan
 				}
 			}
 			is_vassal = no
@@ -922,6 +927,7 @@ political_decisions = {
 							vassal_of = THIS
 							war = no
 						}
+						is_core = JAP
 					}
 				}
 			}
@@ -961,12 +967,136 @@ political_decisions = {
 				limit = { is_core = MIN }
 				remove_core = THIS
 			}
+			all_core = {
+				limit = { is_core = JAP }
+				limit = { NOT = { is_core = TKG } }
+				remove_core = THIS
+			}
 			change_tag = HGK
 			add_accepted_culture = korean
 			add_accepted_culture = buyeo
+			remove_accepted_culture = han
+			remove_accepted_culture = japanese
+			remove_accepted_culture = ainu
+			remove_accepted_culture = manchu
+			remove_accepted_culture = fushu
+			remove_accepted_culture = ryukyuan
 			prestige = 10
 		}
 	}
+	
+	claim_japan = {
+		picture = abolish_the_han_system
+		
+		potential = {
+			tag = HGK
+			NOT = { has_country_flag = reverse_colonialism }
+		}
+
+		allow = {
+			war = no
+			has_unclaimed_cores = no
+			revolution_n_counterrevolution = 1
+			romanticism = 1
+		}
+
+		effect = {
+			set_country_flag =  reverse_colonialism
+			badboy = 20
+			JAP = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			
+		}
+
+		ai_will_do = { factor = 1 }
+		
+	}
+	
+	master_of_the_west_sea_2 = {
+		picture = shandong_map
+		
+		potential = {
+			tag = HGK
+			NOT = { has_country_flag = west_sea_claimed_2 }
+			has_country_flag = greater_korea
+		}
+
+		allow = {
+			war = no
+			revolution_n_counterrevolution = 1
+			has_unclaimed_cores = no
+		}
+
+		effect = {
+			set_country_flag = west_sea_claimed_2 
+			badboy = 20
+			CHI_1563 = {
+				add_core = KOR
+			}
+			CHI_1565 = {
+				add_core = KOR
+			}
+			CHI_1612 = {
+				add_core = KOR
+			}
+			CHI_1616 = {
+				add_core = KOR
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	even_greater_korea = {
+		picture = outer_manchuria_map
+		
+		potential = {
+			tag = HGK
+			NOT = { has_country_flag = greater_korea }
+		}
+
+		allow = {
+			war = no
+			idealism = 1
+			nationalism_n_imperialism = 1
+			has_unclaimed_cores = no
+		}
+
+		effect = {
+			set_country_flag = greater_korea
+			badboy = 5
+			CHI_1082 = {
+				add_core = HGK
+			}
+			CHI_1552 = {
+				add_core = HGK
+			}
+			CHI_1479 = {
+				add_core = HGK
+			}
+			1002 = {
+				add_core = HGK
+			}
+			1082 = {
+				add_core = HGK
+			}
+			1083 = {
+				add_core = HGK
+			}
+			1552 = {
+				add_core = HGK
+			}
+			1553 = {
+				add_core = HGK
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
 	
 #Baohuanghui
 

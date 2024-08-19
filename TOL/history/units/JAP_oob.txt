@@ -3,75 +3,170 @@ SUL = { value = 100 }
 BRU = { value = 100 }
 USA = { value = 0 }
 
-leader = {
-	name = "Sakuma Shozan"
-	date = 1836.1.1
-	type = land
-	personality = clever
-	background = politician
-	prestige = 0.1
-}
 
 leader = {
-	name = "Takashima Shuhan"
+	name = "Nagao Kenshin"
 	date = 1836.1.1
 	type = land
-	personality = defiant
-	background = innovative_tactician
+	personality = bigoted
+	background = school_of_the_bayonet
 	prestige = 0.1
-}
-
-leader = {
-	name = "Watanabe Kazan"
+ }
+ leader = {
+	name = "Miura Takamasa"
 	date = 1836.1.1
 	type = land
-	personality = strange
-	background = aristocrat
+	personality = unflinching
+	background = cavalry_school
 	prestige = 0.1
-}
-
-leader = {
-	name = "Takano Choei"
+ }
+ leader = {
+	name = "Okita Shiro"
 	date = 1836.1.1
 	type = land
-	personality = bold
-	background = aristocrat
+	personality = audacious
+	background = womanizer
 	prestige = 0.1
-}
-
-leader = {
-	name = "Prince Fushimi Kuniie"
+ }
+ leader = {
+	name = "Oda Nobutada"
 	date = 1836.1.1
 	type = land
-	personality = efficient
-	background = adventurer
+	personality = implacable
+	background = school_of_defence
 	prestige = 0.1
-}
-
-leader = {
-	name = "Prince Fushimi Sadanori"
+ }
+ leader = {
+	name = "Hijitaka Ienari"
 	date = 1836.1.1
 	type = land
-	personality = spirited
-	background = rising_star
+	personality = hell_bent
+	background = cartographer
+	prestige = 0.1
+ }
+
+army = {
+	name = "Nagao's Army"
+	location = 1676
+	regiment = {
+		name= "1.Samurai"
+		type = cavalry
+		home = 1652
+	}
+	regiment = {
+		name= "2.Samurai"
+		type = cavalry
+		home = 1650
+	}
+	regiment = {
+		name= "3.Samurai"
+		type = cavalry
+		home = 1649
+	}
+	regiment = {
+		name= "1.Righteous Army"
+		type = irregular
+		home = 1649
+	}
+	regiment = {
+		name= "2.Righteous Army"
+		type = irregular
+		home = 1649
+	}
+	regiment = {
+		name= "1.Righteous Cannons"
+		type = artillery
+		home = 1651
+	}
+	regiment = {
+		name= "5.Samurai"
+		type = irregular
+		home = 1653
+	}
+	regiment = {
+		name= "6.Samurai"
+		type = irregular
+		home = 1653
+	}
+	regiment = {
+		name= "6.Samurai"
+		type = irregular
+		home = 1652
+	}
 }
 
 army = {
-	name = "Imperial Guard"
-	location = 1657
+	name = "Oda's Army"
+	location = 1646
 	regiment = {
-		name= "1.Guard"
+		name= "1.Samurai"
+		type = cavalry
+		home = 1646
+	}
+	regiment = {
+		name= "2.Samurai"
+		type = cavalry
+		home = 1647
+	}
+	regiment = {
+		name= "3.Samurai"
+		type = cuirassier
+		home = 1646
+	}
+	regiment = {
+		name= "4.Samurai"
+		type = artillery
+		home = 1648
+	}
+}
+
+army = {
+	name = "Hijikata's Army"
+	location = 1659
+	regiment = {
+		name= "1.Samurai"
 		type = cavalry
 		home = 1657
 	}
 	regiment = {
-		name= "2.Guard"
-		type = cavalry
-		home = 1655
+		name= "2.Samurai"
+		type = irregular
+		home = 1657
 	}
 	regiment = {
-		name= "3.Guard"
-		type = cavalry
-		home = 1655
+		name= "3.Samurai"
+		type = irregular
+		home = 1657
+	}
+	regiment = {
+		name= "4.Samurai"
+		type = artillery
+		home = 1657
 	}
 }
+
+army = {
+	name = "Okita's Army"
+	location = 1662
+	regiment = {
+		name= "1.Samurai"
+		type = infantry
+		home = 1657
+	}
+	regiment = {
+		name= "2.Samurai"
+		type = infantry
+		home = 1657
+	}
+	regiment = {
+		name= "3.Samurai"
+		type = irregular
+		home = 1657
+	}
+	regiment = {
+		name= "4.Samurai"
+		type = irregular
+		home = 1657
+	}
+}
+
