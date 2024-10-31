@@ -1270,7 +1270,7 @@
 	artisans = {
 		culture = sgirenic
 		religion = reformed
-		size = 450
+		size = 150
 	}
 
 	soldiers = {
@@ -1282,31 +1282,31 @@
 	farmers = {
 		culture = sgirenic
 		religion = reformed
-		size = 7125
+		size = 1425
 	}
 
 	clergymen = {
-		culture = tupinamba
+		culture = amazonian
 		religion = animist
 		size = 25
 	}
 
 	artisans = {
-		culture = tupinamba
+		culture = amazonian
 		religion = animist
 		size = 150
 	}
 
 	soldiers = {
-		culture = tupinamba
+		culture = amazonian
 		religion = animist
 		size = 25
 	}
 
 	farmers = {
-		culture = tupinamba
+		culture = amazonian
 		religion = animist
-		size = 2750
+		size = 3750
 	}
 }
 #Teresina (160000/40000 POPS)
@@ -1376,19 +1376,19 @@
 	aristocrats = {
 		culture = sgirenic
 		religion = reformed
-		size = 225
+		size = 25
 	}
 
 	clergymen = {
 		culture = sgirenic
 		religion = reformed
-		size = 100
+		size = 80
 	}
 
 	artisans = {
 		culture = sgirenic
 		religion = reformed
-		size = 500
+		size = 100
 	}
 
 	soldiers = {
@@ -1400,31 +1400,31 @@
 	farmers = {
 		culture = sgirenic
 		religion = reformed
-		size = 7075
+		size = 675
 	}
 
 	clergymen = {
-		culture = tupinamba
+		culture = amazonian
 		religion = animist
 		size = 10
 	}
 
 	artisans = {
-		culture = tupinamba
+		culture = amazonian
 		religion = animist
 		size = 50
 	}
 
 	soldiers = {
-		culture = tupinamba
+		culture = amazonian
 		religion = animist
 		size = 10
 	}
 
 	farmers = {
-		culture = tupinamba
+		culture = amazonian
 		religion = animist
-		size = 930
+		size = 1730
 	}
 }
 #Paraiba Region (456000)
@@ -2218,55 +2218,37 @@
 	aristocrats = {
 		culture = sgirenic
 		religion = reformed
-		size = 525
+		size = 150
 	}
 
 	clergymen = {
 		culture = sgirenic
 		religion = reformed
-		size = 175
+		size = 120
 	}
 
 	artisans = {
 		culture = sgirenic
 		religion = reformed
-		size = 450
+		size = 280
 	}
 
 	soldiers = {
 		culture = sgirenic
 		religion = reformed
-		size = 125
+		size = 325
 	}
 
 	farmers = {
 		culture = sgirenic
 		religion = reformed
-		size = 18725
-	}
-
-	clergymen = {
-		culture = afro_scot
-		religion = reformed
-		size = 75
-	}
-
-	artisans = {
-		culture = afro_scot
-		religion = reformed
-		size = 700
-	}
-
-	soldiers = {
-		culture = afro_scot
-		religion = reformed
-		size = 150
+		size = 13125
 	}
 
 	slaves = {
 		culture = afro_scot
 		religion = reformed
-		size = 21500
+		size = 5100
 	}
 }
 #Minas Gerais Region (716000)
@@ -2350,19 +2332,19 @@
 	aristocrats = {
 		culture = sgirenic
 		religion = reformed
-		size = 525
+		size = 225
 	}
 
 	clergymen = {
 		culture = sgirenic
 		religion = reformed
-		size = 200
+		size = 100
 	}
 
 	artisans = {
 		culture = sgirenic
 		religion = reformed
-		size = 525
+		size = 225
 	}
 
 	soldiers = {
@@ -2374,19 +2356,19 @@
 	farmers = {
 		culture = sgirenic
 		religion = reformed
-		size = 2700
+		size = 800
 	}
 
 	farmers = {
-		culture = tupinamba
+		culture = amazonian
 		religion = animist
-		size = 3300
+		size = 3800
 	}
 
 	slaves = {
 		culture = afro_scot
 		religion = reformed
-		size = 5600
+		size = 1200
 	}
 }
 #Januaria (100000/25000 POPS)
@@ -2454,8 +2436,8 @@
 #Paracatu (80000/20000 POPS)
 2444 = {
 	aristocrats = {
-		culture = sgirenic
-		religion = reformed
+		culture = amazonian 
+        religion = animist
 		size = 425
 	}
 
@@ -2472,27 +2454,27 @@
 	}
 
 	soldiers = {
-		culture = sgirenic
-		religion = reformed
-		size = 125
+		culture = amazonian 
+        religion = animist
+		size = 75
 	}
 
 	farmers = {
 		culture = sgirenic
 		religion = reformed
-		size = 1750
+		size = 750
 	}
 	
 	farmers = {
 		culture = amazonian 
         religion = animist
-		size = 2650
+		size = 3650
 	}
 
 	slaves = {
 		culture = afro_scot
 		religion = reformed
-		size = 2100
+		size = 900
 	}
 }
 #Uberaba (68000/17000 POPS)
@@ -3551,13 +3533,13 @@
 	officers = {
 		culture = francorientale
 		religion = catholic
-		size = 325
+		size = 300
 	}
 
 	clergymen = {
 		culture = francorientale
 		religion = catholic
-		size = 850
+		size = 1350
 	}
 
 	artisans = {
@@ -3569,42 +3551,30 @@
 	soldiers = {
 		culture = francorientale
 		religion = catholic
-		size = 3000
-	}
-
-	soldiers = {
-		 culture = francorientale
-		religion = catholic
-		size = 2000
+		size = 8930
 	}
 
 	farmers = {
 		culture = francorientale
 		religion = catholic
-		size = 122175
+		size = 102175
 	}
 	clergymen = {
 		culture = francorientale
 		religion = catholic
-		size = 600
+		size = 800
 	}
 
 	artisans = {
 		culture = francorientale
 		religion = catholic
-		size = 2650
-	}
-
-	soldiers = {
-		culture = francorientale
-		religion = catholic
-		size = 8250
+		size = 2550
 	}
 	
 	slaves = {
 		culture = afro_french
 		religion = catholic
-		size = 22370
+		size = 19370
 	}
 
 }
@@ -3669,19 +3639,19 @@
 	farmers = {
 		 culture = francorientale
 		religion = catholic
-		size = 38700
+		size = 15700
 	}
 
 	soldiers = {
 		culture = francorientale
 		religion = catholic
-		size = 2150
+		size = 1350
 	}
 
 	slaves = {
 		culture = afro_french
 		religion = catholic
-		size = 45320
+		size = 28320
 	}
 }
 #Santa Maria (88000/22000 POPS)
@@ -4190,43 +4160,61 @@
 #Lamont
 
 3607 = {
-	aristocrats = {
+aristocrats = {
 		culture = sgirenic
 		religion = reformed
-		size = 150
+		size = 525
 	}
 
 	clergymen = {
 		culture = sgirenic
 		religion = reformed
-		size = 120
+		size = 175
 	}
 
 	artisans = {
 		culture = sgirenic
 		religion = reformed
-		size = 280
+		size = 450
 	}
 
 	soldiers = {
 		culture = sgirenic
 		religion = reformed
-		size = 325
+		size = 125
 	}
 
 	farmers = {
 		culture = sgirenic
 		religion = reformed
-		size = 13125
+		size = 18725
+	}
+
+	clergymen = {
+		culture = afro_scot
+		religion = reformed
+		size = 75
+	}
+
+	artisans = {
+		culture = afro_scot
+		religion = reformed
+		size = 700
+	}
+
+	soldiers = {
+		culture = afro_scot
+		religion = reformed
+		size = 150
 	}
 
 	slaves = {
 		culture = afro_scot
 		religion = reformed
-		size = 5100
+		size = 21500
 	}
 }
-
+	
 #Murdo
 
 3608 = {

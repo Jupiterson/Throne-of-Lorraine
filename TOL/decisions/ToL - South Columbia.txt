@@ -338,6 +338,8 @@ political_decisions = {
 				2444 = { empty = yes }
 				2442 = { empty = yes }
 				2446 = { empty = yes }
+				2425 = { empty = yes }
+				2427 = { empty = yes }
 			}
 			NOT = { has_country_flag = began_consolidationSGR }
 		}
@@ -378,6 +380,20 @@ political_decisions = {
 				}
 				2446 = { secede_province = THIS }
 				2446 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2425 = { empty = yes }
+				}
+				2425 = { secede_province = THIS }
+				2425 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2427 = { empty = yes }
+				}
+				2427 = { secede_province = THIS }
+				2427 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			}
 		}
 		ai_will_do = {
@@ -662,6 +678,7 @@ political_decisions = {
 		ai_will_do = {
             factor = 1
         }
+	}
 		
 	accept_afro_scot = {
 	picture = black_rights 
@@ -757,7 +774,6 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	}
 	
 ### ANTARTIDA DECISIONS ###
 
@@ -766,10 +782,8 @@ political_decisions = {
 
         potential = { 
 			ai = no
-			OR = {
-				tag = FNC
-				tag = OCD
-			}
+			tag = FNC
+			tag = OCD
 		}
 
         allow = { year = 1836 }
@@ -848,7 +862,7 @@ political_decisions = {
 	
 	arc_capital = { 
 	
-		picture = antardopolis
+		picture = Saintenne
 	
 		potential = {
 		tag = ARC
@@ -865,7 +879,7 @@ political_decisions = {
 		capital = 2344
 		set_country_flag = arc_new_capital
 		2344 = { 
-		change_province_name = "Antardopolis" 
+		change_province_name = "Saintenne" 
 		life_rating = 5
 		add_province_modifier = { 
 			name = recently_built_city
@@ -1062,6 +1076,7 @@ political_decisions = {
 			factor = 1
 		}
 	}
+	}
 	
 	arc_beyond_mountains = {
 	
@@ -1215,7 +1230,6 @@ political_decisions = {
 		ai_will_do = { 
 			factor = 1
 		}
-	}
 	}
 	
 ### Renaming ###
