@@ -1,0 +1,49 @@
+# Kolumbianisch culture event #
+
+country_event = {
+
+	id = 690001
+	
+	title = "kolumbianisch_culture_title"
+	desc = "kolumbianisch_culture_desc"
+	picture = "german_rhine"
+	
+	trigger = {
+	tag = VKS
+	has_global_flag = VKS_Annnex_AKI
+	NOT = { has_global_flag = VKS_National_Unity }
+	}
+	
+	mean_time_to_happen = {
+		years = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "kolumbianisch_culture_option1"
+		primary_culture = kolumbianisch
+		remove_accepted_culture = american_german
+		remove_accepted_culture = akino_german
+		remove_accepted_culture = gek
+		remove_accepted_culture = veldlewer
+		remove_accepted_culture = free_german
+		set_global_flag = VKS_National_Unity
+			any_owned = {
+					limit = { is_core = VEL }
+					remove_core = VEL
+			}
+			any_owned = {
+					limit = { is_core = AKI }
+					remove_core = AKI
+			}
+			any_owned = {
+					limit = { is_core = GKS }
+					remove_core = GKS
+			}
+			any_owned = {
+					limit = { is_core = TEX }
+					remove_core = TEX
+			}
+		}	
+}

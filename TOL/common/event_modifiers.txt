@@ -444,7 +444,7 @@ mineral_revolution = {
 	global_assimilation_rate = 0.1
 }
 
-kruger_reserve = { #For the Kruger Wildlife Preserve Decision
+stewart_reserve = {
 	icon = 19
 	immigrant_attract = 0.5
 }
@@ -5515,4 +5515,16 @@ antartidan_capital = {
 	population_growth = 0.003
 	immigrant_attract = 3
 	assimilation_rate = 0.4
+	icon = 9
+}
+
+## Hibernia ##
+
+patricks_legion = {
+	land_organisation = 0.15
+	leadership_modifier = 0.5
+	min_military_spending = 0.3
+	mobilisation_size = 0.1
+	org_regain = 0.1
+	icon = 15
 }

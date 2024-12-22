@@ -125,7 +125,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 1
+		years = 2
 		modifier = {
 			factor = 0.5
 			average_militancy = 7
@@ -185,8 +185,8 @@ country_event = {
 #Irish win
 country_event = {
 	id = 28016
-	title = "ireland annexes the revolt"
-	desc = "amogus"
+	title = "irr_won_title"
+	desc = "irr_won_desc"
 	picture = irish_home_rule
 	fire_only_once = yes
 	
@@ -200,10 +200,8 @@ country_event = {
 	}
 	
 	option = {
-		name = "sium"
-		any_owned = {
-			secede_province = IRE
-		}
+		name = "Godspeed!"
+		change_tag = IRE
 		ai_chance = {
 			factor = 1
 		}

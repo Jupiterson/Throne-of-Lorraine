@@ -313,6 +313,7 @@ political_decisions = {
             owns = 2111
 			owns = 2113
 			owns = 2114
+			owns = 3610
 			war = no
         }
 
@@ -325,6 +326,9 @@ political_decisions = {
             ZUL_2113 = {
 			add_core = THIS
 		    }
+			HBR_3610  = {
+			add_core = THIS 
+			}
 		    ENG_2096 = {
 			add_core = THIS
 			}
@@ -650,9 +654,17 @@ political_decisions = {
 				duration = 36500 }
 			}
 			set_global_flag = cape_merchant_setup
-			set_global_flag = TRN_renamed_BTH
-			set_global_flag = NAL_renamed_NGU
 			set_global_flag = qariega_renamed_NGU
+			set_global_flag = xhosaland_renamed_NGU
+			set_global_flag = caru_renamed_SCO
+			set_global_flag = transgorits_renamed_SCO
+			set_global_flag = lesotho_renamed_NGU
+			set_global_flag = basutoland_renamed_BTH
+			set_global_flag = bapedi_renamed_BTH
+			set_global_flag = bechuinner_renamed_BTH
+			set_global_flag = bechuouter_renamed_BTH
+			set_global_flag = zululand_renamed_NGU
+			set_global_flag = natal_renamed_HBR
 		}
 		ai_will_do = {
             factor = 1
@@ -1213,17 +1225,21 @@ political_decisions = {
         }
 	 }
 	 
-	 rename_KHB_SCO = {
+	rename_KHB_SCO = {
+		picture = xhosa_map1
 		potential = {
 			owns = 2087
 			owns = 3591
 			owns = 2089
+			owns = 2090
+			owns = 3590
+			owns = 3596
+			owns = 3601
 			OR = {
 				primary_culture = scottish
 				accepted_culture = scottish
 			}
 			NOT = { has_global_flag = KHB_renamed_SCO }
-			has_global_flag = KHB_renamed_KHB
 		}
 		
 		allow = {
@@ -1232,10 +1248,58 @@ political_decisions = {
 		
 		effect = {
 			set_global_flag = KHB_renamed_SCO
+			clr_global_flag = KHB_renamed_HBR
 			clr_global_flag = KHB_renamed_KHB
+			2087 = { change_province_name = "Heidtoun" }
 			3591 = { change_province_name = "Neamhnaid" }
+			2089 = { change_province_name = "Yerburgh" }
+			2090 = { change_province_name = "Airdsgainne" }
+			3590 = { change_province_name = "Maybole" }
 			3596 = { change_province_name = "Crail" }
-			2089 = { change_province_name = "Drumnadrochit" }
+			3601 = { change_province_name = "Barclay" }
+			2913 = { change_province_name = "Coast of Heidtoun" }
+			2087 = { state_scope = { change_region_name = "Rubha Ùr" } }
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	rename_KHB_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2087
+			owns = 3591
+			owns = 2089
+			owns = 2090
+			owns = 3590
+			owns = 3596
+			OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { tag = OCN }
+			NOT = { has_global_flag = KHB_renamed_HBR }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = KHB_renamed_HBR
+			clr_global_flag = KHB_renamed_SCO
+			clr_global_flag = KHB_renamed_KHB
+			2087 = { change_province_name = "Rinn Baile" }
+			3591 = { change_province_name = "Vaughan" }
+			2089 = { change_province_name = "Quinlan" }
+			2090 = { change_province_name = "Scully" }
+			3590 = { change_province_name = "Maonaidh" }
+			3596 = { change_province_name = "Cráin" }
+			3601 = { change_province_name = "Bhaoil" }
+			2913 = { change_province_name = "Coast of Rinn Baile" }
+			2087 = { state_scope = { change_region_name = "Rinn Stát" } }
 		}
 		
 		ai_will_do = {
@@ -1244,8 +1308,12 @@ political_decisions = {
 	}
 	
 	rename_KHB_KHB = {
+		picture = xhosa_map1
 		potential = {
 			owns = 3591
+			owns = 3596
+			owns = 2089
+			owns = 3601
 			primary_culture = khoisan
 			NOT = { has_global_flag = KHB_renamed_KHB }
 		}
@@ -1255,11 +1323,13 @@ political_decisions = {
 		}
 		
 		effect = {
-			clr_global_flag = KHB_renamed_SCO
 			set_global_flag = KHB_renamed_KHB
+			clr_global_flag = KHB_renamed_SCO
+			clr_global_flag = KHB_renamed_HBR
 			3591 = { change_province_name = "Khub" }
 			3596 = { change_province_name = "!Hana" }
 			2089 = { change_province_name = "!Khoa" }
+			3601 = { change_province_name = "Mansse" }
 		}
 		
 		ai_will_do = {
@@ -1928,17 +1998,18 @@ political_decisions = {
 		picture = coffee_in_colombia
 		ai_will_do = { factor = 1 }
 		potential = {
-		owns = 2111
+		owns = 3610
 		owns = 2113
 		year = 1840
-		2111 = { NOT = { trade_goods = sugar }}
+		3610 = { NOT = { trade_goods = sugar }}
 		2113 = { NOT = { trade_goods = sugar }}
+		NOT = { has_global_flag = imported_zul_sugar }
 		}
 
 		allow = {
 		OR = { land_reform = yes_land_reform
 		       civilized = yes }
-            owns = 2111
+            owns = 3610
 			owns = 2113
 			money = 5000
 			war = no
@@ -1946,8 +2017,9 @@ political_decisions = {
 
 		effect = {
 		money = -5000
-		2111 = { trade_goods = sugar }
+		3610 = { trade_goods = sugar }
 		2113 = { trade_goods = sugar }
+		set_global_flag = imported_zul_sugar
 		}
 		
 	}
@@ -1956,16 +2028,14 @@ political_decisions = {
 		picture = build_gotthard_tunnel
 		ai_will_do = { factor = 1 }
 		potential = {
-		owns = 2111
-		owns = 2112
+		owns = 3610
 		owns = 2113
 		year = 1840
-		2111 = { trade_goods = sugar }
+		3610 = { trade_goods = sugar }
 		2113 = { trade_goods = sugar }
-		2111 = { is_colonial = no }
+		3610 = { is_colonial = no }
 		2113 = { is_colonial = no }
-		OR = { capital = 2111
-		       capital = 2112
+		OR = { capital = 3610
 			   capital = 2113}
 	    NOT = { has_country_flag = rum_built }
 		can_build_factory_in_capital_state = rum_distillery
@@ -1975,7 +2045,7 @@ political_decisions = {
 		allow = {
 		OR = { pre_indust = yes_pre_indust
 		       civilized = yes }
-            owns = 2111
+            owns = 3610
 			owns = 2113
 			money = 20000
 			war = no
@@ -2022,23 +2092,120 @@ political_decisions = {
 		
 	}
 	
-### Drummond Stuff ###
+### Drummond/Caledonia Decisions ###
+
+	end_xhosa_war = {
+        picture = treaty_signing
+        potential = {
+			OR = {
+				tag = ORA
+				tag = HBR
+			}
+            war = yes
+			has_global_flag = 3rd_frontier_war
+			has_global_flag = hbr_intervention
+			NOT = { has_global_flag = end_war_xho }
+			war_with = XHO
+        }
+
+        allow = {
+            2098 = {
+				controlled_by = THIS
+                province_control_days = 5
+            }
+            war = yes
+        }
+
+        effect = {
+            set_global_flag = end_war_xho
+			ORA = { country_event = { id = 500501 days = 0 } }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+	treaty_of_drummond = {
+        picture = treaty_signing
+        potential = {
+			tag = ORA
+            2087 = {
+                owner = {
+                    war_with = THIS
+                }
+            }
+			NOT = { has_global_flag = won_caledonian_war }
+        }
+
+        allow = {
+            2087 = {
+				OR = {
+					controlled_by = THIS
+					controller = { alliance_with = THIS }
+				}
+                province_control_days = 150
+            }
+            SAF = {
+                all_core = {
+                    OR = {
+                        controlled_by = THIS
+                        controller = { alliance_with = THIS }
+                        empty = yes
+                    }
+                }
+            }
+            war = yes
+        }
+
+        effect = {
+            set_global_flag = won_caledonian_war
+            random_country = {
+                limit = {
+                    owns = 2087
+                    war_with = THIS
+                }
+                country_event = 500507
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	become_caledonia = {
+		picture = heid_colonials		
+		potential = {
+		tag = ORA
+		NOT = { has_global_flag = drummonder_caledonia }
+		}
+		
+		allow = {
+		war = no
+		owns = 2087
+		is_vassal = no
+		state_n_government = 1
+		}
+		
+		effect = {
+		change_tag = CLD
+		prestige = 10
+		SAF = {
+				all_core = {
+					add_core = CLD
+				}
+			}
+		set_global_flag = drummonder_caledonia
+		}
+	}
 
     appoint_ORA_duchy = {
 		picture = boer_leader  
 		ai_will_do = { factor = 1 }
 		potential = {
-		tag = ORA
+		tag = CLD
 		has_leader = "Morven Stewart"
-		year = 1842
 		political_reform_name = none_voting
 		NOT = { has_country_flag = new_world_nation }
 		}
-		
 
 		allow = {
 		war = no
-		ideological_thought = 1
 		owns = 2096
 		OR = { upper_house = {
                                           ideology = reactionary
@@ -2063,16 +2230,13 @@ political_decisions = {
 		picture = drummonder_dream
 		ai_will_do = { factor = 1 }
 		potential = {
-		tag = ORA
-		year = 1843
+		tag = CLD
 		NOT = { has_country_flag = new_world_nation }
 		}
-		
 
 		allow = {
 		war = no
 		owns = 3592
-		ideological_thought = 1
 		upper_house = {
                                           ideology = liberal
                                           value = 0.1 
@@ -2098,6 +2262,439 @@ political_decisions = {
 		set_country_flag = new_world_nation
 		}
 		
+	}
+	
+	CLD_limpopo_push = {
+	
+		picture = fenian_expansion
+		
+			potential = {
+				tag = CLD
+				has_country_flag = drummonder_caledonia
+				NOT = { has_country_flag = cld_limpopo_push }  
+			}
+		
+			allow = {
+				war = no
+				nationalism_n_imperialism = 1				
+			}
+		
+			effect = {
+				badboy = 10
+				prestige = 20
+				ENG_2096 = { add_core = CLD }
+				HBR_3610 = { add_core = CLD }
+				ORA_2103 = { add_core = CLD }
+				ZUL_2113 = { add_core = CLD }
+				TRN_2108 = { add_core = CLD }		
+				set_country_flag = cld_limpopo_push
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+	CLD_northern_push = {
+	
+		picture = fenian_expansion
+		
+			potential = {
+				tag = CLD
+				has_country_flag = cld_limpopo_push
+				NOT = { has_country_flag = cld_push_north }  
+			}
+		
+			allow = {
+				war = no
+				is_secondary_power = yes
+				invention = mission_to_civilize		
+			}
+		
+			effect = {
+				badboy = 5
+				prestige = 15
+				ENG_2094 = { add_core = CLD }
+				ENG_2074 = { add_core = CLD }		
+				set_country_flag = cld_push_north
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+	claim_outback = {
+	
+		picture = map_namibia
+		
+			potential = {
+				tag = CLD
+				has_country_flag = cld_push_north
+				NOT = { has_country_flag = cld_outback }  
+			}
+		
+			allow = {
+				war = no
+				is_secondary_power = yes
+				invention = colonial_negotiations
+				revolution_n_counterrevolution = 1				
+			}
+		
+			effect = {
+				badboy = 5
+				prestige = 15
+				ENG_2078 = { add_core = CLD }
+				ENG_2083 = { add_core = CLD }		
+				set_country_flag = cld_outback
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+### Hibernia Decisions ###
+	
+	rinn_claims = {
+	
+		picture = cape_map
+		
+			potential = {
+				tag = HBR
+				has_country_flag = hbr_anti_drummonder
+				NOT = { has_country_flag = claimed_rinn }  
+			}
+		
+			allow = {
+				war = no
+				state_n_government = 1				
+			}
+		
+			effect = {
+				prestige = 10
+				ENG_3592 = { add_core = HBR }
+				ENG_2091 = { add_core = HBR }
+				ENG_2087 = { add_core = HBR }
+				ENG_2092 = { add_core = HBR }			
+				set_country_flag = claimed_rinn
+			}
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+	HBR_limpopo_push = {
+	
+		picture = fenian_expansion
+		
+			potential = {
+				tag = HBR
+				has_country_flag = claimed_rinn
+				NOT = { has_country_flag = hbr_limpopo_push }  
+			}
+		
+			allow = {
+				war = no
+				nationalism_n_imperialism = 1				
+			}
+		
+			effect = {
+				badboy = 8
+				prestige = 15
+				ORA_2103 = { add_core = HBR }
+				ZUL_2113 = { add_core = HBR }
+				TRN_2108 = { add_core = HBR }		
+				set_country_flag = hbr_limpopo_push
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+	HBR_northern_push = {
+	
+		picture = fenian_expansion
+		
+			potential = {
+				tag = HBR
+				has_country_flag = hbr_limpopo_push
+				NOT = { has_country_flag = hbr_push_north }  
+			}
+		
+			allow = {
+				war = no
+				is_secondary_power = yes
+				invention = mission_to_civilize		
+			}
+		
+			effect = {
+				badboy = 5
+				prestige = 15
+				ENG_2094 = { add_core = HBR }
+				ENG_2074 = { add_core = HBR }		
+				set_country_flag = hbr_push_north
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+	claim_old_ireland = {
+	
+		picture = ireland_map
+		
+			potential = {
+				tag = HBR
+				has_country_flag = hbr_anti_drummonder
+				NOT = { has_country_flag = claim_old_ireland }  
+			}
+		
+			allow = {
+				IRE = { exists = no }
+				war = no
+				is_greater_power = yes
+				state_n_government = 1				
+			}
+		
+			effect = {
+				prestige = 20				
+				IRE = {
+				    all_core = {
+						add_core = THIS
+					}
+				}								
+				set_country_flag = claim_old_ireland
+			}
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+	return_home_HBR = {
+	
+	picture = ireland_map
+	
+			potential = {
+				tag = HBR
+				has_country_flag = hbr_anti_drummonder
+				NOT = { has_country_flag = ireland_returned }
+			}
+		
+			allow = {
+				IRE = { exists = no }
+				war = no
+				IRE = {
+					all_core = {
+						owned_by = THIS
+					}
+				}
+			}
+		
+			effect = {
+				any_owned = {
+					limit = {
+						is_core = IRE
+					}
+					remove_core = HBR
+				}
+				change_tag = IRE
+				primary_culture = irish
+				add_accepted_culture = hibernite
+				capital = 263
+				set_country_flag = ireland_returned
+			}
+			ai_will_do = {
+				factor = 1
+			}
+  }
+  
+### Oceania decisions ###
+
+	prepare_oceanian_union = {
+		picture = form_ocn
+        potential = {
+            tag = HBR
+            NOT = { exists = OCN }
+			has_global_flag = won_caledonian_war
+			has_country_flag = hbr_drummond_cooperation
+            NOT = { has_country_flag = oceania_foundation }
+        }
+
+        allow = {
+			war = no
+			ideological_thought = 1
+			ORA = {
+                OR = {
+                    relation = { who = THIS value = 100 }
+                    in_sphere = THIS
+                }
+            }
+        }
+
+        effect = {
+            ORA = { country_event = { id = 500516 days = 0 } }
+            set_country_flag = oceania_foundation
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	form_oceanian_union = {
+		picture = form_ocn
+        potential = {
+            tag = HBR
+            NOT = { exists = OCN }
+			has_global_flag = ora_subjected
+			has_country_flag = oceania_foundation
+            NOT = { has_global_flag = oceania_formed }
+        }
+
+        allow = {
+			war = no
+			prestige = 30
+			state_n_government = 1
+        }
+
+        effect = {
+			SAF = {
+				all_core = {
+					add_core = OCN
+				}
+			}
+			HBR = {
+				all_core = {
+					add_core = OCN
+				}
+			}
+			change_tag = OCN
+			OCN = {
+				inherit = ORA
+			}
+			add_accepted_culture = scottish
+            set_global_flag = oceania_formed
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	OCN_limpopo_push = {
+	
+		picture = fenian_expansion
+		
+			potential = {
+				tag = OCN
+				has_global_flag = oceania_formed
+				NOT = { has_country_flag = ocn_limpopo_push }  
+			}
+		
+			allow = {
+				war = no
+				nationalism_n_imperialism = 1				
+			}
+		
+			effect = {
+				badboy = 8
+				prestige = 20
+				ORA_2103 = { add_core = OCN }
+				ZUL_2113 = { add_core = OCN }
+				TRN_2108 = { add_core = OCN }			
+				set_country_flag = ocn_limpopo_push
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+	OCN_northern_push = {
+	
+		picture = fenian_expansion
+		
+			potential = {
+				tag = OCN
+				has_country_flag = ocn_limpopo_push
+				NOT = { has_country_flag = ocn_push_north }  
+			}
+		
+			allow = {
+				war = no
+				is_secondary_power = yes
+				invention = mission_to_civilize		
+			}
+		
+			effect = {
+				badboy = 5
+				prestige = 15
+				ENG_2094 = { add_core = OCN }
+				ENG_2074 = { add_core = OCN }		
+				set_country_flag = ocn_push_north
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+	OCN_claim_outback = {
+	
+		picture = map_namibia
+		
+			potential = {
+				tag = OCN
+				has_country_flag = ocn_push_north
+				NOT = { has_country_flag = ocn_outback }  
+			}
+		
+			allow = {
+				war = no
+				is_secondary_power = yes
+				invention = colonial_negotiations
+				revolution_n_counterrevolution = 1				
+			}
+		
+			effect = {
+				badboy = 5
+				prestige = 15
+				ENG_2078 = { add_core = OCN }
+				ENG_2083 = { add_core = OCN }		
+				set_country_flag = ocn_outback
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+	}
+	
+	zambezi_boundary = {
+	
+		picture = cape_map
+		
+			potential = {
+				tag = OCN
+				has_country_flag = ocn_outback
+				NOT = { has_country_flag = oceanian_zambezi }  
+			}
+		
+			allow = {
+				war = no
+				is_greater_power = yes
+				invention = the_dark_continent			
+			}
+		
+			effect = {
+				badboy = 10
+				prestige = 30
+				ENG_2071 = { add_core = OCN }
+				ENG_2068 = { add_core = OCN }		
+				POR_2054 = { add_core = OCN }
+				POR_2053 = { add_core = OCN }
+				set_country_flag = oceanian_zambezi
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
 	}
 	
 ### Colonial Scottish Decisions ###
@@ -2158,6 +2755,9 @@ political_decisions = {
 				owns = 2110
 				owns = 2114
 				owns = 2104
+				owns = 3610
+				owns = 3611
+				owns = 3612
 				NOT = { has_global_flag = NAL_organized }
 		OR = {
 				primary_culture = scottish
@@ -2173,6 +2773,7 @@ political_decisions = {
 		effect = {
 			ENG_2096 = { add_core = NAL }
             ZUL_2113 = { add_core = NAL }
+			HBR_3610 = { add_core = NAL }
 			2049 = { add_core = NAL }
 			2050 = { add_core = NAL }
 			2110 = { add_core = NAL }
@@ -2180,7 +2781,7 @@ political_decisions = {
 			2104 = { add_core = NAL }
 			2100 = { add_province_modifier = { name = province_large_immigration_boom 
 			                                   duration = 3650 }}
-			2111 = { add_province_modifier = { name = province_large_immigration_boom 
+			3610 = { add_province_modifier = { name = province_large_immigration_boom 
 			                                   duration = 3650 }}
             2112 = { add_province_modifier = { name = province_large_immigration_boom 
 			                                   duration = 3650 }}
@@ -2191,60 +2792,68 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	rename_TRN_SCO = {
+	rename_bapedi_SCO = {
 		picture = xhosa_map1
 		potential = {
-			owns = 2094
-			owns = 2101
-			owns = 2102
-			owns = 2103
 			owns = 2105
 			owns = 2106
 			owns = 2108
 			owns = 2109
+			NOT = { tag = OCN }
 		OR = {
 				primary_culture = scottish
 				accepted_culture = scottish
 			}
-			NOT = { has_global_flag = TRN_renamed_SCO }
+			NOT = { has_global_flag = bapedi_renamed_SCO }
 		}
 		allow = {
 		war = no
 		}
 
 		effect = {
-			2101 = { change_province_name = "Balfour" }
-			2102 = { change_province_name = "St Bees" }
-			2103 = { change_province_name = "Chaipelburgh" }
 			2105 = { change_province_name = "Fraser" }
 			2106 = { change_province_name = "Goddington" }
-			2108 = { change_province_name = "Aversdale" }
+			2108 = { change_province_name = "Aversdale" }	
 			2109 = { change_province_name = "Abington" }
-			2094 = { change_province_name = "Cumnock" }
-			2095 = { change_province_name = "Campbell" }
-			2107 = { change_province_name = "Coleraine" }
-			2074 = { change_province_name = "Ramsey" }
-			2574 = { change_province_name = "Laidlaw" }
-			2075 = { change_province_name = "Eastgate" }
-			2076 = { change_province_name = "Perth" }
-			2077 = { change_province_name = "Braemar" }
-			2101 = { state_scope = { change_region_name = "Gleann" } }
-			2105 = { state_scope = { change_region_name = "Transgrey" } }
-			2094 = { state_scope = { change_region_name = "Moray" } }
-			2075 = { state_scope = { change_region_name = "Muigh" } }
-			set_global_flag = TRN_renamed_SCO
-			clr_global_flag = TRN_renamed_BTH
+			set_global_flag = bapedi_renamed_SCO
+			clr_global_flag = bapedi_renamed_BTH
+			clr_global_flag = bapedi_renamed_HBR
 		}
 		ai_will_do = { factor = 1 }
 	}
 	
-	rename_TRN_BTH = {
+	rename_bapedi_HBR = {
 		picture = xhosa_map1
 		potential = {
-			owns = 2094
-			owns = 2101
-			owns = 2102
-			owns = 2103
+			owns = 2105
+			owns = 2106
+			owns = 2108
+			owns = 2109
+		OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { has_global_flag = bapedi_renamed_HBR }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2105 = { change_province_name = "Fionn" }
+			2106 = { change_province_name = "Órlaith" }
+			2108 = { change_province_name = "Assumpta" }	
+			2109 = { change_province_name = "Líadan" }
+			set_global_flag = bapedi_renamed_HBR
+			clr_global_flag = bapedi_renamed_BTH
+			clr_global_flag = bapedi_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_bapedi_BTH = {
+		picture = xhosa_map1
+		potential = {
 			owns = 2105
 			owns = 2106
 			owns = 2108
@@ -2255,7 +2864,94 @@ political_decisions = {
 		                 primary_culture =  sotho
 		                 primary_culture =  mifangaro
 		                 primary_culture =  khoisan }
-			NOT = { has_global_flag = TRN_renamed_BTH }
+			NOT = { has_global_flag = bapedi_renamed_BTH }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2105 = { change_province_name = "Ga-Rankuwa" }
+			2106 = { change_province_name = "Saan" }
+			2108 = { change_province_name = "Mosega" }
+			2109 = { change_province_name = "Ga-Riba" }
+			set_global_flag = bapedi_renamed_BTH
+			clr_global_flag = bapedi_renamed_SCO
+			clr_global_flag = bapedi_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_basutoland_SCO = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2101
+			owns = 2102
+			owns = 2103
+			NOT = { tag = OCN }
+		OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = basutoland_renamed_SCO }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2101 = { change_province_name = "Renfrow" }
+			2102 = { change_province_name = "St Bees" }
+			2103 = { change_province_name = "Chaipelburgh" }
+			2101 = { state_scope = { change_region_name = "Lochnagar" } }
+			set_global_flag = basutoland_renamed_SCO
+			clr_global_flag = basutoland_renamed_BTH
+			clr_global_flag = basutoland_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_basutoland_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2101
+			owns = 2102
+			owns = 2103
+		OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { has_global_flag = basutoland_renamed_HBR }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2101 = { change_province_name = "Riordan" }
+			2102 = { change_province_name = "Naomh Bríd" }
+			2103 = { change_province_name = "Dún Mallacht" }
+			2101 = { state_scope = { change_region_name = "Lochlainn" } }
+			set_global_flag = basutoland_renamed_HBR
+			clr_global_flag = basutoland_renamed_BTH
+			clr_global_flag = basutoland_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_basutoland_BTH = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2101
+			owns = 2102
+			owns = 2103
+		OR = { primary_culture =  southern_bantu 
+	                     primary_culture =  nyasa
+		                 primary_culture =  zulu
+		                 primary_culture =  sotho
+		                 primary_culture =  mifangaro
+		                 primary_culture =  khoisan }
+			NOT = { has_global_flag = basutoland_renamed_BTH }
 		}
 		allow = {
 		war = no
@@ -2265,112 +2961,632 @@ political_decisions = {
 			2101 = { change_province_name = "Thaba Nchu" }
 			2102 = { change_province_name = "Qwa Qwa" }
 			2103 = { change_province_name = "Lephoi" }
-			2105 = { change_province_name = "Ga-Rankuwa" }
-			2106 = { change_province_name = "Saan" }
-			2108 = { change_province_name = "Mosega" }
-			2109 = { change_province_name = "Ga-Riba" }
-			2094 = { change_province_name = "Mammutla" }
-			2095 = { change_province_name = "Dithakong" }
-			2107 = { change_province_name = "Makwasi" }
-			2074 = { change_province_name = "Gaberone" }
-			2574 = { change_province_name = "Mochudi" }
-			2075 = { change_province_name = "Serowe" }
-			2076 = { change_province_name = "Nokaneng" }
-			2077 = { change_province_name = "Tsabong" }
 			2101 = { state_scope = { change_region_name = "Basutoland" } }
-			2105 = { state_scope = { change_region_name = "Limpopo" } }
-			2094 = { state_scope = { change_region_name = "Inner Bechuanaland" } }
-			2075 = { state_scope = { change_region_name = "Outer Bechuanaland" } }
-			set_global_flag = TRN_renamed_BTH
-			clr_global_flag = TRN_renamed_SCO
+			set_global_flag = basutoland_renamed_BTH
+			clr_global_flag = basutoland_renamed_SCO
+			clr_global_flag = basutoland_renamed_HBR
 		}
 		ai_will_do = { factor = 1 }
 	}
 	
-	rename_NAL_SCO = {
+	rename_bechuinner_SCO = {
 		picture = xhosa_map1
 		potential = {
-			owns = 2100
-			owns = 2111
-			owns = 2112
-			owns = 2113
-			owns = 2110
-			owns = 2114
-			owns = 2050
-			owns = 2049
-			owns = 2104
+			owns = 2094
+			owns = 2095
+			owns = 2107
+			owns = 2074
+			owns = 2574
+			NOT = { tag = OCN }
 		OR = {
 				primary_culture = scottish
 				accepted_culture = scottish
 			}
-			NOT = { has_global_flag = NAL_renamed_SCO }
+			NOT = { has_global_flag = bechuinner_renamed_SCO }
 		}
 		allow = {
 		war = no
 		}
 
 		effect = {
-			2100 = { change_province_name = "Port Arron" }
-			2111 = { change_province_name = "Albertine" }
-			2112 = { change_province_name = "Milford" }
-			2113 = { change_province_name = "Emerantburgh" }
-			2110 = { change_province_name = "Churchill" }
-			2114 = { change_province_name = "Oban" }
-			2050 = { change_province_name = "Hawick" }
-			2049 = { change_province_name = "Port Rodgers" }
-			2104 = { change_province_name = "Mt Weddell" }
-			2098 = { change_province_name = "Fauldin" }
-			2099 = { change_province_name = "Blaeburgh" }
-			2100 = { state_scope = { change_region_name = "New Lothian" } }
-			2105 = { state_scope = { change_region_name = "Transgrey" } }
-			2113 = { state_scope = { change_region_name = "Hirselhaven" } }
-			set_global_flag = NAL_renamed_SCO
-			clr_global_flag = NAL_renamed_NGU
+			2094 = { change_province_name = "Cumnock" }
+			2095 = { change_province_name = "Campbell" }
+			2107 = { change_province_name = "Coleraine" }
+			2074 = { change_province_name = "Ramsey" }
+			2574 = { change_province_name = "Laidlaw" }
+			2094 = { state_scope = { change_region_name = "Moray" } }
+			set_global_flag = bechuinner_renamed_SCO
+			clr_global_flag = bechuinner_renamed_BTH
+			clr_global_flag = bechuinner_renamed_HBR
 		}
 		ai_will_do = { factor = 1 }
 	}
 	
-	rename_NAL_NGU = {
+	rename_bechuinner_HBR = {
 		picture = xhosa_map1
 		potential = {
-			owns = 2100
-			owns = 2111
-			owns = 2112
-			owns = 2113
-			owns = 2110
-			owns = 2114
-			owns = 2050
-			owns = 2049
-			owns = 2104
+			owns = 2094
+			owns = 2095
+			owns = 2107
+			owns = 2074
+			owns = 2574
+		OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { has_global_flag = bechuinner_renamed_HBR }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2094 = { change_province_name = "Gráinne" }
+			2095 = { change_province_name = "Caimbeul" }
+			2107 = { change_province_name = "Cúil Raithin" }
+			2074 = { change_province_name = "Immaculata" }
+			2574 = { change_province_name = "Lommán" }
+			2094 = { state_scope = { change_region_name = "Móire" } }
+			set_global_flag = bechuinner_renamed_HBR
+			clr_global_flag = bechuinner_renamed_BTH
+			clr_global_flag = bechuinner_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_bechuinner_BTH = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2094
+			owns = 2095
+			owns = 2107
+			owns = 2074
+			owns = 2574
 		OR = { primary_culture =  southern_bantu 
 	                     primary_culture =  nyasa
 		                 primary_culture =  zulu
 		                 primary_culture =  sotho
 		                 primary_culture =  mifangaro
 		                 primary_culture =  khoisan }
-			NOT = { has_global_flag = NAL_renamed_NGU }
+			NOT = { has_global_flag = bechuinner_renamed_BTH }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {	
+			2094 = { change_province_name = "Mammutla" }
+			2095 = { change_province_name = "Dithakong" }
+			2107 = { change_province_name = "Makwasi" }
+			2074 = { change_province_name = "Gaborone" }
+			2574 = { change_province_name = "Mochudi" }
+			2094 = { state_scope = { change_region_name = "Inner Bechuanaland" } }
+			set_global_flag = bechuinner_renamed_BTH
+			clr_global_flag = bechuinner_renamed_SCO
+			clr_global_flag = bechuinner_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_bechuouter_SCO = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2075
+			owns = 2076
+			owns = 2077
+			NOT = { tag = OCN }
+		OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = bechuouter_renamed_SCO }
 		}
 		allow = {
 		war = no
 		}
 
 		effect = {
+			2075 = { change_province_name = "Eastgate" }
+			2076 = { change_province_name = "Perth" }
+			2077 = { change_province_name = "Braemar" }
+			2075 = { state_scope = { change_region_name = "Dingwall" } }
+			set_global_flag = bechuouter_renamed_SCO
+			clr_global_flag = bechuouter_renamed_BTH
+			clr_global_flag = bechuouter_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_bechuouter_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2075
+			owns = 2076
+			owns = 2077
+		OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { has_global_flag = bechuouter_renamed_HBR }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2075 = { change_province_name = "Siúrtáin" }
+			2076 = { change_province_name = "Peairt" }
+			2077 = { change_province_name = "Neassa" }
+			2075 = { state_scope = { change_region_name = "Damhnait" } }
+			set_global_flag = bechuouter_renamed_HBR
+			clr_global_flag = bechuouter_renamed_BTH
+			clr_global_flag = bechuouter_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_bechuouter_BTH = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2075
+			owns = 2076
+			owns = 2077
+		OR = { primary_culture =  southern_bantu 
+	                     primary_culture =  nyasa
+		                 primary_culture =  zulu
+		                 primary_culture =  sotho
+		                 primary_culture =  mifangaro
+		                 primary_culture =  khoisan }
+			NOT = { has_global_flag = bechuouter_renamed_BTH }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2075 = { change_province_name = "Serowe" }
+			2076 = { change_province_name = "Nokaneng" }
+			2077 = { change_province_name = "Tsabong" }
+			2075 = { state_scope = { change_region_name = "Outer Bechuanaland" } }
+			set_global_flag = bechuouter_renamed_BTH
+			clr_global_flag = bechuouter_renamed_SCO
+			clr_global_flag = bechuouter_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_natal_SCO = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2111
+			owns = 3610
+			owns = 3611
+			NOT = { tag = OCN }
+		OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = natal_renamed_SCO }
+		}
+		
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2111 = { change_province_name = "Albertine" }
+			3610 = { change_province_name = "Corbenic" }
+			3611 = { change_province_name = "Port Stewart" }
+			2111 = { state_scope = { change_region_name = "Clelland" } }
+			set_global_flag = natal_renamed_SCO
+			clr_global_flag = natal_renamed_NGU
+			clr_global_flag = natal_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_natal_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2111
+			owns = 3610
+			owns = 3611
+		OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { has_global_flag = natal_renamed_HBR }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2111 = { change_province_name = "Dún Fallúin" }
+			3610 = { change_province_name = "Conchobar" }
+			3611 = { change_province_name = "Port Phádraig" }
+			2111 = { state_scope = { change_region_name = "Aileach" } }
+			set_global_flag = natal_renamed_HBR
+			clr_global_flag = natal_renamed_SCO
+			clr_global_flag = natal_renamed_NGU
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_natal_NGU = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2111
+			owns = 3610
+			owns = 3611
+		OR = { primary_culture =  southern_bantu 
+	                     primary_culture =  nyasa
+		                 primary_culture =  zulu
+		                 primary_culture =  sotho
+		                 primary_culture =  mifangaro
+		                 primary_culture =  khoisan }
+			NOT = { has_global_flag = natal_renamed_NGU }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2111 = { change_province_name = "Nkwazela" }
+			3610 = { change_province_name = "uMgungundlovu" }
+			3611 = { change_province_name = "Mtwalume" }
+			2111 = { state_scope = { change_region_name = "iKwaNatali" } }
+			set_global_flag = natal_renamed_NGU
+			clr_global_flag = natal_renamed_SCO
+			clr_global_flag = natal_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_xhosaland_SCO = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2099
+			owns = 2100
+			owns = 3612
+			NOT = { tag = OCN }
+		OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = xhosaland_renamed_SCO }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2099 = { change_province_name = "Blaeburgh" }
+			2100 = { change_province_name = "Port Arron" }
+			3612 = { change_province_name = "Kirkaldy" }
+			2099 = { state_scope = { change_region_name = "New Lothian" } }
+			set_global_flag = xhosaland_renamed_SCO
+			clr_global_flag = xhosaland_renamed_HBR
+			clr_global_flag = xhosaland_renamed_NGU
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_xhosaland_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2099
+			owns = 2100
+			owns = 3612
+		OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { has_global_flag = xhosaland_renamed_HBR }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2099 = { change_province_name = "Naomh Odhrán" }
+			2100 = { change_province_name = "Ardghal" }
+			3612 = { change_province_name = "Eithne" }
+			2099 = { state_scope = { change_region_name = "Odhráin" } }
+			set_global_flag = xhosaland_renamed_HBR
+			clr_global_flag = xhosaland_renamed_SCO
+			clr_global_flag = xhosaland_renamed_NGU
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_xhosaland_NGU = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2099
+			owns = 2100
+			owns = 3612
+		OR = { primary_culture =  southern_bantu 
+	                     primary_culture =  nyasa
+		                 primary_culture =  zulu
+		                 primary_culture =  sotho
+		                 primary_culture =  mifangaro
+		                 primary_culture =  khoisan }
+			NOT = { has_global_flag = xhosaland_renamed_NGU }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2099 = { change_province_name = "Mathele" }
 			2100 = { change_province_name = "Umtata" }
-			2111 = { change_province_name = "uMgungundlovu" }
+			3612 = { change_province_name = "Tlokoeng" }
+			2099 = { state_scope = { change_region_name = "Xhosaland" } }
+			set_global_flag = xhosaland_renamed_NGU
+			clr_global_flag = xhosaland_renamed_HBR
+			clr_global_flag = xhosaland_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_zululand_SCO = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2112
+			owns = 2113
+			owns = 3613
+			NOT = { tag = OCN }
+		OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = zululand_renamed_SCO }
+		}
+		
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2112 = { change_province_name = "Milford" }
+			2113 = { change_province_name = "Emerantburgh" }
+			3613 = { change_province_name = "Gateway" }
+			2113 = { state_scope = { change_region_name = "Hirselhaven" } }
+			set_global_flag = zululand_renamed_SCO
+			clr_global_flag = zululand_renamed_NGU
+			clr_global_flag = zululand_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_zululand_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2112
+			owns = 2113
+			owns = 3613
+		OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { has_global_flag = zululand_renamed_HBR }
+		}
+		
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2112 = { change_province_name = "Meallán" }
+			2113 = { change_province_name = "Scannláin" }
+			3613 = { change_province_name = "Geata" }
+			2113 = { state_scope = { change_region_name = "Cúchulainn" } }
+			set_global_flag = zululand_renamed_HBR
+			clr_global_flag = zululand_renamed_NGU
+			clr_global_flag = zululand_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_zululand_NGU = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2112
+			owns = 2113
+			owns = 3613
+		OR = { primary_culture =  southern_bantu 
+	                     primary_culture =  nyasa
+		                 primary_culture =  zulu
+		                 primary_culture =  sotho
+		                 primary_culture =  mifangaro
+		                 primary_culture =  khoisan }
+			NOT = { has_global_flag = zululand_renamed_NGU }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
 			2112 = { change_province_name = "eMnambithi" }
 			2113 = { change_province_name = "Ulundi" }
+			3613 = { change_province_name = "Abaqulusi" }
+			2113 = { state_scope = { change_region_name = "Zululand" } }
+			set_global_flag = zululand_renamed_NGU
+			clr_global_flag = zululand_renamed_SCO
+			clr_global_flag = zululand_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_limpopo_SCO = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2110
+			owns = 2114
+			owns = 2050
+			owns = 2049
+			NOT = { tag = OCN }
+		OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = limpopo_renamed_SCO }
+		}
+		
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2110 = { change_province_name = "Churchill" }
+			2114 = { change_province_name = "Oban" }
+			2050 = { change_province_name = "Hawick" }
+			2049 = { change_province_name = "Port Rodgers" }
+			2105 = { state_scope = { change_region_name = "Transgrey" } }
+			set_global_flag = limpopo_renamed_SCO
+			clr_global_flag = limpopo_renamed_NGU
+			clr_global_flag = limpopo_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_limpopo_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2110
+			owns = 2114
+			owns = 2050
+			owns = 2049
+		OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { has_global_flag = limpopo_renamed_HBR }
+		}
+		
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2110 = { change_province_name = "Eaglaise" }
+			2114 = { change_province_name = "Oisín" }
+			2050 = { change_province_name = "Faolán" }
+			2049 = { change_province_name = "Port Aodhán" }
+			2105 = { state_scope = { change_region_name = "Trasliath" } }
+			set_global_flag = limpopo_renamed_HBR
+			clr_global_flag = limpopo_renamed_NGU
+			clr_global_flag = limpopo_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_limpopo_NGU = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2110
+			owns = 2114
+			owns = 2050
+			owns = 2049
+		OR = { primary_culture =  southern_bantu 
+	                     primary_culture =  nyasa
+		                 primary_culture =  zulu
+		                 primary_culture =  sotho
+		                 primary_culture =  mifangaro
+		                 primary_culture =  khoisan }
+			NOT = { has_global_flag = limpopo_renamed_NGU }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
 			2110 = { change_province_name = "Tsaneng" }
 			2114 = { change_province_name = "Mbabane" }
 			2050 = { change_province_name = "Manjakazi" }
 			2049 = { change_province_name = "Inkomati" }
-			2104 = { change_province_name = "Thaba Bosiu" }
-			2098 = { change_province_name = "Bisho" }
-			2099 = { change_province_name = "Mathele" }
-			2100 = { state_scope = { change_region_name = "Xhosaland" } }
 			2105 = { state_scope = { change_region_name = "Limpopo" } }
-			2113 = { state_scope = { change_region_name = "Zululand" } }
-			set_global_flag = NAL_renamed_NGU
-			clr_global_flag = NAL_renamed_SCO
+			set_global_flag = limpopo_renamed_NGU
+			clr_global_flag = limpopo_renamed_SCO
+			clr_global_flag = limpopo_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_lesotho_SCO = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2104
+			NOT = { tag = OCN }
+		OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = lesotho_renamed_SCO }
+		}
+		
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2104 = { change_province_name = "Mt Weddell" }
+			set_global_flag = lesotho_renamed_SCO
+			clr_global_flag = lesotho_renamed_NGU
+			clr_global_flag = lesotho_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_lesotho_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2104
+		OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { has_global_flag = lesotho_renamed_HBR }
+		}
+		
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2104 = { change_province_name = "Ailinne" }
+			set_global_flag = lesotho_renamed_HBR
+			clr_global_flag = lesotho_renamed_NGU
+			clr_global_flag = lesotho_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_lesotho_NGU = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2110
+			owns = 2114
+			owns = 2050
+			owns = 2049
+		OR = { primary_culture =  southern_bantu 
+	                     primary_culture =  nyasa
+		                 primary_culture =  zulu
+		                 primary_culture =  sotho
+		                 primary_culture =  mifangaro
+		                 primary_culture =  khoisan }
+			NOT = { has_global_flag = lesotho_renamed_NGU }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2104 = { change_province_name = "Thaba Bosiu" }
+			set_global_flag = lesotho_renamed_NGU
+			clr_global_flag = lesotho_renamed_SCO
+			clr_global_flag = lesotho_renamed_HBR
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -2380,6 +3596,7 @@ political_decisions = {
 		potential = {
 			owns = 2096
 			owns = 2097
+			owns = 2098
 			owns = 3592
 			owns = 3595
 		OR = { primary_culture =  southern_bantu 
@@ -2402,6 +3619,7 @@ political_decisions = {
 			2096 = { state_scope = { change_region_name = "Qariega" } }
 			set_global_flag = qariega_renamed_NGU
 			clr_global_flag = qariega_renamed_SCO
+			clr_global_flag = qariega_renamed_HBR
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -2411,6 +3629,7 @@ political_decisions = {
 		potential = {
 			owns = 2096
 			owns = 2097
+			owns = 2098
 			owns = 3592
 			owns = 3595
 		OR = {
@@ -2426,11 +3645,283 @@ political_decisions = {
 		effect = {
 			2096 = { change_province_name = "Newcastle" }
 			2097 = { change_province_name = "Kendel" }
+			2098 = { change_province_name = "Fauldin" }
 			3592 = { change_province_name = "Port Blayan" }
 			3595 = { change_province_name = "Grimsby" }
 			2096 = { state_scope = { change_region_name = "Cariga" } }
 			set_global_flag = qariega_renamed_SCO
 			clr_global_flag = qariega_renamed_NGU
+			clr_global_flag = qariega_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_qariega_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2096
+			owns = 2097
+			owns = 2098
+			owns = 3592
+			owns = 3595
+			OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { tag = OCN }
+			NOT = { has_global_flag = qariega_renamed_HBR }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2096 = { change_province_name = "Caisleán Nua" }
+			2097 = { change_province_name = "Caomhánach" }
+			2098 = { change_province_name = "Fuireastal" }
+			3592 = { change_province_name = "Port Eacháin" }
+			3595 = { change_province_name = "Mag an Ghaill" }
+			2096 = { state_scope = { change_region_name = "Ceathairga" } }
+			set_global_flag = qariega_renamed_HBR
+			clr_global_flag = qariega_renamed_NGU
+			clr_global_flag = qariega_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_transgorits_SCO = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2091
+			owns = 2092
+			owns = 3593
+			owns = 3594
+			OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = transgorits_renamed_SCO }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2091 = { change_province_name = "Balfour" }
+			2092 = { change_province_name = "Neill" }
+			3593 = { change_province_name = "Drummond" }
+			3594 = { change_province_name = "Tylerville" }
+			2091 = { state_scope = { change_region_name = "Transgorits" } }
+			set_global_flag = transgorits_renamed_SCO
+			clr_global_flag = transgorits_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_transgorits_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2091
+			owns = 2092
+			owns = 3593
+			owns = 3594
+			OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { tag = OCN }
+			NOT = { has_global_flag = transgorits_renamed_HBR }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2091 = { change_province_name = "Balfe" }
+			2092 = { change_province_name = "Áth Luain" }
+			3593 = { change_province_name = "Drimnagh" }
+			3594 = { change_province_name = "Tallaght" }
+			2091 = { state_scope = { change_region_name = "Findargat" } }
+			set_global_flag = transgorits_renamed_HBR
+			clr_global_flag = transgorits_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_caru_SCO = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2088
+			owns = 2093
+			owns = 3600
+			owns = 2558
+			OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = caru_renamed_SCO }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2088 = { change_province_name = "Adersier" }
+			2093 = { change_province_name = "Greenlaw" }
+			3600 = { change_province_name = "Delahaye" }
+			2558 = { change_province_name = "Kirkwood" }
+			2088 = { state_scope = { change_region_name = "Lumsden" } }
+			set_global_flag = caru_renamed_SCO
+			clr_global_flag = caru_renamed_HBR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_caru_HBR = {
+		picture = xhosa_map1
+		potential = {
+			owns = 2088
+			owns = 2093
+			owns = 3600
+			owns = 2558
+			OR = {
+				primary_culture = hibernite
+				accepted_culture = hibernite
+			}
+			NOT = { tag = OCN }
+			NOT = { has_global_flag = caru_renamed_HBR }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			2088 = { change_province_name = "Corrigan" }
+			2093 = { change_province_name = "Deargáin" }
+			3600 = { change_province_name = "Sitichetir" }
+			2558 = { change_province_name = "Tiormachd" }
+			2088 = { state_scope = { change_region_name = "Carù" } }
+			set_global_flag = caru_renamed_HBR
+			clr_global_flag = caru_renamed_SCO
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	rename_soutback_SCO = {
+		picture = map_namibia
+		potential = {
+			owns = 2085
+			owns = 2086
+			owns = 3598
+			owns = 3599
+			OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = soutback_renamed_SCO }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2085 = { change_province_name = "Maversburgh" }
+			2086 = { change_province_name = "Gilchrist" }
+			3598 = { change_province_name = "Kilgour" }
+			3599 = { change_province_name = "Hepburn" }
+			2085 = { state_scope = { change_region_name = "Soothren Outback" } }
+			set_global_flag = soutback_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rename_noutback_SCO = {
+		picture = map_namibia
+		potential = {
+			owns = 2078
+			owns = 2079 
+			owns = 2080 
+			owns = 2082
+			owns = 3597
+			owns = 2083
+			OR = {
+				primary_culture = scottish
+				accepted_culture = scottish
+			}
+			NOT = { has_global_flag = noutback_renamed_SCO }
+		}
+		allow = {
+		war = no
+		}
+
+		effect = {
+			2078 = { change_province_name = "New Ellon" }
+			2079 = { change_province_name = "Kiskadden" }
+			2080 = { change_province_name = "Lundin" }
+			2082 = { change_province_name = "Skene" }
+			3597 = { change_province_name = "Millport" }
+			2083 = { change_province_name = "Intyre" }
+			2078 = { state_scope = { change_region_name = "Norlin Outback" } }
+			set_global_flag = noutback_renamed_SCO
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	develop_ellon = {
+		picture = ellon_valley
+		potential = {
+			OR = {
+				tag = CLD
+				tag = OCN
+			}
+			owns = 2078
+			owns = 2079 
+			owns = 3597
+			owns = 2083
+			NOT = { has_global_flag = developed_ellon }
+		}
+		allow = {
+		war = no
+		invention = trademark
+		2078 = {
+				is_colonial = no
+			}
+		}
+
+		effect = {
+			2078 = {
+				life_rating = 25
+				trade_goods = precious_goods
+				add_province_modifier = {
+					name = colonial_recruitment
+					duration = 1750
+				}
+			}
+			2079 = {
+				life_rating = 15
+				add_province_modifier = {
+					name = colonial_recruitment
+					duration = 1750
+				}
+			}
+			3597 = {
+				add_province_modifier = {
+					name = colonial_recruitment
+					duration = 1750
+				}
+			}
+			2083 = {
+				life_rating = 12
+				add_province_modifier = {
+					name = colonial_recruitment
+					duration = 1750
+				}
+			}
+			set_global_flag = developed_ellon
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -2472,7 +3963,7 @@ political_decisions = {
 		}
 
 		effect = {
-			2901 = { any_pop = { move_pop = 2111 }}
+			2901 = { any_pop = { move_pop = 3610 }}
 			2900 = { any_pop = { move_pop = 2100 }}
 			2899 = { any_pop = { move_pop = 2098 }}
 			2898 = { any_pop = { move_pop = 2112 }}
@@ -2541,7 +4032,7 @@ political_decisions = {
 			NAL = { set_country_flag = post_colonial_country neutrality = yes government = hms_government set_country_flag = new_world_nation }
 			release_vassal = NAL
 			create_alliance = NAL
-			NAL = { capital = 2111 }
+			NAL = { capital = 3610 }
 			diplomatic_influence = {
 				who = NAL
 				value = 400
@@ -2629,46 +4120,71 @@ political_decisions = {
 		}
 	}
 	
-	#create_caledon_start = {
-	#	picture = caledon_start
-	#	alert = yes
-	#	potential = {
-	#		SAF = { exists = yes }
-	#		TRN = { exists = yes }
-	#		NAL = { exists = yes }
-	#		is_our_vassal = SAF
-	#		is_our_vassal = TRN
-	#		is_our_vassal = NAL
-	#		year = 1908
-	#		CLD = { exists = no }
-	#		VLK = { exists = no }
-	#		NOT = { has_global_flag = create_caledon_start_1 }
-	#		NOT = {
-	#			capital_scope = { continent = africa }
-	#			capital_scope = { continent = west_africa }
-	#			capital_scope = { continent = central_africa }
-	#			capital_scope = { continent = east_africa }
-	#			capital_scope = { continent = south_west_africa }
-	#		}
-	#		OR = { primary_culture = scottish
-    #               accepted_culture = scottish }
-	#	}
-    #
-	#	allow = {
-	#		war = no
-	#		mass_politics = 1
-	#		is_our_vassal = SAF
-	#		is_our_vassal = TRN
-	#		is_our_vassal = NAL
-	#	}
-    #
-	#	effect = {
-	#		set_global_flag = create_caledon_start_1
-	#		
-	#	}
-    #
-	#	ai_will_do = {
-	#		factor = 1
-	#	}
-	#}
+	create_caledonia = {
+		picture = heid_colonials
+		potential = {
+			SAF = { exists = yes }
+			TRN = { exists = yes }
+			NAL = { exists = yes }
+			is_our_vassal = SAF
+			is_our_vassal = TRN
+			is_our_vassal = NAL
+			year = 1908
+			CLD = { exists = no }
+			ORA = { exists = no }
+			NOT = { has_global_flag = caledonia_united }
+			NOT = {
+				capital_scope = { continent = africa }
+				capital_scope = { continent = west_africa }
+				capital_scope = { continent = central_africa }
+				capital_scope = { continent = east_africa }
+				capital_scope = { continent = south_west_africa }
+			}
+			OR = { primary_culture = scottish
+                   accepted_culture = scottish }
+		}
+    
+		allow = {
+			war = no
+			mass_politics = 1
+			is_our_vassal = SAF
+			is_our_vassal = TRN
+			is_our_vassal = NAL
+		}
+    
+		effect = {
+			set_global_flag = caledonia_united
+			prestige = 50
+			inherit = SAF
+			inherit = TRN
+			inherit = NAL
+			SAF = {
+				all_core = {
+					add_core = CLD
+				}
+			}
+			TRN = {
+				all_core = {
+					add_core = CLD
+				}
+			}
+			NAL = {
+				all_core = {
+					add_core = CLD
+				}
+			}
+			CLD = { set_country_flag = post_colonial_country neutrality = yes government = hms_government set_country_flag = new_world_nation }
+			release_vassal = CLD
+			create_alliance = CLD
+			CLD = { capital = 2087 }
+			diplomatic_influence = {
+				who = CLD
+				value = 400
+			}
+		}
+    
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

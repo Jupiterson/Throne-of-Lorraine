@@ -224,6 +224,36 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	annex_ireland = {
+		picture = ireland_map
+		potential = {
+			tag = ENG
+			is_our_vassal = IRE
+			NOT = { has_global_flag = ire_annexed }
+		}
+
+		allow = {
+			war = no
+			revolution_n_counterrevolution = 1
+		}
+
+		effect = {
+			set_global_flag = ire_annexed
+			prestige = 20
+			inherit = IRE
+			IRE = {
+				all_core = {
+					add_core = ENG
+				}
+			}		
+			any_pop = {
+            limit = { has_pop_culture = irish }
+            militancy = 8
+            consciousness = 4
+			}		
+		}
+	}
+	
 	claim_normandy = {
 		picture = normandy
 		potential = {

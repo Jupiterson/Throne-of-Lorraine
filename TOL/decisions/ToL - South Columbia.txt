@@ -689,9 +689,9 @@ political_decisions = {
 			NOT = { has_country_flag = afro_scot_rights }
 		}
 		allow = {
-			NOT = { war = yes }
+			war = no
 			prestige = 20
-			mass_politics = 1
+			revolution_n_counterrevolution = 1
 			slavery = no_slavery 
 			NOT = { average_militancy = 3 }
 			OR = {
@@ -704,11 +704,7 @@ political_decisions = {
 					value = 0.4
 				}
 				upper_house = {
-					ideology = anarcho_liberal
-					value = 0.4
-				}
-				upper_house = {
-					ideology = social_liberal
+					ideology = radical
 					value = 0.4
 				}
 				AND = {
@@ -717,13 +713,13 @@ political_decisions = {
 						value = 0.20
 					}
 					upper_house = {
-						ideology = anarcho_liberal
+						ideology = radical
 						value = 0.20
 					}
 				}
 				AND = {
 					upper_house = {
-						ideology = anarcho_liberal
+						ideology = radical
 						value = 0.20
 					}
 					upper_house = {
@@ -744,10 +740,6 @@ political_decisions = {
 				AND = {
 					upper_house = {
 						ideology = socialist
-						value = 0.20
-					}
-					upper_house = {
-						ideology = social_liberal
 						value = 0.20
 					}
 				}
@@ -782,9 +774,11 @@ political_decisions = {
 
         potential = { 
 			ai = no
-			tag = FNC
-			tag = OCD
-		}
+			OR = {
+				tag = FNC
+				tag = OCD
+			}
+		}	
 
         allow = { year = 1836 }
 
@@ -1051,8 +1045,6 @@ political_decisions = {
 			set_global_flag = consolidated_malouines
 			prestige = 5
 			
-			2131 = { remove_core = GEN }
-			
 			2131 = { 
 				change_province_name = "Malouines" 
 			}
@@ -1071,6 +1063,8 @@ political_decisions = {
 			3200 = { 
 				change_province_name = "Coast of Saint Jean" 
 			}
+			
+			2131 = { remove_core = GEN }
 			
 		ai_will_do = {
 			factor = 1
@@ -1146,7 +1140,7 @@ political_decisions = {
 			NOT = { has_country_flag = afro_french_rights }
 		}
 		allow = {
-			NOT = { war = yes }
+			war = no
 			prestige = 20
 			revolution_n_counterrevolution = 1
 			slavery = no_slavery 
@@ -1161,11 +1155,7 @@ political_decisions = {
 					value = 0.4
 				}
 				upper_house = {
-					ideology = anarcho_liberal
-					value = 0.4
-				}
-				upper_house = {
-					ideology = social_liberal
+					ideology = radical
 					value = 0.4
 				}
 				AND = {
@@ -1174,13 +1164,13 @@ political_decisions = {
 						value = 0.20
 					}
 					upper_house = {
-						ideology = anarcho_liberal
+						ideology = radical
 						value = 0.20
 					}
 				}
 				AND = {
 					upper_house = {
-						ideology = anarcho_liberal
+						ideology = radical
 						value = 0.20
 					}
 					upper_house = {
@@ -1201,10 +1191,6 @@ political_decisions = {
 				AND = {
 					upper_house = {
 						ideology = socialist
-						value = 0.20
-					}
-					upper_house = {
-						ideology = social_liberal
 						value = 0.20
 					}
 				}

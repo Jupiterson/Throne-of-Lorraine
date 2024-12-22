@@ -1,14 +1,13 @@
 political_decisions = {
-	kruger_wildlife_preserve = {
+	stewart_wildlife_preserve = {
 		picture = kruger_national_park
 
 		potential = {
 			OR = {
 				tag = NAL
 				tag = CLD
-				tag = VLK
 			}
-			NOT = { has_country_flag = kruger_wildlife_preserve_formed }
+			NOT = { has_global_flag = kruger_wildlife_preserve_formed }
 		}
 
 		allow = {
@@ -25,30 +24,31 @@ political_decisions = {
 		effect = {
 			prestige = 20
 			treasury = -20000
-			set_country_flag = kruger_wildlife_preserve_formed
+			set_global_flag = kruger_wildlife_preserve_formed
 			2050 = {
 				life_rating = 5
 				add_province_modifier = {
-					name = kruger_reserve
+					name = stewart_reserve
 					duration = 1750
 				}
 			}
 			2114 = {
 				life_rating = 5
 				add_province_modifier = {
-					name = kruger_reserve
+					name = stewart_reserve
 					duration = 1750
 				}
 			}
 			2110 = {
 				life_rating = 5
 				add_province_modifier = {
-					name = kruger_reserve
+					name = stewart_reserve
 					duration = 1750
 				}
 			}
 		}
 	}
+	
 	adopt_die_stem = {
 		picture = adopt_die_stem
 		potential = {
@@ -141,28 +141,28 @@ political_decisions = {
 			}
 		}
 	}
+	
 	clearances_in_natal = {
 		picture = tea_production
 
 		potential = {
 			OR = {
-				owns = 2111
 				owns = 2112
+				owns = 2113
+				owns = 3613
 			}
 			OR = {
-				2111 = { NOT = { has_province_modifier = plantation } }
 				2112 = { NOT = { has_province_modifier = plantation } }
+				3613 = { NOT = { has_province_modifier = plantation } }
+				2113 = { NOT = { has_province_modifier = plantation } }
 			}
 			civilized = yes
 			OR = {
 				tag = NAL
-				AND = {
-					tag = SAF
-					is_vassal = no
-				}
+				tag = CLD
 			}
+			NOT = { has_global_flag = natal_life_rating }
 		}
-
 
 		allow = {
 			war = no
@@ -171,15 +171,57 @@ political_decisions = {
 		}
 
 		effect = {
-			2111 = { add_province_modifier = { name = plantation duration = -1 } }
+			set_global_flag = natal_life_rating 
 			2112 = { add_province_modifier = { name = plantation duration = -1 } }
+			3613 = { add_province_modifier = { name = plantation duration = -1 } }
+			2113 = { add_province_modifier = { name = plantation duration = -1 } }
 			random_owned = {
-				limit = { owner = { NOT = { has_global_flag = natal_life_rating } } }
 				2112 = { life_rating = 1 }
-				2111 = { life_rating = 2 }
-				owner = { set_global_flag = natal_life_rating  }
+				3613 = { life_rating = 1 }
+				2113 = { life_rating = 2 }
 			}
-			money = -100000
+			money = -150000
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	clearances_in_cuchulainn = {
+		picture = tea_production
+
+		potential = {
+			OR = {
+				owns = 2112
+				owns = 2113
+				owns = 3613
+			}
+			OR = {
+				2112 = { NOT = { has_province_modifier = plantation } }
+				3613 = { NOT = { has_province_modifier = plantation } }
+				2113 = { NOT = { has_province_modifier = plantation } }
+			}
+			civilized = yes
+			tag = HBR
+			NOT = { has_global_flag = natal_life_rating }
+		}
+
+		allow = {
+			war = no
+			compound_steam_engines = 1
+			money = 150000
+		}
+
+		effect = {
+			set_global_flag = natal_life_rating 
+			2112 = { add_province_modifier = { name = plantation duration = -1 } }
+			3613 = { add_province_modifier = { name = plantation duration = -1 } }
+			2113 = { add_province_modifier = { name = plantation duration = -1 } }
+			random_owned = {
+				2112 = { life_rating = 1 }
+				3613 = { life_rating = 1 }
+				2113 = { life_rating = 2 }
+			}
+			money = -150000
 		}
 
 		ai_will_do = { factor = 1 }
@@ -188,27 +230,48 @@ political_decisions = {
 	move_capital = {
 		picture = map_africa
 		potential = {
-			OR = {
-				tag = CLD
-				tag = VLK
-			}
-			NOT = { has_country_flag = moved_capital_saf }
+			tag = CLD
+			NOT = { has_country_flag = moved_capital_cld }
 		}
 
 		allow = {
 			war = no
 			money = 150000
 			2087 = { owned_by = THIS }
-			2111 = { owned_by = THIS }
-			2101 = { owned_by = THIS }
-			2105 = { owned_by = THIS }
-			2106 = { owned_by = THIS }
+			3593 = { owned_by = THIS }
+			3610 = { owned_by = THIS }
 		}
 
 		effect = {
-			set_country_flag = moved_capital_saf
+			set_country_flag = moved_capital_cld
 			country_event = 6013
-			money = -100000
+			money = -150000
+		}
+
+		ai_will_do = {
+				factor = 1
+		}
+	}
+	
+	OCN_move_capital = {
+		picture = map_africa
+		potential = {
+			tag = OCN
+			NOT = { has_country_flag = moved_capital_ocn }
+		}
+
+		allow = {
+			war = no
+			money = 150000
+			2087 = { owned_by = THIS }
+			3593 = { owned_by = THIS }
+			3610 = { owned_by = THIS }
+		}
+
+		effect = {
+			set_country_flag = moved_capital_ocn
+			country_event = 500518
+			money = -150000
 		}
 
 		ai_will_do = {
@@ -216,50 +279,16 @@ political_decisions = {
 		}
 	}
 
-	claim_namibia = {
-		picture = map_africa
-		potential = {
-			OR = {
-				tag = CLD
-				tag = VLK
-			}
-			2084 = { empty = yes }
-			2085 = { empty = yes }
-			2086 = { empty = yes }
-			revolution_n_counterrevolution = 1
-			NOT = { has_country_flag = claimed_namibia }
-		}
-
-		allow = {
-			year = 1870
-			war = no
-			invention = manifest_destiny
-			invention = colonial_negotiations
-			2083 = { owned_by = THIS }
-		}
-
-		effect = {
-			prestige = 5
-			2084 = { add_core = THIS secede_province = THIS change_province_name = "Lüderitz" any_pop = { literacy = -0.99 } life_rating = 5 }
-			2086 = { add_core = THIS secede_province = THIS change_province_name = "Keetmanshoop" any_pop = { literacy = -0.99 } life_rating = 5 }
-			2085 = { add_core = THIS secede_province = THIS change_province_name = "Maltahöe" any_pop = { literacy = -0.99 } life_rating = 5 }
-			set_country_flag = claimed_namibia
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	open_the_frontiers = {
-		picture = die_groot_trek
+		picture = saf_frontier
 		potential = {
 			OR = {
-				tag = VLK
+				tag = HBR
 				tag = CLD
+				tag = OCN
 			}
 			2106 = { owned_by = THIS }
-			2111 = { owned_by = THIS }
+			3610 = { owned_by = THIS }
 			2105 = { owned_by = THIS }
 			2087 = { owned_by = THIS }
 			2098 = { owned_by = THIS }
@@ -281,141 +310,14 @@ political_decisions = {
 		effect = {
 			money = -50000
 			set_country_flag = open_frontiers
-			set_country_flag = new_world_nation
 			THIS = {
 				add_country_modifier = {
 					name = opened_frontiers
 					duration = -1
 				}
-				remove_country_modifier = trek_boers
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-   
-educate_the_natives = {
-		picture = embrace_minority
-
-		potential = {
-			primary_culture = scottish
-			nationalism_n_imperialism = 1
-			NOT = { has_country_flag = natives_educated }
-		}
-
-		allow = {
-			invention = mission_to_civilize
-			slavery = no_slavery
-			year = 1865
-			money = 55000
-			NOT = { citizenship_policy = residency }
-			OR = {
-				school_reforms = acceptable_schools
-				school_reforms = good_schools
-			}
-		}
-
-		effect = {
-			prestige = 3
-			treasury = -55000
-			set_country_flag = natives_educated
-			any_pop = {
-				limit = {
-					OR = {
-						is_culture_group = west_african
-						is_culture_group = sotho_tswana
-						is_culture_group = tsonga
-						is_culture_group = east_african
-						is_culture_group = southern_african
-					}
-				}
-			literacy = 0.05
-			}
-		}
-	}
-
-	boer_south_africa = {
-		picture = form_south_africa
-		potential = {
-			primary_culture = scottish
-			nationalism_n_imperialism = 1
-			SAF = {
-				exists = no
-				all_core = { owned_by = THIS }
-			}
-			NOT = {
-				has_global_flag = south_africa_formed
-				has_global_flag = boer_south_africa
-			}
-		}
-
-		allow = {
-			tag = VLK
-			war = no
-			owns = 2087
-			owns = 2111
-			owns = 2105
-		}
-
-		effect = {
-			prestige = 5
-			SAF = {
-				all_core = { add_core = VLK }
-				primary_culture = british
-				add_accepted_culture = scottish
-			}
-			any_pop = {
-				limit = { is_primary_culture = yes }
-				militancy = -4
-			}
-			any_pop = {
-				limit = { has_pop_culture = british }
-				militancy = 4
-			}
-			set_global_flag = boer_south_africa
-		}
-	}
-
-	unified_south_africa = {
-		picture = form_south_africa
-		potential = {
-			tag = VLK
-			SAF = {
-				exists = no
-				all_core = { owned_by = THIS }
-			}
-			NOT = {
-				ruling_party_ideology = reactionary
-				ruling_party_ideology = fascist
-				has_global_flag = south_africa_formed
-				has_global_flag = unified_south_africa
-				has_country_flag = british_nervous
-			}
-		}
-
-		allow = {
-			mass_politics = 1
-			war = no
-			owns = 2087
-			owns = 2111
-			owns = 2105
-		}
-
-		effect = {
-			prestige = 5
-			SAF  = {
-				all_core = { remove_core = VLK }
-				primary_culture = scottish
-			}
-			any_pop = {
-				limit = { has_pop_culture = british }
-				militancy = -4
-			}
-			change_tag = SAF
-			add_accepted_culture = british
-			set_global_flag = unified_south_africa
-			set_global_flag = south_africa_formed
-		}
-	}
-}

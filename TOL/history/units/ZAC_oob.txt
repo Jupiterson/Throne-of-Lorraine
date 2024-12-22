@@ -1,0 +1,130 @@
+FRA = {value = -20}
+
+leader = {
+	name = "Herramel Ibarrola"
+	picture = southamerican_admiral_4
+	type = sea
+	date="1836.1.1"
+	personality = efficient
+	background = adventurer
+}
+
+leader = {
+	name = "Alfontso Mendoza"
+	picture = southamerican_general_4
+	type = land
+	date="1836.1.1"
+	personality = implacable
+	background = natural_born_leader
+}
+
+leader = {
+	name = "Gartzia Nárdiz"
+	picture = southamerican_general_0
+	type = land
+	date="1836.1.1"
+	personality = skilled
+	background = school_of_the_bayonet
+}
+
+leader = {
+	name = "Bernart Arana"
+	picture = southamerican_general_5
+	type = land
+	date="1836.1.1"
+	personality = vicious
+	background = nationalist
+}
+
+army = {
+	name = "Guardia Inperiala"
+	location = 2158
+	regiment = {
+		name= "1.Mendiko Infanteria"
+		type = infantry
+		home = 2158
+	}
+
+	regiment = {
+		name= "2.Mendiko Infanteria"
+		type = infantry
+		home = 2158
+	}
+
+	regiment = {
+		name= "3.Mendiko Infanteria"
+		type = infantry
+		home = 2159
+	}
+	
+	regiment = {
+		name= "1.Enekoatlan Morteroak"
+		type = artillery
+		home = 2158
+	}
+	
+	regiment = {
+		name= "1. Mendiko Zaldiak"
+		type = hussar
+		home = 2159
+	}
+
+}
+
+army = {
+	name = "Kostaldeko Guardia"
+	location = 2150
+
+	regiment = {
+		name= "1. Kostaldeko Infanteria"
+		type = infantry
+		home = 2150
+	}
+
+	regiment = {
+		name= "2. Kostaldeko Infanteria"
+		type = infantry
+		home = 2151
+	}
+
+	regiment = {
+		name= "1. Kostaldeko Zaldiak"
+		type = hussar
+		home = 2159
+	}
+
+}
+
+navy = {
+	name = "Karibeko Eskuadra"
+	location = 2150
+	ship = {
+		name= "Enekoatlan"
+		type = manowar
+	}
+	ship = {
+		name= "Irunea Berria"
+		type = frigate
+	}
+	ship = {
+		name= "Miarritze Berria"
+		type = frigate
+	}
+	ship = {
+		name= "Bilbo Berria"
+		type = frigate
+	}
+	ship = {
+		name= "Hondarribia Berria"
+		type = frigate
+	}
+	ship = {
+		name= "Zarautz Berria"
+		type = frigate
+	}
+	ship = {
+		name= "Bermeo Berria"
+		type = frigate
+	}
+
+}

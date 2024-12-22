@@ -2331,6 +2331,34 @@ categories =  {
         combat_width = -0.33
     }
 	
+	drummond = {
+        movement_cost = 1.2
+        defence = 1
+        color = { 21 44 66 }
+
+        #immigrant_attract = 1
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+
+        supply_limit = 6
+        min_build_railroad = 1
+        combat_width = -0.33
+    }
+	
+	conchobar = {
+        movement_cost = 1.0
+        color = { 28 221 184 }
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.1
+
+    }
+	
 	dunchaluim = {
         movement_cost = 1.0
         color = { 69 44 66 }

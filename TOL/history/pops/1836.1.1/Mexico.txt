@@ -3,45 +3,51 @@
 #Hermosillo (76000/19000 POPS)
 2137 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 240
 		militancy = 5
 	}
 
 	bureaucrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 35
 		militancy = 5
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
 		militancy = 5
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 550
 		militancy = 5
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 125
 
 		militancy = 5
 	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 500
+	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 9925
+		religion = reformed
+		size = 9425
 		militancy = 5
 	}
 
@@ -78,38 +84,45 @@
 #Nogales (8000/2000 POPS)
 2140 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 15
 		militancy = 4
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 20
 		militancy = 4
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 50
 		militancy = 4
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 10
 
+		militancy = 4
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 80
 		militancy = 4
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 595
+		religion = reformed
+		size = 515
 		militancy = 4
 	}
 
@@ -153,66 +166,71 @@
 2141 = {
 	aristocrats = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 250
 		militancy = 4
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
 		militancy = 5
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 500
 		militancy = 4
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
-
 		militancy = 7
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 550
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 9050
+		religion = reformed
+		size = 8500
 		militancy = 5
 	}
 
 	aristocrats = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 50
 	}
 
 	clergymen = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 75
 	}
 
 	artisans = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 150
 	}
 
 	soldiers = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 25
 	}
 
 	farmers = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 2700
 	}
@@ -297,25 +315,25 @@
 2138 = {
 	aristocrats = {
 		culture = gek
-		religion = catholic
+		religion = reformed
 		size = 25
 	}
 
 	clergymen = {
 		culture = gek
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
 		culture = gek
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	soldiers = {
 		culture = gek
-		religion = catholic
+		religion = reformed
 		size = 100
 
 		militancy = 9
@@ -323,7 +341,7 @@
 
 	farmers = {
 		culture = gek
-		religion = catholic
+		religion = reformed
 		size = 195
 	}
 
@@ -355,31 +373,31 @@
 2139 = {
 	aristocrats = {
 		culture = gek
-		religion = catholic
+		religion = reformed
 		size = 70
 	}
 
 	clergymen = {
 		culture = gek
-		religion = catholic
+		religion = reformed
 		size = 50
 	}
 
 	artisans = {
 		culture = gek
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	soldiers = {
 		culture = gek
-		religion = catholic
+		religion = reformed
 		size = 25
 	}
 
 	farmers = {
 		culture = gek
-		religion = catholic
+		religion = reformed
 		size = 1750
 		militancy = 9
 	}
@@ -419,46 +437,52 @@
 #Chihuahua (100000/25000 POPS)
 2142 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 440
 	}
 
 	bureaucrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 50
 	}
 
 	officers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 15
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 225
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 1100
 		militancy = 9
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 225
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 2000
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 19945
+		religion = reformed
+		size = 17945
 	}
 
 	aristocrats = {
@@ -495,33 +519,39 @@
 #Paso del Norte (12000/3000 POPS)
 2143 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 75
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 150
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
+		size = 100
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
 		size = 100
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 700
+		religion = reformed
+		size = 600
 	}
 
 	clergymen = {
@@ -551,33 +581,39 @@
 #Delicias (8000/2000 POPS)
 2144 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 75
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 100
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 150
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 750
+		religion = reformed
+		size = 600
 		militancy = 9
 	}
 
@@ -608,33 +644,45 @@
 #Parral (16000/4000 POPS)
 2145 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 25
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 20
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 50
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 10
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 55
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 120
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 895
+		religion = reformed
+		size = 725
 	}
 
 	aristocrats = {
@@ -673,33 +721,39 @@
 #Morelos (12000/3000 POPS)
 2147 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 75
 	}
 
 	clergymen = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 150
 	}
 
 	soldiers = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 100
 	}
 
 	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 590
+	}
+	
+	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 700
+		religion = reformed
+		size = 120
 	}
 
 	clergymen = {
@@ -729,67 +783,73 @@
 #Saltillo (44000/11000 POPS)
 2151 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 250
 	}
 
 	bureaucrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 70
 	}
 
 	officers = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 15
 	}
 
 	clergymen = {
-		culture = mexican
-		religion = catholic
-		size = 75
+		culture = kreolera
+		religion = reformed
+		size = 80
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
-		size = 400
+		culture = kreolera
+		religion = reformed
+		size = 500
 	}
 
 	soldiers = {
-		culture = mexican
-		religion = catholic
-		size = 75
+		culture = kreolera
+		religion = reformed
+		size = 1075
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 9260
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 7115
+		religion = reformed
+		size = 1615
 	}
 
 	clergymen = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 75
 	}
 
 	artisans = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 150
 	}
 
 	soldiers = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 25
 	}
 
 	farmers = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 2750
 		militancy = 9
@@ -798,35 +858,39 @@
 #Monclova (48000/12000 POPS)
 2152 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 275
 	}
 
 	clergymen = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 600
 	}
 
 	soldiers = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 125
-
-		militancy = 9
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 4250
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 5875
+		religion = reformed
+		size = 1875
 	}
 
 	clergymen = {
@@ -856,33 +920,39 @@
 #Torreon (56000/14000 POPS)
 2155 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 300
 	}
 
 	clergymen = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 550
 	}
 
 	soldiers = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 125
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 2000
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 9925
+		religion = reformed
+		size = 7925
 	}
 
 	clergymen = {
@@ -976,33 +1046,39 @@
 #Matamoros (28000/7000 POPS)
 2149 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 275
 	}
 
 	clergymen = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 550
 	}
 
 	soldiers = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 125
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 3200
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 3900
+		religion = reformed
+		size = 700
 	}
 
 	clergymen = {
@@ -1032,69 +1108,70 @@
 #Ciudad Victoria (24000/6000 POPS)
 2150 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 700
 	}
 
 	bureaucrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 75
-		militancy = 9
 	}
 
 	officers = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 25
-		militancy = 9
 	}
 
 	clergymen = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 250
-		militancy = 4
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 1250
-		militancy = 4
 	}
 
 	soldiers = {
-		culture = mexican
-		religion = catholic
-		size = 250
-		militancy = 4
+		culture = kreolera
+		religion = reformed
+		size = 1550
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 28450
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 22450
+		religion = reformed
+		size = 4150
 		militancy = 6
 	}
 
 	clergymen = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 75
 		militancy = 9
 	}
 
 	artisans = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 350
 		militancy = 9
 	}
 
 	soldiers = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 75
 
@@ -1102,7 +1179,7 @@
 	}
 
 	farmers = {
-		culture = native_american_minor
+		culture = central_american
 		religion = animist
 		size = 6500
 		militancy = 9
@@ -1113,33 +1190,39 @@
 #Durango (64000/16000 POPS)
 2153 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 350
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 700
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 150
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 500
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 12650
+		religion = reformed
+		size = 12150
 	}
 
 	aristocrats = {
@@ -1175,33 +1258,39 @@
 #Santa Maria del Oro (44000/11000 POPS)
 2154 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 225
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 450
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 80
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 8250
+		religion = reformed
+		size = 1250
 	}
 
 	aristocrats = {
@@ -1231,83 +1320,95 @@
 	farmers = {
 		culture = central_american #native_american_minor
 		religion = animist
-		size = 1800
+		size = 8800
 	}
 }
 #Mazatlan (116000/29000 POPS)
 2156 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 650
 	}
 
 	bureaucrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 100
 	}
 
 	officers = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 25
 	}
 
 	clergymen = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 275
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 1450
 	}
 
 	soldiers = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 300
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 11000
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 26200
+		religion = reformed
+		size = 15200
 	}
 }
 #Culiacan (28000/7000 POPS)
 2157 = {
 	aristocrats = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 175
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 350
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 200
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 3025
+		religion = reformed
+		size = 2825
 	}
 
 	clergymen = {
@@ -1339,71 +1440,76 @@
 #Zacatecas (340000/85000 POPS)
 2158 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 1725
-		militancy = 9
 	}
 
 	bureaucrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 325
-		militancy = 9
 	}
 
 	officers = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 75
-		militancy = 9
 	}
 
 	clergymen = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 425
-		militancy = 9
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 3850
-		militancy = 9
 	}
 
 	soldiers = {
+		culture = kreolera
+		religion = reformed
+		size = 4425
+	}
+	
+	soldiers = {
 		culture = mexican
-		religion = catholic
-		size = 6425
-
-		militancy = 9
+		religion = reformed
+		size = 2000
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 10300
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 29175
+		religion = reformed
+		size = 24175
 		militancy = 9
 	}
 
 	clergymen = {
-culture = central_american
+		culture = central_american
 		religion = animist
 		size = 200
 		militancy = 9
 	}
 
 	artisans = {
-culture = central_american
+		culture = central_american
 		religion = animist
 		size = 2150
 		militancy = 9
 	}
 
 	soldiers = {
-culture = central_american
+		culture = central_american
 		religion = animist
 		size = 450
 
@@ -1411,41 +1517,41 @@ culture = central_american
 	}
 
 	farmers = {
-culture = central_american
+		culture = central_american
 		religion = animist
-		size = 40200
+		size = 38200
 		militancy = 9
 	}
 }
 #Aguascalientes (152000/38000 POPS)
 2160 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 850
 	}
 
 	clergymen = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 175
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 1525
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 400
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 14850
 	}
 
@@ -1476,33 +1582,39 @@ culture = central_american
 #Tepic (76000/19000 POPS)
 2161 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 425
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 750
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 150
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 2000
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 15175
+		religion = reformed
+		size = 13175
 	}
 
 	clergymen = {
@@ -1534,34 +1646,46 @@ culture = central_american
 #San Luis Potosi (324000/81000 POPS)
 2159 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 1625
 	}
 
 	clergymen = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 475
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 2400
-		militancy = 9
 	}
 
 	soldiers = {
+		culture = kreolera
+		religion = reformed
+		size = 4000
+	}
+	
+	soldiers = {
 		culture = mexican
-		religion = catholic
-		size = 6000
+		religion = reformed
+		size = 2000
+		militancy = 9
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 9000
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 42000
+		religion = reformed
+		size = 23000
 		militancy = 9
 	}
 
@@ -1594,46 +1718,53 @@ culture = central_american
 2167 = {
 	aristocrats = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 3400
 	}
 
 	bureaucrats = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 575
 	}
 
 	officers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 375
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 625
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 3150
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 2000
 
+		militancy = 9
+	}
+	
+	farmers = {
+		culture = kreolera
+		religion = reformed
+		size = 4000
 		militancy = 9
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
-		size = 56250
+		religion = reformed
+		size = 52250
 		militancy = 9
 	}
 
@@ -2029,50 +2160,48 @@ culture = mangue
 #Guadalajara (300000/75000 POPS)
 2166 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 1550
-		militancy = 5
 	}
 
 	bureaucrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 250
-		militancy = 5
 	}
 
 	officers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 75
 		militancy = 5
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 350
 		militancy = 5
 	}
 
 	artisans = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 10000
 		militancy = 5
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 1950
 		militancy = 5
 	}
 
 	soldiers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 6650
 
 		militancy = 5
@@ -2080,26 +2209,26 @@ culture = mangue
 
 	farmers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 42875
 		militancy = 5
 	}
 
 	clergymen = {
 		culture = central_american #native_american_minor
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
 		culture = central_american #native_american_minor
-		religion = catholic
+		religion = reformed
 		size = 550
 	}
 
 	soldiers = {
 		culture = central_american #native_american_minor
-		religion = catholic
+		religion = reformed
 		size = 125
 
 		militancy = 9
@@ -2107,63 +2236,63 @@ culture = mangue
 
 	farmers = {
 		culture = central_american #native_american_minor
-		religion = catholic
+		religion = reformed
 		size = 10275
 	}
 }
 #Puerto Vallarta (148000/37000 POPS)
 2168 = {
 	aristocrats = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 750
 	}
 
 	clergymen = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 1200
 	}
 
 	soldiers = {
-		culture = mexican
-		religion = catholic
+		culture = kreolera
+		religion = reformed
 		size = 250
 	}
 
 	farmers = {
 		culture = mexican
-		religion = catholic
+		religion = reformed
 		size = 21550
 	}
 
 	clergymen = {
 		culture = central_american #native_american_minor
-		religion = catholic
+		religion = reformed
 		size = 100
 	}
 
 	artisans = {
 		culture = central_american #native_american_minor
-		religion = catholic
+		religion = reformed
 		size = 650
 	}
 
 	soldiers = {
 		culture = central_american #native_american_minor
-		religion = catholic
+		religion = reformed
 		size = 150
 	}
 
 	farmers = {
 		culture = central_american #native_american_minor
-		religion = catholic
+		religion = reformed
 		size = 12125
 	}
 }

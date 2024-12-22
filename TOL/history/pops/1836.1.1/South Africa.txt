@@ -1,8 +1,4 @@
-#file includes modern South Africa, Lesotho and Swaziland
-#Western Cape Region (395100)
-#Ruled by Britain 1836
-#Boer POPs represent post-Great Trek migration
-#Cape Town (173000/43250 POPS)
+#Heidtoun
 2087 = {
 
 	aristocrats = {
@@ -44,7 +40,7 @@
 	artisans = {
 		culture = low_german
 		religion = protestant
-		size = 12750
+		size = 10750
 	}
 
 	artisans = {
@@ -75,6 +71,12 @@
 		culture = scottish
 		religion = reformed
 		size = 550
+	}
+	
+	artisans = {
+		culture = hibernite
+		religion = catholic
+		size = 380
 	}
 
 	soldiers = {
@@ -128,9 +130,14 @@
 	farmers = {
 		culture = scottish
 		religion = protestant
-		size = 13145
+		size = 10845
 	}
-
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 25320
+	}
 
 	artisans = {
 		culture = griqua
@@ -220,6 +227,12 @@
 		size = 7345
 	}
 	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 8780
+	}
+	
 	aristocrats = {
 		culture = khoisan
 		religion = protestant
@@ -269,6 +282,12 @@
 		culture = khoisan
 		religion = protestant
 		size = 8600
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 890
 	}
 
 	clergymen = {
@@ -323,6 +342,12 @@
 		size = 3195
 	}
 	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 590
+	}
+	
 	aristocrats = {
 		culture = scottish
 		religion = protestant
@@ -373,6 +398,12 @@
 		culture = scottish
 		religion = protestant
 		size = 1125
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 430
 	}
 	
 	farmers = {
@@ -459,6 +490,18 @@
 		religion = animist
 		size = 1700
 	}
+	
+	farmers = {
+		culture = scottish
+		religion = protestant
+		size = 350
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 210
+	}
 
 	aristocrats = {
 		culture = sotho
@@ -509,6 +552,12 @@
 		culture = griqua
 		religion = protestant
 		size = 12525
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 13590
 	}
 
 	aristocrats = {
@@ -619,6 +668,12 @@
 		culture = scottish
 		religion = reformed
 		size = 700
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 930
 	}
 
 	farmers = {
@@ -782,6 +837,12 @@
 		religion = protestant
 		size = 2450
 	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 380
+	}
 
 	farmers = {
 		culture = griqua
@@ -880,6 +941,12 @@
 		culture = griqua
 		religion = protestant
 		size = 1250
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 520
 	}
 	
 	aristocrats = {
@@ -1314,6 +1381,12 @@
 		religion = animist
 		size = 5900
 	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 320
+	}
 
 	soldiers = {
 		culture = southern_bantu
@@ -1329,6 +1402,12 @@
 		culture = scottish
 		religion = protestant
 		size = 1600
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 260
 	}
 	
 	artisans = {
@@ -1504,6 +1583,12 @@
 		size = 1260
 	}
 	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 1360
+	}
+	
 }
 #Graaf Reinet (36000/9000 POPS)
 2097 = {
@@ -1517,6 +1602,12 @@
 		culture = scottish
 		religion = protestant
 		size = 450
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 180
 	}
 
 	aristocrats = {
@@ -1635,6 +1726,12 @@
 		culture = griqua
 		religion = protestant
 		size = 1550
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 260
 	}
 
 	clergymen = {
@@ -1783,6 +1880,12 @@
 		religion = animist
 		size = 17500
 	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 1180
+	}
 }
 #Mathele (80000/20000 POPS)
 2099 = {
@@ -1814,6 +1917,12 @@
 		culture = zulu
 		religion = animist
 		size = 17500
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 2980
 	}
 }
 #Umtata (144000/36000 POPS)
@@ -1851,7 +1960,13 @@
 	farmers = {
 		culture = zulu
 		religion = animist
-		size = 32000
+		size = 21000
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 4230
 	}
 
 	slaves = {
@@ -2419,65 +2534,46 @@
 #Durban (126000/31500 POPS)
 2111 = {
 
-	farmers = {
-		culture = malay
-		religion = sunni
-		size = 150
-	}
-
-	farmers = {
-		culture = javan
-		religion = sunni
-		size = 275
-	}
-
-	clergymen = {
-		culture = javan
-		religion = sunni
-		size = 10
-	}
-
-
 	aristocrats = {
-		culture = zulu
-		religion = animist
+		culture = hibernite
+		religion = catholic
 		size = 150
 	}
 
 	clergymen = {
-		culture = zulu
-		religion = animist
+		culture = hibernite
+		religion = catholic
 		size = 100
 	}
 
 	artisans = {
-		culture = zulu
-		religion = animist
-		size = 400
+		culture = hibernite
+		religion = catholic
+		size = 430
 	}
 
 	soldiers = {
-		culture = zulu
-		religion = animist
-		size = 100
+		culture = hibernite
+		religion = catholic
+		size = 680
 	}
 
 	farmers = {
-		culture = zulu
-		religion = animist
-		size = 7275
+		culture = hibernite
+		religion = catholic
+		size = 2275
 	}
 
 	slaves = {
 		culture = zulu
 		religion = animist
-		size = 1725
+		size = 1825
 	}
 
 	aristocrats = {
 		culture = zulu
 		religion = animist
-		size = 425
+		size = 225
 	}
 
 	clergymen = {
@@ -2489,19 +2585,19 @@
 	artisans = {
 		culture = zulu
 		religion = animist
-		size = 1050
+		size = 150
 	}
 
 	soldiers = {
 		culture = zulu
 		religion = animist
-		size = 250
+		size = 120
 	}
 
 	farmers = {
 		culture = zulu
 		religion = animist
-		size = 11150
+		size = 7250
 	}
 }
 #Ladysmith (156000/39000 POPS)
@@ -2609,25 +2705,13 @@
 	soldiers = {
 		culture = zulu
 		religion = animist
-		size = 3000
-	}
-
-	soldiers = {
-		culture = zulu
-		religion = animist
-		size = 3000
-	}
-
-	soldiers = {
-		culture = zulu
-		religion = animist
 		size = 1000
 	}
 
 	farmers = {
 		culture = zulu
 		religion = animist
-		size = 77450
+		size = 54450
 	}
 
 	slaves = {
@@ -3105,4 +3189,226 @@
 		size = 55
 	}
 	
+}
+
+#Concobhar
+3610 = {
+
+	aristocrats = {
+		culture = hibernite
+		religion = catholic
+		size = 825
+	}
+	
+	bureaucrats = {
+		culture = hibernite
+		religion = catholic
+		size = 180
+	}
+
+	soldiers = {
+		culture = zulu
+		religion = animist
+		size = 320
+	}
+
+	farmers = {
+		culture = zulu
+		religion = animist
+		size = 7475
+	}
+
+	slaves = {
+		culture = zulu
+		religion = animist
+		size = 4525
+	}
+
+	clergymen = {
+		culture = hibernite
+		religion = catholic
+		size = 430
+	}
+
+	artisans = {
+		culture = hibernite
+		religion = catholic
+		size = 2520
+	}
+
+	soldiers = {
+		culture = hibernite
+		religion = catholic
+		size = 1750
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 13070
+	}
+	
+}
+
+#Port Phadraig
+3611 = {
+
+	aristocrats = {
+		culture = hibernite
+		religion = catholic
+		size = 255
+	}
+
+	artisans = {
+		culture = zulu
+		religion = animist
+		size = 80
+	}
+
+	soldiers = {
+		culture = zulu
+		religion = animist
+		size = 40
+	}
+
+	farmers = {
+		culture = zulu
+		religion = animist
+		size = 3475
+	}
+
+	slaves = {
+		culture = zulu
+		religion = animist
+		size = 1425
+	}
+
+	clergymen = {
+		culture = hibernite
+		religion = catholic
+		size = 130
+	}
+
+	artisans = {
+		culture = hibernite
+		religion = catholic
+		size = 180
+	}
+
+	soldiers = {
+		culture = hibernite
+		religion = catholic
+		size = 1130
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 2870
+	}
+	
+}
+
+#Tlokoeng
+3612 = {
+	aristocrats = {
+		culture = zulu
+		religion = animist
+		size = 130
+	}
+
+	bureaucrats = {
+		culture = zulu
+		religion = animist
+		size = 100
+	}
+
+	clergymen = {
+		culture = zulu
+		religion = animist
+		size = 120
+	}
+
+	artisans = {
+		culture = zulu
+		religion = animist
+		size = 150
+	}
+
+	soldiers = {
+		culture = zulu
+		religion = animist
+		size = 800
+	}
+	
+	farmers = {
+		culture = hibernite
+		religion = catholic
+		size = 4860
+	}
+
+	farmers = {
+		culture = zulu
+		religion = animist
+		size = 10000
+	}
+
+	slaves = {
+		culture = zulu
+		religion = animist
+		size = 1100
+	}
+
+}
+
+#Abaqulusi
+3613 = {
+
+	aristocrats = {
+		culture = zulu
+		religion = animist
+		size = 550
+	}
+
+	bureaucrats = {
+		culture = zulu
+		religion = animist
+		size = 80
+	}
+
+	officers = {
+		culture = zulu
+		religion = animist
+		size = 40
+	}
+
+	clergymen = {
+		culture = zulu
+		religion = animist
+		size = 275
+	}
+
+	artisans = {
+		culture = zulu
+		religion = animist
+		size = 1200
+	}
+
+	soldiers = {
+		culture = zulu
+		religion = animist
+		size = 5000
+	}
+
+	farmers = {
+		culture = zulu
+		religion = animist
+		size = 15450
+	}
+
+	slaves = {
+		culture = southern_bantu
+		religion = animist
+		size = 476
+	}
 }

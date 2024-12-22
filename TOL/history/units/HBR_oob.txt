@@ -1,0 +1,36 @@
+ZUL = {
+	value = -30
+	truce_until = 1840.1.1
+}
+
+army = {
+	name = "Garda Phadraig"
+	location = 3610
+	regiment = {
+		name= "1u rannan Coisithe"
+		type = infantry
+		home = 3610
+	}
+	
+	regiment = {
+		name= "2u rannan Coisithe"
+		type = infantry
+		home = 3610
+	}
+
+	regiment = {
+		name= "1u rannan Husair"
+		type = hussar
+		home = 3611
+	}
+}
+
+leader = {
+	name = "Cathaoir Murchu"
+	picture = european_general_9
+	date = 1830.1.1
+	type = land
+	personality = daring
+	background = expert_raider
+	prestige = 0.1
+}

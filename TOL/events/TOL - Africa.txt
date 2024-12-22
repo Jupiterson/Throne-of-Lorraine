@@ -2670,50 +2670,280 @@ country_event = {
 	}
 	}
 	
-###Cape Wars###
-	
+###############
+##			 ##
+## CAPE WARS ##
+##			 ##
+###############
+
+# Hibernian introduction event #
+
 	country_event = {
 
-	id = 50044
+	id = 500500
 
 	trigger = {
-            tag = ORA
-            war = yes
-            controls = 3592
-			has_global_flag = 3rd_frontier_war
-			war_with = XHO
+            tag = HBR
+			year = 1836
 	}
+	
+	mean_time_to_happen = { days = 0 }
 
 	fire_only_once = yes
 
-	title = "ORA_vict_title"
-	desc = "ORA_vict_desc"
+	title = "hbr_xho_intervention_title"
+	desc = "hbr_xho_intervention_desc"
 	picture = "boer_troops"
 
 	option = {
-		name = "ORA_vict_option1"
+		name = "hbr_xho_intervention_option1"
+		set_global_flag = hbr_intervention
+		badboy = 2
+		prestige = 5
+		relation = {
+            who = ORA
+            value = 200
+        }
+        create_alliance = ORA
+		XHO = {
+            war = {
+                target = THIS
+                attacker_goal = { casus_belli = conquest_any }
+                defender_goal = { casus_belli = humiliate_no_infamy }
+            }
+        }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	}
+	
+# Xhosa war end #
+	
+	country_event = {
+
+	id = 500501
+
+	is_triggered_only = yes
+
+	title = "ORA_HBR_vict_title"
+	desc = "ORA_HBR_vict_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "ORA_HBR_vict_option1"
 		end_war = XHO
 		clr_global_flag = 3rd_frontier_war
+		clr_global_flag = hbr_intervention
 		3592 = { secede_province = ORA }
 		3595 = { secede_province = ORA }
+		2096 = { secede_province = ORA }
+		2097 = { secede_province = ORA }
+		2098 = { secede_province = ORA }
+		2092 = { secede_province = ORA }
+		2096 = { add_core = ORA }
+		2097 = { add_core = ORA }
+		2098 = { add_core = ORA }
 		3593 = { remove_core = XHO }
 		3594 = { remove_core = XHO }
 		prestige = 5	
 		SCO = { country_event = { id = 50049 days = 110 } }
-		KHB = { country_event = { id = 50051 days = 54 } }
+		KHB = { country_event = { id = 50051 days = 20 } }
+		HBR = { country_event = { id = 500502 days = 0 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	}
+	
+# Xhosa war end - Hibernia's event #
+	
+	country_event = {
+
+	id = 500502
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "HBR_vict_title"
+	desc = "HBR_vict_desc"
+	picture = "war_ended"
+
+	option = {
+		name = "HBR_vict_option1"
+		end_war = XHO
+		clr_global_flag = 3rd_frontier_war
+		clr_global_flag = hbr_intervention
+		2099 = { secede_province = HBR }
+		2100 = { secede_province = HBR }
+		3612 = { secede_province = HBR }
+		HBR = { country_event = { id = 500503 days = 10 } }
+		prestige = 10	
+		ai_chance = {
+			factor = 1
+		}
+	}
+	}
+	
+	# A meeting in Conchobar #
+	
+	country_event = {
+
+	id = 500503
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "HBR_meeting_title"
+	desc = "HBR_meeting_desc"
+	picture = "hbr_meeting"
+
+	option = {
+		name = "HBR_meeting_option1"
+		HBR = { country_event = { id = 500504 days = 2 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	}
+	
+	# Hibernia social reform #
+	
+	country_event = {
+
+	id = 500504
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "HBR_social_title"
+	desc = "HBR_social_desc"
+	picture = "hbr_hospital"
+
+	option = {
+		name = "HBR_social_option1"
+		social_reform = low_schools
+		social_reform = child_labor_restricted
+		HBR = { country_event = { id = 500505 days = 2 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "HBR_social_option2"
+		social_reform = trinket_health_care
+		2111 = { 
+		add_province_modifier = { 
+			name = small_baby_boom
+			duration = 1825
+				}
+		}
+		3610 = { 
+		add_province_modifier = { 
+			name = small_baby_boom
+			duration = 1825
+				}
+		}
+		3611 = { 
+		add_province_modifier = { 
+			name = small_baby_boom
+			duration = 1825
+				}
+		}
+		HBR = { country_event = { id = 500505 days = 2 } }
+		ai_chance = {
+			factor = 50
+		}
+	}	
+	}
+	
+	# Hibernite future with Drummond #
+	
+	country_event = {
+
+	id = 500505
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "HBR_drummond_title"
+	desc = "HBR_drummond_desc"
+	picture = "cape_map"
+
+	option = {
+		name = "HBR_drummond_option1"
+		set_country_flag = hbr_drummond_cooperation
+		HBR = { country_event = { id = 500506 days = 3 } }
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+	option = {
+		name = "HBR_drummond_option2"
+		relation = { who = ORA value = -100 }
+		leave_alliance = ORA
+		set_country_flag = hbr_anti_drummonder
+		HBR = { country_event = { id = 500506 days = 3 } }
+		ai_chance = {
+			factor = 95
+		}
+	}	
+	}
+	
+	# Hibernite migration and government #
+	
+	country_event = {
+
+	id = 500506
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	title = "HBR_gov_title"
+	desc = "HBR_gov_desc"
+	picture = "hibernia_landscape"
+
+	option = {
+		name = "HBR_gov_option1"
+		political_reform = universal_weighted_voting
+		political_reform = first_past_the_post
+		political_reform = appointed
+		political_reform = yes_meeting
+		political_reform = censored_press
+		political_reform = non_socialist
+		political_reform = non_secret_ballots
+		political_reform = debtors_prisons
+		political_reform = culture_voting_only
+		government = democracy
+		prestige = 5
+		add_country_modifier = {
+				name = land_of_the_free
+				duration = 3650 }
+		any_pop = {militancy = -1}
+		nationalvalue = nv_liberty
+		set_country_flag = new_world_nation
 		ai_chance = {
 			factor = 80
 		}
 	}
 	
 	option = {
-		name = "ORA_vict_option2"
-		badboy = 2
-		prestige = 10	
+		name = "HBR_gov_option2"
+		any_pop = {militancy = 1}
+		any_pop = {consciousness = 2}
+		government = hms_government
+		set_country_flag = new_world_nation
 		ai_chance = {
 			factor = 20
 		}
-	}
+	}	
 	}
 	
 	country_event = {
@@ -2744,7 +2974,7 @@ country_event = {
 		3595 = { remove_core = ORA }
 		prestige = 5	
 		SCO = { country_event = { id = 50049 days = 110 } }
-		KHB = { country_event = { id = 50051 days = 54 } }
+		KHB = { country_event = { id = 50051 days = 20 } }
 		ai_chance = {
 			factor = 50
 		}
@@ -2828,28 +3058,14 @@ country_event = {
 
 	option = {
 		name = "SCO_grow_option1"
-        ORA = { country_event = 50052 }
-       ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 100
-			    ORA = { ai = yes }
-		}		
-	} }
+        ORA = { country_event = { id = 50052 days = 5 } }
+        ai_chance = {
+			factor = 1
+		}	 
+	}
 	
-	option = {
-		name = "SCO_grow_option2"
-		prestige = -10 
-		2092 = { secede_province = SCO }
-		2092 = { secede_province = ORA }
-		ai_chance = {
-			factor = 50
-		}
-			}
-        }			
-	
-	
-	
+    }			
+
 	country_event = {
 
 	id = 50051
@@ -2867,6 +3083,7 @@ country_event = {
 		2089 = { secede_province = KHB }
 		3601 = { secede_province = KHB }
 		3596 = { secede_province = KHB }
+		KHB = { country_event = { id = 50054 days = 3 } }
 	}
 	}
 	
@@ -2880,30 +3097,16 @@ country_event = {
 
 	title = "ORA_response_title"
 	desc = "ORA_response_desc"
-	picture = "boer_war"
-
-	option = {
-		name = "ORA_response_option1"
-		2092 = { secede_province = ORA }
-		FROM = { inherit = ORA }
-        ai_chance = {
-			factor = 95
-		}		
-	}
+	picture = "heid_tension"
 	
 	option = {
-		name = "ORA_response_option2"
-		2092 = { secede_province = ORA }
-		FROM = { country_event = 50053 }
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 20
-			    ORA = { ai = no }
+		name = "ORA_response_option1"
+		FROM = { country_event = { id = 50053 days = 5 } }
+		add_country_modifier = {
+				name = small_country_draft
+				duration = 200 }
 		}
-			}
-			}
-			}	
+	}
 			
 	country_event = {
 
@@ -2931,8 +3134,36 @@ country_event = {
 		 war = {
 	            target = ORA
 	            attacker_goal = { casus_belli = conquest }
+				call_ally = no
                 }		
 	}
+	}
+	
+	### Hibernian cape warning event ###
+	
+	country_event = {
+
+	id = 500517
+
+	trigger = {
+            tag = HBR
+            has_country_flag = hbr_drummond_cooperation		
+	}
+	
+	mean_time_to_happen = { days = 70 }
+
+	fire_only_once = yes
+
+	title = "tensions_heid_title"
+	desc = "tensions_heid_desc"
+	picture = "heid_tension"
+
+	option = {
+		name = "tensions_heid_option1"
+		add_country_modifier = {
+				name = small_country_draft
+				duration = 200 }
+		}
 	}
 	
 	country_event = {
@@ -2949,7 +3180,7 @@ country_event = {
 
 	option = {
 		name = "KHB_response_option1"
-		FROM = { inherit = KHB }
+		SCO = { inherit = KHB }
         ai_chance = {
 			factor = 95
 		}		
@@ -2957,14 +3188,12 @@ country_event = {
 	
 	option = {
 		name = "KHB_response_option2"
-		FROM = { country_event = 50055 }
+		SCO = { country_event = { id = 50055 days = 5 } }
 		ai_chance = {
 			factor = 5
-			modifier = {
-				factor = 20
-			    KHB = { ai = no }
+			}
 		}
-			}}}
+	}
 			
 	country_event = {
 
@@ -3017,12 +3246,483 @@ country_event = {
 		2092 = { secede_province = ORA }
 		2096 = { add_core = ORA }
 		2097 = { add_core = ORA }
-		SCO = { country_event = { id = 50049 days = 110 } } 
-		KHB = { country_event = { id = 50051 days = 54 } }
+		2098 = { add_core = ORA }
 	}
 	}
 	
+# Scottish Heid surrender event #
 	
+	country_event = { #Event called if Treaty of Drummond decision is taken
+    id = 500507
+    title = "EVTNAME500507"
+    desc = "EVTDESC500507"
+    picture = "treaty_drummond"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT500507OPTA"
+        prestige = -50
+        random_country = {
+            limit = {
+                tag = ORA
+            }
+            end_war = THIS
+            country_event = 500508
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    primary_culture = hibernite
+                    alliance_with = FROM
+                }
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+
+    option = {
+        name = "EVT500507OPTB"
+        prestige = -25
+        casus_belli = {
+                target = ORA
+                type = conquest_any
+                months = 60
+            }
+        random_country = {
+            limit = {
+                tag = ORA
+            }
+            end_war = THIS
+            country_event = 500509
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    primary_culture = hibernite
+                    alliance_with = FROM
+                }
+                war_with = THIS
+            }
+            end_war = THIS
+
+        }
+    }
+	}
+	
+#Called from 500507 first option.
+	
+	country_event = {
+    id = 500508
+    title = "EVTNAME500508" #The Treaty of Drummond - Reconciliation
+    desc = "EVTDESC500508"
+    picture = "treaty_drummond"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT500508OPTA"
+        prestige = 25
+        FROM = {
+            any_owned = {
+                limit = { is_core = SAF }
+                secede_province = THIS
+            }
+			2049 = { secede_province = THIS }
+            relation = { who = THIS value = 200 }
+            diplomatic_influence = { who = THIS value = 50 }
+        }
+        any_country = {
+            limit = {
+                alliance_with = FROM
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+}
+
+#Called from 500507 second option.
+
+country_event = {
+    id = 500509
+    title = "EVTNAME500508" #The Treaty of Drummond - Anger
+    desc = "EVTDESC500509"
+    picture = "treaty_drummond"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT500509OPTA"
+        prestige = 25
+        FROM = {
+            any_owned = {
+                limit = { is_core = SAF }
+                secede_province = THIS
+            }
+			2049 = { secede_province = THIS }
+            casus_belli = {
+                target = THIS
+                type = cut_down_to_size
+                months = 240
+            }
+        }
+        any_country = {
+            limit = {
+                alliance_with = FROM
+                war_with = THIS
+            }
+            end_war = THIS
+        }
+    }
+	}
+	
+### Oceanian unification preparation ###
+	
+	country_event = {
+
+	id = 500516
+	
+	is_triggered_only = yes
+
+	title = "preparing_oceania_title"
+	desc = "preparing_oceania_desc"
+	picture = "hbr_meeting"
+
+	option = {
+		name = "preparing_oceania_option1"
+		set_global_flag = ora_subjected
+		FROM = {
+			create_vassal = THIS 
+			}
+		ai_chance = {
+			factor = 1
+		}
+		}
+		
+	option = {
+		name = "preparing_oceania_option2"
+		relation = { who = HBR value = -100 }
+		leave_alliance = HBR
+		ai_chance = {
+			factor = 0
+		}
+		}
+	}
+	
+##############################################
+##											##
+## HIBERNITE DRUMMONDER WAR BUILD UP EVENTS ##
+##											##
+##############################################
+	
+## Patrick's Legion raids Fauldin event ##
+
+	country_event = {
+
+	id = 500510
+
+	trigger = {
+            tag = HBR
+            war = no
+			has_country_flag = hbr_anti_drummonder
+			has_global_flag = won_caledonian_war
+	}
+	
+	mean_time_to_happen = { days = 80 }
+
+	fire_only_once = yes
+
+	title = "HBR_tensions_title"
+	desc = "HBR_tensions_desc"
+	picture = "legion_patrick"
+
+	option = {
+		name = "HBR_tensions_option1"
+		relation = { who = ORA value = -50 }
+		add_country_modifier = {
+				name = patricks_legion 
+				duration = -1 }
+		prestige = 5
+		canned_food = 5
+		wine = 5
+		money = 1500
+		ORA = { country_event = { id = 500511 days = 3 } }
+	}	
+	}
+	
+## Drummond chooses to escalate or not ##
+
+	country_event = {
+
+	id = 500511
+	
+	is_triggered_only = yes
+
+	title = "ORA_tensions_title"
+	desc = "ORA_tensions_desc"
+	picture = "fauldin_raid"
+
+	option = {
+		name = "ORA_tensions_option1"
+		prestige = 5
+		canned_food = -5
+		wine = -5
+		money = -3000
+		2098 = { 
+		any_pop = {
+            limit = { has_pop_culture = scottish }
+	        reduce_pop = 0.3
+            consciousness = 8
+			militancy = 8
+            }
+		}
+		casus_belli = {
+	            target = HBR
+	            type = conquest
+	            months = 12
+              }
+		 war = {
+	            target = HBR
+	            attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = demand_concession_casus_belli  state_province_id = 3592}
+				call_ally = no
+                }
+		HBR = { country_event = { id = 500512 days = 0 } }				
+		ai_chance = {
+			factor = 70
+		}
+	}
+	
+	option = {
+		name = "ORA_tensions_option2"
+		prestige = -5
+		canned_food = -5
+		wine = -5
+		money = -3000
+		2098 = { 
+		any_pop = {
+            limit = { has_pop_culture = scottish }
+	        reduce_pop = 0.3
+            consciousness = 8
+			militancy = 8
+            }
+		}
+		HBR = { country_event = { id = 500513 days = 0 } }
+		ai_chance = {
+			factor = 30
+		}
+	}	
+	}
+	
+### THE OCEANIAN WAR ###
+	
+	country_event = {
+
+	id = 500512
+	
+	is_triggered_only = yes
+
+	title = "ocn_war_title"
+	desc = "ocn_war_desc"
+	picture = "oceanic_war"
+
+	option = {
+		name = "ocn_war_option1"
+		add_country_modifier = {
+				name = small_country_draft
+				duration = 200 }
+		}		
+	}
+	
+# Hibernia can pay reparations or risk war #
+	
+	country_event = {
+
+	id = 500513
+	
+	is_triggered_only = yes
+
+	title = "hbr_reps_title"
+	desc = "hbr_reps_desc"
+	picture = "legion_patrick"
+
+	option = {
+		name = "hbr_reps_option1"
+		prestige = -10
+		canned_food = -10
+		wine = -10
+		money = -5000
+		remove_country_modifier = patricks_legion 
+		ORA = { country_event = { id = 500514 days = 3 } }
+		ai_chance = {
+			factor = 70
+		}
+		}
+		
+	option = {
+		name = "hbr_reps_option2"
+		ORA = { country_event = { id = 500515 days = 3 } }
+		ai_chance = {
+			factor = 30
+		}
+		}		
+	}
+	
+# Drummond receives reparations #
+	
+	country_event = {
+
+	id = 500514
+	
+	is_triggered_only = yes
+
+	title = "ora_reps_title"
+	desc = "ora_reps_desc"
+	picture = "legion_patrick"
+
+	option = {
+		name = "ora_reps_option1"
+		prestige = 5
+		canned_food = 10
+		wine = 10
+		money = 5000 
+		}	
+	}
+	
+# No reparations paid, Drummond chooses to risk war or not #
+	
+	country_event = {
+
+	id = 500515
+	
+	is_triggered_only = yes
+
+	title = "ora_noreps_title"
+	desc = "ora_noreps_desc"
+	picture = "legion_patrick"
+
+	option = {
+		name = "ora_noreps_option1"
+		war = {
+	            target = HBR
+	            attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = demand_concession_casus_belli  state_province_id = 3592}
+				call_ally = no
+                }
+		HBR = { country_event = { id = 500512 days = 0 } }
+		ai_chance = {
+			factor = 90
+		}
+		}
+		
+	option = {
+		name = "ora_noreps_option2"
+		prestige = -10
+		ai_chance = {
+			factor = 10
+		}
+		}
+	}
+	
+# Caledonian capital event #
+	
+country_event = {
+
+    id = 6013
+    title = "capital_caledonia_title"
+    desc = "capital_caledonia_desc"
+    picture = "cape_map"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "capital_caledonia_option1"
+        capital = 2087
+        2087 = {
+            life_rating = 5
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 365
+            }
+        }
+    }
+
+    option = {
+        name = "capital_caledonia_option2"
+        capital = 3593
+        3593 = {
+            life_rating = 5
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 365
+            }
+        }
+    }
+
+    option = {
+        name = "capital_caledonia_option3"
+        capital = 3610
+        3610 = {
+            life_rating = 5
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 365
+            }
+        }
+    }
+	}
+	
+# Oceanian capital event #
+	
+country_event = {
+
+    id = 500518
+    title = "capital_oceania_title"
+    desc = "capital_oceania_desc"
+    picture = "cape_map"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "capital_oceania_option1"
+        capital = 2087
+        2087 = {
+            life_rating = 5
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 365
+            }
+        }
+		primary_culture = scottish
+		add_accepted_culture = hibernite
+    }
+
+    option = {
+        name = "capital_oceania_option2"
+        capital = 3593
+        3593 = {
+            life_rating = 5
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 365
+            }
+        }
+    }
+
+    option = {
+        name = "capital_oceania_option3"
+        capital = 3610
+        3610 = {
+            life_rating = 5
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 365
+            }
+        }
+    }
+	}
 	
 ###  An Empire of Empty Promises  ##
 	

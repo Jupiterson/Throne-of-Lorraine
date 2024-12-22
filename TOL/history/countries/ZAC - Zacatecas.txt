@@ -1,8 +1,9 @@
 ## /history/countries/TAG - Country.txt ##
 capital = 2158
-primary_culture = mexican
+primary_culture = kreolera
+culture = mexican
 culture = basque
-religion = catholic
+religion = reformed
 government = constitutional_empire
 plurality = 25.0
 nationalvalue = nv_order
@@ -10,6 +11,7 @@ literacy = 0.10
 civilized = yes
 #Greater Powers, 20+; Secondary Powers <11
 prestige = 0
+
 # Political Reforms
 border_policy = open_borders
 centralization = federalism
@@ -35,7 +37,7 @@ school_reforms = no_schools
 unemployment_subsidies = no_subsidies
 wage_reform = no_minimum_wage
 work_hours = no_work_hour_limit
-set_country_flag = catholic_country
+set_country_flag = protestant_country
 set_country_flag = new_world_nation
 set_country_flag = post_colonial_country
 set_country_flag = democracy_gov
@@ -43,6 +45,7 @@ set_country_flag = democracy_gov
 post_napoleonic_thought = 1
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
+military_staff_system = 1
 army_command_principle = 1
 # Naval Technologies
 post_nelsonian_thought = 1
@@ -129,4 +132,4 @@ upper_house = { #total 100
 	socialist = 0
 }
 schools = traditional_academic
-#oob = "ZAC_oob.txt"
+oob = "ZAC_oob.txt"

@@ -444,18 +444,18 @@ demotion_chance = {
 	
 	modifier = {
         factor = 100
-        THIS = {
-        OR = { 
-            has_pop_culture = native_american_minor
-            has_pop_culture = haida
-            has_pop_culture = inuit
-            has_pop_culture = dakota
-            has_pop_culture = cherokee
-            has_pop_culture = pueblo
-            has_pop_culture = cree
+        country = {
+			OR = { 
+				has_pop_culture = native_american_minor
+				has_pop_culture = haida
+				has_pop_culture = inuit
+				has_pop_culture = dakota
+				has_pop_culture = cherokee
+				has_pop_culture = pueblo
+				has_pop_culture = cree
             }
-        }
-        tag = HAD
+		tag = HAD
+		}
     }
 }
 
@@ -572,18 +572,18 @@ migration_chance = {
 		
 		modifier = {
         factor = 100
-        THIS = {
-        OR = { 
-            has_pop_culture = native_american_minor
-            has_pop_culture = haida
-            has_pop_culture = inuit
-            has_pop_culture = dakota
-            has_pop_culture = cherokee
-            has_pop_culture = pueblo
-            has_pop_culture = cree
-            }
-        }
+        country = {
+			OR = { 
+				has_pop_culture = native_american_minor
+				has_pop_culture = haida
+				has_pop_culture = inuit
+				has_pop_culture = dakota
+				has_pop_culture = cherokee
+				has_pop_culture = pueblo
+				has_pop_culture = cree
+			}
         tag = HAD
+		}
     }
 		
 #		modifier = {
@@ -728,7 +728,9 @@ colonialmigration_chance = {
 		modifier = {
 			factor = 10
 			unemployment = 0.99
-			NOT = { war = yes }
+			country = {
+				NOT = { war = yes }
+			}
 		}
 	}
 	
@@ -1162,7 +1164,7 @@ assimilation_chance = {
         }
 		AND = {
 			country = { primary_culture = french }
-			country = { primary_culture = { has_country_flag = french_assimilation } }
+			country = { has_country_flag = french_assimilation }
 		}
 		AND = {
 			has_pop_culture = czech
@@ -1202,46 +1204,7 @@ assimilation_chance = {
 			AND = { location = { continent = africa } country = { has_country_flag = new_world_nation }}
         }
     }
-
-    modifier = {
-        factor = -80
-        country = { NOT = { has_country_flag = african_integration_policy } }
-        is_culture_group = african_diaspora_cultures
-        OR = {
-            location = { continent = north_america }
-            location = { continent = south_america }
-        }
-    }
-
-    modifier = {
-        factor = -80
-        country = { NOT = { has_country_flag = african_integration_policy } }
-        OR = {
-            location = { continent = africa }
-            location = { continent = south_west_africa }
-            location = { continent = west_africa }
-            location = { continent = east_africa }
-            location = { continent = central_africa }
-        }
-        OR = {
-            is_culture_group = african_diaspora_cultures
-            is_culture_group = west_african
-           # is_culture_group = central_african
-            is_culture_group = east_african
-            is_culture_group = southern_african
-        }
-        OR = {
-            NOT = { country = { is_culture_group = african_diaspora_cultures } }
-            NOT = { country = { is_culture_group = west_african } }
-            #NOT = { country = { is_culture_group = central_african } }
-            NOT = { country = { is_culture_group = east_african } }
-            NOT = { country = { is_culture_group = southern_african } }
-            NOT = { country = { is_culture_group = arab } }
-        }
-    }
-
 }
-
 #general conversion mtth, same for all pops
 conversion_chance = {
     factor = 0.1
@@ -1287,7 +1250,6 @@ conversion_chance = {
         factor = -0.95
         OR = {
             has_pop_religion = jewish
-            has_pop_religion = mormon
             has_pop_religion = shiite
             has_pop_religion = sunni
             has_pop_religion = ibadi

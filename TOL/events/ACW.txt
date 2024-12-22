@@ -202,16 +202,27 @@ country_event = {
 		add_country_modifier = { name = no_more_war duration = 150 }
 		any_owned = {
             limit = {
-                is_core = NAF
-                NOT = {
-                    province_id = 222
-					province_id = 219
-					province_id = 220
-					province_id = 212
-					province_id = 213
-					province_id = 211
-					province_id = 60
-                }
+					province_id = 197
+					province_id = 194
+					province_id = 140
+					province_id = 195
+					province_id = 196
+					province_id = 192
+					province_id = 193
+					province_id = 199
+					province_id = 3284
+					province_id = 198
+					province_id = 201
+					province_id = 202
+					province_id = 204
+					province_id = 2555
+					province_id = 205
+					province_id = 206
+					province_id = 207
+					province_id = 208
+					province_id = 209
+					province_id = 210
+					province_id = 214
             }
             secede_province = NAF
         }
@@ -263,7 +274,6 @@ country_event = {
 
     immediate = {
         clr_country_flag = the_slavery_debate
-        NAF = { set_country_flag = the_slavery_debate }
         set_global_flag = american_civil_war_has_happened
         set_global_flag = acw_war_started
     }
@@ -335,8 +345,6 @@ country_event = {
 		tag = USA
 		NOT = {
 			exists = NAF
-			exists = FSA
-			primary_culture = yankee
 		}
 		has_global_flag = american_civil_war_has_happened
 		has_country_flag = click_the_button_already

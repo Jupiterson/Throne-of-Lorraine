@@ -618,6 +618,7 @@ political_decisions = {
 		effect = {
 			prestige = 5
 			set_country_flag = schwiss_weak
+			3253 = { add_core = THIS }
 			SWI = {
 				all_core = {
 					add_core = THIS
@@ -649,6 +650,7 @@ political_decisions = {
 			set_country_flag = allemia
 			badboy = 5	
 			411 = { add_core = ALE }
+			3253 = { add_core = ALE }
 			BAD_586 = { add_core = ALE }
 			FRA_412 = { add_core = ALE }
 			SWI = {
@@ -949,6 +951,7 @@ political_decisions = {
 		effect = {
 		set_country_flag = swabians_stronk
 		594 = { add_core = WUR }
+		593 = { add_core = WUR }
 		592 = { add_core = WUR }
 		}
 	}
@@ -971,6 +974,7 @@ political_decisions = {
 			prestige = 15
 			badboy = 15
 			set_country_flag = swabians_weak
+			593 = { add_core = BAV }
 			594 = { add_core = BAV }
 			WUR = {
 				all_core = {

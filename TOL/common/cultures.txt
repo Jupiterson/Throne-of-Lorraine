@@ -865,6 +865,23 @@ celtic = {
 			"O'Flaherty" "O' Gallchobhair" "Cotter" "O' Faoláin" "MacIntyre" "O'Queely"
 			"Corcu Loigde" O'Higgins O'Leary O'Mara Pearse }
 	}
+	
+	hibernite = {
+		color = { 45 180 41}
+		first_names = { Turlough Donal Muireadhach Conchobhar Feidlimidh Cathaoir Muchadh Áed Fonnchadh Brian Criomhthann Art Cathal 
+			Gearóid Muiris Tadhg Seán Niall Einrí Conn Eoghan Aonghus Comhghall Maeleachlain Diarmaid Flann Aerdghal 
+			Bearach Caoímhin Donnabhain Eíhmhín Fearghal Iarfhlaith Lorccán Mathúin Naomhán Oisín Pádraig Ríagáin 
+			Somhairle }
+
+		last_names = { "O'Donnell" "O'Neill" "O'Connor" "O'Brien" MacLochlainn MacMurrough MacWilliam
+			MacNamara "O'Reilly"  "FitzGerald" Kelly
+			"Meic Bráenáin" "MacMorrough Kavanagh" "Dál gCais" "Ua Fáeláin" "Shannon"
+			"FitzPatrick" "O Ruairc" "O'More" "O' Conchobair" "MacDermot" "O' Cellaigh"
+			"Mac Sweeney" "O'Doherty" "Burke" "O' Cathail" "O'Clery" "Mac Egan" "O' Fergail"
+			"O'Flaherty" "O' Gallchobhair" "Cotter" "O' Faoláin" "MacIntyre" "O'Queely"
+			"Corcu Loigde" O'Higgins O'Leary O'Mara Pearse }
+	}
+	
 	breton = {
 		color = {100 110 100}
 		first_names = { Uther Tristan Tudur Piran Jakez Elouan Frañsez Jaoua Paol Segal Alain Herri Hoel Michel Morcant Morgen Paol Padric Domuel Olieur Per Putrael Tibault Goennoc Framual Adoyre Lorens Teudur}
@@ -3888,8 +3905,25 @@ latin_american_cultures = {
 	leader = southamerican
 
 	unit = SouthAmericanGC
+	
+	kreolera = {
+		color = {218 14 19} #{European Zakatlanis}
+		first_names = { Alfontso Alvar Antso Aznar Belasko Bermudo Bernart Diaco Donato Egidio
+			Eneko Erramun Fortun Galindo Gartzia Gilen Gontzal Herramel Joanes
+			Ladron Lupo Luis Manrike MartÃ­n Munio Nuno Obeko Ordono Pelaio Piarres
+			Ramiro Rodrigo Vela Ximeno Zentulo Aitor Ander Andoni 
+		Ceferino Cosme Damián Endika "Frantzisko Xabierkoa" Inigo Imanol Iñaki 
+		Jon Joseba Josu Julen Koldobikal Sabino }
+
+		last_names = { Aguirre Ajuriaguerra Aldecoa Arana Aranzadi Arizmendiarrieta Armendáriz Aznar Balenciaga Berasategui
+		Bilbao Campión Churruca "de Amésquita" "de Azpilicueta" "de Erauso" "de RenterÃ­a" "de Ubisztongo" "de Navarra" "de Enekoatlan" "de LerÃ­n" "de Monteagudo" Escors  Echagüe Echave
+		 Echegaray EchevarrÃ­a Elorza Gaztañeta Ibarrola Ibárruri Irujo Lazcano Mendizabal Moneo
+		Nárdiz Olano Olave Oyarzábal Rotaeche Uzcudun Zamárraga Zárate Zavala Zumalacárregui }
+		radicalism = 10
+	}
+
 	mexican = { 
-		color = {172 64 10 } #{Zakatlan-Euskaldunen}
+		color = {194 71 12} #{Basque Mestizos}
 		first_names = { Alfontso Alvar Antso Aznar Belasko Bermudo Bernart Diaco Donato Egidio
 			Eneko Erramun Fernando Fortun Galindo Gartzia Gilen Gontzal Herramel Joanes
 			Ladron Lope Luis Manrike Martin Munio Nuno Obeko Ordono Pelaio Piarres
@@ -3905,9 +3939,11 @@ latin_american_cultures = {
 			Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui 
 			Topiltzin Totoquihuaztli 
 			Ueman Yaotl Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl 
-			Xochipepe Xochipilli Yaotl Zipactonal Zolin
+			Xochipepe Xochipilli Yaotl Zipactonal Zolin	
 		}
+		radicalism = 5
 	}
+	
 	north_andean = {
 		color = {211 230 216} #{Enseignants}
 		first_names = { Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin Bartehelemy
