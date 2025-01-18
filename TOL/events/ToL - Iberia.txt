@@ -10,14 +10,14 @@ country_event = {
 	trigger = {
 		tag = IBR
 		has_country_flag = sunni_country
-		NOT = { exists = AND exists = GNA }
+		NOT = { exists = ADU exists = GNA }
 	}
 
 	mean_time_to_happen = { days = 1 }
 
 	option = {
 		name = "Yes!"
-	    change_tag = AND
+	    change_tag = ADU
 		ai_chance = {
 			factor = 100
 		}

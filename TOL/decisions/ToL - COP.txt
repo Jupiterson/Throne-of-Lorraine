@@ -132,7 +132,7 @@ political_decisions = {
 			}
 			regenerative_furnaces = 1
 			business_banks = 1
-			market_functionality = 1
+			market_structure = 1
 			industrial_score = 50
         }
 
@@ -647,7 +647,7 @@ political_decisions = {
                     ideology = liberal
                     value = 0.35 
 			    }
-                ideology = liberal
+                ruling_party_ideology = liberal
 				pop_majority_ideology = liberal
 			}
         }
@@ -868,7 +868,7 @@ political_decisions = {
         }
         allow = { 
 			money = 100001
-			paddle_steamers = 1
+			steamers = 1
 			total_amount_of_ships = 20
 		}
         effect = {
@@ -931,7 +931,7 @@ political_decisions = {
         allow = { 
 			is_greater_power = yes
 			nationalism_n_imperialism = 1
-			screw_propelled_steamers = 1
+			iron_steamers = 1
 			naval_statistics = 1
 		}
         effect = {

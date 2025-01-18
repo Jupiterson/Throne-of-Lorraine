@@ -18,13 +18,13 @@ country_event = {
 	immediate = {
 		clr_country_flag = freedom_attempt_made
 		clr_country_flag = foreign_intervention
-		THIS = { government = republic }
+		THIS = { government = democracy }
 	}
 
 	option = {
 		name = "EVT800018OPTA"
 		any_pop = { militancy = -2 }
-		THIS = { government = republic }
+		THIS = { government = democracy }
 		random_country = {
 			limit = {
 				is_our_vassal = THIS

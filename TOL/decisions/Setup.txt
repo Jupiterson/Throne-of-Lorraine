@@ -148,7 +148,6 @@ political_decisions = {
 			2018 = { secede_province = THIS }
 			ENG_2067 = { secede_province = THIS }
 			ENG_1887 = { secede_province = THIS }
-			FRA_1884 = { secede_province = THIS }
 			FRA_1892 = { secede_province = THIS }
 			FRA_1893 = { secede_province = THIS }
 			ENG_2125 = { secede_province = THIS }
@@ -596,7 +595,7 @@ political_decisions = {
 			}
 
 			any_pop = {
-				limit = { OR = { has_pop_culture = akino_german has_pop_culture = metis has_pop_culture = french } }
+				limit = { OR = { has_pop_culture = akino_german has_pop_culture = afrikansin has_pop_culture = french } }
 				literacy = 0.35
 			}
 			any_pop = {
@@ -2373,11 +2372,11 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = 1836_set_up
-			GAB = { country_event = 2425397 }
+			GAB = { country_event = 24253971 }
 			BTU = { country_event = 2425398 }
-			LUN = { country_event = 2425399 }
-			RWA = { country_event = 2425400 }
-			BHA = { country_event = 2425401 }
+			LUN = { country_event = 24253991 }
+			RWA = { country_event = 24254001 }
+			UBH = { country_event = 2425401 }
 			KZB = { country_event = 2425402 }
 			KRW = { country_event = 2425402 }
 			BUG = { country_event = 2425402 }

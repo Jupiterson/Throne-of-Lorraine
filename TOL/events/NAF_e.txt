@@ -229,7 +229,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				has_pop_culture = afro_french
-				ideology = fascist
+				pop_majority_ideology = fascist
 			}
 			consciousness = 5
 			militancy = 5
@@ -255,7 +255,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				has_pop_culture = afro_french
-				ideology = fascist
+				pop_majority_ideology = fascist
 			}
 			consciousness = 5
 			militancy = 5
@@ -555,7 +555,7 @@ country_event = {
 			government = federal_democracy
 		}
 		NOT = { year = 1900 }
-		USA_201 = { owned_by = THIS }
+		USA_190 = { owned_by = THIS }
 	}
 
 	mean_time_to_happen = {
@@ -914,9 +914,9 @@ country_event = { ##### slavery revolt failed
 			value = -100
 		}
 		casus_belli = {
-			who = FSA
+			target = FSA
 			type = humiliate
-			duration = 12
+			months = 12
 		}
 		FSA = { country_event = 4413228 }
 	}

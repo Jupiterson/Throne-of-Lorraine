@@ -6228,7 +6228,7 @@ country_event = {
 					is_cultural_union = no
 					tag = ROM
 				}
-				NOT = { is_culture_group = british }
+				NOT = { is_culture_group = britannian }
 				NOT = { has_country_flag = post_colonial_country }
 				NOT = { tag = TTB }
 			}
@@ -7440,10 +7440,10 @@ country_event = {
 			THIS = {
 			any_owned = {
 			limit = {
-				is_core  = GFC
+				is_core  = GCF
 			}
 			remove_core = THIS
-			secede_province = GFC
+			secede_province = GCF
 		    }
 			}
 		}
@@ -11306,7 +11306,7 @@ country_event = {
 				factor = 4
 			}
 			scaled_militancy = {
-				ideology = anarcho_liberal
+				ideology = radical
 				factor = 8
 			}
 			scaled_militancy = {

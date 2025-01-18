@@ -160,7 +160,7 @@ country_event = {
 		year = 1841
 	}
 	
-	mean_time_to_happen  {
+	mean_time_to_happen = {
 	        days = 250
         }
 
@@ -287,7 +287,7 @@ country_event = {
 		remove_country_modifier = sgirur_trade_revenues
 		treasury = 500000
 		THIS = {
-			alliance = SGR
+			create_alliance = SGR
 		}
 		ai_chance = {
 			factor = 1

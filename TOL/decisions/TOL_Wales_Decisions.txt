@@ -204,7 +204,6 @@ purchase_scilly = {
 		effect = {
 			set_country_flag = buy_caribbean_island
 			country_event = 59001
-			days = 1
 		}
 	}
 	
@@ -310,7 +309,7 @@ purchase_scilly = {
 			3585 = { add_core = ENL }
 			ENL = {
 				any_pop = { 
-					limit = { has_pop_culture = Welsh } 
+					limit = { has_pop_culture = welsh } 
 					consciousness = 3
 					militancy = 2
 				}

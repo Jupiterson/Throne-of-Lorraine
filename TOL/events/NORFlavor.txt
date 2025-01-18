@@ -538,13 +538,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = "RIKSMAAL"
-		rich_strata = {
+		any_pop = { limit = { strata = rich }
 			militancy = -2
 			}
-		poor_strata = {
+		any_pop = { limit = { strata = poor }
 			militancy = 5
 			}
-		middle_strata = {
+		any_pop = { limit = { strata = middle }
 			militancy = 3
 			}
 		add_country_modifier = {
@@ -561,17 +561,15 @@ country_event = {
 		name = "LANDSMAAL"
 		prestige = 12
 		remove_accepted_culture = danish
-		any_pop = {
-		rich_strata = {
+		any_pop = { limit = { strata = rich }
 			militancy = 7
 			}
-		poor_strata = {
+		any_pop = { limit = { strata = poor }
 			militancy = -5
 			}
-		middle_strata = {
+		any_pop = { limit = { strata = middle }
 			militancy = -3
 			}
-		}
 		308 = { change_province_name = "Ålesund" }
 		305 = { change_province_name = "Trondheim" }
 		313 = { change_province_name = "Oslo" }

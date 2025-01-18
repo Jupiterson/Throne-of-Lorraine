@@ -628,7 +628,7 @@ country_event = {
 	mean_time_to_happen = { days = 3 }
 
 	option = {
-		name = "Down with the Qing"
+		name = "Down with the Qing!"
 		set_country_flag = rebellion_resources
 		NIA = {
 			capital_scope = {
@@ -641,7 +641,7 @@ country_event = {
 					sub_unit = { type = dragoon value = current }
 					sub_unit = { type = dragoon value = current }
 			}
-			define_general = { name = "Zhang Lexing" personality = defence_2.1 background = attack_5.1 } 
+			define_general = { name = "Zhang Lexing" personality = implacable background = cavalry_school } 
 		}
 		small_arms = 2000
 		canned_food = 3000
@@ -1209,12 +1209,10 @@ country_event = {
 			duration = -1
 		}
 		QNG = {
-			limit = {
-				any_owned_province = {
-					has_province_modifier = dadu_resistance
+				any_owned = {
+					limit = { has_province_modifier = dadu_resistance }
+					remove_province_modifier = dadu_resistance
 				}
-				remove_province_modifier = dadu_resistance
-			}
 		}
 		1616 = {
 			add_province_modifier = {
@@ -1223,7 +1221,7 @@ country_event = {
 			}
 		}	
 		political_reform = regionalism
-		social_reforms = no_schools
+		social_reform = no_schools
 		political_reform = none_voting
 		political_reform = serfdom
 		prestige = -50
@@ -1274,12 +1272,10 @@ country_event = {
 			duration = -1
 		}
 		QNG = {
-			limit = {
-				any_owned_province = {
-					has_province_modifier = dadu_resistance
+				any_owned = {
+					limit = { has_province_modifier = dadu_resistance }
+					remove_province_modifier = dadu_resistance
 				}
-			}
-			remove_province_modifier = dadu_resistance
 		}
 		1616 = {
 			add_province_modifier = {
@@ -1288,7 +1284,7 @@ country_event = {
 			}
 		}	
 		political_reform = regionalism
-		social_reforms = no_schools
+		social_reform = no_schools
 		political_reform = none_voting
 		political_reform = serfdom
 		prestige = -50
@@ -1911,7 +1907,7 @@ country_event = {
 	option = {
 		name = "We agree to the pact"
 		set_country_flag = agreed_to_baohuanghui_plot
-		relations = {
+		relation = {
 			who = TPG
 			value = 200
 		}
@@ -1924,7 +1920,7 @@ country_event = {
 	option = {
 		name = "It is too risky"
 		prestige = -10
-		relations = {
+		relation = {
 			who = TPG
 			value = -200
 		}
@@ -2007,7 +2003,7 @@ country_event = {
 		remove_country_modifier = chinese_provincial_government
 		prestige = -5
 		leave_alliance = QNG
-		relations = {
+		relation = {
 			who = QNG
 			value = -200
 		}
