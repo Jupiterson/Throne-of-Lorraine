@@ -303,10 +303,7 @@ country_event = {
 			government = theocracy
 		}
 		NOT = {
-		OR = {
-		tag = VNR
 		tag = VIC
-		}
 		}
 		civilized = yes
 		NOT = { vote_franschise = none_voting }
@@ -469,13 +466,6 @@ country_event = {
 			has_country_flag = Government_Democracy
 		}
 		vote_franschise = none_voting
-		NOT = {
-			government = prov_gov_liberal
-			government = prov_gov_liberal_two
-			government = prov_gov_liberal_three
-			government = prov_gov_communist
-			government = prov_gov_conservative
-		}
 		OR = {
 			ruling_party_ideology = conservative
 			ruling_party_ideology = reactionary
@@ -779,7 +769,6 @@ country_event = {
 			tag = CSA
 			tag = DES
 			tag = FSA
-			tag = UIL
 			tag = UNB
 			tag = UBD
 			tag = INO
@@ -3043,9 +3032,9 @@ country_event = {
 		name = "Ok"
 		ITA = { all_core = { add_core = ITS } }
 		ITA = { all_core = { remove_core = ITA } }
-	}
-	ai_chance = {
-		factor = 100
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 
@@ -3182,7 +3171,6 @@ country_event = {
 					government = colonial_company
 					government = parliamentary_republic
 					government = dominion
-					government = viceroyalty
 					government = fascist_dictatorship
 					government = absolute_monarchy
 					government = prussian_constitutionalism
@@ -3237,7 +3225,6 @@ country_event = {
 				owner = {
 					OR = { 
 						government = dominion
-						government = viceroyalty
 					}
 				}
 			}

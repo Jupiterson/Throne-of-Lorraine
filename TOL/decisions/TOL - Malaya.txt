@@ -1030,7 +1030,7 @@ political_decisions = {
         }
 
         allow = {
-			set_country_flag = melaka_purchase
+            NOT = { has_country_flag = melaka_purchase }
             war = no
             money = 55000
             1384 = {

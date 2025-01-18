@@ -497,7 +497,7 @@ province_event = {
 	desc = "EVTDESC98810"
 
 	trigger = {
-		region = FRA_1884
+		region = ENG_1887
 		owned_by = THIS
 		controlled_by = THIS
 		any_neighbor_province = {
@@ -1170,7 +1170,7 @@ province_event = {
 				any_pop = { militancy = -3 }
 			}
 		}
-		NIG = { add_accepted_culture = teda }
+		NIG = { add_accepted_culture = alejo }
 	}
 }
 
@@ -1272,7 +1272,7 @@ province_event = {
 				any_pop = { militancy = -3 }
 			}
 		}
-		CHD = { add_accepted_culture = fur }
+		CHD = { add_accepted_culture = alejo }
 	}
 }
 
@@ -1340,7 +1340,7 @@ province_event = {
 				any_pop = { militancy = -3 }
 			}
 		}
-		CHD = { add_accepted_culture = fur }
+		CHD = { add_accepted_culture = alejo }
 	}
 }
 
@@ -1694,7 +1694,7 @@ province_event = {
 
 	trigger = {
 		OR = {
-			region = BEL_1977
+			region = FRA_1977
 			region = POR_2005
 		}
 		owned_by = THIS
@@ -1756,7 +1756,7 @@ province_event = {
 
 	trigger = {
 		#region = BEL_1992
-		region = BEL_1984
+		region = FRA_3553
 		owned_by = THIS
 		controlled_by = THIS
 		any_neighbor_province = {
@@ -1812,7 +1812,7 @@ province_event = {
 	desc = "EVTDESC98840"
 
 	trigger = {
-		region = BEL_1984
+		region = FRA_3553
 		owned_by = THIS
 		controlled_by = THIS
 		any_neighbor_province = {
@@ -1858,7 +1858,7 @@ province_event = {
 				any_pop = { militancy = -3 }
 			}
 		}
-		CGO = { add_accepted_culture = kuba }
+		CGO = { add_accepted_culture = forest_bantu }
 	}
 }
 
@@ -1925,7 +1925,7 @@ province_event = {
 	desc = "EVTDESC98845"
 
 	trigger = {
-		region = BEL_1977
+		region = FRA_1977
 		owned_by = THIS
 		controlled_by = THIS
 		any_neighbor_province = {
@@ -2017,7 +2017,7 @@ province_event = {
 				any_pop = { militancy = -3 }
 			}
 		}
-		CNG = { add_accepted_culture = kuba }
+		CNG = { add_accepted_culture = forest_bantu }
 	}
 }
 
