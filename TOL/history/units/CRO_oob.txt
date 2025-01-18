@@ -1,0 +1,49 @@
+army = {
+	name = "Kraljevsko Domobranstvo"
+	location = 771
+	regiment = {
+		name= "1.Domobranska Pukovnija"
+		type = infantry
+		home = 771
+	}
+	
+	regiment = {
+		name= "2.Domobranska Pukovnija"
+		type = infantry
+		home = 774
+	}
+	
+	regiment = {
+		name= "3.Domobranska Pukovnija"
+		type = infantry
+		home = 783
+	}
+	
+	regiment = {
+		name= "4.Domobranska Pukovnija"
+		type = infantry
+		home = 783
+	}
+	
+	regiment = {
+		name= "1.Topnicki Korpus"
+		type = artillery
+		home = 789
+	}
+
+	regiment = {
+		name= "Hrvatsko Konjanistvo"
+		type = hussar
+		home = 779
+	}
+}
+
+leader = {
+	name = "Josip Jelacic"
+	picture = cro_gen_jelacic
+	type = land
+	date = 1836.1.1
+	personality = daring
+	background = war_college
+	prestige = 0.1
+}

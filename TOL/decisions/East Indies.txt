@@ -33,9 +33,10 @@ political_decisions = {
 		picture = brunei_protectorate
 		potential = {
 			OR = {
-				tag = ENG
-				tag = SCO
+				tag = CLT
+				is_culture_group = britannian
 			}
+			1395 = { owner = { civilized = yes capital_scope = { {continent = europe } } } }
 			OR = {
 				SWK = {
 					all_core = {

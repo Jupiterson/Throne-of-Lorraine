@@ -970,14 +970,19 @@ province_event = {
 		controlled_by = THIS
 		owned_by = THIS
 		is_colonial = no
-		is_overseas = no
 		OR = {
 			is_primary_culture = yes
 			is_accepted_culture = yes
+			any_neighbor_province = {
+				AND = {
+					is_core = THIS
+					controlled_by = THIS
+				}
+			}
 		}
-		any_neighbor_province = { is_core = THIS }
 		owner = {
-			civilized = yes
+			tag = THIS
+			nationalism_n_imperialism = 1
 			is_vassal = no
 			war = no
 		}

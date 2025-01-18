@@ -1528,6 +1528,13 @@ sayings_of_the_dutch = {
 	icon = 5
 }
 
+thorbecke_reforms = {
+	ruling_party_support = 0.05
+	core_pop_militancy_modifier = -0.02
+	core_pop_consciousness_modifier = -0.01
+	icon = 7
+}
+
 european_military_mission = {
 	research_points_modifier = 0.02
 	global_pop_militancy_modifier = 0.02 #0.05
@@ -3142,23 +3149,15 @@ red_shirts = {
 	icon = 18
 }
 
-###HFM Modifiers###
+## Scottish Indonesia ##
 
-###Dutch###
-kpm_shipping = {
+rpsc_shipping = {
 	farm_rgo_size = 0.5
 	rich_income_modifier = 0.01
 	icon = 1
 }
 
-thorbecke_reforms = {
-	ruling_party_support = 0.05
-	core_pop_militancy_modifier = -0.02
-	core_pop_consciousness_modifier = -0.01
-	icon = 7
-}
-
-bpm_oil = {
+cpc_oil = {
 	local_RGO_output = 0.05
 	farm_rgo_size = 0.5
 	icon = 1
@@ -5506,7 +5505,7 @@ sgirur_trade_revenues = {
 	icon = 9
 }
 
-## ToL Antartida ##
+## Antartida ##
 
 antartidan_capital = {
 	local_RGO_output = 0.5
@@ -5527,4 +5526,58 @@ patricks_legion = {
 	mobilisation_size = 0.1
 	org_regain = 0.1
 	icon = 15
+}
+
+## ToL Croatia ##
+
+croatian_academy = {
+	prestige = 0.1
+	research_points_modifier = 0.15
+	pop_militancy_modifier = -0.01
+	pop_consciousness_modifier = 0.01
+	icon = 3
+}
+
+yugoslav_academy = {
+	prestige = 0.1
+	research_points_modifier = 0.2
+	pop_militancy_modifier = -0.01
+	pop_consciousness_modifier = 0.01
+	icon = 3
+}
+
+croatian_cultural_unity = {
+	assimilation_rate = 3.5
+	icon = 19
+}
+
+pearl_of_mediterranean = {
+	assimilation_rate = 0.5
+	immigrant_attract = 3
+	population_growth = 0.02
+	local_RGO_output = 0.4
+	local_RGO_throughput = 0.4
+	local_factory_input = 0.3
+	local_factory_output = 0.3
+	local_factory_throughput = 0.3
+	local_repair = 0.5
+	local_ship_build = -0.5
+	goods_demand = 0.3
+	rich_income_modifier = 0.5
+	icon = 9
+}
+
+## ToL Serbia ##
+
+balkan_rulers = {
+	administrative_efficiency_modifier = 0.2
+	cb_generation_speed_modifier = 0.1
+	diplomatic_points_modifier = 0.3
+	global_assimilation_rate = 0.4
+	min_military_spending = 0.3
+	research_points = 0.15
+	RGO_throughput = 0.1
+	RGO_output = 0.15
+	prestige = 0.15
+	icon = 5
 }

@@ -6,8 +6,9 @@
 	fire_only_once = yes
 	major = yes
 
-     trigger = {
-		NOT = { has_global_flag = tiniri_disabled exists = TIN exists = MGH exists = SQI }
+    trigger = {
+		has_global_flag = tiniri_enabled
+		NOT = { exists = TIN exists = MGH exists = SQI }
 		year = 1866
 		OR = {
 			tag = CLN
@@ -4900,4 +4901,109 @@ country_event = {
 		SUD = { all_core = { add_core = EGY } }
 		COP = { all_core = { add_core = EGY } }
 	}
+}
+
+# European conquest of Hibernia #
+	
+country_event = {
+	id = 100202
+	title = "fenian_war.T"
+	desc = "fenian_war.D"
+	picture = "boer_war"
+
+    fire_only_once = yes
+
+    trigger = {
+		OR = {
+			any_owned_province = { is_core = SAF }
+			SAF = { vassal_of = THIS }
+		}
+        HBR = {
+            OR = {
+                neighbour = THIS
+                AND = {
+                    neighbour = SAF
+                    SAF = { vassal_of = THIS }
+                }
+            }
+            is_vassal = no
+            war = no
+        }
+        war = no
+        NOT = {
+				capital_scope = { continent = africa }
+				capital_scope = { continent = west_africa }
+				capital_scope = { continent = central_africa }
+				capital_scope = { continent = east_africa }
+				capital_scope = { continent = south_west_africa }
+				has_global_flag = fenian_war
+				has_global_flag = no_fenian_war
+				truce_with = HBR
+        }
+		}
+        year = 1876
+    }
+
+    mean_time_to_happen = {
+        months = 24
+        modifier = {
+            factor = 0.25
+            year = 1880
+        }
+    }
+
+    option = {
+        name = "fenian_war.A"
+        set_global_flag = fenian_war
+        badboy = 3
+        random_country = {
+            limit = { tag = HBR exists = yes }
+            add_casus_belli = { target = THIS type = conquest_any months = 60 }
+        }
+        random_country = {
+            limit = {
+                tag = SAF
+                exists = yes
+                vassal_of = THIS
+                NOT = { alliance_with = THIS }
+            }
+            create_alliance = THIS
+        }
+		HBR = {
+            set_country_flag = uncivilize_on_conquest
+            add_country_modifier = { name = small_country_draft duration = 1095 }
+        }
+        diplomatic_influence = {
+            who = HBR
+            value = -200
+        }
+        leave_alliance = HBR
+        war = {
+            target = HBR
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = humiliate_no_infamy }
+        }
+        }
+        ai_chance = {
+            factor = 0.95
+            modifier = { factor = 0 badboy = 0.87 }
+        }
+    }
+
+    option = {
+        name = "fenian_war.B"
+        set_global_flag = no_fenian_war
+        prestige = -25
+        badboy = -2
+        relation = {
+            who = HBR
+            value = -50
+        }
+        ai_chance = {
+            factor = 0.05
+            modifier = { factor = 0.02 NOT = { has_country_modifier = recently_lost_war } NOT = { badboy = 0.87 } }
+            modifier = { factor = 0.02 war = no NOT = { badboy = 0.87 } }
+            modifier = { factor = 0.02 is_disarmed = no NOT = { badboy = 0.87 } }
+        }
+    }
 }

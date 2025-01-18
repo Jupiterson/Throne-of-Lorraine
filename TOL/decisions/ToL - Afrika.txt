@@ -2200,7 +2200,7 @@ political_decisions = {
 		potential = {
 		tag = CLD
 		has_leader = "Morven Stewart"
-		political_reform_name = none_voting
+		vote_franchise = none_voting
 		NOT = { has_country_flag = new_world_nation }
 		}
 
@@ -2307,7 +2307,10 @@ political_decisions = {
 		
 			allow = {
 				war = no
-				is_secondary_power = yes
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
 				invention = mission_to_civilize		
 			}
 		
@@ -2336,7 +2339,10 @@ political_decisions = {
 		
 			allow = {
 				war = no
-				is_secondary_power = yes
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
 				invention = colonial_negotiations
 				revolution_n_counterrevolution = 1				
 			}
@@ -2425,7 +2431,10 @@ political_decisions = {
 		
 			allow = {
 				war = no
-				is_secondary_power = yes
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
 				invention = mission_to_civilize		
 			}
 		
@@ -2619,7 +2628,10 @@ political_decisions = {
 		
 			allow = {
 				war = no
-				is_secondary_power = yes
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
 				invention = mission_to_civilize		
 			}
 		
@@ -2648,7 +2660,10 @@ political_decisions = {
 		
 			allow = {
 				war = no
-				is_secondary_power = yes
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
 				invention = colonial_negotiations
 				revolution_n_counterrevolution = 1				
 			}

@@ -611,6 +611,17 @@ nouvelleorleans;Jungle;;;;;;;;;
 boisselot;Farmlands;;;;;;;;;
 drummond;Grassland Hills;;;;;;;;;
 conchobar;Grassland;;;;;;;;;
+split;Farmlands;;;;;;;;;
+osijek;Farmlands;;;;;;;;;
+varazdin;Grassland;;;;;;;;;
+rijeka;Grassland;;;;;;;;;
+senj;Montane Grassland;;;;;;;;;
+vrbaskigrad;Forest;;;;;;;;;
+soli;Farmlands;;;;;;;;;
+konstanza;Marsh;;;;;;;;;
+varna;Farmlands;;;;;;;;;
+skopje;Grassland Hills;;;;;;;;;
+nis;Grassland Hills;;;;;;;;;
 STRATA_POOR;Poor;Classes défavorisées;Arm;;Pobre;;;;;;;;;
 STRATA_MIDDLE;Middle;Classes moyennes;Mittel;;Clase media;;;;;;;;;
 STRATA_RICH;Rich;Classes supérieures;Reich;;Rico;;;;;;;;;
@@ -628,19 +639,27 @@ FROM_PROV_SIZE;Province Size: x;Taille de la province : x ;Provinzgröße: x;;Tama
 BASE_RGO_SIZE;Base Workforce: ;Main-d'œuvre de base : ;Basis-Arbeitskräfte:;;Pobl. activa básica: ;;;;;;;;;
 REB;Rebels;Rebelles;Partisanen;;Rebeldes;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ALB;Albania;Albanie;Albanien;;Albania;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-BOS;Bosnia;Bosnie-Herzeovine;Bosnien-Herzegowina;;Bosnia-Herzegovina;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BOS;Bosnia;;;;;;;;
 BUL;Bulgaria;Bulgarie;Bulgarien;;Bulgaria;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-CRO;Croatia;Croatie;Kroatien;;Croacia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CRO;Croatia;x
+YUG_democracy;The Federation of Yugoslavia;x
+YUG_hms_government;The Kingdom of Yugoslavia;x
+YUG_absolute_monarchy;The Kingdom of Yugoslavia;x
+YUG_fascist_dictatorship;The National State of Yugoslavia;;x
+YUG_proletarian_dictatorship;The Socialist Federative Republic of Yugoslavia;x
 CYP;Cyprus;Chypre;Zypern;;Chipre;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 GRE;Free State of Greece;Gr?e;Griechenland;;Grecia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 MOL;Moldavia;Moldavie;Moldawien;;Moldavia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 MON;Montenegro;Mont??ro;Montenegro;;Montenegro;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ROM;Romania;Roumanie;Rum?ien;;Rumania;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-SER;Serbia;Serbie;Serbien;;Serbia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SER;Serbia;x
+SER_absolute_empire;The Serbian Empire;x
+SER_semi_constitutional_empire;The Serbian Empire;x
+SER_constitutional_empire;The Serbian Empire;x
 WAL;Wallachia;Valachie;Walachei;;Valaquia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 SWI;Switzerland;Suisse;Schweiz;;Suiza;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 SLO;Cilli;Slov?ie;Slowenien;;Eslovenia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-AUS;Duchy of Austria;Autriche;?terreich;;Austria;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AUS;The Duchy of Austria;Autriche;?terreich;;Austria;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BOH;Bohemia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 DZG;Danzig;Dantzig;Danzig;;Danzig;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 KRA;Presburg;Cracovie;Krakau;;Cracovia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -808,7 +827,6 @@ REB_ADJ;Rebel;Rebelle;Rebellisch;;Partisanos;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 GER_ADJ;German;Allemand;Deutsch;;Alemana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ENG_ADJ;British;Britannique;Britisch;;Brit?ica;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 RUS_ADJ;Russian;Russe;Russisch;;Rusa;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-USA_ADJ;Amau;Am?icain;Amerikanisch;;Columbiana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 JAP_ADJ;Japanese;Japonais;Japanisch;;Japonesa;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 FRA_ADJ;French;Fran?is;Franz?isch;;Francesa;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ITA_ADJ;Italian;Italien;Italienisch;;Italiana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -837,7 +855,7 @@ SWI_ADJ;Swiss;Suisse;Schweizerisch;;Suiza;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 POR_ADJ;Portuguese;Portugais;Portugiesisch;;Portuguesa;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 SPA_ADJ;Toledan;Espagnol;Spanisch;;Spanish;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ALB_ADJ;Albanian;Albanais;Albanisch;;Alana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-BOS_ADJ;Bosnian;Bosniaque;Bosnisch;;Bosnia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BOS_ADJ;Bosnian;;;;;;;;
 BUL_ADJ;Bulgarian;Bulgare;Bulgarisch;;B?gara;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 GRE_ADJ;Greek;Grec;Griechisch;;Griega;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 MON_ADJ;Montenegrin;Mont??rin;Montenegrinisch;;Montenegrina;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1009,7 +1027,6 @@ bulgarian;Bulgarian;Bulgare;Bulgarisch;;B?gara;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,
 romanian;Romanian;Roumain;Rum?isch;;Rumana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 albanian;Albanian;Albanais;Albanisch;;Albanesa;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 slovene;Slovene;Slov?e;Slowenisch;;Eslovena;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-bosniak;Bosniak;Bosniaque;Bosnisch;;Bosnia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 REMOVE_west_slavic;West Slavic;Slave de l'ouest;Westslawisch;;Eslava del oeste;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 czech;Bohemian;Tch?ue;Tschechisch;;Checa;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 polish;Polish;Polonais;Polnisch;;Polaca;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1119,7 +1136,6 @@ cree;Cree;Cri;Creeisch;;Cree;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 navajo;Navajo;Navajo;Navajonisch;;Navajo;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 native_american_minor;Noorden-Colombian Minor;Petites tribus am?indiennes;Uramerikanisch;;Nativo-Columbiana menor;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 neo_european_cultures;Neo European Cultures;Cultures n?-europ?nnes;Neoeurop?sch;;Culturas neoeuropeas;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-yankee;Amou;Yankee;Yankee-Amerikanisch;;Yanqui;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 latin_american_cultures;Latin Columbian Cultures;Cultures latino-am?icaines;Lateinamerikanisch;;Culturas latinoColumbianas;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 mexican;Mestizoa;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 kreolera;Kreolera;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6978,13 +6994,13 @@ BOL_radical;Partido Radical;Partido Radical;Partido Radical;;Partido Radical;;;;
 BOL_socialist;Partido Socialista;Partido socialiste;Partido Socialist;;Partido Socialista;;;;;;;;;
 BOL_communist;Partido Comunista;Partido communiste;Partido Communist;;Partido Comunista;;;;;;;;;
 BOL_fascist;Partido Fascista;Partido fasciste;Partido Fascist;;Partido Fascista;;;;;;;;;
-BOS_conservative;Royal Faction;Faction royale;Königsfraktion;;Facción real;;;;;;;;;
-BOS_liberal;The Liberal Faction;Faction libérale;Die liberale Fraktion;;La facción liberal;;;;;;;;;
-BOS_reactionary;The Nationalist Faction;Faction nationaliste;Die nationalistische Fraktion;;La facción nacionalista;;;;;;;;;
-BOS_radical;The Radical Faction;Faction radicale;Die radikale Fraktion;;La facción radical;;;;;;;;;
-BOS_socialist;The Socialist Faction;Faction socialiste;Die sozialistische Fraktion;;La facción socialista;;;;;;;;;
-BOS_communist;The Communist Faction;Faction communiste;Die kommunistische Fraktion;;La facción comunista;;;;;;;;;
-BOS_fascist;The Fascist Faction;Faction fasciste;Die faschistische Fraktion;;La facción fascista;;;;;;;;;
+BOS_conservative;Demokratska Akcija;;;;;;;;;;;;
+BOS_liberal;Narodna Stranka;;;;;;;;;;;;
+BOS_reactionary;Stranka Dinastije Kotromanic;;;;;;;;;;;;
+BOS_radical;Anarhisticka Partija;;;;;;;;;;;;
+BOS_socialist;Socijaldemokratska Partija;;;;;;;;;;;;
+BOS_communist;Bosanska Radnicka Fronta;;;;;;;;;;;;
+BOS_fascist;Usta?ki Revolucionarni Pokret;;;;;;;;;;;;
 BRA_liberal;Liberaldem. Partei;Liberaldem. Partei;Liberaldem. Partei;;Liberaldem. Partei;;;;;;;;;
 BRA_conservative;Zentrumspartei;Zentrumspartei;Zentrumspartei;;Zentrumspartei;;;;;;;;;
 BRA_liberal_2;Nationalliberale ;Nationalliberale ;Nationalliberale ;;Nationalliberale ;;;;;;;;;
@@ -9119,7 +9135,7 @@ PROV674;Constanta;Constanta;Constanta;;Constantsa;;;;;;;;;
 PROV675;Tulcea;Tulcea;Tulcea;;Tulcea;;;;;;;;;
 PROV676;Chisinau;Chisinau;Chisinau;;Chisinau;;;;;;;;;
 PROV677;Akkerman;;;;;;;;;;;;;
-PROV678;Izmail;Izmail;Izmail;;Izmail;;;;;;;;;
+PROV678;Brusewitz;;;;;;;;;
 PROV679;Kolberg;Kolberg;Kolberg;;Kolberg;;;;;;;;;
 PROV680;Köslin;Koszalin;Koslin;;Koslin;;;;;;;;;
 PROV681;Küstrin;Küstrin;Küstrin;;Kustrin;;;;;;;;;
@@ -9191,7 +9207,7 @@ PROV766;Olbia;Sassari;Sassari;;Sassari;;;;;;;;;
 PROV769;Postojna;Postojna;Postojna;;Postojna;;;;;;;;;
 PROV770;Pola;Pula;Pola;;Pola;;;;;;;;;
 PROV771;Zagreb;Zagreb;Zagreb;;Zagreb;;;;;;;;;
-PROV773;Karlovac;Karlovac;Karlovac;;Karlovac;;;;;;;;;
+PROV773;Ogulin;;;;;;;;;
 PROV774;Senj;Senj;Senj;;Senj;;;;;;;;;
 PROV775;Varaždin;Varaždin;Varazdin;;Varazdin;;;;;;;;;
 PROV776;Bjelovar;Bjelovar;Bjelovar;;Bjelovar;;;;;;;;;
@@ -9202,16 +9218,15 @@ PROV780;Split;Split;Split;;Split;;;;;;;;;
 PROV781;Zadar;Zadar;Zadar;;Zadar;;;;;;;;;
 PROV782;Dubrovnik;Dubrovnik;Dubrovnik;;Dubrovnik;;;;;;;;;
 PROV783;Vrhbosna;;;;;;;;;
-PROV784;Bihac;Bihac;Bihac;;Bihac;;;;;;;;;
-PROV785;Banja Luka;Banja Luka;Banja Luka;;Banja Luka;;;;;;;;;
+PROV784;Bihac;;;;;;;;;
+PROV785;Vrbaski Grad;;;;;;;;;
 PROV786;Soli;;;;;;;;;
-PROV787;Foca;Foca;Foca;;Foca;;;;;;;;;
 PROV788;Mostar;Mostar;Mostar;;Mostar;;;;;;;;;
 PROV789;Livno;Livno;Livno;;Livno;;;;;;;;;
 PROV790;Kitwe;Kitwe;Kitwe;;Kitwe;;;;;;;;;
 PROV791;Mitrovica;Mitrovica;Mitrovica;;Mitrovica;;;;;;;;;
 PROV793;Vukovar;Vukovar;Vukovar;;Vukovar;;;;;;;;;
-PROV794;Belgrade;Belgrade;Belgrad;;Belgrado;;;;;;;;;
+PROV794;Beograd;Belgrade;Belgrad;;Belgrado;;;;;;;;;
 PROV795;Bor;Bor;Bor;;Bor;;;;;;;;;
 PROV796;Kragujevac;Kragujevac;Kragujevac;;Kragujevac;;;;;;;;;
 PROV797;Užice;Užice;Uzice;;Uzice;;;;;;;;;
@@ -11323,7 +11338,7 @@ ECU_2279;Karu Chinchaysuyu;Karu Chinchaysuyu;Karu Chinchaysuyu;;Karu Chinchaysuy
 HAI_2213;Nuova Sardegna;Nuova Sardegna;Nouva Sardegna;;Nouva Sardegna;;;;;;;;;
 SWE_318;Norrland;Norrland;Norrland;;Norrland;;;;;;;;;
 TUR_853;Albania;Albanie;Albanien;;Albania;;;;;;;;;
-TUR_788;Bosnia;Bosnie;Bosnien;;Bosnia;;;;;;;;;
+TUR_788;Bosna;Bosnie;Bosnien;;Bosnia;;;;;;;;;
 MOL_673;Moldavia;Moldavie;Moldau;;Moldavia;;;;;;;;;
 WAL_665;Wallachia;Valachie;Walachei;;Valaquia;;;;;;;;;
 SPA_498;Catalonia;Catalogne;Katalonien;;Cataluña;;;;;;;;;
@@ -11376,14 +11391,14 @@ SPA_484;Extremadura;Estrémadure;Extremadura;;Extremadura;;;;;;;;;
 SPA_503;Valencia;Valence;Valencia;;Valencia;;;;;;;;;
 SPA_487;Castilla la Nueva;Nouvelle-Castille;Castilla la Nueva;;Castilla La Nueva;;;;;;;;;
 TUR_832;Thessalía;Thessalía;Thessalía;;Tesalia;;;;;;;;;
-TUR_803;Southern Serbia;Serbie du sud;Südserbien;;Serbia Meridional;;;;;;;;;
-SER_794;Northern Serbia;Serbie du nord;Nordserbien;;Serbia Septentrional;;;;;;;;;
+TUR_803;Pomoravlje;;;;;;;;;
+SER_794;Sumadija;;;;;;;;;
 REMOVE_TUR_806;West Macedonia;Macédoine de l'ouest;Westmazedonien;;Macedonia Occidental;;;;;;;;;
 EGY_843;Nisia Aigaiou;Nisia Aigaiou;Nisia Aigaiou;;Nisia Aigaiou;;;;;;;;;
 TUR_855;Cyprus;Chypre;Zypern;;Chipre;;;;;;;;;
-TUR_810;Bulgaria;Bulgarie;Bulgarien;;Bulgaria;;;;;;;;;
+TUR_810;Bulgariya;;;;;;;;;
 TUR_674;Dobrudja;Dobrudja;Dobrudja;;Dobrudja;;;;;;;;;
-MON_2582;Montenegro;Monténégro;Montenegro;;Montenegro;;;;;;;;;
+MON_2582;Crna Gora;Monténégro;Montenegro;;Montenegro;;;;;;;;;
 FRA_458;Aquitaine;Aquitaine;Aquitaine;;Aquitania;;;;;;;;;
 FRA_442;Poitou;Poitou;Poitou;;Poitou;;;;;;;;;
 FRA_461;Languedoc;Languedoc;Languedoc;;Languedoc;;;;;;;;;

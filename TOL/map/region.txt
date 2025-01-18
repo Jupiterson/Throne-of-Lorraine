@@ -357,7 +357,7 @@ SWE_331 = { 331 374 368 348 3364 } #Baltics
 
 AUS_612 = { 612 613 615 735 734 } #Tirol
 
-AUS_613 = { 616 617 618 3288 } #K rnten-Steiermark
+AUS_613 = { 616 617 618 } #K rnten-Steiermark
 
 AUS_624 = { 633 623 624 3286 } #Burgenland,Deutsch Mark
 
@@ -387,21 +387,19 @@ RUS_715 = { 715 711 713 716 } #West Galicia
 
 AUS_726 = { 726 727 728 2568 } #Lombardia
 
-#AUS_733 = { 733 736 } #Friuli
-
 AUS_729 = { 729 730 731 732 733 3262 } #Venetia
 
-AUS_736 = { 770 778 736 737 } #Istria
+AUS_736 = { 770 778 736 737 769 3288 } #Istria
 
-AUS_768 = { 767 768 3282 3370 769 } #Slovenia
+AUS_768 = { 767 768 3282 3370 } #Slovenia
 
-AUS_771 = { 771 772 773 775 776 3289 } #Croatia
+AUS_771 = { 771 772 773 774 775 776 784 3289 } #Croatia
 
-AUS_777 = { 779 793 777 3283 } #Slavonia
+AUS_777 = { 779 793 777 791 3615 } #Slavonia
 
-AUS_780 = { 780 781 782 774 2582 } #Dalmatia
+AUS_780 = { 780 781 782 2582 } #Dalmatia
 
-AUS_2538 = { 2538 792 3330 3331 } #Vojvodina
+AUS_2538 = { 2538 792 3283 3330 3331 } #Vojvodina
 
 
 ### Italy
@@ -439,33 +437,35 @@ TUR_674 = { 674 675 818 3371 3372 } #Dobrudja
 
 MOL_676 = { 676 3279 673 } #Bessarabia
 
-TUR_788 = { 783 789 788 786 785 784 } #Bosnia
+TUR_788 = { 783 788 789 785 786 787 3614 } #Bosnia
 
-SER_794 = { 794 797 795 796 3347 3374 791 787 } #Northern Serbia
+SER_794 = { 794 797 795 796 3347 3374 } #Northern Serbia
 
 MON_2582 = { 2583 2569 3375 2577 804 } #Montenegro
 
-TUR_803 = { 798 802 3346 } #Southern Serbia
+TUR_803 = { 798 799 3346 } #Southern Serbia
 
-TUR_805 = { 805 819 820 821 822 3342 } #Southern Macedonia
+SER_802 = { 802 803 3420 } #Kosovo
 
-TUR_806 = { 806 807 1780 3291 3421 3305 } #Northern Macedonia
+TUR_805 = { 805 819 820 821 822 3306 3342 } #Southern Macedonia
+
+TUR_806 = { 806 807 1780 3291 3305 } #Northern Macedonia
 
 TUR_809 = { 815 817 808 816 3303 3373 } #Eastern Rumelia
 
-TUR_810 = { 809 810 811 812 813 814 799 } #Bulgaria
+TUR_810 = { 809 810 811 812 813 814 3421 } #Bulgaria
 
 TUR_823 = { 823 829 830 3304 825 } #Eastern Macedonia
 
 GRE_826 = { 842 839 826 827 840 841 } #Peloponnese
 
-TUR_832 = { 832 831 833  824 3306 } #Thessalia
+TUR_832 = { 832 831 833 824 } #Thessalia
 
 GRE_837 = { 834 837 836 835 838 } #Attica - Central Greece
 
 EGY_843 = { 848 843 844 846 847 845 } #Aegean Islands
 
-TUR_853 = { 849 853 852 851 850 3307 3308 3420 803 } #Albania
+TUR_853 = { 849 853 852 851 850 3307 3308 } #Albania
 
 TUR_855 = { 855 856 857 } #Cyprus
 

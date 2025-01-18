@@ -127,60 +127,6 @@ political_decisions = {
 		ai_will_do ={ factor = 1 }
 	}
 	
-	ottoman_change_culture = {
-		picture = ottoman_symbol
-		potential = {
-		tag = TUR
-		NOT = { has_country_flag = ottoman_change_culture }
-		}
-
-		allow = {
-			war = no			
-			prestige = 120
-			revolution_n_counterrevolution = 1
-			empiricism = 1
-			phenomenalism = 1
-		}
-		effect = {
-			any_pop = { 
-				limit = {
-					NOT = { has_pop_culture = turkish }
-					NOT = { has_pop_culture = ottoman }
-				}
-			consciousness = 2
-			} 
-			primary_culture = ottoman
-			remove_accepted_culture = mashriqi
-			remove_accepted_culture = bedouin
-			set_country_flag = ottoman_change_culture
-			any_owned = {
-				limit = { 
-					AND = {
-						is_core = TUR 
-						NOT = { 
-							is_core = BYZ 
-							is_core = KDS
-							is_core = ARM
-							is_core = PNT
-							is_core = IRQ
-						}
-						continent = oceania
-					}
-				}
-				assimilate = yes 
-				remove_core = ANT
-				add_core = TUR
-			}
-			any_owned = {
-				add_province_modifier = {
-					name = ottoman_asimilation
-					duration = 11000
-				}
-			}
-		}
-		ai_will_do ={ factor = 1 }
-	}
-	
 	ottoman_factories = {
 		picture = byzantine_triumph
 		potential = {

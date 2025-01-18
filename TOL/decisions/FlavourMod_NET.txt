@@ -1,31 +1,4 @@
 political_decisions = {
-	kpm_shipping = {
-		picture = kpm_shipping
-		potential = {
-			tag = NET
-			owns = 1413 #Batavia
-			colonial_nation = yes
-			is_canal_enabled = 2
-			NOT = { has_country_flag = kpm_shipping_founded }
-		}
-
-		allow = {
-			war = no
-			relation = { who = ENG value = 100 }
-			steel_steamers = 1
-			money = 25000
-		}
-
-		effect = {
-			set_country_flag = kpm_shipping_founded
-			relation = { who = ENG value = 50 }
-			treasury = -25000
-			1413 = { add_province_modifier = { name = kpm_shipping  duration = -1 } }
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
 	 unite_England_with_netherlands = {  #man am I uncreative in naming (real)
 		picture = reform_the_uk
 		potential = {
@@ -151,72 +124,6 @@ political_decisions = {
 		}
 
 		ai_will_do = { factor = 0 }
-	}
-
-	establish_bpm_oil = {
-		picture = bpm_oil
-		potential = {
-			tag = NET
-			owns = 1413 #Batavia
-			capital = 375 #Amsterdam
-			colonial_nation = yes
-			any_owned_province = {
-				continent = east_indies
-				trade_goods = oil
-			}
-			NOT = { has_country_flag = establish_bpm_oil }
-		}
-
-		allow = {
-			war = no
-			invention = cracking
-			any_owned_province = {
-				continent = east_indies
-				trade_goods = oil
-			}
-		}
-
-		effect = {
-			set_country_flag = establish_bpm_oil
-			prestige = 10
-			any_owned = {
-				limit = {
-					continent = east_indies
-					trade_goods = oil
-				}
-				add_province_modifier = { name = bpm_oil duration = -1 }
-			}
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
-	batavian_museum = {
-		picture = batavian_museum
-		potential = {
-			tag = NET
-			owns = 1413 #Batavia
-			capital = 375 #Amsterdam
-			colonial_nation = yes
-			NOT = { has_country_flag = batavian_museum }
-		}
-
-		allow = {
-			owns = 1413 #Batavia
-			money = 10001
-			idealism = 1
-			invention = early_archaeology
-			war = no
-		}
-
-		effect = {
-			treasury = -10000
-			prestige = 10
-			years_of_research = 0.1
-			set_country_flag = batavian_museum
-		}
-
-		ai_will_do = { factor = 1 }
 	}
 
 }

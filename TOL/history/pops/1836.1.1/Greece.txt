@@ -624,7 +624,7 @@
 	farmers = {
 		culture = greek
 		religion = orthodox
-		size = 91550
+		size = 67550
 	}
 
 	aristocrats = {
@@ -784,32 +784,32 @@
 	}
 
 	aristocrats = {
-		culture = albanian
-		religion = sunni
+		culture = albanian 
+        religion = orthodox
 		size = 2600
 	}
 
 	clergymen = {
-		culture = albanian
-		religion = sunni
+		culture = albanian 
+        religion = orthodox
 		size = 125
 	}
 
 	artisans = {
-		culture = albanian
-		religion = sunni
+		culture = albanian 
+        religion = orthodox
 		size = 1100
 	}
 
 	soldiers = {
-		culture = albanian
-		religion = sunni
+		culture = albanian 
+        religion = orthodox
 		size = 1100
 	}
 
 	farmers = {
-		culture = albanian
-		religion = sunni
+		culture = albanian 
+        religion = orthodox
 		size = 8075
 	}
 
@@ -885,9 +885,7 @@
 		religion = jewish
 		size = 100
 	}
-	########
-}
-3306 = {
+	
 	aristocrats = {
 		culture = turkish
 		religion = sunni
@@ -990,18 +988,6 @@
 		size = 800
 	}
 
-	farmers = {
-		culture = romanian
-		religion = orthodox
-		size = 51250
-	}
-
-	soldiers = {
-		culture = romanian
-		religion = orthodox
-		size = 2250
-	}
-
 	######Jews
 	soldiers = {
 		culture = mizrahi
@@ -1027,6 +1013,61 @@
 		size = 100
 	}
 	########
+}
+3306 = {
+	clergymen = {
+		culture = greek
+		religion = orthodox
+		size = 100
+	}
+
+	artisans = {
+		culture = greek
+		religion = orthodox
+		size = 1850
+	}
+
+	soldiers = {
+		culture = greek
+		religion = orthodox
+		size = 300
+	}
+
+	farmers = {
+		culture = greek
+		religion = orthodox
+		size = 21550
+	}
+
+	aristocrats = {
+		culture = turkish
+		religion = sunni
+		size = 300
+	}
+
+	clergymen = {
+		culture = turkish
+		religion = sunni
+		size = 100
+	}
+
+	artisans = {
+		culture = turkish
+		religion = sunni
+		size = 700
+	}
+
+	soldiers = {
+		culture = turkish
+		religion = sunni
+		size = 300
+	}
+
+	farmers = {
+		culture = turkish
+		religion = sunni
+		size = 225
+	}
 }
 #Arta (220000/55000 POPS)
 825 = {
@@ -1116,7 +1157,13 @@
 	artisans = {
 		culture = greek
 		religion = orthodox
-		size = 2436
+		size = 1000
+	}
+	
+	artisans = {
+		culture = greek
+		religion = catholic
+		size = 1436
 	}
 
 	soldiers = {
@@ -1128,7 +1175,13 @@
 	farmers = {
 		culture = greek
 		religion = orthodox
-		size = 6157
+		size = 4157
+	}
+	
+	farmers = {
+		culture = greek
+		religion = catholic
+		size = 2000
 	}
 
 	######Jews #1250 pops
@@ -1415,7 +1468,7 @@
 	farmers = {
 		culture = greek
 		religion = orthodox
-		size = 33350
+		size = 42550
 	}
 
 	soldiers = {
@@ -1439,7 +1492,7 @@
 	farmers = {
 		culture = bulgarian
 		religion = orthodox
-		size = 42550
+		size = 30350
 	}
 }
 #Dedeagatch (72000/18000 POPS)
@@ -1877,7 +1930,7 @@
 	farmers = {
 		culture = greek
 		religion = orthodox
-		size = 50050
+		size = 75050
 	}
 }
 #Lamia (44000/11000 POPS)
@@ -1903,7 +1956,7 @@
 	farmers = {
 		culture = greek
 		religion = orthodox
-		size = 59200
+		size = 34200
 	}
 }
 #Missolonghi (140000/35000 POPS)

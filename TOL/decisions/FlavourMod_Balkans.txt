@@ -92,15 +92,14 @@ political_decisions = {
 		picture = turkification
 		potential = {
 			tag = TUR
-			OR = {
-				AND = { owns = 860 NOT = { has_country_flag = turkification_istanbul } }
-				AND = { owns = 869 NOT = { has_country_flag = turkification_izmir } }
-				AND = { owns = 882 NOT = { has_country_flag = turkification_trabzon } }
-				AND = { owns = 828 NOT = { has_country_flag = turkification_edirne } }
-				AND = { owns = 859 NOT = { has_country_flag = turkification_gelibolu } }
-				AND = { owns = 861 NOT = { has_country_flag = turkification_uskudar } }
-				year = 1900
-			}
+			owns = 860
+			owns = 869
+			owns = 882
+			owns = 828
+			owns = 859
+			owns = 861
+			year = 1900
+			NOT = { has_country_flag = turkification }
 		}
 
 		allow = {
@@ -109,128 +108,44 @@ political_decisions = {
 		}
 
 		effect = {
+			set_country_flag = turkification
 			random_owned = {
 				limit = {
 					province_id = 860
 				}
 				860 = { change_province_name = "Istanbul" }
-				owner = { set_country_flag = turkification_istanbul }
 			}
 			random_owned = {
 				limit = {
 					province_id = 869
 				}
 				869 = { change_province_name = "Izmir" }
-				owner = { set_country_flag = turkification_izmir }
 			}
 			random_owned = {
 				limit = {
 					province_id = 882
 				}
 				882 = { change_province_name = "Trabzon" }
-				owner = { set_country_flag = turkification_trabzon }
 			}
 			random_owned = {
 				limit = {
 					province_id = 828
 				}
 				828 = { change_province_name = "Edirne" }
-				owner = { set_country_flag = turkification_edirne }
 			}
 			random_owned = {
 				limit = {
 					province_id = 859
 				}
 				859 = { change_province_name = "Gelibolu" }
-				owner = { set_country_flag = turkification_gelibolu }
 			}
 			random_owned = {
 				limit = {
 					province_id = 861
 				}
 				861 = { change_province_name = "Üsküdar" }
-				owner = { set_country_flag = turkification_uskudar }
 			}
 		}
-		ai_will_do = { factor = 1 }
-	}
-
-	declare_kingdom_of_serbia = {
-		picture = greater_serbia
-		potential = {
-			tag = SER
-			OR = {
-				government = colonial_company
-				government = dominion
-			}
-			NOT = { has_country_flag = kingdom_of_serbia }
-		}
-
-		allow = {
-			war = no
-			is_vassal = no
-			OR = {
-				revolution_n_counterrevolution = 1
-				is_greater_power = yes
-				year = 1880
-				AND = {
-					TUR_803 = { owned_by = THIS }
-					TUR_806 = { owned_by = THIS }
-				}
-				TUR_788 = { owned_by = THIS }
-				AND = {
-					TUR_803 = { NOT = { owned_by = TUR } }
-					TUR_806 = { NOT = { owned_by = TUR } }
-				}
-			}
-			NOT = { in_sphere = TUR }
-		}
-
-		effect = {
-			set_country_flag = kingdom_of_serbia
-			prestige = 15
-			upper_house = {
-				ideology = conservative
-				value = 0.1
-			}
-			any_pop = {
-				limit = {
-					OR = {
-						is_primary_culture = yes
-						is_accepted_culture = yes
-					}
-				}
-				militancy = -2
-				consciousness = -3
-			}
-
-			random_owned = {
-				limit = { owner = { vote_franschise = none_voting } }
-				owner = { government = absolute_monarchy }
-			}
-
-			random_owned = {
-				limit = { owner = { NOT = { vote_franschise = none_voting } } }
-				owner = { government = prussian_constitutionalism }
-			}
-
-			random_owned = {
-				limit = {
-					owner = {
-						OR = {
-							vote_franschise = universal_weighted_voting
-							vote_franschise = universal_voting
-						}
-						OR = {
-							political_parties = secret_ballots
-							political_parties = non_secret_ballots
-						}
-					}
-				}
-				owner = { government = hms_government }
-			}
-		}
-
 		ai_will_do = { factor = 1 }
 	}
 

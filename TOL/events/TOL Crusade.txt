@@ -11,6 +11,8 @@ country_event = {
 		NOT = { has_country_flag = papal_sent_demand }		
 	}	
 	
+	fire_only_once = yes
+	
 	mean_time_to_happen = {
 		months = 1
 	}
@@ -53,7 +55,8 @@ country_event = {
 	desc = "Cru2.d"
 	picture = "DIM_aprilbeweging"
 	
-	is_triggered_only = yes	
+	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = "The Pope? Tho he may have no divisions, he does have the ears of Europe. Agree to all demands."
@@ -100,6 +103,7 @@ country_event = {
 	picture = "DIM_aprilbeweging"
 	
 	is_triggered_only = yes	
+	fire_only_once = yes
 	
 	option = {
 		name = "I cannot believe that worked!"
@@ -119,6 +123,7 @@ country_event = {
 	picture = "DIM_aprilbeweging"
 
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = "Call for the crusade!"
@@ -175,6 +180,8 @@ country_event = {
 		}
 		TUR = { owns = 917 }
 	}
+	
+	fire_only_once = yes
 	
 	mean_time_to_happen = {
 		months = 2
@@ -279,6 +286,9 @@ country_event = {
 		}
 		TUR = { owns = 917 }
 	}
+	
+	fire_only_once = yes
+	
 	mean_time_to_happen = {
 		months = 12
 		modifier = {
@@ -355,6 +365,7 @@ country_event = {
 	picture = "DIM_aprilbeweging"
 
 	is_triggered_only = yes
+	fire_only_once = yes
 		
 	option = {
 		name = "This is our time to seize the Holy cities!"
@@ -391,6 +402,7 @@ country_event = {
 	picture = "DIM_aprilbeweging"
 	
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = "Finally! Our moment has come!"
@@ -423,6 +435,8 @@ country_event = {
 		NOT = { war_with = TUR }
 		NOT = { has_global_flag = gone_with_them }
 	}
+	
+	fire_only_once = yes
 	
 	mean_time_to_happen = {
 		months = 1
@@ -457,6 +471,8 @@ country_event = {
 		NOT = { war_with = TUR }
 		has_global_flag = gone_with_them
 	}
+	
+	fire_only_once = yes
 	
 	mean_time_to_happen = {
 		months = 1
@@ -534,6 +550,8 @@ country_event = {
 		has_global_flag = last_crusade_lost
 	}
 	
+	fire_only_once = yes
+	
 	mean_time_to_happen = {
 		months = 1
 	}
@@ -562,6 +580,8 @@ country_event = {
 		has_global_flag = last_crusade	
 		NOT = { has_global_flag = gone_with_them }
 	}
+	
+	fire_only_once = yes
 	
 	mean_time_to_happen = {
 		months = 1
@@ -640,6 +660,8 @@ country_event = {
 		has_global_flag = gone_with_them
 	}
 	
+	fire_only_once = yes
+	
 	mean_time_to_happen = {
 		months = 1
 	}
@@ -712,6 +734,8 @@ country_event = {
 		has_global_flag = last_crusade_win
 	}
 	
+	fire_only_once = yes
+	
 	mean_time_to_happen = {
 		months = 1
 	}
@@ -734,6 +758,7 @@ country_event = {
 	picture = "DIM_aprilbeweging"
 
 	is_triggered_only = yes
+	fire_only_once = yes
 		
 	option = {
 		name = "We never though that this day would come!"
@@ -752,6 +777,7 @@ country_event = {
 	picture = "DIM_aprilbeweging"
 
 	is_triggered_only = yes
+	fire_only_once = yes
 		
 	option = {
 		name = "We never though that this day would come!"
@@ -775,6 +801,8 @@ country_event = {
 		NOT = { exists = PAP tag = ITA }
 		exists = yes
 	}
+	
+	fire_only_once = yes
 	
 	mean_time_to_happen = {
 		months = 1

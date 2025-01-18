@@ -4083,27 +4083,6 @@ political_decisions = {
 		}
 	}
 	
-	south_georgia_whaling = {
-		picture = grytviken
-		potential = {
-			owns = 2131
-			OR = {
-				war = no
-				ai = no
-			}
-			NOT = { has_country_flag = s_georgia_colonized }
-			year = 1904
-		}
-
-		allow = {
-			war = no
-		}
-
-		effect = {
-			set_country_flag = s_georgia_colonized
-			2133 = { secede_province = THIS }
-		}
-	}
 	bon_compagni_law = {
 		picture = compagni
 		potential = {

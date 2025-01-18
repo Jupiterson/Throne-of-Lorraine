@@ -113,7 +113,7 @@ country_event = {
 }
 country_event = {
 	id = 24563
-	title = "Delcare war on the Ottomans?"
+	title = "Declare war on the Ottomans?"
 	desc = "Looks like the Bulgarians are fighting for their independence, should we join them?"
 	picture = "wallachian_parliment"
 	trigger = {
@@ -226,3 +226,279 @@ country_event = {
 
 		}
 }
+
+country_event = {
+	id = 100185
+	title = "cro_union_over.T"
+	desc = "cro_union_over.D"
+	picture = "zasjedanje_sabora"
+	
+	trigger = {
+		tag = CRO
+		owns = 771
+		year = 1836
+		month = 1
+		is_vassal = yes
+	}
+	
+    fire_only_once = yes
+   
+    mean_time_to_happen = { days = 4 }
+
+	option = {
+		name = "cro_union_over.A"
+		prestige = 10
+		relation = {
+			who = HUN
+			value = -50
+		}
+		HUN = {
+			release_vassal = CRO
+		}
+		add_country_modifier = {
+				name = small_country_draft
+				duration = 200 }
+		remove_accepted_culture = hungarian
+		government = hms_government
+		771 = {
+			change_province_name = "Zagreb"
+			state_scope = { change_region_name = "Hrvatska" }
+		}
+		772 = { change_province_name = "Sisak" }
+		773 = { change_province_name = "Ogulin" }
+		774 = { change_province_name = "Senj" }
+		775 = { change_province_name = "Varaždin" }
+		776 = { change_province_name = "Bjelovar" }
+		784 = { change_province_name = "Bihac" }
+		3289 = { change_province_name = "Cakovec" }
+		777 = {
+			change_province_name = "Požega"
+			state_scope = { change_region_name = "Slavonija" }
+			}
+		779 = { change_province_name = "Osijek" }
+		793 = { change_province_name = "Vukovar" }
+		791 = { change_province_name = "Srijemska Mitrovica" }
+		set_global_flag = croatia_rename_cro
+		set_global_flag = slavonia_rename_cro
+		clr_global_flag = croatia_rename_hun
+		clr_global_flag = slavonia_rename_hun
+		HUN = { country_event = { id = 100186 days = 0 } }
+	}
+}
+
+country_event = {
+	id = 100186
+	title = "croatian_rebellion.T"
+	desc = "croatian_rebellion.D"
+	picture = "croatian_uprising"
+	
+    fire_only_once = yes
+   
+    is_triggered_only = yes
+
+	option = {
+		name = "croatian_rebellion.A"
+		prestige = -15
+		war = {
+			target = CRO
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+			}
+		relation = {
+			who = CRO
+			value = -50
+		}
+	}
+}
+
+country_event = {
+	id = 100187
+	title = "cro_kingdom_millenium.T"
+	desc = "cro_kingdom_millenium.D"
+	picture = "krunjenje_tomislava"
+	
+	trigger = {
+		primary_culture = croatian
+		year = 1925
+	}
+	
+    fire_only_once = yes
+	
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = "cro_kingdom_millenium.A"
+		prestige = 10
+		any_pop = {
+			limit = {
+				has_pop_culture = croatian
+			}
+			militancy = -1
+			consciousness = 1
+		}
+		3614 = {
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 730
+            }
+			change_province_name = "Tomislavgrad"
+        }
+		}
+	}
+	
+country_event = {
+	id = 1100000
+	title = "hazu_jazu.T"
+	desc = "hazu_jazu.D"
+	picture = "JAZU"
+	
+	trigger = {
+		tag = YUG
+		has_global_flag = croatian_yugoslavia
+		has_country_modifier = croatian_academy
+	}
+	
+    fire_only_once = yes
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "hazu_jazu.A"
+		prestige = 5
+		remove_country_modifier = croatian_academy
+		add_country_modifier = { name = yugoslav_academy duration = -1 }
+	}
+}
+	
+country_event = {
+	id = 1100001
+	title = "carigrad_issue.T"
+	desc = "carigrad_issue.D"
+	picture = "constantinople"
+	
+	trigger = {
+		tag = YUG
+		owns = 860
+		has_global_flag = croatian_yugoslavia
+	}
+	
+    fire_only_once = yes
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "carigrad_issue.A"
+		860 = {
+			life_rating = 5
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 1825
+            }
+			add_province_modifier = {
+                name = pearl_of_mediterranean
+                duration = -1
+            }
+			change_province_name = "Carigrad"
+        }
+		YUG = { all_core = { remove_core = TUR } }
+		prestige = 25
+		capital = 860
+	}
+	
+	option = {
+		name = "carigrad_issue.B"
+		860 = {
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 1825
+            }
+			change_province_name = "Carigrad"
+        }
+		badboy = 1
+		plurality = -2
+		relation = { who = TUR value = -200 }
+		YUG = { all_core = { remove_core = TUR } }
+		860 = {
+			any_pop = {
+				limit = {
+					culture = turkish
+					876 = { owned_by = TUR }
+				}
+				move_pop = 876
+			}
+		}
+		860 = {
+			any_pop = {
+				limit = {
+					culture = turkish
+					NOT = { 876 = { owned_by = TUR } }
+				}
+				reduce_pop = 0.3
+				militancy = 9
+				consciousness = 7
+			}
+		}
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			scaled_militancy = {
+				ideology = fascist
+				factor = -4
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = -2
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = 1.5
+			}
+			scaled_militancy = {
+				ideology = communist
+				factor = 1
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 0.5
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = radical
+				factor = 0.5
+			}
+		}
+		add_country_modifier = {
+			name = turkish_oppression
+			duration = 1095
+		}
+		TUR = {
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 24
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 24
+			}
+		}
+	}
+	
+	option = {
+		name = "carigrad_issue.C"
+		badboy = -4
+		relation = { who = TUR value = 120 }
+		860 = { secede_province = TUR remove_core = YUG }
+		YUG = { all_core = { remove_core = TUR } }
+	}
+}
+

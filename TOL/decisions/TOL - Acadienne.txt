@@ -72,11 +72,11 @@ political_decisions = {
 #	ai_will_do = { factor = 0 }
 #}#
 
-	amauldi_change_capital = {
+	acadien_change_capital = {
 	picture = diplo_annex
 		potential = {
 			tag = USA
-			NOT = { has_country_flag = amauldi_change_capital}
+			NOT = { has_country_flag = acadien_change_capital}
 		}
 
 		allow = {		 
@@ -94,7 +94,7 @@ political_decisions = {
 					duration = 1825
 				}
 			}
-			set_country_flag = amauldi_change_capital
+			set_country_flag = acadien_change_capital
 		}
 
 		ai_will_do = {
@@ -177,11 +177,19 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = racist_pt1
-			TEX = {
-				all_core = {
-					add_core = THIS
-					add_core = NAF
-				}
+			badboy = 10
+			TEX_132 = { add_core = THIS add_core = NAF }
+			MEX_103 = { add_core = THIS add_core = NAF }
+			MEX_100 = { add_core = THIS add_core = NAF }
+			USA_139 = { add_core = THIS add_core = NAF }
+			USA_144 = { add_core = THIS add_core = NAF }
+			DAK_128 = { add_core = THIS add_core = NAF }
+			127 = { add_core = THIS add_core = NAF }
+			126 = { add_core = THIS add_core = NAF }
+			146 = { add_core = THIS add_core = NAF }
+			147 = { add_core = THIS add_core = NAF }
+			148 = { add_core = THIS add_core = NAF }
+			149 = { add_core = THIS add_core = NAF }
 			}
 			CUB = {
 				all_core = {
@@ -209,14 +217,12 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = racist_pt2
-			badboy = 10
+			badboy = 4
 			TEX = {
 				all_core = {
 					add_core = THIS
 				}
 			}
-			147 = { add_core = THIS }	
-			148 = { add_core = THIS }	
 		}
 		ai_will_do = { factor = 1 }
 	}

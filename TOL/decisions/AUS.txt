@@ -51,7 +51,7 @@ political_decisions = {
 				militancy = -4
 			}
 			any_pop = {
-				limit = { has_pop_culture = illyrian }
+				limit = { has_pop_culture = croatian }
 				militancy = -4
 			}
 			any_pop = {
@@ -79,7 +79,7 @@ political_decisions = {
 				militancy = 5
 			}
 			add_accepted_culture = czech
-			add_accepted_culture = illyrian
+			add_accepted_culture = croatian
 			add_accepted_culture = slovene
 			add_accepted_culture = slovak
 			change_tag = AUB
@@ -200,7 +200,7 @@ political_decisions = {
 			tag = BAV
 			any_owned_province = { is_core = SLO }
 			OR = {
-				accepted_culture = illyrian
+				accepted_culture = croatian
 				NOT = { any_owned_province = { is_core = CRO } }
 			}
 			NOT = {
@@ -225,7 +225,7 @@ political_decisions = {
 					OR = {
 						has_pop_culture = hungarian
 						has_pop_culture = czech
-						has_pop_culture = illyrian
+						has_pop_culture = croatian
 					}
 				}
 				militancy = 4
@@ -242,18 +242,18 @@ political_decisions = {
 		}
 	}
 
-	embrace_illyrian_minority = {
+	embrace_croatian_minority = {
 		picture = embrace_minority
 		potential = {
 			tag = BAV
-			any_owned_province = { is_core = ILL }
+			any_owned_province = { is_core = CRO }
 			OR = {
 				accepted_culture = czech
 				NOT = { any_owned_province = { is_core = BOH } }
 			}
 			NOT = {
-				accepted_culture = illyrian
-				has_country_flag = embraced_illyrians
+				accepted_culture = croatian
+				has_country_flag = embraced_croatians
 				has_country_flag = danube_proposal_in_progress
 			}
 		}
@@ -264,8 +264,8 @@ political_decisions = {
 			psychoanalysis = 1
 		}
 		effect = {
-			set_country_flag = embraced_illyrians
-			add_accepted_culture = illyrian
+			set_country_flag = embraced_croatians
+			add_accepted_culture = croatian
 			prestige = -25
 			any_pop = {
 				limit = {
@@ -278,7 +278,7 @@ political_decisions = {
 				consciousness = 4
 			}
 			any_pop = {
-				limit = { has_pop_culture = illyrian }
+				limit = { has_pop_culture = croatian }
 				militancy = -4
 				consciousness = -4
 			}

@@ -4,7 +4,6 @@ political_decisions = {
 		potential = {
 			is_culture_group = britannian
 			NOT = { exists = ENG }
-			NOT = { exists = CLT }
 			OR = {
 				NOT = { tag = SCO }
 				has_country_flag = gaelic_assimilation

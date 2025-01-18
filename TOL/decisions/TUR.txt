@@ -177,7 +177,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	ottoman_national_anthemn = {
+	ottoman_national_anthem = {
 		picture = necip_ahmed_pasha
 		potential = {
 			tag = TUR
@@ -189,7 +189,7 @@ political_decisions = {
 				government = semi_constitutional_empire
 				government = constitutional_empire
 			}
-			NOT = { has_country_flag = ottoman_national_anthemn }
+			NOT = { has_country_flag = ottoman_national_anthem }
 		}
 
 		allow = {
@@ -198,7 +198,7 @@ political_decisions = {
 		}
 
 		effect = {
-			set_country_flag = ottoman_national_anthemn
+			set_country_flag = ottoman_national_anthem
 			plurality = 1
 			any_pop = {
 				limit = { is_primary_culture = yes }
@@ -481,9 +481,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = wallachia_annexed
 			badboy = 5
-			relation = { who = RUS value = -200 }
-			random_owned = { limit = { TUR = { alliance_with = RUS } } TUR = { leave_alliance = RUS } }
-			any_greater_power = { limit = { NOT = { tag = RUS } capital_scope = { continent = europe } }
+			any_greater_power = { limit = { capital_scope = { continent = europe } }
 				relation = { who = THIS value = -50 }
 				leave_alliance = THIS
 			}
@@ -537,9 +535,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = mundungsland_annexed
 			badboy = 5
-			relation = { who = RUS value = -200 }
-			random_owned = { limit = { TUR = { alliance_with = RUS } } TUR = { leave_alliance = RUS } }
-			any_greater_power = { limit = { NOT = { tag = RUS } capital_scope = { continent = europe } }
+			any_greater_power = { limit = { capital_scope = { continent = europe } }
 				relation = { who = THIS value = -50 }
 				leave_alliance = THIS
 			}
@@ -595,9 +591,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = moldavia_annexed
 			badboy = 5
-			relation = { who = RUS value = -200 }
-			random_owned = { limit = { TUR = { alliance_with = RUS } } TUR = { leave_alliance = RUS } }
-			any_greater_power = { limit = { NOT = { tag = RUS } capital_scope = { continent = europe } }
+			any_greater_power = { limit = { capital_scope = { continent = europe } }
 				relation = { who = THIS value = -50 }
 				leave_alliance = THIS
 			}

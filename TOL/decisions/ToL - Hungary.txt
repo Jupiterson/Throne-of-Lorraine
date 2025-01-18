@@ -35,20 +35,21 @@ political_decisions = {
 		}
 	}
 	
-	illyrian_union = {
+	croatian_union = {
 		picture = greater_croatia_map
 		potential = {
 			OR = {
 				tag = HUN
 				tag = PHC
 			}
-			NOT = { has_country_flag = ill_union }
-			NOT = { exists = ILL exists = YUG }
+			NOT = { has_country_flag = cro_union }
+			NOT = { exists = CRO }
+			NOT = { exists = YUG }
 		}
 
 		allow = {
 		state_n_government = 1	
-		ILL = {
+		CRO = {
 				all_core = {
 					OR = {
 						owned_by = THIS
@@ -84,9 +85,9 @@ political_decisions = {
 		}
 
 		effect = {
-		 prestige = 25
-	   set_country_flag = ill_union
-			ILL = {
+			prestige = 25
+			set_country_flag = cro_union
+			CRO = {
 				all_core = {
 					add_core = THIS
 				}
@@ -112,7 +113,7 @@ political_decisions = {
 			add_accepted_culture = serb
 			add_accepted_culture = slovene
 			add_accepted_culture = bulgarian
-			add_accepted_culture = illyrian
+			add_accepted_culture = croatian
 			
 			any_pop = {
 				limit = { has_pop_culture = romanian }
@@ -133,7 +134,7 @@ political_decisions = {
 			}
 			
 			any_pop = {
-				limit = { has_pop_culture = illyrian }
+				limit = { has_pop_culture = croatian }
 				consciousness = -5
 				militancy = -5
 			}
@@ -164,55 +165,5 @@ political_decisions = {
 			factor = 1 
 		}
 	}
-	
-	
-  reconsile_serbia = {
-		picture = knights_hospitaller_paul
-		potential = {
-			tag = HUN
-			NOT = { has_country_flag = serb_stuff has_country_flag = ill_union }
-		}
-
-		allow = {
-		nationalism_n_imperialism = 1	  
-		}
-
-		effect = {
-		HUN = {
-				any_pop = {
-					limit = {
-						culture = serb
-					}
-					move_pop = 791
-				}
-			}
-		prestige = 25
-		badboy = -5
-		set_country_flag = serb_stuff 
-		2538 = { remove_core = SER }
-		792 = { remove_core = SER }
-		791 = { remove_core = HUN }
 		
-		any_pop = {
-				limit = { has_pop_culture = romanian }
-				consciousness = 5
-				militancy = 5
-			}
-			
-			any_pop = {
-				limit = { has_pop_culture = slovak }
-				consciousness = 5
-				militancy = 5
-			}
-			
-			any_pop = {
-				limit = { has_pop_culture = south_german }
-				consciousness = 5
-				militancy = 5
-			}
-			
-		}
-   }
-	
-	
 }
