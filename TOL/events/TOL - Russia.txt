@@ -504,7 +504,7 @@ country_event = {
 		tag = LIT
 		NOT = { accepted_culture = ruthenyan }
 		NOT = { any_owned_province = { or = { region = RUS_360 region = RUS_707 } } }
-		NOT = { has_country_flag = lithuanian_collapse_discussion  has_gloabl_flag = collapsed_lithuania }
+		NOT = { has_country_flag = lithuanian_collapse_discussion  has_global_flag = collapsed_lithuania }
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -548,7 +548,7 @@ country_event = {
 			}
 		secede_province = POL
 		}
-		has_gloabl_flag = collapsed_lithuania
+		set_global_flag = collapsed_lithuania
 		POL = { country_event = 330011 }
 		RUS = { country_event = 330010 }
 		HUN = { country_event = 330011 }

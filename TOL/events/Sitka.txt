@@ -4150,7 +4150,6 @@ country_event = {
 					tag = BUR
 					tag = SIA
 					tag = LXA
-					tag = NYE
 				}
 				OR = {
 					has_country_flag = post_colonial_country
@@ -5027,23 +5026,6 @@ country_event = {
 			remove_core = IBR
 			secede_province = BSQ
 		}
-		#Give Ceuta and Melilla to Rif owner
-		any_country = {
-			limit = { tag = THIS owns = 2590 }
-			1687 = {
-				owner = {
-					secede_province = { 2590 }
-				}
-			}
-		}
-		any_country = {
-			limit = { tag = THIS owns = 1689 }
-			1688 = {
-				owner = {
-					secede_province = { 1689 }
-				}
-			}
-		}
 		478 = { add_core = ATR }
 		475 = { add_core = ATR }
 		any_owned = {
@@ -5414,7 +5396,6 @@ country_event = {
 					tag = BUR
 					tag = SIA
 					tag = LXA
-					tag = NYE
 				}
 				OR = {
 					has_country_flag = post_colonial_country

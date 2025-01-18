@@ -4356,11 +4356,6 @@ country_event = {
 				overlord = { NOT = { government = proletarian_dictatorship } }
 				NOT = { truce_with = THIS }
 			}
-			AND = {
-				government = bourgeois_dictatorship
-				overlord = { NOT = { government = bourgeois_dictatorship } }
-				NOT = { truce_with = THIS }
-			}
 		}
 		NOT = { has_country_flag = spectator ai = yes }
 	}
@@ -4745,8 +4740,8 @@ country_event = {
 		random_country = { limit = { tag = FROM primary_culture = ruthenyan }
 			THIS = { remove_accepted_culture = ruthenyan }
 		}
-		random_country = { limit = { tag = FROM primary_culture = byelorussian }
-			THIS = { remove_accepted_culture = byelorussian }
+		random_country = { limit = { tag = FROM primary_culture = cossack }
+			THIS = { remove_accepted_culture = cossack }
 		}
 		random_country = { limit = { tag = FROM primary_culture = inuit }
 			THIS = { remove_accepted_culture = inuit }

@@ -101,7 +101,7 @@ country_event = {
 			limit = {
 				culture = aborigine
 				location = {
-					is_core = FAS
+					is_core = AST
 					NOT = {
 						province_id = 2501
 						province_id = 2496
@@ -116,7 +116,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				culture = melanesian
-				location = { is_core = FAS }
+				location = { is_core = AST }
 			}
 			reduce_pop = 0.10
 		}
@@ -180,7 +180,7 @@ country_event = {
 					}
 				}
 			}
-			FAS = {
+			AST = {
 				all_core = {
 					limit = {
 						empty = no
@@ -205,7 +205,7 @@ country_event = {
 					}
 				}
 			}
-			any_pop = { limit = { location = { is_core = FAS } culture = australian type = bureaucrats} reduce_pop = 0.1 }
+			any_pop = { limit = { location = { is_core = AST } culture = australian type = bureaucrats} reduce_pop = 0.1 }
 			2476 = {
 				state_scope = {
 					any_owned = {

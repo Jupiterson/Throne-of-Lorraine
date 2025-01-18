@@ -1487,7 +1487,7 @@ country_event = {
 		}
 		random_owned = {
 			limit = { owner = { tag = BUG } }
-			owner = { primary_culture = baganda }
+			owner = { primary_culture = lacus_bantu }
 		}
 		random_owned = {
 			limit = {
@@ -1500,18 +1500,6 @@ country_event = {
 				}
 			}
 			owner = { primary_culture = bakongo }
-		}
-		random_owned = {
-			limit = { owner = { tag = CHD } }
-			owner = { primary_culture = sara }
-		}
-		random_owned = {
-			limit = { owner = { tag = CAR } }
-			owner = { primary_culture = ubangian }
-		}
-		random_owned = {
-			limit = { owner = { tag = GAB } }
-			owner = { primary_culture = fang }
 		}
 		random_owned = {
 			limit = { owner = { tag = CMR } }
@@ -1527,21 +1515,9 @@ country_event = {
 		}
 		random_owned = {
 			limit = {
-				owner = { tag = KNY }
-			}
-			owner = { primary_culture = kikuyu }
-		}
-		random_owned = {
-			limit = {
 				owner = { tag = LBY }
 			}
 			owner = { primary_culture = maghrebi }
-		}
-		random_owned = {
-			limit = {
-				owner = { tag = MOZ }
-			}
-			owner = { primary_culture = shona }
 		}
 		random_owned = {
 			limit = {
@@ -1587,13 +1563,13 @@ country_event = {
 			limit = {
 				owner = { tag = TSW }
 			}
-			owner = { primary_culture = tswana }
+			owner = { primary_culture = khoisan }
 		}
 		random_owned = {
 			limit = {
 				owner = { tag = ZAM }
 			}
-			owner = { primary_culture = lunda }
+			owner = { primary_culture = forest_bantu }
 		}
 		random_owned = {
 			limit = {
@@ -1643,9 +1619,8 @@ country_event = {
 			owner = {
 				primary_culture = khoisan
 				add_accepted_culture = sotho
-				add_accepted_culture = xhosa
+				add_accepted_culture = mifangaro
 				add_accepted_culture = zulu
-				add_accepted_culture = nguni
 			}
 		}
 		any_pop = {
