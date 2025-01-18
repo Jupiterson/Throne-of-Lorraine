@@ -612,7 +612,7 @@ landlocked_nation = {
 			}
 		}
 		NOT = {
-			has_country_modifier = trek_scottishs
+			has_country_modifier = trek_boers
 		}
 	}
 
@@ -1561,11 +1561,11 @@ poland_starting_war = {
 
 pirate_sugar = {
 	trigger = {
-		or = {
-			province = 3309
-			province = 3319
-			province = 2214
-			province = 2215
+		OR = {
+			province_id = 3309
+			province_id = 3319
+			province_id = 2214
+			province_id = 2215
 		}
 		
 	}

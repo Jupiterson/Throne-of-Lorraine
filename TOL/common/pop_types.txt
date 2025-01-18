@@ -806,13 +806,13 @@ assimilation_chance = {
             has_pop_religion = yazidi
             has_pop_religion = druze
             has_pop_culture = asian_minor
-			has_pop_religion = miaphysite
+			has_pop_religion = coptic
 			has_pop_culture = pamiri
 			has_pop_culture = mayan
 			has_pop_culture = ainu
-			has_pop_culture = afro_american
-			has_pop_culture = afro_latino
-			has_pop_culture = afro_brazilian
+			has_pop_culture = afro_scot
+			has_pop_culture = afro_italian
+			has_pop_culture = afro_german
         }
     }
 
@@ -969,11 +969,21 @@ conversion_chance = {
         country = { has_country_flag = religious_unity }
 	}
 
+    modifier = {
+        factor = -0.95
+        OR = {
+            has_pop_religion = jewish
+            has_pop_religion = shiite
+            has_pop_religion = sunni
+            has_pop_religion = ibadi
+			NOT = { country = { has_country_flag = religious_unity } }
+            AND = {
                 has_pop_religion = shinto
                 has_culture_core = yes
             }
         }
     }
+    modifier = {
         factor = 0.15
         country = { colonial_policy = civilizing }
         state_scope = { is_colonial = yes }

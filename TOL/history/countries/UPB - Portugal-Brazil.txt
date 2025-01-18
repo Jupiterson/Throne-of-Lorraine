@@ -1,8 +1,5 @@
 capital = 521
-primary_culture = portuguese
-culture = brazilian
-culture = afro_brazilian
-culture = galician
+primary_culture = galician
 religion = catholic
 government = hms_government
 plurality = 0.0
@@ -11,7 +8,6 @@ literacy = 0.12
 non_state_culture_literacy = 0.01
 civilized = yes
 prestige = 10
-colonial_points = 40
 
 # Political reforms
 slavery = yes_slavery
@@ -22,8 +18,6 @@ press_rights = state_press
 trade_unions = no_trade_unions
 voting_system = jefferson_method
 political_parties = non_secret_ballots
-minorities_reform = limited
-immigration_policy = quota_immigration
 conscription = two_year_draft
 
 # Social Reforms
@@ -33,13 +27,9 @@ safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
 pensions = no_pensions
-land_property=landed_estates
 child_labor = child_labor_restricted
-arts_endowment = no_endowment
-education = elite
 
 ruling_party = POR_liberal
-set_country_flag = liberal_election_win
 last_election = 1818.1.1
 upper_house = {
 	fascist = 0
@@ -51,8 +41,6 @@ upper_house = {
 	communist = 0
 }
 set_country_flag = new_world_nation
-set_country_flag = existing_country
-decision = UPB_setup
 
 # Technologies
 post_napoleonic_thought = 1
@@ -70,17 +58,9 @@ enlightenment_thought = 1
 private_banks = 1
 no_standard = 1
 early_classical_theory_and_critique = 1
-water_wheel_power = 1
-publishing_industry = 1
 
 #Inventions
 
 # Starting Consciousness
 consciousness = 3
 nonstate_consciousness = 1
-
-oob = "/1821/UPB_oob.txt"
-
-1836.1.1 = {
-	clr_country_flag = existing_country
-}

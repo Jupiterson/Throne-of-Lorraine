@@ -4207,19 +4207,8 @@ liberal_rebels = {
 		}
 		prestige_factor = -0.25
 
-		random_owned = {
-			limit = { owner = { NOT = { tag = URU } } }
-			owner = { country_event = 800054 plurality = -10 }
-		}
-
-		random_owned = {
-			limit = { owner = { tag = URU NOT = { has_country_flag = colorado_victory } } }
-			owner = { country_event = 600057 }
-		}
-		random_owned = {
-			limit = { owner = { tag = URU } }
-			owner = { set_country_flag = colorado_rule clr_country_flag = blanco_rule }
-		}
+		country_event = 800054
+		plurality = -10
 	}
 }
 
@@ -4747,19 +4736,8 @@ reformist_rebels = {
 		}
 		prestige_factor = -0.25
 
-		random_owned = {
-			limit = { owner = { NOT = { tag = URU } } }
-			owner = { country_event = 800054 plurality = -10 }
-		}
-
-		random_owned = {
-			limit = { owner = { tag = URU NOT = { has_country_flag = colorado_victory } } }
-			owner = { country_event = 600057 }
-		}
-		random_owned = {
-			limit = { owner = { tag = URU } }
-			owner = { set_country_flag = colorado_rule clr_country_flag = blanco_rule }
-		}
+		country_event = 800054
+		plurality = -10
 	}
 }
 

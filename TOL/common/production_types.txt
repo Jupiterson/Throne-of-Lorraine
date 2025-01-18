@@ -154,10 +154,7 @@ aeroplane_factory = {
 	}
 	bonus = {
 		trigger = {
-			OR = {
-				has_building = synthetic_rubber_factory 
-				trade_goods_in_state = rubber
-			}
+			trade_goods_in_state = rubber
 		}
 		value = 0.20
 	}
@@ -216,10 +213,7 @@ automobile_factory = {
 	}
 	bonus = {
 		trigger = {
-			OR = {
-				has_building = synthetic_rubber_factory 
-				trade_goods_in_state = rubber
-			}
+			trade_goods_in_state = rubber
 		}
 		value = 0.05
 	}
@@ -274,10 +268,7 @@ electric_gear_factory = {
 	value = 5.6			#89.6 - profit = 16.6
 	bonus = {
 		trigger = {
-			OR = {
-				has_building = synthetic_rubber_factory 
-				trade_goods_in_state = rubber
-			}
+			has_building = synthetic_rubber_factory 
 		}
 		value = 0.1
 	}
@@ -421,10 +412,7 @@ luxury_clothes_factory = {
 	}
 	bonus = {
 		trigger = {
-			OR = {
-				has_building = synthetic_silk_factory 
-				trade_goods_in_state = silk
-			}
+			trade_goods_in_state = silk
 		}
 		value = 0.05
 	}
@@ -444,10 +432,7 @@ luxury_furniture_factory = {
 	}
 	bonus = {
 		trigger = {
-			OR = {
-				has_building = synthetic_tropical_factory 
-				trade_goods_in_state = tropical_wood
-			}
+			trade_goods_in_state = tropical_wood
 		}
 		value = 0.05
 	}
@@ -509,11 +494,7 @@ clipper_shipyard = {
 	value = 12			#504, up from 10 with a profit of 420. 14.518% profit margin, similar to steamers. Profit = 73
 	bonus = {
 		trigger = { 
-			OR = {
-				has_building = fabric_factory 
-				has_building = synthetic_fabric_factory 
-				has_building = wool_mill 
-			}
+			has_building = fabric_factory 
 		}
 		value = 0.05
 	}
@@ -583,11 +564,7 @@ regular_clothes_factory = {
 	value = 16			#92.8, from 87/15. Profit margin is 11.63% - total profit is 10.8
 	bonus = {
 		trigger = { 
-			OR = {
-				has_building = fabric_factory 
-				has_building = synthetic_fabric_factory 
-				has_building = wool_mill 
-			}
+			has_building = fabric_factory 
 		}
 		value = 0.25
 	}
