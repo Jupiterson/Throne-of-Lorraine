@@ -2,27 +2,78 @@
 FRA = {value = -80}
 
 leader = {
-	name = "Prince Aleksandar"
+	name = "Princ Aleksandar"
 	type = land
 	date="1836.1.1"
 	personality = openminded
 	background = gifted_administrator
 }
 
+leader = {
+	name = "Miloš Teodorovic"
+	picture = european_general_28
+	type = land
+	date="1820.1.1"
+	personality = disciplined
+	background = natural_born_leader
+}
+
 army = {
-	name = "Army of the Principality of Serbia"
+	name = "Kraljevske Oružane Snage"
 	location = 794
 	regiment = {
-		name= "1st Serbian Infantry"
+		name= "1. Kraljeva Pukovnija"
 		type = infantry
 		home = 794
 	}
-
 	regiment = {
-		name= "2nd Serbian Infantry"
+		name= "2. Kraljeva Pukovnija"
+		type = infantry
+		home = 794
+	}
+	regiment = {
+		name= "3. Kraljeva Pukovnija"
 		type = infantry
 		home = 795
 	}
+	regiment = {
+		name= "Šumadijska Konjica"
+		type = hussar
+		home = 796
+	}
+}
 
-
+army = {
+	name = "Krajišnici"
+	location = 803
+	regiment = {
+		name= "1. Krajinska Pukovnija"
+		type = infantry
+		home = 803
+	}
+	regiment = {
+		name= "2. Krajinska Pukovnija"
+		type = infantry
+		home = 802
+	}
+	regiment = {
+		name= "3. Krajinska Pukovnija"
+		type = infantry
+		home = 802
+	}
+	regiment = {
+		name= "Krajinsko Topništvo"
+		type = artillery
+		home = 2583
+	}
+	regiment = {
+		name= "1. Krajinsko Konjaništvo"
+		type = hussar
+		home = 850
+	}
+	regiment = {
+		name= "2. Krajinsko Konjaništvo"
+		type = cuirassier
+		home = 804
+	}
 }

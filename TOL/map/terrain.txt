@@ -42,7 +42,6 @@ categories =  {
         mine_rgo_eff = 0.0
         supply_limit = 10
 		immigrant_attract = 0.1
-
     }
 
     steppe = {
@@ -1387,20 +1386,50 @@ categories =  {
         combat_width = -0.33
     }
 
-    #salonika = {
-    #    movement_cost = 1.2
-    #    defence = 1
-    #    color = { 22 44 66 }
-    #
-    #    farm_rgo_size = 0.0
-    #    farm_rgo_eff = 0.0
-    #    mine_rgo_size = 0.0
-    #    mine_rgo_eff = 0.0
-    #
-    #    supply_limit = 6
-    #    min_build_railroad = 1
-    #    combat_width = -0.33
-    #}
+    salonika = {
+        movement_cost = 1.2
+        defence = 1
+        color = { 22 44 66 }
+    
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+    
+        supply_limit = 6
+        min_build_railroad = 1
+        combat_width = -0.33
+    }
+	
+	kragujevac = {
+        movement_cost = 1.2
+        defence = 1
+        color = { 22 44 66 }
+
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+
+        supply_limit = 6
+        min_build_railroad = 2
+        combat_width = -0.33
+    }
+	
+	cetinje = {
+        movement_cost = 1.4
+        defence = 3
+        color = { 117 108 119 }
+        farm_rgo_size = -0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+
+        combat_width = -0.6
+
+        min_build_railroad = 3
+    }
 
     ankara = {
         movement_cost = 1.2

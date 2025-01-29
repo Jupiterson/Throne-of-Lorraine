@@ -178,7 +178,7 @@ political_decisions = {
 	}
 
 	vojvodina_rename_ser = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			owns = 2538
 			owns = 791
@@ -279,7 +279,7 @@ political_decisions = {
 	}
 
 	banat_rename_ser = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			owns = 652
 			owns = 653
@@ -417,7 +417,7 @@ political_decisions = {
 	}
 	
 	montenegro_rename_ser = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			OR = {
 				primary_culture = serb
@@ -458,7 +458,7 @@ political_decisions = {
 				limit = {
 					province_id = 804
 				}
-				804 = { change_province_name = "Stari Ras" }
+				804 = { change_province_name = "Ras" }
 				set_global_flag = montenegro_rename_ser_804
 				clr_global_flag = montenegro_rename_cro_804
 			}
@@ -485,7 +485,7 @@ political_decisions = {
 				2583 = {
 				change_province_name = "Cetinje"
 				state_scope = {
-					change_region_name = "Crna Gora"
+					change_region_name = "Zeta"
 					}
 				}
 				set_global_flag = montenegro_rename_ser_2583
@@ -542,7 +542,7 @@ political_decisions = {
 				limit = {
 					province_id = 804
 				}
-				804 = { change_province_name = "Stari Ras" }
+				804 = { change_province_name = "Ras" }
 				set_global_flag = montenegro_rename_cro_804
 				clr_global_flag = montenegro_rename_ser_804									
 			}
@@ -652,7 +652,7 @@ political_decisions = {
 	}
 
 	istria_rename_serbian = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			primary_culture = serb
 			owns = 769
@@ -739,7 +739,7 @@ political_decisions = {
 	}
 
 	istria_rename_ser = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			primary_culture = serb
 			owns = 770
@@ -2284,7 +2284,7 @@ political_decisions = {
 	}
 
 	serbian_rename_cro_cores = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			owns = 772
 			primary_culture = serb
@@ -2311,7 +2311,7 @@ political_decisions = {
 	}
 
 	serbian_rename_cro = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			owns = 771
 			primary_culture = serb
@@ -2458,7 +2458,7 @@ political_decisions = {
 	}
 
 	slavonia_rename_ser = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			owns = 777
 			owns = 779
@@ -2636,7 +2636,7 @@ political_decisions = {
 	}
 
 	dalmatia_rename_ser = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			primary_culture = serb
 			NOT = { tag = YUG }
@@ -3715,6 +3715,7 @@ political_decisions = {
 		picture = gtfo
 		potential = {
 			OR = {
+				primary_culture = serb
 				primary_culture = bulgarian
 				has_global_flag = croatian_yugoslavia
 			}
@@ -3839,11 +3840,9 @@ political_decisions = {
 				624 = { change_province_name = "Eisenstadt" }
 				633 = { change_province_name = "Preßburg" }
 				3286 = { change_province_name = "Steinamanger" }
-				owner = {
-					set_global_flag = burgenland_rename_aus
-					clr_global_flag = burgenland_rename_hun
-					clr_global_flag = burgenland_rename_slo
-				}
+				set_global_flag = burgenland_rename_aus
+				clr_global_flag = burgenland_rename_hun
+				clr_global_flag = burgenland_rename_slo
 			}
 
 			###Hungarian###
@@ -3859,11 +3858,9 @@ political_decisions = {
 				624 = { change_province_name = "Kismarton" }
 				633 = { change_province_name = "Pozsony" }
 				3286 = { change_province_name = "Szombathely" }
-				owner = {
-					set_global_flag = burgenland_rename_hun
-					clr_global_flag = burgenland_rename_aus
-					clr_global_flag = burgenland_rename_slo
-				}
+				set_global_flag = burgenland_rename_hun
+				clr_global_flag = burgenland_rename_aus
+				clr_global_flag = burgenland_rename_slo
 			}
 			###Slovak###
 			random_owned = {
@@ -3878,11 +3875,9 @@ political_decisions = {
 				624 = { change_province_name = "Kismarton" }
 				624 = { change_province_name = "Kismarton" }
 				3286 = { change_province_name = "Szombathely" }
-				owner = {
-					set_global_flag = burgenland_rename_slo
-					clr_global_flag = burgenland_rename_hun
-					clr_global_flag = burgenland_rename_aus
-				}
+				set_global_flag = burgenland_rename_slo
+				clr_global_flag = burgenland_rename_hun
+				clr_global_flag = burgenland_rename_aus
 			}
 		}
 		ai_will_do = { factor = 1 }
@@ -3998,8 +3993,8 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-		#####################################################
-	#Renaming Constantinople#
+    #####################################################
+	#             Renaming Constantinople               #
 	#####################################################
 
 	 renamed_istanbul_constantinople = {
@@ -4018,7 +4013,7 @@ political_decisions = {
 						is_culture_group = levantine
 						is_culture_group = czecho_slovak_culture_group
 					}
-					NOT = { tag = RUS tag = BUL tag = YUG primary_culture = greek }
+					NOT = { tag = RUS tag = BUL tag = SER tag = YUG primary_culture = greek }
 					NOT = { has_global_flag = istanbul_renamed_con }
 				}
 				AND = {
@@ -4107,7 +4102,7 @@ political_decisions = {
 							is_culture_group = levantine
 							is_culture_group = czecho_slovak_culture_group
 						}
-						NOT = { primary_culture = greek tag = BUL tag = RUS tag = YUG }
+						NOT = { primary_culture = greek tag = BUL tag = RUS tag = SER tag = YUG }
 					} 
 				}
 				owner = {
@@ -4315,8 +4310,32 @@ political_decisions = {
 				primary_culture = bulgarian
 				has_global_flag = croatian_yugoslavia
 			}
-			owns = 815
-			NOT = { has_global_flag = bulgaria_rename_rumelia }
+			OR = {
+				AND = {
+					owns = 808
+					NOT = { has_global_flag = rumelia_rename_bul_808 }
+				}
+				AND = {
+					owns = 815
+					NOT = { has_global_flag = rumelia_rename_bul_815 }
+				}
+				AND = {
+					owns = 816
+					NOT = { has_global_flag = rumelia_rename_bul_816 }
+				}
+				AND = {
+					owns = 817
+					NOT = { has_global_flag = rumelia_rename_bul_817 }
+				}
+				AND = {
+					owns = 3303
+					NOT = { has_global_flag = rumelia_rename_bul_3303 }
+				}
+				AND = {
+					owns = 3373
+					NOT = { has_global_flag = rumelia_rename_bul_3373 }
+				}
+			}
 		}
 
 		allow = {
@@ -4324,30 +4343,72 @@ political_decisions = {
 		}
 
 		effect = {
-			set_global_flag = bulgaria_rename_rumelia
-			clr_global_flag = greek_rename_rumelia
-			prestige = 2
-			badboy = -5
-			815 = {
-				change_province_name = "Kurdzhali"
-				state_scope = {
-					change_region_name = "Yuzhna Bulgariya"
+			random_owned = {
+				limit = {
+					province_id = 808
 				}
+				808 = { change_province_name = "Petrich" }
+				set_global_flag = rumelia_rename_bul_808
+				clr_global_flag = rumelia_rename_gre_808
+				clr_global_flag = rumelia_rename_tur_808
+				clr_global_flag = rumelia_rename_ser_808
 			}
-			808 = { change_province_name = "Petrich" }
-			816 = { change_province_name = "Stara Zagora" }
-			817 = { change_province_name = "Burgas" }
-			3303 = { change_province_name = "Tsarevo" }
-			3373 = { change_province_name = "Plovdiv" }
-			RUM = {
-				all_core = {
-					limit = {
-						NOT = { has_global_flag = sw_set }
+			random_owned = {
+				limit = {
+					province_id = 815
+				}
+				815 = {
+					change_province_name = "Kurdzhali"
+					state_scope = {
+						change_region_name = "Yuzhna Bulgariya"
 					}
-					remove_core = RUM
-					remove_core = TUR
 				}
+				set_global_flag = rumelia_rename_bul_815
+				clr_global_flag = rumelia_rename_gre_815
+				clr_global_flag = rumelia_rename_tur_815
+				clr_global_flag = rumelia_rename_ser_815
 			}
+			random_owned = {
+				limit = {
+					province_id = 816
+				}
+				816 = { change_province_name = "Stara Zagora" }
+				set_global_flag = rumelia_rename_bul_816
+				clr_global_flag = rumelia_rename_gre_816
+				clr_global_flag = rumelia_rename_tur_816
+				clr_global_flag = rumelia_rename_ser_816
+			}
+			random_owned = {
+				limit = {
+					province_id = 817
+				}
+				817 = { change_province_name = "Burgas" }
+				set_global_flag = rumelia_rename_bul_817
+				clr_global_flag = rumelia_rename_gre_817
+				clr_global_flag = rumelia_rename_tur_817
+				clr_global_flag = rumelia_rename_ser_817
+			}
+			random_owned = {
+				limit = {
+					province_id = 3303
+				}
+				3303 = { change_province_name = "Tsarevo" }
+				set_global_flag = rumelia_rename_bul_3303
+				clr_global_flag = rumelia_rename_gre_3303
+				clr_global_flag = rumelia_rename_tur_3303
+				clr_global_flag = rumelia_rename_ser_3303
+			}
+			random_owned = {
+				limit = {
+					province_id = 3373
+				}
+				3373 = { change_province_name = "Plovdiv" }
+				set_global_flag = rumelia_rename_bul_3373
+				clr_global_flag = rumelia_rename_gre_3373
+				clr_global_flag = rumelia_rename_tur_3373
+				clr_global_flag = rumelia_rename_ser_3373
+			}
+			prestige = 2
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -4355,9 +4416,33 @@ political_decisions = {
 	greek_rename_rumelia = {
 		picture = gtfo
 		potential = {
-			owns = 815
 			primary_culture = greek
-			NOT = { has_global_flag = greek_rename_rumelia }
+			OR = {
+				AND = {
+					owns = 808
+					NOT = { has_global_flag = rumelia_rename_gre_808 }
+				}
+				AND = {
+					owns = 815
+					NOT = { has_global_flag = rumelia_rename_gre_815 }
+				}
+				AND = {
+					owns = 816
+					NOT = { has_global_flag = rumelia_rename_gre_816 }
+				}
+				AND = {
+					owns = 817
+					NOT = { has_global_flag = rumelia_rename_gre_817 }
+				}
+				AND = {
+					owns = 3303
+					NOT = { has_global_flag = rumelia_rename_gre_3303 }
+				}
+				AND = {
+					owns = 3373
+					NOT = { has_global_flag = rumelia_rename_gre_3373 }
+				}
+			}
 		}
 
 		allow = {
@@ -4365,20 +4450,72 @@ political_decisions = {
 		}
 
 		effect = {
-			set_global_flag = greek_rename_rumelia
-			clr_global_flag = bulgaria_rename_rumelia
-			prestige = 2
-			815 = {
-				change_province_name = "Kártzali"
-				state_scope = {
-					change_region_name = "Vóreia Thráki"
+			random_owned = {
+				limit = {
+					province_id = 808
 				}
+				808 = { change_province_name = "Petrítsi" }
+				set_global_flag = rumelia_rename_gre_808
+				clr_global_flag = rumelia_rename_bul_808
+				clr_global_flag = rumelia_rename_tur_808
+				clr_global_flag = rumelia_rename_ser_808
 			}
-			808 = { change_province_name = "Petrítsi" }
-			816 = { change_province_name = "Paliá Endochóra" }
-			817 = { change_province_name = "Pýrgos" }
-			3303 = { change_province_name = "Aftokrátoras" }
-			3373 = { change_province_name = "Filippoúpoli" }
+			random_owned = {
+				limit = {
+					province_id = 815
+				}
+				815 = {
+					change_province_name = "Kártzali"
+					state_scope = {
+						change_region_name = "Vóreia Thráki"
+					}
+				}
+				set_global_flag = rumelia_rename_gre_815
+				clr_global_flag = rumelia_rename_bul_815
+				clr_global_flag = rumelia_rename_tur_815
+				clr_global_flag = rumelia_rename_ser_815
+			}
+			random_owned = {
+				limit = {
+					province_id = 816
+				}
+				816 = { change_province_name = "Paliá Endochóra" }
+				set_global_flag = rumelia_rename_gre_816
+				clr_global_flag = rumelia_rename_bul_816
+				clr_global_flag = rumelia_rename_tur_816
+				clr_global_flag = rumelia_rename_ser_816
+			}
+			random_owned = {
+				limit = {
+					province_id = 817
+				}
+				817 = { change_province_name = "Pýrgos" }
+				set_global_flag = rumelia_rename_gre_817
+				clr_global_flag = rumelia_rename_bul_817
+				clr_global_flag = rumelia_rename_tur_817
+				clr_global_flag = rumelia_rename_ser_817
+			}
+			random_owned = {
+				limit = {
+					province_id = 3303
+				}
+				3303 = { change_province_name = "Aftokrátoras" }
+				set_global_flag = rumelia_rename_gre_3303
+				clr_global_flag = rumelia_rename_bul_3303
+				clr_global_flag = rumelia_rename_tur_3303
+				clr_global_flag = rumelia_rename_ser_3303
+			}
+			random_owned = {
+				limit = {
+					province_id = 3373
+				}
+				3373 = { change_province_name = "Filippoúpoli" }
+				set_global_flag = rumelia_rename_gre_3373
+				clr_global_flag = rumelia_rename_bul_3373
+				clr_global_flag = rumelia_rename_tur_3373
+				clr_global_flag = rumelia_rename_ser_3373
+			}
+			prestige = 2
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -4387,10 +4524,31 @@ political_decisions = {
 		picture = gtfo
 		potential = {
 			primary_culture = turkish
-			owns = 815
 			OR = {
-				has_global_flag = bulgaria_rename_rumelia
-				has_global_flag = greek_rename_rumelia
+				AND = {
+					owns = 808
+					NOT = { has_global_flag = rumelia_rename_tur_808 }
+				}
+				AND = {
+					owns = 815
+					NOT = { has_global_flag = rumelia_rename_tur_815 }
+				}
+				AND = {
+					owns = 816
+					NOT = { has_global_flag = rumelia_rename_tur_816 }
+				}
+				AND = {
+					owns = 817
+					NOT = { has_global_flag = rumelia_rename_tur_817 }
+				}
+				AND = {
+					owns = 3303
+					NOT = { has_global_flag = rumelia_rename_tur_3303 }
+				}
+				AND = {
+					owns = 3373
+					NOT = { has_global_flag = rumelia_rename_tur_3373 }
+				}
 			}
 		}
 
@@ -4399,20 +4557,649 @@ political_decisions = {
 		}
 
 		effect = {
-			clr_global_flag = bulgaria_rename_rumelia
-			clr_global_flag = greek_rename_rumelia
-			815 = {
-				change_province_name = "Kircaali"
-				state_scope = {
-					change_region_name = "Dogu Rumeli"
+			random_owned = {
+				limit = {
+					province_id = 808
+				}
+				808 = { change_province_name = "Petriç" }
+				set_global_flag = rumelia_rename_tur_808
+				clr_global_flag = rumelia_rename_bul_808
+				clr_global_flag = rumelia_rename_gre_808
+				clr_global_flag = rumelia_rename_ser_808
+			}
+			random_owned = {
+				limit = {
+					province_id = 815
+				}
+				815 = {
+					change_province_name = "Kircaali"
+					state_scope = {
+						change_region_name = "Dogu Rumeli"
+					}
+				}
+				set_global_flag = rumelia_rename_tur_815
+				clr_global_flag = rumelia_rename_bul_815
+				clr_global_flag = rumelia_rename_gre_815
+				clr_global_flag = rumelia_rename_ser_815
+			}
+			random_owned = {
+				limit = {
+					province_id = 816
+				}
+				816 = { change_province_name = "Eski Zagra" }
+				set_global_flag = rumelia_rename_tur_816
+				clr_global_flag = rumelia_rename_bul_816
+				clr_global_flag = rumelia_rename_gre_816
+				clr_global_flag = rumelia_rename_ser_816
+			}
+			random_owned = {
+				limit = {
+					province_id = 817
+				}
+				817 = { change_province_name = "Burgaz" }
+				set_global_flag = rumelia_rename_tur_817
+				clr_global_flag = rumelia_rename_bul_817
+				clr_global_flag = rumelia_rename_gre_817
+				clr_global_flag = rumelia_rename_ser_817
+			}
+			random_owned = {
+				limit = {
+					province_id = 3303
+				}
+				3303 = { change_province_name = "Kestiriç" }
+				set_global_flag = rumelia_rename_tur_3303
+				clr_global_flag = rumelia_rename_bul_3303
+				clr_global_flag = rumelia_rename_gre_3303
+				clr_global_flag = rumelia_rename_ser_3303
+			}
+			random_owned = {
+				limit = {
+					province_id = 3373
+				}
+				3373 = { change_province_name = "Filibe" }
+				set_global_flag = rumelia_rename_tur_3373
+				clr_global_flag = rumelia_rename_bul_3373
+				clr_global_flag = rumelia_rename_gre_3373
+				clr_global_flag = rumelia_rename_ser_3373
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	serbian_rename_rumelia = {
+		picture = gtfo
+		potential = {
+			primary_culture = serb
+			OR = {
+				AND = {
+					owns = 808
+					NOT = { has_global_flag = rumelia_rename_ser_808 }
+				}
+				AND = {
+					owns = 815
+					NOT = { has_global_flag = rumelia_rename_ser_815 }
+				}
+				AND = {
+					owns = 816
+					NOT = { has_global_flag = rumelia_rename_ser_816 }
+				}
+				AND = {
+					owns = 817
+					NOT = { has_global_flag = rumelia_rename_ser_817 }
+				}
+				AND = {
+					owns = 3303
+					NOT = { has_global_flag = rumelia_rename_ser_3303 }
+				}
+				AND = {
+					owns = 3373
+					NOT = { has_global_flag = rumelia_rename_ser_3373 }
 				}
 			}
-			808 = { change_province_name = "Petriç" }
-			816 = { change_province_name = "Eski Zagra" }
-			817 = { change_province_name = "Burgaz" }
-			3303 = { change_province_name = "Kestiriç" }
-			3373 = { change_province_name = "Filibe" }
+		}
 
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 808
+				}
+				808 = { change_province_name = "Petric" }
+				set_global_flag = rumelia_rename_ser_808
+				clr_global_flag = rumelia_rename_bul_808
+				clr_global_flag = rumelia_rename_gre_808
+				clr_global_flag = rumelia_rename_tur_808
+			}
+			random_owned = {
+				limit = {
+					province_id = 815
+				}
+				815 = {
+					change_province_name = "Krdžali"
+					state_scope = {
+						change_region_name = "Rodopi"
+					}
+				}
+				set_global_flag = rumelia_rename_ser_815
+				clr_global_flag = rumelia_rename_bul_815
+				clr_global_flag = rumelia_rename_gre_815
+				clr_global_flag = rumelia_rename_tur_815
+			}
+			random_owned = {
+				limit = {
+					province_id = 816
+				}
+				816 = { change_province_name = "Stara Zagora" }
+				set_global_flag = rumelia_rename_ser_816
+				clr_global_flag = rumelia_rename_bul_816
+				clr_global_flag = rumelia_rename_gre_816
+				clr_global_flag = rumelia_rename_tur_816
+			}
+			random_owned = {
+				limit = {
+					province_id = 817
+				}
+				817 = { change_province_name = "Burgas" }
+				set_global_flag = rumelia_rename_ser_817
+				clr_global_flag = rumelia_rename_bul_817
+				clr_global_flag = rumelia_rename_gre_817
+				clr_global_flag = rumelia_rename_tur_817
+			}
+			random_owned = {
+				limit = {
+					province_id = 3303
+				}
+				3303 = { change_province_name = "Carevo" }
+				set_global_flag = rumelia_rename_ser_3303
+				clr_global_flag = rumelia_rename_bul_3303
+				clr_global_flag = rumelia_rename_gre_3303
+				clr_global_flag = rumelia_rename_tur_3303
+			}
+			random_owned = {
+				limit = {
+					province_id = 3373
+				}
+				3373 = { change_province_name = "Plovdiv" }
+				set_global_flag = rumelia_rename_ser_3373
+				clr_global_flag = rumelia_rename_bul_3373
+				clr_global_flag = rumelia_rename_gre_3373
+				clr_global_flag = rumelia_rename_tur_3373
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	bulgarian_rename_bulgaria = {
+		picture = gtfo
+		potential = {
+			OR = {
+				primary_culture = bulgarian
+				has_global_flag = croatian_yugoslavia
+			}
+			OR = {
+				AND = {
+					owns = 799
+					primary_culture = bulgarian
+					NOT = { primary_culture = croatian }
+					NOT = { has_global_flag = bulgaria_rename_bul_799 }
+				}
+				AND = {
+					owns = 809
+					NOT = { has_global_flag = bulgaria_rename_bul_809 }
+				}
+				AND = {
+					owns = 810
+					NOT = { has_global_flag = bulgaria_rename_bul_810 }
+				}
+				AND = {
+					owns = 811
+					NOT = { has_global_flag = bulgaria_rename_bul_811 }
+				}
+				AND = {
+					owns = 812
+					NOT = { has_global_flag = bulgaria_rename_bul_812 }
+				}
+				AND = {
+					owns = 813
+					NOT = { has_global_flag = bulgaria_rename_bul_813 }
+				}
+				AND = {
+					owns = 814
+					NOT = { has_global_flag = bulgaria_rename_bul_814 }
+				}
+				AND = {
+					owns = 818
+					NOT = { has_global_flag = bulgaria_rename_bul_818 }
+				}
+				AND = {
+					owns = 3421
+					NOT = { has_global_flag = bulgaria_rename_bul_3421 }
+				}
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 799
+					owner = {
+						primary_culture = bulgarian
+						NOT = { primary_culture = croatian }
+					}
+				}
+				799 = { change_province_name = "Tsaribrod" }
+				set_global_flag = bulgaria_rename_bul_799
+				clr_global_flag = bulgaria_rename_tur_799
+				clr_global_flag = bulgaria_rename_ser_799
+			}
+			random_owned = {
+				limit = {
+					province_id = 809
+				}
+				809 = {
+					change_province_name = "Sofija"
+					state_scope = {
+						change_region_name = "Severna Bulgariya"
+					}
+				}
+				set_global_flag = bulgaria_rename_bul_809
+				clr_global_flag = bulgaria_rename_tur_809
+				clr_global_flag = bulgaria_rename_ser_809
+			}
+			random_owned = {
+				limit = {
+					province_id = 810
+				}
+				810 = { change_province_name = "Vidin" }
+				set_global_flag = bulgaria_rename_bul_810
+				clr_global_flag = bulgaria_rename_tur_810
+				clr_global_flag = bulgaria_rename_ser_810
+			}
+			random_owned = {
+				limit = {
+					province_id = 811
+				}
+				811 = { change_province_name = "Ruse" }
+				set_global_flag = bulgaria_rename_bul_811
+				clr_global_flag = bulgaria_rename_tur_811
+				clr_global_flag = bulgaria_rename_ser_811
+			}
+			random_owned = {
+				limit = {
+					province_id = 812
+				}
+				812 = { change_province_name = "Pleven" }
+				set_global_flag = bulgaria_rename_bul_812
+				clr_global_flag = bulgaria_rename_tur_812
+				clr_global_flag = bulgaria_rename_ser_812
+			}
+			random_owned = {
+				limit = {
+					province_id = 813
+				}
+				813 = { change_province_name = "Shumen" }
+				set_global_flag = bulgaria_rename_bul_813
+				clr_global_flag = bulgaria_rename_tur_813
+				clr_global_flag = bulgaria_rename_ser_813
+			}
+			random_owned = {
+				limit = {
+					province_id = 814
+				}
+				814 = { change_province_name = "Varna" }
+				set_global_flag = bulgaria_rename_bul_814
+				clr_global_flag = bulgaria_rename_tur_814
+				clr_global_flag = bulgaria_rename_ser_814
+			}
+			random_owned = {
+				limit = {
+					province_id = 818
+				}
+				818 = { change_province_name = "Silistra" }
+				set_global_flag = bulgaria_rename_bul_818
+				clr_global_flag = bulgaria_rename_tur_818
+				clr_global_flag = bulgaria_rename_ser_818
+				clr_global_flag = bulgaria_rename_ger_818
+			}
+			random_owned = {
+				limit = {
+					province_id = 3421
+				}
+				3421 = { change_province_name = "Kyustendil" }
+				set_global_flag = bulgaria_rename_bul_3421
+				clr_global_flag = bulgaria_rename_tur_3421
+				clr_global_flag = bulgaria_rename_ser_3421
+			}
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	serbian_rename_bulgaria = {
+		picture = gtfo
+		potential = {
+			primary_culture = serb
+			OR = {
+				AND = {
+					owns = 799
+					OR = {
+						primary_culture = serb
+						primary_culture = croatian
+					}
+					NOT = { has_global_flag = bulgaria_rename_ser_799 }
+				}
+				AND = {
+					owns = 809
+					NOT = { has_global_flag = bulgaria_rename_ser_809 }
+				}
+				AND = {
+					owns = 810
+					NOT = { has_global_flag = bulgaria_rename_ser_810 }
+				}
+				AND = {
+					owns = 811
+					NOT = { has_global_flag = bulgaria_rename_ser_811 }
+				}
+				AND = {
+					owns = 812
+					NOT = { has_global_flag = bulgaria_rename_ser_812 }
+				}
+				AND = {
+					owns = 813
+					NOT = { has_global_flag = bulgaria_rename_ser_813 }
+				}
+				AND = {
+					owns = 814
+					NOT = { has_global_flag = bulgaria_rename_ser_814 }
+				}
+				AND = {
+					owns = 818
+					NOT = { has_global_flag = bulgaria_rename_ser_818 }
+				}
+				AND = {
+					owns = 3421
+					NOT = { has_global_flag = bulgaria_rename_ser_3421 }
+				}
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 799
+					owner = {
+						OR = {
+							primary_culture = serb
+							primary_culture = croatian
+						}
+					}
+				}
+				799 = { change_province_name = "Dimitrovgrad" }
+				set_global_flag = bulgaria_rename_ser_799
+				clr_global_flag = bulgaria_rename_tur_799
+				clr_global_flag = bulgaria_rename_bul_799
+			}
+			random_owned = {
+				limit = {
+					province_id = 809
+				}
+				809 = {
+					change_province_name = "Sofija"
+					state_scope = {
+						change_region_name = "Mezija"
+					}
+				}
+				set_global_flag = bulgaria_rename_ser_809
+				clr_global_flag = bulgaria_rename_tur_809
+				clr_global_flag = bulgaria_rename_bul_809
+			}
+			random_owned = {
+				limit = {
+					province_id = 810
+				}
+				810 = { change_province_name = "Vidin" }
+				set_global_flag = bulgaria_rename_ser_810
+				clr_global_flag = bulgaria_rename_tur_810
+				clr_global_flag = bulgaria_rename_bul_810
+			}
+			random_owned = {
+				limit = {
+					province_id = 811
+				}
+				811 = { change_province_name = "Rušcuk" }
+				set_global_flag = bulgaria_rename_ser_811
+				clr_global_flag = bulgaria_rename_tur_811
+				clr_global_flag = bulgaria_rename_bul_811
+			}
+			random_owned = {
+				limit = {
+					province_id = 812
+				}
+				812 = { change_province_name = "Pleven" }
+				set_global_flag = bulgaria_rename_ser_812
+				clr_global_flag = bulgaria_rename_tur_812
+				clr_global_flag = bulgaria_rename_bul_812
+			}
+			random_owned = {
+				limit = {
+					province_id = 813
+				}
+				813 = { change_province_name = "Šumen" }
+				set_global_flag = bulgaria_rename_ser_813
+				clr_global_flag = bulgaria_rename_tur_813
+				clr_global_flag = bulgaria_rename_bul_813
+			}
+			random_owned = {
+				limit = {
+					province_id = 814
+				}
+				814 = { change_province_name = "Varna" }
+				set_global_flag = bulgaria_rename_ser_814
+				clr_global_flag = bulgaria_rename_tur_814
+				clr_global_flag = bulgaria_rename_bul_814
+			}
+			random_owned = {
+				limit = {
+					province_id = 818
+				}
+				818 = { change_province_name = "Silistra" }
+				set_global_flag = bulgaria_rename_ser_818
+				clr_global_flag = bulgaria_rename_tur_818
+				clr_global_flag = bulgaria_rename_bul_818
+				clr_global_flag = bulgaria_rename_ger_818
+			}
+			random_owned = {
+				limit = {
+					province_id = 3421
+				}
+				3421 = { change_province_name = "Velbužd" }
+				set_global_flag = bulgaria_rename_ser_3421
+				clr_global_flag = bulgaria_rename_tur_3421
+				clr_global_flag = bulgaria_rename_bul_3421
+			}
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	turkish_rename_bulgaria = {
+		picture = gtfo
+		potential = {
+			primary_culture = turkish
+			OR = {
+				AND = {
+					owns = 799
+					NOT = { has_global_flag = bulgaria_rename_tur_799 }
+				}
+				AND = {
+					owns = 809
+					NOT = { has_global_flag = bulgaria_rename_tur_809 }
+				}
+				AND = {
+					owns = 810
+					NOT = { has_global_flag = bulgaria_rename_tur_810 }
+				}
+				AND = {
+					owns = 811
+					NOT = { has_global_flag = bulgaria_rename_tur_811 }
+				}
+				AND = {
+					owns = 812
+					NOT = { has_global_flag = bulgaria_rename_tur_812 }
+				}
+				AND = {
+					owns = 813
+					NOT = { has_global_flag = bulgaria_rename_tur_813 }
+				}
+				AND = {
+					owns = 814
+					NOT = { has_global_flag = bulgaria_rename_tur_814 }
+				}
+				AND = {
+					owns = 818
+					NOT = { has_global_flag = bulgaria_rename_tur_818 }
+				}
+				AND = {
+					owns = 3421
+					NOT = { has_global_flag = bulgaria_rename_tur_3421 }
+				}
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 799
+				}
+				810 = { change_province_name = "Kayacik" }
+				set_global_flag = bulgaria_rename_tur_810
+				clr_global_flag = bulgaria_rename_ser_810
+				clr_global_flag = bulgaria_rename_bul_810
+			}
+			random_owned = {
+				limit = {
+					province_id = 809
+				}
+				809 = {
+					change_province_name = "Sofya"
+					state_scope = {
+						change_region_name = "Bulgaristan"
+					}
+				}
+				set_global_flag = bulgaria_rename_tur_809
+				clr_global_flag = bulgaria_rename_ser_809
+				clr_global_flag = bulgaria_rename_bul_809
+			}
+			random_owned = {
+				limit = {
+					province_id = 810
+				}
+				810 = { change_province_name = "Vidin" }
+				set_global_flag = bulgaria_rename_tur_810
+				clr_global_flag = bulgaria_rename_ser_810
+				clr_global_flag = bulgaria_rename_bul_810
+			}
+			random_owned = {
+				limit = {
+					province_id = 811
+				}
+				811 = { change_province_name = "Rusçuk" }
+				set_global_flag = bulgaria_rename_tur_811
+				clr_global_flag = bulgaria_rename_ser_811
+				clr_global_flag = bulgaria_rename_bul_811
+			}
+			random_owned = {
+				limit = {
+					province_id = 812
+				}
+				812 = { change_province_name = "Plevne" }
+				set_global_flag = bulgaria_rename_tur_812
+				clr_global_flag = bulgaria_rename_ser_812
+				clr_global_flag = bulgaria_rename_bul_812
+			}
+			random_owned = {
+				limit = {
+					province_id = 813
+				}
+				813 = { change_province_name = "sumnu" }
+				set_global_flag = bulgaria_rename_tur_813
+				clr_global_flag = bulgaria_rename_ser_813
+				clr_global_flag = bulgaria_rename_bul_813
+			}
+			random_owned = {
+				limit = {
+					province_id = 814
+				}
+				814 = { change_province_name = "Varna" }
+				set_global_flag = bulgaria_rename_tur_814
+				clr_global_flag = bulgaria_rename_ser_814
+				clr_global_flag = bulgaria_rename_bul_814
+			}
+			random_owned = {
+				limit = {
+					province_id = 818
+				}
+				818 = { change_province_name = "Silistre" }
+				set_global_flag = bulgaria_rename_tur_818
+				clr_global_flag = bulgaria_rename_ser_818
+				clr_global_flag = bulgaria_rename_bul_818
+				clr_global_flag = bulgaria_rename_ger_818
+			}
+			random_owned = {
+				limit = {
+					province_id = 3421
+				}
+				3421 = { change_province_name = "Köstendil" }
+				set_global_flag = bulgaria_rename_tur_3421
+				clr_global_flag = bulgaria_rename_ser_3421
+				clr_global_flag = bulgaria_rename_bul_3421
+			}
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	german_rename_bulgaria = {
+		picture = gtfo
+		potential = {
+			is_culture_group = germanic
+			AND = {
+				owns = 818
+				NOT = { has_global_flag = bulgaria_rename_ger_818 }
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 818
+				}
+				818 = { change_province_name = "Blumenthal" }
+				set_global_flag = bulgaria_rename_ger_818
+				clr_global_flag = bulgaria_rename_ser_818
+				clr_global_flag = bulgaria_rename_bul_818
+				clr_global_flag = bulgaria_rename_tur_818
+			}
+			prestige = 2
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -4435,6 +5222,8 @@ political_decisions = {
 		effect = {
 			set_global_flag = bulgaria_rename_thrace
 			clr_global_flag = greek_rename_thrace
+			clr_global_flag = turkish_rename_thrace
+			clr_global_flag = serbian_rename_thrace
 			prestige = 2
 			3302 = {
 				change_province_name = "Lozengrad"
@@ -4444,7 +5233,7 @@ political_decisions = {
 			}
 			828 = { change_province_name = "Odrin" }
 			858 = { change_province_name = "Berkulen" }
-			859 = { change_province_name = "Galipoli" }
+			859 = { change_province_name = "Galipole" }
 			3470 = { change_province_name = "Keshan" }
 		}
 		ai_will_do = { factor = 1 }
@@ -4465,6 +5254,8 @@ political_decisions = {
 		effect = {
 			set_global_flag = greek_rename_thrace
 			clr_global_flag = bulgaria_rename_thrace
+			clr_global_flag = turkish_rename_thrace
+			clr_global_flag = serbian_rename_thrace
 			prestige = 2
 			3302 = {
 				change_province_name = "Saránta Ekklisiés"
@@ -4485,10 +5276,7 @@ political_decisions = {
 		potential = {
 			primary_culture = turkish
 			owns = 3302
-			OR = {
-				has_global_flag = bulgaria_rename_thrace
-				has_global_flag = greek_rename_thrace
-			}
+			NOT = { has_global_flag = turkish_rename_thrace }
 		}
 
 		allow = {
@@ -4496,8 +5284,10 @@ political_decisions = {
 		}
 
 		effect = {
+			set_global_flag = turkish_rename_thrace
 			clr_global_flag = bulgaria_rename_thrace
 			clr_global_flag = greek_rename_thrace
+			clr_global_flag = serbian_rename_thrace
 			3302 = {
 				change_province_name = "Kirklareli"
 				state_scope = {
@@ -4508,6 +5298,44 @@ political_decisions = {
 			858 = { change_province_name = "Lüleburgaz" }
 			859 = { change_province_name = "Gallipoli" }
 			3470 = { change_province_name = "Kesan" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	serbian_rename_thrace = {
+		picture = gtfo
+		potential = {
+			primary_culture = serb
+			owns = 3302
+			NOT = { has_global_flag = serbian_rename_thrace }
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_global_flag = serbian_rename_thrace
+			clr_global_flag = bulgaria_rename_thrace
+			clr_global_flag = greek_rename_thrace
+			clr_global_flag = turkish_rename_thrace
+			clr_global_flag = istanbul_renamed_gre
+			clr_global_flag = istanbul_renamed_con
+			clr_global_flag = istanbul_renamed_rus
+			clr_global_flag = istanbul_renamed_tur
+			clr_global_flag = istanbul_renamed_sca
+			clr_global_flag = istanbul_renamed_qng
+			3302 = {
+				change_province_name = "Lozengrad"
+				state_scope = {
+					change_region_name = "Istocna Trakija"
+				}
+			}
+			828 = { change_province_name = "Jedrene" }
+			858 = { change_province_name = "Berkulen" }
+			859 = { change_province_name = "Galipolje" }
+			860 = { change_province_name = "Konstantinopolj" }
+			3470 = { change_province_name = "Kešan" }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -4531,6 +5359,7 @@ political_decisions = {
 			set_global_flag = bulgaria_rename_dobrudja
 			clr_global_flag = romania_rename_dobrudja
 			clr_global_flag = german_rename_dobrudja
+			clr_global_flag = serbian_rename_dobrudja
 			prestige = 2
 			674 = {
 				change_province_name = "Kyustendzha"
@@ -4561,6 +5390,7 @@ political_decisions = {
 			set_global_flag = romania_rename_dobrudja
 			clr_global_flag = bulgaria_rename_dobrudja
 			clr_global_flag = german_rename_dobrudja
+			clr_global_flag = serbian_rename_dobrudja
 			prestige = 2
 			674 = {
 				change_province_name = "Constanta"
@@ -4591,6 +5421,7 @@ political_decisions = {
 			set_global_flag = german_rename_dobrudja
 			clr_global_flag = romania_rename_dobrudja
 			clr_global_flag = bulgaria_rename_dobrudja
+			clr_global_flag = serbian_rename_dobrudja
 			prestige = 2
 			674 = {
 				change_province_name = "Konstanza"
@@ -4604,6 +5435,37 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	serbian_rename_dobrudja = {
+		picture = gtfo
+		potential = {
+			primary_culture = serb
+			owns = 674
+			NOT = { has_global_flag = serbian_rename_dobrudja }
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_global_flag = serbian_rename_dobrudja
+			clr_global_flag = bulgaria_rename_dobrudja
+			clr_global_flag = german_rename_dobrudja
+			clr_global_flag = romania_rename_dobrudja
+			prestige = 2
+			674 = {
+				change_province_name = "Konstanca"
+				state_scope = {
+					change_region_name = "Dobrudža"
+				}
+			}
+			675 = { change_province_name = "Tulca" }
+			3371 = { change_province_name = "Mangalija" }
+			3372 = { change_province_name = "Sulina" }
+		}
+		ai_will_do = { factor = 1 }
+	}
 
 	greek_rename_epirus = {
 		picture = gtfo
@@ -4612,15 +5474,15 @@ political_decisions = {
 			OR = {
 				AND = {
 					owns = 824
-					NOT = { has_global_flag = greek_rename_epirus_824 }
+					NOT = { has_global_flag = epirus_rename_gre_824 }
 				}
 				AND = {
 					owns = 853
-					NOT = { has_global_flag = greek_rename_epirus_853 }
+					NOT = { has_global_flag = epirus_rename_gre_853 }
 				}
 				AND = {
 					owns = 3307
-					NOT = { has_global_flag = greek_rename_epirus_3307 }
+					NOT = { has_global_flag = epirus_rename_gre_3307 }
 				}
 			}
 		}
@@ -4635,24 +5497,31 @@ political_decisions = {
 					province_id = 824
 				}
 				824 = { change_province_name = "Ioannina" }
-				set_global_flag = greek_rename_epirus_824
-				clr_global_flag = albanian_rename_epirus_824
+				set_global_flag = epirus_rename_gre_824
+				clr_global_flag = epirus_rename_alb_824
+				clr_global_flag = epirus_rename_ser_824
+				clr_global_flag = epirus_rename_tur_824
 			}
 			random_owned = {
 				limit = {
 					province_id = 853
 				}
 				853 = { change_province_name = "Argyrokastro" }
-				set_global_flag = greek_rename_epirus_853
-				clr_global_flag = albanian_rename_epirus_853
+				set_global_flag = epirus_rename_gre_853
+				clr_global_flag = epirus_rename_alb_853
+				clr_global_flag = epirus_rename_ser_853
+				clr_global_flag = epirus_rename_tur_853
 			}
 			random_owned = {
 				limit = {
 					province_id = 3307
 				}
 				3307 = { change_province_name = "Korytsá" }
-				set_global_flag = greek_rename_epirus_3307
-				clr_global_flag = albanian_rename_epirus_3307
+				set_global_flag = epirus_rename_gre_3307
+				clr_global_flag = epirus_rename_alb_3307
+				clr_global_flag = epirus_rename_ser_3307
+				clr_global_flag = epirus_rename_tur_3307
+				clr_global_flag = epirus_rename_bul_3307
 			}
 			prestige = 2
 		}
@@ -4669,15 +5538,15 @@ political_decisions = {
 			OR = {
 				AND = {
 					owns = 824
-					NOT = { has_global_flag = albanian_rename_epirus_824 }
+					NOT = { has_global_flag = epirus_rename_alb_824 }
 				}
 				AND = {
 					owns = 853
-					NOT = { has_global_flag = albanian_rename_epirus_853 }
+					NOT = { has_global_flag = epirus_rename_alb_853 }
 				}
 				AND = {
 					owns = 3307
-					NOT = { has_global_flag = albanian_rename_epirus_3307 }
+					NOT = { has_global_flag = epirus_rename_alb_3307 }
 				}
 			}
 		}
@@ -4692,24 +5561,1349 @@ political_decisions = {
 					province_id = 824
 				}
 				824 = { change_province_name = "Janina" }
-				set_global_flag = albanian_rename_epirus_824
-				clr_global_flag = greek_rename_epirus_824
+				set_global_flag = epirus_rename_alb_824
+				clr_global_flag = epirus_rename_gre_824
+				clr_global_flag = epirus_rename_ser_824
+				clr_global_flag = epirus_rename_tur_824
 			}
 			random_owned = {
 				limit = {
 					province_id = 853
 				}
 				853 = { change_province_name = "Gjirokaster" }
-				set_global_flag = albanian_rename_epirus_853
-				clr_global_flag = greek_rename_epirus_853
+				set_global_flag = epirus_rename_alb_853
+				clr_global_flag = epirus_rename_gre_853
+				clr_global_flag = epirus_rename_ser_853
+				clr_global_flag = epirus_rename_tur_853
 			}
 			random_owned = {
 				limit = {
 					province_id = 3307
 				}
 				3307 = { change_province_name = "Korça" }
-				set_global_flag = albanian_rename_epirus_3307
-				clr_global_flag = greek_rename_epirus_3307
+				set_global_flag = epirus_rename_alb_3307
+				clr_global_flag = epirus_rename_gre_3307
+				clr_global_flag = epirus_rename_ser_3307
+				clr_global_flag = epirus_rename_tur_3307
+				clr_global_flag = epirus_rename_bul_3307
+			}
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	turkish_rename_epirus = {
+		picture = gtfo
+		potential = {
+			primary_culture = turkish
+			OR = {
+				AND = {
+					owns = 824
+					NOT = { has_global_flag = epirus_rename_tur_824 }
+				}
+				AND = {
+					owns = 853
+					NOT = { has_global_flag = epirus_rename_tur_853 }
+				}
+				AND = {
+					owns = 3307
+					NOT = { has_global_flag = epirus_rename_tur_3307 }
+				}
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 824
+				}
+				824 = { change_province_name = "Yanya" }
+				set_global_flag = epirus_rename_tur_824
+				clr_global_flag = epirus_rename_gre_824
+				clr_global_flag = epirus_rename_alb_824
+				clr_global_flag = epirus_rename_ser_824
+				
+			}
+			random_owned = {
+				limit = {
+					province_id = 853
+				}
+				853 = { change_province_name = "Ergiri" }
+				set_global_flag = epirus_rename_tur_853
+				clr_global_flag = epirus_rename_gre_853
+				clr_global_flag = epirus_rename_alb_853
+				clr_global_flag = epirus_rename_ser_853
+			}
+			random_owned = {
+				limit = {
+					province_id = 3307
+				}
+				3307 = { change_province_name = "Görice" }
+				set_global_flag = epirus_rename_tur_3307
+				clr_global_flag = epirus_rename_gre_3307
+				clr_global_flag = epirus_rename_alb_3307
+				clr_global_flag = epirus_rename_ser_3307
+				clr_global_flag = epirus_rename_bul_3307
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	serbian_rename_epirus = {
+		picture = gtfo
+		potential = {
+			primary_culture = serb
+			OR = {
+				AND = {
+					owns = 824
+					NOT = { has_global_flag = epirus_rename_ser_824 }
+				}
+				AND = {
+					owns = 853
+					NOT = { has_global_flag = epirus_rename_ser_853 }
+				}
+				AND = {
+					owns = 3307
+					NOT = { has_global_flag = epirus_rename_ser_3307 }
+				}
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 824
+				}
+				824 = { change_province_name = "Janjina" }
+				set_global_flag = epirus_rename_ser_824
+				clr_global_flag = epirus_rename_gre_824
+				clr_global_flag = epirus_rename_alb_824
+				clr_global_flag = epirus_rename_tur_824
+				
+			}
+			random_owned = {
+				limit = {
+					province_id = 853
+				}
+				853 = { change_province_name = "Djirokastra" }
+				set_global_flag = epirus_rename_ser_853
+				clr_global_flag = epirus_rename_gre_853
+				clr_global_flag = epirus_rename_alb_853
+				clr_global_flag = epirus_rename_tur_853
+			}
+			random_owned = {
+				limit = {
+					province_id = 3307
+				}
+				3307 = { change_province_name = "Gorica" }
+				set_global_flag = epirus_rename_ser_3307
+				clr_global_flag = epirus_rename_gre_3307
+				clr_global_flag = epirus_rename_alb_3307
+				clr_global_flag = epirus_rename_tur_3307
+				clr_global_flag = epirus_rename_bul_3307
+			}
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	greek_rename_s_greece = {
+		picture = gtfo
+		potential = {
+			primary_culture = greek
+			OR = {
+				AND = {
+					owns = 827
+					NOT = { has_global_flag = s_greece_rename_gre_827 }
+				}
+				AND = {
+					owns = 831
+					NOT = { has_global_flag = s_greece_rename_gre_831 }
+				}
+				AND = {
+					owns = 832
+					NOT = { has_global_flag = s_greece_rename_gre_832 }
+				}
+				AND = {
+					owns = 833
+					NOT = { has_global_flag = s_greece_rename_gre_833 }
+				}
+				AND = {
+					owns = 834
+					NOT = { has_global_flag = s_greece_rename_gre_834 }
+				}
+				AND = {
+					owns = 835
+					NOT = { has_global_flag = s_greece_rename_gre_835 }
+				}
+				AND = {
+					owns = 836
+					NOT = { has_global_flag = s_greece_rename_gre_836 }
+				}
+				AND = {
+					owns = 837
+					NOT = { has_global_flag = s_greece_rename_gre_837 }
+				}
+				AND = {
+					owns = 838
+					NOT = { has_global_flag = s_greece_rename_gre_838 }
+				}
+				AND = {
+					owns = 839
+					NOT = { has_global_flag = s_greece_rename_gre_839 }
+				}
+				AND = {
+					owns = 840
+					NOT = { has_global_flag = s_greece_rename_gre_840 }
+				}
+				AND = {
+					owns = 841
+					NOT = { has_global_flag = s_greece_rename_gre_841 }
+				}
+				AND = {
+					owns = 842
+					NOT = { has_global_flag = s_greece_rename_gre_842 }
+				}
+				AND = {
+					owns = 843
+					NOT = { has_global_flag = s_greece_rename_gre_843 }
+				}
+				AND = {
+					owns = 844
+					NOT = { has_global_flag = s_greece_rename_gre_844 }
+				}
+				AND = {
+					owns = 845
+					NOT = { has_global_flag = s_greece_rename_gre_845 }
+				}
+				AND = {
+					owns = 846
+					NOT = { has_global_flag = s_greece_rename_gre_846 }
+				}
+				AND = {
+					owns = 847
+					NOT = { has_global_flag = s_greece_rename_gre_847 }
+				}
+				AND = {
+					owns = 848
+					NOT = { has_global_flag = s_greece_rename_gre_848 }
+				}
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 827
+				}
+				827 = { change_province_name = "Zákynthos" }
+				set_global_flag = s_greece_rename_gre_827
+				clr_global_flag = s_greece_rename_ser_827
+				clr_global_flag = s_greece_rename_tur_827
+				clr_global_flag = s_greece_rename_ita_827
+			}
+			random_owned = {
+				limit = {
+					province_id = 831
+				}
+				831 = { change_province_name = "Lárisa" }
+				set_global_flag = s_greece_rename_gre_831
+				clr_global_flag = s_greece_rename_ser_831
+				clr_global_flag = s_greece_rename_tur_831
+				clr_global_flag = s_greece_rename_ita_831
+			}
+			random_owned = {
+				limit = {
+					province_id = 832
+				}
+				832 = {
+				change_province_name = "Vólos"
+					state_scope = {
+						change_region_name = "Thessalía"
+					}
+				}
+				set_global_flag = s_greece_rename_gre_832
+				clr_global_flag = s_greece_rename_ser_832
+				clr_global_flag = s_greece_rename_tur_832
+				clr_global_flag = s_greece_rename_ita_832
+			}
+			random_owned = {
+				limit = {
+					province_id = 833
+				}
+				833 = { change_province_name = "Tríkala" }
+				set_global_flag = s_greece_rename_gre_833
+				clr_global_flag = s_greece_rename_ser_833
+				clr_global_flag = s_greece_rename_tur_833
+				clr_global_flag = s_greece_rename_ita_833
+			}
+			random_owned = {
+				limit = {
+					province_id = 834
+				}
+				834 = {
+				change_province_name = "Athína"
+					state_scope = {
+						change_region_name = "Stereá Elláda"
+					}
+				}
+				set_global_flag = s_greece_rename_gre_834
+				clr_global_flag = s_greece_rename_ser_834
+				clr_global_flag = s_greece_rename_tur_834
+				clr_global_flag = s_greece_rename_ita_834
+			}
+			random_owned = {
+				limit = {
+					province_id = 835
+				}
+				835 = { change_province_name = "Ámfissa" }
+				set_global_flag = s_greece_rename_gre_835
+				clr_global_flag = s_greece_rename_ser_835
+				clr_global_flag = s_greece_rename_tur_835
+				clr_global_flag = s_greece_rename_ita_835
+			}
+			random_owned = {
+				limit = {
+					province_id = 836
+				}
+				836 = { change_province_name = "Karpenísi" }
+				set_global_flag = s_greece_rename_gre_836
+				clr_global_flag = s_greece_rename_ser_836
+				clr_global_flag = s_greece_rename_tur_836
+				clr_global_flag = s_greece_rename_ita_836
+			}
+			random_owned = {
+				limit = {
+					province_id = 837
+				}
+				837 = { change_province_name = "Mesolóngi" }
+				set_global_flag = s_greece_rename_gre_837
+				clr_global_flag = s_greece_rename_ser_837
+				clr_global_flag = s_greece_rename_tur_837
+				clr_global_flag = s_greece_rename_ita_837
+			}
+			random_owned = {
+				limit = {
+					province_id = 838
+				}
+				838 = { change_province_name = "Chalkída" }
+				set_global_flag = s_greece_rename_gre_838
+				clr_global_flag = s_greece_rename_ser_838
+				clr_global_flag = s_greece_rename_tur_838
+				clr_global_flag = s_greece_rename_ita_838
+			}
+			random_owned = {
+				limit = {
+					province_id = 839
+				}
+				839 = { change_province_name = "Náfplio" }
+				set_global_flag = s_greece_rename_gre_839
+				clr_global_flag = s_greece_rename_ser_839
+				clr_global_flag = s_greece_rename_tur_839
+				clr_global_flag = s_greece_rename_ita_839
+			}
+			random_owned = {
+				limit = {
+					province_id = 840
+				}
+				840 = { change_province_name = "Kórinthos" }
+				set_global_flag = s_greece_rename_gre_840
+				clr_global_flag = s_greece_rename_ser_840
+				clr_global_flag = s_greece_rename_tur_840
+				clr_global_flag = s_greece_rename_ita_840
+			}
+			random_owned = {
+				limit = {
+					province_id = 841
+				}
+				841 = { change_province_name = "Kalamáta" }
+				set_global_flag = s_greece_rename_gre_841
+				clr_global_flag = s_greece_rename_ser_841
+				clr_global_flag = s_greece_rename_tur_841
+				clr_global_flag = s_greece_rename_ita_841
+			}
+			random_owned = {
+				limit = {
+					province_id = 842
+				}
+				842 = { change_province_name = "Pátra" }
+				set_global_flag = s_greece_rename_gre_842
+				clr_global_flag = s_greece_rename_ser_842
+				clr_global_flag = s_greece_rename_tur_842
+				clr_global_flag = s_greece_rename_ita_842
+			}
+			random_owned = {
+				limit = {
+					province_id = 843
+				}
+				843 = { change_province_name = "Sámos" }
+				set_global_flag = s_greece_rename_gre_843
+				clr_global_flag = s_greece_rename_ser_843
+				clr_global_flag = s_greece_rename_tur_843
+				clr_global_flag = s_greece_rename_ita_843
+			}
+			random_owned = {
+				limit = {
+					province_id = 844
+				}
+				844 = { change_province_name = "Mytilíni" }
+				set_global_flag = s_greece_rename_gre_844
+				clr_global_flag = s_greece_rename_ser_844
+				clr_global_flag = s_greece_rename_tur_844
+				clr_global_flag = s_greece_rename_ita_844
+			}
+			random_owned = {
+				limit = {
+					province_id = 845
+				}
+				845 = { change_province_name = "Kykládes" }
+				set_global_flag = s_greece_rename_gre_845
+				clr_global_flag = s_greece_rename_ser_845
+				clr_global_flag = s_greece_rename_tur_845
+				clr_global_flag = s_greece_rename_ita_845
+			}
+			random_owned = {
+				limit = {
+					province_id = 846
+				}
+				846 = { change_province_name = "Dodekánisa" }
+				set_global_flag = s_greece_rename_gre_846
+				clr_global_flag = s_greece_rename_ser_846
+				clr_global_flag = s_greece_rename_tur_846
+				clr_global_flag = s_greece_rename_ita_846
+			}
+			random_owned = {
+				limit = {
+					province_id = 847
+				}
+				847 = { change_province_name = "Chaniá" }
+				set_global_flag = s_greece_rename_gre_847
+				clr_global_flag = s_greece_rename_ser_847
+				clr_global_flag = s_greece_rename_tur_847
+				clr_global_flag = s_greece_rename_ita_847
+			}
+			random_owned = {
+				limit = {
+					province_id = 848
+				}
+				848 = {
+				change_province_name = "Irákleio"
+					state_scope = {
+						change_region_name = "Nisiá Aigaíou"
+					}
+				}
+				set_global_flag = s_greece_rename_gre_848
+				clr_global_flag = s_greece_rename_ser_848
+				clr_global_flag = s_greece_rename_tur_848
+				clr_global_flag = s_greece_rename_ita_848
+			}
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	turkish_rename_s_greece = {
+		picture = gtfo
+		potential = {
+			primary_culture = turkish
+			OR = {
+				AND = {
+					owns = 827
+					NOT = { has_global_flag = s_greece_rename_tur_827 }
+				}
+				AND = {
+					owns = 831
+					NOT = { has_global_flag = s_greece_rename_tur_831 }
+				}
+				AND = {
+					owns = 832
+					NOT = { has_global_flag = s_greece_rename_tur_832 }
+				}
+				AND = {
+					owns = 834
+					NOT = { has_global_flag = s_greece_rename_tur_834 }
+				}
+				AND = {
+					owns = 833
+					NOT = { has_global_flag = s_greece_rename_tur_833 }
+				}
+				AND = {
+					owns = 835
+					NOT = { has_global_flag = s_greece_rename_tur_835 }
+				}
+				AND = {
+					owns = 836
+					NOT = { has_global_flag = s_greece_rename_tur_836 }
+				}
+				AND = {
+					owns = 837
+					NOT = { has_global_flag = s_greece_rename_tur_837 }
+				}
+				AND = {
+					owns = 838
+					NOT = { has_global_flag = s_greece_rename_tur_838 }
+				}
+				AND = {
+					owns = 839
+					NOT = { has_global_flag = s_greece_rename_tur_839 }
+				}
+				AND = {
+					owns = 840
+					NOT = { has_global_flag = s_greece_rename_tur_840 }
+				}
+				AND = {
+					owns = 841
+					NOT = { has_global_flag = s_greece_rename_tur_841 }
+				}
+				AND = {
+					owns = 842
+					NOT = { has_global_flag = s_greece_rename_tur_842 }
+				}
+				AND = {
+					owns = 843
+					NOT = { has_global_flag = s_greece_rename_tur_843 }
+				}
+				AND = {
+					owns = 844
+					NOT = { has_global_flag = s_greece_rename_tur_844 }
+				}
+				AND = {
+					owns = 845
+					NOT = { has_global_flag = s_greece_rename_tur_845 }
+				}
+				AND = {
+					owns = 846
+					NOT = { has_global_flag = s_greece_rename_tur_846 }
+				}
+				AND = {
+					owns = 847
+					NOT = { has_global_flag = s_greece_rename_tur_847 }
+				}
+				AND = {
+					owns = 848
+					NOT = { has_global_flag = s_greece_rename_tur_848 }
+				}
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 827
+				}
+				827 = { change_province_name = "Zanta" }
+				set_global_flag = s_greece_rename_tur_827
+				clr_global_flag = s_greece_rename_ser_827
+				clr_global_flag = s_greece_rename_gre_827
+				clr_global_flag = s_greece_rename_ita_827
+			}
+			random_owned = {
+				limit = {
+					province_id = 831
+				}
+				831 = { change_province_name = "Yenisehir" }
+				set_global_flag = s_greece_rename_tur_831
+				clr_global_flag = s_greece_rename_ser_831
+				clr_global_flag = s_greece_rename_gre_831
+				clr_global_flag = s_greece_rename_ita_831
+			}
+			random_owned = {
+				limit = {
+					province_id = 832
+				}
+				832 = {
+				change_province_name = "Golos"
+					state_scope = {
+						change_region_name = "Teselya"
+					}
+				}
+				set_global_flag = s_greece_rename_tur_832
+				clr_global_flag = s_greece_rename_ser_832
+				clr_global_flag = s_greece_rename_gre_832
+				clr_global_flag = s_greece_rename_ita_832
+			}
+			random_owned = {
+				limit = {
+					province_id = 833
+				}
+				833 = { change_province_name = "Tirhala" }
+				set_global_flag = s_greece_rename_tur_833
+				clr_global_flag = s_greece_rename_ser_833
+				clr_global_flag = s_greece_rename_gre_833
+				clr_global_flag = s_greece_rename_ita_833
+			}
+			random_owned = {
+				limit = {
+					province_id = 834
+				}
+				834 = {
+				change_province_name = "Atina"
+					state_scope = {
+						change_region_name = "Orta Yunanistan"
+					}
+				}
+				set_global_flag = s_greece_rename_tur_834
+				clr_global_flag = s_greece_rename_ser_834
+				clr_global_flag = s_greece_rename_gre_834
+				clr_global_flag = s_greece_rename_ita_834
+			}
+			random_owned = {
+				limit = {
+					province_id = 835
+				}
+				835 = { change_province_name = "Saline" }
+				set_global_flag = s_greece_rename_tur_835
+				clr_global_flag = s_greece_rename_ser_835
+				clr_global_flag = s_greece_rename_gre_835
+				clr_global_flag = s_greece_rename_ita_835
+			}
+			random_owned = {
+				limit = {
+					province_id = 836
+				}
+				836 = { change_province_name = "Kerbenes" }
+				set_global_flag = s_greece_rename_tur_836
+				clr_global_flag = s_greece_rename_ser_836
+				clr_global_flag = s_greece_rename_gre_836
+				clr_global_flag = s_greece_rename_ita_836
+			}
+			random_owned = {
+				limit = {
+					province_id = 837
+				}
+				837 = { change_province_name = "Misolonki" }
+				set_global_flag = s_greece_rename_tur_837
+				clr_global_flag = s_greece_rename_ser_837
+				clr_global_flag = s_greece_rename_gre_837
+				clr_global_flag = s_greece_rename_ita_837
+			}
+			random_owned = {
+				limit = {
+					province_id = 838
+				}
+				838 = { change_province_name = "Kara Baba" }
+				set_global_flag = s_greece_rename_tur_838
+				clr_global_flag = s_greece_rename_ser_838
+				clr_global_flag = s_greece_rename_gre_838
+				clr_global_flag = s_greece_rename_ita_838
+			}
+			random_owned = {
+				limit = {
+					province_id = 839
+				}
+				839 = { change_province_name = "Anabolu" }
+				set_global_flag = s_greece_rename_tur_839
+				clr_global_flag = s_greece_rename_ser_839
+				clr_global_flag = s_greece_rename_gre_839
+				clr_global_flag = s_greece_rename_ita_839
+			}
+			random_owned = {
+				limit = {
+					province_id = 840
+				}
+				840 = { change_province_name = "Gördüs" }
+				set_global_flag = s_greece_rename_tur_840
+				clr_global_flag = s_greece_rename_ser_840
+				clr_global_flag = s_greece_rename_gre_840
+				clr_global_flag = s_greece_rename_ita_840
+			}
+			random_owned = {
+				limit = {
+					province_id = 841
+				}
+				841 = { change_province_name = "Kalamatya" }
+				set_global_flag = s_greece_rename_tur_841
+				clr_global_flag = s_greece_rename_ser_841
+				clr_global_flag = s_greece_rename_gre_841
+				clr_global_flag = s_greece_rename_ita_841
+			}
+			random_owned = {
+				limit = {
+					province_id = 842
+				}
+				842 = { change_province_name = "Badra" }
+				set_global_flag = s_greece_rename_tur_842
+				clr_global_flag = s_greece_rename_ser_842
+				clr_global_flag = s_greece_rename_gre_842
+				clr_global_flag = s_greece_rename_ita_842
+			}
+			random_owned = {
+				limit = {
+					province_id = 843
+				}
+				843 = { change_province_name = "Sisam" }
+				set_global_flag = s_greece_rename_tur_843
+				clr_global_flag = s_greece_rename_ser_843
+				clr_global_flag = s_greece_rename_gre_843
+				clr_global_flag = s_greece_rename_ita_843
+			}
+			random_owned = {
+				limit = {
+					province_id = 844
+				}
+				844 = { change_province_name = "Midilli" }
+				set_global_flag = s_greece_rename_tur_844
+				clr_global_flag = s_greece_rename_ser_844
+				clr_global_flag = s_greece_rename_gre_844
+				clr_global_flag = s_greece_rename_ita_844
+			}
+			random_owned = {
+				limit = {
+					province_id = 845
+				}
+				845 = { change_province_name = "Kiklatlar" }
+				set_global_flag = s_greece_rename_tur_845
+				clr_global_flag = s_greece_rename_ser_845
+				clr_global_flag = s_greece_rename_gre_845
+				clr_global_flag = s_greece_rename_ita_845
+			}
+			random_owned = {
+				limit = {
+					province_id = 846
+				}
+				846 = { change_province_name = "On Iki Ada" }
+				set_global_flag = s_greece_rename_tur_846
+				clr_global_flag = s_greece_rename_ser_846
+				clr_global_flag = s_greece_rename_gre_846
+				clr_global_flag = s_greece_rename_ita_846
+			}
+			random_owned = {
+				limit = {
+					province_id = 847
+				}
+				847 = { change_province_name = "Hanya" }
+				set_global_flag = s_greece_rename_tur_847
+				clr_global_flag = s_greece_rename_ser_847
+				clr_global_flag = s_greece_rename_gre_847
+				clr_global_flag = s_greece_rename_ita_847
+			}
+			random_owned = {
+				limit = {
+					province_id = 848
+				}
+				848 = {
+				change_province_name = "Kandiye"
+					state_scope = {
+						change_region_name = "Ege Adalari"
+					}
+				}
+				set_global_flag = s_greece_rename_tur_848
+				clr_global_flag = s_greece_rename_ser_848
+				clr_global_flag = s_greece_rename_gre_848
+				clr_global_flag = s_greece_rename_ita_848
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	serbian_rename_s_greece = {
+		picture = gtfo
+		potential = {
+			primary_culture = serb
+			OR = {
+				AND = {
+					owns = 827
+					NOT = { has_global_flag = s_greece_rename_ser_837 }
+				}
+				AND = {
+					owns = 831
+					NOT = { has_global_flag = s_greece_rename_ser_831 }
+				}
+				AND = {
+					owns = 832
+					NOT = { has_global_flag = s_greece_rename_ser_832 }
+				}
+				AND = {
+					owns = 833
+					NOT = { has_global_flag = s_greece_rename_ser_833 }
+				}
+				AND = {
+					owns = 834
+					NOT = { has_global_flag = s_greece_rename_ser_834 }
+				}
+				AND = {
+					owns = 835
+					NOT = { has_global_flag = s_greece_rename_ser_835 }
+				}
+				AND = {
+					owns = 836
+					NOT = { has_global_flag = s_greece_rename_ser_836 }
+				}
+				AND = {
+					owns = 837
+					NOT = { has_global_flag = s_greece_rename_ser_837 }
+				}
+				AND = {
+					owns = 838
+					NOT = { has_global_flag = s_greece_rename_ser_838 }
+				}
+				AND = {
+					owns = 839
+					NOT = { has_global_flag = s_greece_rename_ser_839 }
+				}
+				AND = {
+					owns = 840
+					NOT = { has_global_flag = s_greece_rename_ser_840 }
+				}
+				AND = {
+					owns = 841
+					NOT = { has_global_flag = s_greece_rename_ser_841 }
+				}
+				AND = {
+					owns = 842
+					NOT = { has_global_flag = s_greece_rename_ser_842 }
+				}
+				AND = {
+					owns = 843
+					NOT = { has_global_flag = s_greece_rename_ser_843 }
+				}
+				AND = {
+					owns = 844
+					NOT = { has_global_flag = s_greece_rename_ser_844 }
+				}
+				AND = {
+					owns = 845
+					NOT = { has_global_flag = s_greece_rename_ser_845 }
+				}
+				AND = {
+					owns = 846
+					NOT = { has_global_flag = s_greece_rename_ser_846 }
+				}
+				AND = {
+					owns = 847
+					NOT = { has_global_flag = s_greece_rename_ser_847 }
+				}
+				AND = {
+					owns = 848
+					NOT = { has_global_flag = s_greece_rename_ser_848 }
+				}
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 827
+				}
+				827 = { change_province_name = "Zakintos" }
+				set_global_flag = s_greece_rename_ser_827
+				clr_global_flag = s_greece_rename_tur_827
+				clr_global_flag = s_greece_rename_gre_827
+				clr_global_flag = s_greece_rename_ita_827
+			}
+			random_owned = {
+				limit = {
+					province_id = 831
+				}
+				831 = { change_province_name = "Larisa" }
+				set_global_flag = s_greece_rename_ser_831
+				clr_global_flag = s_greece_rename_tur_831
+				clr_global_flag = s_greece_rename_gre_831
+				clr_global_flag = s_greece_rename_ita_831
+			}
+			random_owned = {
+				limit = {
+					province_id = 832
+				}
+				832 = {
+				change_province_name = "Volos"
+					state_scope = {
+						change_region_name = "Tesalija"
+					}
+				}
+				set_global_flag = s_greece_rename_ser_832
+				clr_global_flag = s_greece_rename_tur_832
+				clr_global_flag = s_greece_rename_gre_832
+				clr_global_flag = s_greece_rename_ita_832
+			}
+			random_owned = {
+				limit = {
+					province_id = 833
+				}
+				833 = { change_province_name = "Trikala" }
+				set_global_flag = s_greece_rename_ser_833
+				clr_global_flag = s_greece_rename_tur_833
+				clr_global_flag = s_greece_rename_gre_833
+				clr_global_flag = s_greece_rename_ita_833
+			}
+			random_owned = {
+				limit = {
+					province_id = 834
+				}
+				834 = {
+				change_province_name = "Atina"
+					state_scope = {
+						change_region_name = "Središnja Grcka"
+					}
+				}
+				set_global_flag = s_greece_rename_ser_834
+				clr_global_flag = s_greece_rename_tur_834
+				clr_global_flag = s_greece_rename_gre_834
+				clr_global_flag = s_greece_rename_ita_834
+			}
+			random_owned = {
+				limit = {
+					province_id = 835
+				}
+				835 = { change_province_name = "Amfisa" }
+				set_global_flag = s_greece_rename_ser_835
+				clr_global_flag = s_greece_rename_tur_835
+				clr_global_flag = s_greece_rename_gre_835
+				clr_global_flag = s_greece_rename_ita_835
+			}
+			random_owned = {
+				limit = {
+					province_id = 836
+				}
+				836 = { change_province_name = "Karpenica" }
+				set_global_flag = s_greece_rename_ser_836
+				clr_global_flag = s_greece_rename_tur_836
+				clr_global_flag = s_greece_rename_gre_836
+				clr_global_flag = s_greece_rename_ita_836
+			}
+			random_owned = {
+				limit = {
+					province_id = 837
+				}
+				837 = { change_province_name = "Misolongi" }
+				set_global_flag = s_greece_rename_ser_837
+				clr_global_flag = s_greece_rename_tur_837
+				clr_global_flag = s_greece_rename_gre_837
+				clr_global_flag = s_greece_rename_ita_837
+			}
+			random_owned = {
+				limit = {
+					province_id = 838
+				}
+				838 = { change_province_name = "Halkida" }
+				set_global_flag = s_greece_rename_ser_838
+				clr_global_flag = s_greece_rename_tur_838
+				clr_global_flag = s_greece_rename_gre_838
+				clr_global_flag = s_greece_rename_ita_838
+			}
+			random_owned = {
+				limit = {
+					province_id = 839
+				}
+				839 = { change_province_name = "Nauplion" }
+				set_global_flag = s_greece_rename_ser_839
+				clr_global_flag = s_greece_rename_tur_839
+				clr_global_flag = s_greece_rename_gre_839
+				clr_global_flag = s_greece_rename_ita_839
+			}
+			random_owned = {
+				limit = {
+					province_id = 840
+				}
+				840 = { change_province_name = "Korint" }
+				set_global_flag = s_greece_rename_ser_840
+				clr_global_flag = s_greece_rename_tur_840
+				clr_global_flag = s_greece_rename_gre_840
+				clr_global_flag = s_greece_rename_ita_840
+			}
+			random_owned = {
+				limit = {
+					province_id = 841
+				}
+				841 = { change_province_name = "Kalame" }
+				set_global_flag = s_greece_rename_ser_841
+				clr_global_flag = s_greece_rename_tur_841
+				clr_global_flag = s_greece_rename_gre_841
+				clr_global_flag = s_greece_rename_ita_841
+			}
+			random_owned = {
+				limit = {
+					province_id = 842
+				}
+				842 = { change_province_name = "Patra" }
+				set_global_flag = s_greece_rename_ser_842
+				clr_global_flag = s_greece_rename_tur_842
+				clr_global_flag = s_greece_rename_gre_842
+				clr_global_flag = s_greece_rename_ita_842
+			}
+			random_owned = {
+				limit = {
+					province_id = 843
+				}
+				843 = { change_province_name = "Sam" }
+				set_global_flag = s_greece_rename_ser_843
+				clr_global_flag = s_greece_rename_tur_843
+				clr_global_flag = s_greece_rename_gre_843
+				clr_global_flag = s_greece_rename_ita_843
+			}
+			random_owned = {
+				limit = {
+					province_id = 844
+				}
+				844 = { change_province_name = "Mitilena" }
+				set_global_flag = s_greece_rename_ser_844
+				clr_global_flag = s_greece_rename_tur_844
+				clr_global_flag = s_greece_rename_gre_844
+				clr_global_flag = s_greece_rename_ita_844
+			}
+			random_owned = {
+				limit = {
+					province_id = 845
+				}
+				845 = { change_province_name = "Kikladi" }
+				set_global_flag = s_greece_rename_ser_845
+				clr_global_flag = s_greece_rename_tur_845
+				clr_global_flag = s_greece_rename_gre_845
+				clr_global_flag = s_greece_rename_ita_845
+			}
+			random_owned = {
+				limit = {
+					province_id = 846
+				}
+				846 = { change_province_name = "Dodekanez" }
+				set_global_flag = s_greece_rename_ser_846
+				clr_global_flag = s_greece_rename_tur_846
+				clr_global_flag = s_greece_rename_gre_846
+				clr_global_flag = s_greece_rename_ita_846
+			}
+			random_owned = {
+				limit = {
+					province_id = 847
+				}
+				847 = { change_province_name = "Hanija" }
+				set_global_flag = s_greece_rename_ser_847
+				clr_global_flag = s_greece_rename_tur_847
+				clr_global_flag = s_greece_rename_gre_847
+				clr_global_flag = s_greece_rename_ita_847
+			}
+			random_owned = {
+				limit = {
+					province_id = 848
+				}
+				848 = {
+				change_province_name = "Heraklon"
+					state_scope = {
+						change_region_name = "Egejska Ostrva"
+					}
+				}
+				set_global_flag = s_greece_rename_ser_848
+				clr_global_flag = s_greece_rename_tur_848
+				clr_global_flag = s_greece_rename_gre_848
+				clr_global_flag = s_greece_rename_ita_848
+			}
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	italian_rename_s_greece = {
+		picture = gtfo
+		potential = {
+			is_culture_group = italian
+			OR = {
+				AND = {
+					owns = 827
+					NOT = { has_global_flag = s_greece_rename_ita_837 }
+				}
+				AND = {
+					owns = 831
+					NOT = { has_global_flag = s_greece_rename_ita_831 }
+				}
+				AND = {
+					owns = 832
+					NOT = { has_global_flag = s_greece_rename_ita_832 }
+				}
+				AND = {
+					owns = 833
+					NOT = { has_global_flag = s_greece_rename_ita_833 }
+				}
+				AND = {
+					owns = 834
+					NOT = { has_global_flag = s_greece_rename_ita_834 }
+				}
+				AND = {
+					owns = 835
+					NOT = { has_global_flag = s_greece_rename_ita_835 }
+				}
+				AND = {
+					owns = 836
+					NOT = { has_global_flag = s_greece_rename_ita_836 }
+				}
+				AND = {
+					owns = 837
+					NOT = { has_global_flag = s_greece_rename_ita_837 }
+				}
+				AND = {
+					owns = 838
+					NOT = { has_global_flag = s_greece_rename_ita_838 }
+				}
+				AND = {
+					owns = 839
+					NOT = { has_global_flag = s_greece_rename_ita_839 }
+				}
+				AND = {
+					owns = 840
+					NOT = { has_global_flag = s_greece_rename_ita_840 }
+				}
+				AND = {
+					owns = 841
+					NOT = { has_global_flag = s_greece_rename_ita_841 }
+				}
+				AND = {
+					owns = 842
+					NOT = { has_global_flag = s_greece_rename_ita_842 }
+				}
+				AND = {
+					owns = 843
+					NOT = { has_global_flag = s_greece_rename_ita_843 }
+				}
+				AND = {
+					owns = 844
+					NOT = { has_global_flag = s_greece_rename_ita_844 }
+				}
+				AND = {
+					owns = 845
+					NOT = { has_global_flag = s_greece_rename_ita_845 }
+				}
+				AND = {
+					owns = 846
+					NOT = { has_global_flag = s_greece_rename_ita_846 }
+				}
+				AND = {
+					owns = 847
+					NOT = { has_global_flag = s_greece_rename_ita_847 }
+				}
+				AND = {
+					owns = 848
+					NOT = { has_global_flag = s_greece_rename_ita_848 }
+				}
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 827
+				}
+				827 = { change_province_name = "Zante" }
+				set_global_flag = s_greece_rename_ita_827
+				clr_global_flag = s_greece_rename_tur_827
+				clr_global_flag = s_greece_rename_gre_827
+				clr_global_flag = s_greece_rename_ser_827
+			}
+			random_owned = {
+				limit = {
+					province_id = 831
+				}
+				831 = { change_province_name = "Larissa" }
+				set_global_flag = s_greece_rename_ita_831
+				clr_global_flag = s_greece_rename_tur_831
+				clr_global_flag = s_greece_rename_gre_831
+				clr_global_flag = s_greece_rename_ser_831
+			}
+			random_owned = {
+				limit = {
+					province_id = 832
+				}
+				832 = {
+				change_province_name = "Volo"
+					state_scope = {
+						change_region_name = "Tessaglia"
+					}
+				}
+				set_global_flag = s_greece_rename_ita_832
+				clr_global_flag = s_greece_rename_tur_832
+				clr_global_flag = s_greece_rename_gre_832
+				clr_global_flag = s_greece_rename_ser_832
+			}
+			random_owned = {
+				limit = {
+					province_id = 833
+				}
+				833 = { change_province_name = "Triccala" }
+				set_global_flag = s_greece_rename_ita_833
+				clr_global_flag = s_greece_rename_tur_833
+				clr_global_flag = s_greece_rename_gre_833
+				clr_global_flag = s_greece_rename_ser_833
+			}
+			random_owned = {
+				limit = {
+					province_id = 834
+				}
+				834 = {
+				change_province_name = "Atene"
+					state_scope = {
+						change_region_name = "Grecia Centrale"
+					}
+				}
+				set_global_flag = s_greece_rename_ita_834
+				clr_global_flag = s_greece_rename_tur_834
+				clr_global_flag = s_greece_rename_gre_834
+				clr_global_flag = s_greece_rename_ser_834
+			}
+			random_owned = {
+				limit = {
+					province_id = 835
+				}
+				835 = { change_province_name = "Amfissa" }
+				set_global_flag = s_greece_rename_ita_835
+				clr_global_flag = s_greece_rename_tur_835
+				clr_global_flag = s_greece_rename_gre_835
+				clr_global_flag = s_greece_rename_ser_835
+			}
+			random_owned = {
+				limit = {
+					province_id = 836
+				}
+				836 = { change_province_name = "Karpenisi" }
+				set_global_flag = s_greece_rename_ita_836
+				clr_global_flag = s_greece_rename_tur_836
+				clr_global_flag = s_greece_rename_gre_836
+				clr_global_flag = s_greece_rename_ser_836
+			}
+			random_owned = {
+				limit = {
+					province_id = 837
+				}
+				837 = { change_province_name = "Missolungi" }
+				set_global_flag = s_greece_rename_ita_837
+				clr_global_flag = s_greece_rename_tur_837
+				clr_global_flag = s_greece_rename_gre_837
+				clr_global_flag = s_greece_rename_ser_837
+			}
+			random_owned = {
+				limit = {
+					province_id = 838
+				}
+				838 = { change_province_name = "Calcide" }
+				set_global_flag = s_greece_rename_ita_838
+				clr_global_flag = s_greece_rename_tur_838
+				clr_global_flag = s_greece_rename_gre_838
+				clr_global_flag = s_greece_rename_ser_838
+			}
+			random_owned = {
+				limit = {
+					province_id = 839
+				}
+				839 = { change_province_name = "Nauplia" }
+				set_global_flag = s_greece_rename_ita_839
+				clr_global_flag = s_greece_rename_tur_839
+				clr_global_flag = s_greece_rename_gre_839
+				clr_global_flag = s_greece_rename_ser_839
+			}
+			random_owned = {
+				limit = {
+					province_id = 840
+				}
+				840 = { change_province_name = "Corinto" }
+				set_global_flag = s_greece_rename_ita_840
+				clr_global_flag = s_greece_rename_tur_840
+				clr_global_flag = s_greece_rename_gre_840
+				clr_global_flag = s_greece_rename_ser_840
+			}
+			random_owned = {
+				limit = {
+					province_id = 841
+				}
+				841 = { change_province_name = "Calamata" }
+				set_global_flag = s_greece_rename_ita_841
+				clr_global_flag = s_greece_rename_tur_841
+				clr_global_flag = s_greece_rename_gre_841
+				clr_global_flag = s_greece_rename_ser_841
+			}
+			random_owned = {
+				limit = {
+					province_id = 842
+				}
+				842 = { change_province_name = "Patrasso" }
+				set_global_flag = s_greece_rename_ita_842
+				clr_global_flag = s_greece_rename_tur_842
+				clr_global_flag = s_greece_rename_gre_842
+				clr_global_flag = s_greece_rename_ser_842
+			}
+			random_owned = {
+				limit = {
+					province_id = 843
+				}
+				843 = { change_province_name = "Samo" }
+				set_global_flag = s_greece_rename_ita_843
+				clr_global_flag = s_greece_rename_tur_843
+				clr_global_flag = s_greece_rename_gre_843
+				clr_global_flag = s_greece_rename_ser_843
+			}
+			random_owned = {
+				limit = {
+					province_id = 844
+				}
+				844 = { change_province_name = "Metelino" }
+				set_global_flag = s_greece_rename_ita_844
+				clr_global_flag = s_greece_rename_tur_844
+				clr_global_flag = s_greece_rename_gre_844
+				clr_global_flag = s_greece_rename_ser_844
+			}
+			random_owned = {
+				limit = {
+					province_id = 845
+				}
+				845 = { change_province_name = "Cicladi" }
+				set_global_flag = s_greece_rename_ita_845
+				clr_global_flag = s_greece_rename_tur_845
+				clr_global_flag = s_greece_rename_gre_845
+				clr_global_flag = s_greece_rename_ser_845
+			}
+			random_owned = {
+				limit = {
+					province_id = 846
+				}
+				846 = { change_province_name = "Dodecaneso" }
+				set_global_flag = s_greece_rename_ita_846
+				clr_global_flag = s_greece_rename_tur_846
+				clr_global_flag = s_greece_rename_gre_846
+				clr_global_flag = s_greece_rename_ser_846
+			}
+			random_owned = {
+				limit = {
+					province_id = 847
+				}
+				847 = { change_province_name = "La Canea" }
+				set_global_flag = s_greece_rename_ita_847
+				clr_global_flag = s_greece_rename_tur_847
+				clr_global_flag = s_greece_rename_gre_847
+				clr_global_flag = s_greece_rename_ser_847
+			}
+			random_owned = {
+				limit = {
+					province_id = 848
+				}
+				848 = {
+				change_province_name = "Candia"
+					state_scope = {
+						change_region_name = "Isole dell'Egeo"
+					}
+				}
+				set_global_flag = s_greece_rename_ita_848
+				clr_global_flag = s_greece_rename_tur_848
+				clr_global_flag = s_greece_rename_gre_848
+				clr_global_flag = s_greece_rename_ser_848
 			}
 			prestige = 2
 		}
@@ -4805,17 +6999,14 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-
-	turkish_rename_epirus = {
-		picture = gtfo #I'm lazy to change this decision, the Turks would probably never regain this area if they lost it anyway
+	
+	serbian_rename_corfu = {
+		picture = gtfo
 		potential = {
-			ai = no
-			primary_culture = turkish
-			owns = 824
-			owns = 853
-			OR = {
-				has_global_flag = albanian_rename_epirus
-				has_global_flag = greek_rename_epirus
+			is_culture_group = serb
+			AND = {
+				owns = 826
+				NOT = { has_global_flag = serbian_rename_corfu }
 			}
 		}
 
@@ -4824,10 +7015,309 @@ political_decisions = {
 		}
 
 		effect = {
-			clr_global_flag = albanian_rename_epirus
-			clr_global_flag = greek_rename_epirus
-			824 = { change_province_name = "Yanya" }
-			853 = { change_province_name = "Ergiri" }
+			random_owned = {
+				limit = {
+					province_id = 826
+				}
+				826 = { change_province_name = "Krf" }
+				set_global_flag = serbian_rename_corfu
+				clr_global_flag = italian_rename_corfu
+				clr_global_flag = greek_rename_corfu
+				clr_global_flag = albanian_rename_corfu
+			}
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	albanian_rename_s_italy = {
+		picture = gtfo
+		potential = {
+			primary_culture = albanian
+			AND = {
+				owns = 756
+				NOT = { has_global_flag = s_italy_rename_alb_756 }
+			}
+			AND = {
+				owns = 757
+				NOT = { has_global_flag = s_italy_rename_alb_757 }
+			}
+			AND = {
+				owns = 758
+				NOT = { has_global_flag = s_italy_rename_alb_758 }
+			}
+			AND = {
+				owns = 759
+				NOT = { has_global_flag = s_italy_rename_alb_759 }
+			}
+			AND = {
+				owns = 760
+				NOT = { has_global_flag = s_italy_rename_alb_760 }
+			}
+			AND = {
+				owns = 761
+				NOT = { has_global_flag = s_italy_rename_alb_761 }
+			}
+			AND = {
+				owns = 762
+				NOT = { has_global_flag = s_italy_rename_alb_762 }
+			}
+			AND = {
+				owns = 763
+				NOT = { has_global_flag = s_italy_rename_alb_763 }
+			}
+			AND = {
+				owns = 764
+				NOT = { has_global_flag = s_italy_rename_alb_764 }
+			}
+			AND = {
+				owns = 854
+				NOT = { has_global_flag = s_italy_rename_alb_854 }
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 756
+				}
+				756 = { change_province_name = "Bari" }
+				set_global_flag = s_italy_rename_alb_756
+				clr_global_flag = s_italy_rename_ita_756
+			}
+			random_owned = {
+				limit = {
+					province_id = 757
+				}
+				757 = { change_province_name = "Foxha" }
+				set_global_flag = s_italy_rename_alb_757
+				clr_global_flag = s_italy_rename_ita_757
+			}
+			random_owned = {
+				limit = {
+					province_id = 758
+				}
+				758 = {
+				change_province_name = "Brindizi"
+					state_scope = {
+						change_region_name = "Kalabria"
+					}
+				}
+				set_global_flag = s_italy_rename_alb_758
+				clr_global_flag = s_italy_rename_ita_758
+			}
+			random_owned = {
+				limit = {
+					province_id = 759
+				}
+				759 = { change_province_name = "Rrexho Kalabria" }
+				set_global_flag = s_italy_rename_alb_759
+				clr_global_flag = s_italy_rename_ita_759
+			}
+			random_owned = {
+				limit = {
+					province_id = 760
+				}
+				760 = { change_province_name = "Katanxaro" }
+				set_global_flag = s_italy_rename_alb_760
+				clr_global_flag = s_italy_rename_ita_760
+			}
+			random_owned = {
+				limit = {
+					province_id = 761
+				}
+				761 = { change_province_name = "Potenca" }
+				set_global_flag = s_italy_rename_alb_761
+				clr_global_flag = s_italy_rename_ita_761
+			}
+			random_owned = {
+				limit = {
+					province_id = 762
+				}
+				762 = {
+				change_province_name = "Palermë"
+					state_scope = {
+						change_region_name = "Siçilia"
+					}
+				}
+				set_global_flag = s_italy_rename_alb_762
+				clr_global_flag = s_italy_rename_ita_762
+			}
+			random_owned = {
+				limit = {
+					province_id = 763
+				}
+				763 = { change_province_name = "Mesina" }
+				set_global_flag = s_italy_rename_alb_763
+				clr_global_flag = s_italy_rename_ita_763
+			}
+			random_owned = {
+				limit = {
+					province_id = 764
+				}
+				764 = { change_province_name = "Katania" }
+				set_global_flag = s_italy_rename_alb_764
+				clr_global_flag = s_italy_rename_ita_764
+			}
+			random_owned = {
+				limit = {
+					province_id = 854
+				}
+				854 = { change_province_name = "Maltë" }
+				set_global_flag = s_italy_rename_alb_854
+				clr_global_flag = s_italy_rename_ita_854
+			}
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	italian_rename_s_italy = {
+		picture = gtfo
+		potential = {
+			is_culture_group = italian
+			AND = {
+				owns = 756
+				NOT = { has_global_flag = s_italy_rename_ita_756 }
+			}
+			AND = {
+				owns = 757
+				NOT = { has_global_flag = s_italy_rename_ita_757 }
+			}
+			AND = {
+				owns = 758
+				NOT = { has_global_flag = s_italy_rename_ita_758 }
+			}
+			AND = {
+				owns = 759
+				NOT = { has_global_flag = s_italy_rename_ita_759 }
+			}
+			AND = {
+				owns = 760
+				NOT = { has_global_flag = s_italy_rename_ita_760 }
+			}
+			AND = {
+				owns = 761
+				NOT = { has_global_flag = s_italy_rename_ita_761 }
+			}
+			AND = {
+				owns = 762
+				NOT = { has_global_flag = s_italy_rename_ita_762 }
+			}
+			AND = {
+				owns = 763
+				NOT = { has_global_flag = s_italy_rename_ita_763 }
+			}
+			AND = {
+				owns = 764
+				NOT = { has_global_flag = s_italy_rename_ita_764 }
+			}
+			AND = {
+				owns = 854
+				NOT = { has_global_flag = s_italy_rename_ita_854 }
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 756
+				}
+				756 = { change_province_name = "Bari" }
+				set_global_flag = s_italy_rename_ita_756
+				clr_global_flag = s_italy_rename_alb_756
+			}
+			random_owned = {
+				limit = {
+					province_id = 757
+				}
+				757 = { change_province_name = "Foggia" }
+				set_global_flag = s_italy_rename_ita_757
+				clr_global_flag = s_italy_rename_alb_757
+			}
+			random_owned = {
+				limit = {
+					province_id = 758
+				}
+				758 = {
+				change_province_name = "Brindisi"
+					state_scope = {
+						change_region_name = "Calabria"
+					}
+				}
+				set_global_flag = s_italy_rename_ita_758
+				clr_global_flag = s_italy_rename_alb_758
+			}
+			random_owned = {
+				limit = {
+					province_id = 759
+				}
+				759 = { change_province_name = "Reggio Calabria" }
+				set_global_flag = s_italy_rename_ita_759
+				clr_global_flag = s_italy_rename_alb_759
+			}
+			random_owned = {
+				limit = {
+					province_id = 760
+				}
+				760 = { change_province_name = "Catanzaro" }
+				set_global_flag = s_italy_rename_ita_760
+				clr_global_flag = s_italy_rename_alb_760
+			}
+			random_owned = {
+				limit = {
+					province_id = 761
+				}
+				761 = { change_province_name = "Potenza" }
+				set_global_flag = s_italy_rename_ita_761
+				clr_global_flag = s_italy_rename_alb_761
+			}
+			random_owned = {
+				limit = {
+					province_id = 762
+				}
+				762 = {
+				change_province_name = "Palermo"
+					state_scope = {
+						change_region_name = "Sicilia"
+					}
+				}
+				set_global_flag = s_italy_rename_ita_762
+				clr_global_flag = s_italy_rename_alb_762
+			}
+			random_owned = {
+				limit = {
+					province_id = 763
+				}
+				763 = { change_province_name = "Messina" }
+				set_global_flag = s_italy_rename_ita_763
+				clr_global_flag = s_italy_rename_alb_763
+			}
+			random_owned = {
+				limit = {
+					province_id = 764
+				}
+				764 = { change_province_name = "Catania" }
+				set_global_flag = s_italy_rename_ita_764
+				clr_global_flag = s_italy_rename_alb_764
+			}
+			random_owned = {
+				limit = {
+					province_id = 854
+				}
+				854 = { change_province_name = "Malta" }
+				set_global_flag = s_italy_rename_ita_854
+				clr_global_flag = s_italy_rename_alb_854
+			}
+			prestige = 2
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -5028,7 +7518,7 @@ political_decisions = {
 	}
 
 	serbian_rename_s_macedonia = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			primary_culture = serb
 			owns = 805
@@ -5142,8 +7632,28 @@ political_decisions = {
 		picture = gtfo
 		potential = {
 			primary_culture = greek
-			owns = 829
-			NOT = { has_global_flag = greek_rename_e_macedonia }
+			OR = {
+				AND = {
+					owns = 823
+					NOT = { has_global_flag = e_macedonia_rename_gre_823 }
+				}
+				AND = {
+					owns = 825
+					NOT = { has_global_flag = e_macedonia_rename_gre_825 }
+				}
+				AND = {
+					owns = 829
+					NOT = { has_global_flag = e_macedonia_rename_gre_829 }
+				}
+				AND = {
+					owns = 830
+					NOT = { has_global_flag = e_macedonia_rename_gre_830 }
+				}
+				AND = {
+					owns = 3304
+					NOT = { has_global_flag = e_macedonia_rename_gre_3304 }
+				}
+			}
 		}
 
 		allow = {
@@ -5151,18 +7661,61 @@ political_decisions = {
 		}
 
 		effect = {
-			set_global_flag = greek_rename_e_macedonia
-			clr_global_flag = bulgarian_rename_e_macedonia
-			823 = {
-				change_province_name = "Sérres"
-				state_scope = {
-					change_region_name = "Anatolikís Makedonías"
+			random_owned = {
+				limit = {
+					province_id = 823
 				}
+				823 = {
+					change_province_name = "Sérres"
+					state_scope = {
+						change_region_name = "Anatolikís Makedonías"
+					}
+				}
+				set_global_flag = e_macedonia_rename_gre_823
+				clr_global_flag = e_macedonia_rename_bul_823
+				clr_global_flag = e_macedonia_rename_tur_823
+				clr_global_flag = e_macedonia_rename_ser_823
 			}
-			825 = { change_province_name = "Kavala" }
-			829 = { change_province_name = "Xánthi" }
-			830 = { change_province_name = "Didymóteicho" }
-			3304 = { change_province_name = "Komotini" }
+			random_owned = {
+				limit = {
+					province_id = 825
+				}
+				825 = { change_province_name = "Kavala" }
+				set_global_flag = e_macedonia_rename_gre_825
+				clr_global_flag = e_macedonia_rename_bul_825
+				clr_global_flag = e_macedonia_rename_tur_825
+				clr_global_flag = e_macedonia_rename_ser_825
+			}
+			random_owned = {
+				limit = {
+					province_id = 829
+				}
+				829 = { change_province_name = "Xánthi" }
+				set_global_flag = e_macedonia_rename_gre_829
+				clr_global_flag = e_macedonia_rename_bul_829
+				clr_global_flag = e_macedonia_rename_tur_829
+				clr_global_flag = e_macedonia_rename_ser_829
+			}
+			random_owned = {
+				limit = {
+					province_id = 830
+				}
+				830 = { change_province_name = "Didymóteicho" }
+				set_global_flag = e_macedonia_rename_gre_830
+				clr_global_flag = e_macedonia_rename_bul_830
+				clr_global_flag = e_macedonia_rename_tur_830
+				clr_global_flag = e_macedonia_rename_ser_830
+			}
+			random_owned = {
+				limit = {
+					province_id = 3304
+				}
+				3304 = { change_province_name = "Komotini" }
+				set_global_flag = e_macedonia_rename_gre_3304
+				clr_global_flag = e_macedonia_rename_bul_3304
+				clr_global_flag = e_macedonia_rename_tur_3304
+				clr_global_flag = e_macedonia_rename_ser_3304
+			}
 			prestige = 2
 		}
 		ai_will_do = { factor = 1 }
@@ -5175,8 +7728,28 @@ political_decisions = {
 				primary_culture = bulgarian
 				has_global_flag = croatian_yugoslavia
 			}
-			owns = 829
-			NOT = { has_global_flag = bulgarian_rename_e_macedonia }
+			OR = {
+				AND = {
+					owns = 823
+					NOT = { has_global_flag = e_macedonia_rename_bul_823 }
+				}
+				AND = {
+					owns = 825
+					NOT = { has_global_flag = e_macedonia_rename_bul_825 }
+				}
+				AND = {
+					owns = 829
+					NOT = { has_global_flag = e_macedonia_rename_bul_829 }
+				}
+				AND = {
+					owns = 830
+					NOT = { has_global_flag = e_macedonia_rename_bul_830 }
+				}
+				AND = {
+					owns = 3304
+					NOT = { has_global_flag = e_macedonia_rename_bul_3304 }
+				}
+			}
 		}
 
 		allow = {
@@ -5184,18 +7757,61 @@ political_decisions = {
 		}
 
 		effect = {
-			set_global_flag = bulgarian_rename_e_macedonia
-			clr_global_flag = greek_rename_e_macedonia
-			823 = {
-				change_province_name = "Syar"
-				state_scope = {
-					change_region_name = "Iztochna Makedoniya"
+			random_owned = {
+				limit = {
+					province_id = 823
 				}
+				823 = {
+					change_province_name = "Syar"
+					state_scope = {
+						change_region_name = "Iztochna Makedoniya"
+					}
+				}
+				set_global_flag = e_macedonia_rename_bul_823
+				clr_global_flag = e_macedonia_rename_gre_823
+				clr_global_flag = e_macedonia_rename_tur_823
+				clr_global_flag = e_macedonia_rename_ser_823
 			}
-			825 = { change_province_name = "Kavala" }
-			829 = { change_province_name = "Ksanti" }
-			830 = { change_province_name = "Dimotika" }
-			3304 = { change_province_name = "Gyumyurdzhina" }
+			random_owned = {
+				limit = {
+					province_id = 825
+				}
+				825 = { change_province_name = "Kavala" }
+				set_global_flag = e_macedonia_rename_bul_825
+				clr_global_flag = e_macedonia_rename_gre_825
+				clr_global_flag = e_macedonia_rename_tur_825
+				clr_global_flag = e_macedonia_rename_ser_825
+			}
+			random_owned = {
+				limit = {
+					province_id = 829
+				}
+				829 = { change_province_name = "Ksanti" }
+				set_global_flag = e_macedonia_rename_bul_829
+				clr_global_flag = e_macedonia_rename_gre_829
+				clr_global_flag = e_macedonia_rename_tur_829
+				clr_global_flag = e_macedonia_rename_ser_829
+			}
+			random_owned = {
+				limit = {
+					province_id = 830
+				}
+				830 = { change_province_name = "Dimotika" }
+				set_global_flag = e_macedonia_rename_bul_830
+				clr_global_flag = e_macedonia_rename_gre_830
+				clr_global_flag = e_macedonia_rename_tur_830
+				clr_global_flag = e_macedonia_rename_ser_830
+			}
+			random_owned = {
+				limit = {
+					province_id = 3304
+				}
+				3304 = { change_province_name = "Gyumyurdzhina" }
+				set_global_flag = e_macedonia_rename_bul_3304
+				clr_global_flag = e_macedonia_rename_gre_3304
+				clr_global_flag = e_macedonia_rename_tur_3304
+				clr_global_flag = e_macedonia_rename_ser_3304
+			}
 			prestige = 2
 		}
 		ai_will_do = { factor = 1 }
@@ -5205,10 +7821,27 @@ political_decisions = {
 		picture = gtfo
 		potential = {
 			primary_culture = turkish
-			owns = 829
 			OR = {
-				has_global_flag = bulgarian_rename_e_macedonia
-				has_global_flag = greek_rename_e_macedonia
+				AND = {
+					owns = 823
+					NOT = { has_global_flag = e_macedonia_rename_tur_823 }
+				}
+				AND = {
+					owns = 825
+					NOT = { has_global_flag = e_macedonia_rename_tur_825 }
+				}
+				AND = {
+					owns = 829
+					NOT = { has_global_flag = e_macedonia_rename_tur_829 }
+				}
+				AND = {
+					owns = 830
+					NOT = { has_global_flag = e_macedonia_rename_tur_830 }
+				}
+				AND = {
+					owns = 3304
+					NOT = { has_global_flag = e_macedonia_rename_tur_3304 }
+				}
 			}
 		}
 
@@ -5217,18 +7850,153 @@ political_decisions = {
 		}
 
 		effect = {
-			clr_global_flag = bulgarian_rename_e_macedonia
-			clr_global_flag = greek_rename_e_macedonia
-			823 = {
-				change_province_name = "Siruz"
-				state_scope = {
-					change_region_name = "Dogu Makedonya"
+			random_owned = {
+				limit = {
+					province_id = 823
+				}
+				823 = {
+					change_province_name = "Siruz"
+					state_scope = {
+						change_region_name = "Dogu Makedonya"
+					}
+				}
+				set_global_flag = e_macedonia_rename_tur_823
+				clr_global_flag = e_macedonia_rename_gre_823
+				clr_global_flag = e_macedonia_rename_bul_823
+				clr_global_flag = e_macedonia_rename_ser_823
+			}
+			random_owned = {
+				limit = {
+					province_id = 825
+				}
+				825 = { change_province_name = "Kavala" }
+				set_global_flag = e_macedonia_rename_tur_825
+				clr_global_flag = e_macedonia_rename_gre_825
+				clr_global_flag = e_macedonia_rename_bul_825
+				clr_global_flag = e_macedonia_rename_ser_825
+			}
+			random_owned = {
+				limit = {
+					province_id = 829
+				}
+				829 = { change_province_name = "Iskeçe" }
+				set_global_flag = e_macedonia_rename_tur_829
+				clr_global_flag = e_macedonia_rename_gre_829
+				clr_global_flag = e_macedonia_rename_bul_829
+				clr_global_flag = e_macedonia_rename_ser_829
+			}
+			random_owned = {
+				limit = {
+					province_id = 830
+				}
+				830 = { change_province_name = "Dimetoka" }
+				set_global_flag = e_macedonia_rename_tur_830
+				clr_global_flag = e_macedonia_rename_gre_830
+				clr_global_flag = e_macedonia_rename_bul_830
+				clr_global_flag = e_macedonia_rename_ser_830
+			}
+			random_owned = {
+				limit = {
+					province_id = 3304
+				}
+				3304 = { change_province_name = "Gümülcine" }
+				set_global_flag = e_macedonia_rename_tur_3304
+				clr_global_flag = e_macedonia_rename_gre_3304
+				clr_global_flag = e_macedonia_rename_bul_3304
+				clr_global_flag = e_macedonia_rename_ser_3304
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	serbian_rename_e_macedonia = {
+		picture = gtfo
+		potential = {
+			primary_culture = serb
+			OR = {
+				AND = {
+					owns = 823
+					NOT = { has_global_flag = e_macedonia_rename_ser_823 }
+				}
+				AND = {
+					owns = 825
+					NOT = { has_global_flag = e_macedonia_rename_ser_825 }
+				}
+				AND = {
+					owns = 829
+					NOT = { has_global_flag = e_macedonia_rename_ser_829 }
+				}
+				AND = {
+					owns = 830
+					NOT = { has_global_flag = e_macedonia_rename_ser_830 }
+				}
+				AND = {
+					owns = 3304
+					NOT = { has_global_flag = e_macedonia_rename_ser_3304 }
 				}
 			}
-			825 = { change_province_name = "Kavala" }
-			829 = { change_province_name = "Iskeçe" }
-			830 = { change_province_name = "Dimetoka" }
-			3304 = { change_province_name = "Gümülcine" }
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 823
+				}
+				823 = {
+					change_province_name = "Ser"
+					state_scope = {
+						change_region_name = "Struma"
+					}
+				}
+				set_global_flag = e_macedonia_rename_ser_823
+				clr_global_flag = e_macedonia_rename_gre_823
+				clr_global_flag = e_macedonia_rename_bul_823
+				clr_global_flag = e_macedonia_rename_tur_823
+			}
+			random_owned = {
+				limit = {
+					province_id = 825
+				}
+				825 = { change_province_name = "Kavala" }
+				set_global_flag = e_macedonia_rename_ser_825
+				clr_global_flag = e_macedonia_rename_gre_825
+				clr_global_flag = e_macedonia_rename_bul_825
+				clr_global_flag = e_macedonia_rename_tur_825
+			}
+			random_owned = {
+				limit = {
+					province_id = 829
+				}
+				829 = { change_province_name = "Ksanti" }
+				set_global_flag = e_macedonia_rename_ser_829
+				clr_global_flag = e_macedonia_rename_gre_829
+				clr_global_flag = e_macedonia_rename_bul_829
+				clr_global_flag = e_macedonia_rename_tur_829
+			}
+			random_owned = {
+				limit = {
+					province_id = 830
+				}
+				830 = { change_province_name = "Didimotika" }
+				set_global_flag = e_macedonia_rename_ser_830
+				clr_global_flag = e_macedonia_rename_gre_830
+				clr_global_flag = e_macedonia_rename_bul_830
+				clr_global_flag = e_macedonia_rename_tur_830
+			}
+			random_owned = {
+				limit = {
+					province_id = 3304
+				}
+				3304 = { change_province_name = "Komotini" }
+				set_global_flag = e_macedonia_rename_ser_3304
+				clr_global_flag = e_macedonia_rename_gre_3304
+				clr_global_flag = e_macedonia_rename_bul_3304
+				clr_global_flag = e_macedonia_rename_tur_3304
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -5429,7 +8197,7 @@ political_decisions = {
 	}
 
 	serbian_rename_n_macedonia = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			primary_culture = serb
 			OR = {
@@ -5688,9 +8456,12 @@ political_decisions = {
 	}
 	
 	serbian_rename_kosovo = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
-			primary_culture = serb
+			OR = {
+				primary_culture = serb
+				tag = YUG
+			}
 			OR = {
 				AND = {
 					owns = 802
@@ -5806,7 +8577,7 @@ political_decisions = {
 	}
 
 	serbian_rename_albania = {
-		picture = greater_serbia
+		picture = gtfo
 		potential = {
 			primary_culture = serb
 			OR = {
@@ -5887,6 +8658,7 @@ political_decisions = {
 				set_global_flag = serbian_rename_albania_3308
 				clr_global_flag = albanian_rename_albania_3308
 				clr_global_flag = turkish_rename_albania_3308
+				clr_global_flag = bulgarian_rename_albania_3308
 			}
 			prestige = 2
 		}
@@ -5978,6 +8750,7 @@ political_decisions = {
 				set_global_flag = albanian_rename_albania_3308
 				clr_global_flag = serbian_rename_albania_3308
 				clr_global_flag = turkish_rename_albania_3308
+				clr_global_flag = bulgarian_rename_albania_3308
 			}
 			prestige = 2
 		}
@@ -6066,6 +8839,54 @@ political_decisions = {
 				set_global_flag = turkish_rename_albania_3308
 				clr_global_flag = serbian_rename_albania_3308
 				clr_global_flag = albanian_rename_albania_3308
+				clr_global_flag = bulgarian_rename_albania_3308
+			}
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	bulgarian_rename_albania = {
+		picture = gtfo
+		potential = {
+			primary_culture = bulgarian
+			OR = {
+				AND = {
+					owns = 3307
+					NOT = { has_global_flag = epirus_rename_bul_3307 }
+				}
+				AND = {
+					owns = 3308
+					NOT = { has_global_flag = bulgarian_rename_albania_3308 }
+				}
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 3307
+				}
+				3307 = { change_province_name = "Korcha" }
+				set_global_flag = epirus_rename_bul_3307
+				clr_global_flag = epirus_rename_gre_3307
+				clr_global_flag = epirus_rename_alb_3307
+				clr_global_flag = epirus_rename_ser_3307
+				clr_global_flag = epirus_rename_tur_3307
+			}
+			random_owned = {
+				limit = {
+					province_id = 3308
+				}
+				3308 = { change_province_name = "Peshkopiya" }
+				set_global_flag = bulgarian_rename_albania_3308
+				clr_global_flag = serbian_rename_albania_3308
+				clr_global_flag = albanian_rename_albania_3308
+				clr_global_flag = turkish_rename_albania_3308
 			}
 			prestige = 2
 		}

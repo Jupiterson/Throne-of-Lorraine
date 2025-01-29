@@ -319,7 +319,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = tirsinns_law_passed
 			remove_country_modifier = institutionalized_slavery
-			remove_country_flag = institutionalized_slavery
+			clr_country_flag = institutionalized_slavery
 			badboy = -1
 			political_reform = freedom_of_womb
 			any_pop = { limit = { type = slaves } consciousness = -3 militancy = -1 }

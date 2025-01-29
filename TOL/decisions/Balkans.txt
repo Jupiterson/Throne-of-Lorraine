@@ -514,6 +514,7 @@ political_decisions = {
 			NOT = { tag = ALB }
 			NOT = { exists = YUG }
 			NOT = { has_global_flag = yugoslavia_formed }
+			NOT = { has_country_flag = claimed_greater_serbia }
 			NOT = { has_country_flag = post_colonial_country }
 		}
 
@@ -1903,6 +1904,7 @@ political_decisions = {
 			tag = SER
 			owns = 794
 			NOT = { capital = 794 }
+			NOT = { has_country_flag = skoplje_serbian }
 		}
 
 		allow = {
@@ -1929,6 +1931,11 @@ political_decisions = {
 		picture = remove_undesireables
 		potential = {
 			has_pop_culture = turkish
+			OR = {
+				capital_scope = { continent = europe }
+				is_culture_group = levantine
+				is_culture_group = arab
+			}
 			ideological_thought = 1
 			NOT = {
 				has_country_modifier = turkish_oppression
@@ -2236,5 +2243,197 @@ political_decisions = {
             factor = 1
         }
     }
+	
+	proclaim_serbian_empire = {
+	picture = serbian_empire_emblem
+		potential = {
+			tag = SER
+			has_country_flag = claimed_greater_serbia
+			NOT = { has_country_flag = proclaimed_serbian_empire }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			is_disarmed = no
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			SER = {
+				all_core = { owned_by = THIS }
+			}
+		}
+
+		effect = {
+			set_country_flag = proclaimed_serbian_empire
+			prestige = 30
+			add_accepted_culture = greek
+			government = absolute_empire
+			add_country_modifier = {
+				name = balkan_rulers
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	new_serbian_capital = {
+        picture = skoplje
+        potential = {
+			tag = SER
+			has_country_flag = proclaimed_serbian_empire
+			NOT = { has_country_flag = skoplje_serbian }
+        }
+
+        allow = {
+			war = no
+			money = 50000
+			all_core = { owned_by = THIS }
+        }
+
+        effect = {
+            set_country_flag = skoplje_serbian
+			money = -50000
+			capital = 806
+			806 = { 
+				life_rating = 5
+				add_province_modifier = { 
+					name = recently_built_city
+					duration = 1825
+				}
+			}
+        }
+		ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	claim_bosnia_ser = {
+	picture = greater_bosnia
+		potential = {
+			tag = SER
+			has_country_flag = proclaimed_serbian_empire
+			NOT = { has_country_flag = serbian_bosnia }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			is_disarmed = no
+			romanticism = 1
+			invention = manifest_destiny
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			SER = {
+				all_core = { owned_by = SER }
+			}
+		}
+
+		effect = {
+			set_country_flag = serbian_bosnia
+			badboy = 4
+			TUR_788 = { add_core = SER }
+			AUS_780 = { add_core = SER }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	claim_bulgaria_ser = {
+	picture = bul_emblem
+		potential = {
+			tag = SER
+			has_country_flag = proclaimed_serbian_empire
+			NOT = { has_country_flag = serbian_bulgaria }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			is_disarmed = no
+			war_policy = jingoism
+			prestige = 100
+			revolution_n_counterrevolution = 1
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			SER = {
+				all_core = { owned_by = SER }
+			}
+		}
+
+		effect = {
+			set_country_flag = serbian_bulgaria
+			badboy = 12
+			TUR_674 = { add_core = SER }
+			TUR_809 = { add_core = SER }
+			TUR_810 = { add_core = SER }
+			TUR_823 = { add_core = SER }
+			TUR_860 = { add_core = SER }
+			678 = { add_core = SER }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	claim_greek_remains = {
+	picture = unite_with_greece
+		potential = {
+			tag = SER
+			has_country_flag = proclaimed_serbian_empire
+			NOT = { has_country_flag = claimed_greeks }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			is_disarmed = no
+			invention = biased_multiculturalism
+			invention = political_science
+			revolution_n_counterrevolution = 1
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			SER = {
+				all_core = { owned_by = SER }
+			}
+		}
+
+		effect = {
+			set_country_flag = claimed_greeks
+			badboy = 5
+			826 = { add_core = SER }
+			827 = { add_core = SER }
+			834 = { add_core = SER }
+			835 = { add_core = SER }
+			838 = { add_core = SER }
+			839 = { add_core = SER }
+			840 = { add_core = SER }
+			841 = { add_core = SER }
+			842 = { add_core = SER }
+			843 = { add_core = SER }
+			844 = { add_core = SER }
+			845 = { add_core = SER }
+			846 = { add_core = SER }
+			847 = { add_core = SER }
+			848 = { add_core = SER }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 }

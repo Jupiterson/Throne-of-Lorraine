@@ -7,6 +7,12 @@
 		religion = sunni
 		size = 2050
 	}
+	
+	aristocrats = {
+		culture = serb
+		religion = orthodox
+		size = 250
+	}
 
 	clergymen = {
 		culture = turkish
@@ -31,6 +37,12 @@
 		religion = catholic
 		size = 460
 	}
+	
+	soldiers = {
+		culture = serb
+		religion = orthodox
+		size = 1200
+	}
 
 	soldiers = {
 		culture = turkish
@@ -53,7 +65,13 @@
 	farmers = {
 		culture = serb
 		religion = orthodox
-		size = 3835
+		size = 6835
+	}
+	
+	farmers = {
+		culture = greek
+		religion = orthodox
+		size = 8355
 	}
 
 	aristocrats = {
@@ -89,7 +107,7 @@
 	farmers = {
 		culture = bulgarian
 		religion = orthodox
-		size = 31350
+		size = 28350
 	}
 
 	aristocrats = {
@@ -278,7 +296,7 @@
 
 }
 
-#Debar - Former Tichit
+#Debar
 1780 = {
 	clergymen = {
 		culture = albanian
@@ -310,24 +328,26 @@
 		religion = orthodox
 		size = 11062
 	}
+	farmers = {
+		culture = serb
+		religion = orthodox
+		size = 3855
+	}
 	soldiers = {
 		culture = serb
 		religion = orthodox
-		size = 175
+		size = 575
 	}
-
 	clergymen = {
 		culture = serb
 		religion = orthodox
 		size = 110
 	}
-
 	artisans = {
 		culture = serb
 		religion = orthodox
 		size = 250
 	}
-
 	farmers = {
 		culture = greek
 		religion = orthodox
@@ -336,6 +356,7 @@
 
 }
 
+#Ohrid
 3305 = {
 	aristocrats = {
 		culture = turkish
@@ -377,6 +398,12 @@
 		culture = turkish
 		religion = sunni
 		size = 642
+	}
+	
+	farmers = {
+		culture = albanian
+		religion = orthodox
+		size = 2545
 	}
 
 	aristocrats = {
@@ -448,7 +475,7 @@
 	soldiers = {
 		culture = greek
 		religion = orthodox
-		size = 300
+		size = 500
 	}
 
 	clergymen = {
@@ -460,13 +487,13 @@
 	artisans = {
 		culture = greek
 		religion = orthodox
-		size = 600
+		size = 700
 	}
 
 	farmers = {
 		culture = greek
 		religion = orthodox
-		size = 3800
+		size = 7800
 	}
 
 	######Jews

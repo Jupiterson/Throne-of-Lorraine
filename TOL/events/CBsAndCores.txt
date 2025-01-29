@@ -1047,7 +1047,6 @@ province_event = {
 
 	option = {
 		name = "EVT2600OPTA"
-		owner = { badboy = 2 }
 		state_scope = {
 			any_owned = {
 				limit = {
@@ -1083,18 +1082,6 @@ province_event = {
 			modifier = {
 				factor = 0.5
 				owner = { war_policy = anti_military }
-			}
-			modifier = {
-				factor = 0.1
-				owner = { badboy = 0.92 }
-			}
-			modifier = {
-				factor = 0.75
-				owner = { badboy = 0.8 }
-			}
-			modifier = {
-				factor = 0.75
-				owner = { badboy = 0.7 }
 			}
 		}
 	}
