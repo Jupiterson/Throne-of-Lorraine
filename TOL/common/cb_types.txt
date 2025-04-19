@@ -388,8 +388,6 @@ donau_war = {
     good_relation_infamy_factor = 0
     good_relation_militancy_factor = 0
 
-	po_status_quo = yes
-
     war_name = DONAU_WAR
 
     can_use = {
@@ -476,16 +474,10 @@ donau_war = {
 				668 = { add_core = DAN }
 				669 = { add_core = DAN }
 				set_global_flag = DAN_border_expansion
-				any_country = {
-					limit = {
-						tag = WAL
-						owns = 668
-						owns = 669
-					}
+				WAL = {
 					any_owned = {
-						limit = { 
-							province_id = 668 
-							province_id = 669 
+						limit = {
+							is_core = DAN
 						}
 						secede_province = DAN
 					}
