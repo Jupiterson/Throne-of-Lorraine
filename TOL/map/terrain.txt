@@ -1276,7 +1276,6 @@ categories =  {
         mine_rgo_eff = 0.0
         supply_limit = 10
 		immigrant_attract = 0.1
-
     }
 	
 	rijeka = {
@@ -1288,7 +1287,6 @@ categories =  {
         mine_rgo_eff = 0.0
         supply_limit = 10
 		immigrant_attract = 0.1
-
     }
 	
 	senj = {
@@ -1419,7 +1417,7 @@ categories =  {
 	cetinje = {
         movement_cost = 1.4
         defence = 3
-        color = { 117 108 119 }
+        color = { 22 44 66 }
         farm_rgo_size = -0.2
         farm_rgo_eff = 0.0
         mine_rgo_size = 0.1
@@ -1429,6 +1427,308 @@ categories =  {
         combat_width = -0.6
 
         min_build_railroad = 3
+    }
+	
+	ogulin = {
+        movement_cost = 1.4
+        defence = 3
+        color = { 22 44 66 }
+        farm_rgo_size = -0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+
+        combat_width = -0.6
+
+        min_build_railroad = 3
+    }
+	
+	mostar = {
+        movement_cost = 1.2
+        defence = 1
+        color = { 22 44 66 }
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 6
+        combat_width = -0.20
+        min_build_railroad = 2
+		immigrant_attract = 0.10
+    }
+	
+	celovec = {
+        movement_cost = 1.2
+        defence = 1
+        color = { 22 44 66 }
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 6
+        combat_width = -0.20
+        min_build_railroad = 2
+		immigrant_attract = 0.10
+    }
+	
+	burgas = {
+        movement_cost = 1.4
+        defence = 3
+        color = { 22 44 66 }
+        farm_rgo_size = -0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+
+        combat_width = -0.6
+
+        min_build_railroad = 3
+    }
+	
+	plovdiv = {
+        movement_cost = 1.4
+        defence = 3
+        color = { 22 44 66 }
+        farm_rgo_size = -0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+
+        combat_width = -0.6
+
+        min_build_railroad = 3
+    }
+	
+	maribor = {
+        movement_cost = 1.4
+        defence = 3
+        color = { 22 44 66 }
+        farm_rgo_size = -0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+
+        combat_width = -0.6
+
+        min_build_railroad = 3
+    }
+	
+	gorica = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.1
+    }
+	
+	sisak = {
+        movement_cost = 1.4
+        defence = 3
+        color = { 22 44 66 }
+        farm_rgo_size = -0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+
+        combat_width = -0.6
+
+        min_build_railroad = 3
+    }
+	
+	vukovar = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.25
+    }
+	
+	pozega = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.25
+    }
+	
+	mitrovica = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.25
+    }
+	
+	subotica = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.25
+    }
+	
+	novisad = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.25
+    }
+	
+	pancevo = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.25
+    }
+	
+	kikinda = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.1
+    }
+	
+	bjelovar = {
+        movement_cost = 1.4
+        defence = 3
+        color = { 22 44 66 }
+        farm_rgo_size = -0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.1
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+
+        combat_width = -0.6
+
+        min_build_railroad = 3
+    }
+	
+	pecs = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.25
+    }
+	
+	bihac = {
+        movement_cost = 1.2
+        defence = 1
+        color = { 22 44 66 }
+
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+
+        supply_limit = 6
+        min_build_railroad = 2
+        combat_width = -0.33
+    }
+	
+	smyrna = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.25
+    }
+	
+	edirne = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.1
+    }
+	
+	kotor = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.1
+    }
+	
+	mudania = {
+        movement_cost = 1.2
+        defence = 1
+        color = { 22 44 66 }
+    
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+    
+        supply_limit = 6
+        min_build_railroad = 1
+        combat_width = -0.33
+    }
+	
+	nafplio = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.0
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.1
+    }
+	
+	bursa = {
+        movement_cost = 1.0
+        color = { 22 44 66 }
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.00
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		immigrant_attract = 0.25
     }
 
     ankara = {

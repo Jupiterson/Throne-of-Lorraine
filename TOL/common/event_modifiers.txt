@@ -5576,3 +5576,104 @@ balkan_rulers = {
 	prestige = 0.15
 	icon = 5
 }
+
+# Thervingia #
+
+low_autonomy = {
+	tariff_efficiency_modifier = -0.4
+	tax_efficiency = -0.4
+	supply_consumption = -0.6
+    core_pop_consciousness_modifier = 0.02
+    core_pop_militancy_modifier = 0.02
+    cb_generation_speed_modifier = -3
+	research_points = -0.1
+    prestige = -0.02
+    icon = 8
+}
+
+medium_autonomy = {
+	tariff_efficiency_modifier = -0.2
+	tax_efficiency = -0.2
+	supply_consumption = -0.3
+    core_pop_consciousness_modifier = -0.03
+    core_pop_militancy_modifier = -0.03
+    cb_generation_speed_modifier = -3
+    prestige = -0.01
+    icon = 8
+}
+
+high_autonomy = {
+	tariff_efficiency_modifier = 0.05
+	tax_efficiency = 0.05
+	supply_consumption = -0.1
+    core_pop_consciousness_modifier = -0.05
+    core_pop_militancy_modifier = -0.05
+    cb_generation_speed_modifier = -3
+	research_points = 0.1
+    icon = 8
+}
+
+increasing_centralization = {
+	tariff_efficiency_modifier = -0.3
+	tax_efficiency = -0.1
+    core_pop_consciousness_modifier = 0.01
+    core_pop_militancy_modifier = 0.01
+	research_points = -0.05
+    icon = 6
+}
+
+# Ottoman decline debuff #
+
+rampant_janissaries = {
+	import_cost = 0.5
+	land_organisation = -0.3
+	mobilisation_economy_impact = 0.3
+	mobilization_impact = 0.3
+	mobilisation_size = -0.3
+	non_accepted_pop_consciousness_modifier = 3
+	non_accepted_pop_militancy_modifier = 3
+	org_regain = -0.2
+	unit_start_experience = 10
+	war_exhaustion = 0.5
+    icon = 16
+}
+
+## Greece ##
+
+hellenic_ideals = {
+	badboy = -0.05
+	cb_generation_speed_modifier = -0.4
+	diplomatic_points_modifier = 0.2
+	education_efficiency_modifier = 0.4
+	global_assimilation_rate = 0.1
+	prestige = 0.03
+	research_points_modifier = 0.25
+    icon = 5
+}
+
+ionian_shipyards = {
+	naval_organisation = 0.3
+	naval_unit_start_experience = 20
+	navy_tech_research_bonus = 0.1
+    icon = 15
+}
+
+smyrna_port = {
+	local_repair = 0.5
+	local_ship_build = -0.15
+	life_rating = 1
+	local_artisan_output = 0.2
+	local_factory_output = 0.3
+	local_RGO_output = 0.15
+	goods_demand = 0.05
+	rich_income_modifier = 0.2
+    icon = 11
+}
+
+colonial_farms = {
+	global_population_growth = 0.001
+	mobilisation_economy_impact = -0.25
+	supply_consumption = -0.05
+	mobilisation_size = 0.02
+    icon = 17
+}

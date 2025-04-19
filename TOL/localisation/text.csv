@@ -625,6 +625,32 @@ nis;Grassland Hills;;;;;;;;;
 salonika;Grassland Hills;;;;;;;;;
 kragujevac;Grassland Hills;;;;;;;;;
 cetinje;Montane Grassland;;;;;;;;;
+ogulin;Montane Grassland;;;;;;;;;
+mostar;Forest;;;;;;;;;
+celovec;Forest;;;;;;;;;
+burgas;Forest;;;;;;;;;
+plovdiv;Montane Grassland;;;;;;;;;
+maribor;Forest;;;;;;;;;
+gorica;Grassland;;;;;;;;;
+sisak;Forest;;;;;;;;;
+vukovar;Farmlands;;;;;;;;;
+pozega;Farmlands;;;;;;;;;
+mitrovica;Farmlands;;;;;;;;;
+subotica;Farmlands;;;;;;;;;
+novisad;Farmlands;;;;;;;;;
+pancevo;Farmlands;;;;;;;;;
+kikinda;Grassland;;;;;;;;;
+bjelovar;Forest;;;;;;;;;
+pecs;Farmlands;;;;;;;;;
+bihac;Grassland Hills;;;;;;;;;
+smyrna;Farmlands;;;;;;;;;
+edirne;Grassland;;;;;;;;;
+kotor;Grassland;;;;;;;;;
+mudania;Grassland Hills;;;;;;;;;
+nafplio;Grassland;;;;;;;;;
+bursa;Farmlands;;;;;;;;;
+luxor;Floodplain Farmlands;;;;;;;;;
+aswan;Semidesert;;;;;;;;;
 STRATA_POOR;Poor;Classes défavorisées;Arm;;Pobre;;;;;;;;;
 STRATA_MIDDLE;Middle;Classes moyennes;Mittel;;Clase media;;;;;;;;;
 STRATA_RICH;Rich;Classes supérieures;Reich;;Rico;;;;;;;;;
@@ -651,7 +677,10 @@ YUG_absolute_monarchy;The Kingdom of Yugoslavia;x
 YUG_fascist_dictatorship;The National State of Yugoslavia;;x
 YUG_proletarian_dictatorship;The Socialist Federative Republic of Yugoslavia;x
 CYP;Cyprus;Chypre;Zypern;;Chipre;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-GRE;Free State of Greece;Gr?e;Griechenland;;Grecia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GRE;Greece;x
+GRE_democracy;The Hellenic Republic;x
+GRE_hms_government;The Kingdom of Greece;x
+GRE_absolute_monarchy;The Kingdom of Greece;x
 MOL;Moldavia;Moldavie;Moldawien;;Moldavia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 MON;Montenegro;Mont??ro;Montenegro;;Montenegro;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ROM;Romania;Roumanie;Rum?ien;;Rumania;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -661,7 +690,7 @@ SER_semi_constitutional_empire;The Serbian Empire;x
 SER_constitutional_empire;The Serbian Empire;x
 WAL;Wallachia;Valachie;Walachei;;Valaquia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 SWI;Switzerland;Suisse;Schweiz;;Suiza;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-SLO;Cilli;Slov?ie;Slowenien;;Eslovenia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SLO;Slovenia;Slov?ie;Slowenien;;Eslovenia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 AUS;The Duchy of Austria;Autriche;?terreich;;Austria;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BOH;Bohemia;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 DZG;Danzig;Dantzig;Danzig;;Danzig;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1145,6 +1174,7 @@ kreolera;Kreolera;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 central_american;Erdiko-Kolonbiarra Minor;Centre-am?icain;Mittelamerikanisch;;CentroColumbiana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 caribeno;Caribeno;Cariban;Karibisch;;Caribe?;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 north_andean;Enseignants;Nord-Andin;Nordandisch;;Norandina;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+new_world_scot;New World Scottish;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 sgirenic;Sgirenic;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 african_diaspora_cultures;African Diaspora Cultures;Cultures de la diaspora africaine;Fremdafrikanisch;;Culturas de la di?pora africana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 afro_american;Afro Columbian;Afro-am?icain;Afroamerikanisch;;Afro-Columbiana;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9961,7 +9991,7 @@ PROV1733;Misratah;Misratah;Misratah;;Misurata;;;;;;;;;
 PROV1734;Sirt;Sirt;Sirt;;Sirte;;;;;;;;;
 PROV1735;Benghazi;Benghazi;Benghazi;;Bengasi;;;;;;;;;
 PROV1736;Darna;Darna;Darna;;Darna;;;;;;;;;
-PROV1737;Tobruk;Tobrouk;Tobruk;;Tobruk;;;;;;;;;
+PROV1737;Antipyrgos;;;;;;;;;
 PROV1741;Murzuk;Murzuk;Murzuk;;Murzuq;;;;;;;;;
 PROV1745;Ti-kash-roomi;Cairo;Kairo;;Cairo;;;;;;;;;
 PROV1746;Dumyat;Dumyat;Dumyat;;Dumyat;;;;;;;;;
@@ -9970,26 +10000,26 @@ PROV1748;Tamiatti;Mansura;Mansura;;Mansura;;;;;;;;;
 PROV1749;Cekcik;Ziqaziq;Ziqaziq;;Ziqaziq;;;;;;;;;
 PROV1750;Tipersis;Gizeh;Giza;;Giza;;;;;;;;;
 PROV1751;Rakoti;Alexandrie;Alexandria;;Alexandría;;;;;;;;;
-PROV1752;Matruh;Matruh;Matruh;;Matruh;;;;;;;;;
-PROV1753;Sidi Barrani;Sidi Barrani;Sidi Barrani;;Sïd?Barrân?;;;;;;;;
-PROV1754;Siwa;Siwa;Siwa;;Siwa;;;;;;;;;
+PROV1752;Tparatonion;;;;;;;;;
+PROV1753;Zygra;;;;;;;;
+PROV1754;Amun-Ra;;;;;;;;;
 PROV1755;Peklousma;Canal de Suez;Suez;;Suez;;;;;;;;;
-PROV1756;Al Arish;Al Arish;Al Arish;;Al Arish;;;;;;;;;
-PROV1757;Sharm al-Shaykh;Sharm el Sheikh;Sharm al-Shaykh;;Sharm al-Shaykh;;;;;;;;;
+PROV1756;Hrinokorura;;;;;;;;;
+PROV1757;Du Mafkat;;;;;;;;;
 PROV1759;Bawiti;Bawiti;Bawiti;;Bawiti;;;;;;;;;
-PROV1760;Mut;Mut;Mut;;Mut;;;;;;;;;
+PROV1760;Pshoi;;;;;;;;;
 PROV1761;Baris;Baris;Baris;;Baris;;;;;;;;;
 PROV1762;Asyut;Asyut;Asyut;;Asiut;;;;;;;;;
-PROV1763;Bani Suwayf;Bani Suwayf;Bani Suwayf;;Bani Suwayf;;;;;;;;;
-PROV1764;Thmone;Minya;Minya;;Minya;;;;;;;;;
-PROV1765;Phiom;Fayyum;Fayyum;;Fayyum;;;;;;;;;
-PROV1766;Syene;Assouan;Aswan;;Asuán;;;;;;;;;
-PROV1767;Pape;Louxor;Luxor;;Luxor;;;;;;;;;
-PROV1768;Wetjeset-Hor;Edfou;Idfu;;Idfu;;;;;;;;;
+PROV1763;Hnes;;;;;;;;;
+PROV1764;Tmone;;;;;;;;;
+PROV1765;Phiom;;;;;;;;;
+PROV1766;Suan;;;;;;;;;
+PROV1767;Ne;;;;;;;;;
+PROV1768;Etwo;;;;;;;;;
 PROV1769;Kone;Qina;Qina;;Qina;;;;;;;;;
-PROV1770;Qusayr;Qusayr;Qusayr;;Qusayr;;;;;;;;;
+PROV1770;Tjau;;;;;;;;;
 PROV1771;Marsa Alam;Marsa Alam;Marsa Alam;;Marsa Alam;;;;;;;;;
-PROV1772;Ras Gharib;Ras Gharib;Ras Gharib;;Ras Gharib;;;;;;;;;
+PROV1772;Philotera;;;;;;;;;
 PROV1775;Nouakchott;Nouakchott;Nouakchott;;Nuakchot;;;;;;;;;
 PROV1776;Rosso;Rosso;Rosso;;Rosso;;;;;;;;;
 PROV1777;Aleg;Aleg;Aleg;;Aleg;;;;;;;;;
@@ -10674,7 +10704,7 @@ PROV2552;Pitcairn;Pitcairn;Pitcairn;;Pitcairn;;;;;;;;;
 PROV2553;Tuamotus;Tuamotus;Tuamotus;;Tuamotus;;;;;;;;;
 PROV2555;Augusta;Augusta;Augusta;;Augusta;;;;;;;;;
 PROV2556;Desmoulins;;;;;;;;;
-PROV2559;Tpolubiane;Suhaj;Suhaj;;Suhaj;;;;;;;;;
+PROV2559;Tmoupaho;Suhaj;Suhaj;;Suhaj;;;;;;;;;
 PROV2560;Darmstadt;Darmstadt;Darmstadt;;Darmstadt;;;;;;;;;
 PROV2561;Siegburg;Siegburg;Siegburg;;Siegburg;;;;;;;;;
 PROV2563;Safi;Safi;Safi;;Safi;;;;;;;;;
@@ -11448,7 +11478,7 @@ RUS_349;Estonia;Estonie;Estland;;Estonia;;;;;;;;;
 RUS_710;Wielkopolskie;Wielkopolskie;Wielkopolskie;;Wielkopolskie;;;;;;;;;
 RUS_718;Minsk;Minsk;Minsk;;Minsk;;;;;;;;;
 RUS_676;Budjak;Budjak;Budjak;;Budjak;;;;;;;;;
-RUS_965;Cherson;Cherson;Cherson;;Cherson;;;;;;;;;
+RUS_965;Ali Agak;x
 RUS_1090;Sakartvelo;Sakartvelo;Sakartvelo;;Sakartvelo;;;;;;;;;
 RUS_1098;Hayastan;Hayastan;Hayastan;;Hayastan;;;;;;;;;
 RUS_339;Kareliya;Kareliya;Kareliya;;Kareliya;;;;;;;;;
@@ -13048,7 +13078,6 @@ LEADERDIED_MAP;*;*;*;Id?do;*;Andare;Ugrás;Pøejít na;;;;;;
 american_german;Columbian German;;;;;;;;;;;;
 akino_german;Akino German;;;;;;;;;;;;
 gek;Gekke;;;;;;;;;;;;
-kolumbianisch;Kolumbianisch;;;;;;;;;;;;
 afro_german;Afro German;;;;;;;;;;;;
 free_german;Freilander;;;;;;;;;;;;
 veldlewer;Veldleuwer;;;;;;;;;;;;

@@ -51,18 +51,10 @@ political_decisions = {
 			prestige = 50
 			nationalism_n_imperialism = 1
 			is_greater_power = yes
-			OR = {
-				SGR = {
-					OR = {
-						substate_of  = THIS
-						vassal_of = THIS
-					}
-				}
-				SCO = {
-					OR = {
-						substate_of = THIS
-						vassal_of = THIS
-					}
+			SGR = {
+				OR = {
+					substate_of = THIS
+					vassal_of = THIS
 				}
 			}
 		}

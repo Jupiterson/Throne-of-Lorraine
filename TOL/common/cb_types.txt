@@ -61,6 +61,7 @@ peace_order = {
 	dismantle_cb
 	dismantle_cb_add
 	dismantle_cb_add_new
+	donau_war
 	colonial_competition
 	acquire_all_cores
 	acquire_core_state
@@ -364,6 +365,136 @@ dismantle_cb_add_new = {
 	on_po_accepted = {
 		set_country_flag = dismantling_treaty
 	}
+}
+
+donau_war = {
+    sprite_index = 20
+    is_triggered_only = yes
+    months = 12
+
+    badboy_factor = 0
+    prestige_factor = 1
+    peace_cost_factor = 0.75
+    penalty_factor = 0
+    constructing_cb = no
+    crisis = no
+
+    break_truce_prestige_factor = 0
+    break_truce_infamy_factor = 0
+    break_truce_militancy_factor = 0
+    truce_months = 48
+
+    good_relation_prestige_factor = 0
+    good_relation_infamy_factor = 0
+    good_relation_militancy_factor = 0
+
+	po_status_quo = yes
+
+    war_name = DONAU_WAR
+
+    can_use = {
+    }
+
+    on_add = {
+    }
+	
+	po_remove_prestige = yes
+	po_reparations = yes
+
+    on_po_accepted = {
+		random_owned = {
+			limit = {
+				owner = {
+					exists = yes
+					tag = DAN
+				}
+			}
+			owner = {
+				set_global_flag = DAN_wiped_out
+				WAL = {
+					prestige = 15
+					any_pop = {
+						limit = {
+							OR = {
+								is_primary_culture = yes
+								is_accepted_culture = yes
+							}
+						}
+						militancy = -6
+						consciousness = -6
+					}
+				}
+				678 = { add_core = WAL }
+				818 = { add_core = WAL }
+				DAN = {
+					any_owned = {
+						limit = {
+							is_core = WAL
+						}
+						secede_province = WAL
+						remove_core = DAN
+					}
+				}
+				818 = { remove_core = DAN }
+				WAL = { all_core = { remove_core = TUR } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = yes
+					tag = WAL
+				}
+			}
+			owner = {
+				WAL = {
+					prestige = -15
+					any_pop = {
+						limit = {
+							OR = {
+								is_primary_culture = yes
+								is_accepted_culture = yes
+							}
+						}
+						militancy = 6
+						consciousness = 6
+					}
+				}
+				DAN = {
+					prestige = 15
+					any_pop = {
+						limit = {
+							OR = {
+								is_primary_culture = yes
+								is_accepted_culture = yes
+							}
+						}
+						militancy = -6
+						consciousness = -6
+					}
+				}
+				668 = { add_core = DAN }
+				669 = { add_core = DAN }
+				set_global_flag = DAN_border_expansion
+				any_country = {
+					limit = {
+						tag = WAL
+						owns = 668
+						owns = 669
+					}
+					any_owned = {
+						limit = { 
+							province_id = 668 
+							province_id = 669 
+						}
+						secede_province = DAN
+					}
+				}
+				TUR_674 = { remove_core = WAL }
+			}
+		}
+		add_country_modifier = { name = recently_lost_war duration = 1825 }
+    }
 }
 
 # Great War Penalty

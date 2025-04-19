@@ -160,7 +160,7 @@
 	farmers = {
 		culture = bulgarian
 		religion = orthodox
-		size = 29000
+		size = 34000
 	}
 
 	aristocrats = {
@@ -314,7 +314,7 @@
 	farmers = {
 		culture = bulgarian
 		religion = orthodox
-		size = 36150
+		size = 37430
 	}
 
 	soldiers = {
@@ -337,12 +337,6 @@
 
 	farmers = {
 		culture = romanian
-		religion = orthodox
-		size = 1280
-	}
-	
-	farmers = {
-		culture = greek 
 		religion = orthodox
 		size = 1280
 	}
@@ -403,6 +397,12 @@
 		culture = turkish
 		religion = sunni
 		size = 3250
+	}
+	
+	farmers = {
+		culture = donau_saxon 
+        religion = protestant
+		size = 500
 	}
 
 	clergymen = {
@@ -658,6 +658,12 @@
 		religion = sunni
 		size = 2100
 	}
+	
+	artisans = {
+		culture = donau_saxon 
+        religion = protestant
+		size = 2000
+	}
 
 	soldiers = {
 		culture = turkish
@@ -674,7 +680,7 @@
 	farmers = {
 		culture = greek
 		religion = orthodox
-		size = 6000
+		size = 4000
 	}
 
 	aristocrats = {
@@ -927,7 +933,7 @@
 	farmers = {
 		culture = turkish
 		religion = sunni
-		size = 3900
+		size = 11900
 	}
 
 	soldiers = {
@@ -981,7 +987,7 @@
 	farmers = {
 		culture = greek
 		religion = orthodox
-		size = 19850
+		size = 11850
 	}
 }
 3373 = {
@@ -1012,7 +1018,7 @@
 	farmers = {
 		culture = turkish
 		religion = sunni
-		size = 4900
+		size = 9900
 	}
 
 	soldiers = {
@@ -1066,7 +1072,7 @@
 	farmers = {
 		culture = greek
 		religion = orthodox
-		size = 17850
+		size = 12850
 	}
 }
 #Burgas (196000/49000 POPS)
@@ -1397,8 +1403,8 @@
 	}
 
 	farmers = {
-		culture = donau_saxon
-		religion = catholic
+		culture = donau_saxon 
+        religion = protestant
 		size = 14100
 	}
 
@@ -1468,7 +1474,13 @@
 	farmers = {
 		culture = bulgarian
 		religion = orthodox
-		size = 25000
+		size = 23000
+	}
+	
+    farmers = {
+		culture = turkish
+		religion = sunni
+		size = 3400
 	}
 
 	aristocrats = {

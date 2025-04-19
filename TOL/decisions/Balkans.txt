@@ -579,6 +579,8 @@ political_decisions = {
 			CRO = { all_core = { add_core = YUG } }
 			BOS = { all_core = { add_core = YUG } }
 			SLO = { all_core = { add_core = YUG } }
+			AUS_2538 = { add_core = YUG }
+			640 = { add_core = YUG }
 			random_owned = {
 				limit = { owner = { accepted_culture = north_italian } }
 				owner = { remove_accepted_culture = north_italian }
@@ -648,6 +650,7 @@ political_decisions = {
 			794 = {
 				owner = {
 					OR = {
+						tag = THIS
 						in_sphere = THIS
 						vassal_of = THIS
 					}
@@ -2090,12 +2093,69 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	croatian_slovenia = {
+		alert = yes
+		picture = croatian_unity
+		potential = {
+			tag = CRO
+			NOT = { has_country_flag = claimed_alpine_croatia }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			state_n_government = 1
+		}
+
+		effect = {
+			set_country_flag = claimed_alpine_croatia
+			prestige = 10
+			add_accepted_culture = slovene
+			618 = { add_core = SLO }
+			733 = { add_core = SLO }
+			3617 = { add_core = SLO }
+			AUS_736 = { add_core = CRO }
+			AUS_768 = { add_core = CRO }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	croatian_east = {
+		alert = yes
+		picture = greater_croatia
+		potential = {
+			tag = CRO
+			NOT = { has_country_flag = croatian_east_claimed }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			nationalism_n_imperialism = 1
+			romanticism = 1
+			invention = manifest_destiny
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+
+		effect = {
+			badboy = 8
+			set_country_flag = croatian_east_claimed
+			640 = { add_core = CRO }
+			AUS_2538 = { add_core = CRO }
+			MON_2582 = { add_core = CRO }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
 	croatian_language_schooling = {
         picture = croatian_unity
         potential = {
             primary_culture = croatian
 			SLO = { all_core = { owned_by = THIS } }
-			has_country_flag = claimed_greater_croatia
+			has_country_flag = claimed_alpine_croatia
             NOT = { has_country_flag = enacted_croatian_schooling }
         }
 
@@ -2313,7 +2373,7 @@ political_decisions = {
     }
 	
 	claim_bosnia_ser = {
-	picture = greater_bosnia
+		picture = greater_bosnia
 		potential = {
 			tag = SER
 			has_country_flag = proclaimed_serbian_empire
@@ -2348,7 +2408,7 @@ political_decisions = {
 	}
 	
 	claim_bulgaria_ser = {
-	picture = bul_emblem
+		picture = bul_emblem
 		potential = {
 			tag = SER
 			has_country_flag = proclaimed_serbian_empire
@@ -2374,6 +2434,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = serbian_bulgaria
 			badboy = 12
+			add_accepted_culture = bulgarian
 			TUR_674 = { add_core = SER }
 			TUR_809 = { add_core = SER }
 			TUR_810 = { add_core = SER }
@@ -2388,7 +2449,7 @@ political_decisions = {
 	}
 	
 	claim_greek_remains = {
-	picture = unite_with_greece
+		picture = unite_with_greece
 		potential = {
 			tag = SER
 			has_country_flag = proclaimed_serbian_empire
@@ -2429,6 +2490,79 @@ political_decisions = {
 			846 = { add_core = SER }
 			847 = { add_core = SER }
 			848 = { add_core = SER }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	greater_thervingia = {
+		picture = thervingia_banner
+		potential = {
+			tag = DAN
+			NOT = { has_country_flag = greater_thervingia }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			is_disarmed = no
+			state_n_government = 1
+			NOT = { has_country_modifier = low_autonomy }
+			NOT = { has_country_modifier = medium_autonomy }
+			NOT = { has_country_modifier = high_autonomy }
+			DAN = {
+				all_core = { owned_by = DAN }
+			}
+		}
+
+		effect = {
+			set_country_flag = greater_thervingia
+			badboy = 5
+			664 = { add_core = DAN }
+			668 = { add_core = DAN }
+			669 = { add_core = DAN }
+			677 = { add_core = DAN }
+			811 = { add_core = DAN }
+			813 = { add_core = DAN }
+			814 = { add_core = DAN }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	reichsland_taurien = {
+		picture = retake_crimea
+		potential = {
+			tag = DAN
+			has_country_flag = greater_thervingia
+			NOT = { has_country_flag = taurien_lebensraum }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			is_disarmed = no
+			war_policy = jingoism
+			nationalism_n_imperialism = 1
+			DAN = {
+				all_core = { owned_by = DAN }
+			}
+		}
+
+		effect = {
+			set_country_flag = taurien_lebensraum
+			badboy = 8
+			RUS_964 = { add_core = DAN }
+			965 = { add_core = DAN }
+			973 = { add_core = DAN }
+			979 = { add_core = DAN }
+			1047 = { add_core = DAN }
+			1049 = { add_core = DAN }
+			3392 = { add_core = DAN }
 		}
 
 		ai_will_do = {

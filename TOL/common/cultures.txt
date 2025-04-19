@@ -300,23 +300,6 @@ neo_germanic = {
 			Wolterbeek
 		}
 	}
-	
-	kolumbianisch = {
-		color = { 52 54 46 }
-		first_names = { Adelbert Adolf Albrecht Alexander Alfred August Bernhard Burkhard Dieter
-		Eduard Edwin Erwin Erich Ernst Florian Franz Friedrich Fritz Georg Günther
-		Gustav Hasso Heinrich Helmuth Hermann Hugo Joachim Johann Jürgen Karl
-		Konrad Leonhard Leopold Ludwig Lukas Manfred Maximilian Michael Nikolaus Otto
-		Pascal Paul Peter Reinhard Rudolf Ruprecht Stefan Theodor Wilhelm Wolfgang }
-
-		last_names = { Behncke Brommy Cordemann Dreyer Droste Groener "Herwarth von Bittenfeld" Heppendorf Hoffmann Krohn Ludendorff Schree
-		"Vogel von Falkenstein" "von Alten" "von Anhalt" "von Arentschildt" "von Bismarck-Bohlen" "von Blumenthal" "von Blomberg"		 "von Boyen" "von Braunschweig" "von Bülow" "von dem Knesebeck" "von Gebser" "von Fritsch" "von Halkett" "von Hannover"
-		"von Hessen-Darmstadt" "von Hessen-Kassel" "von Hindenburg" "von Hohenzollern" "von Holstein-Gottorp" "von Knorr" "von Kleefeld"
-		"von Manteuffel" "von Mecklenburg-Schwerin" "von Mecklenburg-Strelitz" "von Moltke" "von Oldenburg" "von Rauch" "von Ravensberg"
-		"von Reuter" "von Richthofen" "von Sachsen-Altenburg" "von Sachsen-Coburg-Gotha" "von Sachsen-Meiningen"
-		"von Sachsen-Weimar-Eisenach" "von Schlieffen" "von Schwarzburg" "von Spee" "von Tirpitz" "von Waldeck und Pyrmont" "von Wettin"
-		"von Wrangel" "von Zieten" "zur Lippe" "von Roon" }
-	}
 
 }
 
@@ -730,20 +713,6 @@ britannian = {
 			Mackintosh Dingwall Melville Corrie Aberach Cunningham Donald
 			Buchanan Menzies Moffat Malcolm "Cameron" "Forbes" "Arbuthnot" "Cockburn" "Adam" Wallace "Abernethy"
 		Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison Sanders	}
-	}
-	
-	sgirenic = {
-		color = {60 54 166}
-		 first_names = { Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde 
-		 Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin 
-		 Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne 
-		 Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace
-		 }
-
-		last_names = { Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott 
-		Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison 
-		Sanders  
-		}
 	}
 	
 	welsh = {
@@ -1329,7 +1298,7 @@ south_slavic = {
 		Drolc Duletic Globocnik Gobec Godina Golob Haus Hladnik Ivanek Kantuser
 		Kidric Komar Kopitar Kraigher Lipovsek Lipuscek Macek Maister Marinko Miklosic
 		Mravlajk Pengov Pesek Peterle Pirec Plecnik Rozman Rupnik Sarh Srebrnic
-		Tomazic Tomsic Urbancic Vega "Von Windisch-GrÃ¤tz" Zagar Zerjal Zizke Zornada Zupancic
+		Tomazic Tomsic Urbancic Vega Zagar Zerjal Zizke Zornada Zupancic
 		}
 	}
 	union = YUG
@@ -1398,8 +1367,6 @@ pan_roman = {
 			Tegama Thabitah Tifan Tiljad Ugdada Uregh Urtilian Urz'ig Watt'as Xamida Yaghmurasen
 			Yattuy Yeften Yuba Yugerten Yugurthen Youkhanna Yuva Zalelsan Zer'wal Zigza }
 	}
-
-union = BYZ
 
 }
 
@@ -3936,6 +3903,24 @@ latin_american_cultures = {
 		first_names = { Alban Andieu Alain Bert Carles Estève Fidèl Frederic Girard Jan Jacin Laurenç Martin Nicolau Privat Roman Vincenç }
 
 		last_names = { Amiel Benet Dardier Delpuech Ladivèze Gilbert Mistral Lacroux Laffont Maury Miquel Montagut Poujade Pujol Vidal Ros Tisseyre }
+	}
+}
+
+new_world_scot = {
+	leader = european
+	unit = BritishGC
+	sgirenic = {
+		color = {60 54 166}
+		 first_names = { Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde 
+		 Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin 
+		 Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne 
+		 Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace
+		 }
+
+		last_names = { Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott 
+		Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison 
+		Sanders  
+		}
 	}
 }
 

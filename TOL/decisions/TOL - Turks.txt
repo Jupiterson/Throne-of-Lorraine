@@ -111,18 +111,17 @@ political_decisions = {
 		}
 
 		effect = {
-			add_core = 1755
-			add_core = 1746
-			add_core = 1751
-			add_core = 1752
-			add_core = 1753
-			add_core = 1737
+			COP = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
 			relation = {
 				who = COP
 				value = -100
 			}
 			set_country_flag = ottoman_conquer_egypt
-			badboy = 7
+			badboy = 12
 		}
 		ai_will_do ={ factor = 1 }
 	}
@@ -171,6 +170,29 @@ political_decisions = {
 				duration = 7300
 			}
 		country_event = { id = 100196 days = 3 }	
+		}
+	}
+	
+	deal_with_janissaries = {
+		picture = janissaries
+		potential = {
+			tag = TUR
+			has_country_modifier = rampant_janissaries
+			NOT = { has_country_flag = janissaries_gone }
+		}
+
+		allow = {
+			war = no			
+			state_n_government = 1
+			military_plans = 1
+			prestige = 15
+		}
+
+		effect = {
+		set_country_flag = janissaries_gone
+			remove_country_modifier = {
+				name = rampant_janissaries
+			}
 		}
 	}
 	

@@ -421,7 +421,7 @@ country_event = {
 	}
 }
 
-#Akino Constitutional ciris
+#Akino Constitutional crisis
 country_event = {
 	id = 100187
 	title = "EVTNAME11380019" #Constitutional Crisis - in HMS Government
@@ -775,5 +775,55 @@ country_event = {
 			}
 		THIS = { inherit = FROM }
 	}
+}
+
+## Freiland - Kolumbia ##
+
+# National unity event #
+
+country_event = {
+
+	id = 6900001
+	
+	title = "VKS1.T"
+	desc = "VKS1.D"
+	picture = "german_rhine"
+	
+	trigger = {
+		tag = VKS
+		has_global_flag = VKS_Annnex_AKI
+		NOT = { has_global_flag = VKS_National_Unity }
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "VKS1.A"
+		remove_accepted_culture = american_german
+		remove_accepted_culture = akino_german
+		remove_accepted_culture = gek
+		remove_accepted_culture = veldlewer
+		set_global_flag = VKS_National_Unity
+			any_owned = {
+					limit = { is_core = VEL }
+					remove_core = VEL
+			}
+			any_owned = {
+					limit = { is_core = AKI }
+					remove_core = AKI
+			}
+			any_owned = {
+					limit = { is_core = GKS }
+					remove_core = GKS
+			}
+			any_owned = {
+					limit = { is_core = TEX }
+					remove_core = TEX
+			}
+		}	
 }
 

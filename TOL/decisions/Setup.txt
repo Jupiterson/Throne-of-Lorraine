@@ -1210,6 +1210,32 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	DAN_1836_setup = {
+		picture = constantinople
+		potential = {
+			tag = DAN
+			always = no
+		}
+
+		allow = {
+			tag = DAN
+		}
+
+		effect = {
+			add_country_modifier = { name = medium_autonomy duration = -1 }
+			small_arms = 20
+			ammunition = 20
+			canned_food = 20
+			wine = 20
+			liquor = 20
+			treasury = 15000
+			any_pop = {
+				limit = { has_pop_culture = donau_saxon }
+				literacy = 0.4
+			}
+		}
+	}
 
 	EGY_1836_setup = {
 		picture = constantinople
@@ -1581,8 +1607,10 @@ political_decisions = {
 			any_pop = { limit = { location = { OR = { province_id = 628 province_id = 619 } } literacy = 0.08 } }
 			any_pop = { limit = { OR = { has_pop_culture = ashkenazi has_pop_culture = sephardic } } literacy = 0.40 }
 			any_pop = { limit = { OR = { has_pop_culture = romanian has_pop_culture = serb has_pop_culture = ruthenyan } } literacy = -0.07 }
-			any_pop = { limit = { has_pop_culture = croatian } literacy = -0.02 }
-			any_pop = { limit = { has_pop_culture = slovene } literacy = 0.18 }
+			AUS_771 = { any_pop = { limit = { has_pop_culture = croatian } literacy = 0.12 } }
+			AUS_777 = { any_pop = { limit = { has_pop_culture = croatian } literacy = 0.12 } }
+			TUR_788 = { any_pop = { limit = { has_pop_culture = croatian } literacy = 0.12 } }
+			AUS_768 = { any_pop = { limit = { has_pop_culture = slovene } literacy = 0.18 } }
 			any_pop = { limit = { has_pop_culture = polish } literacy = 0.02 }
 			AUS_623 = { any_pop = { limit = { has_pop_culture = hungarian } literacy = 0.02 } }
 			any_pop = {

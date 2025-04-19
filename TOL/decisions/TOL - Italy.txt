@@ -80,8 +80,8 @@ political_decisions = {
 								}
 							}
 							NOT = { 
-							culture = north_italian 
-							culture = venetian
+								culture = north_italian 
+								culture = venetian
 							}
 						}
 					}
@@ -296,7 +296,6 @@ embrace_the_greeks_ven = {
 		potential = {
 		OR = {
 			tag = VEN
-			tag = ITA
 			tag = NIF
 			}
 			has_country_flag = greek_italian
@@ -330,28 +329,26 @@ claim_greece_italy = {
 		picture = unite_with_greece
 		potential = {
 			tag = ITA
+			accepted_culture = greek
 			NOT = { has_country_flag = claim_greeks }
 		}
 
 		allow = {
-		accepted_culture = greek
-		nationalism_n_imperialism = 1 
+			nationalism_n_imperialism = 1 
 			all_core = {
 				owned_by = THIS
 			}
-	 
 		}
 
 		effect = {
-		 prestige = 5
-		 badboy = 15
-	   set_country_flag = claim_greeks 
+			set_country_flag = claim_greeks 
+			badboy = 15
+			prestige = 5
 			GRE = {
 				all_core = {
 					add_core = ITA
 				}
 			}
-			
 		}
   }
 
@@ -360,7 +357,6 @@ embrace_the_greeks_syc = {
 		potential = {
 		OR = {
 			tag = SYC
-			tag = ITA
 			tag = ITS
 			}
 			has_country_flag = greek_italian

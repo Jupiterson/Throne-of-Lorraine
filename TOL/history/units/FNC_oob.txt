@@ -1,42 +1,99 @@
 army = {
-	name = "King's Guard"
+	name = "Armée royale"
 	location = 2463
 	regiment = {
-		name= "Nouvelle Orleans Guards"
+		name= "Gardes de la Nouvelle-Orléans"
 		type = infantry
 		home = 2463
 	}
 
 	regiment = {
-		name= "Coastal Guard"
+		name= "Garde côtiere"
 		type = infantry
 		home = 2463
 	}
 
 	regiment = {
-		name= "Northern Coast Watch"
+		name= "Surveillance de la Côte Nord"
 		type = infantry
 		home = 2447
 	}
 
 	regiment = {
-		name= "St Xandre's Cannons"
+		name= "Artillerie de Saint Xandre"
 		type = artillery
 		home = 2464
 	}
 
 	regiment = {
-		name= "Castel Colina Cannons"
+		name= "L'artillerie de Castel Colina"
 		type = artillery
 		home = 2344
 	}
 
 	regiment = {
-		name= "Inlands Cavalry"
-		type = hussar
+		name= "Gendarmes royaux"
+		type = dragoon
 		home = 2466
 	}
 
+}
+
+navy = {
+	name = "Marine Orientale"
+	location = 2463
+	ship = {
+		name= "Le Royal"
+		type = frigate
+	}
+	ship = {
+		name= "Gloire Des Generaux"
+		type = frigate
+	}
+	ship = {
+		name= "Atlas"
+		type = frigate
+	}
+	ship = {
+		name= "Amerique"
+		type = frigate
+	}
+	ship = {
+		name= "Julien"
+		type = frigate
+	}
+	ship = {
+		name = "Armorique"
+		type = frigate
+	}
+	ship = {
+		name = "Levrier"
+		type = frigate
+	}
+	ship = {
+		name = "Alexandre"
+		type = manowar
+	}
+	ship = {
+		name = "Ville de Nouvelle Orleans"
+		type = manowar
+	}
+	ship = {
+		name = "Antarctique"
+		type = manowar
+	}
+	ship = {
+		name = "1ere flottille de transport"
+		type = clipper_transport
+	}
+	ship = {
+		name = "2e flottille de transport"
+		type = clipper_transport
+	}
+	ship = {
+		name = "3e flottille de transport"
+		type = clipper_transport
+	}
 }
 
 leader = {
@@ -64,75 +121,4 @@ leader = {
 	type = sea
 	personality = disciplined
 	background = old_school
-}
-
-navy = {
-	name = "Francoriental Navy"
-	location = 2463
-
-	ship = {
-		name = "Condor"
-		type = frigate
-	}
-
-	ship = {
-		name = "Faucon"
-		type = frigate
-	}
-
-	ship = {
-		name = "Hermione"
-		type = frigate
-	}
-	
-	ship = {
-		name = "Armorique"
-		type = frigate
-	}
-	
-	ship = {
-		name = "Themis"
-		type = frigate
-	}
-	
-	ship = {
-		name = "Cassini"
-		type = frigate
-	}
-	
-	ship = {
-		name = "Levrier"
-		type = frigate
-	
-	}
-	ship = {
-		name = "Alexandre"
-		type = manowar
-	}
-	
-	ship = {
-		name = "Ville de Nouvelle Orleans"
-		type = manowar
-	}
-	
-	ship = {
-		name = "Donawerth"
-		type = manowar
-	}
-
-	ship = {
-		name = "1. Transport Flotilla"
-		type = clipper_transport
-	}
-
-	ship = {
-		name = "2. Transport Flotilla"
-		type = clipper_transport
-	}
-	
-	ship = {
-		name = "3. Transport Flotilla"
-		type = clipper_transport
-	}
-
 }

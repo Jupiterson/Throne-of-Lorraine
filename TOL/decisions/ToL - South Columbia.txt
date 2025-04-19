@@ -509,7 +509,7 @@ political_decisions = {
 
 		allow = {
 			war = no
-			tractors = 1
+			invention = tractors
 			money = 200000
 		}
 
@@ -567,7 +567,7 @@ political_decisions = {
             war = no
 			prestige = 20
 			iron_railroad = 1
-			manifest_destiny = 1
+			invention = manifest_destiny
 			is_greater_power = yes
         }
 
@@ -599,7 +599,7 @@ political_decisions = {
 
 		allow = {
 			war = no			
-			mission_to_civilize = 1
+			invention = mission_to_civilize
 		}
 
 		effect = {
@@ -1044,28 +1044,13 @@ political_decisions = {
 		effect = {
 			set_global_flag = consolidated_malouines
 			prestige = 5
-			
-			2131 = { 
-				change_province_name = "Malouines" 
-			}
-			3048 = { 
-				change_province_name = "Coast of Malouines" 
-			}
-			3047 = { 
-				change_province_name = "Malouines Plateau" 
-			}
-			
+			2131 = { change_province_name = "Malouines" }
+			3048 = { change_province_name = "Coast of Malouines" }
+			3047 = { change_province_name = "Malouines Plateau" }
 			2133 = { secede_province = THIS }
-			
-			2133 = { 
-				change_province_name = "Saint Jean" 
-			}
-			3200 = { 
-				change_province_name = "Coast of Saint Jean" 
-			}
-			
-			2131 = { remove_core = GEN }
-			
+			2133 = { change_province_name = "Saint Jean" }
+			3200 = { change_province_name = "Coast of Saint Jean" }
+			2131 = { remove_core = GEN }	
 		}
 		ai_will_do = {
 			factor = 1
@@ -1479,10 +1464,7 @@ political_decisions = {
 			owns = 3381
 			owns = 2549
 			owns = 2407
-			OR = {
-				tag = SGR
-				tag = UPB	
-			}
+			primary_culture = amazonian
 			NOT = { has_global_flag = AMZ_renamed_amazonas }
 		}
 		

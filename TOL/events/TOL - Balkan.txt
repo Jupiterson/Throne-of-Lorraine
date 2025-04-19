@@ -1,8 +1,32 @@
 country_event = {
+	id = 24560
+	title = "bul_raid.T"
+	desc = "bul_raid.D"
+	picture = "bulgarian_revolution"
+	trigger = {
+		tag = BUL
+		exists = BUL
+		NOT = { year = 1840 }
+	}
+   fire_only_once = yes
+
+	option = {
+		name = "bul_raid.A"
+		BUL = {
+			treasury = 40000
+			small_arms = 100
+			ammunition = 100
+			canned_food = 100
+			artillery = 100
+			}
+		}
+}
+
+country_event = {
 	id = 23680
-	title = "We have defeated the Ottomans"
-	desc = "We have defeated the Ottomans and secured the freedom of the Bulgarian people."
-	picture = "BUL_revolt_2"
+	title = "bul_freedom.T"
+	desc = "bul_freedom.D"
+	picture = "bulgarian_independence"
 	trigger = {
 		tag = BUL
 		exists = BUL
@@ -12,12 +36,13 @@ country_event = {
    fire_only_once = yes
 
 	option = {
-		name = "LMAO EZ"
+		name = "bul_freedom.A"
 		prestige = 10
 		BUL = { all_core = { remove_core = TUR } }
 		any_pop = { militancy = -3 }
 	}
 }
+
 country_event = {
 	id = 24989
 	title = "Romanian and Albanians are now an accepted culture!"
@@ -66,75 +91,90 @@ country_event = {
 		add_accepted_culture = serb
 	}
 }
-country_event = {
-	id = 24560
-	title = "We found some supplies!"
-	desc = "We've raided some Ottoman supply camps and look at what we found!"
-	picture = "bulgarian_parade"
-	trigger = {
-		tag = BUL
-		exists = BUL
-		NOT = { year = 1840 }
-	}
-   fire_only_once = yes
 
-	option = {
-		name = "Free Stuff?"
-		BUL = {
-			treasury = 20000
-			small_arms = 100
-			ammunition = 100
-			canned_food = 100
-			artillery = 100
-			}
-		}
-}
 country_event = {
 	id = 24561
-	title = "We have taken Constantinople!"
-	desc = "After fighting multiple war with the Turks we have taken back the holy city of Constantinople."
-	picture = "bulgarian_parade"
+	title = "bul_tsarigrad.T"
+	desc = "bul_tsarigrad.D"
+	picture = "constantinople"
+	
 	trigger = {
 		tag = BUL
-		exists = BUL
 		owns = 860
 	}
-   fire_only_once = yes
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = "Nice"
-		prestige = 20
+		name = "bul_tsarigrad.A"
+		860 = {
+			life_rating = 5
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 1825
+            }
+			add_province_modifier = {
+                name = pearl_of_mediterranean
+                duration = -1
+            }
+			change_province_name = "Tsarigrad"
+        }
+		BUL = { all_core = { remove_core = TUR } }
+		prestige = 25
+		capital = 860
+	}
+	option = {
+		name = "bul_tsarigrad.B"
 		860 = { change_province_name = Tsarigrad }
-		TUR_832 = { add_core = BUL }
-		TUR_863 = { add_core = BUL }
-		TUR_869 = { add_core = BUL }
-		add_core = 844
-		}
+		prestige = 5
+	}
+	option = {
+		name = "bul_tsarigrad.B"
+		860 = { change_province_name = Tsarigrad }
+		809 = {
+			life_rating = 2
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 1095
+            }
+        }
+		prestige = 5
+	}
 }
+
 country_event = {
 	id = 24563
-	title = "Declare war on the Ottomans?"
-	desc = "Looks like the Bulgarians are fighting for their independence, should we join them?"
-	picture = "wallachian_parliment"
+	title = "rom_war_independence.T"
+	desc = "rom_war_independence.D"
+	picture = "wallachian_parliament"
 	trigger = {
 		tag = WAL
 		exists = BUL
 		NOT = { year = 1840 }
 	}
 	mean_time_to_happen =  {
-			months = 1
+			days = 10
 	}
-   fire_only_once = yes
+    fire_only_once = yes
 
 	option = {
-		name = "We will be an independent nation!"
+		name = "rom_war_independence.A"
 		war = {
 			target = TUR
 			attacker_goal = { casus_belli = become_independent }
 			defender_goal = { casus_belli = make_puppet }
 			call_ally = no
 			}
-		prestige = 3
+		war = {
+			target = DAN
+			attacker_goal = { casus_belli = donau_war }
+			defender_goal = { casus_belli = donau_war }
+			call_ally = no
+			}
+		DAN = { country_event = { id = 25000010 days = 1 } }
+		prestige = 5
 		relation = {
 			who = TUR
 			value = -50
@@ -144,23 +184,40 @@ country_event = {
 			value = 50
 		}
 		create_alliance = BUL
-		ai_chance = { factor = 70 }
+		ai_chance = { factor = 80 }
 	}
 	option = {
-		name = "We're fine the way we are"
-		prestige = -3
+		name = "rom_war_independence.B"
+		prestige = -5
 		any_pop = { 
 			limit = {
 			has_pop_culture = romanian
 			}
-			consciousness = 2
-			militancy = 2
+			consciousness = 4
+			militancy = 4
 		}
 		relation = {
 			who = TUR
 			value = 50
 		}
-		ai_chance = { factor = 30 }
+		ai_chance = { factor = 20 }
+	}
+}
+
+country_event = {
+	id = 25000010
+	title = "romano_germanic_hyperwar.T"
+	desc = "romano_germanic_hyperwar.D"
+	picture = "german_rhine"
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = "romano_germanic_hyperwar.A"
+		add_country_modifier = {
+			name = small_country_draft
+			duration = 50 }
 	}
 }
 
@@ -168,7 +225,7 @@ country_event = {
 	id = 100184
 	title = "The lost Cause..."
 	desc = "BALKANLAR"
-	picture = "bulgarian_parade"
+	picture = "bulgarian_independence"
 	trigger = {
 		tag = TUR
 		OR = {
@@ -190,9 +247,9 @@ country_event = {
 		}
 		war = no
 	}
-   fire_only_once = yes
+    fire_only_once = yes
    
-   mean_time_to_happen = { days = 14 }
+    mean_time_to_happen = { days = 14 }
 
 	option = {
 		name = "Release the Balkans as a puppet"
@@ -257,7 +314,7 @@ country_event = {
 		}
 		add_country_modifier = {
 				name = small_country_draft
-				duration = 200 }
+				duration = 50 }
 		remove_accepted_culture = hungarian
 		government = hms_government
 		771 = {
@@ -271,6 +328,7 @@ country_event = {
 		776 = { change_province_name = "Bjelovar" }
 		784 = { change_province_name = "Bihac" }
 		3289 = { change_province_name = "Cakovec" }
+		3616 = { change_province_name = "Crikvenica" }
 		777 = {
 			change_province_name = "Požega"
 			state_scope = { change_region_name = "Slavonija" }
@@ -282,7 +340,7 @@ country_event = {
 		set_global_flag = slavonia_rename_cro
 		clr_global_flag = croatia_rename_hun
 		clr_global_flag = slavonia_rename_hun
-		HUN = { country_event = { id = 100186 days = 0 } }
+		HUN = { country_event = { id = 100186 days = 1 } }
 	}
 }
 
@@ -293,7 +351,6 @@ country_event = {
 	picture = "croatian_uprising"
 	
     fire_only_once = yes
-   
     is_triggered_only = yes
 
 	option = {
@@ -502,3 +559,642 @@ country_event = {
 	}
 }
 
+#######################################
+##            THERVINGIA             ##
+#######################################
+
+########## The Principality of Thervingia Introduction Event ##########
+
+country_event = {
+	id = 25000000
+	title = "DAN1.T"
+	desc = "DAN1.D"
+	picture = "vesier_town"
+	
+	trigger = {
+		tag = DAN
+		year = 1836
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0 }
+	
+	option = {
+		name = "DAN1.A"
+		any_pop = {
+		   ideology = {
+			  value = liberal
+			  factor = 0.1
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 2
+	    }
+		}
+	}
+}
+
+### Ottomans request Vesier aid against Bulgaria ###
+
+country_event = {
+	id = 25000001
+	title = "DAN2.T"
+	desc = "DAN2.D"
+	picture = "bulgarian_revolution"
+	
+	trigger = {
+		tag = TUR
+		war_with = BUL
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 15 }
+
+	option = {
+		name = "DAN2.A"
+		prestige = -5
+		DAN = { country_event = { id = 25000001 days = 0 } }
+		set_country_flag = requested_vesier_aid
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 10
+				DAN = { ai = no }
+			}
+		}
+	}
+	option = {
+		name = "DAN2.B"
+		prestige = 5
+		ai_chance = { factor = 50 }
+	}
+}
+
+### Thervingia decides if it wants to assist ###
+
+country_event = {
+	id = 25000002
+	title = "DAN3.T"
+	desc = "DAN3.D"
+	picture = "vesier_army"
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "DAN3.A"
+		war = {
+			target = BUL
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 818 }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+			}
+		add_country_modifier = {
+				name = small_country_draft
+				duration = 50 
+		}
+		remove_country_modifier = medium_autonomy
+		add_country_modifier = {
+				name = high_autonomy
+				duration = -1 
+		}
+		relation = { who = TUR value = 30 }
+		prestige = 5
+		ai_chance = { factor = 80 }
+	}
+	option = {
+		name = "DAN3.B"
+		remove_country_modifier = medium_autonomy
+		add_country_modifier = {
+				name = low_autonomy
+				duration = -1 
+		}
+		relation = { who = TUR value = -30 }
+		prestige = -5
+		ai_chance = { factor = 30 }
+	}
+}
+
+### Ottoman event after war if Thervingia is in ###
+
+country_event = {
+	id = 25000003
+	title = "DAN4.T"
+	desc = "DAN4.D"
+	picture = "bulgars_defeated"
+	
+	trigger = {
+		tag = TUR
+		war = no
+		has_country_flag = requested_vesier_aid
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "DAN4.A"
+		818 = { secede_province = DAN remove_core = TUR }
+		relation = { who = DAN value = 30 }
+	}
+}
+
+
+######### VESIER CHAIN #########
+
+###### Events leading towards Vesier independence ######
+
+### Ottoman centralization efforts in Thervingia ###
+
+country_event = {
+	id = 25000004
+	title = "DAN5.T"
+	desc = "DAN5.D"
+	picture = "vesier_port"
+	
+	trigger = {
+		tag = DAN
+		NOT = { has_country_flag = centralizing_thervingia }
+		year = 1844
+		NOT = { has_global_flag = DAN_INDEPENDENT }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 10 }
+	
+	option = {
+		name = "DAN5.A"
+		set_country_flag = centralizing_thervingia
+		relation = { who = TUR value = -10 }
+		add_country_modifier = {
+				name = increasing_centralization
+				duration = -1 
+		}
+		any_pop = {
+		limit = {
+			has_pop_culture = donau_saxon
+		}
+		consciousness = 1
+		}
+		any_pop = {
+		limit = {
+			type = artisans
+		}
+		consciousness = 2
+		militancy = 0.5
+		}
+	}
+}
+
+### Die Konstanzer Nacht - Failed Karlsplatz rebellion of 1844 ###
+
+country_event = {
+	id = 25000005
+	title = "DAN6.T"
+	desc = "DAN6.D"
+	picture = "vesier_resistance"
+	
+	trigger = {
+		tag = DAN
+		has_country_flag = centralizing_thervingia
+		NOT = { has_global_flag = DAN_INDEPENDENT }
+	}
+	
+	fire_only_once = yes
+	major = yes
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "DAN6.A"
+		set_country_flag = konstanzer_nacht 
+		any_pop = {
+		limit = {
+			has_pop_culture = donau_saxon
+		}
+		consciousness = 1.5
+		militancy = 1.5
+		}
+		any_owned = {
+            limit = {
+                is_core = DAN
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 10
+            }
+        }
+	}
+}
+
+### Sublime Porte bans "Die Stern" - Further agitation of the Vesier ###
+
+country_event = {
+	id = 25000006
+	title = "DAN7.T"
+	desc = "DAN7.D"
+	picture = "vesier_die_stern"
+	
+	trigger = {
+		tag = DAN
+		has_country_flag = konstanzer_nacht
+		NOT = { has_global_flag = DAN_INDEPENDENT }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 10 }
+	
+	option = {
+		name = "DAN7.A"
+		set_country_flag = die_stern_ban
+		any_pop = {
+		   ideology = {
+			  value = liberal
+			  factor = 0.05
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 3
+        }
+		scaled_militancy = {
+				ideology = liberal
+				factor = 3
+	    }
+		}
+	}
+}
+
+### Vesier-Befreiungsfront continued disruption of Ottoman supply routes - tensions rising ###
+
+country_event = {
+	id = 25000007
+	title = "DAN8.T"
+	desc = "DAN8.D"
+	picture = "vesier_protests"
+	
+	trigger = {
+		tag = DAN
+		has_country_flag = die_stern_ban
+		NOT = { has_global_flag = DAN_INDEPENDENT }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "DAN8.A"
+		set_country_flag = soon
+	    any_pop = {
+		limit = {
+			has_pop_culture = donau_saxon
+		}
+		consciousness = 2.5
+		militancy = 2.5
+		}
+		any_owned = {
+            limit = {
+                is_core = DAN
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 20
+            }
+        }
+	}
+}
+
+#######################################################################
+##            THE TIME IS NOW - THERVINGIA WILL BE FREE!             ##
+#######################################################################
+
+### Parliament announces secession - IT IS TIME ###
+
+country_event = {
+	id = 25000008
+	title = "DAN9.T"
+	desc = "DAN9.D"
+	picture = "vesier_independence"
+	
+	trigger = {
+		tag = DAN
+		has_country_flag = soon
+		NOT = { has_global_flag = DAN_INDEPENDENT }
+	}
+	
+	fire_only_once = yes
+	major = yes
+	mean_time_to_happen = { days = 15 }
+	
+	option = {
+		name = "DAN9.A"
+		set_global_flag = DAN_INDEPENDENT
+		government = democracy
+		remove_country_modifier = high_autonomy
+		remove_country_modifier = medium_autonomy
+		remove_country_modifier = low_autonomy
+		remove_country_modifier = increasing_centralization
+		add_country_modifier = {
+			name = small_country_draft
+			duration = 50 }
+	    any_pop = {
+		limit = {
+			has_pop_culture = donau_saxon
+		}
+		consciousness = -4
+		militancy = -4
+		}
+		TUR = { country_event = { id = 25000009 days = 1 } }
+	}
+}
+
+### Ottomans notified of the rebellion - Order must be restored! ###
+
+country_event = {
+	id = 25000009
+	title = "DAN10.T"
+	desc = "DAN10.D"
+	picture = "Turkish_intervention"
+	
+    fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = "DAN10.A"
+		prestige = -5
+		war = {
+			target = DAN
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+			}
+		relation = {
+			who = DAN
+			value = -50
+		}
+	}
+}
+
+### Ottoman influence diminishes - Thervingia breaks free ###
+
+country_event = {
+	id = 25000011
+	title = "DAN11.T"
+	desc = "DAN11.D"
+	picture = "vesier_volkstag"
+	
+	trigger = {
+		tag = DAN
+		TUR = {
+			is_greater_power = no 
+		}
+		NOT = { has_global_flag = DAN_INDEPENDENT }
+	}
+	
+    fire_only_once = yes
+	major = yes
+	
+	option = {
+		name = "DAN11.A"
+		set_global_flag = DAN_INDEPENDENT
+		government = democracy
+		remove_country_modifier = high_autonomy
+		remove_country_modifier = medium_autonomy
+		remove_country_modifier = low_autonomy
+		remove_country_modifier = increasing_centralization
+		prestige = 5
+		any_pop = {
+		limit = {
+			has_pop_culture = donau_saxon
+		}
+		consciousness = -4
+		militancy = -4
+		}
+		TUR = { country_event = { id = 25000012 days = 1 } }
+	}
+}
+
+### The Empire must restore order! ###
+
+country_event = {
+	id = 25000012
+	title = "DAN12.T"
+	desc = "DAN12.D"
+	picture = "Turkish_intervention"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "DAN12.A"
+		prestige = 5
+		war = {
+			target = DAN
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+			}
+		DAN = {
+			add_country_modifier = {
+				name = small_country_draft
+				duration = 50 
+			}
+		}
+		relation = {
+			who = DAN
+			value = -50
+		}
+		any_pop = {
+		limit = {
+			has_pop_culture = turkish
+		}
+		consciousness = 2
+		militancy = 2
+		}
+	}
+}
+
+### The Ottoman Decline ###
+
+country_event = {
+	id = 25000013
+	title = "DAN13.T"
+	desc = "DAN13.D"
+	picture = "ottoman_collapse"
+	
+	trigger = {
+		tag = TUR
+		is_greater_power = no
+	}
+
+    fire_only_once = yes
+	major = yes
+	
+	mean_time_to_happen = { days = 3 }
+	
+	option = {
+		name = "DAN13.A"
+		set_country_flag = ottomans_to_turks
+		government = democracy
+		capital = 876
+		add_country_modifier = {
+				name = rampant_janissaries
+				duration = -1 
+			}
+		prestige = -50
+		release_vassal = SRN
+		release_vassal = HAL
+		release_vassal = ARM
+		release_vassal = CRI
+		release_vassal = BTL
+		release_vassal = BDN
+		release_vassal = BHT
+		release_vassal = WAL
+		any_owned = {
+			limit = {
+				is_core = GRE
+				continent = europe
+				NOT = {
+					province_id = 858
+					province_id = 859
+					province_id = 860
+					province_id = 3470
+					province_id = 3304
+					province_id = 829
+					province_id = 860
+					province_id = 860
+				}
+			}
+			secede_province = GRR
+			remove_core = TUR
+		}
+		casus_belli = {
+            target = GRR
+            type = conquest_any
+            months = 60
+        }
+		war = {
+			target = GRR
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+			}
+		GRR = {
+			add_country_modifier = {
+				name = small_country_draft
+				duration = 50 
+			}
+		}
+		ATH = { country_event = { id = 25000014 days = 1 } }
+		any_pop = {
+		limit = {
+			has_pop_culture = turkish
+		}
+		consciousness = 9
+		militancy = 9
+		}
+	}
+}
+
+### Athens event to join the revolution ###
+
+country_event = {
+	id = 25000014
+	title = "GRE1.T"
+	desc = "GRE1.D"
+	picture = "greek_revolution"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "GRE1.A"
+		change_tag_no_core_switch = GRR
+		GRR = { country_event = { id = 25000015 days = 1 } }
+		add_country_modifier = {
+			name = small_country_draft
+			duration = 50 
+		}
+	}
+	option = {
+		name = "GRE1.B"
+		prestige = -2
+	}
+}
+
+### Revolutionary event if Athens accepts ###
+
+country_event = {
+	id = 25000015
+	title = "GRE2.T"
+	desc = "GRE2.D"
+	picture = "greek_revolution"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "GRE2.A"
+		ATH = {
+			annex_to = GRR
+		}
+		prestige = 2
+	}
+}
+
+### Greek independence achieved ###
+
+country_event = {
+	id = 25000016
+	title = "GRE3.T"
+	desc = "GRE3.D"
+	picture = "greek_independence"
+
+    trigger = {
+		tag = GRR
+		truce_with = TUR
+		GRE = { exists = no }
+		war = no
+	}
+
+    fire_only_once = yes
+	
+	mean_time_to_happen = { days = 0 }
+	
+	option = {
+		name = "GRE3.A"
+		change_tag = GRE
+		government = democracy
+		political_reform = harassment
+		political_reform = wealth_voting
+		capital = 834
+		prestige = 15
+	}
+	option = {
+		name = "GRE3.B"
+		change_tag = GRE
+		government = hms_government
+		capital = 834
+		prestige = 15
+	}
+}

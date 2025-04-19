@@ -303,7 +303,7 @@
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 70675
+		size = 55675
 	}
 	
 	   aristocrats = {
@@ -380,7 +380,7 @@
 		size = 45150
 	}
 }
-#Klagenfurt (188000/47000 POPS)
+#Villach (188000/47000 POPS)
 618 = {
 	aristocrats = {
 		culture = south_german
@@ -409,7 +409,7 @@
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 35675
+		size = 30675
 	}
 
 	clergymen = {
@@ -429,12 +429,19 @@
 		religion = catholic
 		size = 1200
 	}
+	
+	farmers = {
+		culture = slovene
+		religion = catholic
+		size = 5200
+	}
 }
+#Klagenfurt
 3370 = {
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 2335
+		size = 5335
 	}
 	aristocrats = {
 		culture = south_german
@@ -449,7 +456,7 @@
 	farmers = {
 		culture = slovene
 		religion = catholic
-		size = 10172
+		size = 16172
 	}
 	soldiers = {
 		culture = slovene
@@ -795,7 +802,6 @@
 		size = 1790
 	}
 }
-
 #Kanaltal
 3288 = {
 	aristocrats = {
@@ -825,7 +831,13 @@
 	farmers = {
 		culture = venetian
 		religion = catholic
-		size = 3300
+		size = 1800
+	}
+	
+	farmers = {
+		culture = romansh
+		religion = catholic
+		size = 1500
 	}
 
 	clergymen = {
@@ -850,5 +862,79 @@
 		culture = slovene
 		religion = catholic
 		size = 2200
+	}
+}
+#Eibiswald (380000/95000 POPS)
+3617 = {
+	aristocrats = {
+		culture = south_german
+		religion = catholic
+		size = 350
+	}
+
+	officers = {
+		culture = south_german
+		religion = catholic
+		size = 275
+	}
+
+	clergymen = {
+		culture = south_german
+		religion = catholic
+		size = 205
+	}
+
+	artisans = {
+		culture = south_german
+		religion = catholic
+		size = 600
+	}
+
+	soldiers = {
+		culture = south_german
+		religion = catholic
+		size = 350
+	}
+
+	farmers = {
+		culture = south_german
+		religion = catholic
+		size = 15075
+	}
+	
+	artisans = {
+		culture = slovene
+		religion = catholic
+		size = 100
+	}
+	
+	clergymen = {
+		culture = slovene
+		religion = catholic
+		size = 50
+	}
+	
+	farmers = {
+		culture = slovene
+		religion = catholic
+		size = 1475
+	}
+	
+	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 25
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 450
 	}
 }

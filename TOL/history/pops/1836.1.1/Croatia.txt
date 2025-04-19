@@ -313,7 +313,7 @@
 	}
 	########
 }
-#Karlovac (184000/46000 POPS)
+#Ogulin (184000/46000 POPS)
 773 = {
 	aristocrats = {
 		culture = croatian
@@ -342,7 +342,7 @@
 	farmers = {
 		culture = croatian
 		religion = catholic
-		size = 44400
+		size = 36400
 	}
 
 	clergymen = {
@@ -665,30 +665,6 @@
 		religion = catholic
 		size = 4425
 	}
-
-	clergymen = {
-		culture = hungarian
-		religion = catholic
-		size = 100
-	}
-
-	artisans = {
-		culture = hungarian
-		religion = catholic
-		size = 250
-	}
-
-	soldiers = {
-		culture = hungarian
-		religion = catholic
-		size = 100
-	}
-
-	farmers = {
-		culture = hungarian
-		religion = catholic
-		size = 700
-	}
 }
 #Baranya Region (180000) #see Hungary.txt for balance of Region
 #under the rule of Austria in 1836
@@ -839,7 +815,7 @@
 	farmers = {
 		culture = venetian
 		religion = catholic
-		size = 11250
+		size = 3250
 	}
 
 	farmers = {
@@ -949,7 +925,7 @@
 	farmers = {
 		culture = venetian
 		religion = catholic
-		size = 2125
+		size = 8125
 	}
 
 	clergymen = {
@@ -1321,5 +1297,61 @@
 		culture = south_german
 		religion = catholic
 		size = 50
+	}
+}
+#Crikvenica
+3616 = {
+	aristocrats = {
+		culture = croatian
+		religion = catholic
+		size = 105
+	}
+
+	artisans = {
+		culture = croatian
+		religion = catholic
+		size = 400
+	}
+
+	soldiers = {
+		culture = croatian
+		religion = catholic
+		size = 50
+	}
+
+	clergymen = {
+		culture = croatian
+		religion = catholic
+		size = 50
+	}
+	
+	farmers = {
+		culture = croatian
+		religion = catholic
+		size = 7600
+	}
+	
+	clergymen = {
+		culture = hungarian
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = hungarian
+		religion = catholic
+		size = 250
+	}
+
+	soldiers = {
+		culture = hungarian
+		religion = catholic
+		size = 100
+	}
+
+	farmers = {
+		culture = hungarian
+		religion = catholic
+		size = 700
 	}
 }

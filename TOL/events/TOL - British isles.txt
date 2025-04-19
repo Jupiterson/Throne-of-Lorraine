@@ -116,16 +116,15 @@ country_event = {
 
 	trigger = {
 		tag = ENG
-		NOT = { has_country_flag = irish_revolt }
-		OR = {
-			263 = { owned_by = ENG }
-			254 = { owned_by = ENG }
+		NOT = { has_global_flag = irish_revolt }
+		254 = { owned_by = ENG }
+		IRE = {
+			vassal_of = ENG
 		}
-		NOT = { exists = IRR }
 	}
 
 	mean_time_to_happen = {
-		years = 2
+		years = 1
 		modifier = {
 			factor = 0.5
 			average_militancy = 7
@@ -139,24 +138,17 @@ country_event = {
 	
 	option = {
 		name = "Well then..."
-		set_country_flag = irish_revolt
-		any_owned = {
-			limit = { is_core = IRR }
-			secede_province = IRR
-		}
+		set_global_flag = irish_revolt
 		diplomatic_influence = {
-			who = IRR
+			who = IRE
 			value = -400
 		}
 		war = {
-			target = IRR 
+			target = IRE
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
+			call_ally = no
 		}
-		THIS = { 
-		badboy = -22
-		}
-		IRE = { country_event = 28018 }
 		random = {
 			chance = 20
 			set_country_flag = irish_integration
@@ -168,10 +160,10 @@ country_event = {
 	
 	option = {
 		name = "Let them go"
-		set_country_flag = irish_revolt
+		set_global_flag = irish_revolt
 		any_owned = {
-			limit = { is_core = IRR }
-			secede_province = IRR
+			limit = { is_core = IRE }
+			secede_province = IRE
 		}
 		ENG = { 
 		badboy = -5
@@ -191,8 +183,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = IRR
+		tag = IRE
 		war = no
+		is_independant = yes
+		has_global_flag = irish_revolt
 	}
 
 	mean_time_to_happen = {
@@ -201,10 +195,7 @@ country_event = {
 	
 	option = {
 		name = "Godspeed!"
-		change_tag = IRE
-		ai_chance = {
-			factor = 1
-		}
+		prestige = 5
 	}
 }
 
@@ -261,56 +252,6 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 0.2
-		}
-	}
-}
-
-#Ireland intervenes
-country_event = {
-	id = 28018
-	title = "EVTNAME28018"
-	desc = "EVTDESC28018"
-	picture = irish_republican_brotherhood
-	is_triggered_only = yes
-	
-	option = {
-		name = "We have to defend our brothers at all costs."
-		war = {
-			target = ENG
-			attacker_goal = { casus_belli = liberate_country country = IRR }
-			defender_goal = { casus_belli = humiliate_no_infamy }
-			call_ally = no
-		}
-		random = {
-			chance = 25
-			relation = {
-				who = ENG
-				value = -75
-			}
-		}
-		ai_chance = {
-			factor = 0.25
-		}
-	}
-	option = {
-		name = "Secretly give them supplies."
-		money = -10000
-		IRR = {
-			small_arms = 300
-			ammunition = 300
-		}
-		ai_chance = {
-			factor = 0.5
-		}
-	}
-	option = {
-		name = "We can't do nothing."
-		relation = {
-			who = ENG
-			value = 25
-		}
-		ai_chance = {
-			factor = 0.25
 		}
 	}
 }

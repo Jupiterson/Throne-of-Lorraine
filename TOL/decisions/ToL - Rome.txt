@@ -253,10 +253,16 @@ form_byzantium = {
 			is_culture_group = pan_roman
 			BYZ = { exists = no }
 			NOT = { OR = { tag = NIR tag = RME } }
+			NOT = {
+				OR = { 
+					government = democracy
+					government = parliamentary_republic 
+				}
+			}
+			NOT = { has_country_flag = embraced_hellenic_ideals }
 		}
 
 		allow = {
-			
 			war = no
 			is_vassal = no
 			nationalism_n_imperialism = 1
@@ -269,7 +275,6 @@ form_byzantium = {
 					}
 				}
 			}
-			
 		}
 
 		effect = {

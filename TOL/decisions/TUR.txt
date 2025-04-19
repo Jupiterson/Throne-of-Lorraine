@@ -993,7 +993,7 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 15
-			badboy = 5
+			badboy = 12
 			set_country_flag = claim_persian_lands
 			relation = {
 				who = PER
@@ -1003,8 +1003,17 @@ political_decisions = {
 				who = PER
 				value = -400
 			}
+			TUR_901 = { add_core = THIS }
+			TUR_893 = { add_core = THIS }
+			TUR_923 = { add_core = THIS }
+			TUR_931 = { add_core = THIS }
+			TUR_935 = { add_core = THIS }
+			TUR_901 = { add_core = THIS }
+			TUR_901 = { add_core = THIS }
 			PER_1112 = { add_core = THIS }
 			PER_1122 = { add_core = THIS }
+			PER_3353 = { add_core = THIS }
+			890 = { add_core = THIS }
 		}
 	
 		ai_will_do = {
@@ -1040,6 +1049,7 @@ political_decisions = {
 			}
 			PER_1112 = { owned_by = THIS }
 			PER_1122 = { owned_by = THIS }
+			PER_3353 = { owned_by = THIS }
 			has_recently_lost_war = no
 		}
 	
@@ -1051,6 +1061,9 @@ political_decisions = {
 				limit = {
 					any_owned_province = {
 						OR = {
+							region = GEO_1092
+							region = TUR_885
+							region = PER_1105
 							region = RUS_1102
 							region = RUS_1098
 							region = RUS_1090
@@ -1059,6 +1072,9 @@ political_decisions = {
 				}
 				relation = { who = THIS value = -400 }
 			}
+			GEO_1092 = { add_core = THIS }
+			TUR_885 = { add_core = THIS }
+			PER_1105 = { add_core = THIS }
 			RUS_1102 = { add_core = THIS }
 			RUS_1098 = { add_core = THIS }
 			RUS_1090 = { add_core = THIS }

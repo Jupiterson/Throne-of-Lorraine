@@ -328,6 +328,7 @@ country_event = {
 	picture = "arab_revolt"
 
 	trigger = {
+		owns = 2501
 		2504 = { empty = yes }
 		has_country_flag = australia_3
 		has_country_flag = australia_4
@@ -365,6 +366,8 @@ country_event = {
 	picture = "arab_revolt"
 
 	trigger = {
+		owns = 2501
+		2500 = { empty = yes }
 		has_country_flag = australia_5
 	}
 
