@@ -115,6 +115,49 @@ political_decisions = {
 		}
 	}
 	
+	smyrna_treaty = {
+		picture = treaty_signing
+		potential = {
+            tag = GRE
+			owns = 869
+			OR = { 
+				government = democracy
+				government = parliamentary_republic 
+			}
+			NOT = { has_country_flag = removed_tur_cores }
+            has_country_flag = megali_idea
+			has_country_flag = embraced_hellenic_ideals
+        }
+
+		allow = {
+			war = no
+			is_vassal = no
+			GRE = {
+				all_core = { owned_by = GRE }
+			}
+        }
+
+		effect = {
+			set_country_flag = removed_tur_cores
+			THIS = { all_core = { remove_core = TUR } }
+			prestige = 5
+			any_country = {
+				limit = {
+					tag = TUR
+				}
+				relation = {
+					who = THIS
+					value = -100
+				}
+				prestige = -15
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	build_smyrna_port = {
 		picture = greek_shipyard
 		potential = {
