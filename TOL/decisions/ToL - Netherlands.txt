@@ -218,18 +218,20 @@ claim_artois = {
 claim_north_sea = {
 		picture = londonderry_quay
 		potential = {
-		tag = NET		
+			tag = NET		
 			NOT = {
 				has_country_flag = plattduetschnr1
 			}
 		}
+		
 		allow = {
-						nationalism_n_imperialism = 1 
-						is_greater_power = yes
-						all_core = {
+			nationalism_n_imperialism = 1 
+			is_greater_power = yes
+			all_core = {
 				owned_by = THIS
 			}
-			}
+		}
+		
 		effect = {
 			set_country_flag = plattduetschnr1
 			NET_385 = {
@@ -243,9 +245,6 @@ claim_north_sea = {
 					add_core = THIS
 				}
 			}
-			528 = { add_core = THIS }
-			582 = { add_core = THIS }
-			3254 = { add_core = THIS }
 		}
 		ai_will_do = {
 			factor = 1

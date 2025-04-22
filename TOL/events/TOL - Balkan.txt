@@ -252,36 +252,39 @@ country_event = {
     mean_time_to_happen = { days = 14 }
 
 	option = {
-		name = "Release the Balkans as a puppet"
-		prestige = 20
+		name = "The end of an Era"
+		prestige = -15
 		any_owned = {
 			limit = {
+				is_core = GRE
 				continent = europe
-				NOT = { region = TUR_860 }
 			}
-			secede_province = RUM
-			add_core = RUM
+			secede_province = GRE
 			remove_core = TUR
 		}
-		create_vassal = RUM
-        ai_chance = { factor = 100 }
-		}
-		
-	option = {
-		name = "Play as the Balkans"
-		prestige = 20
 		any_owned = {
 			limit = {
-				continent = europe
-				NOT = { region = TUR_860 }
+				is_core = BUL
 			}
-			secede_province = RUM
-			add_core = RUM
+			secede_province = BUL
 			remove_core = TUR
 		}
-		change_tag_no_core_switch = RUM
-
+		any_owned = {
+			limit = {
+				is_core = ALB
+			}
+			secede_province = ALB
+			remove_core = TUR
 		}
+		TUR = { 
+			all_core = { 
+				limit = { 
+					continent = europe 
+				} 
+				remove_core = TUR 
+			} 
+		}
+	}
 }
 
 country_event = {
@@ -456,7 +459,6 @@ country_event = {
                 name = pearl_of_mediterranean
                 duration = -1
             }
-			change_province_name = "Carigrad"
         }
 		YUG = { all_core = { remove_core = TUR } }
 		prestige = 25
@@ -470,7 +472,6 @@ country_event = {
                 name = recently_built_city
                 duration = 1825
             }
-			change_province_name = "Carigrad"
         }
 		badboy = 1
 		plurality = -2

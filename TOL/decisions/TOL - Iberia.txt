@@ -684,8 +684,8 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 45
-			badboy = 17
+			prestige = 20
+			badboy = 15
 			set_country_flag = maghreb
 			MGH = {
 				all_core = {
@@ -711,7 +711,7 @@ political_decisions = {
 					tag = TLO
 				}
 			}
-			NOT = { has_country_flag = genocide_arabas }
+			NOT = { has_country_flag = genocide_arabs }
 		}
 
 		allow = {
@@ -726,7 +726,7 @@ political_decisions = {
 			any_pop = { limit = { location = { is_core = IBR } culture = portuguese } reduce_pop = 5.0 }
 			any_pop = { limit = { location = { is_core = IBR } culture = catalan } reduce_pop = 5.0 }
 			any_pop = { limit = { location = { is_core = IBR } culture = mozarabic } literacy = -0.8 reduce_pop = 0.25 }
-			set_country_flag = genocide_arabas	
+			set_country_flag = genocide_arabs	
 		}
 	}
 	
