@@ -1,13 +1,11 @@
-capital = 657
-primary_culture = donau_saxon
+capital = 3621
+primary_culture = gepid
 religion = catholic
-government = absolute_monarchy
-plurality = 0.0
+government = colonial_company
+plurality = 15.0
 nationalvalue = nv_order
 literacy = 0.1
 civilized = yes
-
-oob = "DAN_oob.txt"
 
 # Political reforms
 slavery = no_slavery
@@ -61,15 +59,9 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 
-oob = "DAN_oob.txt"
-
-set_country_flag = protestant_country
+set_country_flag = catholic_country
 
 set_country_flag = german_nation
-
-decision = DAN_1836_setup
-decision = german_rename_dobrudja
-decision = bessarabia_rename_ger
 
 govt_flag = { government = colonial_company flag = absolute_monarchy }
 govt_flag = { government = dominion flag = absolute_monarchy }

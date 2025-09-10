@@ -95,6 +95,7 @@ political_decisions = {
 				AND = { owns = 876 NOT = { has_country_flag = grecofication_galatia } }
 				AND = { owns = 873 NOT = { has_country_flag = grecofication_lycaonia } }
 				AND = { owns = 3520 NOT = { has_country_flag = grecofication_cappadocia } }
+				AND = { owns = 894 NOT = { has_country_flag = grecofication_cilicia } }
 			}
 		}
 
@@ -116,7 +117,7 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = { province_id = 862 }
-				862 = { change_province_name = "Agrílion" }
+				862 = { change_province_name = "Nikomídeia" }
 				owner = { set_country_flag = grecofication_nicomedia }
 			}
 			random_owned = {
@@ -136,7 +137,7 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = { province_id = 3301 }
-				3301 = { change_province_name = "Apámeia" }
+				3301 = { change_province_name = "Moudaniá" }
 				owner = { set_country_flag = grecofication_mudania }
 			}
 			
@@ -144,7 +145,7 @@ political_decisions = {
 			
 			random_owned = {
 				limit = { province_id = 867 }
-				867 = { change_province_name = "Fýskos" }
+				867 = { change_province_name = "Mákri" }
 				owner = { set_country_flag = grecofication_kotyaion }
 			}
 			random_owned = {
@@ -157,12 +158,12 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = { province_id = 871 }
-				871 = { change_province_name = "Ierápolis" }
+				871 = { change_province_name = "Aidínio" }
 				owner = { set_country_flag = grecofication_hierapolis }
 			}
 			random_owned = {
 				limit = { province_id = 872 }
-				872 = { change_province_name = "Mílitos" }
+				872 = { change_province_name = "Sókia" }
 				owner = { set_country_flag = grecofication_fethiye }
 			}
 			
@@ -186,7 +187,7 @@ political_decisions = {
 					state_scope = { change_region_name = "Póntos"  }
 				}
 				884 = { change_province_name = "Kerasoúnta" }
-				3537 = { change_province_name = "Ardáon" }
+				3537 = { change_province_name = "Rizoúnta" }
 				owner = { set_country_flag = grecofication_pontus }
 			}
 			
@@ -198,7 +199,6 @@ political_decisions = {
 				}
 				868 = { change_province_name = "Dorýlaion" }
 				870 = { change_province_name = "Kotýaion" }
-				877 = { change_province_name = "Amáseia" }
 				owner = { set_country_flag = grecofication_galatia }
 			}
 			
@@ -217,12 +217,27 @@ political_decisions = {
 			random_owned = {
 				limit = { province_id = 3520 }
 				3520 = { 
-					change_province_name = "Plastentía"
+					change_province_name = "Kaisáreia"
 					state_scope = { change_region_name = "Kappadokía"  }
 				}
-				878 = { change_province_name = "Kaisáreia" }
+				877 = { change_province_name = "Amáseia" }
+				878 = { change_province_name = "Evdokiáda" }
 				879 = { change_province_name = "Sevásteia" }
 				owner = { set_country_flag = grecofication_cappadocia }
+			}
+			
+			random_owned = {
+				limit = { province_id = 894 }
+				894 = { 
+					change_province_name = "Ádana"
+					state_scope = { change_region_name = "Kilikía"  }
+				}
+				895 = { change_province_name = "Seléfkeia" }
+				896 = { change_province_name = "Alexandrétta" }
+				899 = { change_province_name = "Plastentía" }
+				3345 = { change_province_name = "Mersína" }
+				3362 = { change_province_name = "Sis" }
+				owner = { set_country_flag = grecofication_cilicia }
 			}
 		}
 		ai_will_do = { factor = 1 }

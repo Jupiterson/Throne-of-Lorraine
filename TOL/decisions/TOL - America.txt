@@ -1,31 +1,4 @@
 political_decisions = {
-#	colonize_kannata_aki = {
-#		picture = form_the_rcmp
-#		potential = {
-#			tag = AKI
-#			NOT = { has_country_flag = kanatta }
-#			is_vassal = no
-#		}
-#
-#		allow = {
-#			war = no			
-#			empiricism = 1
-#			state_n_government = 1
-#			prestige = 30
-#		}
-#
-#		effect = {
-#			set_country_flag = kanatta
-#			9 = { add_core = AKI }
-#			2626 = { add_core = AKI }
-#			2593 = { add_core = AKI }
-#			37 = { add_core = AKI }
-#			2595 = { add_core = AKI }
-#			59 = { add_core = AKI }			
-#			AKI = { all_core = { limit = { empty = yes } secede_province = THIS } }
-#		}
-#	}
-	
 	claim_new_england = {
 		picture = german_tirol
 		potential = {
@@ -34,63 +7,19 @@ political_decisions = {
 		}
 
 		allow = {
-		nationalism_n_imperialism = 1 
+			nationalism_n_imperialism = 1 
 			all_core = {
 				owned_by = THIS
 			}
-	 
 		}
 
 		effect = {
-		 prestige = 5
-	   badboy = 10
-	   set_country_flag = border_lands 
-	   USA_247 = { add_core = THIS }
-			
+			prestige = 5
+			badboy = 10
+			set_country_flag = border_lands 
+			USA_247 = { add_core = THIS }
 		}
    }
-
-   
-#	colonize_kannata_vel = {
-#		picture = form_the_rcmp
-#		potential = {
-#			tag = VEL
-#			NOT = { has_country_flag = kanatta }
-#			is_vassal = no
-#		}
-#
-#		allow = {
-#			war = no			
-#			empiricism = 1
-#			state_n_government = 1
-#			prestige = 30
-#		}
-#
-#		effect = {
-#			set_country_flag = kanatta
-#			39 = { add_core = VEL }
-#			38 = { add_core = VEL }
-#			2596 = { add_core = VEL }
-#			11 = { add_core = VEL }
-#			31 = { add_core = VEL }
-#			32 = { add_core = VEL }
-#			23 = { add_core = VEL }
-#			2598 = { add_core = VEL }
-#			6 = { add_core = VEL }			
-#			7 = { add_core = VEL }
-#			48 = { add_core = VEL }
-#			47 = { add_core = VEL }
-#			2594 = { add_core = VEL }
-#			2629 = { add_core = VEL }
-#			18 = { add_core = VEL }
-#			2597 = { add_core = VEL }
-#			28 = { add_core = VEL }	
-#			26 = { add_core = VEL }
-#			27 = { add_core = VEL }			
-#			VEL = { all_core = { limit = { empty = yes } secede_province = THIS } }
-#		}
-#	}
-	
 	
 	claim_freiland = {
 		picture = texas
@@ -116,7 +45,7 @@ political_decisions = {
 		}
    }
 	
-		#Afro Americans
+	#Afro Americans
 	NAF_revolt = {
 		picture = black_belt
 		potential = {
@@ -131,7 +60,6 @@ political_decisions = {
 			NOT = { NAF = { all_core = { owned_by = THIS } } }
 		}
 		allow = {
-			
 			money = 750000
 			USA = { average_militancy = 4 }
 			NOT = { alliance_with = USA }
@@ -252,6 +180,35 @@ political_decisions = {
 		}
 	}
 	
+	annex_haida = {
+		picture = native_integration_status
+        potential = {
+			tag = GKS
+            exists = HAD
+            HAD = { ai = yes }
+            NOT = { has_country_flag = annexed_haida }
+        }
+
+        allow = {
+            state_n_government = 1
+            is_sphere_leader_of = HAD
+        }
+
+        effect = {
+            set_country_flag = annexed_haida
+            prestige = 2
+            HAD = { civilized = no }
+            inherit = HAD
+			HAD = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
 	form_gewesten = {
 		potential = {
 			OR = {
@@ -265,6 +222,9 @@ political_decisions = {
 		}
 
 		allow = {
+			has_global_flag = lake_war_over
+			has_global_flag = GKS_colonization_done
+			has_global_flag = VEL_colonization_done
 			any_neighbor_country = {
 				OR = {
 					tag = VEL
@@ -354,45 +314,263 @@ political_decisions = {
 		}
 	}
 	
-	annex_hiada = {
-        potential = {
-            exists = HAD
-            is_sphere_leader_of = HAD
-            HAD = { ai = yes }
-            NOT = { has_country_flag = annexed_hawaii }
-            any_owned_province = { has_building = naval_base }
-            OR = {
-                capital_scope = { continent = north_america }
-                capital_scope = { continent = south_america }
-                capital_scope = { continent = asia }
-                capital_scope = { continent = australia_new_zealand }
-				capital_scope = { continent = europe }
-            }
-			NOT = { 
-			OR = { 
-			tag = USA
+	gewesten_borderland = {
+		picture = us_mex_peace
+		potential = {
+			tag = VEP
+			NOT = { has_country_flag = vep_borderland }
+		}
+
+		allow = {
+			war = no
+			invention = manifest_destiny
+			owns = 3456
+			VEP = { all_core = { owned_by = THIS } }
+		}
+
+		effect = {
+			set_country_flag = vep_borderland
+			badboy = 5
+			2137 = { add_core = VEP }
+			2140 = { add_core = VEP }
+			2141 = { add_core = VEP }
+			2142 = { add_core = VEP }
+			2143 = { add_core = VEP }
+			2144 = { add_core = VEP }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	###INGEMARIC LEAGUE###
+
+	ottoborg_capital = {
+		picture = ottoborg
+		potential = {
 			tag = AKI
+			NOT = { has_country_flag = ottoborg_capital }
+		}
+
+		allow = {
+			war = no
+			early_railroad = 1
+			ideological_thought = 1
+		}
+
+		effect = {
+			set_country_flag = ottoborg_capital
+			capital = 65
+			65 = { 
+				life_rating = 5
+				add_province_modifier = { 
+					name = recently_built_city
+					duration = 1825
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	ingemaric_unification = {
+		picture = form_germany
+		potential = {
+			tag = AKI
+			NOT = { has_global_flag = ingemards_unified }
+		}
+
+		allow = {
+			war = no
+			capital = 65
+			state_n_government = 1
+		}
+
+		effect = {
+			set_global_flag = ingemards_unified
+			prestige = 15
+			any_country = {
+				limit = { 
+					OR = { 
+						primary_culture = akino_german 
+						primary_culture = american_german 
+					}
+					vassal_of = THIS
+				}
+				country_event = 11101
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	DEI_league = {
+		picture = indianer_rights
+		potential = {
+			tag = AKI
+			NOT = { has_country_flag = indianer_kangz }
+		}
+
+		allow = {
+			war = no
+			prestige = 20
+			revolution_n_counterrevolution = 1
+			NOT = { average_militancy = 3 }
+			OR = {
+				upper_house = {
+					ideology = socialist
+					value = 0.4
+				}
+				upper_house = {
+					ideology = liberal
+					value = 0.4
+				}
+				upper_house = {
+					ideology = radical
+					value = 0.4
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = radical
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = radical
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+				}
+			}	
+		}
+		effect = {
+			set_country_flag = indianer_kangz
+			add_accepted_culture = american_german
+			prestige = -15
+			remove_country_modifier = ingemard_segregation
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	acadien_buckbreaking = {
+		picture = appalachia_map
+		potential = {
+			tag = AKI
+			has_global_flag = aki_won_lakes
+			NOT = { has_country_flag = akino_frontier }
+		}
+
+		allow = {
+			revolution_n_counterrevolution = 1 
+			all_core = {
+				owned_by = THIS
+			}
+		}
+
+		effect = {
+			prestige = 10
+			badboy = 12
+			set_country_flag = akino_frontier 
+			218 = { add_core = THIS }
+			227 = { add_core = THIS }
+			2627 = { add_core = THIS }
+			USA_188 = { add_core = THIS }
+			USA_232 = { add_core = THIS }
+		}
+	}
+	
+	##########################################################
+	########### WAR OF THE LAKES TRIGGER DECISIONS ###########
+	##########################################################
+	
+	AKI_START_LAKE_WAR = {
+		picture = great_lakes
+		potential = {
+			tag = AKI
+			has_global_flag = ingemards_unified
+			NOT = { has_global_flag = lake_war_started }
+		}
+
+		allow = {
+			war = no
+			is_greater_power = yes
+		}
+
+		effect = {
+			prestige = 10
+			set_global_flag = lake_war_started
+			war = {
+				target = VEL
+				attacker_goal = { casus_belli = lake_war }
+				defender_goal = { casus_belli = lake_war }
+				call_ally = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	VEL_START_LAKE_WAR = {
+		picture = great_lakes
+		potential = {
 			tag = VEL
-			tag = NAF
-			tag = TEX
+			has_global_flag = ingemards_unified
+			NOT = { has_global_flag = lake_war_started }
+		}
+
+		allow = {
+			war = no
+			is_greater_power = yes
+		}
+
+		effect = {
+			prestige = 10
+			set_global_flag = lake_war_started
+			war = {
+				target = AKI
+				attacker_goal = { casus_belli = lake_war }
+				defender_goal = { casus_belli = lake_war }
+				call_ally = no
 			}
-			}
-        }
+		}
 
-        allow = {
-            nationalism_n_imperialism = 1
-            is_sphere_leader_of = HAD
-        }
-
-        effect = {
-            set_country_flag = annexed_hawaii
-            prestige = 2
-            HAD = { civilized = no }
-            inherit = HAD
-
-       
-        }
-
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 }

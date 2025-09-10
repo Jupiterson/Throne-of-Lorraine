@@ -13,7 +13,14 @@ name = "The Bulgarian War of Independence"
 	
 	war_goal = {
 		casus_belli = acquire_core_state
-		state_province_id = 806
+		state_province_id = 674
+		actor = BUL
+		receiver = TUR
+	}
+	
+	war_goal = {
+		casus_belli = acquire_core_state
+		state_province_id = 810
 		actor = BUL
 		receiver = TUR
 	}

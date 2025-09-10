@@ -27,11 +27,11 @@ political_decisions = {
 		}
 	}
 	
-	bul_claim_dobrudja = {
+	bul_claim_serbia = {
 		picture = greater_bulgaria
 		potential = {
 			tag = BUL
-			NOT = { has_country_flag = bul_claimed_dobrudja }
+			NOT = { has_country_flag = bul_claimed_morava }
 		}
 
 		allow = {	
@@ -46,13 +46,13 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 4
-			set_country_flag = bul_claimed_dobrudja
-			TUR_674 = { add_core = BUL }
-			678 = { add_core = BUL }
+			badboy = 5
+			set_country_flag = bul_claimed_morava
 			795 = { add_core = BUL }
 			798 = { add_core = BUL }
 			3347 = { add_core = BUL }
+			3619 = { add_core = BUL }
+			3622 = { add_core = BUL }
 		}
 
 		ai_will_do = {

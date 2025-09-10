@@ -101,11 +101,15 @@ political_decisions = {
 		effect = {
 			set_country_flag = megali_idea
 			861 = { add_core = GRE }
-			3301 = { add_core = GRE }
+			862 = { add_core = GRE }
+			863 = { add_core = GRE }
+			864 = { add_core = GRE }
 			865 = { add_core = GRE }
-			869 = { add_core = GRE }
-			872 = { add_core = GRE }
 			867 = { add_core = GRE }
+			869 = { add_core = GRE }
+			871 = { add_core = GRE }
+			872 = { add_core = GRE }
+			3301 = { add_core = GRE }
 			badboy = 5
 			prestige = 10
 		}
@@ -292,6 +296,8 @@ political_decisions = {
 		potential = {
             tag = GRE
 			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
 				government = hms_government
 				government = fascist_dictatorship
 			}
@@ -321,20 +327,11 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = megali_idea
-			TUR_863 = { add_core = GRE }
-			TUR_869 = { add_core = GRE }
-			TUR_880 = { add_core = GRE }
-			TUR_876 = { add_core = GRE }
-			TUR_873 = { add_core = GRE }
-			TUR_882 = { add_core = GRE }
-			TUR_809 = { add_core = GRE }
-			TUR_894 = { add_core = GRE }
-			878 = { add_core = GRE }
-			879 = { add_core = GRE }
-			3520 = { add_core = GRE }
-			830 = { add_core = GRE }
-			828 = { add_core = GRE }
-			3302 = { add_core = GRE }
+			ANT = {
+				all_core = {
+					add_core = GRE
+				}
+			}
 			badboy = 20
 			prestige = 10
 		}

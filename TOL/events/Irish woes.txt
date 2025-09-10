@@ -148,104 +148,6 @@ province_event = {
 	}
 }
 
-country_event = {
-	id = 1010020
-	title = "EVTNAME1010020" #The Irish Republican Brotherhood
-	desc = "EVTDESC1010020"
-	news = yes
-	news_desc_long = "EVTDESC1010020_NEWS_LONG"
-	news_desc_medium = "EVTDESC1010020_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC1010020_NEWS_SHORT"
-	picture = "irish_republican_brotherhood"
-
-	trigger = {
-		OR = {
-			AND = {
-				any_owned_province = {
-					is_core = IRE
-					culture = irish
-					NOT = { has_province_modifier = irish_republicans }
-					NOT = { has_province_modifier = irish_unionists }
-					pop_militancy = 2
-				}
-				NOT = { has_country_flag = help_for_the_irish }
-			}
-			AND = {
-				any_owned_province = {
-					is_core = IRE
-					culture = irish
-					NOT = { has_province_modifier = irish_republicans }
-					NOT = { has_province_modifier = irish_unionists }
-					pop_militancy = 5
-				}
-				has_country_flag = help_for_the_irish
-			}
-		}
-		OR = {
-			AND = {
-				invention = separatism
-				has_country_flag = young_irish
-			}
-			invention = terrorism
-		}
-		NOT = {
-			has_country_flag = irish_republican_brotherhood
-			tag = IRE
-			tag = CLT
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0.5
-			has_country_flag = no_help_for_the_irish
-		}
-		modifier = {
-			factor = 1.5
-			has_country_flag = help_for_the_irish
-		}
-		modifier = {
-			factor = 1.2
-			citizenship_policy = full_citizenship
-		}
-		modifier = {
-			factor = 0.8
-			citizenship_policy = residency
-		}
-	}
-
-	option = {
-		name = "EVT1010020OPTA"
-		set_country_flag = irish_republican_brotherhood
-		random_owned = {
-			limit = { owner = { NOT = { has_country_flag = help_for_the_irish } } }
-			owner = { remove_accepted_culture = irish }
-		}
-		set_variable = {
-			which = irish_republican_provinces
-			value = 1
-		}
-		random_owned = {
-			limit = {
-				is_core = IRE
-				culture = irish
-				NOT = { has_province_modifier = irish_republicans }
-				NOT = { has_province_modifier = irish_unionists }
-			}
-			remove_core = ENG
-			any_pop = {
-				limit = { has_pop_culture = irish }
-				consciousness = 3
-			}
-			add_province_modifier = {
-				name = irish_republicans
-				duration = -1
-			}
-		}
-	}
-}
-
 province_event = {
 	id = 1010021
 	title = "EVTNAME1010021" #Fenians in $PROVINCENAME$
@@ -334,7 +236,6 @@ province_event = {
 
 	option = {
 		name = "EVT1010021OPTA"
-		remove_core = ENG
 		owner = {
 			change_variable = {
 				which = irish_republican_provinces

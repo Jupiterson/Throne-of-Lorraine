@@ -21,7 +21,7 @@ country_event = {
 
     option = {
         name = "REPHUN"                          #Republic
-         set_global_flag = no_jagiellonian_hun
+        set_global_flag = no_jagiellonian_hun
         any_greater_power = {
             limit = {
                 capital_scope = { continent = europe }
@@ -79,7 +79,7 @@ country_event = {
     }
 
     option = {
-           name = "HUNMON"                             #A Hungarian Monarch
+        name = "HUNMON"                             #A Hungarian Monarch
         set_global_flag = no_jagiellonian_hun
         remove_country_modifier = louis_napoleon_iii
         any_greater_power = {
@@ -135,7 +135,7 @@ country_event = {
     }
 
     option = {
-         name = "JAGHUN"     #Jagiellonian Monarch
+        name = "JAGHUN"     #Jagiellonian Monarch
         set_global_flag = jagiellonian_hun
         any_greater_power = {
             limit = {
@@ -212,11 +212,19 @@ country_event = {
 	option = {
 		name = "Rush through reform, reunite Poland-Hungary"
 		inherit = HUN
+		inherit = BAN
+		inherit = VOJ
 		POL = {
 					all_core = { add_core = PHC }
 				}
 				
 	    HUN = {
+					all_core = { add_core = PHC }
+				}
+		BAN = {
+					all_core = { add_core = PHC }
+				}
+		VOJ = {
 					all_core = { add_core = PHC }
 				}
 		add_accepted_culture = hungarian
@@ -229,11 +237,11 @@ country_event = {
         }
 	}
 	
-		option = {
+	option = {
 		name = "Let's punish Hungary for what they did."
 		HUN = {
 		any_owned = {
-		limit = { OR = { is_core = SIE is_core = POL is_core = SLV } }
+		limit = { OR = { is_core = POL is_core = SLV } }
 		secede_province = POL
 		}
         }	
@@ -251,7 +259,7 @@ country_event = {
         badboy = -5	
 		set_global_flag = forgiven_hungary		
 		
-	     ai_chance = {
+	    ai_chance = {
             factor = 1
         }
 	}

@@ -1,0 +1,37 @@
+
+HUN = {value = -50}
+
+army = {
+	name = "Waldmarker Landwehr"
+	location = 3623
+	regiment = {
+		name= "1.J‰gerbataillon"
+		type = infantry
+		home = 3623
+	}
+	regiment = {
+		name= "2.J‰gerbataillon"
+		type = infantry
+		home = 3623
+	}
+	regiment = {
+		name = "1.Kavalleriebataillon"
+		type = hussar
+		home = 794
+	}
+	regiment = {
+		name = "1.Fuﬂartillerie-Bataillon"
+		type = artillery
+		home = 795
+	}
+}
+
+leader = {
+	name = "Engelbert Amsel"
+	picture = european_general_19
+	type = land
+	date = 1836.1.1
+	personality = coolminded
+	background = cavalry_school
+	prestige = 0.1
+}

@@ -104,9 +104,9 @@
 	}
 
 	farmers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 25700
+		culture = patagonian
+		religion = animist
+		size = 5700
 	}
 }
 #La Plata (4000/1000 POPS)
@@ -170,33 +170,39 @@
 	farmers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 35700
+		size = 3700
+	}
+	
+	farmers = {
+		culture = patagonian
+		religion = animist
+		size = 8300
 	}
 }
 #Under loose authority of Argentina 1836
 #Trenque Lanquen (12000/9000 POPS)
 2353 = {
 	clergymen = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = patagonian
+		religion = animist
 		size = 40
 	}
 	
 	artisans = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = patagonian
+		religion = animist
 		size = 100
 	}
 
 	farmers = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = patagonian
+		religion = animist
 		size = 1300
 	}
 	
 	soldiers = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = patagonian
+		religion = animist
 		size = 30
 	}
 
@@ -241,7 +247,7 @@
 	farmers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 3725
+		size = 2725
 	}
 
 	aristocrats = {
@@ -260,7 +266,7 @@
 	farmers = {
 		culture = patagonian
 		religion = animist
-		size = 2700
+		size = 4700
 	}
 }
 #Carmen (20000/5000 POPS)
@@ -268,25 +274,25 @@
 	clergymen = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 50
+		size = 150
 	}
 	
 	artisans = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 70
+		size = 870
 	}
 
 	soldiers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 125
+		size = 1125
 	}
 
 	farmers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 1875
+		size = 36875
 	}
 
 	aristocrats = {
@@ -301,11 +307,10 @@
 		size = 75
 	}
 
-
 	farmers = {
 		culture = patagonian
 		religion = animist
-		size = 5700
+		size = 6700
 	}
 }
 #Corrientes Region (164000)
@@ -339,19 +344,19 @@
 	artisans = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 3000
+		size = 1000
 	}
 
 	soldiers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 3000
+		size = 1000
 	}
 
 	farmers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 15015
+		size = 3015
 	}
 
 	clergymen = {
@@ -363,7 +368,7 @@
 	farmers = {
 		culture = guarani
 		religion = animist
-		size = 22750
+		size = 18750
 	}
 
 }
@@ -408,32 +413,26 @@
 #Santo Tomas (28000/7000 POPS)
 2358 = {
 	clergymen = {
-		culture = francorientale
-		religion = catholic
+		culture = occidentale
+		religion = reformed #hugenott
 		size = 150
 	}
 	
 	artisans = {
-		culture = francorientale
-		religion = catholic
+		culture = occidentale
+		religion = reformed #hugenott
 		size = 400
-	}
-
-	farmers = {
-		culture = francorientale
-		religion = catholic
-		size = 3600
 	}
 	
 	farmers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 730
+		size = 4730
 	}
 	
 	soldiers = {
-		culture = francorientale
-		religion = catholic
+		culture = occidentale
+		religion = reformed #hugenott
 		size = 230
 	}
 
@@ -443,10 +442,10 @@
 		size = 7600
 	}
 	
-	slaves = {
+	farmers = {
 		culture = afro_french
 		religion = catholic
-		size = 8300
+		size = 1300
 	}
 }
 #Colon (8000/2000 POPS)
@@ -544,52 +543,46 @@
 	farmers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 20800
+		size = 15800
 	}
 	
 	farmers = {
 		culture = hets
 		religion = animist
-		size = 3600
+		size = 8600
 	}
 	
 }
 #Reconquista (56000/14000 POPS)
 2362 = {
 	aristocrats = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = guarani
+		religion = animist
 		size = 275
 	}
 
 	officers = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = guarani
+		religion = animist
 		size = 20
 	}
 
 	clergymen = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = guarani
+		religion = animist
 		size = 175
 	}
 
 	artisans = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = guarani
+		religion = animist
 		size = 1800
 	}
 
 	soldiers = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = guarani
+		religion = animist
 		size = 750
-	}
-
-	farmers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 21350
 	}
 	
 	farmers = {
@@ -628,19 +621,13 @@
 	soldiers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 200
+		size = 1200
 	}
 
 	farmers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 22800
-	}
-	
-	farmers = {
-		culture = hets
-		religion = animist
-		size = 1870
+		size = 38800
 	}
 }
 #Chaco Region (76000) #see Paraguay.txt for balance of region
@@ -670,30 +657,6 @@
 		religion = animist
 		size = 2700
 	}
-
-	bureaucrats = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 2
-	}
-
-	clergymen = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 23
-	}
-
-	soldiers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 25
-	}
-
-	farmers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 1200
-	}
 }
 #Villa Angela (16000/4000 POPS)
 2365 = {
@@ -719,24 +682,6 @@
 		culture = guarani
 		religion = animist
 		size = 2700
-	}
-
-	clergymen = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 25
-	}
-
-	soldiers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 25
-	}
-
-	farmers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 900
 	}
 }
 #Under loose authority of Paraguay 1836
@@ -833,45 +778,39 @@
 #Santa Rosa - Former Bechar (20000/5000 POPS)
 1714 = {
 	aristocrats = {
-		culture = hets 
-        religion = animist
+		culture = quechua
+		religion = kristiyanu
 		size = 5
 	}
 
 	bureaucrats = {
-		culture = hets 
-        religion = animist
+		culture = quechua
+		religion = kristiyanu
 		size = 15
 	}
 
 	clergymen = {
-		culture = hets 
-        religion = animist
-		size = 10
+		culture = quechua
+		religion = kristiyanu
+		size = 30
 	}
 
 	artisans = {
-		culture = hets 
-        religion = animist
+		culture = quechua
+		religion = kristiyanu
 		size = 10
 	}
 
 	soldiers = {
-		culture = hets 
-        religion = animist
-		size = 60
+		culture = quechua
+		religion = kristiyanu
+		size = 160
 	}
 
 	farmers = {
-		culture = hets 
-        religion = animist
-		size = 300
-	}
-
-	farmers = {
-		culture = hets 
-        religion = animist
-		size = 200
+		culture = quechua
+		religion = kristiyanu
+		size = 4800
 	}
 }
 
@@ -955,53 +894,53 @@
 #Cochinoca (4000/1000 POPS)
 2370 = {
 	aristocrats = {
-		culture = hets
-		religion = animist
+		culture = quechua
+		religion = kristiyanu
 		size = 15
 	}
 
 	clergymen = {
-		culture = hets
-		religion = animist
+		culture = quechua
+		religion = kristiyanu
 		size = 25
 	}
 
 	soldiers = {
-		culture = hets
-		religion = animist
+		culture = quechua
+		religion = kristiyanu
 		size = 10
 	}
 
 	farmers = {
-		culture = hets
-		religion = animist
-		size = 900
+		culture = quechua
+		religion = kristiyanu
+		size = 1000
 	}
 }
 #Equia (4000/1000 POPS)
 2371 = {
 	aristocrats = {
-		culture = hets
-		religion = animist
+		culture = quechua
+		religion = kristiyanu
 		size = 15
 	}
 
 	clergymen = {
-		culture = hets
-		religion = animist
+		culture = quechua
+		religion = kristiyanu
 		size = 25
 	}
 
 	soldiers = {
-		culture = hets
-		religion = animist
+		culture = quechua
+		religion = kristiyanu
 		size = 10
 	}
 
 	farmers = {
-		culture = hets
-		religion = animist
-		size = 900
+		culture = quechua
+		religion = kristiyanu
+		size = 1000
 	}
 }
 #Rivadavia (4000/1000 POPS)
@@ -1067,13 +1006,13 @@
 	soldiers = {
 		culture = hets
 		religion = animist
-		size = 50
+		size = 1050
 	}
 
 	farmers = {
 		culture = hets
 		religion = animist
-		size = 4225
+		size = 9225
 	}
 
 	slaves = {
@@ -1227,33 +1166,27 @@
 #Mailin (8000/2000 POPS)
 2378 = {
 	aristocrats = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = hets
+		religion = animist
 		size = 25
 	}
 
 	clergymen = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = hets
+		religion = animist
 		size = 50
 	}
 
 	soldiers = {
-		culture = occidentale
-		religion = reformed #hugenott
+		culture = hets
+		religion = animist
 		size = 50
-	}
-	
-	farmers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 600
 	}
 
 	farmers = {
 		culture = hets
 		religion = animist
-		size = 1800
+		size = 2200
 	}
 }
 #Cordoba Region (136000)
@@ -1264,12 +1197,6 @@
 		culture = occidentale
 		religion = reformed #hugenott
 		size = 125
-	}
-
-	bureaucrats = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 40
 	}
 
 	officers = {
@@ -1332,7 +1259,7 @@
 	farmers = {
 		culture = occidentale
 		religion = reformed #hugenott
-		size = 980
+		size = 3980
 	}
 
 	farmers = {
@@ -1396,7 +1323,7 @@
 	farmers = {
 		culture = hets
 		religion = animist
-		size = 1800
+		size = 2800
 	}
 }
 #Under the loose rule of Argentina 1836
@@ -1406,18 +1333,6 @@
 		culture = hets
 		religion = animist
 		size = 50
-	}
-
-	soldiers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 80
-	}
-	
-	farmers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 400
 	}
 
 	farmers = {
@@ -1557,13 +1472,13 @@
 	soldiers = {
 		culture = hets
 		religion = animist
-		size = 125
+		size = 425
 	}
 
 	farmers = {
 		culture = hets
 		religion = animist
-		size = 1800
+		size = 5800
 	}
 }
 #San Juan de la Frontera (12000/3000 POPS)
@@ -1583,13 +1498,13 @@
 	soldiers = {
 		culture = hets
 		religion = animist
-		size = 75
+		size = 375
 	}
 
 	farmers = {
 		culture = hets
 		religion = animist
-		size = 2000
+		size = 4000
 	}
 
 	slaves = {
@@ -1700,24 +1615,6 @@
 #Under the loose rule of Argentina 1836
 #Neuquen (12000/3000 POPS)
 2391 = {
-	clergymen = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 25
-	}
-
-	soldiers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 75
-	}
-
-	farmers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 900
-	}
-
 	aristocrats = {
 		culture = patagonian
 		religion = animist
@@ -1789,12 +1686,6 @@
 		religion = animist
 		size = 175
 	}
-	
-	farmers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 700
-	}
 
 	farmers = {
 		culture = patagonian
@@ -1804,24 +1695,6 @@
 }
 #Bariloche (16000/4000 POPS)
 2394 = {
-	clergymen = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 25
-	}
-
-	soldiers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 75
-	}
-
-	farmers = {
-		culture = occidentale
-		religion = reformed #hugenott
-		size = 900
-	}
-
 	aristocrats = {
 		culture = patagonian
 		religion = animist
@@ -2044,4 +1917,56 @@
 		size = 8900
 	}
 
+}
+
+#Nova Genova
+3618 = {
+	aristocrats = {
+		culture = occidentale
+		religion = reformed #hugenott
+		size = 450
+	}
+	
+	artisans = {
+		culture = occidentale
+		religion = reformed #hugenott
+		size = 4430
+	}
+	
+	bureaucrats = {
+		culture = occidentale
+		religion = reformed #hugenott
+		size = 150
+	}
+	
+	officers = {
+		culture = occidentale
+		religion = reformed #hugenott
+		size = 50
+	}
+
+	clergymen = {
+		culture = occidentale
+		religion = reformed #hugenott
+		size = 820
+	}
+
+	soldiers = {
+		culture = occidentale
+		religion = reformed #hugenott
+		size = 1400
+	}
+
+	farmers = {
+		culture = occidentale
+		religion = reformed #hugenott
+		size = 46200
+	}
+	
+	farmers = {
+		culture = hets
+		religion = animist
+		size = 3600
+	}
+	
 }

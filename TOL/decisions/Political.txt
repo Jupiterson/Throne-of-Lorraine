@@ -867,7 +867,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = { tag = GLM owns = 702 NOT = { capital = 702 } }
-				AND = { tag = NET owns = 375 NOT = { capital = 375 } }
+				AND = { tag = NET owns = 377 NOT = { capital = 377 } }
 				AND = { tag = POL owns = 706 NOT = { capital = 706 } }
 				AND = { tag = BUL owns = 809 NOT = { capital = 809 } }
 				AND = { tag = HUN owns = 641 NOT = { capital = 641 } }
@@ -914,6 +914,7 @@ political_decisions = {
 				AND = { tag = ASH civilized = yes owns = 1907 NOT = { capital = 1907 } }
 				AND = { tag = SUD owns = 1827 NOT = { capital = 1827 } }
 				AND = { tag = PRU owns = 549 NOT = { capital = 549 } }
+				AND = { tag = GEP owns = 791 NOT = { capital = 791 } }
 			}
 		}
 
@@ -967,10 +968,11 @@ political_decisions = {
 			random_owned = { limit = { owner = { tag = NIG } } owner = { capital = 1808 } }
 			random_owned = { limit = { owner = { tag = MLI } } owner = { capital = 1794 } }
 			random_owned = { limit = { owner = { tag = VEN } } owner = { capital = 729 } }
-			random_owned = { limit = { owner = { tag = NET } } owner = { capital = 375 } }
+			random_owned = { limit = { owner = { tag = NET } } owner = { capital = 377 } }
 			random_owned = { limit = { owner = { tag = GLM } } owner = { capital = 702 } }
 			random_owned = { limit = { owner = { tag = SUD } } owner = { capital = 1827 } }
 			random_owned = { limit = { owner = { tag = PRU } } owner = { capital = 549 } }
+			random_owned = { limit = { owner = { tag = GEP } } owner = { capital = 791 } }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -1952,26 +1954,27 @@ political_decisions = {
 					is_capital = yes
 					NOT = { life_rating = 38 }
 				}
-
-				783 = { #Saravejo
+				783 = { #Vrhbosna
 					owned_by = THIS
 					is_capital = yes
 					NOT = { life_rating = 38 }
 				}
-
 				849 = { #Tirana
 					owned_by = THIS
 					is_capital = yes
 					NOT = { life_rating = 38 }
 				}
-
 				487 = { #Madrid
 					owned_by = THIS
 					is_capital = yes
 					NOT = { life_rating = 43 }
 				}
-				
 				498 = { #Barcelona
+					owned_by = THIS
+					is_capital = yes
+					NOT = { life_rating = 38 }
+				}
+				791 = { #Sirmium
 					owned_by = THIS
 					is_capital = yes
 					NOT = { life_rating = 38 }
@@ -2041,6 +2044,7 @@ political_decisions = {
 						province_id = 849
 						province_id = 487
 						province_id = 498
+						province_id = 791
 					}
 				}
 				life_rating = 3

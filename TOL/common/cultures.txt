@@ -22,9 +22,8 @@ germanic = {
 		"von Wrangel" "von Zieten" "zur Lippe" "von Roon" }
 	}
 
-
-	donau_saxon = {
-		color = { 90 65 65 }
+	gepid = {
+		color = { 50 50 75 }
 		first_names = { Adelbert Adolf Albrecht Alexander Alfred August Bernhard Burkhard Dieter
 		Eduard Edwin Erwin Erich Ernst Florian Franz Friedrich Fritz Georg G¸nther
 		Gustav Hasso Heinrich Helmuth Hermann Hugo Joachim Johann J¸rgen Karl
@@ -136,7 +135,7 @@ germanic = {
 neo_germanic = {
 	leader = european
 	akino_german = {
-		color = { 90 50 60 }
+		color = { 101 71 39 }
 		first_names = { Adelbert Adolf Albrecht Alexander Alfred August Bernhard Burkhard Dieter
 		Eduard Edwin Erwin Erich Ernst Florian Franz Friedrich Fritz Georg G¸nther
 		Gustav Hasso Heinrich Helmuth Hermann Hugo Joachim Johann J¸rgen Karl
@@ -153,7 +152,7 @@ neo_germanic = {
 	}
 
 	american_german = {
-		color = { 70 40 40}
+		color = { 98 51 88 }
 		first_names = { Adelbert Adolf Albrecht Alexander Alfred August Bernhard Burkhard Dieter
 		Eduard Edwin Erwin Erich Ernst Florian Franz Friedrich Fritz Georg G¸nther
 		Gustav Hasso Heinrich Helmuth Hermann Hugo Joachim Johann J¸rgen Karl
@@ -345,7 +344,7 @@ beneluxian = {
 	leader = european
 	unit = EuropeanGC
 	dutch = {
-		color = { 230 130 50}
+		color = { 170 90 70}
 		first_names = {
 			Adolf Adriaan Alexander Andreas Antoon Andries Antonius Abraham
 			Barthout
@@ -3406,7 +3405,7 @@ oceanic = {
 native_american = {
 	leader = nativeamerican
 
-        haida = { 
+    haida = { 
 		color = { 0 96 36 }
 		first_names = { Adelbert Adolf Albrecht Alexander Alfred August Bernhard Burkhard Dieter
 		Eduard Edwin Erwin Erich Ernst Florian Franz Friedrich Fritz Georg Gnther
@@ -3452,6 +3451,16 @@ native_american = {
 		Tikal Tulum Tancah Tazumal Tecoh TopoxtÈ Uxmal Uaxactun Ucanal Uci Utatlan Wak· Xcalumkin Xcaret Xcorralche Xcucsuc 
 		Xculoc Xlapak Xpuhil Xultun Xunantunich Yaklmai Yaxchilan Yaxha Yo'okop Zipacna Zaculeu
 		}
+	}
+	hets = {
+		color = {155 228 65}
+		first_names = { Aniceto Antonio BartolomÈ Camilo Carlos Claudio David Emiliano Eugenio Felipe
+		FÈlix Fernando Gregorio Jacinto Jes√∫s JosÈ Juan Julio Luis Manuel
+		Marcos M·ximo Narciso Pablo Pedro Rodrigo Roque SimÛn Teodoro V√≠ctor }
+
+		last_names = { Abjaisu √Ålvarez Ayegua Camba Chuaie Correa Cunhagat√∫ D√≠az Fern·ndez Galeano
+		GÛmez Gonz·lez Guaracay Guaran√≠ Guerrero Jopara LÛpez MongelÛs Morla Ort√≠z
+		ParavÈ Picagua Riquelme Rivarola "Santa Cruz" Taray√∫ Torga Vel·zquez Yaguarete Yrahi }
 	}
 	nahua = {
 		color = {88 175 160}
@@ -3733,19 +3742,8 @@ amazonic = {
 		Karaj· KayapÛ MatsÈs Maxakal√≠ Pur√≠ Timbira Xavante Xerente Xokieng Yanomam√∂ }
 	}
 	
-	hets = {
-		color = {155 228 65}
-		first_names = { Aniceto Antonio BartolomÈ Camilo Carlos Claudio David Emiliano Eugenio Felipe
-		FÈlix Fernando Gregorio Jacinto Jes√∫s JosÈ Juan Julio Luis Manuel
-		Marcos M·ximo Narciso Pablo Pedro Rodrigo Roque SimÛn Teodoro V√≠ctor }
-
-		last_names = { Abjaisu √Ålvarez Ayegua Camba Chuaie Correa Cunhagat√∫ D√≠az Fern·ndez Galeano
-		GÛmez Gonz·lez Guaracay Guaran√≠ Guerrero Jopara LÛpez MongelÛs Morla Ort√≠z
-		ParavÈ Picagua Riquelme Rivarola "Santa Cruz" Taray√∫ Torga Vel·zquez Yaguarete Yrahi }
-	}
-	
 	guarani = {
-		color = {89 180 175}
+		color = {79 101 176}
 		first_names = { Angatupyry Apytere Arandu Araresa Amaru Amapytu Amangy Aravera Arasunu Aratiri Chavuku Jakaira Karai 
 			Katupyry Kuarahy Kuarahyrese Maitei Mba'ehory Mbarakapu Namandu Tajy Tatarendy Tatajyva Tatapytu 
 			Tuvicha Ygary Tekokatu }
@@ -3878,7 +3876,22 @@ latin_american_cultures = {
 	}
 	
 	north_andean = {
-		color = {211 230 216} #{Enseignants}
+		color = {215 220 194} #{Llanero}
+		first_names = { Achille Adolphe Adrien Aimable Alphonse AmÈdÈe Antoine Armand August Augustin Bartehelemy
+		Baudouin Charles Claude Daniel Denis √âdouard Edmond Elie √âttiene EugËne FÈlicien FÈlix Fernand
+		FranÁois FrÈdÈric Fronton Gaspar Georges Guillaume Gustave Guy Henri Hubert Hugo Ignace Jacques Jean
+		Joseph Jules Julien Lazare LÈopold Leroy Louis Lucien Matthieu Marc Michel
+		Nicolas Paschase Patrice Paul Philippe Pierre Rene Robert Thibaut Thierry Thomas Valere Yves }
+
+		last_names = { Albanel Allouez Andre Aveneau Avril Abram Auger Bailloquet 
+		"Bachet de Meziriac" Barry Biard Briet Broet Buteux Carheil Chabanel Chaumonot Cholenec Coton Daniel 
+		Dausque "de Brebeuf" "de Lalande" "de Premare" "de Quen" "de Visdelou" "du Duc" "du Jarric" "d'Espagnac" 
+		Favre Fontaney Garnier Gerbillon Goupil Greslon Jogues "la Croix" "le Jeune" "le Moyne" "le Comte" Lagrene
+		Lalemant Lamberville Marest Martellange Marquette Masse Menard Millet Nouvel Nicolas Parrenin Pierron 
+		Poncet Raffeix Ragueneau Rale Raymbault Regis Vaillant Vimont Xavier }
+	}
+	andino = {
+		color = {255 224 145} #{Andino}
 		first_names = { Achille Adolphe Adrien Aimable Alphonse AmÈdÈe Antoine Armand August Augustin Bartehelemy
 		Baudouin Charles Claude Daniel Denis √âdouard Edmond Elie √âttiene EugËne FÈlicien FÈlix Fernand
 		FranÁois FrÈdÈric Fronton Gaspar Georges Guillaume Gustave Guy Henri Hubert Hugo Ignace Jacques Jean
@@ -3893,13 +3906,13 @@ latin_american_cultures = {
 		Poncet Raffeix Ragueneau Rale Raymbault Regis Vaillant Vimont Xavier }
 	}
 	francorientale = {
-		color = {146 154 80}
+		color = {141 18 62}
 		first_names = { Alban Andieu Carles EstËve FidËl Frederic Girard Jan Jacin LaurenÁ Martin Nicolau Privat Roman VincenÁ }
 
 		last_names = { Amiel Benet Dardier Delpuech LadivËze Gilbert Mistral Lacroux Laffont Maury Miquel Montagut Poujade Pujol Vidal Ros Tisseyre }
 	}
 	occidentale = {
-		color = {148 92 143}
+		color = {146 56 143}
 		first_names = { Alban Andieu Alain Bert Carles EstËve FidËl Frederic Girard Jan Jacin LaurenÁ Martin Nicolau Privat Roman VincenÁ }
 
 		last_names = { Amiel Benet Dardier Delpuech LadivËze Gilbert Mistral Lacroux Laffont Maury Miquel Montagut Poujade Pujol Vidal Ros Tisseyre }
@@ -3910,17 +3923,28 @@ new_world_scot = {
 	leader = european
 	unit = BritishGC
 	sgirenic = {
-		color = {60 54 166}
-		 first_names = { Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde 
-		 Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin 
-		 Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne 
-		 Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace
-		 }
+		color = {0 56 140}
+		first_names = { James Robert Henry Alexander Arthur Walter John Charles Malcolm Donald David Duncan Andrea 
+			Alan Ailpein Archibald Barclay Beathan Bruce Cameron Cin·ed Conall Douglas Duff Edan Evander 
+			Fraser Garry Glen Ian Keir Kennedy Lennox Logan Micheil Mungo Munroe Scott Wallace Adam 
+			Alpin Alwin Alastair Andrew Angus Arran Aulay Olaf Brian Brice Cailean Calum Carbrey Colban 
+			Kolbein Colin Nicholas Conan Constantine Dermid Dugald Edgar Edward Edwin Eric Ivar Ewan 
+			Eugene Farquhar Fergus Fingal Finn Findlay Frang Francis Gavin Gilbride Gilbert Gilchrist 
+			Gillespie Gilpatrick Gilroy Giric Glenn Godfrey Gregor Gregory Hamish Hector Hugh Iain 
+			Indulf Jacob Kenneth Kentigern Lachlan Roland Laurence Lennon Lulach Macbeth Magnus Maldoven 
+			Maldred Malise Malmure Maoilios Marcas Marcus Matad Matthew Michael Morgan Muir Mungo 
+			Murdoch Murray Neil Nigel Ninian Oscar Patrick Paul Peter Philip Radulf Ralph Ranald 
+			Reginald Richard Ronald Ragnvald Rory Roderick Ross Roy Shaw Simon Somerled Stephan Stephen 
+			Sweeny Tadhg Tadg Talore Thomas Torquil Torkel Uhtred Uisdean Eysteinn Walan Valentin 
+			Waldeve Waltheof William
+		Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace}
 
-		last_names = { Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott 
-		Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison 
-		Sanders  
-		}
+		last_names = { Stuart Stewart Campbell Lennox Murray Graham Gordon Erskine Leslie
+			Scott Douglas Hamilton Lindsay Ker Hay Sinclair Dunbar Kennedy
+			Fraser "Aois-d‡na" Dishington Burnett "Bowes-Lyon" "Lockhart" "Corbet"
+			Mackintosh Dingwall Melville Corrie Aberach Cunningham Donald
+			Buchanan Menzies Moffat Malcolm "Cameron" "Forbes" "Arbuthnot" "Cockburn" "Adam" Wallace "Abernethy"
+			Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison Sanders	}
 	}
 }
 
@@ -3940,13 +3964,27 @@ african_diaspora_cultures = {
 	}
 	afro_scot = {
 		color = {22 20 95}
-		first_names = { Afonso Aleixo Alexandre Anderson AndrÈ Artur C‚ndido Carlos Den√≠lson Djalma
-		FÈlix Francisco Guilherme Itamar Jo„o Joaquim Jorge JosÈ KlÈber Leandro
-		Lu√≠s Manuel Marco Marcos Maur√≠cio Mauro Nilo ProcÛpio Ricardo Ronaldo }
+		first_names = { James Robert Henry Alexander Arthur Walter John Charles Malcolm Donald David Duncan Andrea 
+			Alan Ailpein Archibald Barclay Beathan Bruce Cameron Cin·ed Conall Douglas Duff Edan Evander 
+			Fraser Garry Glen Ian Keir Kennedy Lennox Logan Micheil Mungo Munroe Scott Wallace Adam 
+			Alpin Alwin Alastair Andrew Angus Arran Aulay Olaf Brian Brice Cailean Calum Carbrey Colban 
+			Kolbein Colin Nicholas Conan Constantine Dermid Dugald Edgar Edward Edwin Eric Ivar Ewan 
+			Eugene Farquhar Fergus Fingal Finn Findlay Frang Francis Gavin Gilbride Gilbert Gilchrist 
+			Gillespie Gilpatrick Gilroy Giric Glenn Godfrey Gregor Gregory Hamish Hector Hugh Iain 
+			Indulf Jacob Kenneth Kentigern Lachlan Roland Laurence Lennon Lulach Macbeth Magnus Maldoven 
+			Maldred Malise Malmure Maoilios Marcas Marcus Matad Matthew Michael Morgan Muir Mungo 
+			Murdoch Murray Neil Nigel Ninian Oscar Patrick Paul Peter Philip Radulf Ralph Ranald 
+			Reginald Richard Ronald Ragnvald Rory Roderick Ross Roy Shaw Simon Somerled Stephan Stephen 
+			Sweeny Tadhg Tadg Talore Thomas Torquil Torkel Uhtred Uisdean Eysteinn Walan Valentin 
+			Waldeve Waltheof William
+			Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace}
 
-		last_names = { Arag„o AssunÁao Bahia Barbosa Borges "de Cruz e Sousa" "da Lima" "de Lima Barreto" "de Ouro" "de Sousa"
-		"de Souza" "dos Reis" "dos Santos" Fidalgo Filho Gil Gomes "Machado de Assis" Nunes Oliveira
-		Otelo Paim Pandeiro PeÁanha Pereira Pitanga Rodrigues Santos Silva Teixeira }
+		last_names = { Stuart Stewart Campbell Lennox Murray Graham Gordon Erskine Leslie
+			Scott Douglas Hamilton Lindsay Ker Hay Sinclair Dunbar Kennedy
+			Fraser "Aois-d‡na" Dishington Burnett "Bowes-Lyon" "Lockhart" "Corbet"
+			Mackintosh Dingwall Melville Corrie Aberach Cunningham Donald
+			Buchanan Menzies Moffat Malcolm "Cameron" "Forbes" "Arbuthnot" "Cockburn" "Adam" Wallace "Abernethy"
+			Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison Sanders	}
 	}
 	afro_french = {
 		color = {24 44 49}
@@ -3990,8 +4028,6 @@ african_diaspora_cultures = {
 			Madiou PÈralte Pierrot Planchet Price Price-Mars RichÈ Rigaud RiviËre-HÈrard Roumain
 			Roy Saget Salnave Salomon Sam Simon Soulouque ThÈodore Vincent Zamor }
 	}
-
-
 	pirate = {
 		color = { 100 80 80 }
 		first_names = { Alexis AndrÈ AntÈnor Antoine Augustin Balthazar Beaubrun CÈligny Charlemagne Charles
@@ -4006,7 +4042,6 @@ african_diaspora_cultures = {
 			Madiou PÈralte Pierrot Planchet Price Price-Mars RichÈ Rigaud RiviËre-HÈrard Roumain
 			Roy Saget Salnave Salomon Sam Simon Soulouque ThÈodore Vincent Zamor }
 	}
-
 	afro_german = {
 		color = {20 20 32}
 		first_names = { Aaron Alexander Andre Benton Caesar Cathay Charles Colin Ebenezer Edgar

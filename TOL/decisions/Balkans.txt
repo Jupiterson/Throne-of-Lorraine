@@ -635,7 +635,8 @@ political_decisions = {
 		potential = {
 			primary_culture = croatian
 			NOT = { exists = YUG }
-			has_country_flag = claimed_greater_croatia
+			has_country_flag = claimed_alpine_croatia
+			has_country_flag = croatian_east_claimed
 			NOT = { has_global_flag = croatian_yugoslavia }
 			NOT = { has_global_flag = yugoslavia_formed }
 			NOT = { has_country_flag = post_colonial_country }
@@ -2111,9 +2112,9 @@ political_decisions = {
 			set_country_flag = claimed_alpine_croatia
 			prestige = 10
 			add_accepted_culture = slovene
-			618 = { add_core = SLO }
-			733 = { add_core = SLO }
-			3617 = { add_core = SLO }
+			618 = { add_core = CRO }
+			733 = { add_core = CRO }
+			3617 = { add_core = CRO }
 			AUS_736 = { add_core = CRO }
 			AUS_768 = { add_core = CRO }
 		}
@@ -2141,11 +2142,13 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 8
+			badboy = 7
 			set_country_flag = croatian_east_claimed
 			640 = { add_core = CRO }
+			652 = { add_core = CRO }
+			2569 = { add_core = CRO }
+			2577 = { add_core = CRO }
 			AUS_2538 = { add_core = CRO }
-			MON_2582 = { add_core = CRO }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -2245,13 +2248,10 @@ political_decisions = {
 
         effect = {
             set_country_flag = claimed_bul_lands
-			badboy = 10
-			AUS_652 = { add_core = YUG }
-			TUR_674 = { add_core = YUG }
+			badboy = 7
 			TUR_805 = { add_core = YUG }
 			TUR_823 = { add_core = YUG }
 			TUR_860 = { add_core = YUG }
-			678 = { add_core = YUG }
         }
 		ai_will_do = {
             factor = 1
@@ -2497,77 +2497,242 @@ political_decisions = {
 		}
 	}
 	
-	greater_thervingia = {
-		picture = thervingia_banner
+##### GEPID DECISIONS #####
+
+	banate_unification = {
+		picture = german_confederation
+        potential = {
+            OR = {
+				tag = BAN
+                tag = VOJ
+            }
+			NOT = { has_global_flag = banates_unified }
+        }
+
+        allow = {
+			war = no
+			year = 1842
+			ideological_thought = 1
+			BAN = {
+				exists = yes
+				war = no
+				is_vassal = yes
+				vassal_of = HUN
+			}
+			VOJ = {
+				exists = yes
+				war = no
+				is_vassal = yes
+				vassal_of = HUN
+			}
+        }
+
+        effect = {
+            set_global_flag = banates_unified
+			change_tag = GEP
+			GEP = { inherit = BAN }
+			GEP = { inherit = VOJ }
+			HUN = {
+				create_vassal = GEP
+			}
+			prestige = 10
+			government = colonial_company
+            any_pop = {
+                limit = { has_pop_culture = gepid }
+                militancy = -8
+                ideology = {
+                    value = conservative
+                    factor = 0.5
+                }
+                ideology = {
+                    value = reactionary
+                    factor = 0.3
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	gepid_independence = {
+		picture = german_confederation
 		potential = {
-			tag = DAN
-			NOT = { has_country_flag = greater_thervingia }
+			tag = GEP
+			any_neighbor_country = { have_core_in = GEP }
+			NOT = { has_country_flag = gepid_independence }
 		}
 
 		allow = {
 			war = no
 			is_vassal = no
-			is_disarmed = no
-			state_n_government = 1
-			NOT = { has_country_modifier = low_autonomy }
-			NOT = { has_country_modifier = medium_autonomy }
-			NOT = { has_country_modifier = high_autonomy }
-			DAN = {
-				all_core = { owned_by = DAN }
-			}
+			GEP_3621 = { owned_by = THIS }
 		}
 
 		effect = {
-			set_country_flag = greater_thervingia
-			badboy = 5
-			664 = { add_core = DAN }
-			668 = { add_core = DAN }
-			669 = { add_core = DAN }
-			677 = { add_core = DAN }
-			811 = { add_core = DAN }
-			813 = { add_core = DAN }
-			814 = { add_core = DAN }
+			set_country_flag = gepid_independence
+			prestige = 10
+			HUN = {
+				 casus_belli = {
+					target = GEP
+					type = make_puppet
+					months = 6
+				}
+			}
+			GEP = { all_core = { remove_core = HUN } }
+		}
+	}
+
+	abolish_wallachia_moldavia = {
+		picture = create_romania
+		potential = {
+			OR = {
+				tag = ROM
+				tag = URP
+			}
+			OR = {
+				any_owned_province = { is_core = WAL }
+				any_owned_province = { is_core = MOL }
+			}
+			WAL = { exists = no }
+			MOL = { exists = no }
+			exists = yes
 		}
 
-		ai_will_do = {
-			factor = 1
+		allow = {
+			war = no
 		}
+
+		effect = {
+			WAL = { all_core = { remove_core = WAL } }
+			MOL = { all_core = { remove_core = MOL } }
+			MOL_676 = { remove_core = WAL remove_core = MOL }
+		}
+
+		ai_will_do = { factor = 1 }
 	}
 	
-	reichsland_taurien = {
-		picture = retake_crimea
-		potential = {
-			tag = DAN
-			has_country_flag = greater_thervingia
-			NOT = { has_country_flag = taurien_lebensraum }
-		}
+	gepid_south = {
+        picture = map_balkans
+        potential = {
+            tag = GEP
+			is_vassal = no
+            3347 = { NOT = { is_core = GEP } }
+        }
 
-		allow = {
+        allow = {
+            prestige = 20
+            OR = {
+                war_policy = jingoism
+                war_policy = pro_military
+            }
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            badboy = 3
+            810 = { add_core = GEP }
+			3347 = { add_core = GEP }
+			3622 = { add_core = GEP }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	gepid_slavonia = {
+		picture = banatia_map
+        potential = {
+			tag = GEP
+			is_vassal = no
+			793 = { NOT = { is_core = GEP } }
+        }
+
+        allow = {
 			war = no
 			is_vassal = no
-			is_disarmed = no
-			war_policy = jingoism
-			nationalism_n_imperialism = 1
-			DAN = {
-				all_core = { owned_by = DAN }
+			owns = 791
+			prestige = 40
+			state_n_government = 1
+        }
+
+        effect = {
+			badboy = 5
+			779 = { add_core = GEP }
+			793 = { add_core = GEP }
+			3283 = { add_core = GEP }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	gepid_transylvania = {
+		picture = siebenburgen
+        potential = {
+			tag = GEP
+			is_vassal = no
+			NOT = { has_country_flag = reichsland_siebenburgen }
+        }
+
+        allow = {
+			war = no
+			is_vassal = no
+			GEP = {
+				all_core = { owned_by = GEP }
 			}
-		}
+			prestige = 60
+			nationalism_n_imperialism = 1
+        }
 
-		effect = {
-			set_country_flag = taurien_lebensraum
-			badboy = 8
-			RUS_964 = { add_core = DAN }
-			965 = { add_core = DAN }
-			973 = { add_core = DAN }
-			979 = { add_core = DAN }
-			1047 = { add_core = DAN }
-			1049 = { add_core = DAN }
-			3392 = { add_core = DAN }
-		}
+        effect = {
+			set_country_flag = reichsland_siebenburgen
+			badboy = 10
+			AUS_654 = { add_core = GEP }
+			AUS_657 = { add_core = GEP }
+        }
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	gepid_east_hungary = {
+		picture = siebenburgen
+        potential = {
+			tag = GEP
+			is_vassal = no
+			NOT = { has_country_flag = reichsland_ungarn }
+        }
+
+        allow = {
+			war = no
+			is_vassal = no
+			GEP = {
+				all_core = { owned_by = GEP }
+			}
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			prestige = 80
+			invention = manifest_destiny
+			revolution_n_counterrevolution = 1
+        }
+
+        effect = {
+			set_country_flag = reichsland_ungarn
+			badboy = 14
+			950 = { add_core = GEP }
+			3332 = { add_core = GEP }
+			AUS_641 = { add_core = GEP }
+			AUS_623 = { add_core = GEP }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
 	
 }

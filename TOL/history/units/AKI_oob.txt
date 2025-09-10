@@ -130,165 +130,97 @@ leader = {
 }
 
 army = {
-	name = "Akino First Army"
-	location = 73
+	name = "Kontinental Armee"
+	location = 65
+	
 	regiment = {
-		name= "1st Cavalry Regiment"
-		type = dragoon
-		home = 73
-	}
-	regiment = {
-		name= "1st Regiment of Infantry"
-		type = infantry
-		home = 73
-	}
-
-	regiment = {
-		name= "2nd Regiment of Infantry"
-		type = infantry
-		home = 68
-	}
-	regiment = {
-		name= "9th Regiment of Infantry"
-		type = infantry
-		home = 247
-	}
-
-
-}
-
-army = {
-	name = "Akino Second Army"
-	location = 240
-	regiment = {
-		name= "2nd Cavalry Regiment"
-		type = dragoon
-		home = 240
-	}
-
-	regiment = {
-		name= "3rd Cavalry Regiment"
-		type = dragoon
-		home = 236
-	}
-
-	regiment = {
-		name= "3rd Regiment of Infantry"
+		name= "1. Footsoldoten brigade"
 		type = infantry
 		home = 54
 	}
 	regiment = {
-		name= "4th Regiment of Infantry"
+		name= "2. Footsoldoten brigade"
 		type = infantry
 		home = 180
 	}
-
 	regiment = {
-		name= "5th Regiment of Infantry"
+		name= "3. Footsoldoten brigade"
 		type = infantry
 		home = 174
 	}
-
 	regiment = {
-		name= "6th Regiment of Infantry"
+		name= "4. Footsoldoten brigade"
 		type = infantry
 		home = 249
 	}
 	regiment = {
-		name= "1st Regiment of Artillery"
+		name= "1. Dragoner brigade"
+		type = dragoon
+		home = 240
+	}
+	regiment = {
+		name= "2. Dragoner brigade"
+		type = dragoon
+		home = 236
+	}
+	regiment = {
+		name= "1. Kanoonen brigade"
 		type = artillery
 		home = 249
 	}
 	regiment = {
-		name= "2nd Regiment of Artillery"
+		name= "2. Kanoonen brigade"
 		type = artillery
 		home = 56
 	}
 }
 
 navy = {
-	name = "1st Squadron"
-	location = 73
-	ship = {
-		name= "Die Hermann"
-		type = manowar
-	}
-
-	ship = {
-		name= "Der Neu Hamburger Viermaster"
-		type = manowar
-	}
-
-	ship = {
-		name= "Lübeckisches Flankenschiff"
-		type = manowar
-	}
-
-	ship = {
-		name= "Der Neu Lübecker Viermaster"
-		type = frigate
-	}
-
-	ship = {
-		name= "Die Neu-Pommern"
-		type = frigate
-	}
-
-}
-
-
-
-navy = {
-	name = "2nd Squadron"
-	location = 248
-	ship = {
-		name= "Die Karl"
-		type = frigate
-	}
-
-	ship = {
-		name= "Die Alte Jutte"
-		type = frigate
-	}
-
-	ship = {
-		name= "Das Seeland marinen Schiff"
-		type = frigate
-	}
-
-	ship = {
-		name= "Der kleine Robert"
-		type = frigate
-	}
-
-	ship = {
-		name= "Der Neue Brummer"
-		type = clipper_transport
-	}
-
-}
-
-navy = {
-	name = "1st Reserve Squadron"
+	name = "De Groot Liga Kjrichsflott"
 	location = 74
 	ship = {
-		name= "Die Schutzflotte nr1"
+		name= "Adler von Ottoborg"
 		type = manowar
 	}
-
 	ship = {
-		name= "Die Schutzflotte nr 2"
-		type = manowar
+		name= "Nie Hamborg"
+		type = frigate
 	}
-
 	ship = {
-		name= "Die Schutzflotte nr 3"
-		type = manowar
+		name= "Nie Pommern"
+		type = frigate
 	}
-
 	ship = {
-		name= "Die Schutzflotte nr 4"
-		type = clipper_transport
+		name= "Karl"
+		type = frigate
 	}
-
+	ship = {
+		name= "Oolt Jut"
+		type = frigate
+	}
+	ship = {
+		name= "Seeland"
+		type = frigate
+	}
+	ship = {
+		name= "Holsteen"
+		type = frigate
+	}
+	ship = {
+		name= "Ingwer"
+		type = frigate
+	}
+	ship = {
+		name= "1. Transportflottille"
+		type = steam_transport
+	}
+	ship = {
+		name= "2. Transportflottille"
+		type = steam_transport
+	}
+	ship = {
+		name= "3. Transportflottille"
+		type = steam_transport
+	}
 }
+

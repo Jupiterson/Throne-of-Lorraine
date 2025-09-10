@@ -314,7 +314,13 @@
 	farmers = {
 		culture = bulgarian
 		religion = orthodox
-		size = 37430
+		size = 30430
+	}
+	
+	farmers = {
+		culture = gepid
+		religion = catholic
+		size = 1350
 	}
 
 	soldiers = {
@@ -338,7 +344,7 @@
 	farmers = {
 		culture = romanian
 		religion = orthodox
-		size = 1280
+		size = 1780
 	}
 
 	######Jews
@@ -396,13 +402,7 @@
 	farmers = {
 		culture = turkish
 		religion = sunni
-		size = 3250
-	}
-	
-	farmers = {
-		culture = donau_saxon 
-        religion = protestant
-		size = 500
+		size = 3750
 	}
 
 	clergymen = {
@@ -656,13 +656,7 @@
 	artisans = {
 		culture = turkish
 		religion = sunni
-		size = 2100
-	}
-	
-	artisans = {
-		culture = donau_saxon 
-        religion = protestant
-		size = 2000
+		size = 4100
 	}
 
 	soldiers = {
@@ -1375,7 +1369,7 @@
 	farmers = {
 		culture = bulgarian
 		religion = orthodox
-		size = 19625
+		size = 29625
 	}
 
 	aristocrats = {
@@ -1385,13 +1379,13 @@
 	}
 
 	clergymen = {
-		culture = donau_saxon
+		culture = turkish
 		religion = sunni
 		size = 100
 	}
 
 	artisans = {
-		culture = donau_saxon
+		culture = turkish
 		religion = sunni
 		size = 450
 	}
@@ -1401,11 +1395,11 @@
 		religion = sunni
 		size = 1100
 	}
-
+	
 	farmers = {
-		culture = donau_saxon 
-        religion = protestant
-		size = 14100
+		culture = turkish 
+        religion = sunni
+		size = 3300
 	}
 
 	aristocrats = {
@@ -1435,7 +1429,7 @@
 	farmers = {
 		culture = bulgarian               
         religion = orthodox
-		size = 4100
+		size = 8200
 	}
 }
 
@@ -1556,4 +1550,43 @@
 		size = 200
 	}
 	########
+}
+
+#Vratsa
+3622 = {
+	aristocrats = {
+		culture = bulgarian
+		religion = orthodox
+		size = 500
+	}
+
+	clergymen = {
+		culture = bulgarian
+		religion = orthodox
+		size = 200
+	}
+
+	artisans = {
+		culture = bulgarian
+		religion = orthodox
+		size = 1600
+	}
+
+	soldiers = {
+		culture = bulgarian
+		religion = orthodox
+		size = 800
+	}
+	
+	farmers = {
+		culture = turkish
+		religion = sunni
+		size = 2500
+	}
+
+	farmers = {
+		culture = bulgarian
+		religion = orthodox
+		size = 21560
+	}
 }

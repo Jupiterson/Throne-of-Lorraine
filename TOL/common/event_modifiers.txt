@@ -4793,9 +4793,20 @@ country_of_buccaneers = {
 	icon = 6
 }
 
-jesuits_education = {
-	education_efficiency_modifier = 0.25
-	icon = 17
+andine_education = {
+	education_efficiency_modifier = 0.2
+	tax_efficiency = -0.1
+	icon = 3
+}
+
+governorate_capital = {
+	local_RGO_output = 0.4
+	local_RGO_throughput = 0.4
+	goods_demand = 0.1
+	population_growth = 0.001
+	immigrant_attract = 2
+	assimilation_rate = 0.2
+	icon = 1
 }
 
 corpus_iuris_civilis = {
@@ -4900,7 +4911,7 @@ land_of_the_free = {
 	icon = 17
 }
 
-segregation_and_rascism = {
+ingemard_segregation = {
 	global_immigrant_attract = -0.15
 	assimilation_rate = -0.025
 	icon = 20
@@ -5457,7 +5468,7 @@ cop_epektasi_modifier = {
 	icon = 17
 }
 
-## ToL Sgirur ##
+## ToL Mordredland ##
 
 king_james = {
 	ruling_party_support = 0.2
@@ -5500,7 +5511,32 @@ sgirur_trade_revenues = {
 	icon = 9
 }
 
-## Antartida ##
+## Antarctique ##
+
+trade_disruptions = {
+	factory_cost = 0.15
+	RGO_output = -0.2
+	RGO_throughput = -0.2
+	tax_efficiency = -0.1
+	icon = 10
+}
+
+andean_trade = {
+	factory_cost = -0.1
+	RGO_output = 0.1
+	RGO_throughput = 0.1
+	tax_efficiency = 0.1
+	icon = 9
+}
+
+buffed_andean_trade = {
+	factory_cost = -0.15
+	RGO_output = 0.25
+	RGO_throughput = 0.25
+	tax_efficiency = 0.2
+	diplomatic_points_modifier = 0.15
+	icon = 9
+}
 
 antartidan_capital = {
 	local_RGO_output = 0.5
@@ -5549,7 +5585,7 @@ croatian_cultural_unity = {
 pearl_of_mediterranean = {
 	assimilation_rate = 0.5
 	immigrant_attract = 3
-	population_growth = 0.02
+	population_growth = 0.0002
 	local_RGO_output = 0.4
 	local_RGO_throughput = 0.4
 	local_factory_input = 0.3
@@ -5575,51 +5611,6 @@ balkan_rulers = {
 	RGO_output = 0.15
 	prestige = 0.15
 	icon = 5
-}
-
-# Thervingia #
-
-low_autonomy = {
-	tariff_efficiency_modifier = -0.4
-	tax_efficiency = -0.4
-	supply_consumption = -0.6
-    core_pop_consciousness_modifier = 0.02
-    core_pop_militancy_modifier = 0.02
-    cb_generation_speed_modifier = -3
-	research_points = -0.1
-    prestige = -0.02
-    icon = 8
-}
-
-medium_autonomy = {
-	tariff_efficiency_modifier = -0.2
-	tax_efficiency = -0.2
-	supply_consumption = -0.3
-    core_pop_consciousness_modifier = -0.03
-    core_pop_militancy_modifier = -0.03
-    cb_generation_speed_modifier = -3
-    prestige = -0.01
-    icon = 8
-}
-
-high_autonomy = {
-	tariff_efficiency_modifier = 0.05
-	tax_efficiency = 0.05
-	supply_consumption = -0.1
-    core_pop_consciousness_modifier = -0.05
-    core_pop_militancy_modifier = -0.05
-    cb_generation_speed_modifier = -3
-	research_points = 0.1
-    icon = 8
-}
-
-increasing_centralization = {
-	tariff_efficiency_modifier = -0.3
-	tax_efficiency = -0.1
-    core_pop_consciousness_modifier = 0.01
-    core_pop_militancy_modifier = 0.01
-	research_points = -0.05
-    icon = 6
 }
 
 # Ottoman decline debuff #
@@ -5671,7 +5662,7 @@ smyrna_port = {
 }
 
 colonial_farms = {
-	global_population_growth = 0.001
+	global_population_growth = 0.0002
 	mobilisation_economy_impact = -0.25
 	supply_consumption = -0.05
 	mobilisation_size = 0.02

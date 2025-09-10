@@ -2162,21 +2162,21 @@
 	}
 
 	farmers = {
-		culture = native_american_minor
-		religion = protestant
+		culture = cree
+		religion = animist
 		size = 300
 	}
 
 	soldiers = {
-		culture = native_american_minor
+		culture = cree
 		religion = animist
 		size = 150
 	}
 
 	farmers = {
-		culture = native_american_minor
+		culture = cree
 		religion = animist
-		size = 9000
+		size = 6000
 	}
 }
 #Lapwai (XXX/XXX POPS)
@@ -2195,27 +2195,27 @@
 	}
 
 	soldiers = {
-		culture = american_german
-		religion = protestant
+		culture = yankee
+		religion = catholic
 		size = 200
 	}
-
-	farmers = {
-		culture = native_american_minor
+	
+	labourers = {
+		culture = akino_german
 		religion = protestant
-		size = 300
+		size = 1400
+	}
+	
+	labourers = {
+		culture = yankee
+		religion = catholic
+		size = 3680
 	}
 
-	soldiers = {
-		culture = native_american_minor
-		religion = animist
-		size = 150
-	}
-
-	farmers = {
+	labourers = {
 		culture = american_german
 		religion = protestant
-		size = 19000
+		size = 16000
 	}
 }
 #Pocatello (12000/3000 POPS)
@@ -2837,8 +2837,8 @@
 	}
 
 	farmers = {
-		culture = free_german
-		religion = animist
+		culture = free_german 
+		religion = protestant
 		size = 800
 	}
 }
@@ -3140,7 +3140,7 @@
 	}
 	
 	farmers = {
-		culture = veldlewer
+		culture = gek
 		religion = protestant
 		size = 300
 	}
@@ -3674,7 +3674,7 @@
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 200
+		size = 100
 	}
 
 	farmers = {
@@ -3702,9 +3702,9 @@
 	}
 
 	farmers = {
-		culture = veldlewer
-		religion = protestant
-		size = 18000
+		culture = dakota
+		religion = animist
+		size = 2000
 	}
 }
 #Minot (8000/2000 POPS)
@@ -3737,37 +3737,25 @@
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 200
+		size = 100
 	}
 
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 300
+		size = 100
 	}
 
-	soldiers = {
+	farmers = {
 		culture = dakota
 		religion = animist
-		size = 1000
-	}
-
-	farmers = {
-		culture = veldlewer
-		religion = protestant
-		size = 9000
+		size = 1200
 	}
 
 	soldiers = {
 		culture = native_american_minor
 		religion = animist
-		size = 1000
-	}
-
-	farmers = {
-		culture = veldlewer
-		religion = protestant
-		size = 9000
+		size = 400
 	}
 }
 #Dickinson (8000/2000 POPS)
@@ -3868,12 +3856,6 @@
 		size = 1000
 	}
 
-	farmers = {
-		culture = veldlewer
-		religion = protestant
-		size = 9000
-	}
-
 	aristocrats = {
 		culture = native_american_minor
 		religion = animist
@@ -3884,12 +3866,6 @@
 		culture = veldlewer
 		religion = protestant
 		size = 100
-	}
-
-	farmers = {
-		culture = veldlewer
-		religion = protestant
-		size = 9000
 	}
 }
 #Dupree (8000/2000 POPS)
@@ -4337,7 +4313,7 @@
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 1600
+		size = 6600
 	}
 
 	slaves = {
@@ -4414,6 +4390,12 @@
 		religion = animist
 		size = 800
 	}
+	
+	farmers = {
+		culture = veldlewer
+		religion = protestant
+		size = 1000
+	}
 
 	slaves = {
 		culture = native_american_minor
@@ -4436,7 +4418,7 @@
 	farmers = {
 		culture = native_american_minor
 		religion = protestant
-		size = 8000
+		size = 7000
 	}
 }
 #Texas Region (67400)
@@ -4799,20 +4781,20 @@
 	}
 
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 6500
 	}
 
 	artisans = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 10
 	}
 
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 10
 	}
 }
@@ -5252,9 +5234,9 @@
 	}
 
 	farmers = {
-		culture = yankee 
-		religion = catholic
-		size = 1025
+		culture = free_german 
+		religion = protestant
+		size = 2025
 	}
 
 	clergymen = {
@@ -5278,7 +5260,7 @@
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 3525
+		size = 8525
 	}
 
 	clergymen = {
@@ -5328,13 +5310,13 @@
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 525
+		size = 725
 	}
 
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 3050
+		size = 15850
 	}
 
 	clergymen = {
@@ -5410,37 +5392,13 @@
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 650
+		size = 1250
 	}
 
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 28650
-	}
-
-	clergymen = {
-		culture = afro_german
-		religion = protestant
-		size = 50
-	}
-
-	artisans = {
-		culture = afro_german
-		religion = protestant
-		size = 135
-	}
-
-	farmers = {
-		culture = afro_german
-		religion = protestant
-		size = 15
-	}
-
-	slaves = {
-		culture = afro_german
-		religion = protestant
-		size = 3800
+		size = 42050
 	}
 }
 #Hot Springs (16000/4000 POPS)
@@ -5466,7 +5424,7 @@
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 13275
+		size = 18275
 	}
 }
 #Fayetteville (16000/4000 POPS)
@@ -5532,13 +5490,13 @@
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 250
+		size = 5250
 	}
 
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 43650
+		size = 38650
 	}
 
 	clergymen = {
@@ -5672,13 +5630,13 @@
 	clergymen = {
 		culture = veldlewer
 		religion = protestant
-		size = 75
+		size = 125
 	}
 
 	artisans = {
 		culture = veldlewer
 		religion = protestant
-		size = 250
+		size = 320
 	}
 
 	soldiers = {
@@ -5690,7 +5648,7 @@
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 14475
+		size = 19475
 	}
 }
 #Malden (40000/10000 POPS)
@@ -5710,7 +5668,7 @@
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 25
+		size = 725
 	}
 
 	farmers = {
@@ -5734,7 +5692,7 @@
 	artisans = {
 		culture = veldlewer
 		religion = protestant
-		size = 300
+		size = 2800
 	}
 
 	soldiers = {
@@ -5746,7 +5704,7 @@
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 14100
+		size = 25400
 	}
 
 	clergymen = {
@@ -5850,7 +5808,7 @@
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 5025
+		size = 14025
 	}
 
 	clergymen = {
@@ -5906,19 +5864,19 @@
 	artisans = {
 		culture = veldlewer
 		religion = protestant
-		size = 350
+		size = 2350
 	}
 
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 60
+		size = 1060
 	}
 
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 16075
+		size = 32075
 	}
 
 	clergymen = {
@@ -6282,7 +6240,7 @@
 	farmers = {
 		culture = veldlewer
 		religion = animist
-		size = 900
+		size = 400
 	}
 
 	aristocrats = {
@@ -6298,7 +6256,7 @@
 	}
 
 	farmers = {
-		culture = veldlewer
+		culture = native_american_minor
 		religion = animist
 		size = 900
 	}
@@ -6349,9 +6307,9 @@
 	}
 
 	farmers = {
-		culture = veldlewer
+		culture = dakota
 		religion = animist
-		size = 5800
+		size = 1800
 	}
 }
 #Moorhead (8000/2000 POPS)
@@ -6383,14 +6341,14 @@
 
 	soldiers = {
 		culture = veldlewer
-		religion = animist
+		religion = protestant
 		size = 150
 	}
 
 	farmers = {
 		culture = dakota
 		religion = animist
-		size = 900
+		size = 1400
 	}
 
 	soldiers = {
@@ -6399,11 +6357,6 @@
 		size = 150
 	}
 
-	farmers = {
-		culture = veldlewer
-		religion = animist
-		size = 900
-	}
 }
 #Duluth (8000/2000 POPS)
 158 = {
@@ -6448,14 +6401,14 @@
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 10
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
@@ -6466,27 +6419,33 @@
 	}
 
 	artisans = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 2200
 	}
 
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 3250
+		size = 150
 	}
 	
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 21835
+		size = 1835
+	}
+	
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 4000
 	}
 
 	farmers = {
-		culture = american_german
-		religion = catholic
-		size = 23700
+		culture = american_german 
+		religion = protestant
+		size = 8700
 	}
 }
 #Eau Claire (4000/1000 POPS)
@@ -6507,13 +6466,13 @@
 	clergymen = {
 		culture = veldlewer
 		religion = protestant
-		size = 125
+		size = 25
 	}
 
 	artisans = {
 		culture = veldlewer
 		religion = protestant
-		size = 2235
+		size = 35
 	}
 
 	soldiers = {
@@ -6525,19 +6484,19 @@
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 54530
+		size = 180
 	}
 
 	soldiers = {
-		culture = native_american_minor
+		culture = american_german
 		religion = animist
-		size = 150
+		size = 100
 	}
 
 	farmers = {
-		culture = american_german
+		culture = native_american_minor
 		religion = animist
-		size = 900
+		size = 800
 	}
 }
 #Green Bay (8000/2000 POPS)
@@ -6551,7 +6510,7 @@
 	artisans = {
 		culture = veldlewer
 		religion = protestant
-		size = 2150
+		size = 150
 	}
 
 	soldiers = {
@@ -6563,37 +6522,37 @@
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 62910
+		size = 410
 	}
 
 	aristocrats = {
-		culture = native_american_minor
+		culture = american_german
 		religion = animist
 		size = 10
 	}
 
 	clergymen = {
-		culture = native_american_minor
+		culture = american_german
 		religion = animist
 		size = 25
 	}
 
 	artisans = {
-		culture = native_american_minor
+		culture = american_german
 		religion = animist
 		size = 50
 	}
 
 	soldiers = {
-		culture = native_american_minor
+		culture = american_german
 		religion = animist
 		size = 15
 	}
 
 	farmers = {
-		culture = american_german
+		culture = native_american_minor
 		religion = animist
-		size = 900
+		size = 1400
 	}
 }
 #Madison (8000/2000 POPS)
@@ -6611,8 +6570,8 @@
 	}
 
 	artisans = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 2500
 	}
 
@@ -6625,13 +6584,19 @@
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 21835
+		size = 3835
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
-		size = 18835
+		culture = native_american_minor 
+		religion = animist
+		size = 3000
+	}
+	
+	farmers = {
+		culture = american_german 
+		religion = protestant
+		size = 5835
 	}
 }
 #Illinois Region (452000)
@@ -6645,8 +6610,8 @@
 	}
 
 	artisans = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 4150
 	}
 
@@ -6657,8 +6622,8 @@
 	}
 
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 32130
 	}
 
@@ -6677,19 +6642,13 @@
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 450
+		size = 2450
 	}
 
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 30125
-	}
-
-farmers = {
-		culture = yankee 
-		religion = catholic
-		size = 20425
+		size = 28125
 	}
 }
 #Rockford (44000/11000 POPS)
@@ -6709,18 +6668,18 @@ farmers = {
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 125
+		size = 1125
 	}
 
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 20250
+		size = 19250
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 15250
 	}
 }
@@ -6745,8 +6704,8 @@ farmers = {
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 6400
 	}
 
@@ -6773,13 +6732,13 @@ farmers = {
 	soldiers = {
 		culture = veldlewer
 		religion = protestant
-		size = 250
+		size = 2250
 	}
 
 	farmers = {
 		culture = veldlewer
 		religion = protestant
-		size = 43350
+		size = 41350
 	}
 
 	clergymen = {
@@ -6805,36 +6764,30 @@ farmers = {
 		religion = reformed #hugenott
 		size = 250
 	}
-
-farmers = {
-		culture = yankee 
-		religion = catholic
-		size = 10425
-	}
 }
 #Springfield (36000/9000 POPS)
 167 = {
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 15
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	soldiers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 10
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 130
 	}
 
@@ -6869,8 +6822,8 @@ farmers = {
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 34075
 	}
 
@@ -6907,8 +6860,8 @@ farmers = {
 	}
 
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 7925
 	}
 	
@@ -6941,32 +6894,32 @@ farmers = {
 #Indianapolis (276000/69000 POPS)
 169 = {
 	aristocrats = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 5
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 15
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	soldiers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 25
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 100
 	}
 
@@ -7007,8 +6960,8 @@ farmers = {
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 2925
 	}
 
@@ -7025,8 +6978,8 @@ farmers = {
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 17925
 	}
 
@@ -7057,8 +7010,8 @@ farmers = {
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 17925
 	}
 
@@ -7087,32 +7040,32 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 20
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 630
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 10
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
@@ -7143,8 +7096,8 @@ farmers = {
 	}
 	
    farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 4925
 	}
 
@@ -7175,8 +7128,8 @@ farmers = {
 	}
 	
  farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 20925
 	}
 
@@ -7225,64 +7178,59 @@ farmers = {
 		religion = protestant
 		size = 100
 	} 
+	
 	farmers = {
 		culture = american_german
-		religion = catholic
-		size = 8925
+		religion = protestant
+		size = 23925
 	}
 
 	farmers = {
 		culture = akino_german
 		religion = protestant
-		size = 16825
+		size = 8825
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 15
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	soldiers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 10
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 930
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 150
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 15
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 150
-	}
-
-	farmers = {
-		culture = yankee 
-		religion = catholic
-		size = 10425
 	}
 
 	craftsmen = {
@@ -7292,8 +7240,8 @@ farmers = {
 	}
 
 	craftsmen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 1000
 	}
 }
@@ -7324,8 +7272,8 @@ farmers = {
 	}
 
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 5550
 	}
 }
@@ -7356,21 +7304,21 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 15
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 10
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
-		size = 32330
+		culture = akino_german 
+		religion = protestant
+		size = 7330
 	}
 
 }
@@ -7397,7 +7345,13 @@ farmers = {
 	farmers = {
 		culture = akino_german
 		religion = protestant
-		size = 41850
+		size = 2350
+	}
+	
+	farmers = {
+		culture = american_german
+		religion = protestant
+		size = 18550
 	}
 
 	clergymen = {
@@ -7407,26 +7361,26 @@ farmers = {
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	soldiers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 10
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 930
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 150
 	}
 
@@ -7487,12 +7441,6 @@ farmers = {
 		size = 925
 	}
 
-	farmers = {
-		culture = yankee 
-		religion = catholic
-		size = 1025
-	}
-
 	clergymen = {
 		culture = native_american_minor
 		religion = animist
@@ -7528,14 +7476,14 @@ farmers = {
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 150
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 2000
 	}
 
@@ -7560,51 +7508,45 @@ farmers = {
 	farmers = {
 		culture = akino_german
 		religion = protestant
-		size = 31950
+		size = 11950
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 350
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
-		size = 7925
+		culture = american_german 
+		religion = protestant
+		size = 27925
 	}
 
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 15425
+		size = 5425
 	}
 }
 #Columbus (268000/67000 POPS)
 179 = {
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 75
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 200
-	}
-
-	farmers = {
-		culture = akino_german
-		religion = catholic
-		size = 2000
 	}
 
 	bureaucrats = {
@@ -7640,12 +7582,12 @@ farmers = {
 	farmers = {
 		culture = akino_german
 		religion = protestant
-		size = 5775
+		size = 2775
 	}
 
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 17925
 	}
 	
@@ -7668,21 +7610,21 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 75
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 500
 	}
 
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 5425
+		size = 3425
 	}
 }
 #Sandusky (188000/47000 POPS)
@@ -7706,9 +7648,9 @@ farmers = {
 	}
 
 	farmers = {
-		culture = akino_german
+		culture = american_german
 		religion = protestant
-		size = 34525
+		size = 21525
 	}
 
 	clergymen = {
@@ -7726,7 +7668,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 10425
+		size = 5425
 	}
 }
 #Dayton (224000/56000 POPS)
@@ -7782,20 +7724,20 @@ farmers = {
 #Cincinnati (296000/74000 POPS)
 182 = {
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 75
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 200
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 2000
 	}
 
@@ -7824,8 +7766,8 @@ farmers = {
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 7925
 	}
 
@@ -7854,20 +7796,20 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 75
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 500
 	}
 
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 9425
 	}
 
@@ -7910,8 +7852,8 @@ farmers = {
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 21925
 	}
 
@@ -7992,14 +7934,14 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 75
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 250
 	}
 
@@ -8191,12 +8133,6 @@ farmers = {
 		culture = yankee 
 		religion = catholic
 		size = 475
-	}
-
-	farmers = {
-		culture = yankee 
-		religion = catholic
-		size = 23725
 	}
 
 	aristocrats = {
@@ -8456,7 +8392,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 64000
+		size = 24000
 	}
 
 	clergymen = {
@@ -8480,7 +8416,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 23700
+		size = 17700
 		militancy = 9
 	}
 }
@@ -8684,12 +8620,6 @@ farmers = {
 		size = 75
 	}
 
-	farmers = {
-		culture = appalachian 
-		religion = catholic
-		size = 2475
-	}
-
 	aristocrats = {
 		culture = yankee 
 		religion = catholic
@@ -8717,25 +8647,7 @@ farmers = {
 	farmers = {
 		culture = appalachian 
 		religion = catholic
-		size = 33000
-	}
-
-	clergymen = {
-		culture = akino_german
-		religion = protestant
-		size = 75
-	}
-
-	artisans = {
-		culture = akino_german
-		religion = protestant
-		size = 250
-	}
-
-	farmers = {
-		culture = akino_german
-		religion = protestant
-		size = 4675
+		size = 3000
 	}
 
 	clergymen = {
@@ -8759,7 +8671,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 5200
+		size = 1200
 		militancy = 9
 	}
 
@@ -8790,7 +8702,7 @@ farmers = {
 	farmers = {
 		culture = cherokee
 		religion = animist
-		size = 1600
+		size = 11600
 	}
 }
 #Mississippi Region (340000)
@@ -8836,7 +8748,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 19050
+		size = 16050
 	}
 
 	clergymen = {
@@ -8860,7 +8772,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 47650
+		size = 23650
 		militancy = 9
 	}
 }
@@ -8917,7 +8829,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 73700
+		size = 16700
 		militancy = 9
 	}
 }
@@ -8974,7 +8886,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 59800
+		size = 24800
 		militancy = 9
 	}
 }
@@ -9051,7 +8963,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 35950
+		size = 15950
 	}
 
 	clergymen = {
@@ -9075,7 +8987,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 63500
+		size = 33500
 		militancy = 9
 	}
 }
@@ -9171,7 +9083,7 @@ farmers = {
 	farmers = {
 		culture = yankee
 		religion = catholic
-		size = 12525
+		size = 9525
 	}
 
 	aristocrats = {
@@ -9201,7 +9113,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 13525
+		size = 10525
 	}
 
 	clergymen = {
@@ -9225,7 +9137,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 47650
+		size = 27650
 		militancy = 9
 	}
 }
@@ -9296,7 +9208,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 43900
+		size = 13900
 		militancy = 9
 	}
 }
@@ -9360,7 +9272,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 12050
+		size = 10050
 	}
 
 	clergymen = {
@@ -9384,7 +9296,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 46900
+		size = 16900
 		militancy = 9
 	}
 }
@@ -9512,7 +9424,7 @@ farmers = {
 	farmers = {
 		culture = appalachian 
 		religion = catholic
-		size = 64775
+		size = 5775
 	}
 
 	clergymen = {
@@ -9536,7 +9448,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 22400
+		size = 2400
 		militancy = 9
 	}
 
@@ -9567,7 +9479,7 @@ farmers = {
 	farmers = {
 		culture = cherokee
 		religion = animist
-		size = 12775
+		size = 32775
 	}
 }
 #Valdosta (44000/11000 POPS)
@@ -9623,7 +9535,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 26900
+		size = 12900
 		militancy = 9
 	}
 }
@@ -9670,7 +9582,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 24825
+		size = 15825
 	}
 
 	clergymen = {
@@ -9694,7 +9606,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 50475
+		size = 23475
 		militancy = 9
 	}
 }
@@ -9751,7 +9663,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 43650
+		size = 23650
 		militancy = 9
 	}
 }
@@ -9786,7 +9698,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 21225
+		size = 17225
 	}
 
 	artisans = {
@@ -9816,7 +9728,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 65300
+		size = 35300
 		militancy = 9
 	}
 }
@@ -9861,7 +9773,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 34575
+		size = 26575
 	}
 
 	clergymen = {
@@ -9885,7 +9797,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 52450
+		size = 28450
 		militancy = 9
 	}
 }
@@ -9920,7 +9832,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 16400
+		size = 12400
 	}
 
 	clergymen = {
@@ -9944,7 +9856,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 57600
+		size = 17600
 		militancy = 8
 	}
 }
@@ -10157,7 +10069,7 @@ farmers = {
 	slaves = {
 		culture = afro_french 
 		religion = catholic
-		size = 57450
+		size = 37450
 		militancy = 6
 	}
 }
@@ -11360,20 +11272,20 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 5000
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 2950
 	}
 
@@ -11426,11 +11338,17 @@ farmers = {
 		religion = catholic
 		size = 150
 	}
+	
+	farmers = {
+		culture = american_german 
+		religion = protestant
+		size = 12000
+	}
 
 	farmers = {
 		culture = appalachian 
 		religion = catholic
-		size = 24000
+		size = 11000
 	}
 
 	clergymen = {
@@ -11458,20 +11376,20 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 15
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 75
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 1000
 	}
 }
@@ -11620,11 +11538,17 @@ farmers = {
 		religion = catholic
 		size = 400
 	}
+	
+	farmers = {
+		culture = american_german 
+		religion = protestant
+		size = 18000
+	}
 
 	farmers = {
 		culture = appalachian 
 		religion = catholic
-		size = 47300
+		size = 17300
 	}
 
 	clergymen = {
@@ -11652,20 +11576,20 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 60
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 275
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 5525
 	}
 
@@ -11690,8 +11614,8 @@ farmers = {
 #Erie (108000/27000 POPS)
 228 = {
 	clergymen = {
-		culture = yankee 
-		religion = catholic
+		culture = akino_german
+		religion = protestant
 		size = 200
 	}
 
@@ -11702,7 +11626,7 @@ farmers = {
 	}
 
 	soldiers = {
-		culture = yankee 
+		culture = american_german 
 		religion = catholic
 		size = 275
 	}
@@ -11710,19 +11634,19 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 10775
+		size = 2775
 	}
 
 	farmers = {
-		culture = american_german
-		religion = catholic
-		size = 12175
+		culture = american_german 
+		religion = protestant
+		size = 20175
 	}
 	
-farmers = {
+	farmers = {
 		culture = akino_german
 		religion = protestant
-		size = 9175
+		size = 5175
 	} 
 }
 #New Jersey Region (340000)
@@ -12044,14 +11968,14 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 3950
 	}
 
@@ -12194,26 +12118,26 @@ farmers = {
 #Binghamton (352000/88000 POPS)
 235 = {
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 15
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	soldiers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 10
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 130
 	}
 
@@ -12226,7 +12150,7 @@ farmers = {
 	artisans = {
 		culture = akino_german
 		religion = protestant
-		size = 4400
+		size = 3400
 	}
 
 	soldiers = {
@@ -12236,15 +12160,15 @@ farmers = {
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
+		culture = american_german 
+		religion = protestant
 		size = 25175
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = protestant
-		size = 5975
+		culture = yankee
+		religion = catholic
+		size = 6975
 	}
 }
 #Buffalo (244000/61000 POPS)
@@ -12254,66 +12178,55 @@ farmers = {
 		religion = protestant
 		size = 75
 	}
-
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 15
 	}
-
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
-
 	soldiers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 10
 	}
-
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 250
 	}
-
 	craftsmen = {
 		culture = akino_german
 		religion = protestant
 		size = 875
 	}
-
-
 	clergymen = {
 		culture = akino_german
 		religion = protestant
 		size = 450
 	}
-
 	artisans = {
 		culture = akino_german
 		religion = protestant
-		size = 3050
+		size = 2050
 	}
-
 	soldiers = {
 		culture = akino_german
 		religion = protestant
 		size = 625
 	}
-	
+	farmers = {
+		culture = akino_german 
+		religion = protestant
+		size = 13175
+	}
 	farmers = {
 		culture = american_german
-		religion = catholic
-		size = 15175
-	}
-
-	farmers = {
-		culture = akino_german
 		religion = protestant
-		size = 40000
+		size = 22000
 	}
 }
 #Rochester (176000/44000 POPS)
@@ -12337,46 +12250,46 @@ farmers = {
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
-		size = 15175
+		culture = american_german 
+		religion = protestant
+		size = 21175
 	}
 
 	farmers = {
 		culture = akino_german
 		religion = protestant
-		size = 21025
+		size = 14025
 	}
 }
 #Syracuse (304000/76000 POPS)
 238 = {
 	craftsmen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 15
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 15
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	soldiers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 10
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 230
 	}
 
@@ -12405,16 +12318,15 @@ farmers = {
 	}
 	
 	farmers = {
-		culture = american_german
-		religion = catholic
-		size = 15175
+		culture = american_german 
+		religion = protestant
+		size = 25175
 	}
-
 
 	farmers = {
 		culture = akino_german
 		religion = protestant
-		size = 43000
+		size = 13000
 	}
 }
 #Watertown (116000/29000 POPS)
@@ -12438,16 +12350,15 @@ farmers = {
 	}
 	
    farmers = {
-		culture = american_german
-		religion = catholic
-		size = 11175
+		culture = american_german 
+		religion = protestant
+		size = 14175
 	}
-
 
 	farmers = {
 		culture = akino_german
 		religion = protestant
-		size = 57025
+		size = 37025
 	}
 }
 #Plattsburgh (76000/19000 POPS)
@@ -12654,8 +12565,8 @@ farmers = {
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 3000
 	}
 
@@ -12844,20 +12755,20 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 75
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 6000
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 925
 	}
 }
@@ -12930,20 +12841,20 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 1100
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 3950
 	}
 }
@@ -13026,26 +12937,26 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 25
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 200
 	}
 
 	soldiers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 50
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 30000
 	}
 
@@ -13084,8 +12995,8 @@ farmers = {
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 2000
 	}
 
@@ -13156,26 +13067,26 @@ farmers = {
 	}
 
 	clergymen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 500
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 6000
 	}
 
 	artisans = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 3000
 	}
 
 	craftsmen = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 5000
 	}
 }
@@ -13244,8 +13155,8 @@ farmers = {
 	}
 
 	farmers = {
-		culture = akino_german
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 14000
 	}
 }
@@ -13296,100 +13207,70 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 35475
+		size = 30475
 	}
 
 	clergymen = {
 		culture = akino_german
-		religion = catholic
+		religion = protestant
 		size = 40
 	}
 
 	artisans = {
 		culture = akino_german
-		religion = catholic
+		religion = protestant
 		size = 200
 	}
 
 	soldiers = {
 		culture = akino_german
-		religion = catholic
+		religion = protestant
 		size = 75
 	}
 
 	farmers = {
 		culture = akino_german
-		religion = catholic
-		size = 4000
+		religion = protestant
+		size = 9000
 	}
 }
 #ruled by the UK
 #Caribou (36000/9000 POPS)
 250 = {
-	clergymen = {
-		culture = yankee
-		religion = catholic
-		size = 10
-	}
-
 	artisans = {
-		culture = yankee
-		religion = catholic
-		size = 10
+		culture = akino_german 
+		religion = protestant
+		size = 460
 	}
 
 	soldiers = {
-		culture = yankee
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 25
 	}
 
 	farmers = {
-		culture = yankee
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
 		size = 175
 	}
 
 	clergymen = {
-		culture = yankee 
-		religion = catholic
+		culture = akino_german 
+		religion = protestant
+		size = 135
+	}
+
+	soldiers = {
+		culture = akino_german 
+		religion = protestant
 		size = 75
 	}
 
-	artisans = {
-		culture = yankee 
-		religion = catholic
-		size = 250
-	}
-
-	soldiers = {
-		culture = yankee 
-		religion = catholic
-		size = 50
-	}
-
 	farmers = {
-		culture = yankee 
-		religion = catholic
-		size = 4625
-	}
-
-	clergymen = {
-		culture = yankee 
-		religion = catholic
-		size = 50
-	}
-
-	artisans = {
-		culture = yankee 
-		religion = catholic
-		size = 200
-	}
-
-	soldiers = {
-		culture = yankee 
-		religion = catholic
-		size = 25
+		culture = akino_german 
+		religion = protestant
+		size = 6625
 	}
 
 	farmers = {
@@ -13401,7 +13282,7 @@ farmers = {
 	farmers = {
 		culture = yankee 
 		religion = catholic
-		size = 2725
+		size = 1725
 	}
 
 }

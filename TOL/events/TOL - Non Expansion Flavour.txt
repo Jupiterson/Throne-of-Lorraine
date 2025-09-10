@@ -641,9 +641,11 @@ country_event = {
 	option = {
 		name = "What a Glorious day"
 		prestige = 15
-		139 = {
+		139 = { 
 			change_province_name = "Nieuw Hague"
-			}
+			state_scope = { change_region_name = "Nieuw Holland"  }
+		}
+		141 = { change_province_name = "Duiferdam" }
 		add_country_modifier = { name = land_of_the_free duration = 1825 }
 	}
 

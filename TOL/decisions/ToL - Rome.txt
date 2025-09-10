@@ -247,7 +247,7 @@ political_decisions = {
 	}
 
 		
-form_byzantium = {
+	form_byzantium = {
 		picture = byzantine_triumph
 		potential = {
 			is_culture_group = pan_roman
@@ -282,6 +282,17 @@ form_byzantium = {
 			badboy = -10
 			set_country_flag = byzantine_revival
 			change_tag = BYZ
+			BYZ = {
+				all_core = {
+					limit = {
+						OR = {
+							owner = { in_sphere = THIS }
+							owner = { vassal_of = THIS }
+						}
+					}
+					secede_province = THIS
+				}
+			}
 		}
 
 		ai_will_do = { factor = 1 }

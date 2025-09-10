@@ -241,8 +241,8 @@
 	}
 
 	farmers = {
-		culture = donau_saxon
-		religion = protestant
+		culture = romanian
+		religion = orthodox
 		size = 34500
 	}
 }
@@ -255,6 +255,12 @@
 		religion = orthodox
 		size = 850
 	}
+	
+	farmers = {
+        culture = gepid
+        religion = catholic
+        size = 3400
+    }
 
 	artisans = {
 		culture = ruthenyan
@@ -298,6 +304,30 @@
 		religion = catholic
 		size = 15825
 	}
+	
+	clergymen = {
+        culture = gepid
+        religion = catholic
+        size = 50
+    }
+
+    artisans = {
+        culture = gepid
+        religion = catholic
+        size = 100
+    }
+
+    soldiers = {
+        culture = gepid
+        religion = catholic
+        size = 50
+    }
+
+    farmers = {
+        culture = gepid
+        religion = catholic
+        size = 2000
+    }
 
 	aristocrats = {
 		culture = hungarian
@@ -1055,45 +1085,45 @@
 #Proskorov (496000/124000 POPS)
 955 = {
 	aristocrats = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 510
 	}
 
 	officers = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 140
 	}
 
 	bureaucrats = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 160
 	}
 
 	clergymen = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 160
 	}
 
 	artisans = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 2400
 	}
 
 	soldiers = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 1300
 	}
 
 	farmers = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
-		size = 15400
+		size = 10400
 	}
 
 	clergymen = {
@@ -1377,45 +1407,33 @@
 #Kovel (444000/111000 POPS)
 957 = {
 	aristocrats = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 500
 	}
 
 	officers = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 50
 	}
 
 	bureaucrats = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 250
 	}
 
 	clergymen = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 150
 	}
 
 	artisans = {
-		culture = lithuanian
+		culture = polish
 		religion = catholic
 		size = 2100
-	}
-
-	soldiers = {
-		culture = lithuanian
-		religion = catholic
-		size = 100
-	}
-
-	farmers = {
-		culture = lithuanian
-		religion = catholic
-		size = 21110
 	}
 
 	clergymen = {
@@ -4206,38 +4224,44 @@
 #Kramatorsk (240000/60000 POPS)
 974 = {
 	aristocrats = {
-		culture = ruthenyan
-		religion = orthodox
+		culture = tatar
+		religion = sunni
 		size = 1250
 	}
 
 	clergymen = {
-		culture = ruthenyan
-		religion = orthodox
+		culture = tatar
+		religion = sunni
 		size = 550
 	}
 
 	artisans = {
-		culture = ruthenyan
-		religion = orthodox
+		culture = tatar
+		religion = sunni
 		size = 2250
 	}
 
 	soldiers = {
-		culture = ruthenyan
-		religion = orthodox
+		culture = tatar
+		religion = sunni
 		size = 575
 	}
 
 	farmers = {
-		culture = ruthenyan
-		religion = orthodox
-		size = 55875
+		culture = tatar
+		religion = sunni
+		size = 51325
 	}
-
+	
 	farmers = {
 		culture = ruthenyan
 		religion = orthodox
+		size = 4550
+	}
+
+	farmers = {
+		culture = tatar
+		religion = sunni
 		size = 5000
 	}
 

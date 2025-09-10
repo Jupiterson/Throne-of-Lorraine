@@ -97,6 +97,30 @@
 		religion = catholic
 		size = 5225
 	}
+
+    clergymen = {
+        culture = gepid
+        religion = catholic
+        size = 50
+    }
+
+    artisans = {
+        culture = gepid
+        religion = catholic
+        size = 175
+    }
+
+    soldiers = {
+        culture = gepid
+        religion = catholic
+        size = 50
+    }
+
+    farmers = {
+        culture = gepid
+        religion = catholic
+        size = 2763
+    }
 }
 #Pancevo (268000/67000 POPS) #part of Serbia today
 792 = {
@@ -125,9 +149,15 @@
 	}
 	
 	farmers = {
-		culture = bulgarian
-		religion = orthodox
-		size = 5000
+		culture = gepid 
+        religion = catholic
+		size = 2000
+	}
+	
+	farmers = {
+		culture = gepid
+		religion = catholic
+		size = 4200
 	}
 	
 	farmers = {
@@ -143,8 +173,8 @@
 	}
 
 	serfs = {
-		culture = bulgarian
-		religion = catholic
+		culture = gepid 
+        religion = catholic
 		size = 1000
 	}
 }
@@ -228,27 +258,33 @@
 	}
 
 	clergymen = {
-		culture = bulgarian
-		religion = orthodox
+		culture = gepid 
+        religion = catholic
 		size = 100
 	}
 
 	artisans = {
-		culture = bulgarian
-		religion = orthodox
+		culture = gepid 
+        religion = catholic
 		size = 500
 	}
 
 	soldiers = {
-		culture = bulgarian
-		religion = orthodox
+		culture = gepid 
+        religion = catholic
 		size = 100
 	}
 
 	farmers = {
-		culture = bulgarian
-		religion = orthodox
-		size = 10300
+		culture = gepid 
+        religion = catholic
+		size = 8300
+	}
+	
+	farmers = {
+		culture = gepid
+		religion = catholic
+		size = 3500
 	}
 }
 #Novi Sad (384000/96000 POPS) #part of Serbia today
@@ -288,6 +324,12 @@
 		religion = catholic
 		size = 4000
 	}
+	
+	farmers = {
+        culture = gepid
+        religion = catholic
+        size = 11000
+    }
 
 	serfs = {
 		culture = bulgarian
@@ -431,6 +473,30 @@
 		size = 9375
 	}
 
+    clergymen = {
+        culture = gepid
+        religion = catholic
+        size = 225
+    }
+
+    artisans = {
+        culture = gepid
+        religion = catholic
+        size = 235
+    }
+
+    soldiers = {
+        culture = gepid
+        religion = catholic
+        size = 250
+    }
+
+    farmers = {
+        culture = gepid
+        religion = catholic
+        size = 8585
+    }
+
 	aristocrats = {
 		culture = hungarian
 		religion = catholic
@@ -536,7 +602,19 @@
 	soldiers = {
 		culture = serb
 		religion = orthodox
-		size = 2025
+		size = 1825
+	}
+	
+	soldiers = {
+		culture = gepid
+		religion = catholic
+		size = 750
+	}
+	
+	farmers = {
+		culture = gepid
+		religion = catholic
+		size = 11250
 	}
 
 	farmers = {
@@ -577,7 +655,7 @@
 	}
 	########
 }
-#Bor (220400/55000 POPS)
+#Smederevo (220400/55000 POPS)
 795 = {
 	aristocrats = {
 		culture = serb
@@ -606,7 +684,7 @@
 	farmers = {
 		culture = serb
 		religion = orthodox
-		size = 25360
+		size = 35360
 	}
 
 	clergymen = {
@@ -626,14 +704,26 @@
 		religion = orthodox
 		size = 400
 	}
-
+	
 	farmers = {
 		culture = romanian
 		religion = orthodox
-		size = 26000
+		size = 14000
+	}
+	
+	soldiers = {
+		culture = gepid 
+        religion = catholic
+		size = 630
+	}
+	
+	farmers = {
+		culture = gepid 
+        religion = catholic
+		size = 7230
 	}
 }
-#Bor (220400/55000 POPS)
+#Jagodina
 3347 = {
 	aristocrats = {
 		culture = serb
@@ -658,29 +748,17 @@
 		religion = orthodox
 		size = 1600
 	}
+	
+	farmers = {
+		culture = romanian
+		religion = orthodox
+		size = 8000
+	}
 
 	farmers = {
 		culture = serb
 		religion = orthodox
-		size = 11160
-	}
-
-	clergymen = {
-		culture = romanian
-		religion = orthodox
-		size = 100
-	}
-
-	artisans = {
-		culture = romanian
-		religion = orthodox
-		size = 500
-	}
-
-	soldiers = {
-		culture = romanian
-		religion = orthodox
-		size = 400
+		size = 31160
 	}
 }
 #Kragujevac (188000/47000 POPS)
@@ -747,6 +825,7 @@
 		size = 23500
 	}
 }
+#Sabac
 3374 = {
 	aristocrats = {
 		culture = serb
@@ -770,6 +849,18 @@
 		culture = serb
 		religion = orthodox
 		size = 500
+	}
+	
+	soldiers = {
+		culture = gepid
+		religion = catholic
+		size = 750
+	}
+	
+	farmers = {
+		culture = gepid
+		religion = catholic
+		size = 4100
 	}
 
 	farmers = {
@@ -1466,4 +1557,135 @@
 		size = 3450
 	}
 
+}
+
+#Kladovo
+3619 = {
+	aristocrats = {
+		culture = gepid
+		religion = catholic
+		size = 500
+	}
+
+	clergymen = {
+		culture = gepid
+		religion = catholic
+		size = 200
+	}
+
+	artisans = {
+		culture = gepid
+		religion = catholic
+		size = 2300
+	}
+
+	soldiers = {
+		culture = gepid
+		religion = catholic
+		size = 1200
+	}
+	
+	farmers = {
+		culture = gepid
+		religion = catholic
+		size = 7160
+	}
+	
+	farmers = {
+		culture = romanian
+		religion = orthodox
+		size = 15160
+	}
+	
+	soldiers = {
+		culture = romanian
+		religion = orthodox
+		size = 450
+	}
+	
+	soldiers = {
+		culture = serb
+		religion = orthodox
+		size = 300
+	}
+
+	farmers = {
+		culture = serb
+		religion = orthodox
+		size = 3000
+	}
+
+	clergymen = {
+		culture = serb
+		religion = orthodox
+		size = 100
+	}
+
+	artisans = {
+		culture = serb
+		religion = orthodox
+		size = 500
+	}
+
+	soldiers = {
+		culture = serb
+		religion = orthodox
+		size = 400
+	}
+}
+
+3623 = {
+	aristocrats = {
+		culture = gepid
+		religion = catholic
+		size = 150
+	}
+
+	clergymen = {
+		culture = serb
+		religion = orthodox
+		size = 50
+	}
+	
+	clergymen = {
+		culture = gepid
+		religion = catholic
+		size = 150
+	}
+
+	artisans = {
+		culture = serb
+		religion = orthodox
+		size = 400
+	}
+	
+	artisans = {
+		culture = gepid
+		religion = catholic
+		size = 700
+	}
+
+	soldiers = {
+		culture = serb
+		religion = orthodox
+		size = 750
+	}
+	
+	soldiers = {
+		culture = gepid
+		religion = catholic
+		size = 1100
+	}
+	
+	farmers = {
+		culture = gepid
+		religion = catholic
+		size = 12000
+	}
+
+	farmers = {
+		culture = serb
+		religion = orthodox
+		size = 15000
+	}
 }

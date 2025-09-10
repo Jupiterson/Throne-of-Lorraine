@@ -428,20 +428,17 @@ embraced_south_in_hanse = {
 			prestige = 100
 			nationalism_n_imperialism = 1
 			is_greater_power = yes
-			OR = {
-				UBD = {
-					OR = {
-						substate_of = THIS
-						vassal_of = THIS
-					}
+			UBD = {
+				OR = {
+					substate_of = THIS
+					vassal_of = THIS
 				}
 			}
 		}
 
 		effect = {
-			prestige = 30
-			badboy = 20
-
+			prestige = 20
+			badboy = 10
 			any_country = {
 				limit = {
 					tag = UBD
@@ -453,17 +450,15 @@ embraced_south_in_hanse = {
 			add_accepted_culture = volga_german
 			add_accepted_culture = latvian
 			add_accepted_culture = estonian
-			change_tag = HNS
 			set_country_flag = big_hanse
 		}
 	}
-	
 	
 	unite_the_coast_ubd = {
 		picture = annex_united_baltic_duchy
 		potential = {
 			tag = UBD			  
-			NOT = { has_country_flag = big_baltic}
+			NOT = { has_country_flag = big_baltic }
 		}
 
 		allow = {
@@ -482,8 +477,8 @@ embraced_south_in_hanse = {
 		}
 
 		effect = {
-			prestige = 30
-			badboy = 20
+			prestige = 20
+			badboy = 10
 			any_country = {
 				limit = {
 					tag = HNS

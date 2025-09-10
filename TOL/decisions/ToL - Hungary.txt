@@ -1,4 +1,44 @@
 political_decisions = {
+
+	integrate_gepidia = {
+		picture = banatia_map
+		potential = {
+			tag = HUN
+			has_global_flag = banates_unified
+			NOT = { has_country_flag = end_the_banate }
+		}
+		allow = {
+			year = 1846
+			GEP = {
+				exists = yes
+				war = no
+				vassal_of = HUN
+			}
+		}
+		effect = {
+			set_country_flag = end_the_banate
+			badboy = 3
+			HUN = {
+				release_vassal = GEP
+			}
+			casus_belli = {
+				target = GEP
+				type = conquest_any
+				months = 60
+			}
+			war = {
+				target = GEP
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = acquire_all_cores  }
+				call_ally = no
+			}
+			GEP = { country_event = 25000017 }
+		}
+		ai_will_do = {
+			factor = 1 
+		}
+	}
+	
 	down_the_danube = {
 		picture = form_the_rcmp
 		potential = {

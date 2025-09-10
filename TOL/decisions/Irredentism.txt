@@ -600,7 +600,9 @@ political_decisions = {
 		effect = {
 			badboy = 6
 			set_country_flag = claimed_greater_bosnia
-			MON_2582 = { add_core = BOS }
+			2569 = { add_core = BOS }
+			2577 = { add_core = BOS }
+			2582 = { add_core = BOS }
 			AUS_780 = { add_core = BOS }
 		}
 		ai_will_do = { factor = 1 }
@@ -692,9 +694,8 @@ political_decisions = {
 				33 = { badboy = 4 }
 				33 = { badboy = 5 }
 			}
-			RUS_968 = {
-				add_core = ROM
-			}
+			RUS_968 = { add_core = ROM }
+			968 = { add_core = ROM }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -744,7 +745,25 @@ political_decisions = {
 			795 = {
 				add_core = ROM
 			}
+			810 = {
+				add_core = ROM
+			}
+			950 = {
+				add_core = ROM
+			}
+			953 = {
+				add_core = ROM
+			}
+			3332 = {
+				add_core = ROM
+			}
 			3347 = {
+				add_core = ROM
+			}
+			3619 = {
+				add_core = ROM
+			}
+			3622 = {
 				add_core = ROM
 			}
 		}

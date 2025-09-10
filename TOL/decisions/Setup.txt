@@ -1102,8 +1102,8 @@ political_decisions = {
 			1807 = { change_province_name = "Menaka" }
 			1352 = { change_province_name = "Chumphon" }
 			1722 = { change_province_name = "In Zghmir" }
-			867 = { change_province_name = "Fethiye" }
 			830 = { change_province_name = "Orestias" }
+			3407 = { change_province_name = "Artaani" }
 			860 = { any_pop = { literacy = 0.05 } }
 			860 = { any_pop = { limit = { has_pop_culture = turkish } literacy = 0.1 } }
 			any_pop = {
@@ -1211,19 +1211,18 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	DAN_1836_setup = {
+	BAN_1836_setup = {
 		picture = constantinople
 		potential = {
-			tag = DAN
+			tag = BAN
 			always = no
 		}
 
 		allow = {
-			tag = DAN
+			tag = BAN
 		}
 
 		effect = {
-			add_country_modifier = { name = medium_autonomy duration = -1 }
 			small_arms = 20
 			ammunition = 20
 			canned_food = 20
@@ -1231,8 +1230,33 @@ political_decisions = {
 			liquor = 20
 			treasury = 15000
 			any_pop = {
-				limit = { has_pop_culture = donau_saxon }
+				limit = { has_pop_culture = gepid }
 				literacy = 0.4
+			}
+		}
+	}
+	
+	VOJ_1836_setup = {
+		picture = constantinople
+		potential = {
+			tag = VOJ
+			always = no
+		}
+
+		allow = {
+			tag = VOJ
+		}
+
+		effect = {
+			small_arms = 20
+			ammunition = 20
+			canned_food = 20
+			wine = 20
+			liquor = 20
+			treasury = 12000
+			any_pop = {
+				limit = { has_pop_culture = gepid }
+				literacy = 0.3
 			}
 		}
 	}
@@ -2331,6 +2355,10 @@ political_decisions = {
 					name = america_new_world
 					duration = 5475
 				}
+				add_country_modifier = {
+					name = ingemard_segregation
+					duration = -1
+				}
 			}
 			HAD = {
 				add_country_modifier = {
@@ -2355,6 +2383,10 @@ political_decisions = {
 					name = america_new_world
 					duration = 5475
 				}
+				add_country_modifier = {
+					name = trade_disruptions
+					duration = -1
+				}
 			}
 			FNC = {
 				add_country_modifier = {
@@ -2362,6 +2394,10 @@ political_decisions = {
 					duration = 5475
 				}
 			}
+			OCD = { country_event = 900000 days = 0 }
+			FNC = { country_event = 900000 days = 0 }
+			SGR = { country_event = 900003 days = 0 }
+			JES = { country_event = 900016 days = 0 }
 		}
 	}
 

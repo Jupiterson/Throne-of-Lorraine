@@ -10,6 +10,14 @@ LUX = {
 	value = 25
 	level = 5		
 }
+WLL = {
+	value = 25
+	level = 5		
+}
+NAS = {
+	value = 25
+	level = 5		
+}
 LIP = {
 	value = 25
 	level = 5		
@@ -224,18 +232,6 @@ army = {
 		type = infantry
 		home = 390 #Antwerp
 	}
-
-	regiment = {
-		name= "2e Infanterie Brigade"
-		type = infantry
-		home = 388 #Bruges
-	}
-
-	regiment = {
-		name= "3e Infanterie Brigade"
-		type = infantry
-		home = 389 #Ghent
-	}
 }
 
 
@@ -317,7 +313,7 @@ navy = {
 
 navy = {
 	name = "Koninklijke NI Marine"
-	location = 1413 #Batavia
+	location = 1887 #Batavia
 	ship = {
 		name= "Admiraal de Ruyter"
 		type = manowar

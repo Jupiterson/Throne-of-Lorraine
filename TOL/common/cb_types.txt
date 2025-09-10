@@ -61,7 +61,6 @@ peace_order = {
 	dismantle_cb
 	dismantle_cb_add
 	dismantle_cb_add_new
-	donau_war
 	colonial_competition
 	acquire_all_cores
 	acquire_core_state
@@ -73,7 +72,7 @@ peace_order = {
 	unification_casus_belli
 	xhosa_unification
 	civil_war
-	akino_cb
+	gulf_war
 	jihad_cb
 	unification_annex_casus_belli
 	claim_colonial_region_full
@@ -365,128 +364,6 @@ dismantle_cb_add_new = {
 	on_po_accepted = {
 		set_country_flag = dismantling_treaty
 	}
-}
-
-donau_war = {
-    sprite_index = 20
-    is_triggered_only = yes
-    months = 12
-
-    badboy_factor = 0
-    prestige_factor = 1
-    peace_cost_factor = 0.75
-    penalty_factor = 0
-    constructing_cb = no
-    crisis = no
-
-    break_truce_prestige_factor = 0
-    break_truce_infamy_factor = 0
-    break_truce_militancy_factor = 0
-    truce_months = 48
-
-    good_relation_prestige_factor = 0
-    good_relation_infamy_factor = 0
-    good_relation_militancy_factor = 0
-
-    war_name = DONAU_WAR
-
-    can_use = {
-    }
-
-    on_add = {
-    }
-	
-	po_remove_prestige = yes
-	po_reparations = yes
-
-    on_po_accepted = {
-		random_owned = {
-			limit = {
-				owner = {
-					exists = yes
-					tag = DAN
-				}
-			}
-			owner = {
-				set_global_flag = DAN_wiped_out
-				WAL = {
-					prestige = 15
-					any_pop = {
-						limit = {
-							OR = {
-								is_primary_culture = yes
-								is_accepted_culture = yes
-							}
-						}
-						militancy = -6
-						consciousness = -6
-					}
-				}
-				678 = { add_core = WAL }
-				818 = { add_core = WAL }
-				DAN = {
-					any_owned = {
-						limit = {
-							is_core = WAL
-						}
-						secede_province = WAL
-						remove_core = DAN
-					}
-				}
-				818 = { remove_core = DAN }
-				WAL = { all_core = { remove_core = TUR } }
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					exists = yes
-					tag = WAL
-				}
-			}
-			owner = {
-				WAL = {
-					prestige = -15
-					any_pop = {
-						limit = {
-							OR = {
-								is_primary_culture = yes
-								is_accepted_culture = yes
-							}
-						}
-						militancy = 6
-						consciousness = 6
-					}
-				}
-				DAN = {
-					prestige = 15
-					any_pop = {
-						limit = {
-							OR = {
-								is_primary_culture = yes
-								is_accepted_culture = yes
-							}
-						}
-						militancy = -6
-						consciousness = -6
-					}
-				}
-				668 = { add_core = DAN }
-				669 = { add_core = DAN }
-				set_global_flag = DAN_border_expansion
-				WAL = {
-					any_owned = {
-						limit = {
-							is_core = DAN
-						}
-						secede_province = DAN
-					}
-				}
-				TUR_674 = { remove_core = WAL }
-			}
-		}
-		add_country_modifier = { name = recently_lost_war duration = 1825 }
-    }
 }
 
 # Great War Penalty
@@ -13588,40 +13465,340 @@ jihad_cb = {
     }
 }
 
+### De Golfoorlog ###
 
-# AKI - NPU
-akino_cb = {
-	sprite_index = 10
+gulf_war = {
+    sprite_index = 20
 	is_triggered_only = yes
-	months = 1
+	months = 12
 	constructing_cb = no
 	crisis = no
-	peace_cost_factor = 85
 
-	can_use = {
-		NOT = { is_our_vassal = THIS }
-		always = no
-	}
+	badboy_factor = 0
+	prestige_factor = 0
+	peace_cost_factor = 35
+	penalty_factor = 0
+	
+	break_truce_prestige_factor = 0
+	break_truce_infamy_factor = 0
+	break_truce_militancy_factor = 0
+	truce_months = 48
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
 
-	po_disarmament = yes
+    war_name = GULF_WAR
 
-	tws_battle_factor = 2.0
+    can_use = {
+    }
 
-	war_name = WAR_AKINO_NAME
+    on_add = {
+    }
+	
+	po_remove_prestige = yes
+	po_reparations = yes
 
-	on_add = {
-		move_issue_percentage = {
-			from = jingoism
-			to = pro_military
-			value = 0.25
+    on_po_accepted = {
+		random_owned = {
+			limit = {
+				owner = {
+					exists = yes
+					tag = VEL
+				}
+			}
+			owner = {
+				VEL = {
+					any_owned = {
+						limit = {
+							is_core = TEX
+						}
+						secede_province = TEX
+					}
+				}
+				TEX = {
+					any_core = {
+						limit = {
+							is_core = VEL
+						}
+						remove_core = VEL
+					}
+				}
+				TEX = { prestige = 25 }
+				set_global_flag = TEX_Border_Victory
+			}
+			103 = { secede_province = TEX }
+			105 = { secede_province = TEX }
+			135 = { secede_province = TEX }
 		}
-	}
-
-	on_po_accepted = {
-		country_event = 100188	
-	}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = yes
+					tag = TEX
+				}
+			}
+			owner = {
+				TEX = {
+					any_owned = {
+						limit = {
+							is_core = VEL
+						}
+						secede_province = VEL
+					}
+				}
+				VEL = {
+					any_core = {
+						limit = {
+							is_core = TEX
+						}
+						remove_core = TEX
+					}
+				}
+				VEL = { prestige = 10 }
+				set_global_flag = VEL_Border_Victory
+			}
+			103 = { secede_province = VEL }
+			105 = { secede_province = VEL }
+			135 = { secede_province = VEL }
+		}
+		add_country_modifier = { name = recently_lost_war duration = 1825 }
+    }
 }
 
+### War of the Lakes ###
+
+lake_war = {
+    sprite_index = 20
+	is_triggered_only = yes
+	months = 12
+	constructing_cb = no
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 0
+	peace_cost_factor = 35
+	penalty_factor = 0
+	
+	break_truce_prestige_factor = 0
+	break_truce_infamy_factor = 0
+	break_truce_militancy_factor = 0
+	truce_months = 48
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+
+    war_name = LAKE_WAR
+
+    can_use = {
+    }
+
+    on_add = {
+    }
+	
+	po_remove_prestige = yes
+	po_reparations = yes
+
+    on_po_accepted = {
+		random_owned = {
+			limit = {
+				owner = {
+					exists = yes
+					tag = VEL
+				}
+			}
+			owner = {
+				VEL = {
+					any_owned = {
+						limit = {
+							province_id = 159
+							province_id = 162
+							province_id = 163
+							province_id = 164
+							province_id = 166
+						}
+						secede_province = AKI
+						add_core = AKI
+					}
+				}
+				AKI = {
+					any_core = {
+						limit = {
+							is_core = VEL
+						}
+						remove_core = VEL
+					}
+				}
+				set_global_flag = lake_war_over
+				set_global_flag = aki_won_lakes
+			}
+			###SECEDING UNCOLONIZED AREAS###
+			50 = { secede_province = AKI add_core = AKI }
+			155 = { secede_province = AKI add_core = AKI }
+			158 = { secede_province = AKI add_core = AKI }
+			160 = { secede_province = AKI add_core = AKI }
+			161 = { secede_province = AKI add_core = AKI }
+			177 = { secede_province = AKI add_core = AKI }
+			###ADDING UNCOLONIZED CORES###
+			118 = { add_core = AKI }
+			157 = { add_core = AKI }
+			CAN_50 = { add_core = AKI }
+			ENG_36 = { add_core = AKI }
+			CAN_35 = { add_core = AKI }
+			CAN_26 = { add_core = AKI }
+			ENG_30 = { add_core = AKI }
+			ENG_22 = { add_core = AKI }
+			ENG_9 = { add_core = AKI }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = yes
+					tag = AKI
+				}
+			}
+			owner = {
+				set_global_flag = lake_war_over
+			}
+			###SECEDING UNCOLONIZED AREAS###
+			36 = { secede_province = VEL add_core = VEL }
+			42 = { secede_province = VEL add_core = VEL }
+			49 = { secede_province = VEL add_core = VEL }
+			50 = { secede_province = VEL add_core = VEL }
+			118 = { secede_province = VEL add_core = VEL }
+			155 = { secede_province = VEL add_core = VEL }
+			157 = { secede_province = VEL add_core = VEL }
+			158 = { secede_province = VEL add_core = VEL }
+			160 = { secede_province = VEL add_core = VEL }
+			161 = { secede_province = VEL add_core = VEL }
+			177 = { secede_province = VEL add_core = VEL }
+			###ADDING UNCOLONIZED CORES###
+			CAN_50 = { add_core = VEL }
+			ENG_36 = { add_core = VEL }
+			CAN_35 = { add_core = VEL }
+			CAN_26 = { add_core = VEL }
+			ENG_30 = { add_core = VEL }
+			ENG_22 = { add_core = VEL }
+			ENG_9 = { add_core = VEL }
+		}
+		add_country_modifier = { name = recently_lost_war duration = 1825 }
+    }
+}
+
+### Andean War ###
+
+andean_war = {
+    sprite_index = 20
+	is_triggered_only = yes
+	months = 12
+	constructing_cb = no
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 0
+	peace_cost_factor = 35
+	penalty_factor = 0
+	
+	break_truce_prestige_factor = 0
+	break_truce_infamy_factor = 0
+	break_truce_militancy_factor = 0
+	truce_months = 48
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+
+    war_name = ANDEAN_WAR
+
+    can_use = {
+    }
+
+    on_add = {
+    }
+	
+	po_remove_prestige = yes
+	po_reparations = yes
+
+    on_po_accepted = {
+		random_owned = {
+			limit = {
+				owner = {
+					exists = yes
+					tag = PEU
+				}
+			}
+			owner = {
+				PEU = {
+					any_owned = {
+						limit = {
+							province_id = 2323
+							province_id = 2324
+							province_id = 2325
+							province_id = 2326
+							province_id = 2385
+							province_id = 2389
+						}
+						secede_province = OCD
+						add_core = OCD
+					}
+				}
+				OCD = {
+					any_core = {
+						limit = {
+							is_core = PEU
+						}
+						remove_core = PEU
+					}
+				}
+				COC = {
+					annex_to = OCD
+				}
+				set_global_flag = OCD_victory_andes
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = yes
+					tag = OCD
+				}
+			}
+			owner = {
+				OCD = {
+					any_owned = {
+						limit = {
+							province_id = 2380
+							province_id = 2382
+							province_id = 3618
+						}
+						secede_province = COC
+						add_core = COC
+					}
+				}
+				COC = {
+					any_core = {
+						limit = {
+							is_core = OCD
+						}
+						remove_core = OCD
+					}
+				}
+				PEU = {
+					create_vassal = COC
+				}
+				COC = {
+					all_core = {
+						add_core = PEU
+					}
+				}
+				set_global_flag = PEU_victory_andes
+				set_global_flag = andes_resolved
+			}
+		}
+		add_country_modifier = { name = recently_lost_war duration = 1825 }
+    }
+}
 
 # Convert Nation CB
 convert_cb = {

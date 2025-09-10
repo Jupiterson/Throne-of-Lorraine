@@ -230,66 +230,48 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-### SGIRUR DECISIONS ###
-
-	SGR_SS = {
-        alert = no
-
-        potential = { 
-			ai = no
-			tag = SGR
-		}
-
-        allow = { year = 1836 }
-
-        effect = { country_event = 900003 }
-        ai_will_do = { factor = 0 }
-    }
+### MORDREDLAND DECISIONS ###
 
 	dunchaluim_renovation = { 
-	
 		picture = new_dunchaluim
-	
 		potential = { 
-		NOT = { has_global_flag = dunchaluim_renovation }
-		OR = { 
-		tag = SGR
-			}
-		owns = 2436 
+			tag = SGR
+			owns = 2436 
+			NOT = { has_global_flag = dunchaluim_renovation }
 		}
 		
 		allow = {
-		money = 100000
-		iron_railroad = 1 
-		business_banks = 1 
-		romanticism = 1 
+			money = 100000
+			iron_railroad = 1 
+			business_banks = 1 
+			romanticism = 1 
 		}
 		
 		effect = {
-		money = -100000		
-		prestige = 15 
-		set_global_flag = dunchaluim_renovation
-		2436 = { add_province_modifier = { name = recently_built_city duration = 1825 } life_rating = 5 }
+			money = -100000		
+			prestige = 15 
+			set_global_flag = dunchaluim_renovation
+			2436 = { add_province_modifier = { name = recently_built_city duration = 1825 } life_rating = 5 }
 		}
 	}
 	
 	scottish_trade_issue = {
 		picture = scotland_trade
 		potential = {
-		has_country_modifier = scottish_trade_monopoly	
-		civilized = yes
-		NOT = { has_global_flag = scottish_trade_negotiations }
+			has_country_modifier = scottish_trade_monopoly	
+			civilized = yes
+			NOT = { has_global_flag = scottish_trade_negotiations }
 		}
     
 		allow = {
-		state_n_government = 1
-		market_structure = 1
-		money = 500000
+			state_n_government = 1
+			market_structure = 1
+			money = 500000
 		}
     
 		effect = {
-		country_event = 900007
-		set_global_flag = scottish_trade_negotiations
+			country_event = 900007
+			set_global_flag = scottish_trade_negotiations
         }
 		ai_will_do = {
             factor = 1
@@ -328,28 +310,22 @@ political_decisions = {
 	}
 	
 	begin_consolidationSGR = {
-	
-		picture = form_the_rcmp
-	
+		picture = conquest_of_the_desert
 		potential = {
 			tag = SGR
-			OR = {
-				2438 = { empty = yes }
-				2444 = { empty = yes }
-				2442 = { empty = yes }
-				2446 = { empty = yes }
-				2425 = { empty = yes }
-				2427 = { empty = yes }
-			}
+			owns = 3446
+			owns = 3608
 			NOT = { has_country_flag = began_consolidationSGR }
 		}
+		
 		allow = {
 			war = no
 			OR = {
-				state_n_government = 1
-				year = 1850
+				ideological_thought = 1
+				year = 1845
 			}
 		}
+		
 		effect = {
 			set_country_flag = began_consolidationSGR
 			prestige = 5
@@ -366,20 +342,6 @@ political_decisions = {
 				}
 				2444 = { secede_province = THIS }
 				2444 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			random_owned = {
-				limit = {
-					2442 = { empty = yes }
-				}
-				2442 = { secede_province = THIS }
-				2442 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			random_owned = {
-				limit = {
-					2446 = { empty = yes }
-				}
-				2446 = { secede_province = THIS }
-				2446 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			}
 			random_owned = {
 				limit = {
@@ -402,96 +364,122 @@ political_decisions = {
 	}
 	
 	finnish_consolidationSGR = {
-	
-		picture = form_the_rcmp
-	
+		picture = conquest_of_the_south
 		potential = {
 			tag = SGR
+			owns = 2447
+			owns = 2450
 			has_country_flag = began_consolidationSGR
-			OR = {
-				2445 = { empty = yes }
-				2456 = { empty = yes }
-				2452 = { empty = yes }
-				2306 = { empty = yes }
-				2453 = { empty = yes }
-				2460 = { empty = yes }
-				2458 = { empty = yes }
-			}
 			NOT = { has_country_flag = finnished_consolidationSGR }
 		}
 		allow = {
 			war = no
 			OR = {
-				nationalism_n_imperialism = 1
-				year = 1855
+				state_n_government = 1
+				year = 1850
 			}
 		}
 		effect = {
 			set_country_flag = finnished_consolidationSGR
-			prestige = 5
-			
-			SGR = { all_core = { limit = { empty = yes } secede_province = THIS } }
-			
-			2445 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2456 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2452 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2306 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2453 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2460 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2458 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			prestige = 10
+			SGR = { all_core = { remove_core = FNC } }
+			SGR = { all_core = { remove_core = ARC } }
+			random_owned = {
+				limit = {
+					2445 = { empty = yes }
+				}
+				2445 = { secede_province = THIS }
+				2445 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2456 = { empty = yes }
+				}
+				2456 = { secede_province = THIS }
+				2456 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2306 = { empty = yes }
+				}
+				2306 = { secede_province = THIS }
+				2306 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2453 = { empty = yes }
+				}
+				2453 = { secede_province = THIS }
+				2453 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2460 = { empty = yes }
+				}
+				2460 = { secede_province = THIS }
+				2460 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2458 = { empty = yes }
+				}
+				2458 = { secede_province = THIS }
+				2458 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	
-	claim_cote_nord = {
-        picture = south_sgirur_map
-        potential = {
-            tag = SGR
-            has_country_flag = finnished_consolidationSGR
-            NOT = { has_country_flag = claimed_cote_nord }
-        }
-        allow = {
-            war = no
-			prestige = 50
-            nationalism_n_imperialism = 1
-        }
-
-        effect = {
-            set_country_flag = claimed_cote_nord
-			SGR_2447 = { add_core = THIS }
-			badboy = 5
-        }
-    }
-	
 	great_river_push = {
-		picture = form_the_rcmp
+		picture = conquest_of_the_chaco
 		potential = {
 			tag = SGR
-			has_country_flag = finnished_consolidationSGR
+			OR = {
+				owns = 2444
+				has_country_flag = finnished_consolidationSGR
+			}
 			NOT = { has_country_flag = river_push }
 		}
 
 		allow = {
 			war = no			
-			empiricism = 1
-			nationalism_n_imperialism = 1
+			breech_loaded_rifles = 1
+			OR = {
+				nationalism_n_imperialism = 1
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
 		}
 
 		effect = {
 			set_country_flag = river_push
 			prestige = 5
-			
 			2421 = { add_core = SGR }
 			2422 = { add_core = SGR }
 			2423 = { add_core = SGR }
-			
-			SGR = { all_core = { limit = { empty = yes } secede_province = THIS } }
-			
-			2421 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2422 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2423 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			random_owned = {
+				limit = {
+					2421 = { empty = yes }
+				}
+				2421 = { secede_province = THIS }
+				2421 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2422 = { empty = yes }
+				}
+				2422 = { secede_province = THIS }
+				2422 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2423 = { empty = yes }
+				}
+				2423 = { secede_province = THIS }
+				2423 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
 		}
 		
 		ai_will_do = {
@@ -521,39 +509,44 @@ political_decisions = {
 				name = open_territories
 				duration = 1825 
 			}
-			2425 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2427 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			3608 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2433 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2437 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2440 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			3605 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			3606 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			3446 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2443 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			3445 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2438 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2444 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			3443 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2442 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			3444 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2441 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2423 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 10 }
-			2422 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 5 }
-			2421 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 5 }
-			2445 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2456 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2446 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2452 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2453 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2306 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2460 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
-			2458 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } life_rating = 20 }
+			SGR = {
+				any_owned = {
+					limit = {
+						province_id = 2425
+						province_id = 2427
+						province_id = 3608
+						province_id = 2433
+						province_id = 2437
+						province_id = 2440
+						province_id = 3605
+						province_id = 3606
+						province_id = 3446
+						province_id = 2443
+						province_id = 3445
+						province_id = 2438
+						province_id = 2444
+						province_id = 3443
+						province_id = 2442
+						province_id = 3444
+						province_id = 2441
+						province_id = 2423
+						province_id = 2422
+						province_id = 2421
+						province_id = 2445 
+						province_id = 2456 
+						province_id = 2446 
+						province_id = 2452 
+						province_id = 2453
+						province_id = 2306 
+						province_id = 2460
+						province_id = 2458
+					}
+					add_province_modifier = { name = colonial_recruitment duration = 1460 } 
+					life_rating = 20
+				}
+			}
 		}
-		
-		ai_will_do = {
-            factor = 1
-        }
+		ai_will_do = { factor = 1 }
 	}
 	
 	manifest_destinySGR = {
@@ -563,23 +556,37 @@ political_decisions = {
             has_country_flag = river_push
             NOT = { has_country_flag = sgirur_destiny }
         }
+		
         allow = {
             war = no
-			prestige = 20
+			prestige = 80
 			iron_railroad = 1
 			invention = manifest_destiny
-			is_greater_power = yes
+			OR = {
+				revolution_n_counterrevolution = 1
+				is_greater_power = yes
+			}
         }
 
         effect = {
             set_country_flag = sgirur_destiny
+			prestige = 30
 			SGR_2416 = { add_core = THIS }
 			SGR_2408 = { add_core = THIS }
 			SGR_2404 = { add_core = THIS }
 			SGR_2343 = { add_core = THIS }
 			SGR_2338 = { add_core = THIS }
 			ARG_2377 = { add_core = THIS }
-			badboy = 10
+			PEU_2289 = { add_core = THIS }
+			PEU_2301 = { add_core = THIS }
+			JES_1979 = { add_core = THIS }
+			JES_2415 = { add_core = THIS }
+			2286 = { add_core = SGR }
+			2300 = { add_core = SGR }
+			2401 = { add_core = SGR }
+			2402 = { add_core = SGR }
+			2403 = { add_core = SGR }
+			badboy = 15
         }
 		
 		ai_will_do = {
@@ -594,26 +601,24 @@ political_decisions = {
 			owns = 3380
 			owns = 2343
 			has_country_flag = sgirur_destiny
-			NOT = { has_country_flag = conquered_congaltonia }
+			NOT = { has_country_flag = congaltonian_conquest }
 		}
 
 		allow = {
 			war = no			
 			invention = mission_to_civilize
+			SGR = {
+				all_core = { owned_by = SGR }
+			}
 		}
 
 		effect = {
-			set_country_flag = conquered_congaltonia
+			set_country_flag = congaltonian_conquest
 			prestige = 5
-			
-			SGR = { all_core = { limit = { empty = yes } secede_province = THIS } }
-			
 			2343 = {
-				change_province_name = "Renfro"			
+				change_province_name = "Renfro"	
+				state_scope = { change_region_name = "Hallanan"  }
 				add_province_modifier = { name = colonial_recruitment duration = 1460 }
-				state_scope = {
-					change_region_name = "Hallanan"
-              }
 			}
 			2342 = {
 				change_province_name = "Yerburgh"			
@@ -624,7 +629,7 @@ political_decisions = {
 				add_province_modifier = { name = colonial_recruitment duration = 1460 }
 			}
 			2339 = {
-				change_province_name = "Crimmon"			
+				change_province_name = "Chisholm"			
 				add_province_modifier = { name = colonial_recruitment duration = 1460 }
 			}
 			2340 = {
@@ -636,11 +641,9 @@ political_decisions = {
 				add_province_modifier = { name = colonial_recruitment duration = 1460 }
 			}
 			2338 = {
-				change_province_name = "Carnegie"			
+				change_province_name = "Carnegie"
+				state_scope = {	change_region_name = "North Congaltonia"  }				
 				add_province_modifier = { name = colonial_recruitment duration = 1460 }
-				state_scope = {
-					change_region_name = "North Congaltonia"
-              }
 			}			
 			2337 = {
 				change_province_name = "Hamilton"			
@@ -666,12 +669,18 @@ political_decisions = {
 				change_province_name = "Watson"			
 				add_province_modifier = { name = colonial_recruitment duration = 1460 }
 			}
-			2377 = {
-				change_province_name = "Moncrief"			
+			2376 = {
+				change_province_name = "Arbuthnott"	
 				add_province_modifier = { name = colonial_recruitment duration = 1460 }
-				state_scope = {
-					change_region_name = "South Congaltonia"
-              }
+			}
+			2377 = {
+				change_province_name = "Moncrief"	
+				state_scope = {	change_region_name = "South Congaltonia"  }
+				add_province_modifier = { name = colonial_recruitment duration = 1460 }
+			}
+			2420 = {
+				change_province_name = "Errington"	
+				add_province_modifier = { name = colonial_recruitment duration = 1460 }
 			}
 		}
 		
@@ -767,43 +776,477 @@ political_decisions = {
 		}
 	}
 	
-### ANTARTIDA DECISIONS ###
+### ANTARCTIQUE DECISIONS ###
 
-	ARC_SS = {
-        alert = no
+## Aquitanian decisions ##
 
-        potential = { 
-			ai = no
-			OR = {
-				tag = FNC
-				tag = OCD
+	venture_south = { 
+		picture = dreams_of_empire
+		potential = {
+			tag = OCD
+			NOT = { has_country_flag = southern_ventures }
+		}
+		
+		allow = {
+			war = no
+			year = 1840
+		}
+		
+		effect = {	
+			set_country_flag = southern_ventures
+			prestige = 5
+			random_owned = {
+				limit = {
+					2392 = { empty = yes }
+				}
+				2392 = { secede_province = THIS }
+				2392 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			}
-		}	
+			random_owned = {
+				limit = {
+					2396 = { empty = yes }
+				}
+				2396 = { secede_province = THIS }
+				2396 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 
-        allow = { year = 1836 }
-
-        effect = { country_event = 900000 }
-        ai_will_do = { factor = 0 }
-    }
+	andean_question = { 
+		picture = form_the_rcmp
+		potential = {
+			tag = OCD
+			NOT = { has_country_flag = andean_fate }
+		}
+		
+		allow = {
+			war = no
+			year = 1844
+			owns = 2392
+			owns = 2396
+		}
+		
+		effect = {	
+			set_country_flag = andean_fate
+			country_event = 900011
+		}
+		ai_will_do = { factor = 1 }
+	}
 	
-	form_antarctique = { 
+	conquer_chaqu = { 
+		picture = conquest_of_the_chaco
+		potential = {
+			OR = {
+				tag = OCD
+				has_country_flag = antarctique_aquitan
+			}
+			has_global_flag = OCD_victory_andes
+			NOT = { has_country_flag = aquitan_chaco }
+		}
+		
+		allow = {
+			war = no
+			owns = 2356
+			owns = 2362
+			breech_loaded_rifles = 1
+		}
+		
+		effect = {	
+			set_country_flag = aquitan_chaco
+			prestige = 5
+			badboy = 3
+			2337 = { add_core = OCD }
+			2364 = { add_core = OCD }
+			2365 = { add_core = OCD }
+			2366 = { add_core = OCD }
+			2367 = { add_core = OCD }
+			2372 = { add_core = OCD }
+			2377 = { add_core = OCD }
+			random_owned = {
+				limit = {
+					2337 = { empty = yes }
+				}
+				2337 = { secede_province = THIS }
+				2337 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2364 = { empty = yes }
+				}
+				2364 = { secede_province = THIS }
+				2364 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2365 = { empty = yes }
+				}
+				2365 = { secede_province = THIS }
+				2365 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2366 = { empty = yes }
+				}
+				2366 = { secede_province = THIS }
+				2366 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2367 = { empty = yes }
+				}
+				2367 = { secede_province = THIS }
+				2367 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2372 = { empty = yes }
+				}
+				2372 = { secede_province = THIS }
+				2372 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2377 = { empty = yes }
+				}
+				2377 = { secede_province = THIS }
+				2377 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 	
-	    picture = switch_to_freedom
+	settle_wheat_valley = { 
+		picture = our_brothers_the_gauchos
+		potential = {
+			OR = {
+				tag = OCD
+				has_country_flag = antarctique_aquitan
+			}
+			OR = { 
+				has_global_flag = OCD_victory_andes
+				has_global_flag = divide_comechingones
+				has_global_flag = andean_neutrality
+			}
+			NOT = { has_country_flag = settled_wheat_valley }
+		}
+		
+		allow = {
+			war = no
+			owns = 2383
+			owns = 2392
+			state_n_government = 1
+			invention = prophylaxis_against_malaria
+		}
+		
+		effect = {	
+			set_country_flag = settled_wheat_valley
+			prestige = 5
+			2353 = { add_core = OCD }
+			2382 = { add_core = OCD }
+			2384 = { add_core = OCD }
+			2390 = { add_core = OCD }
+			2393 = { add_core = OCD }
+			2395 = { add_core = OCD }
+			random_owned = {
+				limit = {
+					2353 = { empty = yes }
+				}
+				2353 = { secede_province = THIS }
+				2353 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2382 = { empty = yes }
+				}
+				2382 = { secede_province = THIS }
+				2382 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2384 = { empty = yes }
+				}
+				2384 = { secede_province = THIS }
+				2384 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2390 = { empty = yes }
+				}
+				2390 = { secede_province = THIS }
+				2390 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2393 = { empty = yes }
+				}
+				2393 = { secede_province = THIS }
+				2393 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2395 = { empty = yes }
+				}
+				2395 = { secede_province = THIS }
+				2395 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 	
+	claim_patagonia = {
+		picture = argentina_chile_border_treaty
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						tag = OCD
+						has_country_flag = antarctique_aquitan
+					}
+					OR = {
+						has_global_flag = OCD_victory_andes
+						has_global_flag = andean_neutrality
+					}
+				}
+				AND = {
+					OR = {
+						tag = OCD
+						has_country_flag = antarctique_aquitan
+					}
+					has_global_flag = divide_comechingones
+				}
+			}
+			NOT = { has_country_flag = claimed_patagonia }
+		}
+		
+		allow = {
+			war = no
+			owns = 2383
+			owns = 2390
+			nationalism_n_imperialism = 1
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+		
+		effect = {	
+			set_country_flag = claimed_patagonia
+			prestige = 10
+			random_owned = {
+				limit = { 
+					owner = { 
+						OR = {
+							tag = OCD
+							has_country_flag = antarctique_aquitan
+						}
+						OR = {
+							has_global_flag = OCD_victory_andes
+							has_global_flag = andean_neutrality
+						}
+					}
+				}
+				owner = {
+					ARG_2391 = { add_core = OCD }
+					ARG_2398 = { add_core = OCD }
+					CHL_2332 = { add_core = OCD }
+					CHL_2327 = { add_core = OCD }
+				}
+			}
+			random_owned = {
+				limit = { 
+					owner = { 
+						OR = {
+							tag = OCD
+							has_country_flag = antarctique_aquitan
+						}
+						has_global_flag = divide_comechingones 
+					}
+				}
+				owner = {
+					ARG_2391 = { add_core = OCD }
+					ARG_2398 = { add_core = OCD }
+					CHL_2332 = { add_core = OCD }
+					2329 = { add_core = OCD } 
+					2331 = { add_core = OCD } 
+					2328 = { add_core = OCD }
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_malvinas = {
+		picture = falklands_map
+		potential = {
+			OR = {
+				tag = OCD
+				tag = ARC
+			}
+			NOT = { has_country_flag = claimed_malvinas }
+		}
+		
+		allow = {
+			war = no
+			owns = 2396
+			naval_logistics = 1
+			military_score = 70
+			total_amount_of_ships = 60
+			prestige = 100
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+		
+		effect = {	
+			set_country_flag = claimed_malvinas
+			prestige = 10
+			2131 = { add_core = THIS }
+			2133 = { add_core = THIS }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+## Orientalia Decisions ##
+	
+	oriental_hinterland = { 
+		picture = our_brothers_the_gauchos
 		potential = {
 			OR = {
 				tag = FNC
-				tag = OCD
+				has_country_flag = antarctique_oriental
 			}
+			owns = 2446
+			owns = 2452
+			NOT = { has_country_flag = oriental_inlands }
+		}
+		
+		allow = {
+			war = no
+			owns = 2446
+			owns = 2452
+			ideological_thought = 1
+		}
+		
+		effect = {	
+			set_country_flag = oriental_inlands
+			prestige = 10
+			FNC = { all_core = { remove_core = SGR } }
+			FNC = { all_core = { remove_core = SGR } }
+			random_owned = {
+				limit = {
+					2458 = { empty = yes }
+				}
+				2458 = { secede_province = THIS }
+				2458 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2460 = { empty = yes }
+				}
+				2460 = { secede_province = THIS }
+				2460 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2306 = { empty = yes }
+				}
+				2306 = { secede_province = THIS }
+				2306 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2453 = { empty = yes }
+				}
+				2453 = { secede_province = THIS }
+				2453 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2456 = { empty = yes }
+				}
+				2456 = { secede_province = THIS }
+				2456 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	oriental_paraguai = { 
+		picture = conquest_of_the_chaco
+		potential = {
+			OR = {
+				tag = FNC
+				has_country_flag = antarctique_oriental
+			}
+			owns = 2458
+			owns = 2554
+			NOT = { has_country_flag = oriental_parana }
+		}
+		
+		allow = {
+			war = no
+			owns = 2458
+			owns = 2554
+			state_n_government = 1
+		}
+		
+		effect = {	
+			set_country_flag = oriental_parana
+			prestige = 5
+			2339 = { add_core = THIS } 
+			2341 = { add_core = THIS } 
+			2342 = { add_core = THIS }
+			2340 = { add_core = THIS }
+			random_owned = {
+				limit = {
+					2339 = { empty = yes }
+				}
+				2339 = { secede_province = THIS }
+				2339 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2341 = { empty = yes }
+				}
+				2341 = { secede_province = THIS }
+				2341 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2342 = { empty = yes }
+				}
+				2342 = { secede_province = THIS }
+				2342 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+			random_owned = {
+				limit = {
+					2340 = { empty = yes }
+				}
+				2340 = { secede_province = THIS }
+				2340 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+## Formation & after decisions ##
+
+	form_antarctique_OCD = { 
+	    picture = switch_to_freedom
+		potential = {
+			tag = OCD
 			NOT = { exists = ARC }
 		}
 		
-		allow = { 
-		OR = {
-				nationalism_n_imperialism = 1
+		allow = {
+			has_global_flag = andes_resolved
+			OR = {
+				revolution_n_counterrevolution = 1
 				is_greater_power = yes
 			}
-		FNC = {
+			FNC = {
 				all_core = {
 					OR = {
 						owned_by = THIS
@@ -817,9 +1260,8 @@ political_decisions = {
 						}
 					}
 				}
-			}
-			
-		OCD = {
+			}	
+			OCD = {
 				all_core = {
 					OR = {
 						owned_by = THIS
@@ -837,288 +1279,110 @@ political_decisions = {
 		}
 		
 		effect = { 
-		prestige = 20
-		change_tag = ARC
-		ARC = {
-				inherit = FNC
-			}
-		ARC = {
-				inherit = OCD
-			}
-		add_accepted_culture = francorientale
-		add_accepted_culture = occidentale
-		set_global_flag = antarctique_formed
+			prestige = 25
+			change_tag = ARC
+			ARC = { inherit = FNC }
+			ARC = { inherit = OCD }
+			add_accepted_culture = francorientale
+			add_accepted_culture = occidentale
+			set_global_flag = antarctique_formed
+			set_country_flag = antarctique_aquitan
 		}
-		ai_will_do = { 
-			factor = 1
+		ai_will_do = { factor = 1 }
+	}
+	
+	form_antarctique_FNC = { 
+	    picture = switch_to_freedom
+		potential = {
+			tag = FNC
+			NOT = { exists = ARC }
 		}
+		
+		allow = {
+			has_global_flag = andes_resolved
+			OR = {
+				revolution_n_counterrevolution = 1
+				is_greater_power = yes
+			}
+			FNC = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}	
+			OCD = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+		}
+		
+		effect = { 
+			prestige = 25
+			change_tag = ARC
+			ARC = { inherit = FNC }
+			ARC = { inherit = OCD }
+			add_accepted_culture = francorientale
+			add_accepted_culture = occidentale
+			set_global_flag = antarctique_formed
+			set_country_flag = antarctique_oriental
+		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	arc_capital = { 
-	
-		picture = Saintenne
-	
+		picture = restore_washington_capital
 		potential = {
-		tag = ARC
-		NOT = { has_country_flag = arc_new_capital }
+			tag = ARC
+			NOT = { has_country_flag = arc_new_capital }
 		}
 		
 		allow = {
-		iron_railroad = 1
-		romanticism = 1
+			iron_railroad = 1
+			romanticism = 1
 		}
 		
 		effect = {	
-		prestige = 10
-		capital = 2344
-		set_country_flag = arc_new_capital
-		2344 = { 
-		change_province_name = "Saintenne" 
-		life_rating = 5
-		add_province_modifier = { 
-			name = recently_built_city
-			duration = 1825
+			prestige = 10
+			capital = 2344
+			set_country_flag = arc_new_capital
+			2344 = { 
+			change_province_name = "Saintespont" 
+			life_rating = 5
+			add_province_modifier = { 
+				name = recently_built_city
+				duration = 1825
 				}
-		add_province_modifier = { 
-			name = antartidan_capital
-			duration = 7300
+			add_province_modifier = { 
+				name = antartidan_capital
+				duration = 7300
 				}
 			} 
 		}
-	}
-	
-	antartida_valley = {
-	
-		picture = conquest_of_the_chaco
-	
-		potential = {
-			owns = 2379
-			owns = 2363
-			owns = 2355
-			OR = {
-				tag = OCD
-				tag = FNC
-				tag = ARC
-			}
-			OR = {
-				2383 = { empty = yes }
-				2382 = { empty = yes }
-				2353 = { empty = yes }
-				2384 = { empty = yes }
-				2393 = { empty = yes }
-				2390 = { empty = yes }
-				2395 = { empty = yes }
-				2392 = { empty = yes }
-			}
-			NOT = { has_global_flag = arc_valley }
-		}
-		allow = {
-			war = no
-			OR = {
-				state_n_government = 1
-				year = 1850
-			}
-		}
-		effect = {
-			set_global_flag = arc_valley
-			prestige = 5
-			
-			2383 = { secede_province = THIS }
-			2382 = { secede_province = THIS }
-			2353 = { secede_province = THIS }
-			2384 = { secede_province = THIS }
-			2393 = { secede_province = THIS }
-			2390 = { secede_province = THIS }
-			2395 = { secede_province = THIS }
-			2392 = { secede_province = THIS } 
-			
-			2383 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2382 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2353 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2384 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2393 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2390 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2395 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2392 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	conquer_chupaou = {
-	
-		picture = conquest_of_the_desert
-	
-		potential = {
-			OR = {
-				tag = OCD
-				tag = FNC
-				tag = ARC
-			}
-			OR = {
-				2391 = { empty = yes }
-				2394 = { empty = yes }
-				2396 = { empty = yes }
-				2397 = { empty = yes }
-				2398 = { empty = yes }
-				2399 = { empty = yes }
-			}
-			has_global_flag = arc_valley
-			NOT = { has_global_flag = arc_chupaou }
-		}
-		allow = {
-			war = no
-			inorganic_chemistry = 1
-			year = 1855
-		}
-		effect = {
-			set_global_flag = arc_chupaou
-			prestige = 5
-			
-			2391 = { secede_province = THIS }
-			2394 = { secede_province = THIS }
-			2396 = { secede_province = THIS }
-			2397 = { secede_province = THIS }
-			2398 = { secede_province = THIS }
-			2399 = { secede_province = THIS }
-			
-			2391 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2394 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2396 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2397 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2398 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2399 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	arc_claim_malouines = {
-	
-		picture = falklands_map
-	
-		potential = {
-			OR = {
-				tag = OCD
-				tag = FNC
-				tag = ARC
-			}
-			has_global_flag = arc_chupaou
-			NOT = { has_global_flag = arc_malouines }
-		}
-		allow = {
-			war = no
-			naval_plans = 1
-		}
-		effect = {
-			set_global_flag = arc_malouines
-			2131 = { add_core = ARC }
-			}
-			
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	arc_consolidate_malouines = {
-	
-		picture = falklands_map
-	
-		potential = {
-			OR = {
-				tag = OCD
-				tag = FNC
-				tag = ARC
-			}
-			owns = 2131
-			has_global_flag = arc_malouines
-			NOT = { has_global_flag = consolidated_malouines }
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			set_global_flag = consolidated_malouines
-			prestige = 5
-			2131 = { change_province_name = "Malouines" }
-			3048 = { change_province_name = "Coast of Malouines" }
-			3047 = { change_province_name = "Malouines Plateau" }
-			2133 = { secede_province = THIS }
-			2133 = { change_province_name = "Saint Jean" }
-			3200 = { change_province_name = "Coast of Saint Jean" }
-			2131 = { remove_core = GEN }	
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	arc_beyond_mountains = {
-	
-		picture = form_the_rcmp
-	
-		potential = {
-			OR = {
-				tag = OCD
-				tag = FNC
-				tag = ARC
-			}
-			OR = {
-				2327 = { empty = yes }
-				2331 = { empty = yes }
-				2329 = { empty = yes }
-				2328 = { empty = yes }
-				2332 = { empty = yes }
-				2333 = { empty = yes }
-				2334 = { empty = yes }
-				2335 = { empty = yes }
-				2400 = { empty = yes }
-			}
-			has_global_flag = arc_chupaou
-			NOT = { has_global_flag = arc_mountains }
-		}
-		allow = {
-			war = no
-			nationalism_n_imperialism = 1
-			functionalism = 1
-			year = 1860
-		}
-		effect = {
-			set_global_flag = arc_mountains
-			prestige = 5
-			
-			2327 = { secede_province = THIS }
-			2331 = { secede_province = THIS }
-			2329 = { secede_province = THIS }
-			2328 = { secede_province = THIS }
-			2332 = { secede_province = THIS }
-			2333 = { secede_province = THIS }
-			2334 = { secede_province = THIS }
-			2335 = { secede_province = THIS }
-			2400 = { secede_province = THIS }
-			
-			2327 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2331 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2329 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2328 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2332 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2333 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2334 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2335 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2400 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	accept_afro_french = {
-	picture = black_rights 
+		picture = black_rights 
 		potential = {
 			tag = ARC
 			NOT = { accepted_culture = afro_french }
@@ -1198,9 +1462,7 @@ political_decisions = {
           consciousness = 2
 			}
 		}
-		ai_will_do = { 
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 ### Renaming ###
@@ -1227,6 +1489,7 @@ political_decisions = {
 			set_global_flag = SGR_renamed_cote_nord
 			2447 = { change_province_name = "Kennethil" }
 			2451 = { change_province_name = "Gavinstoun" }
+			2455 = { change_province_name = "Lorimer" }
 			2450 = { change_province_name = "Loch Niven" }
 			2987 = { change_province_name = "Kennethil" }
 			2447 = { state_scope = { change_region_name = "Stuartia" } }
@@ -1260,6 +1523,7 @@ political_decisions = {
 			set_global_flag = ARC_renamed_cote_nord
 			2447 = { change_province_name = "Cellines" }
 			2451 = { change_province_name = "Olivet" }
+			2455 = { change_province_name = "Laplante" }
 			2450 = { change_province_name = "Lac Fleur" }
 			2987 = { change_province_name = "Celinnes" }
 			2447 = { state_scope = { change_region_name = "Cote Nord" } }
@@ -1270,106 +1534,23 @@ political_decisions = {
         }
 	}
 	
-	rename_rabina_SGR = {
-		picture = amazonia_map
+	SGR_rename_Amazonia = {
+		picture = "gtfo"
 		potential = {
-			owns = 2419
-			owns = 2416
-			owns = 2417
-			owns = 2418
-			owns = 2420
-			owns = 2550
-			owns = 3380
-			owns = 3382
-			owns = 2317
-			owns = 2320
 			OR = {
 				tag = SGR
 				tag = UPB	
 			}
-			NOT = { has_global_flag = SGR_renamed_rabina }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			clr_global_flag = AMZ_renamed_rabina
-			set_global_flag = SGR_renamed_rabina
-			2419 = { change_province_name = "Ramondale" }
-			2416 = { change_province_name = "Taventry" }
-			2417 = { change_province_name = "Ipertoun" }
-			2418 = { change_province_name = "Keirald" }
-			2420 = { change_province_name = "Eguaton" }
-			2550 = { change_province_name = "Lairden" }
-			3380 = { change_province_name = "Clydell" }
-			3382 = { change_province_name = "Mairead" }
-			2317 = { change_province_name = "Ringan" }
-			2320 = { change_province_name = "Grantville" }
-			2416 = { state_scope = { change_region_name = "Ossian" } }
-		}
-		
-		ai_will_do = {
-            factor = 1
-        }
-	}
-	
-	rename_rabina_AMZ = {
-		picture = amazonia_map
-		potential = {
-			owns = 2419
-			owns = 2416
-			owns = 2417
-			owns = 2418
-			owns = 2420
-			owns = 2550
-			owns = 3380
-			owns = 3382
-			owns = 2317
-			owns = 2320
-			primary_culture = amazonian
-			NOT = { has_global_flag = AMZ_renamed_rabina }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			clr_global_flag = SGR_renamed_rabina
-			set_global_flag = AMZ_renamed_rabina
-			2419 = { change_province_name = "Kokue Tuichava" }
-			2416 = { change_province_name = "Oro" }
-			2417 = { change_province_name = "Tava Iporava" }
-			2418 = { change_province_name = "Calabaza" }
-			2420 = { change_province_name = "Iguatemi" }
-			2550 = { change_province_name = "Principe" }
-			3380 = { change_province_name = "Corumba" }
-			3382 = { change_province_name = "Vue Joyeuse" }
-			2317 = { change_province_name = "Irasema" }
-			2320 = { change_province_name = "Ygary" }
-			2416 = { state_scope = { change_region_name = "Rabina" } }
-		}
-		
-		ai_will_do = {
-            factor = 1
-        }
-	}
-	
-	rename_altamira_SGR = {
-		picture = amazonia_map
-		potential = {
-			owns = 2410
-			owns = 2405
-			owns = 2413
-			owns = 2411
-			owns = 2600
 			OR = {
-				tag = SGR
-				tag = UPB	
+				AND = { owns = 2239 NOT = { has_global_flag = SGR_rename_loyola } }
+				AND = { owns = 2286 NOT = { has_global_flag = SGR_rename_ucayali } }
+				AND = { owns = 2320 NOT = { has_global_flag = SGR_rename_pamahuaya } }
+				AND = { owns = 2402 NOT = { has_global_flag = SGR_rename_manila } }
+				AND = { owns = 2404 NOT = { has_global_flag = SGR_rename_amazonas } }
+				AND = { owns = 2410 NOT = { has_global_flag = SGR_rename_altamira } }
+				AND = { owns = 2415 NOT = { has_global_flag = SGR_rename_javieria  } }
+				AND = { owns = 2417 NOT = { has_global_flag = SGR_rename_rabina  } }
 			}
-			NOT = { has_global_flag = SGR_renamed_altamira }
 		}
 		
 		allow = {
@@ -1377,114 +1558,109 @@ political_decisions = {
 		}
 		
 		effect = {
-			clr_global_flag = AMZ_renamed_altamira
-			set_global_flag = SGR_renamed_altamira
-			2410 = { change_province_name = "New Glescga" }
-			2405 = { change_province_name = "Aitken" }
-			2413 = { change_province_name = "Montgomery" }
-			2411 = { change_province_name = "Lumsden" }
-			2600 = { change_province_name = "Steenburgh" }
-			2408 = { state_scope = { change_region_name = "New Eden" } }
-		}
-		
-		ai_will_do = {
-            factor = 1
-        }
-	}
-	
-	rename_altamira_AMZ = {
-		picture = amazonia_map
-		potential = {
-			owns = 2410
-			owns = 2405
-			owns = 2413
-			owns = 2411
-			owns = 2600
-			primary_culture = amazonian
-			NOT = { has_global_flag = AMZ_renamed_altamira }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			clr_global_flag = SGR_renamed_altamira
-			set_global_flag = AMZ_renamed_altamira
-			2410 = { change_province_name = "Pyahu Genova" }
-			2405 = { change_province_name = "Cuyari" }
-			2413 = { change_province_name = "Mokoi" }
-			2411 = { change_province_name = "Tapas" }
-			2600 = { change_province_name = "Tucurui Igarape" }
-			2408 = { state_scope = { change_region_name = "Altamira" } }
-		}
-		
-		ai_will_do = {
-            factor = 1
-        }
-	}
-	
-	rename_amazonas_SGR = {
-		picture = amazonia_map
-		potential = {
-			owns = 2404
-			owns = 3381
-			owns = 2549
-			owns = 2407
-			OR = {
-				tag = SGR
-				tag = UPB	
+			random_owned = {
+				limit = { province_id = 2239 }
+				2239 = { 
+					change_province_name = "St Loyola"
+					state_scope = { change_region_name = "New Leivinstoun"  }
+				}
+				1979 = { change_province_name = "Briggs" }
+				2240 = { change_province_name = "New Leivinstoun" }
+				2241 = { change_province_name = "Callender" }
+				2245 = { change_province_name = "Aytoun" }
+				2246 = { change_province_name = "Scougal" }
+				owner = { set_global_flag = SGR_rename_loyola }
 			}
-			NOT = { has_global_flag = SGR_renamed_amazonas }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			clr_global_flag = AMZ_renamed_amazonas
-			set_global_flag = SGR_renamed_amazonas
-			2404 = { change_province_name = "Fort Amazon" }
-			3381 = { change_province_name = "Auchteril" }
-			2549 = { change_province_name = "Nacken" }
-			2407 = { change_province_name = "Haliburton" }
-			2404 = { state_scope = { change_region_name = "Amazonia" } }
-		}
-		
-		ai_will_do = {
-            factor = 1
-        }
-	}
-	
-	rename_amazonas_AMZ = {
-		picture = amazonia_map
-		potential = {
-			owns = 2404
-			owns = 3381
-			owns = 2549
-			owns = 2407
-			primary_culture = amazonian
-			NOT = { has_global_flag = AMZ_renamed_amazonas }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			clr_global_flag = SGR_renamed_amazonas
-			set_global_flag = AMZ_renamed_amazonas
-			2404 = { change_province_name = "Tiburon" }
-			3381 = { change_province_name = "Juru Acre" }
-			2549 = { change_province_name = "Tarauaca" }
-			2407 = { change_province_name = "Tabatinga" }
-			2404 = { state_scope = { change_region_name = "Amazonas" } }
-		}
-		
-		ai_will_do = {
-            factor = 1
-        }
-	}
 			
+			random_owned = {
+				limit = { province_id = 2286 }
+				2286 = { 
+					change_province_name = "Rosebury"
+					state_scope = { change_region_name = "Rosewall"  }
+				}
+				2300 = { change_province_name = "Melvil" }
+				owner = { set_global_flag = SGR_rename_ucayali }
+			}
+			
+			random_owned = {
+				limit = { province_id = 2320 }
+				2320 = { 
+					change_province_name = "St Brigid's"
+					state_scope = { change_region_name = "Brigidsland"  }
+				}
+				2301 = { change_province_name = "Kelvintoun" }
+				2317 = { change_province_name = "Regan" }
+				2319 = { change_province_name = "Grantvil" }
+				2321 = { change_province_name = "Skenevil" }
+				3382 = { change_province_name = "Mairead" }
+				owner = { set_global_flag = SGR_rename_pamahuaya }
+			}
+			
+			random_owned = {
+				limit = { province_id = 2402 }
+				2402 = { 
+					change_province_name = "Barrbridge"
+					state_scope = { change_region_name = "Blackwoods"  }
+				}
+				2401 = { change_province_name = "Fort Tormod" }
+				2403 = { change_province_name = "Cleghorn" }
+				owner = { set_global_flag = SGR_rename_manila }
+			}
+			
+			random_owned = {
+				limit = { province_id = 2404 }
+				2404 = { 
+					change_province_name = "Haroldsfeld"
+					state_scope = { change_region_name = "Haroldsland"  }
+				}
+				2407 = { change_province_name = "Haliburton" }
+				2549 = { change_province_name = "Nacken" }
+				3381 = { change_province_name = "Auchinleck" }
+				owner = { set_global_flag = SGR_rename_amazonas }
+			}
+			
+			random_owned = {
+				limit = { province_id = 2410 }
+				2410 = { 
+					change_province_name = "New Glesga"
+					state_scope = { change_region_name = "New Glesga"  }
+				}
+				2405 = { change_province_name = "Aitken" }
+				2411 = { change_province_name = "Lumsden" }
+				2413 = { change_province_name = "Montgomery" }
+				2600 = { change_province_name = "Steenburgh" }
+				owner = { set_global_flag = SGR_rename_altamira }
+			}
+			
+			random_owned = {
+				limit = { province_id = 2415 }
+				2415 = { 
+					change_province_name = "St Xavier"
+					state_scope = { change_region_name = "Xavieria"  }
+				}
+				2408 = { change_province_name = "Haddow" }
+				2412 = { change_province_name = "Orchardson" }
+				owner = { set_global_flag = SGR_rename_javieria }
+			}
+			
+			random_owned = {
+				limit = { province_id = 2417 }
+				2417 = { 
+					change_province_name = "Ossburgh"
+					state_scope = { change_region_name = "Ossian"  }
+				}
+				2416 = { change_province_name = "Templeton" }
+				2419 = { change_province_name = "Ramondale" }
+				2418 = { change_province_name = "Keirald" }
+				2550 = { change_province_name = "Lairden" }
+				3380 = { change_province_name = "Clydell" }
+				owner = { set_global_flag = SGR_rename_rabina }
+			}
+		}
+
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+					
 }

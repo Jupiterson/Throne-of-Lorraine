@@ -24,50 +24,50 @@ PAP = {
 }
 
 army = {
-	name = "Gardé Jésuite"
+	name = "Guardia Jesuita"
 	location = 2264
 	regiment = {
-		name= "1. Garde"
+		name= "1. Guardia"
 		type = guard
 		home = 2247
 	}
 
 	regiment = {
-		name= "2. Garde"
+		name= "2. Guardia"
 		type = guard
 		home = 2252
 	}
 
 	regiment = {
-		name= "3. Garde"
+		name= "3. Guardia"
 		type = guard
 		home = 2254
 	}
 	
 	regiment = {
-		name= "4. Garde"
+		name= "4. Guardia"
 		type = guard
 		home = 2255
 	}
 	regiment = {
-		name= "5. Garde"
+		name= "5. Guardia"
 		type = guard
 		home = 2256
 	}
 		regiment = {
-		name= "6. Garde"
+		name= "6. Guardia"
 		type = guard
 		home = 2264
 	}
 		regiment = {
-		name= "7. Garde"
+		name= "7. Guardia"
 		type = guard
 		home = 2267
 	}
 }
 
 leader = {
-   name = "Guy d'Espagnac"
+   name = "Diego Martínez"
    type = land
    date = 1836.1.1
    background = aristocrat
@@ -75,16 +75,26 @@ leader = {
 }
 
 navy = {
-	name = "Marine des Jèsuites"
+	name = "Marina Dorada"
 	location = 2276
-
 	ship = {
-		name= "Saint Antoine"
+		name= "San Loyola"
 		type = frigate
 	}
-
 	ship = {
-		name= "Navire de transport"
+		name= "San Xavier"
+		type = frigate
+	}
+	ship = {
+		name= "1. Vaporera"
+		type = steam_transport
+	}
+	ship = {
+		name= "2. Vaporera"
+		type = steam_transport
+	}
+	ship = {
+		name= "3. Vaporera"
 		type = steam_transport
 	}
 }

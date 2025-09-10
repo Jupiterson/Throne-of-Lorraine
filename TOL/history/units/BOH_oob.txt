@@ -10,7 +10,7 @@ FRA = {value = -100}
 
 
 army = {
-	name = "česká armáda"
+	name = "Česká armáda"
 	location = 625
 	regiment = {
 		name= "1. pěší divize"
@@ -68,4 +68,14 @@ army = {
 		type = infantry
 		home = 627
 	}
+}
+
+leader = {
+	name = "Gulia Radetzky"
+	picture = aus_gen_radetzky
+	date = 1835.1.1
+	type = land
+	personality = implacable
+	background = school_of_the_bayonet
+	prestige = 0.8
 }
