@@ -1,23 +1,5 @@
 political_decisions = {	
 
-	education_JES = {
-		potential = {
-			tag = JES
-			NOT = {
-				has_country_modifier = jesuits_education
-				}
-		}
-		allow = {
-			tag = JES
-		} 
-		effect = { 
-			add_country_modifier = { 
-			name = jesuits_education
-			duration = -1 }
-		}
-		ai_will_do = { factor = 1 }
-	}
-
 	subjugate_shuara = {
 		picture = jesuites_n_tribes
 		potential = {
