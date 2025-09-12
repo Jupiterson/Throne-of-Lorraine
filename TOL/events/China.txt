@@ -493,44 +493,6 @@ country_event = {
 }
 
 country_event = {
-	id = 90908
-	title = "EVTNAME90908"
-	desc = "EVTDESC90908"
-	picture = "treaty_of_tientsin"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT90908OPTA"
-		1498 = { secede_province = FROM }
-		1498 = { remove_core = THIS }
-		1498 = { remove_core = POR }
-		relation = { who = FROM value = 400 }
-		prestige_factor = -0.1
-		ai_chance = {
-			factor = 0.2
-			modifier = { factor = 0.5 has_recently_lost_war = yes }
-			modifier = { factor = 0.25 is_disarmed = yes }
-			modifier = { factor = 0.25 NOT = { military_score = 100 } }
-		}
-	}
-
-
-	option = {
-		name = "EVT90908OPTB"
-		prestige = 5
-		1498 = { add_core = THIS }
-		relation = { who = FROM value = -400 }
-
-		ai_chance = {
-			factor = 0.8
-			modifier = { factor = 10 is_greater_power = yes }
-			modifier = { factor = 1.1 part_of_sphere = yes }
-		}
-	}
-}
-
-country_event = {
 	id = 90909
 	title = "EVTNAME90909"
 	desc = "EVTDESC90909"

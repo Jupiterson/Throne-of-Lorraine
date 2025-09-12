@@ -1686,7 +1686,7 @@ political_decisions = {
 		picture = croatian_independence
 		potential = {
 			tag = CRO
-			any_neighbor_country = { have_core_in = CRO }
+			is_vassal = no
 			NOT = { has_country_flag = first_croatian_independence }
 		}
 
@@ -2532,11 +2532,7 @@ political_decisions = {
 			change_tag = GEP
 			GEP = { inherit = BAN }
 			GEP = { inherit = VOJ }
-			HUN = {
-				create_vassal = GEP
-			}
 			prestige = 10
-			government = colonial_company
             any_pop = {
                 limit = { has_pop_culture = gepid }
                 militancy = -8
@@ -2560,7 +2556,7 @@ political_decisions = {
 		picture = german_confederation
 		potential = {
 			tag = GEP
-			any_neighbor_country = { have_core_in = GEP }
+			is_vassal = no
 			NOT = { has_country_flag = gepid_independence }
 		}
 
@@ -2582,35 +2578,6 @@ political_decisions = {
 			}
 			GEP = { all_core = { remove_core = HUN } }
 		}
-	}
-
-	abolish_wallachia_moldavia = {
-		picture = create_romania
-		potential = {
-			OR = {
-				tag = ROM
-				tag = URP
-			}
-			OR = {
-				any_owned_province = { is_core = WAL }
-				any_owned_province = { is_core = MOL }
-			}
-			WAL = { exists = no }
-			MOL = { exists = no }
-			exists = yes
-		}
-
-		allow = {
-			war = no
-		}
-
-		effect = {
-			WAL = { all_core = { remove_core = WAL } }
-			MOL = { all_core = { remove_core = MOL } }
-			MOL_676 = { remove_core = WAL remove_core = MOL }
-		}
-
-		ai_will_do = { factor = 1 }
 	}
 	
 	gepid_south = {

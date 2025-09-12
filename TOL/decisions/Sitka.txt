@@ -878,9 +878,6 @@ political_decisions = {
 			badboy = 14
 			prestige = 30
 			set_country_flag = KDS_claimed
-			1096 = {
-			add_core = KDS
-			}
 			882 = {
 			add_core = KDS
 			}
@@ -2954,12 +2951,6 @@ political_decisions = {
 					duration = -1
 				}
 			}
-			AKI = {
-				add_country_modifier = {
-					name = segregation_and_rascism
-					duration = -1
-				}
-			}
 			PIR = {
 				add_country_modifier = {
 					name = land_of_the_free
@@ -4046,39 +4037,6 @@ political_decisions = {
 			factor = 0
 		}
 	}
-	greater_slovenia = {
-		picture = greater_slovenia
-		potential = {
-			tag = SLO
-			war = no
-			NOT = { has_country_flag = greater_slovenia_claimed }
-			OR = {
-				AND = {
-					war = no
-					has_recently_lost_war = no
-					has_unclaimed_cores = no
-					war_policy = jingoism
-				}
-				ai = no
-			}
-		}
-		allow = {
-			war = no
-			has_recently_lost_war = no
-			has_unclaimed_cores = no
-			war_policy = jingoism
-		}
-		effect = {
-			set_country_flag = greater_slovenia_claimed
-			770 = { add_core = THIS }
-			618 = { add_core = THIS }
-			778 = { add_core = THIS }
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
 	bon_compagni_law = {
 		picture = compagni
 		potential = {

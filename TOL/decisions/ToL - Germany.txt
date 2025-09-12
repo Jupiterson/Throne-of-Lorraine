@@ -1117,9 +1117,6 @@ political_decisions = {
 				}
                 secede_province = BAV
             }
-            #BAV_599 = { secede_province = BAV  }
-			#BAV_595 = { secede_province = BAV  }
-			#AUS_612 = { secede_province = BAV  }
 			
 			#Würtemberg
 			any_owned = {
@@ -1131,9 +1128,6 @@ political_decisions = {
 				}
                 secede_province = WUR
             }
-			#WUR_589 = { secede_province = WUR  }
-			#BAD_586 = { secede_province = WUR  }
-			#FRA_412 = { secede_province = WUR  }
 			
 			#Westfalen-Hessen
 			any_owned = {
@@ -1144,8 +1138,6 @@ political_decisions = {
 				}
                 secede_province = WES
             }
-			#PRU_581 = { secede_province = WES  }
-			#HES_2560 = { secede_province = WES  }
 			
 			#Rhineland
 			any_owned = {
@@ -1156,21 +1148,16 @@ political_decisions = {
 				}
                 secede_province = RHI
             }
-			#PRU_575 = { secede_province = RHI  }
-			#PRU_578 = { secede_province = RHI  }
 			
 			#Styria-Austria
 			any_owned = {
                 limit = {
 				region = AUS_613
 				region = AUS_619
-				#region = AUS_624
 				NOT = { is_core = THIS } 
 				}
                 secede_province = STY
             }
-			#AUS_613 = { secede_province = STY  }
-			#AUS_619 = { secede_province = STY  }
 			AUS_624 = { add_core = STY  }
 			any_owned = {
                 limit = {  is_core = STY NOT = { is_core = THIS } }
@@ -1209,9 +1196,6 @@ political_decisions = {
 				}
                 secede_province = SAX
             }
-			#SAX_558 = { secede_province = SAX  }
-			#PRU_554 = { secede_province = SAX  }
-			#LUS_552 = { secede_province = SAX  }
 			#Hanover
 			any_owned = {
                 limit = { 
@@ -1221,7 +1205,6 @@ political_decisions = {
 				}
                 secede_province = HAN
             }
-			#HAN_528 = { secede_province = HAN  }
 			
 			#Holstein
 			any_owned = {
@@ -1233,7 +1216,6 @@ political_decisions = {
             }
 			3295 = { secede_province = HOL }
 			3295 = { secede_province = HOL }
-			#HOL_369 = { secede_province = HOL  }
 			
 			#Mecklenburg-Pomerania
 			any_owned = {
@@ -1244,8 +1226,6 @@ political_decisions = {
 				}
                 secede_province = MEC
             }
-			#PRU_544 = { secede_province = MEC  }
-			#PRU_546 = { secede_province = MEC  }
 			
 			#Westpreussen-Pomerlia
 			any_owned = {
@@ -1255,7 +1235,6 @@ political_decisions = {
 				}
                 secede_province = PML
             }
-			#PRU_690 = { secede_province = PML  }
 			
 			#Brandenburg 
 			any_owned = {
@@ -1266,8 +1245,6 @@ political_decisions = {
 				}
                 secede_province = BRN
             }
-			#PRU_553 = { secede_province = BRN  }
-			#PRU_549 = { secede_province = BRN  }
 			any_owned = {
                 limit = {  is_core = BRA NOT = { is_core = THIS }  }
                 secede_province = BRN
@@ -1297,13 +1274,13 @@ political_decisions = {
 				}
                 secede_province = UBD
             }	
-            #DAN			
+            #GEP			
             any_owned = {
                 limit = { 
-				is_core = DAN
+				is_core = GEP
 				NOT = { is_core = THIS } 
 				}
-                secede_province = DAN
+                secede_province = GEP
             }				
 			
 			release_vassal = HNS
@@ -1327,7 +1304,7 @@ political_decisions = {
 			create_vassal = SWI
 			create_vassal = BOE
 			create_vassal = UBD
-			create_vassal = DAN
+			create_vassal = GEP
 			
             set_global_flag = outside_germany
 			
@@ -1339,7 +1316,7 @@ political_decisions = {
                         tag = UBD
                         tag = HNS
                         tag = SWI
-                        tag = DAN
+                        tag = GEP
 						 tag = LIG
 						  tag = LOR
 						   tag = BRE

@@ -915,6 +915,7 @@ political_decisions = {
 				AND = { tag = SUD owns = 1827 NOT = { capital = 1827 } }
 				AND = { tag = PRU owns = 549 NOT = { capital = 549 } }
 				AND = { tag = GEP owns = 791 NOT = { capital = 791 } }
+				AND = { tag = ARM owns = 1098 NOT = { capital = 1098 } }
 			}
 		}
 
@@ -973,6 +974,7 @@ political_decisions = {
 			random_owned = { limit = { owner = { tag = SUD } } owner = { capital = 1827 } }
 			random_owned = { limit = { owner = { tag = PRU } } owner = { capital = 549 } }
 			random_owned = { limit = { owner = { tag = GEP } } owner = { capital = 791 } }
+			random_owned = { limit = { owner = { tag = ARM } } owner = { capital = 1098 } }
 		}
 
 		ai_will_do = { factor = 1 }

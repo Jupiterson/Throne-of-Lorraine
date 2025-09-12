@@ -1169,31 +1169,3 @@ country_event = { #Faroese Nationalism - Christmas Meeting
 		}
 	}
 }
-
-#Selling Danish India
-country_event = {
-
-	id = 36225
-
-	title = "EVTNAME36225"
-	desc = "EVTDESC36225"
-	picture = "Danishgovernment"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVTOPTA36225"
-		FROM = { treasury = -200000 }
-		treasury = 200000
-		relation = { who = FROM value = 50 }
-		2223 = { remove_core = THIS secede_province = FROM }
-		ai_chance = { factor = 0.95 }
-	}
-
-	option = {
-		name = "EVTOPTB36225"
-		relation = { who = FROM value = -50 }
-		FROM = { diplomatic_influence = { who = THIS value = -50 } }
-		ai_chance = { factor = 0.05 }
-	}
-}

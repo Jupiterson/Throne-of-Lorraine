@@ -4920,6 +4920,7 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
+		year = 1876
 		OR = {
 			any_owned_province = { is_core = SAF }
 			SAF = { vassal_of = THIS }
@@ -4946,9 +4947,7 @@ country_event = {
 				has_global_flag = no_fenian_war
 				truce_with = HBR
         }
-		}
-        year = 1876
-    }
+	}
 
     mean_time_to_happen = {
         months = 24
@@ -4994,7 +4993,6 @@ country_event = {
             factor = 0.95
             modifier = { factor = 0 badboy = 0.87 }
         }
-    }
 
     option = {
         name = "fenian_war.B"

@@ -177,10 +177,6 @@ political_decisions = {
 			treasury = -20000
 			set_country_flag = chinese_jesuit_education
 			research_points = 2000
-			add_country_modifier = {
-				name = jesuits_education
-				duration = 3650
-			}
 			any_pop = {
                 limit = { is_culture_group = east_asian }
                 militancy = 2

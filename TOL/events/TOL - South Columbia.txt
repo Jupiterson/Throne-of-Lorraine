@@ -102,7 +102,7 @@ country_event = {
 }
 
 country_event = {
-	id = 900011
+	id = 900008
 	trigger = {
 		has_country_modifier = king_james
 		year = 1841
@@ -297,6 +297,8 @@ country_event = {
 	option = {
 		name = "ARC4.A"
 		set_global_flag = aquitania_eterna
+		leave_alliance = PEU
+		leave_alliance = COC
 		war = {
             target = PEU
             attacker_goal = { casus_belli = andean_war }
@@ -315,6 +317,7 @@ country_event = {
 	option = {
 		name = "ARC4.B"
 		set_global_flag = divide_comechingones
+		leave_alliance = COC
 		casus_belli = {
 	        target = COC
 	        type = conquest_any
@@ -338,6 +341,7 @@ country_event = {
 	option = {
 		name = "ARC4.C"
 		set_global_flag = andean_neutrality
+		leave_alliance = COC
 		casus_belli = {
 	        target = COC
 	        type = conquest_any
@@ -434,281 +438,74 @@ country_event = {
     }
 }
 
+# Andean war over #
+
 country_event = {
 	id = 900015
 	trigger = {
+		tag = OCD
+		owns = 2378
+		NOT = { exists = COC }
 		OR = {
-			AND = {
-				tag = OCD
-				owns = 2378
-				owns = 2388
-				NOT = { exists = COC }
-				has_global_flag = OCD_victory_andes
-			}
-			AND = {
-				tag = OCD
-				owns = 2378
-				NOT = { exists = COC }
-				has_global_flag = divide_comechingones
-			}	
-			AND = {
-				tag = OCD
-				owns = 2378
-				NOT = { exists = COC }
-				has_global_flag = andean_neutrality
-			}	
+			has_global_flag = OCD_victory_andes
+			has_global_flag = divide_comechingones
+			has_global_flag = andean_neutrality
 		}
 	}
-	mean_time_to_happen = { days = 10 }
+	mean_time_to_happen = { days = 5 }
 	
 	fire_only_once = yes
-
+	
 	title = "ARC8.T"
 	desc = "ARC8.D"
 	picture = "Antelope_War"
-
+	
 	option = {
         name = "ARC8.A"
-		prestige = 5
-		random_owned = {
-			limit = { 
-				owner = { 
-					tag = OCD
-					owns = 2378
-					owns = 2388
-					NOT = { exists = COC }
-					has_global_flag = OCD_victory_andes 
-				}
+		any_country = {
+			limit = {
+				tag = OCD
+				owns = 2378
+				owns = 2388
+				has_global_flag = OCD_victory_andes
 			}
-			owner = {
-				2356 = { secede_province = OCD add_core = OCD }
-				2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-				2362 = { secede_province = OCD add_core = OCD }
-				2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-				remove_country_modifier = trade_disruptions
-				set_global_flag = andes_resolved
-			}
+			prestige = 10
+			2356 = { secede_province = OCD add_core = OCD }
+			2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2362 = { secede_province = OCD add_core = OCD }
+			2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			remove_country_modifier = trade_disruptions
+			set_global_flag = andes_resolved
 		}
-		random_owned = {
-			limit = { 
-				owner = { 
-					tag = OCD
-					owns = 2378
-					NOT = { exists = COC }
-					has_global_flag = divide_comechingones
-				}
+		any_country = {
+			limit = {
+				tag = OCD
+				owns = 2378
+				has_global_flag = divide_comechingones
 			}
-			owner = {
-				2356 = { secede_province = OCD add_core = OCD }
-				2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-				2362 = { secede_province = OCD add_core = OCD }
-				2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-				remove_country_modifier = trade_disruptions
-				add_country_modifier = buffed_andean_trade
-				set_global_flag = andes_resolved
-			}
+			prestige = 5
+			2356 = { secede_province = OCD add_core = OCD }
+			2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2362 = { secede_province = OCD add_core = OCD }
+			2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			remove_country_modifier = trade_disruptions
+			add_country_modifier = buffed_andean_trade
+			set_global_flag = andes_resolved
 		}
-		random_owned = {
-			limit = { 
-				owner = { 
-					tag = OCD
-					owns = 2378
-					NOT = { exists = COC }
-					has_global_flag = andean_neutrality
-				}
+		any_country = {
+			limit = {
+				tag = OCD
+				owns = 2378
+				has_global_flag = andean_neutrality
 			}
-			owner = {
-				2356 = { secede_province = OCD add_core = OCD }
-				2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-				2362 = { secede_province = OCD add_core = OCD }
-				2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-				remove_country_modifier = trade_disruptions
-				add_country_modifier = andean_trade
-				set_global_flag = andes_resolved
-			}
+			prestige = 5
+			2356 = { secede_province = OCD add_core = OCD }
+			2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2362 = { secede_province = OCD add_core = OCD }
+			2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			remove_country_modifier = trade_disruptions
+			add_country_modifier = andean_trade
+			set_global_flag = andes_resolved
 		}
-    }
-}
-
-##### JESUIT/ANDINE EVENTS #####
-
-#Jesuit introduction event #
-country_event = {
-	id = 900016
-	fire_only_once = yes
-
-	title = "JES1.T"
-	desc = "JES1.D"
-	picture = "jesuit_introduction"
-
-	option = {
-		name = "JES1.A"
-	}
-}
-
-### Jesuit instability ###
-
-# Huamanga Conspiracy #
-country_event = {
-	id = 900017
-	trigger = {
-		tag = JES
-		owns = 2302
-		NOT = { exists = PEU }
-		has_country_flag = invade_incas	
-	}
-	mean_time_to_happen = { months = 10 }
-	fire_only_once = yes
-
-	title = "JES2.T"
-	desc = "JES2.D"
-	picture = "andine_revolution"
-
-	option = {
-		name = "JES2.A"
-		any_pop = {
-            consciousness = 4
-			militancy = 4
-			ideology = {
-			   value = liberal
-			   factor = 0.15
-			}
-        }
-		set_country_flag = conspiracy_discovered
-	}
-}
-
-# The Andine Revolution #
-country_event = {
-	id = 900018
-	trigger = {
-		tag = JES
-		owns = 2302
-		NOT = { exists = PEU }
-		has_country_flag = conspiracy_discovered	
-	}
-	mean_time_to_happen = { days = 60 }
-	fire_only_once = yes
-
-	title = "JES3.T"
-	desc = "JES3.D"
-	picture = "jesuit_coup"
-	major = yes
-
-	option = { #Divine rule continues
-		name = "JES3.A"
-		any_pop = {
-            consciousness = 5
-			militancy = 5
-			ideology = {
-			   value = liberal
-			   factor = 0.25
-			}
-        }
-		set_country_flag = jesuit_hegemony
-		ai_chance = { factor = 25 }
-	}
-	option = {
-		name = "JES3.B" #Andine Confederation is here
-		government = democracy
-		nationalvalue = nv_equality
-		political_reform = wealth_weighted_voting
-		political_reform = state_press
-		political_reform = all_voting_pops
-		primary_culture = andino
-		add_accepted_culture = north_andean
-		add_accepted_culture = quechua
-		2264 = { change_province_name = "Caracas"
-				 state_scope = { change_region_name = "Zulia" }	
-				 }
-		any_pop = {
-            consciousness = -2
-			militancy = -2
-			ideology = {
-			   value = liberal
-			   factor = 0.15
-			}
-        }
-		set_country_flag = andine_confederation
-		ai_chance = { factor = 75 }
-	}
-}
-
-### Levantine Crusade successful ###
-
-# Fate of the Jesuits #
-country_event = {
-	id = 900019
-	trigger = {
-		tag = JES
-		owns = 913
-		owns = 915
-		owns = 917
-		owns = 1756
-		has_country_flag = the_last_crusade	
-	}
-	mean_time_to_happen = { days = 3 }
-	fire_only_once = yes
-
-	title = "JES4.T"
-	desc = "JES4.D"
-	picture = "jesuit_crusade"
-
-	option = {
-		name = "JES4.A"
-		change_tag = JER
-		capital = 917
-		primary_culture = syriac
-		add_accepted_culture = north_andean
-		any_pop = {
-            consciousness = 2
-			militancy = 2
-        }
-		909 = { change_province_name = "Gerasa" }
-		913 = { change_province_name = "Berytus" }
-		913 = { 
-			change_province_name = "Berytus"
-			state_scope = { change_region_name = "Libanus"  }
-		}
-		915 = { change_province_name = "Sidon" }
-		916 = { change_province_name = "Acre" }
-		917 = { 
-			change_province_name = "Hierosolyma"
-			state_scope = { change_region_name = "Palaestina"  }
-		}
-		918 = { change_province_name = "Naples" }
-		919 = { change_province_name = "Joppa" }
-		920 = { change_province_name = "Gaza" }
-		922 = { change_province_name = "Elyn" }
-		1756 = { change_province_name = "Bethulia" }
-		3357 = { change_province_name = "Birosaba" }
-		3474 = { change_province_name = "Hepha" }
-	}
-	option = {
-		name = "JES4.B"
-		add_accepted_culture = syriac
-		any_pop = {
-            consciousness = -2
-			militancy = -2
-        }
-		909 = { change_province_name = "Gerasa" }
-		913 = { change_province_name = "Berytus" }
-		913 = { 
-			change_province_name = "Berytus"
-			state_scope = { change_region_name = "Libanus"  }
-		}
-		915 = { change_province_name = "Sidon" }
-		916 = { change_province_name = "Acre" }
-		917 = { 
-			change_province_name = "Hierosolyma"
-			state_scope = { change_region_name = "Palaestina"  }
-		}
-		918 = { change_province_name = "Naples" }
-		919 = { change_province_name = "Joppa" }
-		920 = { change_province_name = "Gaza" }
-		922 = { change_province_name = "Elyn" }
-		1756 = { change_province_name = "Bethulia" }
-		3357 = { change_province_name = "Birosaba" }
-		3474 = { change_province_name = "Hepha" }
 	}
 }

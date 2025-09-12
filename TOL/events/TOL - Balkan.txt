@@ -8,7 +8,7 @@ country_event = {
 		exists = BUL
 		NOT = { year = 1840 }
 	}
-   fire_only_once = yes
+	fire_only_once = yes
 
 	option = {
 		name = "bul_raid.A"
@@ -33,7 +33,7 @@ country_event = {
 		NOT = { year = 1847 }
 		war = no
 	}
-   fire_only_once = yes
+	fire_only_once = yes
 
 	option = {
 		name = "bul_freedom.A"
@@ -489,7 +489,6 @@ country_event = {
 		prestige = -50
 		release_vassal = SRN
 		release_vassal = HAL
-		release_vassal = ARM
 		release_vassal = CRI
 		release_vassal = BTL
 		release_vassal = BDN

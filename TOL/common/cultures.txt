@@ -704,12 +704,12 @@ britannian = {
 			Reginald Richard Ronald Ragnvald Rory Roderick Ross Roy Shaw Simon Somerled Stephan Stephen 
 			Sweeny Tadhg Tadg Talore Thomas Torquil Torkel Uhtred Uisdean Eysteinn Walan Valentin 
 			Waldeve Waltheof William
-		Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace}
+			Alban Aulay Blane Boyd Clyde Coll Derek Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace}
 
 		last_names = { Stuart Stewart Campbell Lennox Murray Graham Gordon Erskine Leslie
 			Scott Douglas Hamilton Lindsay Ker Hay Sinclair Dunbar Kennedy
 			Fraser "Aois-dàna" Dishington Burnett "Bowes-Lyon" "Lockhart" "Corbet"
-			Mackintosh Dingwall Melville Corrie Aberach Cunningham Donald
+			Mackintosh Dingwall Melville Corrie Aberach Cunningham
 			Buchanan Menzies Moffat Malcolm "Cameron" "Forbes" "Arbuthnot" "Cockburn" "Adam" Wallace "Abernethy"
 		Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison Sanders	}
 	}
@@ -3852,7 +3852,20 @@ latin_american_cultures = {
 		Nárdiz Olano Olave Oyarzábal Rotaeche Uzcudun Zamárraga Zárate Zavala Zumalacárregui }
 		radicalism = 10
 	}
+	pirate = {
+		color = { 100 80 80 }
+		first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo
+		Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando
+		Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo
+		Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero
+		Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio }
 
+		last_names = { Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello
+		Caviglia Ceccherini Cialdini Cusani d'Absburgo-Toscana d'Austria-Este Dezza "di Borbone di Parma" "di Robilant" "di Savoia"
+		"di Savoia-Aosta" Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La MÃ rmora" Mambretti
+		Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro
+		Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
+	}
 	mexican = { 
 		color = {194 71 12} #{Basque Mestizos}
 		first_names = { Alfontso Alvar Antso Aznar Belasko Bermudo Bernart Diaco Donato Egidio
@@ -3874,7 +3887,6 @@ latin_american_cultures = {
 		}
 		radicalism = 5
 	}
-	
 	north_andean = {
 		color = {215 220 194} #{Llanero}
 		first_names = { Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin Bartehelemy
@@ -3937,14 +3949,14 @@ new_world_scot = {
 			Reginald Richard Ronald Ragnvald Rory Roderick Ross Roy Shaw Simon Somerled Stephan Stephen 
 			Sweeny Tadhg Tadg Talore Thomas Torquil Torkel Uhtred Uisdean Eysteinn Walan Valentin 
 			Waldeve Waltheof William
-		Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace}
+			Alban Aulay Blane Boyd Clyde Coll Derek Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace}
 
 		last_names = { Stuart Stewart Campbell Lennox Murray Graham Gordon Erskine Leslie
 			Scott Douglas Hamilton Lindsay Ker Hay Sinclair Dunbar Kennedy
 			Fraser "Aois-dàna" Dishington Burnett "Bowes-Lyon" "Lockhart" "Corbet"
 			Mackintosh Dingwall Melville Corrie Aberach Cunningham Donald
 			Buchanan Menzies Moffat Malcolm "Cameron" "Forbes" "Arbuthnot" "Cockburn" "Adam" Wallace "Abernethy"
-			Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison Sanders	}
+			Smith Brown Wilson Robertson Thomson Anderson MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison Sanders	}
 	}
 }
 
@@ -3977,7 +3989,7 @@ african_diaspora_cultures = {
 			Reginald Richard Ronald Ragnvald Rory Roderick Ross Roy Shaw Simon Somerled Stephan Stephen 
 			Sweeny Tadhg Tadg Talore Thomas Torquil Torkel Uhtred Uisdean Eysteinn Walan Valentin 
 			Waldeve Waltheof William
-			Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace}
+			Alban Aulay Blane Boyd Clyde Coll Derek Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace}
 
 		last_names = { Stuart Stewart Campbell Lennox Murray Graham Gordon Erskine Leslie
 			Scott Douglas Hamilton Lindsay Ker Hay Sinclair Dunbar Kennedy
@@ -4016,20 +4028,6 @@ african_diaspora_cultures = {
 	}
 	kreol = {
 		color = { 63 32 10 }
-		first_names = { Alexis André Anténor Antoine Augustin Balthazar Beaubrun Céligny Charlemagne Charles
-			Cincinnatus Dantès Demesvar Denys Emmanuel Eugène Fabre Faustin Florvil François
-			Guillaume Hannibal Henri Jacques Jean Jean-Baptiste Jean-Louis Jean-Pierre Jonathas Joseph
-			Léon Louis Louis-Eugène Louis-Joseph Lysius Michel Monpoint Nissage Nord Oreste
-			Philippe Pierre Simon Sténio Sylvain Tandredè Thomas Timoleón Tirésias Vilbrum }
-
-			last_names = { Alexis Ardouin Auguste Bellegarde Boisrond-Canal Bonnet Borno Boyer Brutus Christophe
-			Conzé Dartiguenave Delorme Dessalines Domingue Firmin Geffrad Granville Guerrier Hyppolite
-			Iginac Janvier Jeune Lafontant Laleau Leconte Légitime Legouaze Léon Lhérisson
-			Madiou Péralte Pierrot Planchet Price Price-Mars Riché Rigaud Rivière-Hérard Roumain
-			Roy Saget Salnave Salomon Sam Simon Soulouque Théodore Vincent Zamor }
-	}
-	pirate = {
-		color = { 100 80 80 }
 		first_names = { Alexis André Anténor Antoine Augustin Balthazar Beaubrun Céligny Charlemagne Charles
 			Cincinnatus Dantès Demesvar Denys Emmanuel Eugène Fabre Faustin Florvil François
 			Guillaume Hannibal Henri Jacques Jean Jean-Baptiste Jean-Louis Jean-Pierre Jonathas Joseph
@@ -4498,7 +4496,7 @@ mixed_cultures = {
 	griqua = {
 		color = {165 105 0}
 		first_names = { James Robert Henry Alexander Arthur Walter John Charles Malcolm Donald David Duncan Andrea 
-			Alan Ailpein Archibald Barclay Beathan Bruce Cameron Cináed Conall Douglas Duff Edan Evander 
+			Ailpein Archibald Barclay Beathan Bruce Cameron Cináed Conall Douglas Duff Edan Evander 
 			Fraser Garry Glen Ian Keir Kennedy Lennox Logan Micheil Mungo Munroe Scott Wallace Adam 
 			Alpin Alwin Alastair Andrew Angus Arran Aulay Olaf Brian Brice Cailean Calum Carbrey Colban 
 			Kolbein Colin Nicholas Conan Constantine Dermid Dugald Edgar Edward Edwin Eric Ivar Ewan 
@@ -4510,7 +4508,7 @@ mixed_cultures = {
 			Reginald Richard Ronald Ragnvald Rory Roderick Ross Roy Shaw Simon Somerled Stephan Stephen 
 			Sweeny Tadhg Tadg Talore Thomas Torquil Torkel Uhtred Uisdean Eysteinn Walan Valentin 
 			Waldeve Waltheof William
-		Alan Alastair Alban Alpin Andrew Angus Aulay Blane Boyd Calum Clyde Coll Derek Donald Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace
+			Alban Aulay Blane Boyd Clyde Coll Derek Donnan Dougal Douglas Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ian Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil Wallace
 		}
 		last_names = { Stuart Stewart Campbell Lennox Murray Graham Gordon Erskine Leslie
 			Scott Douglas Hamilton Lindsay Ker Hay Sinclair Dunbar Kennedy

@@ -1,77 +1,5 @@
 political_decisions = {
 
-#haha_button = {
-#	picture = map_east_indies
-#	potential = {
-#		NOT = {	has_country_flag = melayu_raya	}
-#		tag = TUR
-#		ai = no
-#	}
-#
-#	allow = {
-#    }
-#	effect = {
-#	potential = { }
-#	allow = { }
- #   effect = { capital = 219 }
-	#}
-#		set_country_flag = melayu_raya
-#		any_owned = {
-#				limit = {
-#					pop_majority_culture = greek 
-#				}
-#				secede_province = GRR
-#			}
-#		any_owned = {
-#				limit = {
-#					pop_majority_culture = bulgarian 
-#				}
-#				secede_province = BRR
-#			}			
-#		any_owned = {
-#				limit = {
-#					pop_majority_culture = serbian 
-#				}
-#				secede_province = SRR
-#			}
-#		any_owned = {
-#				limit = {
-#					pop_majority_culture = albanian 
-#				}
-#				secede_province = ARR
-#			}
-#		GRR = {
-#		war = {
-#			target = THIS
-#			attacker_goal = { casus_belli = liberate_country country = GRE }
-#			defender_goal = { casus_belli = conquest_any }
-#			call_ally = yes
-#		}
-#		}
-#		
-#		BRR = {
-#		war = {
-#			target = THIS
-#			attacker_goal = { casus_belli = liberate_country country = BUL }
-#			defender_goal = { casus_belli = conquest_any }
-#			call_ally = yes
-#		}
-#		}
-#		
-#		ARR = {
-#		war = {
-#			target = THIS
-#			attacker_goal = { casus_belli = liberate_country country = ALB }
-#			defender_goal = { casus_belli = conquest_any }
-#			call_ally = yes
-#		}
-#		}
-#		
-#	}
-#
-#	ai_will_do = { factor = 0 }
-#}#
-
 	acadien_change_capital = {
 	picture = diplo_annex
 		potential = {
@@ -155,10 +83,7 @@ political_decisions = {
 				consciousness = 2
 			}
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	###RACIST PATH###
@@ -190,7 +115,6 @@ political_decisions = {
 			147 = { add_core = THIS add_core = NAF }
 			148 = { add_core = THIS add_core = NAF }
 			149 = { add_core = THIS add_core = NAF }
-			}
 			CUB = {
 				all_core = {
 					remove_core = THIS
@@ -264,7 +188,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	
 	emancipate_afros = {
 		picture = embrace_the_jews
 		potential = {
@@ -294,9 +217,6 @@ political_decisions = {
 				consciousness = -2
 			}
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 }

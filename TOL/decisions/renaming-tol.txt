@@ -7629,7 +7629,7 @@ political_decisions = {
 	serbian_rename_corfu = {
 		picture = gtfo
 		potential = {
-			is_culture_group = serb
+			primary_culture = serb
 			AND = { owns = 826 NOT = { has_global_flag = serbian_rename_corfu } }
 		}
 
