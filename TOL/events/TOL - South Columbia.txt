@@ -297,6 +297,7 @@ country_event = {
 	option = {
 		name = "ARC4.A"
 		set_global_flag = aquitania_eterna
+		badboy = 12
 		leave_alliance = PEU
 		leave_alliance = COC
 		war = {
@@ -438,10 +439,99 @@ country_event = {
     }
 }
 
-# Andean war over #
+##### ANDEAN WAR OUTCOMES #####
+
+## Incan Victory ##
 
 country_event = {
 	id = 900015
+	trigger = {
+		tag = OCD
+		has_country_flag = andine_war_loser
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	fire_only_once = yes
+	
+	title = "ARC8.T"
+	desc = "ARC8.D"
+	picture = "war_ended"
+	
+	option = {
+        name = "ARC8.A"
+		OCD = {
+			any_owned_province = {
+				limit = {
+					province_id = 2380
+					province_id = 2382
+					province_id = 3618
+				}
+				secede_province = COC
+				add_core = COC
+			}
+		}
+		COC = {
+			any_core = {
+				limit = { is_core = OCD }
+				remove_core = OCD
+			}
+		}
+		PEU = { create_vassal = COC }
+		COC = {
+			all_core = { add_core = PEU }
+		}
+		set_global_flag = andes_resolved
+	}
+}
+
+## Aquitanian Victory ##
+
+country_event = {
+	id = 900016
+	trigger = {
+		tag = PEU
+		has_country_flag = andine_war_loser
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	fire_only_once = yes
+	
+	title = "ARC9.T"
+	desc = "ARC9.D"
+	picture = "war_ended"
+	
+	option = {
+        name = "ARC9.A"
+		PEU = {
+			any_owned = {
+				limit = {
+					province_id = 2323
+					province_id = 2324
+					province_id = 2325
+					province_id = 2326
+					province_id = 2385
+					province_id = 2389
+				}
+				secede_province = OCD
+				add_core = OCD
+			}
+		}
+		OCD = {
+			any_core = {
+				limit = { is_core = PEU }
+				remove_core = PEU
+			}
+		}
+		COC = { annex_to = OCD }
+		set_global_flag = OCD_victory_andes
+		set_global_flag = andes_resolved
+	}
+}
+
+# Aquitanian northern expansion #
+
+country_event = {
+	id = 900017
 	trigger = {
 		tag = OCD
 		owns = 2378
@@ -456,12 +546,12 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	title = "ARC8.T"
-	desc = "ARC8.D"
+	title = "ARC10.T"
+	desc = "ARC10.D"
 	picture = "Antelope_War"
 	
 	option = {
-        name = "ARC8.A"
+        name = "ARC10.A"
 		any_country = {
 			limit = {
 				tag = OCD
@@ -474,6 +564,8 @@ country_event = {
 			2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			2362 = { secede_province = OCD add_core = OCD }
 			2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+			2377 = { secede_province = OCD add_core = OCD }
+			2377 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			remove_country_modifier = trade_disruptions
 			set_global_flag = andes_resolved
 		}

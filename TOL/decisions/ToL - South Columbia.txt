@@ -23,6 +23,7 @@ political_decisions = {
 			2327 = { add_core = PEU }
 			2328 = { add_core = PEU }
 			2329 = { add_core = PEU }
+			2330 = { add_core = PEU }
 			2331 = { add_core = PEU }
 			PEU = { all_core = { limit = { empty = yes } secede_province = THIS } }
 			random_owned = {
@@ -189,8 +190,125 @@ political_decisions = {
 		}
 	}
 	
+	invade_aquitania = {
+		picture = form_the_rcmp
+		potential = {
+			tag = PEU
+			NOT = { year = 1844 }
+			NOT = { has_country_flag = invade_aquitania }
+		}	
+		
+		allow = {
+			war = no
+			NOT = { year = 1844 }
+			army_schools = yes_army_schools
+		}
+		
+		effect = {
+			badboy = 6
+			leave_alliance = OCD
+			war = {
+				target = OCD
+				attacker_goal = { casus_belli = andean_war }
+				defender_goal = { casus_belli = andean_war }
+			}
+			random_country = {
+				limit = {
+					tag = COC
+					exists = yes
+					is_vassal = no
+				}
+				country_event = 900012
+			}
+			set_country_flag = invade_aquitania
+			OCD = { set_country_flag = andean_fate }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	annex_comechingones = {
+		picture = conquest_of_the_chaco
+		potential = {
+			tag = PEU
+			exists = COC
+			COC = { vassal_of = PEU }
+			NOT = { has_country_flag = annex_comechingones }
+		}	
+		
+		allow = {
+			war = no
+			state_n_government = 1
+		}
+		
+		effect = {
+			inherit = COC
+			prestige = 5
+			set_country_flag = annex_comechingones
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	inca_northern_expansion = {
+		picture = colombia_map
+		potential = {
+			tag = PEU
+			owns = 2248
+			NOT = { has_country_flag = claimed_north }
+		}	
+		
+		allow = {
+			war = no
+			state_n_government = 1
+		}
+		
+		effect = {
+			badboy = 6
+			CLM_2253 = { add_core = THIS }
+			2285 = { add_core = THIS }
+			set_country_flag = claimed_north
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	inca_southern_expansion = {
+		picture = argentina_chile_border_treaty
+		potential = {
+			tag = PEU
+			has_country_flag = annex_comechingones
+			NOT = { has_country_flag = claimed_south }
+		}	
+		
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+		}
+		
+		effect = {
+			prestige = 10
+			ARG_2393 = { add_core = THIS }
+			ARG_2391 = { add_core = THIS }
+			ARG_2398 = { add_core = THIS }
+			CHL_2332 = { add_core = THIS }
+			CHL_2327 = { add_core = THIS }
+			set_country_flag = claimed_south
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	form_amazonas = {
-		picture = create_iberia
+		picture = amazonia_map
 		potential = {
 			is_culture_group = amazonic
 			NOT = { exists = AMZ }
@@ -400,31 +518,10 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = {
-					2306 = { empty = yes }
-				}
-				2306 = { secede_province = THIS }
-				2306 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			random_owned = {
-				limit = {
 					2453 = { empty = yes }
 				}
 				2453 = { secede_province = THIS }
 				2453 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			random_owned = {
-				limit = {
-					2460 = { empty = yes }
-				}
-				2460 = { secede_province = THIS }
-				2460 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			random_owned = {
-				limit = {
-					2458 = { empty = yes }
-				}
-				2458 = { secede_province = THIS }
-				2458 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 			}
 		}
 		ai_will_do = {
@@ -510,7 +607,7 @@ political_decisions = {
 				duration = 1825 
 			}
 			SGR = {
-				any_owned = {
+				any_owned_province = {
 					limit = {
 						province_id = 2425
 						province_id = 2427
@@ -598,8 +695,10 @@ political_decisions = {
 		picture = conquest_of_the_chaco
 		potential = {
 			tag = SGR
-			owns = 3380
-			owns = 2343
+			owns = 2338
+			owns = 2339
+			owns = 2365
+			owns = 2376
 			has_country_flag = sgirur_destiny
 			NOT = { has_country_flag = congaltonian_conquest }
 		}
@@ -1136,27 +1235,6 @@ political_decisions = {
 			FNC = { all_core = { remove_core = SGR } }
 			random_owned = {
 				limit = {
-					2458 = { empty = yes }
-				}
-				2458 = { secede_province = THIS }
-				2458 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			random_owned = {
-				limit = {
-					2460 = { empty = yes }
-				}
-				2460 = { secede_province = THIS }
-				2460 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			random_owned = {
-				limit = {
-					2306 = { empty = yes }
-				}
-				2306 = { secede_province = THIS }
-				2306 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			}
-			random_owned = {
-				limit = {
 					2453 = { empty = yes }
 				}
 				2453 = { secede_province = THIS }
@@ -1466,73 +1544,6 @@ political_decisions = {
 	}
 	
 ### Renaming ###
-
-	rename_cote_nord_SGR = {
-		picture = south_sgirur_map
-		potential = {
-			owns = 2447
-			owns = 2451
-			owns = 2450
-			OR = {
-				tag = SGR
-				tag = UPB	
-			}
-			NOT = { has_global_flag = SGR_renamed_cote_nord }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			clr_global_flag = ARC_renamed_cote_nord
-			set_global_flag = SGR_renamed_cote_nord
-			2447 = { change_province_name = "Kennethil" }
-			2451 = { change_province_name = "Gavinstoun" }
-			2455 = { change_province_name = "Lorimer" }
-			2450 = { change_province_name = "Loch Niven" }
-			2987 = { change_province_name = "Kennethil" }
-			2447 = { state_scope = { change_region_name = "Stuartia" } }
-		}
-		
-		ai_will_do = {
-            factor = 1
-        }
-	}
-	
-	rename_cote_nord_ARC = {
-		picture = south_sgirur_map
-		potential = {
-			owns = 2447
-			owns = 2451
-			owns = 2450
-			OR = {
-				tag = FNC
-				tag = OCD
-				tag = ARC
-			}
-			NOT = { has_global_flag = ARC_renamed_cote_nord }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			clr_global_flag = SGR_renamed_cote_nord
-			set_global_flag = ARC_renamed_cote_nord
-			2447 = { change_province_name = "Cellines" }
-			2451 = { change_province_name = "Olivet" }
-			2455 = { change_province_name = "Laplante" }
-			2450 = { change_province_name = "Lac Fleur" }
-			2987 = { change_province_name = "Celinnes" }
-			2447 = { state_scope = { change_region_name = "Cote Nord" } }
-		}
-		
-		ai_will_do = {
-            factor = 1
-        }
-	}
 	
 	SGR_rename_Amazonia = {
 		picture = "gtfo"

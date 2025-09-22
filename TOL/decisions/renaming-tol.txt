@@ -10949,4 +10949,214 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	SGR_rename_borderlands = {
+		picture = gtfo
+		potential = {
+			OR = {
+				tag = SGR
+				tag = UPB	
+			}
+			AND = { owns = 2447 NOT = { has_global_flag = SGR_rename_valoisiane } }
+			AND = { owns = 2458 NOT = { has_global_flag = SGR_rename_maryland } }
+			AND = { owns = 2456 NOT = { has_global_flag = SGR_rename_filleina } }
+			AND = { owns = 3444 NOT = { has_global_flag = SGR_rename_marion } }
+			AND = { owns = 2449 NOT = { has_global_flag = SGR_rename_novascotia } }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			random_owned = {
+				limit = { province_id = 2447 }
+				2447 = { 
+					change_province_name = "Henrystoun"
+					state_scope = { change_region_name = "Stuartia"  }
+				}
+				2451 = { change_province_name = "Ogilvie" }
+				2455 = { change_province_name = "Lorimer" }
+				2450 = { change_province_name = "Loch Niven" }
+				2987 = { change_province_name = "Henrystoun" }
+				owner = { set_global_flag = SGR_rename_valoisiane clr_global_flag = ARC_rename_valoisiane }
+			}
+			random_owned = {
+				limit = { province_id = 2458 }
+				2458 = { 
+					change_province_name = "Pitcairn"
+					state_scope = { change_region_name = "Maryland"  }
+				}
+				2460 = { change_province_name = "Himelin" }
+				2306 = { change_province_name = "Dulich" }
+				2453 = { change_province_name = "Sanderstoun" }
+				owner = { set_global_flag = SGR_rename_maryland clr_global_flag = ARC_rename_maryland }
+			}
+			random_owned = {
+				limit = { province_id = 2456 }
+				2456 = { 
+					change_province_name = "Allenshire"
+					state_scope = { change_region_name = "Filleina"  }
+				}
+				2452 = { change_province_name = "Campton" }
+				2446 = { change_province_name = "Carswell" }
+				owner = { set_global_flag = SGR_rename_filleina clr_global_flag = ARC_rename_filleina }
+			}
+			random_owned = {
+				limit = { province_id = 3444 }
+				3444 = { 
+					change_province_name = "Wardlaw"
+					state_scope = { change_region_name = "Marion"  }
+				}
+				2441 = { change_province_name = "Dunkeld" }
+				3445 = { change_province_name = "Selkirk" }
+				owner = { set_global_flag = SGR_rename_marion clr_global_flag = ARC_rename_marion }
+			}
+			random_owned = {
+				limit = { province_id = 2449 }
+				2449 = { 
+					change_province_name = "Muireall"
+					state_scope = { change_region_name = "Nova Scotia"  }
+				}
+				2439 = { change_province_name = "Port Eoghann" }
+				2448 = { change_province_name = "Darrow Bay" }
+				owner = { set_global_flag = SGR_rename_novascotia clr_global_flag = ARC_rename_novascotia }
+			}
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	ARC_rename_borderlands = {
+		picture = gtfo
+		potential = {
+			OR = {
+				tag = FNC
+				tag = OCD
+				tag = ARC
+			}
+			AND = { owns = 2447 NOT = { has_global_flag = ARC_rename_valoisiane } }
+			AND = { owns = 2458 NOT = { has_global_flag = ARC_rename_maryland } }
+			AND = { owns = 2456 NOT = { has_global_flag = ARC_rename_filleina } }
+			AND = { owns = 3444 NOT = { has_global_flag = ARC_rename_marion } }
+			AND = { owns = 2449 NOT = { has_global_flag = ARC_rename_novascotia } }
+			AND = { owns = 2339 NOT = { has_global_flag = ARC_rename_paraguay } }
+			AND = { owns = 2364 NOT = { has_global_flag = ARC_rename_chaco } }
+			AND = { owns = 2388 NOT = { has_global_flag = ARC_rename_calingasta } }
+			AND = { owns = 2324 NOT = { has_global_flag = ARC_rename_santiago } }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			random_owned = {
+				limit = { province_id = 2447 }
+				2447 = { 
+					change_province_name = "Henriville"
+					state_scope = { change_region_name = "Valoisiane"  }
+				}
+				2451 = { change_province_name = "Olivet" }
+				2455 = { change_province_name = "Laplante" }
+				2450 = { change_province_name = "Lac Fleur" }
+				2987 = { change_province_name = "Henriville" }
+				owner = { set_global_flag = ARC_rename_valoisiane clr_global_flag = SGR_rename_valoisiane }
+			}
+			random_owned = {
+				limit = { province_id = 2458 }
+				2458 = { 
+					change_province_name = "L'Incarnation"
+					state_scope = { change_region_name = "Terre de Marie"  }
+				}
+				2460 = { change_province_name = "Hennequin" }
+				2306 = { change_province_name = "Duvall" }
+				2453 = { change_province_name = "Sartreville" }
+				owner = { set_global_flag = ARC_rename_maryland clr_global_flag = SGR_rename_maryland }
+			}
+			random_owned = {
+				limit = { province_id = 2456 }
+				2456 = { 
+					change_province_name = "Allaincomté"
+					state_scope = { change_region_name = "Flavienne"  }
+				}
+				2452 = { change_province_name = "Careme" }
+				2446 = { change_province_name = "Celestin" }
+				owner = { set_global_flag = ARC_rename_filleina clr_global_flag = SGR_rename_filleina }
+			}
+			random_owned = {
+				limit = { province_id = 3444 }
+				3444 = { 
+					change_province_name = "Vaugeois"
+					state_scope = { change_region_name = "Marenne"  }
+				}
+				2441 = { change_province_name = "Dumoulin" }
+				3445 = { change_province_name = "Serreau" }
+				owner = { set_global_flag = ARC_rename_marion clr_global_flag = SGR_rename_marion }
+			}
+			random_owned = {
+				limit = { province_id = 2449 }
+				2449 = { 
+					change_province_name = "Nouveau Brest"
+					state_scope = { change_region_name = "Nouvelle Bretagne"  }
+				}
+				2439 = { change_province_name = "Port Escoffier" }
+				2448 = { change_province_name = "Baie Villegaignon" }
+				owner = { set_global_flag = ARC_rename_novascotia clr_global_flag = SGR_rename_novascotia }
+			}
+			random_owned = {
+				limit = { province_id = 2339 }
+				2339 = { 
+					change_province_name = "Assomption"
+					state_scope = { change_region_name = "Trois Rivieres"  }
+				}
+				2341 = { change_province_name = "Lauzonpont" }
+				2342 = { change_province_name = "Saint Ignace" }
+				2340 = { change_province_name = "Trois Rivieres" }
+				owner = { set_global_flag = ARC_rename_paraguay }
+			}
+			random_owned = {
+				limit = { province_id = 2364 }
+				2364 = { 
+					change_province_name = "Resisténcia"
+					state_scope = { change_region_name = "Chaco Aquitan"  }
+				}
+				2337 = { change_province_name = "Fort Fauré" }
+				2365 = { change_province_name = "Lafitte" }
+				2366 = { change_province_name = "Lion de Colómbia" }
+				2367 = { change_province_name = "Xaintrailles" }
+				2372 = { change_province_name = "Parpaillon" }
+				2376 = { change_province_name = "Capdevila" }
+				2377 = { change_province_name = "Aubanel" }
+				owner = { set_global_flag = ARC_rename_chaco }
+			}
+			random_owned = {
+				limit = { province_id = 2388 }
+				2388 = { 
+					change_province_name = "Couffignal"
+					state_scope = { change_region_name = "Couffignal"  }
+				}
+				2385 = { change_province_name = "Roumanille" }
+				2389 = { change_province_name = "Madaune" }
+				owner = { set_global_flag = ARC_rename_calingasta }
+			}
+			random_owned = {
+				limit = { province_id = 2324 }
+				2324 = { 
+					change_province_name = "Zebedeu"
+					state_scope = { change_region_name = "Zebedeu"  }
+				}
+				2323 = { change_province_name = "Sant Natanael" }
+				2326 = { change_province_name = "Vinha de Mar" }
+				2325 = { change_province_name = "Nova Valenca" }
+				owner = { set_global_flag = ARC_rename_santiago }
+			}
+		}
+		
+		ai_will_do = {
+            factor = 1
+        }
+	}
+	
 }

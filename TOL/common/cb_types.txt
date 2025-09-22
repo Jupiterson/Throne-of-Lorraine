@@ -13509,7 +13509,7 @@ gulf_war = {
 			}
 			owner = {
 				VEL = {
-					any_owned = {
+					any_owned_province = {
 						limit = {
 							is_core = TEX
 						}
@@ -13540,7 +13540,7 @@ gulf_war = {
 			}
 			owner = {
 				TEX = {
-					any_owned = {
+					any_owned_province = {
 						limit = {
 							is_core = VEL
 						}
@@ -13610,7 +13610,7 @@ lake_war = {
 			}
 			owner = {
 				VEL = {
-					any_owned = {
+					any_owned_province = {
 						limit = {
 							province_id = 159
 							province_id = 162
@@ -13689,7 +13689,7 @@ lake_war = {
 ### Andean War ###
 
 andean_war = {
-    sprite_index = 20
+	sprite_index = 20
 	is_triggered_only = yes
 	months = 12
 	constructing_cb = no
@@ -13708,96 +13708,28 @@ andean_war = {
 	good_relation_prestige_factor = 0
 	good_relation_infamy_factor = 0
 	good_relation_militancy_factor = 0
-
-    war_name = ANDEAN_WAR
-
-    can_use = {
-    }
-
-    on_add = {
-    }
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		is_vassal = no
+		always = no
+	} 
 	
 	po_remove_prestige = yes
 	po_reparations = yes
-
-    on_po_accepted = {
-		random_owned = {
-			limit = {
-				owner = {
-					exists = yes
-					tag = PEU
-				}
-			}
-			owner = {
-				PEU = {
-					any_owned = {
-						limit = {
-							province_id = 2323
-							province_id = 2324
-							province_id = 2325
-							province_id = 2326
-							province_id = 2385
-							province_id = 2389
-						}
-						secede_province = OCD
-						add_core = OCD
-					}
-				}
-				OCD = {
-					any_core = {
-						limit = {
-							is_core = PEU
-						}
-						remove_core = PEU
-					}
-				}
-				COC = {
-					annex_to = OCD
-				}
-				set_global_flag = OCD_victory_andes
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					exists = yes
-					tag = OCD
-				}
-			}
-			owner = {
-				OCD = {
-					any_owned = {
-						limit = {
-							province_id = 2380
-							province_id = 2382
-							province_id = 3618
-						}
-						secede_province = COC
-						add_core = COC
-					}
-				}
-				COC = {
-					any_core = {
-						limit = {
-							is_core = OCD
-						}
-						remove_core = OCD
-					}
-				}
-				PEU = {
-					create_vassal = COC
-				}
-				COC = {
-					all_core = {
-						add_core = PEU
-					}
-				}
-				set_global_flag = PEU_victory_andes
-				set_global_flag = andes_resolved
-			}
-		}
+	
+	on_po_accepted = {
+		set_country_flag = andine_war_loser
 		add_country_modifier = { name = recently_lost_war duration = 1825 }
-    }
+	}
+	
+	tws_battle_factor = 3.0
+
+	war_name = ANDEAN_WAR
+	
+	on_add = {
+
+	}
 }
 
 # Convert Nation CB
