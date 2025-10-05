@@ -384,7 +384,110 @@ political_decisions = {
 			698 = { remove_core = LIT } #Memel
 			set_global_flag = ober_ost_lit
 		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	lithuanian_west = {
+		picture = grand_lithuania
+		potential = {
+			tag = LIT
+		    NOT = { has_country_flag = lithuanian_west }
+		}
 
+		allow = {
+			war = no
+			owns = 698
+			prestige = 50
+			state_n_government = 1
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+
+		effect = {
+			badboy = 7
+			709 = { add_core = LIT }
+			365 = { add_core = LIT }
+			697 = { add_core = LIT }
+			695 = { add_core = LIT }
+			set_country_flag = lithuanian_west
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	grand_lithuania = {
+		picture = grand_lithuania
+		potential = {
+			tag = LIT
+		    NOT = { has_country_flag = grand_lithuania }
+		}
+
+		allow = {
+			war = no
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+			LIT = { all_core = { owned_by = LIT } }
+		}
+
+		effect = {
+			badboy = 10
+			968 = { add_core = LIT }
+			970 = { add_core = LIT }
+			977 = { add_core = LIT }
+			999 = { add_core = LIT }
+			1007 = { add_core = LIT }
+			1010 = { add_core = LIT }
+			1014 = { add_core = LIT }
+			1018 = { add_core = LIT }
+			3419 = { add_core = LIT }
+			RUS_978 = { add_core = LIT }
+			RUS_943 = { add_core = LIT }
+			set_country_flag = grand_lithuania
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	rule_ruthenia = {
+		picture = greater_ukraine
+		potential = {
+			tag = LIT
+			has_country_flag = grand_lithuania
+		    NOT = { has_country_flag = rule_ruthenia }
+		}
+
+		allow = {
+			war = no
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+			LIT = { all_core = { owned_by = LIT } }
+		}
+
+		effect = {
+			badboy = 15
+			add_accepted_culture = ruthenyan
+			add_accepted_culture = cossack
+			662 = { add_core = LIT }
+			677 = { add_core = LIT }
+			678 = { add_core = LIT }
+			705 = { add_core = LIT }
+			950 = { add_core = LIT }
+			979 = { add_core = LIT }
+			3332 = { add_core = LIT }
+			1045 = { add_core = LIT }
+			1046 = { add_core = LIT }
+			1047 = { add_core = LIT }
+			1048 = { add_core = LIT }
+			1049 = { add_core = LIT }
+			1051 = { add_core = LIT }
+			3315 = { add_core = LIT }
+			3392 = { add_core = LIT }
+			AUS_662 = { add_core = LIT }
+			MOL_676 = { add_core = LIT }
+			RUS_973 = { add_core = LIT }
+			RUS_964 = { add_core = LIT }
+			set_country_flag = rule_ruthenia
+		}
 		ai_will_do = { factor = 1 }
 	}
 }

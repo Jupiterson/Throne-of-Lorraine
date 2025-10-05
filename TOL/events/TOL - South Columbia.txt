@@ -422,20 +422,26 @@ country_event = {
 
 	option = {
         name = "ARC7.A"
-		OCD = {
-			any_owned = {
-				limit = {
-					province_id = 2373
-					province_id = 2376
-					province_id = 2386
-					province_id = 2387
-				}
-				secede_province = PEU
-				add_core = PEU
+		prestige = 5
+		2356 = { secede_province = OCD add_core = OCD }
+		2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+		2362 = { secede_province = OCD add_core = OCD }
+		2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+		any_owned = {
+			limit = {
+				province_id = 2373
+				province_id = 2376
+				province_id = 2386
+				province_id = 2387
 			}
+			secede_province = PEU
+			add_core = PEU
 		}
 		2327 = { secede_province = PEU add_core = PEU }
 		2330 = { secede_province = PEU add_core = PEU }
+		remove_country_modifier = trade_disruptions
+		add_country_modifier = buffed_andean_trade
+		set_global_flag = andes_resolved
     }
 }
 
@@ -460,7 +466,7 @@ country_event = {
 	option = {
         name = "ARC8.A"
 		OCD = {
-			any_owned_province = {
+			any_owned = {
 				limit = {
 					province_id = 2380
 					province_id = 2382
@@ -480,6 +486,7 @@ country_event = {
 		COC = {
 			all_core = { add_core = PEU }
 		}
+		remove_country_modifier = trade_disruptions
 		set_global_flag = andes_resolved
 	}
 }
@@ -522,7 +529,14 @@ country_event = {
 				remove_core = PEU
 			}
 		}
-		COC = { annex_to = OCD }
+		OCD = { inherit = COC }
+		2356 = { secede_province = OCD add_core = OCD }
+		2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+		2362 = { secede_province = OCD add_core = OCD }
+		2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+		2377 = { secede_province = OCD add_core = OCD }
+		2377 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+		OCD = { remove_country_modifier = trade_disruptions }
 		set_global_flag = OCD_victory_andes
 		set_global_flag = andes_resolved
 	}
@@ -536,11 +550,7 @@ country_event = {
 		tag = OCD
 		owns = 2378
 		NOT = { exists = COC }
-		OR = {
-			has_global_flag = OCD_victory_andes
-			has_global_flag = divide_comechingones
-			has_global_flag = andean_neutrality
-		}
+		has_global_flag = andean_neutrality
 	}
 	mean_time_to_happen = { days = 5 }
 	
@@ -552,52 +562,13 @@ country_event = {
 	
 	option = {
         name = "ARC10.A"
-		any_country = {
-			limit = {
-				tag = OCD
-				owns = 2378
-				owns = 2388
-				has_global_flag = OCD_victory_andes
-			}
-			prestige = 10
-			2356 = { secede_province = OCD add_core = OCD }
-			2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2362 = { secede_province = OCD add_core = OCD }
-			2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2377 = { secede_province = OCD add_core = OCD }
-			2377 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			remove_country_modifier = trade_disruptions
-			set_global_flag = andes_resolved
-		}
-		any_country = {
-			limit = {
-				tag = OCD
-				owns = 2378
-				has_global_flag = divide_comechingones
-			}
-			prestige = 5
-			2356 = { secede_province = OCD add_core = OCD }
-			2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2362 = { secede_province = OCD add_core = OCD }
-			2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			remove_country_modifier = trade_disruptions
-			add_country_modifier = buffed_andean_trade
-			set_global_flag = andes_resolved
-		}
-		any_country = {
-			limit = {
-				tag = OCD
-				owns = 2378
-				has_global_flag = andean_neutrality
-			}
-			prestige = 5
-			2356 = { secede_province = OCD add_core = OCD }
-			2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			2362 = { secede_province = OCD add_core = OCD }
-			2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
-			remove_country_modifier = trade_disruptions
-			add_country_modifier = andean_trade
-			set_global_flag = andes_resolved
-		}
+		prestige = 5
+		2356 = { secede_province = OCD add_core = OCD }
+		2356 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+		2362 = { secede_province = OCD add_core = OCD }
+		2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
+		remove_country_modifier = trade_disruptions
+		add_country_modifier = andean_trade
+		set_global_flag = andes_resolved
 	}
 }
