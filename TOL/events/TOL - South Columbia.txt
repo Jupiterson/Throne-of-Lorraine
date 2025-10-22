@@ -440,7 +440,7 @@ country_event = {
 		2327 = { secede_province = PEU add_core = PEU }
 		2330 = { secede_province = PEU add_core = PEU }
 		remove_country_modifier = trade_disruptions
-		add_country_modifier = buffed_andean_trade
+		add_country_modifier = { name = buffed_andean_trade duration = -1 }
 		set_global_flag = andes_resolved
     }
 }
@@ -568,7 +568,7 @@ country_event = {
 		2362 = { secede_province = OCD add_core = OCD }
 		2362 = { add_province_modifier = { name = colonial_recruitment duration = 1460 } }
 		remove_country_modifier = trade_disruptions
-		add_country_modifier = andean_trade
+		add_country_modifier = { name = andean_trade duration = -1 }
 		set_global_flag = andes_resolved
 	}
 }
