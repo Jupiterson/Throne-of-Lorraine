@@ -23,7 +23,8 @@ country_event = {
 		tag = JES
 		owns = 2302
 		NOT = { exists = PEU }
-		has_country_flag = invade_incas	
+		has_country_flag = invade_incas
+		NOT = { has_country_flag = conspiracy_discovered }
 	}
 	mean_time_to_happen = { months = 10 }
 	fire_only_once = yes
@@ -53,7 +54,8 @@ country_event = {
 		tag = JES
 		owns = 2302
 		NOT = { exists = PEU }
-		has_country_flag = conspiracy_discovered	
+		has_country_flag = conspiracy_discovered
+		NOT = { has_country_flag = JES_revolution_resolved }		
 	}
 	mean_time_to_happen = { days = 60 }
 	fire_only_once = yes
@@ -74,6 +76,7 @@ country_event = {
 			}
         }
 		set_country_flag = jesuit_hegemony
+		set_country_flag = JES_revolution_resolved
 		ai_chance = { factor = 25 }
 	}
 	option = {
@@ -98,6 +101,7 @@ country_event = {
 			}
         }
 		set_country_flag = andine_confederation
+		set_country_flag = JES_revolution_resolved
 		ai_chance = { factor = 75 }
 	}
 }
@@ -113,7 +117,8 @@ country_event = {
 		owns = 915
 		owns = 917
 		owns = 1756
-		has_country_flag = the_last_crusade	
+		has_country_flag = the_last_crusade
+		NOT = { has_country_flag = syriacs_integrated }
 	}
 	mean_time_to_happen = { days = 3 }
 	fire_only_once = yes
@@ -124,36 +129,6 @@ country_event = {
 
 	option = {
 		name = "JES4.A"
-		change_tag = JER
-		capital = 917
-		primary_culture = syriac
-		add_accepted_culture = north_andean
-		any_pop = {
-            consciousness = 2
-			militancy = 2
-        }
-		909 = { change_province_name = "Gerasa" }
-		913 = { change_province_name = "Berytus" }
-		913 = { 
-			change_province_name = "Berytus"
-			state_scope = { change_region_name = "Libanus"  }
-		}
-		915 = { change_province_name = "Sidon" }
-		916 = { change_province_name = "Acre" }
-		917 = { 
-			change_province_name = "Hierosolyma"
-			state_scope = { change_region_name = "Palaestina"  }
-		}
-		918 = { change_province_name = "Naples" }
-		919 = { change_province_name = "Joppa" }
-		920 = { change_province_name = "Gaza" }
-		922 = { change_province_name = "Elyn" }
-		1756 = { change_province_name = "Bethulia" }
-		3357 = { change_province_name = "Birosaba" }
-		3474 = { change_province_name = "Hepha" }
-	}
-	option = {
-		name = "JES4.B"
 		add_accepted_culture = syriac
 		any_pop = {
             consciousness = -2
@@ -178,5 +153,6 @@ country_event = {
 		1756 = { change_province_name = "Bethulia" }
 		3357 = { change_province_name = "Birosaba" }
 		3474 = { change_province_name = "Hepha" }
+		set_country_flag = syriacs_integrated
 	}
 }
