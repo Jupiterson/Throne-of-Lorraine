@@ -210,24 +210,21 @@ political_decisions = {
 	VKS_Destroy_Amauldi = {
 		potential = {
 			tag = VKS
-			OR = {
-			USA = {
-					all_core = { owned_by = THIS }	
-			}
-					USA = { vassal_of = VKS } 
-			}
 			has_global_flag = VKS_Freedom
 			NOT = { has_global_flag = VKS_Destroy_Amauldi }
 		}
 		allow = {
 			tag = VKS
+			USA = { all_core = { owned_by = THIS } }
 			is_greater_power = yes
+			revolution_n_counterrevolution = 1
 		}
 		effect = {
 			any_owned = {
 				limit = { is_core = USA }
-					remove_core = USA
+				remove_core = USA
 			}
+			add_accepted_culture = afro_french
 			prestige = 25
 			set_global_flag = VKS_Destroy_Amauldi
 		}
