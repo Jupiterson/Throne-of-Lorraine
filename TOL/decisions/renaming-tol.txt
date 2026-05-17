@@ -2275,6 +2275,7 @@ political_decisions = {
 			}
 			OR = {
 				AND = { owns = 682 NOT = { has_global_flag = prussian_silesia_rename_german } }
+				AND = { owns = 683 NOT = { has_global_flag = czech_silesia_rename_german } }
 				AND = { owns = 689 NOT = { has_global_flag = austrian_silesia_rename_german } }
 				AND = { owns = 3277 NOT = { has_global_flag = austrian_silesia_rename_german } }
 			}
@@ -2295,12 +2296,25 @@ political_decisions = {
 					change_province_name = "Breslau"
 					state_scope = { change_region_name = "Schlesien" }
 				}
-				683 = { change_province_name = "Waldenburg"  }
 				684 = { change_province_name = "Oppeln"  }
 				685 = { change_province_name = "Kattowitz"  }
+				3337 = { change_province_name = "Sorau"  }
 				owner = {
 					set_global_flag = prussian_silesia_rename_german
 					clr_global_flag = prussian_silesia_rename_polish
+				}
+			}
+			random_owned = {
+				limit = {
+					province_id = 683
+				}
+				683 = {
+					change_province_name = "Glatz"
+				}
+				owner = {
+					set_global_flag = czech_silesia_rename_german
+					clr_global_flag = czech_silesia_rename_polish
+					clr_global_flag = czech_silesia_rename_czech
 				}
 			}
 			random_owned = {
@@ -2309,10 +2323,7 @@ political_decisions = {
 				}
 				689 = {
 					change_province_name = "Teschen"
-					state_scope = { change_region_name = "Schlesien" }
 				}
-				2584 = { change_province_name = "Bielitz"  }
-				3277 = { change_province_name = "Hultschin"  }
 				owner = {
 					set_global_flag = austrian_silesia_rename_german
 					clr_global_flag = austrian_silesia_rename_polish
@@ -2337,6 +2348,7 @@ political_decisions = {
 			}
 			OR = {
 				AND = { owns = 682 NOT = { has_global_flag = prussian_silesia_rename_polish } }
+				AND = { owns = 683 NOT = { has_global_flag = czech_silesia_rename_polish } }
 				AND = { owns = 689 NOT = { has_global_flag = austrian_silesia_rename_polish } }
 			}
 		}
@@ -2354,12 +2366,25 @@ political_decisions = {
 					change_province_name = "Wroclaw"
 					state_scope = { change_region_name = "Slask" }
 				}
-				683 = { change_province_name = "Walbrzych"  }
 				684 = { change_province_name = "Opole"  }
 				685 = { change_province_name = "Katowice"  }
+				3337 = { change_province_name = "Zary"  }
 				owner = {
 					set_global_flag = prussian_silesia_rename_polish
 					clr_global_flag = prussian_silesia_rename_german
+				}
+			}
+			random_owned = {
+				limit = {
+					province_id = 683
+				}
+				683 = {
+					change_province_name = "Klodzko"
+				}
+				owner = {
+					set_global_flag = czech_silesia_rename_polish
+					clr_global_flag = czech_silesia_rename_german
+					clr_global_flag = czech_silesia_rename_czech
 				}
 			}
 			random_owned = {
@@ -2383,9 +2408,11 @@ political_decisions = {
 	silesia_rename_czech = {
 		picture = gtfo
 		potential = {
-			owns = 689
 			is_culture_group = czecho_slovak_culture_group
-			NOT = { has_global_flag = austrian_silesia_rename_czech }
+			OR = {
+				AND = { owns = 683 NOT = { has_global_flag = czech_silesia_rename_czech } }
+				AND = { owns = 689 NOT = { has_global_flag = austrian_silesia_rename_czech } }
+			}
 		}
 
 		allow = {
@@ -2395,18 +2422,28 @@ political_decisions = {
 		effect = {
 			random_owned = {
 				limit = {
+					province_id = 683
+				}
+				683 = {
+					change_province_name = "Kladsko"
+				}
+				owner = {
+					set_global_flag = czech_silesia_rename_czech
+					clr_global_flag = czech_silesia_rename_german
+					clr_global_flag = czech_silesia_rename_polish
+				}
+			}
+			random_owned = {
+				limit = {
 					province_id = 689
 				}
 				689 = {
-					change_province_name = "Tesin"
+					change_province_name = "Tešin"
 				}
-				2584 = { change_province_name = "Bilsko"  }
-				685 = { change_province_name = "Hluzin"  }
 				owner = {
 					set_global_flag = austrian_silesia_rename_czech
 					clr_global_flag = austrian_silesia_rename_polish
 					clr_global_flag = austrian_silesia_rename_german
-
 				}
 			}
 		}
@@ -4196,6 +4233,7 @@ political_decisions = {
 				state_scope = {	change_region_name = "Vlaanderen"	}
 			}
 			set_global_flag = dutch_flanders
+			clr_global_flag = french_flanders
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -4209,7 +4247,7 @@ political_decisions = {
 				primary_culture = french
 				primary_culture = occitan
 			}
-			has_global_flag = dutch_flanders
+			NOT = { has_global_flag = french_flanders }
 		}
 
 		allow = {
@@ -4223,7 +4261,8 @@ political_decisions = {
 				change_province_name = "Gand"
 				state_scope = {	change_region_name = "Flandre"	}
 			}
-			set_global_flag = dutch_flanders
+			set_global_flag = french_flanders
+			clr_global_flag = dutch_flanders
 		}
 		ai_will_do = { factor = 1 }
 	}

@@ -62,7 +62,10 @@ political_decisions = {
 		}
 
 		allow = {
-			is_secondary_power = yes
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
 			empiricism = 1
 			all_core = { owned_by = THIS }
 		}
